@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 194,
-  "total_unique_ideas": 183,
-  "total_active_ideas": 159,
+  "total_scene_items": 195,
+  "total_unique_ideas": 184,
+  "total_active_ideas": 160,
   "total_excluded_ideas": 24,
-  "total_creators": 114,
+  "total_creators": 115,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -64,7 +64,7 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 10,
     "talking-head": 20,
     "storytelling": 17,
-    "dien-anh": 77,
+    "dien-anh": 78,
     "chuyen-canh": 32
   },
   "industries": [
@@ -151,7 +151,7 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "industry_stats": {
     "spa-lam-dep": 5,
-    "thuong-hieu": 17,
+    "thuong-hieu": 18,
     "thoi-trang": 17,
     "am-thuc": 17,
     "du-lich": 12,
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 73,
+    "us_eu": 74,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -500,6 +500,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@creator",
+      "name": "Creator",
+      "profile_url": "https://www.instagram.com/creator/",
+      "video_count": 1,
+      "top_industry": "Xây kênh",
+      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdSs5rahILb_Video_DdSs5rahILb/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb"
       ]
     },
     {
@@ -1527,6 +1538,74 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb",
+      "shortcode": "DdSs5rahILb",
+      "title_vi": "@creator DdSs5rahILb Video DdSs5rahILb",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "key_tech": "Instagram Liked 24h: Photo • 15 Of 18 • By @ru9vn • Shared September 14 • 2026 • Cinematic Lighting • Composition Mastery • Visual Rhythm",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industry": {
+        "id": "thuong-hieu",
+        "name": "Xây kênh",
+        "en_name": "Personal Brand",
+        "icon": "💼",
+        "badge_color": "indigo"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Photo, 15 of 18, by @ru9vn, shared September 14, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Photo",
+        "15 Of 18",
+        "By @ru9vn",
+        "Shared September 14",
+        "2026",
+        "Cinematic Lighting",
+        "Composition Mastery",
+        "Visual Rhythm"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Photo, 15 of 18, by @ru9vn, shared September 14, 2026. Phân loại vào Thương Hiệu Cá Nhân & Dịch Vụ • Điện Ảnh (Cinematic).",
+      "creator": {
+        "raw": "@creator",
+        "name": "Creator",
+        "handle": "@creator",
+        "profile_url": "https://www.instagram.com/creator/"
+      },
+      "ig_url": "https://www.instagram.com/p/DdSs5rahILb",
+      "gdrive_folder": "https://drive.google.com/open?id=1gN1yfvp56MNHGZxPKUnYMBIopV3ak6th",
+      "media": {
+        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdSs5rahILb_Video_DdSs5rahILb/shot_01_mid.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdSs5rahILb_Video_DdSs5rahILb/shot_03_mid.jpg",
+        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdSs5rahILb.mp4",
+        "report_url": "reports/IG_@creator_DdSs5rahILb_Video_DdSs5rahILb.html",
+        "shots_count": 0,
+        "duration": "15s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock",
       "shortcode": "DdT9CF7tGzn",

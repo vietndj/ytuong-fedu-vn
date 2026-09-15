@@ -15260,5 +15260,83 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb": {
+    "id": "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb",
+    "creator": "@creator",
+    "creator_name": "Creator",
+    "title": "@creator - Video DdSs5rahILb",
+    "shots_count": 0,
+    "duration": "0.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "thuong-hieu",
+      "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+      "icon": "💼"
+    },
+    "purpose": "Instagram Liked 24h: Photo, 15 of 18, by @ru9vn, shared September 14, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Photo",
+      "15 Of 18",
+      "By @ru9vn",
+      "Shared September 14",
+      "2026",
+      "Cinematic Lighting",
+      "Composition Mastery",
+      "Visual Rhythm"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Photo, 15 of 18, by @ru9vn, shared September 14, 2026. Phân loại vào Thương Hiệu Cá Nhân & Dịch Vụ • Điện Ảnh (Cinematic).",
+    "is_excluded": false,
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DdSs5rahILb": {
+    "id": "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb",
+    "creator": "@creator",
+    "creator_name": "Creator",
+    "title": "@creator - Video DdSs5rahILb",
+    "shots_count": 0,
+    "duration": "0.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "thuong-hieu",
+      "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+      "icon": "💼"
+    },
+    "purpose": "Instagram Liked 24h: Photo, 15 of 18, by @ru9vn, shared September 14, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Photo",
+      "15 Of 18",
+      "By @ru9vn",
+      "Shared September 14",
+      "2026",
+      "Cinematic Lighting",
+      "Composition Mastery",
+      "Visual Rhythm"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Photo, 15 of 18, by @ru9vn, shared September 14, 2026. Phân loại vào Thương Hiệu Cá Nhân & Dịch Vụ • Điện Ảnh (Cinematic).",
+    "is_excluded": false,
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }
