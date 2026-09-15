@@ -2027,7 +2027,7 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40yuto_creator_DdBlAWRO1Hl/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdBlAWRO1Hl.mp4",
         "report_url": "reports/IG_@yuto_creator_DdBlAWRO1Hl.html",
-        "shots_count": 8,
+        "shots_count": 6,
         "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
