@@ -14277,9 +14277,9 @@
     "shortcode": "Dc3PgRbBp-m",
     "creator": "@genya_jp",
     "creator_name": "Genya",
-    "title": "Genya • Khám Phá Ẩm Thực Vùng Núi Hakone & Nghệ Thuật Quay Đồ Ăn Xúc Giác Nóng Hổi",
-    "shots_count": 8,
-    "duration": "25.0s",
+    "title": "Genya • Food Vlog Cận Cảnh Biểu Cảm Tận Hưởng Ẩm Thực Tự Nhiên & Chân Thực",
+    "shots_count": 6,
+    "duration": "18.38s",
     "shooting_style": {
       "id": "dien-anh",
       "name": "Điện Ảnh (Cinematic)",
@@ -14297,22 +14297,21 @@
       "flag": "🌐",
       "badge_color": "sky"
     },
-    "purpose": "Review ẩm thực du lịch Nhật Bản với phong cách quay tĩnh tập trung vào độ bóng bẩy và khói bốc của món ăn",
+    "purpose": "Showcase ẩm thực tập trung hoàn toàn vào biểu cảm khuôn mặt khi ăn, truyền tải độ ngon qua sự thỏa mãn chân thực",
     "tech_tags": [
-      "Food Macro Glaze",
-      "Steam Capture Lighting",
-      "Chopstick Lift Action",
-      "Warm Wooden Background",
-      "Sensory Dining B-Roll"
+      "Authentic Eating Expression",
+      "Eye-level Food Review",
+      "Natural Cafe Lighting",
+      "Taste Reaction B-Roll"
     ],
     "is_ad_bot": false,
-    "logic_explanation": "Kỹ thuật đánh sáng ngược (Backlight) để bắt trọn làn khói nghi ngút bốc lên từ bát mì nóng hổi, cú gắp thức ăn chậm rãi làm nổi bật độ bóng bẩy của nước sốt.",
-    "quick_takeaway": "Quay đồ ăn muốn ngon mắt thì chìa khóa là Ánh Sáng Ngược (Backlight) và Chuyển Động Xúc Giác (gắp lên, bẻ đôi, rưới sốt).",
+    "logic_explanation": "Kỹ thuật quay ngang tầm mắt (Eye-level) kết hợp với ánh sáng tự nhiên và trung cảnh (Medium shot). Thay vì quay cận đồ ăn, máy quay khóa chặt vào biểu cảm tận hưởng của người ăn (nhắm mắt, mỉm cười) để kích thích vị giác người xem.",
+    "quick_takeaway": "Không cần quay đồ ăn quá cầu kỳ, chính biểu cảm thỏa mãn và chân thực của người ăn mới là thứ thuyết phục người xem nhất.",
     "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dc3PgRbBp-m.mp4",
     "report_url": "reports/IG_@genya_jp_Dc3PgRbBp-m.html",
     "fedu_optimization": {
-      "key_optimization_point": "⚡ Quay đồ ăn muốn ngon mắt thì chìa khóa là Ánh Sáng Ngược (Backlight) và Chuyển Động Xúc Giác (gắp lên, bẻ đôi, rưới sốt).",
-      "practice_focus": "Thực hành: Kỹ thuật đánh sáng ngược (Backlight) để bắt trọn làn khói nghi ngút bốc lên từ bát mì nóng hổi, cú gắp thức ăn chậm rãi làm nổi bật độ bóng bẩy của nước sốt.",
+      "key_optimization_point": "⚡ Không cần quay đồ ăn quá cầu kỳ, chính biểu cảm thỏa mãn và chân thực của người ăn mới là thứ thuyết phục người xem nhất.",
+      "practice_focus": "Thực hành: Đặt máy quay ngang tầm mắt, lấy nét vào khuôn mặt người ăn. Yêu cầu diễn viên ăn thật, nhắm mắt cảm nhận và mỉm cười tự nhiên.",
       "ig_seeding_hook": "Follow @genya_jp để cập nhật mẫu video Ẩm Thực & F&B",
       "course_industry_mapping": "Ẩm Thực & F&B"
     }
