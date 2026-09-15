@@ -14142,18 +14142,18 @@
     "shortcode": "DaDFH_TSii8",
     "creator": "@aki_japan",
     "creator_name": "Aki",
-    "title": "Aki • Tự Sự Mùa Hè Thứ Hai Trôi Qua & Nghệ Thuật Chấp Nhận Tích Cực (Positive Surrender)",
+    "title": "Aki • Kỹ Thuật Match Cut Đổi Trang Phục Siêu Mượt Của Barista Đường Phố",
     "shots_count": 8,
     "duration": "25.0s",
     "shooting_style": {
-      "id": "voice-over",
-      "name": "Lồng Tiếng (Voice Over)",
-      "icon": "🎙️"
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (In-Camera Transitions)",
+      "icon": "⚡"
     },
     "industry": {
-      "id": "storytelling",
-      "name": "Kể Chuyện (Storytelling)",
-      "icon": "📖"
+      "id": "thoi-trang",
+      "name": "Thời Trang & Phụ Kiện",
+      "icon": "👔"
     },
     "country": {
       "id": "global",
@@ -14162,13 +14162,13 @@
       "flag": "🌐",
       "badge_color": "sky"
     },
-    "purpose": "Kể chuyện tản văn tự sự triết lý thời gian qua lăng kính đời sống đô thị Nhật Bản",
+    "purpose": "Thể hiện phong cách thời trang đa dạng kết hợp nhịp điệu pha cà phê (Coffee Brewing) mượt mà qua kỹ thuật Match Cut.",
     "tech_tags": [
-      "Philosophical Voiceover",
-      "Street Photography Frames",
-      "Subdued Japanese Film Tone",
-      "Slow Rhythm Breathing",
-      "Emotional Resonance"
+      "Match Cut Transition",
+      "Outfit Change",
+      "Coffee Brewing",
+      "Fixed Camera Angle",
+      "Seamless Loop"
     ],
     "is_ad_bot": false,
     "logic_explanation": "Kết hợp nhịp thở chậm của các khung hình tĩnh ngoài phố: Tàu điện lướt qua, bóng nắng đổ dài trên tường bê tông, kết hợp giọng đọc trầm lắng về sự trôi chảy của một năm.",
@@ -14176,10 +14176,10 @@
     "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DaDFH_TSii8.mp4",
     "report_url": "reports/IG_@aki_japan_DaDFH_TSii8.html",
     "fedu_optimization": {
-      "key_optimization_point": "⚡ Video tự sự cảm xúc không cần hiệu ứng hào nhoáng. Sự chân thành trong câu chữ kết hợp khung hình tĩnh có chiều sâu sẽ giữ chân người xem đến giây cuối cùng.",
-      "practice_focus": "Thực hành: Kết hợp nhịp thở chậm của các khung hình tĩnh ngoài phố: Tàu điện lướt qua, bóng nắng đổ dài trên tường bê tông, kết hợp giọng đọc trầm lắng về sự trôi chảy của một năm.",
-      "ig_seeding_hook": "Follow @aki_japan để cập nhật mẫu video Kể Chuyện (Storytelling)",
-      "course_industry_mapping": "Kể Chuyện (Storytelling)"
+      "key_optimization_point": "⚡ Cố định hoàn toàn góc máy (tripod) và vị trí đứng, chỉ thay đổi trang phục để tạo hiệu ứng thị giác bất ngờ trên cùng một dòng chảy hành động.",
+      "practice_focus": "Thực hành: Khóa sáng, khóa nét (AE/AF Lock) và đánh dấu vị trí chân. Thực hiện cùng một hành động (rót nước/pha trà) với 5-6 bộ trang phục khác nhau, sau đó cắt ghép tại điểm rơi của chuyển động.",
+      "ig_seeding_hook": "Follow @aki_japan để cập nhật mẫu video Thời Trang & Chuyển Cảnh",
+      "course_industry_mapping": "Thời Trang & Phụ Kiện"
     }
   },
   "IG_@nathanael.lct_DdRg_ybtlKI": {
