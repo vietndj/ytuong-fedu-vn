@@ -1495,22 +1495,22 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale",
       "shortcode": "Dcbn7Bix-X-",
-      "title_vi": "Video by calebnatale",
-      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 8 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
-      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
+      "title_vi": "Kỹ thuật Match Cut & VFX Dịch chuyển không gian (Caleb Natale)",
+      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
+      "key_tech": "Match Cut • VFX Transition • In-Camera Effects • Wipe Transition",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Nói Trực Diện",
-        "en_name": "Talking Head",
-        "icon": "🗣️",
-        "badge_color": "blue"
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
       },
       "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
+        "id": "du-lich",
+        "name": "Du lịch",
+        "en_name": "Travel & Culture",
+        "icon": "✈️",
+        "badge_color": "sky"
       },
       "country": {
         "id": "us_eu",
@@ -1519,11 +1519,12 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇺🇸/🇪🇺",
         "badge_color": "purple"
       },
-      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Caleb_Natale",
+      "purpose": "Phân tích cú Match Cut không gian ấn tượng của Caleb Natale",
       "tech_tags": [
-        "Establishing Hook Shot",
-        "Close-Up / Macro Detail Shot",
-        "Low-key Lighting"
+        "Match Cut",
+        "VFX Transition",
+        "In-Camera Effects",
+        "Wipe Transition"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -1543,7 +1544,7 @@ var FEDU_IDEAS_DATABASE = {
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dcbn7Bix-X-.mp4",
         "report_url": "reports/IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale.html",
         "shots_count": 8,
-        "duration": "16s",
+        "duration": "16.00s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -1558,8 +1559,8 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
       "shortcode": "DdTeHleIqkg",
-      "title_vi": "@AL,_The_Creator_Videography_Reels - Video by shogentle",
-      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 24 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "title_vi": "Director's Report • Director's Report",
+      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • High-key Lighting",
       "shooting_style": {
         "id": "talking-head",
@@ -1607,7 +1608,7 @@ var FEDU_IDEAS_DATABASE = {
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdTeHleIqkg.mp4",
         "report_url": "reports/IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle.html",
         "shots_count": 24,
-        "duration": "48s",
+        "duration": "48.00s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -3436,7 +3437,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey",
       "shortcode": "DdLedJjsbNW",
       "title_vi": "Asian Dragon Tattoo Journey • Hannya Tattoo Hà Nội",
-      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, nghệ thuật xăm rồng Irezumi, ánh sáng và nhịp dựng 18 phân cảnh.",
+      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
       "key_tech": "Irezumi Japanese Tattoo • Dragon & Katana • White Ink Highlights • Phố Cổ Hà Nội • Voice-Over Storytelling • ASMR Wipe",
       "shooting_style": {
         "id": "storytelling",
@@ -5586,7 +5587,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion",
       "shortcode": "DawDiT2M1p8",
       "title_vi": "Jamison Lange • Coffee + Outfit Match Cut Transition",
-      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, match-cut chuyển cảnh trang phục, thao tác pha cà phê và nhịp dựng 22 phân cảnh.",
+      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
       "key_tech": "Match Cut Transitions, Visual Sub-framing, Tactile Macro Shots, Wardrobe Continuity, Symmetrical Framing, Dopamine Pacing",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -8901,7 +8902,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai",
       "shortcode": "DakY2EST-Tm",
       "title_vi": "Split City: Shanghai (Bản Giao Hưởng Thượng Hải 3 Tầng Thời Không) - @kyung6film",
-      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, kỹ thuật Kinetic Aspect Ratio Masking, Match Cut đối xứng và cấu trúc Split Screen Triptych 3 tầng thời không.",
+      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
       "key_tech": "Kinetic Masking, Triptych Split Screen, Symmetrical Anchor Pose, Match Cut, 3-Layer Urban Depth",
       "shooting_style": {
         "id": "dien-anh",
@@ -8967,7 +8968,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp",
       "shortcode": "Dcvxba1OvrD",
       "title_vi": "Đèn Bàn Di Động Koti & Nghệ Thuật Ánh Sáng Hoàng Hôn (@by.bennnj)",
-      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng tự nhiên và bố cục tương tác phong cách sống 10 phân cảnh cho đèn Koti.",
+      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
       "key_tech": "Lifestyle Product Hook, Natural Backlighting, Touch Dimmer Macro, Foreground Wipe, Hygge Warmth",
       "shooting_style": {
         "id": "dien-anh",
@@ -9659,7 +9660,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video",
       "shortcode": "DcJDJjVJGy6",
       "title_vi": "How to Cook a Video: Ẩn dụ Chế biến Ẩm thực & Quy trình Hậu kỳ Chuẩn chỉ",
-      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy, thủ pháp ẩn dụ thị giác và nhịp dựng 14 phân cảnh đỉnh cao của creator @shogentle.",
+      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
       "key_tech": "Visual Metaphor, Momentum Continuity, Diegetic Typography, Match Action, Snap Zooms, SaaS Demo Storytelling",
       "shooting_style": {
         "id": "dien-anh",
@@ -9726,7 +9727,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots",
       "shortcode": "DcgTj56Atlc",
       "title_vi": "7 Shots For Your Next Kitchen Film • @thomasmathewt2",
-      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 8 phân cảnh (Shoot-Through, Kinetic Movement, Overhead Flat Lay, In-Cabinet POV, Action POV, Macro Sizzle 90mm).",
+      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
       "key_tech": "Shoot-Through Foreground, Kinetic Toss, Spotify HUD, Overhead Flat Lay, In-Cabinet POV, Action Cam POV, 90mm Food Macro",
       "shooting_style": {
         "id": "dien-anh",
@@ -9796,7 +9797,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing",
       "shortcode": "Dcil1WWiXOC",
       "title_vi": "Cinematic Unboxing Mastery - Lofree Mechanical Keyboard (@yegor.sky)",
-      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, bóc tách 10 phân cảnh unbox chuẩn ASMR, ánh sáng và góc máy điện ảnh.",
+      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
       "key_tech": "Dirty Foreground Framing, Top-Down Flat Lay, Macro CNC Chamfer, Ice Blue Lighting, Kinetic ASMR",
       "shooting_style": {
         "id": "dien-anh",
@@ -10140,7 +10141,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast",
       "shortcode": "xnAU8Pazc6A",
       "title_vi": "Phân Tích Đạo Diễn: Joe Rogan & Elon Musk Podcast | Master Breakdown",
-      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 0 phân cảnh.",
+      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
       "key_tech": "Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide",
       "shooting_style": {
         "id": "dien-anh",
@@ -10479,7 +10480,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture",
       "shortcode": "DcOQSCMqho0",
       "title_vi": "Personal Cinema Wherever You Go - @arturbr",
-      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy macro, thủ pháp so sánh Problem-Solution và nhịp dựng 18 phân cảnh rạp chiếu phim cá nhân VITURE XR.",
+      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
       "key_tech": "Macro POV, Micro-OLED Contrast, Whip Pan Liaison, High-Kinetic Montage, Problem-Solution Framework",
       "shooting_style": {
         "id": "dien-anh",
