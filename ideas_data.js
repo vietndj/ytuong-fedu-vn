@@ -4,10 +4,10 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 188,
-  "total_unique_ideas": 177,
+  "total_scene_items": 189,
+  "total_unique_ideas": 178,
   "total_active_ideas": 154,
-  "total_excluded_ideas": 23,
+  "total_excluded_ideas": 24,
   "total_creators": 111,
   "shooting_styles": [
     {
@@ -1492,6 +1492,69 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale",
+      "shortcode": "Dcbn7Bix-X-",
+      "title_vi": "Video by calebnatale",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 8 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industry": {
+        "id": "ky-thuat-quay",
+        "name": "Bố cục",
+        "en_name": "Filmmaking Mastery",
+        "icon": "🎯",
+        "badge_color": "blue"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Caleb_Natale",
+      "tech_tags": [
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot",
+        "Low-key Lighting"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kỹ Thuật Quay Dựng & Điện Ảnh.",
+      "creator": {
+        "raw": "@Caleb_Natale",
+        "name": "Caleb_Natale",
+        "handle": "@calebnatale",
+        "profile_url": "https://www.instagram.com/calebnatale/"
+      },
+      "ig_url": "https://www.instagram.com/reel/Dcbn7Bix-X-/",
+      "gdrive_folder": "https://drive.google.com/open?id=1bOFljT1EkLxdEgnFAxbosiScsunWa0G4",
+      "media": {
+        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale/shot_01_mid.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale/shot_03_mid.jpg",
+        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dcbn7Bix-X-.mp4",
+        "report_url": "reports/IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale.html",
+        "shots_count": 8,
+        "duration": "16s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": true
+    },
     {
       "id": "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
       "shortcode": "DdTeHleIqkg",
