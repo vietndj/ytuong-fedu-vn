@@ -4,9 +4,9 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 188,
-  "total_unique_ideas": 177,
-  "total_active_ideas": 154,
+  "total_scene_items": 189,
+  "total_unique_ideas": 178,
+  "total_active_ideas": 155,
   "total_excluded_ideas": 23,
   "total_creators": 112,
   "shooting_styles": [
@@ -64,7 +64,7 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 11,
     "talking-head": 15,
     "storytelling": 17,
-    "dien-anh": 77,
+    "dien-anh": 78,
     "chuyen-canh": 31
   },
   "industries": [
@@ -151,7 +151,7 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "industry_stats": {
     "spa-lam-dep": 5,
-    "thuong-hieu": 17,
+    "thuong-hieu": 18,
     "thoi-trang": 16,
     "am-thuc": 17,
     "du-lich": 12,
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 68,
+    "us_eu": 69,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -358,6 +358,18 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@creator",
+      "name": "Creator",
+      "profile_url": "https://www.instagram.com/creator/",
+      "video_count": 2,
+      "top_industry": "Xây kênh",
+      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_Dcbn7Bix-X-_Video_Dcbn7Bix-X-/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@creator_Dcbn7Bix-X-_Video_Dcbn7Bix-X-",
+        "IG_@creator_DdTeHleIqkg_Video_DdTeHleIqkg"
+      ]
+    },
+    {
       "handle": "@beixin",
       "name": "Beixin (Travel & Nature",
       "profile_url": "https://www.instagram.com/beixin/",
@@ -475,17 +487,6 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
-      ]
-    },
-    {
-      "handle": "@creator",
-      "name": "Creator",
-      "profile_url": "https://www.instagram.com/creator/",
-      "video_count": 1,
-      "top_industry": "Xây kênh",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdTeHleIqkg_Video_DdTeHleIqkg/shot_01_mid.jpg",
-      "video_ids": [
-        "IG_@creator_DdTeHleIqkg_Video_DdTeHleIqkg"
       ]
     },
     {
@@ -1502,6 +1503,69 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@creator_Dcbn7Bix-X-_Video_Dcbn7Bix-X-",
+      "shortcode": "Dcbn7Bix-X-",
+      "title_vi": "@creator Dcbn7Bix-X- Video Dcbn7Bix-X-",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "key_tech": "Cinematic Lighting • Composition Mastery • Visual Rhythm",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industry": {
+        "id": "thuong-hieu",
+        "name": "Xây kênh",
+        "en_name": "Personal Brand",
+        "icon": "💼",
+        "badge_color": "indigo"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
+      "tech_tags": [
+        "Cinematic Lighting",
+        "Composition Mastery",
+        "Visual Rhythm"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+      "creator": {
+        "raw": "@creator",
+        "name": "Creator",
+        "handle": "@creator",
+        "profile_url": "https://www.instagram.com/creator/"
+      },
+      "ig_url": "https://www.instagram.com/reel/Dcbn7Bix-X-/",
+      "gdrive_folder": "https://drive.google.com/open?id=1p9UTQ9vT5LxOZ-Tc8MnqfgbbHCPFe-AU",
+      "media": {
+        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_Dcbn7Bix-X-_Video_Dcbn7Bix-X-/shot_01_mid.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_Dcbn7Bix-X-_Video_Dcbn7Bix-X-/shot_03_mid.jpg",
+        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dcbn7Bix-X-.mp4",
+        "report_url": "reports/IG_@creator_Dcbn7Bix-X-_Video_Dcbn7Bix-X-.html",
+        "shots_count": 0,
+        "duration": "15s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@creator_DdTeHleIqkg_Video_DdTeHleIqkg",
       "shortcode": "DdTeHleIqkg",
