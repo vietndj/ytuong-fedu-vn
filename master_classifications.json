@@ -13872,7 +13872,7 @@
     "shortcode": "Db-S8i1hXwF",
     "creator": "@dev_zero",
     "creator_name": "Zero (주니어 개발자)",
-    "title": "Zero Dev • Routine Sau Giờ Làm: Tự Học Code, Đàn Guitar & Kỷ Luật Bản Thân",
+    "title": "Zero Dev • Vlog Kỷ Luật: Tan làm, Đàn Guitar, Code Đêm & Ăn Dưa Hấu",
     "shots_count": 8,
     "duration": "25.0s",
     "shooting_style": {
@@ -13881,9 +13881,9 @@
       "icon": "📖"
     },
     "industry": {
-      "id": "cong-nghe",
-      "name": "Công Nghệ & Lập Trình",
-      "icon": "💻"
+      "id": "ugc",
+      "name": "UGC & Đời Sống",
+      "icon": "🤳"
     },
     "country": {
       "id": "global",
@@ -13901,13 +13901,13 @@
       "Relatable Creator Hook"
     ],
     "is_ad_bot": false,
-    "logic_explanation": "Kể chuyện một buổi tối không dùng lời: Từ bàn phím cơ gõ code, chuyển sang ngón tay gảy đàn guitar, rồi xỏ giày chạy bộ. Mỗi hành động đại diện cho 1 mảnh ghép phát triển bản thân.",
-    "quick_takeaway": "Xây dựng thương hiệu chuyên gia không nhất thiết phải thuyết giảng. Đôi khi chỉ cần quay một chuỗi hành động kỷ luật trong không gian làm việc sạch sẽ là đủ tạo niềm tin.",
+    "logic_explanation": "Xây dựng nhịp điệu sinh hoạt qua 5 bối cảnh đời thường. Các góc máy tĩnh tôn vinh sự thư giãn, kết hợp âm thanh mộc (foley) và text time-stamp để định hình dòng thời gian chân thực.",
+    "quick_takeaway": "Không cần lời thoại, việc ghép các hoạt động (chọn giày, đàn, code, đi dạo, ăn) với text thời gian (06:10 pm -> 10:00 pm) đủ tạo storytelling mạnh mẽ.",
     "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Db-S8i1hXwF.mp4",
     "report_url": "reports/IG_@dev_zero_Db-S8i1hXwF.html",
     "fedu_optimization": {
-      "key_optimization_point": "⚡ Xây dựng thương hiệu chuyên gia không nhất thiết phải thuyết giảng. Đôi khi chỉ cần quay một chuỗi hành động kỷ luật trong không gian làm việc sạch sẽ là đủ tạo niềm tin.",
-      "practice_focus": "Thực hành: Kể chuyện một buổi tối không dùng lời: Từ bàn phím cơ gõ code, chuyển sang ngón tay gảy đàn guitar, rồi xỏ giày chạy bộ. Mỗi hành động đại diện cho 1 mảnh ghép phát triển bản thân.",
+      "key_optimization_point": "Xây dựng nhịp điệu sinh hoạt qua 5 bối cảnh đời thường, kết hợp âm thanh mộc (foley) và text time-stamp để định hình dòng thời gian chân thực.",
+      "practice_focus": "Không cần lời thoại, ghép hoạt động (chọn giày, đàn, code, đi dạo, ăn) với text thời gian (06:10 pm -> 10:00 pm) đủ tạo storytelling.",
       "ig_seeding_hook": "Follow @dev_zero để cập nhật mẫu video Công Nghệ & Lập Trình",
       "course_industry_mapping": "Công Nghệ & Lập Trình"
     }
