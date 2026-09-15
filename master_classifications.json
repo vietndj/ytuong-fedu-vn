@@ -14772,31 +14772,32 @@
     }
   },
   "DdTeHleIqkg": {
-    "id": "IG_@creator_DdTeHleIqkg_Video_DdTeHleIqkg",
-    "creator": "@creator",
-    "creator_name": "Creator",
-    "title": "@creator - Video DdTeHleIqkg",
-    "shots_count": 0,
-    "duration": "0.0s",
+    "id": "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
+    "creator": "@AL,_The_Creator_Videography_Reels",
+    "creator_name": "Al,_The_Creator_Videography_Reels",
+    "title": "@AL,_The_Creator_Videography_Reels - Video by shogentle",
+    "shots_count": 24,
+    "duration": "48.0s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
-      "icon": "🎬"
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
     },
     "industry": {
       "id": "thuong-hieu",
       "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
       "icon": "💼"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @AL,_The_Creator_Videography_Reels",
     "tech_tags": [
-      "Cinematic Lighting",
-      "Composition Mastery",
-      "Visual Rhythm"
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "High-key Lighting"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
     "is_excluded": false,
-    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 24 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -14805,66 +14806,33 @@
       "badge_color": "purple"
     }
   },
-  "IG_@creator_DdTeHleIqkg_Video_DdTeHleIqkg": {
-    "id": "IG_@creator_DdTeHleIqkg_Video_DdTeHleIqkg",
-    "creator": "@creator",
-    "creator_name": "Creator",
-    "title": "@creator - Video DdTeHleIqkg",
-    "shots_count": 0,
-    "duration": "0.0s",
+  "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle": {
+    "id": "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
+    "creator": "@AL,_The_Creator_Videography_Reels",
+    "creator_name": "Al,_The_Creator_Videography_Reels",
+    "title": "@AL,_The_Creator_Videography_Reels - Video by shogentle",
+    "shots_count": 24,
+    "duration": "48.0s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
-      "icon": "🎬"
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
     },
     "industry": {
       "id": "thuong-hieu",
       "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
       "icon": "💼"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @AL,_The_Creator_Videography_Reels",
     "tech_tags": [
-      "Cinematic Lighting",
-      "Composition Mastery",
-      "Visual Rhythm"
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "High-key Lighting"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
     "is_excluded": false,
-    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
-    "country": {
-      "id": "us_eu",
-      "name": "Âu Mỹ",
-      "en_name": "US & Europe",
-      "flag": "🇺🇸/🇪🇺",
-      "badge_color": "purple"
-    }
-  },
-  "IG_@creator_Dcbn7Bix-X-_Video_Dcbn7Bix-X-": {
-    "id": "IG_@creator_Dcbn7Bix-X-_Video_Dcbn7Bix-X-",
-    "creator": "@creator",
-    "creator_name": "Creator",
-    "title": "@creator - Video Dcbn7Bix-X-",
-    "shots_count": 0,
-    "duration": "0.0s",
-    "shooting_style": {
-      "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
-      "icon": "🎬"
-    },
-    "industry": {
-      "id": "thuong-hieu",
-      "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
-      "icon": "💼"
-    },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
-    "tech_tags": [
-      "Cinematic Lighting",
-      "Composition Mastery",
-      "Visual Rhythm"
-    ],
-    "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
-    "is_excluded": false,
-    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 24 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",

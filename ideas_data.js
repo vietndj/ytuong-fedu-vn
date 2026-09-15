@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 189,
-  "total_unique_ideas": 178,
-  "total_active_ideas": 155,
+  "total_scene_items": 188,
+  "total_unique_ideas": 177,
+  "total_active_ideas": 154,
   "total_excluded_ideas": 23,
-  "total_creators": 112,
+  "total_creators": 111,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -62,9 +62,9 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 3,
     "voice-over": 11,
-    "talking-head": 15,
+    "talking-head": 16,
     "storytelling": 17,
-    "dien-anh": 78,
+    "dien-anh": 76,
     "chuyen-canh": 31
   },
   "industries": [
@@ -151,7 +151,7 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "industry_stats": {
     "spa-lam-dep": 5,
-    "thuong-hieu": 18,
+    "thuong-hieu": 17,
     "thoi-trang": 16,
     "am-thuc": 17,
     "du-lich": 12,
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 69,
+    "us_eu": 68,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -278,6 +278,20 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@shogentle",
+      "name": "Al,_The_Creator_Videography_Reels",
+      "profile_url": "https://www.instagram.com/shogentle/",
+      "video_count": 4,
+      "top_industry": "Xây kênh",
+      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40AL%2C_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
+        "IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant",
+        "IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five",
+        "IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video"
+      ]
+    },
+    {
       "handle": "@ulanzi.vietnam",
       "name": "Ulanzi Vietnam Official",
       "profile_url": "https://www.instagram.com/ulanzi.vietnam/",
@@ -332,19 +346,6 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
-      "handle": "@shogentle",
-      "name": "AL (Shogentle)",
-      "profile_url": "https://www.instagram.com/shogentle/",
-      "video_count": 3,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/shot_01_mid.jpg",
-      "video_ids": [
-        "IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant",
-        "IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five",
-        "IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video"
-      ]
-    },
-    {
       "handle": "@ioana_iftode",
       "name": "Ioana_Iftode",
       "profile_url": "https://www.instagram.com/ioana_iftode/",
@@ -355,18 +356,6 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments",
         "IG_@ioana_iftode_DcYQVYJjHa-_Tokyo_Slow_Life_Visual_Diaries",
         "IG_@ioana_iftode_DbqCYu4DAz2_Kyoto_Slow_Life_Visual_Diaries"
-      ]
-    },
-    {
-      "handle": "@creator",
-      "name": "Creator",
-      "profile_url": "https://www.instagram.com/creator/",
-      "video_count": 2,
-      "top_industry": "Xây kênh",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_Dcbn7Bix-X-_Video_Dcbn7Bix-X-/shot_01_mid.jpg",
-      "video_ids": [
-        "IG_@creator_Dcbn7Bix-X-_Video_Dcbn7Bix-X-",
-        "IG_@creator_DdTeHleIqkg_Video_DdTeHleIqkg"
       ]
     },
     {
@@ -1504,80 +1493,17 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "ideas": [
     {
-      "id": "IG_@creator_Dcbn7Bix-X-_Video_Dcbn7Bix-X-",
-      "shortcode": "Dcbn7Bix-X-",
-      "title_vi": "@creator Dcbn7Bix-X- Video Dcbn7Bix-X-",
-      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
-      "key_tech": "Cinematic Lighting • Composition Mastery • Visual Rhythm",
-      "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
-      },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
-      "country": {
-        "id": "us_eu",
-        "name": "Âu Mỹ",
-        "en_name": "US & Europe",
-        "flag": "🇺🇸/🇪🇺",
-        "badge_color": "purple"
-      },
-      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
-      "tech_tags": [
-        "Cinematic Lighting",
-        "Composition Mastery",
-        "Visual Rhythm"
-      ],
-      "transition_level": null,
-      "is_ad_bot": false,
-      "fedu_optimization": {},
-      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
-      "creator": {
-        "raw": "@creator",
-        "name": "Creator",
-        "handle": "@creator",
-        "profile_url": "https://www.instagram.com/creator/"
-      },
-      "ig_url": "https://www.instagram.com/reel/Dcbn7Bix-X-/",
-      "gdrive_folder": "https://drive.google.com/open?id=1p9UTQ9vT5LxOZ-Tc8MnqfgbbHCPFe-AU",
-      "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_Dcbn7Bix-X-_Video_Dcbn7Bix-X-/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_Dcbn7Bix-X-_Video_Dcbn7Bix-X-/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dcbn7Bix-X-.mp4",
-        "report_url": "reports/IG_@creator_Dcbn7Bix-X-_Video_Dcbn7Bix-X-.html",
-        "shots_count": 0,
-        "duration": "15s",
-        "youtube_id": null,
-        "youtube_embed": null,
-        "youtube_url": null
-      },
-      "complexity": {
-        "id": "de",
-        "label": "🟢 Dễ làm theo (3-8 shots)"
-      },
-      "is_personal": false,
-      "is_excluded": false
-    },
-    {
-      "id": "IG_@creator_DdTeHleIqkg_Video_DdTeHleIqkg",
+      "id": "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
       "shortcode": "DdTeHleIqkg",
-      "title_vi": "@creator DdTeHleIqkg Video DdTeHleIqkg",
-      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
-      "key_tech": "Cinematic Lighting • Composition Mastery • Visual Rhythm",
+      "title_vi": "@AL,_The_Creator_Videography_Reels - Video by shogentle",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 24 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • High-key Lighting",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
       },
       "industry": {
         "id": "thuong-hieu",
@@ -1593,38 +1519,39 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇺🇸/🇪🇺",
         "badge_color": "purple"
       },
-      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @AL,_The_Creator_Videography_Reels",
       "tech_tags": [
-        "Cinematic Lighting",
-        "Composition Mastery",
-        "Visual Rhythm"
+        "Establishing Hook Shot",
+        "Low-key Lighting",
+        "Close-Up / Macro Detail Shot",
+        "High-key Lighting"
       ],
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {},
-      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
       "creator": {
-        "raw": "@creator",
-        "name": "Creator",
-        "handle": "@creator",
-        "profile_url": "https://www.instagram.com/creator/"
+        "raw": "@AL,_The_Creator_Videography_Reels",
+        "name": "Al,_The_Creator_Videography_Reels",
+        "handle": "@shogentle",
+        "profile_url": "https://www.instagram.com/shogentle/"
       },
       "ig_url": "https://www.instagram.com/reel/DdTeHleIqkg/",
-      "gdrive_folder": "https://drive.google.com/open?id=1mCN4t5J-9-a9nHDdW022VAifhNMkg5Rs",
+      "gdrive_folder": "https://drive.google.com/open?id=1phw5IyEy-KGuMU0z0lEIAqv4-W5efeew",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdTeHleIqkg_Video_DdTeHleIqkg/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdTeHleIqkg_Video_DdTeHleIqkg/shot_03_mid.jpg",
+        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40AL%2C_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle/shot_01_mid.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40AL%2C_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdTeHleIqkg.mp4",
-        "report_url": "reports/IG_@creator_DdTeHleIqkg_Video_DdTeHleIqkg.html",
-        "shots_count": 0,
-        "duration": "15s",
+        "report_url": "reports/IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle.html",
+        "shots_count": 24,
+        "duration": "48s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
       },
       "complexity": {
-        "id": "de",
-        "label": "🟢 Dễ làm theo (3-8 shots)"
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
       "is_excluded": false
