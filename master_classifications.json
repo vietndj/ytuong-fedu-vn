@@ -15104,5 +15104,83 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen": {
+    "id": "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen",
+    "creator": "@Megan_Tan",
+    "creator_name": "Megan_Tan",
+    "title": "@Megan_Tan - Video by megantanhweewen",
+    "shots_count": 46,
+    "duration": "92.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
+    },
+    "purpose": "Instagram Liked 24h: Video, 7 of 18, by @megantanhweewen, shared September 15, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "7 Of 18",
+      "By @megantanhweewen",
+      "Shared September 15",
+      "2026",
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 7 of 18, by @megantanhweewen, shared September 15, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+    "is_excluded": false,
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 46 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DdT4EOzveQL": {
+    "id": "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen",
+    "creator": "@Megan_Tan",
+    "creator_name": "Megan_Tan",
+    "title": "@Megan_Tan - Video by megantanhweewen",
+    "shots_count": 46,
+    "duration": "92.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
+    },
+    "purpose": "Instagram Liked 24h: Video, 7 of 18, by @megantanhweewen, shared September 15, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "7 Of 18",
+      "By @megantanhweewen",
+      "Shared September 15",
+      "2026",
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 7 of 18, by @megantanhweewen, shared September 15, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+    "is_excluded": false,
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 46 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }

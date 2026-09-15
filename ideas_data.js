@@ -4,9 +4,9 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 192,
-  "total_unique_ideas": 181,
-  "total_active_ideas": 157,
+  "total_scene_items": 193,
+  "total_unique_ideas": 182,
+  "total_active_ideas": 158,
   "total_excluded_ideas": 24,
   "total_creators": 114,
   "shooting_styles": [
@@ -62,7 +62,7 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 3,
     "voice-over": 10,
-    "talking-head": 18,
+    "talking-head": 19,
     "storytelling": 17,
     "dien-anh": 77,
     "chuyen-canh": 32
@@ -158,7 +158,7 @@ var FEDU_IDEAS_DATABASE = {
     "cong-nghe": 21,
     "kien-truc": 12,
     "the-thao": 7,
-    "ky-thuat-quay": 44,
+    "ky-thuat-quay": 45,
     "ugc": 5
   },
   "countries": [
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 71,
+    "us_eu": 72,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -359,6 +359,18 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@megantanhweewen",
+      "name": "Megan_Tan",
+      "profile_url": "https://www.instagram.com/megantanhweewen/",
+      "video_count": 2,
+      "top_industry": "Bố cục",
+      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen",
+        "IG_@Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen"
+      ]
+    },
+    {
       "handle": "@beixin",
       "name": "Beixin (Travel & Nature",
       "profile_url": "https://www.instagram.com/beixin/",
@@ -498,17 +510,6 @@ var FEDU_IDEAS_DATABASE = {
       "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%403413882081_Dcx7pQpS6zs_Video_by_syooaann/shot_01_mid.jpg",
       "video_ids": [
         "IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann"
-      ]
-    },
-    {
-      "handle": "@megantanhweewen",
-      "name": "Megan_Tan",
-      "profile_url": "https://www.instagram.com/megantanhweewen/",
-      "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen/shot_01_mid.jpg",
-      "video_ids": [
-        "IG_@Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen"
       ]
     },
     {
@@ -1525,6 +1526,74 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen",
+      "shortcode": "DdT4EOzveQL",
+      "title_vi": "Video by megantanhweewen",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 46 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "key_tech": "Instagram Liked 24h: Video • 7 Of 18 • By @megantanhweewen • Shared September 15 • 2026 • Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industry": {
+        "id": "ky-thuat-quay",
+        "name": "Bố cục",
+        "en_name": "Filmmaking Mastery",
+        "icon": "🎯",
+        "badge_color": "blue"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 7 of 18, by @megantanhweewen, shared September 15, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "7 Of 18",
+        "By @megantanhweewen",
+        "Shared September 15",
+        "2026",
+        "Establishing Hook Shot",
+        "Low-key Lighting",
+        "Close-Up / Macro Detail Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 7 of 18, by @megantanhweewen, shared September 15, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+      "creator": {
+        "raw": "@Megan_Tan",
+        "name": "Megan_Tan",
+        "handle": "@megantanhweewen",
+        "profile_url": "https://www.instagram.com/megantanhweewen/"
+      },
+      "ig_url": "https://www.instagram.com/p/DdT4EOzveQL",
+      "gdrive_folder": "https://drive.google.com/open?id=143z0kwx9S-8onoXKta0EWaRfahIBIwH6",
+      "media": {
+        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen/shot_01_mid.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen/shot_03_mid.jpg",
+        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdT4EOzveQL.mp4",
+        "report_url": "reports/IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen.html",
+        "shots_count": 46,
+        "duration": "92s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun",
       "shortcode": "DdQwL3Ahci1",
