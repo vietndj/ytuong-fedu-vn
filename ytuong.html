@@ -2126,66 +2126,8 @@
                             </div>
                         ` : ''}
 
-                        <!-- Top Header: Streamlined Badges (Industry + Style + Shots) -->
-                        <div class="flex items-center justify-between gap-2 mb-3">
-                            <div class="flex items-center gap-1.5 flex-wrap">
-                                <!-- Ngành nghề Badge (2-3 từ) -->
-                                <button 
-                                    type="button"
-                                    onclick="event.stopPropagation(); selectIndustry('${item.industry.id}')"
-                                    class="px-2.5 py-0.5 rounded-lg text-xs font-bold border transition cursor-pointer hover:scale-105 active:scale-95 flex items-center gap-1 ${isIndActive ? 'bg-sky-500 text-white border-sky-400 shadow-md shadow-sky-500/30 ring-2 ring-sky-300/60 font-black' : `${badgeColorClass} hover:opacity-90`}"
-                                    title="Lọc theo ngành: ${escapeHtml(item.industry.name)}"
-                                >
-                                    <span>${item.industry.icon}</span>
-                                    <span>${escapeHtml(item.industry.name)}</span>
-                                </button>
-
-                                <!-- Kiểu quay Badge (2-3 từ) -->
-                                ${item.shooting_style ? `
-                                    <button 
-                                        type="button"
-                                        onclick="event.stopPropagation(); selectShootingStyle('${item.shooting_style.id}')"
-                                        class="px-2 py-0.5 rounded-lg text-xs font-semibold border transition cursor-pointer hover:scale-105 active:scale-95 flex items-center gap-1 ${isStyleActive ? 'bg-purple-500 text-white border-purple-400 shadow-md shadow-purple-500/30 ring-2 ring-purple-300/60 font-black' : 'bg-purple-500/15 text-purple-300 border-purple-500/30 hover:bg-purple-500/25'}"
-                                        title="Lọc theo kiểu quay: ${escapeHtml(item.shooting_style.name)}"
-                                    >
-                                        <span>${item.shooting_style.icon}</span>
-                                        <span>${escapeHtml(item.shooting_style.name)}</span>
-                                    </button>
-                                ` : ''}
-
-                                <!-- Số cảnh Badge -->
-                                <button 
-                                    type="button"
-                                    onclick="event.stopPropagation(); selectComplexityPill('${compId}')"
-                                    class="text-[11px] font-mono px-2 py-0.5 rounded transition cursor-pointer hover:scale-105 active:scale-95 border ${isCompActive ? 'bg-emerald-500 text-slate-950 font-bold border-emerald-400 shadow-sm ring-2 ring-emerald-300/60' : 'text-slate-300 bg-slate-800/80 border-slate-700/60 hover:bg-slate-700/80'}"
-                                    title="Lọc theo độ khó: ${item.media.shots_count} phân cảnh"
-                                >
-                                    🎬 ${item.media.shots_count} shots
-                                </button>
-
-                                ${item.is_ad_bot ? `
-                                    <span class="px-2 py-0.5 rounded-lg text-[10px] font-bold border bg-purple-950/60 text-purple-300 border-purple-500/50">
-                                        🤖 Bot QC
-                                    </span>
-                                ` : ''}
-                            </div>
-                            
-                            <!-- Index & Exclude Badge -->
-                            <div class="flex items-center gap-1.5 shrink-0">
-                                ${appState.curationMode ? (isExcluded ? `
-                                    <span class="px-2.5 py-1 rounded-lg text-[10px] font-black bg-amber-400 text-slate-950 border border-amber-300 shadow-sm flex items-center gap-1">
-                                        <span>🔒</span>
-                                        <span>CHỈ QUẢN TRỊ</span>
-                                    </span>
-                                ` : `
-                                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">🌐 HIỆN</span>
-                                `) : ''}
-                                <span class="text-[11px] font-mono text-slate-500 font-bold">#${String(idx + 1).padStart(2, '0')}</span>
-                            </div>
-                        </div>
-
-                        <!-- DUO-POSTER 9:16 (HOOK SHOT & KEY SHOT) -->
-                        <div class="grid grid-cols-2 gap-2 mb-3.5">
+                        <!-- DUO-POSTER 9:16 (HOOK SHOT & KEY SHOT) - ĐƯA LÊN TRÊN CÙNG -->
+                        <div class="grid grid-cols-2 gap-2 mb-3.5 mt-1">
                             <!-- Hook Shot (0.0s) -->
                             <div class="relative rounded-xl overflow-hidden aspect-poster bg-slate-900 group cursor-pointer border border-slate-800" onclick="openReportModal('${item.id}')" title="Bấm để xem báo cáo">
                                 <img 
@@ -2225,37 +2167,41 @@
                             </div>
                         </div>
 
-                        <!-- Creator Tag Button & 1-Click Instagram Follow -->
-                        <div class="flex items-center justify-between gap-2 mb-2">
-                            <button 
-                                type="button"
-                                onclick="event.stopPropagation(); filterByCreator('${escapeJs(item.creator.handle)}', '${escapeJs(item.creator.name)}')"
-                                class="group/creator flex items-center gap-1.5 overflow-hidden text-left py-1 px-2 -ml-2 rounded-xl hover:bg-sky-500/15 border border-transparent hover:border-sky-500/35 transition cursor-pointer"
-                                title="Bấm để lọc toàn bộ video của tác giả ${escapeHtml(item.creator.name)} (${escapeHtml(item.creator.handle)})"
-                            >
-                                <span class="text-sm group-hover/creator:scale-110 transition shrink-0">👤</span>
-                                <span class="text-xs font-bold text-slate-200 group-hover/creator:text-sky-300 transition truncate max-w-[130px]" title="${escapeHtml(item.creator.name)}">${escapeHtml(item.creator.name)}</span>
-                                <span class="text-[11px] font-mono text-slate-400 group-hover/creator:text-sky-400/90 transition truncate max-w-[100px]">${escapeHtml(item.creator.handle)}</span>
-                                <span class="text-[10px] text-sky-400 opacity-0 group-hover/creator:opacity-100 transition shrink-0 font-semibold ml-0.5">🔍 Lọc</span>
-                            </button>
+                        <!-- Header Info: Title & Creator -->
+                        <div class="mb-3">
+                            <!-- Vietnamese Title -->
+                            <h3 class="font-heading font-extrabold text-sm text-white hover:text-sky-400 transition cursor-pointer mb-2 line-clamp-2 leading-snug" onclick="openReportModal('${item.id}')" title="${escapeHtml(item.title_vi)}">
+                                ${highlightText(item.title_vi, appState.searchQuery)}
+                            </h3>
+                            
+                            <!-- Creator Tag Button (Nút IG Follow đã bị xóa) -->
+                            <div class="flex items-center justify-between gap-2">
+                                <button 
+                                    type="button"
+                                    onclick="event.stopPropagation(); filterByCreator('${escapeJs(item.creator.handle)}', '${escapeJs(item.creator.name)}')"
+                                    class="group/creator flex items-center gap-1.5 overflow-hidden text-left py-1 px-2 -ml-2 rounded-xl hover:bg-sky-500/15 border border-transparent hover:border-sky-500/35 transition cursor-pointer"
+                                    title="Bấm để lọc toàn bộ video của tác giả ${escapeHtml(item.creator.name)} (${escapeHtml(item.creator.handle)})"
+                                >
+                                    <span class="text-sm group-hover/creator:scale-110 transition shrink-0">👤</span>
+                                    <span class="text-xs font-bold text-slate-200 group-hover/creator:text-sky-300 transition truncate max-w-[130px]" title="${escapeHtml(item.creator.name)}">${escapeHtml(item.creator.name)}</span>
+                                    <span class="text-[11px] font-mono text-slate-400 group-hover/creator:text-sky-400/90 transition truncate max-w-[100px]">${escapeHtml(item.creator.handle)}</span>
+                                    <span class="text-[10px] text-sky-400 opacity-0 group-hover/creator:opacity-100 transition shrink-0 font-semibold ml-0.5">🔍 Lọc</span>
+                                </button>
 
-                            <!-- Instagram Follow Link -->
-                            <a 
-                                href="${igProfileUrl}" 
-                                target="_blank" 
-                                rel="noopener" 
-                                class="btn-ig-gradient px-2.5 py-1 rounded-lg text-white font-bold text-[10px] flex items-center gap-1 shrink-0 shadow-sm"
-                                title="Theo dõi creator trên Instagram để feed gợi ý ý tưởng tương tự"
-                            >
-                                <span>📸 Follow</span>
-                                <span>↗</span>
-                            </a>
+                                <!-- Index & Exclude Badge (Dời từ trên xuống) -->
+                                <div class="flex items-center gap-1.5 shrink-0">
+                                    ${appState.curationMode ? (isExcluded ? `
+                                        <span class="px-2.5 py-1 rounded-lg text-[10px] font-black bg-amber-400 text-slate-950 border border-amber-300 shadow-sm flex items-center gap-1">
+                                            <span>🔒</span>
+                                            <span>CHỈ QUẢN TRỊ</span>
+                                        </span>
+                                    ` : `
+                                        <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">🌐 HIỆN</span>
+                                    `) : ''}
+                                    <span class="text-[11px] font-mono text-slate-500 font-bold">#${String(idx + 1).padStart(2, '0')}</span>
+                                </div>
+                            </div>
                         </div>
-
-                        <!-- Vietnamese Title -->
-                        <h3 class="font-heading font-extrabold text-sm text-white hover:text-sky-400 transition cursor-pointer mb-2 line-clamp-2 leading-snug" onclick="openReportModal('${item.id}')" title="${escapeHtml(item.title_vi)}">
-                            ${highlightText(item.title_vi, appState.searchQuery)}
-                        </h3>
 
                         <!-- CỐT LÕI THỰC CHIẾN (GỌN GÀNG, DỄ ĐỌC LƯỚT) -->
                         <div class="mb-3 p-2.5 rounded-xl bg-slate-900/80 border border-slate-800/80 text-xs flex flex-col gap-1.5">
@@ -2271,15 +2217,61 @@
                             ` : ''}
                             ${item.key_tech ? `
                                 <div class="text-[10px] text-slate-400 flex items-center gap-1.5 pt-1 border-t border-slate-800/60 truncate ${appState.currentTech ? 'text-sky-300 font-bold' : ''}">
-                                    <span class="text-slate-500 font-semibold shrink-0">⚙️ Kỹ thuật:</span>
+                                    <span class="text-slate-500 font-semibold shrink-0">🧠 Điểm ăn tiền:</span>
                                     <span class="text-sky-300 font-mono truncate">${escapeHtml(item.key_tech)}</span>
                                 </div>
                             ` : ''}
                         </div>
 
+                        <!-- BỘ LỌC TƯƠNG TỰ (DỜI TỪ TRÊN XUỐNG DƯỚI) -->
+                        <div class="mb-3 pt-2 border-t border-slate-800/50 flex flex-col gap-1.5">
+                            <span class="text-[10px] font-semibold text-slate-500 italic">🏷️ Phù hợp cho:</span>
+                            <div class="flex items-center gap-1.5 flex-wrap">
+                                <!-- Ngành nghề Badge -->
+                                <button 
+                                    type="button"
+                                    onclick="event.stopPropagation(); selectIndustry('${item.industry.id}')"
+                                    class="px-2 py-0.5 rounded text-[10px] font-bold border transition cursor-pointer hover:scale-105 active:scale-95 flex items-center gap-1 ${isIndActive ? 'bg-sky-500 text-white border-sky-400 shadow-md shadow-sky-500/30 ring-1 ring-sky-300/60 font-black' : `${badgeColorClass} opacity-80 hover:opacity-100`}"
+                                    title="Lọc theo ngành: ${escapeHtml(item.industry.name)}"
+                                >
+                                    <span>${item.industry.icon}</span>
+                                    <span>${escapeHtml(item.industry.name)}</span>
+                                </button>
+
+                                <!-- Kiểu quay Badge -->
+                                ${item.shooting_style ? `
+                                    <button 
+                                        type="button"
+                                        onclick="event.stopPropagation(); selectShootingStyle('${item.shooting_style.id}')"
+                                        class="px-2 py-0.5 rounded text-[10px] font-semibold border transition cursor-pointer hover:scale-105 active:scale-95 flex items-center gap-1 ${isStyleActive ? 'bg-purple-500 text-white border-purple-400 shadow-md shadow-purple-500/30 ring-1 ring-purple-300/60 font-black' : 'bg-purple-500/15 text-purple-300 border-purple-500/30 hover:bg-purple-500/25'}"
+                                        title="Lọc theo kiểu quay: ${escapeHtml(item.shooting_style.name)}"
+                                    >
+                                        <span>${item.shooting_style.icon}</span>
+                                        <span>${escapeHtml(item.shooting_style.name)}</span>
+                                    </button>
+                                ` : ''}
+
+                                <!-- Số cảnh Badge -->
+                                <button 
+                                    type="button"
+                                    onclick="event.stopPropagation(); selectComplexityPill('${compId}')"
+                                    class="text-[10px] font-mono px-2 py-0.5 rounded transition cursor-pointer hover:scale-105 active:scale-95 border ${isCompActive ? 'bg-emerald-500 text-slate-950 font-bold border-emerald-400 shadow-sm ring-1 ring-emerald-300/60' : 'text-slate-400 bg-slate-800/60 border-slate-700/60 hover:bg-slate-700/80'}"
+                                    title="Lọc theo độ khó: ${item.media.shots_count} phân cảnh"
+                                >
+                                    🎬 ${item.media.shots_count} shots
+                                </button>
+
+                                ${item.is_ad_bot ? `
+                                    <span class="px-2 py-0.5 rounded text-[9px] font-bold border bg-purple-950/60 text-purple-300 border-purple-500/50">
+                                        🤖 Bot QC
+                                    </span>
+                                ` : ''}
+                            </div>
+                        </div>
+
                         <!-- ACTION BUTTONS TOOLBAR -->
                         <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between gap-2 mt-auto">
-                            <!-- Left: Video, Report & Copy Formula -->
+                            <!-- Left: Video & Report (Nút Mẫu đã bị xóa) -->
                             <div class="flex items-center gap-1.5 flex-1 overflow-hidden">
                                 ${(item.media.video_url || item.media.youtube_id || item.media.youtube_embed) ? `
                                     <button 
@@ -2298,14 +2290,6 @@
                                 >
                                     <span>📄 Báo Cáo</span>
                                 </button>
-
-                                <button 
-                                    onclick="copySceneFormula('${item.id}')" 
-                                    class="px-2.5 py-1.5 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/30 text-xs font-semibold transition flex items-center justify-center gap-1 shrink-0"
-                                    title="Sao chép công thức cảnh quay vào ghi chú để đi quay"
-                                >
-                                    <span>📋 Mẫu</span>
-                                </button>
                             </div>
 
                             <!-- Right: Post Link & Curation Toggle -->
@@ -2314,9 +2298,11 @@
                                     <a 
                                         href="${item.ig_url}" 
                                         target="_blank" 
-                                        class="p-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-slate-200 border border-slate-800 text-xs"
-                                        title="Xem post gốc Instagram"
-                                    >📸</a>
+                                        class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-slate-200 border border-slate-800 text-xs flex items-center gap-1 transition shadow-sm"
+                                        title="Xem post gốc trên Instagram"
+                                    >
+                                        📸 <span class="hidden sm:inline font-semibold">Bản gốc</span>
+                                    </a>
                                 ` : ''}
 
                                 <!-- Curation & Admin Controls (Chỉ hiện khi vào Quản trị với mật khẩu 0070) -->
@@ -2327,27 +2313,26 @@
                                             class="px-2.5 py-1.5 rounded-lg text-xs font-black transition flex items-center gap-1 ${isExcluded ? 'bg-amber-400 hover:bg-amber-300 text-slate-950 border border-amber-300 shadow-sm' : 'bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700'}"
                                             title="${isExcluded ? 'Khôi phục hiển thị công khai cho học viên' : 'Ẩn video khỏi học viên'}"
                                         >
-                                            ${isExcluded ? '🔓 Mở công khai' : '🔒 Ẩn video'}
+                                            ${isExcluded ? '🔓' : '🔒'}
                                         </button>
                                         <button 
                                             onclick="openEditIdeaModal('${item.id}')" 
                                             class="px-2 py-1.5 rounded-lg text-xs font-bold bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 border border-sky-500/40 transition flex items-center gap-1"
                                             title="Chỉnh sửa thông tin chi tiết video"
                                         >
-                                            <span>✏️ Sửa</span>
+                                            <span>✏️</span>
                                         </button>
                                         <button 
                                             onclick="openDeleteIdeaModal('${item.id}')" 
                                             class="px-2 py-1.5 rounded-lg text-xs font-bold bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/40 transition flex items-center gap-1"
                                             title="Xóa video khỏi danh sách"
                                         >
-                                            <span>🗑️ Xóa</span>
+                                            <span>🗑️</span>
                                         </button>
                                     </div>
                                 ` : ''}
                             </div>
                         </div>
-
                     </div>
                 `;
             }).join('');
