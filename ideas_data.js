@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 266,
-  "total_unique_ideas": 237,
-  "total_active_ideas": 201,
-  "total_excluded_ideas": 36,
-  "total_creators": 135,
+  "total_scene_items": 267,
+  "total_unique_ideas": 239,
+  "total_active_ideas": 206,
+  "total_excluded_ideas": 33,
+  "total_creators": 137,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -64,7 +64,7 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 12,
     "talking-head": 18,
     "storytelling": 25,
-    "dien-anh": 98,
+    "dien-anh": 103,
     "chuyen-canh": 43
   },
   "industries": [
@@ -151,15 +151,15 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "industry_stats": {
     "spa-lam-dep": 5,
-    "thuong-hieu": 19,
+    "thuong-hieu": 20,
     "thoi-trang": 20,
     "am-thuc": 21,
     "du-lich": 22,
-    "cong-nghe": 21,
-    "kien-truc": 22,
+    "cong-nghe": 22,
+    "kien-truc": 21,
     "the-thao": 9,
     "ky-thuat-quay": 61,
-    "ugc": 1
+    "ugc": 5
   },
   "countries": [
     {
@@ -212,21 +212,19 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 91,
+    "us_eu": 92,
     "korea": 11,
     "india": 6,
     "japan": 10,
-    "vietnam": 1,
+    "vietnam": 5,
     "asia_other": 46
   },
   "transition_stats": {
     "level_1_count": 12,
     "level_2_count": 18,
-    "ad_bot_count": 1
+    "ad_bot_count": 5
   },
-  "deleted_ids": [
-    "LAZADA_Ulanzi_Đèn_LED_Thanh_Bơm_Hơi_UA20,_"
-  ],
+  "deleted_ids": [],
   "creators_hub": [
     {
       "handle": "@jazziesillona",
@@ -304,6 +302,20 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence",
         "IG_@Yegor.Sky_DbBQzyqimbi_Video_by_yegor.sky",
         "IG_@yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing"
+      ]
+    },
+    {
+      "handle": "@ulanzi.vietnam",
+      "name": "Ulanzi Vietnam Official",
+      "profile_url": "https://www.instagram.com/ulanzi.vietnam/",
+      "video_count": 4,
+      "top_industry": "UGC",
+      "sample_thumb": "https://img.youtube.com/vi/L4YUJh9ltF0/hqdefault.jpg",
+      "video_ids": [
+        "LAZADA_Ulanzi_Đèn_LED_Thanh_Bơm_Hơi_UA20,_",
+        "LAZADA_Ulanzi_Chân_Đế_Tự_Sướng_Có_Từ_Tính_",
+        "LAZADA_Ulanzi_UA20_Đèn_LED_Thanh_Bơm_Hơi_20W_Bi",
+        "SHOPEE_ULANZI_MT80_Chân_Máy_Tripod_Cao_213cm_Tả"
       ]
     },
     {
@@ -581,11 +593,22 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@creator",
+      "name": "Creator",
+      "profile_url": "https://www.instagram.com/creator/",
+      "video_count": 1,
+      "top_industry": "Xây kênh",
+      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdTeHleIqkg_Video_DdTeHleIqkg/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@creator_DdTeHleIqkg_Video_DdTeHleIqkg"
+      ]
+    },
+    {
       "handle": "@iman.lizi",
       "name": "Iman Lizi",
       "profile_url": "https://www.instagram.com/iman.lizi/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Góc nhà đẹp",
       "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40iman.lizi_Dc6qXoKoYKh/shot_01_mid.jpg",
       "video_ids": [
         "IG_@iman.lizi_Dc6qXoKoYKh"
@@ -607,7 +630,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Cushy Garden",
       "profile_url": "https://www.instagram.com/cushygarden/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Bố cục",
       "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40cushygarden_DdL6pHDSKRc/shot_01_mid.jpg",
       "video_ids": [
         "IG_@cushygarden_DdL6pHDSKRc"
@@ -618,7 +641,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Zero (주니어 개발자",
       "profile_url": "https://www.instagram.com/dev_zero/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Đồ công nghệ",
       "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dev_zero_Db-S8i1hXwF/shot_01_mid.jpg",
       "video_ids": [
         "IG_@dev_zero_Db-S8i1hXwF"
@@ -1782,6 +1805,69 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "ideas": [
     {
+      "id": "IG_@creator_DdTeHleIqkg_Video_DdTeHleIqkg",
+      "shortcode": "DdTeHleIqkg",
+      "title_vi": "@creator DdTeHleIqkg Video DdTeHleIqkg",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "key_tech": "Cinematic Lighting • Composition Mastery • Visual Rhythm",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industry": {
+        "id": "thuong-hieu",
+        "name": "Xây kênh",
+        "en_name": "Personal Brand",
+        "icon": "💼",
+        "badge_color": "indigo"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
+      "tech_tags": [
+        "Cinematic Lighting",
+        "Composition Mastery",
+        "Visual Rhythm"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+      "creator": {
+        "raw": "@creator",
+        "name": "Creator",
+        "handle": "@creator",
+        "profile_url": "https://www.instagram.com/creator/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DdTeHleIqkg/",
+      "gdrive_folder": "https://drive.google.com/open?id=1mCN4t5J-9-a9nHDdW022VAifhNMkg5Rs",
+      "media": {
+        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdTeHleIqkg_Video_DdTeHleIqkg/shot_01_mid.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdTeHleIqkg_Video_DdTeHleIqkg/shot_03_mid.jpg",
+        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdTeHleIqkg.mp4",
+        "report_url": "reports/IG_@creator_DdTeHleIqkg_Video_DdTeHleIqkg.html",
+        "shots_count": 0,
+        "duration": "15s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
       "id": "IG_@Turkish_Airlines_DchBUgVMvrp_Video_by_turkishairlines",
       "shortcode": "DchBUgVMvrp",
       "title_vi": "Video by turkishairlines",
@@ -2053,11 +2139,11 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "sky"
       },
       "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
+        "id": "kien-truc",
+        "name": "Góc nhà đẹp",
+        "en_name": "Architecture & Living",
+        "icon": "🏛️",
+        "badge_color": "emerald"
       },
       "country": {
         "id": "global",
@@ -2066,10 +2152,8 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Thưởng thức hình ảnh và âm thanh ASMR trà chiều chỉn chu",
+      "purpose": "Aesthetic ASMR B-roll đời sống chậm tại gia, khơi gợi cảm giác thư giãn và tinh tế",
       "tech_tags": [
-        "Chất Lượng Cao",
-        "Bố Cục Khung Hình",
         "ASMR Sound Design",
         "Natural Light Window",
         "Macro Tea Pouring",
@@ -2138,7 +2222,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Mẹo nấu thịt viên sốt cà chua cho bé nhanh gọn",
+      "purpose": "Hướng dẫn công thức nấu ăn dặm cho mẹ bỉm sữa, kết hợp lồng tiếng mộc mạc và phụ đề định lượng rõ ràng",
       "tech_tags": [
         "Top-Down Cooking",
         "Fast-Cut Prep Shots",
@@ -2195,11 +2279,11 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "purple"
       },
       "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
+        "id": "ky-thuat-quay",
+        "name": "Bố cục",
+        "en_name": "Filmmaking Mastery",
+        "icon": "🎯",
+        "badge_color": "blue"
       },
       "country": {
         "id": "global",
@@ -2208,11 +2292,8 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "VLog nhật ký chăm cây ban công chữa lành mộc mạc",
+      "purpose": "Nhật ký chăm sóc vườn cây tại nhà, tạo sự kết nối cảm xúc bình yên và truyền cảm hứng sống chậm",
       "tech_tags": [
-        "Vlog Đời Sống",
-        "Không Gian Sống",
-        "Cửa Hàng Cây Cảnh",
         "Macro Plant Textures",
         "Gentle Voiceover",
         "Morning Sunlight",
@@ -2268,11 +2349,11 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "amber"
       },
       "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
+        "id": "cong-nghe",
+        "name": "Đồ công nghệ",
+        "en_name": "Tech & Gear",
+        "icon": "📱",
+        "badge_color": "purple"
       },
       "country": {
         "id": "global",
@@ -2281,12 +2362,8 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "VLog đời sống routine tự học tại góc bàn làm việc",
+      "purpose": "Xây dựng thương hiệu cá nhân kỷ luật cho lập trình viên trẻ thông qua chuỗi routine buổi tối hiệu quả",
       "tech_tags": [
-        "Đời Thường",
-        "Vlog Đời Sống",
-        "Tự Học",
-        "Desk Setup",
         "Desk Setup B-Roll",
         "Time-lapse Study",
         "Guitar Foley Cut",
@@ -2355,12 +2432,8 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Thưởng thức không gian nội thất Japandi tối giản",
+      "purpose": "Showcase không gian nội thất căn hộ Japandi tối giản, thu hút khách hàng thiết kế và thi công",
       "tech_tags": [
-        "Chỉn Chu",
-        "Japandi",
-        "Không Gian Sống",
-        "Thị Giác & Thẩm Mỹ",
         "Wide Establishing Shot",
         "Slow Panning Movement",
         "Warm Neutral Tones",
@@ -3519,6 +3592,69 @@ var FEDU_IDEAS_DATABASE = {
       "is_excluded": false
     },
     {
+      "id": "LAZADA_Ulanzi_Đèn_LED_Thanh_Bơm_Hơi_UA20,_",
+      "shortcode": "LAZADA_Ulanzi_Đèn_LED_Thanh_Bơm_Hơi_UA20,_",
+      "title_vi": "Ulanzi UA12 & UA20 | Đèn LED Thanh Bơm Hơi Từ Tính 12W & 20W",
+      "quick_takeaway": "Báo cáo bóc tách chuyên sâu 18 phân cảnh video quảng cáo thương mại đèn bóng khí từ tính Ulanzi UA12 & UA20: công nghệ bơm hơi, nam châm N52, dải sáng CRI 95+ và kỹ thuật chiếu sáng chân dung phố đêm.",
+      "key_tech": "Inflatable Tube Light, Magnetic Mounting N52, Full Spectrum CRI 95+, Bi-Color 2700K-5600K, Commercial B-Roll Rhythm, Night Street Portrait",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industry": {
+        "id": "ugc",
+        "name": "UGC",
+        "en_name": "UGC & Ads",
+        "icon": "📱",
+        "badge_color": "amber"
+      },
+      "country": {
+        "id": "vietnam",
+        "name": "Việt Nam",
+        "en_name": "Vietnam",
+        "flag": "🇻🇳",
+        "badge_color": "emerald"
+      },
+      "purpose": "Quảng cáo thương mại điện tử Lazada UGC chuẩn công thức AIDA",
+      "tech_tags": [
+        "UGC",
+        "Quảng cáo",
+        "AIDA"
+      ],
+      "transition_level": null,
+      "is_ad_bot": true,
+      "fedu_optimization": {},
+      "logic_explanation": "Video UGC bán hàng thực chiến tối ưu cho sàn Lazada bám sát công thức AIDA: Mở đầu trực quan, giải quyết nỗi đau khách hàng và kích thích chuyển đổi.",
+      "creator": {
+        "raw": "@ulanzi.vietnam",
+        "name": "Ulanzi Vietnam Official",
+        "handle": "@ulanzi.vietnam",
+        "profile_url": "https://www.instagram.com/ulanzi.vietnam/"
+      },
+      "ig_url": "https://www.lazada.vn/products/pdp-i13344148344-s116633631361.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253Aulanzi%252Bua20%253Bnid%253A13344148344%253Bsrc%253ALazadaMainSrp%253Brn%253A3805aba107017d1fa391a06bedb3781a%253Bregion%253Avn%253Bsku%253A13344148344_VNAMZ%253Bprice%253A1242000%253Bclient%253Adesktop%253Bsupplier_id%253A201110528696%253Bsession_id%253A%253Bbiz_source%253Ah5_internal%253Bslot%253A1%253Butlog_bucket_id%253A470687%253Basc_category_id%253A11068%253Bitem_id%253A13344148344%253Bsku_id%253A116633631361%253Bshop_id%253A5088557%253BtemplateInfo%253A107883_E%2523-1_A3_C%2523164594_J%2523&freeshipping=1&fs_ab=2&fuse_fs=&lang=vi&location=China&price=1.242E%206&priceCompare=skuId%3A116633631361%3Bsource%3Alazada-search-voucher%3Bsn%3A3805aba107017d1fa391a06bedb3781a%3BoriginPrice%3A1242000%3BdisplayPrice%3A1242000%3BisGray%3Afalse%3BsinglePromotionId%3A460000000000000%3BsingleToolCode%3ApromPrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1789368392145&ratingscore=4.875&request_id=3805aba107017d1fa391a06bedb3781a&review=16&sale=32&search=1&source=search&spm=a2o4n.searchlist.list.1&stock=1",
+      "gdrive_folder": "https://drive.google.com/open?id=19t43n4ACnEONaOpKK1ceJLg3Lel0AkLG",
+      "media": {
+        "thumb_hook": "https://img.youtube.com/vi/L4YUJh9ltF0/hqdefault.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/LAZADA_Ulanzi_%C4%90%C3%A8n_LED_Thanh_B%C6%A1m_H%C6%A1i_UA20%2C__thumb.jpg",
+        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Ulanzi%20UA12%20UA20%20Inflatable%20Magnetic%20Tube%20Light%20-%20%40ulanzi.mp4",
+        "report_url": "reports/Ulanzi UA12 UA20 Inflatable Magnetic Tube Light - @ulanzi.html",
+        "shots_count": 18,
+        "duration": "42.7s",
+        "youtube_id": "L4YUJh9ltF0",
+        "youtube_embed": "https://www.youtube.com/embed/L4YUJh9ltF0",
+        "youtube_url": "https://youtu.be/L4YUJh9ltF0"
+      },
+      "complexity": {
+        "id": "trung-binh",
+        "label": "🟡 Trung bình (9-18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
       "id": "LAZADA_Ulanzi_Chân_Đế_Tự_Sướng_Có_Từ_Tính_",
       "shortcode": "LAZADA_Ulanzi_Chân_Đế_Tự_Sướng_Có_Từ_Tính_",
       "title_vi": "Ulanzi | Chân Đế Tự Sướng Có Từ Tính với Hỗ Trợ Camera Điện Thoại, Đa Năng và Di Động",
@@ -3579,7 +3715,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": true
+      "is_excluded": false
     },
     {
       "id": "IG_@Yegor.Sky_DaFDqk4CGB1_Video_by_yegor.sky",
@@ -6007,7 +6143,7 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@ALLURE_cafe_bar_DdF81brAiIj_Video_by_allure.cafebar",
       "shortcode": "DdF81brAiIj",
-      "title_vi": "The Place You Wanna Be • Nghệ Thuật Kể Chuyện Không Gian Cafe & Barista Showmanship (@allure.cafebar)",
+      "title_vi": "Video by allure.cafebar",
       "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 17 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide",
       "shooting_style": {
@@ -6068,7 +6204,7 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@주서방_DbA22ywhMSI_Video_by_ju_seobang",
       "shortcode": "DbA22ywhMSI",
-      "title_vi": "Cách 'Câu' Kẹo Của Bố Vợ • Tuyệt Kỹ Hài Tình Huống Triệu View (@ju_seobang)",
+      "title_vi": "@주서방 - Video by ju seobang",
       "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 10 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide",
       "shooting_style": {
@@ -6378,7 +6514,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": true
+      "is_excluded": false
     },
     {
       "id": "SHOPEE_ULANZI_MT80_Chân_Máy_Tripod_Cao_213cm_Tả",
@@ -6449,7 +6585,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": true
+      "is_excluded": false
     },
     {
       "id": "IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing",

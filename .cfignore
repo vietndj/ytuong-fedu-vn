@@ -1,0 +1,8 @@
+.git/
+.github/
+.wrangler/
+__pycache__/
+*.py
+.env*
+.vercel
+node_modules/

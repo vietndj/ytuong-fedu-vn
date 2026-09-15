@@ -1,11 +1,5 @@
 {
-  "deleted_ids": [
-    "LAZADA_Ulanzi_Đèn_LED_Thanh_Bơm_Hơi_UA20,_"
-  ],
   "excluded_ids": [
-    "LAZADA_Ulanzi_Chân_Đế_Tự_Sướng_Có_Từ_Tính_",
-    "SHOPEE_ULANZI_MT80_Chân_Máy_Tripod_Cao_213cm_Tả",
-    "LAZADA_Ulanzi_UA20_Đèn_LED_Thanh_Bơm_Hơi_20W_Bi",
     "IG_@Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast",
     "Practice_Cinematic_Chay_0903_2_@vietmac",
     "FB_@KopDinh_1398467868829887_Lat_Cat_Cam_Xuc_Kop_Dinh",
@@ -60,12 +54,7 @@
     "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01": "thuong-hieu",
     "IG_@pascal_blaurock_Dcd2VeyNJQx_iPhone_Cinema_Settings_Mastery": "cong-nghe",
     "IG_@kortafilms_DcdthwaTM3J_Camera_Angles_Mastery": "cong-nghe",
-    "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds": "ky-thuat-quay",
-    "IG_@iman.lizi_Dc6qXoKoYKh": "ky-thuat-quay",
-    "IG_@hayancook_DdSUI9BvhqR": "am-thuc",
-    "IG_@cushygarden_DdL6pHDSKRc": "kien-truc",
-    "IG_@dev_zero_Db-S8i1hXwF": "kien-truc",
-    "IG_@nagisa.decor_Dco_DevvUla": "kien-truc"
+    "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds": "ky-thuat-quay"
   },
   "custom_shooting_style_overrides": {
     "IG_@tinanguyen2004_7673468312290037012_Double_Day_luon_la_dip_de_khach_hang_lua_duoc": "walk-and-talk",
@@ -112,12 +101,7 @@
     "IG_@brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession": "chuyen-canh",
     "IG_@Ben_Db6a3tHoWTS_Video_by_by.bennnj": "chuyen-canh",
     "Hong_Kong_Urban_Transitions_@withyuee": "chuyen-canh",
-    "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds": "chuyen-canh",
-    "IG_@iman.lizi_Dc6qXoKoYKh": "dien-anh",
-    "IG_@hayancook_DdSUI9BvhqR": "voice-over",
-    "IG_@cushygarden_DdL6pHDSKRc": "voice-over",
-    "IG_@dev_zero_Db-S8i1hXwF": "storytelling",
-    "IG_@nagisa.decor_Dco_DevvUla": "dien-anh"
+    "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds": "chuyen-canh"
   },
   "custom_title_overrides": {
     "IG_@tinanguyen2004_7673468312290037012_Double_Day_luon_la_dip_de_khach_hang_lua_duoc": "Tina Nguyễn • Phóng Sự Y Khoa Da Liễu & Flash Sale Double Day 8.8",
@@ -133,8 +117,6 @@
     "IG_@jeromememe_Db-zVchOXV7_People_of_Bhutan": "Jerome Teo • People of Bhutan: Ngôn Ngữ Điện Ảnh & Hạnh Phúc Himalaya",
     "IG_@mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery": "Mridupawan Sharma • 4 Kỹ Thuật Cắt Cảnh Nâng Tầm Video Điện Ảnh",
     "IG_@kenshoji.visuals_DZOzwweTc5a_The_Art_of_Static_Shot": "Ken Shoji • The Art of Static Shot: Triết Lý Để Thế Giới Tự Chuyển Động",
-    "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds": "Layton • 6 Góc Máy Trong 60 Giây: Thao Lược B-Roll Thần Tốc Cầu Đi Bộ",
-    "IG_@주서방_DbA22ywhMSI_Video_by_ju_seobang": "Cách 'Câu' Kẹo Của Bố Vợ • Tuyệt Kỹ Hài Tình Huống Triệu View (@ju_seobang)",
-    "IG_@ALLURE_cafe_bar_DdF81brAiIj_Video_by_allure.cafebar": "The Place You Wanna Be • Nghệ Thuật Kể Chuyện Không Gian Cafe & Barista Showmanship (@allure.cafebar)"
+    "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds": "Layton • 6 Góc Máy Trong 60 Giây: Thao Lược B-Roll Thần Tốc Cầu Đi Bộ"
   }
 }

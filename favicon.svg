@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f17" />
+      <stop offset="100%" stop-color="#1e2b42" />
+    </linearGradient>
+    <linearGradient id="yGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <rect width="512" height="512" rx="120" fill="url(#bgGrad)" />
+  
+  <g filter="url(#glow)">
+    <!-- The big bold Y -->
+    <path d="M 140 140 L 256 300 L 372 140 M 256 300 L 256 420" 
+          stroke="url(#yGrad)" 
+          stroke-width="80" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          fill="none" />
+          
+    <!-- Idea spark (lightbulb star) -->
+    <path d="M 380 90 Q 380 130 420 130 Q 380 130 380 170 Q 380 130 340 130 Q 380 130 380 90 Z" 
+          fill="#fcd34d" />
+  </g>
+</svg>
