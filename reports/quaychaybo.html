@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cẩm Nang Đạo Diễn: Quay Chạy Bộ Times City • Storyboard Đối Chiếu Song Song</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #070B12;
+            --bg-secondary: #0E1626;
+            --bg-card: #141E33;
+            --bg-card-hover: #1B2945;
+            --border-color: rgba(255, 255, 255, 0.09);
+            --border-focus: #38BDF8;
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            --accent-cyan: #38BDF8;
+            --accent-amber: #F59E0B;
+            --accent-emerald: #10B981;
+            --accent-rose: #F43F5E;
+            --accent-purple: #A855F7;
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --shadow-card: 0 12px 30px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding-bottom: 110px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(180deg, #0F172A 0%, #070B12 100%);
+            border-bottom: 1px solid var(--border-color);
+            padding: 44px 0 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -120px;
+            right: -120px;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, rgba(7, 11, 18, 0) 70%);
+            pointer-events: none;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--accent-cyan);
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            letter-spacing: -0.5px;
+            line-height: 1.25;
+            margin-bottom: 10px;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, #38BDF8 0%, #818CF8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 960px;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .quick-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .quick-link {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 7px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 0.82rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .quick-link:hover {
+            background: var(--accent-cyan);
+            color: #070B12;
+            border-color: var(--accent-cyan);
+            transform: translateY(-2px);
+        }
+
+        /* Section Headings */
+        .section-header {
+            margin: 40px 0 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-badge {
+            font-size: 0.76rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            text-transform: uppercase;
+        }
+
+        .badge-cyan { background: rgba(56, 189, 248, 0.15); color: var(--accent-cyan); border: 1px solid rgba(56, 189, 248, 0.3); }
+        .badge-amber { background: rgba(245, 158, 11, 0.15); color: var(--accent-amber); border: 1px solid rgba(245, 158, 11, 0.3); }
+        .badge-emerald { background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); border: 1px solid rgba(16, 185, 129, 0.3); }
+
+        /* Storyboard Detailed Beat Row (Side-by-Side) */
+        .beat-container {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            margin-top: 20px;
+        }
+
+        .beat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: border-color 0.25s ease;
+        }
+
+        .beat-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+
+        .beat-header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .beat-title-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .beat-number-badge {
+            background: var(--accent-cyan);
+            color: #070B12;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 800;
+            font-size: 0.82rem;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .beat-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+
+        .beat-time-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82rem;
+            color: var(--accent-amber);
+            font-weight: 700;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .beat-content-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Dual Comparison Visuals */
+        .dual-visual-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .visual-box {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .visual-label {
+            font-size: 0.76rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .label-case { color: var(--accent-amber); }
+        .label-viet { color: var(--accent-cyan); }
+
+        .img-frame {
+            position: relative;
+            width: 100%;
+            padding-top: 130%; /* 9:16 vertical ratio for true mobile video frames */
+            background: #000000;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+        }
+
+        .img-frame img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.35s ease;
+        }
+
+        .img-frame:hover img {
+            transform: scale(1.06);
+        }
+
+        .img-overlay-tag {
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            background: rgba(7, 11, 18, 0.85);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #FFFFFF;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            z-index: 2;
+        }
+
+        .zoom-badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #FFFFFF;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 3px 6px;
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .img-frame:hover .zoom-badge {
+            opacity: 1;
+        }
+
+        /* Director Instructions Column */
+        .director-info-col {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 16px;
+        }
+
+        .instruction-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .instruction-label {
+            font-size: 0.76rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lbl-stand { color: #38BDF8; }
+        .lbl-camera { color: #F59E0B; }
+        .lbl-act { color: #10B981; }
+        .lbl-foley { color: #C084FC; }
+
+        .instruction-val {
+            font-size: 0.86rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .instruction-val strong {
+            color: #FFFFFF;
+        }
+
+        .gear-pill-tag {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            width: fit-content;
+        }
+
+        .pill-sony { background: rgba(56, 189, 248, 0.15); color: #38BDF8; border: 1px solid rgba(56, 189, 248, 0.3); }
+        .pill-lens { background: rgba(245, 158, 11, 0.15); color: #F59E0B; border: 1px solid rgba(245, 158, 11, 0.3); }
+        .pill-iphone { background: rgba(168, 85, 247, 0.15); color: #C084FC; border: 1px solid rgba(168, 85, 247, 0.3); }
+
+        /* Script Tab Controls */
+        .script-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .script-tab-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 10px 18px;
+            border-radius: var(--radius-md);
+            font-size: 0.88rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .script-tab-btn.active {
+            background: var(--accent-cyan);
+            color: #070B12;
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.35);
+        }
+
+        .script-pane { display: none; }
+        .script-pane.active { display: block; }
+
+        /* Lightbox Modal */
+        .modal-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(12px);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-backdrop.active {
+            display: flex;
+        }
+
+        .modal-dialog {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            max-width: 900px;
+            width: 100%;
+            max-height: 92vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+            position: relative;
+        }
+
+        .modal-img-container {
+            background: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            max-height: 70vh;
+        }
+
+        .modal-img-container img {
+            max-width: 100%;
+            max-height: 66vh;
+            object-fit: contain;
+            border-radius: var(--radius-sm);
+        }
+
+        .modal-caption {
+            padding: 18px 24px;
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: #FFFFFF;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            z-index: 10;
+            transition: background 0.2s;
+        }
+
+        .modal-close-btn:hover {
+            background: var(--accent-rose);
+        }
+
+        @media (max-width: 900px) {
+            .beat-content-grid { grid-template-columns: 1fr; }
+            .dual-visual-wrapper { grid-template-columns: 1fr; }
+            .hero-title { font-size: 1.7rem; }
+        }
+    
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-tag">
+                <span>⚡ MASTER DIRECTOR BLUEPRINT • AUDITED RUNNING FRAMES</span>
+            </div>
+            <h1 class="hero-title">Cẩm Nang Đạo Diễn: <span>Quay Chạy Bộ Times City</span></h1>
+            <p class="hero-desc">
+                Bảng phân cảnh đối chiếu trực quan 1-1: <strong>Khung hình mẫu chạy bộ chuẩn xác 100%</strong> (@samuelaitken_) vs <strong>Bối cảnh thực tế Times City của anh Việt</strong>. Chỉ dẫn chính xác <em>Vị trí đứng trong ảnh, cự ly đặt Tripod, tư thế sải chân, biểu cảm và thiết bị quay cụ thể</em>.
+            </p>
+
+            <div class="quick-nav">
+                <a href="https://fedu.vn/reports/Bao_Cao_Boi_Canh_Thuc_Chien_R2.html" target="_blank" class="quick-link">
+                    📍 Bản Đồ 124 Bối Cảnh R2
+                </a>
+                <a href="https://fedu.vn/reports/Aesthetic_Routine_Fitness%20-%20@samuelaitken_.html" target="_blank" class="quick-link">
+                    🏃 Case Samuel Aitken (Aesthetic Running Routine)
+                </a>
+                <a href="https://fedu.vn/reports/The%20Art%20of%20Static%20Shot%20-%20@kenshoji.visuals.html" target="_blank" class="quick-link">
+                    📐 Case Kenshoji (Cú Máy Tĩnh)
+                </a>
+                <a href="https://fedu.vn/reports/The%20Art%20of%20Visual%20Sequence%20-%20@bryanhynes.html" target="_blank" class="quick-link">
+                    🔄 Case Bryan Hynes (Visual Sequence)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="margin-top: 36px;">
+
+        <!-- Section 1: Detailed Storyboard Beats -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span>🎬 1. Bảng Phân Cảnh Đối Chiếu Song Song (Ảnh Mẫu Chạy Bộ Thật vs Bối Cảnh Thực Tế)</span>
+                </h2>
+                <span class="section-badge badge-cyan">100% Verified Running Shots</span>
+            </div>
+
+            <!-- Tab Switcher -->
+            <div class="script-tabs">
+                <button class="script-tab-btn active" onclick="switchScript('pane1', this)">🔥 Kịch Bản 1: Kỷ Luật Chạy Bộ Buổi Sáng (Aesthetic Routine • 30s)</button>
+                <button class="script-tab-btn" onclick="switchScript('pane2', this)">🍃 Kịch Bản 2: Thức Tỉnh & Tĩnh Tâm Dưới Vòm Cây (35s)</button>
+                <button class="script-tab-btn" onclick="switchScript('pane3', this)">🔄 Kịch Bản 3: Match-Cut Đường Chạy x Gym California (45s)</button>
+            </div>
+
+            <!-- PANE 1 -->
+            <div id="pane1" class="script-pane active">
+                <div class="beat-container">
+
+                    <!-- BEAT 1.1 -->
+                    <div class="beat-card">
+                        <div class="beat-header">
+                            <div class="beat-title-box">
+                                <span class="beat-number-badge">PHÂN CẢNH 1.1</span>
+                                <h3 class="beat-title">Hook Cận Cảnh: Đôi Tay Siết Chặt Dây Giày Chạy Bộ & Đồng Hồ Garmin</h3>
+                            </div>
+                            <span class="beat-time-badge">⏱️ 0:00 - 0:04</span>
+                        </div>
+                        <div class="beat-content-grid">
+                            <!-- Dual Visuals -->
+                            <div class="dual-visual-wrapper">
+                                <!-- Frame Mẫu Case Samuel Aitken -->
+                                <div class="visual-box">
+                                    <div class="visual-label label-case">
+                                        <span>🎬 KHUNG HÌNH MẪU (@samuelaitken_)</span>
+                                        <a href="https://fedu.vn/reports/Aesthetic_Routine_Fitness%20-%20@samuelaitken_.html" target="_blank" style="color: var(--accent-amber); font-size: 0.7rem;">Báo Cáo Gốc ↗</a>
+                                    </div>
+                                    <div class="img-frame" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_011_7bd9b14b.jpg', 'Khung Mẫu Case @samuelaitken_: Cận cảnh cúi xuống siết chặt dây giày chạy bộ Adidas, cổ tay đeo đồng hồ Garmin.')">
+                                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_011_7bd9b14b.jpg" alt="Tying running shoes">
+                                        <div class="img-overlay-tag">CASE MẪU: BUỘC DÂY GIÀY CHẠY</div>
+                                        <div class="zoom-badge">🔍 Phóng to</div>
+                                    </div>
+                                    <div style="font-size: 0.78rem; color: var(--accent-amber);">💡 Tư thế mẫu: Bàn tay siết chặt dây giày chạy bộ Adidas, trên cổ tay lộ rõ đồng hồ thể thao.</div>
+                                </div>
+
+                                <!-- Bối Cảnh Thực Tế Anh Việt -->
+                                <div class="visual-box">
+                                    <div class="visual-label label-viet">
+                                        <span>📍 BỐI CẢNH THỰC TẾ (ANH VIỆT)</span>
+                                        <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_115.jpg" target="_blank" style="color: var(--accent-cyan); font-size: 0.7rem;">Ảnh R2 ↗</a>
+                                    </div>
+                                    <div class="img-frame" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_115.jpg', 'Bối Cảnh Thực Tế LOC_115: Phòng quay sàn gỗ ấm áp dưới vệt nắng sớm.')">
+                                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_115.jpg" alt="LOC_115">
+                                        <div class="img-overlay-tag">LOC_115 • SÀN GỖ PHÒNG QUAY</div>
+                                        <div class="zoom-badge">🔍 Phóng to</div>
+                                    </div>
+                                    <div style="font-size: 0.78rem; color: var(--accent-cyan);">📍 Vị trí: Đặt sát sàn gỗ ngay chỗ có vệt nắng sớm rọi qua cửa kính.</div>
+                                </div>
+                            </div>
+
+                            <!-- Director Instructions -->
+                            <div class="director-info-col">
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-stand">📍 VỊ TRÍ ANH VIỆT ĐỨNG/NGỒI TRONG ẢNH:</span>
+                                    <p class="instruction-val">Anh ngồi/quỳ gối một chân ở <strong>góc 1/3 bên phải sàn gỗ LOC_115</strong>, nơi có vệt nắng ban mai chiếu qua mép cửa kính.</p>
+                                </div>
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-camera">🎥 VỊ TRÍ ĐẶT MÁY & THIẾT BỊ:</span>
+                                    <p class="instruction-val">
+                                        <span class="gear-pill-tag pill-iphone">iPhone 13 mini</span> • Đặt tĩnh trên sàn gỗ cao <strong>15cm</strong>, góc ngước chếch 45° Top-Down lấy trọn cổ tay và mũi giày.
+                                    </p>
+                                </div>
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-act">🏃 TƯ THẾ & BIỂU CẢM:</span>
+                                    <p class="instruction-val">Hai tay kéo căng và thắt nút dây giày chạy dứt khoát ➡️ Ngón trỏ nhấn nút Start trên đồng hồ thể thao kích hoạt buổi chạy.</p>
+                                </div>
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-foley">🎙️ ÂM THANH (DJI MIC NANO):</span>
+                                    <p class="instruction-val">Thu cận tiếng <em>click</em> nút bấm đồng hồ + tiếng cọ xát dây giày vào khoen kim loại ASMR.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BEAT 1.2 -->
+                    <div class="beat-card">
+                        <div class="beat-header">
+                            <div class="beat-title-box">
+                                <span class="beat-number-badge">PHÂN CẢNH 1.2</span>
+                                <h3 class="beat-title">Hero Shot: Nén Phối Cảnh 85mm Runner Lao Thẳng Về Ống Kính</h3>
+                            </div>
+                            <span class="beat-time-badge">⏱️ 0:04 - 0:12</span>
+                        </div>
+                        <div class="beat-content-grid">
+                            <!-- Dual Visuals -->
+                            <div class="dual-visual-wrapper">
+                                <!-- Frame Mẫu Case Samuel Aitken -->
+                                <div class="visual-box">
+                                    <div class="visual-label label-case">
+                                        <span>🎬 KHUNG HÌNH MẪU (@samuelaitken_)</span>
+                                        <a href="https://fedu.vn/reports/Aesthetic_Routine_Fitness%20-%20@samuelaitken_.html" target="_blank" style="color: var(--accent-amber); font-size: 0.7rem;">Báo Cáo Gốc ↗</a>
+                                    </div>
+                                    <div class="img-frame" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_019_7ceffd30.jpg', 'Khung Mẫu Case @samuelaitken_: Người chạy bộ mặc đồ thể thao sải bước lao thẳng về phía ống kính ngoài trời.')">
+                                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_019_7ceffd30.jpg" alt="Running towards camera">
+                                        <div class="img-overlay-tag">CASE MẪU: HERO RUNNING TOWARD CAM</div>
+                                        <div class="zoom-badge">🔍 Phóng to</div>
+                                    </div>
+                                    <div style="font-size: 0.78rem; color: var(--accent-amber);">💡 Tư thế mẫu: Chạy thẳng về ống kính, sải chân dài, ngực ưỡn nhẹ, mắt nhìn thẳng vào ống kính.</div>
+                                </div>
+
+                                <!-- Bối Cảnh Thực Tế Anh Việt -->
+                                <div class="visual-box">
+                                    <div class="visual-label label-viet">
+                                        <span>📍 BỐI CẢNH THỰC TẾ (ANH VIỆT)</span>
+                                        <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_14.jpg" target="_blank" style="color: var(--accent-cyan); font-size: 0.7rem;">Ảnh R2 ↗</a>
+                                    </div>
+                                    <div class="img-frame" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_14.jpg', 'Bối Cảnh Thực Tế LOC_014: Đường hầm vòm cây xanh rợp bóng mát rượi.')">
+                                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_14.jpg" alt="LOC_014">
+                                        <div class="img-overlay-tag">LOC_014 • ĐƯỜNG HẦM CÂY XANH</div>
+                                        <div class="zoom-badge">🔍 Phóng to</div>
+                                    </div>
+                                    <div style="font-size: 0.78rem; color: var(--accent-cyan);">📍 Vị trí: Chạy từ cuối đường hầm cây (chấm xa) lao thẳng về máy.</div>
+                                </div>
+                            </div>
+
+                            <!-- Director Instructions -->
+                            <div class="director-info-col">
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-stand">📍 VỊ TRÍ ANH VIỆT ĐỨNG TRONG ẢNH:</span>
+                                    <p class="instruction-val">Xuất phát ở <strong>tận cùng con đường hầm cây LOC_014 (cách máy 35 mét)</strong>, ngay chính giữa trục tim đường lát đá.</p>
+                                </div>
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-camera">🎥 VỊ TRÍ ĐẶT MÁY & THIẾT BỊ:</span>
+                                    <p class="instruction-val">
+                                        <span class="gear-pill-tag pill-sony">Sony ZV-E10</span> + <span class="gear-pill-tag pill-lens">Sony FE 85mm f/1.8</span> (~128mm)<br>
+                                        Đặt Tripod cao <strong>1m10 ngang tầm ngực</strong>, khẩu <strong>f/2.0</strong>, 1080p 120fps Slow-mo 5x, bật AF-C Face Tracking.
+                                    </p>
+                                </div>
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-act">🏃 TƯ THẾ & BIỂU CẢM:</span>
+                                    <p class="instruction-val">Chạy nước rút sải bước dài, nhịp thở dứt khoát. Ở 5 mét cuối khi gần đến máy, mắt nhìn thẳng vào ống kính với thần thái tự tin, kiên định như frame mẫu.</p>
+                                </div>
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-foley">🎙️ ÂM THANH (DJI MIC NANO):</span>
+                                    <p class="instruction-val">Kẹp mic cổ áo thu âm nhịp thở lấy oxy sâu + tiếng nện đất dồn dập.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BEAT 1.3 -->
+                    <div class="beat-card">
+                        <div class="beat-header">
+                            <div class="beat-title-box">
+                                <span class="beat-number-badge">PHÂN CẢNH 1.3</span>
+                                <h3 class="beat-title">Speed Pass: Guồng Chân Sát Mặt Đất</h3>
+                            </div>
+                            <span class="beat-time-badge">⏱️ 0:12 - 0:20</span>
+                        </div>
+                        <div class="beat-content-grid">
+                            <!-- Dual Visuals -->
+                            <div class="dual-visual-wrapper">
+                                <!-- Frame Mẫu Case Samuel Aitken -->
+                                <div class="visual-box">
+                                    <div class="visual-label label-case">
+                                        <span>🎬 KHUNG HÌNH MẪU (@samuelaitken_)</span>
+                                        <a href="https://fedu.vn/reports/Aesthetic_Routine_Fitness%20-%20@samuelaitken_.html" target="_blank" style="color: var(--accent-amber); font-size: 0.7rem;">Báo Cáo Gốc ↗</a>
+                                    </div>
+                                    <div class="img-frame" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_017_7054d1ae.jpg', 'Khung Mẫu Case @samuelaitken_: Cận cảnh sải chân guồng nhanh trên đường chạy.')">
+                                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_017_7054d1ae.jpg" alt="Running stride low angle">
+                                        <div class="img-overlay-tag">CASE MẪU: LOW STRIDE SPEED</div>
+                                        <div class="zoom-badge">🔍 Phóng to</div>
+                                    </div>
+                                    <div style="font-size: 0.78rem; color: var(--accent-amber);">💡 Tư thế mẫu: Sải chân guồng nhanh tạo cảm giác chuyển động lao vút về phía trước.</div>
+                                </div>
+
+                                <!-- Bối Cảnh Thực Tế Anh Việt -->
+                                <div class="visual-box">
+                                    <div class="visual-label label-viet">
+                                        <span>📍 BỐI CẢNH THỰC TẾ (ANH VIỆT)</span>
+                                        <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_20.jpg" target="_blank" style="color: var(--accent-cyan); font-size: 0.7rem;">Ảnh R2 ↗</a>
+                                    </div>
+                                    <div class="img-frame" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_20.jpg', 'Bối Cảnh Thực Tế LOC_020: Đường chạy ven hồ thảm cỏ hoa rực rỡ.')">
+                                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_20.jpg" alt="LOC_020">
+                                        <div class="img-overlay-tag">LOC_020 • ĐƯỜNG CHẠY VEN HỒ</div>
+                                        <div class="zoom-badge">🔍 Phóng to</div>
+                                    </div>
+                                    <div style="font-size: 0.78rem; color: var(--accent-cyan);">📍 Vị trí: Đặt máy sát mép đá cobble, anh chạy lướt ngang qua sát mép ống kính.</div>
+                                </div>
+                            </div>
+
+                            <!-- Director Instructions -->
+                            <div class="director-info-col">
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-stand">📍 VỊ TRÍ ANH VIỆT ĐỨNG TRONG ẢNH:</span>
+                                    <p class="instruction-val">Chạy dọc theo <strong>đường lát đá ven hồ LOC_020</strong>, băng qua từ bên trái khung hình sang bên phải cách máy chỉ <strong>80cm</strong>.</p>
+                                </div>
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-camera">🎥 VỊ TRÍ ĐẶT MÁY & THIẾT BỊ:</span>
+                                    <p class="instruction-val">
+                                        <span class="gear-pill-tag pill-iphone">iPhone 17 Pro</span> • Đặt tựa chân tripod cao <strong>10cm sát mặt đất</strong>, góc ngước nhẹ 15°, góc siêu rộng 0.5x Ultra Wide 4K60.
+                                    </p>
+                                </div>
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-act">🏃 TƯ THẾ & BIỂU CẢM:</span>
+                                    <p class="instruction-val">Guồng chân sải rộng, mũi giày tiếp đất nẩy nước sớm. Thân người nghiêng nhẹ theo gia tốc như frame mẫu.</p>
+                                </div>
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-foley">🎙️ ÂM THANH (DJI MIC NANO):</span>
+                                    <p class="instruction-val">Tiếng gót giày nện xuống mặt đá cobble giòn tan + tiếng gió rít qua mic.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BEAT 1.4 -->
+                    <div class="beat-card">
+                        <div class="beat-header">
+                            <div class="beat-title-box">
+                                <span class="beat-number-badge">PHÂN CẢNH 1.4</span>
+                                <h3 class="beat-title">Về Đích: Bấm Đồng Hồ Hoàn Thành & Đón Ánh Nắng Bình Minh</h3>
+                            </div>
+                            <span class="beat-time-badge">⏱️ 0:20 - 0:30</span>
+                        </div>
+                        <div class="beat-content-grid">
+                            <!-- Dual Visuals -->
+                            <div class="dual-visual-wrapper">
+                                <!-- Frame Mẫu Case Samuel Aitken -->
+                                <div class="visual-box">
+                                    <div class="visual-label label-case">
+                                        <span>🎬 KHUNG HÌNH MẪU (@samuelaitken_)</span>
+                                        <a href="https://fedu.vn/reports/Aesthetic_Routine_Fitness%20-%20@samuelaitken_.html" target="_blank" style="color: var(--accent-amber); font-size: 0.7rem;">Báo Cáo Gốc ↗</a>
+                                    </div>
+                                    <div class="img-frame" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_015_2d0e7626.jpg', 'Khung Mẫu Case @samuelaitken_: Cánh tay cơ bắp đưa lên bấm đồng hồ ghi nhận thành tích buổi chạy.')">
+                                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_015_2d0e7626.jpg" alt="Watch finish stop">
+                                        <div class="img-overlay-tag">CASE MẪU: STOPWATCH FINISH</div>
+                                        <div class="zoom-badge">🔍 Phóng to</div>
+                                    </div>
+                                    <div style="font-size: 0.78rem; color: var(--accent-amber);">💡 Tư thế mẫu: Cánh tay đưa lên bấm nút Stop trên đồng hồ thể thao, đứng thở sâu sau buổi chạy.</div>
+                                </div>
+
+                                <!-- Bối Cảnh Thực Tế Anh Việt -->
+                                <div class="visual-box">
+                                    <div class="visual-label label-viet">
+                                        <span>📍 BỐI CẢNH THỰC TẾ (ANH VIỆT)</span>
+                                        <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_04.jpg" target="_blank" style="color: var(--accent-cyan); font-size: 0.7rem;">Ảnh R2 ↗</a>
+                                    </div>
+                                    <div class="img-frame" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_04.jpg', 'Bối Cảnh Thực Tế LOC_004: Quảng trường mở đón bầu trời xanh ngập nắng.')">
+                                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_04.jpg" alt="LOC_004">
+                                        <div class="img-overlay-tag">LOC_004 • QUẢNG TRƯỜNG BÌNH MINH</div>
+                                        <div class="zoom-badge">🔍 Phóng to</div>
+                                    </div>
+                                    <div style="font-size: 0.78rem; color: var(--accent-cyan);">📍 Vị trí: Đứng chính giữa quảng trường đón ánh nắng ban mai.</div>
+                                </div>
+                            </div>
+
+                            <!-- Director Instructions -->
+                            <div class="director-info-col">
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-stand">📍 VỊ TRÍ ANH VIỆT ĐỨNG TRONG ẢNH:</span>
+                                    <p class="instruction-val">Chạy bứt tốc từ góc trái tiến vào <strong>chính tâm điểm quảng trường mở LOC_004 (cách máy 8 mét)</strong>.</p>
+                                </div>
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-camera">🎥 VỊ TRÍ ĐẶT MÁY & THIẾT BỊ:</span>
+                                    <p class="instruction-val">
+                                        <span class="gear-pill-tag pill-sony">Sony A6400</span> + <span class="gear-pill-tag pill-lens">Sigma 35mm f/1.4</span><br>
+                                        Đặt Tripod thấp <strong>80cm ngang hông</strong> ngước nhẹ lên bầu trời xanh, khẩu <strong>f/2.8</strong>, 4K 24fps.
+                                    </p>
+                                </div>
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-act">🏃 TƯ THẾ & BIỂU CẢM:</span>
+                                    <p class="instruction-val">Dừng bước chạy, đưa tay bấm nút Stop trên đồng hồ ➡️ chống hai tay vào hông, ngực ưỡn nhẹ hít thở sâu, ngước nhìn lên không trung mỉm cười đón nhận ngày mới tràn đầy sinh lực.</p>
+                                </div>
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-foley">🎙️ LỜI DẪN VOICE-OVER:</span>
+                                    <p class="instruction-val" style="color: #FFFFFF; font-style: italic;">
+                                        "Ngày mới không chờ đợi ai. Bạn làm chủ nó, hoặc để nó làm chủ bạn."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- PANE 2 -->
+            <div id="pane2" class="script-pane">
+                <div class="beat-container">
+                    <!-- Beat 2.1 -->
+                    <div class="beat-card">
+                        <div class="beat-header">
+                            <div class="beat-title-box">
+                                <span class="beat-number-badge">PHÂN CẢNH 2.1</span>
+                                <h3 class="beat-title">One-Point Perspective: Khung Tĩnh Đường Chạy Sâu Thẳm</h3>
+                            </div>
+                            <span class="beat-time-badge">⏱️ 0:00 - 0:08</span>
+                        </div>
+                        <div class="beat-content-grid">
+                            <div class="dual-visual-wrapper">
+                                <div class="visual-box">
+                                    <div class="visual-label label-case">
+                                        <span>🎬 KHUNG HÌNH MẪU (@samuelaitken_)</span>
+                                        <a href="https://fedu.vn/reports/Aesthetic_Routine_Fitness%20-%20@samuelaitken_.html" target="_blank" style="color: var(--accent-amber); font-size: 0.7rem;">Báo Cáo Gốc ↗</a>
+                                    </div>
+                                    <div class="img-frame" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_013_7b54a1c1.jpg', 'Khung Mẫu Case @samuelaitken_: Nhún bật thể lực khởi động trên đường chạy.')">
+                                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_013_7b54a1c1.jpg" alt="Warm up jumps">
+                                        <div class="img-overlay-tag">CASE MẪU: WARM-UP JUMPS</div>
+                                        <div class="zoom-badge">🔍 Phóng to</div>
+                                    </div>
+                                </div>
+                                <div class="visual-box">
+                                    <div class="visual-label label-viet">
+                                        <span>📍 BỐI CẢNH THỰC TẾ (ANH VIỆT)</span>
+                                        <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_01.jpg" target="_blank" style="color: var(--accent-cyan); font-size: 0.7rem;">Ảnh R2 ↗</a>
+                                    </div>
+                                    <div class="img-frame" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_01.jpg', 'Bối Cảnh Thực Tế LOC_001: Đường chạy bộ dưới tán cây xanh mát dọc trục đường thẳng.')">
+                                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_01.jpg" alt="LOC_001">
+                                        <div class="img-overlay-tag">LOC_001 • TRỤC ĐƯỜNG RỢP BÓNG</div>
+                                        <div class="zoom-badge">🔍 Phóng to</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="director-info-col">
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-stand">📍 VỊ TRÍ ANH VIỆT ĐỨNG TRONG ẢNH:</span>
+                                    <p class="instruction-val">Khung hình để trống 2 giây đầu, sau đó anh chạy từ <strong>điểm tụ xa nhất (tâm điểm ảnh LOC_001)</strong> nhịp nhàng tiến về phía trước.</p>
+                                </div>
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-camera">🎥 VỊ TRÍ ĐẶT MÁY & THIẾT BỊ:</span>
+                                    <p class="instruction-val">
+                                        <span class="gear-pill-tag pill-sony">Sony A6400</span> + <span class="gear-pill-tag pill-lens">Sigma 35mm f/1.4</span><br>
+                                        Đặt Tripod ở tim đường cao <strong>1m20</strong>, khẩu <strong>f/1.8</strong> cho hiệu ứng 3D Pop.
+                                    </p>
+                                </div>
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-act">🏃 TƯ THẾ & BIỂU CẢM:</span>
+                                    <p class="instruction-val">Chạy nhẹ nhàng, thư thái, nhịp thở sâu, cảm nhận bầu không khí trong lành buổi sáng.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANE 3 -->
+            <div id="pane3" class="script-pane">
+                <div class="beat-container">
+                    <!-- Beat 3.1 -->
+                    <div class="beat-card">
+                        <div class="beat-header">
+                            <div class="beat-title-box">
+                                <span class="beat-number-badge">PHÂN CẢNH 3.1</span>
+                                <h3 class="beat-title">Match Cut: Chạy Ngoài Trời ➡️ Nước Rút Dàn Treadmill Gym Cali</h3>
+                            </div>
+                            <span class="beat-time-badge">⏱️ 0:00 - 0:30</span>
+                        </div>
+                        <div class="beat-content-grid">
+                            <div class="dual-visual-wrapper">
+                                <div class="visual-box">
+                                    <div class="visual-label label-case">
+                                        <span>🎬 BỐI CẢNH 1: NGOÀI TRỜI TIMES CITY</span>
+                                        <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_01.jpg" target="_blank" style="color: var(--accent-amber); font-size: 0.7rem;">Ảnh R2 ↗</a>
+                                    </div>
+                                    <div class="img-frame" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_01.jpg', 'Bối Cảnh Ngoại Cảnh LOC_001: Chạy bước dài trên đường đá.')">
+                                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_01.jpg" alt="LOC_001">
+                                        <div class="img-overlay-tag">LOC_001 • NGOẠI CẢNH</div>
+                                        <div class="zoom-badge">🔍 Phóng to</div>
+                                    </div>
+                                </div>
+                                <div class="visual-box">
+                                    <div class="visual-label label-viet">
+                                        <span>📍 BỐI CẢNH 2: GYM CALIFORNIA</span>
+                                        <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_02.jpg" target="_blank" style="color: var(--accent-cyan); font-size: 0.7rem;">Ảnh R2 ↗</a>
+                                    </div>
+                                    <div class="img-frame" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_02.jpg', 'Bối Cảnh Gym California LOC_002: Dàn máy chạy bộ view kính Panorama.')">
+                                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/locations/raw/loc_02.jpg" alt="LOC_002">
+                                        <div class="img-overlay-tag">LOC_002 • GYM CALIFORNIA</div>
+                                        <div class="zoom-badge">🔍 Phóng to</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="director-info-col">
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-act">✂️ KỸ THUẬT MATCH CUT ON ACTION:</span>
+                                    <p class="instruction-val">Mũi giày chân phải nện xuống mặt đường đá ngoài trời ➡️ <strong>Cut ngay khoảnh khắc chạm đất</strong> ➡️ Mũi giày tiếp tục nện xuống băng chuyền máy chạy Technogym view kính Panorama.</p>
+                                </div>
+                                <div class="instruction-group">
+                                    <span class="instruction-label lbl-camera">🎥 THIẾT BỊ SỬ DỤNG:</span>
+                                    <p class="instruction-val">
+                                        <span class="gear-pill-tag pill-sony">Sony ZV-E10</span> (Ngoài trời) + <span class="gear-pill-tag pill-lens">Sigma 35mm f/1.4</span> (Trong phòng Gym Cali).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Fullscreen Lightbox Modal -->
+    <div class="modal-backdrop" id="lightboxModal" onclick="closeLightbox(event)">
+        <div class="modal-dialog" onclick="event.stopPropagation()">
+            <button class="modal-close-btn" onclick="closeLightbox()">✕</button>
+            <div class="modal-img-container">
+                <img id="modalImg" src="" alt="Preview Full HD">
+            </div>
+            <div class="modal-caption">
+                <p id="modalText" style="font-size: 0.95rem; color: #FFFFFF; font-weight: 600;"></p>
+                <a id="modalFullLink" href="" target="_blank" style="color: var(--accent-cyan); text-decoration: none; font-size: 0.85rem; font-weight: 700;">Mở ảnh gốc ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchScript(paneId, btn) {
+            document.querySelectorAll('.script-pane').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.script-tab-btn').forEach(b => b.classList.remove('active'));
+            const target = document.getElementById(paneId);
+            if (target) target.classList.add('active');
+            if (btn) btn.classList.add('active');
+        }
+
+        function openLightbox(imgUrl, caption) {
+            document.getElementById('modalImg').src = imgUrl;
+            document.getElementById('modalText').innerText = caption;
+            document.getElementById('modalFullLink').href = imgUrl;
+            document.getElementById('lightboxModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(e) {
+            if (e && e.target && e.target.id !== 'lightboxModal' && !e.target.classList.contains('modal-close-btn')) {
+                return;
+            }
+            document.getElementById('lightboxModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

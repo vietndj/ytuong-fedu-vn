@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trung Tâm Học Tập & Hiệu Chỉnh Phân Loại AI | ytuong.fedu.vn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            950: '#070a0f',
+                            900: '#0b0f17',
+                            850: '#0f1624',
+                            800: '#141d2e',
+                            700: '#1e2b42',
+                            600: '#2a3b59'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        body: ['"Be Vietnam Pro"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #070a0f;
+            color: #f8fafc;
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+        .card-glow {
+            background: #0f1624;
+            border: 1px solid rgba(56, 189, 248, 0.15);
+            transition: all 0.2s ease;
+        }
+        .card-glow:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8">
+    <div class="max-w-6xl mx-auto space-y-8">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+            <div>
+                <div class="flex items-center gap-3">
+                    <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-amber-500/20 text-amber-400 border border-amber-500/30 font-mono">
+                        HUMAN-IN-THE-LOOP ENGINE
+                    </span>
+                    <span class="text-xs text-slate-400">ytuong.fedu.vn</span>
+                </div>
+                <h1 class="text-2xl md:text-3xl font-bold font-heading mt-2 text-white">
+                    Trung Tâm Huấn Luyện & Đối Soát Tiến Trình Học Của AI
+                </h1>
+                <p class="text-sm text-slate-400 mt-1">
+                    Cơ chế Active Learning thấm nhuần tư duy kịch bản & thẩm mỹ điện ảnh của <strong class="text-white">anh Nguyễn Việt (@vietndj)</strong>
+                </p>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-sm font-medium text-slate-200 transition">
+                    ← Trở Về Kho Ý Tưởng
+                </a>
+                <a href="scene.html" class="px-4 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 text-sm font-semibold text-white transition shadow-lg shadow-sky-600/20">
+                    Mở Directors Portal
+                </a>
+            </div>
+        </header>
+
+        <!-- Metrics Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="card-glow rounded-xl p-5">
+                <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Chỉ Số Đồng Thuận Tư Duy</div>
+                <div class="text-3xl font-extrabold font-heading text-sky-400 mt-2 flex items-baseline gap-2">
+                    88.5%
+                    <span class="text-xs font-normal text-emerald-400 font-mono">▲ +18.5%</span>
+                </div>
+                <div class="text-xs text-slate-500 mt-1">Mục tiêu chạm trần: 98%</div>
+                <div class="w-full bg-slate-800 h-2 rounded-full mt-3 overflow-hidden">
+                    <div class="bg-sky-400 h-full rounded-full" style="width: 88.5%"></div>
+                </div>
+            </div>
+
+            <div class="card-glow rounded-xl p-5">
+                <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Tổng Số Ca Hiệu Chỉnh</div>
+                <div class="text-3xl font-extrabold font-heading text-amber-400 mt-2">
+                    28
+                </div>
+                <div class="text-xs text-slate-500 mt-1">Lần anh Việt nạp tri thức chuẩn</div>
+            </div>
+
+            <div class="card-glow rounded-xl p-5">
+                <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Quy Tắc Đã Đúc Rút</div>
+                <div class="text-3xl font-extrabold font-heading text-emerald-400 mt-2">
+                    5
+                </div>
+                <div class="text-xs text-slate-500 mt-1">Heuristics Rules vận hành ngầm</div>
+            </div>
+
+            <div class="card-glow rounded-xl p-5">
+                <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Tốc Độ Phản Hồi 1-Chạm</div>
+                <div class="text-3xl font-extrabold font-heading text-purple-400 mt-2 font-mono">
+                    ~0.8s
+                </div>
+                <div class="text-xs text-slate-500 mt-1">Cập nhật CSDL + Web tức thì</div>
+            </div>
+        </div>
+
+        <!-- 3 Cột Kiến Trúc Học Tập -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="card-glow rounded-xl p-6 space-y-3">
+                <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 text-lg">
+                    ⚓
+                </div>
+                <h3 class="text-lg font-bold font-heading text-white">1. Mỏ Neo Chuẩn (Anchors)</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    Mỗi video anh Việt chỉnh sửa lập tức biến thành một <strong>Mẫu Chuẩn Tuyệt Đối</strong> trong <code class="text-sky-300 font-mono">master_classifications.json</code>. Video mới cào về sẽ đo độ tương đồng hình ảnh & kịch bản với các mỏ neo này để gán nhãn chính xác.
+                </p>
+            </div>
+
+            <div class="card-glow rounded-xl p-6 space-y-3">
+                <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-lg">
+                    🧠
+                </div>
+                <h3 class="text-lg font-bold font-heading text-white">2. Chiết Xuất Quy Tắc (Rules)</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    AI tự giải phẫu lý do: <em>"Tại sao video có máy tính nhưng anh Việt lại xếp vào Kỷ Luật & Thương Hiệu chứ không phải Công Nghệ?"</em> → Tự động tạo quy tắc <strong>Ý định cốt lõi thắng Đạo cụ bề mặt</strong>.
+                </p>
+            </div>
+
+            <div class="card-glow rounded-xl p-6 space-y-3">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-lg">
+                    🎯
+                </div>
+                <h3 class="text-lg font-bold font-heading text-white">3. Điểm Tự Tin (Confidence)</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    AI tự đánh giá độ tự tin (0-100%). Nếu độ tự tin &gt; 85%, AI tự gán nhãn. Nếu rơi vào vùng xám (50-80%), AI sẽ <strong>chủ động cất tiếng hỏi anh Việt</strong> trong phiên làm việc để được dạy thêm.
+                </p>
+            </div>
+        </div>
+
+        <!-- Bảng Đối Soát Tri Thức (Diff Log) -->
+        <div class="card-glow rounded-xl p-6 space-y-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="text-lg font-bold font-heading text-white flex items-center gap-2">
+                        <span>🔍</span> Bảng Đối Soát Các Ca Hiệu Chỉnh Gần Nhất
+                    </h2>
+                    <p class="text-xs text-slate-400">Minh chứng thực tế AI đã học được gì sau mỗi lần anh Việt bẻ lái phân loại</p>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-slate-800 text-xs text-slate-300 font-mono">Dữ liệu từ LEARNED_PATTERNS.json</span>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm border-collapse">
+                    <thead>
+                        <tr class="border-b border-slate-800 text-xs font-mono uppercase text-slate-400 bg-slate-900/50">
+                            <th class="p-3">Creator & Video</th>
+                            <th class="p-3">AI Đoán Ban Đầu</th>
+                            <th class="p-3">Anh Việt Hiệu Chỉnh</th>
+                            <th class="p-3">Bài Học Rút Ra</th>
+                            <th class="p-3">Quy Tắc Áp Dụng</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800 text-xs">
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="p-3 font-semibold text-white">
+                                <div>@jackwebstter</div>
+                                <div class="text-[11px] text-slate-500 font-normal">Minimalist Discipline Chiaroscuro</div>
+                            </td>
+                            <td class="p-3 text-rose-400">
+                                Công Nghệ &bull; Điện Ảnh
+                            </td>
+                            <td class="p-3 text-emerald-400 font-semibold">
+                                Thương Hiệu &bull; Voice Over
+                            </td>
+                            <td class="p-3 text-slate-300">
+                                Khung cảnh bàn làm việc tối giản chỉ là bối cảnh; thông điệp chính là Voice-over triết lý kỷ luật sống.
+                            </td>
+                            <td class="p-3 font-mono text-sky-400">
+                                RULE_001 (Intent &gt; Props)
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="p-3 font-semibold text-white">
+                                <div>@tinanguyen2004</div>
+                                <div class="text-[11px] text-slate-500 font-normal">Phóng Sự Da Liễu Flash Sale 8.8</div>
+                            </td>
+                            <td class="p-3 text-rose-400">
+                                UGC &bull; Talking Head
+                            </td>
+                            <td class="p-3 text-emerald-400 font-semibold">
+                                Làm Đẹp & Spa &bull; Walk &amp; Talk
+                            </td>
+                            <td class="p-3 text-slate-300">
+                                Bác sĩ vừa đi dọc hành lang phòng khám vừa tư vấn → xếp chuẩn Walk &amp; Talk ngành Thẩm mỹ.
+                            </td>
+                            <td class="p-3 font-mono text-sky-400">
+                                RULE_002 &amp; RULE_005
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="p-3 font-semibold text-white">
+                                <div>@joshdiazfilms</div>
+                                <div class="text-[11px] text-slate-500 font-normal">Life Feel Put Together</div>
+                            </td>
+                            <td class="p-3 text-rose-400">
+                                Thể Thao &bull; Điện Ảnh
+                            </td>
+                            <td class="p-3 text-emerald-400 font-semibold">
+                                Thương Hiệu &bull; Voice Over
+                            </td>
+                            <td class="p-3 text-slate-300">
+                                Chạy bộ và sinh hoạt hàng ngày là mỏ neo cảm xúc phục vụ xây dựng kênh Solo Creator.
+                            </td>
+                            <td class="p-3 font-mono text-sky-400">
+                                RULE_001
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Cú Pháp Huấn Luyện 1-Chạm -->
+        <div class="card-glow rounded-xl p-6 bg-gradient-to-br from-slate-900 via-slate-900 to-sky-950/40 border border-sky-500/30">
+            <h2 class="text-lg font-bold font-heading text-white flex items-center gap-2">
+                <span>⚡</span> Cách Anh Việt Dạy AI Bằng 1 Dòng Lệnh Cực Nhanh
+            </h2>
+            <p class="text-xs text-slate-400 mt-1">
+                Bất cứ khi nào duyệt web thấy video chưa đúng gu, anh Việt chỉ cần gõ vào khung chat hoặc terminal:
+            </p>
+
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div class="p-3 rounded-lg bg-black/50 border border-slate-700 font-mono text-xs text-sky-300">
+                    <span class="text-slate-500"># Sửa theo số thứ tự video trên web:</span><br>
+                    SUA: #4 -> Đời thường, Kỷ luật
+                </div>
+                <div class="p-3 rounded-lg bg-black/50 border border-slate-700 font-mono text-xs text-amber-300">
+                    <span class="text-slate-500"># Sửa kèm lý do để AI học sâu hơn:</span><br>
+                    SUA: @creator -> Voice Over, Thương Hiệu, Lý do: nói về tư duy
+                </div>
+            </div>
+
+            <div class="mt-4 text-xs text-slate-400 flex items-center gap-2">
+                <span class="text-emerald-400 font-bold">✓ Tự động hóa 100%:</span>
+                Hệ thống sẽ tự ghi đè cấu hình, cập nhật master database, lưu vào file bài học vĩnh viễn và rebuild web trong vòng 1 giây.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

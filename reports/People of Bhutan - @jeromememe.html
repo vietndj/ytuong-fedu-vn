@@ -1,0 +1,3328 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>People of Bhutan 🇧🇹 • Ngôn Ngữ Điện Ảnh & Bản Sắc Hạnh Phúc Himalaya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #070a0f;
+    --bg-card: #0e1420;
+    --bg-card-hover: #151e30;
+    --bg-surface: #121928;
+    --border-color: #1e293b;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-blue: #38bdf8;
+    --accent-amber: #f59e0b;
+    --accent-emerald: #10b981;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: #202d42; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .app-container {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .video-sidebar-col {
+        width: 440px;
+        min-width: 440px;
+        max-width: 480px;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: 1px solid var(--border-color);
+        background: var(--bg-surface);
+        display: flex;
+        flex-direction: column;
+        z-index: 30;
+    }
+    .content-scroll-col {
+        flex: 1;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 24px 32px 60px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    .video-sidebar-col {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(14, 20, 32, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .content-scroll-col {
+        width: 100%;
+        padding: 16px 14px 80px;
+    }
+}
+
+.video-player-container {
+    position: relative;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .video-player-container {
+        aspect-ratio: 9/16;
+        max-height: 60vh;
+    }
+}
+@media (max-width: 1023px) {
+    .video-player-container {
+        max-height: 38vh;
+        aspect-ratio: 16/9;
+    }
+}
+
+video#mainPlayer {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    outline: none;
+}
+
+.video-controls-panel {
+    padding: 12px 16px;
+    background: #0b111c;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.current-status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11.5px;
+}
+
+.speed-buttons-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.ctrl-btn {
+    background: #162032;
+    color: #cbd5e1;
+    border: 1px solid #283750;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+}
+
+.ctrl-btn:hover, .ctrl-btn:active {
+    background: #25334d;
+    color: #fff;
+}
+
+.ctrl-btn.active {
+    background: var(--accent-blue);
+    color: #041324;
+    border-color: var(--accent-blue);
+    font-weight: 800;
+}
+
+.report-header-banner {
+    background: linear-gradient(135deg, #0e1726 0%, #152238 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.genre-badge {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--accent-amber);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.report-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.meta-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+}
+
+.meta-tags-flex strong { color: #fff; }
+
+.overview-card {
+    background: #0e1420;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-blue);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 13.5px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.action-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg-main);
+    padding: 10px 0;
+}
+
+.view-tabs-group {
+    display: flex;
+    gap: 4px;
+    background: #0f1624;
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.view-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+}
+
+.view-tab-btn.active {
+    background: #1e293b;
+    color: #fff;
+    font-weight: 700;
+}
+
+.drawer-trigger-btn {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12.5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.storyboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px;
+    display: flex;
+    gap: 16px;
+    transition: transform 0.15s, border-color 0.15s;
+}
+
+.shot-card:hover {
+    background: var(--bg-card-hover);
+    border-color: #2e3e5a;
+}
+
+.shot-card.active-playing {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+.shot-media-col {
+    width: 120px;
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+.shot-thumb-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.shot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.play-overlay svg { width: 32px; height: 32px; color: #fff; }
+
+.zoom-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.65);
+    border: none;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.thumb-time-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    background: rgba(15, 23, 42, 0.85);
+    font-size: 9.5px;
+    font-weight: 700;
+    color: var(--accent-amber);
+    padding: 2px 4px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: var(--font-mono);
+}
+
+.shot-info-col {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.shot-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-bottom: 1px solid #1a2436;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.shot-badge-num {
+    background: #1e293b;
+    color: var(--accent-blue);
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+
+.shot-heading { font-size: 14.5px; font-weight: 700; color: #fff; display: inline; }
+
+.time-jump-btn {
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--accent-blue);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    cursor: pointer;
+}
+
+.props-list {
+    font-size: 12.5px;
+    color: #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.prop-label { font-weight: 700; color: #94a3b8; }
+.prop-val { color: #e2e8f0; }
+
+.tags-row { display: flex; flex-wrap: wrap; gap: 4px; margin-top: auto; }
+.tag-pill { background: #162032; color: #94a3b8; font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 4px; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+}
+
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.grid-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+}
+
+.grid-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.grid-play-icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+}
+
+.grid-card:hover .grid-play-icon { opacity: 1; }
+
+.grid-zoom-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: rgba(0,0,0,0.7);
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.grid-badge-top {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--accent-blue);
+    font-size: 9px;
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+}
+
+.grid-badge-bottom {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--accent-amber);
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px 4px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: var(--font-mono);
+}
+
+.drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+}
+
+.drawer-backdrop.open { opacity: 1; visibility: visible; }
+
+.drawer-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 85vw;
+    background: #0f172a;
+    border-left: 1px solid var(--border-color);
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-backdrop.open .drawer-panel { transform: translateX(0); }
+
+.drawer-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drawer-title { font-weight: 800; font-size: 15px; color: #fff; }
+.drawer-close-btn { background: #1e293b; border: none; color: #fff; width: 28px; height: 28px; border-radius: 6px; font-size: 16px; cursor: pointer; }
+
+.drawer-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.drawer-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 10px;
+    background: #131d30;
+    border: 1px solid #1e2d48;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.drawer-item:hover, .drawer-item:active {
+    background: #1c2b47;
+    border-color: var(--accent-blue);
+}
+
+.drawer-thumb {
+    width: 44px;
+    height: 58px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #000;
+}
+
+.drawer-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.drawer-info { flex: 1; min-width: 0; }
+.drawer-shot-title { font-weight: 700; font-size: 13px; color: #fff; }
+.drawer-shot-time { font-size: 11.5px; color: var(--accent-amber); font-family: var(--font-mono); }
+.drawer-play-arrow { font-size: 13px; color: var(--accent-blue); }
+
+#lightboxModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    border: 1px solid #334155;
+}
+
+#lightboxCaption {
+    color: #e2e8f0;
+    font-size: 13.5px;
+    margin-top: 14px;
+    text-align: center;
+    background: rgba(15, 23, 42, 0.85);
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid #334155;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* Author Instagram Direct Link Button */
+.author-ig-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(192, 132, 252, 0.12);
+    border: 1px solid rgba(192, 132, 252, 0.35);
+    color: #e879f9;
+    padding: 2px 8px 2px 6px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    vertical-align: middle;
+}
+.author-ig-badge:hover {
+    background: linear-gradient(135deg, rgba(192, 132, 252, 0.3), rgba(244, 63, 94, 0.3));
+    border-color: #f43f5e;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+}
+.author-ig-badge strong {
+    color: #fff;
+}
+.author-ig-badge .ig-ext-btn {
+    background: linear-gradient(135deg, #c084fc, #f43f5e);
+    color: #0b0f17;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: all 0.15s;
+    letter-spacing: 0.2px;
+}
+.author-ig-badge:hover .ig-ext-btn {
+    background: #ffffff;
+    color: #0b0f17;
+}
+
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="video-sidebar-col">
+        <div class="video-player-container">
+            <video id="mainPlayer" controls autoplay muted playsinline preload="auto" loop></video>
+        </div>
+        <div class="video-controls-panel">
+            <div class="current-status-bar">
+                <span class="status-tag" id="shotStatusTag">🎬 Phân cảnh: Toàn bộ video</span>
+                <a id="directVidLink" href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/People%20of%20Bhutan%20-%20%40jeromememe.mp4" target="_blank" style="color:var(--accent-blue); font-size:11.5px; text-decoration:none;">Tệp gốc ↗</a>
+            </div>
+            <div class="speed-buttons-row">
+                <span style="font-size:11.5px; color:#94a3b8; font-weight:700; margin-right:4px;">Tốc độ:</span>
+                <button class="ctrl-btn" onclick="setSpeed(0.25, this)">0.25x</button>
+                <button class="ctrl-btn" onclick="setSpeed(0.5, this)">0.5x</button>
+                <button class="ctrl-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+                <button class="ctrl-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                <button class="ctrl-btn" onclick="toggleMute(this)">🔊 Tiếng</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-scroll-col">
+        <div class="report-header-banner">
+            <div class="header-top-row">
+                <span class="genre-badge">DIRECTOR BREAKDOWN</span>
+                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">17 SHOTS &bull; 18.90s</span>
+            </div>
+            <h1 class="report-title">People of Bhutan 🇧🇹 • Ngôn Ngữ Điện Ảnh & Bản Sắc Hạnh Phúc Himalaya</h1>
+            <div class="meta-tags-flex">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@jeromememe" onclick="handleCreatorClick(event, '@jeromememe', 'Jerome Teo')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Jerome Teo trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Jerome Teo</strong>
+                        <span class="author-handle">(@jeromememe)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span></a></span>
+                <span>Tệp: <strong>People of Bhutan - @jeromememe.html</strong></span>
+                <span>Trực quan: <strong>9:16 Vertical HD</strong></span>
+            </div>
+        </div>
+
+        <div class="overview-card">
+            <h3 style="color:#fff; font-size:14px; margin-bottom:6px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
+            <div>
+<h3 style="color:#fff; font-size:14px; margin-bottom:6px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
+<div>
+<div class="overview-card">
+<h3>🏔️ Triết Lý 'People-First' &amp; Chân Dung Hạnh Phúc</h3>
+<p><strong>Trọng tâm con người:</strong> Không lạm dụng cảnh flycam phong cảnh đại trà, Jerome Teo tập trung toàn lực vào ánh mắt, nụ cười chân chất và đôi bàn tay lao động của người dân Bhutan (tiểu tăng, cụ bà, mục đồng, thợ dệt).</p>
+<p><strong>Cảm xúc chân thật (Candid Authenticity):</strong> Các góc quay ngang tầm mắt (Eye-level) tạo sự đồng cảm sâu sắc, biến mỗi khung hình thành một bức chân dung điện ảnh sống động.</p>
+</div>
+<div class="overview-card">
+<h3>🎨 Bảng Màu Himalaya: Vàng Hổ Phách &amp; Đỏ Cà Sa</h3>
+<p><strong>Độ tương phản màu sắc:</strong> Sự tương phản tuyệt mỹ giữa sắc đỏ thẫm (Kashaya Red/Crimson) của áo tu sĩ, sắc cam vàng của trang phục thổ cẩm Kira và nền xanh mướt của rừng thông Himalaya.</p>
+<p><strong>Ánh sáng Chiaroscuro:</strong> Khai thác triệt để luồng sáng tự nhiên từ ô cửa sổ tu viện và ánh nến chánh điện, tạo chiều sâu khối mềm mại mà không cần đèn nhân tạo.</p>
+</div>
+<div class="overview-card">
+<h3>⚡ Kỹ Thuật Dựng: Nhịp Thở &amp; Kinetic Match Cut</h3>
+<p><strong>Nhịp điệu co giãn (Elastic Pacing):</strong> Xen kẽ thông minh giữa các cảnh lướt nhanh 0.4s - 0.7s (lật sách, dệt vải, xoay kinh luân) với các cú máy tĩnh lắng đọng 1.5s - 2.1s (tụng kinh, chiêm ngưỡng pháo đài).</p>
+<p><strong>Mồi - Nối hoàn hảo:</strong> Chuyển động lật trang kinh ➔ Dải cờ bay trong gió; Chiếc chậu đồng ➔ Bước chân mục đồng dắt bò Yak tạo dòng chảy thị giác liền mạch.</p>
+</div>
+</div>
+</div>
+        </div>
+
+        <div class="action-toolbar">
+            <div class="view-tabs-group">
+                <button class="view-tab-btn active" id="tabDetailBtn" onclick="switchView('detail')">📋 Bóc Tách Chi Tiết</button>
+                <button class="view-tab-btn" id="tabGridBtn" onclick="switchView('grid')">🖼️ Lưới Soi Ảnh (17)</button>
+            </div>
+            <button class="drawer-trigger-btn" onclick="toggleDrawer(true)">📑 Mục Lục Shot</button>
+        </div>
+
+        <div class="storyboard-container" id="storyboardView">
+            
+        <div class="shot-card" id="shot-card-1">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(0.0, 1.57, 'SHOT 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_002_c7376907.jpg" alt="SHOT 01" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_002_c7376907.jpg', 'SHOT 01 [0.0s - 1.57s]')">🔍</button>
+                    <span class="thumb-time-badge">0.00s - 1.57s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 01</span>
+                        <h4 class="shot-heading">SHOT 01</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(0.0, 1.57, 'SHOT 01')">
+                        ▶ 0.00s ➔ 1.57s (1.57s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(0.0, 1.57, 'SHOT 01')">
+<img alt="SHOT 01" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_002_c7376907.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_002_c7376907.jpg', 'SHOT 01 [0.0s - 1.57s]')">🔍</button>
+<span class="thumb-time-badge">0.00s - 1.57s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 01</span>
+<h4 class="shot-heading">SHOT 01</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(0.0, 1.57, 'SHOT 01')">
+                        ▶ 0.00s ➔ 1.57s (1.57s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(0.0)">Shot 01 • Click để xem video</span>
+<div class="shot-name">Mở Màn: Lối Vào Tu Viện Dzong Cổ Kính &amp; Dòng Tiêu Đề Bhutan</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(0.0)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 0.00s - 1.57s (1.60s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_002_c7376907.jpg', 'Shot 01 - Khung Đầu (Start Frame)')">
+<img alt="Shot 1 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_002_c7376907.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_004_5e39f4f3.jpg', 'Shot 01 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 1 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_004_5e39f4f3.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_006_f8001919.jpg', 'Shot 01 - Khung Cuối (End Frame)')">
+<img alt="Shot 1 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_006_f8001919.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Extreme Wide Establishing Shot / Architectural Reveal &amp; Text Title</span></p>
+<p><strong>Địa điểm:</strong> Lối vào Tu viện Pháo đài Dzong (Punakha / Thimphu), Vương quốc Bhutan</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Con đường lát đá cổ kính dẫn vào tu viện pháo đài Dzong uy nghiêm với tường thành trắng quét vôi đồ sộ. Hai nhà sư khoác áo cà sa đỏ thẫm đang khoan thai tản bộ bên dưới tán cây cổ thụ mùa thu lá vàng rực rỡ. Dòng chữ tiêu đề trang nhã 'people of BHUTAN' xuất hiện ở vị trí trung tâm trên nền không gian đậm chất điện ảnh.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Bước chân hai nhà sư khoan thai tiến vào cổng đá, ánh sáng sớm xuyên qua kẽ lá vàng.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Cắt dứt khoát sang Cảnh 2: Đôi bàn tay lật mở từng trang kinh thẻ Pecha truyền thống.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Architectural Landscape Establishing &amp; Elegant Typographic Hook (Thiết lập không gian tôn nghiêm và mở màn tiêu đề di sản)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Giữ máy quay tĩnh tuyệt đối (Static Lock-off) trên chân máy với tiêu cự 35mm. Tận dụng bóng đổ tự nhiên của hàng cây để tạo đường dẫn thị giác (Leading Lines) dẫn mắt người xem vào cổng thành đá.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Ống kính 35mm f/2.8, tốc độ 1/50s (chuẩn 180° Shutter Angle), kính lọc ND 4-stop để bảo vệ chi tiết vùng tường trắng không bị cháy sáng.</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 01 (Out) ➔ Shot 02 (In)</h5>
+<img alt="Transition 1 to 2" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_008_6fc630df.jpg', 'So Sánh Chuyển Cảnh Shot 01 sang Shot 02')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_008_6fc630df.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-2">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(1.6, 2.03, 'SHOT 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_010_9919f8ae.jpg" alt="SHOT 02" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_010_9919f8ae.jpg', 'SHOT 02 [1.6s - 2.03s]')">🔍</button>
+                    <span class="thumb-time-badge">1.60s - 2.03s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 02</span>
+                        <h4 class="shot-heading">SHOT 02</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(1.6, 2.03, 'SHOT 02')">
+                        ▶ 1.60s ➔ 2.03s (0.43s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(1.6, 2.03, 'SHOT 02')">
+<img alt="SHOT 02" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_010_9919f8ae.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_010_9919f8ae.jpg', 'SHOT 02 [1.6s - 2.03s]')">🔍</button>
+<span class="thumb-time-badge">1.60s - 2.03s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 02</span>
+<h4 class="shot-heading">SHOT 02</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(1.6, 2.03, 'SHOT 02')">
+                        ▶ 1.60s ➔ 2.03s (0.43s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(1.6)">Shot 02 • Click để xem video</span>
+<div class="shot-name">Nghi Thức Lật Mở Thẻ Kinh Phật Cổ Truyền (Pecha Scriptures)</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(1.6)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 1.60s - 2.03s (0.47s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_010_9919f8ae.jpg', 'Shot 02 - Khung Đầu (Start Frame)')">
+<img alt="Shot 2 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_010_9919f8ae.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_012_90d231f5.jpg', 'Shot 02 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 2 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_012_90d231f5.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_014_a579bb0e.jpg', 'Shot 02 - Khung Cuối (End Frame)')">
+<img alt="Shot 2 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_014_a579bb0e.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Extreme Close-Up (ECU) / Pecha Scripture Reading</span></p>
+<p><strong>Địa điểm:</strong> Thư viện kinh sách Tu viện Phật giáo Tây Tạng</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Góc siêu cận đặc tả đôi bàn tay vị tu sĩ mặc áo vàng nghệ đang lật mở từng trang kinh thẻ Pecha dài in mộc bản chữ Tạng cổ trên giấy Dzo thủ công. Nét mực đen tuyền khắc sâu trên nền giấy thô mộc nhuốm màu thời gian.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Ngón tay lật trang giấy xào xạc hướng từ dưới lên trên.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Sang Cảnh 3: Dàn cờ cầu nguyện phong mã Lungta tung bay phần phật trên nền trời.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Kinetic Page-Turn to Wind Motion Match Cut (Nối nhịp lật trang sang chuyển động cờ bay trong gió)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Ống kính Macro 85mm lấy nét cực nông, ánh sáng tự nhiên tạt ngang (Soft Side Light) làm nổi bật thớ giấy dó và nét mực khắc gỗ.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Ống kính Macro 90mm f/2.8, lấy nét tay (Manual Focus) chính xác vào mép trang kinh đang chuyển động.</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 02 (Out) ➔ Shot 03 (In)</h5>
+<img alt="Transition 2 to 3" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_016_78699f3f.jpg', 'So Sánh Chuyển Cảnh Shot 02 sang Shot 03')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_016_78699f3f.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-3">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(2.07, 2.73, 'SHOT 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_018_f69c373c.jpg" alt="SHOT 03" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_018_f69c373c.jpg', 'SHOT 03 [2.07s - 2.73s]')">🔍</button>
+                    <span class="thumb-time-badge">2.07s - 2.73s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 03</span>
+                        <h4 class="shot-heading">SHOT 03</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(2.07, 2.73, 'SHOT 03')">
+                        ▶ 2.07s ➔ 2.73s (0.66s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(2.07, 2.73, 'SHOT 03')">
+<img alt="SHOT 03" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_018_f69c373c.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_018_f69c373c.jpg', 'SHOT 03 [2.07s - 2.73s]')">🔍</button>
+<span class="thumb-time-badge">2.07s - 2.73s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 03</span>
+<h4 class="shot-heading">SHOT 03</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(2.07, 2.73, 'SHOT 03')">
+                        ▶ 2.07s ➔ 2.73s (0.66s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(2.07)">Shot 03 • Click để xem video</span>
+<div class="shot-name">Dàn Cờ Cầu Nguyện Ngũ Sắc Bay Trong Gió Núi Himalaya</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(2.07)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 2.07s - 2.73s (0.70s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_018_f69c373c.jpg', 'Shot 03 - Khung Đầu (Start Frame)')">
+<img alt="Shot 3 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_018_f69c373c.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_020_30442729.jpg', 'Shot 03 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 3 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_020_30442729.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_022_dfcf8e40.jpg', 'Shot 03 - Khung Cuối (End Frame)')">
+<img alt="Shot 3 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_022_dfcf8e40.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Close-Up (CU) / Windhorse Prayer Flags (Lungta)</span></p>
+<p><strong>Địa điểm:</strong> Đèo núi cao lộng gió Himalaya (Dochula Pass)</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Dàn cờ cầu nguyện ngũ sắc (Xanh dương - Không gian, Trắng - Gió, Đỏ - Lửa, Xanh lá - Nước, Vàng - Đất) tung bay phần phật trong gió núi đại ngàn. Hậu cảnh mờ ảo sắc xanh của rừng thông nguyên sinh hùng vĩ.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Dải cờ ngũ sắc bay chéo từ góc trên trái xuống góc dưới phải theo luồng gió mạnh.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Sang Cảnh 4: Luồng ánh sáng hắt xiên qua hành lang gỗ tu viện sâu thẳm.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Color Energy &amp; Motion Transition (Truyền tải nguồn năng lượng tâm linh từ thiên nhiên vào không gian thiền định)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Góc máy hướng nhẹ lên trời để đón ánh sáng ngược (Backlight), làm các thớ vải mỏng bừng sáng màu sắc nguyên bản.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Tiêu cự 50mm f/2.0, tốc độ màn trập 1/120s bắt nét chuyển động cờ không bị nhòe vệt quá dài.</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 03 (Out) ➔ Shot 04 (In)</h5>
+<img alt="Transition 3 to 4" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_024_a2ee2051.jpg', 'So Sánh Chuyển Cảnh Shot 03 sang Shot 04')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_024_a2ee2051.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-4">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(2.77, 3.33, 'SHOT 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_026_d6a121e7.jpg" alt="SHOT 04" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_026_d6a121e7.jpg', 'SHOT 04 [2.77s - 3.33s]')">🔍</button>
+                    <span class="thumb-time-badge">2.77s - 3.33s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 04</span>
+                        <h4 class="shot-heading">SHOT 04</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(2.77, 3.33, 'SHOT 04')">
+                        ▶ 2.77s ➔ 3.33s (0.56s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(2.77, 3.33, 'SHOT 04')">
+<img alt="SHOT 04" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_026_d6a121e7.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_026_d6a121e7.jpg', 'SHOT 04 [2.77s - 3.33s]')">🔍</button>
+<span class="thumb-time-badge">2.77s - 3.33s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 04</span>
+<h4 class="shot-heading">SHOT 04</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(2.77, 3.33, 'SHOT 04')">
+                        ▶ 2.77s ➔ 3.33s (0.56s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(2.77)">Shot 04 • Click để xem video</span>
+<div class="shot-name">Hành Lang Gỗ Sâu Hút &amp; Nghệ Thuật Ánh Sáng Tương Phản Chiaroscuro</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(2.77)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 2.77s - 3.33s (0.60s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_026_d6a121e7.jpg', 'Shot 04 - Khung Đầu (Start Frame)')">
+<img alt="Shot 4 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_026_d6a121e7.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_028_9000438a.jpg', 'Shot 04 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 4 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_028_9000438a.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_030_0ec7b330.jpg', 'Shot 04 - Khung Cuối (End Frame)')">
+<img alt="Shot 4 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_030_0ec7b330.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Long Shot / One-Point Perspective Corridor &amp; Chiaroscuro</span></p>
+<p><strong>Địa điểm:</strong> Hành lang cổ bằng gỗ bên trong Tu viện Dzong</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Phối cảnh 1 điểm tụ sâu hun hút bên trong hành lang gỗ tối. Ánh sáng mặt trời chiếu tạt mạnh qua các khung cửa sổ bên hông tạo thành các luồng sáng (Light Shafts) tương phản Chiaroscuro gay gắt. Một nhà sư mặc áo đỏ đang ôm đồ đi ngược ra vùng sáng ở cuối hành lang.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Bóng dáng nhà sư nhỏ dần về phía điểm tụ ánh sáng cuối đường hầm.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Sang Cảnh 5: Nhà sư trẻ bước ra ngoài trời với chiếc chậu đồng cúng dường uy nghiêm.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Chiaroscuro Tunnel to Open Daylight (Tương phản ánh sáng kịch tính: từ bóng tối sâu thẳm ra ánh sáng ban mai)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Căn góc máy chính giữa trục đối xứng hành lang (Symmetrical Framing), đo sáng bảo vệ vùng Highlight bên ngoài cửa sổ.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Ống kính 24mm f/2.8 để kéo giãn độ sâu phối cảnh hành lang gỗ cổ kính.</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 04 (Out) ➔ Shot 05 (In)</h5>
+<img alt="Transition 4 to 5" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_032_89d3337e.jpg', 'So Sánh Chuyển Cảnh Shot 04 sang Shot 05')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_032_89d3337e.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-5">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(3.37, 4.67, 'SHOT 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_034_9b5530bb.jpg" alt="SHOT 05" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_034_9b5530bb.jpg', 'SHOT 05 [3.37s - 4.67s]')">🔍</button>
+                    <span class="thumb-time-badge">3.37s - 4.67s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 05</span>
+                        <h4 class="shot-heading">SHOT 05</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(3.37, 4.67, 'SHOT 05')">
+                        ▶ 3.37s ➔ 4.67s (1.30s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(3.37, 4.67, 'SHOT 05')">
+<img alt="SHOT 05" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_034_9b5530bb.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_034_9b5530bb.jpg', 'SHOT 05 [3.37s - 4.67s]')">🔍</button>
+<span class="thumb-time-badge">3.37s - 4.67s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 05</span>
+<h4 class="shot-heading">SHOT 05</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(3.37, 4.67, 'SHOT 05')">
+                        ▶ 3.37s ➔ 4.67s (1.30s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(3.37)">Shot 05 • Click để xem video</span>
+<div class="shot-name">Nhà Sư Trẻ Bê Chậu Đồng Cúng Dường Nghi Lễ Trang Nghiêm</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(3.37)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 3.37s - 4.67s (1.33s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_034_9b5530bb.jpg', 'Shot 05 - Khung Đầu (Start Frame)')">
+<img alt="Shot 5 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_034_9b5530bb.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_036_59b1029b.jpg', 'Shot 05 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 5 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_036_59b1029b.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_038_be38d62a.jpg', 'Shot 05 - Khung Cuối (End Frame)')">
+<img alt="Shot 5 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_038_be38d62a.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Low Angle Medium Shot / Sacred Brass Offering Vessel</span></p>
+<p><strong>Địa điểm:</strong> Sân chính tu viện Dzong</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Góc máy thấp tôn nghiêm hướng lên một vị sư trẻ Bhutan mặt phúc hậu, cương nghị, hai tay cung kính nâng chiếc chậu đồng nghi lễ vàng óng. Hậu cảnh là hoa văn chạm trổ mây ngũ sắc trên tường thành trắng.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Nhà sư bước đi uy nghi về phía trước, ánh sáng kim loại phản chiếu lấp lánh trên miệng chậu.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Sang Cảnh 6: Người đàn ông nông dân mỉm cười dắt bò Yak trên đồng cỏ sương mù.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Sacred Ritual to Earthly Pastoral Harmony (Chuyển giao mượt mà giữa đời sống tâm linh tu viện và đời sống du mục thanh bình)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Đặt góc máy thấp ngang ngực (Low-angle heroic framing) tạo vị thế tôn kính và vững chãi cho nhân vật.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Tiêu cự 35mm f/2.0, đo sáng Spot vào gương mặt nhà sư.</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 05 (Out) ➔ Shot 06 (In)</h5>
+<img alt="Transition 5 to 6" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_040_74357d77.jpg', 'So Sánh Chuyển Cảnh Shot 05 sang Shot 06')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_040_74357d77.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-6">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(4.7, 5.6, 'SHOT 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_042_3a832256.jpg" alt="SHOT 06" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_042_3a832256.jpg', 'SHOT 06 [4.7s - 5.6s]')">🔍</button>
+                    <span class="thumb-time-badge">4.70s - 5.60s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 06</span>
+                        <h4 class="shot-heading">SHOT 06</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(4.7, 5.6, 'SHOT 06')">
+                        ▶ 4.70s ➔ 5.60s (0.90s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(4.7, 5.6, 'SHOT 06')">
+<img alt="SHOT 06" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_042_3a832256.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_042_3a832256.jpg', 'SHOT 06 [4.7s - 5.6s]')">🔍</button>
+<span class="thumb-time-badge">4.70s - 5.60s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 06</span>
+<h4 class="shot-heading">SHOT 06</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(4.7, 5.6, 'SHOT 06')">
+                        ▶ 4.70s ➔ 5.60s (0.90s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(4.7)">Shot 06 • Click để xem video</span>
+<div class="shot-name">Đời Sống Du Mục Cao Nguyên: Người Nông Dân &amp; Chú Bò Yak</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(4.7)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 4.70s - 5.60s (0.93s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_042_3a832256.jpg', 'Shot 06 - Khung Đầu (Start Frame)')">
+<img alt="Shot 6 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_042_3a832256.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_044_1d536c78.jpg', 'Shot 06 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 6 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_044_1d536c78.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_046_6d8a0be6.jpg', 'Shot 06 - Khung Cuối (End Frame)')">
+<img alt="Shot 6 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_046_6d8a0be6.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Medium Full Shot / Highland Pastoral Life (Mục đồng &amp; Bò Yak)</span></p>
+<p><strong>Địa điểm:</strong> Đồng cỏ cao nguyên sương mù thung lũng Phobjikha</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Người đàn ông du mục Bhutan luống tuổi mặc trang phục Gho truyền thống, tay xách thùng sữa nhôm, tươi cười dắt chú bò Yak con lông dày bước đi giữa thung lũng mờ sương.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Nụ cười hiền hậu nhìn thẳng vào ống kính và bước chân nhẹ nhàng của chú bò Yak.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Sang Cảnh 7: Cận cảnh nụ cười rạng rỡ của cụ bà vùng cao.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Authentic Human Connection Hook (Kích hoạt mạch cảm xúc hạnh phúc thuần khiết của con người Bhutan)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Tận dụng làn sương mù sớm (Atmospheric Fog) làm mềm hậu cảnh, tôn vinh gam màu mộc mạc của áo Gho len dệt thô.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Tiêu cự 50mm f/1.8, bắt nét liên tục vào ánh mắt người nông dân.</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 06 (Out) ➔ Shot 07 (In)</h5>
+<img alt="Transition 6 to 7" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_048_30a646b6.jpg', 'So Sánh Chuyển Cảnh Shot 06 sang Shot 07')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_048_30a646b6.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-7">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(5.63, 6.73, 'SHOT 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_050_01e537f7.jpg" alt="SHOT 07" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_050_01e537f7.jpg', 'SHOT 07 [5.63s - 6.73s]')">🔍</button>
+                    <span class="thumb-time-badge">5.63s - 6.73s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 07</span>
+                        <h4 class="shot-heading">SHOT 07</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(5.63, 6.73, 'SHOT 07')">
+                        ▶ 5.63s ➔ 6.73s (1.10s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(5.63, 6.73, 'SHOT 07')">
+<img alt="SHOT 07" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_050_01e537f7.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_050_01e537f7.jpg', 'SHOT 07 [5.63s - 6.73s]')">🔍</button>
+<span class="thumb-time-badge">5.63s - 6.73s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 07</span>
+<h4 class="shot-heading">SHOT 07</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(5.63, 6.73, 'SHOT 07')">
+                        ▶ 5.63s ➔ 6.73s (1.10s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(5.63)">Shot 07 • Click để xem video</span>
+<div class="shot-name">Nụ Cười Thuần Khiết Từ 'Quốc Gia Hạnh Phúc Nhất Thế Giới'</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(5.63)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 5.63s - 6.73s (1.13s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_050_01e537f7.jpg', 'Shot 07 - Khung Đầu (Start Frame)')">
+<img alt="Shot 7 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_050_01e537f7.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_052_5d471642.jpg', 'Shot 07 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 7 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_052_5d471642.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_054_02700903.jpg', 'Shot 07 - Khung Cuối (End Frame)')">
+<img alt="Shot 7 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_054_02700903.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Medium Close-Up (MCU) / Pure Himalayan Smile</span></p>
+<p><strong>Địa điểm:</strong> Hiên nhà gỗ mộc mạc làng cổ Bhutan</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Cụ bà Bhutan tóc hoa râm, mặc áo Kira/Wonju dệt thổ cẩm cam đỏ cài trâm bạc, nở nụ cười tươi không răng hết sức sảng khoái và hồn hậu, đôi mắt híp lại đầy rạng rỡ.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Cụ bà cười nghiêng đầu về phía trước, tràn ngập năng lượng tích cực.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Sang Cảnh 8: Đôi bàn tay nghệ nhân dệt thổ cẩm Kishuthara.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Joyful Emotion Climax to Tactile Heritage (Chuyển tiếp cảm xúc vui tươi sang nét đẹp thủ công truyền đời)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Khung hình chân dung tự nhiên (Candid Portrait). Ánh sáng mềm ban ngày làm nổi bật những nếp nhăn thời gian và niềm hoan hỷ thuần khiết.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Tiêu cự 85mm f/2.0 tạo độ sâu trường ảnh mượt mà, tách biệt hoàn toàn chủ thể với phên gỗ phía sau.</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 07 (Out) ➔ Shot 08 (In)</h5>
+<img alt="Transition 7 to 8" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_056_430a76a3.jpg', 'So Sánh Chuyển Cảnh Shot 07 sang Shot 08')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_056_430a76a3.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-8">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(6.77, 7.37, 'SHOT 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_058_a9ce659c.jpg" alt="SHOT 08" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_058_a9ce659c.jpg', 'SHOT 08 [6.77s - 7.37s]')">🔍</button>
+                    <span class="thumb-time-badge">6.77s - 7.37s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 08</span>
+                        <h4 class="shot-heading">SHOT 08</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(6.77, 7.37, 'SHOT 08')">
+                        ▶ 6.77s ➔ 7.37s (0.60s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(6.77, 7.37, 'SHOT 08')">
+<img alt="SHOT 08" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_058_a9ce659c.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_058_a9ce659c.jpg', 'SHOT 08 [6.77s - 7.37s]')">🔍</button>
+<span class="thumb-time-badge">6.77s - 7.37s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 08</span>
+<h4 class="shot-heading">SHOT 08</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(6.77, 7.37, 'SHOT 08')">
+                        ▶ 6.77s ➔ 7.37s (0.60s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(6.77)">Shot 08 • Click để xem video</span>
+<div class="shot-name">Đôi Tay Khéo Léo Dệt Thổ Cẩm Hoàng Gia Kishuthara</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(6.77)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 6.77s - 7.37s (0.63s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_058_a9ce659c.jpg', 'Shot 08 - Khung Đầu (Start Frame)')">
+<img alt="Shot 8 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_058_a9ce659c.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_060_74476224.jpg', 'Shot 08 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 8 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_060_74476224.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_062_49915381.jpg', 'Shot 08 - Khung Cuối (End Frame)')">
+<img alt="Shot 8 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_062_49915381.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Extreme Close-Up (ECU) / Traditional Bhutanese Weaving (Kishuthara)</span></p>
+<p><strong>Địa điểm:</strong> Xưởng dệt thổ cẩm nữ công truyền thống</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Siêu cận đôi bàn tay thoăn thoắt của nghệ nhân dệt đang luồn sợi chỉ hồng cánh sen vào các thớ vải lụa thổ cẩm Kishuthara đỏ cam hoa văn hình học cổ truyền.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Ngón tay khéo léo gạt sợi dệt theo phương ngang.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Sang Cảnh 9: Cầu treo Punakha bắc qua dòng sông xanh biếc.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Graphic Texture to Geo Leading Lines (Nối tiếp kết cấu sợi dệt sang đường dây văng của cây cầu treo)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Macro Focus vào điểm giao nhau giữa sợi chỉ và khung cửi gỗ, ánh sáng ấm áp phản chiếu từng sợi tơ bóng mịn.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Ống kính Macro 90mm f/2.8, ánh sáng ven ấm (Warm Side Light).</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 08 (Out) ➔ Shot 09 (In)</h5>
+<img alt="Transition 8 to 9" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_064_63288d0a.jpg', 'So Sánh Chuyển Cảnh Shot 08 sang Shot 09')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_064_63288d0a.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-9">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(7.4, 7.97, 'SHOT 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_066_64759333.jpg" alt="SHOT 09" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_066_64759333.jpg', 'SHOT 09 [7.4s - 7.97s]')">🔍</button>
+                    <span class="thumb-time-badge">7.40s - 7.97s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 09</span>
+                        <h4 class="shot-heading">SHOT 09</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(7.4, 7.97, 'SHOT 09')">
+                        ▶ 7.40s ➔ 7.97s (0.57s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(7.4, 7.97, 'SHOT 09')">
+<img alt="SHOT 09" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_066_64759333.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_066_64759333.jpg', 'SHOT 09 [7.4s - 7.97s]')">🔍</button>
+<span class="thumb-time-badge">7.40s - 7.97s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 09</span>
+<h4 class="shot-heading">SHOT 09</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(7.4, 7.97, 'SHOT 09')">
+                        ▶ 7.40s ➔ 7.97s (0.57s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(7.4)">Shot 09 • Click để xem video</span>
+<div class="shot-name">Cây Cầu Treo Dài Nhất Bhutan &amp; Dòng Sông Ngọc Bích</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(7.4)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 7.40s - 7.97s (0.60s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_066_64759333.jpg', 'Shot 09 - Khung Đầu (Start Frame)')">
+<img alt="Shot 9 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_066_64759333.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_068_4c8ac477.jpg', 'Shot 09 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 9 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_068_4c8ac477.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_070_29be722a.jpg', 'Shot 09 - Khung Cuối (End Frame)')">
+<img alt="Shot 9 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_070_29be722a.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">High-Angle Wide Shot / Punakha Suspension Bridge</span></p>
+<p><strong>Địa điểm:</strong> Cầu treo sông Po Chhu (Punakha Suspension Bridge)</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Góc máy trên cao bao quát cây cầu treo dây văng dài tít tắp vắt ngang dòng sông xanh ngọc bích giữa hai bờ đồi xanh tươi. Một vị sư nhỏ mặc áo đỏ thong thả bước đi giữa nhịp cầu.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Đường dây cáp cầu tạo đường dẫn thị giác hút mắt từ góc trên trái xuống góc dưới phải.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Sang Cảnh 10: Dãy bánh xe cầu nguyện xoay tròn trong tu viện.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Leading Lines &amp; Red Accent Continuity (Duy trì điểm nhấn màu đỏ của áo sư trong không gian thiên nhiên hùng vĩ)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Bố cục đường chéo mạnh mẽ (Diagonal Composition), giữ góc nhìn toàn cảnh để nhấn mạnh sự nhỏ bé an nhiên của con người trước tự nhiên.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Tiêu cự 28mm f/4.0 trên chân máy giữ trọn độ nét từ đầu cầu đến bờ bên kia.</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 09 (Out) ➔ Shot 10 (In)</h5>
+<img alt="Transition 9 to 10" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_072_0fabd4f7.jpg', 'So Sánh Chuyển Cảnh Shot 09 sang Shot 10')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_072_0fabd4f7.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-10">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(8.0, 8.73, 'SHOT 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_074_b332bc5a.jpg" alt="SHOT 10" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_074_b332bc5a.jpg', 'SHOT 10 [8.0s - 8.73s]')">🔍</button>
+                    <span class="thumb-time-badge">8.00s - 8.73s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 10</span>
+                        <h4 class="shot-heading">SHOT 10</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(8.0, 8.73, 'SHOT 10')">
+                        ▶ 8.00s ➔ 8.73s (0.73s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(8.0, 8.73, 'SHOT 10')">
+<img alt="SHOT 10" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_074_b332bc5a.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_074_b332bc5a.jpg', 'SHOT 10 [8.0s - 8.73s]')">🔍</button>
+<span class="thumb-time-badge">8.00s - 8.73s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 10</span>
+<h4 class="shot-heading">SHOT 10</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(8.0, 8.73, 'SHOT 10')">
+                        ▶ 8.00s ➔ 8.73s (0.73s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(8.0)">Shot 10 • Click để xem video</span>
+<div class="shot-name">Dãy Kinh Luân Mạ Vàng Khổng Lồ Xoay Tròn (Mani Khorlo)</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(8.0)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 8.00s - 8.73s (0.77s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_074_b332bc5a.jpg', 'Shot 10 - Khung Đầu (Start Frame)')">
+<img alt="Shot 10 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_074_b332bc5a.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_076_9d5d3f02.jpg', 'Shot 10 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 10 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_076_9d5d3f02.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_078_0dc01325.jpg', 'Shot 10 - Khung Cuối (End Frame)')">
+<img alt="Shot 10 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_078_0dc01325.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Medium Close-Up (MCU) / Spinning Giant Prayer Wheels</span></p>
+<p><strong>Địa điểm:</strong> Dãy hành lang bánh xe kinh luân, Tu viện Dzong</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Dãy bánh xe cầu nguyện mạ vàng chạm khắc kinh Phật khổng lồ xoay tròn liên tục dưới vòm cổng gỗ điêu khắc hoa văn rồng mây. Bàn tay tu sĩ ẩn hiện trong bóng tối xoay chuyển từng bánh xe.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Bánh xe kim loại vàng óng quay đều đặn phát ra ánh kim lấp lánh.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Sang Cảnh 11: Nhóm tiểu tăng đồng thanh tụng kinh trong điện Phật.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Kinetic Spin to Chanting Rhythm (Chuyển động xoay chuyển luân xa dẫn dắt vào âm vang tụng niệm)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Bắt góc máy nghiêng 45 độ để thấy được chiều sâu nối tiếp của hàng chục bánh xe kinh luân đang quay.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Tiêu cự 50mm f/1.8, tận dụng độ mở lớn để bắt ánh sáng kim loại lấp lánh.</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 10 (Out) ➔ Shot 11 (In)</h5>
+<img alt="Transition 10 to 11" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_080_b4295785.jpg', 'So Sánh Chuyển Cảnh Shot 10 sang Shot 11')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_080_b4295785.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-11">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(8.77, 10.57, 'SHOT 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_082_3f4a35d6.jpg" alt="SHOT 11" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_082_3f4a35d6.jpg', 'SHOT 11 [8.77s - 10.57s]')">🔍</button>
+                    <span class="thumb-time-badge">8.77s - 10.57s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 11</span>
+                        <h4 class="shot-heading">SHOT 11</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(8.77, 10.57, 'SHOT 11')">
+                        ▶ 8.77s ➔ 10.57s (1.80s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(8.77, 10.57, 'SHOT 11')">
+<img alt="SHOT 11" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_082_3f4a35d6.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_082_3f4a35d6.jpg', 'SHOT 11 [8.77s - 10.57s]')">🔍</button>
+<span class="thumb-time-badge">8.77s - 10.57s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 11</span>
+<h4 class="shot-heading">SHOT 11</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(8.77, 10.57, 'SHOT 11')">
+                        ▶ 8.77s ➔ 10.57s (1.80s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(8.77)">Shot 11 • Click để xem video</span>
+<div class="shot-name">Hàng Tiểu Tăng Đồng Thanh Tụng Kinh Trong Ánh Nến Chánh Điện</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(8.77)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 8.77s - 10.57s (1.83s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_082_3f4a35d6.jpg', 'Shot 11 - Khung Đầu (Start Frame)')">
+<img alt="Shot 11 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_082_3f4a35d6.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_084_10b6549e.jpg', 'Shot 11 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 11 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_084_10b6549e.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_086_99051c62.jpg', 'Shot 11 - Khung Cuối (End Frame)')">
+<img alt="Shot 11 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_086_99051c62.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Medium Shot / Novice Monks Chanting Ensemble</span></p>
+<p><strong>Địa điểm:</strong> Chánh điện tu viện cổ kính</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Hàng 5 chú tiểu tăng mặc cà sa đỏ thẫm ngồi xếp bằng ngay ngắn trong ánh nến ấm áp của chánh điện, đồng thanh tụng kinh với vẻ mặt nghiêm trang, trong sáng và thánh thiện.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Khuôn mặt các chú tiểu cất tiếng tụng kinh, ánh nến lung linh hắt sáng gò má.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Sang Cảnh 12: Cây bồ đề đại thụ và bảo tháp trắng trong sân chùa.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Audio-Visual Spiritual Stillness (Khoảnh khắc lắng đọng tâm linh trước khi mở rộng không gian tĩnh mịch)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Giữ khung hình tĩnh trường đoạn (1.83s), ánh sáng vàng ấm 3200K phối hợp với ánh sáng tự nhiên từ cửa bên tạo khối chiaroscuro ấm áp.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Tiêu cự 50mm f/1.4, ISO 800-1600 trong điều kiện thiếu sáng.</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 11 (Out) ➔ Shot 12 (In)</h5>
+<img alt="Transition 11 to 12" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_088_03e42743.jpg', 'So Sánh Chuyển Cảnh Shot 11 sang Shot 12')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_088_03e42743.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-12">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(10.6, 11.53, 'SHOT 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_090_d281c1e6.jpg" alt="SHOT 12" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_090_d281c1e6.jpg', 'SHOT 12 [10.6s - 11.53s]')">🔍</button>
+                    <span class="thumb-time-badge">10.60s - 11.53s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 12</span>
+                        <h4 class="shot-heading">SHOT 12</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(10.6, 11.53, 'SHOT 12')">
+                        ▶ 10.60s ➔ 11.53s (0.93s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(10.6, 11.53, 'SHOT 12')">
+<img alt="SHOT 12" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_090_d281c1e6.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_090_d281c1e6.jpg', 'SHOT 12 [10.6s - 11.53s]')">🔍</button>
+<span class="thumb-time-badge">10.60s - 11.53s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 12</span>
+<h4 class="shot-heading">SHOT 12</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(10.6, 11.53, 'SHOT 12')">
+                        ▶ 10.60s ➔ 11.53s (0.93s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(10.6)">Shot 12 • Click để xem video</span>
+<div class="shot-name">Cây Bồ Đề Đại Thụ Linh Thiêng &amp; Bảo Tháp Trắng Tinh Khiết</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(10.6)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 10.60s - 11.53s (0.97s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_090_d281c1e6.jpg', 'Shot 12 - Khung Đầu (Start Frame)')">
+<img alt="Shot 12 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_090_d281c1e6.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_092_996f83ea.jpg', 'Shot 12 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 12 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_092_996f83ea.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_094_d587c933.jpg', 'Shot 12 - Khung Cuối (End Frame)')">
+<img alt="Shot 12 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_094_d587c933.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Wide Establishing Shot / Sacred Bodhi Tree &amp; White Chorten</span></p>
+<p><strong>Địa điểm:</strong> Sân trong Tu viện Dzong</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Cây bồ đề đại thụ cổ thụ xòe tán lá xanh mướt rợp bóng bên cạnh ngôi bảo tháp Phật giáo trắng muốt (Chorten) uy nghiêm, bao bọc bởi dãy hành lang gỗ sơn son thế kỷ.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Tán lá bồ đề xanh biếc rung rinh trong làn gió nhẹ.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Sang Cảnh 13: Cụ bà chắp tay thành kính cầu nguyện.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Monumental Sanctuary to Intimate Devotion (Từ thánh tích đại thụ chuyển vào chiều sâu tâm thức con người)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Căn góc máy toàn cảnh cân đối, làm nổi bật màu trắng tinh khiết của bảo tháp trên nền trời trong xanh và tán cây xanh ngọc.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Tiêu cự 24mm f/5.6 cho độ nét sâu toàn khung hình.</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 12 (Out) ➔ Shot 13 (In)</h5>
+<img alt="Transition 12 to 13" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_096_c990c41a.jpg', 'So Sánh Chuyển Cảnh Shot 12 sang Shot 13')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_096_c990c41a.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-13">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(11.57, 12.43, 'SHOT 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_098_f99a3f80.jpg" alt="SHOT 13" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_098_f99a3f80.jpg', 'SHOT 13 [11.57s - 12.43s]')">🔍</button>
+                    <span class="thumb-time-badge">11.57s - 12.43s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 13</span>
+                        <h4 class="shot-heading">SHOT 13</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(11.57, 12.43, 'SHOT 13')">
+                        ▶ 11.57s ➔ 12.43s (0.86s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(11.57, 12.43, 'SHOT 13')">
+<img alt="SHOT 13" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_098_f99a3f80.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_098_f99a3f80.jpg', 'SHOT 13 [11.57s - 12.43s]')">🔍</button>
+<span class="thumb-time-badge">11.57s - 12.43s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 13</span>
+<h4 class="shot-heading">SHOT 13</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(11.57, 12.43, 'SHOT 13')">
+                        ▶ 11.57s ➔ 12.43s (0.86s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(11.57)">Shot 13 • Click để xem video</span>
+<div class="shot-name">Tâm Thành Kính Cầu Nguyện Của Cụ Bà Bhutan (Anjali Mudra)</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(11.57)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 11.57s - 12.43s (0.90s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_098_f99a3f80.jpg', 'Shot 13 - Khung Đầu (Start Frame)')">
+<img alt="Shot 13 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_098_f99a3f80.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_100_827b18c5.jpg', 'Shot 13 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 13 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_100_827b18c5.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_102_4ef99aa9.jpg', 'Shot 13 - Khung Cuối (End Frame)')">
+<img alt="Shot 13 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_102_4ef99aa9.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Close-Up (CU) / Devotional Prayer &amp; Serenity</span></p>
+<p><strong>Địa điểm:</strong> Gian thờ tu viện trang nghiêm</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Một cụ bà Bhutan phúc hậu mặc áo lụa đỏ thẫm chắp hai tay trước ngực (Anjali Mudra), đôi mắt chân thành nhìn thẳng vào ống kính với sự bình an và tĩnh lặng tuyệt đối.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Đôi bàn tay chắp thẳng trang nghiêm, ánh mắt toát lên niềm tin tôn kính.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Sang Cảnh 14: Nhóm trẻ em học sinh cười đùa vỡ òa ôm vai nhau.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Serene Devotion to Bursting Joy (Tương phản chuyển tiếp: Từ tĩnh lặng tôn nghiêm sang niềm vui bùng nổ của tuổi thơ)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Khung hình chân dung trực diện (Direct Eye-contact), ánh sáng mềm mại từ cửa sổ hắt xiên nhẹ.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Tiêu cự 85mm f/1.8, lấy nét chính xác vào con ngươi cụ bà.</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 13 (Out) ➔ Shot 14 (In)</h5>
+<img alt="Transition 13 to 14" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_104_a3443f62.jpg', 'So Sánh Chuyển Cảnh Shot 13 sang Shot 14')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_104_a3443f62.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-14">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(12.47, 13.33, 'SHOT 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_106_4064471c.jpg" alt="SHOT 14" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_106_4064471c.jpg', 'SHOT 14 [12.47s - 13.33s]')">🔍</button>
+                    <span class="thumb-time-badge">12.47s - 13.33s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 14</span>
+                        <h4 class="shot-heading">SHOT 14</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(12.47, 13.33, 'SHOT 14')">
+                        ▶ 12.47s ➔ 13.33s (0.86s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(12.47, 13.33, 'SHOT 14')">
+<img alt="SHOT 14" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_106_4064471c.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_106_4064471c.jpg', 'SHOT 14 [12.47s - 13.33s]')">🔍</button>
+<span class="thumb-time-badge">12.47s - 13.33s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 14</span>
+<h4 class="shot-heading">SHOT 14</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(12.47, 13.33, 'SHOT 14')">
+                        ▶ 12.47s ➔ 13.33s (0.86s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(12.47)">Shot 14 • Click để xem video</span>
+<div class="shot-name">Niềm Vui Tuổi Thơ Trong Trẻo: Nhóm Trẻ Em Học Sinh Bhutan</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(12.47)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 12.47s - 13.33s (0.90s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_106_4064471c.jpg', 'Shot 14 - Khung Đầu (Start Frame)')">
+<img alt="Shot 14 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_106_4064471c.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_108_171bf493.jpg', 'Shot 14 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 14 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_108_171bf493.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_110_1abce987.jpg', 'Shot 14 - Khung Cuối (End Frame)')">
+<img alt="Shot 14 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_110_1abce987.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Medium Group Shot / Joyful Bhutanese Children</span></p>
+<p><strong>Địa điểm:</strong> Lối đi ven tường hoa giấy đỏ rực rỡ</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Nhóm 6 em học sinh và tiểu tăng Bhutan ôm vai bá cổ nhau, cùng cười phá lên sảng khoái, ánh mắt lấp lánh niềm vui ngây thơ dưới giàn hoa giấy đỏ hồng rực rỡ.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Tiếng cười rộn rã và chuyển động lắc lư hồn nhiên của nhóm trẻ.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Sang Cảnh 15: Ba chú tiểu tăng ngồi nghỉ ngơi trên sườn đồi nhìn ra thung lũng.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Kinetic Group Energy to Peaceful Contemplation (Chuyển giao năng lượng rộn rã sang sự thư thái bình yên)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Giữ khoảnh khắc tương tác tự nhiên nhất, góc máy ngang tầm mắt trẻ em (Eye-level) tạo sự gần gũi chân thực.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Tiêu cự 35mm f/2.8, bắt nét nhận diện khuôn mặt nhóm (Face Tracking).</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 14 (Out) ➔ Shot 15 (In)</h5>
+<img alt="Transition 14 to 15" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_112_d6f3b7cf.jpg', 'So Sánh Chuyển Cảnh Shot 14 sang Shot 15')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_112_d6f3b7cf.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-15">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(13.37, 15.2, 'SHOT 15')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_114_0257fa2b.jpg" alt="SHOT 15" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_114_0257fa2b.jpg', 'SHOT 15 [13.37s - 15.2s]')">🔍</button>
+                    <span class="thumb-time-badge">13.37s - 15.20s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 15</span>
+                        <h4 class="shot-heading">SHOT 15</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(13.37, 15.2, 'SHOT 15')">
+                        ▶ 13.37s ➔ 15.20s (1.83s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(13.37, 15.2, 'SHOT 15')">
+<img alt="SHOT 15" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_114_0257fa2b.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_114_0257fa2b.jpg', 'SHOT 15 [13.37s - 15.2s]')">🔍</button>
+<span class="thumb-time-badge">13.37s - 15.20s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 15</span>
+<h4 class="shot-heading">SHOT 15</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(13.37, 15.2, 'SHOT 15')">
+                        ▶ 13.37s ➔ 15.20s (1.83s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(13.37)">Shot 15 • Click để xem video</span>
+<div class="shot-name">Phút Thảnh Thơi Của Các Tiểu Tăng Trên Sườn Đồi Himalaya</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(13.37)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 13.37s - 15.20s (1.87s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_114_0257fa2b.jpg', 'Shot 15 - Khung Đầu (Start Frame)')">
+<img alt="Shot 15 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_114_0257fa2b.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_116_061676f4.jpg', 'Shot 15 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 15 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_116_061676f4.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_118_cc23477d.jpg', 'Shot 15 - Khung Cuối (End Frame)')">
+<img alt="Shot 15 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_118_cc23477d.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Medium Shot / Little Monks Relaxing on Mountain Slope</span></p>
+<p><strong>Địa điểm:</strong> Sườn đồi cỏ nhìn xuống thung lũng mây mù</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Ba chú tiểu tăng mặc áo đỏ đang ngồi bệt và đứng thư giãn, trò chuyện rôm rả trên thảm cỏ xanh bên sườn núi, phía xa là thung lũng mây mù trập trùng.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Ba chú tiểu tăng quay mặt nhìn nhau trò chuyện, một chú tiểu đứng cầm đồ bên trái.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Sang Cảnh 16: Nhóm nữ sinh đeo ba lô rảo bước trên đường làng.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Naturalistic Leisure Pacing (Kéo dài nhịp thở 1.87s để người xem ngắm nhìn trọn vẹn cảnh sắc hữu tình)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Bố cục 1/3 đặt các chú tiểu ở tiền cảnh góc phải, mở rộng không gian thung lũng mây mờ ở bên trái.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Tiêu cự 50mm f/2.8, cân bằng sắc độ xanh lá cây và màu đỏ cà sa.</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 15 (Out) ➔ Shot 16 (In)</h5>
+<img alt="Transition 15 to 16" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_120_ace6275f.jpg', 'So Sánh Chuyển Cảnh Shot 15 sang Shot 16')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_120_ace6275f.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-16">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(15.23, 16.73, 'SHOT 16')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_122_589c858d.jpg" alt="SHOT 16" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_122_589c858d.jpg', 'SHOT 16 [15.23s - 16.73s]')">🔍</button>
+                    <span class="thumb-time-badge">15.23s - 16.73s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 16</span>
+                        <h4 class="shot-heading">SHOT 16</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(15.23, 16.73, 'SHOT 16')">
+                        ▶ 15.23s ➔ 16.73s (1.50s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(15.23, 16.73, 'SHOT 16')">
+<img alt="SHOT 16" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_122_589c858d.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_122_589c858d.jpg', 'SHOT 16 [15.23s - 16.73s]')">🔍</button>
+<span class="thumb-time-badge">15.23s - 16.73s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 16</span>
+<h4 class="shot-heading">SHOT 16</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(15.23, 16.73, 'SHOT 16')">
+                        ▶ 15.23s ➔ 16.73s (1.50s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(15.23)">Shot 16 • Click để xem video</span>
+<div class="shot-name">Bước Chân Rộn Rã Tan Trường Giữa Thung Lũng Yên Bình</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(15.23)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 15.23s - 16.73s (1.53s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_122_589c858d.jpg', 'Shot 16 - Khung Đầu (Start Frame)')">
+<img alt="Shot 16 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_122_589c858d.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_124_44f57efd.jpg', 'Shot 16 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 16 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_124_44f57efd.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_126_0df8f3d3.jpg', 'Shot 16 - Khung Cuối (End Frame)')">
+<img alt="Shot 16 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_126_0df8f3d3.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Long Shot / Schoolgirls Walking Home</span></p>
+<p><strong>Địa điểm:</strong> Con đường làng uốn lượn ven thung lũng mùa gặt</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Ba nữ sinh Bhutan mặc đồng phục váy dài truyền thống Kira xanh tím, áo sơ mi trắng, đeo ba lô sách vở đang rảo bước cùng nhau trên con đường nhựa uốn lượn nhìn xuống thung lũng ruộng bậc thang làng quê thanh bình, bên cạnh là khóm hoa hồng đỏ nở rực.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Bước chân nhóm học sinh bước dần về phía khúc quanh con đường.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Sang Cảnh 17: Toàn cảnh pháo đài Punakha Dzong tráng lệ nhìn qua vai chàng trai.</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Departure Continuity to Monumental Ending (Hành trình trở về nhà dẫn dắt vào biểu tượng cội nguồn vương quốc)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Máy quay tĩnh bắt trọn chuyển động tự nhiên từ gần ra xa, tận dụng giàn hoa đỏ góc trái làm khung lồng khung (Framing Element).</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Ống kính 70mm f/4.0 nén không gian thung lũng phía sau.</p>
+</div>
+</div>
+<div class="transition-block">
+<h5>⚡ So Sánh Chuyển Cảnh: Shot 16 (Out) ➔ Shot 17 (In)</h5>
+<img alt="Transition 16 to 17" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_128_f8b88fce.jpg', 'So Sánh Chuyển Cảnh Shot 16 sang Shot 17')" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_128_f8b88fce.jpg"/>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-17">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(16.77, 18.9, 'SHOT 17')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_130_1bc9d0db.jpg" alt="SHOT 17" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_130_1bc9d0db.jpg', 'SHOT 17 [16.77s - 18.9s]')">🔍</button>
+                    <span class="thumb-time-badge">16.77s - 18.90s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 17</span>
+                        <h4 class="shot-heading">SHOT 17</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(16.77, 18.9, 'SHOT 17')">
+                        ▶ 16.77s ➔ 18.90s (2.13s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(16.77, 18.9, 'SHOT 17')">
+<img alt="SHOT 17" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_130_1bc9d0db.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_130_1bc9d0db.jpg', 'SHOT 17 [16.77s - 18.9s]')">🔍</button>
+<span class="thumb-time-badge">16.77s - 18.90s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 17</span>
+<h4 class="shot-heading">SHOT 17</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(16.77, 18.9, 'SHOT 17')">
+                        ▶ 16.77s ➔ 18.90s (2.13s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-wrap">
+<span class="shot-tag" onclick="playVideoAtTimestamp(16.77)">Shot 17 • Click để xem video</span>
+<div class="shot-name">Kết Màn Điện Ảnh: Chiêm Ngưỡng Đại Pháo Đài Punakha Dzong Hùng Vĩ</div>
+</div>
+<div class="shot-timing" onclick="playVideoAtTimestamp(16.77)" title="Click để nhảy đến mốc thời gian này trong video">
+                ⏱️ 16.77s - 18.90s (2.17s)
+            </div>
+</div>
+<!-- Keyframes 3-strip -->
+<div class="keyframe-grid">
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_130_1bc9d0db.jpg', 'Shot 17 - Khung Đầu (Start Frame)')">
+<img alt="Shot 17 Start" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_130_1bc9d0db.jpg"/>
+<span class="kf-label">Start Frame</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_132_55e03cc8.jpg', 'Shot 17 - Khung Giữa (Mid Frame)')">
+<img alt="Shot 17 Mid" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_132_55e03cc8.jpg"/>
+<span class="kf-label">Mid Keyframe</span>
+</div>
+<div class="kf-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_134_82685ada.jpg', 'Shot 17 - Khung Cuối (End Frame)')">
+<img alt="Shot 17 End" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_134_82685ada.jpg"/>
+<span class="kf-label">End Frame</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="shot-details-grid">
+<div class="detail-box">
+<h4>📐 Cỡ Cảnh &amp; Bối Cảnh</h4>
+<p><strong>Cỡ cảnh:</strong> <span class="highlight-text">Over-The-Shoulder (OTS) Extreme Wide Cinematic Finale</span></p>
+<p><strong>Địa điểm:</strong> Điểm ngắm cảnh bao quát Pháo đài Đại tu viện Punakha Dzong</p>
+<p style="margin-top: 6px;"><strong>Mô tả thị giác:</strong> Một chàng trai Bhutan mặc áo Gho tím đứng ở tiền cảnh quay lưng về phía máy ảnh (Out of focus), phóng tầm mắt ngắm nhìn pháo đài Đại tu viện Punakha Dzong tráng lệ với mái chùa vàng rực và những bức tường thành trắng đồ sộ tọa lạc giữa ngã ba sông và rừng thông bạt ngàn dưới ánh hoàng hôn vàng óng.</p>
+</div>
+<div class="detail-box">
+<h4>🔄 Kỹ Thuật Mồi - Nối &amp; Chuyển Cảnh</h4>
+<p><strong>Mồi cảnh (Outgoing):</strong> Ánh hoàng hôn vàng óng chiếu rực rỡ lên nóc đền vàng và tường thành trắng.</p>
+<p><strong>Nối cảnh (Incoming):</strong> Kết thúc video (Fade to black / Loop back).</p>
+<p style="margin-top: 6px;"><strong>Kỹ thuật chuyển:</strong> <span class="highlight-text" style="color: var(--accent-amber);">Over-The-Shoulder Grandeur Finale (Cú máy qua vai mở ra sự hùng vĩ, thiêng liêng và lắng đọng bất tận của vương quốc hạnh phúc Bhutan)</span></p>
+</div>
+<div class="detail-box">
+<h4>🎥 Lời Khuyên Đạo Diễn (Director Notes)</h4>
+<p>Sử dụng độ sâu trường ảnh nông vừa phải để tiền cảnh chàng trai tạo cảm giác đồng hành, tiêu điểm khóa chặt vào kiến trúc Punakha Dzong lộng lẫy. Thời lượng dài nhất (2.17s) tạo cái kết sâu lắng.</p>
+</div>
+<div class="detail-box">
+<h4>⚙️ Thông Số Kỹ Thuật &amp; Thiết Bị</h4>
+<p>Tiêu cự 85mm f/2.8, tối ưu hóa dải tương phản Dynamic Range bắt trọn sắc vàng hoàng hôn.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+        </div>
+
+        <div class="grid-container" id="gridView" style="display:none;">
+            
+        <div class="grid-card" onclick="playShot(0.0, 1.57, 'SHOT 01')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_002_c7376907.jpg" alt="SHOT 01" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_002_c7376907.jpg', 'SHOT 01 [0.0s - 1.57s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 01</div>
+                <div class="grid-badge-bottom">0.0s - 1.6s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(1.6, 2.03, 'SHOT 02')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_010_9919f8ae.jpg" alt="SHOT 02" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_010_9919f8ae.jpg', 'SHOT 02 [1.6s - 2.03s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 02</div>
+                <div class="grid-badge-bottom">1.6s - 2.0s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(2.07, 2.73, 'SHOT 03')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_018_f69c373c.jpg" alt="SHOT 03" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_018_f69c373c.jpg', 'SHOT 03 [2.07s - 2.73s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 03</div>
+                <div class="grid-badge-bottom">2.1s - 2.7s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(2.77, 3.33, 'SHOT 04')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_026_d6a121e7.jpg" alt="SHOT 04" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_026_d6a121e7.jpg', 'SHOT 04 [2.77s - 3.33s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 04</div>
+                <div class="grid-badge-bottom">2.8s - 3.3s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(3.37, 4.67, 'SHOT 05')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_034_9b5530bb.jpg" alt="SHOT 05" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_034_9b5530bb.jpg', 'SHOT 05 [3.37s - 4.67s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 05</div>
+                <div class="grid-badge-bottom">3.4s - 4.7s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(4.7, 5.6, 'SHOT 06')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_042_3a832256.jpg" alt="SHOT 06" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_042_3a832256.jpg', 'SHOT 06 [4.7s - 5.6s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 06</div>
+                <div class="grid-badge-bottom">4.7s - 5.6s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(5.63, 6.73, 'SHOT 07')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_050_01e537f7.jpg" alt="SHOT 07" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_050_01e537f7.jpg', 'SHOT 07 [5.63s - 6.73s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 07</div>
+                <div class="grid-badge-bottom">5.6s - 6.7s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(6.77, 7.37, 'SHOT 08')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_058_a9ce659c.jpg" alt="SHOT 08" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_058_a9ce659c.jpg', 'SHOT 08 [6.77s - 7.37s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 08</div>
+                <div class="grid-badge-bottom">6.8s - 7.4s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(7.4, 7.97, 'SHOT 09')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_066_64759333.jpg" alt="SHOT 09" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_066_64759333.jpg', 'SHOT 09 [7.4s - 7.97s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 09</div>
+                <div class="grid-badge-bottom">7.4s - 8.0s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(8.0, 8.73, 'SHOT 10')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_074_b332bc5a.jpg" alt="SHOT 10" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_074_b332bc5a.jpg', 'SHOT 10 [8.0s - 8.73s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 10</div>
+                <div class="grid-badge-bottom">8.0s - 8.7s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(8.77, 10.57, 'SHOT 11')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_082_3f4a35d6.jpg" alt="SHOT 11" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_082_3f4a35d6.jpg', 'SHOT 11 [8.77s - 10.57s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 11</div>
+                <div class="grid-badge-bottom">8.8s - 10.6s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(10.6, 11.53, 'SHOT 12')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_090_d281c1e6.jpg" alt="SHOT 12" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_090_d281c1e6.jpg', 'SHOT 12 [10.6s - 11.53s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 12</div>
+                <div class="grid-badge-bottom">10.6s - 11.5s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(11.57, 12.43, 'SHOT 13')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_098_f99a3f80.jpg" alt="SHOT 13" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_098_f99a3f80.jpg', 'SHOT 13 [11.57s - 12.43s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 13</div>
+                <div class="grid-badge-bottom">11.6s - 12.4s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(12.47, 13.33, 'SHOT 14')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_106_4064471c.jpg" alt="SHOT 14" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_106_4064471c.jpg', 'SHOT 14 [12.47s - 13.33s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 14</div>
+                <div class="grid-badge-bottom">12.5s - 13.3s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(13.37, 15.2, 'SHOT 15')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_114_0257fa2b.jpg" alt="SHOT 15" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_114_0257fa2b.jpg', 'SHOT 15 [13.37s - 15.2s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 15</div>
+                <div class="grid-badge-bottom">13.4s - 15.2s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(15.23, 16.73, 'SHOT 16')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_122_589c858d.jpg" alt="SHOT 16" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_122_589c858d.jpg', 'SHOT 16 [15.23s - 16.73s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 16</div>
+                <div class="grid-badge-bottom">15.2s - 16.7s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(16.77, 18.9, 'SHOT 17')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_130_1bc9d0db.jpg" alt="SHOT 17" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_130_1bc9d0db.jpg', 'SHOT 17 [16.77s - 18.9s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 17</div>
+                <div class="grid-badge-bottom">16.8s - 18.9s</div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)">
+    <div class="drawer-panel" onclick="event.stopPropagation()">
+        <div class="drawer-header">
+            <div class="drawer-title">📑 MỤC LỤC PHÂN CẢNH (17)</div>
+            <button class="drawer-close-btn" onclick="toggleDrawer(false)">&times;</button>
+        </div>
+        <div class="drawer-list">
+            
+        <div class="drawer-item" onclick="jumpToShot(1, 0.0, 1.57, 'SHOT 01')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_002_c7376907.jpg" alt="SHOT 01" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 01</div>
+                <div class="drawer-shot-time">⏱ 0.00s - 1.57s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(2, 1.6, 2.03, 'SHOT 02')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_010_9919f8ae.jpg" alt="SHOT 02" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 02</div>
+                <div class="drawer-shot-time">⏱ 1.60s - 2.03s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(3, 2.07, 2.73, 'SHOT 03')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_018_f69c373c.jpg" alt="SHOT 03" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 03</div>
+                <div class="drawer-shot-time">⏱ 2.07s - 2.73s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(4, 2.77, 3.33, 'SHOT 04')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_026_d6a121e7.jpg" alt="SHOT 04" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 04</div>
+                <div class="drawer-shot-time">⏱ 2.77s - 3.33s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(5, 3.37, 4.67, 'SHOT 05')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_034_9b5530bb.jpg" alt="SHOT 05" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 05</div>
+                <div class="drawer-shot-time">⏱ 3.37s - 4.67s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(6, 4.7, 5.6, 'SHOT 06')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_042_3a832256.jpg" alt="SHOT 06" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 06</div>
+                <div class="drawer-shot-time">⏱ 4.70s - 5.60s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(7, 5.63, 6.73, 'SHOT 07')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_050_01e537f7.jpg" alt="SHOT 07" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 07</div>
+                <div class="drawer-shot-time">⏱ 5.63s - 6.73s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(8, 6.77, 7.37, 'SHOT 08')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_058_a9ce659c.jpg" alt="SHOT 08" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 08</div>
+                <div class="drawer-shot-time">⏱ 6.77s - 7.37s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(9, 7.4, 7.97, 'SHOT 09')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_066_64759333.jpg" alt="SHOT 09" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 09</div>
+                <div class="drawer-shot-time">⏱ 7.40s - 7.97s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(10, 8.0, 8.73, 'SHOT 10')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_074_b332bc5a.jpg" alt="SHOT 10" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 10</div>
+                <div class="drawer-shot-time">⏱ 8.00s - 8.73s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(11, 8.77, 10.57, 'SHOT 11')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_082_3f4a35d6.jpg" alt="SHOT 11" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 11</div>
+                <div class="drawer-shot-time">⏱ 8.77s - 10.57s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(12, 10.6, 11.53, 'SHOT 12')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_090_d281c1e6.jpg" alt="SHOT 12" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 12</div>
+                <div class="drawer-shot-time">⏱ 10.60s - 11.53s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(13, 11.57, 12.43, 'SHOT 13')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_098_f99a3f80.jpg" alt="SHOT 13" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 13</div>
+                <div class="drawer-shot-time">⏱ 11.57s - 12.43s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(14, 12.47, 13.33, 'SHOT 14')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_106_4064471c.jpg" alt="SHOT 14" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 14</div>
+                <div class="drawer-shot-time">⏱ 12.47s - 13.33s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(15, 13.37, 15.2, 'SHOT 15')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_114_0257fa2b.jpg" alt="SHOT 15" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 15</div>
+                <div class="drawer-shot-time">⏱ 13.37s - 15.20s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(16, 15.23, 16.73, 'SHOT 16')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_122_589c858d.jpg" alt="SHOT 16" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 16</div>
+                <div class="drawer-shot-time">⏱ 15.23s - 16.73s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(17, 16.77, 18.9, 'SHOT 17')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/People_of_Bhutan_-_%40jeromememe/img_130_1bc9d0db.jpg" alt="SHOT 17" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 17</div>
+                <div class="drawer-shot-time">⏱ 16.77s - 18.90s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+<div id="lightboxModal" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImg" src="" onclick="event.stopPropagation()" />
+    <div id="lightboxCaption"></div>
+</div>
+
+<script>
+const rawVideoSrc = "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/People%20of%20Bhutan%20-%20%40jeromememe.mp4";
+let currentEndTime = null;
+
+function getCandidateUrls(src) {
+    if (!src) return [];
+    if (src.startsWith('http://') || src.startsWith('https://')) return [src];
+    let clean = src.replace(/^(\.\/|\.\.\/)+/, '').replace(/^(videos\/|reports\/)/, '');
+    return [
+        'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/' + encodeURI(clean),
+        '../videos/' + clean,
+        './videos/' + clean,
+        './' + clean
+    ];
+}
+
+const candidateUrls = getCandidateUrls(rawVideoSrc);
+let candidateIdx = 0;
+const player = document.getElementById('mainPlayer');
+
+function loadVideoCandidate() {
+    if (candidateIdx >= candidateUrls.length) return;
+    const url = candidateUrls[candidateIdx];
+    player.src = url;
+    document.getElementById('directVidLink').href = url;
+    player.load();
+}
+
+player.onerror = () => {
+    candidateIdx++;
+    if (candidateIdx < candidateUrls.length) {
+        loadVideoCandidate();
+    }
+};
+
+loadVideoCandidate();
+
+function playShot(startTime, endTime, label) {
+    currentEndTime = (typeof endTime === 'number') ? endTime : null;
+    const tag = document.getElementById('shotStatusTag');
+    if (tag) {
+        const endTxt = currentEndTime ? ` - ${currentEndTime.toFixed(2)}s` : '';
+        tag.innerText = `🎬 ${label || 'Phân cảnh'}: [${startTime.toFixed(2)}s${endTxt}]`;
+    }
+    player.currentTime = startTime;
+    const p = player.play();
+    if (p !== undefined) {
+        p.catch(e => {
+            player.muted = true;
+            player.play().catch(err => console.log('Autoplay muted triggered'));
+        });
+    }
+    document.querySelectorAll('.shot-card').forEach(c => c.classList.remove('active-playing'));
+    const matchCard = Array.from(document.querySelectorAll('.shot-card')).find(c => c.innerText.includes(label));
+    if (matchCard) matchCard.classList.add('active-playing');
+
+    if (window.innerWidth < 1024) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
+function setSpeed(speed, btn) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.speed-buttons-row .ctrl-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+}
+
+function stepFrame(frames) {
+    player.pause();
+    player.currentTime += (frames * (1/30));
+}
+
+function toggleMute(btn) {
+    player.muted = !player.muted;
+    if (btn) btn.innerText = player.muted ? '🔇 Tắt Tiếng' : '🔊 Tiếng';
+}
+
+function switchView(view) {
+    const sb = document.getElementById('storyboardView');
+    const grid = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetailBtn');
+    const tabGrid = document.getElementById('tabGridBtn');
+    if (view === 'grid') {
+        sb.style.display = 'none';
+        grid.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    } else {
+        sb.style.display = 'flex';
+        grid.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    }
+}
+
+function toggleDrawer(open) {
+    const drawer = document.getElementById('drawerBackdrop');
+    if (open) drawer.classList.add('open');
+    else drawer.classList.remove('open');
+}
+
+function jumpToShot(shotNum, st, et, label) {
+    toggleDrawer(false);
+    switchView('detail');
+    playShot(st, et, label);
+    const targetCard = document.getElementById('shot-card-' + shotNum);
+    if (targetCard) {
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function openLightbox(src, caption) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCaption');
+    img.src = src;
+    cap.innerText = caption || '';
+    modal.style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').style.display = 'none';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+        toggleDrawer(false);
+    } else if (e.key === ' ') {
+        if (document.activeElement.tagName !== 'INPUT') {
+            e.preventDefault();
+            player.paused ? player.play() : player.pause();
+        }
+    }
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

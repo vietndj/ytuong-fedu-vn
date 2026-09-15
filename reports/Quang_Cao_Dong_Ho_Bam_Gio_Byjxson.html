@@ -1,0 +1,2331 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Bản Đồ Ánh Xạ Bối Cảnh • Quảng Cáo Đồng Hồ Bấm Giờ (@byjxson Remake)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #070a0f;
+    --bg-card: #0e1420;
+    --bg-card-hover: #151e30;
+    --bg-surface: #121928;
+    --border-color: #1e293b;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-blue: #38bdf8;
+    --accent-amber: #f59e0b;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-purple: #c084fc;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.55;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: #202d42; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .app-container {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .video-sidebar-col {
+        width: 440px;
+        min-width: 440px;
+        max-width: 480px;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: 1px solid var(--border-color);
+        background: var(--bg-surface);
+        display: flex;
+        flex-direction: column;
+        z-index: 30;
+    }
+    .content-scroll-col {
+        flex: 1;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 24px 32px 60px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    .video-sidebar-col {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(14, 20, 32, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .content-scroll-col {
+        width: 100%;
+        padding: 16px 14px 80px;
+    }
+}
+
+/* Sticky Video Player Box */
+.video-player-container {
+    padding: 16px;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 9/16;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+@media (max-width: 1023px) {
+    .video-player-container {
+        padding: 8px 12px;
+    }
+    .video-wrapper {
+        max-width: 180px;
+        aspect-ratio: 9/16;
+        border-radius: 8px;
+    }
+}
+
+video#mainVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Director Player Controls */
+.player-controls {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg-surface);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.time-display-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent-blue);
+}
+
+.control-btn-group {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ctrl-btn {
+    background: #1c273c;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-family: var(--font-mono);
+}
+
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--accent-blue);
+    color: #000;
+    border-color: var(--accent-blue);
+}
+
+/* Header Banner */
+.header-card {
+    background: linear-gradient(135deg, #101a2e 0%, #1e2d4a 100%);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.badge-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: var(--font-mono);
+}
+
+.badge-gold { background: rgba(245, 158, 11, 0.2); color: var(--accent-amber); border: 1px solid rgba(245, 158, 11, 0.4); }
+.badge-blue { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); border: 1px solid rgba(56, 189, 248, 0.4); }
+.badge-green { background: rgba(16, 185, 129, 0.2); color: var(--accent-emerald); border: 1px solid rgba(16, 185, 129, 0.4); }
+.loc-badge-outdoor { background: rgba(16, 185, 129, 0.25); color: #34d399; border: 1px solid #10b981; }
+.loc-badge-home { background: rgba(56, 189, 248, 0.25); color: #38bdf8; border: 1px solid #0284c7; }
+.loc-badge-balcony { background: rgba(245, 158, 11, 0.25); color: #fbbf24; border: 1px solid #d97706; }
+
+h1.hero-title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.35;
+    margin-bottom: 8px;
+}
+
+.hero-subtitle {
+    color: var(--text-secondary);
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.meta-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+    background: rgba(11, 15, 23, 0.6);
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.stat-box .lbl {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.stat-box .val {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+}
+
+/* Shooting Checklist Section */
+.checklist-section {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.batch-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .batch-grid { grid-template-columns: 1fr; }
+}
+
+.batch-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 14px 16px;
+}
+
+.batch-header {
+    font-weight: 700;
+    font-size: 13.5px;
+    color: var(--accent-amber);
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.batch-time {
+    font-size: 11px;
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--accent-amber);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.checklist-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+}
+
+.check-item input[type="checkbox"] {
+    margin-top: 3px;
+    cursor: pointer;
+    accent-color: var(--accent-blue);
+}
+
+/* Shot Card Styles */
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 24px;
+    transition: all 0.2s ease;
+}
+
+.shot-card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.shot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.shot-meta-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.shot-num {
+    background: var(--accent-blue);
+    color: #000;
+    font-weight: 800;
+    font-size: 11.5px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+}
+
+.shot-time {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent-amber);
+    cursor: pointer;
+    background: rgba(245, 158, 11, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.shot-time:hover {
+    background: var(--accent-amber);
+    color: #000;
+}
+
+/* Comparison 2 Column Grid */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 860px) {
+    .comparison-grid { grid-template-columns: 1fr; }
+}
+
+.col-original {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.col-remake {
+    background: rgba(20, 32, 54, 0.5);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.col-tag {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    font-family: var(--font-mono);
+}
+
+.orig-tag { color: var(--text-muted); }
+.remake-tag { color: var(--accent-blue); }
+
+.col-headline {
+    font-family: var(--font-heading);
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.remake-loc-header h4 {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent-amber);
+    margin-bottom: 10px;
+}
+
+/* Keyframes row */
+.keyframe-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.kf-box {
+    position: relative;
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+
+.kf-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.kf-box:hover img { transform: scale(1.05); }
+
+.kf-label {
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 9px;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+}
+
+.analysis-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12.5px;
+}
+
+.critique-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+.critique-good { color: #a7f3d0; background: rgba(16, 185, 129, 0.1); padding: 5px 8px; border-radius: 5px; }
+.critique-bad { color: #fecdd3; background: rgba(244, 63, 94, 0.1); padding: 5px 8px; border-radius: 5px; }
+.takeaway-box { color: #fde68a; background: rgba(245, 158, 11, 0.1); padding: 6px 10px; border-radius: 5px; border-left: 3px solid var(--accent-amber); }
+
+/* Remake Specs */
+.remake-spec-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.spec-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: rgba(15, 23, 42, 0.5);
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+.spec-icon { font-size: 14px; margin-top: 1px; }
+
+.spec-action {
+    background: rgba(56, 189, 248, 0.1);
+    border-color: rgba(56, 189, 248, 0.2);
+    color: #e0f2fe;
+}
+
+.spec-voice {
+    background: rgba(245, 158, 11, 0.12);
+    border-color: rgba(245, 158, 11, 0.3);
+    color: #fef3c7;
+}
+
+/* Transition box */
+.trans-box {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.trans-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.trans-img {
+    max-height: 48px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+/* Drawer Menu Floating Button */
+.drawer-toggle-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--accent-blue);
+    color: #000;
+    font-weight: 700;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 30px;
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+    cursor: pointer;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+/* Drawer Overlay */
+.drawer-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(6px);
+    z-index: 100;
+    display: none;
+}
+
+.drawer-content {
+    position: fixed;
+    bottom: 0; left: 0; width: 100%;
+    max-height: 75vh;
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 101;
+    display: none;
+}
+
+.drawer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.drawer-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.drawer-item:hover {
+    background: #1c273c;
+    border-color: var(--accent-blue);
+}
+
+.drawer-shot-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-blue);
+}
+
+.drawer-shot-info {
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.drawer-shot-meta {
+    font-size: 10.5px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.92);
+    z-index: 200;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+}
+
+.lightbox-caption {
+    color: var(--text-primary);
+    margin-top: 12px;
+    font-size: 13px;
+    font-family: var(--font-mono);
+}
+
+.close-lb-btn {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Author Instagram Direct Link Button */
+.author-ig-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(192, 132, 252, 0.12);
+    border: 1px solid rgba(192, 132, 252, 0.35);
+    color: #e879f9;
+    padding: 2px 8px 2px 6px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    vertical-align: middle;
+}
+.author-ig-badge:hover {
+    background: linear-gradient(135deg, rgba(192, 132, 252, 0.3), rgba(244, 63, 94, 0.3));
+    border-color: #f43f5e;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+}
+.author-ig-badge strong {
+    color: #fff;
+}
+.author-ig-badge .ig-ext-btn {
+    background: linear-gradient(135deg, #c084fc, #f43f5e);
+    color: #0b0f17;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: all 0.15s;
+    letter-spacing: 0.2px;
+}
+.author-ig-badge:hover .ig-ext-btn {
+    background: #ffffff;
+    color: #0b0f17;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<div class="app-container">
+    <!-- Cột Trái (Sidebar): Sticky Video Player & Bộ Điều Khiển -->
+    <div class="video-sidebar-col">
+        <div class="video-player-container">
+            <div class="video-wrapper">
+                <video id="mainVideo" playsinline preload="metadata">
+                    <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Project%20100%20Day%2001%20-%20%40byjxson.mp4" type="video/mp4">
+                    Trình duyệt không hỗ trợ video.
+                </video>
+            </div>
+        </div>
+
+        <div class="player-controls">
+            <div class="time-display-row">
+                <span id="currentTimeDisplay">0.00s</span>
+                <span id="playbackSpeedDisplay">1.0x</span>
+                <span id="durationDisplay">13.80s</span>
+            </div>
+
+            <div class="control-btn-group">
+                <button class="ctrl-btn" onclick="togglePlay()" id="playPauseBtn">▶ Phát</button>
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                <button class="ctrl-btn" onclick="restartVideo()">🔄 Lặp</button>
+            </div>
+        </div>
+
+        <div style="padding: 16px; font-size: 12px; color: var(--text-muted); border-top: 1px solid var(--border-color);">
+            <p>💡 <b>Mẹo Đạo Diễn:</b> Click vào bất kỳ mốc thời gian nào để nhảy video tới phân cảnh đó. Bấm 0.25x để quan sát kỹ thuật cắt nối Match Cut.</p>
+        </div>
+    </div>
+
+    <!-- Cột Phải (Nội dung): Báo Cáo Ánh Xạ & Kịch Bản Chi Tiết -->
+    <div class="content-scroll-col">
+        
+        <!-- Header Banner -->
+        <div class="header-card">
+            <div class="badge-row">
+                <span class="badge badge-gold">⚡ ÁNH XẠ BỐI CẢNH 1-TO-1</span>
+                <span class="badge badge-blue">⏱ 15 SHOTS • 13.8S</span>
+                <span class="badge badge-green">📍 TIMES CITY & HOME STUDIO</span>
+            </div>
+            <h1 class="hero-title">Quảng Cáo Đồng Hồ Bấm Giờ: "Làm Chủ 86.400 Giây"</h1>
+            <p class="hero-subtitle">Bản đồ chuyển thể toàn diện từ video vlog mẫu <b>Project 100 Day 01 (@byjxson)</b> sang 6 cụm bối cảnh thực tế của anh Việt. Tối ưu hóa nhịp cắt nhanh, năng lượng đô thị dồn dập và thông điệp kỷ luật thời gian.</p>
+            
+            <div class="meta-stats-grid">
+                <div class="stat-box">
+                    <div class="lbl">Sản Phẩm</div>
+                    <div class="val">Focus Stopwatch Pro</div>
+                </div>
+                <div class="stat-box">
+                    <div class="lbl">Thông Điệp</div>
+                    <div class="val">Làm Chủ Thời Gian</div>
+                </div>
+                <div class="stat-box">
+                    <div class="lbl">Nhịp Dựng</div>
+                    <div class="val">Fast-Paced Montage</div>
+                </div>
+                <div class="stat-box">
+                    <div class="lbl">Tổng Thời Lượng</div>
+                    <div class="val">13.80 giây</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shooting Checklist Section -->
+        <div class="checklist-section">
+            <div class="section-title">🎬 LỘ TRÌNH ĐI QUAY TỐI ƯU (SHOOTING CHECKLIST)</div>
+            <p style="color: var(--text-secondary); font-size: 12.5px; margin-bottom: 12px;">Gom cảnh theo 2 ca quay để anh bấm máy nhanh trong 35 phút mà không phải chạy ngược xuôi giữa các địa điểm:</p>
+            
+            <div class="batch-grid">
+                <!-- Ca 1: Ngoại cảnh Times City -->
+                <div class="batch-card">
+                    <div class="batch-header">
+                        <span>☀️ CA 1: NGOẠI CẢNH TIMES CITY</span>
+                        <span class="batch-time">15 Phút</span>
+                    </div>
+                    <ul class="checklist-items">
+                        <li class="check-item"><input type="checkbox"> <span><b>Shot 01 (LOC-01):</b> Đặt máy sát đất đường chạy $
+ightarrow$ Bấm nút Start đồng hồ khi lướt qua.</span></li>
+                        <li class="check-item"><input type="checkbox"> <span><b>Shot 02 (LOC-02):</b> Quay sườn chạy bộ dọc con đường lát gạch bóng cây.</span></li>
+                        <li class="check-item"><input type="checkbox"> <span><b>Shot 08 (LOC-03):</b> Đặt máy sát sàn phòng gym dưới băng chuyền máy chạy.</span></li>
+                        <li class="check-item"><input type="checkbox"> <span><b>Shot 09 (LOC-03):</b> Đặt máy ngửa trên ghế tạ nhìn lên bấm ngắt vòng lap.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Ca 2: Nội cảnh Nhà Riêng -->
+                <div class="batch-card">
+                    <div class="batch-header">
+                        <span>🏠 CA 2: NỘI CẢNH NHÀ RIÊNG</span>
+                        <span class="batch-time">20 Phút</span>
+                    </div>
+                    <ul class="checklist-items">
+                        <li class="check-item"><input type="checkbox"> <span><b>Shot 03, 04, 05 (LOC-04):</b> Bàn làm việc: Đặt ly cà phê & đồng hồ, nhấp nước nhìn thẳng, gõ phím góc cao.</span></li>
+                        <li class="check-item"><input type="checkbox"> <span><b>Shot 06 (LOC-05):</b> Quay xuyên cửa kính đón nắng xiên sàn gỗ.</span></li>
+                        <li class="check-item"><input type="checkbox"> <span><b>Shot 07 (LOC-04):</b> Cận cảnh bấm nút STOP 45 phút trên mặt bàn.</span></li>
+                        <li class="check-item"><input type="checkbox"> <span><b>Shot 10, 11 (LOC-06):</b> Ban công: Quay xuyên tán lá Monstera & đứng đón gió hoàng hôn.</span></li>
+                        <li class="check-item"><input type="checkbox"> <span><b>Shot 12, 13, 14, 15 (LOC-04):</b> Bộ 3 Jump Cut tĩnh trên bàn làm việc & Macro chốt CTA.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 15 Shot Cards -->
+        <div class="shots-list-container">
+            
+    <div class="shot-card" id="shot-1">
+        <div class="shot-header">
+            <div class="shot-meta-left">
+                <span class="shot-num">SHOT 01</span>
+                <span class="shot-time" onclick="jumpToTime(0.0)">⏱ 0.00s - 1.79s (1.84s)</span>
+            </div>
+            <div class="shot-meta-right">
+                <span class="badge loc-badge-outdoor">📍 LOC-01</span>
+            </div>
+        </div>
+
+        <!-- 2 Column Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Left: Original Video -->
+            <div class="col-original">
+                <div class="col-tag orig-tag">🎬 VIDEO GỐC (@byjxson)</div>
+                <h3 class="col-headline">Kinetic Street Tracking Shot & Passing Car Wipe Hook</h3>
+                
+                <div class="keyframe-row">
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_start.jpg" alt="Shot 1 Start" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_start.jpg', 'Shot 1 Start')">
+                        <span class="kf-label">Start</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_mid.jpg" alt="Shot 1 Mid" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_mid.jpg', 'Shot 1 Mid')">
+                        <span class="kf-label">Mid</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_end.jpg" alt="Shot 1 End" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_end.jpg', 'Shot 1 End')">
+                        <span class="kf-label">End</span>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <p class="desc-text"><b>Diễn biến:</b> Jason mang ba lô đi bộ trên vỉa hè ngoại ô, một chiếc xe hơi màu xám đen lao qua tiền cảnh tạo cú gạt khung tự nhiên (Car Wipe) mở ra nhân vật. Dòng chữ 'welcome to' xuất hiện.</p>
+                    <div class="critique-row">
+                        <div class="critique-good"><b>✅ Điểm sáng:</b> Cú gạt khung bằng xe ô tô kéo giật sự chú ý của người xem ngay 0.3s đầu tiên, tạo năng lượng đô thị dồn dập.</div>
+                        <div class="critique-bad"><b>⚠️ Lưu ý:</b> Chuyển động xe đi qua rất nhanh, cần canh đúng tốc độ màn trập (shutter speed) để không bị nhòe mờ nhân vật phía sau.</div>
+                    </div>
+                    <div class="takeaway-box"><b>💡 Bài học:</b> Dùng vật thể chuyển động cắt ngang sát ống kính để tạo cú mở màn bất ngờ (Foreground Object Wipe).</div>
+                </div>
+            </div>
+
+            <!-- Right: Remake Mapping for Anh Viet -->
+            <div class="col-remake">
+                <div class="col-tag remake-tag">✨ ÁNH XẠ CHO ANH VIỆT (ĐỒNG HỒ BẤM GIỜ)</div>
+                <div class="remake-loc-header">
+                    <h4>Ngoại cảnh Times City • Đường Chạy Nắng Sớm</h4>
+                </div>
+
+                <div class="remake-spec-list">
+                    <div class="spec-item">
+                        <span class="spec-icon">📐</span>
+                        <div><b>Góc máy & Tiêu cự:</b> 1x Wide (24mm) • Đặt thấp ngang đầu gối (Low-Angle)</div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">💡</span>
+                        <div><b>Ánh sáng & Nguồn sáng:</b> Nắng sớm 6:30 AM xiên 45 độ ngược sáng nhẹ (Rim Light)</div>
+                    </div>
+                    <div class="spec-item spec-action">
+                        <span class="spec-icon">🎬</span>
+                        <div><b>Hành động & Diễn xuất:</b> Anh Việt mặc trang phục thể thao chạy bộ bước lướt qua ống kính. Đúng khoảnh khắc bước qua, đưa cổ tay trái lên bấm nút 'START' trên chiếc đồng hồ bấm giờ. Dòng chữ: <b>06:00 AM • BẮT ĐẦU NGÀY MỚI</b>.</div>
+                    </div>
+                    <div class="spec-item spec-voice">
+                        <span class="spec-icon">🎙️</span>
+                        <div><b>Lời thoại / Voiceover:</b> <em>"Mỗi ngày chúng ta đều có đúng 86.400 giây như nhau..."</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="trans-box">
+        <span class="trans-label">Chuyển cảnh tiếp theo:</span>
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_01_to_02.jpg" alt="Transition 1" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_01_to_02.jpg', 'Chuyển cảnh Shot 1 sang Shot 2')">
+    </div>
+    
+    </div>
+    
+    <div class="shot-card" id="shot-2">
+        <div class="shot-header">
+            <div class="shot-meta-left">
+                <span class="shot-num">SHOT 02</span>
+                <span class="shot-time" onclick="jumpToTime(1.84)">⏱ 1.84s - 3.34s (1.54s)</span>
+            </div>
+            <div class="shot-meta-right">
+                <span class="badge loc-badge-outdoor">📍 LOC-02</span>
+            </div>
+        </div>
+
+        <!-- 2 Column Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Left: Original Video -->
+            <div class="col-original">
+                <div class="col-tag orig-tag">🎬 VIDEO GỐC (@byjxson)</div>
+                <h3 class="col-headline">Cắt Nối Quán Tính Bước Đi (Momentum Match Cut) & Tiêu Đề 'project 100'</h3>
+                
+                <div class="keyframe-row">
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_02_start.jpg" alt="Shot 2 Start" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_02_start.jpg', 'Shot 2 Start')">
+                        <span class="kf-label">Start</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_02_mid.jpg" alt="Shot 2 Mid" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_02_mid.jpg', 'Shot 2 Mid')">
+                        <span class="kf-label">Mid</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_02_end.jpg" alt="Shot 2 End" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_02_end.jpg', 'Shot 2 End')">
+                        <span class="kf-label">End</span>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <p class="desc-text"><b>Diễn biến:</b> Jason tiếp tục sải bước từ trái sang phải với cùng vận tốc dọc hàng rào xanh. Dòng chữ 'project 100' hiện lớn giữa khung hình.</p>
+                    <div class="critique-row">
+                        <div class="critique-good"><b>✅ Điểm sáng:</b> Duy trì hướng di chuyển mượt mà không ngắt quãng (Invisible Cut), tạo cảm giác liền mạch về không gian.</div>
+                        <div class="critique-bad"><b>⚠️ Lưu ý:</b> Nếu nhân vật đổi tốc độ bước chân giữa 2 shot sẽ làm đứt gãy nhịp Match Cut.</div>
+                    </div>
+                    <div class="takeaway-box"><b>💡 Bài học:</b> Căn chỉnh vị trí đầu và tốc độ di chuyển của nhân vật trùng khớp giữa các góc máy khác nhau.</div>
+                </div>
+            </div>
+
+            <!-- Right: Remake Mapping for Anh Viet -->
+            <div class="col-remake">
+                <div class="col-tag remake-tag">✨ ÁNH XẠ CHO ANH VIỆT (ĐỒNG HỒ BẤM GIỜ)</div>
+                <div class="remake-loc-header">
+                    <h4>Ngoại cảnh Times City • Đường Lát Gạch Vòm Cây</h4>
+                </div>
+
+                <div class="remake-spec-list">
+                    <div class="spec-item">
+                        <span class="spec-icon">📐</span>
+                        <div><b>Góc máy & Tiêu cự:</b> 1x Side Tracking • Cầm máy hoặc gimbal chạy song song ngang sườn</div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">💡</span>
+                        <div><b>Ánh sáng & Nguồn sáng:</b> Bóng râm tán cây xanh mát mẻ, vệt nắng lọt qua kẽ lá</div>
+                    </div>
+                    <div class="spec-item spec-action">
+                        <span class="spec-icon">🎬</span>
+                        <div><b>Hành động & Diễn xuất:</b> Tiếp tục nhịp chạy thanh thoát dọc con đường lát gạch bóng nắng dưới vòm cây xanh. Dòng chữ typography nổi bật: <b>FOCUS TIMER PRO • 100% KỶ LUẬT</b>.</div>
+                    </div>
+                    <div class="spec-item spec-voice">
+                        <span class="spec-icon">🎙️</span>
+                        <div><b>Lời thoại / Voiceover:</b> <em>"...nhưng người làm chủ cuộc chơi là người bấm nút bắt đầu trước khi người khác thức dậy."</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="trans-box">
+        <span class="trans-label">Chuyển cảnh tiếp theo:</span>
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_02_to_03.jpg" alt="Transition 2" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_02_to_03.jpg', 'Chuyển cảnh Shot 2 sang Shot 3')">
+    </div>
+    
+    </div>
+    
+    <div class="shot-card" id="shot-3">
+        <div class="shot-header">
+            <div class="shot-meta-left">
+                <span class="shot-num">SHOT 03</span>
+                <span class="shot-time" onclick="jumpToTime(3.38)">⏱ 3.38s - 3.84s (0.50s)</span>
+            </div>
+            <div class="shot-meta-right">
+                <span class="badge loc-badge-home">📍 LOC-04</span>
+            </div>
+        </div>
+
+        <!-- 2 Column Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Left: Original Video -->
+            <div class="col-original">
+                <div class="col-tag orig-tag">🎬 VIDEO GỐC (@byjxson)</div>
+                <h3 class="col-headline">POV Đặt Ly Cà Phê Đá Xuống Bàn Gỗ • Mốc Giờ (9:30am)</h3>
+                
+                <div class="keyframe-row">
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_03_start.jpg" alt="Shot 3 Start" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_03_start.jpg', 'Shot 3 Start')">
+                        <span class="kf-label">Start</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_03_mid.jpg" alt="Shot 3 Mid" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_03_mid.jpg', 'Shot 3 Mid')">
+                        <span class="kf-label">Mid</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_03_end.jpg" alt="Shot 3 End" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_03_end.jpg', 'Shot 3 End')">
+                        <span class="kf-label">End</span>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <p class="desc-text"><b>Diễn biến:</b> Góc nhìn ngôi thứ nhất (POV) đặt ly cà phê sữa đá xuống mặt bàn gỗ cạnh laptop. Nhãn thời gian '9:30am / day 01/100' hiện trên thân ly.</p>
+                    <div class="critique-row">
+                        <div class="critique-good"><b>✅ Điểm sáng:</b> Góc POV đưa người xem hòa mình trực tiếp vào trải nghiệm bắt đầu phiên làm việc.</div>
+                        <div class="critique-bad"><b>⚠️ Lưu ý:</b> Thời lượng 0.5s rất ngắn, chuyển động đặt ly phải dứt khoát không ngập ngừng.</div>
+                    </div>
+                    <div class="takeaway-box"><b>💡 Bài học:</b> Dùng âm thanh 'cạch' vật lý chạm bàn để tạo điểm neo thính giác chuyển cảnh.</div>
+                </div>
+            </div>
+
+            <!-- Right: Remake Mapping for Anh Viet -->
+            <div class="col-remake">
+                <div class="col-tag remake-tag">✨ ÁNH XẠ CHO ANH VIỆT (ĐỒNG HỒ BẤM GIỜ)</div>
+                <div class="remake-loc-header">
+                    <h4>Nội cảnh Nhà • Bàn Làm Việc Mộc & Setup Đèn</h4>
+                </div>
+
+                <div class="remake-spec-list">
+                    <div class="spec-item">
+                        <span class="spec-icon">📐</span>
+                        <div><b>Góc máy & Tiêu cự:</b> POV Top-Down / Medium Close-up 3x (77mm) xóa phông</div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">💡</span>
+                        <div><b>Ánh sáng & Nguồn sáng:</b> Ánh sáng cửa sổ kết hợp đèn bàn mộc ấm áp</div>
+                    </div>
+                    <div class="spec-item spec-action">
+                        <span class="spec-icon">🎬</span>
+                        <div><b>Hành động & Diễn xuất:</b> Tay anh đặt chiếc đồng hồ bấm giờ vỏ thép nguyên khối sang trọng xuống cạnh bàn phím cơ và cốc espresso đá trên mặt bàn gỗ mộc. Kim giây quét êm ái. Mốc giờ: <b>08:30 AM • PHIÊN LÀM VIỆC SỐ 1</b>.</div>
+                    </div>
+                    <div class="spec-item spec-voice">
+                        <span class="spec-icon">🎙️</span>
+                        <div><b>Lời thoại / Voiceover:</b> <em>"Phiên làm việc sâu: 45 phút tập trung tuyệt đối."</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="trans-box">
+        <span class="trans-label">Chuyển cảnh tiếp theo:</span>
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_03_to_04.jpg" alt="Transition 3" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_03_to_04.jpg', 'Chuyển cảnh Shot 3 sang Shot 4')">
+    </div>
+    
+    </div>
+    
+    <div class="shot-card" id="shot-4">
+        <div class="shot-header">
+            <div class="shot-meta-left">
+                <span class="shot-num">SHOT 04</span>
+                <span class="shot-time" onclick="jumpToTime(3.88)">⏱ 3.88s - 4.80s (0.96s)</span>
+            </div>
+            <div class="shot-meta-right">
+                <span class="badge loc-badge-home">📍 LOC-04</span>
+            </div>
+        </div>
+
+        <!-- 2 Column Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Left: Original Video -->
+            <div class="col-original">
+                <div class="col-tag orig-tag">🎬 VIDEO GỐC (@byjxson)</div>
+                <h3 class="col-headline">Trung Cảnh Trực Diện • Nhấp Cà Phê & Giao Tiếp Bằng Mắt</h3>
+                
+                <div class="keyframe-row">
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_04_start.jpg" alt="Shot 4 Start" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_04_start.jpg', 'Shot 4 Start')">
+                        <span class="kf-label">Start</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_04_mid.jpg" alt="Shot 4 Mid" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_04_mid.jpg', 'Shot 4 Mid')">
+                        <span class="kf-label">Mid</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_04_end.jpg" alt="Shot 4 End" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_04_end.jpg', 'Shot 4 End')">
+                        <span class="kf-label">End</span>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <p class="desc-text"><b>Diễn biến:</b> Jason ngồi đối diện máy quay, đội mũ ngược, nâng ly cà phê uống một ngụm rồi nhìn thẳng ống kính.</p>
+                    <div class="critique-row">
+                        <div class="critique-good"><b>✅ Điểm sáng:</b> Tạo kết nối cảm xúc mạnh mẽ và chân thật như người bạn đang ngồi trò chuyện đối diện.</div>
+                        <div class="critique-bad"><b>⚠️ Lưu ý:</b> Hậu cảnh nếu quá nhiều chuyển động lộn xộn sẽ làm phân tán sự tập trung vào ánh mắt.</div>
+                    </div>
+                    <div class="takeaway-box"><b>💡 Bài học:</b> Giao tiếp mắt (Eye Contact) trực diện là vũ khí giữ chân người xem số 1.</div>
+                </div>
+            </div>
+
+            <!-- Right: Remake Mapping for Anh Viet -->
+            <div class="col-remake">
+                <div class="col-tag remake-tag">✨ ÁNH XẠ CHO ANH VIỆT (ĐỒNG HỒ BẤM GIỜ)</div>
+                <div class="remake-loc-header">
+                    <h4>Nội cảnh Nhà • Bàn Làm Việc (Ngang Tầm Mắt)</h4>
+                </div>
+
+                <div class="remake-spec-list">
+                    <div class="spec-item">
+                        <span class="spec-icon">📐</span>
+                        <div><b>Góc máy & Tiêu cự:</b> Frontal Medium Shot (2x/3x) • Đặt máy ngang tầm mắt sau màn hình</div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">💡</span>
+                        <div><b>Ánh sáng & Nguồn sáng:</b> Softbox tản sáng đều lên gương mặt, hậu cảnh có ánh đèn ấm</div>
+                    </div>
+                    <div class="spec-item spec-action">
+                        <span class="spec-icon">🎬</span>
+                        <div><b>Hành động & Diễn xuất:</b> Anh Việt ngồi vào bàn làm việc, bấm nút kích hoạt chu kỳ đếm giờ 45 phút, ngước nhìn thẳng ống kính mỉm cười tự tin, nhấp một ngụm nước ấm.</div>
+                    </div>
+                    <div class="spec-item spec-voice">
+                        <span class="spec-icon">🎙️</span>
+                        <div><b>Lời thoại / Voiceover:</b> <em>"Không thông báo, không lướt mạng xã hội. Chỉ có mục tiêu và kim giây."</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="trans-box">
+        <span class="trans-label">Chuyển cảnh tiếp theo:</span>
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_04_to_05.jpg" alt="Transition 4" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_04_to_05.jpg', 'Chuyển cảnh Shot 4 sang Shot 5')">
+    </div>
+    
+    </div>
+    
+    <div class="shot-card" id="shot-5">
+        <div class="shot-header">
+            <div class="shot-meta-left">
+                <span class="shot-num">SHOT 05</span>
+                <span class="shot-time" onclick="jumpToTime(4.84)">⏱ 4.84s - 5.51s (0.71s)</span>
+            </div>
+            <div class="shot-meta-right">
+                <span class="badge loc-badge-home">📍 LOC-04</span>
+            </div>
+        </div>
+
+        <!-- 2 Column Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Left: Original Video -->
+            <div class="col-original">
+                <div class="col-tag orig-tag">🎬 VIDEO GỐC (@byjxson)</div>
+                <h3 class="col-headline">Góc Chếch Cao 45° Nhìn Xuống • Trạng Thái Tập Trung Làm Việc (10:00am)</h3>
+                
+                <div class="keyframe-row">
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_05_start.jpg" alt="Shot 5 Start" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_05_start.jpg', 'Shot 5 Start')">
+                        <span class="kf-label">Start</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_05_mid.jpg" alt="Shot 5 Mid" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_05_mid.jpg', 'Shot 5 Mid')">
+                        <span class="kf-label">Mid</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_05_end.jpg" alt="Shot 5 End" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_05_end.jpg', 'Shot 5 End')">
+                        <span class="kf-label">End</span>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <p class="desc-text"><b>Diễn biến:</b> Máy quay trên cao nhìn xuống Jason đang gõ bàn phím laptop. Không gian quán mở rộng với sàn gạch hoa văn. Mốc thời gian '10:00am'.</p>
+                    <div class="critique-row">
+                        <div class="critique-good"><b>✅ Điểm sáng:</b> Đổi góc nhìn từ ngang tầm mắt lên cao 45 độ giúp làm mới nhịp thị giác (Visual Reset).</div>
+                        <div class="critique-bad"><b>⚠️ Lưu ý:</b> Cần căn bố cục gọn gàng để tránh các vật dụng thừa trên bàn lọt vào khung.</div>
+                    </div>
+                    <div class="takeaway-box"><b>💡 Bài học:</b> Thay đổi độ cao máy quay (Angle Elevation) giữa các shot giúp video sống động hơn.</div>
+                </div>
+            </div>
+
+            <!-- Right: Remake Mapping for Anh Viet -->
+            <div class="col-remake">
+                <div class="col-tag remake-tag">✨ ÁNH XẠ CHO ANH VIỆT (ĐỒNG HỒ BẤM GIỜ)</div>
+                <div class="remake-loc-header">
+                    <h4>Nội cảnh Nhà • Bàn Làm Việc (Góc Cao 45°)</h4>
+                </div>
+
+                <div class="remake-spec-list">
+                    <div class="spec-item">
+                        <span class="spec-icon">📐</span>
+                        <div><b>Góc máy & Tiêu cự:</b> High-Angle 45° (1x/2x) • Gắn tripod cao nhìn chéo xuống bàn</div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">💡</span>
+                        <div><b>Ánh sáng & Nguồn sáng:</b> Ánh sáng tự nhiên từ cửa sổ chiếu lên bàn phím và mặt số đồng hồ</div>
+                    </div>
+                    <div class="spec-item spec-action">
+                        <span class="spec-icon">🎬</span>
+                        <div><b>Hành động & Diễn xuất:</b> Hai tay anh gõ phím nhanh dứt khoát trên laptop/màn hình rời, mặt số đồng hồ bấm giờ đếm ngược từng giây đặt nổi bật ở góc bàn.</div>
+                    </div>
+                    <div class="spec-item spec-voice">
+                        <span class="spec-icon">🎙️</span>
+                        <div><b>Lời thoại / Voiceover:</b> <em>"Mọi khối công việc phức tạp đều được băm nhỏ và xử lý dứt điểm."</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="trans-box">
+        <span class="trans-label">Chuyển cảnh tiếp theo:</span>
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_05_to_06.jpg" alt="Transition 5" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_05_to_06.jpg', 'Chuyển cảnh Shot 5 sang Shot 6')">
+    </div>
+    
+    </div>
+    
+    <div class="shot-card" id="shot-6">
+        <div class="shot-header">
+            <div class="shot-meta-left">
+                <span class="shot-num">SHOT 06</span>
+                <span class="shot-time" onclick="jumpToTime(5.55)">⏱ 5.55s - 6.05s (0.54s)</span>
+            </div>
+            <div class="shot-meta-right">
+                <span class="badge loc-badge-home">📍 LOC-05</span>
+            </div>
+        </div>
+
+        <!-- 2 Column Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Left: Original Video -->
+            <div class="col-original">
+                <div class="col-tag orig-tag">🎬 VIDEO GỐC (@byjxson)</div>
+                <h3 class="col-headline">Góc Nghiêng Nhìn Xuyên Kính • Người Quan Sát Tĩnh Lặng (10:55am)</h3>
+                
+                <div class="keyframe-row">
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_06_start.jpg" alt="Shot 6 Start" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_06_start.jpg', 'Shot 6 Start')">
+                        <span class="kf-label">Start</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_06_mid.jpg" alt="Shot 6 Mid" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_06_mid.jpg', 'Shot 6 Mid')">
+                        <span class="kf-label">Mid</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_06_end.jpg" alt="Shot 6 End" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_06_end.jpg', 'Shot 6 End')">
+                        <span class="kf-label">End</span>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <p class="desc-text"><b>Diễn biến:</b> Góc nhìn nghiêng 90 độ quay từ ngoài qua vách kính trong suốt. Jason chống cằm tư duy, phản chiếu phố xá mờ ảo. Mốc thời gian '10:55am'.</p>
+                    <div class="critique-row">
+                        <div class="critique-good"><b>✅ Điểm sáng:</b> Bố cục nhìn xuyên kính (Shoot-Through Glass) mang đậm chất điện ảnh tài liệu.</div>
+                        <div class="critique-bad"><b>⚠️ Lưu ý:</b> Mặt kính phải được lau sạch để không bị vệt bẩn làm mờ nét chủ thể.</div>
+                    </div>
+                    <div class="takeaway-box"><b>💡 Bài học:</b> Tận dụng độ phản chiếu của kính cửa sổ để tạo chiều sâu đa tầng không gian (Layering).</div>
+                </div>
+            </div>
+
+            <!-- Right: Remake Mapping for Anh Viet -->
+            <div class="col-remake">
+                <div class="col-tag remake-tag">✨ ÁNH XẠ CHO ANH VIỆT (ĐỒNG HỒ BẤM GIỜ)</div>
+                <div class="remake-loc-header">
+                    <h4>Nội cảnh Nhà • Cửa Kính Đón Nắng Sàn Gỗ (Sunbeam)</h4>
+                </div>
+
+                <div class="remake-spec-list">
+                    <div class="spec-item">
+                        <span class="spec-icon">📐</span>
+                        <div><b>Góc máy & Tiêu cự:</b> Shoot-Through Glass 3x Telephoto • Đặt máy ngoài cửa kính nhìn vào phòng</div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">💡</span>
+                        <div><b>Ánh sáng & Nguồn sáng:</b> Ánh nắng xiên rọi bóng lá trầu bà lên sàn gỗ và mặt kính phản chiếu</div>
+                    </div>
+                    <div class="spec-item spec-action">
+                        <span class="spec-icon">🎬</span>
+                        <div><b>Hành động & Diễn xuất:</b> Anh Việt quay nghiêng, trầm ngâm nhìn màn hình tư duy chiến lược, tay xoay nhẹ núm vặn bezel cơ học của đồng hồ.</div>
+                    </div>
+                    <div class="spec-item spec-voice">
+                        <span class="spec-icon">🎙️</span>
+                        <div><b>Lời thoại / Voiceover:</b> <em>"Độ chính xác tuyệt đối đến từng micro-giây cho mọi quyết định."</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="trans-box">
+        <span class="trans-label">Chuyển cảnh tiếp theo:</span>
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_06_to_07.jpg" alt="Transition 6" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_06_to_07.jpg', 'Chuyển cảnh Shot 6 sang Shot 7')">
+    </div>
+    
+    </div>
+    
+    <div class="shot-card" id="shot-7">
+        <div class="shot-header">
+            <div class="shot-meta-left">
+                <span class="shot-num">SHOT 07</span>
+                <span class="shot-time" onclick="jumpToTime(6.09)">⏱ 6.09s - 6.84s (0.79s)</span>
+            </div>
+            <div class="shot-meta-right">
+                <span class="badge loc-badge-home">📍 LOC-04</span>
+            </div>
+        </div>
+
+        <!-- 2 Column Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Left: Original Video -->
+            <div class="col-original">
+                <div class="col-tag orig-tag">🎬 VIDEO GỐC (@byjxson)</div>
+                <h3 class="col-headline">Góc Thấp Xem Đồng Hồ Đeo Tay • Tín Hiệu Chuyển Cảnh (11:45am)</h3>
+                
+                <div class="keyframe-row">
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_07_start.jpg" alt="Shot 7 Start" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_07_start.jpg', 'Shot 7 Start')">
+                        <span class="kf-label">Start</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_07_mid.jpg" alt="Shot 7 Mid" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_07_mid.jpg', 'Shot 7 Mid')">
+                        <span class="kf-label">Mid</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_07_end.jpg" alt="Shot 7 End" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_07_end.jpg', 'Shot 7 End')">
+                        <span class="kf-label">End</span>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <p class="desc-text"><b>Diễn biến:</b> Máy quay đặt thấp dưới bàn nhìn lên cổ tay trái Jason xem đồng hồ thông minh. Mốc thời gian '11:45am'.</p>
+                    <div class="critique-row">
+                        <div class="critique-good"><b>✅ Điểm sáng:</b> Động tác xem giờ là 'cái cớ điện ảnh' (Motivated Cut) chuyển từ sáng sang chiều.</div>
+                        <div class="critique-bad"><b>⚠️ Lưu ý:</b> Cần lấy nét chuẩn vào mặt số đồng hồ thay vì lấy nét vào áo.</div>
+                    </div>
+                    <div class="takeaway-box"><b>💡 Bài học:</b> Luôn dùng một hành động cụ thể để làm cầu nối chuyển đổi giữa các địa điểm.</div>
+                </div>
+            </div>
+
+            <!-- Right: Remake Mapping for Anh Viet -->
+            <div class="col-remake">
+                <div class="col-tag remake-tag">✨ ÁNH XẠ CHO ANH VIỆT (ĐỒNG HỒ BẤM GIỜ)</div>
+                <div class="remake-loc-header">
+                    <h4>Nội cảnh Nhà • Bàn Làm Việc (Góc Cận Hắt Lên)</h4>
+                </div>
+
+                <div class="remake-spec-list">
+                    <div class="spec-item">
+                        <span class="spec-icon">📐</span>
+                        <div><b>Góc máy & Tiêu cự:</b> Low-Angle Upward Close-Up 3x • Đặt sát mặt bàn hắt lên cổ tay</div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">💡</span>
+                        <div><b>Ánh sáng & Nguồn sáng:</b> Đèn bàn viền sáng góc cạnh kim loại của đồng hồ</div>
+                    </div>
+                    <div class="spec-item spec-action">
+                        <span class="spec-icon">🎬</span>
+                        <div><b>Hành động & Diễn xuất:</b> Ngón tay anh bấm nút STOP kết thúc phiên 45 phút. Chuông báo rung nhẹ, kim giây dừng chuẩn xác. Mốc giờ: <b>09:15 AM • HOÀN THÀNH</b>.</div>
+                    </div>
+                    <div class="spec-item spec-voice">
+                        <span class="spec-icon">🎙️</span>
+                        <div><b>Lời thoại / Voiceover:</b> <em>"Hết giờ. Một nhiệm vụ trọng tâm trong ngày đã hoàn thành xuất sắc."</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="trans-box">
+        <span class="trans-label">Chuyển cảnh tiếp theo:</span>
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_07_to_08.jpg" alt="Transition 7" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_07_to_08.jpg', 'Chuyển cảnh Shot 7 sang Shot 8')">
+    </div>
+    
+    </div>
+    
+    <div class="shot-card" id="shot-8">
+        <div class="shot-header">
+            <div class="shot-meta-left">
+                <span class="shot-num">SHOT 08</span>
+                <span class="shot-time" onclick="jumpToTime(6.88)">⏱ 6.88s - 7.80s (0.96s)</span>
+            </div>
+            <div class="shot-meta-right">
+                <span class="badge loc-badge-outdoor">📍 LOC-03</span>
+            </div>
+        </div>
+
+        <!-- 2 Column Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Left: Original Video -->
+            <div class="col-original">
+                <div class="col-tag orig-tag">🎬 VIDEO GỐC (@byjxson)</div>
+                <h3 class="col-headline">Góc Siêu Thấp Gắn Sát Bánh Xe Đẩy Siêu Thị (01:30pm)</h3>
+                
+                <div class="keyframe-row">
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_08_start.jpg" alt="Shot 8 Start" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_08_start.jpg', 'Shot 8 Start')">
+                        <span class="kf-label">Start</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_08_mid.jpg" alt="Shot 8 Mid" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_08_mid.jpg', 'Shot 8 Mid')">
+                        <span class="kf-label">Mid</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_08_end.jpg" alt="Shot 8 End" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_08_end.jpg', 'Shot 8 End')">
+                        <span class="kf-label">End</span>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <p class="desc-text"><b>Diễn biến:</b> Camera gắn sát trục bánh xe xoay (Wheel Cam) dưới gầm xe đẩy Target lướt trên sàn sáng bóng. Mốc thời gian '01:30pm'.</p>
+                    <div class="critique-row">
+                        <div class="critique-good"><b>✅ Điểm sáng:</b> Góc nhìn sát mặt đất với chuyển động bánh xe quay tốc độ cao tạo kích thích thị giác cực mạnh.</div>
+                        <div class="critique-bad"><b>⚠️ Lưu ý:</b> Rất dễ rung lắc nếu không có bộ chống rung hoặc gắn chân máy chắc chắn.</div>
+                    </div>
+                    <div class="takeaway-box"><b>💡 Bài học:</b> Đặt camera ở những góc mắt người không thấy để biến việc bình thường thành trải nghiệm điện ảnh.</div>
+                </div>
+            </div>
+
+            <!-- Right: Remake Mapping for Anh Viet -->
+            <div class="col-remake">
+                <div class="col-tag remake-tag">✨ ÁNH XẠ CHO ANH VIỆT (ĐỒNG HỒ BẤM GIỜ)</div>
+                <div class="remake-loc-header">
+                    <h4>Ngoại cảnh Times City • Gym California (Máy Chạy / Tạ)</h4>
+                </div>
+
+                <div class="remake-spec-list">
+                    <div class="spec-item">
+                        <span class="spec-icon">📐</span>
+                        <div><b>Góc máy & Tiêu cự:</b> Ground-Level Low Shot 0.6x Ultra-Wide • Đặt sát sàn máy chạy bộ hoặc giá tạ</div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">💡</span>
+                        <div><b>Ánh sáng & Nguồn sáng:</b> Ánh sáng trần phòng gym hiện đại phản chiếu trên kim loại tạ</div>
+                    </div>
+                    <div class="spec-item spec-action">
+                        <span class="spec-icon">🎬</span>
+                        <div><b>Hành động & Diễn xuất:</b> Băng chuyền máy chạy chuyển động hoặc chân anh đặt bước chạy dồn dập, đồng hồ trên tay hiển thị chế độ đếm thời gian tập ngắt quãng (HIIT Interval).</div>
+                    </div>
+                    <div class="spec-item spec-voice">
+                        <span class="spec-icon">🎙️</span>
+                        <div><b>Lời thoại / Voiceover:</b> <em>"Chuyển đổi trạng thái từ trí óc sang cơ bắp."</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="trans-box">
+        <span class="trans-label">Chuyển cảnh tiếp theo:</span>
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_08_to_09.jpg" alt="Transition 8" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_08_to_09.jpg', 'Chuyển cảnh Shot 8 sang Shot 9')">
+    </div>
+    
+    </div>
+    
+    <div class="shot-card" id="shot-9">
+        <div class="shot-header">
+            <div class="shot-meta-left">
+                <span class="shot-num">SHOT 09</span>
+                <span class="shot-time" onclick="jumpToTime(7.84)">⏱ 7.84s - 8.59s (0.79s)</span>
+            </div>
+            <div class="shot-meta-right">
+                <span class="badge loc-badge-outdoor">📍 LOC-03</span>
+            </div>
+        </div>
+
+        <!-- 2 Column Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Left: Original Video -->
+            <div class="col-original">
+                <div class="col-tag orig-tag">🎬 VIDEO GỐC (@byjxson)</div>
+                <h3 class="col-headline">Góc Đảo Chiều Đặt Trong Xe Đẩy Nhìn Lên (01:30pm)</h3>
+                
+                <div class="keyframe-row">
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_09_start.jpg" alt="Shot 9 Start" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_09_start.jpg', 'Shot 9 Start')">
+                        <span class="kf-label">Start</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_09_mid.jpg" alt="Shot 9 Mid" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_09_mid.jpg', 'Shot 9 Mid')">
+                        <span class="kf-label">Mid</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_09_end.jpg" alt="Shot 9 End" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_09_end.jpg', 'Shot 9 End')">
+                        <span class="kf-label">End</span>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <p class="desc-text"><b>Diễn biến:</b> Máy quay đặt trong giỏ xe đẩy màu đỏ hướng ngược lên mặt Jason khi anh đẩy xe tìm đồ.</p>
+                    <div class="critique-row">
+                        <div class="critique-good"><b>✅ Điểm sáng:</b> Khung viền đỏ đóng khung chủ thể (Frame-in-Frame) tạo sự tập trung cao.</div>
+                        <div class="critique-bad"><b>⚠️ Lưu ý:</b> Cần di chuyển xe đẩy thật êm để mặt nhân vật không bị nhấp nhô quá mạnh.</div>
+                    </div>
+                    <div class="takeaway-box"><b>💡 Bài học:</b> Đặt camera trực tiếp vào vật dụng di chuyển là cách có cú tracking mượt mà không cần gimbal.</div>
+                </div>
+            </div>
+
+            <!-- Right: Remake Mapping for Anh Viet -->
+            <div class="col-remake">
+                <div class="col-tag remake-tag">✨ ÁNH XẠ CHO ANH VIỆT (ĐỒNG HỒ BẤM GIỜ)</div>
+                <div class="remake-loc-header">
+                    <h4>Ngoại cảnh Times City • Gym California (Góc Nhìn Thấp Từ Ghế Tạ)</h4>
+                </div>
+
+                <div class="remake-spec-list">
+                    <div class="spec-item">
+                        <span class="spec-icon">📐</span>
+                        <div><b>Góc máy & Tiêu cự:</b> Low Upward Angle 1x • Đặt máy ngửa trên băng ghế tạ nhìn lên mặt</div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">💡</span>
+                        <div><b>Ánh sáng & Nguồn sáng:</b> Đèn trần rọi viền vai và cơ bắp, thể hiện sự khỏe khoắn</div>
+                    </div>
+                    <div class="spec-item spec-action">
+                        <span class="spec-icon">🎬</span>
+                        <div><b>Hành động & Diễn xuất:</b> Anh Việt thở nhịp đều sau set tập tạ, nhìn xuống bấm ngắt vòng lap-time trên mặt đồng hồ.</div>
+                    </div>
+                    <div class="spec-item spec-voice">
+                        <span class="spec-icon">🎙️</span>
+                        <div><b>Lời thoại / Voiceover:</b> <em>"Kỷ luật không phải là gò bó, mà là sự tự do tuyệt đối khi bạn làm chủ nhịp điệu sống."</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="trans-box">
+        <span class="trans-label">Chuyển cảnh tiếp theo:</span>
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_09_to_10.jpg" alt="Transition 9" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_09_to_10.jpg', 'Chuyển cảnh Shot 9 sang Shot 10')">
+    </div>
+    
+    </div>
+    
+    <div class="shot-card" id="shot-10">
+        <div class="shot-header">
+            <div class="shot-meta-left">
+                <span class="shot-num">SHOT 10</span>
+                <span class="shot-time" onclick="jumpToTime(8.63)">⏱ 8.63s - 9.76s (1.17s)</span>
+            </div>
+            <div class="shot-meta-right">
+                <span class="badge loc-badge-balcony">📍 LOC-06</span>
+            </div>
+        </div>
+
+        <!-- 2 Column Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Left: Original Video -->
+            <div class="col-original">
+                <div class="col-tag orig-tag">🎬 VIDEO GỐC (@byjxson)</div>
+                <h3 class="col-headline">Góc Nhìn Xuyên Khe Hàng Trên Kệ Siêu Thị (01:45pm)</h3>
+                
+                <div class="keyframe-row">
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_10_start.jpg', 'Shot 10 Start')">
+                        <span class="kf-label">Start</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_10_mid.jpg', 'Shot 10 Mid')">
+                        <span class="kf-label">Mid</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_10_end.jpg" alt="Shot 10 End" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_10_end.jpg', 'Shot 10 End')">
+                        <span class="kf-label">End</span>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <p class="desc-text"><b>Diễn biến:</b> Camera đặt sâu trong kệ hàng nhìn xuyên qua khe giữa hai hộp sản phẩm màu trắng. Jason bước tới chọn đồ. Mốc thời gian '01:45pm'.</p>
+                    <div class="critique-row">
+                        <div class="critique-good"><b>✅ Điểm sáng:</b> Tạo cảm giác nhìn lén điện ảnh (Voyeuristic Aesthetic) và phân tầng tiền-trung-hậu rõ rệt.</div>
+                        <div class="critique-bad"><b>⚠️ Lưu ý:</b> Khoảng cách lấy nét giữa tiền cảnh và hậu cảnh khá lớn, cần khép khẩu để cả hai lớp đều rõ nét.</div>
+                    </div>
+                    <div class="takeaway-box"><b>💡 Bài học:</b> Tận dụng các vật phẩm tĩnh xung quanh để tạo tiền cảnh tiền tiêu (Foreground Framing).</div>
+                </div>
+            </div>
+
+            <!-- Right: Remake Mapping for Anh Viet -->
+            <div class="col-remake">
+                <div class="col-tag remake-tag">✨ ÁNH XẠ CHO ANH VIỆT (ĐỒNG HỒ BẤM GIỜ)</div>
+                <div class="remake-loc-header">
+                    <h4>Nội cảnh Nhà • Ban Công Cây Xanh (Nhìn Xuyên Tán Lá)</h4>
+                </div>
+
+                <div class="remake-spec-list">
+                    <div class="spec-item">
+                        <span class="spec-icon">📐</span>
+                        <div><b>Góc máy & Tiêu cự:</b> Shoot-Through Foliage 3x Telephoto • Đặt máy sau kẽ lá Monstera nhìn ra</div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">💡</span>
+                        <div><b>Ánh sáng & Nguồn sáng:</b> Ánh sáng tự nhiên ngoài trời tràn ngập, lá cây xanh bóng</div>
+                    </div>
+                    <div class="spec-item spec-action">
+                        <span class="spec-icon">🎬</span>
+                        <div><b>Hành động & Diễn xuất:</b> Anh Việt bước ra ban công, ánh sáng tự nhiên ngập tràn, cầm bình tưới cây hoặc cầm cốc nước mát ngắm nhìn bầu trời.</div>
+                    </div>
+                    <div class="spec-item spec-voice">
+                        <span class="spec-icon">🎙️</span>
+                        <div><b>Lời thoại / Voiceover:</b> <em>"Biết lúc nào cần dồn sức tập trung, biết lúc nào cần thả lỏng tâm trí."</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="trans-box">
+        <span class="trans-label">Chuyển cảnh tiếp theo:</span>
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_10_to_11.jpg" alt="Transition 10" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_10_to_11.jpg', 'Chuyển cảnh Shot 10 sang Shot 11')">
+    </div>
+    
+    </div>
+    
+    <div class="shot-card" id="shot-11">
+        <div class="shot-header">
+            <div class="shot-meta-left">
+                <span class="shot-num">SHOT 11</span>
+                <span class="shot-time" onclick="jumpToTime(9.8)">⏱ 9.80s - 11.14s (1.38s)</span>
+            </div>
+            <div class="shot-meta-right">
+                <span class="badge loc-badge-balcony">📍 LOC-06</span>
+            </div>
+        </div>
+
+        <!-- 2 Column Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Left: Original Video -->
+            <div class="col-original">
+                <div class="col-tag orig-tag">🎬 VIDEO GỐC (@byjxson)</div>
+                <h3 class="col-headline">Bố Cục Một Điểm Tụ Đối Xứng Dọc Lối Đi (01:45pm)</h3>
+                
+                <div class="keyframe-row">
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_11_start.jpg', 'Shot 11 Start')">
+                        <span class="kf-label">Start</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_11_mid.jpg', 'Shot 11 Mid')">
+                        <span class="kf-label">Mid</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_11_end.jpg" alt="Shot 11 End" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_11_end.jpg', 'Shot 11 End')">
+                        <span class="kf-label">End</span>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <p class="desc-text"><b>Diễn biến:</b> Góc toàn rộng chính giữa lối đi siêu thị với 2 hàng kệ thẳng tắp tạo đường dẫn đối xứng. Jason đẩy xe từ xa tiến về ống kính.</p>
+                    <div class="critique-row">
+                        <div class="critique-good"><b>✅ Điểm sáng:</b> Bố cục đối xứng hoàn hảo (One-Point Perspective) tạo cảm giác trật tự, thỏa mãn thị giác tuyệt đối.</div>
+                        <div class="critique-bad"><b>⚠️ Lưu ý:</b> Đòi hỏi người quay phải căn chính xác trục tâm giữa khung hình, lệch một chút sẽ mất đối xứng.</div>
+                    </div>
+                    <div class="takeaway-box"><b>💡 Bài học:</b> Tận dụng hành lang dài hoặc không gian đối xứng theo phong cách điện ảnh Stanley Kubrick.</div>
+                </div>
+            </div>
+
+            <!-- Right: Remake Mapping for Anh Viet -->
+            <div class="col-remake">
+                <div class="col-tag remake-tag">✨ ÁNH XẠ CHO ANH VIỆT (ĐỒNG HỒ BẤM GIỜ)</div>
+                <div class="remake-loc-header">
+                    <h4>Nội cảnh Nhà • Ban Công Rừng Nhiệt Đới (Trục Chính Diện)</h4>
+                </div>
+
+                <div class="remake-spec-list">
+                    <div class="spec-item">
+                        <span class="spec-icon">📐</span>
+                        <div><b>Góc máy & Tiêu cự:</b> Symmetrical Central Framing (1x / 0.6x) • Căn chính giữa trục ban công</div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">💡</span>
+                        <div><b>Ánh sáng & Nguồn sáng:</b> Ánh sáng hoàng hôn vàng cam ấm áp (Golden Hour)</div>
+                    </div>
+                    <div class="spec-item spec-action">
+                        <span class="spec-icon">🎬</span>
+                        <div><b>Hành động & Diễn xuất:</b> Anh đứng tựa lan can, đưa tay ngắm nhìn chiếc đồng hồ phản chiếu ánh nắng lấp lánh, hít một hơi sâu đón gió chiều.</div>
+                    </div>
+                    <div class="spec-item spec-voice">
+                        <span class="spec-icon">🎙️</span>
+                        <div><b>Lời thoại / Voiceover:</b> <em>"Đồng hồ không chỉ để xem giờ — nó là người bảo chứng cho từng khoảnh khắc bạn không bỏ phí."</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="trans-box">
+        <span class="trans-label">Chuyển cảnh tiếp theo:</span>
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_11_to_12.jpg" alt="Transition 11" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_11_to_12.jpg', 'Chuyển cảnh Shot 11 sang Shot 12')">
+    </div>
+    
+    </div>
+    
+    <div class="shot-card" id="shot-12">
+        <div class="shot-header">
+            <div class="shot-meta-left">
+                <span class="shot-num">SHOT 12</span>
+                <span class="shot-time" onclick="jumpToTime(11.18)">⏱ 11.18s - 11.55s (0.42s)</span>
+            </div>
+            <div class="shot-meta-right">
+                <span class="badge loc-badge-home">📍 LOC-04</span>
+            </div>
+        </div>
+
+        <!-- 2 Column Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Left: Original Video -->
+            <div class="col-original">
+                <div class="col-tag orig-tag">🎬 VIDEO GỐC (@byjxson)</div>
+                <h3 class="col-headline">Nhảy Cảnh Thời Gian (Jump Cut 1) • Khung Hình Hành Lang Trống (02:30pm)</h3>
+                
+                <div class="keyframe-row">
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_12_start.jpg', 'Shot 12 Start')">
+                        <span class="kf-label">Start</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_12_mid.jpg', 'Shot 12 Mid')">
+                        <span class="kf-label">Mid</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_12_end.jpg" alt="Shot 12 End" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_12_end.jpg', 'Shot 12 End')">
+                        <span class="kf-label">End</span>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <p class="desc-text"><b>Diễn biến:</b> Góc máy tĩnh cố định tuyệt đối ở hành lang cửa nhà. Khung hình trống trải, mốc thời gian '02:30pm'.</p>
+                    <div class="critique-row">
+                        <div class="critique-good"><b>✅ Điểm sáng:</b> Tạo khoảng lặng thị giác 0.4s (Visual Pause) trước khi kích hoạt chuỗi Jump Cut xuất hiện liên hoàn.</div>
+                        <div class="critique-bad"><b>⚠️ Lưu ý:</b> Chân máy phải giữ vững 100% không xê dịch 1 milimet.</div>
+                    </div>
+                    <div class="takeaway-box"><b>💡 Bài học:</b> Khóa chặt chân máy để chuỗi Jump Cut nối tiếp đạt hiệu quả thị giác chuẩn xác nhất.</div>
+                </div>
+            </div>
+
+            <!-- Right: Remake Mapping for Anh Viet -->
+            <div class="col-remake">
+                <div class="col-tag remake-tag">✨ ÁNH XẠ CHO ANH VIỆT (ĐỒNG HỒ BẤM GIỜ)</div>
+                <div class="remake-loc-header">
+                    <h4>Nội cảnh Nhà • Mặt Bàn Làm Việc (Tĩnh Tuyệt Đối)</h4>
+                </div>
+
+                <div class="remake-spec-list">
+                    <div class="spec-item">
+                        <span class="spec-icon">📐</span>
+                        <div><b>Góc máy & Tiêu cự:</b> Static Close-up 3x • Đặt chân máy cố định hướng vào góc bàn mộc</div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">💡</span>
+                        <div><b>Ánh sáng & Nguồn sáng:</b> Ánh đèn bàn ấm áp, đồng hồ bấm giờ đặt ngay giữa tâm</div>
+                    </div>
+                    <div class="spec-item spec-action">
+                        <span class="spec-icon">🎬</span>
+                        <div><b>Hành động & Diễn xuất:</b> Khung hình tĩnh 0.4s: Chiếc đồng hồ bấm giờ đặt kiêu hãnh trên mặt bàn gỗ mộc bóng bẩy.</div>
+                    </div>
+                    <div class="spec-item spec-voice">
+                        <span class="spec-icon">🎙️</span>
+                        <div><b>Lời thoại / Voiceover:</b> <em>"Bấm giờ..."</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="trans-box">
+        <span class="trans-label">Chuyển cảnh tiếp theo:</span>
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_12_to_13.jpg" alt="Transition 12" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_12_to_13.jpg', 'Chuyển cảnh Shot 12 sang Shot 13')">
+    </div>
+    
+    </div>
+    
+    <div class="shot-card" id="shot-13">
+        <div class="shot-header">
+            <div class="shot-meta-left">
+                <span class="shot-num">SHOT 13</span>
+                <span class="shot-time" onclick="jumpToTime(11.59)">⏱ 11.59s - 11.85s (0.29s)</span>
+            </div>
+            <div class="shot-meta-right">
+                <span class="badge loc-badge-home">📍 LOC-04</span>
+            </div>
+        </div>
+
+        <!-- 2 Column Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Left: Original Video -->
+            <div class="col-original">
+                <div class="col-tag orig-tag">🎬 VIDEO GỐC (@byjxson)</div>
+                <h3 class="col-headline">Nhảy Cảnh Thời Gian (Jump Cut 2) • Xuất Hiện Tại Ngưỡng Cửa (02:30pm)</h3>
+                
+                <div class="keyframe-row">
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_13_start.jpg', 'Shot 13 Start')">
+                        <span class="kf-label">Start</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_13_mid.jpg', 'Shot 13 Mid')">
+                        <span class="kf-label">Mid</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_13_end.jpg" alt="Shot 13 End" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_13_end.jpg', 'Shot 13 End')">
+                        <span class="kf-label">End</span>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <p class="desc-text"><b>Diễn biến:</b> Cùng góc máy hành lang tĩnh, Jason đột ngột xuất hiện ở ngưỡng cửa với ba lô sau lưng.</p>
+                    <div class="critique-row">
+                        <div class="critique-good"><b>✅ Điểm sáng:</b> Tiết kiệm thời gian dẫn dắt, tạo sự bất ngờ và năng động cho nhịp dựng kết bài.</div>
+                        <div class="critique-bad"><b>⚠️ Lưu ý:</b> Thời lượng chỉ 0.29s (7 frames), cần nhịp cắt cực kỳ chính xác.</div>
+                    </div>
+                    <div class="takeaway-box"><b>💡 Bài học:</b> Dùng Jump Cut để rút ngắn thời gian và tạo nhịp điệu dứt khoát.</div>
+                </div>
+            </div>
+
+            <!-- Right: Remake Mapping for Anh Viet -->
+            <div class="col-remake">
+                <div class="col-tag remake-tag">✨ ÁNH XẠ CHO ANH VIỆT (ĐỒNG HỒ BẤM GIỜ)</div>
+                <div class="remake-loc-header">
+                    <h4>Nội cảnh Nhà • Bấm Nút Kích Hoạt (Jump Cut 2)</h4>
+                </div>
+
+                <div class="remake-spec-list">
+                    <div class="spec-item">
+                        <span class="spec-icon">📐</span>
+                        <div><b>Góc máy & Tiêu cự:</b> Static Close-up 3x (Cùng góc máy với Shot 12)</div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">💡</span>
+                        <div><b>Ánh sáng & Nguồn sáng:</b> Ánh đèn bàn ấm áp</div>
+                    </div>
+                    <div class="spec-item spec-action">
+                        <span class="spec-icon">🎬</span>
+                        <div><b>Hành động & Diễn xuất:</b> Ngón tay anh xuất hiện bấm nút 'START' dứt khoát trên đỉnh đồng hồ, kim giây bắt đầu chạy.</div>
+                    </div>
+                    <div class="spec-item spec-voice">
+                        <span class="spec-icon">🎙️</span>
+                        <div><b>Lời thoại / Voiceover:</b> <em>"...Bắt đầu..."</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="trans-box">
+        <span class="trans-label">Chuyển cảnh tiếp theo:</span>
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_13_to_14.jpg" alt="Transition 13" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_13_to_14.jpg', 'Chuyển cảnh Shot 13 sang Shot 14')">
+    </div>
+    
+    </div>
+    
+    <div class="shot-card" id="shot-14">
+        <div class="shot-header">
+            <div class="shot-meta-left">
+                <span class="shot-num">SHOT 14</span>
+                <span class="shot-time" onclick="jumpToTime(11.89)">⏱ 11.89s - 12.50s (0.61s)</span>
+            </div>
+            <div class="shot-meta-right">
+                <span class="badge loc-badge-home">📍 LOC-04</span>
+            </div>
+        </div>
+
+        <!-- 2 Column Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Left: Original Video -->
+            <div class="col-original">
+                <div class="col-tag orig-tag">🎬 VIDEO GỐC (@byjxson)</div>
+                <h3 class="col-headline">Nhảy Cảnh Thời Gian (Jump Cut 3) • Bước Vào Nhà Đóng Cửa (02:30pm)</h3>
+                
+                <div class="keyframe-row">
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_14_start.jpg" alt="Shot 14 Start" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_14_start.jpg', 'Shot 14 Start')">
+                        <span class="kf-label">Start</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_14_mid.jpg" alt="Shot 14 Mid" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_14_mid.jpg', 'Shot 14 Mid')">
+                        <span class="kf-label">Mid</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_14_end.jpg" alt="Shot 14 End" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_14_end.jpg', 'Shot 14 End')">
+                        <span class="kf-label">End</span>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <p class="desc-text"><b>Diễn biến:</b> Jason bước nhanh vào trong phòng xách túi đồ, cửa khép lại kết thúc chuỗi Jump Cut.</p>
+                    <div class="critique-row">
+                        <div class="critique-good"><b>✅ Điểm sáng:</b> Hoàn tất chu kỳ hành động một ngày một cách gọn gàng và thỏa mãn.</div>
+                        <div class="critique-bad"><b>⚠️ Lưu ý:</b> Cần khớp hướng di chuyển của người để động tác không bị giật ngược.</div>
+                    </div>
+                    <div class="takeaway-box"><b>💡 Bài học:</b> Bộ 3 Jump Cut (Trống -> Xuất hiện -> Hành động hoàn tất) là công thức kinh điển của vlog hiện đại.</div>
+                </div>
+            </div>
+
+            <!-- Right: Remake Mapping for Anh Viet -->
+            <div class="col-remake">
+                <div class="col-tag remake-tag">✨ ÁNH XẠ CHO ANH VIỆT (ĐỒNG HỒ BẤM GIỜ)</div>
+                <div class="remake-loc-header">
+                    <h4>Nội cảnh Nhà • Sẵn Sàng Chinh Phục (Jump Cut 3)</h4>
+                </div>
+
+                <div class="remake-spec-list">
+                    <div class="spec-item">
+                        <span class="spec-icon">📐</span>
+                        <div><b>Góc máy & Tiêu cự:</b> Frontal Medium Shot 2x • Đặt máy đối diện bàn</div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">💡</span>
+                        <div><b>Ánh sáng & Nguồn sáng:</b> Ánh sáng studio rõ nét</div>
+                    </div>
+                    <div class="spec-item spec-action">
+                        <span class="spec-icon">🎬</span>
+                        <div><b>Hành động & Diễn xuất:</b> Anh Việt ngồi thẳng lưng, ánh mắt kiên định nhìn vào màn hình bắt đầu ca làm việc mới.</div>
+                    </div>
+                    <div class="spec-item spec-voice">
+                        <span class="spec-icon">🎙️</span>
+                        <div><b>Lời thoại / Voiceover:</b> <em>"...Và chinh phục mục tiêu!"</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="trans-box">
+        <span class="trans-label">Chuyển cảnh tiếp theo:</span>
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_14_to_15.jpg" alt="Transition 14" class="trans-img" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/transitions/trans_14_to_15.jpg', 'Chuyển cảnh Shot 14 sang Shot 15')">
+    </div>
+    
+    </div>
+    
+    <div class="shot-card" id="shot-15">
+        <div class="shot-header">
+            <div class="shot-meta-left">
+                <span class="shot-num">SHOT 15</span>
+                <span class="shot-time" onclick="jumpToTime(12.5)">⏱ 12.50s - 13.80s (1.30s)</span>
+            </div>
+            <div class="shot-meta-right">
+                <span class="badge loc-badge-home">📍 LOC-04</span>
+            </div>
+        </div>
+
+        <!-- 2 Column Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Left: Original Video -->
+            <div class="col-original">
+                <div class="col-tag orig-tag">🎬 VIDEO GỐC (@byjxson)</div>
+                <h3 class="col-headline">Khóa Khung Kết Vlog (Outro) & Typography 'end of day 01'</h3>
+                
+                <div class="keyframe-row">
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_15_start.jpg" alt="Shot 15 Start" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_15_start.jpg', 'Shot 15 Start')">
+                        <span class="kf-label">Start</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_15_mid.jpg" alt="Shot 15 Mid" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_15_mid.jpg', 'Shot 15 Mid')">
+                        <span class="kf-label">Mid</span>
+                    </div>
+                    <div class="kf-box">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_15_end.jpg" alt="Shot 15 End" loading="lazy" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_15_end.jpg', 'Shot 15 End')">
+                        <span class="kf-label">End</span>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <p class="desc-text"><b>Diễn biến:</b> Dòng chữ tối giản 'end of day 01 / project 100' xuất hiện giữa màn hình trên nền mờ nghệ thuật.</p>
+                    <div class="critique-row">
+                        <div class="critique-good"><b>✅ Điểm sáng:</b> Dấu chấm hết dứt khoát, thanh lịch, tạo cảm giác mong đợi tập tiếp theo.</div>
+                        <div class="critique-bad"><b>⚠️ Lưu ý:</b> Tránh để quá nhiều thông tin rác làm rối mắt ở giây cuối cùng.</div>
+                    </div>
+                    <div class="takeaway-box"><b>💡 Bài học:</b> Kêu gọi hành động và nhận diện thương hiệu một cách tối giản, tinh tế.</div>
+                </div>
+            </div>
+
+            <!-- Right: Remake Mapping for Anh Viet -->
+            <div class="col-remake">
+                <div class="col-tag remake-tag">✨ ÁNH XẠ CHO ANH VIỆT (ĐỒNG HỒ BẤM GIỜ)</div>
+                <div class="remake-loc-header">
+                    <h4>Nội cảnh Nhà • Cận Cảnh Macro Mặt Đồng Hồ & CTA</h4>
+                </div>
+
+                <div class="remake-spec-list">
+                    <div class="spec-item">
+                        <span class="spec-icon">📐</span>
+                        <div><b>Góc máy & Tiêu cự:</b> Macro Close-Up 3x • Bắt nét từng chi tiết kim cương/thép phay xước</div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">💡</span>
+                        <div><b>Ánh sáng & Nguồn sáng:</b> Ánh sáng phản chiếu viền kim loại sang trọng</div>
+                    </div>
+                    <div class="spec-item spec-action">
+                        <span class="spec-icon">🎬</span>
+                        <div><b>Hành động & Diễn xuất:</b> Kim giây quét qua số 12. Dòng chữ chốt màn hình: <b>LÀM CHỦ TỪNG GIÂY • SỞ HỮU NGAY HÔM NAY</b>.</div>
+                    </div>
+                    <div class="spec-item spec-voice">
+                        <span class="spec-icon">🎙️</span>
+                        <div><b>Lời thoại / Voiceover:</b> <em>"Link đặt hàng tại Bio. Đừng để thêm một ngày trôi qua vô nghĩa."</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    
+        </div>
+
+    </div>
+</div>
+
+<!-- Floating Drawer Button -->
+<button class="drawer-toggle-btn" onclick="openDrawer()">
+    ☰ Mục Lục 15 Shot
+</button>
+
+<!-- Drawer Modal -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+<div class="drawer-content" id="drawerContent">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h3 style="font-family:var(--font-heading); color:#fff; font-size:15px;">Danh Sách 15 Phân Cảnh Ánh Xạ</h3>
+        <button onclick="closeDrawer()" style="background:none; border:none; color:var(--text-secondary); font-size:20px; cursor:pointer;">✕</button>
+    </div>
+    <div class="drawer-grid">
+        
+    <div class="drawer-item" onclick="scrollToShot(1); jumpToTime(0.0); closeDrawer();">
+        <span class="drawer-shot-num">#01</span>
+        <div class="drawer-shot-info">
+            <div class="drawer-shot-title">LOC-01 • Mỗi ngày chúng ta đều có đúng 86.40...</div>
+            <div class="drawer-shot-meta">⏱ 0.00s - 1.79s</div>
+        </div>
+    </div>
+    
+    <div class="drawer-item" onclick="scrollToShot(2); jumpToTime(1.84); closeDrawer();">
+        <span class="drawer-shot-num">#02</span>
+        <div class="drawer-shot-info">
+            <div class="drawer-shot-title">LOC-02 • ...nhưng người làm chủ cuộc chơi là...</div>
+            <div class="drawer-shot-meta">⏱ 1.84s - 3.34s</div>
+        </div>
+    </div>
+    
+    <div class="drawer-item" onclick="scrollToShot(3); jumpToTime(3.38); closeDrawer();">
+        <span class="drawer-shot-num">#03</span>
+        <div class="drawer-shot-info">
+            <div class="drawer-shot-title">LOC-04 • Phiên làm việc sâu: 45 phút tập tru...</div>
+            <div class="drawer-shot-meta">⏱ 3.38s - 3.84s</div>
+        </div>
+    </div>
+    
+    <div class="drawer-item" onclick="scrollToShot(4); jumpToTime(3.88); closeDrawer();">
+        <span class="drawer-shot-num">#04</span>
+        <div class="drawer-shot-info">
+            <div class="drawer-shot-title">LOC-04 • Không thông báo, không lướt mạng xã...</div>
+            <div class="drawer-shot-meta">⏱ 3.88s - 4.80s</div>
+        </div>
+    </div>
+    
+    <div class="drawer-item" onclick="scrollToShot(5); jumpToTime(4.84); closeDrawer();">
+        <span class="drawer-shot-num">#05</span>
+        <div class="drawer-shot-info">
+            <div class="drawer-shot-title">LOC-04 • Mọi khối công việc phức tạp đều đượ...</div>
+            <div class="drawer-shot-meta">⏱ 4.84s - 5.51s</div>
+        </div>
+    </div>
+    
+    <div class="drawer-item" onclick="scrollToShot(6); jumpToTime(5.55); closeDrawer();">
+        <span class="drawer-shot-num">#06</span>
+        <div class="drawer-shot-info">
+            <div class="drawer-shot-title">LOC-05 • Độ chính xác tuyệt đối đến từng mic...</div>
+            <div class="drawer-shot-meta">⏱ 5.55s - 6.05s</div>
+        </div>
+    </div>
+    
+    <div class="drawer-item" onclick="scrollToShot(7); jumpToTime(6.09); closeDrawer();">
+        <span class="drawer-shot-num">#07</span>
+        <div class="drawer-shot-info">
+            <div class="drawer-shot-title">LOC-04 • Hết giờ. Một nhiệm vụ trọng tâm tro...</div>
+            <div class="drawer-shot-meta">⏱ 6.09s - 6.84s</div>
+        </div>
+    </div>
+    
+    <div class="drawer-item" onclick="scrollToShot(8); jumpToTime(6.88); closeDrawer();">
+        <span class="drawer-shot-num">#08</span>
+        <div class="drawer-shot-info">
+            <div class="drawer-shot-title">LOC-03 • Chuyển đổi trạng thái từ trí óc san...</div>
+            <div class="drawer-shot-meta">⏱ 6.88s - 7.80s</div>
+        </div>
+    </div>
+    
+    <div class="drawer-item" onclick="scrollToShot(9); jumpToTime(7.84); closeDrawer();">
+        <span class="drawer-shot-num">#09</span>
+        <div class="drawer-shot-info">
+            <div class="drawer-shot-title">LOC-03 • Kỷ luật không phải là gò bó, mà là ...</div>
+            <div class="drawer-shot-meta">⏱ 7.84s - 8.59s</div>
+        </div>
+    </div>
+    
+    <div class="drawer-item" onclick="scrollToShot(10); jumpToTime(8.63); closeDrawer();">
+        <span class="drawer-shot-num">#10</span>
+        <div class="drawer-shot-info">
+            <div class="drawer-shot-title">LOC-06 • Biết lúc nào cần dồn sức tập trung,...</div>
+            <div class="drawer-shot-meta">⏱ 8.63s - 9.76s</div>
+        </div>
+    </div>
+    
+    <div class="drawer-item" onclick="scrollToShot(11); jumpToTime(9.8); closeDrawer();">
+        <span class="drawer-shot-num">#11</span>
+        <div class="drawer-shot-info">
+            <div class="drawer-shot-title">LOC-06 • Đồng hồ không chỉ để xem giờ — nó l...</div>
+            <div class="drawer-shot-meta">⏱ 9.80s - 11.14s</div>
+        </div>
+    </div>
+    
+    <div class="drawer-item" onclick="scrollToShot(12); jumpToTime(11.18); closeDrawer();">
+        <span class="drawer-shot-num">#12</span>
+        <div class="drawer-shot-info">
+            <div class="drawer-shot-title">LOC-04 • Bấm giờ......</div>
+            <div class="drawer-shot-meta">⏱ 11.18s - 11.55s</div>
+        </div>
+    </div>
+    
+    <div class="drawer-item" onclick="scrollToShot(13); jumpToTime(11.59); closeDrawer();">
+        <span class="drawer-shot-num">#13</span>
+        <div class="drawer-shot-info">
+            <div class="drawer-shot-title">LOC-04 • ...Bắt đầu......</div>
+            <div class="drawer-shot-meta">⏱ 11.59s - 11.85s</div>
+        </div>
+    </div>
+    
+    <div class="drawer-item" onclick="scrollToShot(14); jumpToTime(11.89); closeDrawer();">
+        <span class="drawer-shot-num">#14</span>
+        <div class="drawer-shot-info">
+            <div class="drawer-shot-title">LOC-04 • ...Và chinh phục mục tiêu!...</div>
+            <div class="drawer-shot-meta">⏱ 11.89s - 12.50s</div>
+        </div>
+    </div>
+    
+    <div class="drawer-item" onclick="scrollToShot(15); jumpToTime(12.5); closeDrawer();">
+        <span class="drawer-shot-num">#15</span>
+        <div class="drawer-shot-info">
+            <div class="drawer-shot-title">LOC-04 • Link đặt hàng tại Bio. Đừng để thêm...</div>
+            <div class="drawer-shot-meta">⏱ 12.50s - 13.80s</div>
+        </div>
+    </div>
+    
+    </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="close-lb-btn" onclick="closeLightbox()">✕</button>
+    <img id="lightboxImg" class="lightbox-img" src="" alt="Zoomed Keyframe">
+    <div id="lightboxCaption" class="lightbox-caption"></div>
+</div>
+
+<script>
+const video = document.getElementById('mainVideo');
+const currentTimeDisplay = document.getElementById('currentTimeDisplay');
+const durationDisplay = document.getElementById('durationDisplay');
+const playbackSpeedDisplay = document.getElementById('playbackSpeedDisplay');
+const playPauseBtn = document.getElementById('playPauseBtn');
+
+video.addEventListener('timeupdate', () => {
+    currentTimeDisplay.textContent = video.currentTime.toFixed(2) + 's';
+});
+
+video.addEventListener('loadedmetadata', () => {
+    durationDisplay.textContent = video.duration.toFixed(2) + 's';
+});
+
+function togglePlay() {
+    if (video.paused) {
+        video.play();
+        playPauseBtn.textContent = '⏸ Tạm dừng';
+    } else {
+        video.pause();
+        playPauseBtn.textContent = '▶ Phát';
+    }
+}
+
+function jumpToTime(seconds) {
+    video.currentTime = seconds;
+    video.play();
+    playPauseBtn.textContent = '⏸ Tạm dừng';
+}
+
+function stepFrame(frames) {
+    video.pause();
+    playPauseBtn.textContent = '▶ Phát';
+    // Assume 30fps -> 1 frame ~ 0.033s
+    video.currentTime = Math.max(0, Math.min(video.duration, video.currentTime + (frames * 0.0333)));
+}
+
+function setSpeed(speed) {
+    video.playbackRate = speed;
+    playbackSpeedDisplay.textContent = speed.toFixed(2) + 'x';
+    document.querySelectorAll('.ctrl-btn').forEach(btn => {
+        if (btn.textContent.includes(speed + 'x')) {
+            btn.classList.add('active');
+        } else if (btn.textContent.includes('x')) {
+            btn.classList.remove('active');
+        }
+    });
+}
+
+function restartVideo() {
+    video.currentTime = 0;
+    video.play();
+    playPauseBtn.textContent = '⏸ Tạm dừng';
+}
+
+function scrollToShot(shotId) {
+    const el = document.getElementById('shot-' + shotId);
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+function openDrawer() {
+    document.getElementById('drawerOverlay').style.display = 'block';
+    document.getElementById('drawerContent').style.display = 'block';
+}
+
+function closeDrawer() {
+    document.getElementById('drawerOverlay').style.display = 'none';
+    document.getElementById('drawerContent').style.display = 'none';
+}
+
+function openLightbox(imgSrc, caption) {
+    document.getElementById('lightboxImg').src = imgSrc;
+    document.getElementById('lightboxCaption').textContent = caption;
+    document.getElementById('lightboxModal').style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').style.display = 'none';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+        closeDrawer();
+    }
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

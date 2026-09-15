@@ -1,0 +1,2565 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Nghệ Thuật Chuyển Cảnh Che Tiền Cảnh & B-Roll Điện Ảnh Phố Cổ Hội An • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+/* ═══ MASTER KNOWLEDGE SECTION STYLING ═══ */
+.master-knowledge-section {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 16px;
+    padding: 32px 28px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+.knowledge-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    background: rgba(26, 115, 232, 0.08);
+    color: var(--cl-accent);
+    border: 1px solid rgba(26, 115, 232, 0.2);
+    border-radius: 20px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+.knowledge-title {
+    font-family: var(--font-heading-short);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.35;
+    margin-bottom: 10px;
+    letter-spacing: -0.3px;
+}
+.knowledge-desc {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-secondary);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+.knowledge-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+.knowledge-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.2s ease;
+}
+.knowledge-card:hover {
+    border-color: var(--cl-border-hover);
+    transform: translateY(-2px);
+}
+.knowledge-card-num {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 8px;
+    display: block;
+}
+.knowledge-card-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+.knowledge-card-text {
+    font-family: var(--font-body);
+    font-size: 13.5px;
+    color: var(--cl-text-body);
+    line-height: 1.65;
+}
+.rules-banner {
+    background: #fffbeb;
+    border: 1px solid #fef3c7;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+}
+.rules-banner-title {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #b45309;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.rules-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.rules-list li {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: #78350f;
+    line-height: 1.65;
+    position: relative;
+    padding-left: 20px;
+}
+.rules-list li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    font-weight: bold;
+    color: #b45309;
+}
+.script-banner {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    padding: 20px 24px;
+}
+.script-banner-title {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #15803d;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.script-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+.script-step-item {
+    background: #ffffff;
+    border: 1px solid rgba(21, 128, 61, 0.15);
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+.script-step-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    color: #15803d;
+    margin-bottom: 4px;
+}
+.script-step-desc {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: #166534;
+    line-height: 1.5;
+}
+
+/* ═══ RELATED IDEAS SHOWCASE SECTION ═══ */
+.related-ideas-section {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 16px;
+    padding: 32px 28px;
+    margin-top: 36px;
+    margin-bottom: 32px;
+}
+.related-ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.related-idea-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s ease;
+}
+.related-idea-card:hover {
+    border-color: var(--cl-border-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+.related-card-media {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    background: #000;
+    overflow: hidden;
+}
+.related-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.related-idea-card:hover .related-card-media img {
+    transform: scale(1.04);
+}
+.related-badge-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+}
+.related-card-body {
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.related-creator {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 4px;
+}
+.related-title {
+    font-family: var(--font-heading-long);
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+.related-summary {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 14px;
+    flex-grow: 1;
+}
+.related-card-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+}
+.btn-related-primary {
+    flex: 1;
+    background: #090d16;
+    color: #ffffff !important;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.btn-related-primary:hover {
+    background: var(--cl-accent);
+}
+.btn-related-secondary {
+    background: rgba(0,0,0,0.05);
+    color: var(--cl-text-primary) !important;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.btn-related-secondary:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">11 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Nghệ Thuật Chuyển Cảnh Che Tiền Cảnh & B-Roll Điện Ảnh Phố Cổ Hội An</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DdBDvZph1od/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdBDvZph1od.mp4" type="video/mp4">
+                <source src="../videos/Hoi An Natural Mask Transitions - @hey.lirules.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 16.36s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Nghệ Thuật Chuyển Cảnh Che Tiền Cảnh & B-Roll Điện Ảnh Phố Cổ Hội An</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@hey.lirules" onclick="handleCreatorClick(event, '@hey.lirules', 'Li! Video creator')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Li! Video creator trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Li! Video creator</strong>
+                        <span class="author-handle">(@hey.lirules)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/DdBDvZph1od/" target="_blank" class="author-link">@hey.lirules (Li! Video creator)</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 16.36s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Nghệ Thuật Chuyển Cảnh Che Tiền Cảnh & B-Roll Điện Ảnh Phố Cổ Hội An</h1>
+            <p class="overview-hero-desc">Bóc tách 11 phân cảnh mẫu mực trong video 16.36s của @hey.lirules tại Hội An: Nghệ thuật sử dụng vật cản tiền cảnh (Foreground Occlusion Mask Cut) qua nón lá và lưng người đi bộ, đánh lừa thị giác sinh học (Saccadic Masking), bùng nổ màu sắc đèn lồng đêm và cách tạo chiều sâu Parallax 3D cho video ngắn du lịch.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Foreground Occlusion Mask Cut • Saccadic Masking • Parallax Z-Axis Depth • Chiaroscuro Shadow Art • Atmospheric B-Roll • Street Voyeuristic Perspective</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">11 Shots • Nhịp trung bình 1.45s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 • 25.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- MASTER CINEMATIC KNOWLEDGE SECTION -->
+        <section class="master-knowledge-section" id="knowledgeBase">
+            <span class="knowledge-badge">💡 Chuyên Đề Kiến Thức Điện Ảnh &amp; Tâm Lý Học Thị Giác</span>
+            <h2 class="knowledge-title">TẠI SAO CHUYỂN CẢNH BẰNG VẬT THỂ MASK LẠI HẤP DẪN &amp; THÔI MIÊN NGƯỜI XEM?</h2>
+            <p class="knowledge-desc">
+                Trong điện ảnh và dựng phim, kỹ thuật này gọi là <strong>Foreground Occlusion Transition</strong> (hoặc <em>Natural Wipe / Mask Cut</em> — Chuyển cảnh che bằng tiền cảnh tự nhiên). Từ Alfred Hitchcock (phim <em>Rope</em>) cho đến các đạo diễn hiện đại như David Fincher, Sam Mendes và các video creator hàng đầu thế giới, đây luôn là "vũ khí thượng thừa" nhờ 4 tầng tác động tâm lý thị giác:
+            </p>
+
+            <div class="knowledge-grid-4">
+                <div class="knowledge-card">
+                    <span class="knowledge-card-num">TẦNG 01</span>
+                    <h3 class="knowledge-card-title">Đánh Lừa Phản Xạ Sinh Học (Saccadic Masking)</h3>
+                    <p class="knowledge-card-text">
+                        Khi có vật thể lướt sát tầm mắt, não bộ kích hoạt hiện tượng ức chế thị giác (Saccadic suppression), tự động bỏ qua khoảnh khắc bị che và liên kết không gian trước - sau thành một dòng chảy duy nhất. Không có cú "giật" của vết cắt phần mềm, người xem có cảm giác như một chuyến du hành không gian liên tục (Continuous Reality).
+                    </p>
+                </div>
+
+                <div class="knowledge-card">
+                    <span class="knowledge-card-num">TẦNG 02</span>
+                    <h3 class="knowledge-card-title">Hiệu Ứng "Màn Nhung" &amp; Cú Nổ Dopamine</h3>
+                    <p class="knowledge-card-text">
+                        Vật cản che khuất tạo ra một khoảng trống thị giác ngắn (0.2s - 0.4s). Não bộ vô thức đặt câu hỏi: <em>"Phía sau vật cản là gì?"</em>. Cú mở màn ngay sau đó mang lại kích thích Dopamine tột độ nhờ sự <strong>đối lập tương phản cực đại</strong>: từ tối sang sáng, từ cận sang đại cảnh, từ góc hẹp tĩnh lặng sang bữa tiệc sắc màu lồng đèn.
+                    </p>
+                </div>
+
+                <div class="knowledge-card">
+                    <span class="knowledge-card-num">TẦNG 03</span>
+                    <h3 class="knowledge-card-title">Tái Tạo Chiều Sâu 3D Trục Z (Parallax Effect)</h3>
+                    <p class="knowledge-card-text">
+                        Màn hình điện thoại là mặt phẳng 2D. Đưa vật thể lướt sát sạt thấu kính (out of focus ở tiền cảnh) tương phản với hậu cảnh rõ nét kích hoạt hiệu ứng thị sai (Parallax). Khung hình lập tức tách làm 3 lớp rõ rệt, biến người xem thành "kẻ ẩn nấp quan sát thực tế" (Voyeuristic perspective) như đang đứng nép bên phố Hội.
+                    </p>
+                </div>
+
+                <div class="knowledge-card">
+                    <span class="knowledge-card-num">TẦNG 04</span>
+                    <h3 class="knowledge-card-title">Vẻ Đẹp "Hữu Cơ" Đánh Bại Kỹ Xảo Số Rẻ Tiền</h3>
+                    <p class="knowledge-card-text">
+                        Khác với các hiệu ứng chuyển cảnh kỹ thuật số rẻ tiền (zoom giật, xoay màn hình, flash trắng nhấp nháy trên CapCut), Mask Transition mượn chính chuyển động sống của đời thực: nón lá, tà áo, xe máy, người qua đường. Nó toát lên con mắt quan sát không gian và nhịp thở của một đạo diễn thực thụ.
+                    </p>
+                </div>
+            </div>
+
+            <div class="rules-banner">
+                <div class="rules-banner-title">⚡ 3 Nguyên Tắc Vàng Để Tự Quay Dựng Trên Điện Thoại &amp; Máy Ảnh</div>
+                <ul class="rules-list">
+                    <li><strong>Đồng pha hướng chuyển động (Vector Continuity):</strong> Vật cản ở cuối Shot A và đầu Shot B phải đi cùng một hướng (Trái sang Phải, hoặc Phải sang Trái) và tương đồng về tốc độ lướt.</li>
+                    <li><strong>Áp sát ống kính &amp; Tận dụng Motion Blur:</strong> Vật cản phải đi thật gần máy để che kín hoặc gần kín khung hình. Tốc độ di chuyển tự nhiên tạo độ nhòe chuyển động (Motion Blur) giúp che giấu điểm cắt (Cut Point) không một tì vết.</li>
+                    <li><strong>Quy luật tương phản phần thưởng thị giác (Contrast Reward):</strong> Cảnh mở ra phía sau PHẢI thú vị hơn, sáng hơn hoặc khác biệt hoàn toàn về năng lượng/màu sắc so với cảnh trước để người xem nhận được "phần thưởng thị giác" xứng đáng.</li>
+                </ul>
+            </div>
+
+            <div class="script-banner">
+                <div class="script-banner-title">🎬 Kịch Bản 4 Nhịp Ứng Dụng Ngay Vào Video Du Lịch / Vlog Đời Sống</div>
+                <div class="script-steps">
+                    <div class="script-step-item">
+                        <div class="script-step-header">Nhịp 1 (0 – 2s) • Tiền Cảnh Đời Thực</div>
+                        <div class="script-step-desc">Đặt máy góc thấp bên đường, đợi một người/xe lướt qua tiền cảnh rồi mới bắt đầu hành động chính.</div>
+                    </div>
+                    <div class="script-step-item">
+                        <div class="script-step-header">Nhịp 2 (2 – 6s) • Săn Tìm Texture Vi Mô</div>
+                        <div class="script-step-desc">Quay cận vào chi tiết đặc trưng: bóng đổ trên tường vôi, cánh cửa gỗ, bước chân trên nền đá.</div>
+                    </div>
+                    <div class="script-step-item">
+                        <div class="script-step-header">Nhịp 3 (6 – 11s) • Cú Che Tiền Cảnh</div>
+                        <div class="script-step-desc">Áp sát camera vào lưng áo người đi bộ hoặc nón lá để che tối toàn màn hình, mở ra không gian mới.</div>
+                    </div>
+                    <div class="script-step-item">
+                        <div class="script-step-header">Nhịp 4 (11 – 16s) • Bùng Nổ Thị Giác</div>
+                        <div class="script-step-desc">Ngay sau cú mở màn hình, đặt góc quay đẹp nhất, lung linh nhất (đèn lồng, hoàng hôn, nụ cười) để chốt hạ cảm xúc.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 2.0)">
+                    ▶ 0.00s - 2.00s (2.00s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hook Thị Giác Đời Thực Bên Bờ Sông Hoài Với Tiền Cảnh Xe Máy Lướt Qua: Khóa chặt sự chú ý ngay giây đầu bằng chuyển động tự nhiên kết hợp Text Overlay</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_01_mid.jpg', 'Shot 01 • Giữa (1.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_01_end.jpg', 'Shot 01 • Cuối (2.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (2.00s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cô gái tóc vàng mặc váy maxi dài đang cúi người tỉ mỉ căn chỉnh máy ảnh gắn trên chân máy (tripod) bên lan can bờ sông Hoài (Hội An). Ngay khung hình mở đầu, một chiếc xe máy chở hai người vụt qua sát tiền cảnh từ trái sang phải, tạo lớp chuyển động tầng thứ nhất. Chữ in hoa đậm nét 'THE DAY WE STARTED FILMING EVERYTHING' nổi bật ở góc trên.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khung hình chia 3 lớp sâu sắc: Tiền cảnh xe máy lướt nhanh -> Trung cảnh nhân vật chỉnh máy -> Hậu cảnh dòng sông và dãy nhà màu vàng Hội An. Ánh sáng xiên ban ngày tôn làn da và tóc nhân vật.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Tiền cảnh xe máy chạy qua khá nhanh ở 5 frame đầu, nếu người xem lướt quá vội có thể chưa kịp đọc hết text overlay nếu không có hiệu ứng nhấn text.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Mở đầu video tài liệu du lịch bằng một cú lướt tiền cảnh tự nhiên (xe cộ, người đi bộ) để ngay lập tức tạo nhịp sống đời thực, xóa tan cảm giác dàn dựng khiên cưỡng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Low-Angle Medium Shot • 50mm Equivalent</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bờ kè sông Hoài, Phố cổ Hội An</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên ban ngày (Daylight Natural)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt nối cảnh sang Shot 02</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Cắt nối cảnh sang Shot 02</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 2.04, 4.56)">
+                    ▶ 2.04s - 4.56s (2.52s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Chuyển Đổi Không Gian Bên Bến Sông Với Thuyền Gỗ Xanh & Nhịp Người Lướt Qua: Tái lập bối cảnh đời sống sông nước đặc trưng phố cổ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_02_start.jpg', 'Shot 02 • Đầu (2.04s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (2.04s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_02_mid.jpg', 'Shot 02 • Giữa (3.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (3.30s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_02_end.jpg', 'Shot 02 • Cuối (4.56s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (4.56s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Máy quay giữ tĩnh bên bờ kè sông Hoài, bắt trọn chiếc thuyền gỗ du lịch sơn màu xanh lam mộc mạc đang neo đậu, người lái đò áo sẫm màu ngồi tĩnh lặng bên trong. Ở đầu shot, một người đi bộ mặc áo sơ mi xanh lướt qua tiền cảnh. Dòng nước sông lấp lánh ánh nắng ban trưa, phía xa là dãy thuyền và hàng cây rủ bóng. Text overlay vẫn được duy trì tạo sự liên tục về mạch thông điệp.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Gam màu xanh lam của thuyền tương phản bổ trợ hoàn hảo với màu vàng của bờ kè và dãy nhà phố cổ đối diện. Chuyển động người đi bộ áo xanh ở đầu shot tạo kết nối nhịp điệu với xe máy ở shot 1.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Mặt nước sông phản chiếu ánh nắng hơi gắt ở rìa trái khung hình (specular highlight), cần filter CPL (Circular Polarizer) để triệt tiêu chói sáng và làm đậm màu nước xanh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Giữ text hook xuyên suốt 2 shot đầu tiên (tổng thời lượng ~4.5s) giúp người xem vừa kịp đọc hết thông điệp vừa được chiêm ngưỡng 2 bối cảnh thị giác khác nhau mà không bị ngắt mạch tư duy.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Eye-Level Medium Wide • 35mm Lens</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bến thuyền sông Hoài, Hội An</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng mặt trời trực tiếp (Direct Sun)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt nối cảnh sang Shot 03</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Cắt nối cảnh sang Shot 03</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 4.6, 5.56)">
+                    ▶ 4.60s - 5.56s (0.96s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Establishing Shot Ngôi Nhà Vàng Cổ Kính Rợp Bóng Cây: Định danh địa danh bằng Typography Viết Tay 'Hoi An, Vietnam'</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_03_start.jpg', 'Shot 03 • Đầu (4.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (4.60s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_03_mid.jpg', 'Shot 03 • Giữa (5.08s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.08s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_03_end.jpg', 'Shot 03 • Cuối (5.56s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.56s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình tĩnh góc trung toàn ghi lại mặt tiền tầng 2 của một tòa nhà kiến trúc thuộc địa màu vàng mù tạt đặc trưng phố cổ Hội An, ban công rực rỡ hoa giấy đỏ và tán cây xanh đung đưa trong gió. Dòng chữ viết tay uốn lượn phong cách hoài niệm 'Hoi An, Vietnam' xuất hiện tinh tế ở giữa khung hình.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Màu vàng ấm áp đặc trưng của Hội An tràn ngập khung hình mang lại cảm giác hoài cổ, bình yên. Bố cục 1/3 cân đối giữa tường vàng, ban công gỗ và vòm trời xanh ngát. Typography thanh thoát, đậm chất điện ảnh du ký.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng hơi ngắn (chỉ đúng 0.96s), người xem vừa kịp nhận diện địa danh thì khung hình đã chuyển sang shot tiếp theo.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Với video ngắn dạng Aesthetic Travel, các cú thiết lập không gian (Establishing Shot) chỉ cần xuất hiện từ 0.8s - 1.2s như một 'nhịp thở thị giác' để định vị địa điểm trước khi đi vào các chi tiết vi mô.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Medium Long Shot • 50mm Lens</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Phố cổ Hội An</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Nắng chiều vàng rực (Golden Daylight)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt nối cảnh sang Shot 04</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Cắt nối cảnh sang Shot 04</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 5.6, 6.16)">
+                    ▶ 5.60s - 6.16s (0.56s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Nghệ Thuật Bóng Đổ Trên Cửa Gỗ Cổ Kính: Tận dụng ánh sáng tự nhiên tạo hình bóng ước lệ đầy thi vị</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_04_start.jpg', 'Shot 04 • Đầu (5.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.60s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_04_mid.jpg', 'Shot 04 • Giữa (5.88s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.88s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_04_end.jpg', 'Shot 04 • Cuối (6.16s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (6.16s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình cận cảnh cánh cửa gỗ nâu mộc mạc của nhà cổ Hội An. Chiếc bóng đổ sắc nét của cô gái in hằn lên bề mặt gỗ, hai cánh tay nhẹ nhàng nâng lên tạo dáng thanh thoát. Bề mặt gỗ với những đường rãnh vân nứt nẻ thời gian tạo chất cảm thô mộc (Rich Texture).</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tận dụng triệt để góc chiếu của ánh nắng mặt trời tạo nên một bức tranh tương phản sáng - tối (Chiaroscuro) giàu tính hội họa. Khán giả không nhìn thấy người thật mà chỉ thấy bóng đổ, kích thích trí tò mò về diện mạo nhân vật.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng cực ngắn (0.56s / 15 frames), đóng vai trò như một nhịp đệm dự báo (Setup Shot) cho cú chuyển cảnh bùng nổ phía sau.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Thay vì luôn quay thẳng vào mặt nhân vật, hãy tìm kiếm những bề mặt texture (cửa gỗ, tường vôi, nền đất) để ghi lại chiếc bóng đổ — đó là ngôn ngữ điện ảnh của sự tinh tế và giàu chất thơ.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tight Close-Up • 50mm Lens</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Hiên nhà cổ Hội An</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> High-Contrast Harsh Sunlight</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Foreground Mask Wipe (Nón lá / Bờ vai) sang Shot 05</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Foreground Mask Wipe (Nón lá / Bờ vai) sang Shot 05</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 6.2, 7.56)">
+                    ▶ 6.20s - 7.56s (1.36s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Chuyển Cảnh Bằng Nón Lá/Bờ Vai Lướt Qua Ống Kính: Mở bung toàn cảnh ngôi nhà hoa giấy và cô gái áo trắng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_05_start.jpg', 'Shot 05 • Đầu (6.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (6.20s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_05_mid.jpg', 'Shot 05 • Giữa (6.88s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.88s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_05_end.jpg', 'Shot 05 • Cuối (7.56s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (7.56s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bắt đầu bằng một bờ vai/chiếc nón lá màu nâu của người đi đường quét ngang qua sát ống kính từ trái sang phải, tạo thành một 'chiếc rèm che tự nhiên' (Foreground Occlusion Wipe). Khi vật cản lướt qua, khung hình mở ra toàn cảnh đối xứng hoàn hảo: Ngôi nhà cổ Hội An với giàn hoa giấy đỏ rực phủ trọn mái hiên, cô gái mặc váy dài trắng tinh khôi đội mũ rộng vành đứng duyên dáng ngay chính giữa cửa chính. Ở cuối shot, một chiếc xe máy chở hai người vụt qua tiền cảnh.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú chuyển cảnh Foreground Mask cực kỳ mượt mà, biến sự cản trở của dòng người đi đường thành đòn bẩy chuyển cảnh nghệ thuật. Bố cục đối xứng trục trung tâm (Center Symmetrical Framing) tạo sự uy nghi và trang nhã. Màu đỏ của hoa giấy và màu trắng của váy nổi bật trên nền gỗ sẫm.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chiếc xe máy chạy qua ở cuối shot che khuất chủ thể trong tích tắc, nhưng người quay đã chủ động dùng nó để kết thúc cảnh quay.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đừng bao giờ bực bội khi quay phim ngoài đường phố mà có người đi qua che mất máy — hãy áp sát máy vào người đó để tạo cú Wipe chuyển cảnh tự nhiên, biến 'tai nạn hiện trường' thành 'kỹ xảo đắt giá'.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Symmetrical Wide Shot • 35mm Lens</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt tiền nhà cổ giàn hoa giấy, Hội An</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tán xạ mềm hiên nhà (Diffused Shade)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt nối cảnh sang Shot 06</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Cắt nối cảnh sang Shot 06</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 7.6, 8.68)">
+                    ▶ 7.60s - 8.68s (1.08s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố Cục Cửa Vòm Cổng Đình Cổ & Dòng Xe Cộ Phố Hội: Tôn vinh nét cổ kính ngàn năm của kiến trúc di sản</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_06_start.jpg', 'Shot 06 • Đầu (7.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (7.60s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_06_mid.jpg', 'Shot 06 • Giữa (8.14s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (8.14s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_06_end.jpg', 'Shot 06 • Cuối (8.68s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.68s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình góc rộng ghi lại cổng tam quan cổ kính với những nét hoa văn trạm trổ tinh xảo, mái ngói rêu phong. Hai bên cổng là hai cây cổ thụ rợp bóng mát, bên dưới cổng là dòng người và xe máy qua lại nhộn nhịp, tạo nên sự giao thoa sống động giữa di sản cổ xưa và nhịp sống thường nhật.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục khung hình đóng khung (Framing within a Frame) với vòm cổng uy nghiêm làm tâm điểm. Chiều sâu không gian sâu thẳm từ mặt đường tiền cảnh đến sân đình bên trong.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh sáng loang lổ giữa bóng râm của cây và vạt nắng gắt trên mặt đường có thể làm cháy sáng nhẹ phần tán lá phía trên.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Muốn ghi lại hồn cốt của một thành phố di sản, hãy chọn những góc quay có sự hiện diện đồng thời của kiến trúc tĩnh lặng trăm năm và nhịp chuyển động không ngừng của con người hiện đại.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide Angle Landscape • 28mm Lens</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Cổng đình / Chùa cổ Hội An</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Dappled Sunlight qua tán cây</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut sang Đêm Bờ Sông (Shot 07)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Hard Cut sang Đêm Bờ Sông (Shot 07)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 8.72, 10.8)">
+                    ▶ 8.72s - 10.80s (2.08s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Máy Sát Mặt Đất Nhịp Chân Dòng Người & Cú Che Tối Toàn Khung Hình: Nhịp thở tiền cảnh thôi miên trước thời khắc bùng nổ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_07_start.jpg', 'Shot 07 • Đầu (8.72s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.72s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_07_mid.jpg', 'Shot 07 • Giữa (9.76s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.76s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_07_end.jpg', 'Shot 07 • Cuối (10.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.80s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung cảnh chuyển sang ban đêm ven bờ sông Hoài. Máy quay đặt ở góc cực thấp sát mặt đường đá (Ground-level Dutch/Low Angle). Hàng loạt đôi chân và thân người đi bộ bước qua ống kính liên tục, tạo ra những nhịp che khuất tiền cảnh dồn dập (Rhythmic Occlusion). Phía sau đôi chân là dòng sông đêm với ánh đèn vàng ấm áp phản chiếu từ những con thuyền. Đến giây 10.60s, một tấm lưng áo tối màu đi sát thấu kính, che kín hoàn toàn khung hình thành một mảng đen kịt.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc máy thấp mang tính khám phá (Voyeuristic Street Perspective), nhịp bước chân tạo tiết tấu âm thanh và thị giác dồn dập. Đỉnh cao là cú Blackout Mask ở cuối shot chuẩn bị hoàn hảo cho cú nhảy vọt thị giác ở shot tiếp theo.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy thấp ban đêm đòi hỏi cảm biến ISO cao để không bị nhiễu hạt (noise) ở các vùng tối bờ sông.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sử dụng chuyển động lặp đi lặp lại của dòng người (đôi chân bước qua) để xây dựng sự tò mò tăng dần (Building Momentum), sau đó kết thúc bằng một vật cản tối màu che kín 100% màn hình để thực hiện cú Blackout Transition.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Ground-Level Low Angle • 35mm Fast Lens (f/1.4)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bờ sông Hoài về đêm, Hội An</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng đêm phố cổ (Night Ambient Lantern Glow)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Blackout Occlusion Wipe (Lưng người đi bộ) sang Shot 08</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Blackout Occlusion Wipe (Lưng người đi bộ) sang Shot 08</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 10.84, 12.68)">
+                    ▶ 10.84s - 12.68s (1.84s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Vụ Nổ Màu Sắc Bức Tường Lồng Đèn Hội An & Cử Chỉ Xoay Quạt Nữ Tính: Phần thưởng thị giác bùng nổ Dopamine sau cú che tối</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_08_start.jpg', 'Shot 08 • Đầu (10.84s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (10.84s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_08_mid.jpg', 'Shot 08 • Giữa (11.76s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (11.76s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_08_end.jpg', 'Shot 08 • Cuối (12.68s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (12.68s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Tấm lưng đen kịt ở shot 7 vừa quét sang bên trái thì ngay lập tức hiện ra một 'bữa tiệc thị giác': Bức tường khổng lồ kết bằng hàng trăm chiếc lồng đèn lụa Hội An rực rỡ sắc màu (đỏ, vàng, xanh ngọc, trắng). Cô gái tóc búi cao thanh lịch mặc áo cổ yếm nâu, tay cầm chiếc quạt nan giấy màu cam xòe rộng, xoay người nhẹ nhàng và mỉm cười nhìn vào ống kính.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú nhảy vọt về mặt cảm xúc và thị giác (Contrast Shock) đạt điểm 10 tuyệt đối: Từ tối đen mờ mịt chuyển sang rực rỡ sắc màu lung linh; từ góc thấp bước chân chuyển sang chân dung kiêu sa. Màu sắc ấm áp, độ bão hòa cao, tôn vinh trọn vẹn biểu tượng văn hóa đèn lồng Hội An.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Hậu cảnh đèn lồng rất nhiều chi tiết và ánh sáng đa hướng, nếu chủ thể không cử động quạt thì người xem có thể bị phân tán chú ý vào các hoa văn phía sau.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đỉnh cao của kỹ thuật Mask Transition không nằm ở việc che vật cản, mà nằm ở 'CÁI GÌ ĐƯỢC MỞ RA SAU VẬT CẢN'. Hãy dành cảnh quay đẹp nhất, rực rỡ nhất, bất ngờ nhất để đặt ngay sau cú che đen màn hình.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Medium Close-Up Portrait • 50mm f/1.4 Lens</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Quầy đèn lồng đêm phố cổ Hội An</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng lồng đèn lụa ấm (Tungsten Warm Lanterns)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt nối cảnh sang Shot 09</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 09 • Cắt nối cảnh sang Shot 09</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_08_to_09.jpg?v=2', 'Chuyển cảnh Shot 08 sang Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_08_to_09.jpg?v=2" alt="Transition 8 to 9" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-9">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 09</span>
+                <button class="shot-time-btn" onclick="jumpToShot(9, 12.72, 13.88)">
+                    ▶ 12.72s - 13.88s (1.16s)
+                </button>
+            </div>
+            <h2 class="shot-headline">B-Roll Xích Lô Lướt Dưới Vòm Hoa Giấy & Khói Chiều Huyền Ảo: Nét thơ mộng hoài cổ của phố Hội trong sương khói</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_09_start.jpg', 'Shot 09 • Đầu (12.72s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (12.72s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_09_mid.jpg', 'Shot 09 • Giữa (13.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (13.30s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_09_end.jpg', 'Shot 09 • Cuối (13.88s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (13.88s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy đặt sau tán lá cây mờ ở tiền cảnh (Over-the-shoulder / Leaf foreground), hướng nhìn dọc theo con phố cổ rực rỡ hoa giấy và những chiếc đèn lồng treo cao. Một đoàn xe xích lô chở khách du lịch thong thả đạp về phía trước. Khói sương chiều hoặc ánh nắng chiếu xiên tạo nên những luồng sáng mờ ảo (God Rays) phủ lên mặt đường đá bóng loáng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tiền cảnh lá cây xanh tạo cảm giác 'nhìn lén' (Voyeuristic Framing) tăng tính chân thực. Chiều sâu phối cảnh một điểm tụ (One-point Perspective) hút mắt người xem vào cuối con đường. Khói sương tạo chất thơ điện ảnh lãng đãng.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Xe xích lô đi hơi xa camera, nếu có một chiếc xích lô đi sát qua mép khung hình thì hiệu ứng Parallax sẽ còn mạnh mẽ hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Quay qua một lớp tiền cảnh tự nhiên (tán lá, cành cây, cánh cửa hé mở) sẽ biến một góc quay đường phố bình thường thành một shot phim có chiều sâu nghệ thuật.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Deep Focus Wide Shot • 50mm Lens</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Tuyến phố đi bộ Hội An</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Backlit Golden Hour & Atmospheric Smoke</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt nối cảnh sang Shot 10</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 10 • Cắt nối cảnh sang Shot 10</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_09_to_10.jpg?v=2', 'Chuyển cảnh Shot 09 sang Shot 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_09_to_10.jpg?v=2" alt="Transition 9 to 10" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-10">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 10</span>
+                <button class="shot-time-btn" onclick="jumpToShot(10, 13.92, 14.96)">
+                    ▶ 13.92s - 14.96s (1.04s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Nhìn Văn Hóa: Nghệ Nhân Thư Pháp & Quầy Tranh Thủy Mặc Bên Vỉa Hè: Tôn vinh nét đẹp văn hóa tâm hồn phố Hội</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_10_start.jpg', 'Shot 10 • Đầu (13.92s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (13.92s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_10_mid.jpg', 'Shot 10 • Giữa (14.44s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (14.44s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_10_end.jpg', 'Shot 10 • Cuối (14.96s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (14.96s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình trung toàn cân xứng ghi lại góc vỉa hè lát đá bên tường cổ Hội An. Một nghệ nhân thư pháp mặc trang phục truyền thống ngồi bên bàn mực tàu giấy đỏ, phía sau là hàng loạt bức tranh thủy mặc và câu đối chữ được bày trí trang trọng. Khách du lịch đứng ngắm nhìn và trò chuyện.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Ghi lại chân thực một mảnh ghép văn hóa di sản sống động của phố cổ Hội An. Tỷ lệ con người nhỏ nhắn trong không gian nghệ thuật tạo cảm giác khiêm nhường, kính trọng văn hóa truyền thống.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh sáng góc quay này hơi tối hơn so với các shot trước do nằm trong bóng râm của tòa nhà, cần nâng nhẹ shadow để nhìn rõ nét chữ thư pháp.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Một video du lịch điện ảnh không chỉ có cảnh đẹp và người mẫu, mà bắt buộc phải có những shot B-roll về con người bản địa, nghệ nhân, làng nghề truyền thống để tạo nên linh hồn cho tác phẩm.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Eye-Level Medium Shot • 35mm Lens</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc phố ông đồ thư pháp, Hội An</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng bóng râm tự nhiên (Soft Natural Shade)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt nối cảnh sang Shot 11</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 11 • Cắt nối cảnh sang Shot 11</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_10_to_11.jpg?v=2', 'Chuyển cảnh Shot 10 sang Shot 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/transitions/trans_10_to_11.jpg?v=2" alt="Transition 10 to 11" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-11">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 11</span>
+                <button class="shot-time-btn" onclick="jumpToShot(11, 15.0, 16.32)">
+                    ▶ 15.00s - 16.32s (1.32s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Kết Đọng Lại Cảm Xúc Với Nụ Cười Nghiêng & Bong Bóng Xà Phòng Bay Lượn: Nốt nhạc êm dịu khép lại cuốn phim du ký</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_11_start.jpg', 'Shot 11 • Đầu (15.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (15.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_11_mid.jpg', 'Shot 11 • Giữa (15.66s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (15.66s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_11_end.jpg', 'Shot 11 • Cuối (16.32s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (16.32s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc quay cận cảnh (Close-Up) từ phía sau lưng nhìn nghiêng lên gương mặt rạng rỡ của cô gái. Mái tóc uốn gợn sóng cài những nhánh hoa baby trắng tinh khôi, làn da trắng ngần dưới ánh nắng dịu ngọt. Những quả bong bóng xà phòng ngũ sắc lơ lửng bay qua khung hình, phản chiếu ánh sáng lấp lánh như trong một giấc mơ cổ tích.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khung hình nên thơ, dịu dàng, tạo cảm xúc vương vấn khó quên. Độ sâu trường ảnh mỏng (Bokeh tròn trịa từ cây lá phía sau), chuyển động trôi nổi của bong bóng mang lại nhịp điệu bay bổng, lãng mạn.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Shot kết dừng lại ở 16.32s khi bong bóng đang bay, nếu có thêm 0.5s fade out nhẹ thì cảm xúc sẽ trọn vẹn hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kết thúc video du lịch bằng một chi tiết bay bổng (bong bóng, cánh hoa rơi, làn gió thổi tung tóc) kết hợp với chân dung nghiêng sẽ để lại dư vị ngọt ngào và thôi thúc người xem muốn xách balo lên đường.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tight Beauty Close-Up • 85mm f/1.4 Lens</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Vườn hoa quán cafe phố cổ, Hội An</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Soft Ambient Daylight & Bubble Reflections</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Outro Final Cut</span>
+            </div>
+
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 2.0)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Hook Thị Giác Đời Thực Bên Bờ Sông Hoài Với Tiền Cảnh Xe Máy Lướt Qua: Khóa chặt sự chú ý ngay giây đầu bằng chuyển động tự nhiên kết hợp Text Overlay</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 2.04, 4.56)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 2.04s</span>
+            </div>
+            <div class="grid-card-body">Chuyển Đổi Không Gian Bên Bến Sông Với Thuyền Gỗ Xanh & Nhịp Người Lướt Qua: Tái lập bối cảnh đời sống sông nước đặc trưng phố cổ</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 4.6, 5.56)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 4.60s</span>
+            </div>
+            <div class="grid-card-body">Establishing Shot Ngôi Nhà Vàng Cổ Kính Rợp Bóng Cây: Định danh địa danh bằng Typography Viết Tay 'Hoi An, Vietnam'</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 5.6, 6.16)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 5.60s</span>
+            </div>
+            <div class="grid-card-body">Nghệ Thuật Bóng Đổ Trên Cửa Gỗ Cổ Kính: Tận dụng ánh sáng tự nhiên tạo hình bóng ước lệ đầy thi vị</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 6.2, 7.56)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 6.20s</span>
+            </div>
+            <div class="grid-card-body">Cú Chuyển Cảnh Bằng Nón Lá/Bờ Vai Lướt Qua Ống Kính: Mở bung toàn cảnh ngôi nhà hoa giấy và cô gái áo trắng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 7.6, 8.68)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 7.60s</span>
+            </div>
+            <div class="grid-card-body">Bố Cục Cửa Vòm Cổng Đình Cổ & Dòng Xe Cộ Phố Hội: Tôn vinh nét cổ kính ngàn năm của kiến trúc di sản</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 8.72, 10.8)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 8.72s</span>
+            </div>
+            <div class="grid-card-body">Góc Máy Sát Mặt Đất Nhịp Chân Dòng Người & Cú Che Tối Toàn Khung Hình: Nhịp thở tiền cảnh thôi miên trước thời khắc bùng nổ</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 10.84, 12.68)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 10.84s</span>
+            </div>
+            <div class="grid-card-body">Vụ Nổ Màu Sắc Bức Tường Lồng Đèn Hội An & Cử Chỉ Xoay Quạt Nữ Tính: Phần thưởng thị giác bùng nổ Dopamine sau cú che tối</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(9, 12.72, 13.88)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <span class="grid-thumb-badge">Shot 09 • 12.72s</span>
+            </div>
+            <div class="grid-card-body">B-Roll Xích Lô Lướt Dưới Vòm Hoa Giấy & Khói Chiều Huyền Ảo: Nét thơ mộng hoài cổ của phố Hội trong sương khói</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(10, 13.92, 14.96)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+                <span class="grid-thumb-badge">Shot 10 • 13.92s</span>
+            </div>
+            <div class="grid-card-body">Góc Nhìn Văn Hóa: Nghệ Nhân Thư Pháp & Quầy Tranh Thủy Mặc Bên Vỉa Hè: Tôn vinh nét đẹp văn hóa tâm hồn phố Hội</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(11, 15.0, 16.32)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/extracted_shots/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+                <span class="grid-thumb-badge">Shot 11 • 15.00s</span>
+            </div>
+            <div class="grid-card-body">Cú Kết Đọng Lại Cảm Xúc Với Nụ Cười Nghiêng & Bong Bóng Xà Phòng Bay Lượn: Nốt nhạc êm dịu khép lại cuốn phim du ký</div>
+        </div>
+        
+        </div>
+
+        
+        <!-- RELATED IDEAS SHOWCASE SECTION -->
+        <section class="related-ideas-section" id="relatedIdeas">
+            <span class="knowledge-badge">⚡ Hệ Sinh Thái YTUONG HUB • FEDU</span>
+            <h2 class="knowledge-title">CÁC Ý TƯỞNG TƯƠNG TỰ CÙNG SỬ DỤNG KỸ THUẬT CHE VẬT THỂ (MASK &amp; OCCLUSION)</h2>
+            <p class="knowledge-desc">
+                Khám phá các case study mẫu mực trong kho dữ liệu <strong>YTUONG HUB</strong> đã được bóc tách phân cảnh chi tiết, cùng khai thác triệt để kỹ thuật che khuất tiền cảnh, match cut và natural wipe:
+            </p>
+
+            <div class="related-ideas-grid">
+                <!-- Case 1: Jerome Meme - Copenhagen -->
+                <article class="related-idea-card">
+                    <div class="related-card-media">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jeromememe_DbGMt3oIaZm_People_of_Copenhagen/shot_01_mid.jpg" alt="People of Copenhagen" loading="lazy">
+                        <span class="related-badge-tag">🚲 Copenhagen • Đời Sống</span>
+                    </div>
+                    <div class="related-card-body">
+                        <div class="related-creator">@jeromememe (Jerome Meme)</div>
+                        <h3 class="related-title">Nghệ Thuật Quan Sát Cuộc Sống Mùa Hè Copenhagen &amp; Tinh Thần Hygge</h3>
+                        <p class="related-summary">
+                            Dùng dòng người đi xe đạp và người đi bộ lướt sát ống kính (Foreground Occlusion Wipe) để che kín khung hình, chuyển cảnh mượt mà giữa các góc phố và kênh đào Copenhagen mà không tạo cảm giác cắt ghép nhân tạo.
+                        </p>
+                        <div class="related-card-actions">
+                            <a href="https://vietndj.github.io/reports/People%20of%20Copenhagen%20-%20@jeromememe.html" target="_blank" class="btn-related-primary">📖 Xem Báo Cáo ↗</a>
+                            <a href="https://ytuong.fedu.vn/ytuong.html?search=copenhagen" target="_blank" class="btn-related-secondary">💡 YTUONG HUB</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case 2: Yegor Sky - Suitcase Sequence -->
+                <article class="related-idea-card">
+                    <div class="related-card-media">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_01_mid.jpg" alt="Cinematic Suitcase Sequence" loading="lazy">
+                        <span class="related-badge-tag">🧳 Đồ Vật • Black Wipe</span>
+                    </div>
+                    <div class="related-card-body">
+                        <div class="related-creator">@yegor.sky (Yegor Sky)</div>
+                        <h3 class="related-title">Nghệ Thuật Biến Vali Du Lịch Thành Chuỗi Thước Phim Điện Ảnh</h3>
+                        <p class="related-summary">
+                            Cú đóng nắp vali tối sầm màn hình (Black Occlusion Wipe) được dùng như một chiếc màn sập tự nhiên (Natural Shutter) để chuyển từ cảnh sắp đồ trong phòng sang cảnh kéo vali trên sàn sân bay.
+                        </p>
+                        <div class="related-card-actions">
+                            <a href="https://vietndj.github.io/reports/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence.html" target="_blank" class="btn-related-primary">📖 Xem Báo Cáo ↗</a>
+                            <a href="https://ytuong.fedu.vn/ytuong.html?search=suitcase" target="_blank" class="btn-related-secondary">💡 YTUONG HUB</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case 3: Mridupawan Sharma - 4 Cuts Mastery -->
+                <article class="related-idea-card">
+                    <div class="related-card-media">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery/shot_01_mid.jpg" alt="4 Cuts Mastery" loading="lazy">
+                        <span class="related-badge-tag">🎬 Kỹ Thuật Dựng • Infinite Loop</span>
+                    </div>
+                    <div class="related-card-body">
+                        <div class="related-creator">@mridupawasharma</div>
+                        <h3 class="related-title">4 Kỹ Thuật Cắt Cảnh Nâng Tầm Video Điện Ảnh: Natural Mask Cut</h3>
+                        <p class="related-summary">
+                            Trình diễn chuyên sâu kỹ thuật "Natural Mask Cut" — dùng một đồ vật (cốc nước, laptop, cánh tay) quét qua ống kính làm ranh giới che cảnh cũ và mở ra cảnh mới, tạo vòng lặp vô tận (Seamless Infinite Loop).
+                        </p>
+                        <div class="related-card-actions">
+                            <a href="https://vietndj.github.io/reports/4%20Cuts%20Mastery%20-%20@mridupawasharma.html" target="_blank" class="btn-related-primary">📖 Xem Báo Cáo ↗</a>
+                            <a href="https://ytuong.fedu.vn/ytuong.html?search=4%20cuts" target="_blank" class="btn-related-secondary">💡 YTUONG HUB</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case 4: Byjxson - Project 100 Day 01 -->
+                <article class="related-idea-card">
+                    <div class="related-card-media">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_mid.jpg" alt="Project 100 Day 01" loading="lazy">
+                        <span class="related-badge-tag">🚗 Car Wipe • Bãi Đỗ Xe</span>
+                    </div>
+                    <div class="related-card-body">
+                        <div class="related-creator">@byjxson (Jason Vargas)</div>
+                        <h3 class="related-title">Project 100 Day 01 • Cú Chuyển Cảnh Car Wipe &amp; Đa Góc Máy</h3>
+                        <p class="related-summary">
+                            Cú chuyển cảnh bằng xe ô tô chạy ngang qua (Car Wipe Transition): chiếc xe lướt qua che kín ống kính ở bãi đỗ xe, ngay sau khi xe đi qua mở ra góc nhìn nhân vật đẩy xe đẩy vào siêu thị Target.
+                        </p>
+                        <div class="related-card-actions">
+                            <a href="https://vietndj.github.io/reports/Project%20100%20Day%2001%20-%20@byjxson.html" target="_blank" class="btn-related-primary">📖 Xem Báo Cáo ↗</a>
+                            <a href="https://ytuong.fedu.vn/ytuong.html?search=byjxson" target="_blank" class="btn-related-secondary">💡 YTUONG HUB</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case 5: Jesús Ropero - Getting Ready Faster Than Ever -->
+                <article class="related-idea-card">
+                    <div class="related-card-media">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever/shot_01_mid.jpg" alt="Getting Ready Faster Than Ever" loading="lazy">
+                        <span class="related-badge-tag">👟 Foot Stamp • Biến Hình OOTD</span>
+                    </div>
+                    <div class="related-card-body">
+                        <div class="related-creator">@jesussropero (Jesús Ropero)</div>
+                        <h3 class="related-title">Getting Ready Faster Than Ever • Match Cut Dậm Chân Che Máy</h3>
+                        <p class="related-summary">
+                            Đặt máy sát mặt đất, nhân vật dậm gót giày xuống che sát sạt thấu kính (Foot Stamp Lens-Wipe), biến chiếc giày thành mặt nạ che tối để biến hình trang phục OOTD chỉ trong 1 frame đúng nhịp trống 120 BPM.
+                        </p>
+                        <div class="related-card-actions">
+                            <a href="https://vietndj.github.io/reports/Getting%20Ready%20Faster%20Than%20Ever%20-%20@jesussropero.html" target="_blank" class="btn-related-primary">📖 Xem Báo Cáo ↗</a>
+                            <a href="https://ytuong.fedu.vn/ytuong.html?search=ropero" target="_blank" class="btn-related-secondary">💡 YTUONG HUB</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case 6: withyuee - Hong Kong Urban Transitions -->
+                <article class="related-idea-card">
+                    <div class="related-card-media">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Urban_Transitions_@withyuee/shot_01_mid.jpg" alt="Hong Kong Urban Transitions" loading="lazy">
+                        <span class="related-badge-tag">🏙️ Dốc Phố • Cột Đèn &amp; Thân Cây</span>
+                    </div>
+                    <div class="related-card-body">
+                        <div class="related-creator">@withyuee</div>
+                        <h3 class="related-title">Hong Kong Urban Transitions • Chuyển Cảnh Mượt Không Cần Kỹ Xảo</h3>
+                        <p class="related-summary">
+                            Lợi dụng cột đèn đường và thân cây cổ thụ trên các con dốc U Lam Terrace che một nửa khung hình rồi trượt sang góc phố mới theo đà chuyển động mượt mà của camera.
+                        </p>
+                        <div class="related-card-actions">
+                            <a href="https://vietndj.github.io/reports/Hong_Kong_Urban_Transitions%20-%20@withyuee.html" target="_blank" class="btn-related-primary">📖 Xem Báo Cáo ↗</a>
+                            <a href="https://ytuong.fedu.vn/ytuong.html?search=hong%20kong" target="_blank" class="btn-related-secondary">💡 YTUONG HUB</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1kIvOxphPKOBP3TcOhGw50wmUAy1u0UPs" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "en_frame": 50, "st_time": 0.0, "en_time": 2.0, "duration": 2.0, "headline": "Hook Thị Giác Đời Thực Bên Bờ Sông Hoài Với Tiền Cảnh Xe Máy Lướt Qua: Khóa chặt sự chú ý ngay giây đầu bằng chuyển động tự nhiên kết hợp Text Overlay", "subject_action": "Cô gái tóc vàng mặc váy maxi dài đang cúi người tỉ mỉ căn chỉnh máy ảnh gắn trên chân máy (tripod) bên lan can bờ sông Hoài (Hội An). Ngay khung hình mở đầu, một chiếc xe máy chở hai người vụt qua sát tiền cảnh từ trái sang phải, tạo lớp chuyển động tầng thứ nhất. Chữ in hoa đậm nét 'THE DAY WE STARTED FILMING EVERYTHING' nổi bật ở góc trên.", "pros": "Khung hình chia 3 lớp sâu sắc: Tiền cảnh xe máy lướt nhanh -> Trung cảnh nhân vật chỉnh máy -> Hậu cảnh dòng sông và dãy nhà màu vàng Hội An. Ánh sáng xiên ban ngày tôn làn da và tóc nhân vật.", "cons": "Tiền cảnh xe máy chạy qua khá nhanh ở 5 frame đầu, nếu người xem lướt quá vội có thể chưa kịp đọc hết text overlay nếu không có hiệu ứng nhấn text.", "takeaway": "Mở đầu video tài liệu du lịch bằng một cú lướt tiền cảnh tự nhiên (xe cộ, người đi bộ) để ngay lập tức tạo nhịp sống đời thực, xóa tan cảm giác dàn dựng khiên cưỡng.", "location": "Bờ kè sông Hoài, Phố cổ Hội An", "lens_angle": "Low-Angle Medium Shot • 50mm Equivalent", "lighting_color": "Ánh sáng tự nhiên ban ngày (Daylight Natural)", "transition": "Cắt nối cảnh sang Shot 02"}, {"id": 2, "st_frame": 51, "en_frame": 114, "st_time": 2.04, "en_time": 4.56, "duration": 2.52, "headline": "Chuyển Đổi Không Gian Bên Bến Sông Với Thuyền Gỗ Xanh & Nhịp Người Lướt Qua: Tái lập bối cảnh đời sống sông nước đặc trưng phố cổ", "subject_action": "Máy quay giữ tĩnh bên bờ kè sông Hoài, bắt trọn chiếc thuyền gỗ du lịch sơn màu xanh lam mộc mạc đang neo đậu, người lái đò áo sẫm màu ngồi tĩnh lặng bên trong. Ở đầu shot, một người đi bộ mặc áo sơ mi xanh lướt qua tiền cảnh. Dòng nước sông lấp lánh ánh nắng ban trưa, phía xa là dãy thuyền và hàng cây rủ bóng. Text overlay vẫn được duy trì tạo sự liên tục về mạch thông điệp.", "pros": "Gam màu xanh lam của thuyền tương phản bổ trợ hoàn hảo với màu vàng của bờ kè và dãy nhà phố cổ đối diện. Chuyển động người đi bộ áo xanh ở đầu shot tạo kết nối nhịp điệu với xe máy ở shot 1.", "cons": "Mặt nước sông phản chiếu ánh nắng hơi gắt ở rìa trái khung hình (specular highlight), cần filter CPL (Circular Polarizer) để triệt tiêu chói sáng và làm đậm màu nước xanh.", "takeaway": "Giữ text hook xuyên suốt 2 shot đầu tiên (tổng thời lượng ~4.5s) giúp người xem vừa kịp đọc hết thông điệp vừa được chiêm ngưỡng 2 bối cảnh thị giác khác nhau mà không bị ngắt mạch tư duy.", "location": "Bến thuyền sông Hoài, Hội An", "lens_angle": "Eye-Level Medium Wide • 35mm Lens", "lighting_color": "Ánh sáng mặt trời trực tiếp (Direct Sun)", "transition": "Cắt nối cảnh sang Shot 03"}, {"id": 3, "st_frame": 115, "en_frame": 139, "st_time": 4.6, "en_time": 5.56, "duration": 0.96, "headline": "Establishing Shot Ngôi Nhà Vàng Cổ Kính Rợp Bóng Cây: Định danh địa danh bằng Typography Viết Tay 'Hoi An, Vietnam'", "subject_action": "Khung hình tĩnh góc trung toàn ghi lại mặt tiền tầng 2 của một tòa nhà kiến trúc thuộc địa màu vàng mù tạt đặc trưng phố cổ Hội An, ban công rực rỡ hoa giấy đỏ và tán cây xanh đung đưa trong gió. Dòng chữ viết tay uốn lượn phong cách hoài niệm 'Hoi An, Vietnam' xuất hiện tinh tế ở giữa khung hình.", "pros": "Màu vàng ấm áp đặc trưng của Hội An tràn ngập khung hình mang lại cảm giác hoài cổ, bình yên. Bố cục 1/3 cân đối giữa tường vàng, ban công gỗ và vòm trời xanh ngát. Typography thanh thoát, đậm chất điện ảnh du ký.", "cons": "Thời lượng hơi ngắn (chỉ đúng 0.96s), người xem vừa kịp nhận diện địa danh thì khung hình đã chuyển sang shot tiếp theo.", "takeaway": "Với video ngắn dạng Aesthetic Travel, các cú thiết lập không gian (Establishing Shot) chỉ cần xuất hiện từ 0.8s - 1.2s như một 'nhịp thở thị giác' để định vị địa điểm trước khi đi vào các chi tiết vi mô.", "location": "Phố cổ Hội An", "lens_angle": "Medium Long Shot • 50mm Lens", "lighting_color": "Nắng chiều vàng rực (Golden Daylight)", "transition": "Cắt nối cảnh sang Shot 04"}, {"id": 4, "st_frame": 140, "en_frame": 154, "st_time": 5.6, "en_time": 6.16, "duration": 0.56, "headline": "Nghệ Thuật Bóng Đổ Trên Cửa Gỗ Cổ Kính: Tận dụng ánh sáng tự nhiên tạo hình bóng ước lệ đầy thi vị", "subject_action": "Khung hình cận cảnh cánh cửa gỗ nâu mộc mạc của nhà cổ Hội An. Chiếc bóng đổ sắc nét của cô gái in hằn lên bề mặt gỗ, hai cánh tay nhẹ nhàng nâng lên tạo dáng thanh thoát. Bề mặt gỗ với những đường rãnh vân nứt nẻ thời gian tạo chất cảm thô mộc (Rich Texture).", "pros": "Tận dụng triệt để góc chiếu của ánh nắng mặt trời tạo nên một bức tranh tương phản sáng - tối (Chiaroscuro) giàu tính hội họa. Khán giả không nhìn thấy người thật mà chỉ thấy bóng đổ, kích thích trí tò mò về diện mạo nhân vật.", "cons": "Thời lượng cực ngắn (0.56s / 15 frames), đóng vai trò như một nhịp đệm dự báo (Setup Shot) cho cú chuyển cảnh bùng nổ phía sau.", "takeaway": "Thay vì luôn quay thẳng vào mặt nhân vật, hãy tìm kiếm những bề mặt texture (cửa gỗ, tường vôi, nền đất) để ghi lại chiếc bóng đổ — đó là ngôn ngữ điện ảnh của sự tinh tế và giàu chất thơ.", "location": "Hiên nhà cổ Hội An", "lens_angle": "Tight Close-Up • 50mm Lens", "lighting_color": "High-Contrast Harsh Sunlight", "transition": "Foreground Mask Wipe (Nón lá / Bờ vai) sang Shot 05"}, {"id": 5, "st_frame": 155, "en_frame": 189, "st_time": 6.2, "en_time": 7.56, "duration": 1.36, "headline": "Cú Chuyển Cảnh Bằng Nón Lá/Bờ Vai Lướt Qua Ống Kính: Mở bung toàn cảnh ngôi nhà hoa giấy và cô gái áo trắng", "subject_action": "Bắt đầu bằng một bờ vai/chiếc nón lá màu nâu của người đi đường quét ngang qua sát ống kính từ trái sang phải, tạo thành một 'chiếc rèm che tự nhiên' (Foreground Occlusion Wipe). Khi vật cản lướt qua, khung hình mở ra toàn cảnh đối xứng hoàn hảo: Ngôi nhà cổ Hội An với giàn hoa giấy đỏ rực phủ trọn mái hiên, cô gái mặc váy dài trắng tinh khôi đội mũ rộng vành đứng duyên dáng ngay chính giữa cửa chính. Ở cuối shot, một chiếc xe máy chở hai người vụt qua tiền cảnh.", "pros": "Cú chuyển cảnh Foreground Mask cực kỳ mượt mà, biến sự cản trở của dòng người đi đường thành đòn bẩy chuyển cảnh nghệ thuật. Bố cục đối xứng trục trung tâm (Center Symmetrical Framing) tạo sự uy nghi và trang nhã. Màu đỏ của hoa giấy và màu trắng của váy nổi bật trên nền gỗ sẫm.", "cons": "Chiếc xe máy chạy qua ở cuối shot che khuất chủ thể trong tích tắc, nhưng người quay đã chủ động dùng nó để kết thúc cảnh quay.", "takeaway": "Đừng bao giờ bực bội khi quay phim ngoài đường phố mà có người đi qua che mất máy — hãy áp sát máy vào người đó để tạo cú Wipe chuyển cảnh tự nhiên, biến 'tai nạn hiện trường' thành 'kỹ xảo đắt giá'.", "location": "Mặt tiền nhà cổ giàn hoa giấy, Hội An", "lens_angle": "Symmetrical Wide Shot • 35mm Lens", "lighting_color": "Ánh sáng tán xạ mềm hiên nhà (Diffused Shade)", "transition": "Cắt nối cảnh sang Shot 06"}, {"id": 6, "st_frame": 190, "en_frame": 217, "st_time": 7.6, "en_time": 8.68, "duration": 1.08, "headline": "Bố Cục Cửa Vòm Cổng Đình Cổ & Dòng Xe Cộ Phố Hội: Tôn vinh nét cổ kính ngàn năm của kiến trúc di sản", "subject_action": "Khung hình góc rộng ghi lại cổng tam quan cổ kính với những nét hoa văn trạm trổ tinh xảo, mái ngói rêu phong. Hai bên cổng là hai cây cổ thụ rợp bóng mát, bên dưới cổng là dòng người và xe máy qua lại nhộn nhịp, tạo nên sự giao thoa sống động giữa di sản cổ xưa và nhịp sống thường nhật.", "pros": "Bố cục khung hình đóng khung (Framing within a Frame) với vòm cổng uy nghiêm làm tâm điểm. Chiều sâu không gian sâu thẳm từ mặt đường tiền cảnh đến sân đình bên trong.", "cons": "Ánh sáng loang lổ giữa bóng râm của cây và vạt nắng gắt trên mặt đường có thể làm cháy sáng nhẹ phần tán lá phía trên.", "takeaway": "Muốn ghi lại hồn cốt của một thành phố di sản, hãy chọn những góc quay có sự hiện diện đồng thời của kiến trúc tĩnh lặng trăm năm và nhịp chuyển động không ngừng của con người hiện đại.", "location": "Cổng đình / Chùa cổ Hội An", "lens_angle": "Wide Angle Landscape • 28mm Lens", "lighting_color": "Dappled Sunlight qua tán cây", "transition": "Hard Cut sang Đêm Bờ Sông (Shot 07)"}, {"id": 7, "st_frame": 218, "en_frame": 270, "st_time": 8.72, "en_time": 10.8, "duration": 2.08, "headline": "Góc Máy Sát Mặt Đất Nhịp Chân Dòng Người & Cú Che Tối Toàn Khung Hình: Nhịp thở tiền cảnh thôi miên trước thời khắc bùng nổ", "subject_action": "Khung cảnh chuyển sang ban đêm ven bờ sông Hoài. Máy quay đặt ở góc cực thấp sát mặt đường đá (Ground-level Dutch/Low Angle). Hàng loạt đôi chân và thân người đi bộ bước qua ống kính liên tục, tạo ra những nhịp che khuất tiền cảnh dồn dập (Rhythmic Occlusion). Phía sau đôi chân là dòng sông đêm với ánh đèn vàng ấm áp phản chiếu từ những con thuyền. Đến giây 10.60s, một tấm lưng áo tối màu đi sát thấu kính, che kín hoàn toàn khung hình thành một mảng đen kịt.", "pros": "Góc máy thấp mang tính khám phá (Voyeuristic Street Perspective), nhịp bước chân tạo tiết tấu âm thanh và thị giác dồn dập. Đỉnh cao là cú Blackout Mask ở cuối shot chuẩn bị hoàn hảo cho cú nhảy vọt thị giác ở shot tiếp theo.", "cons": "Góc máy thấp ban đêm đòi hỏi cảm biến ISO cao để không bị nhiễu hạt (noise) ở các vùng tối bờ sông.", "takeaway": "Sử dụng chuyển động lặp đi lặp lại của dòng người (đôi chân bước qua) để xây dựng sự tò mò tăng dần (Building Momentum), sau đó kết thúc bằng một vật cản tối màu che kín 100% màn hình để thực hiện cú Blackout Transition.", "location": "Bờ sông Hoài về đêm, Hội An", "lens_angle": "Ground-Level Low Angle • 35mm Fast Lens (f/1.4)", "lighting_color": "Ánh sáng đêm phố cổ (Night Ambient Lantern Glow)", "transition": "Blackout Occlusion Wipe (Lưng người đi bộ) sang Shot 08"}, {"id": 8, "st_frame": 271, "en_frame": 317, "st_time": 10.84, "en_time": 12.68, "duration": 1.84, "headline": "Vụ Nổ Màu Sắc Bức Tường Lồng Đèn Hội An & Cử Chỉ Xoay Quạt Nữ Tính: Phần thưởng thị giác bùng nổ Dopamine sau cú che tối", "subject_action": "Tấm lưng đen kịt ở shot 7 vừa quét sang bên trái thì ngay lập tức hiện ra một 'bữa tiệc thị giác': Bức tường khổng lồ kết bằng hàng trăm chiếc lồng đèn lụa Hội An rực rỡ sắc màu (đỏ, vàng, xanh ngọc, trắng). Cô gái tóc búi cao thanh lịch mặc áo cổ yếm nâu, tay cầm chiếc quạt nan giấy màu cam xòe rộng, xoay người nhẹ nhàng và mỉm cười nhìn vào ống kính.", "pros": "Cú nhảy vọt về mặt cảm xúc và thị giác (Contrast Shock) đạt điểm 10 tuyệt đối: Từ tối đen mờ mịt chuyển sang rực rỡ sắc màu lung linh; từ góc thấp bước chân chuyển sang chân dung kiêu sa. Màu sắc ấm áp, độ bão hòa cao, tôn vinh trọn vẹn biểu tượng văn hóa đèn lồng Hội An.", "cons": "Hậu cảnh đèn lồng rất nhiều chi tiết và ánh sáng đa hướng, nếu chủ thể không cử động quạt thì người xem có thể bị phân tán chú ý vào các hoa văn phía sau.", "takeaway": "Đỉnh cao của kỹ thuật Mask Transition không nằm ở việc che vật cản, mà nằm ở 'CÁI GÌ ĐƯỢC MỞ RA SAU VẬT CẢN'. Hãy dành cảnh quay đẹp nhất, rực rỡ nhất, bất ngờ nhất để đặt ngay sau cú che đen màn hình.", "location": "Quầy đèn lồng đêm phố cổ Hội An", "lens_angle": "Medium Close-Up Portrait • 50mm f/1.4 Lens", "lighting_color": "Ánh sáng lồng đèn lụa ấm (Tungsten Warm Lanterns)", "transition": "Cắt nối cảnh sang Shot 09"}, {"id": 9, "st_frame": 318, "en_frame": 347, "st_time": 12.72, "en_time": 13.88, "duration": 1.16, "headline": "B-Roll Xích Lô Lướt Dưới Vòm Hoa Giấy & Khói Chiều Huyền Ảo: Nét thơ mộng hoài cổ của phố Hội trong sương khói", "subject_action": "Góc máy đặt sau tán lá cây mờ ở tiền cảnh (Over-the-shoulder / Leaf foreground), hướng nhìn dọc theo con phố cổ rực rỡ hoa giấy và những chiếc đèn lồng treo cao. Một đoàn xe xích lô chở khách du lịch thong thả đạp về phía trước. Khói sương chiều hoặc ánh nắng chiếu xiên tạo nên những luồng sáng mờ ảo (God Rays) phủ lên mặt đường đá bóng loáng.", "pros": "Tiền cảnh lá cây xanh tạo cảm giác 'nhìn lén' (Voyeuristic Framing) tăng tính chân thực. Chiều sâu phối cảnh một điểm tụ (One-point Perspective) hút mắt người xem vào cuối con đường. Khói sương tạo chất thơ điện ảnh lãng đãng.", "cons": "Xe xích lô đi hơi xa camera, nếu có một chiếc xích lô đi sát qua mép khung hình thì hiệu ứng Parallax sẽ còn mạnh mẽ hơn.", "takeaway": "Quay qua một lớp tiền cảnh tự nhiên (tán lá, cành cây, cánh cửa hé mở) sẽ biến một góc quay đường phố bình thường thành một shot phim có chiều sâu nghệ thuật.", "location": "Tuyến phố đi bộ Hội An", "lens_angle": "Deep Focus Wide Shot • 50mm Lens", "lighting_color": "Backlit Golden Hour & Atmospheric Smoke", "transition": "Cắt nối cảnh sang Shot 10"}, {"id": 10, "st_frame": 348, "en_frame": 374, "st_time": 13.92, "en_time": 14.96, "duration": 1.04, "headline": "Góc Nhìn Văn Hóa: Nghệ Nhân Thư Pháp & Quầy Tranh Thủy Mặc Bên Vỉa Hè: Tôn vinh nét đẹp văn hóa tâm hồn phố Hội", "subject_action": "Khung hình trung toàn cân xứng ghi lại góc vỉa hè lát đá bên tường cổ Hội An. Một nghệ nhân thư pháp mặc trang phục truyền thống ngồi bên bàn mực tàu giấy đỏ, phía sau là hàng loạt bức tranh thủy mặc và câu đối chữ được bày trí trang trọng. Khách du lịch đứng ngắm nhìn và trò chuyện.", "pros": "Ghi lại chân thực một mảnh ghép văn hóa di sản sống động của phố cổ Hội An. Tỷ lệ con người nhỏ nhắn trong không gian nghệ thuật tạo cảm giác khiêm nhường, kính trọng văn hóa truyền thống.", "cons": "Ánh sáng góc quay này hơi tối hơn so với các shot trước do nằm trong bóng râm của tòa nhà, cần nâng nhẹ shadow để nhìn rõ nét chữ thư pháp.", "takeaway": "Một video du lịch điện ảnh không chỉ có cảnh đẹp và người mẫu, mà bắt buộc phải có những shot B-roll về con người bản địa, nghệ nhân, làng nghề truyền thống để tạo nên linh hồn cho tác phẩm.", "location": "Góc phố ông đồ thư pháp, Hội An", "lens_angle": "Eye-Level Medium Shot • 35mm Lens", "lighting_color": "Ánh sáng bóng râm tự nhiên (Soft Natural Shade)", "transition": "Cắt nối cảnh sang Shot 11"}, {"id": 11, "st_frame": 375, "en_frame": 408, "st_time": 15.0, "en_time": 16.32, "duration": 1.32, "headline": "Cú Kết Đọng Lại Cảm Xúc Với Nụ Cười Nghiêng & Bong Bóng Xà Phòng Bay Lượn: Nốt nhạc êm dịu khép lại cuốn phim du ký", "subject_action": "Góc quay cận cảnh (Close-Up) từ phía sau lưng nhìn nghiêng lên gương mặt rạng rỡ của cô gái. Mái tóc uốn gợn sóng cài những nhánh hoa baby trắng tinh khôi, làn da trắng ngần dưới ánh nắng dịu ngọt. Những quả bong bóng xà phòng ngũ sắc lơ lửng bay qua khung hình, phản chiếu ánh sáng lấp lánh như trong một giấc mơ cổ tích.", "pros": "Khung hình nên thơ, dịu dàng, tạo cảm xúc vương vấn khó quên. Độ sâu trường ảnh mỏng (Bokeh tròn trịa từ cây lá phía sau), chuyển động trôi nổi của bong bóng mang lại nhịp điệu bay bổng, lãng mạn.", "cons": "Shot kết dừng lại ở 16.32s khi bong bóng đang bay, nếu có thêm 0.5s fade out nhẹ thì cảm xúc sẽ trọn vẹn hơn.", "takeaway": "Kết thúc video du lịch bằng một chi tiết bay bổng (bong bóng, cánh hoa rơi, làn gió thổi tung tóc) kết hợp với chân dung nghiêng sẽ để lại dư vị ngọt ngào và thôi thúc người xem muốn xách balo lên đường.", "location": "Vườn hoa quán cafe phố cổ, Hội An", "lens_angle": "Tight Beauty Close-Up • 85mm f/1.4 Lens", "lighting_color": "Soft Ambient Daylight & Bubble Reflections", "transition": "Outro Final Cut"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ;
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 25.0 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById();
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

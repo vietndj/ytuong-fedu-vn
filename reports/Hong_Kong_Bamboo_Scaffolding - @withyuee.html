@@ -1,0 +1,2671 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Báo Cáo Phân Tích Đạo Diễn: Hong Kong Bamboo Scaffolding (搭棚)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #070a0f;
+    --bg-card: #0e1420;
+    --bg-card-hover: #151e30;
+    --bg-surface: #121928;
+    --border-color: #1e293b;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-blue: #38bdf8;
+    --accent-amber: #f59e0b;
+    --accent-emerald: #10b981;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: #202d42; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .app-container {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .video-sidebar-col {
+        width: 440px;
+        min-width: 440px;
+        max-width: 480px;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: 1px solid var(--border-color);
+        background: var(--bg-surface);
+        display: flex;
+        flex-direction: column;
+        z-index: 30;
+    }
+    .content-scroll-col {
+        flex: 1;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 24px 32px 60px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    .video-sidebar-col {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(14, 20, 32, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .content-scroll-col {
+        width: 100%;
+        padding: 16px 14px 80px;
+    }
+}
+
+.video-player-container {
+    position: relative;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .video-player-container {
+        aspect-ratio: 9/16;
+        max-height: 60vh;
+    }
+}
+@media (max-width: 1023px) {
+    .video-player-container {
+        max-height: 38vh;
+        aspect-ratio: 16/9;
+    }
+}
+
+video#mainPlayer {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    outline: none;
+}
+
+.video-controls-panel {
+    padding: 12px 16px;
+    background: #0b111c;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.current-status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11.5px;
+}
+
+.speed-buttons-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.ctrl-btn {
+    background: #162032;
+    color: #cbd5e1;
+    border: 1px solid #283750;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+}
+
+.ctrl-btn:hover, .ctrl-btn:active {
+    background: #25334d;
+    color: #fff;
+}
+
+.ctrl-btn.active {
+    background: var(--accent-blue);
+    color: #041324;
+    border-color: var(--accent-blue);
+    font-weight: 800;
+}
+
+.report-header-banner {
+    background: linear-gradient(135deg, #0e1726 0%, #152238 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.genre-badge {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--accent-amber);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.report-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.meta-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+}
+
+.meta-tags-flex strong { color: #fff; }
+
+.overview-card {
+    background: #0e1420;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-blue);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 13.5px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.action-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg-main);
+    padding: 10px 0;
+}
+
+.view-tabs-group {
+    display: flex;
+    gap: 4px;
+    background: #0f1624;
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.view-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+}
+
+.view-tab-btn.active {
+    background: #1e293b;
+    color: #fff;
+    font-weight: 700;
+}
+
+.drawer-trigger-btn {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12.5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.storyboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px;
+    display: flex;
+    gap: 16px;
+    transition: transform 0.15s, border-color 0.15s;
+}
+
+.shot-card:hover {
+    background: var(--bg-card-hover);
+    border-color: #2e3e5a;
+}
+
+.shot-card.active-playing {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+.shot-media-col {
+    width: 120px;
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+.shot-thumb-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.shot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.play-overlay svg { width: 32px; height: 32px; color: #fff; }
+
+.zoom-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.65);
+    border: none;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.thumb-time-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    background: rgba(15, 23, 42, 0.85);
+    font-size: 9.5px;
+    font-weight: 700;
+    color: var(--accent-amber);
+    padding: 2px 4px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: var(--font-mono);
+}
+
+.shot-info-col {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.shot-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-bottom: 1px solid #1a2436;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.shot-badge-num {
+    background: #1e293b;
+    color: var(--accent-blue);
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+
+.shot-heading { font-size: 14.5px; font-weight: 700; color: #fff; display: inline; }
+
+.time-jump-btn {
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--accent-blue);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    cursor: pointer;
+}
+
+.props-list {
+    font-size: 12.5px;
+    color: #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.prop-label { font-weight: 700; color: #94a3b8; }
+.prop-val { color: #e2e8f0; }
+
+.tags-row { display: flex; flex-wrap: wrap; gap: 4px; margin-top: auto; }
+.tag-pill { background: #162032; color: #94a3b8; font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 4px; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+}
+
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.grid-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+}
+
+.grid-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.grid-play-icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+}
+
+.grid-card:hover .grid-play-icon { opacity: 1; }
+
+.grid-zoom-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: rgba(0,0,0,0.7);
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.grid-badge-top {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--accent-blue);
+    font-size: 9px;
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+}
+
+.grid-badge-bottom {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--accent-amber);
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px 4px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: var(--font-mono);
+}
+
+.drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+}
+
+.drawer-backdrop.open { opacity: 1; visibility: visible; }
+
+.drawer-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 85vw;
+    background: #0f172a;
+    border-left: 1px solid var(--border-color);
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-backdrop.open .drawer-panel { transform: translateX(0); }
+
+.drawer-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drawer-title { font-weight: 800; font-size: 15px; color: #fff; }
+.drawer-close-btn { background: #1e293b; border: none; color: #fff; width: 28px; height: 28px; border-radius: 6px; font-size: 16px; cursor: pointer; }
+
+.drawer-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.drawer-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 10px;
+    background: #131d30;
+    border: 1px solid #1e2d48;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.drawer-item:hover, .drawer-item:active {
+    background: #1c2b47;
+    border-color: var(--accent-blue);
+}
+
+.drawer-thumb {
+    width: 44px;
+    height: 58px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #000;
+}
+
+.drawer-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.drawer-info { flex: 1; min-width: 0; }
+.drawer-shot-title { font-weight: 700; font-size: 13px; color: #fff; }
+.drawer-shot-time { font-size: 11.5px; color: var(--accent-amber); font-family: var(--font-mono); }
+.drawer-play-arrow { font-size: 13px; color: var(--accent-blue); }
+
+#lightboxModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    border: 1px solid #334155;
+}
+
+#lightboxCaption {
+    color: #e2e8f0;
+    font-size: 13.5px;
+    margin-top: 14px;
+    text-align: center;
+    background: rgba(15, 23, 42, 0.85);
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid #334155;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* Author Instagram Direct Link Button */
+.author-ig-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(192, 132, 252, 0.12);
+    border: 1px solid rgba(192, 132, 252, 0.35);
+    color: #e879f9;
+    padding: 2px 8px 2px 6px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    vertical-align: middle;
+}
+.author-ig-badge:hover {
+    background: linear-gradient(135deg, rgba(192, 132, 252, 0.3), rgba(244, 63, 94, 0.3));
+    border-color: #f43f5e;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+}
+.author-ig-badge strong {
+    color: #fff;
+}
+.author-ig-badge .ig-ext-btn {
+    background: linear-gradient(135deg, #c084fc, #f43f5e);
+    color: #0b0f17;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: all 0.15s;
+    letter-spacing: 0.2px;
+}
+.author-ig-badge:hover .ig-ext-btn {
+    background: #ffffff;
+    color: #0b0f17;
+}
+
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="video-sidebar-col">
+        <div class="video-player-container">
+            <video id="mainPlayer" controls autoplay muted playsinline preload="auto" loop></video>
+        </div>
+        <div class="video-controls-panel">
+            <div class="current-status-bar">
+                <span class="status-tag" id="shotStatusTag">🎬 Phân cảnh: Toàn bộ video</span>
+                <a id="directVidLink" href="Hong_Kong_Bamboo_Scaffolding - @withyuee.mp4" target="_blank" style="color:var(--accent-blue); font-size:11.5px; text-decoration:none;">Tệp gốc ↗</a>
+            </div>
+            <div class="speed-buttons-row">
+                <span style="font-size:11.5px; color:#94a3b8; font-weight:700; margin-right:4px;">Tốc độ:</span>
+                <button class="ctrl-btn" onclick="setSpeed(0.25, this)">0.25x</button>
+                <button class="ctrl-btn" onclick="setSpeed(0.5, this)">0.5x</button>
+                <button class="ctrl-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+                <button class="ctrl-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                <button class="ctrl-btn" onclick="toggleMute(this)">🔊 Tiếng</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-scroll-col">
+        <div class="report-header-banner">
+            <div class="header-top-row">
+                <span class="genre-badge">DIRECTOR BREAKDOWN</span>
+                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">16 SHOTS &bull; 23.93s</span>
+            </div>
+            <h1 class="report-title">Báo Cáo Phân Tích Đạo Diễn: Hong Kong Bamboo Scaffolding (搭棚)</h1>
+            <div class="meta-tags-flex">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@withyuee" onclick="handleCreatorClick(event, '@withyuee', 'Withyuee')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Withyuee trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Withyuee</strong>
+                        <span class="author-handle">(@withyuee)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span></a></span>
+                <span>Tệp: <strong>Hong_Kong_Bamboo_Scaffolding - @withyuee.html</strong></span>
+                <span>Trực quan: <strong>9:16 Vertical HD</strong></span>
+            </div>
+        </div>
+
+        <div class="overview-card">
+            <h3 style="color:#fff; font-size:14px; margin-bottom:6px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
+            <div>
+<h3 style="color:#fff; font-size:14px; margin-bottom:6px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
+<div>Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng phân cảnh.</div>
+</div>
+        </div>
+
+        <div class="action-toolbar">
+            <div class="view-tabs-group">
+                <button class="view-tab-btn active" id="tabDetailBtn" onclick="switchView('detail')">📋 Bóc Tách Chi Tiết</button>
+                <button class="view-tab-btn" id="tabGridBtn" onclick="switchView('grid')">🖼️ Lưới Soi Ảnh (16)</button>
+            </div>
+            <button class="drawer-trigger-btn" onclick="toggleDrawer(true)">📑 Mục Lục Shot</button>
+        </div>
+
+        <div class="storyboard-container" id="storyboardView">
+            
+        <div class="shot-card" id="shot-card-1">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(0.0, 2.0, 'SHOT 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_001_84d02fa0.jpg" alt="SHOT 01" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_001_84d02fa0.jpg', 'SHOT 01 [0.0s - 2.0s]')">🔍</button>
+                    <span class="thumb-time-badge">0.00s - 2.00s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 01</span>
+                        <h4 class="shot-heading">SHOT 01</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(0.0, 2.0, 'SHOT 01')">
+                        ▶ 0.00s ➔ 2.00s (2.00s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(0.0, 2.0, 'SHOT 01')">
+<img alt="SHOT 01" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_001_84d02fa0.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_001_84d02fa0.jpg', 'SHOT 01 [0.0s - 2.0s]')">🔍</button>
+<span class="thumb-time-badge">0.00s - 2.00s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 01</span>
+<h4 class="shot-heading">SHOT 01</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(0.0, 2.0, 'SHOT 01')">
+                        ▶ 0.00s ➔ 2.00s (2.00s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 01" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_001_84d02fa0.jpg"/>
+<span class="shot-badge">SHOT 01</span>
+<span class="shot-time">2.00s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 01: 0.00s - 2.00s</div>
+<div class="shot-role-tag">Visual Hook &amp; Grandeur (Mở cảnh &amp; Thiết lập không gian đồ sộ)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Cực Toàn Cảnh (Extreme Wide Shot - EWS) • Góc ngước thấp (Low-Angle Look Up)</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Ánh sáng ban ngày mềm dịu (Soft Daylight), bóng cây xanh tiền cảnh làm nổi bật lưới tre xám vàng • Xanh ngọc râm mát (Teal shadows) phối vàng tre cổ kính (Amber Bamboo).</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Tòa cao ốc đồ sộ bọc kín giàn giáo tre như một công trình điêu khắc khổng lồ. Dòng chữ typography 'a centuries-old art that built the city Hong Kong 香港' màu vàng gold xuất hiện trang trọng.</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Bao quát toàn bộ kiến trúc ➔ <b>Nối In:</b> Cắt thẳng (Hard Cut) xuống mặt đường bắt trọn người thợ bắt đầu lắp dựng từng gióng tre.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-2">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(2.0, 4.67, 'SHOT 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_002_699421e3.jpg" alt="SHOT 02" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_002_699421e3.jpg', 'SHOT 02 [2.0s - 4.67s]')">🔍</button>
+                    <span class="thumb-time-badge">2.00s - 4.67s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 02</span>
+                        <h4 class="shot-heading">SHOT 02</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(2.0, 4.67, 'SHOT 02')">
+                        ▶ 2.00s ➔ 4.67s (2.67s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(2.0, 4.67, 'SHOT 02')">
+<img alt="SHOT 02" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_002_699421e3.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_002_699421e3.jpg', 'SHOT 02 [2.0s - 4.67s]')">🔍</button>
+<span class="thumb-time-badge">2.00s - 4.67s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 02</span>
+<h4 class="shot-heading">SHOT 02</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(2.0, 4.67, 'SHOT 02')">
+                        ▶ 2.00s ➔ 4.67s (2.67s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 02" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_002_699421e3.jpg"/>
+<span class="shot-badge">SHOT 02</span>
+<span class="shot-time">2.67s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 02: 2.00s - 4.67s</div>
+<div class="shot-role-tag">Craft Definition &amp; Ground Work (Định danh nghề &amp; Khởi điểm đường phố)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Trung Cảnh Đứng (Medium Full Shot) • Góc ngang tầm mắt hơi thấp (Eye-Level / Low)</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Ánh sáng phản chiếu từ vỉa hè gạch đỏ và đèn neon biển hiệu cửa tiệm phía sau • Đỏ gạch vỉa hè (Terracotta Red) tương phản áo vàng thợ và xanh biển hiệu.</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Người thợ áo vàng mũ bảo hộ trắng vắt vẻo trên gióng tre cách mặt đất hơn 2m, hai tay thoăn thoắt lắp ghép giàn giáo. Chữ tiêu đề 'Bamboo Scaffolding 搭棚 / 竹棚架' xuất hiện trang trọng.</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Khóa tư thế chân vững chãi trên gióng tre ➔ <b>Nối In:</b> Đẩy tầm mắt vút lên cao tầng nơi bó tre được kéo lên không trung.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-3">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(4.67, 6.0, 'SHOT 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_003_02cc6fea.jpg" alt="SHOT 03" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_003_02cc6fea.jpg', 'SHOT 03 [4.67s - 6.0s]')">🔍</button>
+                    <span class="thumb-time-badge">4.67s - 6.00s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 03</span>
+                        <h4 class="shot-heading">SHOT 03</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(4.67, 6.0, 'SHOT 03')">
+                        ▶ 4.67s ➔ 6.00s (1.33s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(4.67, 6.0, 'SHOT 03')">
+<img alt="SHOT 03" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_003_02cc6fea.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_003_02cc6fea.jpg', 'SHOT 03 [4.67s - 6.0s]')">🔍</button>
+<span class="thumb-time-badge">4.67s - 6.00s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 03</span>
+<h4 class="shot-heading">SHOT 03</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(4.67, 6.0, 'SHOT 03')">
+                        ▶ 4.67s ➔ 6.00s (1.33s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 03" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_003_02cc6fea.jpg"/>
+<span class="shot-badge">SHOT 03</span>
+<span class="shot-time">1.33s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 03: 4.67s - 6.00s</div>
+<div class="shot-role-tag">Vertical Hauling &amp; Rhythm (Nhịp vận chuyển thẳng đứng &amp; Đội ngũ trên cao)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Toàn Cảnh Trục Dọc (Vertical Long Shot) • Góc máy cao nhìn dọc thân tòa cao ốc</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Ánh sáng phản quang từ mặt kính cửa sổ và tường ốp gạch men hồng cam ấm áp • Tone ấm gạch men (Warm Peach) đan xen màu trời xanh phản chiếu trên kính.</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Bó tre dài được tời kéo thẳng đứng lơ lửng giữa không trung. Các người thợ ở từng tầng lầu khác nhau bám trụ giàn tre đón bắt vật liệu theo nhịp điệu âm nhạc dứt khoát.</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Bó tre nghiêng theo đà kéo ➔ <b>Nối In:</b> Match Cut chuyển động sang góc nhìn hẹp hơn khi bó tre vút qua ban công.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-4">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(6.0, 7.27, 'SHOT 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_004_1cc9b542.jpg" alt="SHOT 04" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_004_1cc9b542.jpg', 'SHOT 04 [6.0s - 7.27s]')">🔍</button>
+                    <span class="thumb-time-badge">6.00s - 7.27s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 04</span>
+                        <h4 class="shot-heading">SHOT 04</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(6.0, 7.27, 'SHOT 04')">
+                        ▶ 6.00s ➔ 7.27s (1.27s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(6.0, 7.27, 'SHOT 04')">
+<img alt="SHOT 04" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_004_1cc9b542.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_004_1cc9b542.jpg', 'SHOT 04 [6.0s - 7.27s]')">🔍</button>
+<span class="thumb-time-badge">6.00s - 7.27s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 04</span>
+<h4 class="shot-heading">SHOT 04</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(6.0, 7.27, 'SHOT 04')">
+                        ▶ 6.00s ➔ 7.27s (1.27s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 04" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_004_1cc9b542.jpg"/>
+<span class="shot-badge">SHOT 04</span>
+<span class="shot-time">1.27s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 04: 6.00s - 7.27s</div>
+<div class="shot-role-tag">Altitude Tension &amp; Dynamics (Nhịp căng thẳng độ cao &amp; Lơ lửng giữa trời)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Toàn Cảnh Nghiêng (High-Angle Oblique Full Shot) • Góc ngửa chếch nhìn lên tầng cao trên nền trời xanh</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Nắng chiếu rọi trực diện, làm rực màu áo cam dạ quang của các thợ giàn giáo trên nền trời xanh thẳm • Xanh da trời sâu (Deep Sky Blue) kết hợp cam neon an toàn (Hi-Vis Orange).</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Bó tre nằm ngang được nhấc bổng qua các tầng chót vót. 4 người thợ ở các cao độ khác nhau phối hợp kéo tời tay điêu luyện không cần máy móc cơ giới nặng.</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Bó tre vượt qua tầm mắt người thợ áo cam ➔ <b>Nối In:</b> Đẩy lên đỉnh cao nhất của tòa nhà (Rooftop Peak).
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-5">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(7.27, 8.57, 'SHOT 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_005_2f20fc74.jpg" alt="SHOT 05" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_005_2f20fc74.jpg', 'SHOT 05 [7.27s - 8.57s]')">🔍</button>
+                    <span class="thumb-time-badge">7.27s - 8.57s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 05</span>
+                        <h4 class="shot-heading">SHOT 05</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(7.27, 8.57, 'SHOT 05')">
+                        ▶ 7.27s ➔ 8.57s (1.30s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(7.27, 8.57, 'SHOT 05')">
+<img alt="SHOT 05" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_005_2f20fc74.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_005_2f20fc74.jpg', 'SHOT 05 [7.27s - 8.57s]')">🔍</button>
+<span class="thumb-time-badge">7.27s - 8.57s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 05</span>
+<h4 class="shot-heading">SHOT 05</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(7.27, 8.57, 'SHOT 05')">
+                        ▶ 7.27s ➔ 8.57s (1.30s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 05" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_005_2f20fc74.jpg"/>
+<span class="shot-badge">SHOT 05</span>
+<span class="shot-time">1.30s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 05: 7.27s - 8.57s</div>
+<div class="shot-role-tag">Vertigo Apex (Đỉnh cao nghẹt thở &amp; Ranh giới trời mây)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Cực Toàn Cảnh Góc Cao (Extreme High Angle / Rooftop POV) • Góc nhìn từ tòa đối diện nhìn sang mép sân thượng</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Ánh sáng ngược nhẹ trên nền mây trời hoàng hôn và rặng núi xanh rì phía sau • Vàng ráng chiều (Golden Hour Haze) hòa cùng xanh rừng nhiệt đới.</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Người thợ ngồi thu mình trên mép gờ sân thượng tầng cao nhất (hơn 30 tầng lầu), bên dưới là các công nhân khác đu mình trên mạng lưới tre chênh vênh giữa vách tường đứng.</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Giữ độ tĩnh cheo leo trên đỉnh cao ➔ <b>Nối In:</b> Cắt giật (Shock Cut) xuống góc nhìn chủ quan sâu hút từ giàn tre xuống con hẻm.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-6">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(8.57, 9.87, 'SHOT 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_006_7779e4d0.jpg" alt="SHOT 06" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_006_7779e4d0.jpg', 'SHOT 06 [8.57s - 9.87s]')">🔍</button>
+                    <span class="thumb-time-badge">8.57s - 9.87s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 06</span>
+                        <h4 class="shot-heading">SHOT 06</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(8.57, 9.87, 'SHOT 06')">
+                        ▶ 8.57s ➔ 9.87s (1.30s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(8.57, 9.87, 'SHOT 06')">
+<img alt="SHOT 06" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_006_7779e4d0.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_006_7779e4d0.jpg', 'SHOT 06 [8.57s - 9.87s]')">🔍</button>
+<span class="thumb-time-badge">8.57s - 9.87s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 06</span>
+<h4 class="shot-heading">SHOT 06</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(8.57, 9.87, 'SHOT 06')">
+                        ▶ 8.57s ➔ 9.87s (1.30s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 06" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_006_7779e4d0.jpg"/>
+<span class="shot-badge">SHOT 06</span>
+<span class="shot-time">1.30s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 06: 8.57s - 9.87s</div>
+<div class="shot-role-tag">Spatial Depth &amp; POV (Góc nhìn thợ giàn giáo &amp; Chiều sâu hun hút)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Góc Nhìn Điểm Hút (One-Point Perspective High Angle) • Góc nhìn từ giàn giáo cao nhìn thẳng xuống lòng ngõ hẻm</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Nắng vàng rọi vào bức tường gạch đỏ cổ kính bên phải, tạo vệt sáng ấm áp tương phản bóng râm dưới hẻm • Đỏ gạch nung (Red Brick), vàng tre tự nhiên và sắc trắng áo công nhân.</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Người thợ đeo khẩu trang, mũ vàng ngồi trên gióng tre ngang tiền cảnh, tay thoăn thoắt buộc dây. Dưới lòng hẻm là dòng xe cộ và nhóm kỹ sư áo trắng nón vàng giám sát.</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Thao tác siết dây mấu chốt ➔ <b>Nối In:</b> Cận cảnh chi tiết bao đựng cọc tre và cuộn dây buộc ni-lông.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-7">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(9.87, 11.17, 'SHOT 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_007_6ba7708a.jpg" alt="SHOT 07" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_007_6ba7708a.jpg', 'SHOT 07 [9.87s - 11.17s]')">🔍</button>
+                    <span class="thumb-time-badge">9.87s - 11.17s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 07</span>
+                        <h4 class="shot-heading">SHOT 07</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(9.87, 11.17, 'SHOT 07')">
+                        ▶ 9.87s ➔ 11.17s (1.30s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(9.87, 11.17, 'SHOT 07')">
+<img alt="SHOT 07" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_007_6ba7708a.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_007_6ba7708a.jpg', 'SHOT 07 [9.87s - 11.17s]')">🔍</button>
+<span class="thumb-time-badge">9.87s - 11.17s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 07</span>
+<h4 class="shot-heading">SHOT 07</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(9.87, 11.17, 'SHOT 07')">
+                        ▶ 9.87s ➔ 11.17s (1.30s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 07" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_007_6ba7708a.jpg"/>
+<span class="shot-badge">SHOT 07</span>
+<span class="shot-time">1.30s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 07: 9.87s - 11.17s</div>
+<div class="shot-role-tag">Materiality &amp; Craft Tools (Chất liệu thô mộc &amp; Công cụ truyền thống)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Cận Cảnh Đặc Tả (Close-Up - CU) • Góc ngang tĩnh (Static Eye-Level)</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Ánh sáng tán xạ mềm ngoài trời làm nổi bật thớ vải đay thô và độ bóng của các ống tre khô • Nâu vải đay mộc mạc (Burlap Brown), vàng ống tre và đen tuyền dây cột.</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Những bao tải vải gai đay chứa các đầu cọc tre ngắn sắc gọn, bên cạnh là chùm dây dải nhựa đen chuyên dụng dùng để thắt gút cổ truyền không dùng đinh ốc kim loại.</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Chi tiết công cụ thô mộc ➔ <b>Nối In:</b> Cắt 90 độ từ trên cao nhìn xuống sàn xe tải bốc dỡ tre.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-8">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(11.17, 12.43, 'SHOT 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_008_05c4e95c.jpg" alt="SHOT 08" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_008_05c4e95c.jpg', 'SHOT 08 [11.17s - 12.43s]')">🔍</button>
+                    <span class="thumb-time-badge">11.17s - 12.43s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 08</span>
+                        <h4 class="shot-heading">SHOT 08</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(11.17, 12.43, 'SHOT 08')">
+                        ▶ 11.17s ➔ 12.43s (1.26s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(11.17, 12.43, 'SHOT 08')">
+<img alt="SHOT 08" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_008_05c4e95c.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_008_05c4e95c.jpg', 'SHOT 08 [11.17s - 12.43s]')">🔍</button>
+<span class="thumb-time-badge">11.17s - 12.43s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 08</span>
+<h4 class="shot-heading">SHOT 08</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(11.17, 12.43, 'SHOT 08')">
+                        ▶ 11.17s ➔ 12.43s (1.26s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 08" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_008_05c4e95c.jpg"/>
+<span class="shot-badge">SHOT 08</span>
+<span class="shot-time">1.27s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 08: 11.17s - 12.43s</div>
+<div class="shot-role-tag">Top-Down Geometry (Hình học từ trên cao &amp; Lao động thủ công)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Góc Nhìn Trực Diện Trên Cao (Bird's Eye Top-Down View 90°) • Góc chúc thẳng đứng 90 độ xuống mặt đường</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Vệt sơn chỉ đường màu trắng và vạch đôi vàng rực trên nền nhựa đường xám đen • Đỏ áo thợ (Signal Red), vàng nón bảo hộ và vàng vạch sơn kẻ đường nổi bật.</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Người thợ áo đỏ mũ vàng ngồi trực tiếp trên đống tre xếp lớp dày đặc trên thùng xe tải, tay thoăn thoắt chọn lọc và kéo từng cây tre thẳng tắp ra khỏi kiện hàng.</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Cánh tay nhấc cây tre lên ➔ <b>Nối In:</b> Bắt tiếp động tác hai người thợ luồn tre vào khung tường.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-9">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(12.43, 13.77, 'SHOT 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_009_2ebaf132.jpg" alt="SHOT 09" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_009_2ebaf132.jpg', 'SHOT 09 [12.43s - 13.77s]')">🔍</button>
+                    <span class="thumb-time-badge">12.43s - 13.77s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 09</span>
+                        <h4 class="shot-heading">SHOT 09</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(12.43, 13.77, 'SHOT 09')">
+                        ▶ 12.43s ➔ 13.77s (1.34s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(12.43, 13.77, 'SHOT 09')">
+<img alt="SHOT 09" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_009_2ebaf132.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_009_2ebaf132.jpg', 'SHOT 09 [12.43s - 13.77s]')">🔍</button>
+<span class="thumb-time-badge">12.43s - 13.77s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 09</span>
+<h4 class="shot-heading">SHOT 09</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(12.43, 13.77, 'SHOT 09')">
+                        ▶ 12.43s ➔ 13.77s (1.34s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 09" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_009_2ebaf132.jpg"/>
+<span class="shot-badge">SHOT 09</span>
+<span class="shot-time">1.33s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 09: 12.43s - 13.77s</div>
+<div class="shot-role-tag">Synchronized Teamwork (Nhịp phối hợp tay đôi &amp; Sức mạnh cơ bắp)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Trung Cảnh Ngước Lên (Low Angle Medium Shot) • Góc chếch 45 độ ngước nhìn nhóm thợ</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Ánh nắng xiên tạo khối cơ bắp và bóng đổ hình học của mạng lưới tre lên mặt tường gạch đỏ • Xanh áo phản quang (Cyan/Mint), đỏ gạch nung và vàng ấm thân tre.</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Hai người thợ giàn giáo đứng hai bên gióng dọc, cùng lúc đón và đẩy một thân tre lớn ăn khớp vào khớp nối. Cả hai đều mang dây đai an toàn chuyên dụng và chùm dây buộc giắt sau lưng.</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Thân tre được lồng khít vào gá đỡ ➔ <b>Nối In:</b> Chuyển góc nhìn đóng khung từ con ngõ hẹp cổ điển.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-10">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(13.77, 15.03, 'SHOT 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_010_2bbfc03d.jpg" alt="SHOT 10" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_010_2bbfc03d.jpg', 'SHOT 10 [13.77s - 15.03s]')">🔍</button>
+                    <span class="thumb-time-badge">13.77s - 15.03s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 10</span>
+                        <h4 class="shot-heading">SHOT 10</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(13.77, 15.03, 'SHOT 10')">
+                        ▶ 13.77s ➔ 15.03s (1.26s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(13.77, 15.03, 'SHOT 10')">
+<img alt="SHOT 10" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_010_2bbfc03d.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_010_2bbfc03d.jpg', 'SHOT 10 [13.77s - 15.03s]')">🔍</button>
+<span class="thumb-time-badge">13.77s - 15.03s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 10</span>
+<h4 class="shot-heading">SHOT 10</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(13.77, 15.03, 'SHOT 10')">
+                        ▶ 13.77s ➔ 15.03s (1.26s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 10" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_010_2bbfc03d.jpg"/>
+<span class="shot-badge">SHOT 10</span>
+<span class="shot-time">1.27s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 10: 13.77s - 15.03s</div>
+<div class="shot-role-tag">Urban Sub-Framing (Đóng khung đô thị &amp; Tương phản kiến trúc)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Khung Lồng Khung (Framed Alley Vista) • Góc nhìn sâu qua khe hẹp hai dãy nhà (Deep Focus)</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Ánh sáng rọi dọc khe hẹp giữa hai tòa nhà, làm nổi bật mảng cây xanh mướt và tòa cao ốc bọc tre phía xa • Vàng đất tường nhà cũ (Ochre), xanh lá cây rực rỡ và xám bê tông.</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Hai dãy nhà tập thể cũ kỹ với giàn phơi đồ, cục nóng điều hòa tạo thành một chiếc khung hình tự nhiên dẫn mắt thẳng vào tòa cao ốc hiện đại đang được bọc kín bởi giàn tre ở hậu cảnh.</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Tầm nhìn lọt thỏm trong hẻm ➔ <b>Nối In:</b> Mở rộng ra mặt phố lớn với chiếc taxi đỏ biểu tượng lướt qua.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-11">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(15.03, 16.33, 'SHOT 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_011_cc185eb2.jpg" alt="SHOT 11" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_011_cc185eb2.jpg', 'SHOT 11 [15.03s - 16.33s]')">🔍</button>
+                    <span class="thumb-time-badge">15.03s - 16.33s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 11</span>
+                        <h4 class="shot-heading">SHOT 11</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(15.03, 16.33, 'SHOT 11')">
+                        ▶ 15.03s ➔ 16.33s (1.30s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(15.03, 16.33, 'SHOT 11')">
+<img alt="SHOT 11" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_011_cc185eb2.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_011_cc185eb2.jpg', 'SHOT 11 [15.03s - 16.33s]')">🔍</button>
+<span class="thumb-time-badge">15.03s - 16.33s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 11</span>
+<h4 class="shot-heading">SHOT 11</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(15.03, 16.33, 'SHOT 11')">
+                        ▶ 15.03s ➔ 16.33s (1.30s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 11" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_011_cc185eb2.jpg"/>
+<span class="shot-badge">SHOT 11</span>
+<span class="shot-time">1.30s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 11: 15.03s - 16.33s</div>
+<div class="shot-role-tag">Cultural Iconography (Biểu tượng văn hóa &amp; Động lực đường phố)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Toàn Cảnh Góc Thấp (Low Angle Street View) • Góc thấp ngang mặt đường bắt chuyển động xe</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Ánh sáng tự nhiên phản chiếu bóng loáng trên nắp ca-pô chiếc xe taxi đỏ kinh điển Hong Kong (Toyota Crown Comfort) • Đỏ tươi Taxi Hong Kong (Iconic Red), xám đá hoa cương và vàng tre.</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Chiếc taxi màu đỏ mui bạc chạy lướt ngang qua khung hình. Toàn bộ mặt tiền tòa nhà phong cách châu Âu cổ điển phía sau được che phủ hoàn toàn bởi ma trận giàn tre đồ sộ.</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Đuôi xe taxi trôi khỏi khung hình ➔ <b>Nối In:</b> Cắt sang ngã tư đường ray tàu điện với góc phố sầm uất.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-12">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(16.33, 17.63, 'SHOT 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_012_965809e5.jpg" alt="SHOT 12" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_012_965809e5.jpg', 'SHOT 12 [16.33s - 17.63s]')">🔍</button>
+                    <span class="thumb-time-badge">16.33s - 17.63s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 12</span>
+                        <h4 class="shot-heading">SHOT 12</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(16.33, 17.63, 'SHOT 12')">
+                        ▶ 16.33s ➔ 17.63s (1.30s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(16.33, 17.63, 'SHOT 12')">
+<img alt="SHOT 12" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_012_965809e5.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_012_965809e5.jpg', 'SHOT 12 [16.33s - 17.63s]')">🔍</button>
+<span class="thumb-time-badge">16.33s - 17.63s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 12</span>
+<h4 class="shot-heading">SHOT 12</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(16.33, 17.63, 'SHOT 12')">
+                        ▶ 16.33s ➔ 17.63s (1.30s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 12" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_012_965809e5.jpg"/>
+<span class="shot-badge">SHOT 12</span>
+<span class="shot-time">1.30s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 12: 16.33s - 17.63s</div>
+<div class="shot-role-tag">Daily Life Intersection (Giao lộ đô thị &amp; Nhịp sống thường nhật)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Toàn Cảnh Ngã Tư (Intersection Wide Shot) • Góc thấp ngắm dòng người qua đường</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Nắng vàng rọi chiếu các vạch kẻ vàng ngã tư và lưới bảo hộ màu xanh lục tươi mát • Xanh lục lưới bảo vệ (Emerald Green mesh), đỏ taxi và vàng vạch qua đường.</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Đường ray tàu điện leng keng (Ding Ding) cắt ngang mặt đường, người dân đi bộ qua đường dưới chân tòa nhà bọc tre nhiều tầng. Chiếc taxi đỏ xuất hiện như một dấu ấn thị giác quen thuộc.</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Người bộ hành rẽ bước ➔ <b>Nối In:</b> Đưa người xem bước thẳng vào dưới 'mái vòm tre' trên vỉa hè.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-13">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(17.63, 18.93, 'SHOT 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_013_728e9f25.jpg" alt="SHOT 13" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_013_728e9f25.jpg', 'SHOT 13 [17.63s - 18.93s]')">🔍</button>
+                    <span class="thumb-time-badge">17.63s - 18.93s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 13</span>
+                        <h4 class="shot-heading">SHOT 13</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(17.63, 18.93, 'SHOT 13')">
+                        ▶ 17.63s ➔ 18.93s (1.30s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(17.63, 18.93, 'SHOT 13')">
+<img alt="SHOT 13" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_013_728e9f25.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_013_728e9f25.jpg', 'SHOT 13 [17.63s - 18.93s]')">🔍</button>
+<span class="thumb-time-badge">17.63s - 18.93s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 13</span>
+<h4 class="shot-heading">SHOT 13</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(17.63, 18.93, 'SHOT 13')">
+                        ▶ 17.63s ➔ 18.93s (1.30s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 13" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_013_728e9f25.jpg"/>
+<span class="shot-badge">SHOT 13</span>
+<span class="shot-time">1.30s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 13: 17.63s - 18.93s</div>
+<div class="shot-role-tag">Bamboo Arcade Tunnel (Đường hầm vòm tre &amp; Trải nghiệm đắm chìm)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Góc Nhìn Chiều Sâu Một Điểm Tụ (One-Point Perspective) • Góc nhìn thẳng trục giữa đường hầm vỉa hè</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Ánh nắng xiên rọi qua các kẽ tre đan trên mái vòm, đổ những vệt sọc bóng sáng nghệ thuật xuống nền đá hoa cương vỉa hè • Nâu tre vàng mộc mạc (Natural Bamboo Tan), ánh nắng vàng rực rỡ và tường trắng.</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Hành lang vòm tre được dựng phủ kín lối đi bộ cho người dân tránh rơi đồ. Một người phụ nữ thong thả bước về phía ánh sáng cuối đường hầm.</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Bước chân tiến ra vùng sáng ➔ <b>Nối In:</b> Chuyển ra mặt đường nơi xe tải chở các thân tre khổng lồ sẵn sàng xuất phát.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-14">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(18.93, 20.23, 'SHOT 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_014_3d85444b.jpg" alt="SHOT 14" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_014_3d85444b.jpg', 'SHOT 14 [18.93s - 20.23s]')">🔍</button>
+                    <span class="thumb-time-badge">18.93s - 20.23s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 14</span>
+                        <h4 class="shot-heading">SHOT 14</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(18.93, 20.23, 'SHOT 14')">
+                        ▶ 18.93s ➔ 20.23s (1.30s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(18.93, 20.23, 'SHOT 14')">
+<img alt="SHOT 14" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_014_3d85444b.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_014_3d85444b.jpg', 'SHOT 14 [18.93s - 20.23s]')">🔍</button>
+<span class="thumb-time-badge">18.93s - 20.23s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 14</span>
+<h4 class="shot-heading">SHOT 14</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(18.93, 20.23, 'SHOT 14')">
+                        ▶ 18.93s ➔ 20.23s (1.30s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 14" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_014_3d85444b.jpg"/>
+<span class="shot-badge">SHOT 14</span>
+<span class="shot-time">1.30s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 14: 18.93s - 20.23s</div>
+<div class="shot-role-tag">Supply Chain Logistics (Chuỗi cung ứng vật liệu &amp; Sức sống thương mại)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Trung Cảnh Góc Nghiêng (Medium Shot 45°) • Góc ngang tầm mắt bên hông xe tải</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Biển hiệu bất động sản màu vàng chanh '新威地產' treo cao rực rỡ trên nền tường gạch men nâu đỏ • Xanh dương thùng xe (Cobalt Blue), vàng biển hiệu chữ Hán và nâu gỗ tre.</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Hai chiếc xe tải chở hàng trăm bó tre dài xếp ngay ngắn trên giá đỡ sắt xanh và trắng, phản ánh quy mô lưu thông nguyên liệu tre diễn ra hàng ngày tại Hong Kong.</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Đuôi xe tải đậu tĩnh ➔ <b>Nối In:</b> Bắt trọn khoảnh khắc chiếc xe tải xanh chở tre lao nhanh trên cầu vượt.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-15">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(20.23, 21.93, 'SHOT 15')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_015_96b624d0.jpg" alt="SHOT 15" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_015_96b624d0.jpg', 'SHOT 15 [20.23s - 21.93s]')">🔍</button>
+                    <span class="thumb-time-badge">20.23s - 21.93s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 15</span>
+                        <h4 class="shot-heading">SHOT 15</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(20.23, 21.93, 'SHOT 15')">
+                        ▶ 20.23s ➔ 21.93s (1.70s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(20.23, 21.93, 'SHOT 15')">
+<img alt="SHOT 15" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_015_96b624d0.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_015_96b624d0.jpg', 'SHOT 15 [20.23s - 21.93s]')">🔍</button>
+<span class="thumb-time-badge">20.23s - 21.93s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 15</span>
+<h4 class="shot-heading">SHOT 15</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(20.23, 21.93, 'SHOT 15')">
+                        ▶ 20.23s ➔ 21.93s (1.70s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 15" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_015_96b624d0.jpg"/>
+<span class="shot-badge">SHOT 15</span>
+<span class="shot-time">1.70s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 15: 20.23s - 21.93s</div>
+<div class="shot-role-tag">Arterial Transit &amp; Modern Clash (Huyết mạch giao thông &amp; Giao thoa tre - kính)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Toàn Cảnh Chuyển Động Lướt Ngang (Low-Angle Pan Tracking) • Góc thấp nhìn lên thân cầu vượt</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Sự tương phản giữa kính phản quang xanh lạnh của tòa cao ốc tài chính ngân hàng với những thân tre mộc mạc trên xe • Xanh kính hiện đại (Cyan Blue Glass) đối trọng với xanh xe tải và vàng tre.</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Chiếc xe tải màu xanh dương chở đầy tre di chuyển trên cầu vượt đường bộ, lướt qua phía trước tòa nhà kính tài chính đồ sộ và trạm dừng xe buýt bên dưới.</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Xe tải chạy hết chiều dài cầu vượt ➔ <b>Nối In:</b> Khóa toàn cảnh tòa cao ốc phủ tre để hoàn thành vòng lặp vô tận (Perfect Loop).
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-16">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(21.93, 23.93, 'SHOT 16')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_016_a96cf6cd.jpg" alt="SHOT 16" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_016_a96cf6cd.jpg', 'SHOT 16 [21.93s - 23.93s]')">🔍</button>
+                    <span class="thumb-time-badge">21.93s - 23.93s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 16</span>
+                        <h4 class="shot-heading">SHOT 16</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(21.93, 23.93, 'SHOT 16')">
+                        ▶ 21.93s ➔ 23.93s (2.00s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(21.93, 23.93, 'SHOT 16')">
+<img alt="SHOT 16" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_016_a96cf6cd.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_016_a96cf6cd.jpg', 'SHOT 16 [21.93s - 23.93s]')">🔍</button>
+<span class="thumb-time-badge">21.93s - 23.93s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 16</span>
+<h4 class="shot-heading">SHOT 16</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(21.93, 23.93, 'SHOT 16')">
+                        ▶ 21.93s ➔ 23.93s (2.00s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-img-col">
+<div class="img-box">
+<img alt="Shot 16" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_016_a96cf6cd.jpg"/>
+<span class="shot-badge">SHOT 16</span>
+<span class="shot-time">2.00s</span>
+</div>
+</div>
+<div class="shot-content">
+<div class="shot-header">
+<div class="shot-title">Shot 16: 21.93s - 23.93s</div>
+<div class="shot-role-tag">Infinite Loop &amp; Heritage Legacy (Vòng lặp bất tận &amp; Tôn vinh di sản trăm năm)</div>
+</div>
+<div class="info-row"><strong>Cỡ Cảnh &amp; Góc Máy:</strong> Cực Toàn Cảnh (Extreme Wide Shot - EWS) • Khung tiền cảnh bậc thang đá &amp; cổng vòm đèn tròn</div>
+<div class="info-row"><strong>Ánh Sáng &amp; Màu Sắc:</strong> Bầu không khí xanh mát của hàng cọ và ánh sáng ban ngày dịu dàng ôm trọn công trình vĩ đại • Xanh ngọc mờ ảo (Teal Vintage) và vàng gold cổ kính.</div>
+<div class="info-row"><strong>Hành Động Diễn Xuất:</strong> Bậc thang đá và cổng vòm đèn tròn cổ kính làm bệ đỡ tiền cảnh hướng mắt lên toàn bộ tòa cao ốc bọc tre giữa mây trời. Dòng chữ 'Hong Kong 香港' màu vàng một lần nữa xuất hiện rực rỡ, nối liền 100% khớp chuyển động về Shot 01 tạo vòng lặp vô tận (Seamless Infinite Loop).</div>
+<div class="trans-box">
+<b>Mồi Out:</b> Nối trực tiếp về Shot 01 không một vết gợn (Zero-Cut Seamless Loop).
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+        </div>
+
+        <div class="grid-container" id="gridView" style="display:none;">
+            
+        <div class="grid-card" onclick="playShot(0.0, 2.0, 'SHOT 01')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_001_84d02fa0.jpg" alt="SHOT 01" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_001_84d02fa0.jpg', 'SHOT 01 [0.0s - 2.0s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 01</div>
+                <div class="grid-badge-bottom">0.0s - 2.0s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(2.0, 4.67, 'SHOT 02')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_002_699421e3.jpg" alt="SHOT 02" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_002_699421e3.jpg', 'SHOT 02 [2.0s - 4.67s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 02</div>
+                <div class="grid-badge-bottom">2.0s - 4.7s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(4.67, 6.0, 'SHOT 03')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_003_02cc6fea.jpg" alt="SHOT 03" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_003_02cc6fea.jpg', 'SHOT 03 [4.67s - 6.0s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 03</div>
+                <div class="grid-badge-bottom">4.7s - 6.0s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(6.0, 7.27, 'SHOT 04')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_004_1cc9b542.jpg" alt="SHOT 04" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_004_1cc9b542.jpg', 'SHOT 04 [6.0s - 7.27s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 04</div>
+                <div class="grid-badge-bottom">6.0s - 7.3s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(7.27, 8.57, 'SHOT 05')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_005_2f20fc74.jpg" alt="SHOT 05" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_005_2f20fc74.jpg', 'SHOT 05 [7.27s - 8.57s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 05</div>
+                <div class="grid-badge-bottom">7.3s - 8.6s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(8.57, 9.87, 'SHOT 06')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_006_7779e4d0.jpg" alt="SHOT 06" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_006_7779e4d0.jpg', 'SHOT 06 [8.57s - 9.87s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 06</div>
+                <div class="grid-badge-bottom">8.6s - 9.9s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(9.87, 11.17, 'SHOT 07')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_007_6ba7708a.jpg" alt="SHOT 07" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_007_6ba7708a.jpg', 'SHOT 07 [9.87s - 11.17s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 07</div>
+                <div class="grid-badge-bottom">9.9s - 11.2s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(11.17, 12.43, 'SHOT 08')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_008_05c4e95c.jpg" alt="SHOT 08" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_008_05c4e95c.jpg', 'SHOT 08 [11.17s - 12.43s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 08</div>
+                <div class="grid-badge-bottom">11.2s - 12.4s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(12.43, 13.77, 'SHOT 09')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_009_2ebaf132.jpg" alt="SHOT 09" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_009_2ebaf132.jpg', 'SHOT 09 [12.43s - 13.77s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 09</div>
+                <div class="grid-badge-bottom">12.4s - 13.8s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(13.77, 15.03, 'SHOT 10')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_010_2bbfc03d.jpg" alt="SHOT 10" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_010_2bbfc03d.jpg', 'SHOT 10 [13.77s - 15.03s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 10</div>
+                <div class="grid-badge-bottom">13.8s - 15.0s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(15.03, 16.33, 'SHOT 11')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_011_cc185eb2.jpg" alt="SHOT 11" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_011_cc185eb2.jpg', 'SHOT 11 [15.03s - 16.33s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 11</div>
+                <div class="grid-badge-bottom">15.0s - 16.3s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(16.33, 17.63, 'SHOT 12')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_012_965809e5.jpg" alt="SHOT 12" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_012_965809e5.jpg', 'SHOT 12 [16.33s - 17.63s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 12</div>
+                <div class="grid-badge-bottom">16.3s - 17.6s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(17.63, 18.93, 'SHOT 13')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_013_728e9f25.jpg" alt="SHOT 13" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_013_728e9f25.jpg', 'SHOT 13 [17.63s - 18.93s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 13</div>
+                <div class="grid-badge-bottom">17.6s - 18.9s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(18.93, 20.23, 'SHOT 14')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_014_3d85444b.jpg" alt="SHOT 14" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_014_3d85444b.jpg', 'SHOT 14 [18.93s - 20.23s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 14</div>
+                <div class="grid-badge-bottom">18.9s - 20.2s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(20.23, 21.93, 'SHOT 15')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_015_96b624d0.jpg" alt="SHOT 15" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_015_96b624d0.jpg', 'SHOT 15 [20.23s - 21.93s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 15</div>
+                <div class="grid-badge-bottom">20.2s - 21.9s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(21.93, 23.93, 'SHOT 16')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_016_a96cf6cd.jpg" alt="SHOT 16" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_016_a96cf6cd.jpg', 'SHOT 16 [21.93s - 23.93s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 16</div>
+                <div class="grid-badge-bottom">21.9s - 23.9s</div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)">
+    <div class="drawer-panel" onclick="event.stopPropagation()">
+        <div class="drawer-header">
+            <div class="drawer-title">📑 MỤC LỤC PHÂN CẢNH (16)</div>
+            <button class="drawer-close-btn" onclick="toggleDrawer(false)">&times;</button>
+        </div>
+        <div class="drawer-list">
+            
+        <div class="drawer-item" onclick="jumpToShot(1, 0.0, 2.0, 'SHOT 01')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_001_84d02fa0.jpg" alt="SHOT 01" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 01</div>
+                <div class="drawer-shot-time">⏱ 0.00s - 2.00s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(2, 2.0, 4.67, 'SHOT 02')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_002_699421e3.jpg" alt="SHOT 02" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 02</div>
+                <div class="drawer-shot-time">⏱ 2.00s - 4.67s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(3, 4.67, 6.0, 'SHOT 03')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_003_02cc6fea.jpg" alt="SHOT 03" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 03</div>
+                <div class="drawer-shot-time">⏱ 4.67s - 6.00s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(4, 6.0, 7.27, 'SHOT 04')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_004_1cc9b542.jpg" alt="SHOT 04" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 04</div>
+                <div class="drawer-shot-time">⏱ 6.00s - 7.27s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(5, 7.27, 8.57, 'SHOT 05')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_005_2f20fc74.jpg" alt="SHOT 05" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 05</div>
+                <div class="drawer-shot-time">⏱ 7.27s - 8.57s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(6, 8.57, 9.87, 'SHOT 06')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_006_7779e4d0.jpg" alt="SHOT 06" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 06</div>
+                <div class="drawer-shot-time">⏱ 8.57s - 9.87s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(7, 9.87, 11.17, 'SHOT 07')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_007_6ba7708a.jpg" alt="SHOT 07" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 07</div>
+                <div class="drawer-shot-time">⏱ 9.87s - 11.17s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(8, 11.17, 12.43, 'SHOT 08')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_008_05c4e95c.jpg" alt="SHOT 08" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 08</div>
+                <div class="drawer-shot-time">⏱ 11.17s - 12.43s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(9, 12.43, 13.77, 'SHOT 09')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_009_2ebaf132.jpg" alt="SHOT 09" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 09</div>
+                <div class="drawer-shot-time">⏱ 12.43s - 13.77s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(10, 13.77, 15.03, 'SHOT 10')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_010_2bbfc03d.jpg" alt="SHOT 10" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 10</div>
+                <div class="drawer-shot-time">⏱ 13.77s - 15.03s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(11, 15.03, 16.33, 'SHOT 11')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_011_cc185eb2.jpg" alt="SHOT 11" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 11</div>
+                <div class="drawer-shot-time">⏱ 15.03s - 16.33s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(12, 16.33, 17.63, 'SHOT 12')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_012_965809e5.jpg" alt="SHOT 12" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 12</div>
+                <div class="drawer-shot-time">⏱ 16.33s - 17.63s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(13, 17.63, 18.93, 'SHOT 13')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_013_728e9f25.jpg" alt="SHOT 13" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 13</div>
+                <div class="drawer-shot-time">⏱ 17.63s - 18.93s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(14, 18.93, 20.23, 'SHOT 14')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_014_3d85444b.jpg" alt="SHOT 14" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 14</div>
+                <div class="drawer-shot-time">⏱ 18.93s - 20.23s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(15, 20.23, 21.93, 'SHOT 15')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_015_96b624d0.jpg" alt="SHOT 15" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 15</div>
+                <div class="drawer-shot-time">⏱ 20.23s - 21.93s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(16, 21.93, 23.93, 'SHOT 16')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_016_a96cf6cd.jpg" alt="SHOT 16" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 16</div>
+                <div class="drawer-shot-time">⏱ 21.93s - 23.93s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+<div id="lightboxModal" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImg" src="" onclick="event.stopPropagation()" />
+    <div id="lightboxCaption"></div>
+</div>
+
+<script>
+const rawVideoSrc = "Hong_Kong_Bamboo_Scaffolding - @withyuee.mp4";
+let currentEndTime = null;
+
+function getCandidateUrls(src) {
+    if (!src) return [];
+    if (src.startsWith('http://') || src.startsWith('https://')) return [src];
+    let clean = src.replace(/^(\.\/|\.\.\/)+/, '').replace(/^(videos\/|reports\/)/, '');
+    return [
+        'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/' + encodeURI(clean),
+        '../videos/' + clean,
+        './videos/' + clean,
+        './' + clean
+    ];
+}
+
+const candidateUrls = getCandidateUrls(rawVideoSrc);
+let candidateIdx = 0;
+const player = document.getElementById('mainPlayer');
+
+function loadVideoCandidate() {
+    if (candidateIdx >= candidateUrls.length) return;
+    const url = candidateUrls[candidateIdx];
+    player.src = url;
+    document.getElementById('directVidLink').href = url;
+    player.load();
+}
+
+player.onerror = () => {
+    candidateIdx++;
+    if (candidateIdx < candidateUrls.length) {
+        loadVideoCandidate();
+    }
+};
+
+loadVideoCandidate();
+
+function playShot(startTime, endTime, label) {
+    currentEndTime = (typeof endTime === 'number') ? endTime : null;
+    const tag = document.getElementById('shotStatusTag');
+    if (tag) {
+        const endTxt = currentEndTime ? ` - ${currentEndTime.toFixed(2)}s` : '';
+        tag.innerText = `🎬 ${label || 'Phân cảnh'}: [${startTime.toFixed(2)}s${endTxt}]`;
+    }
+    player.currentTime = startTime;
+    const p = player.play();
+    if (p !== undefined) {
+        p.catch(e => {
+            player.muted = true;
+            player.play().catch(err => console.log('Autoplay muted triggered'));
+        });
+    }
+    document.querySelectorAll('.shot-card').forEach(c => c.classList.remove('active-playing'));
+    const matchCard = Array.from(document.querySelectorAll('.shot-card')).find(c => c.innerText.includes(label));
+    if (matchCard) matchCard.classList.add('active-playing');
+
+    if (window.innerWidth < 1024) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
+function setSpeed(speed, btn) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.speed-buttons-row .ctrl-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+}
+
+function stepFrame(frames) {
+    player.pause();
+    player.currentTime += (frames * (1/30));
+}
+
+function toggleMute(btn) {
+    player.muted = !player.muted;
+    if (btn) btn.innerText = player.muted ? '🔇 Tắt Tiếng' : '🔊 Tiếng';
+}
+
+function switchView(view) {
+    const sb = document.getElementById('storyboardView');
+    const grid = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetailBtn');
+    const tabGrid = document.getElementById('tabGridBtn');
+    if (view === 'grid') {
+        sb.style.display = 'none';
+        grid.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    } else {
+        sb.style.display = 'flex';
+        grid.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    }
+}
+
+function toggleDrawer(open) {
+    const drawer = document.getElementById('drawerBackdrop');
+    if (open) drawer.classList.add('open');
+    else drawer.classList.remove('open');
+}
+
+function jumpToShot(shotNum, st, et, label) {
+    toggleDrawer(false);
+    switchView('detail');
+    playShot(st, et, label);
+    const targetCard = document.getElementById('shot-card-' + shotNum);
+    if (targetCard) {
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function openLightbox(src, caption) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCaption');
+    img.src = src;
+    cap.innerText = caption || '';
+    modal.style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').style.display = 'none';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+        toggleDrawer(false);
+    } else if (e.key === ' ') {
+        if (document.activeElement.tagName !== 'INPUT') {
+            e.preventDefault();
+            player.paused ? player.play() : player.pause();
+        }
+    }
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

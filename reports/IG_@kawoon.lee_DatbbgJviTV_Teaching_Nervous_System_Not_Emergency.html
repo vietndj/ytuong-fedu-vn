@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Nghệ Thuật Điều Hòa Hệ Thần Kinh - Giải Phóng Cơn Vội Vã Vô Thức (@kawoon.lee) • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* DRAWER QUICK JUMP MENU */
+.drawer-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-line);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.drawer-title {
+    font-family: var(--font-heading-short);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cl-text-muted);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.drawer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.drawer-shot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: var(--cl-bg-tint);
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+    background: #eef2f6;
+    border-color: var(--cl-accent);
+}
+.d-badge {
+    background: var(--cl-accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.d-time {
+    color: var(--cl-text-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    flex-shrink: 0;
+}
+.d-title {
+    color: var(--cl-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">8 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Nghệ Thuật Điều Hòa Hệ Thần Kinh - Giải Phóng Cơn Vội Vã Vô Thức (@kawoon.lee)</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DatbbgJviTV/?stkn=MW41cXVxOGNwMjUwZw==" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Teaching_Nervous_System_Not_Emergency_-_@kawoon.lee.mp4" type="video/mp4">
+                <source src="../videos/Teaching_Nervous_System_Not_Emergency_-_@kawoon.lee.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 27.33s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Nghệ Thuật Điều Hòa Hệ Thần Kinh - Giải Phóng Cơn Vội Vã Vô Thức (@kawoon.lee)</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@kawoon.lee" onclick="handleCreatorClick(event, '@kawoon.lee', 'Karen Lee')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Karen Lee trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Karen Lee</strong>
+                        <span class="author-handle">(@kawoon.lee)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/DatbbgJviTV/?stkn=MW41cXVxOGNwMjUwZw==" target="_blank" class="author-link">Karen Lee (@kawoon.lee)</a>
+            </div>
+        </div>
+
+        <!-- DRAWER QUICK JUMP MENU -->
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+        <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0, 1.73)">
+            <span class="d-badge">Shot 01</span>
+            <span class="d-time">0.00s - 1.73s (1.73s)</span>
+            <span class="d-title">Điểm Dừng Đột Ngột (Somatic Brake Hook) Phá Vỡ Quán Tính Cuộ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(2, 1.73, 5.8)">
+            <span class="d-badge">Shot 02</span>
+            <span class="d-time">1.73s - 5.80s (4.07s)</span>
+            <span class="d-title">Khóa Ánh Nhìn Chính Diện (Direct-to-Lens Gaze) Kết Hợp Xả Va...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(3, 5.8, 10.27)">
+            <span class="d-badge">Shot 03</span>
+            <span class="d-time">5.80s - 10.27s (4.47s)</span>
+            <span class="d-title">Chiếc Muỗng Bất Động Phơi Bày Căn Bệnh Ăn Vội Tiềm Thức...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(4, 10.27, 15.43)">
+            <span class="d-badge">Shot 04</span>
+            <span class="d-time">10.27s - 15.43s (5.16s)</span>
+            <span class="d-title">Hạ Tốc Độ Cọ Trang Điểm Tháo Dỡ Áp Lực Sáng Sớm...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(5, 15.43, 19.1)">
+            <span class="d-badge">Shot 05</span>
+            <span class="d-time">15.43s - 19.10s (3.67s)</span>
+            <span class="d-title">Xòe Bàn Tay Thở Thả Khí Tháo Ngòi Nổ Áp Lực Lái Xe...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(6, 19.1, 20.53)">
+            <span class="d-badge">Shot 06</span>
+            <span class="d-time">19.10s - 20.53s (1.43s)</span>
+            <span class="d-title">Cú Jump-Cut Thu Về Điểm Tĩnh Tâm (Visual Baseline Reset)...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(7, 20.53, 25.43)">
+            <span class="d-badge">Shot 07</span>
+            <span class="d-time">20.53s - 25.43s (4.90s)</span>
+            <span class="d-title">Bước Chân Chậm Dưới Bóng Nắng Trả Lại Tự Do Nội Tại...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(8, 25.43, 27.33)">
+            <span class="d-badge">Shot 08</span>
+            <span class="d-time">25.43s - 27.33s (1.90s)</span>
+            <span class="d-title">Thẻ Thoại Cứu Rỗi Tâm Hồn (Emotional Anchor Card) Đọng Lại D...</span>
+        </div>
+        
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 27.33s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Nghệ Thuật Điều Hòa Hệ Thần Kinh - Giải Phóng Cơn Vội Vã Vô Thức (@kawoon.lee)</h1>
+            <p class="overview-hero-desc">Báo cáo phân tích chuyên sâu 8 phân cảnh mẫu mực trong video 27.3s của Karen Lee (@kawoon.lee): Bậc thầy kể chuyện thị giác về chứng vội vã vô thức (chronic urgency), vận dụng kỹ thuật Somatic Grounding Contrast, Pacing Whiplash, âm thanh tụng niệm Ambient Sound Chant và chiếc Thẻ Thoại Cứu Rỗi (Emotional Reassurance Anchor) chạm đáy cảm xúc hàng triệu người xem.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Somatic Pattern Interrupt, Pacing Whiplash, Deceleration Arc, Direct-to-Lens Gaze, Ambient Sound Chant, Micro Jump-Cut, Affirmation Reveal Anchor</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">8 Shots • Nhịp trung bình 3.42s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1440x2560 • 30.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 1.73)">
+                    ▶ 0.00s - 1.73s (1.73s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Điểm Dừng Đột Ngột (Somatic Brake Hook) Phá Vỡ Quán Tính Cuộn Feed</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_01_mid.jpg', 'Shot 01 • Giữa (0.86s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (0.86s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_01_end.jpg', 'Shot 01 • Cuối (1.73s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (1.73s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Tác giả Karen Lee trong trang phục áo thun trắng oversize, quần jeans thụng rảo bước vội vã theo thói quen xuống dốc công viên rồi đột ngột khựng lại, thả lỏng toàn bộ cơ thể. Chữ text serif 'teaching my nervous system that this is not an emergency' xuất hiện nổi bật trên nền tán cây xanh.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú máy toàn góc thấp từ mặt cỏ tạo độ dốc chuyển động rõ nét. Việc chuyển trạng thái đột ngột từ bước nhanh gấp gáp sang đứng bất động tạo cú sốc thị giác (Visual Pattern Interrupt), ngay lập tức chặn đứng quán tính lướt nhanh của người xem. Font chữ serif có chân cổ điển với viền đen nhẹ tạo độ tương phản cao trên nền lá cây rậm rạp.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Text đặt ở nửa trên khung hình che mất một phần tán cây và đường chân trời; góc máy hơi xa khiến nét mặt của nhân vật ở những frame đầu chưa đủ rõ để truyền tải biểu cảm căng thẳng trước khi dừng lại.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Mở đầu video bằng một hành vi vội vã đời thường rồi bẻ gãy nhịp điệu đột ngột là công thức vàng để bắt dính người xem đang lướt nhanh trên mạng xã hội.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Góc thấp (Low Angle), Tiêu cự tiêu chuẩn ~35mm, máy cố định trên tripod sát thảm cỏ.</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Công viên đô thị, lối đi bộ bê tông uốn lượn rợp bóng cây xanh mát.</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên khuếch tán ban ngày (Soft Daylight), gam màu xanh lá cây đậm tương phản với áo thun trắng ngà.</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut trực tiếp (Hard Cut) sang góc chính diện trung cảnh ở Shot 02.</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Cut trực tiếp (Hard Cut) sang góc chính diện trung cảnh ở Shot 02.</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 1.73, 5.8)">
+                    ▶ 1.73s - 5.80s (4.07s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Khóa Ánh Nhìn Chính Diện (Direct-to-Lens Gaze) Kết Hợp Xả Vai Hạ Cortisol</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_02_start.jpg', 'Shot 02 • Đầu (1.73s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (1.73s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_02_mid.jpg', 'Shot 02 • Giữa (3.76s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (3.76s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_02_end.jpg', 'Shot 02 • Cuối (5.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.80s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Karen Lee đứng thẳng giữa tâm khung hình, mắt nhìn xoáy thẳng vào ống kính máy quay với ánh mắt thấu cảm, mệt mỏi nhưng kiên định. Cô từ từ hạ hai vai xuống, buông lỏng bàn tay và thở hắt ra một nhịp sâu, thể hiện hành động somatic reset (định tâm cơ thể).</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục trung tâm đối xứng hoàn hảo (Symmetrical Framing). Vòm cây xanh phía sau đóng vai trò như một khung tự nhiên (Natural Frame) ôm trọn chủ thể. Động tác hạ vai và thở ra có tính lây lan cảm xúc cực mạnh (Mirror Neuron Effect), kích hoạt người xem vô thức bắt chước thở ra theo.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng giữ khung hơn 4 giây là khá dài đối với nhịp điệu Reel thông thường; hậu cảnh phía xa bên phải có xe hơi đỗ ven đường làm phân tán nhẹ tính thanh bình của khung cảnh thiên nhiên.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi muốn neo giữ cảm xúc lắng đọng, hãy để nhân vật giao tiếp bằng mắt trực diện với camera và thực hiện một cử chỉ cơ thể giải tỏa thực tế thay vì nói quá nhiều.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Ngang tầm mắt (Eye-Level), Tiêu cự ~50mm chuẩn chân dung, máy quay đối diện trực diện trục tâm.</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Ngã ba đường đi bộ công viên, hậu cảnh phố thị ngoại ô yên tĩnh.</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên dưới bóng râm (Shade Ambient), làn da được chiếu sáng dịu nhẹ không bị gắt bóng.</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut chuyển cảnh cứng (Hard Cut) vào bối cảnh nội thất tại bàn ăn ở Shot 03.</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Cut chuyển cảnh cứng (Hard Cut) vào bối cảnh nội thất tại bàn ăn ở Shot 03.</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 5.8, 10.27)">
+                    ▶ 5.80s - 10.27s (4.47s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Chiếc Muỗng Bất Động Phơi Bày Căn Bệnh Ăn Vội Tiềm Thức</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_03_start.jpg', 'Shot 03 • Đầu (5.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_03_mid.jpg', 'Shot 03 • Giữa (8.04s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (8.04s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_03_end.jpg', 'Shot 03 • Cuối (10.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.27s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bên bàn ăn tối giản trong nhà, Karen Lee mặc áo sơ mi denim khoác ngoài, trên bàn là đĩa cơm nghệ vàng óng. Cô đang cầm thìa xúc cơm định đưa vào miệng theo quán tính vội vã thì dừng sững muỗng lại giữa không trung, nhai chậm rãi và mắt nhìn xa xăm tự vấn.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khắc họa trúng tim đen thói quen ăn uống như 'chạy giặc' của người làm việc văn phòng/overachiever. Tương phản màu sắc rất bắt mắt giữa sắc vàng rực của đĩa cơm, áo sơ mi denim xanh nhạt và mặt bàn gỗ đen mun. Không gian tối giản phong cách Wabi-sabi phía sau với các hốc tường và bình gốm tạo cảm giác tĩnh tại.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh sáng cửa sổ bên hông tạo bóng đổ hơi gắt lên nửa mặt bên phải của nhân vật; góc máy đặt hơi chéo và thấp khiến đĩa thức ăn che mất một phần thao tác tay.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đánh trúng nỗi đau người xem bằng cách soi chiếu một thói quen sinh hoạt vô thức (như vừa ăn vừa lo nghĩ) giúp nội dung đạt tỷ lệ lưu và chia sẻ kỷ lục.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Góc ngang mặt hơi chếch 15 độ (Eye-Level Medium Close-up), tiêu cự ~35mm.</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Phòng ăn căn hộ tối giản, tường trắng có hốc trang trí bình gốm mộc.</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên một phía từ cửa sổ (Side Daylight Key), tương phản giữa tông vàng ấm của đồ ăn và tông xanh lạnh của áo denim.</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut chuyển cảnh cứng (Hard Cut) sang không gian phòng tắm ở Shot 04.</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Cut chuyển cảnh cứng (Hard Cut) sang không gian phòng tắm ở Shot 04.</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 10.27, 15.43)">
+                    ▶ 10.27s - 15.43s (5.16s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hạ Tốc Độ Cọ Trang Điểm Tháo Dỡ Áp Lực Sáng Sớm</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_04_start.jpg', 'Shot 04 • Đầu (10.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (10.27s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_04_mid.jpg', 'Shot 04 • Giữa (12.85s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (12.85s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_04_end.jpg', 'Shot 04 • Cuối (15.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (15.43s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy thấp trong phòng tắm nhìn lên nhân vật đang đứng trước gương, mặc áo thun gân trắng croptop và quần xám. Cô cầm cọ phấn bản lớn trang điểm dặm phấn hối hả, sau đó chầm chậm dừng tay, nhắm mắt thở dài rồi tiếp tục dặm thật êm ái, từ tốn.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc máy Low-Angle đặt sát mép bồn rửa mặt tạo cảm giác chân thật như góc nhìn góc khuất riêng tư (Intimate POV). Tiền cảnh là túi trang điểm vải nhung hồng tím tạo lớp lang độ sâu (Depth of Field). Cử động tay giảm tốc từ giật cục sang nhịp nhàng được thể hiện mượt mà.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh sáng trần phòng tắm dạng đèn tuýp trắng phía trên hơi phẳng và gắt, để lộ một chút quầng thâm và bóng đổ dưới hốc mắt; phông nền tường gạch men trắng và rèm tắm hơi đơn điệu.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Tận dụng các đồ vật tiền cảnh (túi xách, mỹ phẩm) để tạo chiều sâu thị giác khi quay video không gian hẹp trong nhà như phòng tắm hay góc làm việc.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Góc ngước thấp (Low-Angle Dutch Tilt nhẹ), tiêu cự ~28mm góc rộng nhẹ.</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Phòng tắm gia đình, gương soi và bồn lavabo với túi đựng mỹ phẩm cá nhân.</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng đèn nội thất phòng tắm (Cool White Bathroom Light), phối màu tối giản Trắng - Xám - Điểm nhấn Hồng Fuchsia của túi vải.</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut chuyển cảnh cứng (Hard Cut) vào cabin xe ô tô ở Shot 05.</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Cut chuyển cảnh cứng (Hard Cut) vào cabin xe ô tô ở Shot 05.</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 15.43, 19.1)">
+                    ▶ 15.43s - 19.10s (3.67s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Xòe Bàn Tay Thở Thả Khí Tháo Ngòi Nổ Áp Lực Lái Xe</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_05_start.jpg', 'Shot 05 • Đầu (15.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (15.43s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_05_mid.jpg', 'Shot 05 • Giữa (17.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (17.27s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_05_end.jpg', 'Shot 05 • Cuối (19.10s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (19.10s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy góc rộng gắn trên táp-lô nhìn xéo vào ghế lái. Karen Lee thắt dây an toàn, một tay giữ vô-lăng, một tay đưa lên ngang ngực mở rộng lòng bàn tay, ngửa cổ chu môi thổi một hơi dài để xoa dịu cơn hồi hộp/lo âu khi tham gia giao thông.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tận dụng bối cảnh ô tô—nơi sản sinh lượng cortisol và ức chế thần kinh cao nhất trong ngày của người hiện đại. Cử chỉ xòe ngón tay hướng lên trên kết hợp nhịp thở ra tạo thành một động tác mỏ neo thân nghiệm (Somatic Anchor Gesture) cực kỳ giàu tính biểu tượng và dễ ghi nhớ.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh nắng trưa xuyên qua kính lái tạo vệt lóa mạnh trên vai áo và vô-lăng; rung lắc nhẹ của camera khi xe dừng/chạy làm khung hình hơi giật ở những frame đầu.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Bối cảnh cabin xe hơi là mỏ vàng để quay nội dung tự sự/tâm lý vì không gian khép kín tạo sự cô đọng và liên tưởng lập tức tới áp lực di chuyển hàng ngày.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Góc rộng Medium Close-Up từ táp-lô xe hơi (Dashboard Mount Angle), tiêu cự ~24mm.</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khoang lái xe hơi cá nhân, hậu cảnh đường phố ngoại ô qua khung kính xe.</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên ngoài trời xuyên kính xe (Direct & Dappled Sunbeams), tương phản nội thất da đen và áo thun trắng sáng.</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Jump-cut vi mô (Micro Jump-Cut) nối tiếp hành động sang Shot 06.</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Jump-cut vi mô (Micro Jump-Cut) nối tiếp hành động sang Shot 06.</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 19.1, 20.53)">
+                    ▶ 19.10s - 20.53s (1.43s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Jump-Cut Thu Về Điểm Tĩnh Tâm (Visual Baseline Reset)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_06_start.jpg', 'Shot 06 • Đầu (19.10s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (19.10s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_06_mid.jpg', 'Shot 06 • Giữa (19.82s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (19.82s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_06_end.jpg', 'Shot 06 • Cuối (20.53s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (20.53s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Ngay sau nhịp thở xả van áp lực, cú jump-cut vi mô đưa nhân vật về tư thế lái xe chuẩn mực: hai tay đặt vững trên vô-lăng, cằm hơi nâng, ánh mắt nhìn thẳng về phía trước với khuôn mặt đã hoàn toàn giãn nở, không còn vương nét cau có hay gấp gáp.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Nhịp cắt nhanh (1.4s) tạo độ dứt khoát của một quyết định tâm lý: từ trạng thái đang giải tỏa chuyển hẳn sang trạng thái đã bình yên. Việc giữ nguyên góc máy táp-lô giúp bước chuyển trạng thái cảm xúc trở nên rõ nét và cô đọng mà không gây rối mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Sự khác biệt về mặt bố cục so với Shot 05 tương đối nhỏ nên nếu người xem không để ý kỹ sẽ tưởng là lỗi giật hình (glitch) thay vì một cú jump-cut có chủ đích nghệ thuật.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi dùng jump-cut để rút ngắn thời gian biểu đạt cảm xúc, hãy tạo sự tương phản rõ nét giữa trạng thái cử động (thở/vẫy tay) và trạng thái tĩnh (giữ yên tư thế).</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Góc táp-lô ngang ngực người lái (Dashboard Medium Shot), tiêu cự ~24mm.</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Nội thất ô tô trên cung đường ngoại ô rợp bóng cây xanh.</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng trời tự nhiên qua kính lái, đổ bóng xiên nhẹ trên gương mặt nhân vật.</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut chuyển cảnh ngoại cảnh (Exterior Cut) sang vỉa hè khu dân cư ở Shot 07.</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Cut chuyển cảnh ngoại cảnh (Exterior Cut) sang vỉa hè khu dân cư ở Shot 07.</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 20.53, 25.43)">
+                    ▶ 20.53s - 25.43s (4.90s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bước Chân Chậm Dưới Bóng Nắng Trả Lại Tự Do Nội Tại</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_07_start.jpg', 'Shot 07 • Đầu (20.53s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (20.53s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_07_mid.jpg', 'Shot 07 • Giữa (22.98s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (22.98s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_07_end.jpg', 'Shot 07 • Cuối (25.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (25.43s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Karen Lee mặc áo sơ mi denim khoác ngoài áo hai dây đen, quần ống rộng, sải từng bước chân thong thả, đung đưa tự nhiên tiến về phía trước trên vỉa hè rợp bóng cây dọc theo dãy nhà phố hiện đại và hàng rào cây xanh tỉa tót vuông vức.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục đường dẫn phối cảnh một điểm tụ (One-Point Perspective) tạo chiều sâu hun hút cho con đường. Ánh nắng rực rỡ lọt qua kẽ lá tạo các mảng sáng tối nhảy múa (Dappled Sunlight) trên mặt đường bê tông. Dáng đi thả lỏng đối lập hoàn toàn với dáng chạy vội vã ở Shot 01, hoàn tất vòng lặp chuyển biến tâm lý nhân vật (Emotional Arc).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Nhân vật đi thẳng vào ống kính và lách nhẹ sang bên trái để lộ khoảng trống, nhưng tốc độ bước hơi chậm ở đoạn giữa khiến khung hình có thể hơi thiếu chuyển động nếu tách riêng khỏi thông điệp.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khép lại video bằng một hành động đối lập hoàn toàn với mở đầu (Rảo bước vội vã -> Đi dạo thảnh thơi) tạo cảm giác viên mãn và thông suốt cho toàn bộ hành trình trải nghiệm của khán giả.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Góc toàn trung ngang tầm mắt (Eye-Level Medium Long Shot), tiêu cự ~35mm tiêu chuẩn.</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Vỉa hè khu dân cư cao cấp, hai bên là hàng cây cổ thụ bóng mát và hàng rào cây xén tỉa tỉ mỉ.</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh nắng hè ban trưa (Bright Sunny Daylight) với mảng đốm nắng đổ bóng hữu cơ trên nền xám bê tông.</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Nhân vật bước lệch ra khỏi khung hình để lộ background cho Text Card ở Shot 08.</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Nhân vật bước lệch ra khỏi khung hình để lộ background cho Text Card ở Shot 08.</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 25.43, 27.33)">
+                    ▶ 25.43s - 27.33s (1.90s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thẻ Thoại Cứu Rỗi Tâm Hồn (Emotional Anchor Card) Đọng Lại Dư Ba</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_08_start.jpg', 'Shot 08 • Đầu (25.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (25.43s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_08_mid.jpg', 'Shot 08 • Giữa (26.38s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (26.38s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_08_end.jpg', 'Shot 08 • Cuối (27.33s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (27.33s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khi nhân vật đã bước ra khỏi mép trái khung hình, máy quay giữ nguyên góc tĩnh ngắm nhìn con đường vỉa hè vắng lặng ngập tràn ánh nắng. Ở chính giữa khung hình, một thẻ thông điệp màu trắng bo góc thanh lịch xuất hiện: 'it's not your fault. you're okay.'</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú chốt hạ hoàn hảo về mặt tâm lý học hành vi. Thẻ trắng bo góc mềm mại (Rounded White Card) với kiểu chữ có chân thanh lịch mang tính trị liệu tinh thần sâu sắc. Khung hình tĩnh lặng không còn bóng người tạo không gian thở (Breathing Room) để thông điệp thẩm thấu vào tâm trí người xem trước khi video lặp lại (Loop).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Kích thước thẻ thoại chiếm diện tích khá lớn ở trung tâm, che mất điểm tụ sâu nhất của con đường; thời lượng 1.9s hơi ngắn để đọc kỹ nếu người xem đọc chậm.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kết thúc video bằng một câu khẳng định chữa lành (Affirmation Card) trên khung cảnh tĩnh vắng người là vũ khí tối thượng kích hoạt lượng Re-watch và Chia sẻ về Story cá nhân.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Góc tĩnh toàn cảnh vỉa hè (Static Empty Path Shot), tiêu cự ~35mm.</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Con đường vỉa hè khu phố tĩnh lặng với hàng rào xanh mướt và kiến trúc nhà gỗ hiện đại.</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng nắng vàng rực rỡ tương phản với nền trắng tinh khôi của Thẻ Thoại (White Callout Card).</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hết video (Video Loop End) tạo vòng lặp mượt mà quay lại Shot 01.</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_08_to_01_loop.jpg?v=2', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/transitions/trans_08_to_01_loop.jpg?v=2" alt="Loop Transition" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 1.73)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Điểm Dừng Đột Ngột (Somatic Brake Hook) Phá Vỡ Quán Tính Cuộn Feed</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 1.73, 5.8)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 1.73s</span>
+            </div>
+            <div class="grid-card-body">Khóa Ánh Nhìn Chính Diện (Direct-to-Lens Gaze) Kết Hợp Xả Vai Hạ Cortisol</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 5.8, 10.27)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 5.80s</span>
+            </div>
+            <div class="grid-card-body">Chiếc Muỗng Bất Động Phơi Bày Căn Bệnh Ăn Vội Tiềm Thức</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 10.27, 15.43)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 10.27s</span>
+            </div>
+            <div class="grid-card-body">Hạ Tốc Độ Cọ Trang Điểm Tháo Dỡ Áp Lực Sáng Sớm</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 15.43, 19.1)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 15.43s</span>
+            </div>
+            <div class="grid-card-body">Xòe Bàn Tay Thở Thả Khí Tháo Ngòi Nổ Áp Lực Lái Xe</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 19.1, 20.53)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 19.10s</span>
+            </div>
+            <div class="grid-card-body">Cú Jump-Cut Thu Về Điểm Tĩnh Tâm (Visual Baseline Reset)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 20.53, 25.43)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 20.53s</span>
+            </div>
+            <div class="grid-card-body">Bước Chân Chậm Dưới Bóng Nắng Trả Lại Tự Do Nội Tại</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 25.43, 27.33)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 25.43s</span>
+            </div>
+            <div class="grid-card-body">Thẻ Thoại Cứu Rỗi Tâm Hồn (Emotional Anchor Card) Đọng Lại Dư Ba</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1BZI-pZznTc7KAL7lbt-Iyj48UoJmujVC" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_time": 0.0, "en_time": 1.73, "duration": 1.73, "st_frame": 0, "en_frame": 51, "headline": "Điểm Dừng Đột Ngột (Somatic Brake Hook) Phá Vỡ Quán Tính Cuộn Feed", "subject_action": "Tác giả Karen Lee trong trang phục áo thun trắng oversize, quần jeans thụng rảo bước vội vã theo thói quen xuống dốc công viên rồi đột ngột khựng lại, thả lỏng toàn bộ cơ thể. Chữ text serif 'teaching my nervous system that this is not an emergency' xuất hiện nổi bật trên nền tán cây xanh.", "pros": "Cú máy toàn góc thấp từ mặt cỏ tạo độ dốc chuyển động rõ nét. Việc chuyển trạng thái đột ngột từ bước nhanh gấp gáp sang đứng bất động tạo cú sốc thị giác (Visual Pattern Interrupt), ngay lập tức chặn đứng quán tính lướt nhanh của người xem. Font chữ serif có chân cổ điển với viền đen nhẹ tạo độ tương phản cao trên nền lá cây rậm rạp.", "cons": "Text đặt ở nửa trên khung hình che mất một phần tán cây và đường chân trời; góc máy hơi xa khiến nét mặt của nhân vật ở những frame đầu chưa đủ rõ để truyền tải biểu cảm căng thẳng trước khi dừng lại.", "takeaway": "Mở đầu video bằng một hành vi vội vã đời thường rồi bẻ gãy nhịp điệu đột ngột là công thức vàng để bắt dính người xem đang lướt nhanh trên mạng xã hội.", "lens_angle": "Góc thấp (Low Angle), Tiêu cự tiêu chuẩn ~35mm, máy cố định trên tripod sát thảm cỏ.", "location": "Công viên đô thị, lối đi bộ bê tông uốn lượn rợp bóng cây xanh mát.", "lighting_color": "Ánh sáng tự nhiên khuếch tán ban ngày (Soft Daylight), gam màu xanh lá cây đậm tương phản với áo thun trắng ngà.", "transition": "Cut trực tiếp (Hard Cut) sang góc chính diện trung cảnh ở Shot 02."}, {"id": 2, "st_time": 1.73, "en_time": 5.8, "duration": 4.07, "st_frame": 52, "en_frame": 173, "headline": "Khóa Ánh Nhìn Chính Diện (Direct-to-Lens Gaze) Kết Hợp Xả Vai Hạ Cortisol", "subject_action": "Karen Lee đứng thẳng giữa tâm khung hình, mắt nhìn xoáy thẳng vào ống kính máy quay với ánh mắt thấu cảm, mệt mỏi nhưng kiên định. Cô từ từ hạ hai vai xuống, buông lỏng bàn tay và thở hắt ra một nhịp sâu, thể hiện hành động somatic reset (định tâm cơ thể).", "pros": "Bố cục trung tâm đối xứng hoàn hảo (Symmetrical Framing). Vòm cây xanh phía sau đóng vai trò như một khung tự nhiên (Natural Frame) ôm trọn chủ thể. Động tác hạ vai và thở ra có tính lây lan cảm xúc cực mạnh (Mirror Neuron Effect), kích hoạt người xem vô thức bắt chước thở ra theo.", "cons": "Thời lượng giữ khung hơn 4 giây là khá dài đối với nhịp điệu Reel thông thường; hậu cảnh phía xa bên phải có xe hơi đỗ ven đường làm phân tán nhẹ tính thanh bình của khung cảnh thiên nhiên.", "takeaway": "Khi muốn neo giữ cảm xúc lắng đọng, hãy để nhân vật giao tiếp bằng mắt trực diện với camera và thực hiện một cử chỉ cơ thể giải tỏa thực tế thay vì nói quá nhiều.", "lens_angle": "Ngang tầm mắt (Eye-Level), Tiêu cự ~50mm chuẩn chân dung, máy quay đối diện trực diện trục tâm.", "location": "Ngã ba đường đi bộ công viên, hậu cảnh phố thị ngoại ô yên tĩnh.", "lighting_color": "Ánh sáng tự nhiên dưới bóng râm (Shade Ambient), làn da được chiếu sáng dịu nhẹ không bị gắt bóng.", "transition": "Cut chuyển cảnh cứng (Hard Cut) vào bối cảnh nội thất tại bàn ăn ở Shot 03."}, {"id": 3, "st_time": 5.8, "en_time": 10.27, "duration": 4.47, "st_frame": 174, "en_frame": 307, "headline": "Chiếc Muỗng Bất Động Phơi Bày Căn Bệnh Ăn Vội Tiềm Thức", "subject_action": "Bên bàn ăn tối giản trong nhà, Karen Lee mặc áo sơ mi denim khoác ngoài, trên bàn là đĩa cơm nghệ vàng óng. Cô đang cầm thìa xúc cơm định đưa vào miệng theo quán tính vội vã thì dừng sững muỗng lại giữa không trung, nhai chậm rãi và mắt nhìn xa xăm tự vấn.", "pros": "Khắc họa trúng tim đen thói quen ăn uống như 'chạy giặc' của người làm việc văn phòng/overachiever. Tương phản màu sắc rất bắt mắt giữa sắc vàng rực của đĩa cơm, áo sơ mi denim xanh nhạt và mặt bàn gỗ đen mun. Không gian tối giản phong cách Wabi-sabi phía sau với các hốc tường và bình gốm tạo cảm giác tĩnh tại.", "cons": "Ánh sáng cửa sổ bên hông tạo bóng đổ hơi gắt lên nửa mặt bên phải của nhân vật; góc máy đặt hơi chéo và thấp khiến đĩa thức ăn che mất một phần thao tác tay.", "takeaway": "Đánh trúng nỗi đau người xem bằng cách soi chiếu một thói quen sinh hoạt vô thức (như vừa ăn vừa lo nghĩ) giúp nội dung đạt tỷ lệ lưu và chia sẻ kỷ lục.", "lens_angle": "Góc ngang mặt hơi chếch 15 độ (Eye-Level Medium Close-up), tiêu cự ~35mm.", "location": "Phòng ăn căn hộ tối giản, tường trắng có hốc trang trí bình gốm mộc.", "lighting_color": "Ánh sáng tự nhiên một phía từ cửa sổ (Side Daylight Key), tương phản giữa tông vàng ấm của đồ ăn và tông xanh lạnh của áo denim.", "transition": "Cut chuyển cảnh cứng (Hard Cut) sang không gian phòng tắm ở Shot 04."}, {"id": 4, "st_time": 10.27, "en_time": 15.43, "duration": 5.16, "st_frame": 308, "en_frame": 462, "headline": "Hạ Tốc Độ Cọ Trang Điểm Tháo Dỡ Áp Lực Sáng Sớm", "subject_action": "Góc máy thấp trong phòng tắm nhìn lên nhân vật đang đứng trước gương, mặc áo thun gân trắng croptop và quần xám. Cô cầm cọ phấn bản lớn trang điểm dặm phấn hối hả, sau đó chầm chậm dừng tay, nhắm mắt thở dài rồi tiếp tục dặm thật êm ái, từ tốn.", "pros": "Góc máy Low-Angle đặt sát mép bồn rửa mặt tạo cảm giác chân thật như góc nhìn góc khuất riêng tư (Intimate POV). Tiền cảnh là túi trang điểm vải nhung hồng tím tạo lớp lang độ sâu (Depth of Field). Cử động tay giảm tốc từ giật cục sang nhịp nhàng được thể hiện mượt mà.", "cons": "Ánh sáng trần phòng tắm dạng đèn tuýp trắng phía trên hơi phẳng và gắt, để lộ một chút quầng thâm và bóng đổ dưới hốc mắt; phông nền tường gạch men trắng và rèm tắm hơi đơn điệu.", "takeaway": "Tận dụng các đồ vật tiền cảnh (túi xách, mỹ phẩm) để tạo chiều sâu thị giác khi quay video không gian hẹp trong nhà như phòng tắm hay góc làm việc.", "lens_angle": "Góc ngước thấp (Low-Angle Dutch Tilt nhẹ), tiêu cự ~28mm góc rộng nhẹ.", "location": "Phòng tắm gia đình, gương soi và bồn lavabo với túi đựng mỹ phẩm cá nhân.", "lighting_color": "Ánh sáng đèn nội thất phòng tắm (Cool White Bathroom Light), phối màu tối giản Trắng - Xám - Điểm nhấn Hồng Fuchsia của túi vải.", "transition": "Cut chuyển cảnh cứng (Hard Cut) vào cabin xe ô tô ở Shot 05."}, {"id": 5, "st_time": 15.43, "en_time": 19.1, "duration": 3.67, "st_frame": 463, "en_frame": 572, "headline": "Xòe Bàn Tay Thở Thả Khí Tháo Ngòi Nổ Áp Lực Lái Xe", "subject_action": "Góc máy góc rộng gắn trên táp-lô nhìn xéo vào ghế lái. Karen Lee thắt dây an toàn, một tay giữ vô-lăng, một tay đưa lên ngang ngực mở rộng lòng bàn tay, ngửa cổ chu môi thổi một hơi dài để xoa dịu cơn hồi hộp/lo âu khi tham gia giao thông.", "pros": "Tận dụng bối cảnh ô tô—nơi sản sinh lượng cortisol và ức chế thần kinh cao nhất trong ngày của người hiện đại. Cử chỉ xòe ngón tay hướng lên trên kết hợp nhịp thở ra tạo thành một động tác mỏ neo thân nghiệm (Somatic Anchor Gesture) cực kỳ giàu tính biểu tượng và dễ ghi nhớ.", "cons": "Ánh nắng trưa xuyên qua kính lái tạo vệt lóa mạnh trên vai áo và vô-lăng; rung lắc nhẹ của camera khi xe dừng/chạy làm khung hình hơi giật ở những frame đầu.", "takeaway": "Bối cảnh cabin xe hơi là mỏ vàng để quay nội dung tự sự/tâm lý vì không gian khép kín tạo sự cô đọng và liên tưởng lập tức tới áp lực di chuyển hàng ngày.", "lens_angle": "Góc rộng Medium Close-Up từ táp-lô xe hơi (Dashboard Mount Angle), tiêu cự ~24mm.", "location": "Khoang lái xe hơi cá nhân, hậu cảnh đường phố ngoại ô qua khung kính xe.", "lighting_color": "Ánh sáng tự nhiên ngoài trời xuyên kính xe (Direct & Dappled Sunbeams), tương phản nội thất da đen và áo thun trắng sáng.", "transition": "Jump-cut vi mô (Micro Jump-Cut) nối tiếp hành động sang Shot 06."}, {"id": 6, "st_time": 19.1, "en_time": 20.53, "duration": 1.43, "st_frame": 573, "en_frame": 615, "headline": "Cú Jump-Cut Thu Về Điểm Tĩnh Tâm (Visual Baseline Reset)", "subject_action": "Ngay sau nhịp thở xả van áp lực, cú jump-cut vi mô đưa nhân vật về tư thế lái xe chuẩn mực: hai tay đặt vững trên vô-lăng, cằm hơi nâng, ánh mắt nhìn thẳng về phía trước với khuôn mặt đã hoàn toàn giãn nở, không còn vương nét cau có hay gấp gáp.", "pros": "Nhịp cắt nhanh (1.4s) tạo độ dứt khoát của một quyết định tâm lý: từ trạng thái đang giải tỏa chuyển hẳn sang trạng thái đã bình yên. Việc giữ nguyên góc máy táp-lô giúp bước chuyển trạng thái cảm xúc trở nên rõ nét và cô đọng mà không gây rối mắt.", "cons": "Sự khác biệt về mặt bố cục so với Shot 05 tương đối nhỏ nên nếu người xem không để ý kỹ sẽ tưởng là lỗi giật hình (glitch) thay vì một cú jump-cut có chủ đích nghệ thuật.", "takeaway": "Khi dùng jump-cut để rút ngắn thời gian biểu đạt cảm xúc, hãy tạo sự tương phản rõ nét giữa trạng thái cử động (thở/vẫy tay) và trạng thái tĩnh (giữ yên tư thế).", "lens_angle": "Góc táp-lô ngang ngực người lái (Dashboard Medium Shot), tiêu cự ~24mm.", "location": "Nội thất ô tô trên cung đường ngoại ô rợp bóng cây xanh.", "lighting_color": "Ánh sáng trời tự nhiên qua kính lái, đổ bóng xiên nhẹ trên gương mặt nhân vật.", "transition": "Cut chuyển cảnh ngoại cảnh (Exterior Cut) sang vỉa hè khu dân cư ở Shot 07."}, {"id": 7, "st_time": 20.53, "en_time": 25.43, "duration": 4.9, "st_frame": 616, "en_frame": 762, "headline": "Bước Chân Chậm Dưới Bóng Nắng Trả Lại Tự Do Nội Tại", "subject_action": "Karen Lee mặc áo sơ mi denim khoác ngoài áo hai dây đen, quần ống rộng, sải từng bước chân thong thả, đung đưa tự nhiên tiến về phía trước trên vỉa hè rợp bóng cây dọc theo dãy nhà phố hiện đại và hàng rào cây xanh tỉa tót vuông vức.", "pros": "Bố cục đường dẫn phối cảnh một điểm tụ (One-Point Perspective) tạo chiều sâu hun hút cho con đường. Ánh nắng rực rỡ lọt qua kẽ lá tạo các mảng sáng tối nhảy múa (Dappled Sunlight) trên mặt đường bê tông. Dáng đi thả lỏng đối lập hoàn toàn với dáng chạy vội vã ở Shot 01, hoàn tất vòng lặp chuyển biến tâm lý nhân vật (Emotional Arc).", "cons": "Nhân vật đi thẳng vào ống kính và lách nhẹ sang bên trái để lộ khoảng trống, nhưng tốc độ bước hơi chậm ở đoạn giữa khiến khung hình có thể hơi thiếu chuyển động nếu tách riêng khỏi thông điệp.", "takeaway": "Khép lại video bằng một hành động đối lập hoàn toàn với mở đầu (Rảo bước vội vã -> Đi dạo thảnh thơi) tạo cảm giác viên mãn và thông suốt cho toàn bộ hành trình trải nghiệm của khán giả.", "lens_angle": "Góc toàn trung ngang tầm mắt (Eye-Level Medium Long Shot), tiêu cự ~35mm tiêu chuẩn.", "location": "Vỉa hè khu dân cư cao cấp, hai bên là hàng cây cổ thụ bóng mát và hàng rào cây xén tỉa tỉ mỉ.", "lighting_color": "Ánh nắng hè ban trưa (Bright Sunny Daylight) với mảng đốm nắng đổ bóng hữu cơ trên nền xám bê tông.", "transition": "Nhân vật bước lệch ra khỏi khung hình để lộ background cho Text Card ở Shot 08."}, {"id": 8, "st_time": 25.43, "en_time": 27.33, "duration": 1.9, "st_frame": 763, "en_frame": 819, "headline": "Thẻ Thoại Cứu Rỗi Tâm Hồn (Emotional Anchor Card) Đọng Lại Dư Ba", "subject_action": "Khi nhân vật đã bước ra khỏi mép trái khung hình, máy quay giữ nguyên góc tĩnh ngắm nhìn con đường vỉa hè vắng lặng ngập tràn ánh nắng. Ở chính giữa khung hình, một thẻ thông điệp màu trắng bo góc thanh lịch xuất hiện: 'it's not your fault. you're okay.'", "pros": "Cú chốt hạ hoàn hảo về mặt tâm lý học hành vi. Thẻ trắng bo góc mềm mại (Rounded White Card) với kiểu chữ có chân thanh lịch mang tính trị liệu tinh thần sâu sắc. Khung hình tĩnh lặng không còn bóng người tạo không gian thở (Breathing Room) để thông điệp thẩm thấu vào tâm trí người xem trước khi video lặp lại (Loop).", "cons": "Kích thước thẻ thoại chiếm diện tích khá lớn ở trung tâm, che mất điểm tụ sâu nhất của con đường; thời lượng 1.9s hơi ngắn để đọc kỹ nếu người xem đọc chậm.", "takeaway": "Kết thúc video bằng một câu khẳng định chữa lành (Affirmation Card) trên khung cảnh tĩnh vắng người là vũ khí tối thượng kích hoạt lượng Re-watch và Chia sẻ về Story cá nhân.", "lens_angle": "Góc tĩnh toàn cảnh vỉa hè (Static Empty Path Shot), tiêu cự ~35mm.", "location": "Con đường vỉa hè khu phố tĩnh lặng với hàng rào xanh mướt và kiến trúc nhà gỗ hiện đại.", "lighting_color": "Ánh sáng nắng vàng rực rỡ tương phản với nền trắng tinh khôi của Thẻ Thoại (White Callout Card).", "transition": "Hết video (Video Loop End) tạo vòng lặp mượt mà quay lại Shot 01."}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ct.toFixed(2) + 's / ' + (player.duration ? player.duration.toFixed(2) : '27.33') + 's';
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 30.0 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById('shot-' + shotId);
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

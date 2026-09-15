@@ -1,0 +1,257 @@
+{
+  "version": "1.0.0",
+  "project": "Kho Ý Tưởng & Hệ Thống Phân Loại Video Điện Ảnh (ytuong.fedu.vn)",
+  "mentor": "Nguyễn Việt (@vietndj)",
+  "learner_agent": "Antigravity Active Learner",
+  "last_updated": "2026-09-15T10:20:00+07:00",
+  "learning_stats": {
+    "total_corrections": 8,
+    "current_alignment_score": 92.0,
+    "target_alignment_score": 98.0,
+    "confidence_auto_accept_threshold": 85,
+    "ambiguity_ask_mentor_threshold": 65
+  },
+  "alignment_progression": [
+    {
+      "milestone": "Kho báu 20 Video ban đầu (Quét thô AI)",
+      "date": "2026-09-13",
+      "sample_size": 20,
+      "ai_matched": 14,
+      "mentor_adjusted": 6,
+      "alignment_score": 70.0,
+      "note": "AI bị thiên kiến nhìn vật thể (máy tính xếp thành Công nghệ, đi bộ ngoài đường xếp thành Walk & Talk)"
+    },
+    {
+      "milestone": "Đợt hiệu chỉnh 4 Trục & Phân tầng Level 1-2",
+      "date": "2026-09-15",
+      "sample_size": 42,
+      "ai_matched": 37,
+      "mentor_adjusted": 5,
+      "alignment_score": 88.1,
+      "note": "AI đã bắt đầu hiểu triết lý phân biệt Đạo cụ (Props) và Ý định cốt lõi (Core Intent)"
+    }
+  ],
+  "distilled_rules": [
+    {
+      "rule_id": "RULE_001",
+      "name": "Ý định cốt lõi thắng Đạo cụ bề mặt (Intent over Props)",
+      "description": "Khi trong khung hình có laptop, máy tính, iPhone, đèn setup nhưng kịch bản thoại/nội dung nói về kỷ luật, tư duy, kinh nghiệm sống -> KHÔNG xếp vào Công Nghệ mà xếp vào Thương Hiệu Cá Nhân hoặc Tâm Lý/Phát Triển Bản Thân.",
+      "trigger_keywords": [
+        "laptop",
+        "bàn làm việc",
+        "setup",
+        "máy tính",
+        "iphone",
+        "camera"
+      ],
+      "conflict_target": "cong-nghe",
+      "resolved_industry": "thuong-hieu",
+      "confidence_boost": 0.95
+    },
+    {
+      "rule_id": "RULE_002",
+      "name": "Walk & Talk chuẩn: Miệng nói trực diện khi đang di chuyển",
+      "description": "Nếu video chỉ quay bước chân, dạo phố, ngắm cảnh ngoài đường mà nhân vật KHÔNG nói trực tiếp vào ống kính (chỉ có nhạc nền hoặc lồng tiếng Voice-over) -> KHÔNG xếp vào Walk & Talk mà xếp vào Thời Trang, Du Lịch hoặc Voice Over.",
+      "trigger_keywords": [
+        "dạo phố",
+        "bước chân",
+        "đi bộ",
+        "street"
+      ],
+      "conflict_style": "walk-and-talk",
+      "resolved_style": "voice-over",
+      "confidence_boost": 0.98
+    },
+    {
+      "rule_id": "RULE_003",
+      "name": "Chuẩn mực Chuyển Cảnh 2 Cấp Độ Anh Việt (Level 1 vs Level 2)",
+      "description": "Level 1: Cầm điện thoại selfie chỗ đông người, dùng động tác gật đầu/lắc đầu lặp lại 2 lần để chuyển cảnh. Level 2: Đặt chân máy cố định, bất kỳ động tác cơ thể lặp lại 2 lần rõ nét (đứng lên, quay người, ném đồ).",
+      "level_1_criteria": "Selfie đông người + cử động đầu lặp lại x2",
+      "level_2_criteria": "Chân máy cố định + cử động toàn thân lặp lại x2",
+      "confidence_boost": 1.0
+    },
+    {
+      "rule_id": "RULE_004",
+      "name": "Cô lập Ad-Bot thương mại điện tử khỏi Kho Ý Tưởng Tinh Hoa",
+      "description": "Video quảng cáo sản phẩm thuần túy (Ulanzi, Lazada, Shopee affiliate) được gán is_ad_bot: true để tự động ẩn trên luồng chính, chỉ hiển thị khi người dùng chọn riêng danh mục UGC.",
+      "trigger_keywords": [
+        "shopee",
+        "lazada",
+        "ulanzi",
+        "bơm hơi",
+        "đèn led thanh",
+        "chân máy tripod"
+      ],
+      "action": "is_ad_bot = True",
+      "confidence_boost": 1.0
+    },
+    {
+      "rule_id": "RULE_005",
+      "name": "Flash Sale & Phòng Khám Y Khoa -> Làm Đẹp & Spa",
+      "description": "Video dịch vụ khám da liễu, nặn mụn, tư vấn y khoa kết hợp giảm giá Double Day 8.8/9.9 thuộc hệ sinh thái Spa & Thẩm mỹ viện.",
+      "trigger_keywords": [
+        "double day",
+        "da liễu",
+        "bác sĩ da",
+        "phòng khám",
+        "nặn mụn"
+      ],
+      "resolved_industry": "spa-lam-dep",
+      "confidence_boost": 0.95
+    },
+    {
+      "rule_id": "RULE_010",
+      "name": "Bình dân hóa ngôn ngữ: Điện Ảnh -> Chỉn Chu",
+      "description": "Thay thế từ ngữ xa hoa hàn lâm \"Điện Ảnh (Cinematic)\" thành \"Chỉn Chu\". Giúp học viên bình thường cảm thấy gần gũi, thực chiến, không sợ hãi thiết bị đắt tiền.",
+      "term_replacement": {
+        "from": "Điện Ảnh",
+        "to": "Chỉn Chu"
+      },
+      "confidence_boost": 1.0
+    }
+  ],
+  "learning_history_logs": [
+    {
+      "log_id": "LEARN_20260915_01",
+      "video_id": "IG_@jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro",
+      "title": "Minimalist Discipline Chiaroscuro",
+      "creator": "@jackwebstter",
+      "ai_predicted": {
+        "industry": "cong-nghe",
+        "shooting_style": "dien-anh"
+      },
+      "mentor_corrected": {
+        "industry": "thuong-hieu",
+        "shooting_style": "voice-over"
+      },
+      "reason_distilled": "Khung cảnh setup bàn làm việc tối giản dễ làm AI nhầm sang Công nghệ, nhưng giọng đọc voice-over truyền tải triết lý kỷ luật cá nhân.",
+      "rule_applied": "RULE_001 & RULE_002",
+      "learned_at": "2026-09-15T09:30:00+07:00"
+    },
+    {
+      "log_id": "LEARN_20260915_02",
+      "video_id": "IG_@tinanguyen2004_7673468312290037012_Double_Day_luon_la_dip_de_khach_hang_lua_duoc",
+      "title": "Tina Nguyễn • Phóng Sự Y Khoa Da Liễu & Flash Sale Double Day 8.8",
+      "creator": "@tinanguyen2004",
+      "ai_predicted": {
+        "industry": "ugc",
+        "shooting_style": "talking-head"
+      },
+      "mentor_corrected": {
+        "industry": "spa-lam-dep",
+        "shooting_style": "walk-and-talk"
+      },
+      "reason_distilled": "Bác sĩ vừa đi dọc sảnh phòng khám vừa nói (Walk & Talk), nội dung da liễu thẩm mỹ thương mại.",
+      "rule_applied": "RULE_005",
+      "learned_at": "2026-09-15T09:35:00+07:00"
+    },
+    {
+      "log_id": "LEARN_20260915_03",
+      "video_id": "IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together",
+      "title": "Life Feel Put Together",
+      "creator": "@joshdiazfilms",
+      "ai_predicted": {
+        "industry": "the-thao",
+        "shooting_style": "dien-anh"
+      },
+      "mentor_corrected": {
+        "industry": "thuong-hieu",
+        "shooting_style": "voice-over"
+      },
+      "reason_distilled": "Dù có cảnh tập luyện và dạo phố, nhưng cốt lõi là kể chuyện xây dựng phong cách sống và thương hiệu cá nhân qua Voice-over.",
+      "rule_applied": "RULE_001",
+      "learned_at": "2026-09-15T09:40:00+07:00"
+    },
+    {
+      "log_id": "LEARN_20260915_VIDEO_01",
+      "video_id": "IG_@iman.lizi_Dc6qXoKoYKh",
+      "title": "Iman Lizi • ASMR Trà Chiều & B-Roll Đời Sống Chậm Cozy Homebody",
+      "creator": "@iman.lizi",
+      "ai_predicted": {
+        "industry": "kien-truc (Kiến Trúc & Không Gian / Nội Thất)",
+        "shooting_style": "dien-anh (Điện Ảnh)"
+      },
+      "mentor_corrected": {
+        "industry": "ky-thuat-quay (Bố Cục Khung Hình)",
+        "shooting_style": "dien-anh (Chất Lượng Cao)"
+      },
+      "reason_distilled": "Dù quay trong không gian nhà nhưng giá trị cốt lõi anh Việt định vị là bài học về Bố Cục Khung Hình và thẩm mỹ hình ảnh Chất Lượng Cao.",
+      "rule_applied": "RULE_006: Thẩm mỹ tĩnh ASMR B-roll quy về Bố Cục Khung Hình & Chất Lượng Cao",
+      "learned_at": "2026-09-15T10:39:15+07:00"
+    },
+    {
+      "log_id": "LEARN_20260915_VIDEO_02",
+      "video_id": "IG_@hayancook_DdSUI9BvhqR",
+      "title": "Hayan Cook • Công Thức Thịt Viên Sốt Cà Cho Bé 22 Tháng",
+      "creator": "@hayancook",
+      "ai_predicted": {
+        "industry": "am-thuc (Ẩm Thực & F&B)",
+        "shooting_style": "voice-over (Lồng Tiếng)"
+      },
+      "mentor_corrected": {
+        "industry": "am-thuc (F&B)",
+        "shooting_style": "voice-over (Voice Over)"
+      },
+      "reason_distilled": "Chuẩn hóa tên gọi danh mục ngắn gọn, súc tích: F&B thay vì Ẩm Thực dài dòng, Voice Over chuẩn quốc tế.",
+      "rule_applied": "RULE_007: Chuẩn hóa nhãn danh mục tinh gọn (F&B & Voice Over)",
+      "learned_at": "2026-09-15T10:46:00+07:00"
+    },
+    {
+      "log_id": "LEARN_20260915_VIDEO_03",
+      "video_id": "IG_@cushygarden_DdL6pHDSKRc",
+      "title": "Cushy Garden • Nhật Ký Làm Vườn Mỗi Ngày & Kỹ Thuật Macro Chăm Cây Chữa Lành",
+      "creator": "@cushygarden",
+      "ai_predicted": {
+        "industry": "ky-thuat-quay (Kỹ Thuật Quay)",
+        "shooting_style": "voice-over",
+        "purpose": "Nhật ký chăm sóc vườn cây..."
+      },
+      "mentor_corrected": {
+        "industry": "kien-truc (Không Gian Sống / Cửa Hàng Cây Cảnh)",
+        "shooting_style": "voice-over (Voice Over)",
+        "purpose": "Vlog Đời Sống"
+      },
+      "reason_distilled": "Nhận diện theo 5 Mục Đích Quay chuẩn của web: Video làm vườn chăm cây thuộc mục đích Vlog Đời Sống, ngành hàng Không Gian Sống & Cửa Hàng Cây Cảnh, không bị nhầm sang Kỹ thuật quay.",
+      "rule_applied": "RULE_008: Đồng bộ 5 Mục Đích Quay chuẩn (Vlog Đời Sống, Bán Hàng, Hướng Dẫn, Kỷ Luật, Thị Giác)",
+      "learned_at": "2026-09-15T10:48:00+07:00"
+    },
+    {
+      "log_id": "LEARN_20260915_VIDEO_04",
+      "video_id": "IG_@dev_zero_Db-S8i1hXwF",
+      "title": "Zero Dev • Routine Sau Giờ Làm: Tự Học Code & Kỷ Luật Bản Thân",
+      "creator": "@dev_zero",
+      "ai_predicted": {
+        "industry": "cong-nghe (Công Nghệ)",
+        "shooting_style": "storytelling (Kể Chuyện)",
+        "purpose": "Xây dựng thương hiệu chuyên gia..."
+      },
+      "mentor_corrected": {
+        "industry": "kien-truc (Không Gian Sống / Desk Setup)",
+        "shooting_style": "storytelling (Đời Thường)",
+        "purpose": "Vlog Đời Sống"
+      },
+      "reason_distilled": "Nhìn nhận góc bàn làm việc và routine tự học qua lăng kính Không Gian Sống & Vlog Đời Sống thay vì ép vào khuôn Công nghệ phần mềm.",
+      "rule_applied": "RULE_009: Routine học tập tại bàn làm việc = Không Gian Sống & Vlog Đời Sống",
+      "learned_at": "2026-09-15T10:54:00+07:00"
+    },
+    {
+      "log_id": "LEARN_20260915_VIDEO_05",
+      "video_id": "IG_@nagisa.decor_Dco_DevvUla",
+      "title": "Nagisa • Nghệ Thuật Decor Căn Hộ Phong Cách Japandi",
+      "creator": "@nagisa.decor",
+      "ai_predicted": {
+        "industry": "kien-truc",
+        "shooting_style": "dien-anh (Điện Ảnh)",
+        "purpose": "Bán Hàng & Chuyển Đổi"
+      },
+      "mentor_corrected": {
+        "industry": "kien-truc (Không Gian Sống)",
+        "shooting_style": "dien-anh (Chỉn Chu)",
+        "purpose": "Thị Giác & Thẩm Mỹ"
+      },
+      "reason_distilled": "Chốt nhãn Chỉn Chu cho kiểu quay thẩm mỹ không gian, mục đích Thị Giác & Thẩm Mỹ thay vì gò ép vào phễu bán hàng lộ liễu.",
+      "rule_applied": "RULE_010 (Điện Ảnh -> Chỉn Chu) & Đồng bộ Mục đích Thị Giác & Thẩm Mỹ",
+      "learned_at": "2026-09-15T12:08:00+07:00"
+    }
+  ]
+}

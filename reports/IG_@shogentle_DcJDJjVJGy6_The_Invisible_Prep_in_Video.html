@@ -1,0 +1,2328 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>The Invisible Prep in Video • Báo Cáo Đạo Diễn 14 Phân Cảnh - @shogentle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-dark: #080c14;
+    --bg-surface: #0f172a;
+    --bg-card: #141e33;
+    --bg-card-hover: #1b2845;
+    --accent-primary: #f97316;
+    --accent-orange: #fb923c;
+    --accent-cyan: #38bdf8;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-amber: #f59e0b;
+    --border-color: #22314e;
+    --border-active: #f97316;
+    --text-main: #f8fafc;
+    --text-sub: #94a3b8;
+    --text-muted: #64748b;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    font-size: 14.5px;
+    overflow-x: hidden;
+}
+
+/* Layout */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+@media (min-width: 1024px) {
+    .app-container {
+        display: grid;
+        grid-template-columns: 440px 1fr;
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
+/* Sticky Left / Video Column */
+.player-column {
+    background: #05080e;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+@media (min-width: 1024px) {
+    .player-column {
+        border-bottom: none;
+        border-right: 1px solid var(--border-color);
+        height: 100vh;
+        overflow-y: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.video-player-wrapper {
+    position: relative;
+    width: 100%;
+    background: #000;
+    aspect-ratio: 9 / 16;
+    max-height: 46vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .video-player-wrapper {
+        max-height: none;
+        width: 100%;
+    }
+}
+
+video#mainVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+
+/* Director Controls Toolbar */
+.director-controls {
+    background: var(--bg-surface);
+    padding: 12px 16px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.control-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.speed-buttons {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #0b1120;
+    padding: 3px 6px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.speed-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-sub);
+    font-size: 11px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    padding: 4px 7px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.speed-btn.active, .speed-btn:hover {
+    background: var(--accent-primary);
+    color: #fff;
+}
+
+.frame-nav-group {
+    display: flex;
+    gap: 4px;
+}
+
+.nav-btn {
+    background: #1e293b;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: background 0.15s ease;
+}
+
+.nav-btn:hover {
+    background: #334155;
+    border-color: var(--accent-cyan);
+}
+
+.timestamp-indicator {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent-cyan);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Right / Content Column */
+.content-column {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 16px 80px 16px;
+}
+
+@media (min-width: 1024px) {
+    .content-column {
+        padding: 32px 36px 120px 36px;
+    }
+}
+
+/* Header Meta */
+.header-meta {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.badge-portal {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(249, 115, 22, 0.12);
+    color: var(--accent-primary);
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.video-main-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+@media (min-width: 1024px) {
+    .video-main-title {
+        font-size: 30px;
+    }
+}
+
+.meta-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--text-sub);
+}
+
+.author-ig-badge {
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--accent-cyan);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s ease;
+}
+
+.author-ig-badge:hover {
+    background: var(--accent-cyan);
+    color: #000;
+}
+
+/* View Mode Switcher Toolbar */
+.view-switcher-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    backdrop-filter: blur(8px);
+}
+
+.view-tabs {
+    display: flex;
+    gap: 6px;
+}
+
+.view-tab-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-sub);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.view-tab-btn.active {
+    background: var(--accent-primary);
+    color: #fff;
+    border-color: var(--accent-primary);
+}
+
+.drawer-trigger-btn {
+    background: #1e293b;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.drawer-trigger-btn:hover {
+    border-color: var(--accent-primary);
+}
+
+/* Shot Cards */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 20px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.shot-card:hover {
+    border-color: rgba(249, 115, 22, 0.4);
+}
+
+.shot-card.active-playing {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.15);
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+@media (min-width: 768px) {
+    .card-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.shot-badge-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.shot-number {
+    background: #f97316;
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+}
+
+.shot-time-btn {
+    background: #0f172a;
+    border: 1px solid var(--border-color);
+    color: var(--accent-cyan);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.shot-time-btn:hover {
+    background: var(--accent-cyan);
+    color: #000;
+}
+
+.shot-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tech-tag {
+    background: #0b1120;
+    border: 1px solid #1e293b;
+    color: var(--text-sub);
+    font-size: 11.5px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.shot-headline {
+    font-family: var(--font-heading);
+    font-size: 16.5px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: 16px;
+}
+
+/* Keyframe 3-Image Strip */
+.keyframe-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.keyframe-col {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    aspect-ratio: 9 / 16;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.keyframe-col:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-cyan);
+}
+
+.keyframe-col.hero-col {
+    border: 2px solid rgba(249, 115, 22, 0.6);
+}
+
+.keyframe-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.img-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #cbd5e1;
+    font-size: 9.5px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    padding: 2px 5px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+}
+
+.hero-badge {
+    background: rgba(249, 115, 22, 0.85);
+    color: #fff;
+}
+
+/* Analysis Body & 3 Pillars */
+.shot-analysis-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.analysis-block {
+    background: #0c1322;
+    border-radius: 8px;
+    padding: 12px 14px;
+    border: 1px solid #1e293b;
+}
+
+.block-title {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+}
+
+.block-text {
+    color: #e2e8f0;
+    font-size: 13.5px;
+    line-height: 1.6;
+}
+
+.critique-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .critique-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.critique-col {
+    border-radius: 8px;
+    padding: 12px 14px;
+    border: 1px solid var(--border-color);
+}
+
+.good-col {
+    background: rgba(16, 185, 129, 0.06);
+    border-color: rgba(16, 185, 129, 0.25);
+}
+
+.good-col .critique-title {
+    color: #34d399;
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.bad-col {
+    background: rgba(244, 63, 94, 0.06);
+    border-color: rgba(244, 63, 94, 0.25);
+}
+
+.bad-col .critique-title {
+    color: #fb7185;
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.critique-text {
+    font-size: 13px;
+    color: #cbd5e1;
+    line-height: 1.55;
+}
+
+.takeaway-box {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(249, 115, 22, 0.05) 100%);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+
+.takeaway-title {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-amber);
+    margin-bottom: 4px;
+}
+
+.takeaway-text {
+    color: #fde68a;
+    font-size: 13.5px;
+    font-weight: 500;
+    line-height: 1.55;
+}
+
+/* Transition Section */
+.trans-section {
+    margin-top: 6px;
+    background: #090e1a;
+    border: 1px dashed #283856;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.trans-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-sub);
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+}
+
+.trans-tech-tag {
+    color: var(--accent-primary);
+    background: rgba(249, 115, 22, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.trans-img-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+}
+
+.trans-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Visual Grid View Layout */
+.visual-grid-container {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+@media (min-width: 768px) {
+    .visual-grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .visual-grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.grid-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-primary);
+}
+
+.grid-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    background: #000;
+}
+
+.grid-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.grid-info {
+    padding: 8px 10px;
+}
+
+.grid-headline {
+    font-size: 12px;
+    font-weight: 600;
+    color: #e2e8f0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Drawer Jump Menu */
+.drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+}
+
+.drawer-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.drawer-panel {
+    position: fixed;
+    top: 0;
+    right: -360px;
+    width: 320px;
+    max-width: 85vw;
+    height: 100vh;
+    background: #0b1120;
+    border-left: 1px solid var(--border-color);
+    z-index: 210;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-overlay.open .drawer-panel {
+    right: 0;
+}
+
+.drawer-header {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drawer-title {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.drawer-close-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-sub);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.drawer-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.drawer-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #111827;
+    border: 1px solid #1e293b;
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 12.5px;
+    transition: background 0.15s ease;
+}
+
+.drawer-item:hover {
+    background: #1e293b;
+    border-color: var(--accent-primary);
+}
+
+.drawer-num {
+    background: var(--accent-primary);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.drawer-text {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.drawer-time {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent-cyan);
+}
+
+/* Lightbox Modal Darkroom */
+.lightbox-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.92);
+    z-index: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    padding: 20px;
+}
+
+.lightbox-modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-img-wrap {
+    max-width: 90vw;
+    max-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-img-wrap img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+
+.lightbox-caption {
+    margin-top: 14px;
+    color: #e2e8f0;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    max-width: 800px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Director Philosophy Callout */
+.director-philosophy {
+    background: linear-gradient(135deg, #111b2e 0%, #0c1322 100%);
+    border: 1px solid #243552;
+    border-left: 4px solid var(--accent-primary);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+}
+
+.philo-title {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent-primary);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.philo-quote {
+    font-size: 14px;
+    color: #cbd5e1;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<div class="app-container">
+    <!-- Left Column: Video Sticky Player & Controls -->
+    <aside class="player-column">
+        <div class="video-player-wrapper">
+            <video id="mainVideo" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcJDJjVJGy6.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ phát video MP4.
+            </video>
+        </div>
+
+        <div class="director-controls">
+            <div class="control-row">
+                <div class="timestamp-indicator">
+                    <span id="curTime">0.00s</span> / <span id="durTime">26.23s</span>
+                </div>
+                <div class="frame-nav-group">
+                    <button class="nav-btn" onclick="stepFrame(-1)" title="Lùi 1 Frame (1/30s)">⏮ -1F</button>
+                    <button class="nav-btn" onclick="togglePlay()" id="playBtn">▶ Play</button>
+                    <button class="nav-btn" onclick="stepFrame(1)" title="Tiến 1 Frame (1/30s)">+1F ⏭</button>
+                </div>
+            </div>
+
+            <div class="control-row">
+                <div class="speed-buttons">
+                    <button class="speed-btn" onclick="setSpeed(0.25, this)">0.25x</button>
+                    <button class="speed-btn" onclick="setSpeed(0.5, this)">0.5x</button>
+                    <button class="speed-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+                    <button class="speed-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+                    <button class="speed-btn" onclick="setSpeed(2.0, this)">2.0x</button>
+                </div>
+
+                <div class="frame-nav-group">
+                    <button class="nav-btn" onclick="toggleMute()" id="muteBtn">🔊 Bật âm</button>
+                    <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcJDJjVJGy6.mp4" download class="nav-btn" target="_blank" title="Tải video MP4">📥 Tải</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Right Column: Director Breakdown Content -->
+    <main class="content-column">
+        <!-- Header -->
+        <header class="header-meta">
+            <div class="badge-portal">🎬 BÁO CÁO PHÂN TÍCH ĐẠO DIỄN • SHORT-FORM CINEMATOGRAPHY</div>
+            <h1 class="video-main-title">How to Cook a Video: Ẩn dụ Chế biến Ẩm thực & Quy trình Hậu kỳ Chuẩn chỉ</h1>
+            <div class="meta-tags-flex">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@shogentle" onclick="handleCreatorClick(event, '@shogentle', 'Shogentle')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Shogentle trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Shogentle</strong>
+                        <span class="author-handle">(@shogentle)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/DcJDJjVJGy6/" target="_blank" class="author-ig-badge">
+                    📸 Xem Instagram Gốc ↗
+                </a>
+                <span>⏱ 26.23s • 14 Phân Cảnh • 1080x1920 (30fps)</span>
+            </div>
+        </header>
+
+        <!-- Director Philosophy -->
+        <section class="director-philosophy">
+            <div class="philo-title">💡 TRIẾT LÝ SÁNG TẠO CỐT LÕI (DIRECTOR'S LOGIC):</div>
+            <div class="philo-quote">
+                "Mọi nền ẩm thực trên thế giới đều đồng thuận một điều: Món ăn ngon được tạo nên từ khâu sơ chế chuẩn bị (Prep), chứ không phải lúc bày lên đĩa. Video cũng vận hành y như vậy: Bấm máy chỉ là phần vui vẻ, nhưng điều khán giả thực sự cảm nhận được là sự chuẩn bị vô hình đằng sau — Nhịp điệu, Tính dễ đọc, và các lựa chọn trước/sau khi ghi hình."
+            </div>
+        </section>
+
+        <!-- View Switcher & Drawer Trigger -->
+        <div class="view-switcher-bar">
+            <div class="view-tabs">
+                <button class="view-tab-btn active" id="tabDetail" onclick="switchView('detail')">📋 Storyboard Chi Tiết</button>
+                <button class="view-tab-btn" id="tabGrid" onclick="switchView('grid')">🖼 Lưới Visual Grid</button>
+            </div>
+            <button class="drawer-trigger-btn" onclick="openDrawer()">☰ Mục Lục 14 Phân Cảnh</button>
+        </div>
+
+        <!-- Detail Storyboard View -->
+        <section class="shots-container" id="detailViewContainer">
+            
+    <article class="shot-card" id="shot-01" data-start="0.0" data-end="1.8">
+        <div class="card-header">
+            <div class="shot-badge-group">
+                <span class="shot-number">PHÂN CẢNH 01</span>
+                <span class="shot-time-btn" onclick="jumpToTime(0.0)" title="Nhảy video tới mốc này">▶ 0.00s - 1.80s (1.80s)</span>
+            </div>
+            <div class="shot-tech-tags">
+                <span class="tech-tag"><i class="tag-icon">📍</i> Kitchen Studio / Dark Aesthetic Table</span>
+                <span class="tech-tag"><i class="tag-icon">🎥</i> 24mm (Wide 1x) Top-Down</span>
+                <span class="tech-tag"><i class="tag-icon">💡</i> Key Light 45° ấm áp + Dark Ambient Background</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Tung hứng dưa leo dọc trục thị giác: Mồi câu trực quan (Visual Hook) đảo ngược kỳ vọng ẩm thực sang dựng phim</h3>
+
+        <!-- 3-Image Strip -->
+        <div class="keyframe-strip">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_01_start.jpg', 'Shot 01 [Start 0.00s]')">
+                <div class="img-badge">START (0.00s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+            </div>
+            <div class="keyframe-col hero-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_01_mid.jpg', 'Shot 01 [Mid 0.90s]')">
+                <div class="img-badge hero-badge">KEYFRAME (MID)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_01_end.jpg', 'Shot 01 [End 1.80s]')">
+                <div class="img-badge">END (1.80s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+            </div>
+        </div>
+
+        <!-- 3 Pillars Analysis -->
+        <div class="shot-analysis-body">
+            <div class="analysis-block subject-block">
+                <div class="block-title">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN THỰC TẾ:</div>
+                <p class="block-text">Tác giả (AL) mặc áo sơ mi cam nổi bật, quay góc nhìn từ trên xuống (Top-down) trên mặt thớt gỗ, tung mạnh quả dưa leo tươi lên không trung. Dòng chữ 'HOW TO COOK A VIDEO' màu vàng cam hiện ra nổi bật theo hướng rơi của vật thể.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col good-col">
+                    <div class="critique-title">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p class="critique-text">Bố cục đối xứng dọc 9:16 căn tâm hoàn hảo, chuyển động tung dưa leo thẳng vào ống kính tạo hiệu ứng chiều sâu 3D (Z-axis motion). Độ tương phản màu sắc cao giữa nền gỗ ấm, áo cam và màu xanh mướt của dưa leo giúp khóa chặt ánh nhìn ngay trong giây đầu tiên.</p>
+                </div>
+                <div class="critique-col bad-col">
+                    <div class="critique-title">⚠️ ĐIỂM HẠN CHẾ / CẦN LƯU Ý (NHƯỢC ĐIỂM):</div>
+                    <p class="critique-text">Vùng tối dưới thớt gỗ hơi bết sáng, dưa leo rơi ở tốc độ cao tạo chút motion blur nhẹ ở 2 frame đỉnh điểm.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐÚC KẾT (ACTIONABLE TAKEAWAY):</div>
+                <p class="takeaway-text">Mở đầu video giáo dục bằng một hành động vật lý bất ngờ gắn với ẩn dụ đời thường (nấu ăn) để giữ chân người xem trước khi họ nhận ra đây là nội dung kỹ thuật.</p>
+            </div>
+
+            
+        <div class="trans-section">
+            <div class="trans-label">⚡ SO SÁNH CHUYỂN CẢNH (TRANSITION 01 → 02): <span class="trans-tech-tag">Match Action Cut (Dưa rơi -> Bắt dưa góc ngang)</span></div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_01_to_02.jpg', 'Chuyển cảnh 01 → 02: Match Action Cut (Dưa rơi -> Bắt dưa góc ngang)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_01_to_02.jpg" alt="Transition 01 to 02" loading="lazy">
+            </div>
+        </div>
+        
+        </div>
+    </article>
+    
+    <article class="shot-card" id="shot-02" data-start="1.8" data-end="2.27">
+        <div class="card-header">
+            <div class="shot-badge-group">
+                <span class="shot-number">PHÂN CẢNH 02</span>
+                <span class="shot-time-btn" onclick="jumpToTime(1.8)" title="Nhảy video tới mốc này">▶ 1.80s - 2.27s (0.47s)</span>
+            </div>
+            <div class="shot-tech-tags">
+                <span class="tech-tag"><i class="tag-icon">📍</i> Kitchen Studio Bar</span>
+                <span class="tech-tag"><i class="tag-icon">🎥</i> 35mm (Medium Eye-Level)</span>
+                <span class="tech-tag"><i class="tag-icon">💡</i> Warm Key Light + Sharp Rim Light tách nền</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Match Cut bắt dưa leo chuyển góc máy ngang: Duy trì xung lực chuyển động (Momentum Continuity) cực nhanh</h3>
+
+        <!-- 3-Image Strip -->
+        <div class="keyframe-strip">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_02_start.jpg', 'Shot 02 [Start 1.80s]')">
+                <div class="img-badge">START (1.80s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+            </div>
+            <div class="keyframe-col hero-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_02_mid.jpg', 'Shot 02 [Mid 2.04s]')">
+                <div class="img-badge hero-badge">KEYFRAME (MID)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_02_end.jpg', 'Shot 02 [End 2.27s]')">
+                <div class="img-badge">END (2.27s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+            </div>
+        </div>
+
+        <!-- 3 Pillars Analysis -->
+        <div class="shot-analysis-body">
+            <div class="analysis-block subject-block">
+                <div class="block-title">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN THỰC TẾ:</div>
+                <p class="block-text">Chuyển đột ngột sang góc máy ngang ngực (Medium Shot). Nhân vật đón bắt gọn gàng quả dưa leo đang rơi với phong thái dứt khoát của một đầu bếp chuyên nghiệp. Phụ đề đậm 'CUT OFF THE DEAD PARTS' đập vào mắt người xem.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col good-col">
+                    <div class="critique-title">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p class="critique-text">Điểm cắt Match Action chuẩn xác từng frame giữa pha rơi ở cảnh 1 và pha bắt ở cảnh 2. Hiệu ứng Rim Light viền vàng sau lưng tách chủ thể rõ rệt khỏi phông tối phía sau, tạo độ nổi khối điện ảnh.</p>
+                </div>
+                <div class="critique-col bad-col">
+                    <div class="critique-title">⚠️ ĐIỂM HẠN CHẾ / CẦN LƯU Ý (NHƯỢC ĐIỂM):</div>
+                    <p class="critique-text">Thời lượng 0.47s (14 frame) rất chớp nhoáng, đòi hỏi người xem phải tập trung cao độ, dễ bỏ lỡ chi tiết hậu cảnh.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐÚC KẾT (ACTIONABLE TAKEAWAY):</div>
+                <p class="takeaway-text">Dùng Match Cut bắt trọn vector chuyển động của đạo cụ khi đổi góc máy để bộ não khán giả tự động nối liền hai không gian mà không cảm thấy bị giật.</p>
+            </div>
+
+            
+        <div class="trans-section">
+            <div class="trans-label">⚡ SO SÁNH CHUYỂN CẢNH (TRANSITION 02 → 03): <span class="trans-tech-tag">Fast Hard Cut xuống cận cảnh mặt thớt</span></div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_02_to_03.jpg', 'Chuyển cảnh 02 → 03: Fast Hard Cut xuống cận cảnh mặt thớt')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_02_to_03.jpg" alt="Transition 02 to 03" loading="lazy">
+            </div>
+        </div>
+        
+        </div>
+    </article>
+    
+    <article class="shot-card" id="shot-03" data-start="2.27" data-end="4.3">
+        <div class="card-header">
+            <div class="shot-badge-group">
+                <span class="shot-number">PHÂN CẢNH 03</span>
+                <span class="shot-time-btn" onclick="jumpToTime(2.27)" title="Nhảy video tới mốc này">▶ 2.27s - 4.30s (2.03s)</span>
+            </div>
+            <div class="shot-tech-tags">
+                <span class="tech-tag"><i class="tag-icon">📍</i> Wooden Cutting Board Station</span>
+                <span class="tech-tag"><i class="tag-icon">🎥</i> 50mm (High-Angle Close-Up)</span>
+                <span class="tech-tag"><i class="tag-icon">💡</i> Spotlight tập trung vào bề mặt thớt</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Ẩn dụ thị giác 'Cắt bỏ phần chết': Đặt Text 3D bám dính trên quả dưa leo mô phỏng thao tác loại bỏ khoảng lặng (Dead Air)</h3>
+
+        <!-- 3-Image Strip -->
+        <div class="keyframe-strip">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_03_start.jpg', 'Shot 03 [Start 2.27s]')">
+                <div class="img-badge">START (2.27s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+            </div>
+            <div class="keyframe-col hero-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_03_mid.jpg', 'Shot 03 [Mid 3.29s]')">
+                <div class="img-badge hero-badge">KEYFRAME (MID)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_03_end.jpg', 'Shot 03 [End 4.30s]')">
+                <div class="img-badge">END (4.30s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+            </div>
+        </div>
+
+        <!-- 3 Pillars Analysis -->
+        <div class="shot-analysis-body">
+            <div class="analysis-block subject-block">
+                <div class="block-title">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN THỰC TẾ:</div>
+                <p class="block-text">Góc quay cận trung trên mặt thớt gỗ. Con dao bếp sắc bén cắt dứt khoát phần đầu dưa leo gắn nhãn 'DEAD PART', giữ lại phần thân tươi mang nhãn 'YOUR VIDEO'. Lời thoại nhấn mạnh: 'Cut off the dead parts, that's where people scroll'.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col good-col">
+                    <div class="critique-title">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p class="critique-text">Kỹ thuật Motion Tracking gắn chữ trực tiếp lên bề mặt vật thể (Diegetic Typography) biến khái niệm trừu tượng thành hành động vật lý trực quan ngon mắt, giúp thông điệp thẩm thấu tức thì.</p>
+                </div>
+                <div class="critique-col bad-col">
+                    <div class="critique-title">⚠️ ĐIỂM HẠN CHẾ / CẦN LƯU Ý (NHƯỢC ĐIỂM):</div>
+                    <p class="critique-text">Lát cắt hơi chệch về phía rìa trái khung hình, tay cầm dao che khuất một phần chữ 'DEAD' trong 3 frame đầu tiên.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐÚC KẾT (ACTIONABLE TAKEAWAY):</div>
+                <p class="takeaway-text">Cụ thể hóa các thuật ngữ biên tập khó hiểu bằng các lát cắt đạo cụ thực tế để người xem phổ thông hiểu ngay giá trị của việc gọt giũa video.</p>
+            </div>
+
+            
+        <div class="trans-section">
+            <div class="trans-label">⚡ SO SÁNH CHUYỂN CẢNH (TRANSITION 03 → 04): <span class="trans-tech-tag">Hard Cut sang cận cảnh lưỡi dao lướt mỏng</span></div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_03_to_04.jpg', 'Chuyển cảnh 03 → 04: Hard Cut sang cận cảnh lưỡi dao lướt mỏng')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_03_to_04.jpg" alt="Transition 03 to 04" loading="lazy">
+            </div>
+        </div>
+        
+        </div>
+    </article>
+    
+    <article class="shot-card" id="shot-04" data-start="4.3" data-end="5.63">
+        <div class="card-header">
+            <div class="shot-badge-group">
+                <span class="shot-number">PHÂN CẢNH 04</span>
+                <span class="shot-time-btn" onclick="jumpToTime(4.3)" title="Nhảy video tới mốc này">▶ 4.30s - 5.63s (1.33s)</span>
+            </div>
+            <div class="shot-tech-tags">
+                <span class="tech-tag"><i class="tag-icon">📍</i> Macro Studio Station</span>
+                <span class="tech-tag"><i class="tag-icon">🎥</i> 85mm Macro (Top-Down Overhead)</span>
+                <span class="tech-tag"><i class="tag-icon">💡</i> Side-lit Striplight làm nổi bật làn khói trắng</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Lưỡi dao xẻ dọc thớt bốc khói lạnh: Chơi chữ thị giác 'Keep cuts cool as a cucumber' kết hợp hiệu ứng khói CO2</h3>
+
+        <!-- 3-Image Strip -->
+        <div class="keyframe-strip">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_04_start.jpg', 'Shot 04 [Start 4.30s]')">
+                <div class="img-badge">START (4.30s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+            </div>
+            <div class="keyframe-col hero-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_04_mid.jpg', 'Shot 04 [Mid 4.96s]')">
+                <div class="img-badge hero-badge">KEYFRAME (MID)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_04_end.jpg', 'Shot 04 [End 5.63s]')">
+                <div class="img-badge">END (5.63s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+            </div>
+        </div>
+
+        <!-- 3 Pillars Analysis -->
+        <div class="shot-analysis-body">
+            <div class="analysis-block subject-block">
+                <div class="block-title">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN THỰC TẾ:</div>
+                <p class="block-text">Góc quay Macro thẳng đứng từ trên xuống. Con dao bếp lướt mượt mà xẻ dọc lát dưa leo mỏng tang, làn sương khói lạnh bốc lên nghi ngút quanh thớt. Dòng chữ 'KEEP YOUR CUTS COOL AS A CUCUMBER' xuất hiện đồng bộ với đường dao.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col good-col">
+                    <div class="critique-title">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p class="critique-text">Bố cục đối xứng dọc thẳng tắp, đường sáng phản chiếu trên lưỡi dao kim loại cực kỳ tinh tế. Khói lạnh mang lại trải nghiệm ASMR xúc giác - thị giác mạnh mẽ, kích thích cảm giác tươi mới.</p>
+                </div>
+                <div class="critique-col bad-col">
+                    <div class="critique-title">⚠️ ĐIỂM HẠN CHẾ / CẦN LƯU Ý (NHƯỢC ĐIỂM):</div>
+                    <p class="critique-text">Khói đặc che phủ nhẹ rìa dưới vân gỗ, tuy nhiên không làm mất đi độ sắc nét của lát cắt trung tâm.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐÚC KẾT (ACTIONABLE TAKEAWAY):</div>
+                <p class="takeaway-text">Kết hợp hiệu ứng vật lý thực (khói lạnh, sương nước) với thành ngữ chơi chữ để neo chặt cảm giác thẩm mỹ cao cấp vào tâm trí khách hàng.</p>
+            </div>
+
+            
+        <div class="trans-section">
+            <div class="trans-label">⚡ SO SÁNH CHUYỂN CẢNH (TRANSITION 04 → 05): <span class="trans-tech-tag">Quick Jump Cut chuyển sang động tác thả tôm</span></div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_04_to_05.jpg', 'Chuyển cảnh 04 → 05: Quick Jump Cut chuyển sang động tác thả tôm')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_04_to_05.jpg" alt="Transition 04 to 05" loading="lazy">
+            </div>
+        </div>
+        
+        </div>
+    </article>
+    
+    <article class="shot-card" id="shot-05" data-start="5.63" data-end="6.4">
+        <div class="card-header">
+            <div class="shot-badge-group">
+                <span class="shot-number">PHÂN CẢNH 05</span>
+                <span class="shot-time-btn" onclick="jumpToTime(5.63)" title="Nhảy video tới mốc này">▶ 5.63s - 6.40s (0.77s)</span>
+            </div>
+            <div class="shot-tech-tags">
+                <span class="tech-tag"><i class="tag-icon">📍</i> Kitchen Studio Counter</span>
+                <span class="tech-tag"><i class="tag-icon">🎥</i> 35mm Eye-Level</span>
+                <span class="tech-tag"><i class="tag-icon">💡</i> Warm Softbox chính diện + Golden Rim Light</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Thả tôm rơi tự do vào chảo nóng: Ẩn dụ tăng nhiệt độ kịch tính (Add Heat with Zooms & SFX)</h3>
+
+        <!-- 3-Image Strip -->
+        <div class="keyframe-strip">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_05_start.jpg', 'Shot 05 [Start 5.63s]')">
+                <div class="img-badge">START (5.63s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+            </div>
+            <div class="keyframe-col hero-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_05_mid.jpg', 'Shot 05 [Mid 6.01s]')">
+                <div class="img-badge hero-badge">KEYFRAME (MID)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_05_end.jpg', 'Shot 05 [End 6.40s]')">
+                <div class="img-badge">END (6.40s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+            </div>
+        </div>
+
+        <!-- 3 Pillars Analysis -->
+        <div class="shot-analysis-body">
+            <div class="analysis-block subject-block">
+                <div class="block-title">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN THỰC TẾ:</div>
+                <p class="block-text">Góc máy trung diện đối mặt tác giả AL đang cười rạng rỡ, hai tay nâng cao thả một vốc tôm tươi rơi tự do xuống lòng chảo đen. Dòng chữ 'ADD HEAT WITH ZOOMS' xuất hiện kích hoạt giai đoạn tăng tốc nhịp điệu.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col good-col">
+                    <div class="critique-title">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p class="critique-text">Năng lượng bùng nổ từ nụ cười của nhân vật kết hợp quỹ đạo rơi nhanh của nguyên liệu tạo động lực thị giác mạnh mẽ, chuẩn bị tâm lý cho chuỗi giật nhịp sắp tới.</p>
+                </div>
+                <div class="critique-col bad-col">
+                    <div class="critique-title">⚠️ ĐIỂM HẠN CHẾ / CẦN LƯU Ý (NHƯỢC ĐIỂM):</div>
+                    <p class="critique-text">Hành động thả hơi nhanh, nếu kết hợp thêm cú đẩy camera Dolly-in nhẹ sẽ làm tăng độ hoành tráng của cú thả.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐÚC KẾT (ACTIONABLE TAKEAWAY):</div>
+                <p class="takeaway-text">Dùng thao tác thả nguyên liệu từ trên cao để tạo đường dẫn chuyển động (Motion Lead) định hướng mắt người xem vào lòng chảo ở phân cảnh tiếp theo.</p>
+            </div>
+
+            
+        <div class="trans-section">
+            <div class="trans-label">⚡ SO SÁNH CHUYỂN CẢNH (TRANSITION 05 → 06): <span class="trans-tech-tag">Match Action rơi xuống đáy chảo cận cảnh</span></div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_05_to_06.jpg', 'Chuyển cảnh 05 → 06: Match Action rơi xuống đáy chảo cận cảnh')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_05_to_06.jpg" alt="Transition 05 to 06" loading="lazy">
+            </div>
+        </div>
+        
+        </div>
+    </article>
+    
+    <article class="shot-card" id="shot-06" data-start="6.4" data-end="7.97">
+        <div class="card-header">
+            <div class="shot-badge-group">
+                <span class="shot-number">PHÂN CẢNH 06</span>
+                <span class="shot-time-btn" onclick="jumpToTime(6.4)" title="Nhảy video tới mốc này">▶ 6.40s - 7.97s (1.57s)</span>
+            </div>
+            <div class="shot-tech-tags">
+                <span class="tech-tag"><i class="tag-icon">📍</i> Stove Skillet Station</span>
+                <span class="tech-tag"><i class="tag-icon">🎥</i> 50mm High-Angle + Digital Punch-in</span>
+                <span class="tech-tag"><i class="tag-icon">💡</i> Warm Overhead Spotlight tạo độ bóng bẩy của dầu ăn</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Zoom nhồi 3 cấp độ (Snap Zooms & Dynamic Slider): Mô phỏng gia nhiệt xèo xèo và đẩy cao nhịp điệu thị giác</h3>
+
+        <!-- 3-Image Strip -->
+        <div class="keyframe-strip">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_06_start.jpg', 'Shot 06 [Start 6.40s]')">
+                <div class="img-badge">START (6.40s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+            </div>
+            <div class="keyframe-col hero-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_06_mid.jpg', 'Shot 06 [Mid 7.19s]')">
+                <div class="img-badge hero-badge">KEYFRAME (MID)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_06_end.jpg', 'Shot 06 [End 7.97s]')">
+                <div class="img-badge">END (7.97s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+            </div>
+        </div>
+
+        <!-- 3 Pillars Analysis -->
+        <div class="shot-analysis-body">
+            <div class="analysis-block subject-block">
+                <div class="block-title">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN THỰC TẾ:</div>
+                <p class="block-text">Cận cảnh chảo tôm đang xèo xèo nóng hổi. Khung hình thực hiện 3 cú giật Zoom (Punch-in 1x -> 1.2x -> 1.4x) liên hoàn theo các từ 'TENSE', 'DYNAMIC' kết hợp thanh trượt UI Zoom đo mức nhiệt ở góc phải. Tôm chuyển từ sống sang chín đỏ rực.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col good-col">
+                    <div class="critique-title">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p class="critique-text">Sự đồng bộ tuyệt đối giữa cú giật khung hình (Snap Zoom), âm thanh xèo xèo (SFX), thanh slider UI hiện đại và sự biến đổi màu sắc thức ăn. Tạo nhịp tim thị giác (Visual Pulse) dồn dập.</p>
+                </div>
+                <div class="critique-col bad-col">
+                    <div class="critique-title">⚠️ ĐIỂM HẠN CHẾ / CẦN LƯU Ý (NHƯỢC ĐIỂM):</div>
+                    <p class="critique-text">Tôm trong chảo phân bổ hơi lệch sang phải, mép trái chảo hơi trống trải trong 0.3s đầu.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐÚC KẾT (ACTIONABLE TAKEAWAY):</div>
+                <p class="takeaway-text">Sử dụng Snap Zoom / Punch-in từng nấc kết hợp âm thanh SFX giòn giã để biến một cảnh tĩnh thành một cao trào thị giác đầy phấn khích.</p>
+            </div>
+
+            
+        <div class="trans-section">
+            <div class="trans-label">⚡ SO SÁNH CHUYỂN CẢNH (TRANSITION 06 → 07): <span class="trans-tech-tag">Hard Cut sang phân cảnh tung rau xà lách</span></div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_06_to_07.jpg', 'Chuyển cảnh 06 → 07: Hard Cut sang phân cảnh tung rau xà lách')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_06_to_07.jpg" alt="Transition 06 to 07" loading="lazy">
+            </div>
+        </div>
+        
+        </div>
+    </article>
+    
+    <article class="shot-card" id="shot-07" data-start="7.97" data-end="9.07">
+        <div class="card-header">
+            <div class="shot-badge-group">
+                <span class="shot-number">PHÂN CẢNH 07</span>
+                <span class="shot-time-btn" onclick="jumpToTime(7.97)" title="Nhảy video tới mốc này">▶ 7.97s - 9.07s (1.10s)</span>
+            </div>
+            <div class="shot-tech-tags">
+                <span class="tech-tag"><i class="tag-icon">📍</i> Plating Station</span>
+                <span class="tech-tag"><i class="tag-icon">🎥</i> 50mm 45° Angle</span>
+                <span class="tech-tag"><i class="tag-icon">💡</i> Diffused Soft Light làm mềm mại cấu trúc lá rau</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Mưa rau rocket rải đều mặt đĩa: Ẩn dụ 'Toss in fresh captions' nâng tầm trang trí món ăn</h3>
+
+        <!-- 3-Image Strip -->
+        <div class="keyframe-strip">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_07_start.jpg', 'Shot 07 [Start 7.97s]')">
+                <div class="img-badge">START (7.97s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+            </div>
+            <div class="keyframe-col hero-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_07_mid.jpg', 'Shot 07 [Mid 8.52s]')">
+                <div class="img-badge hero-badge">KEYFRAME (MID)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_07_end.jpg', 'Shot 07 [End 9.07s]')">
+                <div class="img-badge">END (9.07s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+            </div>
+        </div>
+
+        <!-- 3 Pillars Analysis -->
+        <div class="shot-analysis-body">
+            <div class="analysis-block subject-block">
+                <div class="block-title">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN THỰC TẾ:</div>
+                <p class="block-text">Cận cảnh bàn tay rải những lá rau rocket xanh tươi bồng bềnh rơi xuống đĩa tôm áp chảo nóng sốt. Chữ 'TOSS IN FRESH CAPTIONS' cùng nhãn 'CAPTIONS' dán trực tiếp trên lá rau bay phấp phới.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col good-col">
+                    <div class="critique-title">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p class="critique-text">Cảm giác chuyển động chậm mượt mà của lá rau xanh tương phản rực rỡ với màu tôm cam đỏ (Cặp màu bổ túc Complementary Green-Orange), tạo nên một bố cục thị giác kích thích vị giác cao độ.</p>
+                </div>
+                <div class="critique-col bad-col">
+                    <div class="critique-title">⚠️ ĐIỂM HẠN CHẾ / CẦN LƯU Ý (NHƯỢC ĐIỂM):</div>
+                    <p class="critique-text">Lá rau rơi dày che khuất một phần chi tiết những con tôm ngon nhất ở nửa dưới đĩa vào giây cuối.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐÚC KẾT (ACTIONABLE TAKEAWAY):</div>
+                <p class="takeaway-text">Phụ đề (Captions) trong video ngắn đóng vai trò như rau thơm trang trí món ăn: vừa làm đẹp khung hình vừa giúp người xem thưởng thức trọn vẹn nội dung ngay cả khi tắt tiếng.</p>
+            </div>
+
+            
+        <div class="trans-section">
+            <div class="trans-label">⚡ SO SÁNH CHUYỂN CẢNH (TRANSITION 07 → 08): <span class="trans-tech-tag">Hard Cut sang biểu cảm cắn rau duyên dáng</span></div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_07_to_08.jpg', 'Chuyển cảnh 07 → 08: Hard Cut sang biểu cảm cắn rau duyên dáng')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_07_to_08.jpg" alt="Transition 07 to 08" loading="lazy">
+            </div>
+        </div>
+        
+        </div>
+    </article>
+    
+    <article class="shot-card" id="shot-08" data-start="9.07" data-end="10.73">
+        <div class="card-header">
+            <div class="shot-badge-group">
+                <span class="shot-number">PHÂN CẢNH 08</span>
+                <span class="shot-time-btn" onclick="jumpToTime(9.07)" title="Nhảy video tới mốc này">▶ 9.07s - 10.73s (1.66s)</span>
+            </div>
+            <div class="shot-tech-tags">
+                <span class="tech-tag"><i class="tag-icon">📍</i> Studio Kitchen Foreground</span>
+                <span class="tech-tag"><i class="tag-icon">🎥</i> 50mm Eye-Level Center-Framed</span>
+                <span class="tech-tag"><i class="tag-icon">💡</i> Warm Key Light + Subtle Hair Light</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Cắn nhánh rau tạo khoảnh khắc duyên dáng (Character Quirk): Giữ chân bằng sự chân thật và hóm hỉnh</h3>
+
+        <!-- 3-Image Strip -->
+        <div class="keyframe-strip">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_08_start.jpg', 'Shot 08 [Start 9.07s]')">
+                <div class="img-badge">START (9.07s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+            </div>
+            <div class="keyframe-col hero-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_08_mid.jpg', 'Shot 08 [Mid 9.90s]')">
+                <div class="img-badge hero-badge">KEYFRAME (MID)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_08_end.jpg', 'Shot 08 [End 10.73s]')">
+                <div class="img-badge">END (10.73s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+            </div>
+        </div>
+
+        <!-- 3 Pillars Analysis -->
+        <div class="shot-analysis-body">
+            <div class="analysis-block subject-block">
+                <div class="block-title">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN THỰC TẾ:</div>
+                <p class="block-text">Cắt về nhân vật AL ở góc trung cận, anh nháy mắt ngậm nhánh rau xanh trên khóe môi với nụ cười tinh nghịch, tự tin. Dòng chữ 'BECAUSE YOU JUST NEED THEM' khẳng định tầm quan trọng của phụ đề.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col good-col">
+                    <div class="critique-title">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p class="critique-text">Chèn một khoảnh khắc tương tác con người (Human Touch) duyên dáng giúp xua tan cảm giác khô cứng của chuỗi B-roll kỹ thuật, xây dựng thương hiệu cá nhân gần gũi, đáng yêu.</p>
+                </div>
+                <div class="critique-col bad-col">
+                    <div class="critique-title">⚠️ ĐIỂM HẠN CHẾ / CẦN LƯU Ý (NHƯỢC ĐIỂM):</div>
+                    <p class="critique-text">Ánh sáng phản chiếu qua kính cam tạo bóng đổ nhẹ trên gò má phải, tuy nhiên không làm giảm tính thẩm mỹ của nét mặt.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐÚC KẾT (ACTIONABLE TAKEAWAY):</div>
+                <p class="takeaway-text">Đừng chỉ làm B-roll vô hồn, hãy đưa cá tính, biểu cảm tinh nghịch của bạn vào từng nhịp ngắt để khán giả yêu quý con người bạn.</p>
+            </div>
+
+            
+        <div class="trans-section">
+            <div class="trans-label">⚡ SO SÁNH CHUYỂN CẢNH (TRANSITION 08 → 09): <span class="trans-tech-tag">Cut sang phân cảnh chuẩn bị nước sốt</span></div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_08_to_09.jpg', 'Chuyển cảnh 08 → 09: Cut sang phân cảnh chuẩn bị nước sốt')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_08_to_09.jpg" alt="Transition 08 to 09" loading="lazy">
+            </div>
+        </div>
+        
+        </div>
+    </article>
+    
+    <article class="shot-card" id="shot-09" data-start="10.73" data-end="13.0">
+        <div class="card-header">
+            <div class="shot-badge-group">
+                <span class="shot-number">PHÂN CẢNH 09</span>
+                <span class="shot-time-btn" onclick="jumpToTime(10.73)" title="Nhảy video tới mốc này">▶ 10.73s - 13.00s (2.27s)</span>
+            </div>
+            <div class="shot-tech-tags">
+                <span class="tech-tag"><i class="tag-icon">📍</i> Bar Studio Mixing Table</span>
+                <span class="tech-tag"><i class="tag-icon">🎥</i> 35mm Medium Shot</span>
+                <span class="tech-tag"><i class="tag-icon">💡</i> Warm Tungsten Glow + Specular Crystal Reflections</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Khuấy sốt trong ly pha chế dán nhãn 'Analytics': Ẩn dụ bước hoàn thiện cuối cùng (The Final Touch)</h3>
+
+        <!-- 3-Image Strip -->
+        <div class="keyframe-strip">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_09_start.jpg', 'Shot 09 [Start 10.73s]')">
+                <div class="img-badge">START (10.73s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+            </div>
+            <div class="keyframe-col hero-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_09_mid.jpg', 'Shot 09 [Mid 11.87s]')">
+                <div class="img-badge hero-badge">KEYFRAME (MID)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_09_end.jpg', 'Shot 09 [End 13.00s]')">
+                <div class="img-badge">END (13.00s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+            </div>
+        </div>
+
+        <!-- 3 Pillars Analysis -->
+        <div class="shot-analysis-body">
+            <div class="analysis-block subject-block">
+                <div class="block-title">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN THỰC TẾ:</div>
+                <p class="block-text">Nhân vật dùng thìa khuấy đều hỗn hợp nước sốt sóng sánh trong ly pha lê cắt vân kim cương mang nhãn 'ANALYTICS'. Lời thoại: 'The final touch: Add a result of analytics...'. Text: 'AND THE FINAL TOUCH: A DRIZZLE OF ANALYTICS'.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col good-col">
+                    <div class="critique-title">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p class="critique-text">Đạo cụ ly pha lê tán sắc ánh sáng lung linh tạo cảm giác sang trọng. Động tác khuấy tượng trưng cho việc tổng hợp, chắt lọc các chỉ số dữ liệu trước khi đưa ra quyết định tối ưu video.</p>
+                </div>
+                <div class="critique-col bad-col">
+                    <div class="critique-title">⚠️ ĐIỂM HẠN CHẾ / CẦN LƯU Ý (NHƯỢC ĐIỂM):</div>
+                    <p class="critique-text">Góc máy hơi thấp khiến khoảng trống phía trên đỉnh đầu nhân vật hơi rộng hơn tỷ lệ vàng tiêu chuẩn.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐÚC KẾT (ACTIONABLE TAKEAWAY):</div>
+                <p class="takeaway-text">Nâng tầm khái niệm số liệu phân tích khô khan thành 'thứ nước sốt thần thánh' - gia vị bí mật quyết định độ ngon của một sản phẩm sáng tạo.</p>
+            </div>
+
+            
+        <div class="trans-section">
+            <div class="trans-label">⚡ SO SÁNH CHUYỂN CẢNH (TRANSITION 09 → 10): <span class="trans-tech-tag">Cut cận cảnh thìa rưới sốt lên đĩa</span></div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_09_to_10.jpg', 'Chuyển cảnh 09 → 10: Cut cận cảnh thìa rưới sốt lên đĩa')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_09_to_10.jpg" alt="Transition 09 to 10" loading="lazy">
+            </div>
+        </div>
+        
+        </div>
+    </article>
+    
+    <article class="shot-card" id="shot-10" data-start="13.0" data-end="15.83">
+        <div class="card-header">
+            <div class="shot-badge-group">
+                <span class="shot-number">PHÂN CẢNH 10</span>
+                <span class="shot-time-btn" onclick="jumpToTime(13.0)" title="Nhảy video tới mốc này">▶ 13.00s - 15.83s (2.83s)</span>
+            </div>
+            <div class="shot-tech-tags">
+                <span class="tech-tag"><i class="tag-icon">📍</i> Plating Hero Station</span>
+                <span class="tech-tag"><i class="tag-icon">🎥</i> 85mm Macro f/1.8 Shallow DOF</span>
+                <span class="tech-tag"><i class="tag-icon">💡</i> Directional Softbox tạo viền bóng bẩy cho dòng sốt</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Rưới nước sốt đậm đà lên đĩa tôm: Điểm nhấn thị giác đỉnh cao (Hero Food Shot) giải thích 'What works & what doesn't'</h3>
+
+        <!-- 3-Image Strip -->
+        <div class="keyframe-strip">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_10_start.jpg', 'Shot 10 [Start 13.00s]')">
+                <div class="img-badge">START (13.00s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+            </div>
+            <div class="keyframe-col hero-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_10_mid.jpg', 'Shot 10 [Mid 14.41s]')">
+                <div class="img-badge hero-badge">KEYFRAME (MID)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_10_end.jpg', 'Shot 10 [End 15.83s]')">
+                <div class="img-badge">END (15.83s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+            </div>
+        </div>
+
+        <!-- 3 Pillars Analysis -->
+        <div class="shot-analysis-body">
+            <div class="analysis-block subject-block">
+                <div class="block-title">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN THỰC TẾ:</div>
+                <p class="block-text">Cận cảnh chiếc thìa bạc nghiêng nhẹ, rưới từng giọt sốt nâu óng ả phủ đều lên đĩa tôm xà lách. Nhân vật AL ghé sát mắt quan sát chăm chú phía sau. Dòng chữ 'WHAT WORKS AND WHAT DOESN'T' hiện ra sắc nét.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col good-col">
+                    <div class="critique-title">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p class="critique-text">Độ sâu trường ảnh cực mỏng (Shallow DOF), dòng sốt sánh mịn kích thích trực giác thèm ăn (Visual Appetite). Sự kết hợp chiều sâu 3 lớp: Tiền cảnh (Thìa sốt) - Trung cảnh (Món ăn) - Hậu cảnh (Ánh mắt tập trung của tác giả).</p>
+                </div>
+                <div class="critique-col bad-col">
+                    <div class="critique-title">⚠️ ĐIỂM HẠN CHẾ / CẦN LƯU Ý (NHƯỢC ĐIỂM):</div>
+                    <p class="critique-text">Chiếc thìa chiếm diện tích tương đối lớn ở tiền cảnh bên trái, hơi che một phần đĩa tôm ở góc nhìn đầu tiên.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐÚC KẾT (ACTIONABLE TAKEAWAY):</div>
+                <p class="takeaway-text">Tạo ra cảnh 'Hero Shot' với độ sâu trường ảnh mỏng và chuyển động chất lỏng gợi cảm giác thỏa mãn để giữ chân người xem ở chặng cuối của video.</p>
+            </div>
+
+            
+        <div class="trans-section">
+            <div class="trans-label">⚡ SO SÁNH CHUYỂN CẢNH (TRANSITION 10 → 11): <span class="trans-tech-tag">Cut thẳng đứng xuống đĩa thành phẩm hoàn chỉnh</span></div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_10_to_11.jpg', 'Chuyển cảnh 10 → 11: Cut thẳng đứng xuống đĩa thành phẩm hoàn chỉnh')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_10_to_11.jpg" alt="Transition 10 to 11" loading="lazy">
+            </div>
+        </div>
+        
+        </div>
+    </article>
+    
+    <article class="shot-card" id="shot-11" data-start="15.83" data-end="16.47">
+        <div class="card-header">
+            <div class="shot-badge-group">
+                <span class="shot-number">PHÂN CẢNH 11</span>
+                <span class="shot-time-btn" onclick="jumpToTime(15.83)" title="Nhảy video tới mốc này">▶ 15.83s - 16.47s (0.64s)</span>
+            </div>
+            <div class="shot-tech-tags">
+                <span class="tech-tag"><i class="tag-icon">📍</i> Top-down Overhead Display</span>
+                <span class="tech-tag"><i class="tag-icon">🎥</i> 24mm Flat-Lay</span>
+                <span class="tech-tag"><i class="tag-icon">💡</i> Uniform Overhead Ring/Soft Light</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Chiêm ngưỡng đĩa thành phẩm hoàn mỹ (Top-down Beauty Shot): Mồi chuyển tiếp vào giao diện ứng dụng</h3>
+
+        <!-- 3-Image Strip -->
+        <div class="keyframe-strip">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_11_start.jpg', 'Shot 11 [Start 15.83s]')">
+                <div class="img-badge">START (15.83s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+            </div>
+            <div class="keyframe-col hero-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_11_mid.jpg', 'Shot 11 [Mid 16.15s]')">
+                <div class="img-badge hero-badge">KEYFRAME (MID)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_11_end.jpg', 'Shot 11 [End 16.47s]')">
+                <div class="img-badge">END (16.47s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+            </div>
+        </div>
+
+        <!-- 3 Pillars Analysis -->
+        <div class="shot-analysis-body">
+            <div class="analysis-block subject-block">
+                <div class="block-title">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN THỰC TẾ:</div>
+                <p class="block-text">Góc nhìn thẳng đứng Top-down 90 độ thu trọn đĩa tôm sốt salad hoàn thiện đặt giữa đĩa gốm đen sang trọng. Text: 'ALL OF IT HAPPENS'. Lời thoại chuyển giao: 'All of it happens in one tool: Submagic...'.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col good-col">
+                    <div class="critique-title">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p class="critique-text">Bố cục tròn hoàn mỹ đặt chính tâm, màu sắc cân bằng tuyệt đối giữa các nguyên liệu. Đóng vai trò như một cú chốt thị giác (Visual Payoff) thỏa mãn người xem sau cả quá trình chuẩn bị.</p>
+                </div>
+                <div class="critique-col bad-col">
+                    <div class="critique-title">⚠️ ĐIỂM HẠN CHẾ / CẦN LƯU Ý (NHƯỢC ĐIỂM):</div>
+                    <p class="critique-text">Thời lượng 0.64s rất ngắn, chỉ đóng vai trò làm cầu nối chuyển mạch (Bridge Shot).</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐÚC KẾT (ACTIONABLE TAKEAWAY):</div>
+                <p class="takeaway-text">Luôn có một khung hình thành phẩm trọn vẹn để đánh dấu điểm kết thúc của phần kể chuyện trước khi bước sang phần giới thiệu sản phẩm phần mềm.</p>
+            </div>
+
+            
+        <div class="trans-section">
+            <div class="trans-label">⚡ SO SÁNH CHUYỂN CẢNH (TRANSITION 11 → 12): <span class="trans-tech-tag">Seamless Zoom-in chuyển thẳng vào màn hình Submagic UI</span></div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_11_to_12.jpg', 'Chuyển cảnh 11 → 12: Seamless Zoom-in chuyển thẳng vào màn hình Submagic UI')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_11_to_12.jpg" alt="Transition 11 to 12" loading="lazy">
+            </div>
+        </div>
+        
+        </div>
+    </article>
+    
+    <article class="shot-card" id="shot-12" data-start="16.47" data-end="20.33">
+        <div class="card-header">
+            <div class="shot-badge-group">
+                <span class="shot-number">PHÂN CẢNH 12</span>
+                <span class="shot-time-btn" onclick="jumpToTime(16.47)" title="Nhảy video tới mốc này">▶ 16.47s - 20.33s (3.86s)</span>
+            </div>
+            <div class="shot-tech-tags">
+                <span class="tech-tag"><i class="tag-icon">📍</i> Digital SaaS Interface / UI Mockup</span>
+                <span class="tech-tag"><i class="tag-icon">🎥</i> Screen Capture 2.5D Tilt</span>
+                <span class="tech-tag"><i class="tag-icon">💡</i> High-Key Clean White UI Light</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Giao diện Submagic AI Editor: Trình diễn tính năng 3-trong-1 (AI Trimming, Trendy Captions & Pacing)</h3>
+
+        <!-- 3-Image Strip -->
+        <div class="keyframe-strip">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_12_start.jpg', 'Shot 12 [Start 16.47s]')">
+                <div class="img-badge">START (16.47s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+            </div>
+            <div class="keyframe-col hero-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_12_mid.jpg', 'Shot 12 [Mid 18.40s]')">
+                <div class="img-badge hero-badge">KEYFRAME (MID)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_12_end.jpg', 'Shot 12 [End 20.33s]')">
+                <div class="img-badge">END (20.33s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+            </div>
+        </div>
+
+        <!-- 3 Pillars Analysis -->
+        <div class="shot-analysis-body">
+            <div class="analysis-block subject-block">
+                <div class="block-title">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN THỰC TẾ:</div>
+                <p class="block-text">Màn hình trực quan lồng ghép video đĩa tôm vào chính giao diện biên tập của Submagic. Hiển thị sinh động các công cụ: Cắt tỉa AI tự động ('TO SAVE TIME'), Phụ đề động trendy, Hiệu ứng âm thanh và Bảng phân tích ('ANALYTICS').</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col good-col">
+                    <div class="critique-title">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p class="critique-text">Thiết kế Clean UI hiện đại, tông màu trắng - cam tương thích với trang phục nhân vật. Việc đưa chính video vừa quay vào làm mẫu demo tạo cảm giác tin cậy 100% ('Ăn chính món mình vừa nấu').</p>
+                </div>
+                <div class="critique-col bad-col">
+                    <div class="critique-title">⚠️ ĐIỂM HẠN CHẾ / CẦN LƯU Ý (NHƯỢC ĐIỂM):</div>
+                    <p class="critique-text">Sự chênh lệch độ sáng (Luminance Jump) giữa nền tối của cảnh trước và nền trắng UI có thể làm chói mắt nhẹ nếu người xem trong bóng tối.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐÚC KẾT (ACTIONABLE TAKEAWAY):</div>
+                <p class="takeaway-text">Demo sản phẩm phần mềm bằng chính tác phẩm bạn vừa tạo ra ngay trước mắt khán giả là cách thuyết phục khách hàng mạnh mẽ nhất.</p>
+            </div>
+
+            
+        <div class="trans-section">
+            <div class="trans-label">⚡ SO SÁNH CHUYỂN CẢNH (TRANSITION 12 → 13): <span class="trans-tech-tag">Cut cận cảnh màn hình Macbook Dashboard</span></div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_12_to_13.jpg', 'Chuyển cảnh 12 → 13: Cut cận cảnh màn hình Macbook Dashboard')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_12_to_13.jpg" alt="Transition 12 to 13" loading="lazy">
+            </div>
+        </div>
+        
+        </div>
+    </article>
+    
+    <article class="shot-card" id="shot-13" data-start="20.33" data-end="21.97">
+        <div class="card-header">
+            <div class="shot-badge-group">
+                <span class="shot-number">PHÂN CẢNH 13</span>
+                <span class="shot-time-btn" onclick="jumpToTime(20.33)" title="Nhảy video tới mốc này">▶ 20.33s - 21.97s (1.64s)</span>
+            </div>
+            <div class="shot-tech-tags">
+                <span class="tech-tag"><i class="tag-icon">📍</i> Macbook Pro Display Setup</span>
+                <span class="tech-tag"><i class="tag-icon">🎥</i> 50mm Straight-On</span>
+                <span class="tech-tag"><i class="tag-icon">💡</i> Subtle Keyboard Backlight + Studio Reflection</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Cận cảnh Dashboard Analytics trên Macbook: Chứng minh hiệu quả tăng trưởng View đa nền tảng</h3>
+
+        <!-- 3-Image Strip -->
+        <div class="keyframe-strip">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_13_start.jpg', 'Shot 13 [Start 20.33s]')">
+                <div class="img-badge">START (20.33s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy">
+            </div>
+            <div class="keyframe-col hero-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_13_mid.jpg', 'Shot 13 [Mid 21.15s]')">
+                <div class="img-badge hero-badge">KEYFRAME (MID)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy">
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_13_end.jpg', 'Shot 13 [End 21.97s]')">
+                <div class="img-badge">END (21.97s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_13_end.jpg" alt="Shot 13 End" loading="lazy">
+            </div>
+        </div>
+
+        <!-- 3 Pillars Analysis -->
+        <div class="shot-analysis-body">
+            <div class="analysis-block subject-block">
+                <div class="block-title">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN THỰC TẾ:</div>
+                <p class="block-text">Cận cảnh màn hình Macbook Pro hiển thị đồ thị đường cong tăng trưởng lượt xem (1.2K views trên TikTok, Instagram, YouTube, Facebook, LinkedIn) kèm các chỉ số tương tác xanh lá. Text: 'ANALYTICS TO KNOW WHAT TO FIX'.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col good-col">
+                    <div class="critique-title">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p class="critique-text">Khung cảnh thiết bị thực tế tạo cảm giác chân thực, chuyên nghiệp. Các con số và logo nền tảng rõ ràng tạo bằng chứng xã hội (Social Proof) đắt giá.</p>
+                </div>
+                <div class="critique-col bad-col">
+                    <div class="critique-title">⚠️ ĐIỂM HẠN CHẾ / CẦN LƯU Ý (NHƯỢC ĐIỂM):</div>
+                    <p class="critique-text">Góc nhìn trực diện hơi phẳng, nếu có chuyển động lướt máy nghiêng nhẹ (Pan/Tilt) sẽ tăng thêm tính điện ảnh cho giao diện.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐÚC KẾT (ACTIONABLE TAKEAWAY):</div>
+                <p class="takeaway-text">Đưa biểu đồ tăng trưởng thực tế vào video quảng cáo công cụ để kích hoạt khao khát đạt được kết quả tương tự từ người xem.</p>
+            </div>
+
+            
+        <div class="trans-section">
+            <div class="trans-label">⚡ SO SÁNH CHUYỂN CẢNH (TRANSITION 13 → 14): <span class="trans-tech-tag">Cut về nhân vật ngồi thưởng thức món ăn</span></div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_13_to_14.jpg', 'Chuyển cảnh 13 → 14: Cut về nhân vật ngồi thưởng thức món ăn')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/transitions/trans_13_to_14.jpg" alt="Transition 13 to 14" loading="lazy">
+            </div>
+        </div>
+        
+        </div>
+    </article>
+    
+    <article class="shot-card" id="shot-14" data-start="21.97" data-end="26.23">
+        <div class="card-header">
+            <div class="shot-badge-group">
+                <span class="shot-number">PHÂN CẢNH 14</span>
+                <span class="shot-time-btn" onclick="jumpToTime(21.97)" title="Nhảy video tới mốc này">▶ 21.97s - 26.23s (4.26s)</span>
+            </div>
+            <div class="shot-tech-tags">
+                <span class="tech-tag"><i class="tag-icon">📍</i> Studio Kitchen Dining Setup</span>
+                <span class="tech-tag"><i class="tag-icon">🎥</i> 35mm Eye-Level Medium Shot</span>
+                <span class="tech-tag"><i class="tag-icon">💡</i> Warm Key Light + Golden Rim Light sang trọng</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Thưởng thức món ăn & Kêu gọi hành động 'Comment COOK': Đòn bẩy tâm lý đảo ngược (Do It Yourself)</h3>
+
+        <!-- 3-Image Strip -->
+        <div class="keyframe-strip">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_14_start.jpg', 'Shot 14 [Start 21.97s]')">
+                <div class="img-badge">START (21.97s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_14_start.jpg" alt="Shot 14 Start" loading="lazy">
+            </div>
+            <div class="keyframe-col hero-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_14_mid.jpg', 'Shot 14 [Mid 24.10s]')">
+                <div class="img-badge hero-badge">KEYFRAME (MID)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_14_mid.jpg" alt="Shot 14 Mid" loading="lazy">
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_14_end.jpg', 'Shot 14 [End 26.23s]')">
+                <div class="img-badge">END (26.23s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_14_end.jpg" alt="Shot 14 End" loading="lazy">
+            </div>
+        </div>
+
+        <!-- 3 Pillars Analysis -->
+        <div class="shot-analysis-body">
+            <div class="analysis-block subject-block">
+                <div class="block-title">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN THỰC TẾ:</div>
+                <p class="block-text">Trở lại nhân vật AL ngồi tại bàn studio, cầm dĩa thưởng thức món tôm ngon lành. Anh nhìn thẳng vào ống kính và tung lời kêu gọi: 'Wanna try Submagic? Comment COOK. Wanna try the dish? Do it yourself.' Text nổi bật: 'WANNA TRY', 'COMMENT <<COOK>>'.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col good-col">
+                    <div class="critique-title">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p class="critique-text">Ánh mắt giao tiếp trực diện (Direct Eye Contact), phong thái tự tin và câu nói hóm hỉnh tạo kết bài trọn vẹn (Full Circle Ending). Từ khóa CTA 'COOK' gắn liền chủ đề video giúp tối ưu tỷ lệ comment tự động qua bot.</p>
+                </div>
+                <div class="critique-col bad-col">
+                    <div class="critique-title">⚠️ ĐIỂM HẠN CHẾ / CẦN LƯU Ý (NHƯỢC ĐIỂM):</div>
+                    <p class="critique-text">5 frame cuối cùng chuyển đen (Fade to black) hơi nhanh.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐÚC KẾT (ACTIONABLE TAKEAWAY):</div>
+                <p class="takeaway-text">Thiết kế từ khóa kêu gọi hành động (CTA Trigger) gắn liền với chủ đề video và khép lại bằng một câu đùa thông minh để thúc đẩy tương tác bình luận tự nhiên bùng nổ.</p>
+            </div>
+
+            
+        </div>
+    </article>
+    
+        </section>
+
+        <!-- Visual Grid View -->
+        <section class="visual-grid-container" id="gridViewContainer">
+            
+    <div class="grid-card" onclick="jumpToShot(1)">
+        <div class="grid-img-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+            <span class="grid-badge">SHOT 01 (0.00s)</span>
+        </div>
+        <div class="grid-info">
+            <div class="grid-headline">Tung hứng dưa leo dọc trục thị giác: Mồi câu trực quan (Visual Hook) đảo ngược kỳ vọng ẩm thực sang dựng phim</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(2)">
+        <div class="grid-img-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+            <span class="grid-badge">SHOT 02 (1.80s)</span>
+        </div>
+        <div class="grid-info">
+            <div class="grid-headline">Match Cut bắt dưa leo chuyển góc máy ngang: Duy trì xung lực chuyển động (Momentum Continuity) cực nhanh</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(3)">
+        <div class="grid-img-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+            <span class="grid-badge">SHOT 03 (2.27s)</span>
+        </div>
+        <div class="grid-info">
+            <div class="grid-headline">Ẩn dụ thị giác 'Cắt bỏ phần chết': Đặt Text 3D bám dính trên quả dưa leo mô phỏng thao tác loại bỏ khoảng lặng (Dead Air)</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(4)">
+        <div class="grid-img-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+            <span class="grid-badge">SHOT 04 (4.30s)</span>
+        </div>
+        <div class="grid-info">
+            <div class="grid-headline">Lưỡi dao xẻ dọc thớt bốc khói lạnh: Chơi chữ thị giác 'Keep cuts cool as a cucumber' kết hợp hiệu ứng khói CO2</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(5)">
+        <div class="grid-img-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+            <span class="grid-badge">SHOT 05 (5.63s)</span>
+        </div>
+        <div class="grid-info">
+            <div class="grid-headline">Thả tôm rơi tự do vào chảo nóng: Ẩn dụ tăng nhiệt độ kịch tính (Add Heat with Zooms & SFX)</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(6)">
+        <div class="grid-img-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+            <span class="grid-badge">SHOT 06 (6.40s)</span>
+        </div>
+        <div class="grid-info">
+            <div class="grid-headline">Zoom nhồi 3 cấp độ (Snap Zooms & Dynamic Slider): Mô phỏng gia nhiệt xèo xèo và đẩy cao nhịp điệu thị giác</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(7)">
+        <div class="grid-img-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+            <span class="grid-badge">SHOT 07 (7.97s)</span>
+        </div>
+        <div class="grid-info">
+            <div class="grid-headline">Mưa rau rocket rải đều mặt đĩa: Ẩn dụ 'Toss in fresh captions' nâng tầm trang trí món ăn</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(8)">
+        <div class="grid-img-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+            <span class="grid-badge">SHOT 08 (9.07s)</span>
+        </div>
+        <div class="grid-info">
+            <div class="grid-headline">Cắn nhánh rau tạo khoảnh khắc duyên dáng (Character Quirk): Giữ chân bằng sự chân thật và hóm hỉnh</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(9)">
+        <div class="grid-img-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+            <span class="grid-badge">SHOT 09 (10.73s)</span>
+        </div>
+        <div class="grid-info">
+            <div class="grid-headline">Khuấy sốt trong ly pha chế dán nhãn 'Analytics': Ẩn dụ bước hoàn thiện cuối cùng (The Final Touch)</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(10)">
+        <div class="grid-img-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+            <span class="grid-badge">SHOT 10 (13.00s)</span>
+        </div>
+        <div class="grid-info">
+            <div class="grid-headline">Rưới nước sốt đậm đà lên đĩa tôm: Điểm nhấn thị giác đỉnh cao (Hero Food Shot) giải thích 'What works & what doesn't'</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(11)">
+        <div class="grid-img-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+            <span class="grid-badge">SHOT 11 (15.83s)</span>
+        </div>
+        <div class="grid-info">
+            <div class="grid-headline">Chiêm ngưỡng đĩa thành phẩm hoàn mỹ (Top-down Beauty Shot): Mồi chuyển tiếp vào giao diện ứng dụng</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(12)">
+        <div class="grid-img-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+            <span class="grid-badge">SHOT 12 (16.47s)</span>
+        </div>
+        <div class="grid-info">
+            <div class="grid-headline">Giao diện Submagic AI Editor: Trình diễn tính năng 3-trong-1 (AI Trimming, Trendy Captions & Pacing)</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(13)">
+        <div class="grid-img-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_13_mid.jpg" alt="Shot 13" loading="lazy">
+            <span class="grid-badge">SHOT 13 (20.33s)</span>
+        </div>
+        <div class="grid-info">
+            <div class="grid-headline">Cận cảnh Dashboard Analytics trên Macbook: Chứng minh hiệu quả tăng trưởng View đa nền tảng</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(14)">
+        <div class="grid-img-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/extracted_shots/shot_14_mid.jpg" alt="Shot 14" loading="lazy">
+            <span class="grid-badge">SHOT 14 (21.97s)</span>
+        </div>
+        <div class="grid-info">
+            <div class="grid-headline">Thưởng thức món ăn & Kêu gọi hành động 'Comment COOK': Đòn bẩy tâm lý đảo ngược (Do It Yourself)</div>
+        </div>
+    </div>
+    
+        </section>
+    </main>
+</div>
+
+<!-- Drawer Menu -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()">
+    <div class="drawer-panel" onclick="event.stopPropagation()">
+        <div class="drawer-header">
+            <div class="drawer-title">Danh Sách 14 Phân Cảnh</div>
+            <button class="drawer-close-btn" onclick="closeDrawer()">✕</button>
+        </div>
+        <div class="drawer-list">
+            <a href="#shot-01" class="drawer-item" onclick="closeDrawer(); jumpToTime(0.0);"><span class="drawer-num">S01</span> <span class="drawer-text">Tung hứng dưa leo dọc trục thị giác: Mồi câu trực quan (Visual Hook) đảo ngược kỳ vọng ẩm thực sang dựng phim</span> <span class="drawer-time">0.0s</span></a>
+<a href="#shot-02" class="drawer-item" onclick="closeDrawer(); jumpToTime(1.8);"><span class="drawer-num">S02</span> <span class="drawer-text">Match Cut bắt dưa leo chuyển góc máy ngang: Duy trì xung lực chuyển động (Momentum Continuity) cực nhanh</span> <span class="drawer-time">1.8s</span></a>
+<a href="#shot-03" class="drawer-item" onclick="closeDrawer(); jumpToTime(2.27);"><span class="drawer-num">S03</span> <span class="drawer-text">Ẩn dụ thị giác 'Cắt bỏ phần chết': Đặt Text 3D bám dính trên quả dưa leo mô phỏng thao tác loại bỏ khoảng lặng (Dead Air)</span> <span class="drawer-time">2.3s</span></a>
+<a href="#shot-04" class="drawer-item" onclick="closeDrawer(); jumpToTime(4.3);"><span class="drawer-num">S04</span> <span class="drawer-text">Lưỡi dao xẻ dọc thớt bốc khói lạnh: Chơi chữ thị giác 'Keep cuts cool as a cucumber' kết hợp hiệu ứng khói CO2</span> <span class="drawer-time">4.3s</span></a>
+<a href="#shot-05" class="drawer-item" onclick="closeDrawer(); jumpToTime(5.63);"><span class="drawer-num">S05</span> <span class="drawer-text">Thả tôm rơi tự do vào chảo nóng: Ẩn dụ tăng nhiệt độ kịch tính (Add Heat with Zooms & SFX)</span> <span class="drawer-time">5.6s</span></a>
+<a href="#shot-06" class="drawer-item" onclick="closeDrawer(); jumpToTime(6.4);"><span class="drawer-num">S06</span> <span class="drawer-text">Zoom nhồi 3 cấp độ (Snap Zooms & Dynamic Slider): Mô phỏng gia nhiệt xèo xèo và đẩy cao nhịp điệu thị giác</span> <span class="drawer-time">6.4s</span></a>
+<a href="#shot-07" class="drawer-item" onclick="closeDrawer(); jumpToTime(7.97);"><span class="drawer-num">S07</span> <span class="drawer-text">Mưa rau rocket rải đều mặt đĩa: Ẩn dụ 'Toss in fresh captions' nâng tầm trang trí món ăn</span> <span class="drawer-time">8.0s</span></a>
+<a href="#shot-08" class="drawer-item" onclick="closeDrawer(); jumpToTime(9.07);"><span class="drawer-num">S08</span> <span class="drawer-text">Cắn nhánh rau tạo khoảnh khắc duyên dáng (Character Quirk): Giữ chân bằng sự chân thật và hóm hỉnh</span> <span class="drawer-time">9.1s</span></a>
+<a href="#shot-09" class="drawer-item" onclick="closeDrawer(); jumpToTime(10.73);"><span class="drawer-num">S09</span> <span class="drawer-text">Khuấy sốt trong ly pha chế dán nhãn 'Analytics': Ẩn dụ bước hoàn thiện cuối cùng (The Final Touch)</span> <span class="drawer-time">10.7s</span></a>
+<a href="#shot-10" class="drawer-item" onclick="closeDrawer(); jumpToTime(13.0);"><span class="drawer-num">S10</span> <span class="drawer-text">Rưới nước sốt đậm đà lên đĩa tôm: Điểm nhấn thị giác đỉnh cao (Hero Food Shot) giải thích 'What works & what doesn't'</span> <span class="drawer-time">13.0s</span></a>
+<a href="#shot-11" class="drawer-item" onclick="closeDrawer(); jumpToTime(15.83);"><span class="drawer-num">S11</span> <span class="drawer-text">Chiêm ngưỡng đĩa thành phẩm hoàn mỹ (Top-down Beauty Shot): Mồi chuyển tiếp vào giao diện ứng dụng</span> <span class="drawer-time">15.8s</span></a>
+<a href="#shot-12" class="drawer-item" onclick="closeDrawer(); jumpToTime(16.47);"><span class="drawer-num">S12</span> <span class="drawer-text">Giao diện Submagic AI Editor: Trình diễn tính năng 3-trong-1 (AI Trimming, Trendy Captions & Pacing)</span> <span class="drawer-time">16.5s</span></a>
+<a href="#shot-13" class="drawer-item" onclick="closeDrawer(); jumpToTime(20.33);"><span class="drawer-num">S13</span> <span class="drawer-text">Cận cảnh Dashboard Analytics trên Macbook: Chứng minh hiệu quả tăng trưởng View đa nền tảng</span> <span class="drawer-time">20.3s</span></a>
+<a href="#shot-14" class="drawer-item" onclick="closeDrawer(); jumpToTime(21.97);"><span class="drawer-num">S14</span> <span class="drawer-text">Thưởng thức món ăn & Kêu gọi hành động 'Comment COOK': Đòn bẩy tâm lý đảo ngược (Do It Yourself)</span> <span class="drawer-time">22.0s</span></a>
+        </div>
+    </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <div class="lightbox-img-wrap" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Enlarged Frame">
+    </div>
+    <div class="lightbox-caption" id="lightboxCap"></div>
+</div>
+
+<script>
+const video = document.getElementById('mainVideo');
+const curTimeEl = document.getElementById('curTime');
+const durTimeEl = document.getElementById('durTime');
+const playBtn = document.getElementById('playBtn');
+const muteBtn = document.getElementById('muteBtn');
+
+// Video time update sync
+video.addEventListener('timeupdate', () => {
+    const cur = video.currentTime;
+    curTimeEl.textContent = cur.toFixed(2) + 's';
+    
+    // Highlight active card
+    const cards = document.querySelectorAll('.shot-card');
+    cards.forEach(card => {
+        const st = parseFloat(card.getAttribute('data-start'));
+        const en = parseFloat(card.getAttribute('data-end'));
+        if (cur >= st && cur <= en) {
+            card.classList.add('active-playing');
+        } else {
+            card.classList.remove('active-playing');
+        }
+    });
+});
+
+video.addEventListener('loadedmetadata', () => {
+    durTimeEl.textContent = video.duration.toFixed(2) + 's';
+});
+
+video.addEventListener('play', () => {
+    playBtn.textContent = '⏸ Pause';
+});
+
+video.addEventListener('pause', () => {
+    playBtn.textContent = '▶ Play';
+});
+
+function togglePlay() {
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
+}
+
+function toggleMute() {
+    video.muted = !video.muted;
+    muteBtn.textContent = video.muted ? '🔇 Đã tắt âm' : '🔊 Bật âm';
+}
+
+function setSpeed(speed, btn) {
+    video.playbackRate = speed;
+    document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+}
+
+function stepFrame(dir) {
+    video.pause();
+    const fps = 30.0;
+    video.currentTime = Math.max(0, Math.min(video.duration, video.currentTime + (dir / fps)));
+}
+
+function jumpToTime(seconds) {
+    video.currentTime = seconds;
+    video.play();
+}
+
+function jumpToShot(shotId) {
+    switchView('detail');
+    const target = document.getElementById('shot-' + String(shotId).padStart(2, '0'));
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const st = parseFloat(target.getAttribute('data-start'));
+        jumpToTime(st);
+    }
+}
+
+// View Switcher
+function switchView(mode) {
+    const detailContainer = document.getElementById('detailViewContainer');
+    const gridContainer = document.getElementById('gridViewContainer');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (mode === 'detail') {
+        detailContainer.style.display = 'flex';
+        gridContainer.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailContainer.style.display = 'none';
+        gridContainer.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Drawer Menu
+function openDrawer() {
+    document.getElementById('drawerOverlay').classList.add('open');
+}
+
+function closeDrawer() {
+    document.getElementById('drawerOverlay').classList.remove('open');
+}
+
+// Lightbox Darkroom
+function openLightbox(src, caption) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCap');
+    img.src = src;
+    cap.textContent = caption || '';
+    modal.classList.add('open');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('open');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+        closeDrawer();
+    }
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Đạo Diễn: Mùa Sứa Đỏ Hải Dương - @thodiahaiduongne</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Be+Vietnam+Pro:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        body: ['"Be Vietnam Pro"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fdf2f2',
+                            100: '#fde8e8',
+                            500: '#ef4444',
+                            600: '#dc2626',
+                            900: '#7f1d1d',
+                            accent: '#f97316'
+                        },
+                        dark: {
+                            900: '#0a0d14',
+                            800: '#111827',
+                            700: '#1f2937',
+                            600: '#374151'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.6); }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(239, 68, 68, 0.4); border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(239, 68, 68, 0.8); }
+        .glass-panel { background: rgba(17, 24, 39, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .shot-card.active { border-color: #ef4444; box-shadow: 0 0 25px rgba(239, 68, 68, 0.3); }
+    
+/* Author Instagram Direct Link Button */
+.author-ig-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(192, 132, 252, 0.12);
+    border: 1px solid rgba(192, 132, 252, 0.35);
+    color: #e879f9;
+    padding: 2px 8px 2px 6px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    vertical-align: middle;
+}
+.author-ig-badge:hover {
+    background: linear-gradient(135deg, rgba(192, 132, 252, 0.3), rgba(244, 63, 94, 0.3));
+    border-color: #f43f5e;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+}
+.author-ig-badge strong {
+    color: #fff;
+}
+.author-ig-badge .ig-ext-btn {
+    background: linear-gradient(135deg, #c084fc, #f43f5e);
+    color: #0b0f17;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: all 0.15s;
+    letter-spacing: 0.2px;
+}
+.author-ig-badge:hover .ig-ext-btn {
+    background: #ffffff;
+    color: #0b0f17;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body class="bg-[#080b11] text-slate-200 antialiased min-h-screen custom-scrollbar">
+
+    <!-- TOP NAV -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-white/10 px-4 lg:px-8 py-3.5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <a href="https://vietndj.github.io/scene.html" class="flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 transition-all border border-white/10">
+                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                <span>Cổng Điện Ảnh</span>
+            </a>
+            <div class="h-4 w-px bg-white/10 hidden sm:block"></div>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded bg-red-500/20 text-red-400 border border-red-500/30">TikTok Food Review</span>
+                    <h1 class="text-sm sm:text-base font-bold text-white tracking-tight truncate max-w-[200px] sm:max-w-md">Mùa Sứa Đỏ Hải Dương</h1>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center gap-2 sm:gap-3">
+            <!-- View Switcher -->
+            <div class="flex items-center bg-black/40 rounded-xl p-1 border border-white/10">
+                <button onclick="switchView('detail')" id="btn-detail-view" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-red-600 text-white transition-all">Storyboard Chi Tiết</button>
+                <button onclick="switchView('grid')" id="btn-grid-view" class="px-3 py-1.5 text-xs font-semibold rounded-lg text-slate-400 hover:text-white transition-all">Lưới Keyframes</button>
+            </div>
+            <!-- Drawer Toggle -->
+            <button onclick="toggleDrawer()" class="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 flex items-center gap-1.5 text-xs font-medium">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <span class="hidden md:inline">Mục Lục (15 Shots)</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER (DESKTOP SPLIT / MOBILE STACK) -->
+    <main class="max-w-7xl mx-auto px-4 lg:px-8 py-6">
+        
+        <!-- INTRO HERO BANNER -->
+        <section class="mb-8 rounded-2xl glass-panel p-6 border border-white/10 relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 w-80 h-80 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div>
+                    <div class="flex flex-wrap items-center gap-3 mb-2">
+                        <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-red-600 text-white">15 PHÂN CẢNH</span>
+                        <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-white/5 text-slate-300 border border-white/10">Thời lượng: 100.83s</span>
+                        <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-white/5 text-slate-300 border border-white/10">Kênh: @thodiahaiduongne</span>
+                        <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-white/5 text-slate-300 border border-white/10">Địa chỉ: 59 Mạc Thị Bưởi, TP Hải Dương</span>
+                    </div>
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-white mb-2">Bóc Tách Nghệ Thuật Kịch Bản Viral & Ngôn Ngữ Hình Ảnh Sứa Đỏ Hải Dương</h2>
+                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-3xl">
+                        Phân tích toàn diện cấu trúc 5 bước vàng (Challenge Hook ➔ Độ Hiếm Mùa Vụ ➔ Bày Biện & Hướng Dẫn Ăn Chuẩn ➔ Bùng Nổ Vị Giác & Social Proof ➔ FOMO Urgency CTA). Bóc tách 15 phân cảnh logic thị giác, đánh giá 2 chiều và bài học đạo diễn thực chiến.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 shrink-0">
+                    <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Mua%20Sua%20Do%20Hai%20Duong%20-%20%40thodiahaiduongne.mp4" target="_blank" download class="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs font-semibold border border-white/15 transition-all">
+                        <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Tải Video MP4
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENT GRID (LEFT: STICKY PLAYER | RIGHT: SHOTS LIST) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- LEFT COLUMN: STICKY VIDEO PLAYER & CONTROLS (5 COLS) -->
+            <div class="lg:col-span-5 lg:sticky lg:top-24 space-y-4">
+                <div class="rounded-2xl glass-panel p-4 border border-white/10 shadow-2xl overflow-hidden">
+                    <div class="relative aspect-[9/16] bg-black rounded-xl overflow-hidden border border-white/10 group">
+                        <video id="main-player" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Mua%20Sua%20Do%20Hai%20Duong%20-%20%40thodiahaiduongne.mp4" playsinline class="w-full h-full object-cover" preload="metadata"></video>
+                        
+                        <!-- Overlay Time Badge -->
+                        <div class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md border border-white/10 text-[11px] font-mono text-red-400 font-bold flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                            <span id="player-time">00:00.00</span>
+                        </div>
+                    </div>
+
+                    <!-- DIRECTOR CONTROLS -->
+                    <div class="mt-4 space-y-3">
+                        <!-- Progress Bar -->
+                        <div class="relative w-full h-2 bg-white/10 rounded-full overflow-hidden cursor-pointer" id="progress-bar-container" onclick="seekVideo(event)">
+                            <div id="progress-bar" class="h-full bg-gradient-to-r from-red-600 to-orange-500 w-0 transition-all duration-75"></div>
+                        </div>
+
+                        <!-- Buttons Row -->
+                        <div class="flex items-center justify-between gap-2">
+                            <div class="flex items-center gap-1.5">
+                                <button onclick="stepFrame(-1)" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono font-bold" title="Lùi 1 Frame">◀ 1F</button>
+                                <button onclick="togglePlay()" id="btn-play" class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-lg shadow-red-600/30">
+                                    <svg id="play-icon" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span id="play-text">Phát</span>
+                                </button>
+                                <button onclick="stepFrame(1)" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono font-bold" title="Tới 1 Frame">1F ▶</button>
+                            </div>
+                            <!-- Speed Select -->
+                            <div class="flex items-center gap-1">
+                                <span class="text-[11px] text-slate-400 font-medium">Tốc độ:</span>
+                                <div class="flex bg-black/40 rounded-lg p-0.5 border border-white/10 text-[11px] font-mono">
+                                    <button onclick="setSpeed(0.25)" class="px-2 py-0.5 rounded speed-btn hover:bg-white/10 text-slate-400">0.25x</button>
+                                    <button onclick="setSpeed(0.5)" class="px-2 py-0.5 rounded speed-btn hover:bg-white/10 text-slate-400">0.5x</button>
+                                    <button onclick="setSpeed(1.0)" class="px-2 py-0.5 rounded speed-btn bg-red-600 text-white font-bold">1x</button>
+                                    <button onclick="setSpeed(1.5)" class="px-2 py-0.5 rounded speed-btn hover:bg-white/10 text-slate-400">1.5x</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Active Shot Indicator -->
+                        <div id="active-shot-info" class="p-3 rounded-xl bg-black/40 border border-white/10 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                                <span class="text-xs font-bold text-white" id="active-shot-title">Shot 01: Hook Thách Thức Đi Ăn Theo Vần</span>
+                            </div>
+                            <span class="text-[11px] font-mono text-slate-400" id="active-shot-time">[0.00s - 11.30s]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: SHOTS STORYBOARD OR VISUAL GRID (7 COLS) -->
+            <div class="lg:col-span-7 space-y-6">
+                
+                <!-- DETAIL VIEW CONTAINER -->
+                <div id="view-detail" class="space-y-6">
+
+                    <!-- SHOT 01 CARD -->
+                    <article id="shot-1" class="shot-card rounded-2xl glass-panel p-5 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-200" data-st="0.0" data-et="11.3">
+                        
+                        <!-- CARD HEADER -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-mono font-bold">SHOT #01</span>
+                                <button onclick="jumpTo(0.0)" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono border border-white/10 hover:text-white transition-all">
+                                    <svg class="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span>0.00s - 11.30s (11.30s)</span>
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium">Medium Frontal Dialogue Shot • Ánh sáng tự nhiên trong phòng/ô tô</span>
+                        </div>
+
+                        <!-- SHOT HEADLINE (KEY VISUAL LOGIC) -->
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-4 leading-snug hover:text-red-400 cursor-pointer transition-colors" onclick="jumpTo(0.0)">
+                            Hook Thách Thức Đi Ăn Theo Vần: Kích Hoạt Tò Mò Bằng Đối Thoại Tự Nhiên & Chọn Vần 'ƯA'
+                        </h3>
+
+                        <!-- 3 KEYFRAMES STRIP (START - MID - END) -->
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_start.jpg', 'Shot 01 Start (0.00s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_start.jpg" alt="Shot 01 Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">Start 0.00s</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-red-500/40 ring-2 ring-red-500/20 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_mid.jpg', 'Shot 01 Mid Peak Frame')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_mid.jpg" alt="Shot 01 Mid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-red-600/80 backdrop-blur-sm text-[10px] font-mono text-white font-bold">Mid Peak</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_end.jpg', 'Shot 01 End (11.30s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_end.jpg" alt="Shot 01 End" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">End 11.30s</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 SEPARATE CONTENT BLOCKS -->
+                        <div class="space-y-3.5 text-xs sm:text-sm">
+                            
+                            <!-- BLOCK 1: SUBJECT & ACTION -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Mô Tả Đối Tượng & Diễn Biến</span>
+                                </div>
+                                <p class="text-slate-300 leading-relaxed pl-5">Hai bạn trẻ thách đố nhau chọn vần khó để đi ăn. Nhân vật chính thách chọn vần 'ƯA' -> bạn đối đáp chọn ngay món SỨA ĐỎ / SỨA BIỂN.</p>
+                            </div>
+
+                            <!-- BLOCK 2: 2-WAY COMPOSITION CRITIQUE -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span>Đánh Giá Bố Cục & Phê Bình Thị Giác 2 Chiều</span>
+                                </div>
+                                <div class="pl-5 space-y-2">
+                                    <p class="text-emerald-400 leading-relaxed"><span class="font-bold text-emerald-300">✅ Điểm sáng thị giác:</span> Mở đầu trực diện bằng format Thử thách (Challenge) đánh trúng tâm lý tò mò của khán giả Gen Z. Lối thoại tự nhiên, không gượng gạo, tạo cảm giác cuộc hội thoại đời thường chân thật.</p>
+                                    <p class="text-amber-400 leading-relaxed"><span class="font-bold text-amber-300">⚠️ Hạn chế / Điểm cần lưu ý:</span> Thời lượng đoạn hook thoại hơi dài (11.3s) so với chuẩn TikTok (<5s). Có thể cắt gọn hơn để đẩy cảnh sứa đỏ lên sớm hơn.</p>
+                                </div>
+                            </div>
+
+                            <!-- BLOCK 3: ACTIONABLE TAKEAWAY -->
+                            <div class="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-red-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Bài Học Thực Chiến Cho Creator</span>
+                                </div>
+                                <p class="text-red-200 leading-relaxed pl-5 font-medium">Dùng format 'Thách đố theo vần/theo chữ cái' là công thức vàng để biến một video review ẩm thực quen thuộc thành một trò chơi tương tác cuốn hút người xem từ giây đầu tiên.</p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- SHOT 02 CARD -->
+                    <article id="shot-2" class="shot-card rounded-2xl glass-panel p-5 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-200" data-st="11.33" data-et="13.07">
+                        
+                        <!-- CARD HEADER -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-mono font-bold">SHOT #02</span>
+                                <button onclick="jumpTo(11.33)" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono border border-white/10 hover:text-white transition-all">
+                                    <svg class="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span>11.33s - 13.07s (1.74s)</span>
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium">POV / Medium Action Shot • Di chuyển ngoài đường</span>
+                        </div>
+
+                        <!-- SHOT HEADLINE (KEY VISUAL LOGIC) -->
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-4 leading-snug hover:text-red-400 cursor-pointer transition-colors" onclick="jumpTo(11.33)">
+                            Cắt Nối Di Chuyển (Travel Transition): Lên Xe Lao Ra Phố Tìm Quán Sứa
+                        </h3>
+
+                        <!-- 3 KEYFRAMES STRIP (START - MID - END) -->
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_02_start.jpg', 'Shot 02 Start (11.33s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_02_start.jpg" alt="Shot 02 Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">Start 11.33s</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-red-500/40 ring-2 ring-red-500/20 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_02_mid.jpg', 'Shot 02 Mid Peak Frame')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_02_mid.jpg" alt="Shot 02 Mid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-red-600/80 backdrop-blur-sm text-[10px] font-mono text-white font-bold">Mid Peak</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_02_end.jpg', 'Shot 02 End (13.07s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_02_end.jpg" alt="Shot 02 End" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">End 13.07s</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 SEPARATE CONTENT BLOCKS -->
+                        <div class="space-y-3.5 text-xs sm:text-sm">
+                            
+                            <!-- BLOCK 1: SUBJECT & ACTION -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Mô Tả Đối Tượng & Diễn Biến</span>
+                                </div>
+                                <p class="text-slate-300 leading-relaxed pl-5">Chuyển cảnh nhanh hai bạn lên xe máy/ô tô phóng ra phố đến thẳng tọa độ ăn sứa đỏ.</p>
+                            </div>
+
+                            <!-- BLOCK 2: 2-WAY COMPOSITION CRITIQUE -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span>Đánh Giá Bố Cục & Phê Bình Thị Giác 2 Chiều</span>
+                                </div>
+                                <div class="pl-5 space-y-2">
+                                    <p class="text-emerald-400 leading-relaxed"><span class="font-bold text-emerald-300">✅ Điểm sáng thị giác:</span> Cắt cảnh dứt khoát, giải quyết nhanh khâu di chuyển mà không làm loãng nhịp video.</p>
+                                    <p class="text-amber-400 leading-relaxed"><span class="font-bold text-amber-300">⚠️ Hạn chế / Điểm cần lưu ý:</span> Góc quay hơi rung lắc nhẹ do quay tay ngoài đường, chưa dùng ổn định hình ảnh.</p>
+                                </div>
+                            </div>
+
+                            <!-- BLOCK 3: ACTIONABLE TAKEAWAY -->
+                            <div class="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-red-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Bài Học Thực Chiến Cho Creator</span>
+                                </div>
+                                <p class="text-red-200 leading-relaxed pl-5 font-medium">Chỉ dùng 1-2 giây cho cảnh di chuyển để duy trì nhịp năng lượng (Momentum), tránh quay lê thê cảnh đi đường.</p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- SHOT 03 CARD -->
+                    <article id="shot-3" class="shot-card rounded-2xl glass-panel p-5 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-200" data-st="13.1" data-et="17.77">
+                        
+                        <!-- CARD HEADER -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-mono font-bold">SHOT #03</span>
+                                <button onclick="jumpTo(13.1)" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono border border-white/10 hover:text-white transition-all">
+                                    <svg class="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span>13.10s - 17.77s (4.67s)</span>
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium">High-Angle Close-Up • Chậu sứa đỏ vỉa hè</span>
+                        </div>
+
+                        <!-- SHOT HEADLINE (KEY VISUAL LOGIC) -->
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-4 leading-snug hover:text-red-400 cursor-pointer transition-colors" onclick="jumpTo(13.1)">
+                            Hero Visual Hook: Chậu Sứa Đỏ Mọng Nước & Nguồn Gốc Sứa Đỏ Hải Phòng Sang Hải Dương
+                        </h3>
+
+                        <!-- 3 KEYFRAMES STRIP (START - MID - END) -->
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_03_start.jpg', 'Shot 03 Start (13.10s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_03_start.jpg" alt="Shot 03 Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">Start 13.10s</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-red-500/40 ring-2 ring-red-500/20 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_03_mid.jpg', 'Shot 03 Mid Peak Frame')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_03_mid.jpg" alt="Shot 03 Mid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-red-600/80 backdrop-blur-sm text-[10px] font-mono text-white font-bold">Mid Peak</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_03_end.jpg', 'Shot 03 End (17.77s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_03_end.jpg" alt="Shot 03 End" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">End 17.77s</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 SEPARATE CONTENT BLOCKS -->
+                        <div class="space-y-3.5 text-xs sm:text-sm">
+                            
+                            <!-- BLOCK 1: SUBJECT & ACTION -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Mô Tả Đối Tượng & Diễn Biến</span>
+                                </div>
+                                <p class="text-slate-300 leading-relaxed pl-5">Máy quay dí sát vào chậu sứa đỏ au ngập trong nước, những tảng sứa núng nính, mọng nước được vớt lên.</p>
+                            </div>
+
+                            <!-- BLOCK 2: 2-WAY COMPOSITION CRITIQUE -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span>Đánh Giá Bố Cục & Phê Bình Thị Giác 2 Chiều</span>
+                                </div>
+                                <div class="pl-5 space-y-2">
+                                    <p class="text-emerald-400 leading-relaxed"><span class="font-bold text-emerald-300">✅ Điểm sáng thị giác:</span> Màu đỏ mọng nước của sứa tạo điểm nhấn thị giác cực mạnh (Visual Eyecandy), khiến người xem không thể rời mắt.</p>
+                                    <p class="text-amber-400 leading-relaxed"><span class="font-bold text-amber-300">⚠️ Hạn chế / Điểm cần lưu ý:</span> Góc quay hơi cao nên phần chậu nhôm bị lóa nhẹ ở mép viền.</p>
+                                </div>
+                            </div>
+
+                            <!-- BLOCK 3: ACTIONABLE TAKEAWAY -->
+                            <div class="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-red-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Bài Học Thực Chiến Cho Creator</span>
+                                </div>
+                                <p class="text-red-200 leading-relaxed pl-5 font-medium">Luôn đưa khung hình 'đắt giá nhất' của món ăn (Hero Shot) lên ngay sau khi đến quán để khóa chặt thị giác người xem.</p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- SHOT 04 CARD -->
+                    <article id="shot-4" class="shot-card rounded-2xl glass-panel p-5 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-200" data-st="17.8" data-et="20.23">
+                        
+                        <!-- CARD HEADER -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-mono font-bold">SHOT #04</span>
+                                <button onclick="jumpTo(17.8)" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono border border-white/10 hover:text-white transition-all">
+                                    <svg class="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span>17.80s - 20.23s (2.43s)</span>
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium">Over-The-Counter Medium Shot • Quầy hàng vỉa hè</span>
+                        </div>
+
+                        <!-- SHOT HEADLINE (KEY VISUAL LOGIC) -->
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-4 leading-snug hover:text-red-400 cursor-pointer transition-colors" onclick="jumpTo(17.8)">
+                            Tương Tác Chủ Quán: Xác Thực Gốc Gác Nghề Sứa Đỏ Truyền Thống
+                        </h3>
+
+                        <!-- 3 KEYFRAMES STRIP (START - MID - END) -->
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_04_start.jpg', 'Shot 04 Start (17.80s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_04_start.jpg" alt="Shot 04 Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">Start 17.80s</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-red-500/40 ring-2 ring-red-500/20 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_04_mid.jpg', 'Shot 04 Mid Peak Frame')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_04_mid.jpg" alt="Shot 04 Mid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-red-600/80 backdrop-blur-sm text-[10px] font-mono text-white font-bold">Mid Peak</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_04_end.jpg', 'Shot 04 End (20.23s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_04_end.jpg" alt="Shot 04 End" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">End 20.23s</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 SEPARATE CONTENT BLOCKS -->
+                        <div class="space-y-3.5 text-xs sm:text-sm">
+                            
+                            <!-- BLOCK 1: SUBJECT & ACTION -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Mô Tả Đối Tượng & Diễn Biến</span>
+                                </div>
+                                <p class="text-slate-300 leading-relaxed pl-5">Chủ quán niềm nở giải thích về nguồn gốc món sứa đỏ gốc Hải Phòng được mang về phục vụ người dân Hải Dương.</p>
+                            </div>
+
+                            <!-- BLOCK 2: 2-WAY COMPOSITION CRITIQUE -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span>Đánh Giá Bố Cục & Phê Bình Thị Giác 2 Chiều</span>
+                                </div>
+                                <div class="pl-5 space-y-2">
+                                    <p class="text-emerald-400 leading-relaxed"><span class="font-bold text-emerald-300">✅ Điểm sáng thị giác:</span> Âm thanh tiếng nói của chủ quán tạo độ tin cậy và tính xác thực cao (Authenticity).</p>
+                                    <p class="text-amber-400 leading-relaxed"><span class="font-bold text-amber-300">⚠️ Hạn chế / Điểm cần lưu ý:</span> Góc máy hơi lệch sang một bên do không gian vỉa hè chật hẹp.</p>
+                                </div>
+                            </div>
+
+                            <!-- BLOCK 3: ACTIONABLE TAKEAWAY -->
+                            <div class="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-red-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Bài Học Thực Chiến Cho Creator</span>
+                                </div>
+                                <p class="text-red-200 leading-relaxed pl-5 font-medium">Lấy tiếng nói thật của người bán hàng (bằng chứng sống) giúp câu chuyện tăng 200% độ uy tín so với người review tự nói.</p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- SHOT 05 CARD -->
+                    <article id="shot-5" class="shot-card rounded-2xl glass-panel p-5 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-200" data-st="20.27" data-et="31.73">
+                        
+                        <!-- CARD HEADER -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-mono font-bold">SHOT #05</span>
+                                <button onclick="jumpTo(20.27)" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono border border-white/10 hover:text-white transition-all">
+                                    <svg class="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span>20.27s - 31.73s (11.46s)</span>
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium">Extreme Close-Up (Macro) • Tay cầm sứa vớt lên từ nước</span>
+                        </div>
+
+                        <!-- SHOT HEADLINE (KEY VISUAL LOGIC) -->
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-4 leading-snug hover:text-red-400 cursor-pointer transition-colors" onclick="jumpTo(20.27)">
+                            Bí Quyết Nghề Gia Truyền: Ngâm Vỏ Sú Vẹt Tạo Màu Đỏ Tự Nhiên & Độ Giòn Sần Sật
+                        </h3>
+
+                        <!-- 3 KEYFRAMES STRIP (START - MID - END) -->
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_05_start.jpg', 'Shot 05 Start (20.27s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_05_start.jpg" alt="Shot 05 Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">Start 20.27s</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-red-500/40 ring-2 ring-red-500/20 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_05_mid.jpg', 'Shot 05 Mid Peak Frame')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_05_mid.jpg" alt="Shot 05 Mid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-red-600/80 backdrop-blur-sm text-[10px] font-mono text-white font-bold">Mid Peak</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_05_end.jpg', 'Shot 05 End (31.73s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_05_end.jpg" alt="Shot 05 End" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">End 31.73s</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 SEPARATE CONTENT BLOCKS -->
+                        <div class="space-y-3.5 text-xs sm:text-sm">
+                            
+                            <!-- BLOCK 1: SUBJECT & ACTION -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Mô Tả Đối Tượng & Diễn Biến</span>
+                                </div>
+                                <p class="text-slate-300 leading-relaxed pl-5">Bóc tách kỹ thuật: Sứa biển sau khi đánh bắt phải ngâm ngay trong nước vỏ cây sú vẹt để thân sứa tiết nước, co lại giòn sần sật và chuyển sang màu đỏ tự nhiên.</p>
+                            </div>
+
+                            <!-- BLOCK 2: 2-WAY COMPOSITION CRITIQUE -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span>Đánh Giá Bố Cục & Phê Bình Thị Giác 2 Chiều</span>
+                                </div>
+                                <div class="pl-5 space-y-2">
+                                    <p class="text-emerald-400 leading-relaxed"><span class="font-bold text-emerald-300">✅ Điểm sáng thị giác:</span> Cung cấp giá trị tri thức ẩm thực độc đáo (Curiosity Gap) - giải thích cặn kẽ vì sao sứa lại có màu đỏ tự nhiên mà không phẩm màu.</p>
+                                    <p class="text-amber-400 leading-relaxed"><span class="font-bold text-amber-300">⚠️ Hạn chế / Điểm cần lưu ý:</span> Đoạn nói hơi dài, có thể xen kẽ thêm hình ảnh b-roll cây sú vẹt hoặc quy trình ngâm để trực quan hơn.</p>
+                                </div>
+                            </div>
+
+                            <!-- BLOCK 3: ACTIONABLE TAKEAWAY -->
+                            <div class="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-red-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Bài Học Thực Chiến Cho Creator</span>
+                                </div>
+                                <p class="text-red-200 leading-relaxed pl-5 font-medium">Kết hợp 'Kể chuyện văn hóa + Bí quyết chế biến' nâng tầm video từ review đồ ăn đơn thuần lên mức trải nghiệm văn hóa ẩm thực.</p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- SHOT 06 CARD -->
+                    <article id="shot-6" class="shot-card rounded-2xl glass-panel p-5 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-200" data-st="31.77" data-et="42.53">
+                        
+                        <!-- CARD HEADER -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-mono font-bold">SHOT #06</span>
+                                <button onclick="jumpTo(31.77)" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono border border-white/10 hover:text-white transition-all">
+                                    <svg class="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span>31.77s - 42.53s (10.76s)</span>
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium">Close-Up High-Angle • Đôi tay thái sứa trên thớt</span>
+                        </div>
+
+                        <!-- SHOT HEADLINE (KEY VISUAL LOGIC) -->
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-4 leading-snug hover:text-red-400 cursor-pointer transition-colors" onclick="jumpTo(31.77)">
+                            Kỹ Nghệ Dao Thớt 3 Thế Hệ: Nhát Cắt Dao Tre Thoăn Thoắt & Độ Hiếm Mùa Vụ
+                        </h3>
+
+                        <!-- 3 KEYFRAMES STRIP (START - MID - END) -->
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_06_start.jpg', 'Shot 06 Start (31.77s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_06_start.jpg" alt="Shot 06 Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">Start 31.77s</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-red-500/40 ring-2 ring-red-500/20 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_06_mid.jpg', 'Shot 06 Mid Peak Frame')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_06_mid.jpg" alt="Shot 06 Mid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-red-600/80 backdrop-blur-sm text-[10px] font-mono text-white font-bold">Mid Peak</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_06_end.jpg', 'Shot 06 End (42.53s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_06_end.jpg" alt="Shot 06 End" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">End 42.53s</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 SEPARATE CONTENT BLOCKS -->
+                        <div class="space-y-3.5 text-xs sm:text-sm">
+                            
+                            <!-- BLOCK 1: SUBJECT & ACTION -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Mô Tả Đối Tượng & Diễn Biến</span>
+                                </div>
+                                <p class="text-slate-300 leading-relaxed pl-5">Chủ quán thái sứa thoăn thoắt từng miếng vuông vức, nhấn mạnh gia đình 3 thế hệ làm sứa và 1 năm chỉ có duy nhất 1 mùa vụ sứa đỏ (tháng 3-5 âm lịch).</p>
+                            </div>
+
+                            <!-- BLOCK 2: 2-WAY COMPOSITION CRITIQUE -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span>Đánh Giá Bố Cục & Phê Bình Thị Giác 2 Chiều</span>
+                                </div>
+                                <div class="pl-5 space-y-2">
+                                    <p class="text-emerald-400 leading-relaxed"><span class="font-bold text-emerald-300">✅ Điểm sáng thị giác:</span> Âm thanh dao thớt và hình ảnh thái sứa thoăn thoắt tạo hiệu ứng kích thích vị giác cực mạnh.</p>
+                                    <p class="text-amber-400 leading-relaxed"><span class="font-bold text-amber-300">⚠️ Hạn chế / Điểm cần lưu ý:</span> Cần thêm góc quay cận macro hơn vào từng thớ thịt sứa khi tách ra.</p>
+                                </div>
+                            </div>
+
+                            <!-- BLOCK 3: ACTIONABLE TAKEAWAY -->
+                            <div class="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-red-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Bài Học Thực Chiến Cho Creator</span>
+                                </div>
+                                <p class="text-red-200 leading-relaxed pl-5 font-medium">Tạo hiệu ứng 'Khan hiếm mùa vụ' (Seasonal FOMO: 1 năm chỉ có 1 lần) thúc giục người xem phải lập tức lên lịch đi ăn ngay.</p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- SHOT 07 CARD -->
+                    <article id="shot-7" class="shot-card rounded-2xl glass-panel p-5 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-200" data-st="42.57" data-et="44.7">
+                        
+                        <!-- CARD HEADER -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-mono font-bold">SHOT #07</span>
+                                <button onclick="jumpTo(42.57)" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono border border-white/10 hover:text-white transition-all">
+                                    <svg class="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span>42.57s - 44.70s (2.13s)</span>
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium">Frontal Medium Shot • Nhân vật ngồi tại bàn ăn vỉa hè</span>
+                        </div>
+
+                        <!-- SHOT HEADLINE (KEY VISUAL LOGIC) -->
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-4 leading-snug hover:text-red-400 cursor-pointer transition-colors" onclick="jumpTo(42.57)">
+                            Chủ Thể Giới Thiệu Trực Diện: 'Hé-lô Mình Là Huy' Tái Khẳng Định Thương Hiệu Kênh
+                        </h3>
+
+                        <!-- 3 KEYFRAMES STRIP (START - MID - END) -->
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_07_start.jpg', 'Shot 07 Start (42.57s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_07_start.jpg" alt="Shot 07 Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">Start 42.57s</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-red-500/40 ring-2 ring-red-500/20 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_07_mid.jpg', 'Shot 07 Mid Peak Frame')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_07_mid.jpg" alt="Shot 07 Mid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-red-600/80 backdrop-blur-sm text-[10px] font-mono text-white font-bold">Mid Peak</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_07_end.jpg', 'Shot 07 End (44.70s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_07_end.jpg" alt="Shot 07 End" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">End 44.70s</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 SEPARATE CONTENT BLOCKS -->
+                        <div class="space-y-3.5 text-xs sm:text-sm">
+                            
+                            <!-- BLOCK 1: SUBJECT & ACTION -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Mô Tả Đối Tượng & Diễn Biến</span>
+                                </div>
+                                <p class="text-slate-300 leading-relaxed pl-5">Nhân vật Huy mỉm cười chào khán giả, kết nối trực diện bằng ánh mắt vào ống kính.</p>
+                            </div>
+
+                            <!-- BLOCK 2: 2-WAY COMPOSITION CRITIQUE -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span>Đánh Giá Bố Cục & Phê Bình Thị Giác 2 Chiều</span>
+                                </div>
+                                <div class="pl-5 space-y-2">
+                                    <p class="text-emerald-400 leading-relaxed"><span class="font-bold text-emerald-300">✅ Điểm sáng thị giác:</span> Cú chào thương hiệu tạo sự nhận diện quen thuộc cho kênh Thổ Địa Hải Dương.</p>
+                                    <p class="text-amber-400 leading-relaxed"><span class="font-bold text-amber-300">⚠️ Hạn chế / Điểm cần lưu ý:</span> Đặt màn chào ở giây thứ 42 là hơi muộn so với cấu trúc video ngắn thông thường.</p>
+                                </div>
+                            </div>
+
+                            <!-- BLOCK 3: ACTIONABLE TAKEAWAY -->
+                            <div class="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-red-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Bài Học Thực Chiến Cho Creator</span>
+                                </div>
+                                <p class="text-red-200 leading-relaxed pl-5 font-medium">Định vị bản thân là 'người bạn bản địa dẫn đường' giúp khán giả tin tưởng hoàn toàn vào các đề xuất quán xá.</p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- SHOT 08 CARD -->
+                    <article id="shot-8" class="shot-card rounded-2xl glass-panel p-5 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-200" data-st="44.73" data-et="47.23">
+                        
+                        <!-- CARD HEADER -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-mono font-bold">SHOT #08</span>
+                                <button onclick="jumpTo(44.73)" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono border border-white/10 hover:text-white transition-all">
+                                    <svg class="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span>44.73s - 47.23s (2.50s)</span>
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium">Medium Chest Shot • Biểu cảm hào hứng</span>
+                        </div>
+
+                        <!-- SHOT HEADLINE (KEY VISUAL LOGIC) -->
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-4 leading-snug hover:text-red-400 cursor-pointer transition-colors" onclick="jumpTo(44.73)">
+                            Bắt Trend Cơn Sốt Mạng Xã Hội: Cơn Sốt Sứa Đỏ Lan Rộng Khắp Nơi
+                        </h3>
+
+                        <!-- 3 KEYFRAMES STRIP (START - MID - END) -->
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_08_start.jpg', 'Shot 08 Start (44.73s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_08_start.jpg" alt="Shot 08 Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">Start 44.73s</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-red-500/40 ring-2 ring-red-500/20 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_08_mid.jpg', 'Shot 08 Mid Peak Frame')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_08_mid.jpg" alt="Shot 08 Mid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-red-600/80 backdrop-blur-sm text-[10px] font-mono text-white font-bold">Mid Peak</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_08_end.jpg', 'Shot 08 End (47.23s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_08_end.jpg" alt="Shot 08 End" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">End 47.23s</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 SEPARATE CONTENT BLOCKS -->
+                        <div class="space-y-3.5 text-xs sm:text-sm">
+                            
+                            <!-- BLOCK 1: SUBJECT & ACTION -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Mô Tả Đối Tượng & Diễn Biến</span>
+                                </div>
+                                <p class="text-slate-300 leading-relaxed pl-5">Nhân vật phân tích lý do vì sao mấy hôm nay mạng xã hội lại phát sốt vì món sứa biển này.</p>
+                            </div>
+
+                            <!-- BLOCK 2: 2-WAY COMPOSITION CRITIQUE -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span>Đánh Giá Bố Cục & Phê Bình Thị Giác 2 Chiều</span>
+                                </div>
+                                <div class="pl-5 space-y-2">
+                                    <p class="text-emerald-400 leading-relaxed"><span class="font-bold text-emerald-300">✅ Điểm sáng thị giác:</span> Móc nối nội dung vào dòng chảy xu hướng chung của mạng xã hội (Trend Jacking).</p>
+                                    <p class="text-amber-400 leading-relaxed"><span class="font-bold text-amber-300">⚠️ Hạn chế / Điểm cần lưu ý:</span> Không có text overlay minh họa trend màn hình điện thoại.</p>
+                                </div>
+                            </div>
+
+                            <!-- BLOCK 3: ACTIONABLE TAKEAWAY -->
+                            <div class="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-red-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Bài Học Thực Chiến Cho Creator</span>
+                                </div>
+                                <p class="text-red-200 leading-relaxed pl-5 font-medium">Tận dụng hiệu ứng đám đông để củng cố lý do vì sao khán giả không thể bỏ qua món ăn này.</p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- SHOT 09 CARD -->
+                    <article id="shot-9" class="shot-card rounded-2xl glass-panel p-5 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-200" data-st="47.27" data-et="51.6">
+                        
+                        <!-- CARD HEADER -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-mono font-bold">SHOT #09</span>
+                                <button onclick="jumpTo(47.27)" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono border border-white/10 hover:text-white transition-all">
+                                    <svg class="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span>47.27s - 51.60s (4.33s)</span>
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium">High-Angle 45° Flatlay Shot • Mâm đồ ăn đầy đủ</span>
+                        </div>
+
+                        <!-- SHOT HEADLINE (KEY VISUAL LOGIC) -->
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-4 leading-snug hover:text-red-400 cursor-pointer transition-colors" onclick="jumpTo(47.27)">
+                            Bày Mâm Đầy Đủ: Định Giá 40k Suất Sứa & Bộ Topping Hoàn Chỉnh
+                        </h3>
+
+                        <!-- 3 KEYFRAMES STRIP (START - MID - END) -->
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_09_start.jpg', 'Shot 09 Start (47.27s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_09_start.jpg" alt="Shot 09 Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">Start 47.27s</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-red-500/40 ring-2 ring-red-500/20 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_09_mid.jpg', 'Shot 09 Mid Peak Frame')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_09_mid.jpg" alt="Shot 09 Mid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-red-600/80 backdrop-blur-sm text-[10px] font-mono text-white font-bold">Mid Peak</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_09_end.jpg', 'Shot 09 End (51.60s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_09_end.jpg" alt="Shot 09 End" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">End 51.60s</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 SEPARATE CONTENT BLOCKS -->
+                        <div class="space-y-3.5 text-xs sm:text-sm">
+                            
+                            <!-- BLOCK 1: SUBJECT & ACTION -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Mô Tả Đối Tượng & Diễn Biến</span>
+                                </div>
+                                <p class="text-slate-300 leading-relaxed pl-5">Giới thiệu chi tiết giá cả: 1 đĩa sứa 40k, thêm đậu rán vàng & cùi dừa thái mỏng 15k, rau thơm tía tô kinh giới ngập tràn.</p>
+                            </div>
+
+                            <!-- BLOCK 2: 2-WAY COMPOSITION CRITIQUE -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span>Đánh Giá Bố Cục & Phê Bình Thị Giác 2 Chiều</span>
+                                </div>
+                                <div class="pl-5 space-y-2">
+                                    <p class="text-emerald-400 leading-relaxed"><span class="font-bold text-emerald-300">✅ Điểm sáng thị giác:</span> Minh bạch giá cả ngay lập tức giúp người xem tính toán hầu bao và tăng khả năng ra quyết định ghé ăn.</p>
+                                    <p class="text-amber-400 leading-relaxed"><span class="font-bold text-amber-300">⚠️ Hạn chế / Điểm cần lưu ý:</span> Mặt bàn inox phản chiếu hơi chói một chút ở góc dưới.</p>
+                                </div>
+                            </div>
+
+                            <!-- BLOCK 3: ACTIONABLE TAKEAWAY -->
+                            <div class="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-red-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Bài Học Thực Chiến Cho Creator</span>
+                                </div>
+                                <p class="text-red-200 leading-relaxed pl-5 font-medium">Nêu giá tiền cụ thể + hình ảnh toàn cảnh mâm đồ ăn là thông tin đắt giá nhất trong video review ẩm thực đường phố.</p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- SHOT 10 CARD -->
+                    <article id="shot-10" class="shot-card rounded-2xl glass-panel p-5 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-200" data-st="51.63" data-et="54.8">
+                        
+                        <!-- CARD HEADER -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-mono font-bold">SHOT #10</span>
+                                <button onclick="jumpTo(51.63)" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono border border-white/10 hover:text-white transition-all">
+                                    <svg class="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span>51.63s - 54.80s (3.17s)</span>
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium">Close-Up POV • Bát mắm tôm đánh chanh sủi bọt</span>
+                        </div>
+
+                        <!-- SHOT HEADLINE (KEY VISUAL LOGIC) -->
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-4 leading-snug hover:text-red-400 cursor-pointer transition-colors" onclick="jumpTo(51.63)">
+                            Linh Hồn Nước Chấm: Đánh Bát Mắm Tôm Sủi Bọt Bông Trắng Điểm Nút Hương Vị
+                        </h3>
+
+                        <!-- 3 KEYFRAMES STRIP (START - MID - END) -->
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_10_start.jpg', 'Shot 10 Start (51.63s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_10_start.jpg" alt="Shot 10 Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">Start 51.63s</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-red-500/40 ring-2 ring-red-500/20 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_10_mid.jpg', 'Shot 10 Mid Peak Frame')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_10_mid.jpg" alt="Shot 10 Mid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-red-600/80 backdrop-blur-sm text-[10px] font-mono text-white font-bold">Mid Peak</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_10_end.jpg', 'Shot 10 End (54.80s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_10_end.jpg" alt="Shot 10 End" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">End 54.80s</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 SEPARATE CONTENT BLOCKS -->
+                        <div class="space-y-3.5 text-xs sm:text-sm">
+                            
+                            <!-- BLOCK 1: SUBJECT & ACTION -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Mô Tả Đối Tượng & Diễn Biến</span>
+                                </div>
+                                <p class="text-slate-300 leading-relaxed pl-5">Bàn tay vắt chanh, ớt tươi và dùng đũa đánh mắm tôm sủi bọt trắng mịn thơm nức.</p>
+                            </div>
+
+                            <!-- BLOCK 2: 2-WAY COMPOSITION CRITIQUE -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span>Đánh Giá Bố Cục & Phê Bình Thị Giác 2 Chiều</span>
+                                </div>
+                                <div class="pl-5 space-y-2">
+                                    <p class="text-emerald-400 leading-relaxed"><span class="font-bold text-emerald-300">✅ Điểm sáng thị giác:</span> Góc quay cận cảnh đánh mắm tôm kích thích tuyến nước bọt cực mạnh của người xem Việt Nam.</p>
+                                    <p class="text-amber-400 leading-relaxed"><span class="font-bold text-amber-300">⚠️ Hạn chế / Điểm cần lưu ý:</span> Chưa có hiệu ứng âm thanh ASMR tiếng đánh mắm tôm lách cách rõ nét.</p>
+                                </div>
+                            </div>
+
+                            <!-- BLOCK 3: ACTIONABLE TAKEAWAY -->
+                            <div class="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-red-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Bài Học Thực Chiến Cho Creator</span>
+                                </div>
+                                <p class="text-red-200 leading-relaxed pl-5 font-medium">Nước chấm là linh hồn của món cuốn Việt - quay cận cảnh pha chế nước chấm luôn là điểm rơi cảm xúc cao trào.</p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- SHOT 11 CARD -->
+                    <article id="shot-11" class="shot-card rounded-2xl glass-panel p-5 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-200" data-st="54.83" data-et="58.73">
+                        
+                        <!-- CARD HEADER -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-mono font-bold">SHOT #11</span>
+                                <button onclick="jumpTo(54.83)" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono border border-white/10 hover:text-white transition-all">
+                                    <svg class="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span>54.83s - 58.73s (3.90s)</span>
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium">First-Person POV Close-Up • Đôi bàn tay gói ghém</span>
+                        </div>
+
+                        <!-- SHOT HEADLINE (KEY VISUAL LOGIC) -->
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-4 leading-snug hover:text-red-400 cursor-pointer transition-colors" onclick="jumpTo(54.83)">
+                            Hướng Dẫn Cuốn Chuẩn Bài: Xếp Lớp Tía Tô + Dừa Bùi + Đậu Vàng + Sứa Đỏ Mọng
+                        </h3>
+
+                        <!-- 3 KEYFRAMES STRIP (START - MID - END) -->
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_11_start.jpg', 'Shot 11 Start (54.83s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_11_start.jpg" alt="Shot 11 Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">Start 54.83s</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-red-500/40 ring-2 ring-red-500/20 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_11_mid.jpg', 'Shot 11 Mid Peak Frame')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_11_mid.jpg" alt="Shot 11 Mid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-red-600/80 backdrop-blur-sm text-[10px] font-mono text-white font-bold">Mid Peak</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_11_end.jpg', 'Shot 11 End (58.73s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_11_end.jpg" alt="Shot 11 End" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">End 58.73s</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 SEPARATE CONTENT BLOCKS -->
+                        <div class="space-y-3.5 text-xs sm:text-sm">
+                            
+                            <!-- BLOCK 1: SUBJECT & ACTION -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Mô Tả Đối Tượng & Diễn Biến</span>
+                                </div>
+                                <p class="text-slate-300 leading-relaxed pl-5">Hướng dẫn từng bước cuốn: Đặt lá tía tô -> kinh giới -> miếng cùi dừa giòn bùi -> miếng đậu rán nướng -> miếng sứa đỏ mọng -> cuộn tròn chặt tay.</p>
+                            </div>
+
+                            <!-- BLOCK 2: 2-WAY COMPOSITION CRITIQUE -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span>Đánh Giá Bố Cục & Phê Bình Thị Giác 2 Chiều</span>
+                                </div>
+                                <div class="pl-5 space-y-2">
+                                    <p class="text-emerald-400 leading-relaxed"><span class="font-bold text-emerald-300">✅ Điểm sáng thị giác:</span> Góc nhìn POV ngôi thứ nhất giúp người xem có cảm giác như chính đôi tay mình đang tự cuốn.</p>
+                                    <p class="text-amber-400 leading-relaxed"><span class="font-bold text-amber-300">⚠️ Hạn chế / Điểm cần lưu ý:</span> Ánh sáng hậu cảnh hơi tối hơn so với chủ thể bàn tay.</p>
+                                </div>
+                            </div>
+
+                            <!-- BLOCK 3: ACTIONABLE TAKEAWAY -->
+                            <div class="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-red-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Bài Học Thực Chiến Cho Creator</span>
+                                </div>
+                                <p class="text-red-200 leading-relaxed pl-5 font-medium">Hướng dẫn thao tác 'How-To' biến video thụ động thành cẩm nang ẩm thực có giá trị lưu lại (Save/Bookmark) cao.</p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- SHOT 12 CARD -->
+                    <article id="shot-12" class="shot-card rounded-2xl glass-panel p-5 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-200" data-st="58.77" data-et="79.87">
+                        
+                        <!-- CARD HEADER -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-mono font-bold">SHOT #12</span>
+                                <button onclick="jumpTo(58.77)" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono border border-white/10 hover:text-white transition-all">
+                                    <svg class="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span>58.77s - 79.87s (21.10s)</span>
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium">Frontal Medium Close-Up • Thưởng thức món ăn</span>
+                        </div>
+
+                        <!-- SHOT HEADLINE (KEY VISUAL LOGIC) -->
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-4 leading-snug hover:text-red-400 cursor-pointer transition-colors" onclick="jumpTo(58.77)">
+                            Cao Trào Trải Nghiệm Vị Giác: Cắn Ngập Miệng & Phân Tích Đa Tầng Vị Giác Bùng Nổ
+                        </h3>
+
+                        <!-- 3 KEYFRAMES STRIP (START - MID - END) -->
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_12_start.jpg', 'Shot 12 Start (58.77s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_12_start.jpg" alt="Shot 12 Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">Start 58.77s</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-red-500/40 ring-2 ring-red-500/20 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_12_mid.jpg', 'Shot 12 Mid Peak Frame')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_12_mid.jpg" alt="Shot 12 Mid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-red-600/80 backdrop-blur-sm text-[10px] font-mono text-white font-bold">Mid Peak</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_12_end.jpg', 'Shot 12 End (79.87s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_12_end.jpg" alt="Shot 12 End" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">End 79.87s</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 SEPARATE CONTENT BLOCKS -->
+                        <div class="space-y-3.5 text-xs sm:text-sm">
+                            
+                            <!-- BLOCK 1: SUBJECT & ACTION -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Mô Tả Đối Tượng & Diễn Biến</span>
+                                </div>
+                                <p class="text-slate-300 leading-relaxed pl-5">Chấm đẫm cuộn sứa vào bát mắm tôm, đưa vào miệng cắn ngập chân răng (âm thanh giòn sần sật). Miêu tả: Sứa không có vị nhưng giòn mát như thạch, quyện với vị béo bùi ngậy của dừa và đậu, cay thơm nồng nàn của tía tô và mặn ngọt dậy mùi mắm tôm.</p>
+                            </div>
+
+                            <!-- BLOCK 2: 2-WAY COMPOSITION CRITIQUE -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span>Đánh Giá Bố Cục & Phê Bình Thị Giác 2 Chiều</span>
+                                </div>
+                                <div class="pl-5 space-y-2">
+                                    <p class="text-emerald-400 leading-relaxed"><span class="font-bold text-emerald-300">✅ Điểm sáng thị giác:</span> Biểu cảm chân thực, miêu tả chi tiết cảm giác xúc giác và vị giác (đa tầng vị giác) khiến người xem thèm thuồng.</p>
+                                    <p class="text-amber-400 leading-relaxed"><span class="font-bold text-amber-300">⚠️ Hạn chế / Điểm cần lưu ý:</span> Đoạn quay một góc máy kéo dài 21s hơi lâu, nên xen kẽ các cutaway cận cảnh nhai hoặc cận cảnh bát mắm tôm.</p>
+                                </div>
+                            </div>
+
+                            <!-- BLOCK 3: ACTIONABLE TAKEAWAY -->
+                            <div class="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-red-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Bài Học Thực Chiến Cho Creator</span>
+                                </div>
+                                <p class="text-red-200 leading-relaxed pl-5 font-medium">Tả vị món ăn phải bóc tách thành các giác quan: độ giòn (âm thanh) + độ béo bùi (vị giác) + mùi thơm (khứu giác) + màu sắc (thị giác).</p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- SHOT 13 CARD -->
+                    <article id="shot-13" class="shot-card rounded-2xl glass-panel p-5 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-200" data-st="79.9" data-et="92.47">
+                        
+                        <!-- CARD HEADER -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-mono font-bold">SHOT #13</span>
+                                <button onclick="jumpTo(79.9)" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono border border-white/10 hover:text-white transition-all">
+                                    <svg class="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span>79.90s - 92.47s (12.57s)</span>
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium">Wide Panning Shot • Không gian quán vỉa hè</span>
+                        </div>
+
+                        <!-- SHOT HEADLINE (KEY VISUAL LOGIC) -->
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-4 leading-snug hover:text-red-400 cursor-pointer transition-colors" onclick="jumpTo(79.9)">
+                            Bằng Chứng Xã Hội (Social Proof): Vỉa Hè Chật Kín Bàn Ghế & Các Cặp Đôi Nườm Nượp
+                        </h3>
+
+                        <!-- 3 KEYFRAMES STRIP (START - MID - END) -->
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_13_start.jpg', 'Shot 13 Start (79.90s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_13_start.jpg" alt="Shot 13 Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">Start 79.90s</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-red-500/40 ring-2 ring-red-500/20 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_13_mid.jpg', 'Shot 13 Mid Peak Frame')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_13_mid.jpg" alt="Shot 13 Mid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-red-600/80 backdrop-blur-sm text-[10px] font-mono text-white font-bold">Mid Peak</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_13_end.jpg', 'Shot 13 End (92.47s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_13_end.jpg" alt="Shot 13 End" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">End 92.47s</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 SEPARATE CONTENT BLOCKS -->
+                        <div class="space-y-3.5 text-xs sm:text-sm">
+                            
+                            <!-- BLOCK 1: SUBJECT & ACTION -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Mô Tả Đối Tượng & Diễn Biến</span>
+                                </div>
+                                <p class="text-slate-300 leading-relaxed pl-5">Lia máy quay ra không gian xung quanh: các dãy bàn kín chỗ, bạn bè trêu đùa nhau, các cặp đôi rủ nhau đi ăn sứa đỏ đông đúc.</p>
+                            </div>
+
+                            <!-- BLOCK 2: 2-WAY COMPOSITION CRITIQUE -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span>Đánh Giá Bố Cục & Phê Bình Thị Giác 2 Chiều</span>
+                                </div>
+                                <div class="pl-5 space-y-2">
+                                    <p class="text-emerald-400 leading-relaxed"><span class="font-bold text-emerald-300">✅ Điểm sáng thị giác:</span> Khung cảnh quán đông khách là bằng chứng xã hội thép chứng minh quán cực ngon và đắt hàng.</p>
+                                    <p class="text-amber-400 leading-relaxed"><span class="font-bold text-amber-300">⚠️ Hạn chế / Điểm cần lưu ý:</span> Góc lia máy hơi nhanh ở đoạn cuối.</p>
+                                </div>
+                            </div>
+
+                            <!-- BLOCK 3: ACTIONABLE TAKEAWAY -->
+                            <div class="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-red-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Bài Học Thực Chiến Cho Creator</span>
+                                </div>
+                                <p class="text-red-200 leading-relaxed pl-5 font-medium">Luôn chèn cảnh 'khách đông kín quán' để tăng uy tín và kích thích tâm lý tò mò của người xem.</p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- SHOT 14 CARD -->
+                    <article id="shot-14" class="shot-card rounded-2xl glass-panel p-5 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-200" data-st="92.5" data-et="98.47">
+                        
+                        <!-- CARD HEADER -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-mono font-bold">SHOT #14</span>
+                                <button onclick="jumpTo(92.5)" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono border border-white/10 hover:text-white transition-all">
+                                    <svg class="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span>92.50s - 98.47s (5.97s)</span>
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium">Medium Side Shot • Phỏng vấn khách ăn</span>
+                        </div>
+
+                        <!-- SHOT HEADLINE (KEY VISUAL LOGIC) -->
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-4 leading-snug hover:text-red-400 cursor-pointer transition-colors" onclick="jumpTo(92.5)">
+                            Phỏng Vấn Người Đi Đường: Sức Hút Không Thể Cưỡng Lại Khi Đi Ngang Quán
+                        </h3>
+
+                        <!-- 3 KEYFRAMES STRIP (START - MID - END) -->
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_14_start.jpg', 'Shot 14 Start (92.50s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_14_start.jpg" alt="Shot 14 Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">Start 92.50s</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-red-500/40 ring-2 ring-red-500/20 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_14_mid.jpg', 'Shot 14 Mid Peak Frame')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_14_mid.jpg" alt="Shot 14 Mid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-red-600/80 backdrop-blur-sm text-[10px] font-mono text-white font-bold">Mid Peak</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_14_end.jpg', 'Shot 14 End (98.47s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_14_end.jpg" alt="Shot 14 End" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">End 98.47s</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 SEPARATE CONTENT BLOCKS -->
+                        <div class="space-y-3.5 text-xs sm:text-sm">
+                            
+                            <!-- BLOCK 1: SUBJECT & ACTION -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Mô Tả Đối Tượng & Diễn Biến</span>
+                                </div>
+                                <p class="text-slate-300 leading-relaxed pl-5">Ghi lại lời khách hàng đi qua quán không kìm lòng được phải tấp xe vào ăn đĩa sứa đỏ.</p>
+                            </div>
+
+                            <!-- BLOCK 2: 2-WAY COMPOSITION CRITIQUE -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span>Đánh Giá Bố Cục & Phê Bình Thị Giác 2 Chiều</span>
+                                </div>
+                                <div class="pl-5 space-y-2">
+                                    <p class="text-emerald-400 leading-relaxed"><span class="font-bold text-emerald-300">✅ Điểm sáng thị giác:</span> Ý kiến người đi đường tạo tính khách quan và cảm giác gần gũi như người thật việc thật.</p>
+                                    <p class="text-amber-400 leading-relaxed"><span class="font-bold text-amber-300">⚠️ Hạn chế / Điểm cần lưu ý:</span> Chưa có mic cài áo cho khách nên tiếng đường phố hơi lấn át.</p>
+                                </div>
+                            </div>
+
+                            <!-- BLOCK 3: ACTIONABLE TAKEAWAY -->
+                            <div class="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-red-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Bài Học Thực Chiến Cho Creator</span>
+                                </div>
+                                <p class="text-red-200 leading-relaxed pl-5 font-medium">Phỏng vấn nhanh khách hàng tại quán giúp đa dạng hóa góc nhìn và tăng sức thuyết phục.</p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- SHOT 15 CARD -->
+                    <article id="shot-15" class="shot-card rounded-2xl glass-panel p-5 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-200" data-st="98.5" data-et="100.83">
+                        
+                        <!-- CARD HEADER -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-mono font-bold">SHOT #15</span>
+                                <button onclick="jumpTo(98.5)" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono border border-white/10 hover:text-white transition-all">
+                                    <svg class="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <span>98.50s - 100.83s (2.33s)</span>
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium">Frontal Medium Shot • Kêu gọi hành động</span>
+                        </div>
+
+                        <!-- SHOT HEADLINE (KEY VISUAL LOGIC) -->
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-4 leading-snug hover:text-red-400 cursor-pointer transition-colors" onclick="jumpTo(98.5)">
+                            Call To Action & Địa Chỉ Rõ Ràng: 59 Mạc Thị Bưởi (TP Hải Dương) - Đi Ngay Kẻo Hết Mùa
+                        </h3>
+
+                        <!-- 3 KEYFRAMES STRIP (START - MID - END) -->
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_15_start.jpg', 'Shot 15 Start (98.50s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_15_start.jpg" alt="Shot 15 Start" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">Start 98.50s</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-red-500/40 ring-2 ring-red-500/20 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_15_mid.jpg', 'Shot 15 Mid Peak Frame')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_15_mid.jpg" alt="Shot 15 Mid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-red-600/80 backdrop-blur-sm text-[10px] font-mono text-white font-bold">Mid Peak</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black/50 border border-white/10 group cursor-pointer" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_15_end.jpg', 'Shot 15 End (100.83s)')">
+                                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_15_end.jpg" alt="Shot 15 End" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-slate-300">End 100.83s</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 SEPARATE CONTENT BLOCKS -->
+                        <div class="space-y-3.5 text-xs sm:text-sm">
+                            
+                            <!-- BLOCK 1: SUBJECT & ACTION -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Mô Tả Đối Tượng & Diễn Biến</span>
+                                </div>
+                                <p class="text-slate-300 leading-relaxed pl-5">Chốt lại địa chỉ cụ thể: 59 Mạc Thị Bưởi, TP Hải Dương. Kêu gọi mọi người tranh thủ đi ăn ngay vì sứa đỏ chỉ bán trong thời gian ngắn.</p>
+                            </div>
+
+                            <!-- BLOCK 2: 2-WAY COMPOSITION CRITIQUE -->
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-300">
+                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span>Đánh Giá Bố Cục & Phê Bình Thị Giác 2 Chiều</span>
+                                </div>
+                                <div class="pl-5 space-y-2">
+                                    <p class="text-emerald-400 leading-relaxed"><span class="font-bold text-emerald-300">✅ Điểm sáng thị giác:</span> Cung cấp địa chỉ rõ ràng, chốt lời kêu gọi hành động kèm yếu tố thôi thúc (FOMO) mạnh mẽ.</p>
+                                    <p class="text-amber-400 leading-relaxed"><span class="font-bold text-amber-300">⚠️ Hạn chế / Điểm cần lưu ý:</span> Không có text đồ họa ghim địa chỉ nổi bật trên màn hình.</p>
+                                </div>
+                            </div>
+
+                            <!-- BLOCK 3: ACTIONABLE TAKEAWAY -->
+                            <div class="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-red-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    <span>Bài Học Thực Chiến Cho Creator</span>
+                                </div>
+                                <p class="text-red-200 leading-relaxed pl-5 font-medium">Phần kết video ẩm thực phải có 2 thứ: Địa chỉ chính xác + Lý do phải đi ngay hôm nay (Tính khan hiếm/Thời vụ).</p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- GRID VIEW CONTAINER (HIDDEN INITIALLY) -->
+                <div id="view-grid" class="hidden grid grid-cols-2 sm:grid-cols-3 gap-4">
+
+                    <div class="rounded-xl glass-panel p-3 border border-white/10 hover:border-red-500 transition-all cursor-pointer group" onclick="jumpTo(0.0); switchView('detail')">
+                        <div class="relative aspect-[9/16] rounded-lg overflow-hidden bg-black mb-2">
+                            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_mid.jpg" alt="Shot 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-mono font-bold">#01</span>
+                            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/70 text-slate-300 text-[10px] font-mono">11.3s</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white line-clamp-2">Hook Thách Thức Đi Ăn Theo Vần: Kích Hoạt Tò Mò Bằng Đối Thoại Tự Nhiên & Chọn Vần 'ƯA'</h4>
+                    </div>
+
+                    <div class="rounded-xl glass-panel p-3 border border-white/10 hover:border-red-500 transition-all cursor-pointer group" onclick="jumpTo(11.33); switchView('detail')">
+                        <div class="relative aspect-[9/16] rounded-lg overflow-hidden bg-black mb-2">
+                            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_02_mid.jpg" alt="Shot 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-mono font-bold">#02</span>
+                            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/70 text-slate-300 text-[10px] font-mono">1.7s</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white line-clamp-2">Cắt Nối Di Chuyển (Travel Transition): Lên Xe Lao Ra Phố Tìm Quán Sứa</h4>
+                    </div>
+
+                    <div class="rounded-xl glass-panel p-3 border border-white/10 hover:border-red-500 transition-all cursor-pointer group" onclick="jumpTo(13.1); switchView('detail')">
+                        <div class="relative aspect-[9/16] rounded-lg overflow-hidden bg-black mb-2">
+                            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_03_mid.jpg" alt="Shot 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-mono font-bold">#03</span>
+                            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/70 text-slate-300 text-[10px] font-mono">4.7s</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white line-clamp-2">Hero Visual Hook: Chậu Sứa Đỏ Mọng Nước & Nguồn Gốc Sứa Đỏ Hải Phòng Sang Hải Dương</h4>
+                    </div>
+
+                    <div class="rounded-xl glass-panel p-3 border border-white/10 hover:border-red-500 transition-all cursor-pointer group" onclick="jumpTo(17.8); switchView('detail')">
+                        <div class="relative aspect-[9/16] rounded-lg overflow-hidden bg-black mb-2">
+                            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_04_mid.jpg" alt="Shot 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-mono font-bold">#04</span>
+                            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/70 text-slate-300 text-[10px] font-mono">2.4s</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white line-clamp-2">Tương Tác Chủ Quán: Xác Thực Gốc Gác Nghề Sứa Đỏ Truyền Thống</h4>
+                    </div>
+
+                    <div class="rounded-xl glass-panel p-3 border border-white/10 hover:border-red-500 transition-all cursor-pointer group" onclick="jumpTo(20.27); switchView('detail')">
+                        <div class="relative aspect-[9/16] rounded-lg overflow-hidden bg-black mb-2">
+                            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_05_mid.jpg" alt="Shot 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-mono font-bold">#05</span>
+                            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/70 text-slate-300 text-[10px] font-mono">11.5s</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white line-clamp-2">Bí Quyết Nghề Gia Truyền: Ngâm Vỏ Sú Vẹt Tạo Màu Đỏ Tự Nhiên & Độ Giòn Sần Sật</h4>
+                    </div>
+
+                    <div class="rounded-xl glass-panel p-3 border border-white/10 hover:border-red-500 transition-all cursor-pointer group" onclick="jumpTo(31.77); switchView('detail')">
+                        <div class="relative aspect-[9/16] rounded-lg overflow-hidden bg-black mb-2">
+                            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_06_mid.jpg" alt="Shot 6" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-mono font-bold">#06</span>
+                            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/70 text-slate-300 text-[10px] font-mono">10.8s</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white line-clamp-2">Kỹ Nghệ Dao Thớt 3 Thế Hệ: Nhát Cắt Dao Tre Thoăn Thoắt & Độ Hiếm Mùa Vụ</h4>
+                    </div>
+
+                    <div class="rounded-xl glass-panel p-3 border border-white/10 hover:border-red-500 transition-all cursor-pointer group" onclick="jumpTo(42.57); switchView('detail')">
+                        <div class="relative aspect-[9/16] rounded-lg overflow-hidden bg-black mb-2">
+                            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_07_mid.jpg" alt="Shot 7" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-mono font-bold">#07</span>
+                            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/70 text-slate-300 text-[10px] font-mono">2.1s</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white line-clamp-2">Chủ Thể Giới Thiệu Trực Diện: 'Hé-lô Mình Là Huy' Tái Khẳng Định Thương Hiệu Kênh</h4>
+                    </div>
+
+                    <div class="rounded-xl glass-panel p-3 border border-white/10 hover:border-red-500 transition-all cursor-pointer group" onclick="jumpTo(44.73); switchView('detail')">
+                        <div class="relative aspect-[9/16] rounded-lg overflow-hidden bg-black mb-2">
+                            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_08_mid.jpg" alt="Shot 8" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-mono font-bold">#08</span>
+                            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/70 text-slate-300 text-[10px] font-mono">2.5s</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white line-clamp-2">Bắt Trend Cơn Sốt Mạng Xã Hội: Cơn Sốt Sứa Đỏ Lan Rộng Khắp Nơi</h4>
+                    </div>
+
+                    <div class="rounded-xl glass-panel p-3 border border-white/10 hover:border-red-500 transition-all cursor-pointer group" onclick="jumpTo(47.27); switchView('detail')">
+                        <div class="relative aspect-[9/16] rounded-lg overflow-hidden bg-black mb-2">
+                            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_09_mid.jpg" alt="Shot 9" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-mono font-bold">#09</span>
+                            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/70 text-slate-300 text-[10px] font-mono">4.3s</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white line-clamp-2">Bày Mâm Đầy Đủ: Định Giá 40k Suất Sứa & Bộ Topping Hoàn Chỉnh</h4>
+                    </div>
+
+                    <div class="rounded-xl glass-panel p-3 border border-white/10 hover:border-red-500 transition-all cursor-pointer group" onclick="jumpTo(51.63); switchView('detail')">
+                        <div class="relative aspect-[9/16] rounded-lg overflow-hidden bg-black mb-2">
+                            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_10_mid.jpg" alt="Shot 10" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-mono font-bold">#10</span>
+                            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/70 text-slate-300 text-[10px] font-mono">3.2s</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white line-clamp-2">Linh Hồn Nước Chấm: Đánh Bát Mắm Tôm Sủi Bọt Bông Trắng Điểm Nút Hương Vị</h4>
+                    </div>
+
+                    <div class="rounded-xl glass-panel p-3 border border-white/10 hover:border-red-500 transition-all cursor-pointer group" onclick="jumpTo(54.83); switchView('detail')">
+                        <div class="relative aspect-[9/16] rounded-lg overflow-hidden bg-black mb-2">
+                            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_11_mid.jpg" alt="Shot 11" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-mono font-bold">#11</span>
+                            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/70 text-slate-300 text-[10px] font-mono">3.9s</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white line-clamp-2">Hướng Dẫn Cuốn Chuẩn Bài: Xếp Lớp Tía Tô + Dừa Bùi + Đậu Vàng + Sứa Đỏ Mọng</h4>
+                    </div>
+
+                    <div class="rounded-xl glass-panel p-3 border border-white/10 hover:border-red-500 transition-all cursor-pointer group" onclick="jumpTo(58.77); switchView('detail')">
+                        <div class="relative aspect-[9/16] rounded-lg overflow-hidden bg-black mb-2">
+                            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_12_mid.jpg" alt="Shot 12" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-mono font-bold">#12</span>
+                            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/70 text-slate-300 text-[10px] font-mono">21.1s</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white line-clamp-2">Cao Trào Trải Nghiệm Vị Giác: Cắn Ngập Miệng & Phân Tích Đa Tầng Vị Giác Bùng Nổ</h4>
+                    </div>
+
+                    <div class="rounded-xl glass-panel p-3 border border-white/10 hover:border-red-500 transition-all cursor-pointer group" onclick="jumpTo(79.9); switchView('detail')">
+                        <div class="relative aspect-[9/16] rounded-lg overflow-hidden bg-black mb-2">
+                            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_13_mid.jpg" alt="Shot 13" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-mono font-bold">#13</span>
+                            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/70 text-slate-300 text-[10px] font-mono">12.6s</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white line-clamp-2">Bằng Chứng Xã Hội (Social Proof): Vỉa Hè Chật Kín Bàn Ghế & Các Cặp Đôi Nườm Nượp</h4>
+                    </div>
+
+                    <div class="rounded-xl glass-panel p-3 border border-white/10 hover:border-red-500 transition-all cursor-pointer group" onclick="jumpTo(92.5); switchView('detail')">
+                        <div class="relative aspect-[9/16] rounded-lg overflow-hidden bg-black mb-2">
+                            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_14_mid.jpg" alt="Shot 14" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-mono font-bold">#14</span>
+                            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/70 text-slate-300 text-[10px] font-mono">6.0s</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white line-clamp-2">Phỏng Vấn Người Đi Đường: Sức Hút Không Thể Cưỡng Lại Khi Đi Ngang Quán</h4>
+                    </div>
+
+                    <div class="rounded-xl glass-panel p-3 border border-white/10 hover:border-red-500 transition-all cursor-pointer group" onclick="jumpTo(98.5); switchView('detail')">
+                        <div class="relative aspect-[9/16] rounded-lg overflow-hidden bg-black mb-2">
+                            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_15_mid.jpg" alt="Shot 15" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-mono font-bold">#15</span>
+                            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/70 text-slate-300 text-[10px] font-mono">2.3s</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white line-clamp-2">Call To Action & Địa Chỉ Rõ Ràng: 59 Mạc Thị Bưởi (TP Hải Dương) - Đi Ngay Kẻo Hết Mùa</h4>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- DRAWER JUMP MENU (MODAL) -->
+    <div id="drawer" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="absolute right-0 top-0 h-full w-full max-w-md bg-[#0e131f] border-l border-white/10 p-6 overflow-y-auto custom-scrollbar shadow-2xl">
+            <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+                <div>
+                    <h3 class="text-base font-bold text-white">Mục Lục 15 Phân Cảnh</h3>
+                    <p class="text-xs text-slate-400">Nhảy tức thì đến từng shot quay</p>
+                </div>
+                <button onclick="toggleDrawer()" class="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div class="space-y-2.5">
+
+                <button onclick="jumpTo(0.0); toggleDrawer();" class="w-full text-left p-3 rounded-xl bg-white/[0.03] hover:bg-red-600/20 border border-white/5 hover:border-red-500/40 flex items-start gap-3 transition-all">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-white text-xs font-mono font-bold shrink-0">#01</span>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-white line-clamp-1">Hook Thách Thức Đi Ăn Theo Vần: Kích Hoạt Tò Mò Bằng Đối Thoại Tự Nhiên & Chọn Vần 'ƯA'</p>
+                        <p class="text-[11px] text-slate-400 font-mono mt-0.5">[0.00s - 11.30s] • 11.3s</p>
+                    </div>
+                </button>
+
+                <button onclick="jumpTo(11.33); toggleDrawer();" class="w-full text-left p-3 rounded-xl bg-white/[0.03] hover:bg-red-600/20 border border-white/5 hover:border-red-500/40 flex items-start gap-3 transition-all">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-white text-xs font-mono font-bold shrink-0">#02</span>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-white line-clamp-1">Cắt Nối Di Chuyển (Travel Transition): Lên Xe Lao Ra Phố Tìm Quán Sứa</p>
+                        <p class="text-[11px] text-slate-400 font-mono mt-0.5">[11.33s - 13.07s] • 1.7s</p>
+                    </div>
+                </button>
+
+                <button onclick="jumpTo(13.1); toggleDrawer();" class="w-full text-left p-3 rounded-xl bg-white/[0.03] hover:bg-red-600/20 border border-white/5 hover:border-red-500/40 flex items-start gap-3 transition-all">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-white text-xs font-mono font-bold shrink-0">#03</span>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-white line-clamp-1">Hero Visual Hook: Chậu Sứa Đỏ Mọng Nước & Nguồn Gốc Sứa Đỏ Hải Phòng Sang Hải Dương</p>
+                        <p class="text-[11px] text-slate-400 font-mono mt-0.5">[13.10s - 17.77s] • 4.7s</p>
+                    </div>
+                </button>
+
+                <button onclick="jumpTo(17.8); toggleDrawer();" class="w-full text-left p-3 rounded-xl bg-white/[0.03] hover:bg-red-600/20 border border-white/5 hover:border-red-500/40 flex items-start gap-3 transition-all">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-white text-xs font-mono font-bold shrink-0">#04</span>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-white line-clamp-1">Tương Tác Chủ Quán: Xác Thực Gốc Gác Nghề Sứa Đỏ Truyền Thống</p>
+                        <p class="text-[11px] text-slate-400 font-mono mt-0.5">[17.80s - 20.23s] • 2.4s</p>
+                    </div>
+                </button>
+
+                <button onclick="jumpTo(20.27); toggleDrawer();" class="w-full text-left p-3 rounded-xl bg-white/[0.03] hover:bg-red-600/20 border border-white/5 hover:border-red-500/40 flex items-start gap-3 transition-all">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-white text-xs font-mono font-bold shrink-0">#05</span>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-white line-clamp-1">Bí Quyết Nghề Gia Truyền: Ngâm Vỏ Sú Vẹt Tạo Màu Đỏ Tự Nhiên & Độ Giòn Sần Sật</p>
+                        <p class="text-[11px] text-slate-400 font-mono mt-0.5">[20.27s - 31.73s] • 11.5s</p>
+                    </div>
+                </button>
+
+                <button onclick="jumpTo(31.77); toggleDrawer();" class="w-full text-left p-3 rounded-xl bg-white/[0.03] hover:bg-red-600/20 border border-white/5 hover:border-red-500/40 flex items-start gap-3 transition-all">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-white text-xs font-mono font-bold shrink-0">#06</span>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-white line-clamp-1">Kỹ Nghệ Dao Thớt 3 Thế Hệ: Nhát Cắt Dao Tre Thoăn Thoắt & Độ Hiếm Mùa Vụ</p>
+                        <p class="text-[11px] text-slate-400 font-mono mt-0.5">[31.77s - 42.53s] • 10.8s</p>
+                    </div>
+                </button>
+
+                <button onclick="jumpTo(42.57); toggleDrawer();" class="w-full text-left p-3 rounded-xl bg-white/[0.03] hover:bg-red-600/20 border border-white/5 hover:border-red-500/40 flex items-start gap-3 transition-all">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-white text-xs font-mono font-bold shrink-0">#07</span>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-white line-clamp-1">Chủ Thể Giới Thiệu Trực Diện: 'Hé-lô Mình Là Huy' Tái Khẳng Định Thương Hiệu Kênh</p>
+                        <p class="text-[11px] text-slate-400 font-mono mt-0.5">[42.57s - 44.70s] • 2.1s</p>
+                    </div>
+                </button>
+
+                <button onclick="jumpTo(44.73); toggleDrawer();" class="w-full text-left p-3 rounded-xl bg-white/[0.03] hover:bg-red-600/20 border border-white/5 hover:border-red-500/40 flex items-start gap-3 transition-all">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-white text-xs font-mono font-bold shrink-0">#08</span>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-white line-clamp-1">Bắt Trend Cơn Sốt Mạng Xã Hội: Cơn Sốt Sứa Đỏ Lan Rộng Khắp Nơi</p>
+                        <p class="text-[11px] text-slate-400 font-mono mt-0.5">[44.73s - 47.23s] • 2.5s</p>
+                    </div>
+                </button>
+
+                <button onclick="jumpTo(47.27); toggleDrawer();" class="w-full text-left p-3 rounded-xl bg-white/[0.03] hover:bg-red-600/20 border border-white/5 hover:border-red-500/40 flex items-start gap-3 transition-all">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-white text-xs font-mono font-bold shrink-0">#09</span>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-white line-clamp-1">Bày Mâm Đầy Đủ: Định Giá 40k Suất Sứa & Bộ Topping Hoàn Chỉnh</p>
+                        <p class="text-[11px] text-slate-400 font-mono mt-0.5">[47.27s - 51.60s] • 4.3s</p>
+                    </div>
+                </button>
+
+                <button onclick="jumpTo(51.63); toggleDrawer();" class="w-full text-left p-3 rounded-xl bg-white/[0.03] hover:bg-red-600/20 border border-white/5 hover:border-red-500/40 flex items-start gap-3 transition-all">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-white text-xs font-mono font-bold shrink-0">#10</span>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-white line-clamp-1">Linh Hồn Nước Chấm: Đánh Bát Mắm Tôm Sủi Bọt Bông Trắng Điểm Nút Hương Vị</p>
+                        <p class="text-[11px] text-slate-400 font-mono mt-0.5">[51.63s - 54.80s] • 3.2s</p>
+                    </div>
+                </button>
+
+                <button onclick="jumpTo(54.83); toggleDrawer();" class="w-full text-left p-3 rounded-xl bg-white/[0.03] hover:bg-red-600/20 border border-white/5 hover:border-red-500/40 flex items-start gap-3 transition-all">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-white text-xs font-mono font-bold shrink-0">#11</span>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-white line-clamp-1">Hướng Dẫn Cuốn Chuẩn Bài: Xếp Lớp Tía Tô + Dừa Bùi + Đậu Vàng + Sứa Đỏ Mọng</p>
+                        <p class="text-[11px] text-slate-400 font-mono mt-0.5">[54.83s - 58.73s] • 3.9s</p>
+                    </div>
+                </button>
+
+                <button onclick="jumpTo(58.77); toggleDrawer();" class="w-full text-left p-3 rounded-xl bg-white/[0.03] hover:bg-red-600/20 border border-white/5 hover:border-red-500/40 flex items-start gap-3 transition-all">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-white text-xs font-mono font-bold shrink-0">#12</span>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-white line-clamp-1">Cao Trào Trải Nghiệm Vị Giác: Cắn Ngập Miệng & Phân Tích Đa Tầng Vị Giác Bùng Nổ</p>
+                        <p class="text-[11px] text-slate-400 font-mono mt-0.5">[58.77s - 79.87s] • 21.1s</p>
+                    </div>
+                </button>
+
+                <button onclick="jumpTo(79.9); toggleDrawer();" class="w-full text-left p-3 rounded-xl bg-white/[0.03] hover:bg-red-600/20 border border-white/5 hover:border-red-500/40 flex items-start gap-3 transition-all">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-white text-xs font-mono font-bold shrink-0">#13</span>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-white line-clamp-1">Bằng Chứng Xã Hội (Social Proof): Vỉa Hè Chật Kín Bàn Ghế & Các Cặp Đôi Nườm Nượp</p>
+                        <p class="text-[11px] text-slate-400 font-mono mt-0.5">[79.90s - 92.47s] • 12.6s</p>
+                    </div>
+                </button>
+
+                <button onclick="jumpTo(92.5); toggleDrawer();" class="w-full text-left p-3 rounded-xl bg-white/[0.03] hover:bg-red-600/20 border border-white/5 hover:border-red-500/40 flex items-start gap-3 transition-all">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-white text-xs font-mono font-bold shrink-0">#14</span>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-white line-clamp-1">Phỏng Vấn Người Đi Đường: Sức Hút Không Thể Cưỡng Lại Khi Đi Ngang Quán</p>
+                        <p class="text-[11px] text-slate-400 font-mono mt-0.5">[92.50s - 98.47s] • 6.0s</p>
+                    </div>
+                </button>
+
+                <button onclick="jumpTo(98.5); toggleDrawer();" class="w-full text-left p-3 rounded-xl bg-white/[0.03] hover:bg-red-600/20 border border-white/5 hover:border-red-500/40 flex items-start gap-3 transition-all">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-white text-xs font-mono font-bold shrink-0">#15</span>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-white line-clamp-1">Call To Action & Địa Chỉ Rõ Ràng: 59 Mạc Thị Bưởi (TP Hải Dương) - Đi Ngay Kẻo Hết Mùa</p>
+                        <p class="text-[11px] text-slate-400 font-mono mt-0.5">[98.50s - 100.83s] • 2.3s</p>
+                    </div>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX DARKROOM MODAL -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-lg hidden items-center justify-center p-4" onclick="closeLightbox()">
+        <div class="relative max-w-4xl max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="Enlarged Shot" class="max-h-[80vh] rounded-xl object-contain shadow-2xl border border-white/15">
+            <p id="lightbox-caption" class="mt-3 text-xs sm:text-sm text-slate-300 font-medium text-center"></p>
+            <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white hover:text-red-400 font-mono text-sm">✕ ĐÓNG [ESC]</button>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        const player = document.getElementById('main-player');
+        const progressBar = document.getElementById('progress-bar');
+        const playerTime = document.getElementById('player-time');
+        const playBtn = document.getElementById('btn-play');
+        const playIcon = document.getElementById('play-icon');
+        const playText = document.getElementById('play-text');
+        const activeShotTitle = document.getElementById('active-shot-title');
+        const activeShotTime = document.getElementById('active-shot-time');
+
+        const shots = [{"id": 1, "st_frame": 0, "en_frame": 339, "st_time": 0.0, "en_time": 11.3, "duration": 11.3, "title": "Hook Thách Thức Đi Ăn Theo Vần: Kích Hoạt Tò Mò Bằng Đối Thoại Tự Nhiên & Chọn Vần 'ƯA'", "title_en": "Rhyme Food Challenge Hook: Natural Dialogue Setup & Letter-Sound Bait", "shot_type": "Medium Frontal Dialogue Shot • Ánh sáng tự nhiên trong phòng/ô tô", "lighting": "Ánh sáng tán xạ mềm dịu trong nhà, tương phản nhẹ vùng đổ bóng", "color_grade": "Tông màu đời sống tự nhiên (Organic Warm Natural) • Màu áo thun đen & xanh lam", "pacing": "Nhịp đối thoại nhanh, dồn dập (Fast Conversational Pacing 11.3s)", "composition": "Bố cục đối diện trò chuyện (Direct Confrontational Framing), chủ thể ở góc 1/3", "subject_action": "Hai bạn trẻ thách đố nhau chọn vần khó để đi ăn. Nhân vật chính thách chọn vần 'ƯA' -> bạn đối đáp chọn ngay món SỨA ĐỎ / SỨA BIỂN.", "critique_good": "Mở đầu trực diện bằng format Thử thách (Challenge) đánh trúng tâm lý tò mò của khán giả Gen Z. Lối thoại tự nhiên, không gượng gạo, tạo cảm giác cuộc hội thoại đời thường chân thật.", "critique_bad": "Thời lượng đoạn hook thoại hơi dài (11.3s) so với chuẩn TikTok (<5s). Có thể cắt gọn hơn để đẩy cảnh sứa đỏ lên sớm hơn.", "actionable_takeaway": "Dùng format 'Thách đố theo vần/theo chữ cái' là công thức vàng để biến một video review ẩm thực quen thuộc thành một trò chơi tương tác cuốn hút người xem từ giây đầu tiên.", "img_start": "shot_01_start.jpg", "img_mid": "shot_01_mid.jpg", "img_end": "shot_01_end.jpg", "trans_img": "trans_01_to_02.jpg"}, {"id": 2, "st_frame": 340, "en_frame": 392, "st_time": 11.33, "en_time": 13.07, "duration": 1.74, "title": "Cắt Nối Di Chuyển (Travel Transition): Lên Xe Lao Ra Phố Tìm Quán Sứa", "title_en": "Kinetic Travel Transition: On The Road to Hai Duong Red Jellyfish Stall", "shot_type": "POV / Medium Action Shot • Di chuyển ngoài đường", "lighting": "Ánh sáng ban ngày ngoài trời (Daylight 5600K)", "color_grade": "Màu sắc đường phố rực rỡ, độ bão hòa cao", "pacing": "Nhịp cắt nhanh (Fast-cut 1.74s) tạo đà chuyển cảnh dứt khoát", "composition": "Bố cục động, hướng chuyển động tiến về phía trước", "subject_action": "Chuyển cảnh nhanh hai bạn lên xe máy/ô tô phóng ra phố đến thẳng tọa độ ăn sứa đỏ.", "critique_good": "Cắt cảnh dứt khoát, giải quyết nhanh khâu di chuyển mà không làm loãng nhịp video.", "critique_bad": "Góc quay hơi rung lắc nhẹ do quay tay ngoài đường, chưa dùng ổn định hình ảnh.", "actionable_takeaway": "Chỉ dùng 1-2 giây cho cảnh di chuyển để duy trì nhịp năng lượng (Momentum), tránh quay lê thê cảnh đi đường.", "img_start": "shot_02_start.jpg", "img_mid": "shot_02_mid.jpg", "img_end": "shot_02_end.jpg", "trans_img": "trans_02_to_03.jpg"}, {"id": 3, "st_frame": 393, "en_frame": 533, "st_time": 13.1, "en_time": 17.77, "duration": 4.67, "title": "Hero Visual Hook: Chậu Sứa Đỏ Mọng Nước & Nguồn Gốc Sứa Đỏ Hải Phòng Sang Hải Dương", "title_en": "Hero Close-Up: Ruby Red Jellyfish Basin & Hai Phong Heritage Origin", "shot_type": "High-Angle Close-Up • Chậu sứa đỏ vỉa hè", "lighting": "Ánh sáng tự nhiên phản chiếu óng ánh trên mặt nước và thân sứa", "color_grade": "Sắc đỏ ruby rực rỡ của sứa tương phản với màu nước trong và chậu nhôm sáng", "pacing": "Nhịp quan sát chậm lại để kích thích thị giác (Sensory Visual 4.67s)", "composition": "Bố cục Top-Down Close-up làm đầy khung hình (Frame-Filling Texture)", "subject_action": "Máy quay dí sát vào chậu sứa đỏ au ngập trong nước, những tảng sứa núng nính, mọng nước được vớt lên.", "critique_good": "Màu đỏ mọng nước của sứa tạo điểm nhấn thị giác cực mạnh (Visual Eyecandy), khiến người xem không thể rời mắt.", "critique_bad": "Góc quay hơi cao nên phần chậu nhôm bị lóa nhẹ ở mép viền.", "actionable_takeaway": "Luôn đưa khung hình 'đắt giá nhất' của món ăn (Hero Shot) lên ngay sau khi đến quán để khóa chặt thị giác người xem.", "img_start": "shot_03_start.jpg", "img_mid": "shot_03_mid.jpg", "img_end": "shot_03_end.jpg", "trans_img": "trans_03_to_04.jpg"}, {"id": 4, "st_frame": 534, "en_frame": 607, "st_time": 17.8, "en_time": 20.23, "duration": 2.43, "title": "Tương Tác Chủ Quán: Xác Thực Gốc Gác Nghề Sứa Đỏ Truyền Thống", "title_en": "Vendor Dialogue & Authentic Heritage Verification", "shot_type": "Over-The-Counter Medium Shot • Quầy hàng vỉa hè", "lighting": "Ánh sáng tự nhiên dưới mái hiên vỉa hè", "color_grade": "Tông màu mộc mạc đời thường", "pacing": "Nhịp đối thoại ngắn gọn (2.43s)", "composition": "Góc nhìn qua quầy hàng (Over-The-Counter Framing)", "subject_action": "Chủ quán niềm nở giải thích về nguồn gốc món sứa đỏ gốc Hải Phòng được mang về phục vụ người dân Hải Dương.", "critique_good": "Âm thanh tiếng nói của chủ quán tạo độ tin cậy và tính xác thực cao (Authenticity).", "critique_bad": "Góc máy hơi lệch sang một bên do không gian vỉa hè chật hẹp.", "actionable_takeaway": "Lấy tiếng nói thật của người bán hàng (bằng chứng sống) giúp câu chuyện tăng 200% độ uy tín so với người review tự nói.", "img_start": "shot_04_start.jpg", "img_mid": "shot_04_mid.jpg", "img_end": "shot_04_end.jpg", "trans_img": "trans_04_to_05.jpg"}, {"id": 5, "st_frame": 608, "en_frame": 952, "st_time": 20.27, "en_time": 31.73, "duration": 11.46, "title": "Bí Quyết Nghề Gia Truyền: Ngâm Vỏ Sú Vẹt Tạo Màu Đỏ Tự Nhiên & Độ Giòn Sần Sật", "title_en": "Artisan Craftsmanship: Mangrove Bark Soaking Technique for Natural Ruby Hue", "shot_type": "Extreme Close-Up (Macro) • Tay cầm sứa vớt lên từ nước", "lighting": "Ánh sáng xiên làm nổi bật độ trong suốt và vân sứa", "color_grade": "Màu đỏ hổ phách - đỏ ruby của vỏ sú vẹt hòa quyện tự nhiên", "pacing": "Nhịp giảng giải kiến thức ẩm thực sâu sắc (Storytelling Pace 11.46s)", "composition": "Bố cục Macro tập trung 100% vào miếng sứa đỏ mọng nước trên tay", "subject_action": "Bóc tách kỹ thuật: Sứa biển sau khi đánh bắt phải ngâm ngay trong nước vỏ cây sú vẹt để thân sứa tiết nước, co lại giòn sần sật và chuyển sang màu đỏ tự nhiên.", "critique_good": "Cung cấp giá trị tri thức ẩm thực độc đáo (Curiosity Gap) - giải thích cặn kẽ vì sao sứa lại có màu đỏ tự nhiên mà không phẩm màu.", "critique_bad": "Đoạn nói hơi dài, có thể xen kẽ thêm hình ảnh b-roll cây sú vẹt hoặc quy trình ngâm để trực quan hơn.", "actionable_takeaway": "Kết hợp 'Kể chuyện văn hóa + Bí quyết chế biến' nâng tầm video từ review đồ ăn đơn thuần lên mức trải nghiệm văn hóa ẩm thực.", "img_start": "shot_05_start.jpg", "img_mid": "shot_05_mid.jpg", "img_end": "shot_05_end.jpg", "trans_img": "trans_05_to_06.jpg"}, {"id": 6, "st_frame": 953, "en_frame": 1276, "st_time": 31.77, "en_time": 42.53, "duration": 10.76, "title": "Kỹ Nghệ Dao Thớt 3 Thế Hệ: Nhát Cắt Dao Tre Thoăn Thoắt & Độ Hiếm Mùa Vụ", "title_en": "3 Generations of Craft: Rhythmic Bamboo Knife Slicing & Seasonal Exclusivity", "shot_type": "Close-Up High-Angle • Đôi tay thái sứa trên thớt", "lighting": "Ánh sáng rọi thẳng mặt thớt gỗ ẩm", "color_grade": "Đỏ mọng tương phản với thớt gỗ mộc và thau inox", "pacing": "Nhịp thái nhanh, dồn dập (10.76s)", "composition": "Bố cục trung tâm 1/3 (Center Grid Alignment) theo vết cắt dao", "subject_action": "Chủ quán thái sứa thoăn thoắt từng miếng vuông vức, nhấn mạnh gia đình 3 thế hệ làm sứa và 1 năm chỉ có duy nhất 1 mùa vụ sứa đỏ (tháng 3-5 âm lịch).", "critique_good": "Âm thanh dao thớt và hình ảnh thái sứa thoăn thoắt tạo hiệu ứng kích thích vị giác cực mạnh.", "critique_bad": "Cần thêm góc quay cận macro hơn vào từng thớ thịt sứa khi tách ra.", "actionable_takeaway": "Tạo hiệu ứng 'Khan hiếm mùa vụ' (Seasonal FOMO: 1 năm chỉ có 1 lần) thúc giục người xem phải lập tức lên lịch đi ăn ngay.", "img_start": "shot_06_start.jpg", "img_mid": "shot_06_mid.jpg", "img_end": "shot_06_end.jpg", "trans_img": "trans_06_to_07.jpg"}, {"id": 7, "st_frame": 1277, "en_frame": 1341, "st_time": 42.57, "en_time": 44.7, "duration": 2.13, "title": "Chủ Thể Giới Thiệu Trực Diện: 'Hé-lô Mình Là Huy' Tái Khẳng Định Thương Hiệu Kênh", "title_en": "Direct Host Presentation & Channel Brand Identity Anchor", "shot_type": "Frontal Medium Shot • Nhân vật ngồi tại bàn ăn vỉa hè", "lighting": "Ánh sáng tự nhiên vỉa hè ban ngày", "color_grade": "Tông ấm áp, chân thực", "pacing": "Cắt dứt khoát 2.13s", "composition": "Bố cục chính diện (Center Portrait Framing)", "subject_action": "Nhân vật Huy mỉm cười chào khán giả, kết nối trực diện bằng ánh mắt vào ống kính.", "critique_good": "Cú chào thương hiệu tạo sự nhận diện quen thuộc cho kênh Thổ Địa Hải Dương.", "critique_bad": "Đặt màn chào ở giây thứ 42 là hơi muộn so với cấu trúc video ngắn thông thường.", "actionable_takeaway": "Định vị bản thân là 'người bạn bản địa dẫn đường' giúp khán giả tin tưởng hoàn toàn vào các đề xuất quán xá.", "img_start": "shot_07_start.jpg", "img_mid": "shot_07_mid.jpg", "img_end": "shot_07_end.jpg", "trans_img": "trans_07_to_08.jpg"}, {"id": 8, "st_frame": 1342, "en_frame": 1417, "st_time": 44.73, "en_time": 47.23, "duration": 2.5, "title": "Bắt Trend Cơn Sốt Mạng Xã Hội: Cơn Sốt Sứa Đỏ Lan Rộng Khắp Nơi", "title_en": "Riding The Viral Wave: Social Media Trend Amplification", "shot_type": "Medium Chest Shot • Biểu cảm hào hứng", "lighting": "Ánh sáng tự nhiên", "color_grade": "Tươi sáng, năng động", "pacing": "Nhịp nói ngắn gọn (2.50s)", "composition": "Bố cục 1/3 bên phải", "subject_action": "Nhân vật phân tích lý do vì sao mấy hôm nay mạng xã hội lại phát sốt vì món sứa biển này.", "critique_good": "Móc nối nội dung vào dòng chảy xu hướng chung của mạng xã hội (Trend Jacking).", "critique_bad": "Không có text overlay minh họa trend màn hình điện thoại.", "actionable_takeaway": "Tận dụng hiệu ứng đám đông để củng cố lý do vì sao khán giả không thể bỏ qua món ăn này.", "img_start": "shot_08_start.jpg", "img_mid": "shot_08_mid.jpg", "img_end": "shot_08_end.jpg", "trans_img": "trans_08_to_09.jpg"}, {"id": 9, "st_frame": 1418, "en_frame": 1548, "st_time": 47.27, "en_time": 51.6, "duration": 4.33, "title": "Bày Mâm Đầy Đủ: Định Giá 40k Suất Sứa & Bộ Topping Hoàn Chỉnh", "title_en": "Full Spread Flatlay & Transparent Pricing (40k/Serving)", "shot_type": "High-Angle 45° Flatlay Shot • Mâm đồ ăn đầy đủ", "lighting": "Ánh sáng tràn ngập bề mặt bàn inox", "color_grade": "Màu sắc tương phản rực rỡ: Sứa đỏ, Đậu vàng, Dừa trắng, Rau tía tô tím biếc", "pacing": "Nhịp trình bày rõ ràng (4.33s)", "composition": "Bố cục mâm cỗ hài hòa màu sắc (Color Harmony Flatlay)", "subject_action": "Giới thiệu chi tiết giá cả: 1 đĩa sứa 40k, thêm đậu rán vàng & cùi dừa thái mỏng 15k, rau thơm tía tô kinh giới ngập tràn.", "critique_good": "Minh bạch giá cả ngay lập tức giúp người xem tính toán hầu bao và tăng khả năng ra quyết định ghé ăn.", "critique_bad": "Mặt bàn inox phản chiếu hơi chói một chút ở góc dưới.", "actionable_takeaway": "Nêu giá tiền cụ thể + hình ảnh toàn cảnh mâm đồ ăn là thông tin đắt giá nhất trong video review ẩm thực đường phố.", "img_start": "shot_09_start.jpg", "img_mid": "shot_09_mid.jpg", "img_end": "shot_09_end.jpg", "trans_img": "trans_09_to_10.jpg"}, {"id": 10, "st_frame": 1549, "en_frame": 1644, "st_time": 51.63, "en_time": 54.8, "duration": 3.17, "title": "Linh Hồn Nước Chấm: Đánh Bát Mắm Tôm Sủi Bọt Bông Trắng Điểm Nút Hương Vị", "title_en": "The Soul Sauce: Whipping Fermented Shrimp Paste to Frothy Perfection", "shot_type": "Close-Up POV • Bát mắm tôm đánh chanh sủi bọt", "lighting": "Ánh sáng chiếu trực tiếp vào lòng bát sứ", "color_grade": "Màu tím sẫm của mắm tôm chuyển sang màu hồng tím bọt bông mịn", "pacing": "Nhịp khuấy đũa nhanh tạo bọt (3.17s)", "composition": "Bố cục cận cảnh trung tâm (Center Close-Up)", "subject_action": "Bàn tay vắt chanh, ớt tươi và dùng đũa đánh mắm tôm sủi bọt trắng mịn thơm nức.", "critique_good": "Góc quay cận cảnh đánh mắm tôm kích thích tuyến nước bọt cực mạnh của người xem Việt Nam.", "critique_bad": "Chưa có hiệu ứng âm thanh ASMR tiếng đánh mắm tôm lách cách rõ nét.", "actionable_takeaway": "Nước chấm là linh hồn của món cuốn Việt - quay cận cảnh pha chế nước chấm luôn là điểm rơi cảm xúc cao trào.", "img_start": "shot_10_start.jpg", "img_mid": "shot_10_mid.jpg", "img_end": "shot_10_end.jpg", "trans_img": "trans_10_to_11.jpg"}, {"id": 11, "st_frame": 1645, "en_frame": 1762, "st_time": 54.83, "en_time": 58.73, "duration": 3.9, "title": "Hướng Dẫn Cuốn Chuẩn Bài: Xếp Lớp Tía Tô + Dừa Bùi + Đậu Vàng + Sứa Đỏ Mọng", "title_en": "Tactile How-To-Wrap Guide: Layering Perilla, Coconut, Fried Tofu & Jellyfish", "shot_type": "First-Person POV Close-Up • Đôi bàn tay gói ghém", "lighting": "Ánh sáng tự nhiên rõ nét từng chi tiết ngón tay", "color_grade": "Phân tầng màu sắc đa dạng: xanh tím tía tô, trắng ngà cùi dừa, vàng óng đậu rán, đỏ thắm miếng sứa", "pacing": "Nhịp thực hiện chậm rãi, tỉ mỉ từng bước (3.90s)", "composition": "Bố cục POV ngôi thứ nhất (Subjective POV Immersion)", "subject_action": "Hướng dẫn từng bước cuốn: Đặt lá tía tô -> kinh giới -> miếng cùi dừa giòn bùi -> miếng đậu rán nướng -> miếng sứa đỏ mọng -> cuộn tròn chặt tay.", "critique_good": "Góc nhìn POV ngôi thứ nhất giúp người xem có cảm giác như chính đôi tay mình đang tự cuốn.", "critique_bad": "Ánh sáng hậu cảnh hơi tối hơn so với chủ thể bàn tay.", "actionable_takeaway": "Hướng dẫn thao tác 'How-To' biến video thụ động thành cẩm nang ẩm thực có giá trị lưu lại (Save/Bookmark) cao.", "img_start": "shot_11_start.jpg", "img_mid": "shot_11_mid.jpg", "img_end": "shot_11_end.jpg", "trans_img": "trans_11_to_12.jpg"}, {"id": 12, "st_frame": 1763, "en_frame": 2396, "st_time": 58.77, "en_time": 79.87, "duration": 21.1, "title": "Cao Trào Trải Nghiệm Vị Giác: Cắn Ngập Miệng & Phân Tích Đa Tầng Vị Giác Bùng Nổ", "title_en": "Sensory Climax: The Crunchy ASMR Bite & Multi-Layer Flavor Explosion", "shot_type": "Frontal Medium Close-Up • Thưởng thức món ăn", "lighting": "Ánh sáng tự nhiên làm nổi bật biểu cảm thỏa mãn trên khuôn mặt", "color_grade": "Tông màu da tự nhiên, rạng rỡ", "pacing": "Nhịp cảm nhận sâu lắng (Climax Taste Pacing 21.10s)", "composition": "Bố cục khung hình chính diện, tiêu cự tập trung biểu cảm khuôn mặt", "subject_action": "Chấm đẫm cuộn sứa vào bát mắm tôm, đưa vào miệng cắn ngập chân răng (âm thanh giòn sần sật). Miêu tả: Sứa không có vị nhưng giòn mát như thạch, quyện với vị béo bùi ngậy của dừa và đậu, cay thơm nồng nàn của tía tô và mặn ngọt dậy mùi mắm tôm.", "critique_good": "Biểu cảm chân thực, miêu tả chi tiết cảm giác xúc giác và vị giác (đa tầng vị giác) khiến người xem thèm thuồng.", "critique_bad": "Đoạn quay một góc máy kéo dài 21s hơi lâu, nên xen kẽ các cutaway cận cảnh nhai hoặc cận cảnh bát mắm tôm.", "actionable_takeaway": "Tả vị món ăn phải bóc tách thành các giác quan: độ giòn (âm thanh) + độ béo bùi (vị giác) + mùi thơm (khứu giác) + màu sắc (thị giác).", "img_start": "shot_12_start.jpg", "img_mid": "shot_12_mid.jpg", "img_end": "shot_12_end.jpg", "trans_img": "trans_12_to_13.jpg"}, {"id": 13, "st_frame": 2397, "en_frame": 2774, "st_time": 79.9, "en_time": 92.47, "duration": 12.57, "title": "Bằng Chứng Xã Hội (Social Proof): Vỉa Hè Chật Kín Bàn Ghế & Các Cặp Đôi Nườm Nượp", "title_en": "Social Proof Pan: Packed Sidewalk & Thriving Street Atmosphere", "shot_type": "Wide Panning Shot • Không gian quán vỉa hè", "lighting": "Ánh sáng chiều muộn đường phố", "color_grade": "Tông màu phố thị Hải Dương sinh động", "pacing": "Cú lia máy mượt mà (Panning Pace 12.57s)", "composition": "Bố cục toàn cảnh đường phố (Wide Streetscape Framing)", "subject_action": "Lia máy quay ra không gian xung quanh: các dãy bàn kín chỗ, bạn bè trêu đùa nhau, các cặp đôi rủ nhau đi ăn sứa đỏ đông đúc.", "critique_good": "Khung cảnh quán đông khách là bằng chứng xã hội thép chứng minh quán cực ngon và đắt hàng.", "critique_bad": "Góc lia máy hơi nhanh ở đoạn cuối.", "actionable_takeaway": "Luôn chèn cảnh 'khách đông kín quán' để tăng uy tín và kích thích tâm lý tò mò của người xem.", "img_start": "shot_13_start.jpg", "img_mid": "shot_13_mid.jpg", "img_end": "shot_13_end.jpg", "trans_img": "trans_13_to_14.jpg"}, {"id": 14, "st_frame": 2775, "en_frame": 2954, "st_time": 92.5, "en_time": 98.47, "duration": 5.97, "title": "Phỏng Vấn Người Đi Đường: Sức Hút Không Thể Cưỡng Lại Khi Đi Ngang Quán", "title_en": "Customer Testimonial: Irresistible Street Craving", "shot_type": "Medium Side Shot • Phỏng vấn khách ăn", "lighting": "Ánh sáng tự nhiên", "color_grade": "Chân thực, gần gũi", "pacing": "Nhịp chia sẻ ngắn (5.97s)", "composition": "Bố cục đối thoại ngang tầm mắt", "subject_action": "Ghi lại lời khách hàng đi qua quán không kìm lòng được phải tấp xe vào ăn đĩa sứa đỏ.", "critique_good": "Ý kiến người đi đường tạo tính khách quan và cảm giác gần gũi như người thật việc thật.", "critique_bad": "Chưa có mic cài áo cho khách nên tiếng đường phố hơi lấn át.", "actionable_takeaway": "Phỏng vấn nhanh khách hàng tại quán giúp đa dạng hóa góc nhìn và tăng sức thuyết phục.", "img_start": "shot_14_start.jpg", "img_mid": "shot_14_mid.jpg", "img_end": "shot_14_end.jpg", "trans_img": "trans_14_to_15.jpg"}, {"id": 15, "st_frame": 2955, "en_frame": 3024, "st_time": 98.5, "en_time": 100.83, "duration": 2.33, "title": "Call To Action & Địa Chỉ Rõ Ràng: 59 Mạc Thị Bưởi (TP Hải Dương) - Đi Ngay Kẻo Hết Mùa", "title_en": "Urgent Location CTA: 59 Mac Thi Buoi - Catch The Season Before It Ends", "shot_type": "Frontal Medium Shot • Kêu gọi hành động", "lighting": "Ánh sáng chiều", "color_grade": "Tươi tắn", "pacing": "Chốt dứt khoát 2.33s", "composition": "Bố cục chính diện", "subject_action": "Chốt lại địa chỉ cụ thể: 59 Mạc Thị Bưởi, TP Hải Dương. Kêu gọi mọi người tranh thủ đi ăn ngay vì sứa đỏ chỉ bán trong thời gian ngắn.", "critique_good": "Cung cấp địa chỉ rõ ràng, chốt lời kêu gọi hành động kèm yếu tố thôi thúc (FOMO) mạnh mẽ.", "critique_bad": "Không có text đồ họa ghim địa chỉ nổi bật trên màn hình.", "actionable_takeaway": "Phần kết video ẩm thực phải có 2 thứ: Địa chỉ chính xác + Lý do phải đi ngay hôm nay (Tính khan hiếm/Thời vụ).", "img_start": "shot_15_start.jpg", "img_mid": "shot_15_mid.jpg", "img_end": "shot_15_end.jpg"}];
+
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            const ms = Math.floor((seconds % 1) * 100);
+            return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}.${String(ms).padStart(2, '0')}`;
+        }
+
+        function togglePlay() {
+            if (player.paused) {
+                player.play();
+                playText.innerText = "Tạm dừng";
+                playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+            } else {
+                player.pause();
+                playText.innerText = "Phát";
+                playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+            }
+        }
+
+        function stepFrame(direction) {
+            player.pause();
+            player.currentTime = Math.max(0, player.currentTime + (direction * (1/30)));
+        }
+
+        function setSpeed(speed) {
+            player.playbackRate = speed;
+            document.querySelectorAll('.speed-btn').forEach(btn => {
+                if (parseFloat(btn.innerText) === speed || (speed === 1.0 && btn.innerText === '1x')) {
+                    btn.className = 'px-2 py-0.5 rounded speed-btn bg-red-600 text-white font-bold';
+                } else {
+                    btn.className = 'px-2 py-0.5 rounded speed-btn hover:bg-white/10 text-slate-400';
+                }
+            });
+        }
+
+        function jumpTo(time) {
+            player.currentTime = time;
+            player.play();
+            playText.innerText = "Tạm dừng";
+            playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+            
+            // Scroll to shot card
+            const activeShot = shots.find(s => time >= s.st_time && time < s.en_time);
+            if (activeShot) {
+                const el = document.getElementById(`shot-${activeShot.id}`);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        }
+
+        function seekVideo(e) {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const pos = (e.clientX - rect.left) / rect.width;
+            player.currentTime = pos * player.duration;
+        }
+
+        player.addEventListener('timeupdate', () => {
+            const current = player.currentTime;
+            const duration = player.duration || 100.83;
+            const progress = (current / duration) * 100;
+            progressBar.style.width = `${progress}%`;
+            playerTime.innerText = formatTime(current);
+
+            // Sync active shot card
+            const active = shots.find(s => current >= s.st_time && current <= s.en_time);
+            if (active) {
+                activeShotTitle.innerText = `Shot ${String(active.id).padStart(2, '0')}: ${active.title}`;
+                activeShotTime.innerText = `[${active.st_time.toFixed(2)}s - ${active.en_time.toFixed(2)}s]`;
+
+                document.querySelectorAll('.shot-card').forEach(card => card.classList.remove('active'));
+                const cardEl = document.getElementById(`shot-${active.id}`);
+                if (cardEl) cardEl.classList.add('active');
+            }
+        });
+
+        function switchView(view) {
+            const detailView = document.getElementById('view-detail');
+            const gridView = document.getElementById('view-grid');
+            const btnDetail = document.getElementById('btn-detail-view');
+            const btnGrid = document.getElementById('btn-grid-view');
+
+            if (view === 'detail') {
+                detailView.classList.remove('hidden');
+                gridView.classList.add('hidden');
+                btnDetail.className = 'px-3 py-1.5 text-xs font-semibold rounded-lg bg-red-600 text-white transition-all';
+                btnGrid.className = 'px-3 py-1.5 text-xs font-semibold rounded-lg text-slate-400 hover:text-white transition-all';
+            } else {
+                detailView.classList.add('hidden');
+                gridView.classList.remove('hidden');
+                btnGrid.className = 'px-3 py-1.5 text-xs font-semibold rounded-lg bg-red-600 text-white transition-all';
+                btnDetail.className = 'px-3 py-1.5 text-xs font-semibold rounded-lg text-slate-400 hover:text-white transition-all';
+            }
+        }
+
+        function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            if (drawer.classList.contains('hidden')) {
+                drawer.classList.remove('hidden');
+                setTimeout(() => drawer.classList.remove('opacity-0'), 10);
+            } else {
+                drawer.classList.add('opacity-0');
+                setTimeout(() => drawer.classList.add('hidden'), 300);
+            }
+        }
+
+        function openLightbox(src, caption) {
+            const lb = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+            img.src = src;
+            cap.innerText = caption;
+            lb.classList.remove('hidden');
+            lb.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            lb.classList.add('hidden');
+            lb.classList.remove('flex');
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === ' ') { e.preventDefault(); togglePlay(); }
+            if (e.key === 'ArrowLeft') stepFrame(-1);
+            if (e.key === 'ArrowRight') stepFrame(1);
+        });
+    
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Where Is Your Booth? • Nghệ Thuật Dẫn Đường Pop-Up Store Bằng Ván Trượt Độc Lạ | Báo Cáo Đạo Diễn • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* DRAWER QUICK JUMP MENU */
+.drawer-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-line);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.drawer-title {
+    font-family: var(--font-heading-short);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cl-text-muted);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.drawer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.drawer-shot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: var(--cl-bg-tint);
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+    background: #eef2f6;
+    border-color: var(--cl-accent);
+}
+.d-badge {
+    background: var(--cl-accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.d-time {
+    color: var(--cl-text-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    flex-shrink: 0;
+}
+.d-title {
+    color: var(--cl-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">7 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Where Is Your Booth? • Nghệ Thuật Dẫn Đường Pop-Up Store Bằng Ván Trượt Độc Lạ | Báo Cáo Đạo Diễn</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DdK6GtHJPrH/?stkn=MWZtejVra2cweWdkZA==" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdK6GtHJPrH.mp4" type="video/mp4">
+                <source src="DdK6GtHJPrH.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 17.93s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Where Is Your Booth? • Nghệ Thuật Dẫn Đường Pop-Up Store Bằng Ván Trượt Độc Lạ</div>
+            <div class="video-meta-author">
+                <span>Tác giả:</span>
+                <a href="https://www.instagram.com/reel/DdK6GtHJPrH/?stkn=MWZtejVra2cweWdkZA==" target="_blank" class="author-link">@breth.co (Brēth ® | Art for the Nose)</a>
+            </div>
+        </div>
+
+        <!-- DRAWER QUICK JUMP MENU -->
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+    <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0, 1.87)">
+        <span class="d-badge">Shot 01</span>
+        <span class="d-title">Hook Chạy Đua Mở Màn & Dòng Chữ 'Where Is Your Booth?' Chặn Đứng Thao Tác Lướt Màn Hình (Sprint Hook & Interactive Question Text)</span>
+        <span class="d-time">0.00s</span>
+    </div>
+    
+
+    <div class="drawer-shot-row" onclick="jumpToShot(2, 1.9, 5.2)">
+        <span class="d-badge">Shot 02</span>
+        <span class="d-title">Cú Nhảy Bắt Ván Trượt Lướt Dáng Lướt Sóng Giữa Lòng Chợ Truyền Thống (Threshold Skateboard Launch & Standing Surf Stance)</span>
+        <span class="d-time">1.90s</span>
+    </div>
+    
+
+    <div class="drawer-shot-row" onclick="jumpToShot(3, 5.23, 7.73)">
+        <span class="d-badge">Shot 03</span>
+        <span class="d-title">Tư Thế Lướt Nằm Sấp 'Superman' Sát Mặt Sàn Gây Cười Cực Độ (Low-Slung 'Superman' Belly-Down Glide)</span>
+        <span class="d-time">5.23s</span>
+    </div>
+    
+
+    <div class="drawer-shot-row" onclick="jumpToShot(4, 7.77, 10.9)">
+        <span class="d-badge">Shot 04</span>
+        <span class="d-title">Tư Thế Thiền Định Xếp Bằng Hoa Sen 'Lướt Gió Không Chạm Đất' (Zen Lotus Meditation Floating Glide)</span>
+        <span class="d-time">7.77s</span>
+    </div>
+    
+
+    <div class="drawer-shot-row" onclick="jumpToShot(5, 10.93, 13.07)">
+        <span class="d-badge">Shot 05</span>
+        <span class="d-title">Pha Đảo Trọng Tâm Slalom Lượn Sóng Bẻ Lái Giữa Không Gian Trống (Dynamic Slalom Carve & Wide Space Carving)</span>
+        <span class="d-time">10.93s</span>
+    </div>
+    
+
+    <div class="drawer-shot-row" onclick="jumpToShot(6, 13.1, 16.53)">
+        <span class="d-badge">Shot 06</span>
+        <span class="d-title">Thế Đứng Cò Một Chân Yoga Chắp Tay Cầu Nguyện 'Bách Phát Bách Trúng' (One-Leg Yoga Tree Stance & Overhead Prayer Glide)</span>
+        <span class="d-time">13.10s</span>
+    </div>
+    
+
+    <div class="drawer-shot-row" onclick="jumpToShot(7, 16.57, 17.93)">
+        <span class="d-badge">Shot 07</span>
+        <span class="d-title">Cú Ngã 'Sấp Mặt' Hài Hước Đích Đến & Cú Hất Máy Hé Lộ Gian Hàng Brēth (Comic Belly-Flop Landing & Upward Booth Reveal)</span>
+        <span class="d-time">16.57s</span>
+    </div>
+    
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 17.93s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Where Is Your Booth? • Nghệ Thuật Dẫn Đường Pop-Up Store Bằng Ván Trượt Độc Lạ</h1>
+            <p class="overview-hero-desc">Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, động tác hình thể phi lý (Absurdist Movement), kỹ thuật bám đuôi góc thấp (Follow Cam) và cấu trúc Punchline Payoff trong video quảng bá gian hàng pop-up nước hoa Brēth tại Central Market Kuala Lumpur.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Viral Guerrilla Marketing, Absurdist Body Movement, Low-Angle Follow Cam, Punchline Payoff Structure</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">7 Shots • Nhịp trung bình 2.53s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 • 30 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+    <article class="shot-card" id="shot-1">
+        <div class="shot-card-header">
+            <span class="shot-id-pill">SHOT 01</span>
+            <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 1.87)">
+                ▶ 0.00s - 1.87s (1.87s)
+            </button>
+        </div>
+        <h2 class="shot-headline">Hook Chạy Đua Mở Màn & Dòng Chữ 'Where Is Your Booth?' Chặn Đứng Thao Tác Lướt Màn Hình (Sprint Hook & Interactive Question Text)</h2>
+
+        <!-- 3 Keyframes -->
+        <div class="keyframes-row">
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                <span class="kf-label-tag start">Đầu (0.00s)</span>
+            </div>
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_01_mid.jpg', 'Shot 01 • Giữa (0.94s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                <span class="kf-label-tag mid">Giữa (0.94s)</span>
+            </div>
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_01_end.jpg', 'Shot 01 • Cuối (1.87s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                <span class="kf-label-tag end">Cuối (1.87s)</span>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="critique-blocks-grid">
+            <div class="block-subject-action">
+                <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                <div class="block-text">Bối cảnh mở ra bên ngoài tòa nhà di sản Central Market (Pasar Seni - thành lập năm 1888 tại Kuala Lumpur, Malaysia) với mặt tiền màu xanh ngọc lam Art Deco cổ điển. Nhân vật chính (nam nhân viên của thương hiệu nước hoa Brēth mặc áo thun nâu, tạp dề buộc chéo lưng và quần kaki nâu) đang dốc sức chạy nước rút hướng thẳng về phía cửa ra vào của chợ. Trên nền trời và phần trên khung hình xuất hiện dòng chữ typography vàng rực 'Where is your booth?' – mô phỏng câu hỏi lặp đi lặp lại của khách hàng đang tìm gian hàng pop-up.</div>
+            </div>
+
+            <div class="block-two-sided">
+                <div class="critique-side pro">
+                    <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <div class="side-content">Động tác chạy nước rút về phía cửa (Forward Sprint Vector) tạo xung lực thị giác (Visual Momentum) cực mạnh ngay từ frame 0; câu hỏi màu vàng 'Where is your booth?' đóng vai trò mỏ neo tương tác khơi gợi tính tò mò (Curiosity Hook) khiến người xem muốn biết câu trả lời bằng cách xem tiếp; mặt tiền kiến trúc đối xứng của Central Market tạo bố cục dẫn hướng 1 điểm tụ hút mắt vào lối vào.</div>
+                </div>
+                <div class="critique-side con">
+                    <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <div class="side-content">Dòng chữ vàng tuy nổi bật nhưng font chữ hơi mảnh và không có bóng đổ (drop shadow), khi chạy qua các khoảng tường sáng dễ bị giảm độ tương phản nhẹ trong nửa giây đầu.</div>
+                </div>
+            </div>
+
+            <div class="block-takeaway">
+                <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                <div class="takeaway-body">Khi thông báo địa điểm gian hàng hội chợ hoặc pop-up store, đừng đăng ảnh sơ đồ tĩnh khô khan; hãy mở đầu bằng câu hỏi thực tế của khách hàng kèm một cú chạy nước rút đầy năng lượng để kéo khán giả cùng bước vào hành trình.</div>
+            </div>
+        </div>
+
+        <!-- Specs Strip -->
+        <div class="shot-specs-strip">
+            <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/1.8 (Camera 1x) • Chụp ngang tầm mắt, bám đuôi chủ thể (Rear Tracking Shot)</span>
+            <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Cửa chính Central Market (Pasar Seni), Kuala Lumpur, Malaysia</span>
+            <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ban ngày tự nhiên ngoài trời, mây tán xạ nhẹ dịu mắt</span>
+            <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Action Cut - cắt cảnh khi chân vừa chạm ngưỡng cửa lát gạch bông để chuyển sang cú trượt ván ở Shot 02</span>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Match Action Cut - cắt cảnh khi chân vừa chạm ngưỡng cửa lát gạch bông để chuyển sang cú trượt ván ở Shot 02</div>
+            <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/transitions/trans_01_to_02.jpg', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/transitions/trans_01_to_02.jpg" alt="Transition 1 to 2" loading="lazy">
+                <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </article>
+    
+
+    <article class="shot-card" id="shot-2">
+        <div class="shot-card-header">
+            <span class="shot-id-pill">SHOT 02</span>
+            <button class="shot-time-btn" onclick="jumpToShot(2, 1.9, 5.2)">
+                ▶ 1.90s - 5.20s (3.30s)
+            </button>
+        </div>
+        <h2 class="shot-headline">Cú Nhảy Bắt Ván Trượt Lướt Dáng Lướt Sóng Giữa Lòng Chợ Truyền Thống (Threshold Skateboard Launch & Standing Surf Stance)</h2>
+
+        <!-- 3 Keyframes -->
+        <div class="keyframes-row">
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_02_start.jpg', 'Shot 02 • Đầu (1.90s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                <span class="kf-label-tag start">Đầu (1.90s)</span>
+            </div>
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_02_mid.jpg', 'Shot 02 • Giữa (3.55s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                <span class="kf-label-tag mid">Giữa (3.55s)</span>
+            </div>
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_02_end.jpg', 'Shot 02 • Cuối (5.20s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                <span class="kf-label-tag end">Cuối (5.20s)</span>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="critique-blocks-grid">
+            <div class="block-subject-action">
+                <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                <div class="block-text">Vừa bước qua cánh cửa kính của Pasar Seni, nhân vật lập tức nhảy lên ván trượt và bắt đầu lướt êm ru trên sàn gạch nhẵn bóng của khu chợ. Anh đứng nghiêng người, hai tay dang rộng sang hai bên như một vận động viên lướt sóng (Surfing Glide), lượn nhẹ nhàng qua các quầy hàng lưu niệm truyền thống, thùng làm mát và khách tham quan đang ngơ ngác ngoái nhìn theo.</div>
+            </div>
+
+            <div class="block-two-sided">
+                <div class="critique-side pro">
+                    <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <div class="side-content">Yếu tố bất ngờ (Surprise Factor) cực lớn khi chuyển từ hành vi chạy bộ sang lướt ván điệu nghệ bên trong không gian công cộng; tư thế dang tay đón gió giữ thăng bằng tạo cảm giác tự do, mượt mà và nhịp độ trôi êm ái; góc quay bám sát từ phía sau (Follow Shot) tạo trải nghiệm góc nhìn người thứ ba (Third-Person Perspective) như trong game phiêu lưu nhập vai.</div>
+                </div>
+                <div class="critique-side con">
+                    <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <div class="side-content">Hành động lướt ván trong chợ đông người có thể gây cảm giác hơi rủi ro/nguy hiểm cho người qua lại nếu không kiểm soát tốt tốc độ; tay máy đôi lúc bị rung lắc nhẹ do người cầm máy cũng phải di chuyển nhanh theo tốc độ ván trượt.</div>
+                </div>
+            </div>
+
+            <div class="block-takeaway">
+                <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                <div class="takeaway-body">Thay đổi phương thức di chuyển đột ngột (từ chạy sang lướt) ngay khi chuyển đổi không gian (từ ngoài trời vào trong nhà) là đòn bẩy tuyệt vời để duy trì chỉ số giữ chân khán giả (Audience Retention Rate).</div>
+            </div>
+        </div>
+
+        <!-- Specs Strip -->
+        <div class="shot-specs-strip">
+            <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/1.8 (Camera 1x) • Follow Cam góc thấp bám theo trục di chuyển</span>
+            <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Hành lang chính tầng trệt Central Market, hai bên là các gian hàng quà tặng và thủ công mỹ nghệ</span>
+            <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng đèn trần huỳnh quang kết hợp ánh sáng tự nhiên hắt từ mái vòm kính giếng trời</span>
+            <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Match Cut - cắt nối đột ngột theo trục dọc sang tư thế nằm sấp ở Shot 03</span>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Hard Match Cut - cắt nối đột ngột theo trục dọc sang tư thế nằm sấp ở Shot 03</div>
+            <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/transitions/trans_02_to_03.jpg', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/transitions/trans_02_to_03.jpg" alt="Transition 2 to 3" loading="lazy">
+                <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </article>
+    
+
+    <article class="shot-card" id="shot-3">
+        <div class="shot-card-header">
+            <span class="shot-id-pill">SHOT 03</span>
+            <button class="shot-time-btn" onclick="jumpToShot(3, 5.23, 7.73)">
+                ▶ 5.23s - 7.73s (2.50s)
+            </button>
+        </div>
+        <h2 class="shot-headline">Tư Thế Lướt Nằm Sấp 'Superman' Sát Mặt Sàn Gây Cười Cực Độ (Low-Slung 'Superman' Belly-Down Glide)</h2>
+
+        <!-- 3 Keyframes -->
+        <div class="keyframes-row">
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_03_start.jpg', 'Shot 03 • Đầu (5.23s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                <span class="kf-label-tag start">Đầu (5.23s)</span>
+            </div>
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_03_mid.jpg', 'Shot 03 • Giữa (6.48s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                <span class="kf-label-tag mid">Giữa (6.48s)</span>
+            </div>
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_03_end.jpg', 'Shot 03 • Cuối (7.73s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                <span class="kf-label-tag end">Cuối (7.73s)</span>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="critique-blocks-grid">
+            <div class="block-subject-action">
+                <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                <div class="block-text">Sau cú cắt cảnh chớp nhoáng, nhân vật bất ngờ chuyển sang tư thế nằm sấp bụng hoàn toàn trên mặt ván trượt tí hon, hai tay vươn thẳng về phía trước và hai chân duỗi thẳng phía sau như động tác bơi lội hoặc tư thế bay của Siêu Nhân. Ván trượt lướt băng qua hành lang hẹp, phía trên là khách bộ hành ăn mặc thanh lịch và người mua sắm ngạc nhiên ngoái đầu lại nhìn trân trối.</div>
+            </div>
+
+            <div class="block-two-sided">
+                <div class="critique-side pro">
+                    <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <div class="side-content">Tính hài hước thị giác (Visual Comedy / Absurd Humor) bùng nổ đỉnh điểm; góc máy hạ thấp sát sàn gạch tôn vinh sự chênh lệch tỷ lệ giữa người nằm trượt và các khách đi bộ cao lêu nghêu hai bên; phản ứng tự nhiên (Authentic Reaction) của người đi đường xung quanh tăng thêm tính chân thật và sức viral cho video.</div>
+                </div>
+                <div class="critique-side con">
+                    <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <div class="side-content">Vị trí chân của nhân vật che khuất phần lớn ván trượt, khiến ở một số góc nhìn người xem có thể tưởng nhầm là anh đang bị trượt ngã hoặc nằm bò tự do; khoảng cách với người đi bộ phía trước khá gần đòi hỏi độ chính xác cao.</div>
+                </div>
+            </div>
+
+            <div class="block-takeaway">
+                <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                <div class="takeaway-body">Đưa các động tác cơ thể phi lý, hài hước (Slapstick / Absurdist movement) vào bối cảnh đời thực nghiêm túc luôn là công thức tạo tương tác bình luận (Comment Magnet) số 1 trên TikTok và Instagram Reels.</div>
+            </div>
+        </div>
+
+        <!-- Specs Strip -->
+        <div class="shot-specs-strip">
+            <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/1.8 (Camera 1x) • Ground-Level Tracking Shot (Góc máy sát mặt sàn)</span>
+            <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Dãy hành lang giữa các ki-ốt thời trang và quầy đồ uống Durian tại Central Market</span>
+            <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng nội thất hỗn hợp (đèn neon quầy hàng và ánh sáng giếng trời mái nhà)</span>
+            <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Center Axis Match Cut - giữ nguyên tâm trục khung hình, chuyển tức thì sang tư thế ngồi xếp bằng ở Shot 04</span>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Center Axis Match Cut - giữ nguyên tâm trục khung hình, chuyển tức thì sang tư thế ngồi xếp bằng ở Shot 04</div>
+            <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/transitions/trans_03_to_04.jpg', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/transitions/trans_03_to_04.jpg" alt="Transition 3 to 4" loading="lazy">
+                <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </article>
+    
+
+    <article class="shot-card" id="shot-4">
+        <div class="shot-card-header">
+            <span class="shot-id-pill">SHOT 04</span>
+            <button class="shot-time-btn" onclick="jumpToShot(4, 7.77, 10.9)">
+                ▶ 7.77s - 10.90s (3.13s)
+            </button>
+        </div>
+        <h2 class="shot-headline">Tư Thế Thiền Định Xếp Bằng Hoa Sen 'Lướt Gió Không Chạm Đất' (Zen Lotus Meditation Floating Glide)</h2>
+
+        <!-- 3 Keyframes -->
+        <div class="keyframes-row">
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_04_start.jpg', 'Shot 04 • Đầu (7.77s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                <span class="kf-label-tag start">Đầu (7.77s)</span>
+            </div>
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_04_mid.jpg', 'Shot 04 • Giữa (9.34s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                <span class="kf-label-tag mid">Giữa (9.34s)</span>
+            </div>
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_04_end.jpg', 'Shot 04 • Cuối (10.90s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                <span class="kf-label-tag end">Cuối (10.90s)</span>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="critique-blocks-grid">
+            <div class="block-subject-action">
+                <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                <div class="block-text">Tiếp nối sự phi lý, nhân vật bất ngờ xuất hiện trong tư thế ngồi xếp bằng bắt chéo chân (Hoa Sen / Padmasana), hai bàn tay đặt nhẹ lên đầu gối bấm ngón tay thủ ấn Gyan Mudra thư thái. Anh lướt đi nhẹ tênh giữa lòng chợ như một vị đạo sĩ đang lơ lửng thiền định trên thảm bay, điềm tĩnh băng qua các bảng hiệu quảng cáo nước hoa và gian hàng đông đúc.</div>
+            </div>
+
+            <div class="block-two-sided">
+                <div class="critique-side pro">
+                    <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <div class="side-content">Sự tương phản tuyệt đỉnh giữa chuyển động vật lý tốc độ cao của ván trượt và vẻ mặt/tư thế tĩnh tại tuyệt đối của người thiền; lưng thẳng, dây đai tạp dề bắt chéo chữ X cân đối tạo một khối hình học tam giác vững chãi ngay giữa trục đối xứng khung hình; tạo cảm giác 'trôi' vô trọng lực kích thích thị giác cực mạnh.</div>
+                </div>
+                <div class="critique-side con">
+                    <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <div class="side-content">Biển quảng cáo đứng màu đen bên trái ở đầu phân cảnh hơi choán một phần góc nhìn và tạo bóng râm tạm thời lên nhân vật.</div>
+                </div>
+            </div>
+
+            <div class="block-takeaway">
+                <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                <div class="takeaway-body">Vận dụng thủ pháp tương phản tĩnh - động (Static pose in high-speed motion): Giữ cơ thể hoàn toàn bất động trong một tư thế zen khi khung cảnh xung quanh chuyển động vun vút để tạo hiệu ứng thị giác thôi miên người xem.</div>
+            </div>
+        </div>
+
+        <!-- Specs Strip -->
+        <div class="shot-specs-strip">
+            <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/1.8 (Camera 1x) • Low Eye-Level Symmetric Tracking</span>
+            <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Trục giao thông chính gần khu vực cầu thang trung tâm của chợ</span>
+            <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng giếng trời tán xạ mềm, làm nổi bật đường chỉ may tạp dề và phom dáng</span>
+            <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Pop-Cut chuyển thẳng từ tư thế ngồi sang tư thế đứng nghiêng lượn sóng ở Shot 05</span>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Pop-Cut chuyển thẳng từ tư thế ngồi sang tư thế đứng nghiêng lượn sóng ở Shot 05</div>
+            <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/transitions/trans_04_to_05.jpg', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/transitions/trans_04_to_05.jpg" alt="Transition 4 to 5" loading="lazy">
+                <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </article>
+    
+
+    <article class="shot-card" id="shot-5">
+        <div class="shot-card-header">
+            <span class="shot-id-pill">SHOT 05</span>
+            <button class="shot-time-btn" onclick="jumpToShot(5, 10.93, 13.07)">
+                ▶ 10.93s - 13.07s (2.13s)
+            </button>
+        </div>
+        <h2 class="shot-headline">Pha Đảo Trọng Tâm Slalom Lượn Sóng Bẻ Lái Giữa Không Gian Trống (Dynamic Slalom Carve & Wide Space Carving)</h2>
+
+        <!-- 3 Keyframes -->
+        <div class="keyframes-row">
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_05_start.jpg', 'Shot 05 • Đầu (10.93s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                <span class="kf-label-tag start">Đầu (10.93s)</span>
+            </div>
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_05_mid.jpg', 'Shot 05 • Giữa (12.00s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                <span class="kf-label-tag mid">Giữa (12.00s)</span>
+            </div>
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_05_end.jpg', 'Shot 05 • Cuối (13.07s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                <span class="kf-label-tag end">Cuối (13.07s)</span>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="critique-blocks-grid">
+            <div class="block-subject-action">
+                <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                <div class="block-text">Không gian hành lang mở rộng ra khu sảnh rộng thênh thang trang trí cờ Malaysia. Nhân vật bật dậy tư thế đứng, ngả người sâu sang bên phải rồi lượn ngoạn mục sang bên trái (Slalom Carve), hai tay mở rộng hết cỡ để giữ thăng bằng như một tay trượt ván đường phố chuyên nghiệp, tạo nên những đường lượn chữ S đẹp mắt trên mặt sàn bóng loáng.</div>
+            </div>
+
+            <div class="block-two-sided">
+                <div class="critique-side pro">
+                    <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <div class="side-content">Nhịp độ dựng thay đổi từ chuyển động thẳng đều sang chuyển động lượn sóng zíc-zắc (Dynamic S-Curve Motion) giúp giải tỏa cảm giác đơn điệu; không gian sảnh trần cao với hàng cờ và cột lớn tạo chiều sâu phối cảnh hoành tráng; kỹ năng kiểm soát ván trượt khéo léo mang lại sự phấn khích cho người xem.</div>
+                </div>
+                <div class="critique-side con">
+                    <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <div class="side-content">Cú nghiêng người ở tốc độ cao khiến camera phải xoay theo, viền biên khung hình có chút chuyển động mờ (motion blur nhẹ), đòi hỏi người xem phải tập trung vào trọng tâm lưng áo.</div>
+                </div>
+            </div>
+
+            <div class="block-takeaway">
+                <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                <div class="takeaway-body">Khi làm video hành trình di chuyển (Tour / Walkthrough), cần luân chuyển nhịp độ: xen kẽ giữa các phân đoạn đi thẳng êm ái với các cú bẻ lái đánh võng tốc độ để tái kích thích nhịp tim và sự chú ý thị giác của khán giả.</div>
+            </div>
+        </div>
+
+        <!-- Specs Strip -->
+        <div class="shot-specs-strip">
+            <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/1.8 (Camera 1x) • Dynamic Kinetic Tracking bám sát quỹ đạo rẽ</span>
+            <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khu vực sảnh giếng trời trung tâm với trần cao và cờ trang trí lễ hội</span>
+            <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng trần rực rỡ và phản xạ sàn gạch men bóng loáng</span>
+            <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Jump Cut trực tiếp vào tư thế thăng bằng một chân yoga ở Shot 06</span>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Jump Cut trực tiếp vào tư thế thăng bằng một chân yoga ở Shot 06</div>
+            <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/transitions/trans_05_to_06.jpg', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/transitions/trans_05_to_06.jpg" alt="Transition 5 to 6" loading="lazy">
+                <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </article>
+    
+
+    <article class="shot-card" id="shot-6">
+        <div class="shot-card-header">
+            <span class="shot-id-pill">SHOT 06</span>
+            <button class="shot-time-btn" onclick="jumpToShot(6, 13.1, 16.53)">
+                ▶ 13.10s - 16.53s (3.43s)
+            </button>
+        </div>
+        <h2 class="shot-headline">Thế Đứng Cò Một Chân Yoga Chắp Tay Cầu Nguyện 'Bách Phát Bách Trúng' (One-Leg Yoga Tree Stance & Overhead Prayer Glide)</h2>
+
+        <!-- 3 Keyframes -->
+        <div class="keyframes-row">
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_06_start.jpg', 'Shot 06 • Đầu (13.10s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                <span class="kf-label-tag start">Đầu (13.10s)</span>
+            </div>
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_06_mid.jpg', 'Shot 06 • Giữa (14.82s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                <span class="kf-label-tag mid">Giữa (14.82s)</span>
+            </div>
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_06_end.jpg', 'Shot 06 • Cuối (16.53s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                <span class="kf-label-tag end">Cuối (16.53s)</span>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="critique-blocks-grid">
+            <div class="block-subject-action">
+                <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                <div class="block-text">Bước vào đoạn hành lang lát gạch đỏ gốm nung dẫn thẳng đến gian hàng, nhân vật đột ngột co một chân lên vuông góc, chỉ trụ trên một bàn chân duy nhất trên mặt ván (Tư thế Cây / Vrikshasana trong Yoga), đồng thời hai tay giơ thẳng lên cao chắp lại trên đỉnh đầu theo hình mũi tên nhọn. Anh lướt đi kiêu hãnh và vững chãi qua hàng loạt quầy trưng bày cho đến khi nhìn thấy gian hàng Brēth.</div>
+            </div>
+
+            <div class="block-two-sided">
+                <div class="critique-side pro">
+                    <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <div class="side-content">Khả năng giữ thăng bằng một chân trên ván trượt đang chạy với hai tay giơ cao tạo ấn tượng thán phục về kỹ năng thể chất; tư thế vươn cao kéo dài trục đứng (Vertical Line), tận dụng tối đa khung hình tỷ lệ 9:16 dọc; hai bàn tay chắp hình mũi tên chỉ thẳng lên trên đóng vai trò như một la bàn điều hướng thị giác hướng thẳng về phía trước.</div>
+                </div>
+                <div class="critique-side con">
+                    <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <div class="side-content">Tư thế giơ cao tay khiến đầu và mặt nhân vật bị che khuất một phần bởi cánh tay, người xem chỉ nhìn thấy lưng và hình thể tổng thể; đoạn này kéo dài hơn 3.4s, có thể cắt bớt 0.5s để nhịp về đích gãy gọn hơn.</div>
+                </div>
+            </div>
+
+            <div class="block-takeaway">
+                <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                <div class="takeaway-body">Sử dụng các tư thế kéo dài trục đứng cơ thể (Vertical Axis Poses) để lấp đầy khung hình dọc 9:16, tạo sự bề thế và khác biệt hoàn toàn so với các video quay dọc thông thường.</div>
+            </div>
+        </div>
+
+        <!-- Specs Strip -->
+        <div class="shot-specs-strip">
+            <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/1.8 (Camera 1x) • Low Tracking Shot tôn chiều cao nhân vật</span>
+            <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Hành lang lát gạch đỏ gốm nung tại khu vực chợ nghệ thuật Pasar Seni</span>
+            <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn rọi spotlight từ trần các gian hàng tạo viền sáng (Rim Light) trên cánh tay nhân vật</span>
+            <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut Match Dive - cắt nhanh vào pha tiếp đất nằm bò trên sàn ở Shot 07</span>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Cut Match Dive - cắt nhanh vào pha tiếp đất nằm bò trên sàn ở Shot 07</div>
+            <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/transitions/trans_06_to_07.jpg', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/transitions/trans_06_to_07.jpg" alt="Transition 6 to 7" loading="lazy">
+                <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </article>
+    
+
+    <article class="shot-card" id="shot-7">
+        <div class="shot-card-header">
+            <span class="shot-id-pill">SHOT 07</span>
+            <button class="shot-time-btn" onclick="jumpToShot(7, 16.57, 17.93)">
+                ▶ 16.57s - 17.93s (1.37s)
+            </button>
+        </div>
+        <h2 class="shot-headline">Cú Ngã 'Sấp Mặt' Hài Hước Đích Đến & Cú Hất Máy Hé Lộ Gian Hàng Brēth (Comic Belly-Flop Landing & Upward Booth Reveal)</h2>
+
+        <!-- 3 Keyframes -->
+        <div class="keyframes-row">
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_07_start.jpg', 'Shot 07 • Đầu (16.57s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                <span class="kf-label-tag start">Đầu (16.57s)</span>
+            </div>
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_07_mid.jpg', 'Shot 07 • Giữa (17.25s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                <span class="kf-label-tag mid">Giữa (17.25s)</span>
+            </div>
+            <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_07_end.jpg', 'Shot 07 • Cuối (17.93s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                <span class="kf-label-tag end">Cuối (17.93s)</span>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="critique-blocks-grid">
+            <div class="block-subject-action">
+                <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                <div class="block-text">Đến ngay trước vỉa gạch đỏ của gian hàng, chiếc ván trượt bị đẩy bay sang một bên và nhân vật lao mình 'sấp mặt' trượt dài trên sàn nhà theo phong cách hài kịch câm (Slapstick Comedy). Ngay lập tức, góc máy quay hất ngược lên (Upward Tilt) để hé lộ toàn bộ gian hàng pop-up với bảng hiệu gỗ khắc tên thương hiệu 'Brēth', quầy kệ gỗ bọc khăn trải bàn thanh lịch trưng bày hàng chục chai nước hoa cao cấp, cùng nụ cười rạng rỡ của nữ nhân viên bán hàng đang đứng đón chào.</div>
+            </div>
+
+            <div class="block-two-sided">
+                <div class="critique-side pro">
+                    <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <div class="side-content">Cú chốt hạ (Punchline Payoff) trọn vẹn và thông minh: Giải đáp dứt khoát câu hỏi mở đầu 'Where is your booth?' bằng việc nhân vật 'hạ cánh' ngay dưới chân quầy; cú ngã ngửa trượt bụng tạo tiếng cười sảng khoái đánh tan mọi sự quảng cáo lộ liễu; chuyển động hất máy từ sàn lên quầy dẫn dắt ánh nhìn thẳng vào bảng hiệu tên thương hiệu 'Brēth' và sản phẩm nước hoa.</div>
+                </div>
+                <div class="critique-side con">
+                    <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <div class="side-content">Thời lượng xuất hiện của gian hàng và sản phẩm nước hoa chỉ vỏn vẹn khoảng 1 giây cuối, người xem muốn nhìn kỹ các lọ nước hoa phải bấm tạm dừng hoặc xem lại lần hai (dù điều này lại vô tình tăng chỉ số re-watch).</div>
+                </div>
+            </div>
+
+            <div class="block-takeaway">
+                <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                <div class="takeaway-body">Kết thúc một video dẫn đường / tour bằng một cú ngã hài hước hoặc một điểm hạ cánh bất ngờ (Landing Punchline) luôn để lại dư âm cảm xúc tích cực hơn gấp trăm lần so với việc kết thúc bằng lời kêu gọi mua hàng (Call To Action) cứng nhắc.</div>
+            </div>
+        </div>
+
+        <!-- Specs Strip -->
+        <div class="shot-specs-strip">
+            <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/1.8 (Camera 1x) • Ground-Level Impact chuyển nhanh sang Upward Tilt Reveal</span>
+            <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Gian hàng Pop-up Brēth ® Art for the Nose tại Central Market KL</span>
+            <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng đèn trưng bày ấm áp (Warm White) tôn vinh màu hổ phách của chai nước hoa</span>
+            <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Kết thúc tác phẩm, mở ra chu kỳ Loop hoàn hảo quay lại câu hỏi ban đầu</span>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+            <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/transitions/trans_07_to_01_loop.jpg', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/transitions/trans_07_to_01_loop.jpg" alt="Loop Transition" loading="lazy">
+                <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </article>
+    
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+    <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 1.87)">
+        <div class="grid-thumb-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+            <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+        </div>
+        <div class="grid-card-body">Hook Chạy Đua Mở Màn & Dòng Chữ 'Where Is Your Booth?' Chặn Đứng Thao Tác Lướt Màn Hình (Sprint Hook & Interactive Question Text)</div>
+    </div>
+    
+
+    <div class="grid-shot-card" onclick="jumpToShot(2, 1.9, 5.2)">
+        <div class="grid-thumb-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+            <span class="grid-thumb-badge">Shot 02 • 1.90s</span>
+        </div>
+        <div class="grid-card-body">Cú Nhảy Bắt Ván Trượt Lướt Dáng Lướt Sóng Giữa Lòng Chợ Truyền Thống (Threshold Skateboard Launch & Standing Surf Stance)</div>
+    </div>
+    
+
+    <div class="grid-shot-card" onclick="jumpToShot(3, 5.23, 7.73)">
+        <div class="grid-thumb-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+            <span class="grid-thumb-badge">Shot 03 • 5.23s</span>
+        </div>
+        <div class="grid-card-body">Tư Thế Lướt Nằm Sấp 'Superman' Sát Mặt Sàn Gây Cười Cực Độ (Low-Slung 'Superman' Belly-Down Glide)</div>
+    </div>
+    
+
+    <div class="grid-shot-card" onclick="jumpToShot(4, 7.77, 10.9)">
+        <div class="grid-thumb-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+            <span class="grid-thumb-badge">Shot 04 • 7.77s</span>
+        </div>
+        <div class="grid-card-body">Tư Thế Thiền Định Xếp Bằng Hoa Sen 'Lướt Gió Không Chạm Đất' (Zen Lotus Meditation Floating Glide)</div>
+    </div>
+    
+
+    <div class="grid-shot-card" onclick="jumpToShot(5, 10.93, 13.07)">
+        <div class="grid-thumb-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+            <span class="grid-thumb-badge">Shot 05 • 10.93s</span>
+        </div>
+        <div class="grid-card-body">Pha Đảo Trọng Tâm Slalom Lượn Sóng Bẻ Lái Giữa Không Gian Trống (Dynamic Slalom Carve & Wide Space Carving)</div>
+    </div>
+    
+
+    <div class="grid-shot-card" onclick="jumpToShot(6, 13.1, 16.53)">
+        <div class="grid-thumb-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+            <span class="grid-thumb-badge">Shot 06 • 13.10s</span>
+        </div>
+        <div class="grid-card-body">Thế Đứng Cò Một Chân Yoga Chắp Tay Cầu Nguyện 'Bách Phát Bách Trúng' (One-Leg Yoga Tree Stance & Overhead Prayer Glide)</div>
+    </div>
+    
+
+    <div class="grid-shot-card" onclick="jumpToShot(7, 16.57, 17.93)">
+        <div class="grid-thumb-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+            <span class="grid-thumb-badge">Shot 07 • 16.57s</span>
+        </div>
+        <div class="grid-card-body">Cú Ngã 'Sấp Mặt' Hài Hước Đích Đến & Cú Hất Máy Hé Lộ Gian Hàng Brēth (Comic Belly-Flop Landing & Upward Booth Reveal)</div>
+    </div>
+    
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="#" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "en_frame": 56, "st_time": 0.0, "en_time": 1.87, "duration": 1.87, "headline": "Hook Chạy Đua Mở Màn & Dòng Chữ 'Where Is Your Booth?' Chặn Đứng Thao Tác Lướt Màn Hình (Sprint Hook & Interactive Question Text)", "subject_action": "Bối cảnh mở ra bên ngoài tòa nhà di sản Central Market (Pasar Seni - thành lập năm 1888 tại Kuala Lumpur, Malaysia) với mặt tiền màu xanh ngọc lam Art Deco cổ điển. Nhân vật chính (nam nhân viên của thương hiệu nước hoa Brēth mặc áo thun nâu, tạp dề buộc chéo lưng và quần kaki nâu) đang dốc sức chạy nước rút hướng thẳng về phía cửa ra vào của chợ. Trên nền trời và phần trên khung hình xuất hiện dòng chữ typography vàng rực 'Where is your booth?' – mô phỏng câu hỏi lặp đi lặp lại của khách hàng đang tìm gian hàng pop-up.", "pros": "Động tác chạy nước rút về phía cửa (Forward Sprint Vector) tạo xung lực thị giác (Visual Momentum) cực mạnh ngay từ frame 0; câu hỏi màu vàng 'Where is your booth?' đóng vai trò mỏ neo tương tác khơi gợi tính tò mò (Curiosity Hook) khiến người xem muốn biết câu trả lời bằng cách xem tiếp; mặt tiền kiến trúc đối xứng của Central Market tạo bố cục dẫn hướng 1 điểm tụ hút mắt vào lối vào.", "cons": "Dòng chữ vàng tuy nổi bật nhưng font chữ hơi mảnh và không có bóng đổ (drop shadow), khi chạy qua các khoảng tường sáng dễ bị giảm độ tương phản nhẹ trong nửa giây đầu.", "takeaway": "Khi thông báo địa điểm gian hàng hội chợ hoặc pop-up store, đừng đăng ảnh sơ đồ tĩnh khô khan; hãy mở đầu bằng câu hỏi thực tế của khách hàng kèm một cú chạy nước rút đầy năng lượng để kéo khán giả cùng bước vào hành trình.", "specs": {"lens": "24mm f/1.8 (Camera 1x) • Chụp ngang tầm mắt, bám đuôi chủ thể (Rear Tracking Shot)", "location": "Cửa chính Central Market (Pasar Seni), Kuala Lumpur, Malaysia", "lighting": "Ánh sáng ban ngày tự nhiên ngoài trời, mây tán xạ nhẹ dịu mắt", "transition": "Match Action Cut - cắt cảnh khi chân vừa chạm ngưỡng cửa lát gạch bông để chuyển sang cú trượt ván ở Shot 02"}}, {"id": 2, "st_frame": 57, "en_frame": 156, "st_time": 1.9, "en_time": 5.2, "duration": 3.3, "headline": "Cú Nhảy Bắt Ván Trượt Lướt Dáng Lướt Sóng Giữa Lòng Chợ Truyền Thống (Threshold Skateboard Launch & Standing Surf Stance)", "subject_action": "Vừa bước qua cánh cửa kính của Pasar Seni, nhân vật lập tức nhảy lên ván trượt và bắt đầu lướt êm ru trên sàn gạch nhẵn bóng của khu chợ. Anh đứng nghiêng người, hai tay dang rộng sang hai bên như một vận động viên lướt sóng (Surfing Glide), lượn nhẹ nhàng qua các quầy hàng lưu niệm truyền thống, thùng làm mát và khách tham quan đang ngơ ngác ngoái nhìn theo.", "pros": "Yếu tố bất ngờ (Surprise Factor) cực lớn khi chuyển từ hành vi chạy bộ sang lướt ván điệu nghệ bên trong không gian công cộng; tư thế dang tay đón gió giữ thăng bằng tạo cảm giác tự do, mượt mà và nhịp độ trôi êm ái; góc quay bám sát từ phía sau (Follow Shot) tạo trải nghiệm góc nhìn người thứ ba (Third-Person Perspective) như trong game phiêu lưu nhập vai.", "cons": "Hành động lướt ván trong chợ đông người có thể gây cảm giác hơi rủi ro/nguy hiểm cho người qua lại nếu không kiểm soát tốt tốc độ; tay máy đôi lúc bị rung lắc nhẹ do người cầm máy cũng phải di chuyển nhanh theo tốc độ ván trượt.", "takeaway": "Thay đổi phương thức di chuyển đột ngột (từ chạy sang lướt) ngay khi chuyển đổi không gian (từ ngoài trời vào trong nhà) là đòn bẩy tuyệt vời để duy trì chỉ số giữ chân khán giả (Audience Retention Rate).", "specs": {"lens": "24mm f/1.8 (Camera 1x) • Follow Cam góc thấp bám theo trục di chuyển", "location": "Hành lang chính tầng trệt Central Market, hai bên là các gian hàng quà tặng và thủ công mỹ nghệ", "lighting": "Ánh sáng đèn trần huỳnh quang kết hợp ánh sáng tự nhiên hắt từ mái vòm kính giếng trời", "transition": "Hard Match Cut - cắt nối đột ngột theo trục dọc sang tư thế nằm sấp ở Shot 03"}}, {"id": 3, "st_frame": 157, "en_frame": 232, "st_time": 5.23, "en_time": 7.73, "duration": 2.5, "headline": "Tư Thế Lướt Nằm Sấp 'Superman' Sát Mặt Sàn Gây Cười Cực Độ (Low-Slung 'Superman' Belly-Down Glide)", "subject_action": "Sau cú cắt cảnh chớp nhoáng, nhân vật bất ngờ chuyển sang tư thế nằm sấp bụng hoàn toàn trên mặt ván trượt tí hon, hai tay vươn thẳng về phía trước và hai chân duỗi thẳng phía sau như động tác bơi lội hoặc tư thế bay của Siêu Nhân. Ván trượt lướt băng qua hành lang hẹp, phía trên là khách bộ hành ăn mặc thanh lịch và người mua sắm ngạc nhiên ngoái đầu lại nhìn trân trối.", "pros": "Tính hài hước thị giác (Visual Comedy / Absurd Humor) bùng nổ đỉnh điểm; góc máy hạ thấp sát sàn gạch tôn vinh sự chênh lệch tỷ lệ giữa người nằm trượt và các khách đi bộ cao lêu nghêu hai bên; phản ứng tự nhiên (Authentic Reaction) của người đi đường xung quanh tăng thêm tính chân thật và sức viral cho video.", "cons": "Vị trí chân của nhân vật che khuất phần lớn ván trượt, khiến ở một số góc nhìn người xem có thể tưởng nhầm là anh đang bị trượt ngã hoặc nằm bò tự do; khoảng cách với người đi bộ phía trước khá gần đòi hỏi độ chính xác cao.", "takeaway": "Đưa các động tác cơ thể phi lý, hài hước (Slapstick / Absurdist movement) vào bối cảnh đời thực nghiêm túc luôn là công thức tạo tương tác bình luận (Comment Magnet) số 1 trên TikTok và Instagram Reels.", "specs": {"lens": "24mm f/1.8 (Camera 1x) • Ground-Level Tracking Shot (Góc máy sát mặt sàn)", "location": "Dãy hành lang giữa các ki-ốt thời trang và quầy đồ uống Durian tại Central Market", "lighting": "Ánh sáng nội thất hỗn hợp (đèn neon quầy hàng và ánh sáng giếng trời mái nhà)", "transition": "Center Axis Match Cut - giữ nguyên tâm trục khung hình, chuyển tức thì sang tư thế ngồi xếp bằng ở Shot 04"}}, {"id": 4, "st_frame": 233, "en_frame": 327, "st_time": 7.77, "en_time": 10.9, "duration": 3.13, "headline": "Tư Thế Thiền Định Xếp Bằng Hoa Sen 'Lướt Gió Không Chạm Đất' (Zen Lotus Meditation Floating Glide)", "subject_action": "Tiếp nối sự phi lý, nhân vật bất ngờ xuất hiện trong tư thế ngồi xếp bằng bắt chéo chân (Hoa Sen / Padmasana), hai bàn tay đặt nhẹ lên đầu gối bấm ngón tay thủ ấn Gyan Mudra thư thái. Anh lướt đi nhẹ tênh giữa lòng chợ như một vị đạo sĩ đang lơ lửng thiền định trên thảm bay, điềm tĩnh băng qua các bảng hiệu quảng cáo nước hoa và gian hàng đông đúc.", "pros": "Sự tương phản tuyệt đỉnh giữa chuyển động vật lý tốc độ cao của ván trượt và vẻ mặt/tư thế tĩnh tại tuyệt đối của người thiền; lưng thẳng, dây đai tạp dề bắt chéo chữ X cân đối tạo một khối hình học tam giác vững chãi ngay giữa trục đối xứng khung hình; tạo cảm giác 'trôi' vô trọng lực kích thích thị giác cực mạnh.", "cons": "Biển quảng cáo đứng màu đen bên trái ở đầu phân cảnh hơi choán một phần góc nhìn và tạo bóng râm tạm thời lên nhân vật.", "takeaway": "Vận dụng thủ pháp tương phản tĩnh - động (Static pose in high-speed motion): Giữ cơ thể hoàn toàn bất động trong một tư thế zen khi khung cảnh xung quanh chuyển động vun vút để tạo hiệu ứng thị giác thôi miên người xem.", "specs": {"lens": "24mm f/1.8 (Camera 1x) • Low Eye-Level Symmetric Tracking", "location": "Trục giao thông chính gần khu vực cầu thang trung tâm của chợ", "lighting": "Ánh sáng giếng trời tán xạ mềm, làm nổi bật đường chỉ may tạp dề và phom dáng", "transition": "Pop-Cut chuyển thẳng từ tư thế ngồi sang tư thế đứng nghiêng lượn sóng ở Shot 05"}}, {"id": 5, "st_frame": 328, "en_frame": 392, "st_time": 10.93, "en_time": 13.07, "duration": 2.13, "headline": "Pha Đảo Trọng Tâm Slalom Lượn Sóng Bẻ Lái Giữa Không Gian Trống (Dynamic Slalom Carve & Wide Space Carving)", "subject_action": "Không gian hành lang mở rộng ra khu sảnh rộng thênh thang trang trí cờ Malaysia. Nhân vật bật dậy tư thế đứng, ngả người sâu sang bên phải rồi lượn ngoạn mục sang bên trái (Slalom Carve), hai tay mở rộng hết cỡ để giữ thăng bằng như một tay trượt ván đường phố chuyên nghiệp, tạo nên những đường lượn chữ S đẹp mắt trên mặt sàn bóng loáng.", "pros": "Nhịp độ dựng thay đổi từ chuyển động thẳng đều sang chuyển động lượn sóng zíc-zắc (Dynamic S-Curve Motion) giúp giải tỏa cảm giác đơn điệu; không gian sảnh trần cao với hàng cờ và cột lớn tạo chiều sâu phối cảnh hoành tráng; kỹ năng kiểm soát ván trượt khéo léo mang lại sự phấn khích cho người xem.", "cons": "Cú nghiêng người ở tốc độ cao khiến camera phải xoay theo, viền biên khung hình có chút chuyển động mờ (motion blur nhẹ), đòi hỏi người xem phải tập trung vào trọng tâm lưng áo.", "takeaway": "Khi làm video hành trình di chuyển (Tour / Walkthrough), cần luân chuyển nhịp độ: xen kẽ giữa các phân đoạn đi thẳng êm ái với các cú bẻ lái đánh võng tốc độ để tái kích thích nhịp tim và sự chú ý thị giác của khán giả.", "specs": {"lens": "24mm f/1.8 (Camera 1x) • Dynamic Kinetic Tracking bám sát quỹ đạo rẽ", "location": "Khu vực sảnh giếng trời trung tâm với trần cao và cờ trang trí lễ hội", "lighting": "Ánh sáng trần rực rỡ và phản xạ sàn gạch men bóng loáng", "transition": "Jump Cut trực tiếp vào tư thế thăng bằng một chân yoga ở Shot 06"}}, {"id": 6, "st_frame": 393, "en_frame": 496, "st_time": 13.1, "en_time": 16.53, "duration": 3.43, "headline": "Thế Đứng Cò Một Chân Yoga Chắp Tay Cầu Nguyện 'Bách Phát Bách Trúng' (One-Leg Yoga Tree Stance & Overhead Prayer Glide)", "subject_action": "Bước vào đoạn hành lang lát gạch đỏ gốm nung dẫn thẳng đến gian hàng, nhân vật đột ngột co một chân lên vuông góc, chỉ trụ trên một bàn chân duy nhất trên mặt ván (Tư thế Cây / Vrikshasana trong Yoga), đồng thời hai tay giơ thẳng lên cao chắp lại trên đỉnh đầu theo hình mũi tên nhọn. Anh lướt đi kiêu hãnh và vững chãi qua hàng loạt quầy trưng bày cho đến khi nhìn thấy gian hàng Brēth.", "pros": "Khả năng giữ thăng bằng một chân trên ván trượt đang chạy với hai tay giơ cao tạo ấn tượng thán phục về kỹ năng thể chất; tư thế vươn cao kéo dài trục đứng (Vertical Line), tận dụng tối đa khung hình tỷ lệ 9:16 dọc; hai bàn tay chắp hình mũi tên chỉ thẳng lên trên đóng vai trò như một la bàn điều hướng thị giác hướng thẳng về phía trước.", "cons": "Tư thế giơ cao tay khiến đầu và mặt nhân vật bị che khuất một phần bởi cánh tay, người xem chỉ nhìn thấy lưng và hình thể tổng thể; đoạn này kéo dài hơn 3.4s, có thể cắt bớt 0.5s để nhịp về đích gãy gọn hơn.", "takeaway": "Sử dụng các tư thế kéo dài trục đứng cơ thể (Vertical Axis Poses) để lấp đầy khung hình dọc 9:16, tạo sự bề thế và khác biệt hoàn toàn so với các video quay dọc thông thường.", "specs": {"lens": "24mm f/1.8 (Camera 1x) • Low Tracking Shot tôn chiều cao nhân vật", "location": "Hành lang lát gạch đỏ gốm nung tại khu vực chợ nghệ thuật Pasar Seni", "lighting": "Đèn rọi spotlight từ trần các gian hàng tạo viền sáng (Rim Light) trên cánh tay nhân vật", "transition": "Cut Match Dive - cắt nhanh vào pha tiếp đất nằm bò trên sàn ở Shot 07"}}, {"id": 7, "st_frame": 497, "en_frame": 537, "st_time": 16.57, "en_time": 17.93, "duration": 1.37, "headline": "Cú Ngã 'Sấp Mặt' Hài Hước Đích Đến & Cú Hất Máy Hé Lộ Gian Hàng Brēth (Comic Belly-Flop Landing & Upward Booth Reveal)", "subject_action": "Đến ngay trước vỉa gạch đỏ của gian hàng, chiếc ván trượt bị đẩy bay sang một bên và nhân vật lao mình 'sấp mặt' trượt dài trên sàn nhà theo phong cách hài kịch câm (Slapstick Comedy). Ngay lập tức, góc máy quay hất ngược lên (Upward Tilt) để hé lộ toàn bộ gian hàng pop-up với bảng hiệu gỗ khắc tên thương hiệu 'Brēth', quầy kệ gỗ bọc khăn trải bàn thanh lịch trưng bày hàng chục chai nước hoa cao cấp, cùng nụ cười rạng rỡ của nữ nhân viên bán hàng đang đứng đón chào.", "pros": "Cú chốt hạ (Punchline Payoff) trọn vẹn và thông minh: Giải đáp dứt khoát câu hỏi mở đầu 'Where is your booth?' bằng việc nhân vật 'hạ cánh' ngay dưới chân quầy; cú ngã ngửa trượt bụng tạo tiếng cười sảng khoái đánh tan mọi sự quảng cáo lộ liễu; chuyển động hất máy từ sàn lên quầy dẫn dắt ánh nhìn thẳng vào bảng hiệu tên thương hiệu 'Brēth' và sản phẩm nước hoa.", "cons": "Thời lượng xuất hiện của gian hàng và sản phẩm nước hoa chỉ vỏn vẹn khoảng 1 giây cuối, người xem muốn nhìn kỹ các lọ nước hoa phải bấm tạm dừng hoặc xem lại lần hai (dù điều này lại vô tình tăng chỉ số re-watch).", "takeaway": "Kết thúc một video dẫn đường / tour bằng một cú ngã hài hước hoặc một điểm hạ cánh bất ngờ (Landing Punchline) luôn để lại dư âm cảm xúc tích cực hơn gấp trăm lần so với việc kết thúc bằng lời kêu gọi mua hàng (Call To Action) cứng nhắc.", "specs": {"lens": "24mm f/1.8 (Camera 1x) • Ground-Level Impact chuyển nhanh sang Upward Tilt Reveal", "location": "Gian hàng Pop-up Brēth ® Art for the Nose tại Central Market KL", "lighting": "Ánh sáng đèn trưng bày ấm áp (Warm White) tôn vinh màu hổ phách của chai nước hoa", "transition": "Kết thúc tác phẩm, mở ra chu kỳ Loop hoàn hảo quay lại câu hỏi ban đầu"}}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ct.toFixed(2) + 's / ' + (player.duration ? player.duration.toFixed(2) : '17.93') + 's';
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 30 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById('shot-' + shotId);
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

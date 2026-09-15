@@ -1,0 +1,2942 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Nghệ Thuật Mở Hộp Rương Quà Mùa Hè Tory Burch & Phối Đồ Điện Ảnh - @tsangtastic • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / VIDEO Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 VIDEO DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">22 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Nghệ Thuật Mở Hộp Rương Quà Mùa Hè Tory Burch & Phối Đồ Điện Ảnh - @tsangtastic</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DaB-gO6hvPX/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DaB-gO6hvPX.mp4" type="video/mp4">
+                <source src="DaB-gO6hvPX.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 90.13s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Nghệ Thuật Mở Hộp Rương Quà Mùa Hè Tory Burch & Phối Đồ Điện Ảnh - @tsangtastic</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@tsangtastic" onclick="handleCreatorClick(event, '@tsangtastic', 'Jenny Tsang')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Jenny Tsang trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Jenny Tsang</strong>
+                        <span class="author-handle">(@tsangtastic)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/DaB-gO6hvPX/" target="_blank" class="author-link">Jenny Tsang (@tsangtastic)</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 90.13s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Nghệ Thuật Mở Hộp Rương Quà Mùa Hè Tory Burch & Phối Đồ Điện Ảnh - @tsangtastic</h1>
+            <p class="overview-hero-desc">Bóc tách 22 phân cảnh mở hộp rương quà tặng mùa hè Tory Burch (Summer PR Trunk) của Jenny Tsang (@tsangtastic): Kỹ thuật giấu cắt nhịp thở, mở ngăn kéo đa tầng, phối màu kính mát & khuyên tai, cận cảnh túi da lộn camel & charm bóng bãi biển, bước đi song song tracking dolly và cú chuyển cảnh viễn tưởng hồ bơi vô cực.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Luxury PR Trunk Unboxing • Tracking Dolly Walk • Action Match Cut • Multi-Tier Drawer Reveal • Macro Accessory Showcase • Dreamy Pool Fantasy Cut</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">22 Shots • Nhịp trung bình 4.1s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 • 60.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 3.38)">
+                    ▶ 0.00s - 3.38s (3.38s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Khung Dẫn Khung Cửa Sẫm Màu & Cú Hook Thì Thầm Thân Mật (Architectural Doorway Framing & Intimate Whisper Hook)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_01_mid.jpg', 'Shot 01 • Giữa (1.69s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.69s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_01_end.jpg', 'Shot 01 • Cuối (3.38s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (3.38s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Jenny Tsang bước ra từ cửa ngách hành lang, tay ôm chiếc rương quà tặng màu xanh biển khổng lồ (cyan-blue Tory Burch PR trunk) bước về phía đảo bếp. Cô mặc áo polo len dệt xanh pastel đồng điệu cùng quần jean ống rộng, dừng bước trước ống kính và buông câu thì thầm kinh ngạc: 'Seriously? Tory Burch!'.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cánh cửa gỗ đen và viền đá marble đóng vai trò khung tự nhiên (Natural Architecture Framing) hút trọn ánh mắt vào chủ thể; sắc xanh biển rực rỡ của chiếc rương tạo điểm nhấn pop-color tương phản mạnh trên phông nền tối; kỹ thuật nói thì thầm (Intimate ASMR-like Whisper) kéo người xem lại gần như một cuộc trò chuyện riêng tư.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Dáng đi mang vác chiếc hộp nặng khiến bước chân hơi gượng nhẹ ở giây thứ 2; nếu lia máy hạ thấp một chút sẽ thấy rõ sự đồ sộ của chiếc rương hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Mở đầu video unboxing bằng một hành động mang vác đồ vật quá khổ qua khung cửa kết hợp biểu cảm thì thầm bất ngờ giúp giữ chân người xem ngay trong 3 giây vàng đầu tiên.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Medium Wide 28mm f/2.2 • Eye-Level Tracking</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Lối đi hành lang bước vào đảo bếp</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên cửa sổ kết hợp đèn âm trần dịu nhẹ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt nhảy trực diện (Jump Cut to Reaction Close-Up)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Cắt nhảy trực diện (Jump Cut to Reaction Close-Up)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 3.38, 4.12)">
+                    ▶ 3.38s - 4.12s (0.74s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cận Cảnh Biểu Cảm Chắp Tay & Nghiêng Đầu Chớp Mắt Tương Tác Cảm Xúc (Emotional Micro-Reaction & Head-Tilt Connect)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_02_start.jpg', 'Shot 02 • Đầu (3.38s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (3.38s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_02_mid.jpg', 'Shot 02 • Giữa (3.75s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (3.75s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_02_end.jpg', 'Shot 02 • Cuối (4.12s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (4.12s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy cận cảnh (Tight Close-Up) bắt trọn khuôn mặt rạng rỡ của Jenny. Cô chắp hai bàn tay lại, nghiêng đầu nhẹ sang một bên, nở nụ cười tươi tắn với ánh mắt lấp lánh nhìn thẳng vào ống kính.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cắt cận bất ngờ (Micro Cut 0.72s) tạo nhịp giật thị giác (Visual Accent), phá vỡ sự bằng phẳng của cú toàn cảnh; biểu cảm chân thật hân hoan truyền tải năng lượng tích cực tức thì đến khán giả.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng cực ngắn (chưa đầy 1 giây) có thể khiến người xem chưa kịp đọc hết chi tiết trang sức trên cổ tay nếu không tập trung.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Chèn một micro-reaction shot (< 1s) ngay sau cú hook giúp nhân cách hóa video (Humanize), tạo sợi dây đồng cảm sâu sắc trước khi đi vào giới thiệu sản phẩm.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Portrait 50mm f/2.0 • Tight Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khuôn mặt Jenny cạnh vách tủ bếp</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ven (Rim Light) làm nổi bật đường nét mái tóc đen</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt mở rộng (Cut to Medium Wide) sang thao tác đặt rương</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Cắt mở rộng (Cut to Medium Wide) sang thao tác đặt rương</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 4.12, 7.22)">
+                    ▶ 4.12s - 7.22s (3.10s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thao Tác Đặt Rương Lên Mặt Bàn Đá & Định Vị Không Gian Sân Khấu (Island Counter Stage Setting & Box Placement)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_03_start.jpg', 'Shot 03 • Đầu (4.12s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (4.12s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_03_mid.jpg', 'Shot 03 • Giữa (5.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.67s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_03_end.jpg', 'Shot 03 • Cuối (7.22s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (7.22s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc trung cảnh rộng (Medium Wide Shot). Jenny dùng hai tay nâng và đặt chiếc rương xanh Tory Burch vững chãi lên mặt bàn đá cẩm thạch đảo bếp. Mặt trước chiếc rương in hình vận động viên bơi lội nghệ thuật và logo Tory Burch trắng sắc sảo hướng thẳng về phía camera.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Mặt bàn đá cẩm thạch phản chiếu ánh sáng trắng sạch sẽ, biến không gian bếp thành sàn diễn sang trọng (Luxury Display Stage); bố cục rương chiếm trọn 1/3 góc dưới khung hình làm mỏ neo cố định vững chãi.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cạnh trái của rương hơi sát mép khung hình khi cô xoay góc.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Hãy coi mặt bàn hoặc đảo bếp là một sân khấu trình diễn; đặt sản phẩm có logo thương hiệu hướng thẳng về phía ống kính trước khi thực hiện bất kỳ thao tác bóc mở nào.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm f/2.5 • Three-Quarter Medium Angle</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn đảo bếp mặt đá cẩm thạch</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Key light dịu từ trần và ánh sáng tản ngang</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt tiếp nối thao tác (Action Match Cut) sang cú kéo ngăn rương</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Cắt tiếp nối thao tác (Action Match Cut) sang cú kéo ngăn rương</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 7.22, 11.52)">
+                    ▶ 7.22s - 11.52s (4.30s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cơ Chế Kéo Ngăn Đa Tầng Bí Ẩn & Chiết Xuất Hộp Da Xanh Olive (Multi-Tier Drawer Mechanism & Olive Case Extraction)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_04_start.jpg', 'Shot 04 • Đầu (7.22s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (7.22s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_04_mid.jpg', 'Shot 04 • Giữa (9.37s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.37s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_04_end.jpg', 'Shot 04 • Cuối (11.52s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (11.52s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Jenny dùng tay kéo trượt ngăn kéo bên hông của chiếc rương xanh, để lộ hệ thống ngăn chứa quà tặng phân tầng thông minh. Cô cầm bình nước cá nhân nhấp một ngụm rồi vươn tay rút chiếc hộp bọc da màu xanh olive từ ngăn giữa giơ lên trước ống kính.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thiết kế rương có ngăn kéo trượt ngang tạo bất ngờ cơ khí (Mechanical Surprise); chi tiết uống nước tự nhiên làm giảm tính chất quảng cáo cứng nhắc, tạo cảm giác vlog đời sống chân thực.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Hành động uống nước hơi phân tán sự chú ý vào ngăn kéo trong 1.5 giây đầu.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Các cơ chế mở trượt ngang (sliding drawers) hoặc mở lật tạo cảm giác khám phá kho báu sâu sắc hơn nhiều so với nắp hộp mở thông thường.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm f/2.8 • Medium Side Angle</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Ngăn kéo bên hông rương quà tặng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng phản chiếu từ trần chiếu sáng lòng ngăn kéo</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt cận cảnh (Cut to Close-Up) vào bàn tay mở hộp kính</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Cắt cận cảnh (Cut to Close-Up) vào bàn tay mở hộp kính</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 11.52, 14.32)">
+                    ▶ 11.52s - 14.32s (2.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bật Nắp Hộp Da Khâu Chỉ Thủ Công & Lộ Diện Kính Mát Đồi Mồi (Textured Leather Case Pop & Tortoiseshell Sunglasses Reveal)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_05_start.jpg', 'Shot 05 • Đầu (11.52s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (11.52s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_05_mid.jpg', 'Shot 05 • Giữa (12.92s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (12.92s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_05_end.jpg', 'Shot 05 • Cuối (14.32s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (14.32s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc cận cảnh (Close-Up). Jenny cầm chiếc hộp đựng kính màu xanh cốm bọc da có dập chìm logo Tory Burch, mở nắp từ tính và lấy ra chiếc kính mát gọng đồi mồi màu nâu sẫm kèm khăn lau lụa trắng: 'Sunnies? Let's just put it in here'.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Chất liệu da hạt mịn (pebbled leather) của hộp kính nổi rõ dưới ánh sáng tản; thao tác mở nắp êm ái kết hợp âm thanh tách nhẹ kích thích giác quan xúc giác (Tactile Satisfaction).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Mặt trong của nắp hộp hơi bị bóng lóa nhẹ khi xoay nghiêng.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi giới thiệu phụ kiện cao cấp, hãy để ống kính đủ gần để người xem cảm nhận được vân da, đường may và cơ chế đóng mở tinh xảo.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/2.0 • Macro Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn tay cầm hộp kính ngang ngực</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng studio mềm 45 độ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt nhảy thao tác (Match Cut on Action) đeo kính lên mắt</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Cắt nhảy thao tác (Match Cut on Action) đeo kính lên mắt</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 14.32, 17.05)">
+                    ▶ 14.32s - 17.05s (2.73s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thử Kính Mát Tại Chỗ & Rút Thêm Hộp Phụ Kiện Trang Sức (Instant Eyewear Styling Check & Jewelry Pouch Tease)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_06_start.jpg', 'Shot 06 • Đầu (14.32s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (14.32s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_06_mid.jpg', 'Shot 06 • Giữa (15.69s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (15.69s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_06_end.jpg', 'Shot 06 • Cuối (17.05s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (17.05s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Jenny đeo kính mát lên khuôn mặt, mỉm cười thần thái kiêu sa nhìn thẳng vào máy quay, sau đó nhanh chóng nhấc tiếp một chiếc bao bì phụ kiện màu xanh cốm khác: 'Good. You would love these'.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Chuyển từ bóc hộp sang 'on-body styling' ngay lập tức giúp khán giả thấy ngay công năng và phom dáng thực tế của kính trên gương mặt Á Đông thanh tú; tông màu kính đồi mồi ăn khớp hoàn hảo với mái tóc.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Mắt kính đen sẫm che mất ánh mắt tương tác của nhân vật trong 2 giây.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Quy tắc vàng của unboxing thời trang: Đừng chỉ để đồ trên bàn, hãy mặc/đeo thử ngay lên người để người xem hình dung trọn vẹn phong cách (Immediate Wearability).</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Portrait 50mm f/2.0 • Medium Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Trước đảo bếp</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Catchlight phản chiếu trên bề mặt tròng kính đen bóng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt cận cảnh (Cut to Tight Detail) vào khuyên tai bạc</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Cắt cận cảnh (Cut to Tight Detail) vào khuyên tai bạc</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 17.05, 20.85)">
+                    ▶ 17.05s - 20.85s (3.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Trưng Bày Cặp Khuyên Tai Bạc Chunky Hoop & Ướm Thử Lên Vành Tai (Chunky Silver Hoop Earrings & Earlobe Try-On)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_07_start.jpg', 'Shot 07 • Đầu (17.05s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (17.05s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_07_mid.jpg', 'Shot 07 • Giữa (18.95s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (18.95s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_07_end.jpg', 'Shot 07 • Cuối (20.85s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (20.85s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Jenny đưa tấm bìa kẹp đôi khuyên tai vòng tròn kim loại màu bạc sáng bóng sát vào ống kính máy quay, rồi vén nhẹ tóc mai và ướm chiếc khuyên lên vành tai để kiểm tra kích thước và độ tương phản: 'Perfect color. I love this color'.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Độ phóng đại sát ống kính giúp thấy rõ kết cấu kim loại đặc và khóa bấm; động tác vén tóc mai để lộ đường nét tai và xương quai hàm quyến rũ; màu xanh cốm của tấm thẻ làm nền tôn sắc bạc của khuyên tai.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Đầu ngón tay hơi che một phần góc cong dưới của chiếc khuyên tai bên phải.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Tận dụng độ tương phản giữa bao bì và kim loại (bìa xanh cốm - trang sức bạc) để làm phụ kiện nổi bật tự nhiên mà không cần chỉnh màu quá đà.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/2.0 • Extreme Close-Up to Medium Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Vành tai và bàn tay Jenny</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ven chiếu góc 45 độ làm ánh kim loại lóe sáng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt nhảy (Jump Cut) sang khuyên tai đã cài hoàn thiện</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Cắt nhảy (Jump Cut) sang khuyên tai đã cài hoàn thiện</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 20.85, 25.78)">
+                    ▶ 20.85s - 25.78s (4.93s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Nụ Cười Hoàn Thiện Phong Cách & Giày Búp Bê Da Trắng Đính Khóa Logo (Look Approval Smile & Ivory Ballet Flats Reveal)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_08_start.jpg', 'Shot 08 • Đầu (20.85s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (20.85s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_08_mid.jpg', 'Shot 08 • Giữa (23.32s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (23.32s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_08_end.jpg', 'Shot 08 • Cuối (25.78s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (25.78s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Jenny mỉm cười gật đầu tán thưởng màu xanh cốm ('Green is perfect'), sau đó bất ngờ giơ lên trước ống kính đôi giày búp bê da cừu màu trắng ngà (ivory ballet flats) thắt nơ mảnh đính logo Tory Burch kim loại tròn sáng loáng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Sự chuyển tiếp mượt mà từ phụ kiện nhỏ (kính, khuyên tai) sang phụ kiện thời trang trọng tâm (giày búp bê); đôi giày trắng nổi bật tuyệt đối trên nền áo polo xanh và tóc đen; chi tiết nơ và khóa cài hiện lên sắc sảo.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Đôi giày còn giữ miếng xốp lót bên trong nên phom dáng chưa hoàn toàn mềm mại như khi mang vào chân.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Duy trì nhịp bóc mở liên tục từ nhỏ đến lớn (vi mô -> vĩ mô) để duy trì sự tò mò và hứng thú của khán giả.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm f/2.5 • Medium Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Không gian trước ngực và vách tường đen</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tán xạ mềm tôn chất liệu da cừu</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt mở góc toàn thân (Cut to Full Body Angle) cúi lấy túi</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 09 • Cắt mở góc toàn thân (Cut to Full Body Angle) cúi lấy túi</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_08_to_09.jpg?v=2', 'Chuyển cảnh Shot 08 sang Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_08_to_09.jpg?v=2" alt="Transition 8 to 9" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-9">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 09</span>
+                <button class="shot-time-btn" onclick="jumpToShot(9, 25.78, 30.18)">
+                    ▶ 25.78s - 30.18s (4.40s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cúi Mình Xuống Ngăn Đáy Trầm & Trục Vớt Túi Bọc Vải Lime Green (Deep Drawer Retrieval & Lime-Green Dust Bag Pop)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_09_start.jpg', 'Shot 09 • Đầu (25.78s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (25.78s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_09_mid.jpg', 'Shot 09 • Giữa (27.98s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (27.98s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_09_end.jpg', 'Shot 09 • Cuối (30.18s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (30.18s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy toàn cảnh (Full-Body Wide Shot). Jenny cúi thấp người kéo hết hành trình ngăn kéo tầng dưới của chiếc rương, hai tay cẩn trọng nâng chiếc túi vải rút (dust bag) màu xanh cốm khổ lớn chứa nhân vật trung tâm của bộ sưu tập.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc toàn cảnh giải phóng không gian sau một chuỗi góc cận cảnh; cử chỉ nâng niu chiếc túi vải tạo cảm giác đây là vật phẩm quý giá nhất trong chiếc rương (Hero Product Build-up).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chuyển động cúi người làm mặt Jenny hơi khuất vào bóng tối của cạnh bàn trong 1 giây.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Trước khi giới thiệu món đồ quan trọng nhất (Hero Item), hãy lùi máy quay ra góc toàn để tạo khoảng dừng nhịp thở (Breathing Room) và nhấn mạnh kích thước của món đồ.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide 28mm f/2.8 • Full-Body Wide Angle</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Ngăn kéo tầng đáy rương quà tặng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng phòng tổng thể</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt cận cảnh (Cut to Close-Up) vào miệng túi rút</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 10 • Cắt cận cảnh (Cut to Close-Up) vào miệng túi rút</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_09_to_10.jpg?v=2', 'Chuyển cảnh Shot 09 sang Shot 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_09_to_10.jpg?v=2" alt="Transition 9 to 10" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-10">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 10</span>
+                <button class="shot-time-btn" onclick="jumpToShot(10, 30.18, 35.28)">
+                    ▶ 30.18s - 35.28s (5.10s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Kéo Mở Túi Bọc Lụa & Lộ Diện Túi Da Lộn Kèm Dây Charm Bóng Biển (Suede Shoulder Bag Reveal & Beach Ball Bead Charm)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_10_start.jpg', 'Shot 10 • Đầu (30.18s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (30.18s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_10_mid.jpg', 'Shot 10 • Giữa (32.73s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (32.73s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_10_end.jpg', 'Shot 10 • Cuối (35.28s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (35.28s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc cận cảnh (Close-Up). Jenny hai tay mở dây rút chiếc túi vải màu cốm, rút ra chiếc túi kẹp nách da lộn màu nâu lạc đà (camel suede shoulder bag) với khóa logo Tory Burch mạ vàng đồng. Đặc biệt, chiếc túi gắn dải charm bi tròn mô phỏng quả bóng bãi biển (pink, green, white beach balls).</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Chất liệu da lộn mềm mại tương phản tuyệt vời với bóng nhẵn của dải charm bi tròn; màu nâu ấm kết hợp sắc xanh cốm của túi vải tạo nên bảng màu mùa hè nhiệt đới sang trọng (Earthy-Pastel Harmony).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Dải charm bóng bãi biển bị xoay nhẹ ra phía sau túi khi vừa nhấc lên khỏi túi bọc.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sự kết hợp giữa chất liệu cổ điển (da lộn) và phụ kiện hiện đại ngộ nghĩnh (charm bóng biển) là điểm neo nội dung thu hút thế hệ trẻ yêu thích phong cách Y2K sang trọng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Portrait 50mm f/1.8 • Medium Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Trước ngực và nền áo polo xanh</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ven phản chiếu trên khóa kim loại mạ vàng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt cận tĩnh (Static Close-Up) vào bề mặt da lộn</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 11 • Cắt cận tĩnh (Static Close-Up) vào bề mặt da lộn</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_10_to_11.jpg?v=2', 'Chuyển cảnh Shot 10 sang Shot 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_10_to_11.jpg?v=2" alt="Transition 10 to 11" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-11">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 11</span>
+                <button class="shot-time-btn" onclick="jumpToShot(11, 35.28, 40.05)">
+                    ▶ 35.28s - 40.05s (4.77s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thao Tác Chỉnh Dây Đeo Da & Trải Nghiệm Xúc Giác Túi Kẹp Nách (Strap Length Adjustment & Suede Tactile Exploration)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_11_start.jpg', 'Shot 11 • Đầu (35.28s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (35.28s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_11_mid.jpg', 'Shot 11 • Giữa (37.66s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (37.66s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_11_end.jpg', 'Shot 11 • Cuối (40.05s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (40.05s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Jenny nâng dây đeo da màu nâu, kiểm tra chiều dài quai xách và ướm thử tư thế kẹp nách: 'For my look today, shoulder wrap... Let's do a fit check'. Cô vuốt nhẹ bờ vai và nắp túi da lộn chuẩn bị cho màn trình diễn thời trang.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Hành động điều chỉnh quai túi trả lời trực tiếp thắc mắc của người mua về tính linh hoạt và công năng của sản phẩm; chuyển động tay tự nhiên, phong thái tự tin và chuyên nghiệp.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Mắt kính mát vắt trên đầu hơi xê dịch nhẹ khi cô cử động vai.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Luôn thể hiện thao tác điều chỉnh công năng (quai đeo, khóa bấm) để biến thước phim unboxing thành cẩm nang hướng dẫn sử dụng trực quan.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/2.0 • Medium Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Đảo bếp</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Keylight dịu đều, viền sáng tóc rõ nét</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt góc toàn theo dõi (Cut to Tracking Dolly Shot) sải bước fit check</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 12 • Cắt góc toàn theo dõi (Cut to Tracking Dolly Shot) sải bước fit check</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_11_to_12.jpg?v=2', 'Chuyển cảnh Shot 11 sang Shot 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_11_to_12.jpg?v=2" alt="Transition 11 to 12" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-12">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 12</span>
+                <button class="shot-time-btn" onclick="jumpToShot(12, 40.05, 44.02)">
+                    ▶ 40.05s - 44.02s (3.97s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Bước Đi Song Song Tracking Dolly & Trình Diễn Toàn Thân Tự Tin (Side-Parallel Tracking Dolly Walk & Full-Body Fit Check)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_12_start.jpg', 'Shot 12 • Đầu (40.05s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (40.05s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_12_mid.jpg', 'Shot 12 • Giữa (42.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (42.03s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_12_end.jpg', 'Shot 12 • Cuối (44.02s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (44.02s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Camera di chuyển song song theo bước chân (Parallel Tracking Dolly). Jenny kẹp chiếc túi da lộn Tory Burch trên vai, sải bước tự tin dọc theo chiều dài bàn đảo bếp. Chiếc túi đung đưa nhịp nhàng theo bước đi, phô diễn trọn vẹn sự kết hợp giữa áo polo xanh dệt kim, quần jean ống rộng rách gấu và túi xách hàng hiệu.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú máy chuyển động song song (Side Dolly) tạo chiều sâu thị sai (Parallax Depth) giữa nhân vật, bàn đảo bếp và bức tường phía sau; nhịp bước đi khoan thai khẳng định đẳng cấp thời trang đường phố thanh lịch (Quiet Luxury Walk).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy hơi hẹp ở phần bàn chân khiến đôi giày chỉ lấp ló sau gấu quần jean.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Cú tracking dolly song song là vũ khí tối thượng để 'thổi hồn cuộc sống' vào chiếc túi xách, cho khán giả thấy sản phẩm chuyển động và tôn vinh vóc dáng người đeo như thế nào trong thực tế.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Cinematic 35mm f/2.2 • Parallel Dolly Tracking Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Lối đi dọc bàn đảo bếp đá marble</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên chạy dọc hành lang tạo vệt sáng động trên thân áo</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt quay lại rương (Match Cut on Return) về ngăn tủ trên</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 13 • Cắt quay lại rương (Match Cut on Return) về ngăn tủ trên</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_12_to_13.jpg?v=2', 'Chuyển cảnh Shot 12 sang Shot 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_12_to_13.jpg?v=2" alt="Transition 12 to 13" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-13">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 13</span>
+                <button class="shot-time-btn" onclick="jumpToShot(13, 44.02, 48.02)">
+                    ▶ 44.02s - 48.02s (4.00s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Khám Phá Ngăn Bí Mật Tầng Trên & Tìm Ra Chiếc Hộp Nhỏ Kỳ Thú (Upper Chamber Exploration & Mystery Box Discovery)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_13_start.jpg', 'Shot 13 • Đầu (44.02s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (44.02s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_13_mid.jpg', 'Shot 13 • Giữa (46.02s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (46.02s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_13_end.jpg', 'Shot 13 • Cuối (48.02s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_13_end.jpg" alt="Shot 13 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (48.02s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Jenny quay trở lại bên chiếc rương xanh, đóng nhẹ ngăn dưới và mở khám phá các hộc tủ trên cùng. Cô hào hứng lấy ra một chiếc hộp nhỏ màu trắng tinh tế được xếp ngay ngắn trong rương.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tái thiết lập sự tò mò của khán giả sau màn catwalk; cấu trúc mở nhiều tầng khiến video không bị đơn điệu mà liên tục mang lại phần thưởng thị giác (Visual Dopamine Loop).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy hơi lệch về phía lưng Jenny khi cô vươn tay tìm đồ trong hộc sâu.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Bố trí các món quà kích thước khác nhau ở từng ngăn riêng biệt giúp cấu trúc kịch bản unboxing có nhịp thăng trầm rõ rệt.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm f/2.5 • Three-Quarter Medium Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt bên rương Tory Burch</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tản từ trần</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt cận cảnh (Cut to Close-Up) bóc hộp máy ảnh</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 14 • Cắt cận cảnh (Cut to Close-Up) bóc hộp máy ảnh</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_13_to_14.jpg?v=2', 'Chuyển cảnh Shot 13 sang Shot 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_13_to_14.jpg?v=2" alt="Transition 13 to 14" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-14">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 14</span>
+                <button class="shot-time-btn" onclick="jumpToShot(14, 48.02, 52.35)">
+                    ▶ 48.02s - 52.35s (4.33s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bóc Hộp Máy Ảnh Phim 35mm Chống Nước Vỏ Tím Lilac Độc Đáo (Waterproof 35mm Film Camera & Transparent Dive Housing Reveal)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_14_start.jpg', 'Shot 14 • Đầu (48.02s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_14_start.jpg" alt="Shot 14 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (48.02s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_14_mid.jpg', 'Shot 14 • Giữa (50.19s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_14_mid.jpg" alt="Shot 14 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (50.19s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_14_end.jpg', 'Shot 14 • Cuối (52.35s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_14_end.jpg" alt="Shot 14 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (52.35s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc cận cảnh (Close-Up). Jenny mở nắp hộp giấy, rút ra chiếc máy ảnh chụp phim 35mm dùng một lần màu tím pastel được bọc trong vỏ nhựa chống nước trong suốt kèm dây đeo cổ tay màu xanh: 'Yes, a film camera with a waterproof case'.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Vật phẩm đậm chất hoài niệm mùa hè (Nostalgic Summer Vibe); lớp vỏ nhựa trong suốt phản chiếu ánh sáng sắc nét làm nổi bật sự kỳ công và chu đáo của thương hiệu Tory Burch dành cho kỳ nghỉ biển.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Dây đeo máy ảnh bị xoắn nhẹ quanh cổ tay khi vừa nhấc ra khỏi hộp.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sự xuất hiện của một thiết bị phi thời trang (máy ảnh chống nước) tạo bất ngờ lớn và gắn kết trực tiếp thương hiệu với trải nghiệm du lịch thực tế.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Portrait 50mm f/1.8 • Close-Up Eye-Level</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Trước ngực Jenny</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng studio làm bóng bề mặt vỏ chống nước</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt trực diện ngắm chụp (Cut to POV Shutter Click)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 15 • Cắt trực diện ngắm chụp (Cut to POV Shutter Click)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_14_to_15.jpg?v=2', 'Chuyển cảnh Shot 14 sang Shot 15')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_14_to_15.jpg?v=2" alt="Transition 14 to 15" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-15">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 15</span>
+                <button class="shot-time-btn" onclick="jumpToShot(15, 52.35, 55.58)">
+                    ▶ 52.35s - 55.58s (3.23s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Đưa Ống Kính Lên Mắt Ngắm & Cú Bấm Máy Phá Vỡ Bức Tường Thứ 4 (POV Shutter Click & Breaking The 4th Wall)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_15_start.jpg', 'Shot 15 • Đầu (52.35s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_15_start.jpg" alt="Shot 15 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (52.35s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_15_mid.jpg', 'Shot 15 • Giữa (53.97s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_15_mid.jpg" alt="Shot 15 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (53.97s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_15_end.jpg', 'Shot 15 • Cuối (55.58s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_15_end.jpg" alt="Shot 15 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (55.58s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Jenny nhấc chiếc máy ảnh phim lên ngang tầm mắt, nhắm một mắt lại ngắm thẳng vào ống kính máy quay chính và bấm nút chụp. Biểu cảm tinh nghịch, nụ cười rạng rỡ phá vỡ khoảng cách với người xem.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tương tác trực diện với khán giả (Subject-to-Audience Direct Interaction); âm thanh 'tách' của màn trập cơ học tạo điểm nhấn âm thanh đắt giá; biểu cảm cực kỳ duyên dáng và tràn đầy năng lượng mùa hè.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Vỏ máy ảnh che khuất một nửa khuôn mặt của Jenny trong khoảnh khắc bấm chụp.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Hành động hướng máy ảnh hoặc điện thoại chụp ngược lại người xem là một chiêu thức điện ảnh kinh điển để kéo khán giả vào trung tâm câu chuyện (Immersive Engagement).</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/1.8 • Tight Medium Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Gương mặt Jenny đối diện camera</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ven tôn bờ vai và tóc</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt góc cận (Cut to Close-Up) vào bộ bài tây</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 16 • Cắt góc cận (Cut to Close-Up) vào bộ bài tây</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_15_to_16.jpg?v=2', 'Chuyển cảnh Shot 15 sang Shot 16')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_15_to_16.jpg?v=2" alt="Transition 15 to 16" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-16">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 16</span>
+                <button class="shot-time-btn" onclick="jumpToShot(16, 55.58, 59.85)">
+                    ▶ 55.58s - 59.85s (4.27s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Kỹ Thuật Xòe Bài Card Spring Điêu Luyện & Bộ Bài Tory Burch Mùa Hè (Card Spring Flourish Cascade & Custom Playing Cards Fan)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_16_start.jpg', 'Shot 16 • Đầu (55.58s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_16_start.jpg" alt="Shot 16 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (55.58s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_16_mid.jpg', 'Shot 16 • Giữa (57.72s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_16_mid.jpg" alt="Shot 16 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (57.72s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_16_end.jpg', 'Shot 16 • Cuối (59.85s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_16_end.jpg" alt="Shot 16 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (59.85s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Jenny cầm bộ bài tây in họa tiết độc quyền Tory Burch, thực hiện cú bắn bài lò xo (Card Spring Flourish) rơi liên hoàn từ tay trên xuống tay dưới như một ảo thuật gia chuyên nghiệp, sau đó xòe nan quạt các lá bài trước ống kính khoe nụ cười tươi tắn.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú bắn bài (Card Spring) là kỹ năng thị giác cao cấp (Kinetic Eye-Candy), tạo chuyển động tốc độ cao cuốn hút bất ngờ; thể hiện sự khéo léo và cá tính năng động của creator.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Một vài lá bài rơi hơi lệch khỏi bàn tay đón bên dưới.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Lồng ghép một kỹ năng vi mô bất ngờ (tung hứng, xòe bài, xoay phụ kiện) giúp video unboxing thoát khỏi khuôn mẫu nhàm chán và tăng tỷ lệ xem lại (Re-watch Rate).</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/2.0 • Medium Close-Up with Fast Shutter</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khoảng không trước ngực</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tốc độ cao bắt dính từng lá bài bay trong không trung</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt mở rộng (Cut to Medium Wide) sang phong bì lớn</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 17 • Cắt mở rộng (Cut to Medium Wide) sang phong bì lớn</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_16_to_17.jpg?v=2', 'Chuyển cảnh Shot 16 sang Shot 17')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_16_to_17.jpg?v=2" alt="Transition 16 to 17" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-17">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 17</span>
+                <button class="shot-time-btn" onclick="jumpToShot(17, 59.85, 64.85)">
+                    ▶ 59.85s - 64.85s (5.00s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bao Bì Giấy Dập Nổi Logo & Bóc Mở Gói Khăn Tắm Biển Khổng Lồ (Embossed Paper Envelope & Beach Towel Package Extraction)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_17_start.jpg', 'Shot 17 • Đầu (59.85s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_17_start.jpg" alt="Shot 17 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (59.85s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_17_mid.jpg', 'Shot 17 • Giữa (62.35s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_17_mid.jpg" alt="Shot 17 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (62.35s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_17_end.jpg', 'Shot 17 • Cuối (64.85s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_17_end.jpg" alt="Shot 17 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (64.85s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Jenny nhấc chiếc phong bì giấy trắng dày dập nổi dòng chữ 'TORY BURCH' màu xanh hải quân, giơ lên trước ống kính, sau đó kéo ra gói khăn tắm biển bọc túi nylon trong suốt.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Nhấn mạnh đẳng cấp đóng gói bao bì xa xỉ (Luxury Packaging Hierarchy); thương hiệu hiện diện sắc nét và trang nhã; thao tác bóc mở gọn gàng, dứt khoát.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Túi nylon bọc bên trong có nếp gấp phản chiếu ánh sáng trắng hơi mạnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đừng bỏ qua các yếu tố bao bì giấy; logo dập nổi trên nền giấy mỹ thuật luôn là biểu tượng của sự tinh tế và đầu tư chỉn chu từ thương hiệu.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm f/2.5 • Medium Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Trước ngực và bàn đảo bếp</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Keylight mềm chiếu trực diện làm nổi vân dập logo</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt giũ khăn (Action Cut on Shaking Towel)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 18 • Cắt giũ khăn (Action Cut on Shaking Towel)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_17_to_18.jpg?v=2', 'Chuyển cảnh Shot 17 sang Shot 18')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_17_to_18.jpg?v=2" alt="Transition 17 to 18" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-18">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 18</span>
+                <button class="shot-time-btn" onclick="jumpToShot(18, 64.85, 70.35)">
+                    ▶ 64.85s - 70.35s (5.50s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Giũ Khăn Tắm Đồ Họa Vận Động Viên & Lộ Diện Ván Phao Bơi Cỡ Đại (Graphic Swimmer Towel Unfold & Inflatable Surfboard Tease)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_18_start.jpg', 'Shot 18 • Đầu (64.85s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_18_start.jpg" alt="Shot 18 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (64.85s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_18_mid.jpg', 'Shot 18 • Giữa (67.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_18_mid.jpg" alt="Shot 18 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (67.60s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_18_end.jpg', 'Shot 18 • Cuối (70.35s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_18_end.jpg" alt="Shot 18 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (70.35s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Jenny giũ bung chiếc khăn tắm biển khổng lồ in hình vận động viên bơi lội nghệ thuật màu xanh trắng choáng ngợp khung hình, sau đó rút ra chiếc phao bơi dáng ván lướt sóng dài bằng cả người cô.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Họa tiết khăn tắm đồng bộ 100% với bức tranh in trên nắp rương ngoài hành lang (Design Motif Continuity); tỷ lệ kích thước phao bơi siêu lớn mang lại sự trầm trồ thị giác (Scale Disruption).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chiếc khăn quá dài che khuất một phần thân dưới của Jenny khi giũ bung.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sử dụng các vật phẩm có hoa văn xuyên suốt (Visual Motif) giúp tạo sự liên kết chặt chẽ giữa các phân cảnh từ đầu đến cuối video.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide 28mm f/2.8 • Full-Length Wide Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Toàn bộ không gian đảo bếp</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng bao quát toàn phòng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt sang phao tròn (Cut to Ring Floatie Framing)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 19 • Cắt sang phao tròn (Cut to Ring Floatie Framing)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_18_to_19.jpg?v=2', 'Chuyển cảnh Shot 18 sang Shot 19')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_18_to_19.jpg?v=2" alt="Transition 18 to 19" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-19">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 19</span>
+                <button class="shot-time-btn" onclick="jumpToShot(19, 70.35, 78.02)">
+                    ▶ 70.35s - 78.02s (7.67s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Lồng Mặt Qua Phao Bơi Tròn Sọc Biển & Khoảnh Khắc Mơ Mộng Bên Hồ Bơi (Striped Swim Ring Peek-Through & Poolside Daydreaming)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_19_start.jpg', 'Shot 19 • Đầu (70.35s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_19_start.jpg" alt="Shot 19 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (70.35s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_19_mid.jpg', 'Shot 19 • Giữa (74.19s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_19_mid.jpg" alt="Shot 19 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (74.19s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_19_end.jpg', 'Shot 19 • Cuối (78.02s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_19_end.jpg" alt="Shot 19 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (78.02s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Jenny đưa khuôn mặt lồng qua tâm vòng phao bơi sọc xanh trắng Tory Burch mỉm cười rạng rỡ, sau đó dùng bơm mini bơm căng phao, đặt hai chiếc phao khổng lồ cạnh nhau và nghiêng đầu tựa vào thành phao nhắm mắt mơ màng: 'Can you see the whole thing? Imagine...'</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc nhìn lồng khung qua tâm phao bơi (Framing within a Frame) vô cùng duyên dáng và sáng tạo; động tác tựa đầu mơ mộng tạo nhịp chuyển cảm xúc (Emotional Transition) dẫn dắt hoàn hảo vào phân cảnh viễn tưởng tiếp theo.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Kích thước phao hơi cồng kềnh lấn át một phần ánh sáng chiếu vào mặt.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Tận dụng chính sản phẩm để làm khung hình sáng tạo cho gương mặt nhân vật; kết thúc phần unboxing bằng một cử chỉ thả hồn tưởng tượng sẽ tạo cầu nối mượt mà sang cảnh thực tế ngoài trời.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm f/2.0 • Medium Shot to Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc đảo bếp bên cạnh hai chiếc phao căng phồng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng mơ màng với catchlight dịu dàng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt match-cut viễn tưởng (Dreamy Match Cut to Infinity Pool)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 20 • Cắt match-cut viễn tưởng (Dreamy Match Cut to Infinity Pool)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_19_to_20.jpg?v=2', 'Chuyển cảnh Shot 19 sang Shot 20')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_19_to_20.jpg?v=2" alt="Transition 19 to 20" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-20">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 20</span>
+                <button class="shot-time-btn" onclick="jumpToShot(20, 78.02, 78.98)">
+                    ▶ 78.02s - 78.98s (0.96s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Cắt Chớp Nhoáng Sang Hồ Bơi Vô Cực Nhiệt Đới (Resort Infinity Pool Fantasy Flash Match-Cut)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_20_start.jpg', 'Shot 20 • Đầu (78.02s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_20_start.jpg" alt="Shot 20 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (78.02s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_20_mid.jpg', 'Shot 20 • Giữa (78.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_20_mid.jpg" alt="Shot 20 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (78.50s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_20_end.jpg', 'Shot 20 • Cuối (78.98s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_20_end.jpg" alt="Shot 20 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (78.98s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Chỉ trong 0.95 giây, khung cảnh đột ngột chuyển đổi kỳ ảo (Match Cut): Vẫn tư thế nghiêng đầu tựa phao bơi ấy, nhưng Jenny giờ đây đang thảnh thơi trôi giữa làn nước xanh ngọc bích của một hồ bơi vô cực tại khu nghỉ dưỡng sang trọng, dưới tán dừa và bầu trời rực nắng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú match-cut ma thuật (Dream Sequence / Teleportation Match Cut) hiện thực hóa trí tưởng tượng của nhân vật ngay tức thì; màu nước hồ bơi xanh biếc và ánh nắng nhiệt đới đánh thức mọi giác quan khao khát mùa hè của khán giả; một điểm nhấn biên tập đỉnh cao.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng quá ngắn (dưới 1 giây) khiến người xem phải replay để thưởng thức lại cú chuyển cảnh tài tình này.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kỹ thuật match-cut giữa bối cảnh trong nhà (mơ mộng) sang bối cảnh ngoại cảnh (thực tế) là công thức đắt giá nhất để kích hoạt cảm xúc khao khát trải nghiệm của người tiêu dùng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Cinematic Wide 24mm f/2.8 • Overhead Pool Angle</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Hồ bơi vô cực khu nghỉ dưỡng cao cấp</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh nắng vàng tự nhiên gay gắt phản chiếu lấp lánh trên mặt nước</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt giật ngược về studio (Flash Cut Back to Studio)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 21 • Cắt giật ngược về studio (Flash Cut Back to Studio)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_20_to_21.jpg?v=2', 'Chuyển cảnh Shot 20 sang Shot 21')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_20_to_21.jpg?v=2" alt="Transition 20 to 21" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-21">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 21</span>
+                <button class="shot-time-btn" onclick="jumpToShot(21, 78.98, 83.65)">
+                    ▶ 78.98s - 83.65s (4.67s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bộ Ba Sẵn Sàng Lên Đường: Kính Mát, Túi Da & Máy Ảnh (Triple Readiness Checklist: Sunnies, Bag & Camera)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_21_start.jpg', 'Shot 21 • Đầu (78.98s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_21_start.jpg" alt="Shot 21 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (78.98s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_21_mid.jpg', 'Shot 21 • Giữa (81.31s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_21_mid.jpg" alt="Shot 21 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (81.31s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_21_end.jpg', 'Shot 21 • Cuối (83.65s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_21_end.jpg" alt="Shot 21 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (83.65s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung cảnh giật ngược về căn bếp hiện tại. Jenny đeo lại kính mát lên sống mũi, cầm túi da lộn camel và cẩn thận cất chiếc máy ảnh phim chống nước vào trong lòng túi: 'Sunnies ready. Bag ready. Camera ready'.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cấu trúc kịch bản khép vòng (Narrative Tie-up): Tất cả các món đồ bóc tách từ đầu video giờ đây được gom lại thành một bộ trang bị du lịch hoàn chỉnh (Complete Travel Kit); câu khẩu hiệu ngắn gọn 3 nhịp cực kỳ bắt tai.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thao tác cất máy ảnh vào túi làm che mất logo Tory Burch trên nắp túi.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Tổng kết lại các sản phẩm chủ đạo bằng một thao tác 'Ready to go' giúp gắn kết toàn bộ video thành một câu chuyện có đầu có đuôi hoàn mỹ.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm f/2.2 • Medium Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Trước rương quà tặng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Keylight cân bằng chuẩn xác</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt toàn cảnh bước ra (Cut to Full Runway Outro)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 22 • Cắt toàn cảnh bước ra (Cut to Full Runway Outro)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_21_to_22.jpg?v=2', 'Chuyển cảnh Shot 21 sang Shot 22')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_21_to_22.jpg?v=2" alt="Transition 21 to 22" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-22">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 22</span>
+                <button class="shot-time-btn" onclick="jumpToShot(22, 83.65, 90.13)">
+                    ▶ 83.65s - 90.13s (6.48s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Đóng Ngăn Rương, Nụ Cười 'Hẹn Gặp Ở Hồ Bơi' & Cú Sải Bước Rời Khung Hình (Closing The Trunk, Poolside Sign-off & Graceful Runway Exit)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_22_start.jpg', 'Shot 22 • Đầu (83.65s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_22_start.jpg" alt="Shot 22 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (83.65s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_22_mid.jpg', 'Shot 22 • Giữa (86.89s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_22_mid.jpg" alt="Shot 22 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (86.89s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_22_end.jpg', 'Shot 22 • Cuối (90.13s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_22_end.jpg" alt="Shot 22 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (90.13s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Jenny đẩy nhẹ các ngăn rương đóng lại ngăn nắp, đeo túi da lộn lên vai, quay đầu mỉm cười đầy mê hoặc với ống kính và thì thầm lời chào: 'See you by the pool!'. Sau đó cô quay lưng sải bước khoan thai bước ra khỏi hành lang ngập tràn ánh nắng hè.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cái kết mở đầy quyến rũ (Magnetic Call-to-Action Outro); hành động đóng rương thể hiện sự trân trọng và tinh tế; dáng đi lùi dần vào ánh sáng tạo cảm giác cuộc hành trình mùa hè chỉ vừa mới bắt đầu.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc khuất vách tường bên phải che một phần bóng lưng khi cô bước qua cửa.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đừng bao giờ kết thúc video bằng một nụ cười đơ cứng trước ống kính; hãy để nhân vật quay lưng bước đi hoặc hòa vào không gian để người xem cảm nhận được nhịp sống tiếp diễn ngoài khung hình.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide 28mm f/2.5 • Wide Runway Exit</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Lối đi hành lang dẫn ra ngoài</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ngược (Backlight) hắt qua khung cửa tôn dáng người sải bước</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Khép vòng lặp vô tận (Loop back to Shot 01)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_22_to_01_loop.jpg?v=2', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/transitions/trans_22_to_01_loop.jpg?v=2" alt="Loop Transition" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 3.38)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Khung Dẫn Khung Cửa Sẫm Màu & Cú Hook Thì Thầm Thân Mật (Architectural Doorway Framing & Intimate Whisper Hook)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 3.38, 4.12)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 3.38s</span>
+            </div>
+            <div class="grid-card-body">Cận Cảnh Biểu Cảm Chắp Tay & Nghiêng Đầu Chớp Mắt Tương Tác Cảm Xúc (Emotional Micro-Reaction & Head-Tilt Connect)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 4.12, 7.22)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 4.12s</span>
+            </div>
+            <div class="grid-card-body">Thao Tác Đặt Rương Lên Mặt Bàn Đá & Định Vị Không Gian Sân Khấu (Island Counter Stage Setting & Box Placement)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 7.22, 11.52)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 7.22s</span>
+            </div>
+            <div class="grid-card-body">Cơ Chế Kéo Ngăn Đa Tầng Bí Ẩn & Chiết Xuất Hộp Da Xanh Olive (Multi-Tier Drawer Mechanism & Olive Case Extraction)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 11.52, 14.32)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 11.52s</span>
+            </div>
+            <div class="grid-card-body">Bật Nắp Hộp Da Khâu Chỉ Thủ Công & Lộ Diện Kính Mát Đồi Mồi (Textured Leather Case Pop & Tortoiseshell Sunglasses Reveal)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 14.32, 17.05)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 14.32s</span>
+            </div>
+            <div class="grid-card-body">Thử Kính Mát Tại Chỗ & Rút Thêm Hộp Phụ Kiện Trang Sức (Instant Eyewear Styling Check & Jewelry Pouch Tease)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 17.05, 20.85)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 17.05s</span>
+            </div>
+            <div class="grid-card-body">Trưng Bày Cặp Khuyên Tai Bạc Chunky Hoop & Ướm Thử Lên Vành Tai (Chunky Silver Hoop Earrings & Earlobe Try-On)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 20.85, 25.78)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 20.85s</span>
+            </div>
+            <div class="grid-card-body">Nụ Cười Hoàn Thiện Phong Cách & Giày Búp Bê Da Trắng Đính Khóa Logo (Look Approval Smile & Ivory Ballet Flats Reveal)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(9, 25.78, 30.18)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <span class="grid-thumb-badge">Shot 09 • 25.78s</span>
+            </div>
+            <div class="grid-card-body">Cúi Mình Xuống Ngăn Đáy Trầm & Trục Vớt Túi Bọc Vải Lime Green (Deep Drawer Retrieval & Lime-Green Dust Bag Pop)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(10, 30.18, 35.28)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+                <span class="grid-thumb-badge">Shot 10 • 30.18s</span>
+            </div>
+            <div class="grid-card-body">Kéo Mở Túi Bọc Lụa & Lộ Diện Túi Da Lộn Kèm Dây Charm Bóng Biển (Suede Shoulder Bag Reveal & Beach Ball Bead Charm)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(11, 35.28, 40.05)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+                <span class="grid-thumb-badge">Shot 11 • 35.28s</span>
+            </div>
+            <div class="grid-card-body">Thao Tác Chỉnh Dây Đeo Da & Trải Nghiệm Xúc Giác Túi Kẹp Nách (Strap Length Adjustment & Suede Tactile Exploration)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(12, 40.05, 44.02)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+                <span class="grid-thumb-badge">Shot 12 • 40.05s</span>
+            </div>
+            <div class="grid-card-body">Cú Bước Đi Song Song Tracking Dolly & Trình Diễn Toàn Thân Tự Tin (Side-Parallel Tracking Dolly Walk & Full-Body Fit Check)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(13, 44.02, 48.02)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_13_mid.jpg" alt="Shot 13" loading="lazy">
+                <span class="grid-thumb-badge">Shot 13 • 44.02s</span>
+            </div>
+            <div class="grid-card-body">Khám Phá Ngăn Bí Mật Tầng Trên & Tìm Ra Chiếc Hộp Nhỏ Kỳ Thú (Upper Chamber Exploration & Mystery Box Discovery)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(14, 48.02, 52.35)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_14_mid.jpg" alt="Shot 14" loading="lazy">
+                <span class="grid-thumb-badge">Shot 14 • 48.02s</span>
+            </div>
+            <div class="grid-card-body">Bóc Hộp Máy Ảnh Phim 35mm Chống Nước Vỏ Tím Lilac Độc Đáo (Waterproof 35mm Film Camera & Transparent Dive Housing Reveal)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(15, 52.35, 55.58)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_15_mid.jpg" alt="Shot 15" loading="lazy">
+                <span class="grid-thumb-badge">Shot 15 • 52.35s</span>
+            </div>
+            <div class="grid-card-body">Đưa Ống Kính Lên Mắt Ngắm & Cú Bấm Máy Phá Vỡ Bức Tường Thứ 4 (POV Shutter Click & Breaking The 4th Wall)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(16, 55.58, 59.85)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_16_mid.jpg" alt="Shot 16" loading="lazy">
+                <span class="grid-thumb-badge">Shot 16 • 55.58s</span>
+            </div>
+            <div class="grid-card-body">Kỹ Thuật Xòe Bài Card Spring Điêu Luyện & Bộ Bài Tory Burch Mùa Hè (Card Spring Flourish Cascade & Custom Playing Cards Fan)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(17, 59.85, 64.85)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_17_mid.jpg" alt="Shot 17" loading="lazy">
+                <span class="grid-thumb-badge">Shot 17 • 59.85s</span>
+            </div>
+            <div class="grid-card-body">Bao Bì Giấy Dập Nổi Logo & Bóc Mở Gói Khăn Tắm Biển Khổng Lồ (Embossed Paper Envelope & Beach Towel Package Extraction)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(18, 64.85, 70.35)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_18_mid.jpg" alt="Shot 18" loading="lazy">
+                <span class="grid-thumb-badge">Shot 18 • 64.85s</span>
+            </div>
+            <div class="grid-card-body">Cú Giũ Khăn Tắm Đồ Họa Vận Động Viên & Lộ Diện Ván Phao Bơi Cỡ Đại (Graphic Swimmer Towel Unfold & Inflatable Surfboard Tease)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(19, 70.35, 78.02)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_19_mid.jpg" alt="Shot 19" loading="lazy">
+                <span class="grid-thumb-badge">Shot 19 • 70.35s</span>
+            </div>
+            <div class="grid-card-body">Lồng Mặt Qua Phao Bơi Tròn Sọc Biển & Khoảnh Khắc Mơ Mộng Bên Hồ Bơi (Striped Swim Ring Peek-Through & Poolside Daydreaming)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(20, 78.02, 78.98)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_20_mid.jpg" alt="Shot 20" loading="lazy">
+                <span class="grid-thumb-badge">Shot 20 • 78.02s</span>
+            </div>
+            <div class="grid-card-body">Cú Cắt Chớp Nhoáng Sang Hồ Bơi Vô Cực Nhiệt Đới (Resort Infinity Pool Fantasy Flash Match-Cut)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(21, 78.98, 83.65)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_21_mid.jpg" alt="Shot 21" loading="lazy">
+                <span class="grid-thumb-badge">Shot 21 • 78.98s</span>
+            </div>
+            <div class="grid-card-body">Bộ Ba Sẵn Sàng Lên Đường: Kính Mát, Túi Da & Máy Ảnh (Triple Readiness Checklist: Sunnies, Bag & Camera)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(22, 83.65, 90.13)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_22_mid.jpg" alt="Shot 22" loading="lazy">
+                <span class="grid-thumb-badge">Shot 22 • 83.65s</span>
+            </div>
+            <div class="grid-card-body">Đóng Ngăn Rương, Nụ Cười 'Hẹn Gặp Ở Hồ Bơi' & Cú Sải Bước Rời Khung Hình (Closing The Trunk, Poolside Sign-off & Graceful Runway Exit)</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=13_XfCZ1WlHUI2E10MsvNS6UQ-75THvh5" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "en_frame": 202, "headline": "Khung Dẫn Khung Cửa Sẫm Màu & Cú Hook Thì Thầm Thân Mật (Architectural Doorway Framing & Intimate Whisper Hook)", "subject_action": "Jenny Tsang bước ra từ cửa ngách hành lang, tay ôm chiếc rương quà tặng màu xanh biển khổng lồ (cyan-blue Tory Burch PR trunk) bước về phía đảo bếp. Cô mặc áo polo len dệt xanh pastel đồng điệu cùng quần jean ống rộng, dừng bước trước ống kính và buông câu thì thầm kinh ngạc: 'Seriously? Tory Burch!'.", "pros": "Cánh cửa gỗ đen và viền đá marble đóng vai trò khung tự nhiên (Natural Architecture Framing) hút trọn ánh mắt vào chủ thể; sắc xanh biển rực rỡ của chiếc rương tạo điểm nhấn pop-color tương phản mạnh trên phông nền tối; kỹ thuật nói thì thầm (Intimate ASMR-like Whisper) kéo người xem lại gần như một cuộc trò chuyện riêng tư.", "cons": "Dáng đi mang vác chiếc hộp nặng khiến bước chân hơi gượng nhẹ ở giây thứ 2; nếu lia máy hạ thấp một chút sẽ thấy rõ sự đồ sộ của chiếc rương hơn.", "takeaway": "Mở đầu video unboxing bằng một hành động mang vác đồ vật quá khổ qua khung cửa kết hợp biểu cảm thì thầm bất ngờ giúp giữ chân người xem ngay trong 3 giây vàng đầu tiên.", "specs": {"lens": "Medium Wide 28mm f/2.2 • Eye-Level Tracking", "location": "Lối đi hành lang bước vào đảo bếp", "lighting": "Ánh sáng tự nhiên cửa sổ kết hợp đèn âm trần dịu nhẹ", "transition": "Cắt nhảy trực diện (Jump Cut to Reaction Close-Up)"}, "st_time": 0.0, "en_time": 3.38, "duration": 3.38}, {"id": 2, "st_frame": 203, "en_frame": 246, "headline": "Cận Cảnh Biểu Cảm Chắp Tay & Nghiêng Đầu Chớp Mắt Tương Tác Cảm Xúc (Emotional Micro-Reaction & Head-Tilt Connect)", "subject_action": "Góc máy cận cảnh (Tight Close-Up) bắt trọn khuôn mặt rạng rỡ của Jenny. Cô chắp hai bàn tay lại, nghiêng đầu nhẹ sang một bên, nở nụ cười tươi tắn với ánh mắt lấp lánh nhìn thẳng vào ống kính.", "pros": "Cắt cận bất ngờ (Micro Cut 0.72s) tạo nhịp giật thị giác (Visual Accent), phá vỡ sự bằng phẳng của cú toàn cảnh; biểu cảm chân thật hân hoan truyền tải năng lượng tích cực tức thì đến khán giả.", "cons": "Thời lượng cực ngắn (chưa đầy 1 giây) có thể khiến người xem chưa kịp đọc hết chi tiết trang sức trên cổ tay nếu không tập trung.", "takeaway": "Chèn một micro-reaction shot (< 1s) ngay sau cú hook giúp nhân cách hóa video (Humanize), tạo sợi dây đồng cảm sâu sắc trước khi đi vào giới thiệu sản phẩm.", "specs": {"lens": "Portrait 50mm f/2.0 • Tight Close-Up", "location": "Khuôn mặt Jenny cạnh vách tủ bếp", "lighting": "Ánh sáng ven (Rim Light) làm nổi bật đường nét mái tóc đen", "transition": "Cắt mở rộng (Cut to Medium Wide) sang thao tác đặt rương"}, "st_time": 3.38, "en_time": 4.12, "duration": 0.74}, {"id": 3, "st_frame": 247, "en_frame": 432, "headline": "Thao Tác Đặt Rương Lên Mặt Bàn Đá & Định Vị Không Gian Sân Khấu (Island Counter Stage Setting & Box Placement)", "subject_action": "Góc trung cảnh rộng (Medium Wide Shot). Jenny dùng hai tay nâng và đặt chiếc rương xanh Tory Burch vững chãi lên mặt bàn đá cẩm thạch đảo bếp. Mặt trước chiếc rương in hình vận động viên bơi lội nghệ thuật và logo Tory Burch trắng sắc sảo hướng thẳng về phía camera.", "pros": "Mặt bàn đá cẩm thạch phản chiếu ánh sáng trắng sạch sẽ, biến không gian bếp thành sàn diễn sang trọng (Luxury Display Stage); bố cục rương chiếm trọn 1/3 góc dưới khung hình làm mỏ neo cố định vững chãi.", "cons": "Cạnh trái của rương hơi sát mép khung hình khi cô xoay góc.", "takeaway": "Hãy coi mặt bàn hoặc đảo bếp là một sân khấu trình diễn; đặt sản phẩm có logo thương hiệu hướng thẳng về phía ống kính trước khi thực hiện bất kỳ thao tác bóc mở nào.", "specs": {"lens": "Standard 35mm f/2.5 • Three-Quarter Medium Angle", "location": "Bàn đảo bếp mặt đá cẩm thạch", "lighting": "Key light dịu từ trần và ánh sáng tản ngang", "transition": "Cắt tiếp nối thao tác (Action Match Cut) sang cú kéo ngăn rương"}, "st_time": 4.12, "en_time": 7.22, "duration": 3.1}, {"id": 4, "st_frame": 433, "en_frame": 690, "headline": "Cơ Chế Kéo Ngăn Đa Tầng Bí Ẩn & Chiết Xuất Hộp Da Xanh Olive (Multi-Tier Drawer Mechanism & Olive Case Extraction)", "subject_action": "Jenny dùng tay kéo trượt ngăn kéo bên hông của chiếc rương xanh, để lộ hệ thống ngăn chứa quà tặng phân tầng thông minh. Cô cầm bình nước cá nhân nhấp một ngụm rồi vươn tay rút chiếc hộp bọc da màu xanh olive từ ngăn giữa giơ lên trước ống kính.", "pros": "Thiết kế rương có ngăn kéo trượt ngang tạo bất ngờ cơ khí (Mechanical Surprise); chi tiết uống nước tự nhiên làm giảm tính chất quảng cáo cứng nhắc, tạo cảm giác vlog đời sống chân thực.", "cons": "Hành động uống nước hơi phân tán sự chú ý vào ngăn kéo trong 1.5 giây đầu.", "takeaway": "Các cơ chế mở trượt ngang (sliding drawers) hoặc mở lật tạo cảm giác khám phá kho báu sâu sắc hơn nhiều so với nắp hộp mở thông thường.", "specs": {"lens": "Standard 35mm f/2.8 • Medium Side Angle", "location": "Ngăn kéo bên hông rương quà tặng", "lighting": "Ánh sáng phản chiếu từ trần chiếu sáng lòng ngăn kéo", "transition": "Cắt cận cảnh (Cut to Close-Up) vào bàn tay mở hộp kính"}, "st_time": 7.22, "en_time": 11.52, "duration": 4.3}, {"id": 5, "st_frame": 691, "en_frame": 858, "headline": "Bật Nắp Hộp Da Khâu Chỉ Thủ Công & Lộ Diện Kính Mát Đồi Mồi (Textured Leather Case Pop & Tortoiseshell Sunglasses Reveal)", "subject_action": "Góc cận cảnh (Close-Up). Jenny cầm chiếc hộp đựng kính màu xanh cốm bọc da có dập chìm logo Tory Burch, mở nắp từ tính và lấy ra chiếc kính mát gọng đồi mồi màu nâu sẫm kèm khăn lau lụa trắng: 'Sunnies? Let's just put it in here'.", "pros": "Chất liệu da hạt mịn (pebbled leather) của hộp kính nổi rõ dưới ánh sáng tản; thao tác mở nắp êm ái kết hợp âm thanh tách nhẹ kích thích giác quan xúc giác (Tactile Satisfaction).", "cons": "Mặt trong của nắp hộp hơi bị bóng lóa nhẹ khi xoay nghiêng.", "takeaway": "Khi giới thiệu phụ kiện cao cấp, hãy để ống kính đủ gần để người xem cảm nhận được vân da, đường may và cơ chế đóng mở tinh xảo.", "specs": {"lens": "50mm f/2.0 • Macro Close-Up", "location": "Bàn tay cầm hộp kính ngang ngực", "lighting": "Ánh sáng studio mềm 45 độ", "transition": "Cắt nhảy thao tác (Match Cut on Action) đeo kính lên mắt"}, "st_time": 11.52, "en_time": 14.32, "duration": 2.8}, {"id": 6, "st_frame": 859, "en_frame": 1022, "headline": "Thử Kính Mát Tại Chỗ & Rút Thêm Hộp Phụ Kiện Trang Sức (Instant Eyewear Styling Check & Jewelry Pouch Tease)", "subject_action": "Jenny đeo kính mát lên khuôn mặt, mỉm cười thần thái kiêu sa nhìn thẳng vào máy quay, sau đó nhanh chóng nhấc tiếp một chiếc bao bì phụ kiện màu xanh cốm khác: 'Good. You would love these'.", "pros": "Chuyển từ bóc hộp sang 'on-body styling' ngay lập tức giúp khán giả thấy ngay công năng và phom dáng thực tế của kính trên gương mặt Á Đông thanh tú; tông màu kính đồi mồi ăn khớp hoàn hảo với mái tóc.", "cons": "Mắt kính đen sẫm che mất ánh mắt tương tác của nhân vật trong 2 giây.", "takeaway": "Quy tắc vàng của unboxing thời trang: Đừng chỉ để đồ trên bàn, hãy mặc/đeo thử ngay lên người để người xem hình dung trọn vẹn phong cách (Immediate Wearability).", "specs": {"lens": "Portrait 50mm f/2.0 • Medium Close-Up", "location": "Trước đảo bếp", "lighting": "Catchlight phản chiếu trên bề mặt tròng kính đen bóng", "transition": "Cắt cận cảnh (Cut to Tight Detail) vào khuyên tai bạc"}, "st_time": 14.32, "en_time": 17.05, "duration": 2.73}, {"id": 7, "st_frame": 1023, "en_frame": 1250, "headline": "Trưng Bày Cặp Khuyên Tai Bạc Chunky Hoop & Ướm Thử Lên Vành Tai (Chunky Silver Hoop Earrings & Earlobe Try-On)", "subject_action": "Jenny đưa tấm bìa kẹp đôi khuyên tai vòng tròn kim loại màu bạc sáng bóng sát vào ống kính máy quay, rồi vén nhẹ tóc mai và ướm chiếc khuyên lên vành tai để kiểm tra kích thước và độ tương phản: 'Perfect color. I love this color'.", "pros": "Độ phóng đại sát ống kính giúp thấy rõ kết cấu kim loại đặc và khóa bấm; động tác vén tóc mai để lộ đường nét tai và xương quai hàm quyến rũ; màu xanh cốm của tấm thẻ làm nền tôn sắc bạc của khuyên tai.", "cons": "Đầu ngón tay hơi che một phần góc cong dưới của chiếc khuyên tai bên phải.", "takeaway": "Tận dụng độ tương phản giữa bao bì và kim loại (bìa xanh cốm - trang sức bạc) để làm phụ kiện nổi bật tự nhiên mà không cần chỉnh màu quá đà.", "specs": {"lens": "50mm f/2.0 • Extreme Close-Up to Medium Close-Up", "location": "Vành tai và bàn tay Jenny", "lighting": "Ánh sáng ven chiếu góc 45 độ làm ánh kim loại lóe sáng", "transition": "Cắt nhảy (Jump Cut) sang khuyên tai đã cài hoàn thiện"}, "st_time": 17.05, "en_time": 20.85, "duration": 3.8}, {"id": 8, "st_frame": 1251, "en_frame": 1546, "headline": "Nụ Cười Hoàn Thiện Phong Cách & Giày Búp Bê Da Trắng Đính Khóa Logo (Look Approval Smile & Ivory Ballet Flats Reveal)", "subject_action": "Jenny mỉm cười gật đầu tán thưởng màu xanh cốm ('Green is perfect'), sau đó bất ngờ giơ lên trước ống kính đôi giày búp bê da cừu màu trắng ngà (ivory ballet flats) thắt nơ mảnh đính logo Tory Burch kim loại tròn sáng loáng.", "pros": "Sự chuyển tiếp mượt mà từ phụ kiện nhỏ (kính, khuyên tai) sang phụ kiện thời trang trọng tâm (giày búp bê); đôi giày trắng nổi bật tuyệt đối trên nền áo polo xanh và tóc đen; chi tiết nơ và khóa cài hiện lên sắc sảo.", "cons": "Đôi giày còn giữ miếng xốp lót bên trong nên phom dáng chưa hoàn toàn mềm mại như khi mang vào chân.", "takeaway": "Duy trì nhịp bóc mở liên tục từ nhỏ đến lớn (vi mô -> vĩ mô) để duy trì sự tò mò và hứng thú của khán giả.", "specs": {"lens": "Standard 35mm f/2.5 • Medium Close-Up", "location": "Không gian trước ngực và vách tường đen", "lighting": "Ánh sáng tán xạ mềm tôn chất liệu da cừu", "transition": "Cắt mở góc toàn thân (Cut to Full Body Angle) cúi lấy túi"}, "st_time": 20.85, "en_time": 25.78, "duration": 4.93}, {"id": 9, "st_frame": 1547, "en_frame": 1810, "headline": "Cúi Mình Xuống Ngăn Đáy Trầm & Trục Vớt Túi Bọc Vải Lime Green (Deep Drawer Retrieval & Lime-Green Dust Bag Pop)", "subject_action": "Góc máy toàn cảnh (Full-Body Wide Shot). Jenny cúi thấp người kéo hết hành trình ngăn kéo tầng dưới của chiếc rương, hai tay cẩn trọng nâng chiếc túi vải rút (dust bag) màu xanh cốm khổ lớn chứa nhân vật trung tâm của bộ sưu tập.", "pros": "Góc toàn cảnh giải phóng không gian sau một chuỗi góc cận cảnh; cử chỉ nâng niu chiếc túi vải tạo cảm giác đây là vật phẩm quý giá nhất trong chiếc rương (Hero Product Build-up).", "cons": "Chuyển động cúi người làm mặt Jenny hơi khuất vào bóng tối của cạnh bàn trong 1 giây.", "takeaway": "Trước khi giới thiệu món đồ quan trọng nhất (Hero Item), hãy lùi máy quay ra góc toàn để tạo khoảng dừng nhịp thở (Breathing Room) và nhấn mạnh kích thước của món đồ.", "specs": {"lens": "Wide 28mm f/2.8 • Full-Body Wide Angle", "location": "Ngăn kéo tầng đáy rương quà tặng", "lighting": "Ánh sáng phòng tổng thể", "transition": "Cắt cận cảnh (Cut to Close-Up) vào miệng túi rút"}, "st_time": 25.78, "en_time": 30.18, "duration": 4.4}, {"id": 10, "st_frame": 1811, "en_frame": 2116, "headline": "Kéo Mở Túi Bọc Lụa & Lộ Diện Túi Da Lộn Kèm Dây Charm Bóng Biển (Suede Shoulder Bag Reveal & Beach Ball Bead Charm)", "subject_action": "Góc cận cảnh (Close-Up). Jenny hai tay mở dây rút chiếc túi vải màu cốm, rút ra chiếc túi kẹp nách da lộn màu nâu lạc đà (camel suede shoulder bag) với khóa logo Tory Burch mạ vàng đồng. Đặc biệt, chiếc túi gắn dải charm bi tròn mô phỏng quả bóng bãi biển (pink, green, white beach balls).", "pros": "Chất liệu da lộn mềm mại tương phản tuyệt vời với bóng nhẵn của dải charm bi tròn; màu nâu ấm kết hợp sắc xanh cốm của túi vải tạo nên bảng màu mùa hè nhiệt đới sang trọng (Earthy-Pastel Harmony).", "cons": "Dải charm bóng bãi biển bị xoay nhẹ ra phía sau túi khi vừa nhấc lên khỏi túi bọc.", "takeaway": "Sự kết hợp giữa chất liệu cổ điển (da lộn) và phụ kiện hiện đại ngộ nghĩnh (charm bóng biển) là điểm neo nội dung thu hút thế hệ trẻ yêu thích phong cách Y2K sang trọng.", "specs": {"lens": "Portrait 50mm f/1.8 • Medium Close-Up", "location": "Trước ngực và nền áo polo xanh", "lighting": "Ánh sáng ven phản chiếu trên khóa kim loại mạ vàng", "transition": "Cắt cận tĩnh (Static Close-Up) vào bề mặt da lộn"}, "st_time": 30.18, "en_time": 35.28, "duration": 5.1}, {"id": 11, "st_frame": 2117, "en_frame": 2402, "headline": "Thao Tác Chỉnh Dây Đeo Da & Trải Nghiệm Xúc Giác Túi Kẹp Nách (Strap Length Adjustment & Suede Tactile Exploration)", "subject_action": "Jenny nâng dây đeo da màu nâu, kiểm tra chiều dài quai xách và ướm thử tư thế kẹp nách: 'For my look today, shoulder wrap... Let's do a fit check'. Cô vuốt nhẹ bờ vai và nắp túi da lộn chuẩn bị cho màn trình diễn thời trang.", "pros": "Hành động điều chỉnh quai túi trả lời trực tiếp thắc mắc của người mua về tính linh hoạt và công năng của sản phẩm; chuyển động tay tự nhiên, phong thái tự tin và chuyên nghiệp.", "cons": "Mắt kính mát vắt trên đầu hơi xê dịch nhẹ khi cô cử động vai.", "takeaway": "Luôn thể hiện thao tác điều chỉnh công năng (quai đeo, khóa bấm) để biến thước phim unboxing thành cẩm nang hướng dẫn sử dụng trực quan.", "specs": {"lens": "50mm f/2.0 • Medium Shot", "location": "Đảo bếp", "lighting": "Keylight dịu đều, viền sáng tóc rõ nét", "transition": "Cắt góc toàn theo dõi (Cut to Tracking Dolly Shot) sải bước fit check"}, "st_time": 35.28, "en_time": 40.05, "duration": 4.77}, {"id": 12, "st_frame": 2403, "en_frame": 2640, "headline": "Cú Bước Đi Song Song Tracking Dolly & Trình Diễn Toàn Thân Tự Tin (Side-Parallel Tracking Dolly Walk & Full-Body Fit Check)", "subject_action": "Camera di chuyển song song theo bước chân (Parallel Tracking Dolly). Jenny kẹp chiếc túi da lộn Tory Burch trên vai, sải bước tự tin dọc theo chiều dài bàn đảo bếp. Chiếc túi đung đưa nhịp nhàng theo bước đi, phô diễn trọn vẹn sự kết hợp giữa áo polo xanh dệt kim, quần jean ống rộng rách gấu và túi xách hàng hiệu.", "pros": "Cú máy chuyển động song song (Side Dolly) tạo chiều sâu thị sai (Parallax Depth) giữa nhân vật, bàn đảo bếp và bức tường phía sau; nhịp bước đi khoan thai khẳng định đẳng cấp thời trang đường phố thanh lịch (Quiet Luxury Walk).", "cons": "Góc máy hơi hẹp ở phần bàn chân khiến đôi giày chỉ lấp ló sau gấu quần jean.", "takeaway": "Cú tracking dolly song song là vũ khí tối thượng để 'thổi hồn cuộc sống' vào chiếc túi xách, cho khán giả thấy sản phẩm chuyển động và tôn vinh vóc dáng người đeo như thế nào trong thực tế.", "specs": {"lens": "Cinematic 35mm f/2.2 • Parallel Dolly Tracking Shot", "location": "Lối đi dọc bàn đảo bếp đá marble", "lighting": "Ánh sáng tự nhiên chạy dọc hành lang tạo vệt sáng động trên thân áo", "transition": "Cắt quay lại rương (Match Cut on Return) về ngăn tủ trên"}, "st_time": 40.05, "en_time": 44.02, "duration": 3.97}, {"id": 13, "st_frame": 2641, "en_frame": 2880, "headline": "Khám Phá Ngăn Bí Mật Tầng Trên & Tìm Ra Chiếc Hộp Nhỏ Kỳ Thú (Upper Chamber Exploration & Mystery Box Discovery)", "subject_action": "Jenny quay trở lại bên chiếc rương xanh, đóng nhẹ ngăn dưới và mở khám phá các hộc tủ trên cùng. Cô hào hứng lấy ra một chiếc hộp nhỏ màu trắng tinh tế được xếp ngay ngắn trong rương.", "pros": "Tái thiết lập sự tò mò của khán giả sau màn catwalk; cấu trúc mở nhiều tầng khiến video không bị đơn điệu mà liên tục mang lại phần thưởng thị giác (Visual Dopamine Loop).", "cons": "Góc máy hơi lệch về phía lưng Jenny khi cô vươn tay tìm đồ trong hộc sâu.", "takeaway": "Bố trí các món quà kích thước khác nhau ở từng ngăn riêng biệt giúp cấu trúc kịch bản unboxing có nhịp thăng trầm rõ rệt.", "specs": {"lens": "35mm f/2.5 • Three-Quarter Medium Shot", "location": "Mặt bên rương Tory Burch", "lighting": "Ánh sáng tản từ trần", "transition": "Cắt cận cảnh (Cut to Close-Up) bóc hộp máy ảnh"}, "st_time": 44.02, "en_time": 48.02, "duration": 4.0}, {"id": 14, "st_frame": 2881, "en_frame": 3140, "headline": "Bóc Hộp Máy Ảnh Phim 35mm Chống Nước Vỏ Tím Lilac Độc Đáo (Waterproof 35mm Film Camera & Transparent Dive Housing Reveal)", "subject_action": "Góc cận cảnh (Close-Up). Jenny mở nắp hộp giấy, rút ra chiếc máy ảnh chụp phim 35mm dùng một lần màu tím pastel được bọc trong vỏ nhựa chống nước trong suốt kèm dây đeo cổ tay màu xanh: 'Yes, a film camera with a waterproof case'.", "pros": "Vật phẩm đậm chất hoài niệm mùa hè (Nostalgic Summer Vibe); lớp vỏ nhựa trong suốt phản chiếu ánh sáng sắc nét làm nổi bật sự kỳ công và chu đáo của thương hiệu Tory Burch dành cho kỳ nghỉ biển.", "cons": "Dây đeo máy ảnh bị xoắn nhẹ quanh cổ tay khi vừa nhấc ra khỏi hộp.", "takeaway": "Sự xuất hiện của một thiết bị phi thời trang (máy ảnh chống nước) tạo bất ngờ lớn và gắn kết trực tiếp thương hiệu với trải nghiệm du lịch thực tế.", "specs": {"lens": "Portrait 50mm f/1.8 • Close-Up Eye-Level", "location": "Trước ngực Jenny", "lighting": "Ánh sáng studio làm bóng bề mặt vỏ chống nước", "transition": "Cắt trực diện ngắm chụp (Cut to POV Shutter Click)"}, "st_time": 48.02, "en_time": 52.35, "duration": 4.33}, {"id": 15, "st_frame": 3141, "en_frame": 3334, "headline": "Đưa Ống Kính Lên Mắt Ngắm & Cú Bấm Máy Phá Vỡ Bức Tường Thứ 4 (POV Shutter Click & Breaking The 4th Wall)", "subject_action": "Jenny nhấc chiếc máy ảnh phim lên ngang tầm mắt, nhắm một mắt lại ngắm thẳng vào ống kính máy quay chính và bấm nút chụp. Biểu cảm tinh nghịch, nụ cười rạng rỡ phá vỡ khoảng cách với người xem.", "pros": "Tương tác trực diện với khán giả (Subject-to-Audience Direct Interaction); âm thanh 'tách' của màn trập cơ học tạo điểm nhấn âm thanh đắt giá; biểu cảm cực kỳ duyên dáng và tràn đầy năng lượng mùa hè.", "cons": "Vỏ máy ảnh che khuất một nửa khuôn mặt của Jenny trong khoảnh khắc bấm chụp.", "takeaway": "Hành động hướng máy ảnh hoặc điện thoại chụp ngược lại người xem là một chiêu thức điện ảnh kinh điển để kéo khán giả vào trung tâm câu chuyện (Immersive Engagement).", "specs": {"lens": "50mm f/1.8 • Tight Medium Close-Up", "location": "Gương mặt Jenny đối diện camera", "lighting": "Ánh sáng ven tôn bờ vai và tóc", "transition": "Cắt góc cận (Cut to Close-Up) vào bộ bài tây"}, "st_time": 52.35, "en_time": 55.58, "duration": 3.23}, {"id": 16, "st_frame": 3335, "en_frame": 3590, "headline": "Kỹ Thuật Xòe Bài Card Spring Điêu Luyện & Bộ Bài Tory Burch Mùa Hè (Card Spring Flourish Cascade & Custom Playing Cards Fan)", "subject_action": "Jenny cầm bộ bài tây in họa tiết độc quyền Tory Burch, thực hiện cú bắn bài lò xo (Card Spring Flourish) rơi liên hoàn từ tay trên xuống tay dưới như một ảo thuật gia chuyên nghiệp, sau đó xòe nan quạt các lá bài trước ống kính khoe nụ cười tươi tắn.", "pros": "Cú bắn bài (Card Spring) là kỹ năng thị giác cao cấp (Kinetic Eye-Candy), tạo chuyển động tốc độ cao cuốn hút bất ngờ; thể hiện sự khéo léo và cá tính năng động của creator.", "cons": "Một vài lá bài rơi hơi lệch khỏi bàn tay đón bên dưới.", "takeaway": "Lồng ghép một kỹ năng vi mô bất ngờ (tung hứng, xòe bài, xoay phụ kiện) giúp video unboxing thoát khỏi khuôn mẫu nhàm chán và tăng tỷ lệ xem lại (Re-watch Rate).", "specs": {"lens": "50mm f/2.0 • Medium Close-Up with Fast Shutter", "location": "Khoảng không trước ngực", "lighting": "Ánh sáng tốc độ cao bắt dính từng lá bài bay trong không trung", "transition": "Cắt mở rộng (Cut to Medium Wide) sang phong bì lớn"}, "st_time": 55.58, "en_time": 59.85, "duration": 4.27}, {"id": 17, "st_frame": 3591, "en_frame": 3890, "headline": "Bao Bì Giấy Dập Nổi Logo & Bóc Mở Gói Khăn Tắm Biển Khổng Lồ (Embossed Paper Envelope & Beach Towel Package Extraction)", "subject_action": "Jenny nhấc chiếc phong bì giấy trắng dày dập nổi dòng chữ 'TORY BURCH' màu xanh hải quân, giơ lên trước ống kính, sau đó kéo ra gói khăn tắm biển bọc túi nylon trong suốt.", "pros": "Nhấn mạnh đẳng cấp đóng gói bao bì xa xỉ (Luxury Packaging Hierarchy); thương hiệu hiện diện sắc nét và trang nhã; thao tác bóc mở gọn gàng, dứt khoát.", "cons": "Túi nylon bọc bên trong có nếp gấp phản chiếu ánh sáng trắng hơi mạnh.", "takeaway": "Đừng bỏ qua các yếu tố bao bì giấy; logo dập nổi trên nền giấy mỹ thuật luôn là biểu tượng của sự tinh tế và đầu tư chỉn chu từ thương hiệu.", "specs": {"lens": "35mm f/2.5 • Medium Close-Up", "location": "Trước ngực và bàn đảo bếp", "lighting": "Keylight mềm chiếu trực diện làm nổi vân dập logo", "transition": "Cắt giũ khăn (Action Cut on Shaking Towel)"}, "st_time": 59.85, "en_time": 64.85, "duration": 5.0}, {"id": 18, "st_frame": 3891, "en_frame": 4220, "headline": "Cú Giũ Khăn Tắm Đồ Họa Vận Động Viên & Lộ Diện Ván Phao Bơi Cỡ Đại (Graphic Swimmer Towel Unfold & Inflatable Surfboard Tease)", "subject_action": "Jenny giũ bung chiếc khăn tắm biển khổng lồ in hình vận động viên bơi lội nghệ thuật màu xanh trắng choáng ngợp khung hình, sau đó rút ra chiếc phao bơi dáng ván lướt sóng dài bằng cả người cô.", "pros": "Họa tiết khăn tắm đồng bộ 100% với bức tranh in trên nắp rương ngoài hành lang (Design Motif Continuity); tỷ lệ kích thước phao bơi siêu lớn mang lại sự trầm trồ thị giác (Scale Disruption).", "cons": "Chiếc khăn quá dài che khuất một phần thân dưới của Jenny khi giũ bung.", "takeaway": "Sử dụng các vật phẩm có hoa văn xuyên suốt (Visual Motif) giúp tạo sự liên kết chặt chẽ giữa các phân cảnh từ đầu đến cuối video.", "specs": {"lens": "Wide 28mm f/2.8 • Full-Length Wide Shot", "location": "Toàn bộ không gian đảo bếp", "lighting": "Ánh sáng bao quát toàn phòng", "transition": "Cắt sang phao tròn (Cut to Ring Floatie Framing)"}, "st_time": 64.85, "en_time": 70.35, "duration": 5.5}, {"id": 19, "st_frame": 4221, "en_frame": 4680, "headline": "Lồng Mặt Qua Phao Bơi Tròn Sọc Biển & Khoảnh Khắc Mơ Mộng Bên Hồ Bơi (Striped Swim Ring Peek-Through & Poolside Daydreaming)", "subject_action": "Jenny đưa khuôn mặt lồng qua tâm vòng phao bơi sọc xanh trắng Tory Burch mỉm cười rạng rỡ, sau đó dùng bơm mini bơm căng phao, đặt hai chiếc phao khổng lồ cạnh nhau và nghiêng đầu tựa vào thành phao nhắm mắt mơ màng: 'Can you see the whole thing? Imagine...'", "pros": "Góc nhìn lồng khung qua tâm phao bơi (Framing within a Frame) vô cùng duyên dáng và sáng tạo; động tác tựa đầu mơ mộng tạo nhịp chuyển cảm xúc (Emotional Transition) dẫn dắt hoàn hảo vào phân cảnh viễn tưởng tiếp theo.", "cons": "Kích thước phao hơi cồng kềnh lấn át một phần ánh sáng chiếu vào mặt.", "takeaway": "Tận dụng chính sản phẩm để làm khung hình sáng tạo cho gương mặt nhân vật; kết thúc phần unboxing bằng một cử chỉ thả hồn tưởng tượng sẽ tạo cầu nối mượt mà sang cảnh thực tế ngoài trời.", "specs": {"lens": "35mm f/2.0 • Medium Shot to Close-Up", "location": "Góc đảo bếp bên cạnh hai chiếc phao căng phồng", "lighting": "Ánh sáng mơ màng với catchlight dịu dàng", "transition": "Cắt match-cut viễn tưởng (Dreamy Match Cut to Infinity Pool)"}, "st_time": 70.35, "en_time": 78.02, "duration": 7.67}, {"id": 20, "st_frame": 4681, "en_frame": 4738, "headline": "Cú Cắt Chớp Nhoáng Sang Hồ Bơi Vô Cực Nhiệt Đới (Resort Infinity Pool Fantasy Flash Match-Cut)", "subject_action": "Chỉ trong 0.95 giây, khung cảnh đột ngột chuyển đổi kỳ ảo (Match Cut): Vẫn tư thế nghiêng đầu tựa phao bơi ấy, nhưng Jenny giờ đây đang thảnh thơi trôi giữa làn nước xanh ngọc bích của một hồ bơi vô cực tại khu nghỉ dưỡng sang trọng, dưới tán dừa và bầu trời rực nắng.", "pros": "Cú match-cut ma thuật (Dream Sequence / Teleportation Match Cut) hiện thực hóa trí tưởng tượng của nhân vật ngay tức thì; màu nước hồ bơi xanh biếc và ánh nắng nhiệt đới đánh thức mọi giác quan khao khát mùa hè của khán giả; một điểm nhấn biên tập đỉnh cao.", "cons": "Thời lượng quá ngắn (dưới 1 giây) khiến người xem phải replay để thưởng thức lại cú chuyển cảnh tài tình này.", "takeaway": "Kỹ thuật match-cut giữa bối cảnh trong nhà (mơ mộng) sang bối cảnh ngoại cảnh (thực tế) là công thức đắt giá nhất để kích hoạt cảm xúc khao khát trải nghiệm của người tiêu dùng.", "specs": {"lens": "Cinematic Wide 24mm f/2.8 • Overhead Pool Angle", "location": "Hồ bơi vô cực khu nghỉ dưỡng cao cấp", "lighting": "Ánh nắng vàng tự nhiên gay gắt phản chiếu lấp lánh trên mặt nước", "transition": "Cắt giật ngược về studio (Flash Cut Back to Studio)"}, "st_time": 78.02, "en_time": 78.98, "duration": 0.96}, {"id": 21, "st_frame": 4739, "en_frame": 5018, "headline": "Bộ Ba Sẵn Sàng Lên Đường: Kính Mát, Túi Da & Máy Ảnh (Triple Readiness Checklist: Sunnies, Bag & Camera)", "subject_action": "Khung cảnh giật ngược về căn bếp hiện tại. Jenny đeo lại kính mát lên sống mũi, cầm túi da lộn camel và cẩn thận cất chiếc máy ảnh phim chống nước vào trong lòng túi: 'Sunnies ready. Bag ready. Camera ready'.", "pros": "Cấu trúc kịch bản khép vòng (Narrative Tie-up): Tất cả các món đồ bóc tách từ đầu video giờ đây được gom lại thành một bộ trang bị du lịch hoàn chỉnh (Complete Travel Kit); câu khẩu hiệu ngắn gọn 3 nhịp cực kỳ bắt tai.", "cons": "Thao tác cất máy ảnh vào túi làm che mất logo Tory Burch trên nắp túi.", "takeaway": "Tổng kết lại các sản phẩm chủ đạo bằng một thao tác 'Ready to go' giúp gắn kết toàn bộ video thành một câu chuyện có đầu có đuôi hoàn mỹ.", "specs": {"lens": "Standard 35mm f/2.2 • Medium Shot", "location": "Trước rương quà tặng", "lighting": "Keylight cân bằng chuẩn xác", "transition": "Cắt toàn cảnh bước ra (Cut to Full Runway Outro)"}, "st_time": 78.98, "en_time": 83.65, "duration": 4.67}, {"id": 22, "st_frame": 5019, "en_frame": 5407, "headline": "Đóng Ngăn Rương, Nụ Cười 'Hẹn Gặp Ở Hồ Bơi' & Cú Sải Bước Rời Khung Hình (Closing The Trunk, Poolside Sign-off & Graceful Runway Exit)", "subject_action": "Jenny đẩy nhẹ các ngăn rương đóng lại ngăn nắp, đeo túi da lộn lên vai, quay đầu mỉm cười đầy mê hoặc với ống kính và thì thầm lời chào: 'See you by the pool!'. Sau đó cô quay lưng sải bước khoan thai bước ra khỏi hành lang ngập tràn ánh nắng hè.", "pros": "Cái kết mở đầy quyến rũ (Magnetic Call-to-Action Outro); hành động đóng rương thể hiện sự trân trọng và tinh tế; dáng đi lùi dần vào ánh sáng tạo cảm giác cuộc hành trình mùa hè chỉ vừa mới bắt đầu.", "cons": "Góc khuất vách tường bên phải che một phần bóng lưng khi cô bước qua cửa.", "takeaway": "Đừng bao giờ kết thúc video bằng một nụ cười đơ cứng trước ống kính; hãy để nhân vật quay lưng bước đi hoặc hòa vào không gian để người xem cảm nhận được nhịp sống tiếp diễn ngoài khung hình.", "specs": {"lens": "Wide 28mm f/2.5 • Wide Runway Exit", "location": "Lối đi hành lang dẫn ra ngoài", "lighting": "Ánh sáng ngược (Backlight) hắt qua khung cửa tôn dáng người sải bước", "transition": "Khép vòng lặp vô tận (Loop back to Shot 01)"}, "st_time": 83.65, "en_time": 90.13, "duration": 6.48}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ;
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 60.0 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById();
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

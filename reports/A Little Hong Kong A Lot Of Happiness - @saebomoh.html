@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>A Little Hong Kong A Lot Of Happiness • Nghệ Thuật Vlog Du Lịch Hè Góc Thấp Đầy Bản Sắc • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* DRAWER QUICK JUMP MENU */
+.drawer-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-line);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.drawer-title {
+    font-family: var(--font-heading-short);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cl-text-muted);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.drawer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.drawer-shot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: var(--cl-bg-tint);
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+    background: #eef2f6;
+    border-color: var(--cl-accent);
+}
+.d-badge {
+    background: var(--cl-accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.d-time {
+    color: var(--cl-text-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    flex-shrink: 0;
+}
+.d-title {
+    color: var(--cl-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">6 PHÂN CẢNH</span>
+        <span class="nav-meta-title">A Little Hong Kong A Lot Of Happiness • Nghệ Thuật Vlog Du Lịch Hè Góc Thấp Đầy Bản Sắc</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DbH76S5yg5W/?stkn=dmVsa2twaGoyNGI2" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/A%20Little%20Hong%20Kong%20A%20Lot%20Of%20Happiness%20-%20@saebomoh.mp4" type="video/mp4">
+                <source src="videos/A Little Hong Kong A Lot Of Happiness - @saebomoh.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 16.33s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">A Little Hong Kong A Lot Of Happiness • Nghệ Thuật Vlog Du Lịch Hè Góc Thấp Đầy Bản Sắc</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@saebomoh" onclick="handleCreatorClick(event, '@saebomoh', '오새봄 / Oh Sae Bom')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của 오새봄 / Oh Sae Bom trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>오새봄 / Oh Sae Bom</strong>
+                        <span class="author-handle">(@saebomoh)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/DbH76S5yg5W/?stkn=dmVsa2twaGoyNGI2" target="_blank" class="author-link">@saebomoh (오새봄 / Oh Sae Bom)</a>
+            </div>
+        </div>
+
+        <!-- DRAWER QUICK JUMP MENU -->
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+        <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0, 4.43)">
+            <span class="d-badge">Shot 01</span>
+            <span class="d-time">0.00s - 4.43s (4.43s)</span>
+            <span class="d-title">Hook Thị Giác 'Trip to Hong Kong' Trên Băng Chuyền Sân Bay: ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(2, 4.47, 6.23)">
+            <span class="d-badge">Shot 02</span>
+            <span class="d-time">4.47s - 6.23s (1.77s)</span>
+            <span class="d-title">Cú Match-Cut Bổ Máy Vào Hẻm Núi Bê Tông (Urban Canyon): Đảo ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(3, 6.27, 8.53)">
+            <span class="d-badge">Shot 03</span>
+            <span class="d-time">6.27s - 8.53s (2.27s)</span>
+            <span class="d-title">Bước Chân Dạo Phố Góc Thấp Xuyên Qua Cao Ốc Chọc Trời: Tôn v...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(4, 8.57, 10.37)">
+            <span class="d-badge">Shot 04</span>
+            <span class="d-time">8.57s - 10.37s (1.80s)</span>
+            <span class="d-title">Cú Biến Hình Trang Phục (Outfit Switch Match-Cut) Giữa Giao ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(5, 10.4, 12.03)">
+            <span class="d-badge">Shot 05</span>
+            <span class="d-time">10.40s - 12.03s (1.63s)</span>
+            <span class="d-title">Lạc Bước Vào Phố Cổ Chung Cư Cũ: Tái hiện chất thơ điện ảnh ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(6, 12.07, 16.3)">
+            <span class="d-badge">Shot 06</span>
+            <span class="d-time">12.07s - 16.30s (4.23s)</span>
+            <span class="d-title">Nụ Cười Kết Thúc Trên Băng Chuyền Khép Kín Vòng Lặp Vô Tận (...</span>
+        </div>
+        
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 16.33s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">A Little Hong Kong A Lot Of Happiness • Nghệ Thuật Vlog Du Lịch Hè Góc Thấp Đầy Bản Sắc</h1>
+            <p class="overview-hero-desc">Bóc tách 6 phân cảnh mẫu mực trong video Reel của @saebomoh (Oh Sae Bom - Hàn Quốc): Thao lược góc máy thấp góc siêu rộng (Low-Angle Ultra-Wide POV) kết hợp chuyển động băng chuyền sân bay mượt mà như thanh trượt dolly, kỹ thuật Match-Cut định hướng chuyển động (Motion Match Cut) liên kết tức thì giữa hai miền không gian cách nhau ngàn dặm, cú biến hình trang phục (Outfit Switch) giữa ngã tư rực nắng và thiết kế vòng lặp vô tận (Infinite Loop) giữ chân người xem tuyệt đối.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Low-Angle Ultra-Wide POV • Travelator Natural Dolly • Motion Match-Cut • Urban Canyon Scale Shock • Seamless Outfit Switch • Wong Kar-wai Retro Street Aesthetic • Infinite Loop Narrative</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">6 Shots • Nhịp trung bình 2.69s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1440x2560 • 30.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 4.43)">
+                    ▶ 0.00s - 4.43s (4.43s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hook Thị Giác 'Trip to Hong Kong' Trên Băng Chuyền Sân Bay: Cú máy POV Walk & Talk góc thấp nén không gian vòm kính mở đầu hành trình</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_01_mid.jpg', 'Shot 01 • Giữa (2.21s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (2.21s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_01_end.jpg', 'Shot 01 • Cuối (4.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (4.43s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Nhân vật nam (Oh Sae Bom) diện phong cách streetwear năng động (băng đô đen, kính râm đen, tai nghe Beats quanh cổ, áo raglan xám in chữ NOMANUAL) đứng trên băng chuyền di động (travelator) tại nhà ga sân bay. Anh cầm gậy selfie góc thấp hướng lên, sải bước tự tin về phía trước trong khi máy quay lùi dần theo nhịp di chuyển, hiển thị dòng chữ định vị 'TRIP TO HONG KONG 🇭🇰'. Cuối phân cảnh, máy quay chúi nhanh xuống sàn tạo đà cho cú chuyển cảnh whip-cut mượt mà.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc máy thấp (Low-Angle POV) kết hợp tiêu cự góc siêu rộng (Ultra-Wide ~16mm) tạo hiệu ứng đường dẫn phối cảnh (Perspective Converging Lines) cực mạnh từ vòm kính kiến trúc sân bay hướng thẳng vào gương mặt chủ thể. Nhịp trôi êm ru của băng chuyền giúp khung hình ổn định tuyệt đối mà không cần gimbal cồng kềnh.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng 4.43s hơi dài so với nhịp cắt trung bình của Reels hiện đại (1.5s - 2.5s); nếu cắt ngắn ở giây thứ 2.5 sau khi khán giả đã định hình được bối cảnh thì độ căng thị giác sẽ cao hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Muốn quay mở đầu travel vlog cuốn hút mà không bị rung lắc, hãy tận dụng ngay băng chuyền sân bay (travelator) hoặc thang cuốn – đây là chiếc 'dolly track' tự nhiên mượt mà nhất mà bất kỳ creator nào cũng có thể khai thác miễn phí.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Ultra-Wide 16mm Equivalent</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Nhà ga Sân bay Khởi hành (Airport Departure Hall)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tán xạ qua mái vòm kính (Diffused Skylight)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Fast Downward Whip-Tilt sang hẻm phố Hong Kong</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Fast Downward Whip-Tilt sang hẻm phố Hong Kong</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 4.47, 6.23)">
+                    ▶ 4.47s - 6.23s (1.77s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Match-Cut Bổ Máy Vào Hẻm Núi Bê Tông (Urban Canyon): Đảo ngược góc nhìn từ vòm kính sân bay vào lòng phố dốc Hồng Kông</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_02_start.jpg', 'Shot 02 • Đầu (4.47s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (4.47s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_02_mid.jpg', 'Shot 02 • Giữa (5.35s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.35s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_02_end.jpg', 'Shot 02 • Cuối (6.23s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (6.23s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Nối tiếp cú hất máy từ Shot 1, camera mở ra từ góc quay vuông góc ngước thẳng lên bầu trời xám và những tòa nhà chọc trời san sát đặc trưng của Hong Kong, sau đó hạ dần xuống để bắt trọn nhân vật đang sải bước xuống bậc thang dốc trong con hẻm cổ điển. Nhân vật chuyển động dứt khoát, mái tóc và vạt áo bay nhẹ tạo cảm giác sống động giữa không gian bê tông tĩnh lặng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Kỹ thuật Match-Cut định hướng chuyển động (Motion Match Cut) hoàn hảo: chuyển từ không gian hiện đại, bóng bẩy của sân bay sang sự chật chội, cổ kính đầy bản sắc của hẻm phố Hong Kong trong chớp mắt. Góc máy ngước 90 độ lột tả trọn vẹn 'độ ngộp' thị giác (Spatial Scale Shock) của kiến trúc đô thị nén.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chuyển động hạ máy diễn ra rất nhanh (trong chưa đầy 1 giây) khiến chi tiết kiến trúc tầng thấp hai bên hẻm hơi bị mờ nhòe do motion blur.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Để chuyển cảnh giữa hai địa điểm cách nhau hàng ngàn kilomet mà không bị thô, hãy mượn chuyển động hất máy lên trời/mái nhà ở cảnh trước và tiếp nối bằng cú bổ máy từ trời xuống đất ở cảnh sau – khán giả sẽ bị cuốn theo dòng chảy động học mà quên mất sự gián đoạn về địa lý.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Ultra-Wide 16mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bậc thang hẻm phố cổ Hong Kong (Central / Sheung Wan Alley)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên trời nhiều mây (Overcast Soft Light)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Whip-Down Tilt sang đại lộ cao ốc</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Whip-Down Tilt sang đại lộ cao ốc</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 6.27, 8.53)">
+                    ▶ 6.27s - 8.53s (2.27s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bước Chân Dạo Phố Góc Thấp Xuyên Qua Cao Ốc Chọc Trời: Tôn vinh tỷ lệ cơ thể và sự tương phản giữa con người với đô thị hiện đại</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_03_start.jpg', 'Shot 03 • Đầu (6.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (6.27s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_03_mid.jpg', 'Shot 03 • Giữa (7.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (7.40s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_03_end.jpg', 'Shot 03 • Cuối (8.53s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.53s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Camera đặt cực thấp ngang hông/đầu gối, nhân vật cầm gậy selfie sải bước mạnh mẽ trên vỉa hè Hong Kong. Nền trời xanh trong với những cụm mây trắng bồng bềnh xen kẽ giữa các tòa tháp kính tài chính tráng lệ. Nhân vật quay đầu nhìn phố xá với thần thái tự nhiên, khoe trọn outfit streetwear thời thượng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc ngước thấp từ dưới lên (Worm's Eye Perspective) kéo dài tỷ lệ đôi chân và cơ thể, đồng thời biến các tòa nhà cao ốc thành bức tường thị giác hùng vĩ bao bọc lấy nhân vật. Độ tương phản màu sắc giữa sắc xanh của bầu trời và tông xám lạnh của bê tông tạo nên bảng màu thành thị cao cấp (Urban Cool Tone).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cánh tay cầm gậy selfie chiếm một góc khá lớn ở tiền cảnh phía dưới bên phải khung hình, đôi lúc phân tán bớt sự chú ý của người xem khỏi gương mặt chủ thể.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay OOTD / thời trang du lịch trên phố đông, hạ thấp góc máy xuống 30-45 độ hướng lên trời là mẹo 'vàng' giúp vừa giấu được dòng người đông đúc phía dưới, vừa lấy được toàn cảnh kiến trúc tráng lệ phía trên và giúp vóc dáng người mẫu trông cao ráo, quyền lực hơn.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Ultra-Wide 16mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Đại lộ trung tâm Hong Kong (Central Financial District)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng nắng ban ngày trong trẻo (Direct Daylight & Blue Sky)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Downward Swipe Tilt sang góc phố nắng hè</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Downward Swipe Tilt sang góc phố nắng hè</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 8.57, 10.37)">
+                    ▶ 8.57s - 10.37s (1.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Biến Hình Trang Phục (Outfit Switch Match-Cut) Giữa Giao Lộ: Chuyển nhịp thời tiết từ âm u sang nắng rực rỡ và áo sát nách mùa hè</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_04_start.jpg', 'Shot 04 • Đầu (8.57s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.57s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_04_mid.jpg', 'Shot 04 • Giữa (9.47s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.47s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_04_end.jpg', 'Shot 04 • Cuối (10.37s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.37s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Nối tiếp cú lia máy dốc xuống lòng đường ở Shot 3, camera lia ngược lên mở ra một giao lộ rực nắng. Nhân vật bất ngờ xuất hiện với bộ trang phục mới: áo tank top đen khoét nách thể thao khỏe khoắn, khoe bắp tay rắn rỏi, tai nghe Beats quanh cổ và vòng tay kim loại. Xung quanh là cột đèn giao thông, biển chỉ dẫn đường phố Hong Kong và cao ốc văn phòng phản chiếu ánh mây.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Nhịp cắt nhanh và bất ngờ tạo hiệu ứng 'biến hình' trang phục (Seamless Costume Change) kích thích sự tò mò của người xem. Bố cục 1/3 cân đối, hướng mắt nhân vật nhìn chếch về phía góc phố tạo cảm giác khám phá tự do.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Do nắng gắt chiếu thẳng từ trên đỉnh đầu nên vùng bóng đổ dưới hốc mắt và cằm hơi đậm nét, làm giảm bớt độ sáng mịn của khuôn mặt.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Để làm video thời trang du lịch không bị đơn điệu một màu, hãy đổi outfit giữa các cảnh quay nhưng GIỮ NGUYÊN cùng một góc máy và kiểu di chuyển – khán giả sẽ cảm nhận được sự phong phú của cả chuyến đi chỉ trong vài giây lướt qua.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Ultra-Wide 16mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Giao lộ phố thương mại Hong Kong</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh nắng hè trực tiếp trên cao (Hard Overhead Sunlight)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Fast Downward Dip sang phố cổ</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Fast Downward Dip sang phố cổ</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 10.4, 12.03)">
+                    ▶ 10.40s - 12.03s (1.63s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Lạc Bước Vào Phố Cổ Chung Cư Cũ: Tái hiện chất thơ điện ảnh Wong Kar-wai qua gam màu pastel và những khối nhà tổ ong</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_05_start.jpg', 'Shot 05 • Đầu (10.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (10.40s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_05_mid.jpg', 'Shot 05 • Giữa (11.21s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (11.21s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_05_end.jpg', 'Shot 05 • Cuối (12.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (12.03s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Camera tiếp tục cú lia nhanh đưa người xem về lại với dáng vẻ quen thuộc trong chiếc áo raglan dài tay, nhưng bối cảnh đã chuyển sang khu phố dân cư cổ kính đặc trưng của Hong Kong. Những tòa nhà tập thể cao ngút ngàn với những ô cửa sổ san sát, ban công chằng chịt dây phơi và dàn nóng điều hòa nhuốm màu thời gian. Phía xa là chiếc taxi đỏ kinh điển của Hong Kong lướt qua.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Giá trị thẩm mỹ đậm chất điện ảnh Hồng Kông (Hong Kong Retro Aesthetics). Sự đối lập giữa vẻ đẹp hiện đại, trendy của nhân vật trẻ tuổi với sự phong sương, hoài niệm của những khối nhà cổ tạo nên tầng sâu cảm xúc mạnh mẽ cho thước phim.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Phân cảnh diễn ra khá nhanh (1.63s) trong khi bối cảnh này có quá nhiều chi tiết thị giác thú vị (taxi đỏ, bảng hiệu, kiến trúc nhà cổ) khiến người xem chưa kịp thẩm thấu hết vẻ đẹp của không gian.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đừng chỉ quay ở các trung tâm thương mại sang trọng; linh hồn của một thành phố du lịch luôn nằm ở các khu phố cổ và ngõ ngách đời thường. Đặt một chủ thể ăn mặc hiện đại vào bối cảnh retro là công thức tương phản kinh điển không bao giờ lỗi thời.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Ultra-Wide 16mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khu chung cư tập thể cũ Hong Kong (Tenement District / Sham Shui Po)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tán xạ trời âm u (Diffused Overcast)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Fast Tilt-Down sang nhà ga sân bay</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Fast Tilt-Down sang nhà ga sân bay</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 12.07, 16.3)">
+                    ▶ 12.07s - 16.30s (4.23s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Nụ Cười Kết Thúc Trên Băng Chuyền Khép Kín Vòng Lặp Vô Tận (Infinite Loop): Trở lại nhà ga sân bay Norman Foster mở ra chu kỳ hành trình mới</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_06_start.jpg', 'Shot 06 • Đầu (12.07s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (12.07s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_06_mid.jpg', 'Shot 06 • Giữa (14.19s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (14.19s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_06_end.jpg', 'Shot 06 • Cuối (16.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (16.30s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Từ cú hất máy cuối Shot 5, khung hình chuyển tiếp mượt mà vào nhà ga Sân bay Quốc tế Hong Kong (HKG). Nhân vật xuất hiện rạng rỡ với chiếc mũ beret đen cổ điển và áo thun trắng in dòng chữ 'TOO MATCH!!', nở nụ cười tươi tắn nhìn vào ống kính và ngắm nhìn vòm mái thép tam giác trứ danh của sân bay. Phân cảnh kéo dài êm ả trên băng chuyền di động cho đến frame cuối cùng, khớp hoàn hảo vào bối cảnh băng chuyền ở Shot 1.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thiết kế cấu trúc kịch bản vòng lặp vô tận (Infinite Loop Narrative) đỉnh cao: Bắt đầu tại băng chuyền sân bay và kết thúc tại băng chuyền sân bay. Biểu cảm nhân vật tươi vui, thư giãn mang lại cảm xúc trọn vẹn (emotional fulfillment) sau chuyến trải nghiệm Hong Kong. Khối kiến trúc mái vòm tam giác tạo chiều sâu vô tận (Vanishing Point).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Vùng trần nhà ga có đèn huỳnh quang công suất lớn đôi lúc làm lóa nhẹ một góc trên của khung hình.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Muốn giữ chân người xem xem đi xem lại video nhiều lần (tăng chỉ số Loop Watch Time trên Reels/TikTok), hãy kết thúc video bằng cùng một hành động hoặc bối cảnh giống hệt như cảnh mở đầu – người xem sẽ bị cuốn vào vòng lặp mà không nhận ra video đã hết.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Ultra-Wide 16mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Nhà ga Sân bay Quốc tế Hong Kong (HKG Terminal Departure)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng đèn nhà ga kết hợp giếng trời kiến trúc Foster + Partners</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Infinite Loop Match Cut quay trở lại Shot 01</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/transitions/trans_06_to_01_loop.jpg?v=2', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/transitions/trans_06_to_01_loop.jpg?v=2" alt="Loop Transition" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 4.43)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Hook Thị Giác 'Trip to Hong Kong' Trên Băng Chuyền Sân Bay: Cú máy POV Walk & Talk góc thấp nén không gian vòm kính mở đầu hành trình</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 4.47, 6.23)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 4.47s</span>
+            </div>
+            <div class="grid-card-body">Cú Match-Cut Bổ Máy Vào Hẻm Núi Bê Tông (Urban Canyon): Đảo ngược góc nhìn từ vòm kính sân bay vào lòng phố dốc Hồng Kông</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 6.27, 8.53)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 6.27s</span>
+            </div>
+            <div class="grid-card-body">Bước Chân Dạo Phố Góc Thấp Xuyên Qua Cao Ốc Chọc Trời: Tôn vinh tỷ lệ cơ thể và sự tương phản giữa con người với đô thị hiện đại</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 8.57, 10.37)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 8.57s</span>
+            </div>
+            <div class="grid-card-body">Cú Biến Hình Trang Phục (Outfit Switch Match-Cut) Giữa Giao Lộ: Chuyển nhịp thời tiết từ âm u sang nắng rực rỡ và áo sát nách mùa hè</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 10.4, 12.03)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 10.40s</span>
+            </div>
+            <div class="grid-card-body">Lạc Bước Vào Phố Cổ Chung Cư Cũ: Tái hiện chất thơ điện ảnh Wong Kar-wai qua gam màu pastel và những khối nhà tổ ong</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 12.07, 16.3)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/extracted_shots/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 12.07s</span>
+            </div>
+            <div class="grid-card-body">Nụ Cười Kết Thúc Trên Băng Chuyền Khép Kín Vòng Lặp Vô Tận (Infinite Loop): Trở lại nhà ga sân bay Norman Foster mở ra chu kỳ hành trình mới</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1-O9WxOLsK1gVAsxJh9ZZT7Ni4HxjImrz" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "mid_frame": 66, "en_frame": 133, "st_time": 0.0, "mid_time": 2.2, "en_time": 4.43, "duration": 4.43, "headline": "Hook Thị Giác 'Trip to Hong Kong' Trên Băng Chuyền Sân Bay: Cú máy POV Walk & Talk góc thấp nén không gian vòm kính mở đầu hành trình", "subject_action": "Nhân vật nam (Oh Sae Bom) diện phong cách streetwear năng động (băng đô đen, kính râm đen, tai nghe Beats quanh cổ, áo raglan xám in chữ NOMANUAL) đứng trên băng chuyền di động (travelator) tại nhà ga sân bay. Anh cầm gậy selfie góc thấp hướng lên, sải bước tự tin về phía trước trong khi máy quay lùi dần theo nhịp di chuyển, hiển thị dòng chữ định vị 'TRIP TO HONG KONG 🇭🇰'. Cuối phân cảnh, máy quay chúi nhanh xuống sàn tạo đà cho cú chuyển cảnh whip-cut mượt mà.", "pros": "Góc máy thấp (Low-Angle POV) kết hợp tiêu cự góc siêu rộng (Ultra-Wide ~16mm) tạo hiệu ứng đường dẫn phối cảnh (Perspective Converging Lines) cực mạnh từ vòm kính kiến trúc sân bay hướng thẳng vào gương mặt chủ thể. Nhịp trôi êm ru của băng chuyền giúp khung hình ổn định tuyệt đối mà không cần gimbal cồng kềnh.", "cons": "Thời lượng 4.43s hơi dài so với nhịp cắt trung bình của Reels hiện đại (1.5s - 2.5s); nếu cắt ngắn ở giây thứ 2.5 sau khi khán giả đã định hình được bối cảnh thì độ căng thị giác sẽ cao hơn.", "takeaway": "Muốn quay mở đầu travel vlog cuốn hút mà không bị rung lắc, hãy tận dụng ngay băng chuyền sân bay (travelator) hoặc thang cuốn – đây là chiếc 'dolly track' tự nhiên mượt mà nhất mà bất kỳ creator nào cũng có thể khai thác miễn phí.", "shot_type": "Low-Angle Handheld POV (Góc thấp tự quay)", "lens_angle": "Ultra-Wide 16mm Equivalent", "location": "Nhà ga Sân bay Khởi hành (Airport Departure Hall)", "lighting_color": "Ánh sáng tán xạ qua mái vòm kính (Diffused Skylight)", "color_grade": "Clean Modern Urban • Tông màu lạnh hiện đại, trong trẻo", "sound_design": "Nhạc nền K-R&B Chill Beat vui tươi + Tiếng động cơ băng chuyền mờ ảo", "transition": "Fast Downward Whip-Tilt sang hẻm phố Hong Kong"}, {"id": 2, "st_frame": 134, "mid_frame": 160, "en_frame": 187, "st_time": 4.47, "mid_time": 5.33, "en_time": 6.23, "duration": 1.77, "headline": "Cú Match-Cut Bổ Máy Vào Hẻm Núi Bê Tông (Urban Canyon): Đảo ngược góc nhìn từ vòm kính sân bay vào lòng phố dốc Hồng Kông", "subject_action": "Nối tiếp cú hất máy từ Shot 1, camera mở ra từ góc quay vuông góc ngước thẳng lên bầu trời xám và những tòa nhà chọc trời san sát đặc trưng của Hong Kong, sau đó hạ dần xuống để bắt trọn nhân vật đang sải bước xuống bậc thang dốc trong con hẻm cổ điển. Nhân vật chuyển động dứt khoát, mái tóc và vạt áo bay nhẹ tạo cảm giác sống động giữa không gian bê tông tĩnh lặng.", "pros": "Kỹ thuật Match-Cut định hướng chuyển động (Motion Match Cut) hoàn hảo: chuyển từ không gian hiện đại, bóng bẩy của sân bay sang sự chật chội, cổ kính đầy bản sắc của hẻm phố Hong Kong trong chớp mắt. Góc máy ngước 90 độ lột tả trọn vẹn 'độ ngộp' thị giác (Spatial Scale Shock) của kiến trúc đô thị nén.", "cons": "Chuyển động hạ máy diễn ra rất nhanh (trong chưa đầy 1 giây) khiến chi tiết kiến trúc tầng thấp hai bên hẻm hơi bị mờ nhòe do motion blur.", "takeaway": "Để chuyển cảnh giữa hai địa điểm cách nhau hàng ngàn kilomet mà không bị thô, hãy mượn chuyển động hất máy lên trời/mái nhà ở cảnh trước và tiếp nối bằng cú bổ máy từ trời xuống đất ở cảnh sau – khán giả sẽ bị cuốn theo dòng chảy động học mà quên mất sự gián đoạn về địa lý.", "shot_type": "High-Tilt to Low-Angle Tracking (Hạ góc từ đỉnh trời xuống chủ thể)", "lens_angle": "Ultra-Wide 16mm", "location": "Bậc thang hẻm phố cổ Hong Kong (Central / Sheung Wan Alley)", "lighting_color": "Ánh sáng tự nhiên trời nhiều mây (Overcast Soft Light)", "color_grade": "Cinematic Moody Grey • Sắc xám bê tông đặc trưng phim Vương Gia Vệ", "sound_design": "Nhịp beat chuyển nhịp + Âm thanh gió rít hẻm cao ốc", "transition": "Whip-Down Tilt sang đại lộ cao ốc"}, {"id": 3, "st_frame": 188, "mid_frame": 222, "en_frame": 256, "st_time": 6.27, "mid_time": 7.4, "en_time": 8.53, "duration": 2.27, "headline": "Bước Chân Dạo Phố Góc Thấp Xuyên Qua Cao Ốc Chọc Trời: Tôn vinh tỷ lệ cơ thể và sự tương phản giữa con người với đô thị hiện đại", "subject_action": "Camera đặt cực thấp ngang hông/đầu gối, nhân vật cầm gậy selfie sải bước mạnh mẽ trên vỉa hè Hong Kong. Nền trời xanh trong với những cụm mây trắng bồng bềnh xen kẽ giữa các tòa tháp kính tài chính tráng lệ. Nhân vật quay đầu nhìn phố xá với thần thái tự nhiên, khoe trọn outfit streetwear thời thượng.", "pros": "Góc ngước thấp từ dưới lên (Worm's Eye Perspective) kéo dài tỷ lệ đôi chân và cơ thể, đồng thời biến các tòa nhà cao ốc thành bức tường thị giác hùng vĩ bao bọc lấy nhân vật. Độ tương phản màu sắc giữa sắc xanh của bầu trời và tông xám lạnh của bê tông tạo nên bảng màu thành thị cao cấp (Urban Cool Tone).", "cons": "Cánh tay cầm gậy selfie chiếm một góc khá lớn ở tiền cảnh phía dưới bên phải khung hình, đôi lúc phân tán bớt sự chú ý của người xem khỏi gương mặt chủ thể.", "takeaway": "Khi quay OOTD / thời trang du lịch trên phố đông, hạ thấp góc máy xuống 30-45 độ hướng lên trời là mẹo 'vàng' giúp vừa giấu được dòng người đông đúc phía dưới, vừa lấy được toàn cảnh kiến trúc tráng lệ phía trên và giúp vóc dáng người mẫu trông cao ráo, quyền lực hơn.", "shot_type": "Low-Angle Worm's Eye View (Góc nhìn tầm mắt sâu bọ)", "lens_angle": "Ultra-Wide 16mm", "location": "Đại lộ trung tâm Hong Kong (Central Financial District)", "lighting_color": "Ánh sáng nắng ban ngày trong trẻo (Direct Daylight & Blue Sky)", "color_grade": "Vibrant Cyan & Steel Grey • Xanh mây trời kết hợp xám thép sang trọng", "sound_design": "Tiếng bước chân dạo phố + Giai điệu K-R&B du dương", "transition": "Downward Swipe Tilt sang góc phố nắng hè"}, {"id": 4, "st_frame": 257, "mid_frame": 284, "en_frame": 311, "st_time": 8.57, "mid_time": 9.47, "en_time": 10.37, "duration": 1.8, "headline": "Cú Biến Hình Trang Phục (Outfit Switch Match-Cut) Giữa Giao Lộ: Chuyển nhịp thời tiết từ âm u sang nắng rực rỡ và áo sát nách mùa hè", "subject_action": "Nối tiếp cú lia máy dốc xuống lòng đường ở Shot 3, camera lia ngược lên mở ra một giao lộ rực nắng. Nhân vật bất ngờ xuất hiện với bộ trang phục mới: áo tank top đen khoét nách thể thao khỏe khoắn, khoe bắp tay rắn rỏi, tai nghe Beats quanh cổ và vòng tay kim loại. Xung quanh là cột đèn giao thông, biển chỉ dẫn đường phố Hong Kong và cao ốc văn phòng phản chiếu ánh mây.", "pros": "Nhịp cắt nhanh và bất ngờ tạo hiệu ứng 'biến hình' trang phục (Seamless Costume Change) kích thích sự tò mò của người xem. Bố cục 1/3 cân đối, hướng mắt nhân vật nhìn chếch về phía góc phố tạo cảm giác khám phá tự do.", "cons": "Do nắng gắt chiếu thẳng từ trên đỉnh đầu nên vùng bóng đổ dưới hốc mắt và cằm hơi đậm nét, làm giảm bớt độ sáng mịn của khuôn mặt.", "takeaway": "Để làm video thời trang du lịch không bị đơn điệu một màu, hãy đổi outfit giữa các cảnh quay nhưng GIỮ NGUYÊN cùng một góc máy và kiểu di chuyển – khán giả sẽ cảm nhận được sự phong phú của cả chuyến đi chỉ trong vài giây lướt qua.", "shot_type": "Low-Angle Dynamic POV (Tự quay góc thấp linh hoạt)", "lens_angle": "Ultra-Wide 16mm", "location": "Giao lộ phố thương mại Hong Kong", "lighting_color": "Ánh nắng hè trực tiếp trên cao (Hard Overhead Sunlight)", "color_grade": "Warm Golden Summer & Deep Black • Sắc nắng hè rực rỡ đối lập tank top đen", "sound_design": "Tiếng còi xe phố xá vi mô + Bass drop nhịp nhạc", "transition": "Fast Downward Dip sang phố cổ"}, {"id": 5, "st_frame": 312, "mid_frame": 336, "en_frame": 361, "st_time": 10.4, "mid_time": 11.2, "en_time": 12.03, "duration": 1.63, "headline": "Lạc Bước Vào Phố Cổ Chung Cư Cũ: Tái hiện chất thơ điện ảnh Wong Kar-wai qua gam màu pastel và những khối nhà tổ ong", "subject_action": "Camera tiếp tục cú lia nhanh đưa người xem về lại với dáng vẻ quen thuộc trong chiếc áo raglan dài tay, nhưng bối cảnh đã chuyển sang khu phố dân cư cổ kính đặc trưng của Hong Kong. Những tòa nhà tập thể cao ngút ngàn với những ô cửa sổ san sát, ban công chằng chịt dây phơi và dàn nóng điều hòa nhuốm màu thời gian. Phía xa là chiếc taxi đỏ kinh điển của Hong Kong lướt qua.", "pros": "Giá trị thẩm mỹ đậm chất điện ảnh Hồng Kông (Hong Kong Retro Aesthetics). Sự đối lập giữa vẻ đẹp hiện đại, trendy của nhân vật trẻ tuổi với sự phong sương, hoài niệm của những khối nhà cổ tạo nên tầng sâu cảm xúc mạnh mẽ cho thước phim.", "cons": "Phân cảnh diễn ra khá nhanh (1.63s) trong khi bối cảnh này có quá nhiều chi tiết thị giác thú vị (taxi đỏ, bảng hiệu, kiến trúc nhà cổ) khiến người xem chưa kịp thẩm thấu hết vẻ đẹp của không gian.", "takeaway": "Đừng chỉ quay ở các trung tâm thương mại sang trọng; linh hồn của một thành phố du lịch luôn nằm ở các khu phố cổ và ngõ ngách đời thường. Đặt một chủ thể ăn mặc hiện đại vào bối cảnh retro là công thức tương phản kinh điển không bao giờ lỗi thời.", "shot_type": "Low-Angle Street Glide POV", "lens_angle": "Ultra-Wide 16mm", "location": "Khu chung cư tập thể cũ Hong Kong (Tenement District / Sham Shui Po)", "lighting_color": "Ánh sáng tán xạ trời âm u (Diffused Overcast)", "color_grade": "Vintage Hong Kong Teal-Orange • Tông màu hoài niệm đậm chất điện ảnh", "sound_design": "Tiếng phố thị Hồng Kông + Tiếng taxi lướt qua", "transition": "Fast Tilt-Down sang nhà ga sân bay"}, {"id": 6, "st_frame": 362, "mid_frame": 425, "en_frame": 489, "st_time": 12.07, "mid_time": 14.17, "en_time": 16.3, "duration": 4.23, "headline": "Nụ Cười Kết Thúc Trên Băng Chuyền Khép Kín Vòng Lặp Vô Tận (Infinite Loop): Trở lại nhà ga sân bay Norman Foster mở ra chu kỳ hành trình mới", "subject_action": "Từ cú hất máy cuối Shot 5, khung hình chuyển tiếp mượt mà vào nhà ga Sân bay Quốc tế Hong Kong (HKG). Nhân vật xuất hiện rạng rỡ với chiếc mũ beret đen cổ điển và áo thun trắng in dòng chữ 'TOO MATCH!!', nở nụ cười tươi tắn nhìn vào ống kính và ngắm nhìn vòm mái thép tam giác trứ danh của sân bay. Phân cảnh kéo dài êm ả trên băng chuyền di động cho đến frame cuối cùng, khớp hoàn hảo vào bối cảnh băng chuyền ở Shot 1.", "pros": "Thiết kế cấu trúc kịch bản vòng lặp vô tận (Infinite Loop Narrative) đỉnh cao: Bắt đầu tại băng chuyền sân bay và kết thúc tại băng chuyền sân bay. Biểu cảm nhân vật tươi vui, thư giãn mang lại cảm xúc trọn vẹn (emotional fulfillment) sau chuyến trải nghiệm Hong Kong. Khối kiến trúc mái vòm tam giác tạo chiều sâu vô tận (Vanishing Point).", "cons": "Vùng trần nhà ga có đèn huỳnh quang công suất lớn đôi lúc làm lóa nhẹ một góc trên của khung hình.", "takeaway": "Muốn giữ chân người xem xem đi xem lại video nhiều lần (tăng chỉ số Loop Watch Time trên Reels/TikTok), hãy kết thúc video bằng cùng một hành động hoặc bối cảnh giống hệt như cảnh mở đầu – người xem sẽ bị cuốn vào vòng lặp mà không nhận ra video đã hết.", "shot_type": "Gliding Travelator Low-Angle POV", "lens_angle": "Ultra-Wide 16mm", "location": "Nhà ga Sân bay Quốc tế Hong Kong (HKG Terminal Departure)", "lighting_color": "Ánh sáng đèn nhà ga kết hợp giếng trời kiến trúc Foster + Partners", "color_grade": "Clean Bright Departure • Ánh sáng trắng sáng ngập tràn hy vọng", "sound_design": "Giai điệu bài hát ngân vang trọn vẹn khép lại hành trình", "transition": "Infinite Loop Match Cut quay trở lại Shot 01"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ct.toFixed(2) + 's / ' + (player.duration ? player.duration.toFixed(2) : '16.33') + 's';
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 30.0 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById('shot-' + shotId);
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2552 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>The Art of Consistency • Bàn Làm Việc Công Nghệ (@critos_pro) • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 4 / 3;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">17 PHÂN CẢNH</span>
+        <span class="nav-meta-title">The Art of Consistency • Bàn Làm Việc Công Nghệ (@critos_pro)</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DcxwKHYoBFv/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/The_Art_of_Consistency_-_@critos_pro.mp4" type="video/mp4">
+                <source src="../videos/The Art of Consistency - @critos_pro.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 10.22s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">The Art of Consistency • Bàn Làm Việc Công Nghệ (@critos_pro)</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@critos_pro" onclick="handleCreatorClick(event, '@critos_pro', 'Critos Pro')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Critos Pro trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Critos Pro</strong>
+                        <span class="author-handle">(@critos_pro)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/DcxwKHYoBFv/" target="_blank" class="author-link">Critos Pro (@critos_pro)</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>4:3 Ngang (Classic Postcard)</strong> • 10.22s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">The Art of Consistency • Bàn Làm Việc Công Nghệ (@critos_pro)</h1>
+            <p class="overview-hero-desc">Báo cáo phân tích chuyên sâu 17 phân cảnh điện ảnh của Critos Pro: Nghệ thuật duy trì tính nhất quán và thói quen làm việc sâu ban đêm (Deep Work Routine). Phân tích cấu trúc nhịp dựng Micro-Staccato tốc độ cao (0.2s - 0.9s), kỹ thuật Match-Cut đổi ánh sáng Ngày sang Đêm (Day-to-Night Transition), phối màu Teal-Orange & Amber Warmth, thiết kế âm thanh tạo đà hành động và cấu trúc vòng tròn hoàn hảo (Story Circle Loop).</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Micro-Staccato Speed Cut, Day-to-Night Match Cut, Desk Setup B-Roll, Dual Amber Accent Lighting, Closed-Loop Visual Rhythm, Multi-Angle Consistency, Audio Sensory Trigger</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">17 Shots • Nhịp trung bình 0.6s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1440x1080 • 23.976 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 0.21)">
+                    ▶ 0.00s - 0.21s (0.21s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố Cục Góc Cao Top-Down Thiết Lập Toàn Bộ Bàn Làm Việc Và Thói Quen Viết Nhật Ký Đầu Ngày</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_01_mid.jpg', 'Shot 01 • Giữa (0.10s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (0.10s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_01_end.jpg', 'Shot 01 • Cuối (0.21s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (0.21s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình từ trên cao nhìn xuống góc làm việc: chiếc ghế công thái học màu xanh rêu xoay nhẹ, creator đội mũ lưỡi trai xanh dương ngồi ngay ngắn, tay cầm bút mực xanh bắt đầu viết vào cuốn sổ tay mở sẵn trên bàn. Phía trên màn hình xuất hiện typography mờ 'The art of consistency'.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tạo ngay cú neo bối cảnh (Establishing hook) chỉ trong 0.21s với bố cục hình học ngăn nắp: thảm caro xanh-trắng tạo đường lưới dẫn mắt, bàn làm việc trắng tương phản với mũ và ghế màu đậm. Hành động viết sổ kích hoạt ngay chủ đề kỷ luật và thói quen.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng quá ngắn (5 frames ~ 0.21s) khiến người xem chưa kịp đọc hết chữ nếu không có chuyển động nổi bật; tuy nhiên trong nhịp dựng micro-staccato đây là nhịp đập mồi hoàn hảo.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Dùng góc máy Top-down để mở màn chuỗi B-roll giúp người xem bao quát lập tức toàn bộ hệ sinh thái đồ đạc mà không bị phân tán vào gương mặt.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm Góc rộng Top-Down (Bird's Eye)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Home Studio / Bàn trắng tối giản, sàn caro</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Key light mềm bên trái, ambient ấm phía sau</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut staccato cực nhanh (5 frames)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Hard Cut staccato cực nhanh (5 frames)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 0.21, 0.46)">
+                    ▶ 0.21s - 0.46s (0.25s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cận Cảnh Đảo Trọng Tâm Vào Trang Sổ Trắng Nhằm Nhấn Mạnh Hành Động Ghi Chép Mục Tiêu</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_02_start.jpg', 'Shot 02 • Đầu (0.21s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.21s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_02_mid.jpg', 'Shot 02 • Giữa (0.34s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (0.34s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_02_end.jpg', 'Shot 02 • Cuối (0.46s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (0.46s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Camera zoom sâu xuống mặt bàn: cuốn sổ tay màu be mở sẵn, cây bút bi xanh đặt chéo, bên trái là bàn phím cơ tone trắng-cam và chuột công thái học dọc. Bàn tay lướt nhanh ghi chép.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thu hẹp trường nhìn (Spatial convergence) từ toàn cảnh vào chi tiết cốt lõi. Sự xuất hiện của các công cụ làm việc thực tế tạo cảm giác thực chiến, chân thực (Authentic deep work).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Bút viết chưa kịp chạm nét chữ rõ ràng thì đã cắt cảnh; nếu giữ thêm 2 frame để thấy nét mực đen xuất hiện trên giấy sẽ gia tăng tính thỏa mãn thị giác (satisfying cue).</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Cắt từ góc cao toàn cảnh vào góc cận cùng trục (Direct Axis Cut) là cách nhanh nhất để dẫn dắt sự chú ý của người xem vào vật thể then chốt.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm Top-Down cận (Medium Close-up)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt bàn làm việc (Desk Surface)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng dịu lan tỏa, bóng đổ nhẹ công cụ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match cut cùng trục nhìn nối tiếp Shot 01</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Match cut cùng trục nhìn nối tiếp Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 0.46, 0.67)">
+                    ▶ 0.46s - 0.67s (0.21s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Nghiêng Tương Phản Ánh Sáng Trung Tính Thể Hiện Trạng Thái Tư Duy Chiến Lược</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_03_start.jpg', 'Shot 03 • Đầu (0.46s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.46s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_03_mid.jpg', 'Shot 03 • Giữa (0.57s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (0.57s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_03_end.jpg', 'Shot 03 • Cuối (0.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (0.67s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Creator ngồi thẳng thắn, tay chống cằm suy tư nhìn chăm chú vào hệ thống màn hình cong đôi đang hiển thị giao diện làm việc. Trang phục áo polo xanh đen mang lại cảm giác chuyên nghiệp, tập trung.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bắt trọn thần thái tập trung cao độ (Deep Concentration). Bố cục 1/3 với nhân vật bên phải hướng nhìn sang trái vào hai màn hình tạo đường hướng thị giác (Leading Eye-line) rõ ràng.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc nghiêng bị cắt sát đỉnh đầu và phần lưng; góc máy hơi hẹp khiến hậu cảnh bên trái hơi trống trải.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đưa khuôn mặt và ánh mắt vào khung hình ở giây thứ 0.5 giúp nhân cách hóa video (Humanize), ngăn người xem lướt qua vì tưởng đây chỉ là video giới thiệu đồ công nghệ vô hồn.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm Góc ngang bán thân nghiêng (Side Profile)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Ghế làm việc & Hệ thống màn hình kép</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ban ngày/trung tính (Neutral Daylight ~5000K)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Jump Cut đổi trục 90 độ giật nhịp dồn dập</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Jump Cut đổi trục 90 độ giật nhịp dồn dập</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 0.67, 0.92)">
+                    ▶ 0.67s - 0.92s (0.25s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Match-Cut Chuyển Đổi Ánh Sáng Sang Hổ Phách Thể Hiện Bước Chuyển Từ Tư Duy Sang Thực Thi</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_04_start.jpg', 'Shot 04 • Đầu (0.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.67s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_04_mid.jpg', 'Shot 04 • Giữa (0.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (0.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_04_end.jpg', 'Shot 04 • Cuối (0.92s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (0.92s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Vẫn góc quay Shot 03 nhưng ánh sáng lập tức rực lên sắc vàng cam ấm cúng. Creator từ tư thế chống cằm lập tức hạ tay gõ thoăn thoắt trên bàn phím cơ, màn hình phản chiếu ánh sáng dịu vào mắt.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Một trong những cú cắt đắt giá nhất video: Thể hiện khái niệm 'Day to Night' hoặc 'Thinking to Doing' chỉ trong chớp mắt thông qua kỹ thuật Match-cut ánh sáng. Tạo cảm giác không gian ấm cúng, truyền cảm hứng làm việc đêm khuya.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Biên độ chuyển động của tay khá nhanh dễ tạo hiện tượng bóng mờ chuyển động (Motion Blur) nếu tốc độ màn trập không đủ cao.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Thay vì dùng hiệu ứng mờ chồng (Cross Dissolve) cũ kỹ, hãy dùng Match Cut kết hợp đổi tone màu đèn để diễn tả bước nhảy thời gian hoặc thay đổi trạng thái tâm lý nhân vật.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm Bán thân ngang (Side Profile Match Cut)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc làm việc ban đêm (Night Work Ambient)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng Hổ Phách ấm (Warm Amber / Tungsten ~2700K)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Lighting Match Cut đổi tone màu đột ngột</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Lighting Match Cut đổi tone màu đột ngột</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 0.92, 1.38)">
+                    ▶ 0.92s - 1.38s (0.46s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố Cục Đối Xứng Trục Dọc Từ Đỉnh Đầu Nhấn Mạnh Kỷ Luật Và Nhịp Điệu Gõ Phím</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_05_start.jpg', 'Shot 05 • Đầu (0.92s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.92s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_05_mid.jpg', 'Shot 05 • Giữa (1.15s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.15s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_05_end.jpg', 'Shot 05 • Cuối (1.38s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (1.38s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Camera đặt vuông góc trên đỉnh đầu creator (đội mũ xanh), hai cánh tay đặt đối xứng hoàn hảo trên bàn phím cơ trắng. Hai bên mặt bàn bài trí cân đối: bên trái là chiếc iPhone, bên phải là cuốn sổ mở cùng chuột không dây.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục đối xứng tuyệt đối (Symmetrical Layout) tạo cảm giác trật tự, kỷ luật và kiểm soát tối đa không gian. Động tác gõ phím nhịp nhàng cộng hưởng hoàn hảo với beat nhạc.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc nhìn này giấu hoàn toàn biểu cảm gương mặt, phụ thuộc hoàn toàn vào chuyển động của đôi bàn tay và sự ngăn nắp của các vật dụng.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Bố cục đối xứng từ trên cao luôn mang lại cảm giác quyền năng, trật tự và thẩm mỹ thiết kế công nghiệp (Industrial Minimalism) cực kỳ phù hợp cho nội dung năng suất.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 28mm Góc đỉnh đầu vuông góc (Overhead Symmetry)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt bàn làm việc chính diện người ngồi</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng dịu trên đỉnh + viền ấm bên phải</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Overhead Cut chuyển từ góc nghiêng sang đỉnh đầu</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Overhead Cut chuyển từ góc nghiêng sang đỉnh đầu</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 1.38, 1.96)">
+                    ▶ 1.38s - 1.96s (0.58s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Macro Khoe Chi Tiết Bàn Làm Việc Với Quả Cầu Phát Sáng Làm Nguồn Sáng Thực Tế (Practical Light)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_06_start.jpg', 'Shot 06 • Đầu (1.38s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (1.38s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_06_mid.jpg', 'Shot 06 • Giữa (1.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.67s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_06_end.jpg', 'Shot 06 • Cuối (1.96s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (1.96s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cận cảnh các món đồ công nghệ của creator: quả cầu đèn tròn dạ quang ấm áp, bên cạnh là máy ảnh mirrorless retro, ống kính góc rộng, ổ cứng SSD di động và các phụ kiện làm phim được sắp đặt tinh tế.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Ánh sáng thực tế từ quả cầu đèn đóng vai trò như một mỏ neo thị giác (Visual Anchor), tạo điểm nhấn tương phản màu sắc rực rỡ và nâng tầm tính điện ảnh (Cinematic Production Value) cho góc làm việc.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Vùng tối phía sau hơi sâu có thể làm chìm một số chi tiết kim loại của thân máy ảnh; cần thêm một tia rim light nhẹ để tách khối.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Luôn đưa một nguồn sáng thực tế (đèn bàn, quả cầu led, nến thơm) vào khung hình cận cảnh để tạo điểm sáng tự nhiên, tăng độ sâu trường ảnh và độ sang trọng của khung hình.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm Cận cảnh xiên f/1.8 (Macro Detail)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Kệ phụ kiện công nghệ (Desk Gear Shelf)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Quả cầu LED tròn ánh sáng cam hổ phách (Practical Light)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut đảo góc sang chi tiết tĩnh tạo nhịp thở</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Hard Cut đảo góc sang chi tiết tĩnh tạo nhịp thở</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 1.96, 2.59)">
+                    ▶ 1.96s - 2.59s (0.63s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố Cục Đường Chéo Flatlay Bày Trí Bộ Đồ Dùng Bất Ly Thân Của Nhà Sáng Tạo (Everyday Carry)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_07_start.jpg', 'Shot 07 • Đầu (1.96s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (1.96s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_07_mid.jpg', 'Shot 07 • Giữa (2.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (2.27s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_07_end.jpg', 'Shot 07 • Cuối (2.59s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (2.59s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình flatlay chéo tinh tế: chiếc mũ nhung tăm xanh coban (vật bất ly thân của creator), tai nghe over-ear Sony/Bose màu đen nhám, và chiếc iPhone đang sáng màn hình khóa hiển thị đồng hồ 23:31.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Sắp đặt đồ vật theo đường chéo thị giác (Diagonal Composition) tạo sự năng động, phá vỡ sự khô cứng của các góc chụp vuông vắn thông thường. Màu xanh của mũ và màn hình điện thoại tạo sự liên kết màu sắc chặt chẽ (Color Consistency).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Tai nghe màu đen đặt trên nền tối dễ bị bết màu (shadow clipping) nếu màn hình người xem có độ sáng thấp.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Nghệ thuật flatlay không phải là xếp thẳng hàng, mà là tạo ra một đường chéo kể chuyện kết nối từ phụ kiện cá nhân (mũ) đến công cụ tập trung (tai nghe) và mục tiêu thời gian (điện thoại).</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm Góc chéo 45 độ từ trên cao (Diagonal Flatlay)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc thảm caro xanh và mặt bàn trắng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ambient kết hợp luồng sáng xanh từ iPhone</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut nối cảnh giới thiệu bộ nhận diện cá nhân</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Cut nối cảnh giới thiệu bộ nhận diện cá nhân</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 2.59, 3.17)">
+                    ▶ 2.59s - 3.17s (0.58s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Siêu Cận Màn Hình Khóa Khẳng Định Khung Giờ Kỷ Luật Nghiêm Ngặt Lúc 23h31 Đêm</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_08_start.jpg', 'Shot 08 • Đầu (2.59s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (2.59s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_08_mid.jpg', 'Shot 08 • Giữa (2.88s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (2.88s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_08_end.jpg', 'Shot 08 • Cuối (3.17s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (3.17s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình lấp đầy bởi màn hình iPhone hiển thị con số '23:31' font số to bản, bên dưới là chế độ Tập Trung (Focus Mode) và dòng chữ triết lý 'Consistency'. Hình nền gradient xanh-trắng tối giản.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Truyền tải thông điệp cốt lõi cực kỳ trực diện và đanh thép: 23:31 đêm không phải giờ đi ngủ hay lướt mạng xã hội vô bổ, mà là giờ dành cho Deep Work. Con số cụ thể tạo độ tin cậy và sự đồng cảm mạnh mẽ (Relatability).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khung hình tĩnh hoàn toàn trong 0.58s; một chuyển động lướt ngón tay nhẹ hoặc hiệu ứng sáng dần sẽ tăng thêm tính tương tác.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Chi tiết số liệu (giờ giấc, đồng hồ bấm giờ, trang sách) luôn là vũ khí tạo bằng chứng thị giác (Visual Proof) tốt nhất cho chủ đề kỷ luật và năng suất.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 85mm Siêu cận dọc (Macro Tight Close-up)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Màn hình điện thoại iPhone trên mặt bàn</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự thân (Self-illuminated) màn hình OLED</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Push-in Match Cut từ flatlay vào tâm điểm màn hình</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 09 • Push-in Match Cut từ flatlay vào tâm điểm màn hình</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_08_to_09.jpg?v=2', 'Chuyển cảnh Shot 08 sang Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_08_to_09.jpg?v=2" alt="Transition 8 to 9" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-9">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 09</span>
+                <button class="shot-time-btn" onclick="jumpToShot(9, 3.17, 3.63)">
+                    ▶ 3.17s - 3.63s (0.46s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Quay Toàn Cảnh Đối Xứng Phía Sau Lưng Thiết Lập Không Gian Làm Việc Điện Ảnh Ban Đêm</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_09_start.jpg', 'Shot 09 • Đầu (3.17s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (3.17s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_09_mid.jpg', 'Shot 09 • Giữa (3.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (3.40s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_09_end.jpg', 'Shot 09 • Cuối (3.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (3.63s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Camera đặt ngay trục giữa sau lưng chiếc ghế công thái học trắng. Creator ngồi vững chãi, trước mặt là hai màn hình cong siêu rộng hiển thị không gian làm việc số, bảng treo tường pegboard ngăn nắp phía trên, đồng hồ số đỏ nổi bật góc trái.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục trung tâm đối xứng kinh điển của điện ảnh (Wes Anderson / Kubrick symmetry). Cú tương phản tỉ lệ (Scale Contrast) từ cực cận sang cực rộng giải phóng tầm mắt, phô diễn trọn vẹn vẻ đẹp của góc setup đỉnh cao.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy đặt hơi xa làm nhân vật trông nhỏ bé so với hệ thống màn hình, tuy nhiên điều này lại phục vụ mục đích tôn vinh không gian làm việc.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Hãy luôn tạo sự thay đổi quy mô góc quay cực đại (Extreme Scale Change: từ Macro sang Wide) để tạo cảm giác mãn nhãn và làm mới sự chú ý của người xem.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm Góc rộng chính diện sau lưng (Rear Symmetrical Wide)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Toàn cảnh phòng làm việc / Góc setup hoàn chỉnh</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> LED hắt sau màn hình + đèn bàn hổ phách đối xứng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Wide Establishing Cut tương phản quy mô cực đại</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 10 • Wide Establishing Cut tương phản quy mô cực đại</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_09_to_10.jpg?v=2', 'Chuyển cảnh Shot 09 sang Shot 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_09_to_10.jpg?v=2" alt="Transition 9 to 10" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-10">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 10</span>
+                <button class="shot-time-btn" onclick="jumpToShot(10, 3.63, 4.55)">
+                    ▶ 3.63s - 4.55s (0.92s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Động Tác Nhấc Tai Nghe Dứt Khoát Khởi Động Nghi Thức Bắt Đầu Phiên Làm Việc Chuyên Sâu</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_10_start.jpg', 'Shot 10 • Đầu (3.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (3.63s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_10_mid.jpg', 'Shot 10 • Giữa (4.09s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (4.09s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_10_end.jpg', 'Shot 10 • Cuối (4.55s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (4.55s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bàn tay creator vươn vào khung hình, nắm lấy chiếc tai nghe over-ear đen nằm cạnh chiếc loa kiểm âm trắng và nhấc bổng lên khỏi mặt bàn để đeo vào tai.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Âm thanh và hình ảnh của hành động 'đeo tai nghe' là một biểu tượng kinh điển (Sensory Trigger) cho việc cách ly tiếng ồn bên ngoài và bước vào trạng thái dòng chảy (Flow State). Tương phản màu sắc đen-trắng giữa tai nghe và loa rất tinh tế.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Bàn tay khi nhấc tai nghe lùi ra khỏi khung hình hơi nhanh, tạo một khoảng trống nhỏ ở cuối shot trước khi chuyển cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Dùng một hành động kích hoạt vật lý cụ thể (nhấc tai nghe, rót nước, mở nắp bút) làm bản lề chuyển cảnh sẽ khiến video có nhịp điệu tự nhiên hơn nhiều so với việc chỉ ngồi gõ máy tính.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm Cận cảnh ngang mặt bàn (Low-Angle Close-up)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn làm việc, góc loa kiểm âm màu trắng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ven nổi khối vật liệu nhám và vỏ loa</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Action Cut dẫn dắt bằng chuyển động nhấc vật thể</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 11 • Action Cut dẫn dắt bằng chuyển động nhấc vật thể</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_10_to_11.jpg?v=2', 'Chuyển cảnh Shot 10 sang Shot 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_10_to_11.jpg?v=2" alt="Transition 10 to 11" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-11">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 11</span>
+                <button class="shot-time-btn" onclick="jumpToShot(11, 4.55, 5.46)">
+                    ▶ 4.55s - 5.46s (0.91s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Thấp Qua Vai Bắt Trọn Nhịp Gõ Phím Và Giao Diện Âm Nhạc Truyền Cảm Hứng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_11_start.jpg', 'Shot 11 • Đầu (4.55s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (4.55s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_11_mid.jpg', 'Shot 11 • Giữa (5.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_11_end.jpg', 'Shot 11 • Cuối (5.46s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.46s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cận cảnh góc thấp bàn tay gõ phím cơ thoăn thoắt, phía trên là màn hình cong gắn trên tay nâng công thái học hiển thị trình phát nhạc Spotify, góc phải là micro thu âm chuyên nghiệp trên cánh tay boom arm.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc quay tầng lớp (Layering) cực kỳ giàu chi tiết: tiền cảnh là điện thoại và mặt bàn, trung cảnh là bàn tay gõ phím sống động, hậu cảnh là màn hình giao diện công việc và đèn ấm. Truyền tải trọn vẹn rung cảm Deep Work ban đêm.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Phần chân đế màn hình màu đen và dây cáp chiếm một góc nhỏ ở trung tâm khung hình, có thể giấu bớt để đạt độ tối giản tuyệt đối.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Thay vì quay màn hình phẳng nhàm chán, hãy hạ thấp máy quay ngang tầm tay gõ phím và hướng lên màn hình để thu được cả động thái cơ thể lẫn không gian công nghệ số.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm Góc thấp qua vai hướng lên (Low-Angle OTS)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khu vực phím cơ và chân tay nâng màn hình</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Màn hình phản chiếu phím + rim light vàng ấm viền tay</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Cut âm nhạc kết nối tai nghe với Spotify</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 12 • Match Cut âm nhạc kết nối tai nghe với Spotify</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_11_to_12.jpg?v=2', 'Chuyển cảnh Shot 11 sang Shot 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_11_to_12.jpg?v=2" alt="Transition 11 to 12" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-12">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 12</span>
+                <button class="shot-time-btn" onclick="jumpToShot(12, 5.46, 6.34)">
+                    ▶ 5.46s - 6.34s (0.88s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Cao Toàn Cảnh Ghi Lại Khoảnh Khắc Viết Ý Tưởng Đã Đeo Tai Nghe Khép Kín Thế Giới Riêng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_12_start.jpg', 'Shot 12 • Đầu (5.46s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.46s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_12_mid.jpg', 'Shot 12 • Giữa (5.90s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.90s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_12_end.jpg', 'Shot 12 • Cuối (6.34s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (6.34s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Tương tự góc máy Shot 01 nhưng lúc này creator đã đeo chiếc tai nghe đen trùm qua mũ, hai tay đặt trên bàn tiếp tục viết nắn nót vào cuốn sổ nhật ký. Bên cạnh là bàn phím, chuột và micro.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tạo tính nhất quán và tiến triển trong câu chuyện (Visual Progression): Người xem thấy rõ sự thay đổi trạng thái từ lúc bắt đầu ngồi vào bàn (Shot 01) đến khi hoàn toàn đắm chìm trong âm nhạc và ý tưởng (Shot 12).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Vị trí đèn quả cầu ở mép phải bị cháy sáng nhẹ (clipping highlight) do đặt quá sát rìa khung hình.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sử dụng lại một góc máy cố định nhưng thay đổi chi tiết nhân vật (ở đây là chiếc tai nghe đã được đeo) là thủ pháp điện ảnh kinh điển để kể câu chuyện về sự tiến triển thời gian mà không cần lời thoại.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm Góc cao 90 độ Top-Down (Bird's Eye)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn làm việc, ghế xoay, sàn caro xanh</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn quả cầu cam tỏa sáng viền phải + đèn trần dịu</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Scale Cut từ cận phím sang toàn cảnh góc cao</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 13 • Scale Cut từ cận phím sang toàn cảnh góc cao</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_12_to_13.jpg?v=2', 'Chuyển cảnh Shot 12 sang Shot 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_12_to_13.jpg?v=2" alt="Transition 12 to 13" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-13">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 13</span>
+                <button class="shot-time-btn" onclick="jumpToShot(13, 6.34, 7.26)">
+                    ▶ 6.34s - 7.26s (0.92s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Nghiêng Tĩnh Ghi Lại Trạng Thái Chiêm Nghiệm Sâu Sắc Trước Màn Hình Kép</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_13_start.jpg', 'Shot 13 • Đầu (6.34s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (6.34s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_13_mid.jpg', 'Shot 13 • Giữa (6.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_13_end.jpg', 'Shot 13 • Cuối (7.26s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_13_end.jpg" alt="Shot 13 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (7.26s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Creator ngồi yên bất động, tay chống cằm, ánh mắt chăm chú đọc lướt các dòng dữ liệu trên màn hình cong đôi. Biểu cảm điềm tĩnh, tập trung tuyệt đối.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tương phản nhiệt độ màu hoàn hảo (Color Temperature Contrast): Ánh sáng lạnh (Cool Blue) từ màn hình đối trọng với ánh sáng ấm (Warm Amber) từ đèn hậu cảnh, tạo nên bảng màu Teal-Orange chuẩn điện ảnh. Thần thái nhân vật toát lên sự kiên trì, kỷ luật.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khoảng cách giữa nhân vật và màn hình hơi gần, khiến ánh sáng màn hình tạt lên mặt hơi gắt ở phần chóp mũi.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Trong các video về năng suất, những giây phút tĩnh lặng suy nghĩ mang lại sức nặng cảm xúc và độ sâu nhận thức cao hơn nhiều so với việc chỉ chiếu cảnh gõ phím liên tục.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm Bán thân nghiêng (Side Profile Close Medium)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Vị trí ngồi đối diện hệ thống màn hình kép</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Teal-Orange: Xanh từ màn hình + Vàng ấm từ hậu cảnh</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut on State chuyển từ động (viết) sang tĩnh (suy ngẫm)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 14 • Cut on State chuyển từ động (viết) sang tĩnh (suy ngẫm)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_13_to_14.jpg?v=2', 'Chuyển cảnh Shot 13 sang Shot 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_13_to_14.jpg?v=2" alt="Transition 13 to 14" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-14">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 14</span>
+                <button class="shot-time-btn" onclick="jumpToShot(14, 7.26, 8.13)">
+                    ▶ 7.26s - 8.13s (0.87s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Đỉnh Đầu Cân Xứng Đúc Kết Thói Quen Ghi Chép Bằng Bút Mực Sau Buổi Làm Việc</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_14_start.jpg', 'Shot 14 • Đầu (7.26s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_14_start.jpg" alt="Shot 14 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (7.26s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_14_mid.jpg', 'Shot 14 • Giữa (7.70s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_14_mid.jpg" alt="Shot 14 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (7.70s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_14_end.jpg', 'Shot 14 • Cuối (8.13s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_14_end.jpg" alt="Shot 14 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.13s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Creator ngồi thẳng thớm ngay trục giữa, tay phải cầm cây bút bi xanh viết những dòng chữ cuối cùng vào cuốn sổ tay bên cạnh bàn phím cơ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thể hiện vòng lặp hoàn chỉnh của thói quen (Habit Loop): Bắt đầu bằng kế hoạch trong sổ (Shot 01-02), triển khai trên máy tính (Shot 04-11), suy ngẫm (Shot 13) và kết thúc bằng việc đúc kết lại vào trang giấy (Shot 14).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Bàn tay trái để ngoài rìa khung hình hơi mất cân đối nhẹ so với bàn tay phải đang viết; nếu hai tay cùng đặt trên bàn sẽ giữ trọn tính đối xứng.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kỷ luật (Consistency) không chỉ là thao tác số, mà còn là sự kết nối vật lý với trang sổ để đóng gói tư duy sau mỗi phiên làm việc sâu.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 28mm Góc đỉnh đầu vuông góc (Overhead Symmetry)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt bàn làm việc và vạt áo polo xanh</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng dịu từ trên cao tạo bóng đổ mềm của bút</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Overhead Match Cut khép lại chu kỳ gõ phím</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 15 • Overhead Match Cut khép lại chu kỳ gõ phím</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_14_to_15.jpg?v=2', 'Chuyển cảnh Shot 14 sang Shot 15')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_14_to_15.jpg?v=2" alt="Transition 14 to 15" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-15">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 15</span>
+                <button class="shot-time-btn" onclick="jumpToShot(15, 8.13, 8.55)">
+                    ▶ 8.13s - 8.55s (0.42s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Toàn Cảnh Góc Nghiêng Căn Phòng Khi Ghế Đã Trống Tôn Vinh Không Gian Sáng Tạo Sau Giờ Làm Việc</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_15_start.jpg', 'Shot 15 • Đầu (8.13s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_15_start.jpg" alt="Shot 15 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.13s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_15_mid.jpg', 'Shot 15 • Giữa (8.34s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_15_mid.jpg" alt="Shot 15 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (8.34s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_15_end.jpg', 'Shot 15 • Cuối (8.55s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_15_end.jpg" alt="Shot 15 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.55s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Căn phòng làm việc tĩnh lặng lúc nửa đêm. Chiếc ghế xoay công thái học đứng yên đối diện hai màn hình, bàn làm việc ngăn nắp, ánh sáng studio tạo nên một bức tranh kiến trúc nội thất công nghệ đầy tính thẩm mỹ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tạo cảm giác lắng đọng và thành tựu (Sense of Accomplishment). Chiếc ghế trống là một ẩn dụ thị giác mạnh mẽ: Người làm việc đã hoàn thành nhiệm vụ và rời đi, chỉ còn lại sự kỷ luật và thành quả được gìn giữ trong không gian.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng 0.42s hơi vội cho một khung cảnh kiến trúc đẹp như thế này; giữ thêm 0.3s sẽ cho người xem thời gian chiêm ngưỡng trọn vẹn hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kết thúc một chuỗi hành động bằng một khung hình không gian trống (Empty Space) là kỹ thuật kinh điển giúp tạo sự giải tỏa cảm xúc và đọng lại ấn tượng thẩm mỹ sâu đậm.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 20mm Toàn cảnh góc chéo rộng (Architectural Wide)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Toàn bộ góc làm việc khi creator đã rời vị trí</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Softbox dù góc trái + màn hình sáng + đèn quả cầu cam</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Empty Room Cut báo hiệu kết thúc phiên làm việc</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 16 • Empty Room Cut báo hiệu kết thúc phiên làm việc</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_15_to_16.jpg?v=2', 'Chuyển cảnh Shot 15 sang Shot 16')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_15_to_16.jpg?v=2" alt="Transition 15 to 16" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-16">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 16</span>
+                <button class="shot-time-btn" onclick="jumpToShot(16, 8.55, 9.22)">
+                    ▶ 8.55s - 9.22s (0.67s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cận Cảnh Mặt Bàn Trống Ngăn Nắp Khép Lại Trình Tự Làm Việc Với Quy Chuẩn Gọn Gàng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_16_start.jpg', 'Shot 16 • Đầu (8.55s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_16_start.jpg" alt="Shot 16 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.55s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_16_mid.jpg', 'Shot 16 • Giữa (8.89s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_16_mid.jpg" alt="Shot 16 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (8.89s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_16_end.jpg', 'Shot 16 • Cuối (9.22s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_16_end.jpg" alt="Shot 16 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (9.22s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cuốn sổ tay mở sẵn ghi nhận những dòng chữ đã hoàn thành, cây bút bi xanh đặt ngay ngắn trên nếp gấp, chuột máy tính và góc bàn phím nằm yên vị trong sự trật tự, sạch sẽ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Đối chiếu trực tiếp với Shot 02 ở đầu video để hoàn tất cấu trúc vòng tròn (Cyclical Narrative). Khẳng định thông điệp: Người có tính kỷ luật cao luôn rời bàn làm việc trong trạng thái ngăn nắp để sẵn sàng cho ngày hôm sau.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Không có chuyển động vật lý nào trong shot này, hoàn toàn là một khung hình tĩnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Để video có tính cấu trúc chặt chẽ, hãy luôn để các shot cuối phản chiếu (echo) lại các shot mở đầu.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm Cận cảnh góc cao mặt bàn (Medium Close Top-Down)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt bàn làm việc sau khi kết thúc phiên</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng dịu lan tỏa làm nổi bật sổ và bút</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Direct Match Cut phản chiếu Shot 02 (Story Circle)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 17 • Direct Match Cut phản chiếu Shot 02 (Story Circle)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_16_to_17.jpg?v=2', 'Chuyển cảnh Shot 16 sang Shot 17')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_16_to_17.jpg?v=2" alt="Transition 16 to 17" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-17">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 17</span>
+                <button class="shot-time-btn" onclick="jumpToShot(17, 9.22, 10.22)">
+                    ▶ 9.22s - 10.22s (1.00s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Màn Hình Điện Thoại Tắt Đột Ngột Về Đen Khóa Chặt Vòng Lặp Vô Tận Của Sự Kiên Trì Bền Bỉ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_17_start.jpg', 'Shot 17 • Đầu (9.22s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_17_start.jpg" alt="Shot 17 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (9.22s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_17_mid.jpg', 'Shot 17 • Giữa (9.72s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_17_mid.jpg" alt="Shot 17 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.72s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_17_end.jpg', 'Shot 17 • Cuối (10.22s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_17_end.jpg" alt="Shot 17 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.22s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Màn hình iPhone sáng với đồng hồ 23:31 và dòng chữ triết lý 'Consistency'. Sau khoảng 0.5s, màn hình tự động chuyển sang màu đen bóng bẩy phản chiếu ánh sáng môi trường mờ ảo.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cái kết tuyệt đỉnh về mặt ý niệm điện ảnh: Tắt màn hình tượng trưng cho việc gác lại công việc, đi ngủ đúng giờ để ngày mai tiếp tục kiên trì. Đây cũng là điểm nối hoàn hảo để lặp lại video (Seamless Loop) khi người xem trên Instagram xem đi xem lại mà không nhận ra điểm bắt đầu.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Tốc độ tắt màn hình diễn ra hơi nhanh trong 2 frame (F234-F236); nếu có một chuyển động ngón tay gạt tắt thủ công sẽ giàu tính người hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Tắt màn hình điện thoại về màu đen là cách tinh tế nhất để kết thúc một video B-roll công nghệ, vừa giải quyết việc cắt cảnh vừa tạo cảm giác trọn vẹn, không cần chèn outro rườm rà.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 85mm Cận cảnh macro màn hình điện thoại (Macro Lockscreen)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Màn hình iPhone trên bàn làm việc</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng màn hình OLED tắt dần về màu đen sâu</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Fade to Black tự nhiên khép vòng lặp vô tận (Loop)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_17_to_01_loop.jpg?v=2', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/transitions/trans_17_to_01_loop.jpg?v=2" alt="Loop Transition" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 0.21)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Bố Cục Góc Cao Top-Down Thiết Lập Toàn Bộ Bàn Làm Việc Và Thói Quen Viết Nhật Ký Đầu Ngày</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 0.21, 0.46)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 0.21s</span>
+            </div>
+            <div class="grid-card-body">Cận Cảnh Đảo Trọng Tâm Vào Trang Sổ Trắng Nhằm Nhấn Mạnh Hành Động Ghi Chép Mục Tiêu</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 0.46, 0.67)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 0.46s</span>
+            </div>
+            <div class="grid-card-body">Góc Nghiêng Tương Phản Ánh Sáng Trung Tính Thể Hiện Trạng Thái Tư Duy Chiến Lược</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 0.67, 0.92)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 0.67s</span>
+            </div>
+            <div class="grid-card-body">Cú Match-Cut Chuyển Đổi Ánh Sáng Sang Hổ Phách Thể Hiện Bước Chuyển Từ Tư Duy Sang Thực Thi</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 0.92, 1.38)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 0.92s</span>
+            </div>
+            <div class="grid-card-body">Bố Cục Đối Xứng Trục Dọc Từ Đỉnh Đầu Nhấn Mạnh Kỷ Luật Và Nhịp Điệu Gõ Phím</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 1.38, 1.96)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 1.38s</span>
+            </div>
+            <div class="grid-card-body">Góc Macro Khoe Chi Tiết Bàn Làm Việc Với Quả Cầu Phát Sáng Làm Nguồn Sáng Thực Tế (Practical Light)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 1.96, 2.59)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 1.96s</span>
+            </div>
+            <div class="grid-card-body">Bố Cục Đường Chéo Flatlay Bày Trí Bộ Đồ Dùng Bất Ly Thân Của Nhà Sáng Tạo (Everyday Carry)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 2.59, 3.17)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 2.59s</span>
+            </div>
+            <div class="grid-card-body">Siêu Cận Màn Hình Khóa Khẳng Định Khung Giờ Kỷ Luật Nghiêm Ngặt Lúc 23h31 Đêm</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(9, 3.17, 3.63)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <span class="grid-thumb-badge">Shot 09 • 3.17s</span>
+            </div>
+            <div class="grid-card-body">Góc Quay Toàn Cảnh Đối Xứng Phía Sau Lưng Thiết Lập Không Gian Làm Việc Điện Ảnh Ban Đêm</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(10, 3.63, 4.55)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+                <span class="grid-thumb-badge">Shot 10 • 3.63s</span>
+            </div>
+            <div class="grid-card-body">Động Tác Nhấc Tai Nghe Dứt Khoát Khởi Động Nghi Thức Bắt Đầu Phiên Làm Việc Chuyên Sâu</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(11, 4.55, 5.46)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+                <span class="grid-thumb-badge">Shot 11 • 4.55s</span>
+            </div>
+            <div class="grid-card-body">Góc Thấp Qua Vai Bắt Trọn Nhịp Gõ Phím Và Giao Diện Âm Nhạc Truyền Cảm Hứng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(12, 5.46, 6.34)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+                <span class="grid-thumb-badge">Shot 12 • 5.46s</span>
+            </div>
+            <div class="grid-card-body">Góc Cao Toàn Cảnh Ghi Lại Khoảnh Khắc Viết Ý Tưởng Đã Đeo Tai Nghe Khép Kín Thế Giới Riêng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(13, 6.34, 7.26)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_13_mid.jpg" alt="Shot 13" loading="lazy">
+                <span class="grid-thumb-badge">Shot 13 • 6.34s</span>
+            </div>
+            <div class="grid-card-body">Góc Nghiêng Tĩnh Ghi Lại Trạng Thái Chiêm Nghiệm Sâu Sắc Trước Màn Hình Kép</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(14, 7.26, 8.13)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_14_mid.jpg" alt="Shot 14" loading="lazy">
+                <span class="grid-thumb-badge">Shot 14 • 7.26s</span>
+            </div>
+            <div class="grid-card-body">Góc Đỉnh Đầu Cân Xứng Đúc Kết Thói Quen Ghi Chép Bằng Bút Mực Sau Buổi Làm Việc</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(15, 8.13, 8.55)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_15_mid.jpg" alt="Shot 15" loading="lazy">
+                <span class="grid-thumb-badge">Shot 15 • 8.13s</span>
+            </div>
+            <div class="grid-card-body">Toàn Cảnh Góc Nghiêng Căn Phòng Khi Ghế Đã Trống Tôn Vinh Không Gian Sáng Tạo Sau Giờ Làm Việc</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(16, 8.55, 9.22)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_16_mid.jpg" alt="Shot 16" loading="lazy">
+                <span class="grid-thumb-badge">Shot 16 • 8.55s</span>
+            </div>
+            <div class="grid-card-body">Cận Cảnh Mặt Bàn Trống Ngăn Nắp Khép Lại Trình Tự Làm Việc Với Quy Chuẩn Gọn Gàng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(17, 9.22, 10.22)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/extracted_shots/shot_17_mid.jpg" alt="Shot 17" loading="lazy">
+                <span class="grid-thumb-badge">Shot 17 • 9.22s</span>
+            </div>
+            <div class="grid-card-body">Màn Hình Điện Thoại Tắt Đột Ngột Về Đen Khóa Chặt Vòng Lặp Vô Tận Của Sự Kiên Trì Bền Bỉ</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1e9HUEN86EvCHqEC-9RG00x1ny6LxBIkD" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_time": 0.0, "en_time": 0.21, "duration": 0.21, "st_frame": 0, "en_frame": 4, "headline": "Bố Cục Góc Cao Top-Down Thiết Lập Toàn Bộ Bàn Làm Việc Và Thói Quen Viết Nhật Ký Đầu Ngày", "subject_action": "Khung hình từ trên cao nhìn xuống góc làm việc: chiếc ghế công thái học màu xanh rêu xoay nhẹ, creator đội mũ lưỡi trai xanh dương ngồi ngay ngắn, tay cầm bút mực xanh bắt đầu viết vào cuốn sổ tay mở sẵn trên bàn. Phía trên màn hình xuất hiện typography mờ 'The art of consistency'.", "pros": "Tạo ngay cú neo bối cảnh (Establishing hook) chỉ trong 0.21s với bố cục hình học ngăn nắp: thảm caro xanh-trắng tạo đường lưới dẫn mắt, bàn làm việc trắng tương phản với mũ và ghế màu đậm. Hành động viết sổ kích hoạt ngay chủ đề kỷ luật và thói quen.", "cons": "Thời lượng quá ngắn (5 frames ~ 0.21s) khiến người xem chưa kịp đọc hết chữ nếu không có chuyển động nổi bật; tuy nhiên trong nhịp dựng micro-staccato đây là nhịp đập mồi hoàn hảo.", "takeaway": "Dùng góc máy Top-down để mở màn chuỗi B-roll giúp người xem bao quát lập tức toàn bộ hệ sinh thái đồ đạc mà không bị phân tán vào gương mặt.", "lens_angle": "24mm Góc rộng Top-Down (Bird's Eye)", "location": "Home Studio / Bàn trắng tối giản, sàn caro", "lighting_color": "Key light mềm bên trái, ambient ấm phía sau", "transition": "Hard Cut staccato cực nhanh (5 frames)"}, {"id": 2, "st_time": 0.21, "en_time": 0.46, "duration": 0.25, "st_frame": 5, "en_frame": 10, "headline": "Cận Cảnh Đảo Trọng Tâm Vào Trang Sổ Trắng Nhằm Nhấn Mạnh Hành Động Ghi Chép Mục Tiêu", "subject_action": "Camera zoom sâu xuống mặt bàn: cuốn sổ tay màu be mở sẵn, cây bút bi xanh đặt chéo, bên trái là bàn phím cơ tone trắng-cam và chuột công thái học dọc. Bàn tay lướt nhanh ghi chép.", "pros": "Thu hẹp trường nhìn (Spatial convergence) từ toàn cảnh vào chi tiết cốt lõi. Sự xuất hiện của các công cụ làm việc thực tế tạo cảm giác thực chiến, chân thực (Authentic deep work).", "cons": "Bút viết chưa kịp chạm nét chữ rõ ràng thì đã cắt cảnh; nếu giữ thêm 2 frame để thấy nét mực đen xuất hiện trên giấy sẽ gia tăng tính thỏa mãn thị giác (satisfying cue).", "takeaway": "Cắt từ góc cao toàn cảnh vào góc cận cùng trục (Direct Axis Cut) là cách nhanh nhất để dẫn dắt sự chú ý của người xem vào vật thể then chốt.", "lens_angle": "35mm Top-Down cận (Medium Close-up)", "location": "Mặt bàn làm việc (Desk Surface)", "lighting_color": "Ánh sáng dịu lan tỏa, bóng đổ nhẹ công cụ", "transition": "Match cut cùng trục nhìn nối tiếp Shot 01"}, {"id": 3, "st_time": 0.46, "en_time": 0.67, "duration": 0.21, "st_frame": 11, "en_frame": 15, "headline": "Góc Nghiêng Tương Phản Ánh Sáng Trung Tính Thể Hiện Trạng Thái Tư Duy Chiến Lược", "subject_action": "Creator ngồi thẳng thắn, tay chống cằm suy tư nhìn chăm chú vào hệ thống màn hình cong đôi đang hiển thị giao diện làm việc. Trang phục áo polo xanh đen mang lại cảm giác chuyên nghiệp, tập trung.", "pros": "Bắt trọn thần thái tập trung cao độ (Deep Concentration). Bố cục 1/3 với nhân vật bên phải hướng nhìn sang trái vào hai màn hình tạo đường hướng thị giác (Leading Eye-line) rõ ràng.", "cons": "Góc nghiêng bị cắt sát đỉnh đầu và phần lưng; góc máy hơi hẹp khiến hậu cảnh bên trái hơi trống trải.", "takeaway": "Đưa khuôn mặt và ánh mắt vào khung hình ở giây thứ 0.5 giúp nhân cách hóa video (Humanize), ngăn người xem lướt qua vì tưởng đây chỉ là video giới thiệu đồ công nghệ vô hồn.", "lens_angle": "50mm Góc ngang bán thân nghiêng (Side Profile)", "location": "Ghế làm việc & Hệ thống màn hình kép", "lighting_color": "Ánh sáng ban ngày/trung tính (Neutral Daylight ~5000K)", "transition": "Jump Cut đổi trục 90 độ giật nhịp dồn dập"}, {"id": 4, "st_time": 0.67, "en_time": 0.92, "duration": 0.25, "st_frame": 16, "en_frame": 21, "headline": "Cú Match-Cut Chuyển Đổi Ánh Sáng Sang Hổ Phách Thể Hiện Bước Chuyển Từ Tư Duy Sang Thực Thi", "subject_action": "Vẫn góc quay Shot 03 nhưng ánh sáng lập tức rực lên sắc vàng cam ấm cúng. Creator từ tư thế chống cằm lập tức hạ tay gõ thoăn thoắt trên bàn phím cơ, màn hình phản chiếu ánh sáng dịu vào mắt.", "pros": "Một trong những cú cắt đắt giá nhất video: Thể hiện khái niệm 'Day to Night' hoặc 'Thinking to Doing' chỉ trong chớp mắt thông qua kỹ thuật Match-cut ánh sáng. Tạo cảm giác không gian ấm cúng, truyền cảm hứng làm việc đêm khuya.", "cons": "Biên độ chuyển động của tay khá nhanh dễ tạo hiện tượng bóng mờ chuyển động (Motion Blur) nếu tốc độ màn trập không đủ cao.", "takeaway": "Thay vì dùng hiệu ứng mờ chồng (Cross Dissolve) cũ kỹ, hãy dùng Match Cut kết hợp đổi tone màu đèn để diễn tả bước nhảy thời gian hoặc thay đổi trạng thái tâm lý nhân vật.", "lens_angle": "50mm Bán thân ngang (Side Profile Match Cut)", "location": "Góc làm việc ban đêm (Night Work Ambient)", "lighting_color": "Ánh sáng Hổ Phách ấm (Warm Amber / Tungsten ~2700K)", "transition": "Lighting Match Cut đổi tone màu đột ngột"}, {"id": 5, "st_time": 0.92, "en_time": 1.38, "duration": 0.46, "st_frame": 22, "en_frame": 32, "headline": "Bố Cục Đối Xứng Trục Dọc Từ Đỉnh Đầu Nhấn Mạnh Kỷ Luật Và Nhịp Điệu Gõ Phím", "subject_action": "Camera đặt vuông góc trên đỉnh đầu creator (đội mũ xanh), hai cánh tay đặt đối xứng hoàn hảo trên bàn phím cơ trắng. Hai bên mặt bàn bài trí cân đối: bên trái là chiếc iPhone, bên phải là cuốn sổ mở cùng chuột không dây.", "pros": "Bố cục đối xứng tuyệt đối (Symmetrical Layout) tạo cảm giác trật tự, kỷ luật và kiểm soát tối đa không gian. Động tác gõ phím nhịp nhàng cộng hưởng hoàn hảo với beat nhạc.", "cons": "Góc nhìn này giấu hoàn toàn biểu cảm gương mặt, phụ thuộc hoàn toàn vào chuyển động của đôi bàn tay và sự ngăn nắp của các vật dụng.", "takeaway": "Bố cục đối xứng từ trên cao luôn mang lại cảm giác quyền năng, trật tự và thẩm mỹ thiết kế công nghiệp (Industrial Minimalism) cực kỳ phù hợp cho nội dung năng suất.", "lens_angle": "28mm Góc đỉnh đầu vuông góc (Overhead Symmetry)", "location": "Mặt bàn làm việc chính diện người ngồi", "lighting_color": "Ánh sáng dịu trên đỉnh + viền ấm bên phải", "transition": "Overhead Cut chuyển từ góc nghiêng sang đỉnh đầu"}, {"id": 6, "st_time": 1.38, "en_time": 1.96, "duration": 0.58, "st_frame": 33, "en_frame": 46, "headline": "Góc Macro Khoe Chi Tiết Bàn Làm Việc Với Quả Cầu Phát Sáng Làm Nguồn Sáng Thực Tế (Practical Light)", "subject_action": "Cận cảnh các món đồ công nghệ của creator: quả cầu đèn tròn dạ quang ấm áp, bên cạnh là máy ảnh mirrorless retro, ống kính góc rộng, ổ cứng SSD di động và các phụ kiện làm phim được sắp đặt tinh tế.", "pros": "Ánh sáng thực tế từ quả cầu đèn đóng vai trò như một mỏ neo thị giác (Visual Anchor), tạo điểm nhấn tương phản màu sắc rực rỡ và nâng tầm tính điện ảnh (Cinematic Production Value) cho góc làm việc.", "cons": "Vùng tối phía sau hơi sâu có thể làm chìm một số chi tiết kim loại của thân máy ảnh; cần thêm một tia rim light nhẹ để tách khối.", "takeaway": "Luôn đưa một nguồn sáng thực tế (đèn bàn, quả cầu led, nến thơm) vào khung hình cận cảnh để tạo điểm sáng tự nhiên, tăng độ sâu trường ảnh và độ sang trọng của khung hình.", "lens_angle": "50mm Cận cảnh xiên f/1.8 (Macro Detail)", "location": "Kệ phụ kiện công nghệ (Desk Gear Shelf)", "lighting_color": "Quả cầu LED tròn ánh sáng cam hổ phách (Practical Light)", "transition": "Hard Cut đảo góc sang chi tiết tĩnh tạo nhịp thở"}, {"id": 7, "st_time": 1.96, "en_time": 2.59, "duration": 0.63, "st_frame": 47, "en_frame": 61, "headline": "Bố Cục Đường Chéo Flatlay Bày Trí Bộ Đồ Dùng Bất Ly Thân Của Nhà Sáng Tạo (Everyday Carry)", "subject_action": "Khung hình flatlay chéo tinh tế: chiếc mũ nhung tăm xanh coban (vật bất ly thân của creator), tai nghe over-ear Sony/Bose màu đen nhám, và chiếc iPhone đang sáng màn hình khóa hiển thị đồng hồ 23:31.", "pros": "Sắp đặt đồ vật theo đường chéo thị giác (Diagonal Composition) tạo sự năng động, phá vỡ sự khô cứng của các góc chụp vuông vắn thông thường. Màu xanh của mũ và màn hình điện thoại tạo sự liên kết màu sắc chặt chẽ (Color Consistency).", "cons": "Tai nghe màu đen đặt trên nền tối dễ bị bết màu (shadow clipping) nếu màn hình người xem có độ sáng thấp.", "takeaway": "Nghệ thuật flatlay không phải là xếp thẳng hàng, mà là tạo ra một đường chéo kể chuyện kết nối từ phụ kiện cá nhân (mũ) đến công cụ tập trung (tai nghe) và mục tiêu thời gian (điện thoại).", "lens_angle": "35mm Góc chéo 45 độ từ trên cao (Diagonal Flatlay)", "location": "Góc thảm caro xanh và mặt bàn trắng", "lighting_color": "Ánh sáng ambient kết hợp luồng sáng xanh từ iPhone", "transition": "Cut nối cảnh giới thiệu bộ nhận diện cá nhân"}, {"id": 8, "st_time": 2.59, "en_time": 3.17, "duration": 0.58, "st_frame": 62, "en_frame": 75, "headline": "Siêu Cận Màn Hình Khóa Khẳng Định Khung Giờ Kỷ Luật Nghiêm Ngặt Lúc 23h31 Đêm", "subject_action": "Khung hình lấp đầy bởi màn hình iPhone hiển thị con số '23:31' font số to bản, bên dưới là chế độ Tập Trung (Focus Mode) và dòng chữ triết lý 'Consistency'. Hình nền gradient xanh-trắng tối giản.", "pros": "Truyền tải thông điệp cốt lõi cực kỳ trực diện và đanh thép: 23:31 đêm không phải giờ đi ngủ hay lướt mạng xã hội vô bổ, mà là giờ dành cho Deep Work. Con số cụ thể tạo độ tin cậy và sự đồng cảm mạnh mẽ (Relatability).", "cons": "Khung hình tĩnh hoàn toàn trong 0.58s; một chuyển động lướt ngón tay nhẹ hoặc hiệu ứng sáng dần sẽ tăng thêm tính tương tác.", "takeaway": "Chi tiết số liệu (giờ giấc, đồng hồ bấm giờ, trang sách) luôn là vũ khí tạo bằng chứng thị giác (Visual Proof) tốt nhất cho chủ đề kỷ luật và năng suất.", "lens_angle": "85mm Siêu cận dọc (Macro Tight Close-up)", "location": "Màn hình điện thoại iPhone trên mặt bàn", "lighting_color": "Ánh sáng tự thân (Self-illuminated) màn hình OLED", "transition": "Push-in Match Cut từ flatlay vào tâm điểm màn hình"}, {"id": 9, "st_time": 3.17, "en_time": 3.63, "duration": 0.46, "st_frame": 76, "en_frame": 86, "headline": "Góc Quay Toàn Cảnh Đối Xứng Phía Sau Lưng Thiết Lập Không Gian Làm Việc Điện Ảnh Ban Đêm", "subject_action": "Camera đặt ngay trục giữa sau lưng chiếc ghế công thái học trắng. Creator ngồi vững chãi, trước mặt là hai màn hình cong siêu rộng hiển thị không gian làm việc số, bảng treo tường pegboard ngăn nắp phía trên, đồng hồ số đỏ nổi bật góc trái.", "pros": "Bố cục trung tâm đối xứng kinh điển của điện ảnh (Wes Anderson / Kubrick symmetry). Cú tương phản tỉ lệ (Scale Contrast) từ cực cận sang cực rộng giải phóng tầm mắt, phô diễn trọn vẹn vẻ đẹp của góc setup đỉnh cao.", "cons": "Góc máy đặt hơi xa làm nhân vật trông nhỏ bé so với hệ thống màn hình, tuy nhiên điều này lại phục vụ mục đích tôn vinh không gian làm việc.", "takeaway": "Hãy luôn tạo sự thay đổi quy mô góc quay cực đại (Extreme Scale Change: từ Macro sang Wide) để tạo cảm giác mãn nhãn và làm mới sự chú ý của người xem.", "lens_angle": "24mm Góc rộng chính diện sau lưng (Rear Symmetrical Wide)", "location": "Toàn cảnh phòng làm việc / Góc setup hoàn chỉnh", "lighting_color": "LED hắt sau màn hình + đèn bàn hổ phách đối xứng", "transition": "Wide Establishing Cut tương phản quy mô cực đại"}, {"id": 10, "st_time": 3.63, "en_time": 4.55, "duration": 0.92, "st_frame": 87, "en_frame": 108, "headline": "Động Tác Nhấc Tai Nghe Dứt Khoát Khởi Động Nghi Thức Bắt Đầu Phiên Làm Việc Chuyên Sâu", "subject_action": "Bàn tay creator vươn vào khung hình, nắm lấy chiếc tai nghe over-ear đen nằm cạnh chiếc loa kiểm âm trắng và nhấc bổng lên khỏi mặt bàn để đeo vào tai.", "pros": "Âm thanh và hình ảnh của hành động 'đeo tai nghe' là một biểu tượng kinh điển (Sensory Trigger) cho việc cách ly tiếng ồn bên ngoài và bước vào trạng thái dòng chảy (Flow State). Tương phản màu sắc đen-trắng giữa tai nghe và loa rất tinh tế.", "cons": "Bàn tay khi nhấc tai nghe lùi ra khỏi khung hình hơi nhanh, tạo một khoảng trống nhỏ ở cuối shot trước khi chuyển cảnh.", "takeaway": "Dùng một hành động kích hoạt vật lý cụ thể (nhấc tai nghe, rót nước, mở nắp bút) làm bản lề chuyển cảnh sẽ khiến video có nhịp điệu tự nhiên hơn nhiều so với việc chỉ ngồi gõ máy tính.", "lens_angle": "50mm Cận cảnh ngang mặt bàn (Low-Angle Close-up)", "location": "Bàn làm việc, góc loa kiểm âm màu trắng", "lighting_color": "Ánh sáng ven nổi khối vật liệu nhám và vỏ loa", "transition": "Action Cut dẫn dắt bằng chuyển động nhấc vật thể"}, {"id": 11, "st_time": 4.55, "en_time": 5.46, "duration": 0.91, "st_frame": 109, "en_frame": 130, "headline": "Góc Thấp Qua Vai Bắt Trọn Nhịp Gõ Phím Và Giao Diện Âm Nhạc Truyền Cảm Hứng", "subject_action": "Cận cảnh góc thấp bàn tay gõ phím cơ thoăn thoắt, phía trên là màn hình cong gắn trên tay nâng công thái học hiển thị trình phát nhạc Spotify, góc phải là micro thu âm chuyên nghiệp trên cánh tay boom arm.", "pros": "Góc quay tầng lớp (Layering) cực kỳ giàu chi tiết: tiền cảnh là điện thoại và mặt bàn, trung cảnh là bàn tay gõ phím sống động, hậu cảnh là màn hình giao diện công việc và đèn ấm. Truyền tải trọn vẹn rung cảm Deep Work ban đêm.", "cons": "Phần chân đế màn hình màu đen và dây cáp chiếm một góc nhỏ ở trung tâm khung hình, có thể giấu bớt để đạt độ tối giản tuyệt đối.", "takeaway": "Thay vì quay màn hình phẳng nhàm chán, hãy hạ thấp máy quay ngang tầm tay gõ phím và hướng lên màn hình để thu được cả động thái cơ thể lẫn không gian công nghệ số.", "lens_angle": "35mm Góc thấp qua vai hướng lên (Low-Angle OTS)", "location": "Khu vực phím cơ và chân tay nâng màn hình", "lighting_color": "Màn hình phản chiếu phím + rim light vàng ấm viền tay", "transition": "Match Cut âm nhạc kết nối tai nghe với Spotify"}, {"id": 12, "st_time": 5.46, "en_time": 6.34, "duration": 0.88, "st_frame": 131, "en_frame": 151, "headline": "Góc Cao Toàn Cảnh Ghi Lại Khoảnh Khắc Viết Ý Tưởng Đã Đeo Tai Nghe Khép Kín Thế Giới Riêng", "subject_action": "Tương tự góc máy Shot 01 nhưng lúc này creator đã đeo chiếc tai nghe đen trùm qua mũ, hai tay đặt trên bàn tiếp tục viết nắn nót vào cuốn sổ nhật ký. Bên cạnh là bàn phím, chuột và micro.", "pros": "Tạo tính nhất quán và tiến triển trong câu chuyện (Visual Progression): Người xem thấy rõ sự thay đổi trạng thái từ lúc bắt đầu ngồi vào bàn (Shot 01) đến khi hoàn toàn đắm chìm trong âm nhạc và ý tưởng (Shot 12).", "cons": "Vị trí đèn quả cầu ở mép phải bị cháy sáng nhẹ (clipping highlight) do đặt quá sát rìa khung hình.", "takeaway": "Sử dụng lại một góc máy cố định nhưng thay đổi chi tiết nhân vật (ở đây là chiếc tai nghe đã được đeo) là thủ pháp điện ảnh kinh điển để kể câu chuyện về sự tiến triển thời gian mà không cần lời thoại.", "lens_angle": "24mm Góc cao 90 độ Top-Down (Bird's Eye)", "location": "Bàn làm việc, ghế xoay, sàn caro xanh", "lighting_color": "Đèn quả cầu cam tỏa sáng viền phải + đèn trần dịu", "transition": "Scale Cut từ cận phím sang toàn cảnh góc cao"}, {"id": 13, "st_time": 6.34, "en_time": 7.26, "duration": 0.92, "st_frame": 152, "en_frame": 173, "headline": "Góc Nghiêng Tĩnh Ghi Lại Trạng Thái Chiêm Nghiệm Sâu Sắc Trước Màn Hình Kép", "subject_action": "Creator ngồi yên bất động, tay chống cằm, ánh mắt chăm chú đọc lướt các dòng dữ liệu trên màn hình cong đôi. Biểu cảm điềm tĩnh, tập trung tuyệt đối.", "pros": "Tương phản nhiệt độ màu hoàn hảo (Color Temperature Contrast): Ánh sáng lạnh (Cool Blue) từ màn hình đối trọng với ánh sáng ấm (Warm Amber) từ đèn hậu cảnh, tạo nên bảng màu Teal-Orange chuẩn điện ảnh. Thần thái nhân vật toát lên sự kiên trì, kỷ luật.", "cons": "Khoảng cách giữa nhân vật và màn hình hơi gần, khiến ánh sáng màn hình tạt lên mặt hơi gắt ở phần chóp mũi.", "takeaway": "Trong các video về năng suất, những giây phút tĩnh lặng suy nghĩ mang lại sức nặng cảm xúc và độ sâu nhận thức cao hơn nhiều so với việc chỉ chiếu cảnh gõ phím liên tục.", "lens_angle": "50mm Bán thân nghiêng (Side Profile Close Medium)", "location": "Vị trí ngồi đối diện hệ thống màn hình kép", "lighting_color": "Teal-Orange: Xanh từ màn hình + Vàng ấm từ hậu cảnh", "transition": "Cut on State chuyển từ động (viết) sang tĩnh (suy ngẫm)"}, {"id": 14, "st_time": 7.26, "en_time": 8.13, "duration": 0.87, "st_frame": 174, "en_frame": 194, "headline": "Góc Đỉnh Đầu Cân Xứng Đúc Kết Thói Quen Ghi Chép Bằng Bút Mực Sau Buổi Làm Việc", "subject_action": "Creator ngồi thẳng thớm ngay trục giữa, tay phải cầm cây bút bi xanh viết những dòng chữ cuối cùng vào cuốn sổ tay bên cạnh bàn phím cơ.", "pros": "Thể hiện vòng lặp hoàn chỉnh của thói quen (Habit Loop): Bắt đầu bằng kế hoạch trong sổ (Shot 01-02), triển khai trên máy tính (Shot 04-11), suy ngẫm (Shot 13) và kết thúc bằng việc đúc kết lại vào trang giấy (Shot 14).", "cons": "Bàn tay trái để ngoài rìa khung hình hơi mất cân đối nhẹ so với bàn tay phải đang viết; nếu hai tay cùng đặt trên bàn sẽ giữ trọn tính đối xứng.", "takeaway": "Kỷ luật (Consistency) không chỉ là thao tác số, mà còn là sự kết nối vật lý với trang sổ để đóng gói tư duy sau mỗi phiên làm việc sâu.", "lens_angle": "28mm Góc đỉnh đầu vuông góc (Overhead Symmetry)", "location": "Mặt bàn làm việc và vạt áo polo xanh", "lighting_color": "Ánh sáng dịu từ trên cao tạo bóng đổ mềm của bút", "transition": "Overhead Match Cut khép lại chu kỳ gõ phím"}, {"id": 15, "st_time": 8.13, "en_time": 8.55, "duration": 0.42, "st_frame": 195, "en_frame": 204, "headline": "Toàn Cảnh Góc Nghiêng Căn Phòng Khi Ghế Đã Trống Tôn Vinh Không Gian Sáng Tạo Sau Giờ Làm Việc", "subject_action": "Căn phòng làm việc tĩnh lặng lúc nửa đêm. Chiếc ghế xoay công thái học đứng yên đối diện hai màn hình, bàn làm việc ngăn nắp, ánh sáng studio tạo nên một bức tranh kiến trúc nội thất công nghệ đầy tính thẩm mỹ.", "pros": "Tạo cảm giác lắng đọng và thành tựu (Sense of Accomplishment). Chiếc ghế trống là một ẩn dụ thị giác mạnh mẽ: Người làm việc đã hoàn thành nhiệm vụ và rời đi, chỉ còn lại sự kỷ luật và thành quả được gìn giữ trong không gian.", "cons": "Thời lượng 0.42s hơi vội cho một khung cảnh kiến trúc đẹp như thế này; giữ thêm 0.3s sẽ cho người xem thời gian chiêm ngưỡng trọn vẹn hơn.", "takeaway": "Kết thúc một chuỗi hành động bằng một khung hình không gian trống (Empty Space) là kỹ thuật kinh điển giúp tạo sự giải tỏa cảm xúc và đọng lại ấn tượng thẩm mỹ sâu đậm.", "lens_angle": "20mm Toàn cảnh góc chéo rộng (Architectural Wide)", "location": "Toàn bộ góc làm việc khi creator đã rời vị trí", "lighting_color": "Softbox dù góc trái + màn hình sáng + đèn quả cầu cam", "transition": "Empty Room Cut báo hiệu kết thúc phiên làm việc"}, {"id": 16, "st_time": 8.55, "en_time": 9.22, "duration": 0.67, "st_frame": 205, "en_frame": 220, "headline": "Cận Cảnh Mặt Bàn Trống Ngăn Nắp Khép Lại Trình Tự Làm Việc Với Quy Chuẩn Gọn Gàng", "subject_action": "Cuốn sổ tay mở sẵn ghi nhận những dòng chữ đã hoàn thành, cây bút bi xanh đặt ngay ngắn trên nếp gấp, chuột máy tính và góc bàn phím nằm yên vị trong sự trật tự, sạch sẽ.", "pros": "Đối chiếu trực tiếp với Shot 02 ở đầu video để hoàn tất cấu trúc vòng tròn (Cyclical Narrative). Khẳng định thông điệp: Người có tính kỷ luật cao luôn rời bàn làm việc trong trạng thái ngăn nắp để sẵn sàng cho ngày hôm sau.", "cons": "Không có chuyển động vật lý nào trong shot này, hoàn toàn là một khung hình tĩnh.", "takeaway": "Để video có tính cấu trúc chặt chẽ, hãy luôn để các shot cuối phản chiếu (echo) lại các shot mở đầu.", "lens_angle": "35mm Cận cảnh góc cao mặt bàn (Medium Close Top-Down)", "location": "Mặt bàn làm việc sau khi kết thúc phiên", "lighting_color": "Ánh sáng dịu lan tỏa làm nổi bật sổ và bút", "transition": "Direct Match Cut phản chiếu Shot 02 (Story Circle)"}, {"id": 17, "st_time": 9.22, "en_time": 10.22, "duration": 1.0, "st_frame": 221, "en_frame": 244, "headline": "Màn Hình Điện Thoại Tắt Đột Ngột Về Đen Khóa Chặt Vòng Lặp Vô Tận Của Sự Kiên Trì Bền Bỉ", "subject_action": "Màn hình iPhone sáng với đồng hồ 23:31 và dòng chữ triết lý 'Consistency'. Sau khoảng 0.5s, màn hình tự động chuyển sang màu đen bóng bẩy phản chiếu ánh sáng môi trường mờ ảo.", "pros": "Cái kết tuyệt đỉnh về mặt ý niệm điện ảnh: Tắt màn hình tượng trưng cho việc gác lại công việc, đi ngủ đúng giờ để ngày mai tiếp tục kiên trì. Đây cũng là điểm nối hoàn hảo để lặp lại video (Seamless Loop) khi người xem trên Instagram xem đi xem lại mà không nhận ra điểm bắt đầu.", "cons": "Tốc độ tắt màn hình diễn ra hơi nhanh trong 2 frame (F234-F236); nếu có một chuyển động ngón tay gạt tắt thủ công sẽ giàu tính người hơn.", "takeaway": "Tắt màn hình điện thoại về màu đen là cách tinh tế nhất để kết thúc một video B-roll công nghệ, vừa giải quyết việc cắt cảnh vừa tạo cảm giác trọn vẹn, không cần chèn outro rườm rà.", "lens_angle": "85mm Cận cảnh macro màn hình điện thoại (Macro Lockscreen)", "location": "Màn hình iPhone trên bàn làm việc", "lighting_color": "Ánh sáng màn hình OLED tắt dần về màu đen sâu", "transition": "Fade to Black tự nhiên khép vòng lặp vô tận (Loop)"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ;
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 23.976 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById();
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

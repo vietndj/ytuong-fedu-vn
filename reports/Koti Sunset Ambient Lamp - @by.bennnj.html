@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Đèn Bàn Di Động Koti & Nghệ Thuật Ánh Sáng Hoàng Hôn Trong Căn Hộ Tối Giản • @by.bennnj</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>:root{--bg-dark:#070a0f;--bg-card:#0e1420;--bg-card-hover:#151e30;--bg-sidebar:#0a0f18;--border:#1a2336;--border-accent:#38bdf8;--text-main:#f8fafc;--text-sub:#94a3b8;--text-muted:#64748b;--accent-amber:#f59e0b;--accent-blue:#38bdf8;--accent-emerald:#10b981;--accent-rose:#f43f5e;--accent-purple:#c084fc;--font-heading:'Plus Jakarta Sans',sans-serif;--font-body:'Be Vietnam Pro',sans-serif;--font-mono:'JetBrains Mono',monospace;}*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}body{background-color:var(--bg-dark);color:var(--text-main);font-family:var(--font-body);line-height:1.55;font-size:14px;overflow-x:hidden;}::-webkit-scrollbar{width:6px;height:6px;}::-webkit-scrollbar-track{background:var(--bg-dark);}::-webkit-scrollbar-thumb{background:#1e293b;border-radius:3px;}::-webkit-scrollbar-thumb:hover{background:var(--accent-blue);}.app-layout{display:grid;grid-template-columns:420px 1fr;min-height:100vh;}@media (max-width:1023px){.app-layout{grid-template-columns:1fr;}}.player-col{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--bg-sidebar);display:flex;flex-direction:column;z-index:40;}@media (max-width:1023px){.player-col{height:auto;position:sticky;top:0;z-index:50;background:rgba(10,15,24,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);border-right:none;}}.video-box{background:#000;width:100%;aspect-ratio:9/16;max-height:60vh;display:flex;align-items:center;justify-content:center;position:relative;}@media (max-width:1023px){.video-box{aspect-ratio:16/9;max-height:36vh;}}video#mainPlayer{width:100%;height:100%;object-fit:contain;outline:none;}.ctrl-panel{padding:10px 14px;background:#090d15;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:8px;}.ctrl-row{display:flex;align-items:center;justify-content:space-between;font-size:12px;}.status-pill{background:rgba(56,189,248,0.12);color:var(--accent-blue);font-weight:700;font-family:var(--font-mono);padding:3px 8px;border-radius:4px;font-size:11.5px;}.speed-row{display:flex;align-items:center;gap:5px;flex-wrap:wrap;}.btn-ctrl{background:#141c2c;border:1px solid var(--border);color:#cbd5e1;font-size:11px;font-weight:600;padding:4px 8px;border-radius:4px;cursor:pointer;transition:all 0.15s;}.btn-ctrl:hover,.btn-ctrl.active{background:var(--accent-blue);color:#000;border-color:var(--accent-blue);}.content-col{padding:24px 28px 80px;overflow-y:auto;}@media (max-width:767px){.content-col{padding:14px 12px 80px;}}.doc-header{margin-bottom:20px;border-bottom:1px solid var(--border);padding-bottom:16px;}.doc-tag-row{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:8px;}.badge-pill{background:rgba(245,158,11,0.15);color:var(--accent-amber);border:1px solid rgba(245,158,11,0.3);font-size:11px;font-weight:800;padding:3px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:0.5px;}.doc-title{font-family:var(--font-heading);font-size:21px;font-weight:800;color:#fff;line-height:1.35;margin-bottom:10px;}@media (max-width:767px){.doc-title{font-size:17px;}}.doc-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:12.5px;color:var(--text-sub);}.doc-meta strong{color:#fff;}.author-ig-btn{display:inline-flex;align-items:center;gap:4px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:#fff!important;text-decoration:none;font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:14px;box-shadow:0 3px 10px rgba(253,29,29,0.25);transition:transform 0.15s;}.author-ig-btn:hover{transform:translateY(-1px);}.overview-box{background:var(--bg-card);border:1px solid var(--border);border-left:4px solid var(--accent-amber);border-radius:10px;padding:14px 18px;margin-bottom:20px;font-size:13.5px;color:#cbd5e1;line-height:1.6;}.view-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:20px;position:sticky;top:0;z-index:20;background:var(--bg-dark);padding:8px 0;}.btn-group{display:flex;gap:4px;background:#0d131f;padding:3px;border-radius:8px;border:1px solid var(--border);}.tab-btn{background:transparent;border:none;color:var(--text-sub);font-size:12px;font-weight:600;padding:5px 12px;border-radius:6px;cursor:pointer;transition:all 0.15s;}.tab-btn.active{background:#1e293b;color:#fff;font-weight:700;}.drawer-btn{background:#141c2c;border:1px solid var(--border);color:#e2e8f0;font-size:12px;font-weight:600;padding:5px 12px;border-radius:6px;cursor:pointer;}.shot-list{display:flex;flex-direction:column;gap:22px;}.shot-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:14px;transition:border-color 0.2s,box-shadow 0.2s;scroll-margin-top:70px;}.shot-card:hover,.shot-card.is-active{border-color:var(--border-accent);box-shadow:0 4px 20px rgba(56,189,248,0.1);}.shot-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;}.shot-badge-box{display:flex;align-items:center;gap:8px;}.shot-id-tag{background:var(--accent-blue);color:#000;font-weight:800;font-size:11px;padding:2px 7px;border-radius:4px;font-family:var(--font-mono);}.shot-head-text{font-size:15.5px;font-weight:700;color:#fff;line-height:1.4;margin-top:2px;}.shot-time-trigger{background:#131c2d;border:1px solid var(--border);color:var(--accent-amber);font-family:var(--font-mono);font-size:11.5px;font-weight:700;padding:6px 12px;border-radius:6px;cursor:pointer;white-space:nowrap;transition:all 0.15s;}.shot-time-trigger:hover{background:#1e2e4a;border-color:var(--accent-blue);}.kf-strip{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:8px;}.kf-item{background:#05080e;border-radius:8px;overflow:hidden;position:relative;cursor:pointer;border:1px solid var(--border);transition:transform 0.15s,border-color 0.15s;}.kf-item:hover{transform:translateY(-2px);border-color:var(--accent-blue);}.kf-item.hero{border-color:rgba(245,158,11,0.5);box-shadow:0 4px 14px rgba(245,158,11,0.15);}.kf-item img{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;}.kf-lbl{position:absolute;top:6px;left:6px;background:rgba(0,0,0,0.8);color:#e2e8f0;font-size:9px;font-weight:700;padding:2px 5px;border-radius:3px;font-family:var(--font-mono);}.kf-lbl.hero-lbl{background:var(--accent-amber);color:#000;font-weight:800;}.desc-box{background:#111827;border-left:3px solid var(--accent-blue);padding:10px 14px;border-radius:6px;font-size:13px;color:#e2e8f0;line-height:1.55;}.desc-title{font-weight:700;color:var(--accent-blue);display:block;font-size:12px;margin-bottom:2px;}.critique-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;}@media (max-width:640px){.critique-row{grid-template-columns:1fr;}}.crit-box{padding:10px 12px;border-radius:6px;font-size:12.5px;line-height:1.45;}.crit-pro{background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25);}.crit-pro .crit-head{color:var(--accent-emerald);font-weight:700;font-size:12px;margin-bottom:2px;}.crit-con{background:rgba(244,63,94,0.08);border:1px solid rgba(244,63,94,0.25);}.crit-con .crit-head{color:var(--accent-rose);font-weight:700;font-size:12px;margin-bottom:2px;}.takeaway-card{background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.25);border-left:3px solid var(--accent-amber);padding:10px 14px;border-radius:6px;font-size:12.5px;line-height:1.5;}.takeaway-head{color:var(--accent-amber);font-weight:700;font-size:12px;margin-bottom:2px;}.spec-bar{background:#090d15;border:1px solid var(--border);border-radius:8px;padding:8px 12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:6px 12px;font-size:11.5px;}.spec-item .sp-k{color:var(--text-muted);font-weight:600;}.spec-item .sp-v{color:#cbd5e1;font-weight:600;}.trans-row{background:#0c111a;border:1px dashed #223048;border-radius:8px;padding:8px 12px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all 0.15s;}.trans-row:hover{border-color:var(--accent-blue);background:#121927;}.trans-text{font-size:12px;color:#cbd5e1;}.trans-tag{color:var(--accent-amber);font-weight:700;font-family:var(--font-mono);font-size:11px;margin-right:4px;}.grid-wrap{display:none;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;}.grid-item{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;overflow:hidden;cursor:pointer;transition:all 0.15s;}.grid-item:hover{border-color:var(--accent-blue);transform:translateY(-2px);}.grid-thumb{position:relative;aspect-ratio:9/16;background:#000;}.grid-thumb img{width:100%;height:100%;object-fit:cover;}.grid-head{padding:6px 8px;font-size:11px;font-weight:600;color:#cbd5e1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.3;}.grid-id{position:absolute;top:4px;left:4px;background:var(--accent-blue);color:#000;font-size:9px;font-weight:800;padding:1px 5px;border-radius:3px;font-family:var(--font-mono);}.grid-time{position:absolute;bottom:4px;left:4px;right:4px;background:rgba(0,0,0,0.85);color:var(--accent-amber);font-size:9px;font-weight:700;padding:1px 3px;border-radius:3px;text-align:center;font-family:var(--font-mono);}.drawer-mask{position:fixed;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px);z-index:100;opacity:0;visibility:hidden;transition:all 0.25s;}.drawer-mask.open{opacity:1;visibility:visible;}.drawer-body{position:fixed;top:0;right:0;bottom:0;width:320px;max-width:85vw;background:#0f172a;border-left:1px solid var(--border);z-index:101;display:flex;flex-direction:column;transform:translateX(100%);transition:transform 0.25s;}.drawer-mask.open .drawer-body{transform:translateX(0);}.drawer-top{padding:14px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;font-weight:800;font-size:14px;color:#fff;}.drawer-close{background:#1e293b;border:none;color:#fff;width:26px;height:26px;border-radius:4px;font-size:16px;cursor:pointer;}.drawer-scroll{flex:1;overflow-y:auto;padding:10px;display:flex;flex-direction:column;gap:6px;}.d-card{display:flex;align-items:center;gap:10px;padding:6px 8px;background:#141d2d;border:1px solid var(--border);border-radius:6px;cursor:pointer;transition:all 0.15s;}.d-card:hover{border-color:var(--accent-blue);background:#1a273e;}.d-thumb{width:38px;aspect-ratio:9/16;border-radius:3px;overflow:hidden;flex-shrink:0;}.d-thumb img{width:100%;height:100%;object-fit:cover;}.d-info{flex:1;min-width:0;}.d-name{font-size:11px;font-weight:800;color:var(--accent-blue);font-family:var(--font-mono);}.d-head{font-size:11px;color:#cbd5e1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}.d-time{font-size:10px;color:var(--accent-amber);font-family:var(--font-mono);}.lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:200;display:none;align-items:center;justify-content:center;flex-direction:column;padding:20px;}.lightbox.open{display:flex;}.lightbox img{max-width:90vw;max-height:82vh;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,0.8);}.lightbox-cap{margin-top:12px;color:#e2e8f0;font-size:13px;max-width:800px;text-align:center;line-height:1.4;}.lightbox-close{position:absolute;top:20px;right:24px;color:#fff;font-size:32px;cursor:pointer;}
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+<div class="app-layout">
+<aside class="player-col">
+<div class="video-box">
+<video id="mainPlayer" controls autoplay muted playsinline preload="auto" loop src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dcvxba1OvrD.mp4"></video>
+</div>
+<div class="ctrl-panel">
+<div class="ctrl-row">
+<span class="status-pill" id="shotStatusTag">🎬 Toàn bộ video</span>
+<a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dcvxba1OvrD.mp4" target="_blank" style="color:var(--accent-blue);font-size:11.5px;text-decoration:none;font-weight:600;">Tệp MP4 ↗</a>
+</div>
+<div class="speed-row">
+<span style="font-size:11px;color:#94a3b8;font-weight:700;">Tốc độ:</span>
+<button class="btn-ctrl" onclick="setSpd(0.25,this)">0.25x</button>
+<button class="btn-ctrl" onclick="setSpd(0.5,this)">0.5x</button>
+<button class="btn-ctrl active" onclick="setSpd(1.0,this)">1.0x</button>
+<button class="btn-ctrl" onclick="setSpd(1.5,this)">1.5x</button>
+<button class="btn-ctrl" onclick="stepF(-1)">⏮ -1F</button>
+<button class="btn-ctrl" onclick="stepF(1)">+1F ⏭</button>
+<button class="btn-ctrl" onclick="toggleM(this)">🔊 Bật tiếng</button>
+</div>
+</div>
+</aside>
+<main class="content-col">
+<header class="doc-header">
+<div class="doc-tag-row">
+<span class="badge-pill">DIRECTOR STORYBOARD BREAKDOWN</span>
+<span style="font-size:12px;color:var(--accent-amber);font-family:var(--font-mono);font-weight:700;">10 SHOTS • 17.67s</span>
+</div>
+<h1 class="doc-title">Đèn Bàn Di Động Koti & Nghệ Thuật Ánh Sáng Hoàng Hôn Trong Căn Hộ Tối Giản</h1>
+<div class="doc-meta">
+<span>Tác giả: 
+                    <a href="../index.html?creator=@by.bennnj" onclick="handleCreatorClick(event, '@by.bennnj', 'By.Bennnj')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của By.Bennnj trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>By.Bennnj</strong>
+                        <span class="author-handle">(@by.bennnj)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+<a href="https://www.instagram.com/reel/Dcvxba1OvrD/?utm_source=ig_web_copy_link&igsi=NTc4MTIwNjQ2YQ==" target="_blank" class="author-ig-btn">📸 Xem Instagram Gốc ↗</a>
+<span>Sản phẩm: <strong>@koti.store Ambient Lamp</strong></span>
+<span>Tỉ lệ: <strong>9:16 Vertical HD</strong></span>
+</div>
+</header>
+<section class="overview-box">
+<h3 style="color:#fff;font-size:13.5px;margin-bottom:6px;font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
+Video thương mại phong cách sống (Lifestyle Commercial Reel) mẫu mực dành cho đồ decor gia dụng cao cấp. Thay vì đọc thông số kỹ thuật khô khan, tác giả kết hợp <strong>10 phân cảnh bóc tách tỉ mỉ</strong> khai thác trọn vẹn dải ánh sáng tự nhiên ban ngày chuyển dần sang ánh sáng hoàng hôn và ánh sáng ấm cúng ban đêm (Low-key Hygge Glow). Chiếc đèn Koti không dây được lồng ghép như một người bạn đồng hành tự nhiên trong mọi không gian sống: bàn console đón nắng, bàn ăn đọc sách, góc sofa thư giãn đến bàn trà tĩnh lặng buổi tối.
+</section>
+<div class="view-toolbar">
+<div class="btn-group">
+<button class="tab-btn active" id="btnDetail" onclick="setV('detail')">📋 Bóc Tách Chi Tiết (10)</button>
+<button class="tab-btn" id="btnGrid" onclick="setV('grid')">🖼️ Lưới Soi Ảnh (10)</button>
+</div>
+<button class="drawer-btn" onclick="openD(true)">📑 Mục Lục Shot</button>
+</div>
+<div class="shot-list" id="detailWrap"><div class="shot-card" id="shot-1">
+<div class="shot-card-top">
+<div class="shot-badge-box">
+<span class="shot-id-tag">SHOT 01</span>
+<div class="shot-head-text">Hook thị giác "found the most aesthetic portable lamp": Khóa chú ý bằng tương tác người bước vào góc bàn mosaic đón nắng</div>
+</div>
+<button class="shot-time-trigger" onclick="playShot(0.0,4.7,'SHOT 01')">▶ 0.00s ➔ 4.70s (4.70s)</button>
+</div>
+<div class="kf-strip">
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_01_start.jpg','SHOT 01 Start (0.00s)')"><span class="kf-lbl">START 0.0s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_01_start.jpg" alt="S1 Start" loading="lazy" /></div>
+<div class="kf-item hero" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_01_mid.jpg','SHOT 01 Hero Frame')"><span class="kf-lbl hero-lbl">MID HERO</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_01_mid.jpg" alt="S1 Mid" loading="lazy" /></div>
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_01_end.jpg','SHOT 01 End (4.70s)')"><span class="kf-lbl">END 4.7s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_01_end.jpg" alt="S1 End" loading="lazy" /></div>
+</div>
+<div class="desc-box"><span class="desc-title">🎬 Mô tả đối tượng &amp; Diễn biến:</span>Ben sải bước đi vào từ góc phải khung hình, tiến về phía bàn console ốp gạch men mosaic xanh lá cây đặt sát rèm cửa lanh ngập nắng, đưa tay chạm bật chiếc đèn hình trụ tối giản.</div>
+<div class="critique-row">
+<div class="crit-box crit-pro"><div class="crit-head">✅ Điểm Sáng Thị Giác (Ưu điểm):</div>Bố cục 1/3 dọc khai thác rèm cửa mềm mại làm khung dẫn (Frame-within-a-frame), ánh sáng tự nhiên dịu nhẹ hòa sắc cùng tone vàng cam ấm áp. Dòng chữ Hook đặt ở vị trí mắt nhìn tự nhiên.</div>
+<div class="crit-box crit-con"><div class="crit-head">⚠️ Hạn Chế / Cần Lưu Ý:</div>Góc máy tĩnh và chủ thể bước vào bị cắt ngang phần đầu/mắt (Head cut), làm phân tán sự tập trung giữa biểu cảm khuôn mặt và thao tác tay chạm vào đèn.</div>
+</div>
+<div class="takeaway-card"><div class="takeaway-head">💡 Bài Học Thực Chiến Đúc Kết:</div>Hook video sản phẩm decor nên có chuyển động người thật tương tác ngay 2s đầu thay vì chỉ quay tĩnh vật, tạo cảm giác chân thực và khơi gợi mong muốn sở hữu không gian sống tương tự.</div>
+<div class="spec-bar">
+<div class="spec-item"><span class="sp-k">Bối cảnh: </span><span class="sp-v">Góc bàn console cạnh cửa sổ phòng khách</span></div>
+<div class="spec-item"><span class="sp-k">Góc &amp; Tiêu cự: </span><span class="sp-v">Medium Full Shot (Góc trung toàn đứng)</span></div>
+<div class="spec-item"><span class="sp-k">Ánh sáng: </span><span class="sp-v">Ánh sáng tự nhiên khuếch tán qua rèm lanh (Diffused Daylight)</span></div>
+<div class="spec-item"><span class="sp-k">Bảng màu: </span><span class="sp-v">Tông màu Đất ấm & Xanh Olive (Warm Earth & Sage Green)</span></div>
+</div>
+<div class="trans-row" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/trans_01_to_02.jpg', 'CHUYỂN TIẾP: SHOT 01 ➔ 02')"><span class="trans-text"><span class="trans-tag">🔄 CHUYỂN CẢNH:</span> Direct Cut theo nhịp nhạc lo-fi sang cảnh ngồi bàn đọc sách</span><span style="color:var(--accent-blue);font-size:11.5px;font-weight:700;">Xem ảnh ➔</span></div>
+</div>
+<div class="shot-card" id="shot-2">
+<div class="shot-card-top">
+<div class="shot-badge-box">
+<span class="shot-id-tag">SHOT 02</span>
+<div class="shot-head-text">Tạo chiều sâu 3 lớp (Fore - Mid - Background): Đèn phát sáng làm điểm tựa thị giác tiền cảnh khi đọc sách</div>
+</div>
+<button class="shot-time-trigger" onclick="playShot(4.7,6.2,'SHOT 02')">▶ 4.70s ➔ 6.20s (1.50s)</button>
+</div>
+<div class="kf-strip">
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_02_start.jpg','SHOT 02 Start (4.70s)')"><span class="kf-lbl">START 4.7s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_02_start.jpg" alt="S2 Start" loading="lazy" /></div>
+<div class="kf-item hero" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_02_mid.jpg','SHOT 02 Hero Frame')"><span class="kf-lbl hero-lbl">MID HERO</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_02_mid.jpg" alt="S2 Mid" loading="lazy" /></div>
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_02_end.jpg','SHOT 02 End (6.20s)')"><span class="kf-lbl">END 6.2s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_02_end.jpg" alt="S2 End" loading="lazy" /></div>
+</div>
+<div class="desc-box"><span class="desc-title">🎬 Mô tả đối tượng &amp; Diễn biến:</span>Ben ngồi tại bàn ăn gỗ sồi tự nhiên, đang lật giở một cuốn artbook lớn; chiếc đèn Koti tỏa sáng ấm áp ở tiền cảnh góc trái bàn, chiếu nhẹ lên trang sách mở.</div>
+<div class="critique-row">
+<div class="crit-box crit-pro"><div class="crit-head">✅ Điểm Sáng Thị Giác (Ưu điểm):</div>Tách lớp trường ảnh xuất sắc: Đèn nét căng ở tiền cảnh (Foreground anchor), cuốn sách ở trung cảnh và nhân vật ở hậu cảnh tạo cảm giác không gian ba chiều giàu chiều sâu.</div>
+<div class="crit-box crit-con"><div class="crit-head">⚠️ Hạn Chế / Cần Lưu Ý:</div>Mảng tường phía sau nhân vật hơi phẳng và đồng màu, có thể bổ sung bóng đổ nhẹ của rèm hoặc cành cây để khung hình thêm phần kịch tính.</div>
+</div>
+<div class="takeaway-card"><div class="takeaway-head">💡 Bài Học Thực Chiến Đúc Kết:</div>Đặt sản phẩm ở tiền cảnh với ánh sáng nổi bật để biến sản phẩm thành nguồn sáng chủ đạo định hình toàn bộ không khí của phân đoạn.</div>
+<div class="spec-bar">
+<div class="spec-item"><span class="sp-k">Bối cảnh: </span><span class="sp-v">Bàn ăn gỗ sồi khu vực phòng sinh hoạt</span></div>
+<div class="spec-item"><span class="sp-k">Góc &amp; Tiêu cự: </span><span class="sp-v">Over-the-table Medium Shot (Góc trung qua mặt bàn)</span></div>
+<div class="spec-item"><span class="sp-k">Ánh sáng: </span><span class="sp-v">Ánh sáng đèn Koti 2700K kết hợp ánh sáng môi trường dịu</span></div>
+<div class="spec-item"><span class="sp-k">Bảng màu: </span><span class="sp-v">Tông gỗ sáng & Nâu ấm (Natural Oak & Warm Cream)</span></div>
+</div>
+<div class="trans-row" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/trans_02_to_03.jpg', 'CHUYỂN TIẾP: SHOT 02 ➔ 03')"><span class="trans-text"><span class="trans-tag">🔄 CHUYỂN CẢNH:</span> Direct Cut sang góc cận cảnh thao tác chạm cảm ứng</span><span style="color:var(--accent-blue);font-size:11.5px;font-weight:700;">Xem ảnh ➔</span></div>
+</div>
+<div class="shot-card" id="shot-3">
+<div class="shot-card-top">
+<div class="shot-badge-box">
+<span class="shot-id-tag">SHOT 03</span>
+<div class="shot-head-text">Đặc tả Macro cảm ứng chạm (Touch Dimmer Interaction): Thao tác 1 ngón tay khoe trọn bề mặt kim loại tiện CNC và ánh sáng bừng nở</div>
+</div>
+<button class="shot-time-trigger" onclick="playShot(6.23,7.47,'SHOT 03')">▶ 6.23s ➔ 7.47s (1.24s)</button>
+</div>
+<div class="kf-strip">
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_03_start.jpg','SHOT 03 Start (6.23s)')"><span class="kf-lbl">START 6.2s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_03_start.jpg" alt="S3 Start" loading="lazy" /></div>
+<div class="kf-item hero" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_03_mid.jpg','SHOT 03 Hero Frame')"><span class="kf-lbl hero-lbl">MID HERO</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_03_mid.jpg" alt="S3 Mid" loading="lazy" /></div>
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_03_end.jpg','SHOT 03 End (7.47s)')"><span class="kf-lbl">END 7.5s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_03_end.jpg" alt="S3 End" loading="lazy" /></div>
+</div>
+<div class="desc-box"><span class="desc-title">🎬 Mô tả đối tượng &amp; Diễn biến:</span>Ngón tay trỏ đưa vào chạm nhẹ lên nắp kim loại tròn tích hợp cảm ứng ở đỉnh đèn; chao đèn thủy tinh mờ lập tức đổi dải sáng cam hổ phách ấm cúng.</div>
+<div class="critique-row">
+<div class="crit-box crit-pro"><div class="crit-head">✅ Điểm Sáng Thị Giác (Ưu điểm):</div>Độ sâu trường ảnh cực mỏng (Shallow DoF) làm nổi bật bề mặt nhôm anodized và chao đèn mờ mịn như sương. Chuyển động tay dứt khoát chứng minh công năng 1-chạm mượt mà.</div>
+<div class="crit-box crit-con"><div class="crit-head">⚠️ Hạn Chế / Cần Lưu Ý:</div>Thời lượng phân cảnh hơi ngắn (1.24s), chưa đủ thời gian để người xem quan sát trọn vẹn dải dimming tăng giảm độ sáng mượt mà của bóng LED.</div>
+</div>
+<div class="takeaway-card"><div class="takeaway-head">💡 Bài Học Thực Chiến Đúc Kết:</div>Cảnh quay công năng (Feature Shot) cần tối giản hậu cảnh tuyệt đối, tập trung 100% thị giác vào điểm tiếp xúc vật lý giữa ngón tay và sản phẩm.</div>
+<div class="spec-bar">
+<div class="spec-item"><span class="sp-k">Bối cảnh: </span><span class="sp-v">Mặt bàn đọc sách</span></div>
+<div class="spec-item"><span class="sp-k">Góc &amp; Tiêu cự: </span><span class="sp-v">Extreme Close-Up / Macro (Cận cảnh đặc tả)</span></div>
+<div class="spec-item"><span class="sp-k">Ánh sáng: </span><span class="sp-v">Ánh sáng tự phát từ lõi đèn (Internal Diffused LED)</span></div>
+<div class="spec-item"><span class="sp-k">Bảng màu: </span><span class="sp-v">Cam hoàng hôn & Kim loại bạc (Sunset Amber & Brushed Aluminum)</span></div>
+</div>
+<div class="trans-row" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/trans_03_to_04.jpg', 'CHUYỂN TIẾP: SHOT 03 ➔ 04')"><span class="trans-text"><span class="trans-tag">🔄 CHUYỂN CẢNH:</span> Direct Cut sang góc quay hất thấp bên tủ console</span><span style="color:var(--accent-blue);font-size:11.5px;font-weight:700;">Xem ảnh ➔</span></div>
+</div>
+<div class="shot-card" id="shot-4">
+<div class="shot-card-top">
+<div class="shot-badge-box">
+<span class="shot-id-tag">SHOT 04</span>
+<div class="shot-head-text">Góc máy hất thấp (Low-Angle Hero Shot): Tôn vinh vẻ đẹp tĩnh vật bên cạnh mảng xanh thực vật và vân gỗ sồi chạm trổ</div>
+</div>
+<button class="shot-time-trigger" onclick="playShot(7.5,8.6,'SHOT 04')">▶ 7.50s ➔ 8.60s (1.10s)</button>
+</div>
+<div class="kf-strip">
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_04_start.jpg','SHOT 04 Start (7.50s)')"><span class="kf-lbl">START 7.5s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_04_start.jpg" alt="S4 Start" loading="lazy" /></div>
+<div class="kf-item hero" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_04_mid.jpg','SHOT 04 Hero Frame')"><span class="kf-lbl hero-lbl">MID HERO</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_04_mid.jpg" alt="S4 Mid" loading="lazy" /></div>
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_04_end.jpg','SHOT 04 End (8.60s)')"><span class="kf-lbl">END 8.6s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_04_end.jpg" alt="S4 End" loading="lazy" /></div>
+</div>
+<div class="desc-box"><span class="desc-title">🎬 Mô tả đối tượng &amp; Diễn biến:</span>Đèn Koti đứng kiêu hãnh trên mặt tủ gỗ trang trí phong cách Mid-Century Modern, phía sau là chậu cây cảnh lá xanh tươi mát đón ánh sáng hắt dịu nhẹ.</div>
+<div class="critique-row">
+<div class="crit-box crit-pro"><div class="crit-head">✅ Điểm Sáng Thị Giác (Ưu điểm):</div>Sự tương phản màu sắc bổ trợ mẫu mực giữa sắc xanh diệp lục của lá cây và ánh sáng hổ phách ấm áp của đèn tạo nên thị giác sang trọng, thư thái.</div>
+<div class="crit-box crit-con"><div class="crit-head">⚠️ Hạn Chế / Cần Lưu Ý:</div>Gáy cuốn sách bìa trắng ở góc dưới bên trái bị cắt ngang mép khung hình, tạo chi tiết thừa hơi vướng mắt ở rìa biên.</div>
+</div>
+<div class="takeaway-card"><div class="takeaway-head">💡 Bài Học Thực Chiến Đúc Kết:</div>Kết hợp sản phẩm công nghệ / gia dụng với chất liệu hữu cơ (gỗ thô, gốm, cây xanh) giúp xóa bỏ cảm giác công nghiệp cứng nhắc, nâng tầm thành tác phẩm nghệ thuật nội thất.</div>
+<div class="spec-bar">
+<div class="spec-item"><span class="sp-k">Bối cảnh: </span><span class="sp-v">Khu vực tủ búp phê / Credenza phòng khách</span></div>
+<div class="spec-item"><span class="sp-k">Góc &amp; Tiêu cự: </span><span class="sp-v">Low-Angle Medium Close-Up (Góc thấp cận vừa)</span></div>
+<div class="spec-item"><span class="sp-k">Ánh sáng: </span><span class="sp-v">Ánh sáng hắt xiên kết hợp vầng sáng ấm của đèn Koti</span></div>
+<div class="spec-item"><span class="sp-k">Bảng màu: </span><span class="sp-v">Xanh lá cây & Nâu gỗ sồi (Botanical Green & Warm Oak)</span></div>
+</div>
+<div class="trans-row" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/trans_04_to_05.jpg', 'CHUYỂN TIẾP: SHOT 04 ➔ 05')"><span class="trans-text"><span class="trans-tag">🔄 CHUYỂN CẢNH:</span> Direct Cut sang góc toàn bàn tròn ăn cơm</span><span style="color:var(--accent-blue);font-size:11.5px;font-weight:700;">Xem ảnh ➔</span></div>
+</div>
+<div class="shot-card" id="shot-5">
+<div class="shot-card-top">
+<div class="shot-badge-box">
+<span class="shot-id-tag">SHOT 05</span>
+<div class="shot-head-text">Bố cục đối xứng trục trung tâm (Center Symmetrical Tabletop): Khắc họa tính linh hoạt không dây trên bàn tròn phòng ăn</div>
+</div>
+<button class="shot-time-trigger" onclick="playShot(8.63,9.9,'SHOT 05')">▶ 8.63s ➔ 9.90s (1.27s)</button>
+</div>
+<div class="kf-strip">
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_05_start.jpg','SHOT 05 Start (8.63s)')"><span class="kf-lbl">START 8.6s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_05_start.jpg" alt="S5 Start" loading="lazy" /></div>
+<div class="kf-item hero" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_05_mid.jpg','SHOT 05 Hero Frame')"><span class="kf-lbl hero-lbl">MID HERO</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_05_mid.jpg" alt="S5 Mid" loading="lazy" /></div>
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_05_end.jpg','SHOT 05 End (9.90s)')"><span class="kf-lbl">END 9.9s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_05_end.jpg" alt="S5 End" loading="lazy" /></div>
+</div>
+<div class="desc-box"><span class="desc-title">🎬 Mô tả đối tượng &amp; Diễn biến:</span>Đèn Koti đặt ngay tâm mặt bàn tròn gỗ lớn, phía sau là hàng ghế bọc nỉ màu ô-liu và rèm buông dài đón tia nắng chiều xiên ngược (Backlight).</div>
+<div class="critique-row">
+<div class="crit-box crit-pro"><div class="crit-head">✅ Điểm Sáng Thị Giác (Ưu điểm):</div>Bố cục đối xứng trục trung tâm (Center Framing) thể hiện trọn vẹn ưu điểm không dây (Cordless) tự do, không bị ràng buộc bởi dây cắm hay ổ điện. Rèm cửa sọc dọc dẫn hướng mắt thẳng vào sản phẩm.</div>
+<div class="crit-box crit-con"><div class="crit-head">⚠️ Hạn Chế / Cần Lưu Ý:</div>Khoảng không gian trống (Negative space) trên mặt bàn hơi lớn, nếu có thêm một tách trà hoặc đĩa sứ nhỏ sẽ tạo cảm giác ấm cúng hơn.</div>
+</div>
+<div class="takeaway-card"><div class="takeaway-head">💡 Bài Học Thực Chiến Đúc Kết:</div>Khi quay tính năng 'không dây', hãy đặt sản phẩm giữa không gian trống trải rộng nhất để sự vắng mặt của dây điện trở thành tuyên ngôn thị giác mạnh mẽ nhất.</div>
+<div class="spec-bar">
+<div class="spec-item"><span class="sp-k">Bối cảnh: </span><span class="sp-v">Bàn ăn tròn trung tâm phòng khách</span></div>
+<div class="spec-item"><span class="sp-k">Góc &amp; Tiêu cự: </span><span class="sp-v">Eye-Level Medium Shot (Góc trung ngang tầm mắt)</span></div>
+<div class="spec-item"><span class="sp-k">Ánh sáng: </span><span class="sp-v">Ánh sáng ngược dịu qua lớp rèm voan (Soft Backlit)</span></div>
+<div class="spec-item"><span class="sp-k">Bảng màu: </span><span class="sp-v">Vàng nắng chiều & Nỉ xanh ô-liu (Golden Sun & Olive Velvet)</span></div>
+</div>
+<div class="trans-row" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/trans_05_to_06.jpg', 'CHUYỂN TIẾP: SHOT 05 ➔ 06')"><span class="trans-text"><span class="trans-tag">🔄 CHUYỂN CẢNH:</span> Direct Cut sang góc cận hai bàn tay cầm đèn</span><span style="color:var(--accent-blue);font-size:11.5px;font-weight:700;">Xem ảnh ➔</span></div>
+</div>
+<div class="shot-card" id="shot-6">
+<div class="shot-card-top">
+<div class="shot-badge-box">
+<span class="shot-id-tag">SHOT 06</span>
+<div class="shot-head-text">Tương quan tỷ lệ nhân trắc (Scale & Ergonomics POV): Hai bàn tay nâng niu chiếc đèn làm nổi bật kích thước nhỏ gọn</div>
+</div>
+<button class="shot-time-trigger" onclick="playShot(9.93,11.0,'SHOT 06')">▶ 9.93s ➔ 11.00s (1.07s)</button>
+</div>
+<div class="kf-strip">
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_06_start.jpg','SHOT 06 Start (9.93s)')"><span class="kf-lbl">START 9.9s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_06_start.jpg" alt="S6 Start" loading="lazy" /></div>
+<div class="kf-item hero" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_06_mid.jpg','SHOT 06 Hero Frame')"><span class="kf-lbl hero-lbl">MID HERO</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_06_mid.jpg" alt="S6 Mid" loading="lazy" /></div>
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_06_end.jpg','SHOT 06 End (11.00s)')"><span class="kf-lbl">END 11.0s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_06_end.jpg" alt="S6 End" loading="lazy" /></div>
+</div>
+<div class="desc-box"><span class="desc-title">🎬 Mô tả đối tượng &amp; Diễn biến:</span>Ben cầm trọn chiếc đèn bằng hai bàn tay, xoay nhẹ thân đèn kim loại trước ngực để khoe trọng lượng đầm chắc, kích thước vừa vặn trong lòng bàn tay.</div>
+<div class="critique-row">
+<div class="crit-box crit-pro"><div class="crit-head">✅ Điểm Sáng Thị Giác (Ưu điểm):</div>Giải quyết triệt để sự hoài nghi về kích thước thật khi mua hàng online. Tông màu da tay và áo thun trắng ngà tạo bối cảnh trung tính tôn vinh nguồn sáng ấm.</div>
+<div class="crit-box crit-con"><div class="crit-head">⚠️ Hạn Chế / Cần Lưu Ý:</div>Ngón tay cái ở phía trên hơi che nhẹ viền trên của chao đèn, nếu chỉ cầm ở phần đế nhôm thì phần đèn phát sáng sẽ phô diễn trọn vẹn hơn.</div>
+</div>
+<div class="takeaway-card"><div class="takeaway-head">💡 Bài Học Thực Chiến Đúc Kết:</div>Bắt buộc phải có shot 'Bàn tay tương tác' trong video thương mại để kích hoạt thụ thể xúc giác của người xem, giúp họ tưởng tượng cảnh mình đang cầm sản phẩm.</div>
+<div class="spec-bar">
+<div class="spec-item"><span class="sp-k">Bối cảnh: </span><span class="sp-v">Khu vực hành lang căn hộ</span></div>
+<div class="spec-item"><span class="sp-k">Góc &amp; Tiêu cự: </span><span class="sp-v">Tight Handheld Medium Shot (Cận trung cầm tay)</span></div>
+<div class="spec-item"><span class="sp-k">Ánh sáng: </span><span class="sp-v">Ánh sáng khuếch tán nội thất (Soft Diffused Interior)</span></div>
+<div class="spec-item"><span class="sp-k">Bảng màu: </span><span class="sp-v">Ấm áp, tự nhiên, gần gũi (Intimate Human Warmth)</span></div>
+</div>
+<div class="trans-row" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/trans_06_to_07.jpg', 'CHUYỂN TIẾP: SHOT 06 ➔ 07')"><span class="trans-text"><span class="trans-tag">🔄 CHUYỂN CẢNH:</span> Direct Cut sang góc bàn trà sofa thư giãn</span><span style="color:var(--accent-blue);font-size:11.5px;font-weight:700;">Xem ảnh ➔</span></div>
+</div>
+<div class="shot-card" id="shot-7">
+<div class="shot-card-top">
+<div class="shot-badge-box">
+<span class="shot-id-tag">SHOT 07</span>
+<div class="shot-head-text">Tách lớp chủ thể bằng trường sâu DOF nông: Đèn sắc nét trên bàn trà, nhân vật ngả lưng thư giãn ngoài tiêu cự</div>
+</div>
+<button class="shot-time-trigger" onclick="playShot(11.03,12.7,'SHOT 07')">▶ 11.03s ➔ 12.70s (1.67s)</button>
+</div>
+<div class="kf-strip">
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_07_start.jpg','SHOT 07 Start (11.03s)')"><span class="kf-lbl">START 11.0s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_07_start.jpg" alt="S7 Start" loading="lazy" /></div>
+<div class="kf-item hero" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_07_mid.jpg','SHOT 07 Hero Frame')"><span class="kf-lbl hero-lbl">MID HERO</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_07_mid.jpg" alt="S7 Mid" loading="lazy" /></div>
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_07_end.jpg','SHOT 07 End (12.70s)')"><span class="kf-lbl">END 12.7s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_07_end.jpg" alt="S7 End" loading="lazy" /></div>
+</div>
+<div class="desc-box"><span class="desc-title">🎬 Mô tả đối tượng &amp; Diễn biến:</span>Đèn Koti đặt trên bàn trà gỗ cong; ở hậu cảnh, Ben ngả người thư thái trên chiếc ghế bành êm ái, nhấp ngụm nước ấm trong không gian yên tĩnh.</div>
+<div class="critique-row">
+<div class="crit-box crit-pro"><div class="crit-head">✅ Điểm Sáng Thị Giác (Ưu điểm):</div>Kể chuyện phong cách sống (Lifestyle Storytelling) xuất sắc: Đèn không đơn thuần là nguồn sáng mà là chất xúc tác tạo nên khoảnh khắc chữa lành (Relaxation) sau một ngày bận rộn.</div>
+<div class="crit-box crit-con"><div class="crit-head">⚠️ Hạn Chế / Cần Lưu Ý:</div>Độ sâu trường ảnh mỏng khiến gương mặt nhân vật bị nhòe hoàn toàn, người xem khó cảm nhận được biểu cảm nụ cười mãn nguyện của người dùng.</div>
+</div>
+<div class="takeaway-card"><div class="takeaway-head">💡 Bài Học Thực Chiến Đúc Kết:</div>Bán 'bầu không khí' và 'trạng thái tâm trí' thay vì bán đèn. Người xem sẵn sàng chi tiền khi họ nhìn thấy sự an yên mà sản phẩm mang lại cho không gian sống.</div>
+<div class="spec-bar">
+<div class="spec-item"><span class="sp-k">Bối cảnh: </span><span class="sp-v">Góc sofa thư giãn phòng khách</span></div>
+<div class="spec-item"><span class="sp-k">Góc &amp; Tiêu cự: </span><span class="sp-v">Low Medium Shot (Góc thấp tầm trung)</span></div>
+<div class="spec-item"><span class="sp-k">Ánh sáng: </span><span class="sp-v">Ánh sáng chạng vạng dịu nhẹ (Dusk Ambience) + Đèn Koti hắt sáng</span></div>
+<div class="spec-item"><span class="sp-k">Bảng màu: </span><span class="sp-v">Tông ấm hoàng hôn & Gỗ óc chó (Golden Dusk & Walnut Wood)</span></div>
+</div>
+<div class="trans-row" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/trans_07_to_08.jpg', 'CHUYỂN TIẾP: SHOT 07 ➔ 08')"><span class="trans-text"><span class="trans-tag">🔄 CHUYỂN CẢNH:</span> Foreground Wipe Cut sang shot đi ngang qua tủ</span><span style="color:var(--accent-blue);font-size:11.5px;font-weight:700;">Xem ảnh ➔</span></div>
+</div>
+<div class="shot-card" id="shot-8">
+<div class="shot-card-top">
+<div class="shot-badge-box">
+<span class="shot-id-tag">SHOT 08</span>
+<div class="shot-head-text">Wipe Transition bằng chuyển động cơ thể (Human Body Foreground Wipe): Tận dụng bước chân lướt qua để đổi góc nhìn</div>
+</div>
+<button class="shot-time-trigger" onclick="playShot(12.73,14.43,'SHOT 08')">▶ 12.73s ➔ 14.43s (1.70s)</button>
+</div>
+<div class="kf-strip">
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_08_start.jpg','SHOT 08 Start (12.73s)')"><span class="kf-lbl">START 12.7s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_08_start.jpg" alt="S8 Start" loading="lazy" /></div>
+<div class="kf-item hero" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_08_mid.jpg','SHOT 08 Hero Frame')"><span class="kf-lbl hero-lbl">MID HERO</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_08_mid.jpg" alt="S8 Mid" loading="lazy" /></div>
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_08_end.jpg','SHOT 08 End (14.43s)')"><span class="kf-lbl">END 14.4s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_08_end.jpg" alt="S8 End" loading="lazy" /></div>
+</div>
+<div class="desc-box"><span class="desc-title">🎬 Mô tả đối tượng &amp; Diễn biến:</span>Đèn đặt tĩnh trên mặt tủ gỗ; nhân vật bất ngờ sải bước lướt qua sát ống kính, vạt áo che kín khung hình tạo nhịp chuyển tiếp tự nhiên sang không gian ánh sáng ban đêm.</div>
+<div class="critique-row">
+<div class="crit-box crit-pro"><div class="crit-head">✅ Điểm Sáng Thị Giác (Ưu điểm):</div>Kỹ thuật In-Camera Whip/Wipe kinh điển giúp duy trì nhịp dựng dồn dập mà không cần hiệu ứng đồ họa, kết nối liền mạch giữa các mảng không gian khác nhau trong nhà.</div>
+<div class="crit-box crit-con"><div class="crit-head">⚠️ Hạn Chế / Cần Lưu Ý:</div>Khoảnh khắc cơ thể che khung hình hơi mờ nhòe do tốc độ màn trập (Motion Blur) hơi cao, nếu tăng tốc độ shutter speed lên sẽ sắc sảo hơn.</div>
+</div>
+<div class="takeaway-card"><div class="takeaway-head">💡 Bài Học Thực Chiến Đúc Kết:</div>Sử dụng chuyển động của con người hoặc vật dụng hàng ngày cắt ngang tiền cảnh để tạo cú Wipe Cut tự nhiên, giữ chân mắt người xem không rời khỏi màn hình.</div>
+<div class="spec-bar">
+<div class="spec-item"><span class="sp-k">Bối cảnh: </span><span class="sp-v">Lối đi cạnh tủ gỗ phòng khách</span></div>
+<div class="spec-item"><span class="sp-k">Góc &amp; Tiêu cự: </span><span class="sp-v">Tracking to Body Wipe (Góc lia chuyển tiếp tiền cảnh)</span></div>
+<div class="spec-item"><span class="sp-k">Ánh sáng: </span><span class="sp-v">Ánh sáng dịu nhẹ trong phòng kết hợp đèn Koti</span></div>
+<div class="spec-item"><span class="sp-k">Bảng màu: </span><span class="sp-v">Tương phản động, chuyển tiếp ánh sáng</span></div>
+</div>
+<div class="trans-row" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/trans_08_to_09.jpg', 'CHUYỂN TIẾP: SHOT 08 ➔ 09')"><span class="trans-text"><span class="trans-tag">🔄 CHUYỂN CẢNH:</span> In-Camera Foreground Wipe Cut sang cảnh đêm cốc cà phê gốm</span><span style="color:var(--accent-blue);font-size:11.5px;font-weight:700;">Xem ảnh ➔</span></div>
+</div>
+<div class="shot-card" id="shot-9">
+<div class="shot-card-top">
+<div class="shot-badge-box">
+<span class="shot-id-tag">SHOT 09</span>
+<div class="shot-head-text">Đặc tả khoảnh khắc "Hygge" ấm áp: Ánh sáng đèn vàng rực rỡ đổ bóng lên cốc cà phê gốm mộc mạc</div>
+</div>
+<button class="shot-time-trigger" onclick="playShot(14.47,15.57,'SHOT 09')">▶ 14.47s ➔ 15.57s (1.10s)</button>
+</div>
+<div class="kf-strip">
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_09_start.jpg','SHOT 09 Start (14.47s)')"><span class="kf-lbl">START 14.5s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_09_start.jpg" alt="S9 Start" loading="lazy" /></div>
+<div class="kf-item hero" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_09_mid.jpg','SHOT 09 Hero Frame')"><span class="kf-lbl hero-lbl">MID HERO</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_09_mid.jpg" alt="S9 Mid" loading="lazy" /></div>
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_09_end.jpg','SHOT 09 End (15.57s)')"><span class="kf-lbl">END 15.6s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_09_end.jpg" alt="S9 End" loading="lazy" /></div>
+</div>
+<div class="desc-box"><span class="desc-title">🎬 Mô tả đối tượng &amp; Diễn biến:</span>Cận cảnh đèn Koti phát sáng rực rỡ ở chế độ tối đa trên mặt bàn gỗ tối; bàn tay Ben đặt nhẹ lên quai cốc gốm màu xanh ngọc bích, gợi không khí ấm áp, tĩnh tại ban đêm.</div>
+<div class="critique-row">
+<div class="crit-box crit-pro"><div class="crit-head">✅ Điểm Sáng Thị Giác (Ưu điểm):</div>Màu men gốm xanh ngọc bích (Sage Green Ceramic) đối trọng hoàn hảo với vầng sáng cam rực rỡ (Teal & Orange palette). Bề mặt bóng đổ tạo cảm giác cực kỳ êm dịu cho thị giác.</div>
+<div class="crit-box crit-con"><div class="crit-head">⚠️ Hạn Chế / Cần Lưu Ý:</div>Tâm phát sáng của đèn ở shot này hơi gần ngưỡng clipping sáng nhẹ (Highlight overexposure) do phòng xung quanh đã giảm sáng tối đa.</div>
+</div>
+<div class="takeaway-card"><div class="takeaway-head">💡 Bài Học Thực Chiến Đúc Kết:</div>Vật phẩm gốm mộc kết hợp ánh sáng đèn vàng là công thức bất bại để tạo cảm giác 'Hygge' (ấm cúng Bắc Âu), kích thích cảm xúc hoài niệm và gắn kết tinh thần.</div>
+<div class="spec-bar">
+<div class="spec-item"><span class="sp-k">Bối cảnh: </span><span class="sp-v">Bàn trà phòng khách trong ánh sáng tối</span></div>
+<div class="spec-item"><span class="sp-k">Góc &amp; Tiêu cự: </span><span class="sp-v">Close-Up Still Life (Cận cảnh tĩnh vật & Bàn tay)</span></div>
+<div class="spec-item"><span class="sp-k">Ánh sáng: </span><span class="sp-v">Low-Key Night Lighting + Vầng sáng đèn Koti làm Key Light</span></div>
+<div class="spec-item"><span class="sp-k">Bảng màu: </span><span class="sp-v">Xanh ngọc & Vàng cam hổ phách (Sage Green Ceramic & Amber Glow)</span></div>
+</div>
+<div class="trans-row" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/trans_09_to_10.jpg', 'CHUYỂN TIẾP: SHOT 09 ➔ 10')"><span class="trans-text"><span class="trans-tag">🔄 CHUYỂN CẢNH:</span> Direct Cut sang shot toàn kết thúc với sách và ghế sofa</span><span style="color:var(--accent-blue);font-size:11.5px;font-weight:700;">Xem ảnh ➔</span></div>
+</div>
+<div class="shot-card" id="shot-10">
+<div class="shot-card-top">
+<div class="shot-badge-box">
+<span class="shot-id-tag">SHOT 10</span>
+<div class="shot-head-text">Khép màn thư thái (End-card Resolution): Đèn kê trên chồng sách nghệ thuật bên cạnh khoảnh khắc đọc sách cuối ngày</div>
+</div>
+<button class="shot-time-trigger" onclick="playShot(15.6,17.67,'SHOT 10')">▶ 15.60s ➔ 17.67s (2.07s)</button>
+</div>
+<div class="kf-strip">
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_10_start.jpg','SHOT 10 Start (15.60s)')"><span class="kf-lbl">START 15.6s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_10_start.jpg" alt="S10 Start" loading="lazy" /></div>
+<div class="kf-item hero" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_10_mid.jpg','SHOT 10 Hero Frame')"><span class="kf-lbl hero-lbl">MID HERO</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_10_mid.jpg" alt="S10 Mid" loading="lazy" /></div>
+<div class="kf-item" onclick="openLb('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_10_end.jpg','SHOT 10 End (17.67s)')"><span class="kf-lbl">END 17.7s</span><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_10_end.jpg" alt="S10 End" loading="lazy" /></div>
+</div>
+<div class="desc-box"><span class="desc-title">🎬 Mô tả đối tượng &amp; Diễn biến:</span>Góc nhìn từ sau lưng ghế sofa: Đèn Koti đặt vững chãi trên hai cuốn sách bìa cứng, Ben ngồi gác chân thư thả đọc sách bên khung cửa sổ ngập tràn bóng chiều buông.</div>
+<div class="critique-row">
+<div class="crit-box crit-pro"><div class="crit-head">✅ Điểm Sáng Thị Giác (Ưu điểm):</div>Đóng khung kết thúc (Ending Resolution) hoàn hảo: Trả sản phẩm về vị trí tôn vinh thói quen sống tinh tế của gia chủ. Ánh sáng dịu nhẹ từ rèm tạo viền sáng mềm (Rim Light) quanh người đọc sách.</div>
+<div class="crit-box crit-con"><div class="crit-head">⚠️ Hạn Chế / Cần Lưu Ý:</div>Thời lượng kết thúc video hơi đột ngột (2s), nếu có thêm 0.5s fade to black êm ái sẽ giúp dư âm thẩm mỹ đọng lại sâu sắc hơn.</div>
+</div>
+<div class="takeaway-card"><div class="takeaway-head">💡 Bài Học Thực Chiến Đúc Kết:</div>Cú máy kết thúc video quảng cáo phong cách sống không cần hô hào kêu gọi mua hàng (Hard CTA); hãy để một hình ảnh đẹp đẽ, thanh bình tự nói lên giá trị của sản phẩm.</div>
+<div class="spec-bar">
+<div class="spec-item"><span class="sp-k">Bối cảnh: </span><span class="sp-v">Góc đọc sách thư phòng hướng ra cửa sổ lớn</span></div>
+<div class="spec-item"><span class="sp-k">Góc &amp; Tiêu cự: </span><span class="sp-v">Over-the-shoulder Medium Long Shot (Góc toàn qua vai)</span></div>
+<div class="spec-item"><span class="sp-k">Ánh sáng: </span><span class="sp-v">Ánh sáng chạng vạng ngoài trời + Ánh sáng ấm nội tại của đèn</span></div>
+<div class="spec-item"><span class="sp-k">Bảng màu: </span><span class="sp-v">Muted Evening Scandinavian (Bắc Âu êm đềm buổi chạng vạng)</span></div>
+</div>
+
+</div></div>
+<div class="grid-wrap" id="gridWrap"><div class="grid-item" onclick="playShot(0.0,4.7,'SHOT 01')">
+<div class="grid-thumb">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
+<span class="grid-id">S01</span>
+<span class="grid-time">0.0s - 4.7s</span>
+</div>
+<div class="grid-head">Hook thị giác "found the most aesthetic portable lamp": Khóa chú ý bằng tương tác người bước vào góc bàn mosaic đón nắng</div>
+</div>
+<div class="grid-item" onclick="playShot(4.7,6.2,'SHOT 02')">
+<div class="grid-thumb">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
+<span class="grid-id">S02</span>
+<span class="grid-time">4.7s - 6.2s</span>
+</div>
+<div class="grid-head">Tạo chiều sâu 3 lớp (Fore - Mid - Background): Đèn phát sáng làm điểm tựa thị giác tiền cảnh khi đọc sách</div>
+</div>
+<div class="grid-item" onclick="playShot(6.23,7.47,'SHOT 03')">
+<div class="grid-thumb">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
+<span class="grid-id">S03</span>
+<span class="grid-time">6.2s - 7.5s</span>
+</div>
+<div class="grid-head">Đặc tả Macro cảm ứng chạm (Touch Dimmer Interaction): Thao tác 1 ngón tay khoe trọn bề mặt kim loại tiện CNC và ánh sáng bừng nở</div>
+</div>
+<div class="grid-item" onclick="playShot(7.5,8.6,'SHOT 04')">
+<div class="grid-thumb">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
+<span class="grid-id">S04</span>
+<span class="grid-time">7.5s - 8.6s</span>
+</div>
+<div class="grid-head">Góc máy hất thấp (Low-Angle Hero Shot): Tôn vinh vẻ đẹp tĩnh vật bên cạnh mảng xanh thực vật và vân gỗ sồi chạm trổ</div>
+</div>
+<div class="grid-item" onclick="playShot(8.63,9.9,'SHOT 05')">
+<div class="grid-thumb">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
+<span class="grid-id">S05</span>
+<span class="grid-time">8.6s - 9.9s</span>
+</div>
+<div class="grid-head">Bố cục đối xứng trục trung tâm (Center Symmetrical Tabletop): Khắc họa tính linh hoạt không dây trên bàn tròn phòng ăn</div>
+</div>
+<div class="grid-item" onclick="playShot(9.93,11.0,'SHOT 06')">
+<div class="grid-thumb">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
+<span class="grid-id">S06</span>
+<span class="grid-time">9.9s - 11.0s</span>
+</div>
+<div class="grid-head">Tương quan tỷ lệ nhân trắc (Scale & Ergonomics POV): Hai bàn tay nâng niu chiếc đèn làm nổi bật kích thước nhỏ gọn</div>
+</div>
+<div class="grid-item" onclick="playShot(11.03,12.7,'SHOT 07')">
+<div class="grid-thumb">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" />
+<span class="grid-id">S07</span>
+<span class="grid-time">11.0s - 12.7s</span>
+</div>
+<div class="grid-head">Tách lớp chủ thể bằng trường sâu DOF nông: Đèn sắc nét trên bàn trà, nhân vật ngả lưng thư giãn ngoài tiêu cự</div>
+</div>
+<div class="grid-item" onclick="playShot(12.73,14.43,'SHOT 08')">
+<div class="grid-thumb">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" />
+<span class="grid-id">S08</span>
+<span class="grid-time">12.7s - 14.4s</span>
+</div>
+<div class="grid-head">Wipe Transition bằng chuyển động cơ thể (Human Body Foreground Wipe): Tận dụng bước chân lướt qua để đổi góc nhìn</div>
+</div>
+<div class="grid-item" onclick="playShot(14.47,15.57,'SHOT 09')">
+<div class="grid-thumb">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" />
+<span class="grid-id">S09</span>
+<span class="grid-time">14.5s - 15.6s</span>
+</div>
+<div class="grid-head">Đặc tả khoảnh khắc "Hygge" ấm áp: Ánh sáng đèn vàng rực rỡ đổ bóng lên cốc cà phê gốm mộc mạc</div>
+</div>
+<div class="grid-item" onclick="playShot(15.6,17.67,'SHOT 10')">
+<div class="grid-thumb">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_10_mid.jpg" alt="SHOT 10" loading="lazy" />
+<span class="grid-id">S10</span>
+<span class="grid-time">15.6s - 17.7s</span>
+</div>
+<div class="grid-head">Khép màn thư thái (End-card Resolution): Đèn kê trên chồng sách nghệ thuật bên cạnh khoảnh khắc đọc sách cuối ngày</div>
+</div></div>
+</main>
+</div>
+<div class="drawer-mask" id="drawerMask" onclick="openD(false)">
+<div class="drawer-body" onclick="event.stopPropagation()">
+<div class="drawer-top">
+<span>📑 MỤC LỤC PHÂN CẢNH (10)</span>
+<button class="drawer-close" onclick="openD(false)">&times;</button>
+</div>
+<div class="drawer-scroll"><div class="d-card" onclick="jumpTo(1,0.0,4.7,'SHOT 01')">
+<div class="d-thumb"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" /></div>
+<div class="d-info"><div class="d-name">SHOT 01</div><div class="d-head">Hook thị giác "found the most aesthetic ...</div><div class="d-time">⏱ 0.00s - 4.70s</div></div>
+</div>
+<div class="d-card" onclick="jumpTo(2,4.7,6.2,'SHOT 02')">
+<div class="d-thumb"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" /></div>
+<div class="d-info"><div class="d-name">SHOT 02</div><div class="d-head">Tạo chiều sâu 3 lớp (Fore - Mid - Backgr...</div><div class="d-time">⏱ 4.70s - 6.20s</div></div>
+</div>
+<div class="d-card" onclick="jumpTo(3,6.23,7.47,'SHOT 03')">
+<div class="d-thumb"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" /></div>
+<div class="d-info"><div class="d-name">SHOT 03</div><div class="d-head">Đặc tả Macro cảm ứng chạm (Touch Dimmer ...</div><div class="d-time">⏱ 6.23s - 7.47s</div></div>
+</div>
+<div class="d-card" onclick="jumpTo(4,7.5,8.6,'SHOT 04')">
+<div class="d-thumb"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" /></div>
+<div class="d-info"><div class="d-name">SHOT 04</div><div class="d-head">Góc máy hất thấp (Low-Angle Hero Shot): ...</div><div class="d-time">⏱ 7.50s - 8.60s</div></div>
+</div>
+<div class="d-card" onclick="jumpTo(5,8.63,9.9,'SHOT 05')">
+<div class="d-thumb"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" /></div>
+<div class="d-info"><div class="d-name">SHOT 05</div><div class="d-head">Bố cục đối xứng trục trung tâm (Center S...</div><div class="d-time">⏱ 8.63s - 9.90s</div></div>
+</div>
+<div class="d-card" onclick="jumpTo(6,9.93,11.0,'SHOT 06')">
+<div class="d-thumb"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" /></div>
+<div class="d-info"><div class="d-name">SHOT 06</div><div class="d-head">Tương quan tỷ lệ nhân trắc (Scale & Ergo...</div><div class="d-time">⏱ 9.93s - 11.00s</div></div>
+</div>
+<div class="d-card" onclick="jumpTo(7,11.03,12.7,'SHOT 07')">
+<div class="d-thumb"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" /></div>
+<div class="d-info"><div class="d-name">SHOT 07</div><div class="d-head">Tách lớp chủ thể bằng trường sâu DOF nôn...</div><div class="d-time">⏱ 11.03s - 12.70s</div></div>
+</div>
+<div class="d-card" onclick="jumpTo(8,12.73,14.43,'SHOT 08')">
+<div class="d-thumb"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" /></div>
+<div class="d-info"><div class="d-name">SHOT 08</div><div class="d-head">Wipe Transition bằng chuyển động cơ thể ...</div><div class="d-time">⏱ 12.73s - 14.43s</div></div>
+</div>
+<div class="d-card" onclick="jumpTo(9,14.47,15.57,'SHOT 09')">
+<div class="d-thumb"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" /></div>
+<div class="d-info"><div class="d-name">SHOT 09</div><div class="d-head">Đặc tả khoảnh khắc "Hygge" ấm áp: Ánh sá...</div><div class="d-time">⏱ 14.47s - 15.57s</div></div>
+</div>
+<div class="d-card" onclick="jumpTo(10,15.6,17.67,'SHOT 10')">
+<div class="d-thumb"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_10_mid.jpg" alt="SHOT 10" loading="lazy" /></div>
+<div class="d-info"><div class="d-name">SHOT 10</div><div class="d-head">Khép màn thư thái (End-card Resolution):...</div><div class="d-time">⏱ 15.60s - 17.67s</div></div>
+</div></div>
+</div>
+</div>
+<div class="lightbox" id="lbModal" onclick="closeLb()">
+<span class="lightbox-close" onclick="closeLb()">&times;</span>
+<img id="lbImg" src="" onclick="event.stopPropagation()" />
+<div class="lightbox-cap" id="lbCap"></div>
+</div>
+<script>
+const player = document.getElementById('mainPlayer');
+let endTimeLimit = null;
+
+function playShot(st, et, label) {
+    endTimeLimit = et;
+    const tag = document.getElementById('shotStatusTag');
+    if (tag) tag.innerText = '🎬 ' + label + ': [' + st.toFixed(2) + 's - ' + et.toFixed(2) + 's]';
+    player.currentTime = st;
+    player.play().catch(e => { player.muted = true; player.play(); });
+    document.querySelectorAll('.shot-card').forEach(c => c.classList.remove('is-active'));
+    const match = Array.from(document.querySelectorAll('.shot-card')).find(c => c.innerText.includes(label));
+    if (match) match.classList.add('is-active');
+    if (window.innerWidth < 1024) window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+player.ontimeupdate = () => {
+    if (endTimeLimit !== null && player.currentTime >= endTimeLimit) {
+        player.pause();
+        endTimeLimit = null;
+    }
+};
+
+function jumpTo(id, st, et, label) {
+    openD(false);
+    playShot(st, et, label);
+    const el = document.getElementById('shot-' + id);
+    if (el) el.scrollIntoView({behavior: 'smooth', block: 'center'});
+}
+
+function setSpd(s, btn) {
+    player.playbackRate = s;
+    document.querySelectorAll('.speed-row .btn-ctrl').forEach(b => { if (b.innerText.includes('x')) b.classList.remove('active'); });
+    if (btn) btn.classList.add('active');
+}
+
+function stepF(frames) {
+    player.pause();
+    player.currentTime += (frames * (1 / 30.0));
+}
+
+function toggleM(btn) {
+    player.muted = !player.muted;
+    btn.innerText = player.muted ? '🔇 Bật tiếng' : '🔊 Tắt tiếng';
+    btn.classList.toggle('active', !player.muted);
+}
+
+function setV(v) {
+    const d = document.getElementById('detailWrap');
+    const g = document.getElementById('gridWrap');
+    const bd = document.getElementById('btnDetail');
+    const bg = document.getElementById('btnGrid');
+    if (v === 'grid') {
+        d.style.display = 'none';
+        g.style.display = 'grid';
+        bd.classList.remove('active');
+        bg.classList.add('active');
+    } else {
+        d.style.display = 'flex';
+        g.style.display = 'none';
+        bd.classList.add('active');
+        bg.classList.remove('active');
+    }
+}
+
+function openD(open) {
+    const m = document.getElementById('drawerMask');
+    if (open) m.classList.add('open'); else m.classList.remove('open');
+}
+
+function openLb(src, cap) {
+    const m = document.getElementById('lbModal');
+    document.getElementById('lbImg').src = src;
+    document.getElementById('lbCap').innerText = cap || '';
+    m.classList.add('open');
+}
+
+function closeLb() {
+    document.getElementById('lbModal').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

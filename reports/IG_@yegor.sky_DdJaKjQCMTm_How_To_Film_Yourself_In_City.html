@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>How To Film Yourself In City • Công Thức 9 Phân Cảnh B-Roll Điện Ảnh • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">10 PHÂN CẢNH</span>
+        <span class="nav-meta-title">How To Film Yourself In City • Công Thức 9 Phân Cảnh B-Roll Điện Ảnh</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DdJaKjQCMTm/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdJaKjQCMTm.mp4" type="video/mp4">
+                <source src="./DdJaKjQCMTm.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 16.21s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">How To Film Yourself In City • Công Thức 9 Phân Cảnh B-Roll Điện Ảnh</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@yegor.sky" onclick="handleCreatorClick(event, '@yegor.sky', 'Yegor.Sky')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Yegor.Sky trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Yegor.Sky</strong>
+                        <span class="author-handle">(@yegor.sky)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/DdJaKjQCMTm/" target="_blank" class="author-link">Yegor.Sky (@yegor.sky)</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc Chuẩn Instagram Reels</strong> • 16.21s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">How To Film Yourself In City • Công Thức 9 Phân Cảnh B-Roll Điện Ảnh</h1>
+            <p class="overview-hero-desc">Bóc tách chuyên sâu công thức 9 phân cảnh kinh điển quay phim bản thân giữa lòng đô thị của creator Yegor.Sky: Tận dụng phối cảnh ngã tư, hất máy góc thấp 2x kiến trúc zíc-zắc, selfie camera hàng cọ, mặt tiền quán ăn Wes Anderson, ngược sáng tán cây, ngõ biển hiệu neon và vệt sáng hoàng hôn rực rỡ.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Urban Self-Filming Formula • 9-Shot Montage • 1x & 2x Focal Shift</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">10 Shots • Nhịp trung bình 1.62s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 (9:16 Widescreen Letterboxed) • 24 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 2.71)">
+                    ▶ 0.00s - 2.71s (2.71s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Chạy Cắt Ngang Khung Hình Biển & Đồ Họa Hút Mắt Khởi Động Tutorial (Hook Lateral Movement & Graphic Pop)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_01_mid.jpg', 'Shot 01 • Giữa (1.35s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.35s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_01_end.jpg', 'Shot 01 • Cuối (2.71s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (2.71s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bối cảnh mở ra tại bờ biển nhiệt đới đảo Jeju với bãi cát trắng và làn nước biển xanh ngọc bích. Phía trước là bức tường kè ốp đá mosaic đa sắc và hai cọc tiêu phân làn cam-vàng. Một cô gái trẻ mặc đồ thể thao trắng năng động chạy vụt ngang từ phải sang trái, đổ bóng đen sắc nét lên tường gạch. Dòng chữ typography vàng rực 'HOW TO FILM YOURSELF in the city' nằm nổi bật ở 1/3 trên bầu trời.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Động tác chạy cắt ngang (Lateral Cross-Screen Action) kích hoạt ngay phản xạ theo dõi chuyển động tự nhiên của mắt trong 2 giây đầu; màu nước biển xanh ngọc kết hợp tường mosaic rực rỡ và chữ vàng tạo độ tương phản thị giác tối đa; bố cục phong cảnh thoáng đãng giải phóng thị giác người xem.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Tiêu đề ghi 'in the city' nhưng bối cảnh mở màn lại là bờ biển tự nhiên, tạo độ lệch nhẹ về ngữ cảnh trước khi các cảnh đường phố xuất hiện ở shot tiếp theo.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi mở đầu video hướng dẫn (Tutorial Hook), luôn lồng ghép một chuyển động vật lý cắt ngang khung hình kết hợp typography tương phản cao để chặn đứng thao tác lướt qua của khán giả.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/1.8 (Camera 1x) • Eye-Level Static Landscape View</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bờ biển đảo Jeju (Hàn Quốc) - bãi đá dung nham đen và tường kè mosaic</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Nắng gắt ban ngày (Direct Overhead Sunlight) tạo bóng đổ ngắn, sắc cạnh</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) theo nhịp phách BGM, đồng thời chuyển sang khung dải điện ảnh 2.39:1</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Cắt thẳng (Hard Cut) theo nhịp phách BGM, đồng thời chuyển sang khung dải điện ảnh 2.39:1</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 2.71, 4.33)">
+                    ▶ 2.71s - 4.33s (1.62s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Giao Lộ Ngã Tư Rộng & Đường Dẫn Thị Giác Vạch Sang Đường (1-Point Perspective Crosswalk Lead)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_02_start.jpg', 'Shot 02 • Đầu (2.71s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (2.71s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_02_mid.jpg', 'Shot 02 • Giữa (3.52s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (3.52s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_02_end.jpg', 'Shot 02 • Cuối (4.33s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (4.33s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình co lại chuẩn dải điện ảnh 2.39:1 với tiêu đề đồ họa 'shot 1 | STREETS | CAMERA X1'. Máy quay đặt tĩnh ở góc ngã tư rộng đón hướng nhìn vào khu phố sầm uất. Một người mặc áo trùm đầu màu trắng, tay xách túi đỏ đang rảo bước băng qua vạch kẻ đường cho người đi bộ. Chiếc xe buýt đỏ-trắng đậu bên trái và xe ô tô sedan trắng lướt qua ngã tư bên phải.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc nhìn 1 điểm tụ (One-Point Perspective) với các vạch kẻ đường màu trắng tạo thành những đường dẫn thị giác (leading lines) mạnh mẽ đưa mắt thẳng vào nhân vật áo trắng mang túi đỏ; dải letterbox đen trên dưới giúp người xem tập trung cao độ vào hành động cốt lõi.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Nhân vật áo trắng ở khoảng cách khá xa máy quay nên điểm nhấn bị phân tán nhẹ khi chiếc xe sedan trắng chạy cắt ngang phía sau.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay B-roll đường phố đô thị (Streets), hãy tìm một giao lộ có vạch kẻ đường lớn và kiên nhẫn chờ một chủ thể có trang phục tương phản cao (trắng/đỏ) bước vào làm mỏ neo thị giác.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/1.8 (Camera 1x) • Wide Eye-Level Static Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Giao lộ ngã tư trung tâm đô thị hiện đại (Hàn Quốc)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng nắng xiên buổi chiều tạo bóng đổ chếch 45 độ trên mặt đường nhựa</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) chuyển đổi tiêu cự từ 1x sang 2x ở Shot 03</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Cắt thẳng (Hard Cut) chuyển đổi tiêu cự từ 1x sang 2x ở Shot 03</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 4.33, 5.75)">
+                    ▶ 4.33s - 5.75s (1.42s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hất Góc Thấp Lên Kiến Trúc Zíc-Zắc & Nén Phối Cảnh Tele 2x (Low-Angle Geometric Architecture & 2x Compression)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_03_start.jpg', 'Shot 03 • Đầu (4.33s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (4.33s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_03_mid.jpg', 'Shot 03 • Giữa (5.04s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.04s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_03_end.jpg', 'Shot 03 • Cuối (5.75s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.75s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Chuyển sang tiêu đề 'shot 2 | BUILDINGS | CAMERA X2'. Máy quay ngước góc thấp (Low-Angle Shot) hướng lên mặt tiền tòa nhà hiện đại, đặc tả hệ thống cầu thang thoát hiểm ngoài trời bằng bê tông gấp khúc zíc-zắc và các ô cửa sổ kính xanh lục bảo. Phía dưới cùng khung hình xuất hiện một góc bảng hiệu với thông điệp đầy chất thơ 'REMEMBER THIS MOMENT'.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Sử dụng ống kính tele 2x (~50mm) giúp nén không gian (Lens Compression), triệt tiêu hiện tượng méo góc và giữ các đường thẳng kỷ hà của kiến trúc đứng thẳng tắp; việc hất máy lên bầu trời xanh giúp loại bỏ hoàn toàn các chi tiết rác dưới mặt đất; thông điệp 'REMEMBER THIS MOMENT' tạo điểm nhấn cảm xúc tinh tế.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Bề mặt tòa nhà hơi đơn sắc xám bê tông; nếu có một cánh chim bay ngang hoặc đám mây trắng trôi lướt qua sẽ tăng thêm tính động cho khung hình.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay các tòa nhà cao tầng trong thành phố, hãy chuyển sang camera 2x hoặc 3x rồi ngước máy lên góc 45-60 độ, tận dụng bầu trời xanh làm phông nền sạch sẽ để tôn vinh vẻ đẹp hình học của kiến trúc.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/2.0 (Camera 2x) • Low-Angle Upward Architectural Push</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt tiền tòa nhà văn phòng hiện đại với cầu thang thoát hiểm lộ thiên</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên hắt nghiêng làm nổi bật vân đá ốp và gân bê tông</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt giật dứt khoát (Match Cut) từ kiến trúc sang cận cảnh con người ở Shot 04</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Cắt giật dứt khoát (Match Cut) từ kiến trúc sang cận cảnh con người ở Shot 04</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 5.75, 7.25)">
+                    ▶ 5.75s - 7.25s (1.50s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Selfie Camera Góc Thấp Đón Nắng & Thiết Lập Kết Nối Con Người (Low-Angle Selfie Walking & Human Connection)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_04_start.jpg', 'Shot 04 • Đầu (5.75s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.75s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_04_mid.jpg', 'Shot 04 • Giữa (6.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.50s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_04_end.jpg', 'Shot 04 • Cuối (7.25s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (7.25s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Chuyển sang tiêu đề 'shot 3 | YOU | SELFIE CAMERA'. Yegor tự cầm điện thoại quay chính mình bằng camera trước khi đang sải bước ngoài trời. Anh diện kính râm đen phong cách, áo ba lỗ tank-top trắng in hình mặt cười vàng, khuyên tai đen và kiểu tóc vuốt fade nam tính. Phía sau lưng là những rặng dừa nhiệt đới vút cao đón trọn ánh nắng rực rỡ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Sau 2 cú máy đặc tả cảnh vật môi trường, việc đưa gương mặt creator vào khung hình tạo sự kết nối cảm xúc tức thì (Human Connection) và xác lập chủ nhân của chuyến đi; chuyển động bước chân tạo độ rung lắc tự nhiên (Organic Camera Shake) mang lại cảm giác đồng hành chân thực; hàng cọ vươn cao tạo thành khung tự nhiên ôm trọn chủ thể.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Camera trước của điện thoại có dải tương phản động thấp hơn camera sau, khiến phần vai áo trắng bị cháy sáng nhẹ (Highlight Clipping) dưới ánh nắng gắt.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Trong bất kỳ video du lịch hay dạo phố nào, cứ sau 2-3 shot B-roll cảnh vật thì bắt buộc phải có 1 shot quay cận chính bạn (You) để giữ sợi dây liên kết cá nhân với người xem.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 23mm f/2.2 (Selfie Front Camera) • Dynamic Low-Angle Walking Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Đại lộ hàng cọ nhiệt đới ven biển</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng xiên ngược (Side-Backlight) tạo viền sáng ven tóc và khối cơ vai</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) sang bố cục phẳng cửa tiệm ở Shot 05</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Cắt thẳng (Hard Cut) sang bố cục phẳng cửa tiệm ở Shot 05</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 7.25, 8.62)">
+                    ▶ 7.25s - 8.62s (1.37s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố Cục Trực Diện Đối Xứng Mặt Tiền Cửa Tiệm Chuẩn Wes Anderson (Frontal Flat Elevation & Symmetrical Storefront)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_05_start.jpg', 'Shot 05 • Đầu (7.25s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (7.25s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_05_mid.jpg', 'Shot 05 • Giữa (7.93s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (7.93s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_05_end.jpg', 'Shot 05 • Cuối (8.62s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.62s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Chuyển sang tiêu đề 'shot 4 | CAFES | CAMERA X2'. Máy quay đặt đối diện trực tiếp 90 độ ghi lại toàn bộ mặt tiền quán ăn Nhật Bản 'YUMMY, UDON GYOZA' với chữ Nhật ウドン ギョーザ, chữ Hán và tiếng Hàn. Hai mái hiên màu kem che cửa kính trượt, phía trước là dãy 6 chiếc ghế đẩu nhựa màu vàng và xanh lá cây xếp thẳng hàng tăm tắp, dãy đèn tròn gắn dọc mép tường gạch thẻ đỏ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục phẳng trực diện (Flat Elevation) chuẩn phong cách điện ảnh Wes Anderson mang lại cảm giác trật tự, ngăn nắp và bình yên; hàng ghế đẩu rực rỡ màu sắc đóng vai trò dải màu nhấn (Color Accent) ấm áp; tiêu cự 2x giúp khử méo góc, các khung cửa kính đứng thẳng hoàn hảo.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khung cảnh hoàn toàn tĩnh lặng, không có nhân viên hay khách hàng bước qua lại trong cửa kính.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi ghi hình quán cafe hoặc tiệm ăn đường phố, hãy đứng bên kia đường, zoom 2x rồi canh góc vuông góc 90 độ để tạo nên bức tranh mặt tiền phẳng tĩnh tại và đậm chất nghệ thuật.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/2.0 (Camera 2x) • Frontal Symmetrical Flat Elevation</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt tiền quán mì Udon Gyoza trên phố ẩm thực</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ban ngày dịu trong bóng râm tòa nhà đối diện (Open Shade)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) sang chuyển động người đi bộ ở Shot 06</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Cắt thẳng (Hard Cut) sang chuyển động người đi bộ ở Shot 06</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 8.62, 10.17)">
+                    ▶ 8.62s - 10.17s (1.55s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Quay Ngược Sáng Qua Tán Lá Vỉa Hè Bắt Trọn Dòng Người Sống Động (Backlit Tree Canopy & Street Life Flow)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_06_start.jpg', 'Shot 06 • Đầu (8.62s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.62s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_06_mid.jpg', 'Shot 06 • Giữa (9.39s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.39s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_06_end.jpg', 'Shot 06 • Cuối (10.17s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.17s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Chuyển sang tiêu đề 'shot 5 | PEOPLE | CAMERA X1'. Máy quay đặt ngang tầm mắt (Eye-Level) trên vỉa hè rợp bóng mát của hàng cây cổ thụ. Một tốp người dân địa phương và du khách đang tản bộ về phía máy quay, trong đó nổi bật là hai người phụ nữ đi trước (áo sơ mi trắng mang túi xách đỏ). Mặt trời chiếu ngược từ phía sau tán cây tạo ra vệt lóa sáng (Lens Flare) huyền ảo trên nền các cửa hàng thời trang.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Hiệu ứng ánh sáng ngược tự nhiên (Natural Backlight Sun Flare) xuyên qua kẽ lá tạo ra chất thơ điện ảnh tràn đầy năng lượng mùa hè; hành vi của dòng người tản bộ hoàn toàn tự nhiên, không diễn; sự tương phản giữa bóng râm vỉa hè và lòng đường ngập nắng tạo chiều sâu thị giác phong phú.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Luồng sáng mặt trời lọt vào ống kính hơi gắt ở góc trên bên trái làm giảm độ tương phản cục bộ của tán cây xung quanh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đừng ngần ngại quay ngược sáng khi ghi hình con người trên phố; hãy khéo léo để mặt trời lấp ló sau mép lá cây hoặc biển hiệu để có ngay luồng ánh sáng thần tiên mà không cần bất kỳ hiệu ứng kỹ xảo nào.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/1.8 (Camera 1x) • Eye-Level Backlit Street Tracking</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Vỉa hè rợp bóng cây khu phố mua sắm sầm uất</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ngược sáng mặt trời (Backlight) tạo hiệu ứng lóe sáng qua kẽ lá</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) theo nhịp phách trống sang Shot 07</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Cắt thẳng (Hard Cut) theo nhịp phách trống sang Shot 07</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 10.17, 11.58)">
+                    ▶ 10.17s - 11.58s (1.41s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hút Sâu Điểm Tụ Ngõ Biển Hiệu Neon & Xe Tải Chuyển Động Dẫn Hướng (Alleyway Vanishing Point & Motion Lead)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_07_start.jpg', 'Shot 07 • Đầu (10.17s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (10.17s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_07_mid.jpg', 'Shot 07 • Giữa (10.88s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (10.88s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_07_end.jpg', 'Shot 07 • Cuối (11.58s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (11.58s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Chuyển sang tiêu đề 'shot 6 | SHOP SIGNS | CAMERA X1'. Góc máy nhìn thẳng vào trung tâm con ngõ thương mại sầm uất với mật độ biển hiệu dày đặc (biển hiệu tiếng Hàn '야구 사격 농구' màu vàng cam, biển quán bar 'FLEX BAR', cột điện chằng chịt dây cáp và trạm biến áp). Một chiếc xe tải thùng màu trắng đang lăn bánh từ từ đi sâu vào trong ngõ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục điểm tụ trung tâm (Central Vanishing Point) khai thác tối đa chiều sâu của ngõ phố châu Á; chiếc xe tải trắng di chuyển về phía xa đóng vai trò vật thể dẫn động (Motion Guide) kéo tầm mắt khán giả đi sâu vào không gian; sắc cam rực rỡ của mặt tiền quán bên trái tương phản hài hòa với bầu trời xanh trong.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Hệ thống dây cáp điện phía trên khá rối rắm (tuy nhiên lại là nét đặc trưng chân thực của văn hóa phố thị bản địa).</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay các ngõ phố nhiều biển hiệu, hãy đặt máy ở giữa lòng đường nhìn thẳng vào điểm tụ và chờ một phương tiện (xe tải, xe máy, xe đạp) chạy vào trong để tạo trục chuyển động hút mắt.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/1.8 (Camera 1x) • Central Linear Perspective View</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Ngõ phố ẩm thực và giải trí về đêm</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ban ngày chan hòa kết hợp ánh đèn neon biển hiệu bắt đầu sáng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) sang toàn cảnh thiên nhiên bao la ở Shot 08</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Cắt thẳng (Hard Cut) sang toàn cảnh thiên nhiên bao la ở Shot 08</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 11.58, 13.04)">
+                    ▶ 11.58s - 13.04s (1.46s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Toàn Cảnh Bờ Vịnh Hoàng Hôn & Bụi Cây Tiền Cảnh Đóng Khung Tự Nhiên (Bay Vista Vignette & 2x Landscape Compression)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_08_start.jpg', 'Shot 08 • Đầu (11.58s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (11.58s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_08_mid.jpg', 'Shot 08 • Giữa (12.31s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (12.31s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_08_end.jpg', 'Shot 08 • Cuối (13.04s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (13.04s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Chuyển sang tiêu đề 'shot 7 | SKY | CAMERA X2'. Góc máy trên cao phóng tầm mắt ra toàn cảnh vụng biển và thị trấn ven biển đảo Jeju lúc hoàng hôn. Tiền cảnh là những bụi cây dại và dây leo xanh mướt vươn sang hai bên mép khung hình tạo thành khung viền tự nhiên (Natural Framing). Phía xa là bờ cát thoai thoải, mặt biển êm đềm, rặng núi mờ sương và bầu trời chuyển dải màu từ xanh ngọc sang cam đào ngọt ngào.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tạo cú nghỉ thở thị giác (Visual Breath) cực kỳ quý giá sau chuỗi khung hình phố xá đông đúc; việc sử dụng ống kính 2x nén đường chân trời giúp các rặng núi xa và mặt biển xích lại gần nhau hơn; bụi cây tiền cảnh tạo độ sâu 3 lớp (Foreground - Midground - Background) tách bạch và cuốn hút; dải màu hoàng hôn thanh bình đem lại cảm xúc lắng đọng.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Bụi cây bên phải chiếm diện tích tương đối lớn (khoảng 30% khung hình), che khuất một phần góc thị trấn phía dưới.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sau chuỗi phân cảnh đường phố chật hẹp, luôn luôn bố trí một cú máy ngắm bầu trời hoặc phong cảnh bao la (Sky / Landscape Shot) để người xem có thời gian thẩm thấu cảm xúc không gian của vùng đất.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/2.0 (Camera 2x) • High-Angle Landscape Vista with Foliage Framing</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Đỉnh đồi ngắm cảnh vịnh biển đảo Jeju (Hàn Quốc)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng giờ vàng (Magic Hour Warm Glow) nhuộm sắc cam đào dịu ngọt</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) sang ngã tư giao thông đô thị ở Shot 09</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 09 • Cắt thẳng (Hard Cut) sang ngã tư giao thông đô thị ở Shot 09</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_08_to_09.jpg?v=2', 'Chuyển cảnh Shot 08 sang Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_08_to_09.jpg?v=2" alt="Transition 8 to 9" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-9">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 09</span>
+                <button class="shot-time-btn" onclick="jumpToShot(9, 13.04, 14.54)">
+                    ▶ 13.04s - 14.54s (1.50s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Chặn Đầu Góc Cua Giao Lộ Đón Dòng Xe SUV Tạt Ngang Mạnh Mẽ (Intersection Corner Low Profile & Kinetic Rush)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_09_start.jpg', 'Shot 09 • Đầu (13.04s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (13.04s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_09_mid.jpg', 'Shot 09 • Giữa (13.79s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (13.79s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_09_end.jpg', 'Shot 09 • Cuối (14.54s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (14.54s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Chuyển sang tiêu đề 'shot 8 | TRAFFIC | CAMERA X1'. Máy quay đặt góc rộng 1x ở mép vỉa hè ngã tư lớn đón dòng xe cộ. Phía hậu cảnh là tòa nhà khách sạn hiện đại 'SHILLA STAY' bên trái và tòa nhà thương mại góc phố 'SFG' màu trắng-đỏ-vàng. Một chiếc SUV màu đen bóng bẩy và một chiếc xe tải nhỏ màu trắng rẽ ngang qua giao lộ với tốc độ cao lướt sát ngay trước ống kính.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc quay thấp ở mép vỉa hè tạo cảm giác áp sát mặt đường đầy kịch tính; chuyển động tạt ngang (Cross-Frame Motion) của chiếc SUV đen bóng mang lại xung lực thị giác mạnh mẽ, tái hiện nhịp đập hối hả của đô thị; nền trời xanh mây trắng tương phản hoàn hảo với mặt đường bê tông.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chiếc xe SUV đen di chuyển sát ống kính che khuất toàn bộ nửa dưới khung hình trong một tích tắc ngắn ngủi.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Để quay giao thông (Traffic) có lực nhất, hãy đứng ở góc cua của giao lộ lớn nơi xe cộ buộc phải chuyển hướng và lướt ngang qua trước ống kính, tạo nên hiệu ứng thị sai (Parallax) cực kỳ ấn tượng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/1.8 (Camera 1x) • Wide-Angle Street-Level Intersection Tracking</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Giao lộ ngã tư trước khách sạn Shilla Stay (Jeju City)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Nắng chiều vàng rực rỡ với mây trắng xốp trên nền trời xanh ngắt</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) sang cảnh hoàng hôn biển khép lại hành trình ở Shot 10</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 10 • Cắt thẳng (Hard Cut) sang cảnh hoàng hôn biển khép lại hành trình ở Shot 10</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_09_to_10.jpg?v=2', 'Chuyển cảnh Shot 09 sang Shot 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/transitions/trans_09_to_10.jpg?v=2" alt="Transition 9 to 10" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-10">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 10</span>
+                <button class="shot-time-btn" onclick="jumpToShot(10, 14.54, 16.21)">
+                    ▶ 14.54s - 16.21s (1.67s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cột Sáng Mặt Trời Lặn Trải Dài Trên Biển & Khoảnh Khắc Lắng Đọng Khép Lại Chuyến Đi (Golden Sun Reflection & Fade to Black)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_10_start.jpg', 'Shot 10 • Đầu (14.54s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (14.54s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_10_mid.jpg', 'Shot 10 • Giữa (15.38s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (15.38s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_10_end.jpg', 'Shot 10 • Cuối (16.21s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (16.21s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Chuyển sang tiêu đề 'shot 9 | SUNSET | CAMERA X1'. Khung cảnh hoàng hôn tráng lệ bên bờ biển đảo Jeju: Quả cầu mặt trời rực đỏ như hòn than đang từ từ lặn xuống đường chân trời, tạo thành một vệt sáng vàng óng ánh (Sun Reflection Column) trải dài trên mặt biển phẳng lặng. Trên con đường mòn ven vách đá có hàng rào cọc gỗ thừng, một cô gái đứng lặng lẽ chiêm ngưỡng hoàng hôn; tiền cảnh bên trái là khóm lá rừng sẫm màu. Đoạn phim từ từ chìm vào màn đen (Fade to Black) kết thúc trọn vẹn ở frame 388.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục điểm vàng 1/3 chuẩn mực với mặt trời và vệt sáng thẳng tắp hút trọn ánh nhìn; bóng đen silhouette của cô gái ngắm hoàng hôn thổi vào khung hình chiều sâu cảm xúc nhân văn; cú fade to black kết thúc thước phim cực kỳ êm ái, mang lại cảm giác thỏa mãn và trọn vẹn.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khóm lá tiền cảnh bên trái bị tối hoàn toàn do ngược sáng mạnh (tuy nhiên lại giúp tạo khung tự nhiên tôn vinh vệt sáng mặt trời).</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Luôn khép lại một video du lịch hoặc khám phá thành phố bằng cảnh hoàng hôn (Sunset) hoặc ánh đèn đêm mờ ảo; đây là công thức tâm lý học thị giác giúp khán giả cảm nhận được sự kết thúc trọn vẹn và dư âm của một hành trình.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/1.8 (Camera 1x) • Wide Sunset Silhouette Coastline View</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Đường mòn đi bộ ven vách đá bờ biển đảo Jeju</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Hoàng hôn ngược sáng rực rỡ (Sunset Golden Backlight) với vệt sáng lấp lánh trên biển</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Chìm dần vào màn đen (Fade to Black) kết thúc tác phẩm điện ảnh</span>
+            </div>
+
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 2.71)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Cú Chạy Cắt Ngang Khung Hình Biển & Đồ Họa Hút Mắt Khởi Động Tutorial (Hook Lateral Movement & Graphic Pop)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 2.71, 4.33)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 2.71s</span>
+            </div>
+            <div class="grid-card-body">Giao Lộ Ngã Tư Rộng & Đường Dẫn Thị Giác Vạch Sang Đường (1-Point Perspective Crosswalk Lead)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 4.33, 5.75)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 4.33s</span>
+            </div>
+            <div class="grid-card-body">Hất Góc Thấp Lên Kiến Trúc Zíc-Zắc & Nén Phối Cảnh Tele 2x (Low-Angle Geometric Architecture & 2x Compression)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 5.75, 7.25)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 5.75s</span>
+            </div>
+            <div class="grid-card-body">Selfie Camera Góc Thấp Đón Nắng & Thiết Lập Kết Nối Con Người (Low-Angle Selfie Walking & Human Connection)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 7.25, 8.62)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 7.25s</span>
+            </div>
+            <div class="grid-card-body">Bố Cục Trực Diện Đối Xứng Mặt Tiền Cửa Tiệm Chuẩn Wes Anderson (Frontal Flat Elevation & Symmetrical Storefront)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 8.62, 10.17)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 8.62s</span>
+            </div>
+            <div class="grid-card-body">Quay Ngược Sáng Qua Tán Lá Vỉa Hè Bắt Trọn Dòng Người Sống Động (Backlit Tree Canopy & Street Life Flow)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 10.17, 11.58)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 10.17s</span>
+            </div>
+            <div class="grid-card-body">Hút Sâu Điểm Tụ Ngõ Biển Hiệu Neon & Xe Tải Chuyển Động Dẫn Hướng (Alleyway Vanishing Point & Motion Lead)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 11.58, 13.04)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 11.58s</span>
+            </div>
+            <div class="grid-card-body">Toàn Cảnh Bờ Vịnh Hoàng Hôn & Bụi Cây Tiền Cảnh Đóng Khung Tự Nhiên (Bay Vista Vignette & 2x Landscape Compression)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(9, 13.04, 14.54)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <span class="grid-thumb-badge">Shot 09 • 13.04s</span>
+            </div>
+            <div class="grid-card-body">Chặn Đầu Góc Cua Giao Lộ Đón Dòng Xe SUV Tạt Ngang Mạnh Mẽ (Intersection Corner Low Profile & Kinetic Rush)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(10, 14.54, 16.21)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+                <span class="grid-thumb-badge">Shot 10 • 14.54s</span>
+            </div>
+            <div class="grid-card-body">Cột Sáng Mặt Trời Lặn Trải Dài Trên Biển & Khoảnh Khắc Lắng Đọng Khép Lại Chuyến Đi (Golden Sun Reflection & Fade to Black)</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1j4DIeOUcRDlGJVjvfLBO_2bq-8JQu9V6" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "shot_id": 1, "st_frame": 0, "en_frame": 64, "st_time": 0.0, "en_time": 2.71, "duration": 2.71, "headline": "Cú Chạy Cắt Ngang Khung Hình Biển & Đồ Họa Hút Mắt Khởi Động Tutorial (Hook Lateral Movement & Graphic Pop)", "subject_action": "Bối cảnh mở ra tại bờ biển nhiệt đới đảo Jeju với bãi cát trắng và làn nước biển xanh ngọc bích. Phía trước là bức tường kè ốp đá mosaic đa sắc và hai cọc tiêu phân làn cam-vàng. Một cô gái trẻ mặc đồ thể thao trắng năng động chạy vụt ngang từ phải sang trái, đổ bóng đen sắc nét lên tường gạch. Dòng chữ typography vàng rực 'HOW TO FILM YOURSELF in the city' nằm nổi bật ở 1/3 trên bầu trời.", "pros": "Động tác chạy cắt ngang (Lateral Cross-Screen Action) kích hoạt ngay phản xạ theo dõi chuyển động tự nhiên của mắt trong 2 giây đầu; màu nước biển xanh ngọc kết hợp tường mosaic rực rỡ và chữ vàng tạo độ tương phản thị giác tối đa; bố cục phong cảnh thoáng đãng giải phóng thị giác người xem.", "cons": "Tiêu đề ghi 'in the city' nhưng bối cảnh mở màn lại là bờ biển tự nhiên, tạo độ lệch nhẹ về ngữ cảnh trước khi các cảnh đường phố xuất hiện ở shot tiếp theo.", "takeaway": "Khi mở đầu video hướng dẫn (Tutorial Hook), luôn lồng ghép một chuyển động vật lý cắt ngang khung hình kết hợp typography tương phản cao để chặn đứng thao tác lướt qua của khán giả.", "location": "Bờ biển đảo Jeju (Hàn Quốc) - bãi đá dung nham đen và tường kè mosaic", "lens_angle": "24mm f/1.8 (Camera 1x) • Eye-Level Static Landscape View", "lighting_color": "Nắng gắt ban ngày (Direct Overhead Sunlight) tạo bóng đổ ngắn, sắc cạnh", "transition": "Cắt thẳng (Hard Cut) theo nhịp phách BGM, đồng thời chuyển sang khung dải điện ảnh 2.39:1"}, {"id": 2, "shot_id": 2, "st_frame": 65, "en_frame": 103, "st_time": 2.71, "en_time": 4.33, "duration": 1.62, "headline": "Giao Lộ Ngã Tư Rộng & Đường Dẫn Thị Giác Vạch Sang Đường (1-Point Perspective Crosswalk Lead)", "subject_action": "Khung hình co lại chuẩn dải điện ảnh 2.39:1 với tiêu đề đồ họa 'shot 1 | STREETS | CAMERA X1'. Máy quay đặt tĩnh ở góc ngã tư rộng đón hướng nhìn vào khu phố sầm uất. Một người mặc áo trùm đầu màu trắng, tay xách túi đỏ đang rảo bước băng qua vạch kẻ đường cho người đi bộ. Chiếc xe buýt đỏ-trắng đậu bên trái và xe ô tô sedan trắng lướt qua ngã tư bên phải.", "pros": "Góc nhìn 1 điểm tụ (One-Point Perspective) với các vạch kẻ đường màu trắng tạo thành những đường dẫn thị giác (leading lines) mạnh mẽ đưa mắt thẳng vào nhân vật áo trắng mang túi đỏ; dải letterbox đen trên dưới giúp người xem tập trung cao độ vào hành động cốt lõi.", "cons": "Nhân vật áo trắng ở khoảng cách khá xa máy quay nên điểm nhấn bị phân tán nhẹ khi chiếc xe sedan trắng chạy cắt ngang phía sau.", "takeaway": "Khi quay B-roll đường phố đô thị (Streets), hãy tìm một giao lộ có vạch kẻ đường lớn và kiên nhẫn chờ một chủ thể có trang phục tương phản cao (trắng/đỏ) bước vào làm mỏ neo thị giác.", "location": "Giao lộ ngã tư trung tâm đô thị hiện đại (Hàn Quốc)", "lens_angle": "24mm f/1.8 (Camera 1x) • Wide Eye-Level Static Shot", "lighting_color": "Ánh sáng nắng xiên buổi chiều tạo bóng đổ chếch 45 độ trên mặt đường nhựa", "transition": "Cắt thẳng (Hard Cut) chuyển đổi tiêu cự từ 1x sang 2x ở Shot 03"}, {"id": 3, "shot_id": 3, "st_frame": 104, "en_frame": 137, "st_time": 4.33, "en_time": 5.75, "duration": 1.42, "headline": "Hất Góc Thấp Lên Kiến Trúc Zíc-Zắc & Nén Phối Cảnh Tele 2x (Low-Angle Geometric Architecture & 2x Compression)", "subject_action": "Chuyển sang tiêu đề 'shot 2 | BUILDINGS | CAMERA X2'. Máy quay ngước góc thấp (Low-Angle Shot) hướng lên mặt tiền tòa nhà hiện đại, đặc tả hệ thống cầu thang thoát hiểm ngoài trời bằng bê tông gấp khúc zíc-zắc và các ô cửa sổ kính xanh lục bảo. Phía dưới cùng khung hình xuất hiện một góc bảng hiệu với thông điệp đầy chất thơ 'REMEMBER THIS MOMENT'.", "pros": "Sử dụng ống kính tele 2x (~50mm) giúp nén không gian (Lens Compression), triệt tiêu hiện tượng méo góc và giữ các đường thẳng kỷ hà của kiến trúc đứng thẳng tắp; việc hất máy lên bầu trời xanh giúp loại bỏ hoàn toàn các chi tiết rác dưới mặt đất; thông điệp 'REMEMBER THIS MOMENT' tạo điểm nhấn cảm xúc tinh tế.", "cons": "Bề mặt tòa nhà hơi đơn sắc xám bê tông; nếu có một cánh chim bay ngang hoặc đám mây trắng trôi lướt qua sẽ tăng thêm tính động cho khung hình.", "takeaway": "Khi quay các tòa nhà cao tầng trong thành phố, hãy chuyển sang camera 2x hoặc 3x rồi ngước máy lên góc 45-60 độ, tận dụng bầu trời xanh làm phông nền sạch sẽ để tôn vinh vẻ đẹp hình học của kiến trúc.", "location": "Mặt tiền tòa nhà văn phòng hiện đại với cầu thang thoát hiểm lộ thiên", "lens_angle": "50mm f/2.0 (Camera 2x) • Low-Angle Upward Architectural Push", "lighting_color": "Ánh sáng tự nhiên hắt nghiêng làm nổi bật vân đá ốp và gân bê tông", "transition": "Cắt giật dứt khoát (Match Cut) từ kiến trúc sang cận cảnh con người ở Shot 04"}, {"id": 4, "shot_id": 4, "st_frame": 138, "en_frame": 173, "st_time": 5.75, "en_time": 7.25, "duration": 1.5, "headline": "Selfie Camera Góc Thấp Đón Nắng & Thiết Lập Kết Nối Con Người (Low-Angle Selfie Walking & Human Connection)", "subject_action": "Chuyển sang tiêu đề 'shot 3 | YOU | SELFIE CAMERA'. Yegor tự cầm điện thoại quay chính mình bằng camera trước khi đang sải bước ngoài trời. Anh diện kính râm đen phong cách, áo ba lỗ tank-top trắng in hình mặt cười vàng, khuyên tai đen và kiểu tóc vuốt fade nam tính. Phía sau lưng là những rặng dừa nhiệt đới vút cao đón trọn ánh nắng rực rỡ.", "pros": "Sau 2 cú máy đặc tả cảnh vật môi trường, việc đưa gương mặt creator vào khung hình tạo sự kết nối cảm xúc tức thì (Human Connection) và xác lập chủ nhân của chuyến đi; chuyển động bước chân tạo độ rung lắc tự nhiên (Organic Camera Shake) mang lại cảm giác đồng hành chân thực; hàng cọ vươn cao tạo thành khung tự nhiên ôm trọn chủ thể.", "cons": "Camera trước của điện thoại có dải tương phản động thấp hơn camera sau, khiến phần vai áo trắng bị cháy sáng nhẹ (Highlight Clipping) dưới ánh nắng gắt.", "takeaway": "Trong bất kỳ video du lịch hay dạo phố nào, cứ sau 2-3 shot B-roll cảnh vật thì bắt buộc phải có 1 shot quay cận chính bạn (You) để giữ sợi dây liên kết cá nhân với người xem.", "location": "Đại lộ hàng cọ nhiệt đới ven biển", "lens_angle": "23mm f/2.2 (Selfie Front Camera) • Dynamic Low-Angle Walking Shot", "lighting_color": "Ánh sáng xiên ngược (Side-Backlight) tạo viền sáng ven tóc và khối cơ vai", "transition": "Cắt thẳng (Hard Cut) sang bố cục phẳng cửa tiệm ở Shot 05"}, {"id": 5, "shot_id": 5, "st_frame": 174, "en_frame": 206, "st_time": 7.25, "en_time": 8.62, "duration": 1.37, "headline": "Bố Cục Trực Diện Đối Xứng Mặt Tiền Cửa Tiệm Chuẩn Wes Anderson (Frontal Flat Elevation & Symmetrical Storefront)", "subject_action": "Chuyển sang tiêu đề 'shot 4 | CAFES | CAMERA X2'. Máy quay đặt đối diện trực tiếp 90 độ ghi lại toàn bộ mặt tiền quán ăn Nhật Bản 'YUMMY, UDON GYOZA' với chữ Nhật ウドン ギョーザ, chữ Hán và tiếng Hàn. Hai mái hiên màu kem che cửa kính trượt, phía trước là dãy 6 chiếc ghế đẩu nhựa màu vàng và xanh lá cây xếp thẳng hàng tăm tắp, dãy đèn tròn gắn dọc mép tường gạch thẻ đỏ.", "pros": "Bố cục phẳng trực diện (Flat Elevation) chuẩn phong cách điện ảnh Wes Anderson mang lại cảm giác trật tự, ngăn nắp và bình yên; hàng ghế đẩu rực rỡ màu sắc đóng vai trò dải màu nhấn (Color Accent) ấm áp; tiêu cự 2x giúp khử méo góc, các khung cửa kính đứng thẳng hoàn hảo.", "cons": "Khung cảnh hoàn toàn tĩnh lặng, không có nhân viên hay khách hàng bước qua lại trong cửa kính.", "takeaway": "Khi ghi hình quán cafe hoặc tiệm ăn đường phố, hãy đứng bên kia đường, zoom 2x rồi canh góc vuông góc 90 độ để tạo nên bức tranh mặt tiền phẳng tĩnh tại và đậm chất nghệ thuật.", "location": "Mặt tiền quán mì Udon Gyoza trên phố ẩm thực", "lens_angle": "50mm f/2.0 (Camera 2x) • Frontal Symmetrical Flat Elevation", "lighting_color": "Ánh sáng ban ngày dịu trong bóng râm tòa nhà đối diện (Open Shade)", "transition": "Cắt thẳng (Hard Cut) sang chuyển động người đi bộ ở Shot 06"}, {"id": 6, "shot_id": 6, "st_frame": 207, "en_frame": 243, "st_time": 8.62, "en_time": 10.17, "duration": 1.55, "headline": "Quay Ngược Sáng Qua Tán Lá Vỉa Hè Bắt Trọn Dòng Người Sống Động (Backlit Tree Canopy & Street Life Flow)", "subject_action": "Chuyển sang tiêu đề 'shot 5 | PEOPLE | CAMERA X1'. Máy quay đặt ngang tầm mắt (Eye-Level) trên vỉa hè rợp bóng mát của hàng cây cổ thụ. Một tốp người dân địa phương và du khách đang tản bộ về phía máy quay, trong đó nổi bật là hai người phụ nữ đi trước (áo sơ mi trắng mang túi xách đỏ). Mặt trời chiếu ngược từ phía sau tán cây tạo ra vệt lóa sáng (Lens Flare) huyền ảo trên nền các cửa hàng thời trang.", "pros": "Hiệu ứng ánh sáng ngược tự nhiên (Natural Backlight Sun Flare) xuyên qua kẽ lá tạo ra chất thơ điện ảnh tràn đầy năng lượng mùa hè; hành vi của dòng người tản bộ hoàn toàn tự nhiên, không diễn; sự tương phản giữa bóng râm vỉa hè và lòng đường ngập nắng tạo chiều sâu thị giác phong phú.", "cons": "Luồng sáng mặt trời lọt vào ống kính hơi gắt ở góc trên bên trái làm giảm độ tương phản cục bộ của tán cây xung quanh.", "takeaway": "Đừng ngần ngại quay ngược sáng khi ghi hình con người trên phố; hãy khéo léo để mặt trời lấp ló sau mép lá cây hoặc biển hiệu để có ngay luồng ánh sáng thần tiên mà không cần bất kỳ hiệu ứng kỹ xảo nào.", "location": "Vỉa hè rợp bóng cây khu phố mua sắm sầm uất", "lens_angle": "24mm f/1.8 (Camera 1x) • Eye-Level Backlit Street Tracking", "lighting_color": "Ngược sáng mặt trời (Backlight) tạo hiệu ứng lóe sáng qua kẽ lá", "transition": "Cắt thẳng (Hard Cut) theo nhịp phách trống sang Shot 07"}, {"id": 7, "shot_id": 7, "st_frame": 244, "en_frame": 277, "st_time": 10.17, "en_time": 11.58, "duration": 1.41, "headline": "Hút Sâu Điểm Tụ Ngõ Biển Hiệu Neon & Xe Tải Chuyển Động Dẫn Hướng (Alleyway Vanishing Point & Motion Lead)", "subject_action": "Chuyển sang tiêu đề 'shot 6 | SHOP SIGNS | CAMERA X1'. Góc máy nhìn thẳng vào trung tâm con ngõ thương mại sầm uất với mật độ biển hiệu dày đặc (biển hiệu tiếng Hàn '야구 사격 농구' màu vàng cam, biển quán bar 'FLEX BAR', cột điện chằng chịt dây cáp và trạm biến áp). Một chiếc xe tải thùng màu trắng đang lăn bánh từ từ đi sâu vào trong ngõ.", "pros": "Bố cục điểm tụ trung tâm (Central Vanishing Point) khai thác tối đa chiều sâu của ngõ phố châu Á; chiếc xe tải trắng di chuyển về phía xa đóng vai trò vật thể dẫn động (Motion Guide) kéo tầm mắt khán giả đi sâu vào không gian; sắc cam rực rỡ của mặt tiền quán bên trái tương phản hài hòa với bầu trời xanh trong.", "cons": "Hệ thống dây cáp điện phía trên khá rối rắm (tuy nhiên lại là nét đặc trưng chân thực của văn hóa phố thị bản địa).", "takeaway": "Khi quay các ngõ phố nhiều biển hiệu, hãy đặt máy ở giữa lòng đường nhìn thẳng vào điểm tụ và chờ một phương tiện (xe tải, xe máy, xe đạp) chạy vào trong để tạo trục chuyển động hút mắt.", "location": "Ngõ phố ẩm thực và giải trí về đêm", "lens_angle": "24mm f/1.8 (Camera 1x) • Central Linear Perspective View", "lighting_color": "Ánh sáng ban ngày chan hòa kết hợp ánh đèn neon biển hiệu bắt đầu sáng", "transition": "Cắt thẳng (Hard Cut) sang toàn cảnh thiên nhiên bao la ở Shot 08"}, {"id": 8, "shot_id": 8, "st_frame": 278, "en_frame": 312, "st_time": 11.58, "en_time": 13.04, "duration": 1.46, "headline": "Toàn Cảnh Bờ Vịnh Hoàng Hôn & Bụi Cây Tiền Cảnh Đóng Khung Tự Nhiên (Bay Vista Vignette & 2x Landscape Compression)", "subject_action": "Chuyển sang tiêu đề 'shot 7 | SKY | CAMERA X2'. Góc máy trên cao phóng tầm mắt ra toàn cảnh vụng biển và thị trấn ven biển đảo Jeju lúc hoàng hôn. Tiền cảnh là những bụi cây dại và dây leo xanh mướt vươn sang hai bên mép khung hình tạo thành khung viền tự nhiên (Natural Framing). Phía xa là bờ cát thoai thoải, mặt biển êm đềm, rặng núi mờ sương và bầu trời chuyển dải màu từ xanh ngọc sang cam đào ngọt ngào.", "pros": "Tạo cú nghỉ thở thị giác (Visual Breath) cực kỳ quý giá sau chuỗi khung hình phố xá đông đúc; việc sử dụng ống kính 2x nén đường chân trời giúp các rặng núi xa và mặt biển xích lại gần nhau hơn; bụi cây tiền cảnh tạo độ sâu 3 lớp (Foreground - Midground - Background) tách bạch và cuốn hút; dải màu hoàng hôn thanh bình đem lại cảm xúc lắng đọng.", "cons": "Bụi cây bên phải chiếm diện tích tương đối lớn (khoảng 30% khung hình), che khuất một phần góc thị trấn phía dưới.", "takeaway": "Sau chuỗi phân cảnh đường phố chật hẹp, luôn luôn bố trí một cú máy ngắm bầu trời hoặc phong cảnh bao la (Sky / Landscape Shot) để người xem có thời gian thẩm thấu cảm xúc không gian của vùng đất.", "location": "Đỉnh đồi ngắm cảnh vịnh biển đảo Jeju (Hàn Quốc)", "lens_angle": "50mm f/2.0 (Camera 2x) • High-Angle Landscape Vista with Foliage Framing", "lighting_color": "Ánh sáng giờ vàng (Magic Hour Warm Glow) nhuộm sắc cam đào dịu ngọt", "transition": "Cắt thẳng (Hard Cut) sang ngã tư giao thông đô thị ở Shot 09"}, {"id": 9, "shot_id": 9, "st_frame": 313, "en_frame": 348, "st_time": 13.04, "en_time": 14.54, "duration": 1.5, "headline": "Chặn Đầu Góc Cua Giao Lộ Đón Dòng Xe SUV Tạt Ngang Mạnh Mẽ (Intersection Corner Low Profile & Kinetic Rush)", "subject_action": "Chuyển sang tiêu đề 'shot 8 | TRAFFIC | CAMERA X1'. Máy quay đặt góc rộng 1x ở mép vỉa hè ngã tư lớn đón dòng xe cộ. Phía hậu cảnh là tòa nhà khách sạn hiện đại 'SHILLA STAY' bên trái và tòa nhà thương mại góc phố 'SFG' màu trắng-đỏ-vàng. Một chiếc SUV màu đen bóng bẩy và một chiếc xe tải nhỏ màu trắng rẽ ngang qua giao lộ với tốc độ cao lướt sát ngay trước ống kính.", "pros": "Góc quay thấp ở mép vỉa hè tạo cảm giác áp sát mặt đường đầy kịch tính; chuyển động tạt ngang (Cross-Frame Motion) của chiếc SUV đen bóng mang lại xung lực thị giác mạnh mẽ, tái hiện nhịp đập hối hả của đô thị; nền trời xanh mây trắng tương phản hoàn hảo với mặt đường bê tông.", "cons": "Chiếc xe SUV đen di chuyển sát ống kính che khuất toàn bộ nửa dưới khung hình trong một tích tắc ngắn ngủi.", "takeaway": "Để quay giao thông (Traffic) có lực nhất, hãy đứng ở góc cua của giao lộ lớn nơi xe cộ buộc phải chuyển hướng và lướt ngang qua trước ống kính, tạo nên hiệu ứng thị sai (Parallax) cực kỳ ấn tượng.", "location": "Giao lộ ngã tư trước khách sạn Shilla Stay (Jeju City)", "lens_angle": "24mm f/1.8 (Camera 1x) • Wide-Angle Street-Level Intersection Tracking", "lighting_color": "Nắng chiều vàng rực rỡ với mây trắng xốp trên nền trời xanh ngắt", "transition": "Cắt thẳng (Hard Cut) sang cảnh hoàng hôn biển khép lại hành trình ở Shot 10"}, {"id": 10, "shot_id": 10, "st_frame": 349, "en_frame": 388, "st_time": 14.54, "en_time": 16.21, "duration": 1.67, "headline": "Cột Sáng Mặt Trời Lặn Trải Dài Trên Biển & Khoảnh Khắc Lắng Đọng Khép Lại Chuyến Đi (Golden Sun Reflection & Fade to Black)", "subject_action": "Chuyển sang tiêu đề 'shot 9 | SUNSET | CAMERA X1'. Khung cảnh hoàng hôn tráng lệ bên bờ biển đảo Jeju: Quả cầu mặt trời rực đỏ như hòn than đang từ từ lặn xuống đường chân trời, tạo thành một vệt sáng vàng óng ánh (Sun Reflection Column) trải dài trên mặt biển phẳng lặng. Trên con đường mòn ven vách đá có hàng rào cọc gỗ thừng, một cô gái đứng lặng lẽ chiêm ngưỡng hoàng hôn; tiền cảnh bên trái là khóm lá rừng sẫm màu. Đoạn phim từ từ chìm vào màn đen (Fade to Black) kết thúc trọn vẹn ở frame 388.", "pros": "Bố cục điểm vàng 1/3 chuẩn mực với mặt trời và vệt sáng thẳng tắp hút trọn ánh nhìn; bóng đen silhouette của cô gái ngắm hoàng hôn thổi vào khung hình chiều sâu cảm xúc nhân văn; cú fade to black kết thúc thước phim cực kỳ êm ái, mang lại cảm giác thỏa mãn và trọn vẹn.", "cons": "Khóm lá tiền cảnh bên trái bị tối hoàn toàn do ngược sáng mạnh (tuy nhiên lại giúp tạo khung tự nhiên tôn vinh vệt sáng mặt trời).", "takeaway": "Luôn khép lại một video du lịch hoặc khám phá thành phố bằng cảnh hoàng hôn (Sunset) hoặc ánh đèn đêm mờ ảo; đây là công thức tâm lý học thị giác giúp khán giả cảm nhận được sự kết thúc trọn vẹn và dư âm của một hành trình.", "location": "Đường mòn đi bộ ven vách đá bờ biển đảo Jeju", "lens_angle": "24mm f/1.8 (Camera 1x) • Wide Sunset Silhouette Coastline View", "lighting_color": "Hoàng hôn ngược sáng rực rỡ (Sunset Golden Backlight) với vệt sáng lấp lánh trên biển", "transition": "Chìm dần vào màn đen (Fade to Black) kết thúc tác phẩm điện ảnh"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ;
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 24 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById();
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

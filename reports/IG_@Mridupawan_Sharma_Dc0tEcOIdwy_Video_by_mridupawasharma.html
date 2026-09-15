@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>4 Kỹ Thuật Cắt Cảnh Nâng Tầm Video Điện Ảnh - @mridupawasharma • Director's Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #0b0f17;
+    --bg-card: #131b2a;
+    --bg-card-hover: #1c273c;
+    --bg-sidebar: #0f1624;
+    --border-color: #202c42;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-amber: #f59e0b;
+    --accent-blue: #38bdf8;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-purple: #c084fc;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    font-size: 14.5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.top-nav {
+    background: rgba(15, 22, 36, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+.nav-badge {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+    background: var(--bg-card-hover);
+}
+.nav-btn.primary {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    border-color: var(--accent-blue);
+}
+.nav-btn.primary:hover {
+    opacity: 0.9;
+}
+
+.main-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.player-column {
+    width: 420px;
+    flex-shrink: 0;
+    padding: 24px 16px 24px 24px;
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-right: 1px solid var(--border-color);
+}
+.video-frame-box {
+    background: #000;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    aspect-ratio: 9 / 16;
+    max-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-frame-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.player-controls {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.15s;
+}
+.ctrl-btn:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-blue);
+}
+.speed-pills {
+    display: flex;
+    gap: 4px;
+}
+.speed-pill {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+}
+.speed-pill.active {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    font-weight: 700;
+    border-color: var(--accent-blue);
+}
+
+.content-column {
+    flex: 1;
+    padding: 24px 28px 40px 24px;
+    min-width: 0;
+}
+
+.report-header {
+    margin-bottom: 24px;
+}
+.meta-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.author-ig-badge {
+    background: rgba(244, 63, 94, 0.12);
+    color: #fb7185;
+    border: 1px solid rgba(244, 63, 94, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.stat-pill {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: var(--font-mono);
+}
+.report-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.35;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+.report-summary {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.65;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-amber);
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.view-switch-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 24px;
+}
+.tab-pills {
+    display: flex;
+    gap: 6px;
+}
+.tab-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+}
+.tab-btn.active {
+    background: var(--bg-sidebar);
+    border-color: var(--border-color);
+    color: var(--accent-blue);
+}
+.drawer-toggle-btn {
+    background: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.drawer-toggle-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+}
+
+.shots-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 20px;
+    transition: all 0.2s ease;
+    scroll-margin-top: 80px;
+}
+.shot-card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+}
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.shot-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.shot-index-badge {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    font-weight: 800;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+}
+.time-jump-btn {
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    color: var(--accent-blue);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.time-jump-btn:hover {
+    background: var(--accent-blue);
+    color: #0b0f17;
+}
+.dur-pill {
+    opacity: 0.8;
+    font-weight: 400;
+}
+.tech-tag {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11.5px;
+    font-family: var(--font-mono);
+}
+.shot-headline-box {
+    margin-bottom: 16px;
+}
+.shot-headline-title {
+    font-family: var(--font-heading);
+    font-size: 16.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.45;
+}
+
+.keyframes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+}
+.keyframe-item {
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+    background: #000;
+    aspect-ratio: 9 / 16;
+}
+.keyframe-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.keyframe-item:hover img {
+    transform: scale(1.03);
+}
+.kf-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+}
+.kf-badge.start { border-left: 3px solid var(--accent-blue); }
+.kf-badge.mid { border-left: 3px solid var(--accent-amber); }
+.kf-badge.end { border-left: 3px solid var(--accent-emerald); }
+
+.analysis-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.critique-block {
+    background: rgba(15, 22, 36, 0.7);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 14px 16px;
+}
+.block-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 13.5px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-content {
+    font-size: 13.5px;
+    color: #cbd5e1;
+    line-height: 1.65;
+}
+.two-column-critique {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-col {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.critique-col.pro {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #a7f3d0;
+}
+.critique-col.con {
+    background: rgba(244, 63, 94, 0.08);
+    border: 1px solid rgba(244, 63, 94, 0.2);
+    color: #fecdd3;
+}
+.col-header {
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 12.5px;
+}
+.critique-col.pro .col-header { color: var(--accent-emerald); }
+.critique-col.con .col-header { color: var(--accent-rose); }
+
+.takeaway-block {
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-left: 4px solid var(--accent-amber);
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+.takeaway-title {
+    font-weight: 700;
+    color: var(--accent-amber);
+    font-size: 13px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-size: 13.5px;
+    color: #fef3c7;
+    line-height: 1.6;
+}
+
+.shot-specs-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.spec-label {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.trans-section {
+    margin-top: 16px;
+    background: var(--bg-sidebar);
+    border: 1px dashed var(--border-color);
+    border-radius: 10px;
+    padding: 12px;
+}
+.trans-header {
+    font-size: 12px;
+    color: var(--accent-blue);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.trans-img-wrap {
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+.trans-img-wrap img {
+    width: 100%;
+    display: block;
+}
+.zoom-indicator {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+.grid-view-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-blue);
+}
+.grid-thumb-box {
+    aspect-ratio: 9 / 16;
+    background: #000;
+    position: relative;
+}
+.grid-thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid-time-tag {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: var(--font-mono);
+}
+.grid-shot-tag {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: var(--accent-blue);
+    color: #0b0f17;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+}
+.grid-card-desc {
+    padding: 10px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.drawer-backdrop {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    z-index: 200;
+    display: none;
+}
+.drawer-container {
+    position: fixed;
+    top: 0; right: -360px; width: 340px; height: 100%;
+    background: var(--bg-sidebar);
+    border-left: 1px solid var(--border-color);
+    z-index: 201;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+}
+.drawer-header {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.drawer-title {
+    font-weight: 700;
+    font-size: 15px;
+}
+.drawer-close {
+    background: none; border: none; color: var(--text-muted);
+    font-size: 20px; cursor: pointer;
+}
+.drawer-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.drawer-shot-row {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: all 0.15s;
+}
+.drawer-shot-row:hover {
+    border-color: var(--accent-blue);
+    background: var(--bg-card-hover);
+}
+.d-badge {
+    color: var(--accent-blue);
+    font-weight: 700;
+    font-size: 11px;
+    font-family: var(--font-mono);
+}
+.d-time {
+    font-size: 10.5px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+.d-title {
+    font-size: 12px;
+    color: var(--text-primary);
+    line-height: 1.35;
+}
+
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(5, 8, 15, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 300;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+}
+.lightbox-caption {
+    margin-top: 14px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .main-wrapper {
+        flex-direction: column;
+    }
+    .player-column {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 16px;
+        z-index: 90;
+        background: var(--bg-main);
+    }
+    .video-frame-box {
+        max-height: 380px;
+    }
+    .two-column-critique {
+        grid-template-columns: 1fr;
+    }
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<header class="top-nav">
+    <a href="https://vietndj.github.io/scene.html" class="nav-brand">
+        <span class="nav-badge">VIDEO Master Series</span>
+        <span>Director's Shot Analysis</span>
+    </a>
+    <div class="nav-actions">
+        <a href="https://www.instagram.com/reel/Dc0tEcOIdwy/" target="_blank" class="nav-btn primary">
+            📸 Xem Instagram Gốc ↗
+        </a>
+        <a href="https://vietndj.github.io/scene.html" class="nav-btn">
+            🏛 Cổng Tra Cứu
+        </a>
+    </div>
+</header>
+
+<div class="main-wrapper">
+
+    <aside class="player-column">
+        <div class="video-frame-box">
+            <video id="mainVideo" playsinline preload="auto">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dc0tEcOIdwy.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video HTML5.
+            </video>
+        </div>
+
+        <div class="player-controls">
+            <div class="ctrl-row">
+                <button class="ctrl-btn" id="playPauseBtn" onclick="togglePlay()">▶ Phát Video</button>
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                <button class="ctrl-btn" id="muteBtn" onclick="toggleMute()">🔊</button>
+            </div>
+            <div class="ctrl-row">
+                <span style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Tốc Độ:</span>
+                <div class="speed-pills">
+                    <button class="speed-pill" onclick="setSpeed(0.25, this)">0.25x</button>
+                    <button class="speed-pill" onclick="setSpeed(0.5, this)">0.5x</button>
+                    <button class="speed-pill active" onclick="setSpeed(1.0, this)">1.0x</button>
+                    <button class="speed-pill" onclick="setSpeed(1.5, this)">1.5x</button>
+                    <button class="speed-pill" onclick="setSpeed(2.0, this)">2.0x</button>
+                </div>
+            </div>
+            <div class="ctrl-row" style="margin-top: 4px;">
+                <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dc0tEcOIdwy.mp4" download class="ctrl-btn" style="flex: 1; justify-content: center; text-decoration: none;">
+                    ⬇ Tải Video Gốc MP4
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <main class="content-column">
+        <header class="report-header">
+            <div class="meta-tags-flex">
+                <a href="https://www.instagram.com/reel/Dc0tEcOIdwy/" target="_blank" class="author-ig-badge">
+                    📸 @mridupawasharma ↗
+                </a>
+                <span class="stat-pill">⏱ 48.67s</span>
+                <span class="stat-pill">🎞 24 Phân Cảnh</span>
+                <span class="stat-pill">📐 1080x1920 (9:16)</span>
+            </div>
+            <h1 class="report-title">4 Kỹ Thuật Cắt Cảnh Nâng Tầm Video Điện Ảnh - @mridupawasharma</h1>
+            <div class="report-summary">
+                Bóc tách 24 phân cảnh chuẩn đạo diễn về 4 kỹ thuật cắt cảnh kinh điển của ngôn ngữ điện ảnh ứng dụng vào video dọc Instagram Reels/TikTok: 1. The Mask Cut (Cắt giấu mép bằng vật thể tự nhiên), 2. The Match Cut (Cắt đồng dạng hình học và phụ kiện qua hai bối cảnh đối lập), 3. The L-Cut (Âm thanh thoại dẫn trước tràn sang b-roll sách ảnh và gian bếp), 4. The J-Cut (Âm thanh xào nấu xuất hiện trước khi chuyển cảnh về sa mạc) và nghệ thuật thiết kế Outro khép vòng lặp vô tận (Infinite Seamless Audio-Visual Loop) giúp giữ chân người xem và tối đa hóa lượt xem lặp lại.
+            </div>
+        </header>
+
+        <div class="view-switch-bar">
+            <div class="tab-pills">
+                <button class="tab-btn active" id="btnDetail" onclick="switchView('detail')">📋 Chế Độ Chi Tiết</button>
+                <button class="tab-btn" id="btnGrid" onclick="switchView('grid')">🖼 Lưới Khung Hình</button>
+            </div>
+            <button class="drawer-toggle-btn" onclick="toggleDrawer(true)">
+                📑 Danh Sách Shot (24)
+            </button>
+        </div>
+
+        <section class="shots-timeline" id="detailViewSection"></section>
+
+        <section class="grid-view-container" id="gridViewSection" style="display: none;"></section>
+    </main>
+
+</div>
+
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)"></div>
+<div class="drawer-container" id="drawerContainer">
+    <div class="drawer-header">
+        <span class="drawer-title">📑 Mục Lục Phân Cảnh (24)</span>
+        <button class="drawer-close" onclick="toggleDrawer(false)">✕</button>
+    </div>
+    <div class="drawer-list" id="drawerList"></div>
+</div>
+
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+    <div class="lightbox-content">
+        <img id="lightboxImg" src="" alt="Zoom Image">
+    </div>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<script>
+const video = document.getElementById('mainVideo');
+const playBtn = document.getElementById('playPauseBtn');
+const muteBtn = document.getElementById('muteBtn');
+const CDN_IMG = "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery";
+const shotsData = [{"id": 1, "st_frame": 0, "en_frame": 30, "mid_frame": 15, "st_time": 0.0, "en_time": 1.25, "duration": 1.25, "headline": "Hook Khởi Động Đột Phá: Cú Đi Bộ Thẳng Ống Kính Trên Đồi Cát Sa Mạc Phá Vỡ Mô Thức Lướt Của Khán Giả", "subject_action": "Góc toàn trung (Medium-Full Shot): Mridupawan mặc sơ mi kẻ caro, quần đen, đeo kính râm và quấn khăn bandana đỏ, sải bước tự tin từ đỉnh cồn cát sa mạc Thar (Jaisalmer) tiến thẳng về phía ống kính, cất giọng cảnh báo trực diện: 'Stop using...'.", "pros": "Cú bước đi đối diện máy quay (Direct Head-On Walk) giữa cồn cát bao la tạo lực hút thị giác mạnh mẽ ngay giây 0. Màu vàng của cát sa mạc tương phản tuyệt đối với sắc xanh ngắt của bầu trời và khăn đỏ trên đầu, tạo điểm nhấn trung tâm không thể rời mắt.", "cons": "Thời lượng ngắn (1.25s) khiến người xem chưa kịp định hình toàn cảnh xung quanh đã bị cắt sang shot kế tiếp. Ánh nắng sa mạc gắt tạo bóng đổ đen dưới chân.", "takeaway": "Trong 3 giây đầu của Reel/Shorts, hãy đưa nhân vật vào chuyển động lao về phía máy quay kết hợp lời thoại cảnh báo tiêu cực ('Stop doing X') để kích hoạt tâm lý tò mò và ngăn người xem quẹt ngón tay.", "location": "Đồi cát sa mạc Thar, Jaisalmer, Ấn Độ", "lens_angle": "24mm f/2.8 • Handheld Tracking Backwards", "lighting_color": "Ánh sáng tự nhiên sa mạc ban trưa (Hard Sunlight 5600K)", "transition": "Hard Cut dồn dập sang Shot 02"}, {"id": 2, "st_frame": 31, "en_frame": 109, "mid_frame": 70, "st_time": 1.29, "en_time": 4.55, "duration": 3.26, "headline": "Ném Áo Che Ống Kính (Whip/Cover Wipe): Động Tác Cơ Thể Mạnh Mẽ Gia Tăng Nhịp Điệu Và Che Mờ Điểm Cắt Cảnh", "subject_action": "Góc thấp (Low Angle): Nhân vật đứng cạnh chiếc xe jeep dã ngoại địa hình trên sa mạc cát, tay cầm chiếc áo khoác vung mạnh che kín ống kính máy quay trong khi tiếp tục nói lời thoại dẫn nhập giải pháp: '...cuts that are boring. Instead use these 4 cuts...'.", "pros": "Hành động ném áo văng ngang ống kính tạo ra chuyển động thị giác tốc độ cao (Visual Velocity), làm tan biến cảm giác tĩnh của cảnh nói chuyện và tạo tiền đề cho cú chuyển cảnh tiếp theo cực kỳ mượt mà.", "cons": "Góc máy ngước lên nền trời khiến góc trên bên phải bị dư sáng nhẹ (blown-out highlights).", "takeaway": "Khi nhân vật cần chuyển tải lời thoại dài hơn 2 giây, luôn gắn kèm một động tác cơ thể tương tác với đạo cụ (ném áo, chỉ tay, vung kính) để giữ nhịp mắt người xem liên tục bị kích thích.", "location": "Bên hông xe jeep dã ngoại sa mạc Thar", "lens_angle": "28mm f/2.4 • Dynamic Low-Angle Handheld", "lighting_color": "Ánh sáng tự nhiên ngược sáng nhẹ (Backlit Sun)", "transition": "Motion Blur / Whip Cut sang Shot 03"}, {"id": 3, "st_frame": 110, "en_frame": 168, "mid_frame": 139, "st_time": 4.59, "en_time": 7.01, "duration": 2.42, "headline": "Chuyển Đổi Không Gian Ngoạn Mục: Góc Nhìn Nóc Thành Cổ Jaisalmer Tôn Tinh Thần Điện Ảnh Hoàng Gia", "subject_action": "Góc trung cảnh (Medium Shot) trên nóc pháo đài cát vàng Jaisalmer (Golden Fort): Nhân vật đổi sang áo sơ mi đỏ rực rỡ, đứng bên lan can thành cổ bằng đá sa thạch chạm khắc tinh xảo, dứt khoát nói câu mở đầu: '...to instantly improve your videos. First, the mask cut.'.", "pros": "Màu áo đỏ tương phản bổ trợ hoàn hảo với màu vàng hoàng thổ của đá sa thạch thành cổ thế kỷ 12. Hậu cảnh mở ra bầu trời xanh và kiến trúc mái vòm đặc trưng xứ Rajasthan, khẳng định đẳng cấp sản xuất hình ảnh điện ảnh (High Production Value).", "cons": "Gió trên cao làm bay vạt áo và tóc, đòi hỏi lọc gió micro tốt nếu thu âm trực tiếp.", "takeaway": "Đổi bối cảnh và đổi trang phục giữa các câu thoại ngắn (Visual Location Hopping) là bí quyết số một để biến video hướng dẫn nhàm chán thành một thước phim du lịch điện ảnh cuốn hút.", "location": "Sân thượng pháo đài Fort Jaisalmer, Rajasthan", "lens_angle": "35mm f/2.0 • Medium Eye-Level", "lighting_color": "Ánh sáng vàng sa thạch ấm áp (Golden Hour)", "transition": "Hard Cut đột ngột vào phòng tối Shot 04"}, {"id": 4, "st_frame": 169, "en_frame": 342, "mid_frame": 255, "st_time": 7.05, "en_time": 14.26, "duration": 7.21, "headline": "Kỹ Thuật Mask Cut Chuẩn Mực: Tận Dụng Người Đi Ngang Che Kín Ống Kính Tạo Màn Chắn Thị Giác Tự Nhiên", "subject_action": "Trung cận (MCU): Chuyển vào phòng làm việc tối moody/studio. Nhân vật ngồi gõ phím MacBook Pro, ánh sáng bàn phím và đèn hắt chiếu lên góc nghiêng. Một người khác mang trang phục tối màu bước ngang qua sát ống kính từ phải sang trái, che kín hoàn toàn khung hình ở giây thứ 14.", "pros": "Cú đi ngang sát ống kính tạo ra đường mép cắt (Mask boundary) hoàn hảo 100% bằng vật lý tự nhiên mà không cần dùng hiệu ứng kỹ xảo 3D phức tạp. Bối cảnh studio tối tạo độ tập trung cao độ vào hành động gõ phím.", "cons": "Thời lượng giữ cảnh hơi dài (7.26s) so với nhịp chung của video, nhưng cần thiết để giải thích lý thuyết chi tiết cho kỹ thuật Mask Cut.", "takeaway": "Luôn tận dụng các vật cản tự nhiên (người đi ngang, cột nhà, cánh cửa, thân cây) đi sát ống kính để làm điểm che (wipe transition) sang cảnh khác mà không tốn công keyframe phức tạp.", "location": "Phòng làm việc tối phong cách Moody Studio", "lens_angle": "50mm f/1.8 • Low-Key Studio Interior", "lighting_color": "Ánh sáng màn hình laptop kết hợp đèn LED ven xanh tím", "transition": "Natural Foreground Wipe Cut sang Shot 05"}, {"id": 5, "st_frame": 343, "en_frame": 407, "mid_frame": 375, "st_time": 14.31, "en_time": 16.98, "duration": 2.67, "headline": "Hé Lộ Bất Ngờ Sau Lớp Mặt Nạ: Chiếc Vali Cổ Điển Và Ảnh Polaroid Kích Hoạt Cảm Xúc Bí Ẩn", "subject_action": "Góc máy nhìn từ trên xuống (High Angle POV): Sau khi bóng người che ống kính đi qua, khung hình hé mở ra chiếc vali da cổ điển màu nâu đang mở, bên trong chứa máy ảnh cơ, các tấm ảnh polaroid chụp hành trình du lịch sa mạc và bản đồ phiêu lưu.", "pros": "Hiệu ứng hé lộ (Reveal effect) cực kỳ mượt mà. Sự tương phản giữa phòng công nghệ (laptop) và chiếc vali da vintage tạo sự tò mò mạnh mẽ về nội dung câu chuyện.", "cons": "Góc chiếu sáng hơi gắt ở mép vali da, tạo một vài vệt lóa phản xạ nhẹ trên bề mặt da bóng.", "takeaway": "Phía sau lớp mặt nạ che (Mask wipe), hãy luôn đưa ra một đối tượng hoàn toàn khác biệt về màu sắc, chất liệu hoặc tính chất câu chuyện để tạo hiệu ứng 'thưởng cho thị giác' (Visual Reward).", "location": "Bàn làm việc vintage với vali cổ điển", "lens_angle": "35mm f/2.8 • Overhead 45-degree Angled Shot", "lighting_color": "Ánh sáng đèn bàn tiêu điểm ấm (Warm Spotlight 3200K)", "transition": "Hard Cut sang Shot 06"}, {"id": 6, "st_frame": 408, "en_frame": 482, "mid_frame": 445, "st_time": 17.02, "en_time": 20.1, "duration": 3.08, "headline": "Khẳng Định Giá Trị Mask Cut: Cú Rướn Người Cận Máy Trong Studio Tối Khóa Chặt Sự Chú Ý", "subject_action": "Góc thấp cận cảnh (Low-Angle MCU): Nhân vật ngồi trong phòng tối, tay cầm điện thoại thông minh, rướn người nghiêng về phía camera và nhìn thẳng vào ống kính để nhấn mạnh: 'Best for grabbing the viewer's attention' với nụ cười tự tin.", "pros": "Góc ngước từ dưới lên kết hợp ánh sáng ven tương phản cao (High Contrast Chiaroscuro) tạo phong thái chuyên gia đầy uy tín. Biểu cảm khuôn mặt linh hoạt, giàu năng lượng truyền cảm hứng.", "cons": "Không gian phía sau hậu cảnh hơi tối đặc (crushed blacks), thiếu một đèn nền tạo chiều sâu cho căn phòng.", "takeaway": "Khi đưa ra lời khuyên cốt lõi hoặc câu chốt giá trị, hãy zoom gần vào khuôn mặt nhân vật để tăng sức thuyết phục và độ chân thực.", "location": "Studio nội thất tối phong cách điện ảnh", "lens_angle": "35mm f/1.8 • Low-Angle MCU Handheld", "lighting_color": "Key light ấm 45 độ kết hợp ánh sáng hắt từ màn hình smartphone", "transition": "Hard Cut chuyển đổi sang Kỹ thuật số 2 (Match Cut)"}, {"id": 7, "st_frame": 483, "en_frame": 498, "mid_frame": 490, "st_time": 20.15, "en_time": 20.77, "duration": 0.62, "headline": "Match Cut Điểm Neo 1: Cú Đặt Giày Timberland Xuống Sàn Studio Định Hình Tọa Độ Thị Giác Ban Đầu", "subject_action": "Cận cảnh góc siêu thấp (Extreme Low Angle / Ground Level): Trong căn phòng tối, một bàn tay đặt dứt khoát chiếc giày bốt dã ngoại Timberland màu vàng da bò xuống mặt sàn gỗ bóng loáng. Dòng chữ 'the MATCH CUT' xuất hiện nổi bật.", "pros": "Thời lượng siêu ngắn (chỉ 0.67s, 16 frames) nhưng cực kỳ đắt giá. Màu vàng của đôi giày Timberland nổi bật rực rỡ trên nền sàn đen tuyền, ngay lập tức neo giữ toàn bộ ánh nhìn của khán giả vào đúng vị trí chiếc giày.", "cons": "Do thời lượng dưới 1 giây, nếu khán giả chớp mắt có thể lỡ mất chi tiết chiếc giày, đòi hỏi shot tiếp theo phải khớp vị trí tuyệt đối.", "takeaway": "Khởi đầu một cú Match Cut thành công bắt buộc phải có một vật thể đơn lẻ có hình khối rõ ràng, màu sắc nổi bật và thời lượng ngắn để tạo ấn tượng thị giác tức thì.", "location": "Sàn studio tối bóng loáng", "lens_angle": "50mm f/2.0 Macro • Ground Level Perspective", "lighting_color": "Đèn chiếu rọi tập trung (Spotlight) vào đôi giày", "transition": "Match Cut chuyển sang Shot 08"}, {"id": 8, "st_frame": 499, "en_frame": 519, "mid_frame": 509, "st_time": 20.81, "en_time": 21.65, "duration": 0.84, "headline": "Match Cut Điểm Neo 2: Buộc Dây Giày Tại Sàn Gỗ Hồ Bơi Khớp Khung Hình Hoàn Hảo Qua Hai Bối Cảnh Trái Ngược", "subject_action": "Cận cảnh sát sàn (Ground Level Macro): Bối cảnh chuyển đổi ngay lập tức ra ngoài trời nắng chan hòa bên cạnh sàn gỗ hồ bơi resort nghỉ dưỡng cao cấp. Đôi chân nhân vật đang mang đúng đôi giày Timberland màu vàng ấy và hai tay đang thoăn thoắt thắt dây giày.", "pros": "Sự đồng nhất hình học (Geometric Alignment) và đồng nhất màu sắc của đôi giày vàng giữa hai cảnh nội thất tối và ngoại cảnh nắng chói chang tạo ra hiệu ứng 'bẻ cong không gian' cực kỳ mãn nhãn.", "cons": "Góc chiếu sáng ngoài trời rất gắt khiến các vân gỗ sàn có độ bóng và tương phản cao hơn nhiều so với sàn phòng tối.", "takeaway": "Chìa khóa vàng của Match Cut là giữ nguyên kích thước khung hình, vị trí tương đối của vật thể trong khung hình và hướng chuyển động của bàn tay khi bấm máy ở hai địa điểm cách nhau hàng trăm dặm.", "location": "Sàn gỗ bên bờ hồ bơi resort ngoài trời", "lens_angle": "50mm f/2.8 • Ground Level Shot", "lighting_color": "Ánh sáng mặt trời tự nhiên rực rỡ (Daylight 5600K)", "transition": "Match Cut tiếp diễn sang Shot 09"}, {"id": 9, "st_frame": 520, "en_frame": 575, "mid_frame": 547, "st_time": 21.69, "en_time": 23.98, "duration": 2.29, "headline": "Mở Rộng Không Gian Sau Match Cut: Tư Thế Quỳ Bên Bờ Hồ Bơi Resort Hướng Dẫn Kỹ Thuật Đồng Dạng", "subject_action": "Toàn trung (Medium Wide Shot): Nhân vật trong trang phục sơ mi kẻ caro quỳ một gối bên mép sàn gỗ hồ bơi nước xanh biếc, chỉ tay xuống đôi giày Timberland vàng và nhìn lên camera giải thích nguyên lý hoạt động của Match Cut: 'You take a specific element of the first shot...'.", "pros": "Góc máy mở rộng từ cận cảnh giày ra toàn cảnh hồ bơi xanh ngắt tạo sự giải phóng thị giác (Visual Release) sảng khoái. Màu xanh của nước hồ bơi và màu vàng của giày tạo thành cặp màu tương phản bắt mắt.", "cons": "Mặt nước hồ bơi có sóng gợn lăn tăn nhẹ phía sau lưng có thể gây xao nhãng khỏi cử chỉ tay của nhân vật nếu nhìn lâu.", "takeaway": "Sau khi thực hiện một cú Match Cut cận cảnh đồ vật, hãy cắt ngay sang một góc trung hoặc toàn cảnh để người xem nhìn thấy trọn vẹn không gian mới, củng cố cảm giác chuyển dịch không gian mượt mà.", "location": "Bờ hồ bơi khu nghỉ dưỡng Jaisalmer resort", "lens_angle": "28mm f/2.8 • Medium Low Angle", "lighting_color": "Nắng nhiệt đới rực rỡ kết hợp ánh nước phản xạ hắt lên", "transition": "Hard Cut sang Shot 10"}, {"id": 10, "st_frame": 576, "en_frame": 590, "mid_frame": 583, "st_time": 24.02, "en_time": 24.61, "duration": 0.59, "headline": "Match Cut Ví Dụ 2: Cận Cảnh Chiếc Kính Râm Hàng Hiệu Đón Nắng Trên Sàn Gỗ Hồ Bơi", "subject_action": "Cận cảnh macro (Macro Close-Up): Chiếc kính râm gọng kim loại vát cạnh tinh xảo (Cartier rimless style) nằm tĩnh trên sàn gỗ hồ bơi ngoài trời nắng, tròng kính phản chiếu ánh sáng mặt trời lấp lánh.", "pros": "Tạo điểm neo thị giác thứ hai với một phụ kiện thời trang quen thuộc. Độ nét cực cao đặc tả chất liệu kim loại và tròng kính màu nâu trà thời thượng.", "cons": "Thời lượng chỉ 0.59s (14 frames), đòi hỏi chuyển động lấy kính ở shot kế tiếp phải diễn ra tại đúng vị trí tròng kính để đạt độ khớp tuyệt đối.", "takeaway": "Thực hiện Match Cut kép (Double Match Cut) với hai đồ vật khác nhau (giày -> kính) trong cùng một video giúp khán giả hiểu sâu sắc tính ứng dụng đa dạng của kỹ thuật.", "location": "Sàn gỗ hồ bơi resort ngoài trời", "lens_angle": "85mm Macro f/2.8 • Top-Down 30 degree Angle", "lighting_color": "Ánh nắng phản chiếu mặt kính chói lòa", "transition": "Match Cut sang Shot 11"}, {"id": 11, "st_frame": 591, "en_frame": 615, "mid_frame": 603, "st_time": 24.65, "en_time": 25.65, "duration": 1.0, "headline": "Bàn Tay Nhấc Kính Trong Phòng Tối: Cú Match Cut Hoàn Hảo Khép Lại Sự Luân Chuyển Không Gian Ngược", "subject_action": "Cận cảnh (Close-Up): Vẫn là chiếc kính râm gọng kim loại vát cạnh ấy, nhưng bối cảnh đã lập tức quay trở lại mặt bàn phòng tối studio. Một bàn tay đưa vào khung hình nhấc bổng chiếc kính lên khớp đúng vị trí.", "pros": "Sự ăn khớp tuyệt đối về góc nghiêng của kính và vị trí tiếp cận của các ngón tay. Khán giả có cảm giác bàn tay từ không gian tối đã với xuyên không gian để nhấc chiếc kính từ bờ hồ bơi nắng ngoài trời về phòng.", "cons": "Bàn tay che khuất một phần ánh sáng hắt vào chiếc kính khi nhấc lên, làm giảm bớt độ lấp lánh của tròng kính.", "takeaway": "Khi làm Match Cut với hành động nhấc vật thể, hãy để vật thể nằm yên ở shot 1 và chỉ bắt đầu chuyển động nhấc lên ở shot 2 để não bộ người xem tự động chắp nối hai phân cảnh thành một chuỗi liên tục.", "location": "Mặt bàn studio tối", "lens_angle": "50mm f/2.0 • Close-Up Desk Perspective", "lighting_color": "Ánh sáng đèn vàng rọi tập trung", "transition": "Hard Cut sang Shot 12"}, {"id": 12, "st_frame": 616, "en_frame": 671, "mid_frame": 643, "st_time": 25.69, "en_time": 27.99, "duration": 2.3, "headline": "Đeo Kính Vào Mắt Và Nhìn Thẳng Ống Kính: Hành Động Hoàn Tất Chuỗi Match Cut Thuyết Phục Tuyệt Đối", "subject_action": "Trung cận (Medium Close-Up): Mridupawan trong căn phòng tối, hai tay đeo chiếc kính râm vừa nhấc lên vào mắt, đầu quấn khăn bandana đỏ, ngước nhìn thẳng vào camera và hoàn tất câu hướng dẫn: '...and then carry it to the second shot.'.", "pros": "Chuỗi hành động logic trọn vẹn: Thấy kính -> Nhấc kính -> Đeo kính vào mặt. Biểu cảm khuôn mặt đầy phong cách, ánh sáng dịu hắt từ phía trước làm nổi bật tròng kính và thần thái tự tin của đạo diễn.", "cons": "Trần nhà phía trên có cánh quạt trần hơi tối, tạo một khoảng đen lớn ở nửa trên khung hình.", "takeaway": "Luôn kết thúc một kỹ thuật cắt cảnh phức tạp bằng một hành vi tự nhiên của nhân vật chính để kéo người xem quay lại với mạch câu chuyện chính trước khi bước sang kỹ thuật kế tiếp.", "location": "Không gian phòng tối nội thất studio", "lens_angle": "35mm f/2.0 • Eye-Level Medium MCU", "lighting_color": "Ánh sáng tản mát dịu phía trước (Soft Key Light)", "transition": "Hard Cut sang Kỹ thuật số 3 (The L-Cut)"}, {"id": 13, "st_frame": 672, "en_frame": 708, "mid_frame": 690, "st_time": 28.03, "en_time": 29.53, "duration": 1.5, "headline": "Mở Đầu L-Cut Tại Cổng Đại Thành Cổ: Khẳng Định Vị Thế Âm Thanh Dẫn Đường Cho Thị Giác", "subject_action": "Toàn cảnh (Long Shot): Nhân vật trong chiếc áo đỏ rực và quần xám sải bước dứt khoát trên nền cát sa mạc trước cổng thành đồ sộ bằng đá vàng của pháo đài Rajasthan, cất giọng dẫn nhập vào kỹ thuật L-Cut: 'Now the L-Cut, this is when the audio from the first shot...'.", "pros": "Kiến trúc pháo đài đối xứng hai bên tháp canh cát vàng đồ sộ tạo hậu cảnh nguy nga, hoành tráng. Sắc đỏ của áo nhân vật là tâm điểm thu hút thị giác ở phần ba dưới khung hình.", "cons": "Thời lượng chỉ 1.5s trong khi câu thoại còn rất dài, dẫn đến tiếng nói của Shot 13 sẽ phải tràn sang Shot 14 (bản chất cốt lõi của kỹ thuật L-Cut).", "takeaway": "L-Cut phát huy sức mạnh tối đa khi hình ảnh khởi đầu là một phân cảnh hùng vĩ, tiếng nói của người dẫn đường tiếp tục vang lên khi hình ảnh chuyển sang các chi tiết bổ trợ.", "location": "Trước cổng pháo đài Jaisalmer Palace Fort", "lens_angle": "24mm f/4.0 • Dynamic Tracking Walk", "lighting_color": "Ánh sáng vàng sa mạc rực rỡ ban ngày", "transition": "L-Cut Transition (Audio tràn sang Shot 14)"}, {"id": 14, "st_frame": 709, "en_frame": 752, "mid_frame": 730, "st_time": 29.57, "en_time": 31.36, "duration": 1.79, "headline": "Bản Chất Của L-Cut: Tiếng Nói Vang Sang Cuốn Sách Ảnh Nghệ Thuật (Contact Sheet Film Stills)", "subject_action": "Cận cảnh (Close-Up): Khung hình chuyển sang một trang sách ảnh in các khung hình phim (film stills contact sheet mã C8176) chụp chính nhân vật đang chạy về phía thành cổ trên nền trời cam rực lửa. Giọng nói từ Shot 13 vẫn tiếp tục vang lên đều đặn: '...continues over to the second shot...'.", "pros": "Minh chứng thực tế không thể rõ ràng hơn cho định nghĩa L-Cut: Tai người xem vẫn nghe giọng nói ở cảnh thành cổ, nhưng mắt đã nhìn thấy một cuốn sách ảnh nghệ thuật. Sự chuyển dịch chất liệu từ video sang ảnh in tạo nét thẩm mỹ thị giác retro độc đáo.", "cons": "Ánh sáng trên trang giấy có bóng ngón tay cầm mép sách ở góc trái màn hình.", "takeaway": "Thay vì chỉ cắt B-roll video thông thường, hãy sử dụng các chất liệu sáng tạo như bản in film, tạp chí, ảnh polaroid để làm B-roll minh họa cho L-cut.", "location": "Trang sách in film stills nghệ thuật", "lens_angle": "50mm Macro f/2.8 • Top-Down Close-Up", "lighting_color": "Ánh sáng phòng tự nhiên dịu nhẹ", "transition": "L-Cut tiếp diễn sang Shot 15"}, {"id": 15, "st_frame": 753, "en_frame": 828, "mid_frame": 790, "st_time": 31.41, "en_time": 34.53, "duration": 3.12, "headline": "Hóa Thân Bất Ngờ Vào Gian Bếp: Trang Phục Đầu Bếp Tạp Dề Đỏ Cầm Dao Chặt Tạo Cú Sốc Bối Cảnh Thú Vị", "subject_action": "Trung cận (Medium Close-Up): Mridupawan bất ngờ xuất hiện trong diện mạo một đầu bếp: đeo tạp dề đỏ, áo phông màu be, đầu quấn khăn bandana nâu, tay cầm một con dao chặt bếp lớn. Anh vừa hoa con dao vừa nói dứt khoát câu kết của định nghĩa L-cut.", "pros": "Cú 'nhảy vọt' về bối cảnh (từ sa mạc cát vàng thành cổ nhảy sang gian bếp làm bếp) khiến người xem hoàn toàn bất ngờ và bật cười thích thú. Diễn xuất hình thể cầm dao nhấn mạnh từng từ ngữ của lời thoại.", "cons": "Ánh sáng nền phòng tối phía sau hơi đơn điệu, các chi tiết nội thất phòng bếp chưa lộ rõ.", "takeaway": "Tạo sự tương phản cực đại giữa bối cảnh A (sa mạc) và bối cảnh B (căn bếp) là cách nhanh nhất để biến video lý thuyết kỹ thuật thành một sản phẩm giải trí hấp dẫn.", "location": "Bếp studio ánh sáng ấm", "lens_angle": "35mm f/2.0 • Medium Close-Up", "lighting_color": "Đèn softbox ven trên cao tôn vai và dao bếp", "transition": "Hard Cut sang chuỗi Montage B-roll ẩm thực (Shot 16-20)"}, {"id": 16, "st_frame": 829, "en_frame": 838, "mid_frame": 833, "st_time": 34.58, "en_time": 34.95, "duration": 0.37, "headline": "Micro-Montage 1: Nhát Dao Chặt Ớt Chuông Vàng Cực Nhanh Thiết Lập Nhịp Điệu Dồn Dập", "subject_action": "Cận cảnh macro (Extreme Close-Up): Lưỡi dao đen sắc bén bổ dứt khoát xuống quả ớt chuông vàng rực trên thớt gỗ, từng lát ớt bung ra sống động kèm hiệu ứng âm thanh dứt khoát.", "pros": "Cực kỳ dứt khoát (chỉ 0.37s, 9 frames!). Màu vàng tươi của ớt chuông tương phản mạnh với màu đen của lưỡi dao và tạp dề đỏ phía sau.", "cons": "Thời lượng siêu ngắn đòi hỏi mắt người xem phải tập trung cao độ.", "takeaway": "Khi làm chuỗi B-roll bổ trợ, hãy bắt đầu bằng một cú va chạm mạnh mẽ (lưỡi dao chạm thớt, ly nước chạm bàn) để tạo xung lực âm thanh và hình ảnh.", "location": "Thớt gỗ nhà bếp studio", "lens_angle": "100mm Macro f/2.8 • ECU Side Angle", "lighting_color": "Ánh sáng studio chiếu nghiêng tôn thớ cắt", "transition": "Hard Cut theo nhịp phách sang Shot 17"}, {"id": 17, "st_frame": 839, "en_frame": 857, "mid_frame": 848, "st_time": 34.99, "en_time": 35.74, "duration": 0.75, "headline": "Micro-Montage 2: Quả Ớt Chuông Đỏ Bật Nảy Tạo Chuyển Động Đàn Hồi Vui Mắt", "subject_action": "Cận cảnh góc ngang thớt: Một quả ớt chuông đỏ tươi rơi từ trên cao xuống mặt thớt gỗ và bật nảy tưng tưng trước mặt nhân vật.", "pros": "Chuyển động bật nảy tự nhiên (Organic Bounce) mang lại cảm giác vui nhộn, sống động cho thước phim ẩm thực. Màu đỏ rực của ớt kết nối đồng điệu với tạp dề đỏ của đầu bếp.", "cons": "Hậu cảnh nhân vật bị out nét hơi mờ do khẩu độ mở lớn f/2.0.", "takeaway": "Đưa các chuyển động vật lý đàn hồi (rơi nảy, nước bắn, bột tung) vào B-roll để tạo cảm giác xúc giác (tactile sensation) cho người xem.", "location": "Gian bếp studio làm việc", "lens_angle": "50mm f/2.0 • Low Angle Cutting Board", "lighting_color": "Ánh sáng ven nổi bật đường cong quả ớt", "transition": "Hard Cut sang Shot 18"}, {"id": 18, "st_frame": 858, "en_frame": 874, "mid_frame": 866, "st_time": 35.79, "en_time": 36.45, "duration": 0.66, "headline": "Slow-Motion Rơi Hạt Lựu: Bàn Tay Thả Ớt Chuông Vàng Khẳng Định Công Thức B-Roll Đỉnh Cao", "subject_action": "Góc máy ngước lên (Low Angle): Bàn tay đầu bếp từ trên cao thả rơi từng viên ớt chuông vàng thái hạt lựu bay lơ lửng trong không trung theo chuyển động chậm (Slow-Motion). Dòng chữ 'best while showing B-roll' xuất hiện trang trọng.", "pros": "Kỹ xảo quay chậm bắt trọn từng hạt ớt vàng rực rơi như pháo hoa ẩm thực. Không gian tối phía sau làm nổi bật độ tương phản của từng hạt ớt.", "cons": "Có vài hạt rơi sát ống kính hơi bị mờ nhòe quang học.", "takeaway": "Chuyển động rơi chậm (Slow-Mo Drop) là chìa khóa tạo sự sang trọng và thẩm mỹ cao cấp cho bất kỳ video ẩm thực hay sản phẩm nào.", "location": "Studio bếp tối nội thất", "lens_angle": "50mm f/2.8 • 120fps Slow-Motion", "lighting_color": "Ánh sáng chiếu ngược (Backlight) tôn từng hạt rau củ", "transition": "Hard Cut sang Shot 19"}, {"id": 19, "st_frame": 875, "en_frame": 888, "mid_frame": 881, "st_time": 36.49, "en_time": 37.04, "duration": 0.55, "headline": "Micro-Montage 4: Bàn Tay Rắc Ớt Chuông Vào Chảo Nóng Đánh Thức Vị Giác Bằng Âm Thanh Xèo Xèo", "subject_action": "Trung cận (Medium Shot): Nhân vật đứng trước bếp ga, tay rắc các hạt ớt chuông đủ màu đỏ, vàng, xanh và hành tím vào chiếc chảo gang đen đang nóng rực trên bếp lửa.", "pros": "Bố cục màu sắc trong lòng chảo cực kỳ phong phú (Đỏ, Vàng, Xanh lục, Tím hành tây). Góc máy nhìn nghiêng thấy rõ bàn tay thao tác tự tin và ngọn lửa bếp.", "cons": "Khói và hơi dầu bốc lên có thể làm mờ kính bảo vệ ống kính nếu để máy quá gần.", "takeaway": "Luôn kết hợp màu sắc đa dạng trong một khung hình ẩm thực để kích thích thị giác tối đa.", "location": "Bếp nấu ăn gia đình", "lens_angle": "35mm f/2.4 • 45-degree Kitchen Countertop", "lighting_color": "Ánh sáng đèn bếp ấm áp", "transition": "Hard Cut sang Shot 20"}, {"id": 20, "st_frame": 889, "en_frame": 913, "mid_frame": 901, "st_time": 37.08, "en_time": 38.08, "duration": 1.0, "headline": "Đảo Muôi Gỗ Xào Nấu Siêu Cận Cảnh: Âm Thanh Sôi Sục Chuẩn Bị Cho Cú J-Cut Sang Cảnh Kế Tiếp", "subject_action": "Cận cảnh vĩ mô (Macro Close-Up): Muôi xới bằng gỗ đang đảo đều tay các loại rau củ đang sôi lách tách trong dầu ăn trên lòng chảo gang đen bóng. Dòng chữ 'to connect your story' xuất hiện tinh tế.", "pros": "Âm thanh xào nấu giòn tan (ASMR Cooking Sound) lấp đầy thính giác. Màu sắc bóng bẩy của dầu ăn và rau củ tạo cảm giác tươi ngon đầy cuốn hút.", "cons": "Hơi dầu nóng làm rung chuyển nhẹ không khí trên mặt chảo.", "takeaway": "Tận dụng âm thanh thực tế của cảnh quay B-roll (tiếng xào, tiếng gõ, tiếng bước chân) để làm cầu nối âm thanh mượt mà sang phân cảnh kế tiếp.", "location": "Lòng chảo gang trên bếp ga", "lens_angle": "100mm Macro f/2.8 • Top-Down Slanted Macro", "lighting_color": "Ánh sáng đèn spotlight chiếu thẳng vào lòng chảo", "transition": "J-Cut Transition sang Shot 21"}, {"id": 21, "st_frame": 914, "en_frame": 975, "mid_frame": 944, "st_time": 38.12, "en_time": 40.67, "duration": 2.55, "headline": "Giới Thiệu J-Cut: Đầu Bếp Vừa Đảo Chảo Vừa Bắn Tiếng Thoại Trước Khi Chuyển Cảnh", "subject_action": "Trung cận góc thấp (Low-Angle MCU): Người dẫn chuyện trong bộ dạng đầu bếp tay vừa lắc chảo điêu luyện vừa nhìn thẳng vào mắt khán giả hào hứng giới thiệu: 'And now the J-Cut! This is when the audio from the second shot begins over the end of the first shot...'.", "pros": "Thần thái diễn xuất cực kỳ duyên dáng và tràn đầy năng lượng. Dòng chữ 'the J CUT' màu cam nổi bật ngay trước ngực nhân vật, tạo dấu ấn thương hiệu thị giác mạnh mẽ.", "cons": "Góc máy nghiêng ngước lên khiến trần nhà phía sau hơi trống trải.", "takeaway": "Khi giới thiệu một khái niệm mới, hãy vừa làm một việc quen thuộc bằng tay (nấu nướng, rót nước, gấp đồ) vừa nói để giảm bớt tính học thuật cứng nhắc của bài giảng.", "location": "Gian bếp gia đình studio", "lens_angle": "35mm f/1.8 • Low-Angle MCU", "lighting_color": "Đèn key light mềm mại tôn chân dung", "transition": "J-Cut Audio Lead-in sang Shot 22"}, {"id": 22, "st_frame": 976, "en_frame": 1130, "mid_frame": 1053, "st_time": 40.71, "en_time": 47.13, "duration": 6.42, "headline": "J-Cut Kỳ Diệu Trở Lại Sa Mạc: Âm Thanh Lời Thoại Vang Lên Trước Khi Hình Ảnh Xuất Hiện Giúp Cắt Mượt Tuyệt Đối", "subject_action": "Toàn cảnh trung (Medium Shot): Khung hình cắt ngoạn mục từ gian bếp tối quay trở lại đồi cát sa mạc Thar lộng gió ban ngày. Nhân vật một tay cầm chiếc áo khoác, đứng giữa triền cát vàng óng ả dưới vòm trời xanh thẳm, giải thích trọn vẹn tại sao J-cut lại biến các cú cắt giật cục trở nên mượt mà và liền mạch ('smooth and seamless. That's it!').", "pros": "Cú J-cut âm thanh đã xóa bỏ hoàn toàn cảm giác sốc thị giác khi chuyển từ phòng tối ra sa mạc nắng chói chang. Dáng đứng tự tin, gió thổi bay tóc và vạt áo tạo chất phong trần lãng tử đậm chất điện ảnh phiêu lưu.", "cons": "Thời lượng 6.46s khá dài và nhân vật đứng một chỗ nói chuyện, nhưng được bù đắp bởi cảnh sắc sa mạc kỳ vĩ phía sau.", "takeaway": "Luôn cho âm thanh của bối cảnh mới hoặc giọng nói của câu tiếp theo phát ra trước 0.5 - 1.0 giây so với hình ảnh (J-Cut) để bộ não người xem chuẩn bị tâm lý đón nhận không gian mới.", "location": "Cồn cát sa mạc Thar mênh mông", "lens_angle": "35mm f/2.8 • Handheld Medium Shot", "lighting_color": "Ánh nắng vàng rực rỡ và bóng đổ xiên dài trên cát", "transition": "Hard Cut sang Shot 23"}, {"id": 23, "st_frame": 1131, "en_frame": 1151, "mid_frame": 1141, "st_time": 47.17, "en_time": 48.01, "duration": 0.84, "headline": "Điểm Chuẩn Bị Cho Vòng Lặp (Loop Anchor): Cú Cúi Người Nhặt Áo Cận Cảnh Tạo Lực Nâng Thị Giác", "subject_action": "Cận cảnh góc thấp sát cát (Low Ground-Level Close-Up): Máy quay đặt sát mặt cát sa mạc. Nhân vật cúi thấp người, hai tay cầm chiếc áo khoác đen/họa tiết vung nhẹ lên để phủi cát và chuẩn bị vác lên vai.", "pros": "Chuyển đổi cỡ cảnh đột ngột từ toàn trung (Shot 22) sang siêu cận chân và tay (Shot 23) tạo nhịp giật kích thích mắt nhìn. Đôi giày Timberland màu vàng da bò lại xuất hiện ở hậu cảnh, kết nối tinh tế với toàn bộ mạch phim.", "cons": "Động tác diễn ra rất nhanh (chỉ 0.84s, 20 frames), người xem chỉ kịp cảm nhận chuyển động cơ thể mà chưa kịp nhìn rõ họa tiết chiếc áo.", "takeaway": "Trước khi khép lại video, hãy tạo một cú cắt cận cảnh có chuyển động đi lên (cúi nhặt áo, ngẩng đầu) để tạo lực đẩy quán tính cho khung hình kết thúc.", "location": "Cồn cát sa mạc Thar", "lens_angle": "35mm f/2.8 • Ground-Level Macro Perspective", "lighting_color": "Nắng xiên sa mạc chiều tà", "transition": "Motion Cut sang Shot 24"}, {"id": 24, "st_frame": 1152, "en_frame": 1166, "mid_frame": 1159, "st_time": 48.05, "en_time": 48.63, "duration": 0.58, "headline": "Tuyệt Đỉnh Infinite Loop: Khép Vòng Lặp Vô Tận Bằng Câu Nói Bỏ Lửng Nối Thẳng Về Giây Đầu Tiên", "subject_action": "Toàn cảnh trung (Medium Shot): Nhân vật ôm chiếc áo khoác trước ngực, quay ngoắt người nhìn thẳng vào ống kính và cất giọng bỏ lửng: 'which is why you should...'. Ngay khoảnh khắc này, video lập tức khép vòng lặp quay lại Shot 01: '...Stop using cuts that are boring.'.", "pros": "Một cái kết thần sầu cho video ngắn! Cú cắt kết thúc ở mốc 48.63s với câu thoại dở dang ghép nối trọn vẹn cả về âm thanh lẫn ngữ pháp với câu mở đầu của Shot 01, tạo thành một vòng lặp vĩnh cửu (Infinite Seamless Loop). Người xem không hề nhận ra video đã hết mà tiếp tục xem lại lần 2, lần 3, giúp tăng vọt chỉ số giữ chân (Retention Rate).", "cons": "Nếu người xem tắt âm thanh thì chỉ thấy nhân vật quay người sang một góc khác, nhưng hiệu ứng âm thanh đã biến nó thành một kiệt tác kỹ thuật.", "takeaway": "Thiết kế kịch bản video ngắn có câu kết nối ngữ pháp dở dang ở cuối video ('And that's how you...', 'Which is why you should...') để nối khớp chính xác vào từ đầu tiên của video là vũ khí tối thượng của các nhà sáng tạo triệu view trên Instagram Reels và TikTok.", "location": "Đỉnh đồi cát sa mạc Thar", "lens_angle": "28mm f/2.8 • Eye-Level Tracking", "lighting_color": "Ánh nắng vàng rực rỡ", "transition": "Vòng lặp vô tận (Infinite Seamless Audio-Visual Loop) quay lại Shot 01"}];
+
+function renderApp() {
+    const detailSec = document.getElementById('detailViewSection');
+    const gridSec = document.getElementById('gridViewSection');
+    const drawerList = document.getElementById('drawerList');
+
+    let detailHtml = '';
+    let gridHtml = '';
+    let drawerHtml = '';
+
+    shotsData.forEach((s, idx) => {
+        const s_id = s.id;
+        const st_t = s.st_time;
+        const en_t = s.en_time;
+        const dur = s.duration;
+        const padId = String(s_id).padStart(2, '0');
+
+        const img_start = `${CDN_IMG}/shot_${padId}_start.jpg`;
+        const img_mid = `${CDN_IMG}/shot_${padId}_mid.jpg`;
+        const img_end = `${CDN_IMG}/shot_${padId}_end.jpg`;
+
+        let img_trans = '';
+        let trans_title = '';
+        if (s_id < shotsData.length) {
+            const nextPad = String(s_id + 1).padStart(2, '0');
+            img_trans = `${CDN_IMG}/transitions/trans_${padId}_to_${nextPad}.jpg`;
+            trans_title = `⚡ Chuyển Cảnh Sang Shot ${nextPad} • ${s.transition}`;
+        } else {
+            img_trans = `${CDN_IMG}/transitions/trans_24_to_01_loop.jpg`;
+            trans_title = `⚡ Chuyển Cảnh Vòng Lặp Vô Tận Sang Shot 01 • ${s.transition}`;
+        }
+
+        drawerHtml += `
+        <div class="drawer-shot-row" onclick="jumpToShot(${s_id}, ${st_t})">
+            <span class="d-badge">Shot ${padId}</span>
+            <span class="d-time">${st_t.toFixed(2)}s - ${en_t.toFixed(2)}s (${dur.toFixed(2)}s)</span>
+            <span class="d-title">${s.headline.slice(0, 65)}...</span>
+        </div>`;
+
+        gridHtml += `
+        <div class="grid-card" onclick="jumpToShot(${s_id}, ${st_t})">
+            <div class="grid-thumb-box">
+                <img src="${img_mid}" alt="Shot ${padId}" loading="lazy">
+                <div class="grid-time-tag">${st_t.toFixed(2)}s - ${en_t.toFixed(2)}s</div>
+                <div class="grid-shot-tag">Shot ${padId}</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>${s.headline}</strong>
+            </div>
+        </div>`;
+
+        const transBlock = `
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">${trans_title}</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('${img_trans}', '${trans_title}')">
+                <img src="${img_trans}" alt="Transition Shot ${padId}" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>`;
+
+        detailHtml += `
+        <div class="shot-card" id="shot-${s_id}" data-start="${st_t}" data-end="${en_t}">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot ${padId}</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(${s_id}, ${st_t})">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        ${st_t.toFixed(2)}s - ${en_t.toFixed(2)}s <span class="dur-pill">(${dur.toFixed(2)}s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">${s.lens_angle.split('•')[0].trim()}</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">${s.headline}</h3>
+            </div>
+
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('${img_start}', 'Shot ${padId} • Khung hình Đầu (${st_t.toFixed(2)}s)')">
+                    <img src="${img_start}" alt="Shot ${padId} Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (${st_t.toFixed(2)}s)</span>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('${img_mid}', 'Shot ${padId} • Cao trào Giữa (${((st_t+en_t)/2).toFixed(2)}s)')">
+                    <img src="${img_mid}" alt="Shot ${padId} Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (${((st_t+en_t)/2).toFixed(2)}s)</span>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('${img_end}', 'Shot ${padId} • Khung hình Cuối (${en_t.toFixed(2)}s)')">
+                    <img src="${img_end}" alt="Shot ${padId} End" loading="lazy">
+                    <span class="kf-badge end">Cuối (${en_t.toFixed(2)}s)</span>
+                </div>
+            </div>
+
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title"><span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-content">${s.subject_action}</div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title"><span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)</div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>${s.pros}</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>${s.cons}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title"><span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">${s.takeaway}</div>
+                </div>
+            </div>
+
+            <div class="shot-specs-bar">
+                <div class="spec-item"><span class="spec-label">📐 Góc máy:</span> ${s.lens_angle}</div>
+                <div class="spec-item"><span class="spec-label">📍 Bối cảnh:</span> ${s.location}</div>
+                <div class="spec-item"><span class="spec-label">💡 Ánh sáng:</span> ${s.lighting_color}</div>
+                <div class="spec-item"><span class="spec-label">⚡ Chuyển cảnh:</span> ${s.transition}</div>
+            </div>
+
+            ${transBlock}
+        </div>`;
+    });
+
+    detailSec.innerHTML = detailHtml;
+    gridSec.innerHTML = gridHtml;
+    drawerList.innerHTML = drawerHtml;
+}
+
+function togglePlay() {
+    if (video.paused) {
+        video.play();
+        playBtn.innerText = "⏸ Tạm Dừng";
+    } else {
+        video.pause();
+        playBtn.innerText = "▶ Phát Video";
+    }
+}
+
+function toggleMute() {
+    video.muted = !video.muted;
+    muteBtn.innerText = video.muted ? "🔇" : "🔊";
+}
+
+function setSpeed(rate, el) {
+    video.playbackRate = rate;
+    document.querySelectorAll('.speed-pill').forEach(b => b.classList.remove('active'));
+    if (el) el.classList.add('active');
+}
+
+function stepFrame(frames) {
+    video.pause();
+    playBtn.innerText = "▶ Phát Video";
+    video.currentTime = Math.max(0, video.currentTime + (frames * 0.0416));
+}
+
+function jumpToShot(shotId, startTime) {
+    video.currentTime = startTime;
+    video.play();
+    playBtn.innerText = "⏸ Tạm Dừng";
+    toggleDrawer(false);
+    switchView('detail');
+    
+    const el = document.getElementById('shot-' + shotId);
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        el.style.borderColor = 'var(--accent-blue)';
+        setTimeout(() => {
+            el.style.borderColor = 'var(--border-color)';
+        }, 2000);
+    }
+}
+
+function switchView(mode) {
+    const detailSec = document.getElementById('detailViewSection');
+    const gridSec = document.getElementById('gridViewSection');
+    const btnDetail = document.getElementById('btnDetail');
+    const btnGrid = document.getElementById('btnGrid');
+
+    if (mode === 'grid') {
+        detailSec.style.display = 'none';
+        gridSec.style.display = 'grid';
+        btnGrid.classList.add('active');
+        btnDetail.classList.remove('active');
+    } else {
+        gridSec.style.display = 'none';
+        detailSec.style.display = 'flex';
+        btnDetail.classList.add('active');
+        btnGrid.classList.remove('active');
+    }
+}
+
+function toggleDrawer(open) {
+    const bd = document.getElementById('drawerBackdrop');
+    const dc = document.getElementById('drawerContainer');
+    if (open) {
+        bd.style.display = 'block';
+        dc.style.right = '0';
+    } else {
+        bd.style.display = 'none';
+        dc.style.right = '-360px';
+    }
+}
+
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').innerText = caption;
+    document.getElementById('lightboxModal').style.display = 'flex';
+}
+
+function closeLightbox(e) {
+    if (e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightboxModal').style.display = 'none';
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.getElementById('lightboxModal').style.display = 'none';
+        toggleDrawer(false);
+    }
+});
+
+// Initialize app rendering on DOM load
+document.addEventListener('DOMContentLoaded', renderApp);
+if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    renderApp();
+}
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

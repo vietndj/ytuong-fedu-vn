@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>The Art of Composition in London - @chowyhh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #070a0f;
+    --bg-card: #0e1420;
+    --bg-card-hover: #151e30;
+    --bg-surface: #121928;
+    --border-color: #1e293b;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-blue: #38bdf8;
+    --accent-amber: #f59e0b;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-purple: #c084fc;
+    --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.55;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: #202d42; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .app-container {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .video-sidebar-col {
+        width: 440px;
+        min-width: 440px;
+        max-width: 480px;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: 1px solid var(--border-color);
+        background: var(--bg-surface);
+        display: flex;
+        flex-direction: column;
+        z-index: 30;
+    }
+    .content-scroll-col {
+        flex: 1;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 24px 32px 60px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    .video-sidebar-col {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(14, 20, 32, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .content-scroll-col {
+        width: 100%;
+        padding: 16px 14px 80px;
+    }
+}
+
+.video-player-container {
+    position: relative;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .video-player-container {
+        aspect-ratio: 4/3;
+        max-height: 52vh;
+    }
+}
+@media (max-width: 1023px) {
+    .video-player-container {
+        max-height: 38vh;
+        aspect-ratio: 4/3;
+    }
+}
+
+video#mainPlayer {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    outline: none;
+}
+
+.video-controls-panel {
+    padding: 12px 16px;
+    background: #0b111c;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.current-status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #1e293b;
+    color: var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-family: var(--font-mono);
+}
+
+.speed-buttons-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.ctrl-btn {
+    background: #172033;
+    border: 1px solid #23324d;
+    color: var(--text-secondary);
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 5px 9px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.ctrl-btn:hover, .ctrl-btn:active {
+    background: var(--accent-blue);
+    color: #000;
+    border-color: var(--accent-blue);
+}
+
+.ctrl-btn.active {
+    background: var(--accent-blue);
+    color: #000;
+    font-weight: 700;
+    border-color: var(--accent-blue);
+}
+
+.report-header-banner {
+    background: linear-gradient(135deg, #0e1726 0%, #172338 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+.header-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.genre-badge {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.report-title {
+    font-size: 22px;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.meta-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    align-items: center;
+}
+
+.author-ig-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    color: #fff !important;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    box-shadow: 0 2px 8px rgba(253, 29, 29, 0.3);
+    transition: transform 0.15s ease;
+}
+.author-ig-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(253, 29, 29, 0.5);
+}
+
+.overview-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 24px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.action-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg-main);
+    padding: 10px 0;
+}
+
+.view-tabs-group {
+    display: flex;
+    gap: 4px;
+    background: #0f1624;
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.view-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+}
+
+.view-tab-btn.active {
+    background: #1e293b;
+    color: #fff;
+    font-weight: 700;
+}
+
+.drawer-trigger-btn {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12.5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.storyboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    gap: 20px;
+    transition: transform 0.15s, border-color 0.15s;
+}
+
+@media (max-width: 768px) {
+    .shot-card {
+        flex-direction: column;
+        gap: 14px;
+    }
+    .shot-media-col {
+        width: 100% !important;
+        min-width: 100% !important;
+    }
+}
+
+.shot-card:hover {
+    background: var(--bg-card-hover);
+    border-color: #2e3e5a;
+}
+
+.shot-card.active-playing {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+.shot-media-col {
+    width: 220px;
+    min-width: 220px;
+    flex-shrink: 0;
+}
+
+.shot-thumb-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.shot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+.shot-thumb-wrap:hover .play-overlay {
+    opacity: 1;
+    background: rgba(0,0,0,0.2);
+}
+
+.play-overlay svg {
+    width: 38px;
+    height: 38px;
+    color: #fff;
+}
+
+.zoom-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.65);
+    border: none;
+    border-radius: 4px;
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumb-time-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    background: rgba(0,0,0,0.75);
+    color: #38bdf8;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.keyframe-sub-row {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.sub-kf {
+    width: calc(50% - 3px);
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #1e293b;
+    opacity: 0.85;
+    transition: opacity 0.15s;
+}
+.sub-kf:hover { opacity: 1; border-color: var(--accent-blue); }
+
+.shot-info-col {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.shot-title-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1;
+}
+
+.shot-badge-num {
+    background: var(--accent-amber);
+    color: #000;
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.shot-heading {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.time-jump-btn {
+    background: #17253d;
+    border: 1px solid #253b5c;
+    color: var(--accent-blue);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+}
+.time-jump-btn:hover {
+    background: var(--accent-blue);
+    color: #000;
+}
+
+.shot-block-desc {
+    background: #111a2c;
+    border-left: 3px solid var(--accent-blue);
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 13.5px;
+    color: #e2e8f0;
+}
+
+.block-label {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--accent-blue);
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.critique-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+@media (max-width: 640px) {
+    .critique-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.critique-box {
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.critique-good {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    color: #d1fae5;
+}
+
+.critique-bad {
+    background: rgba(244, 63, 94, 0.08);
+    border: 1px solid rgba(244, 63, 94, 0.25);
+    color: #ffe4e6;
+}
+
+.critique-header {
+    font-weight: 800;
+    font-size: 11.5px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.critique-good .critique-header { color: var(--accent-emerald); }
+.critique-bad .critique-header { color: var(--accent-rose); }
+
+.takeaway-box {
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    padding: 10px 14px;
+    border-radius: 6px;
+    color: #fef3c7;
+    font-size: 13px;
+}
+
+.takeaway-header {
+    font-size: 11.5px;
+    font-weight: 800;
+    color: var(--accent-amber);
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+    font-size: 12px;
+    padding-top: 6px;
+    border-top: 1px dashed #1e2d48;
+}
+
+@media (max-width: 640px) {
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.spec-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.spec-full {
+    grid-column: 1 / -1;
+}
+
+.spec-label {
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 11px;
+}
+
+.spec-val {
+    color: var(--text-secondary);
+}
+
+/* Visual Grid View */
+.visual-grid-container {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.grid-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-blue);
+}
+
+.grid-thumb-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: #000;
+}
+
+.grid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-time-badge {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.75);
+    color: var(--accent-amber);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.grid-caption {
+    padding: 10px 12px;
+}
+
+.grid-title {
+    font-weight: 700;
+    font-size: 12.5px;
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.grid-meta {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+/* Drawer Jump Menu */
+.drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+}
+
+.drawer-backdrop.open { opacity: 1; visibility: visible; }
+
+.drawer-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 340px;
+    max-width: 85vw;
+    background: #0f172a;
+    border-left: 1px solid var(--border-color);
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-backdrop.open .drawer-panel { transform: translateX(0); }
+
+.drawer-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drawer-title { font-weight: 800; font-size: 15px; color: #fff; }
+.drawer-close-btn { background: #1e293b; border: none; color: #fff; width: 28px; height: 28px; border-radius: 6px; font-size: 16px; cursor: pointer; }
+
+.drawer-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.drawer-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 10px;
+    background: #131d30;
+    border: 1px solid #1e2d48;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.drawer-item:hover, .drawer-item:active {
+    background: #1c2b47;
+    border-color: var(--accent-blue);
+}
+
+.drawer-thumb {
+    width: 50px;
+    height: 38px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #000;
+}
+
+.drawer-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.drawer-info { flex: 1; min-width: 0; }
+.drawer-shot-title { font-weight: 700; font-size: 12.5px; color: var(--accent-blue); }
+.drawer-shot-headline { font-size: 11.5px; color: #fff; margin: 1px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.drawer-shot-time { font-size: 11px; color: var(--accent-amber); font-family: var(--font-mono); }
+.drawer-play-arrow { font-size: 13px; color: var(--accent-blue); }
+
+/* Lightbox Modal */
+#lightboxModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    border: 1px solid #334155;
+}
+
+#lightboxCaption {
+    color: #e2e8f0;
+    font-size: 13.5px;
+    margin-top: 14px;
+    text-align: center;
+    background: rgba(15, 23, 42, 0.85);
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid #334155;
+    max-width: 90vw;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* Practical Shooting Script Section */
+.script-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 30px;
+}
+.script-title {
+    color: var(--accent-amber);
+    font-size: 17px;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.script-step {
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #1e293b;
+}
+.script-step:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.step-num {
+    display: inline-block;
+    background: var(--accent-blue);
+    color: #000;
+    font-weight: 800;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+
+/* Print Stylesheet for Chrome Headless PDF */
+@media print {
+    body {
+        background: #ffffff !important;
+        color: #1a1a1a !important;
+        font-size: 11pt !important;
+    }
+    .video-sidebar-col, .action-toolbar, .drawer-backdrop, #lightboxModal, .time-jump-btn, .zoom-btn, .play-overlay {
+        display: none !important;
+    }
+    .app-container, .content-scroll-col {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+        padding: 0 !important;
+    }
+    .report-header-banner {
+        background: #f1f5f9 !important;
+        color: #0f172a !important;
+        border: 1px solid #cbd5e1 !important;
+        page-break-after: avoid;
+    }
+    .report-title { color: #0f172a !important; }
+    .author-ig-badge { background: #0284c7 !important; color: #fff !important; }
+    .overview-card, .script-section {
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        color: #334155 !important;
+        page-break-inside: avoid;
+    }
+    .shot-card {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #0f172a !important;
+        page-break-inside: avoid;
+        margin-bottom: 20px !important;
+    }
+    .shot-heading { color: #0f172a !important; }
+    .shot-block-desc { background: #f1f5f9 !important; color: #1e293b !important; }
+    .critique-good { background: #ecfdf5 !important; color: #065f46 !important; border-color: #a7f3d0 !important; }
+    .critique-bad { background: #fff1f2 !important; color: #9f1239 !important; border-color: #fecdd3 !important; }
+    .takeaway-box { background: #fffbeb !important; color: #92400e !important; border-color: #fde68a !important; }
+    .specs-grid { border-top-color: #cbd5e1 !important; }
+    .spec-val { color: #334155 !important; }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="video-sidebar-col">
+        <div class="video-player-container">
+            <video id="mainPlayer" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/The%20Art%20of%20Composition%20in%20London%20-%20@chowyhh.mp4" controls autoplay muted playsinline preload="auto" loop></video>
+        </div>
+        <div class="video-controls-panel">
+            <div class="current-status-bar">
+                <span class="status-tag" id="shotStatusTag">🎬 Phân cảnh: Toàn bộ video</span>
+                <a id="directVidLink" href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/The%20Art%20of%20Composition%20in%20London%20-%20@chowyhh.mp4" target="_blank" style="color:var(--accent-blue); font-size:11.5px; text-decoration:none;">Tệp gốc ↗</a>
+            </div>
+            <div class="speed-buttons-row">
+                <span style="font-size:11.5px; color:#94a3b8; font-weight:700; margin-right:4px;">Tốc độ:</span>
+                <button class="ctrl-btn" onclick="setSpeed(0.25, this)">0.25x</button>
+                <button class="ctrl-btn" onclick="setSpeed(0.5, this)">0.5x</button>
+                <button class="ctrl-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+                <button class="ctrl-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                <button class="ctrl-btn" onclick="toggleMute(this)">🔊 Tiếng</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-scroll-col">
+        <div class="report-header-banner">
+            <div class="header-top-row">
+                <span class="genre-badge">DIRECTOR STORYBOARD BREAKDOWN</span>
+                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">5 SHOTS &bull; 16.42s &bull; 4:3 CLASSIC</span>
+            </div>
+            <h1 class="report-title">The Art of Composition in London - @chowyhh</h1>
+            <div class="meta-tags-flex">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@chowyhh" onclick="handleCreatorClick(event, '@chowyhh', 'Ethan')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Ethan trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Ethan</strong>
+                        <span class="author-handle">(@chowyhh)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <span>Thiết bị: <strong>Insta360 Luna Ultra (I-Log 4K, 24fps)</strong></span>
+                <span>Địa điểm: <strong>London, Vương Quốc Anh 🇬🇧</strong></span>
+            </div>
+        </div>
+
+        <div class="overview-card">
+            <h3 style="color:#fff; font-size:14.5px; margin-bottom:8px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
+            <p style="margin-bottom:10px;">Tác phẩm điện ảnh đường phố ngắn gọn (16.42s) của đạo diễn/creator Ethan (<strong>@chowyhh</strong>) là một bài học mẫu mực về <strong>4 Quy Tắc Bố Cục Hình Học</strong> ứng dụng trong bối cảnh kiến trúc và giao thông công cộng London: <em>Parallel Lines (Đường song song), Level Change (Đa tầng cao độ), Frame Within a Frame (Khung lồng khung), và Vanishing Point (Điểm tụ chiều sâu)</em>.</p>
+            <p>Sử dụng máy quay chống rung <strong>Insta360 Luna Ultra</strong> quay ở định dạng I-Log 4K, Ethan khai thác triệt để tính đối xứng, độ tương phản ánh sáng (Chiaroscuro) và các chuyển động ngược chiều của phương tiện/con người để biến những không gian đời thường tại London Underground và phố cổ Victoria thành những khuôn hình đậm chất điện ảnh.</p>
+        </div>
+
+        <div class="action-toolbar">
+            <div class="view-tabs-group">
+                <button class="view-tab-btn active" id="tabDetailBtn" onclick="switchView('detail')">📋 Bóc Tách Chi Tiết (5)</button>
+                <button class="view-tab-btn" id="tabGridBtn" onclick="switchView('grid')">🖼️ Lưới Soi Ảnh (5)</button>
+            </div>
+            <button class="drawer-trigger-btn" onclick="toggleDrawer(true)">📑 Mục Lục Shot</button>
+        </div>
+
+        <div class="storyboard-container" id="storyboardView">
+            
+    <div class="shot-card" id="shot-card-1">
+        <div class="shot-media-col">
+            <div class="shot-thumb-wrap" onclick="playShot(0.0, 4.75, 'SHOT 01')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_01_mid.jpg" alt="SHOT 01" class="shot-img" loading="lazy" />
+                <div class="play-overlay">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_01_mid.jpg', 'SHOT 01 [0.00s - 4.75s] • Bố cục đối xứng 3 cột & Kinetic Motion Blur: Khóa chặt mắt người xem bằng nhịp chuyển động ngược chiều của đoàn tàu')" title="Phóng to ảnh">🔍</button>
+                <span class="thumb-time-badge">0.00s - 4.75s</span>
+            </div>
+            <div class="keyframe-sub-row">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_01_start.jpg" class="sub-kf" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_01_start.jpg', 'SHOT 01 Start Frame')" title="Start Frame" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_01_end.jpg" class="sub-kf" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_01_end.jpg', 'SHOT 01 End Frame')" title="End Frame" />
+            </div>
+        </div>
+        <div class="shot-info-col">
+            <div class="shot-card-header">
+                <div class="shot-title-wrap">
+                    <span class="shot-badge-num">SHOT 01</span>
+                    <h4 class="shot-heading">Bố cục đối xứng 3 cột & Kinetic Motion Blur: Khóa chặt mắt người xem bằng nhịp chuyển động ngược chiều của đoàn tàu</h4>
+                </div>
+                <button class="time-jump-btn" onclick="playShot(0.0, 4.75, 'SHOT 01')">
+                    ▶ 0.00s ➔ 4.75s (4.75s)
+                </button>
+            </div>
+
+            <div class="shot-block-desc">
+                <div class="block-label">🎬 MÔ TẢ ĐỐI TƯỢNG &amp; DIỄN BIẾN:</div>
+                <p>Bên trong toa tàu điện ngầm London Underground. Hai cột tay vịn màu đỏ chia khung hình thành 3 phần cân xứng (Rule of Thirds). Phía sau cửa sổ, một đoàn tàu ngầm khác lao vút qua theo chiều ngược lại với tốc độ cao tạo vệt mờ chuyển động (motion blur) ấn tượng. Dòng chữ kinetic typography 'THE ART OF' màu trắng và 'COMPOSITION' màu vàng kim xuất hiện phóng to dần ở tâm điểm khung hình.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-box critique-good">
+                    <div class="critique-header"><span class="icon">✅</span> ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p>Tận dụng hoàn hảo cấu trúc nội thất toa tàu để tạo bố cục đối xứng tuyệt đối (Symmetry). Tương phản thị giác đỉnh cao giữa nội thất tĩnh lặng và ngoại cảnh chuyển động xé gió (Motion Blur) tạo năng lượng thị giác mạnh mẽ ngay từ giây 0, giữ chân người xem lập tức.</p>
+                </div>
+                <div class="critique-box critique-bad">
+                    <div class="critique-header"><span class="icon">⚠️</span> HẠN CHẾ / ĐIỂM CẦN LƯU Ý:</div>
+                    <p>Cửa sổ phía sau có đôi chút phản chiếu bóng đèn trần của chính toa tàu; nếu sử dụng kính lọc phân cực (CPL Filter) thì chi tiết đoàn tàu bên ngoài sẽ trong trẻo, tương phản và sắc nét hơn.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-header"><span class="icon">💡</span> BÀI HỌC THỰC CHIẾN ĐÚC KẾT:</div>
+                <p><strong>Đặt chủ thể hoặc camera vào chính giữa một khung kiến trúc tĩnh (toa tàu, cửa sổ) và chờ đợi một chuyển động tốc độ cao ở hậu cảnh để tạo ra sự tương phản Tĩnh - Động (Static vs Kinetic Contrast).</strong></p>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-item"><span class="spec-label">📍 Vị trí / Bối cảnh:</span><span class="spec-val">Toa tàu điện ngầm London Underground Carriage</span></div>
+                <div class="spec-item"><span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span><span class="spec-val">Eye-level Symmetrical Static Shot • London Tube Window Frame</span></div>
+                <div class="spec-item"><span class="spec-label">💡 Ánh sáng:</span><span class="spec-val">Ánh sáng đèn huỳnh quang trong toa tàu kết hợp dải đèn neon quét ngang từ đoàn tàu chạy ngược chiều bên ngoài</span></div>
+                <div class="spec-item"><span class="spec-label">🎨 Bảng màu (Color Grade):</span><span class="spec-val">Warm Muted Interior • Tông nâu đất ghế ngồi, tương phản với Đỏ tươi tay vịn và Vàng kim Typography</span></div>
+                <div class="spec-item spec-full"><span class="spec-label">🔄 Chuyển cảnh kế tiếp:</span><span class="spec-val">Dissolve sang Graphic Card nền đen 'PARALLEL LINES' với các đường kẻ chéo đỏ động học.</span></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="shot-card" id="shot-card-2">
+        <div class="shot-media-col">
+            <div class="shot-thumb-wrap" onclick="playShot(4.79, 7.67, 'SHOT 02')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_02_mid.jpg" alt="SHOT 02" class="shot-img" loading="lazy" />
+                <div class="play-overlay">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_02_mid.jpg', 'SHOT 02 [4.79s - 7.67s] • Đường chéo song song (Diagonal Parallel Lines) góc Dutch Angle: Dẫn hướng mắt trôi sâu vào lòng đất bằng chuỗi hình học lặp lại')" title="Phóng to ảnh">🔍</button>
+                <span class="thumb-time-badge">4.79s - 7.67s</span>
+            </div>
+            <div class="keyframe-sub-row">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_02_start.jpg" class="sub-kf" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_02_start.jpg', 'SHOT 02 Start Frame')" title="Start Frame" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_02_end.jpg" class="sub-kf" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_02_end.jpg', 'SHOT 02 End Frame')" title="End Frame" />
+            </div>
+        </div>
+        <div class="shot-info-col">
+            <div class="shot-card-header">
+                <div class="shot-title-wrap">
+                    <span class="shot-badge-num">SHOT 02</span>
+                    <h4 class="shot-heading">Đường chéo song song (Diagonal Parallel Lines) góc Dutch Angle: Dẫn hướng mắt trôi sâu vào lòng đất bằng chuỗi hình học lặp lại</h4>
+                </div>
+                <button class="time-jump-btn" onclick="playShot(4.79, 7.67, 'SHOT 02')">
+                    ▶ 4.79s ➔ 7.67s (2.88s)
+                </button>
+            </div>
+
+            <div class="shot-block-desc">
+                <div class="block-label">🎬 MÔ TẢ ĐỐI TƯỢNG &amp; DIỄN BIẾN:</div>
+                <p>Cú máy nghiêng góc Dutch Angle (~40-45 độ) trôi từ từ xuống thang cuốn sâu hun hút của ga tàu ngầm London Underground. Tay vịn kim loại sáng bóng, các đường gờ bậc thang và chuỗi biển quảng cáo treo tường (ABBA Voyage, You Me Marg?) tạo thành hàng loạt đường kẻ song song cắt chéo toàn bộ khung hình.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-box critique-good">
+                    <div class="critique-header"><span class="icon">✅</span> ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p>Đường chéo nghiêng (Diagonal Leading Lines) phá vỡ sự bằng phẳng tĩnh tại của khung hình truyền thống, tạo cảm giác chuyển động lao dốc không ngừng nghỉ và chiều sâu thăm thẳm. Các poster quảng cáo nhịp nhàng lướt qua hoạt động như các mốc nhịp điệu thị giác (visual rhythm).</p>
+                </div>
+                <div class="critique-box critique-bad">
+                    <div class="critique-header"><span class="icon">⚠️</span> HẠN CHẾ / ĐIỂM CẦN LƯU Ý:</div>
+                    <p>Góc nghiêng hơi dốc có thể khiến người xem bị mất thăng bằng thị giác nhẹ nếu giữ shot quá lâu; thời lượng ~2.3s là vừa vặn để truyền tải trọn vẹn ý đồ.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-header"><span class="icon">💡</span> BÀI HỌC THỰC CHIẾN ĐÚC KẾT:</div>
+                <p><strong>Khi quay thang cuốn hoặc hành lang dốc, thay vì quay góc thẳng thông thường, hãy xoay nghiêng camera 30-45 độ để biến các đường viền kiến trúc thành những đường chéo động lực (dynamic diagonals) dẫn dắt ánh nhìn.</strong></p>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-item"><span class="spec-label">📍 Vị trí / Bối cảnh:</span><span class="spec-val">Thang cuốn ga ngầm London Underground Escalator</span></div>
+                <div class="spec-item"><span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span><span class="spec-val">Dutch Angle Tilt (~40°) • Gimbal Slow Descending Glide</span></div>
+                <div class="spec-item"><span class="spec-label">💡 Ánh sáng:</span><span class="spec-val">Đèn rọi vách tường spotlight hắt lên các khung tranh quảng cáo và phản chiếu kim loại sáng bóng</span></div>
+                <div class="spec-item"><span class="spec-label">🎨 Bảng màu (Color Grade):</span><span class="spec-val">Warm Tungsten & Chlorine Tone • Tương phản bề mặt kim loại bạc sáng và tường gạch men cổ điển</span></div>
+                <div class="spec-item spec-full"><span class="spec-label">🔄 Chuyển cảnh kế tiếp:</span><span class="spec-val">Dissolve sang Graphic Card nền đen 'LEVEL CHANGE' với các bậc thang đỏ zíc-zắc.</span></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="shot-card" id="shot-card-3">
+        <div class="shot-media-col">
+            <div class="shot-thumb-wrap" onclick="playShot(7.71, 10.58, 'SHOT 03')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_03_mid.jpg" alt="SHOT 03" class="shot-img" loading="lazy" />
+                <div class="play-overlay">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_03_mid.jpg', 'SHOT 03 [7.71s - 10.58s] • Đa tầng không gian thẳng đứng (Level Change & 3-Tier Layering): Kể trọn vẹn nhịp sống đô thị qua 3 cao độ chuyển động')" title="Phóng to ảnh">🔍</button>
+                <span class="thumb-time-badge">7.71s - 10.58s</span>
+            </div>
+            <div class="keyframe-sub-row">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_03_start.jpg" class="sub-kf" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_03_start.jpg', 'SHOT 03 Start Frame')" title="Start Frame" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_03_end.jpg" class="sub-kf" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_03_end.jpg', 'SHOT 03 End Frame')" title="End Frame" />
+            </div>
+        </div>
+        <div class="shot-info-col">
+            <div class="shot-card-header">
+                <div class="shot-title-wrap">
+                    <span class="shot-badge-num">SHOT 03</span>
+                    <h4 class="shot-heading">Đa tầng không gian thẳng đứng (Level Change & 3-Tier Layering): Kể trọn vẹn nhịp sống đô thị qua 3 cao độ chuyển động</h4>
+                </div>
+                <button class="time-jump-btn" onclick="playShot(7.71, 10.58, 'SHOT 03')">
+                    ▶ 7.71s ➔ 10.58s (2.88s)
+                </button>
+            </div>
+
+            <div class="shot-block-desc">
+                <div class="block-label">🎬 MÔ TẢ ĐỐI TƯỢNG &amp; DIỄN BIẾN:</div>
+                <p>Khung cảnh cầu vượt đi bộ bằng kết cấu thép tại ga Hackney Central Overground Station. Khung hình được chia thành 3 tầng cao độ rõ rệt: Tầng 1 (dưới cùng) là các hành khách đứng đợi cạnh biển hiệu tròn Overground màu cam; Tầng 2 (trung tầng) là cầu thang sắt zíc-zắc có người đang bước lên; Tầng 3 (thượng tầng) là nhịp cầu trên cao nối 2 bờ ray với một người bộ hành đơn độc đang sải bước nổi bật trên nền trời xanh.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-box critique-good">
+                    <div class="critique-header"><span class="icon">✅</span> ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p>Tận dụng tuyệt hảo kiến trúc cầu vượt đô thị để tạo bố cục phân tầng (Vertical Layering). Sự hiện diện của con người ở cả 3 cao độ tạo nên một nhịp chuyển động đa chiều, kích thích mắt người xem quét từ dưới lên trên rồi từ trên xuống dưới.</p>
+                </div>
+                <div class="critique-box critique-bad">
+                    <div class="critique-header"><span class="icon">⚠️</span> HẠN CHẾ / ĐIỂM CẦN LƯU Ý:</div>
+                    <p>Phần kiến trúc dầm thép phía bên phải hơi nặng và chiếm diện tích lớn; nếu dịch camera sang trái một chút để mở rộng thêm khoảng trời xanh thì bố cục sẽ cân bằng và thoáng đãng hơn.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-header"><span class="icon">💡</span> BÀI HỌC THỰC CHIẾN ĐÚC KẾT:</div>
+                <p><strong>Hãy tìm kiếm các địa điểm có kiến trúc đa tầng (cầu vượt bộ hành, giếng trời TTTM, cầu thang xoắn) và chờ đợi khoảnh khắc có người di chuyển ở các tầng khác nhau để bấm máy, khung hình sẽ lập tức có chiều sâu kể chuyện.</strong></p>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-item"><span class="spec-label">📍 Vị trí / Bối cảnh:</span><span class="spec-val">Cầu vượt ga tàu Hackney Central Overground Station, London</span></div>
+                <div class="spec-item"><span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span><span class="spec-val">Wide-to-Normal ~24mm • Eye-level Architectural Locked Shot</span></div>
+                <div class="spec-item"><span class="spec-label">💡 Ánh sáng:</span><span class="spec-val">Ánh sáng ban ngày tự nhiên (Daylight 5600K), bóng đổ sắc nét dưới gầm cầu thang, nắng xiên tạo viền trên lan can sắt</span></div>
+                <div class="spec-item"><span class="spec-label">🎨 Bảng màu (Color Grade):</span><span class="spec-val">Urban Realism • Cam Overground, Kim loại ghi xám, Gạch đỏ và Trời xanh trong vắt</span></div>
+                <div class="spec-item spec-full"><span class="spec-label">🔄 Chuyển cảnh kế tiếp:</span><span class="spec-val">Dissolve sang Graphic Card nền đen 'FRAME WITHIN A FRAME' với khung viền đỏ đồng tâm.</span></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="shot-card" id="shot-card-4">
+        <div class="shot-media-col">
+            <div class="shot-thumb-wrap" onclick="playShot(10.62, 13.58, 'SHOT 04')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_04_mid.jpg" alt="SHOT 04" class="shot-img" loading="lazy" />
+                <div class="play-overlay">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_04_mid.jpg', 'SHOT 04 [10.62s - 13.58s] • Khung lồng khung (Frame Within a Frame) kết hợp Tách lớp Đa chuyển động: Cô lập chủ thể và tạo kịch tính bằng 3 lớp thị giác')" title="Phóng to ảnh">🔍</button>
+                <span class="thumb-time-badge">10.62s - 13.58s</span>
+            </div>
+            <div class="keyframe-sub-row">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_04_start.jpg" class="sub-kf" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_04_start.jpg', 'SHOT 04 Start Frame')" title="Start Frame" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_04_end.jpg" class="sub-kf" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_04_end.jpg', 'SHOT 04 End Frame')" title="End Frame" />
+            </div>
+        </div>
+        <div class="shot-info-col">
+            <div class="shot-card-header">
+                <div class="shot-title-wrap">
+                    <span class="shot-badge-num">SHOT 04</span>
+                    <h4 class="shot-heading">Khung lồng khung (Frame Within a Frame) kết hợp Tách lớp Đa chuyển động: Cô lập chủ thể và tạo kịch tính bằng 3 lớp thị giác</h4>
+                </div>
+                <button class="time-jump-btn" onclick="playShot(10.62, 13.58, 'SHOT 04')">
+                    ▶ 10.62s ➔ 13.58s (2.96s)
+                </button>
+            </div>
+
+            <div class="shot-block-desc">
+                <div class="block-label">🎬 MÔ TẢ ĐỐI TƯỢNG &amp; DIỄN BIẾN:</div>
+                <p>Camera nhìn từ trong một hành lang/cửa vòm ngầm tối màu ra sân ga tàu điện ngầm rực sáng. Hai vách tường tối ở tiền cảnh tạo thành một 'khung tranh tự nhiên' đóng chặt không gian. Ở tâm điểm khung hình, một cặp đôi đứng tựa lưng chờ tàu; ngay phía sau họ, đoàn tàu ngầm màu đỏ - trắng lao qua với tốc độ xé gió, trong khi ở tiền cảnh, một người đàn ông mặc áo đỏ thẫm bước cắt ngang từ phải sang trái.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-box critique-good">
+                    <div class="critique-header"><span class="icon">✅</span> ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p>Bậc thầy về nghệ thuật tách lớp thị giác (Visual Layering): Lớp 1 (Khung cửa tối tiền cảnh) -> Lớp 2 (Người đi bộ áo đỏ cắt ngang) -> Lớp 3 (Cặp đôi tĩnh lặng đứng chờ) -> Lớp 4 (Đoàn tàu chuyển động siêu tốc ở hậu cảnh). Độ tương phản ánh sáng hút chặt sự tập trung vào vùng trung tâm.</p>
+                </div>
+                <div class="critique-box critique-bad">
+                    <div class="critique-header"><span class="icon">⚠️</span> HẠN CHẾ / ĐIỂM CẦN LƯU Ý:</div>
+                    <p>Chữ biển quảng cáo 'A-Vel' phía trên cửa sổ hơi bị cắt nửa viền trên; nếu góc máy hạ thấp xuống 5cm thì toàn bộ khung chữ nhật sân ga sẽ trọn vẹn và vuông vức hơn.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-header"><span class="icon">💡</span> BÀI HỌC THỰC CHIẾN ĐÚC KẾT:</div>
+                <p><strong>Luôn lùi lại 2-3 bước vào phía sau một khung cửa, hành lang hoặc bóng râm để biến kiến trúc xung quanh thành viền đen tự nhiên đóng khung chủ thể đang được chiếu sáng ở phía trước.</strong></p>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-item"><span class="spec-label">📍 Vị trí / Bối cảnh:</span><span class="spec-val">Sân ga và Cửa vòm London Underground Platform & Tunnel</span></div>
+                <div class="spec-item"><span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span><span class="spec-val">Normal ~28mm • Symmetrical Center Portal Framing</span></div>
+                <div class="spec-item"><span class="spec-label">💡 Ánh sáng:</span><span class="spec-val">Độ tương phản cực cao (Chiaroscuro) giữa tiền cảnh tối sẫm (Silhouette) và sân ga sáng rực rỡ dưới đèn tuýp</span></div>
+                <div class="spec-item"><span class="spec-label">🎨 Bảng màu (Color Grade):</span><span class="spec-val">Underground Metro Palette • Đỏ London Underground, Xanh Navy, Vàng gạch và Đen sâu</span></div>
+                <div class="spec-item spec-full"><span class="spec-label">🔄 Chuyển cảnh kế tiếp:</span><span class="spec-val">Dissolve sang Graphic Card nền đen 'VANISHING POINT' với các đường chéo chữ X hội tụ.</span></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="shot-card" id="shot-card-5">
+        <div class="shot-media-col">
+            <div class="shot-thumb-wrap" onclick="playShot(13.62, 16.42, 'SHOT 05')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_05_mid.jpg" alt="SHOT 05" class="shot-img" loading="lazy" />
+                <div class="play-overlay">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_05_mid.jpg', 'SHOT 05 [13.62s - 16.42s] • Điểm tụ trung tâm (One-Point Perspective / Vanishing Point): Cú Push-in dọc tim đường hút trọn tầm mắt vào chiều sâu vô tận của kiến trúc London')" title="Phóng to ảnh">🔍</button>
+                <span class="thumb-time-badge">13.62s - 16.42s</span>
+            </div>
+            <div class="keyframe-sub-row">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_05_start.jpg" class="sub-kf" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_05_start.jpg', 'SHOT 05 Start Frame')" title="Start Frame" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_05_end.jpg" class="sub-kf" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_05_end.jpg', 'SHOT 05 End Frame')" title="End Frame" />
+            </div>
+        </div>
+        <div class="shot-info-col">
+            <div class="shot-card-header">
+                <div class="shot-title-wrap">
+                    <span class="shot-badge-num">SHOT 05</span>
+                    <h4 class="shot-heading">Điểm tụ trung tâm (One-Point Perspective / Vanishing Point): Cú Push-in dọc tim đường hút trọn tầm mắt vào chiều sâu vô tận của kiến trúc London</h4>
+                </div>
+                <button class="time-jump-btn" onclick="playShot(13.62, 16.42, 'SHOT 05')">
+                    ▶ 13.62s ➔ 16.42s (2.80s)
+                </button>
+            </div>
+
+            <div class="shot-block-desc">
+                <div class="block-label">🎬 MÔ TẢ ĐỐI TƯỢNG &amp; DIỄN BIẾN:</div>
+                <p>Góc máy đặt thấp dọc theo vạch sơn trắng chính giữa con phố cổ điển của London với hai dãy nhà gạch đỏ Victoria (Red-brick Victorian Townhouses) tráng lệ. Hai hàng xe ô tô đỗ ngay ngắn hai bên tạo thành hai luồng dẫn thị giác song song. Camera sử dụng gimbal của Insta360 Luna Ultra đẩy tới (Push-in) êm ái về phía điểm hội tụ cuối con đường, nơi có khoảng trời xanh ngắt và toà nhà cổ kính ở điểm kết.</p>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-box critique-good">
+                    <div class="critique-header"><span class="icon">✅</span> ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM):</div>
+                    <p>Khai thác tính đối xứng hình học và trật tự đô thị hoàn hảo. 4 đường dẫn chính (mép mái nhà hai bên + hai hàng xe đỗ) hội tụ chính xác tại tâm điểm khung hình, mang lại cảm giác điện ảnh trang trọng, mãn nhãn và kết thúc video một cách trọn vẹn, thuyết phục.</p>
+                </div>
+                <div class="critique-box critique-bad">
+                    <div class="critique-header"><span class="icon">⚠️</span> HẠN CHẾ / ĐIỂM CẦN LƯU Ý:</div>
+                    <p>Cú đẩy máy hơi ngắn (~2.1s) do giới hạn thời lượng video ngắn; nếu kéo dài thêm 1-2s và có một người đi bộ qua đường ở điểm tụ thì shot hình sẽ càng giàu chất thơ hơn.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <div class="takeaway-header"><span class="icon">💡</span> BÀI HỌC THỰC CHIẾN ĐÚC KẾT:</div>
+                <p><strong>Khi đứng ở một con phố đẹp, hãy đặt camera ở điểm chính giữa trục đường (Center Alignment) và di chuyển tịnh tiến thẳng về phía trước để tận dụng đường viền kiến trúc hai bên tạo cú hút điểm tụ (Vanishing Point Pull).</strong></p>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-item"><span class="spec-label">📍 Vị trí / Bối cảnh:</span><span class="spec-val">Khu phố dân cư gạch đỏ cổ điển London (Victorian Townhouses)</span></div>
+                <div class="spec-item"><span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span><span class="spec-val">Low-Angle Center Push-in • Gimbal Forward Glide</span></div>
+                <div class="spec-item"><span class="spec-label">💡 Ánh sáng:</span><span class="spec-val">Nắng chiều vàng ấm (Golden Hour / Warm Sunlight) chiếu xiên lên mặt tiền gạch đỏ nung cổ kính</span></div>
+                <div class="spec-item"><span class="spec-label">🎨 Bảng màu (Color Grade):</span><span class="spec-val">Warm British Film Grade • Đỏ gạch nung Victoria, Xanh da trời mộng mơ và Xám kim loại xe hơi</span></div>
+                <div class="spec-item spec-full"><span class="spec-label">🔄 Chuyển cảnh kế tiếp:</span><span class="spec-val">Fade out kết thúc video hoàn hảo.</span></div>
+            </div>
+        </div>
+    </div>
+    
+        </div>
+
+        <div class="visual-grid-container" id="gridView">
+            
+    <div class="grid-card" onclick="playShot(0.0, 4.75, 'SHOT 01')">
+        <div class="grid-thumb-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_01_mid.jpg" alt="SHOT 01" class="grid-img" loading="lazy" />
+            <span class="grid-time-badge">SHOT 01 &bull; 4.75s</span>
+        </div>
+        <div class="grid-caption">
+            <div class="grid-title">Bố cục đối xứng 3 cột & Kinetic Motion Blur: Khóa chặt mắt người xem bằng nhịp chuyển động ngược chiều của đoàn tàu</div>
+            <div class="grid-meta">Toa tàu điện ngầm London Underground Carriage</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="playShot(4.79, 7.67, 'SHOT 02')">
+        <div class="grid-thumb-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_02_mid.jpg" alt="SHOT 02" class="grid-img" loading="lazy" />
+            <span class="grid-time-badge">SHOT 02 &bull; 2.88s</span>
+        </div>
+        <div class="grid-caption">
+            <div class="grid-title">Đường chéo song song (Diagonal Parallel Lines) góc Dutch Angle: Dẫn hướng mắt trôi sâu vào lòng đất bằng chuỗi hình học lặp lại</div>
+            <div class="grid-meta">Thang cuốn ga ngầm London Underground Escalator</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="playShot(7.71, 10.58, 'SHOT 03')">
+        <div class="grid-thumb-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_03_mid.jpg" alt="SHOT 03" class="grid-img" loading="lazy" />
+            <span class="grid-time-badge">SHOT 03 &bull; 2.88s</span>
+        </div>
+        <div class="grid-caption">
+            <div class="grid-title">Đa tầng không gian thẳng đứng (Level Change & 3-Tier Layering): Kể trọn vẹn nhịp sống đô thị qua 3 cao độ chuyển động</div>
+            <div class="grid-meta">Cầu vượt ga tàu Hackney Central Overground Station, London</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="playShot(10.62, 13.58, 'SHOT 04')">
+        <div class="grid-thumb-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_04_mid.jpg" alt="SHOT 04" class="grid-img" loading="lazy" />
+            <span class="grid-time-badge">SHOT 04 &bull; 2.96s</span>
+        </div>
+        <div class="grid-caption">
+            <div class="grid-title">Khung lồng khung (Frame Within a Frame) kết hợp Tách lớp Đa chuyển động: Cô lập chủ thể và tạo kịch tính bằng 3 lớp thị giác</div>
+            <div class="grid-meta">Sân ga và Cửa vòm London Underground Platform & Tunnel</div>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="playShot(13.62, 16.42, 'SHOT 05')">
+        <div class="grid-thumb-wrap">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_05_mid.jpg" alt="SHOT 05" class="grid-img" loading="lazy" />
+            <span class="grid-time-badge">SHOT 05 &bull; 2.80s</span>
+        </div>
+        <div class="grid-caption">
+            <div class="grid-title">Điểm tụ trung tâm (One-Point Perspective / Vanishing Point): Cú Push-in dọc tim đường hút trọn tầm mắt vào chiều sâu vô tận của kiến trúc London</div>
+            <div class="grid-meta">Khu phố dân cư gạch đỏ cổ điển London (Victorian Townhouses)</div>
+        </div>
+    </div>
+    
+        </div>
+
+        <div class="script-section">
+            <div class="script-title">🎬 KỊCH BẢN THỰC CHIẾN ỨNG DỤNG (SHOOTING SCRIPT):</div>
+            <div class="script-step">
+                <span class="step-num">BƯỚC 1</span> <strong>Hook Mở Màn (0 - 4s):</strong> Chọn một vị trí có kiến trúc đối xứng cố định (cửa sổ xe buýt, toa tàu, ô cửa kính) và canh thời điểm có phương tiện tốc độ cao lướt qua để tạo vệt mờ chuyển động (Motion Blur) giữ chân người xem.
+            </div>
+            <div class="script-step">
+                <span class="step-num">BƯỚC 2</span> <strong>Đường Dẫn Nghiêng (4 - 7s):</strong> Nghiêng máy góc Dutch Angle 30-45 độ khi đi thang cuốn hoặc hành lang dài để tạo chuỗi đường chéo song song hút mắt.
+            </div>
+            <div class="script-step">
+                <span class="step-num">BƯỚC 3</span> <strong>Phân Tầng Đô Thị (7 - 10s):</strong> Tìm cầu vượt đi bộ hoặc không gian 3 tầng cao độ, chờ khoảnh khắc có người di chuyển ở cả 3 tầng để bấm máy.
+            </div>
+            <div class="script-step">
+                <span class="step-num">BƯỚC 4</span> <strong>Đóng Khung Ánh Sáng (10 - 13s):</strong> Đứng lùi vào hầm tối/hành lang nhìn ra khu vực rực sáng, tạo khung viền tự nhiên (Frame within Frame) và bắt khoảnh khắc chủ thể đứng tĩnh giữa dòng chuyển động lướt qua.
+            </div>
+            <div class="script-step">
+                <span class="step-num">BƯỚC 5</span> <strong>Cú Hút Điểm Tụ Kết (13 - 16s):</strong> Đặt máy ngay tim đường thẳng giữa hai dãy nhà/hàng cây, đẩy gimbal tịnh tiến thẳng về điểm tụ phía chân trời để tạo cảm giác mãn nhãn kết thúc video.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Drawer Menu -->
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)">
+    <div class="drawer-panel" onclick="event.stopPropagation()">
+        <div class="drawer-header">
+            <div class="drawer-title">📑 Danh Sách Phân Cảnh (5)</div>
+            <button class="drawer-close-btn" onclick="toggleDrawer(false)">✕</button>
+        </div>
+        <div class="drawer-list">
+            
+    <div class="drawer-item" onclick="jumpFromDrawer(0.0, 4.75, 'SHOT 01', 1)">
+        <div class="drawer-thumb">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_01_mid.jpg" alt="SHOT 01" />
+        </div>
+        <div class="drawer-info">
+            <div class="drawer-shot-title">SHOT 01 (4.75s)</div>
+            <div class="drawer-shot-headline">Bố cục đối xứng 3 cột & Kinetic Motion Blur: Khóa chặt mắt người xem bằng nhịp chuyển động ngược chiều của đoàn tàu</div>
+            <div class="drawer-shot-time">⏱️ 0.00s - 4.75s</div>
+        </div>
+        <div class="drawer-play-arrow">▶</div>
+    </div>
+    
+    <div class="drawer-item" onclick="jumpFromDrawer(4.79, 7.67, 'SHOT 02', 2)">
+        <div class="drawer-thumb">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_02_mid.jpg" alt="SHOT 02" />
+        </div>
+        <div class="drawer-info">
+            <div class="drawer-shot-title">SHOT 02 (2.88s)</div>
+            <div class="drawer-shot-headline">Đường chéo song song (Diagonal Parallel Lines) góc Dutch Angle: Dẫn hướng mắt trôi sâu vào lòng đất bằng chuỗi hình học lặp lại</div>
+            <div class="drawer-shot-time">⏱️ 4.79s - 7.67s</div>
+        </div>
+        <div class="drawer-play-arrow">▶</div>
+    </div>
+    
+    <div class="drawer-item" onclick="jumpFromDrawer(7.71, 10.58, 'SHOT 03', 3)">
+        <div class="drawer-thumb">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_03_mid.jpg" alt="SHOT 03" />
+        </div>
+        <div class="drawer-info">
+            <div class="drawer-shot-title">SHOT 03 (2.88s)</div>
+            <div class="drawer-shot-headline">Đa tầng không gian thẳng đứng (Level Change & 3-Tier Layering): Kể trọn vẹn nhịp sống đô thị qua 3 cao độ chuyển động</div>
+            <div class="drawer-shot-time">⏱️ 7.71s - 10.58s</div>
+        </div>
+        <div class="drawer-play-arrow">▶</div>
+    </div>
+    
+    <div class="drawer-item" onclick="jumpFromDrawer(10.62, 13.58, 'SHOT 04', 4)">
+        <div class="drawer-thumb">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_04_mid.jpg" alt="SHOT 04" />
+        </div>
+        <div class="drawer-info">
+            <div class="drawer-shot-title">SHOT 04 (2.96s)</div>
+            <div class="drawer-shot-headline">Khung lồng khung (Frame Within a Frame) kết hợp Tách lớp Đa chuyển động: Cô lập chủ thể và tạo kịch tính bằng 3 lớp thị giác</div>
+            <div class="drawer-shot-time">⏱️ 10.62s - 13.58s</div>
+        </div>
+        <div class="drawer-play-arrow">▶</div>
+    </div>
+    
+    <div class="drawer-item" onclick="jumpFromDrawer(13.62, 16.42, 'SHOT 05', 5)">
+        <div class="drawer-thumb">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_05_mid.jpg" alt="SHOT 05" />
+        </div>
+        <div class="drawer-info">
+            <div class="drawer-shot-title">SHOT 05 (2.80s)</div>
+            <div class="drawer-shot-headline">Điểm tụ trung tâm (One-Point Perspective / Vanishing Point): Cú Push-in dọc tim đường hút trọn tầm mắt vào chiều sâu vô tận của kiến trúc London</div>
+            <div class="drawer-shot-time">⏱️ 13.62s - 16.42s</div>
+        </div>
+        <div class="drawer-play-arrow">▶</div>
+    </div>
+    
+        </div>
+    </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightboxModal" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightboxImg" src="" alt="Zoom Frame" onclick="event.stopPropagation()" />
+    <div id="lightboxCaption" onclick="event.stopPropagation()"></div>
+</div>
+
+<script>
+const player = document.getElementById('mainPlayer');
+const statusTag = document.getElementById('shotStatusTag');
+let activeLoop = null;
+
+function playShot(start, end, label) {
+    if (activeLoop) clearInterval(activeLoop);
+    player.currentTime = start;
+    player.play();
+    statusTag.innerText = `🎬 Đang phát: ${label} [${start.toFixed(2)}s - ${end.toFixed(2)}s]`;
+
+    // Highlight active card
+    document.querySelectorAll('.shot-card').forEach(c => c.classList.remove('active-playing'));
+    const matchCard = Array.from(document.querySelectorAll('.shot-badge-num')).find(el => el.innerText.trim() === label);
+    if (matchCard) {
+        matchCard.closest('.shot-card').classList.add('active-playing');
+    }
+
+    // Check loop boundary
+    activeLoop = setInterval(() => {
+        if (player.currentTime >= end || player.currentTime < start) {
+            player.currentTime = start;
+        }
+    }, 100);
+}
+
+function setSpeed(speed, btn) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.speed-buttons-row .ctrl-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+}
+
+function stepFrame(frames) {
+    player.pause();
+    if (activeLoop) clearInterval(activeLoop);
+    player.currentTime += (frames * (1/24.0));
+    statusTag.innerText = `⏱️ Tạm dừng tại: ${player.currentTime.toFixed(3)}s`;
+}
+
+function toggleMute(btn) {
+    player.muted = !player.muted;
+    btn.innerText = player.muted ? '🔇 Tắt tiếng' : '🔊 Bật tiếng';
+}
+
+function switchView(view) {
+    const sb = document.getElementById('storyboardView');
+    const grid = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetailBtn');
+    const tabGrid = document.getElementById('tabGridBtn');
+
+    if (view === 'detail') {
+        sb.style.display = 'flex';
+        grid.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        sb.style.display = 'none';
+        grid.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+function toggleDrawer(open) {
+    const drawer = document.getElementById('drawerBackdrop');
+    if (open) {
+        drawer.classList.add('open');
+    } else {
+        drawer.classList.remove('open');
+    }
+}
+
+function jumpFromDrawer(start, end, label, shotId) {
+    toggleDrawer(false);
+    playShot(start, end, label);
+    const target = document.getElementById(`shot-card-${shotId}`);
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function openLightbox(src, caption) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCaption');
+    img.src = src;
+    cap.innerText = caption;
+    modal.style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').style.display = 'none';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+        toggleDrawer(false);
+    }
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

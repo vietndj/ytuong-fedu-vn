@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>🎬 Báo Cáo Phân Tích Chuyên Sâu: Practice Cinematic Chạy 0903 - @vietmac</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #070a0f;
+    --bg-card: #0e1420;
+    --bg-card-hover: #151e30;
+    --bg-surface: #121928;
+    --border-color: #1e293b;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-blue: #38bdf8;
+    --accent-amber: #f59e0b;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-purple: #c084fc;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.55;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: #202d42; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .app-container {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .video-sidebar-col {
+        width: 440px;
+        min-width: 440px;
+        max-width: 480px;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: 1px solid var(--border-color);
+        background: var(--bg-surface);
+        display: flex;
+        flex-direction: column;
+        z-index: 30;
+    }
+    .content-scroll-col {
+        flex: 1;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 28px 36px 80px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    .video-sidebar-col {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(14, 20, 32, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .content-scroll-col {
+        width: 100%;
+        padding: 16px 14px 80px;
+    }
+}
+
+.video-player-container {
+    position: relative;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .video-player-container {
+        aspect-ratio: 9/16;
+        max-height: 56vh;
+    }
+}
+@media (max-width: 1023px) {
+    .video-player-container {
+        max-height: 36vh;
+        aspect-ratio: 16/9;
+    }
+}
+
+video#mainVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+
+.player-controls-panel {
+    padding: 14px 18px;
+    background: #0c121e;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.time-display-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent-blue);
+    margin-bottom: 10px;
+}
+
+.btn-group-flex {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn-ctrl {
+    background: #192336;
+    color: #e2e8f0;
+    border: 1px solid #283750;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-ctrl:hover, .btn-ctrl.active {
+    background: var(--accent-blue);
+    color: #000;
+    border-color: var(--accent-blue);
+}
+
+.btn-primary {
+    background: var(--accent-blue);
+    color: #000;
+    border-color: var(--accent-blue);
+}
+
+.sidebar-meta-box {
+    padding: 18px;
+    flex: 1;
+}
+
+.meta-badge-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    margin-right: 6px;
+    margin-bottom: 8px;
+}
+
+.badge-blue { background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); border: 1px solid rgba(56, 189, 248, 0.3); }
+.badge-amber { background: rgba(245, 158, 11, 0.15); color: var(--accent-amber); border: 1px solid rgba(245, 158, 11, 0.3); }
+.badge-emerald { background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); border: 1px solid rgba(16, 185, 129, 0.3); }
+.badge-purple { background: rgba(192, 132, 252, 0.15); color: var(--accent-purple); border: 1px solid rgba(192, 132, 252, 0.3); }
+.badge-rose { background: rgba(244, 63, 94, 0.15); color: var(--accent-rose); border: 1px solid rgba(244, 63, 94, 0.3); }
+
+.main-header-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.section-block {
+    margin-bottom: 32px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 22px 24px;
+}
+
+.section-header-title {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.grid-3-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 14px;
+}
+
+.analysis-subcard {
+    background: #141b2a;
+    border: 1px solid #222f46;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.subcard-title {
+    font-family: var(--font-heading);
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Comparison Card */
+.comparison-card {
+    background: #111827;
+    border: 1px solid #1f293d;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 14px;
+    transition: all 0.2s;
+}
+
+.comparison-card:hover {
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
+}
+
+.comp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.comp-title {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.comp-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+}
+
+/* Shot Card Styles */
+.shot-card-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 22px;
+    transition: border-color 0.2s;
+}
+
+.shot-card-item:hover {
+    border-color: #334668;
+}
+
+.shot-meta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.shot-number-badge {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-amber);
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.shot-timestamp-jump {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent-blue);
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.shot-timestamp-jump:hover {
+    background: var(--accent-blue);
+    color: #000;
+}
+
+.shot-headline-text {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+
+.shot-thumbnails-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.shot-thumb-box {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 9/16;
+    background: #000;
+    cursor: pointer;
+    border: 1px solid #202d42;
+}
+
+.shot-thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.shot-thumb-box:hover img {
+    transform: scale(1.05);
+}
+
+.thumb-tag {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #cbd5e1;
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.critique-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+@media (max-width: 640px) {
+    .critique-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.critique-good {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+
+.critique-bad {
+    background: rgba(244, 63, 94, 0.08);
+    border: 1px solid rgba(244, 63, 94, 0.25);
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+
+.critique-label {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.critique-good .critique-label { color: var(--accent-emerald); }
+.critique-bad .critique-label { color: var(--accent-rose); }
+
+.takeaway-box {
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    font-size: 13.5px;
+    color: #e0f2fe;
+}
+
+.takeaway-title {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.case-ref-box {
+    background: rgba(192, 132, 252, 0.08);
+    border: 1px solid rgba(192, 132, 252, 0.25);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+}
+
+.case-ref-header {
+    font-family: var(--font-heading);
+    font-size: 12.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.gear-tech-line {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--text-muted);
+    border-top: 1px solid #1a2436;
+    padding-top: 8px;
+    margin-top: 8px;
+}
+
+/* Grid Storyboard View */
+.grid-storyboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.grid-thumb-item {
+    position: relative;
+    aspect-ratio: 9/16;
+    background: #000;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #1f293d;
+    cursor: pointer;
+}
+
+.grid-thumb-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.grid-thumb-item:hover img {
+    transform: scale(1.08);
+}
+
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+    display: flex;
+    align-items: flex-end;
+    padding: 6px;
+}
+
+.grid-tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.lightbox-modal.active {
+    display: flex;
+}
+
+.lightbox-img-wrap {
+    max-width: 90vw;
+    max-height: 85vh;
+    position: relative;
+}
+
+.lightbox-img-wrap img {
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    border: 1px solid #334155;
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: -36px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 13px;
+    font-family: var(--font-heading);
+}
+
+.lightbox-close-btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<div class="app-container">
+    <!-- CỘT TRÁI: STICKY VIDEO PLAYER & CONTROLS -->
+    <aside class="video-sidebar-col">
+        <div class="video-player-container">
+            <video id="mainVideo" playsinline webkit-playsinline x5-playsinline preload="auto" controls poster="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_06_mid.jpg">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/practice_cinematic_chay_0903.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ phát video MP4.
+            </video>
+        </div>
+        
+        <div class="player-controls-panel">
+            <div class="time-display-bar">
+                <span id="curTimeDisplay">00:00.00</span>
+                <span id="totTimeDisplay">00:16.54</span>
+            </div>
+            
+            <div class="btn-group-flex">
+                <button class="btn-ctrl btn-primary" id="btnPlayPause" onclick="togglePlay()">▶ Play</button>
+                <button class="btn-ctrl" onclick="stepFrame(-1)">⏮ -1F</button>
+                <button class="btn-ctrl" onclick="stepFrame(1)">+1F ⏭</button>
+                <button class="btn-ctrl" onclick="setSpeed(0.25, this)">0.25x</button>
+                <button class="btn-ctrl" onclick="setSpeed(0.5, this)">0.5x</button>
+                <button class="btn-ctrl active" onclick="setSpeed(1.0, this)">1.0x</button>
+                <button class="btn-ctrl" onclick="toggleMute()" id="btnMute">🔊 Bật tiếng</button>
+            </div>
+        </div>
+        
+        <div class="sidebar-meta-box">
+            <div style="margin-bottom: 12px;">
+                <span class="meta-badge-tag badge-emerald">🏃 KINETIC RUNNING MASTER</span>
+                <span class="meta-badge-tag badge-blue">8 SHOTS (12.58S)</span>
+                <span class="meta-badge-tag badge-amber">4K 24FPS DỌC 9:16</span>
+            </div>
+            
+            <h3 style="font-family: var(--font-heading); font-size: 16px; color: #fff; margin-bottom: 8px;">🎬 Practice Cinematic Chạy 0903</h3>
+            <p style="font-size: 12.5px; color: var(--text-secondary); margin-bottom: 14px;">
+                Báo cáo phân tích chuyên sâu 8 phân cảnh chạy bộ thể thao tự quay ngày 09/03: Đánh giá nhịp chuyển động dồn dập, kỹ thuật ngược sáng mặt đường dát bạc và đối chiếu case study quốc tế để tối ưu từng khung hình.
+            </p>
+            
+            <div style="background: #090e17; border: 1px solid #1a2334; border-radius: 8px; padding: 12px; font-size: 12px;">
+                <div style="color: var(--accent-blue); font-weight: 700; margin-bottom: 8px;">📌 MỤC LỤC TRUY CẬP NHANH PHÂN CẢNH:</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+<button class="btn-ctrl" style="padding: 4px 8px; font-size: 11px;" onclick="seekTo(0.0)">S01 (0.0s)</button>
+<button class="btn-ctrl" style="padding: 4px 8px; font-size: 11px;" onclick="seekTo(0.79)">S02 (0.8s)</button>
+<button class="btn-ctrl" style="padding: 4px 8px; font-size: 11px;" onclick="seekTo(1.79)">S03 (1.8s)</button>
+<button class="btn-ctrl" style="padding: 4px 8px; font-size: 11px;" onclick="seekTo(3.67)">S04 (3.7s)</button>
+<button class="btn-ctrl" style="padding: 4px 8px; font-size: 11px;" onclick="seekTo(4.71)">S05 (4.7s)</button>
+<button class="btn-ctrl" style="padding: 4px 8px; font-size: 11px;" onclick="seekTo(6.71)">S06 (6.7s)</button>
+<button class="btn-ctrl" style="padding: 4px 8px; font-size: 11px;" onclick="seekTo(8.71)">S07 (8.7s)</button>
+<button class="btn-ctrl" style="padding: 4px 8px; font-size: 11px;" onclick="seekTo(10.62)">S08 (10.6s)</button>
+<button class="btn-ctrl" style="padding: 4px 8px; font-size: 11px;" onclick="seekTo(12.58)">S09 (12.6s)</button>
+
+                </div>
+            </div>
+            
+            <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid #1a2334;">
+                <a href="https://instagram.com/vietmac" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; color: var(--accent-amber); font-weight: 700; font-size: 12.5px; text-decoration: none;">
+                    <span>📸 Tác giả: @vietmac</span>
+                    <span style="font-size: 11px; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.4); padding: 2px 6px; border-radius: 4px;">Xem Profile ↗</span>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- CỘT PHẢI: NỘI DUNG PHÂN TÍCH & BÓC TÁCH CHI TIẾT -->
+    <main class="content-scroll-col">
+        <header style="margin-bottom: 24px;">
+            <div style="display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap;">
+                <span class="meta-badge-tag badge-emerald">DIRECTOR NOTEBOOK</span>
+                <span class="meta-badge-tag badge-amber">RUNNING SEQUENCE FORMULA</span>
+                <span class="meta-badge-tag badge-blue">TIMES CITY B-ROLL</span>
+            </div>
+            <h1 class="main-header-title">🎬 PHÂN TÍCH CHUYÊN SÂU: PRACTICE CINEMATIC CHẠY 0903 & BÀI HỌC CẢI THIỆN TỪNG KHUNG HÌNH</h1>
+            <p style="color: var(--text-secondary); font-size: 14px;">
+                Đạo diễn thực hành: <strong style="color: var(--accent-amber);">@vietmac</strong> • Bối cảnh: <strong style="color: #fff;">Vinhomes Times City Hà Nội</strong> • Chuẩn kỹ thuật: <strong style="color: var(--accent-blue);">4K 24FPS Dọc 9:16 (16.54s)</strong>
+            </p>
+        </header>
+
+        <!-- SECTION 1: ĐÁNH GIÁ TỔNG QUAN -->
+        <section class="section-block">
+            <h2 class="section-header-title"><span>📊</span> 1. ĐÁNH GIÁ TỔNG QUAN & BƯỚC TIẾN BỘ THỊ GIÁC SO VỚI BẢN 2508</h2>
+            <p style="color: #cbd5e1; font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
+                Video <strong>Practice Cinematic Chạy 0903</strong> đánh dấu bước chuyển mình rõ rệt của anh Việt từ dạng video tĩnh quan sát đời thường (Life Observation) sang <strong>Kinetic Sports Storytelling (Kể chuyện thể thao vận động cao)</strong>. Sự kết hợp giữa năng lượng sải bước thể thao và không gian hiện đại của Times City tạo ra một chuỗi phân cảnh đầy sức sống.
+            </p>
+            
+            <div class="grid-3-cards">
+                <div class="analysis-subcard">
+                    <div class="subcard-title"><span>⚡</span> Nhịp Dựng Thể Thao Dồn Dập</div>
+                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">
+                        Thời lượng trung bình mỗi shot đạt <strong>1.57 giây</strong> (8 phân cảnh trong 12.58s), duy trì nhịp thở nhanh, kích thích nhịp tim người xem và tối ưu hoàn hảo cho Reels/TikTok.
+                    </p>
+                </div>
+                <div class="analysis-subcard">
+                    <div class="subcard-title"><span>☀️</span> Đỉnh Cao Ánh Sáng Ngược (Backlit)</div>
+                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">
+                        <strong>Shot 06 & Shot 07</strong> là những khung hình đạt chất lượng quảng cáo quốc tế: Mặt đường bê tông phản chiếu ánh sáng xiên như dát bạc kết hợp viền sáng Rim Light tôn vinh đường nét cơ bắp.
+                    </p>
+                </div>
+                <div class="analysis-subcard">
+                    <div class="subcard-title"><span>🎯</span> Giao Tiếp Ánh Mắt Kết Thúc</div>
+                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">
+                        Cú dừng lại thở đều và nhìn thẳng ống kính ở <strong>Shot 08</strong> tạo điểm neo cảm xúc đắt giá (Emotional Anchor), kết nối trực tiếp với sự đồng cảm của người xem sau một chặng chạy nỗ lực.
+                    </p>
+                </div>
+            </div>
+            
+            <div style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 8px; padding: 14px 16px; margin-top: 16px;">
+                <div style="font-family: var(--font-heading); font-size: 13.5px; font-weight: 700; color: var(--accent-blue); margin-bottom: 6px;">📈 BẢNG SO SÁNH TIẾN BỘ GIỮA 25/08 VÀ 09/03:</div>
+                <ul style="padding-left: 20px; font-size: 13px; color: #e0f2fe; line-height: 1.6;">
+                    <li><strong>Tốc độ chủ thể:</strong> Bản 25/08 chủ yếu là người đi bộ/nhảy dây tĩnh tại chỗ; Bản 0903 chuyển hẳn sang chạy nước rút và chạy bền, tạo động lực thị giác mạnh mẽ hơn 300%.</li>
+                    <li><strong>Xử lý tương phản:</strong> Bản 0903 khai thác mặt đường bê tông bóng nắng sớm mai tạo hiệu ứng Specular Reflection tuyệt đẹp, không bị bết màu đen.</li>
+                    <li><strong>Điểm cần khắc phục ngay:</strong> Đoạn đuôi video có 3.96s màn hình đen (Shot 09) do timeline CapCut chưa được Trim sát điểm kết thúc, cần xóa bỏ để tránh tụt retention rate.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION 2: DẪN CHỨNG CASE STUDY QUỐC TẾ -->
+        <section class="section-block">
+            <h2 class="section-header-title"><span>🏆</span> 2. DẪN CHỨNG CASE STUDY QUỐC TẾ ĐỂ NÂNG TẦM TỪNG KHUNG HÌNH</h2>
+            <p style="color: #cbd5e1; font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
+                Để biến các cảnh quay chạy bộ tự quay thành tác phẩm điện ảnh chuẩn Hollywood/Nike Commercial, dưới đây là 4 case study tham chiếu cốt lõi từ các đạo diễn và creator hàng đầu thế giới:
+            </p>
+
+            <div class="comparison-card">
+                <div class="comp-header">
+                    <div class="comp-title">🏋️ Case 1: @willwfit — "The Goal Is Simple Gym Motivation"</div>
+                    <span class="comp-badge badge-emerald">THỂ THAO & NĂNG LƯỢNG BÙNG NỔ</span>
+                </div>
+                <p style="font-size: 13px; color: #cbd5e1; line-height: 1.5; margin-bottom: 8px;">
+                    <strong>Kỹ thuật mấu chốt:</strong> Kết hợp góc quay cận trung (Medium Close-up) theo dõi nhịp thở dồn dập + âm thanh tiếng giày nện xuống mặt đường (Shoe Impact SFX) cực đanh.
+                </p>
+                <p style="font-size: 12.5px; color: var(--accent-blue); line-height: 1.45;">
+                    👉 <strong>Áp dụng cho Video của anh Việt:</strong> Ở <em>Shot 07</em>, hãy lồng thêm âm thanh thở dốc chân thực và tiếng giày nện đất để kích thích đa giác quan người xem, biến bước chạy thành nhịp đập cảm xúc.
+                </p>
+            </div>
+
+            <div class="comparison-card">
+                <div class="comp-header">
+                    <div class="comp-title">🚀 Case 2: @omgadrian — "Travel Sequence Formula"</div>
+                    <span class="comp-badge badge-blue">TRACKING & KINETIC MATCH CUT</span>
+                </div>
+                <p style="font-size: 13px; color: #cbd5e1; line-height: 1.5; margin-bottom: 8px;">
+                    <strong>Kỹ thuật mấu chốt:</strong> Duy trì hướng chuyển động của chủ thể (Vector Continuity) từ trái qua phải hoặc từ xa lại gần đồng nhất qua từng nhát cắt.
+                </p>
+                <p style="font-size: 12.5px; color: var(--accent-blue); line-height: 1.45;">
+                    👉 <strong>Áp dụng cho Video của anh Việt:</strong> Khi chuyển từ <em>Shot 01</em> sang <em>Shot 02</em> và <em>Shot 03</em>, việc anh Việt luôn chạy thẳng về phía ống kính đã tạo ra một dòng chảy quán tính thị giác mượt mà không bị ngắt quãng.
+                </p>
+            </div>
+
+            <div class="comparison-card">
+                <div class="comp-header">
+                    <div class="comp-title">⏱️ Case 3: @byjxson — "Project 100 Day 01 & Quảng Cáo Đồng Hồ"</div>
+                    <span class="comp-badge badge-amber">NÉN TIÊU CỰ & CÚ CHỐT HẠ MÀN</span>
+                </div>
+                <p style="font-size: 13px; color: #cbd5e1; line-height: 1.5; margin-bottom: 8px;">
+                    <strong>Kỹ thuật mấu chốt:</strong> Luôn kết thúc chuỗi vận động thể thao bằng một cử chỉ chi tiết (Micro-action): Bấm dừng đồng hồ bấm giờ, tháo dây giày hoặc ngửa cổ uống nước.
+                </p>
+                <p style="font-size: 12.5px; color: var(--accent-blue); line-height: 1.45;">
+                    👉 <strong>Áp dụng cho Video của anh Việt:</strong> Tại <em>Shot 08</em>, sau khi dừng lại nhìn camera, hãy chèn ngay 1 shot Ultra Macro 1.0s đặc tả bàn tay bấm nút 'Stop' trên Apple Watch để tạo cảm giác hoàn thành mục tiêu (Sense of Accomplishment).
+                </p>
+            </div>
+
+            <div class="comparison-card">
+                <div class="comp-header">
+                    <div class="comp-title">🌅 Case 4: @daiki.shino — "London Cinematic Video Postcards"</div>
+                    <span class="comp-badge badge-purple">MẶT ĐƯỜNG PHẢN QUANG & BÓNG ĐỔ</span>
+                </div>
+                <p style="font-size: 13px; color: #cbd5e1; line-height: 1.5; margin-bottom: 8px;">
+                    <strong>Kỹ thuật mấu chốt:</strong> Tận dụng góc nghiêng mặt trời thấp lúc 6h-7h sáng để biến bề mặt bê tông/nhựa đường thành một tấm gương phản quang sáng lóa.
+                </p>
+                <p style="font-size: 12.5px; color: var(--accent-blue); line-height: 1.45;">
+                    👉 <strong>Áp dụng cho Video của anh Việt:</strong> <em>Shot 06</em> của anh Việt chính là minh chứng hoàn hảo của kỹ thuật này! Nếu hạ máy thấp hơn 30cm nữa, bóng đổ người chạy sẽ kéo dài chạm tận đáy khung hình cực kỳ nghệ thuật.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 3: BÓC TÁCH CHI TIẾT TOÀN BỘ PHÂN CẢNH -->
+        <section class="section-block">
+            <h2 class="section-header-title"><span>🎬</span> 3. BÓC TÁCH CHI TIẾT 8 PHÂN CẢNH CHẠY BỘ + 1 PHÂN ĐOẠN ĐỆM</h2>
+            <p style="color: #cbd5e1; font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
+                Mỗi phân cảnh được phân tích dựa trên sự thật khung hình: Đặt tiêu đề là điểm hiệu quả nhất + lý do, mô tả đối tượng diễn biến, đánh giá bố cục 2 chiều (Mặt tốt & Hạn chế) và đúc kết bài học đạo diễn thực chiến kèm Case Study tham chiếu.
+            </p>
+
+            <div class="shot-breakdown-list">
+
+    <div class="shot-card-item" id="shot-card-1">
+        <div class="shot-meta-header">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="meta-badge-tag badge-amber">SHOT 01</span>
+                <span class="shot-number-badge" onclick="seekTo(0.0)">PHÂN CẢNH #01</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">⏱ 0.79s (0 - 18F)</span>
+            </div>
+            <button class="shot-timestamp-jump" onclick="seekTo(0.0)">▶ Nhảy tới [0.00s - 0.79s]</button>
+        </div>
+        
+        <h3 class="shot-headline-text">Bố cục vòm tán cây & Sự xuất hiện đồng thời: Nhịp mở màn 0.79s quá nhanh chưa kịp khóa tiêu điểm</h3>
+        
+        <div class="shot-thumbnails-grid">
+            <div class="shot-thumb-box" onclick="seekTo(0.0); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_01_start.jpg', 'Shot 01 - Đầu cảnh (0.00s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                <span class="thumb-tag">ĐẦU (0.00s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(0.395); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_01_mid.jpg', 'Shot 01 - Giữa cảnh (0.40s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                <span class="thumb-tag">GIỮA (0.40s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(0.79); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_01_end.jpg', 'Shot 01 - Cuối cảnh (0.79s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                <span class="thumb-tag">CUỐI (0.79s)</span>
+            </div>
+        </div>
+        
+        <div style="background: #141b2a; border: 1px solid #222f46; border-radius: 8px; padding: 12px 14px; margin-bottom: 12px;">
+            <div style="font-family: var(--font-heading); font-size: 12.5px; font-weight: 700; color: var(--accent-blue); margin-bottom: 4px;">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN:</div>
+            <p style="font-size: 13.5px; color: var(--text-primary); line-height: 1.5;">Góc máy trung toàn (Full/Medium-Wide Shot) đặt thấp trên vỉa hè con đường nội khu Times City rợp bóng cây cổ thụ. Anh Việt sải bước chạy về phía trước, cùng lúc có người phụ nữ đạp xe đạp mini cùng chiều lướt song song bên cạnh.</p>
+        </div>
+        
+        <div class="critique-grid">
+            <div class="critique-good">
+                <div class="critique-label"><span>✅</span> ĐIỂM SÁNG THỊ GIÁC (PROS)</div>
+                <p style="font-size: 13px; color: #d1fae5; line-height: 1.5;">Đường viền vỉa hè đá xám tạo đường dẫn tự nhiên (Leading Line); vòm lá cây xanh mát tạo khung viền tự nhiên (Natural Canopy Framing) rất thoáng đãng; ghi lại trọn vẹn nhịp sống đô thị buổi sáng trong lành.</p>
+            </div>
+            <div class="critique-bad">
+                <div class="critique-label"><span>⚠️</span> ĐIỂM CẦN KHẮC PHỤC (CONS)</div>
+                <p style="font-size: 13px; color: #ffe4e6; line-height: 1.5;">Thời lượng 0.79s (chỉ 19 frames) là quá ngắn cho một cú mở màn (Visual Hook); người đi xe đạp bên cạnh vô tình thu hút một phần thị giác khiến mắt người xem chưa kịp nhận diện rõ chủ thể thì video đã chuyển cảnh.</p>
+            </div>
+        </div>
+        
+        <div class="takeaway-box">
+            <div class="takeaway-title"><span>💡</span> BÀI HỌC THỰC CHIẾN ĐẠO DIỄN:</div>
+            <p>Hãy giữ cú mở màn tối thiểu 1.5s để người xem kịp khóa tiêu điểm vào bước chạy và nhịp thở của nhân vật. Nếu muốn có người đi xe đạp làm yếu tố đời thường (Foreground Pass-by), hãy để xe lướt qua ống kính trước rồi người chạy mới xuất hiện.</p>
+        </div>
+        
+        <div class="case-ref-box">
+            <div class="case-ref-header">
+                <span style="color: var(--accent-purple); font-weight: 700;">🎯 Case Study Benchmark: @byjxson (Project 100) & @omgadrian (Travel Sequence Formula)</span>
+            </div>
+            <p style="font-size: 12.5px; color: #e2e8f0; line-height: 1.45; margin-top: 4px;">Kỹ thuật 'Establishing Pass-by & Space Isolation': Sử dụng ống kính Telephoto 3x (85mm) nén chặt không gian, cô lập người chạy ở trung tâm và làm mờ các đối tượng chuyển động phụ xung quanh, giúp người xem tập trung 100% vào năng lượng của nhân vật chính.</p>
+        </div>
+        
+        <div class="gear-tech-line">
+            📷 <strong>KỸ THUẬT QUAY:</strong> Full / Medium Wide Shot • 1x Lens (~24mm) • Diffused Morning Canopy Light • Direct Motion Cut
+        </div>
+    </div>
+    
+    <div class="shot-card-item" id="shot-card-2">
+        <div class="shot-meta-header">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="meta-badge-tag badge-amber">SHOT 02</span>
+                <span class="shot-number-badge" onclick="seekTo(0.79)">PHÂN CẢNH #02</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">⏱ 1.00s (19 - 42F)</span>
+            </div>
+            <button class="shot-timestamp-jump" onclick="seekTo(0.79)">▶ Nhảy tới [0.79s - 1.79s]</button>
+        </div>
+        
+        <h3 class="shot-headline-text">Chân dung toàn thân trục thẳng (Center Alignment): Năng lượng sải bước cô đọng nhưng thiếu tiền cảnh</h3>
+        
+        <div class="shot-thumbnails-grid">
+            <div class="shot-thumb-box" onclick="seekTo(0.79); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_02_start.jpg', 'Shot 02 - Đầu cảnh (0.79s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                <span class="thumb-tag">ĐẦU (0.79s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(1.29); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_02_mid.jpg', 'Shot 02 - Giữa cảnh (1.29s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                <span class="thumb-tag">GIỮA (1.29s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(1.79); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_02_end.jpg', 'Shot 02 - Cuối cảnh (1.79s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                <span class="thumb-tag">CUỐI (1.79s)</span>
+            </div>
+        </div>
+        
+        <div style="background: #141b2a; border: 1px solid #222f46; border-radius: 8px; padding: 12px 14px; margin-bottom: 12px;">
+            <div style="font-family: var(--font-heading); font-size: 12.5px; font-weight: 700; color: var(--accent-blue); margin-bottom: 4px;">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN:</div>
+            <p style="font-size: 13.5px; color: var(--text-primary); line-height: 1.5;">Góc quay trung cảnh (Medium Shot) theo trục thẳng trực diện giữa lòng đường nội khu vắng vẻ. Anh Việt sải bước chạy dứt khoát hướng thẳng về camera, biểu cảm tập trung cao độ.</p>
+        </div>
+        
+        <div class="critique-grid">
+            <div class="critique-good">
+                <div class="critique-label"><span>✅</span> ĐIỂM SÁNG THỊ GIÁC (PROS)</div>
+                <p style="font-size: 13px; color: #d1fae5; line-height: 1.5;">Căn chỉnh đối tượng ở trục 1/3 trung tâm rất cân đối; bắt trọn vẹn tư thế thể thao khỏe khoắn, nhịp đánh tay và cơ bắp khi chạy; tốc độ sải bước có lực và tràn đầy năng lượng.</p>
+            </div>
+            <div class="critique-bad">
+                <div class="critique-label"><span>⚠️</span> ĐIỂM CẦN KHẮC PHỤC (CONS)</div>
+                <p style="font-size: 13px; color: #ffe4e6; line-height: 1.5;">Khung hình hơi phẳng (2D look) do thiếu tiền cảnh (Foreground Layer); mặt đường bê tông xám chiếm 50% diện tích nửa dưới mà không có điểm nhấn; ánh sáng thuận hướng làm bóng đổ mờ nhạt.</p>
+            </div>
+        </div>
+        
+        <div class="takeaway-box">
+            <div class="takeaway-title"><span>💡</span> BÀI HỌC THỰC CHIẾN ĐẠO DIỄN:</div>
+            <p>Bổ sung một tiền cảnh mờ (Dirty Foreground) như góc thân cây, gương xe máy hoặc hạ máy sát mặt đường để tăng cảm giác chiều sâu 3D (Z-axis Layering).</p>
+        </div>
+        
+        <div class="case-ref-box">
+            <div class="case-ref-header">
+                <span style="color: var(--accent-purple); font-weight: 700;">🎯 Case Study Benchmark: @bryanhynes (The Art of Visual Sequence)</span>
+            </div>
+            <p style="font-size: 12.5px; color: #e2e8f0; line-height: 1.45; margin-top: 4px;">Kỹ thuật 'Dirty Foreground Tracking': Đặt camera nấp sau một gờ đá hoặc mép tán lá, tracking lùi dần theo người chạy để tạo cảm giác ống kính điện ảnh đang bí mật theo dõi từ bên lề con phố.</p>
+        </div>
+        
+        <div class="gear-tech-line">
+            📷 <strong>KỸ THUẬT QUAY:</strong> Medium Tracking Shot • 1x/2x Lens (~40mm) • Soft Front Daylight • Kinetic Match Cut
+        </div>
+    </div>
+    
+    <div class="shot-card-item" id="shot-card-3">
+        <div class="shot-meta-header">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="meta-badge-tag badge-amber">SHOT 03</span>
+                <span class="shot-number-badge" onclick="seekTo(1.79)">PHÂN CẢNH #03</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">⏱ 1.87s (43 - 87F)</span>
+            </div>
+            <button class="shot-timestamp-jump" onclick="seekTo(1.79)">▶ Nhảy tới [1.79s - 3.67s]</button>
+        </div>
+        
+        <h3 class="shot-headline-text">Tương phản tỷ lệ Người vs Cao ốc (Human Scale): Đường dẫn mép vỉa hè sâu hun hút</h3>
+        
+        <div class="shot-thumbnails-grid">
+            <div class="shot-thumb-box" onclick="seekTo(1.79); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_03_start.jpg', 'Shot 03 - Đầu cảnh (1.79s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                <span class="thumb-tag">ĐẦU (1.79s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(2.73); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_03_mid.jpg', 'Shot 03 - Giữa cảnh (2.73s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                <span class="thumb-tag">GIỮA (2.73s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(3.67); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_03_end.jpg', 'Shot 03 - Cuối cảnh (3.67s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                <span class="thumb-tag">CUỐI (3.67s)</span>
+            </div>
+        </div>
+        
+        <div style="background: #141b2a; border: 1px solid #222f46; border-radius: 8px; padding: 12px 14px; margin-bottom: 12px;">
+            <div style="font-family: var(--font-heading); font-size: 12.5px; font-weight: 700; color: var(--accent-blue); margin-bottom: 4px;">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN:</div>
+            <p style="font-size: 13.5px; color: var(--text-primary); line-height: 1.5;">Góc toàn cảnh sâu (Deep Establishing Shot) dọc theo vỉa hè lát đá dài, hậu cảnh là khối chung cư cao tầng trắng vươn lên bầu trời xanh mát. Anh Việt chạy từ xa lại dọc theo vỉa hè bên phải.</p>
+        </div>
+        
+        <div class="critique-grid">
+            <div class="critique-good">
+                <div class="critique-label"><span>✅</span> ĐIỂM SÁNG THỊ GIÁC (PROS)</div>
+                <p style="font-size: 13px; color: #d1fae5; line-height: 1.5;">Bố cục 1/3 kinh điển xuất sắc: 1/3 trái là đường vỉa hè và tòa cao ốc, 2/3 phải là hàng cây xanh; đường viền vỉa hè (curb line) tạo đường dẫn thị giác cực khỏe hướng thẳng vào công trình; tôn vinh sự nhỏ bé kiên trì của con người trước quy mô đô thị.</p>
+            </div>
+            <div class="critique-bad">
+                <div class="critique-label"><span>⚠️</span> ĐIỂM CẦN KHẮC PHỤC (CONS)</div>
+                <p style="font-size: 13px; color: #ffe4e6; line-height: 1.5;">Nhân vật ở khoảng cách khá xa trong suốt 1.87s, chuyển động người chạy chiếm diện tích nhỏ khiến năng lượng hành động bị giảm; chiếc ô tô đen đỗ bên lề trái hơi nặng mắt.</p>
+            </div>
+        </div>
+        
+        <div class="takeaway-box">
+            <div class="takeaway-title"><span>💡</span> BÀI HỌC THỰC CHIẾN ĐẠO DIỄN:</div>
+            <p>Khi quay cảnh toàn kiến trúc, hãy để nhân vật chạy từ xa cho đến khi lướt qua hẳn mép camera (Frame Exit) rồi mới cắt cảnh, tạo cú chuyển tiếp không gian mượt mà 100%.</p>
+        </div>
+        
+        <div class="case-ref-box">
+            <div class="case-ref-header">
+                <span style="color: var(--accent-purple); font-weight: 700;">🎯 Case Study Benchmark: @ioana_iftode (Kyoto Slow Life) & @chowyhh (London Composition)</span>
+            </div>
+            <p style="font-size: 12.5px; color: #e2e8f0; line-height: 1.45; margin-top: 4px;">Kỹ thuật 'Deep Space Human Element': Khóa máy tĩnh tuyệt đối trên chân máy (Locked-off Tripod), căn trục kiến trúc thẳng đứng 90 độ và để chuyển động tự nhiên của người chạy làm sống động bức tranh kiến trúc tĩnh.</p>
+        </div>
+        
+        <div class="gear-tech-line">
+            📷 <strong>KỸ THUẬT QUAY:</strong> Extreme Wide Establishing • 1x Wide (~24mm) • Soft Overhead Skylight • Smooth Continuity Cut
+        </div>
+    </div>
+    
+    <div class="shot-card-item" id="shot-card-4">
+        <div class="shot-meta-header">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="meta-badge-tag badge-amber">SHOT 04</span>
+                <span class="shot-number-badge" onclick="seekTo(3.67)">PHÂN CẢNH #04</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">⏱ 1.04s (88 - 112F)</span>
+            </div>
+            <button class="shot-timestamp-jump" onclick="seekTo(3.67)">▶ Nhảy tới [3.67s - 4.71s]</button>
+        </div>
+        
+        <h3 class="shot-headline-text">Màu sắc lễ hội dẫn hướng mắt: Dải cờ dây sắc màu làm ranh giới thị giác sinh động</h3>
+        
+        <div class="shot-thumbnails-grid">
+            <div class="shot-thumb-box" onclick="seekTo(3.67); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_04_start.jpg', 'Shot 04 - Đầu cảnh (3.67s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                <span class="thumb-tag">ĐẦU (3.67s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(4.1899999999999995); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_04_mid.jpg', 'Shot 04 - Giữa cảnh (4.19s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                <span class="thumb-tag">GIỮA (4.19s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(4.71); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_04_end.jpg', 'Shot 04 - Cuối cảnh (4.71s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                <span class="thumb-tag">CUỐI (4.71s)</span>
+            </div>
+        </div>
+        
+        <div style="background: #141b2a; border: 1px solid #222f46; border-radius: 8px; padding: 12px 14px; margin-bottom: 12px;">
+            <div style="font-family: var(--font-heading); font-size: 12.5px; font-weight: 700; color: var(--accent-blue); margin-bottom: 4px;">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN:</div>
+            <p style="font-size: 13.5px; color: var(--text-primary); line-height: 1.5;">Toàn cảnh con đường nội khu với hàng rào cờ dây nhiều màu sắc giăng bên lề phải, hàng dừa xanh mát bên trái. Anh Việt chạy giữa con đường vắng tiến về phía trước.</p>
+        </div>
+        
+        <div class="critique-grid">
+            <div class="critique-good">
+                <div class="critique-label"><span>✅</span> ĐIỂM SÁNG THỊ GIÁC (PROS)</div>
+                <p style="font-size: 13px; color: #d1fae5; line-height: 1.5;">Dải cờ dây màu sắc rực rỡ tạo mảng màu dẫn hướng mắt sinh động, mang lại không khí tươi vui, tràn đầy sức sống của một buổi sáng mới.</p>
+            </div>
+            <div class="critique-bad">
+                <div class="critique-label"><span>⚠️</span> ĐIỂM CẦN KHẮC PHỤC (CONS)</div>
+                <p style="font-size: 13px; color: #ffe4e6; line-height: 1.5;">Trục máy hơi nghiêng nhẹ sang phải; góc máy đặt ngang tầm ngực làm phối cảnh mặt đường hơi bẹt; chưa tận dụng được cờ dây làm tiền cảnh cận (Foreground bokeh).</p>
+            </div>
+        </div>
+        
+        <div class="takeaway-box">
+            <div class="takeaway-title"><span>💡</span> BÀI HỌC THỰC CHIẾN ĐẠO DIỄN:</div>
+            <p>Hạ máy sát mặt đường (Low Angle) ngay dưới dây cờ, dùng ống kính tele 2x/3x để cờ dây tạo thành dải màu mờ nhòe (bokeh) ở góc trên khung hình, nâng tầm cảnh quay thành phim tài liệu thể thao chuyên nghiệp.</p>
+        </div>
+        
+        <div class="case-ref-box">
+            <div class="case-ref-header">
+                <span style="color: var(--accent-purple); font-weight: 700;">🎯 Case Study Benchmark: @joshdiazfilms (Life Feel Put Together) & @kenshoji.visuals (The Art of Static Shot)</span>
+            </div>
+            <p style="font-size: 12.5px; color: #e2e8f0; line-height: 1.45; margin-top: 4px;">Kỹ thuật 'Leading Color Line': Tận dụng các vật thể trang trí ven đường (cờ hoa, rào chắn, cột mốc) làm ranh giới thị giác dẫn mắt người xem thẳng vào tâm điểm chuyển động.</p>
+        </div>
+        
+        <div class="gear-tech-line">
+            📷 <strong>KỸ THUẬT QUAY:</strong> Full Shot • 1x Wide (~24mm) • Morning Natural Daylight • Action Cut
+        </div>
+    </div>
+    
+    <div class="shot-card-item" id="shot-card-5">
+        <div class="shot-meta-header">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="meta-badge-tag badge-amber">SHOT 05</span>
+                <span class="shot-number-badge" onclick="seekTo(4.71)">PHÂN CẢNH #05</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">⏱ 2.00s (113 - 160F)</span>
+            </div>
+            <button class="shot-timestamp-jump" onclick="seekTo(4.71)">▶ Nhảy tới [4.71s - 6.71s]</button>
+        </div>
+        
+        <h3 class="shot-headline-text">Hình học mặt đường (Dynamic Chevron Lines): Góc chéo 45° phá vỡ sự đơn điệu của trục thẳng</h3>
+        
+        <div class="shot-thumbnails-grid">
+            <div class="shot-thumb-box" onclick="seekTo(4.71); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_05_start.jpg', 'Shot 05 - Đầu cảnh (4.71s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                <span class="thumb-tag">ĐẦU (4.71s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(5.71); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_05_mid.jpg', 'Shot 05 - Giữa cảnh (5.71s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                <span class="thumb-tag">GIỮA (5.71s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(6.71); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_05_end.jpg', 'Shot 05 - Cuối cảnh (6.71s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                <span class="thumb-tag">CUỐI (6.71s)</span>
+            </div>
+        </div>
+        
+        <div style="background: #141b2a; border: 1px solid #222f46; border-radius: 8px; padding: 12px 14px; margin-bottom: 12px;">
+            <div style="font-family: var(--font-heading); font-size: 12.5px; font-weight: 700; color: var(--accent-blue); margin-bottom: 4px;">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN:</div>
+            <p style="font-size: 13.5px; color: var(--text-primary); line-height: 1.5;">Góc máy chéo từ trên vỉa hè nhìn xuống ngã rẽ có vạch sơn vàng chéo (Yellow Chevron Hatching). Anh Việt chạy từ lối đi sau rặng cây xanh bước ra lòng đường.</p>
+        </div>
+        
+        <div class="critique-grid">
+            <div class="critique-good">
+                <div class="critique-label"><span>✅</span> ĐIỂM SÁNG THỊ GIÁC (PROS)</div>
+                <p style="font-size: 13px; color: #d1fae5; line-height: 1.5;">Họa tiết hình học vạch kẻ đường chevron màu vàng tương phản mạnh mẽ với nền bê tông xám và mảng xanh của cây cối; góc quay chéo 45 độ tạo tính động và chiều sâu không gian mới lạ.</p>
+            </div>
+            <div class="critique-bad">
+                <div class="critique-label"><span>⚠️</span> ĐIỂM CẦN KHẮC PHỤC (CONS)</div>
+                <p style="font-size: 13px; color: #ffe4e6; line-height: 1.5;">Nhân vật xuất hiện hơi muộn ở nửa sau của shot; thùng rác màu đỏ-trắng phía sau lề đường hơi làm vướng tầm mắt; ánh sáng bóng râm làm nhân vật hơi chìm vào hậu cảnh cây xanh.</p>
+            </div>
+        </div>
+        
+        <div class="takeaway-box">
+            <div class="takeaway-title"><span>💡</span> BÀI HỌC THỰC CHIẾN ĐẠO DIỄN:</div>
+            <p>Cắt cảnh ngay khoảnh khắc bước chân đầu tiên của nhân vật đạp vào vùng vạch sơn vàng (Match Cut on Action) để video luôn duy trì nhịp độ cao.</p>
+        </div>
+        
+        <div class="case-ref-box">
+            <div class="case-ref-header">
+                <span style="color: var(--accent-purple); font-weight: 700;">🎯 Case Study Benchmark: @colecoppolino (Kỷ Luật Thép) & @withyuee (Visual Storytelling)</span>
+            </div>
+            <p style="font-size: 12.5px; color: #e2e8f0; line-height: 1.45; margin-top: 4px;">Kỹ thuật 'Graphic Street Canvas': Biến mặt đường thành 'sân khấu đồ họa', sử dụng vạch sơn làm đường dẫn bước chân người chạy để tạo nhịp điệu thị giác dứt khoát.</p>
+        </div>
+        
+        <div class="gear-tech-line">
+            📷 <strong>KỸ THUẬT QUAY:</strong> Diagonal High-Angle Shot • 1x Wide (~28mm) • Shaded Ambient Light • Jump on Action
+        </div>
+    </div>
+    
+    <div class="shot-card-item" id="shot-card-6">
+        <div class="shot-meta-header">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="meta-badge-tag badge-emerald">🔥 SIÊU PHẨM</span>
+                <span class="shot-number-badge" onclick="seekTo(6.71)">PHÂN CẢNH #06</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">⏱ 2.00s (161 - 208F)</span>
+            </div>
+            <button class="shot-timestamp-jump" onclick="seekTo(6.71)">▶ Nhảy tới [6.71s - 8.71s]</button>
+        </div>
+        
+        <h3 class="shot-headline-text">KHOẢNH KHẮC NGƯỢC SÁNG ĐỈNH CAO: Mặt đường dát bạc phản chiếu & Bóng đổ Silhouette</h3>
+        
+        <div class="shot-thumbnails-grid">
+            <div class="shot-thumb-box" onclick="seekTo(6.71); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_06_start.jpg', 'Shot 06 - Đầu cảnh (6.71s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                <span class="thumb-tag">ĐẦU (6.71s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(7.710000000000001); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_06_mid.jpg', 'Shot 06 - Giữa cảnh (7.71s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                <span class="thumb-tag">GIỮA (7.71s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(8.71); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_06_end.jpg', 'Shot 06 - Cuối cảnh (8.71s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                <span class="thumb-tag">CUỐI (8.71s)</span>
+            </div>
+        </div>
+        
+        <div style="background: #141b2a; border: 1px solid #222f46; border-radius: 8px; padding: 12px 14px; margin-bottom: 12px;">
+            <div style="font-family: var(--font-heading); font-size: 12.5px; font-weight: 700; color: var(--accent-blue); margin-bottom: 4px;">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN:</div>
+            <p style="font-size: 13.5px; color: var(--text-primary); line-height: 1.5;">Góc máy đặt sau đuôi xe van 'Yummy' màu xanh-trắng bên trái và hàng xe hơi đỗ bên phải. Mặt trời ban mai chiếu thẳng trực diện làm mặt đường bê tông sáng bừng lên như dát bạc, anh Việt chạy giữa luồng ánh sáng chói chang tiến về phía trước.</p>
+        </div>
+        
+        <div class="critique-grid">
+            <div class="critique-good">
+                <div class="critique-label"><span>✅</span> ĐIỂM SÁNG THỊ GIÁC (PROS)</div>
+                <p style="font-size: 13px; color: #d1fae5; line-height: 1.5;">ĐÂY LÀ SHOT ĐẮT GIÁ NHẤT VIDEO: Hiệu ứng Backlit ngược sáng rực rỡ, bề mặt đường phản chiếu ánh sáng lấp lánh (Specular Road Reflection), tạo bóng đen dáng người (Silhouette/Rim light) cực kỳ cinematic; xe van bên trái đóng vai trò tiền cảnh che chắn (Occlusion Frame) tạo chiều sâu đa tầng.</p>
+            </div>
+            <div class="critique-bad">
+                <div class="critique-label"><span>⚠️</span> ĐIỂM CẦN KHẮC PHỤC (CONS)</div>
+                <p style="font-size: 13px; color: #ffe4e6; line-height: 1.5;">Góc máy hơi nghiêng nhẹ; chiếc xe van chiếm hơi nhiều diện tích ở mép trái; bóng đổ người chạy chưa được khai thác trọn vẹn ở góc thấp.</p>
+            </div>
+        </div>
+        
+        <div class="takeaway-box">
+            <div class="takeaway-title"><span>💡</span> BÀI HỌC THỰC CHIẾN ĐẠO DIỄN:</div>
+            <p>Khi bắt được luồng ánh sáng ngược mặt đường dát bạc này, hãy hạ máy thấp xuống 30cm (Low Angle Backlit), khóa phơi sáng theo vùng sáng (Expose for Highlights) để bóng người đổ dài hun hút về phía camera.</p>
+        </div>
+        
+        <div class="case-ref-box">
+            <div class="case-ref-header">
+                <span style="color: var(--accent-purple); font-weight: 700;">🎯 Case Study Benchmark: @vietmac Practice 2508 Shot 04 & @daiki.shino (London Cinematic Postcards)</span>
+            </div>
+            <p style="font-size: 12.5px; color: #e2e8f0; line-height: 1.45; margin-top: 4px;">Kỹ thuật 'Blinding Backlit & Specular Surface': Tận dụng góc nghiêng mặt trời 15-30 độ sớm mai để biến mặt đường thành tấm gương phản chiếu ánh sáng tự nhiên, biến chủ thể thành bóng đổ huyền bí đầy cảm xúc điện ảnh.</p>
+        </div>
+        
+        <div class="gear-tech-line">
+            📷 <strong>KỸ THUẬT QUAY:</strong> Golden Backlit Tracking • 1x Wide (~28mm) • Extreme Backlight & Road Specular • Cinematic Beat Drop Cut
+        </div>
+    </div>
+    
+    <div class="shot-card-item" id="shot-card-7">
+        <div class="shot-meta-header">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="meta-badge-tag badge-emerald">🔥 SIÊU PHẨM</span>
+                <span class="shot-number-badge" onclick="seekTo(8.71)">PHÂN CẢNH #07</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">⏱ 1.92s (209 - 254F)</span>
+            </div>
+            <button class="shot-timestamp-jump" onclick="seekTo(8.71)">▶ Nhảy tới [8.71s - 10.62s]</button>
+        </div>
+        
+        <h3 class="shot-headline-text">Chân dung thể thao bùng nổ (Medium Close-Up Tracking): Viền sáng Halo bao quanh cơ bắp</h3>
+        
+        <div class="shot-thumbnails-grid">
+            <div class="shot-thumb-box" onclick="seekTo(8.71); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_07_start.jpg', 'Shot 07 - Đầu cảnh (8.71s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                <span class="thumb-tag">ĐẦU (8.71s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(9.665); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_07_mid.jpg', 'Shot 07 - Giữa cảnh (9.66s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                <span class="thumb-tag">GIỮA (9.66s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(10.62); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_07_end.jpg', 'Shot 07 - Cuối cảnh (10.62s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                <span class="thumb-tag">CUỐI (10.62s)</span>
+            </div>
+        </div>
+        
+        <div style="background: #141b2a; border: 1px solid #222f46; border-radius: 8px; padding: 12px 14px; margin-bottom: 12px;">
+            <div style="font-family: var(--font-heading); font-size: 12.5px; font-weight: 700; color: var(--accent-blue); margin-bottom: 4px;">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN:</div>
+            <p style="font-size: 13.5px; color: var(--text-primary); line-height: 1.5;">Cận trung chân dung chạy bộ ngược sáng (Medium Close-Up Tracking Run). Anh Việt sải bước mạnh mẽ tiến thẳng vào ống kính, ánh nắng chiếu xiên từ phía sau tạo viền sáng (Rim Light) óng ánh trên tóc, bờ vai và cánh tay. Phía xa là các tòa chung cư mờ trong sương mai.</p>
+        </div>
+        
+        <div class="critique-grid">
+            <div class="critique-good">
+                <div class="critique-label"><span>✅</span> ĐIỂM SÁNG THỊ GIÁC (PROS)</div>
+                <p style="font-size: 13px; color: #d1fae5; line-height: 1.5;">Năng lượng bùng nổ, đặc tả rõ nét mặt quyết tâm, nhịp thở và cơ bắp; hiệu ứng viền sáng (Rim Light/Halo effect) tách hẳn nhân vật ra khỏi hậu cảnh; shot quay chân dung thể thao đạt chuẩn thương mại Nike / Garmin.</p>
+            </div>
+            <div class="critique-bad">
+                <div class="critique-label"><span>⚠️</span> ĐIỂM CẦN KHẮC PHỤC (CONS)</div>
+                <p style="font-size: 13px; color: #ffe4e6; line-height: 1.5;">Vùng trời hậu cảnh hơi bị cháy sáng nhẹ (Highlight clipping); camera hơi rung lắc ở 2 bước chạy cuối khi nhân vật tiến sát ống kính.</p>
+            </div>
+        </div>
+        
+        <div class="takeaway-box">
+            <div class="takeaway-title"><span>💡</span> BÀI HỌC THỰC CHIẾN ĐẠO DIỄN:</div>
+            <p>Sử dụng kính lọc CPL hoặc ND Filter để giữ được chi tiết mây trời và tòa nhà phía sau; tăng tương phản vùng tối (Shadows crush) trong hậu kỳ để tôn vinh đường nét cơ bắp sắc nét.</p>
+        </div>
+        
+        <div class="case-ref-box">
+            <div class="case-ref-header">
+                <span style="color: var(--accent-purple); font-weight: 700;">🎯 Case Study Benchmark: @willwfit (The Goal Is Simple Gym Motivation) & @mridupawasharma (3 Hooks Mastery)</span>
+            </div>
+            <p style="font-size: 12.5px; color: #e2e8f0; line-height: 1.45; margin-top: 4px;">Kỹ thuật 'Hero Kinetic Portrait': Chân dung chuyển động cận trung là 'vũ khí chốt hạ' cảm xúc, truyền tải trực tiếp tinh thần kiên cường của người chạy đến người xem.</p>
+        </div>
+        
+        <div class="gear-tech-line">
+            📷 <strong>KỸ THUẬT QUAY:</strong> Medium Close-Up Kinetic Shot • 2x Telephoto (~50mm) • Strong Golden Rim Light • Dynamic Cut
+        </div>
+    </div>
+    
+    <div class="shot-card-item" id="shot-card-8">
+        <div class="shot-meta-header">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="meta-badge-tag badge-amber">SHOT 08</span>
+                <span class="shot-number-badge" onclick="seekTo(10.62)">PHÂN CẢNH #08</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">⏱ 1.96s (255 - 301F)</span>
+            </div>
+            <button class="shot-timestamp-jump" onclick="seekTo(10.62)">▶ Nhảy tới [10.62s - 12.58s]</button>
+        </div>
+        
+        <h3 class="shot-headline-text">Hạ màn chuyển trạng thái (Motion to Stillness): Ánh mắt giao tiếp trực diện sau chặng chạy</h3>
+        
+        <div class="shot-thumbnails-grid">
+            <div class="shot-thumb-box" onclick="seekTo(10.62); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_08_start.jpg', 'Shot 08 - Đầu cảnh (10.62s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                <span class="thumb-tag">ĐẦU (10.62s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(11.6); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_08_mid.jpg', 'Shot 08 - Giữa cảnh (11.60s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                <span class="thumb-tag">GIỮA (11.60s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(12.58); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_08_end.jpg', 'Shot 08 - Cuối cảnh (12.58s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                <span class="thumb-tag">CUỐI (12.58s)</span>
+            </div>
+        </div>
+        
+        <div style="background: #141b2a; border: 1px solid #222f46; border-radius: 8px; padding: 12px 14px; margin-bottom: 12px;">
+            <div style="font-family: var(--font-heading); font-size: 12.5px; font-weight: 700; color: var(--accent-blue); margin-bottom: 4px;">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN:</div>
+            <p style="font-size: 13.5px; color: var(--text-primary); line-height: 1.5;">Toàn cảnh vỉa hè dài dưới tán cây cổ thụ râm mát, hậu cảnh là tòa nhà cao ốc trắng. Anh Việt chạy chậm lại rồi dừng bước, chống hai tay lên hông thở đều và ngước mắt nhìn thẳng vào ống kính.</p>
+        </div>
+        
+        <div class="critique-grid">
+            <div class="critique-good">
+                <div class="critique-label"><span>✅</span> ĐIỂM SÁNG THỊ GIÁC (PROS)</div>
+                <p style="font-size: 13px; color: #d1fae5; line-height: 1.5;">Cú hạ màn hoàn hảo về cấu trúc nhịp điệu (Rhythm & Pacing) - chuyển đổi từ trạng thái vận động nhanh dồn dập (Shots 1-7) sang trạng thái tĩnh lặng hồi sức (Stillness); Ánh mắt nhìn thẳng vào ống kính tạo sự kết nối mạnh mẽ (Eye Contact Connection) với khán giả.</p>
+            </div>
+            <div class="critique-bad">
+                <div class="critique-label"><span>⚠️</span> ĐIỂM CẦN KHẮC PHỤC (CONS)</div>
+                <p style="font-size: 13px; color: #ffe4e6; line-height: 1.5;">Chiếc ô tô trắng ở góc trái chiếm một góc khung hình; khoảng cách nhân vật hơi xa khiến cảm xúc giải tỏa (relief) sau khi hoàn thành buổi chạy chưa được lột tả cận cảnh.</p>
+            </div>
+        </div>
+        
+        <div class="takeaway-box">
+            <div class="takeaway-title"><span>💡</span> BÀI HỌC THỰC CHIẾN ĐẠO DIỄN:</div>
+            <p>Sau shot toàn này, nên bổ sung 1 shot Macro/Close-up đặc tả bàn tay bấm dừng đồng hồ bấm giờ (Apple Watch / Garmin) hoặc giọt mồ hôi rơi xuống để tạo cú kết trọn vẹn 100 điểm.</p>
+        </div>
+        
+        <div class="case-ref-box">
+            <div class="case-ref-header">
+                <span style="color: var(--accent-purple); font-weight: 700;">🎯 Case Study Benchmark: @byjxson (Quảng Cáo Đồng Hồ Bấm Giờ) & @lifeofriza (Ý Tưởng Thành Hiện Thực)</span>
+            </div>
+            <p style="font-size: 12.5px; color: #e2e8f0; line-height: 1.45; margin-top: 4px;">Kỹ thuật 'The Finish-Line Anchor': Luôn khép lại hành trình vận động bằng một cử chỉ hoặc chi tiết vật lý mang tính biểu tượng của sự hoàn thành mục tiêu.</p>
+        </div>
+        
+        <div class="gear-tech-line">
+            📷 <strong>KỸ THUẬT QUAY:</strong> Full Ending Shot • 1x Wide (~28mm) • Natural Canopy Ambient • Fade to Finish
+        </div>
+    </div>
+    
+    <div class="shot-card-item" id="shot-card-9">
+        <div class="shot-meta-header">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="meta-badge-tag badge-rose">⚠️ LỖI TIMELINE</span>
+                <span class="shot-number-badge" onclick="seekTo(12.58)">PHÂN CẢNH #09</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">⏱ 3.96s (302 - 396F)</span>
+            </div>
+            <button class="shot-timestamp-jump" onclick="seekTo(12.58)">▶ Nhảy tới [12.58s - 16.54s]</button>
+        </div>
+        
+        <h3 class="shot-headline-text">⚠️ Khoảng đệm màn hình đen cuối Timeline (Render Black Tail Buffer): Cần cắt tỉa tối ưu</h3>
+        
+        <div class="shot-thumbnails-grid">
+            <div class="shot-thumb-box" onclick="seekTo(12.58); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_09_start.jpg', 'Shot 09 - Đầu cảnh (12.58s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                <span class="thumb-tag">ĐẦU (12.58s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(14.559999999999999); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_09_mid.jpg', 'Shot 09 - Giữa cảnh (14.56s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                <span class="thumb-tag">GIỮA (14.56s)</span>
+            </div>
+            <div class="shot-thumb-box" onclick="seekTo(16.54); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_09_end.jpg', 'Shot 09 - Cuối cảnh (16.54s)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                <span class="thumb-tag">CUỐI (16.54s)</span>
+            </div>
+        </div>
+        
+        <div style="background: #141b2a; border: 1px solid #222f46; border-radius: 8px; padding: 12px 14px; margin-bottom: 12px;">
+            <div style="font-family: var(--font-heading); font-size: 12.5px; font-weight: 700; color: var(--accent-blue); margin-bottom: 4px;">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN:</div>
+            <p style="font-size: 13.5px; color: var(--text-primary); line-height: 1.5;">Màn hình đen hoàn toàn kéo dài 3.96 giây (từ 12.58s đến 16.54s) do phần đuôi timeline trống khi xuất file từ phần mềm dựng (CapCut / Premiere).</p>
+        </div>
+        
+        <div class="critique-grid">
+            <div class="critique-good">
+                <div class="critique-label"><span>✅</span> ĐIỂM SÁNG THỊ GIÁC (PROS)</div>
+                <p style="font-size: 13px; color: #d1fae5; line-height: 1.5;">Không có nội dung hình ảnh.</p>
+            </div>
+            <div class="critique-bad">
+                <div class="critique-label"><span>⚠️</span> ĐIỂM CẦN KHẮC PHỤC (CONS)</div>
+                <p style="font-size: 13px; color: #ffe4e6; line-height: 1.5;">Màn hình đen vô tình làm tụt tỷ lệ giữ chân (Retention Drop) trên các nền tảng Reels/TikTok; người xem tưởng video đã hết và vuốt đi ngay lập tức.</p>
+            </div>
+        </div>
+        
+        <div class="takeaway-box">
+            <div class="takeaway-title"><span>💡</span> BÀI HỌC THỰC CHIẾN ĐẠO DIỄN:</div>
+            <p>Cắt cúp chính xác điểm kết thúc video tại giây 12.58s, hoặc bổ sung Outro Logo / Thẻ kêu gọi hành động (CTA) 1.0s kèm âm thanh tắt dần.</p>
+        </div>
+        
+        <div class="case-ref-box">
+            <div class="case-ref-header">
+                <span style="color: var(--accent-purple); font-weight: 700;">🎯 Quy tắc dựng phim Short-form: Zero Black Tail Rule</span>
+            </div>
+            <p style="font-size: 12.5px; color: #e2e8f0; line-height: 1.45; margin-top: 4px;">Trên Instagram Reels & TikTok, mỗi 0.5s màn hình đen khiến thuật toán đánh tụt điểm Completion Rate xuống 25%. Luôn kiểm tra phím In/Out trên timeline trước khi Render.</p>
+        </div>
+        
+        <div class="gear-tech-line">
+            📷 <strong>KỸ THUẬT QUAY:</strong> Timeline Buffer • 0 FPS • Mean Brightness 0.0 • Needs Trimming
+        </div>
+    </div>
+    
+            </div>
+        </section>
+
+        <!-- SECTION 4: KỊCH BẢN QUAY CHẠY BỘ ĐỀ XUẤT NÂNG CẤP -->
+        <section class="section-block">
+            <h2 class="section-header-title"><span>📝</span> 4. KỊCH BẢN QUAY CHẠY BỘ ĐỀ XUẤT NÂNG CẤP (5-BEAT FORMULA)</h2>
+            <p style="color: #cbd5e1; font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
+                Dựa trên kinh nghiệm từ buổi quay 09/03, dưới đây là công thức 5 cú bấm máy (5-Shot Kinetic Formula) tối ưu 15s cho buổi chạy tiếp theo của anh Việt:
+            </p>
+
+            <div style="display: grid; gap: 12px;">
+                <div style="background: #141b2a; border-left: 4px solid var(--accent-blue); padding: 12px 16px; border-radius: 0 8px 8px 0;">
+                    <div style="font-family: var(--font-heading); font-weight: 700; color: var(--accent-blue); font-size: 13.5px;">BEAT 1 (0.0s - 2.0s): KHỞI ĐẦU ĐỒNG HỒ & DÂY GIÀY (THE SPARK)</div>
+                    <p style="font-size: 13px; color: #cbd5e1; margin-top: 4px;">Cận cảnh 3x đặc tả ngón tay siết chặt dây giày thể thao hoặc bấm 'Start Running' trên Apple Watch. Âm thanh: Tiếng 'Beep' dứt khoát.</p>
+                </div>
+                <div style="background: #141b2a; border-left: 4px solid var(--accent-amber); padding: 12px 16px; border-radius: 0 8px 8px 0;">
+                    <div style="font-family: var(--font-heading); font-weight: 700; color: var(--accent-amber); font-size: 13.5px;">BEAT 2 (2.0s - 5.5s): GÓC MÁY SÁT ĐẤT CUỘN THEO BƯỚC CHÂN (GROUND KINETIC)</div>
+                    <p style="font-size: 13px; color: #cbd5e1; margin-top: 4px;">Đặt máy sát mặt đường 5cm, nhân vật chạy lướt qua máy với tốc độ cao. Tiền cảnh là vạch sơn vàng chevron hoặc lá cờ màu sắc.</p>
+                </div>
+                <div style="background: #141b2a; border-left: 4px solid var(--accent-emerald); padding: 12px 16px; border-radius: 0 8px 8px 0;">
+                    <div style="font-family: var(--font-heading); font-weight: 700; color: var(--accent-emerald); font-size: 13.5px;">BEAT 3 (5.5s - 9.0s): NGƯỢC SÁNG MẶT ĐƯỜNG DÁT BẠC & BÓNG ĐỔ DÀI (THE EPIC BACKLIT)</div>
+                    <p style="font-size: 13px; color: #cbd5e1; margin-top: 4px;">Tái hiện lại Shot 06: Mặt trời sớm mai rọi thẳng xuống mặt đường bê tông, bóng đổ người chạy kéo dài chạm đáy ống kính.</p>
+                </div>
+                <div style="background: #141b2a; border-left: 4px solid var(--accent-purple); padding: 12px 16px; border-radius: 0 8px 8px 0;">
+                    <div style="font-family: var(--font-heading); font-weight: 700; color: var(--accent-purple); font-size: 13.5px;">BEAT 4 (9.0s - 12.0s): CHÂN DUNG THEO DÕI NĂNG LƯỢNG CAO (HERO TRACKING PORTRAIT)</div>
+                    <p style="font-size: 13px; color: #cbd5e1; margin-top: 4px;">Cận trung 2x/3x chạy lùi cùng tốc độ, viền sáng Rim Light bao quanh mái tóc và bờ vai, đặc tả biểu cảm quyết tâm và mồ hôi.</p>
+                </div>
+                <div style="background: #141b2a; border-left: 4px solid var(--accent-rose); padding: 12px 16px; border-radius: 0 8px 8px 0;">
+                    <div style="font-family: var(--font-heading); font-weight: 700; color: var(--accent-rose); font-size: 13.5px;">BEAT 5 (12.0s - 15.0s): ĐÍCH ĐẾN & ÁNH MẮT CHINH PHỤC (FINISH LINE HERO)</div>
+                    <p style="font-size: 13px; color: #cbd5e1; margin-top: 4px;">Dừng chân, chống tay lên đùi thở đều rồi ngước nhìn thẳng vào camera mỉm cười tự tin. Kết thúc bằng cú Fade to Black sắc lẹm.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: LƯỚI ẢNH STORYBOARD VISUAL GRID -->
+        <section class="section-block">
+            <h2 class="section-header-title"><span>🖼️</span> 5. LƯỚI ẢNH STORYBOARD TOÀN CẢNH (VISUAL GRID VIEW)</h2>
+            <p style="color: #cbd5e1; font-size: 14px; line-height: 1.6;">
+                Bảng contact sheet tổng hợp 8 phân cảnh chạy bộ: Nhấp vào bất kỳ ảnh nào để phóng to hoặc nhảy video đến phân cảnh tương ứng.
+            </p>
+            <div class="grid-storyboard-container">
+
+    <div class="grid-thumb-item" onclick="seekTo(0.0); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_01_mid.jpg', 'Shot 01: Bố cục vòm tán cây & Sự xuất hiện đồng thời: Nhịp mở màn 0.79s quá nhanh chưa kịp khóa tiêu điểm')">
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+        <div class="grid-overlay">
+            <span class="grid-tag">S01 • 0.79s</span>
+        </div>
+    </div>
+    
+    <div class="grid-thumb-item" onclick="seekTo(0.79); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_02_mid.jpg', 'Shot 02: Chân dung toàn thân trục thẳng (Center Alignment): Năng lượng sải bước cô đọng nhưng thiếu tiền cảnh')">
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+        <div class="grid-overlay">
+            <span class="grid-tag">S02 • 1.00s</span>
+        </div>
+    </div>
+    
+    <div class="grid-thumb-item" onclick="seekTo(1.79); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_03_mid.jpg', 'Shot 03: Tương phản tỷ lệ Người vs Cao ốc (Human Scale): Đường dẫn mép vỉa hè sâu hun hút')">
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+        <div class="grid-overlay">
+            <span class="grid-tag">S03 • 1.87s</span>
+        </div>
+    </div>
+    
+    <div class="grid-thumb-item" onclick="seekTo(3.67); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_04_mid.jpg', 'Shot 04: Màu sắc lễ hội dẫn hướng mắt: Dải cờ dây sắc màu làm ranh giới thị giác sinh động')">
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+        <div class="grid-overlay">
+            <span class="grid-tag">S04 • 1.04s</span>
+        </div>
+    </div>
+    
+    <div class="grid-thumb-item" onclick="seekTo(4.71); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_05_mid.jpg', 'Shot 05: Hình học mặt đường (Dynamic Chevron Lines): Góc chéo 45° phá vỡ sự đơn điệu của trục thẳng')">
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+        <div class="grid-overlay">
+            <span class="grid-tag">S05 • 2.00s</span>
+        </div>
+    </div>
+    
+    <div class="grid-thumb-item" onclick="seekTo(6.71); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_06_mid.jpg', 'Shot 06: KHOẢNH KHẮC NGƯỢC SÁNG ĐỈNH CAO: Mặt đường dát bạc phản chiếu & Bóng đổ Silhouette')">
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+        <div class="grid-overlay">
+            <span class="grid-tag">S06 • 2.00s</span>
+        </div>
+    </div>
+    
+    <div class="grid-thumb-item" onclick="seekTo(8.71); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_07_mid.jpg', 'Shot 07: Chân dung thể thao bùng nổ (Medium Close-Up Tracking): Viền sáng Halo bao quanh cơ bắp')">
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+        <div class="grid-overlay">
+            <span class="grid-tag">S07 • 1.92s</span>
+        </div>
+    </div>
+    
+    <div class="grid-thumb-item" onclick="seekTo(10.62); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_08_mid.jpg', 'Shot 08: Hạ màn chuyển trạng thái (Motion to Stillness): Ánh mắt giao tiếp trực diện sau chặng chạy')">
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+        <div class="grid-overlay">
+            <span class="grid-tag">S08 • 1.96s</span>
+        </div>
+    </div>
+    
+    <div class="grid-thumb-item" onclick="seekTo(12.58); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_09_mid.jpg', 'Shot 09: ⚠️ Khoảng đệm màn hình đen cuối Timeline (Render Black Tail Buffer): Cần cắt tỉa tối ưu')">
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_@vietmac/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+        <div class="grid-overlay">
+            <span class="grid-tag">S09 • 3.96s</span>
+        </div>
+    </div>
+    
+            </div>
+        </section>
+
+        <!-- FOOTER LINKS BLOCK -->
+        <footer style="margin-top: 40px; padding: 24px; background: #0b101b; border: 1px solid #1e293b; border-radius: 12px; text-align: center;">
+            <p style="color: var(--text-secondary); font-size: 13px; margin-bottom: 14px;">
+                Báo cáo được khởi tạo tự động bởi <strong>Antigravity Director Intelligence Engine</strong> • Dữ liệu lưu trữ vĩnh viễn trên Cloudflare R2 CDN & GitHub Pages.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+                <a href="https://vietndj.github.io/scene.html" target="_blank" class="btn-ctrl btn-primary" style="text-decoration: none; padding: 8px 16px;">🌐 Cổng Tra Cứu Điện Ảnh Scene.html ↗</a>
+                <a href="https://fedu.vn/reports/Practice_Cinematic_2508%20-%20%40vietmac.html" target="_blank" class="btn-ctrl" style="text-decoration: none; padding: 8px 16px;">🎬 Xem Lại Bản 2508 ↗</a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <div class="lightbox-img-wrap" onclick="event.stopPropagation()">
+        <span class="lightbox-close-btn" onclick="closeLightbox()">&times;</span>
+        <img id="lightboxImg" src="" alt="Enlarged Shot">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+const video = document.getElementById('mainVideo');
+const curTimeDisplay = document.getElementById('curTimeDisplay');
+const totTimeDisplay = document.getElementById('totTimeDisplay');
+const btnPlayPause = document.getElementById('btnPlayPause');
+const btnMute = document.getElementById('btnMute');
+const fps = 24.0;
+
+function formatTime(sec) {
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60);
+    const ms = Math.floor((sec % 1) * 100);
+    return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}.${ms.toString().padStart(2, '0')}`;
+}
+
+video.addEventListener('timeupdate', () => {
+    curTimeDisplay.textContent = formatTime(video.currentTime);
+    highlightActiveShot(video.currentTime);
+});
+
+video.addEventListener('loadedmetadata', () => {
+    totTimeDisplay.textContent = formatTime(video.duration);
+});
+
+video.addEventListener('play', () => {
+    btnPlayPause.textContent = '⏸ Pause';
+});
+
+video.addEventListener('pause', () => {
+    btnPlayPause.textContent = '▶ Play';
+});
+
+function togglePlay() {
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
+}
+
+function seekTo(sec) {
+    video.currentTime = sec;
+    video.play();
+    // Smooth scroll to corresponding shot card on desktop or mobile
+    const shotCard = document.querySelector(`[id^="shot-card-"] button[onclick*="seekTo(${sec})"]`)?.closest('.shot-card-item');
+    if (shotCard) {
+        shotCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function stepFrame(frames) {
+    video.pause();
+    video.currentTime = Math.max(0, Math.min(video.duration, video.currentTime + (frames / fps)));
+}
+
+function setSpeed(speed, btn) {
+    video.playbackRate = speed;
+    document.querySelectorAll('.btn-group-flex .btn-ctrl').forEach(b => {
+        if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+    btn.classList.add('active');
+}
+
+function toggleMute() {
+    video.muted = !video.muted;
+    btnMute.textContent = video.muted ? '🔇 Đã tắt tiếng' : '🔊 Bật tiếng';
+}
+
+function highlightActiveShot(time) {
+    const shotRanges = [
+        { id: 1, s: 0.00, e: 0.79 },
+        { id: 2, s: 0.79, e: 1.79 },
+        { id: 3, s: 1.79, e: 3.67 },
+        { id: 4, s: 3.67, e: 4.71 },
+        { id: 5, s: 4.71, e: 6.71 },
+        { id: 6, s: 6.71, e: 8.71 },
+        { id: 7, s: 8.71, e: 10.62 },
+        { id: 8, s: 10.62, e: 12.58 },
+        { id: 9, s: 12.58, e: 16.54 }
+    ];
+    
+    shotRanges.forEach(r => {
+        const el = document.getElementById(`shot-card-${r.id}`);
+        if (el) {
+            if (time >= r.s && time < r.e) {
+                el.style.borderColor = 'var(--accent-blue)';
+            } else {
+                el.style.borderColor = 'var(--border-color)';
+            }
+        }
+    });
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCaption');
+    img.src = src;
+    cap.textContent = caption;
+    modal.classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === ' ') {
+        e.preventDefault();
+        togglePlay();
+    }
+    if (e.key === 'ArrowRight') stepFrame(1);
+    if (e.key === 'ArrowLeft') stepFrame(-1);
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

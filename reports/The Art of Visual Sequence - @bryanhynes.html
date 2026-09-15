@@ -1,0 +1,3887 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>The Art of Visual Sequence: 8 Quy Tắc Dựng Chuỗi Phân Cảnh Biến Mọi Điều Bình Thường Thành Thước Phim Điện Ảnh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #070a0f;
+    --bg-card: #0e1420;
+    --bg-card-hover: #151e30;
+    --bg-surface: #121928;
+    --border-color: #1e293b;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-blue: #38bdf8;
+    --accent-amber: #f59e0b;
+    --accent-emerald: #10b981;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: #202d42; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .app-container {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .video-sidebar-col {
+        width: 440px;
+        min-width: 440px;
+        max-width: 480px;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: 1px solid var(--border-color);
+        background: var(--bg-surface);
+        display: flex;
+        flex-direction: column;
+        z-index: 30;
+    }
+    .content-scroll-col {
+        flex: 1;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 24px 32px 60px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    .video-sidebar-col {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(14, 20, 32, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .content-scroll-col {
+        width: 100%;
+        padding: 16px 14px 80px;
+    }
+}
+
+.video-player-container {
+    position: relative;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .video-player-container {
+        aspect-ratio: 9/16;
+        max-height: 60vh;
+    }
+}
+@media (max-width: 1023px) {
+    .video-player-container {
+        max-height: 38vh;
+        aspect-ratio: 16/9;
+    }
+}
+
+video#mainPlayer {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    outline: none;
+}
+
+.video-controls-panel {
+    padding: 12px 16px;
+    background: #0b111c;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.current-status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11.5px;
+}
+
+.speed-buttons-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.ctrl-btn {
+    background: #162032;
+    color: #cbd5e1;
+    border: 1px solid #283750;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+}
+
+.ctrl-btn:hover, .ctrl-btn:active {
+    background: #25334d;
+    color: #fff;
+}
+
+.ctrl-btn.active {
+    background: var(--accent-blue);
+    color: #041324;
+    border-color: var(--accent-blue);
+    font-weight: 800;
+}
+
+.report-header-banner {
+    background: linear-gradient(135deg, #0e1726 0%, #152238 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.genre-badge {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--accent-amber);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.report-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.meta-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+}
+
+.meta-tags-flex strong { color: #fff; }
+
+.overview-card {
+    background: #0e1420;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-blue);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 13.5px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.action-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg-main);
+    padding: 10px 0;
+}
+
+.view-tabs-group {
+    display: flex;
+    gap: 4px;
+    background: #0f1624;
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.view-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+}
+
+.view-tab-btn.active {
+    background: #1e293b;
+    color: #fff;
+    font-weight: 700;
+}
+
+.drawer-trigger-btn {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12.5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.storyboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px;
+    display: flex;
+    gap: 16px;
+    transition: transform 0.15s, border-color 0.15s;
+}
+
+.shot-card:hover {
+    background: var(--bg-card-hover);
+    border-color: #2e3e5a;
+}
+
+.shot-card.active-playing {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+.shot-media-col {
+    width: 120px;
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+.shot-thumb-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.shot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.play-overlay svg { width: 32px; height: 32px; color: #fff; }
+
+.zoom-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.65);
+    border: none;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.thumb-time-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    background: rgba(15, 23, 42, 0.85);
+    font-size: 9.5px;
+    font-weight: 700;
+    color: var(--accent-amber);
+    padding: 2px 4px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: var(--font-mono);
+}
+
+.shot-info-col {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.shot-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-bottom: 1px solid #1a2436;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.shot-badge-num {
+    background: #1e293b;
+    color: var(--accent-blue);
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+
+.shot-heading { font-size: 14.5px; font-weight: 700; color: #fff; display: inline; }
+
+.time-jump-btn {
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--accent-blue);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    cursor: pointer;
+}
+
+.props-list {
+    font-size: 12.5px;
+    color: #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.prop-label { font-weight: 700; color: #94a3b8; }
+.prop-val { color: #e2e8f0; }
+
+.tags-row { display: flex; flex-wrap: wrap; gap: 4px; margin-top: auto; }
+.tag-pill { background: #162032; color: #94a3b8; font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 4px; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+}
+
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.grid-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+}
+
+.grid-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.grid-play-icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+}
+
+.grid-card:hover .grid-play-icon { opacity: 1; }
+
+.grid-zoom-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: rgba(0,0,0,0.7);
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.grid-badge-top {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--accent-blue);
+    font-size: 9px;
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+}
+
+.grid-badge-bottom {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--accent-amber);
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px 4px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: var(--font-mono);
+}
+
+.drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+}
+
+.drawer-backdrop.open { opacity: 1; visibility: visible; }
+
+.drawer-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 85vw;
+    background: #0f172a;
+    border-left: 1px solid var(--border-color);
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-backdrop.open .drawer-panel { transform: translateX(0); }
+
+.drawer-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drawer-title { font-weight: 800; font-size: 15px; color: #fff; }
+.drawer-close-btn { background: #1e293b; border: none; color: #fff; width: 28px; height: 28px; border-radius: 6px; font-size: 16px; cursor: pointer; }
+
+.drawer-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.drawer-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 10px;
+    background: #131d30;
+    border: 1px solid #1e2d48;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.drawer-item:hover, .drawer-item:active {
+    background: #1c2b47;
+    border-color: var(--accent-blue);
+}
+
+.drawer-thumb {
+    width: 44px;
+    height: 58px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #000;
+}
+
+.drawer-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.drawer-info { flex: 1; min-width: 0; }
+.drawer-shot-title { font-weight: 700; font-size: 13px; color: #fff; }
+.drawer-shot-time { font-size: 11.5px; color: var(--accent-amber); font-family: var(--font-mono); }
+.drawer-play-arrow { font-size: 13px; color: var(--accent-blue); }
+
+#lightboxModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    border: 1px solid #334155;
+}
+
+#lightboxCaption {
+    color: #e2e8f0;
+    font-size: 13.5px;
+    margin-top: 14px;
+    text-align: center;
+    background: rgba(15, 23, 42, 0.85);
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid #334155;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* Author Instagram Direct Link Button */
+.author-ig-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(192, 132, 252, 0.12);
+    border: 1px solid rgba(192, 132, 252, 0.35);
+    color: #e879f9;
+    padding: 2px 8px 2px 6px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    vertical-align: middle;
+}
+.author-ig-badge:hover {
+    background: linear-gradient(135deg, rgba(192, 132, 252, 0.3), rgba(244, 63, 94, 0.3));
+    border-color: #f43f5e;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+}
+.author-ig-badge strong {
+    color: #fff;
+}
+.author-ig-badge .ig-ext-btn {
+    background: linear-gradient(135deg, #c084fc, #f43f5e);
+    color: #0b0f17;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: all 0.15s;
+    letter-spacing: 0.2px;
+}
+.author-ig-badge:hover .ig-ext-btn {
+    background: #ffffff;
+    color: #0b0f17;
+}
+
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="video-sidebar-col">
+        <div class="video-player-container">
+            <video id="mainPlayer" controls autoplay muted playsinline preload="auto" loop></video>
+        </div>
+        <div class="video-controls-panel">
+            <div class="current-status-bar">
+                <span class="status-tag" id="shotStatusTag">🎬 Phân cảnh: Toàn bộ video</span>
+                <a id="directVidLink" href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/The%20Art%20of%20Visual%20Sequence%20-%20%40bryanhynes.mp4" target="_blank" style="color:var(--accent-blue); font-size:11.5px; text-decoration:none;">Tệp gốc ↗</a>
+            </div>
+            <div class="speed-buttons-row">
+                <span style="font-size:11.5px; color:#94a3b8; font-weight:700; margin-right:4px;">Tốc độ:</span>
+                <button class="ctrl-btn" onclick="setSpeed(0.25, this)">0.25x</button>
+                <button class="ctrl-btn" onclick="setSpeed(0.5, this)">0.5x</button>
+                <button class="ctrl-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+                <button class="ctrl-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                <button class="ctrl-btn" onclick="toggleMute(this)">🔊 Tiếng</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-scroll-col">
+        <div class="report-header-banner">
+            <div class="header-top-row">
+                <span class="genre-badge">DIRECTOR BREAKDOWN</span>
+                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">20 SHOTS &bull; 22.64s</span>
+            </div>
+            <h1 class="report-title">The Art of Visual Sequence: 8 Quy Tắc Dựng Chuỗi Phân Cảnh Biến Mọi Điều Bình Thường Thành Thước Phim Điện Ảnh</h1>
+            <div class="meta-tags-flex">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@bryanhynes" onclick="handleCreatorClick(event, '@bryanhynes', 'Bryan Hynes')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Bryan Hynes trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Bryan Hynes</strong>
+                        <span class="author-handle">(@bryanhynes)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span></a></span>
+                <span>Tệp: <strong>The Art of Visual Sequence - @bryanhynes.html</strong></span>
+                <span>Trực quan: <strong>9:16 Vertical HD</strong></span>
+            </div>
+        </div>
+
+        <div class="overview-card">
+            <h3 style="color:#fff; font-size:14px; margin-bottom:6px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
+            <div>
+<h3 style="color:#fff; font-size:14px; margin-bottom:6px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
+<div>
+<div class="overview-card">
+<h3>🎬 Triết Lý Chuỗi Phân Cảnh (Sequence Theory)</h3>
+<p><strong>"How do you make boring things interesting? You create a sequence."</strong> (Làm thế nào để biến những công việc nhàm chán hàng ngày trở nên cuốn hút? Bạn tạo ra một chuỗi phân cảnh liên hoàn).</p>
+<ul>
+<li><strong>1. Open with movement:</strong> Đánh thức thị giác ngay bằng chuyển động bước vào hoặc thức giấc.</li>
+<li><strong>2. Show details:</strong> Dùng cảnh cận (Tight Shot) và đặc tả (Extreme Close-Up) để tôn vinh chi tiết.</li>
+<li><strong>3. Shoot through objects:</strong> Đặt vật thể tiền cảnh (Kính lúp, thấu kính) tạo chiều sâu 3D.</li>
+<li><strong>4. Keep the momentum:</strong> Nối hành động liên tục bằng các nhát cắt nhanh (Match Cuts).</li>
+<li><strong>5. More change = More tights:</strong> Càng nhiều thay đổi hành động thì càng dùng nhiều cảnh cận.</li>
+<li><strong>6. Stay connected with a subject:</strong> Luôn bám sát ý định và mục tiêu của nhân vật.</li>
+<li><strong>7. Show character reaction:</strong> Bộc lộ biểu cảm sống động qua đôi mắt và nụ cười.</li>
+<li><strong>8. Multisensory CTA:</strong> Kêu gọi hành động tự nhiên bằng âm thanh giòn tan và sự dí dỏm.</li>
+</ul>
+</div>
+<div class="overview-card">
+<h3>🎨 Thiết Kế Ánh Sáng, Bối Cảnh &amp; Đạo Cụ</h3>
+<p>Video ứng dụng xuất sắc phong cách <em>Warm Vintage Aesthetic</em> (Điện ảnh hoài cổ ấm áp) với các lớp lang không gian chặt chẽ:</p>
+<ul>
+<li><strong>Hòa sắc ấm áp (2700K - 3200K):</strong> Đèn bàn sợi đốt Edison kết hợp bóng đổ ấm trên gỗ sồi và thảm nhung đỏ Ba Tư.</li>
+<li><strong>Hệ đạo cụ gắn kết câu chuyện:</strong> Quả địa cầu cổ ➔ Kính lúp phóng đại ➔ Tọa độ bản đồ Vietnam ➔ Sách du lịch Lonely Planet Vietnam ➔ Hộ chiếu Úc ➔ Ba lô canvas.</li>
+<li><strong>Kỹ xảo quang học thực tế (In-Camera Practical Effect):</strong> Cú đưa kính lúp lên mắt tạo hiệu ứng phóng đại mắt hoạt họa tự nhiên không cần CGI.</li>
+</ul>
+</div>
+</div>
+</div>
+        </div>
+
+        <div class="action-toolbar">
+            <div class="view-tabs-group">
+                <button class="view-tab-btn active" id="tabDetailBtn" onclick="switchView('detail')">📋 Bóc Tách Chi Tiết</button>
+                <button class="view-tab-btn" id="tabGridBtn" onclick="switchView('grid')">🖼️ Lưới Soi Ảnh (20)</button>
+            </div>
+            <button class="drawer-trigger-btn" onclick="toggleDrawer(true)">📑 Mục Lục Shot</button>
+        </div>
+
+        <div class="storyboard-container" id="storyboardView">
+            
+        <div class="shot-card" id="shot-card-1">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(0.0, 3.44, 'SHOT 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_080_ae283717.jpg" alt="SHOT 01" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_080_ae283717.jpg', 'SHOT 01 [0.0s - 3.44s]')">🔍</button>
+                    <span class="thumb-time-badge">0.00s - 3.44s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 01</span>
+                        <h4 class="shot-heading">SHOT 01</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(0.0, 3.44, 'SHOT 01')">
+                        ▶ 0.00s ➔ 3.44s (3.44s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(0.0, 3.44, 'SHOT 01')">
+<img alt="SHOT 01" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_080_ae283717.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_080_ae283717.jpg', 'SHOT 01 [0.0s - 3.44s]')">🔍</button>
+<span class="thumb-time-badge">0.00s - 3.44s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 01</span>
+<h4 class="shot-heading">SHOT 01</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(0.0, 3.44, 'SHOT 01')">
+                        ▶ 0.00s ➔ 3.44s (3.44s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 01</span>
+<span class="shot-time" onclick="jumpToVideo(0.0)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [0.00s - 3.44s • 3.48s]
+                </span>
+<h3 class="shot-heading">Mở Đầu (Hook): Đặt Vấn Đề 'How to film boring tasks to be interesting'</h3>
+</div>
+<div class="shot-type-pill">Static Medium Shot / Visual Hook &amp; Problem Statement</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(0)">
+<img alt="Shot 01 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_080_ae283717.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(1)">
+<img alt="Shot 01 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_081_1687ee76.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(2)">
+<img alt="Shot 01 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_082_406f7de9.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Góc phòng làm việc ấm áp với tấm thảm đỏ Ba Tư phía sau</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Khung hình tĩnh trực diện (Static Eye-Level). Bryan Hynes mặc áo khoác The North Face nỉ trắng phối xanh dương, đeo tai nghe có dây, đứng thẳng cầm chiếc cốc gốm và nhấp một ngụm trà/cà phê. Tiêu đề đồ họa 'how to film boring tasks to be interesting' xuất hiện nổi bật với chữ 'film' cách điệu chiếc lá. Tạo điểm neo thị giác tĩnh lặng tuyệt đối trước khi bước vào chuỗi hành động dồn dập.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Động tác nâng cốc nhấp ngụm nước và ánh mắt nhìn thẳng vào người xem tạo sự kết nối tự nhiên.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Đặt máy quay tĩnh trên tripod ở tầm ngang ngực (Chest Level). Sử dụng ánh sáng key light ấm (3200K) bên phải để tạo khối cho khuôn mặt và làm nổi bật màu xanh dương của áo trên nền thảm đỏ.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 35mm f/2.0, Shutter 1/50s (25fps), ISO 400.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 01 (End) ➔ Shot 02 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(3)">
+<img alt="Transition 01 to 02" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_083_eed05426.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt dứt khoát (Hard Cut) sang Cảnh 02: Góc máy sát sàn nhà phá vỡ hoàn toàn góc nhìn tĩnh.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-2">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(3.48, 3.92, 'SHOT 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_084_86a274b6.jpg" alt="SHOT 02" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_084_86a274b6.jpg', 'SHOT 02 [3.48s - 3.92s]')">🔍</button>
+                    <span class="thumb-time-badge">3.48s - 3.92s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 02</span>
+                        <h4 class="shot-heading">SHOT 02</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(3.48, 3.92, 'SHOT 02')">
+                        ▶ 3.48s ➔ 3.92s (0.44s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(3.48, 3.92, 'SHOT 02')">
+<img alt="SHOT 02" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_084_86a274b6.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_084_86a274b6.jpg', 'SHOT 02 [3.48s - 3.92s]')">🔍</button>
+<span class="thumb-time-badge">3.48s - 3.92s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 02</span>
+<h4 class="shot-heading">SHOT 02</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(3.48, 3.92, 'SHOT 02')">
+                        ▶ 3.48s ➔ 3.92s (0.44s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 02</span>
+<span class="shot-time" onclick="jumpToVideo(3.48)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [3.48s - 3.92s • 0.48s]
+                </span>
+<h3 class="shot-heading">Nguyên Tắc 1: Mở Đầu Bằng Chuyển Động (Open with Movement) — Thức Giấc</h3>
+</div>
+<div class="shot-type-pill">Ground-Level Extreme Close-Up Profile / Awakening Action</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(4)">
+<img alt="Shot 02 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_084_86a274b6.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(5)">
+<img alt="Shot 02 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_085_4d23afb1.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(6)">
+<img alt="Shot 02 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_086_87061aaf.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Sàn phòng trải thảm nhung đỏ</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc máy đặt sát mặt thảm đỏ (Extreme Low Ground Angle). Nhân vật đang nằm ngửa nhắm mắt trên sàn, đột ngột mở bừng mắt và xoay nghiêng đầu sang bên. Tiêu đề 'open with movement' cùng dòng hướng dẫn 'objects that enter the frame work great' hiện lên thanh lịch.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Mí mắt mở to và đầu quay nhanh tạo chuyển động thị giác bất ngờ (Visual Surprise).</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Hạ máy quay chạm sát sàn nhà. Lấy nét nông (Shallow DoF) vào đôi mắt và vành tai nhân vật để ánh sáng ấm phía sau tạo viền sáng mềm mại.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 35mm f/1.8, khẩu độ mở lớn f/2.0.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 02 (End) ➔ Shot 03 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(7)">
+<img alt="Transition 02 to 03" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_087_34ecffe0.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Nối chuyển động (Match Cut) sang Cảnh 03: Góc nhìn từ trên xuống bắt trọn động tác chống tay ngồi dậy.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-3">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(3.96, 5.32, 'SHOT 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_088_9dce67cb.jpg" alt="SHOT 03" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_088_9dce67cb.jpg', 'SHOT 03 [3.96s - 5.32s]')">🔍</button>
+                    <span class="thumb-time-badge">3.96s - 5.32s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 03</span>
+                        <h4 class="shot-heading">SHOT 03</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(3.96, 5.32, 'SHOT 03')">
+                        ▶ 3.96s ➔ 5.32s (1.36s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(3.96, 5.32, 'SHOT 03')">
+<img alt="SHOT 03" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_088_9dce67cb.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_088_9dce67cb.jpg', 'SHOT 03 [3.96s - 5.32s]')">🔍</button>
+<span class="thumb-time-badge">3.96s - 5.32s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 03</span>
+<h4 class="shot-heading">SHOT 03</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(3.96, 5.32, 'SHOT 03')">
+                        ▶ 3.96s ➔ 5.32s (1.36s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 03</span>
+<span class="shot-time" onclick="jumpToVideo(3.96)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [3.96s - 5.32s • 1.40s]
+                </span>
+<h3 class="shot-heading">Chống Tay Ngồi Dậy: Gia Tốc Chuyển Động Cơ Thể</h3>
+</div>
+<div class="shot-type-pill">High-Angle 45° Medium Close-Up / Rising Momentum</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(8)">
+<img alt="Shot 03 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_088_9dce67cb.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(9)">
+<img alt="Shot 03 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_089_11cea53b.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(10)">
+<img alt="Shot 03 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_090_a18bf35e.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Sàn nhà / Thảm đỏ</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc quay chếch 45 độ từ trên cao nhìn xuống (High Angle). Nhân vật chống hai tay xuống thảm và nâng thân mình bật dậy khỏi sàn, ánh mắt hướng lên về phía bàn làm việc.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Thân người nâng lên theo phương chéo kéo tầm nhìn người xem từ sàn lên không gian cao hơn.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Đặt chân máy cao ngang ngực hướng góc chúc xuống 45 độ. Diễn viên thực hiện một chuyển động liền mạch không ngắt quãng giữa các shot.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 28mm hoặc 35mm f/2.2.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 03 (End) ➔ Shot 04 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(11)">
+<img alt="Transition 03 to 04" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_091_146b3aa0.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Nối cảnh liên tục sang Cảnh 04: Toàn cảnh căn phòng bắt trọn hành động đứng lên hoàn chỉnh.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-4">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(5.36, 6.08, 'SHOT 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_092_90f3f4b7.jpg" alt="SHOT 04" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_092_90f3f4b7.jpg', 'SHOT 04 [5.36s - 6.08s]')">🔍</button>
+                    <span class="thumb-time-badge">5.36s - 6.08s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 04</span>
+                        <h4 class="shot-heading">SHOT 04</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(5.36, 6.08, 'SHOT 04')">
+                        ▶ 5.36s ➔ 6.08s (0.72s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(5.36, 6.08, 'SHOT 04')">
+<img alt="SHOT 04" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_092_90f3f4b7.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_092_90f3f4b7.jpg', 'SHOT 04 [5.36s - 6.08s]')">🔍</button>
+<span class="thumb-time-badge">5.36s - 6.08s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 04</span>
+<h4 class="shot-heading">SHOT 04</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(5.36, 6.08, 'SHOT 04')">
+                        ▶ 5.36s ➔ 6.08s (0.72s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 04</span>
+<span class="shot-time" onclick="jumpToVideo(5.36)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [5.36s - 6.08s • 0.76s]
+                </span>
+<h3 class="shot-heading">Toàn Cảnh: Đứng Dậy Và Tiến Về Bàn Làm Việc</h3>
+</div>
+<div class="shot-type-pill">Wide Establishing Room Shot / Spatial Transition</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(12)">
+<img alt="Shot 04 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_092_90f3f4b7.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(13)">
+<img alt="Shot 04 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_093_2cb552c8.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(14)">
+<img alt="Shot 04 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_094_fbc07322.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Toàn bộ góc phòng làm việc</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc toàn cảnh (Wide Shot) bao quát căn phòng với thảm đỏ, rèm cửa trắng sáng, bàn gỗ vintage và kệ sách. Nhân vật đứng bật dậy dứt khoát và bước những bước nhanh về phía chiếc bàn có quả địa cầu đang phát sáng ấm áp.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Bước chân dứt khoát di chuyển từ góc tối sàn nhà vào vùng ánh sáng bàn làm việc.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Khóa máy góc rộng tĩnh. Cân bằng giữa nguồn sáng tự nhiên từ rèm cửa sổ bên phải và ánh sáng đèn bàn Edison màu vàng hổ phách bên trái.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 24mm f/2.8, bao quát toàn bộ chiều sâu căn phòng.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 04 (End) ➔ Shot 05 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(15)">
+<img alt="Transition 04 to 05" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_095_a3a1ace9.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt sang Cảnh 05: Trung cảnh ngang hông khi tay với tới quả địa cầu.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-5">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(6.12, 6.6, 'SHOT 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_096_0b8b25e9.jpg" alt="SHOT 05" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_096_0b8b25e9.jpg', 'SHOT 05 [6.12s - 6.6s]')">🔍</button>
+                    <span class="thumb-time-badge">6.12s - 6.60s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 05</span>
+                        <h4 class="shot-heading">SHOT 05</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(6.12, 6.6, 'SHOT 05')">
+                        ▶ 6.12s ➔ 6.60s (0.48s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(6.12, 6.6, 'SHOT 05')">
+<img alt="SHOT 05" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_096_0b8b25e9.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_096_0b8b25e9.jpg', 'SHOT 05 [6.12s - 6.6s]')">🔍</button>
+<span class="thumb-time-badge">6.12s - 6.60s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 05</span>
+<h4 class="shot-heading">SHOT 05</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(6.12, 6.6, 'SHOT 05')">
+                        ▶ 6.12s ➔ 6.60s (0.48s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 05</span>
+<span class="shot-time" onclick="jumpToVideo(6.12)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [6.12s - 6.60s • 0.52s]
+                </span>
+<h3 class="shot-heading">Nguyên Tắc 2: Thể Hiện Chi Tiết (Show Details) — Tiếp Cận Quả Địa Cầu</h3>
+</div>
+<div class="shot-type-pill">Medium Side Angle / Object Approach</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(16)">
+<img alt="Shot 05 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_096_0b8b25e9.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(17)">
+<img alt="Shot 05 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_097_a191ad06.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(18)">
+<img alt="Shot 05 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_098_52f62df5.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Bàn làm việc gỗ phong cách cổ điển</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc quay ngang hông 45 độ (Side Medium Shot). Nhân vật bước vào khung hình từ phía bên phải, vươn cánh tay về phía quả địa cầu cổ đặt cạnh bóng đèn sợi đốt Edison sáng lung linh. Tiêu đề 'show details' cùng dòng chú thích 'use tight shots and extreme close ups' xuất hiện.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Cánh tay bước vào khung hình từ ngoài biên (Frame Entry) tạo cảm giác hành động trực tiếp.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Đặt máy quay ngang tầm ngực cạnh bàn gỗ. Tạo sự ấm cúng bằng ánh sáng đèn Edison 2700K chiếu ngược nhẹ lên quả địa cầu.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 35mm f/2.0.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 05 (End) ➔ Shot 06 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(19)">
+<img alt="Transition 05 to 06" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_099_0f84e280.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt dồn dập sang Cảnh 06: Cận cảnh bàn tay chạm và xoay quả địa cầu.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-6">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(6.64, 7.0, 'SHOT 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_100_7c8ae49d.jpg" alt="SHOT 06" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_100_7c8ae49d.jpg', 'SHOT 06 [6.64s - 7.0s]')">🔍</button>
+                    <span class="thumb-time-badge">6.64s - 7.00s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 06</span>
+                        <h4 class="shot-heading">SHOT 06</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(6.64, 7.0, 'SHOT 06')">
+                        ▶ 6.64s ➔ 7.00s (0.36s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(6.64, 7.0, 'SHOT 06')">
+<img alt="SHOT 06" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_100_7c8ae49d.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_100_7c8ae49d.jpg', 'SHOT 06 [6.64s - 7.0s]')">🔍</button>
+<span class="thumb-time-badge">6.64s - 7.00s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 06</span>
+<h4 class="shot-heading">SHOT 06</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(6.64, 7.0, 'SHOT 06')">
+                        ▶ 6.64s ➔ 7.00s (0.36s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 06</span>
+<span class="shot-time" onclick="jumpToVideo(6.64)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [6.64s - 7.00s • 0.40s]
+                </span>
+<h3 class="shot-heading">Cận Cảnh Bàn Tay: Cú Xoay Trục Địa Cầu Khởi Động Nhịp Dựng</h3>
+</div>
+<div class="shot-type-pill">Close-Up Action Insert / Globe Spin Initiation</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(20)">
+<img alt="Shot 06 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_100_7c8ae49d.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(21)">
+<img alt="Shot 06 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_101_018578e1.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(22)">
+<img alt="Shot 06 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_102_61e9ea0f.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Mặt bàn gỗ sồi vintage</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc cận cảnh (Close-Up) quả địa cầu và bóng đèn Edison. Bàn tay nhân vật xuất hiện từ góc trên bên phải, ngón tay vuốt mạnh vào thân quả địa cầu khiến nó quay tít quanh trục kim loại.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Cú xoay dứt khoát kích hoạt chuyển động quay tròn tốc độ cao.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Thu hẹp khung hình, tập trung tuyệt đối vào quả địa cầu và ánh sáng phản chiếu trên mặt gỗ. Lồng tiếng hiệu ứng (Foley) tiếng trục xoay 'ro ro' ma sát chân thực.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 50mm f/1.8, khẩu độ f/2.2.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 06 (End) ➔ Shot 07 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(23)">
+<img alt="Transition 06 to 07" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_103_73cf35eb.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Nối chuyển động sang Cảnh 07: Đặc tả siêu cận bề mặt quả địa cầu đang quay với vệt mờ chuyển động.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-7">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(7.04, 7.72, 'SHOT 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_104_c01a7cce.jpg" alt="SHOT 07" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_104_c01a7cce.jpg', 'SHOT 07 [7.04s - 7.72s]')">🔍</button>
+                    <span class="thumb-time-badge">7.04s - 7.72s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 07</span>
+                        <h4 class="shot-heading">SHOT 07</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(7.04, 7.72, 'SHOT 07')">
+                        ▶ 7.04s ➔ 7.72s (0.68s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(7.04, 7.72, 'SHOT 07')">
+<img alt="SHOT 07" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_104_c01a7cce.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_104_c01a7cce.jpg', 'SHOT 07 [7.04s - 7.72s]')">🔍</button>
+<span class="thumb-time-badge">7.04s - 7.72s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 07</span>
+<h4 class="shot-heading">SHOT 07</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(7.04, 7.72, 'SHOT 07')">
+                        ▶ 7.04s ➔ 7.72s (0.68s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 07</span>
+<span class="shot-time" onclick="jumpToVideo(7.04)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [7.04s - 7.72s • 0.72s]
+                </span>
+<h3 class="shot-heading">Đặc Tả Siêu Cận: Vệt Xoay Chóng Mặt Của Bề Mặt Bản Đồ</h3>
+</div>
+<div class="shot-type-pill">Extreme Close-Up Macro / Kinetic Motion Blur</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(24)">
+<img alt="Shot 07 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_104_c01a7cce.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(25)">
+<img alt="Shot 07 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_105_f722bb14.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(26)">
+<img alt="Shot 07 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_106_54dac2fc.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Bề mặt quả địa cầu</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc đặc tả siêu cận (Macro Extreme Close-Up). Toàn bộ khung hình là bề mặt quả địa cầu đang quay tít mù với tốc độ cao, các lục địa và đại dương lướt qua tạo thành những dải màu vàng nâu và nâu đất mờ ảo tuyệt đẹp.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Dải sọc chuyển động ngang lướt qua với tốc độ 60km/h trên tỷ lệ mô hình.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Ống kính macro dí sát cách bề mặt quả cầu 10cm. Khẩu độ mở lớn tạo độ mờ nhòe (Motion Blur) điện ảnh.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính Macro 85mm f/2.8, Shutter Speed 1/50s.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 07 (End) ➔ Shot 08 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(27)">
+<img alt="Transition 07 to 08" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_107_e37b4269.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt sang Cảnh 08: Tiền cảnh kính lúp quang học.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-8">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(7.76, 8.28, 'SHOT 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_108_21561698.jpg" alt="SHOT 08" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_108_21561698.jpg', 'SHOT 08 [7.76s - 8.28s]')">🔍</button>
+                    <span class="thumb-time-badge">7.76s - 8.28s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 08</span>
+                        <h4 class="shot-heading">SHOT 08</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(7.76, 8.28, 'SHOT 08')">
+                        ▶ 7.76s ➔ 8.28s (0.52s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(7.76, 8.28, 'SHOT 08')">
+<img alt="SHOT 08" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_108_21561698.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_108_21561698.jpg', 'SHOT 08 [7.76s - 8.28s]')">🔍</button>
+<span class="thumb-time-badge">7.76s - 8.28s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 08</span>
+<h4 class="shot-heading">SHOT 08</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(7.76, 8.28, 'SHOT 08')">
+                        ▶ 7.76s ➔ 8.28s (0.52s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 08</span>
+<span class="shot-time" onclick="jumpToVideo(7.76)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [7.76s - 8.28s • 0.56s]
+                </span>
+<h3 class="shot-heading">Nguyên Tắc 3: Quay Xuyên Vật Thể (Shoot Through Objects) — Kính Lúp Tiền Cảnh</h3>
+</div>
+<div class="shot-type-pill">Foreground Framing Macro / Optical Glass Reflection</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(28)">
+<img alt="Shot 08 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_108_21561698.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(29)">
+<img alt="Shot 08 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_109_e8ac2ca0.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(30)">
+<img alt="Shot 08 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_110_4b4ecb1e.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Mặt bàn cạnh đèn Edison</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc máy đặc tả thấu kính lúp cầm tay bằng đồng đặt trên bàn gỗ. Ánh sáng đèn ấm phản chiếu lung linh trên vành kim loại và mặt kính cong tạo vệt sáng bokeh tròn trịa. Tiêu đề 'shoot through objects' cùng giải thích 'adds depth to shots &amp; makes it interesting' hiện lên.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Vệt sáng lấp lánh trên mép kính lúp thu hút ánh nhìn vào tiền cảnh quang học.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Đặt kính lúp ở 1/3 dưới khung hình làm mỏ neo thị giác (Visual Anchor). Ánh đèn bên cạnh tạo hiệu ứng viền sáng (Lens Flare) nghệ thuật.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 50mm f/1.8, bắt nét vào mép viền kính lúp kim loại.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 08 (End) ➔ Shot 09 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(31)">
+<img alt="Transition 08 to 09" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_111_a3cb2518.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt sang Cảnh 09: Nhìn xuyên qua kính lúp vào bản đồ châu Á.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-9">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(8.32, 8.64, 'SHOT 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_112_f3dfcb6b.jpg" alt="SHOT 09" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_112_f3dfcb6b.jpg', 'SHOT 09 [8.32s - 8.64s]')">🔍</button>
+                    <span class="thumb-time-badge">8.32s - 8.64s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 09</span>
+                        <h4 class="shot-heading">SHOT 09</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(8.32, 8.64, 'SHOT 09')">
+                        ▶ 8.32s ➔ 8.64s (0.32s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(8.32, 8.64, 'SHOT 09')">
+<img alt="SHOT 09" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_112_f3dfcb6b.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_112_f3dfcb6b.jpg', 'SHOT 09 [8.32s - 8.64s]')">🔍</button>
+<span class="thumb-time-badge">8.32s - 8.64s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 09</span>
+<h4 class="shot-heading">SHOT 09</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(8.32, 8.64, 'SHOT 09')">
+                        ▶ 8.32s ➔ 8.64s (0.32s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 09</span>
+<span class="shot-time" onclick="jumpToVideo(8.32)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [8.32s - 8.64s • 0.36s]
+                </span>
+<h3 class="shot-heading">Soi Kính Lúp Lên Bản Đồ: Khu Vực Trung Quốc &amp; Mông Cổ</h3>
+</div>
+<div class="shot-type-pill">Optical Magnification Macro / Map Inspection</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(32)">
+<img alt="Shot 09 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_112_f3dfcb6b.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(33)">
+<img alt="Shot 09 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_113_a2931791.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(34)">
+<img alt="Shot 09 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_114_d3cd7bc1.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Bề mặt quả địa cầu qua thấu kính</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc nhìn cận cảnh xuyên qua tròng kính lúp. Các địa danh MONGOLIA, CHINA, KUNLUN SHAN trên quả địa cầu được phóng to rõ nét với các đường kinh tuyến vĩ tuyến cổ điển.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Kính lúp lướt nhẹ qua bản đồ làm các dòng chữ phóng đại rồi trượt đi.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Cầm kính lúp rê sát bề mặt quả địa cầu để tạo độ cong quang học (Optical Distortion) nhẹ ở rìa thấu kính.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 50mm f/2.0.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 09 (End) ➔ Shot 10 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(35)">
+<img alt="Transition 09 to 10" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_115_b8300530.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt sang Cảnh 10: Cú đổi góc bất ngờ đưa kính lúp lên sát mắt nhân vật.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-10">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(8.68, 9.92, 'SHOT 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_116_02ecd8a4.jpg" alt="SHOT 10" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_116_02ecd8a4.jpg', 'SHOT 10 [8.68s - 9.92s]')">🔍</button>
+                    <span class="thumb-time-badge">8.68s - 9.92s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 10</span>
+                        <h4 class="shot-heading">SHOT 10</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(8.68, 9.92, 'SHOT 10')">
+                        ▶ 8.68s ➔ 9.92s (1.24s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(8.68, 9.92, 'SHOT 10')">
+<img alt="SHOT 10" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_116_02ecd8a4.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_116_02ecd8a4.jpg', 'SHOT 10 [8.68s - 9.92s]')">🔍</button>
+<span class="thumb-time-badge">8.68s - 9.92s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 10</span>
+<h4 class="shot-heading">SHOT 10</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(8.68, 9.92, 'SHOT 10')">
+                        ▶ 8.68s ➔ 9.92s (1.24s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 10</span>
+<span class="shot-time" onclick="jumpToVideo(8.68)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [8.68s - 9.92s • 1.28s]
+                </span>
+<h3 class="shot-heading">Cú Nhìn Xuyên Kính Lúp Phóng Đại Mắt Nhân Vật (Comic Visual Hook)</h3>
+</div>
+<div class="shot-type-pill">Extreme Close-Up Comic Hook / Eye Magnified Through Lens</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(36)">
+<img alt="Shot 10 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_116_02ecd8a4.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(37)">
+<img alt="Shot 10 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_117_bf0495c5.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(38)">
+<img alt="Shot 10 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_118_a8659578.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Gương mặt nhân vật</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc quay trực diện cực cận (Extreme Close-Up Portrait). Bryan Hynes đưa chiếc kính lúp lên sát mắt phải, con mắt được phóng đại gấp 2 lần với ánh nhìn mở to, tò mò nhìn thẳng vào ống kính máy quay. Ánh sáng đèn ấm phản chiếu một đốm sáng tròn (Catchlight) lấp lánh trong đồng tử.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Con mắt phóng to chớp nhẹ và đảo qua đảo lại tạo sự hài hước, dí dỏm và cuốn hút người xem tuyệt đối.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Đây là cú shot 'signature' giữ chân người xem đỉnh cao của video! Đưa kính lúp cách mắt 3-5cm và cách ống kính 15cm để mắt đạt độ phóng đại tối đa mà không bị mất nét.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 50mm f/2.0, lấy nét khóa chặt vào tròng đen của mắt qua kính lúp.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 10 (End) ➔ Shot 11 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(39)">
+<img alt="Transition 10 to 11" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_119_189ee719.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt sang Cảnh 11: Trọng tâm dừng lại ở chữ 'VIETNAM' trên bản đồ.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-11">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(9.96, 11.0, 'SHOT 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_120_0203c5be.jpg" alt="SHOT 11" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_120_0203c5be.jpg', 'SHOT 11 [9.96s - 11.0s]')">🔍</button>
+                    <span class="thumb-time-badge">9.96s - 11.00s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 11</span>
+                        <h4 class="shot-heading">SHOT 11</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(9.96, 11.0, 'SHOT 11')">
+                        ▶ 9.96s ➔ 11.00s (1.04s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(9.96, 11.0, 'SHOT 11')">
+<img alt="SHOT 11" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_120_0203c5be.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_120_0203c5be.jpg', 'SHOT 11 [9.96s - 11.0s]')">🔍</button>
+<span class="thumb-time-badge">9.96s - 11.00s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 11</span>
+<h4 class="shot-heading">SHOT 11</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(9.96, 11.0, 'SHOT 11')">
+                        ▶ 9.96s ➔ 11.00s (1.04s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 11</span>
+<span class="shot-time" onclick="jumpToVideo(9.96)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [9.96s - 11.00s • 1.08s]
+                </span>
+<h3 class="shot-heading">Điểm Đến Định Mệnh: Khoanh Vùng Bản Đồ 'VIETNAM'</h3>
+</div>
+<div class="shot-type-pill">Macro Destination Focus / Finding 'VIETNAM'</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(40)">
+<img alt="Shot 11 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_120_0203c5be.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(41)">
+<img alt="Shot 11 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_121_aee54619.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(42)">
+<img alt="Shot 11 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_122_ab915b04.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Khu vực Đông Nam Á trên quả địa cầu</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc cận macro sắc nét chiếu vào khu vực Đông Nam Á với chữ 'VIETNAM', 'THAILAND', 'CAMBODIA', 'MALAYSIA' in hoa đậm nét. Ánh sáng vàng cam phủ lên dải đất hình chữ S, thiết lập động cơ cho hành động tìm sách du lịch ngay sau đó.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Vùng chữ 'VIETNAM' nằm trọn ở trung tâm vùng lấy nét sắc sảo.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Dừng quả địa cầu đúng tọa độ Việt Nam, chiếu ánh sáng đèn rọi vào bờ biển Đông Nam Á để tạo điểm nhấn thị giác.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 50mm f/2.8 macro.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 11 (End) ➔ Shot 12 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(43)">
+<img alt="Transition 11 to 12" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_123_1fa0457a.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt sang Cảnh 12: Trung cảnh nhân vật quay sang kệ sách.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-12">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(11.04, 11.88, 'SHOT 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_124_dde02867.jpg" alt="SHOT 12" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_124_dde02867.jpg', 'SHOT 12 [11.04s - 11.88s]')">🔍</button>
+                    <span class="thumb-time-badge">11.04s - 11.88s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 12</span>
+                        <h4 class="shot-heading">SHOT 12</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(11.04, 11.88, 'SHOT 12')">
+                        ▶ 11.04s ➔ 11.88s (0.84s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(11.04, 11.88, 'SHOT 12')">
+<img alt="SHOT 12" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_124_dde02867.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_124_dde02867.jpg', 'SHOT 12 [11.04s - 11.88s]')">🔍</button>
+<span class="thumb-time-badge">11.04s - 11.88s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 12</span>
+<h4 class="shot-heading">SHOT 12</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(11.04, 11.88, 'SHOT 12')">
+                        ▶ 11.04s ➔ 11.88s (0.84s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 12</span>
+<span class="shot-time" onclick="jumpToVideo(11.04)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [11.04s - 11.88s • 0.88s]
+                </span>
+<h3 class="shot-heading">Nguyên Tắc 4: Giữ Vững Đà Chuyển Động (Keep the Momentum) — Quyết Định Chọn Sách</h3>
+</div>
+<div class="shot-type-pill">Medium Over-the-Shoulder / Decision Moment</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(44)">
+<img alt="Shot 12 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_124_dde02867.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(45)">
+<img alt="Shot 12 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_125_93b1a5be.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(46)">
+<img alt="Shot 12 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_126_dbdef20a.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Bàn làm việc cạnh giá sách</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc quay từ sau vai (Over-The-Shoulder Medium Shot). Nhân vật ngồi tựa tay vào quả địa cầu, quay đầu nhìn sang hàng sách du lịch trên kệ gỗ bên cạnh. Tiêu đề 'keep the momentum' cùng dòng chữ 'reveal more details as things change' xuất hiện.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Động tác xoay đầu và vươn người sang kệ sách giữ cho nhịp phim luôn chuyển động không ngừng.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Góc máy đặt phía sau lưng nhân vật chếch 45 độ, lấy trọn quả địa cầu bên trái và kệ sách bên phải tạo bố cục cân đối.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 35mm f/2.0.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 12 (End) ➔ Shot 13 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(47)">
+<img alt="Transition 12 to 13" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_127_dfdfa12e.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt sang Cảnh 13: Cận cảnh bàn tay lướt trên gáy sách.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-13">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(11.92, 13.36, 'SHOT 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_128_2e52884b.jpg" alt="SHOT 13" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_128_2e52884b.jpg', 'SHOT 13 [11.92s - 13.36s]')">🔍</button>
+                    <span class="thumb-time-badge">11.92s - 13.36s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 13</span>
+                        <h4 class="shot-heading">SHOT 13</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(11.92, 13.36, 'SHOT 13')">
+                        ▶ 11.92s ➔ 13.36s (1.44s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(11.92, 13.36, 'SHOT 13')">
+<img alt="SHOT 13" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_128_2e52884b.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_128_2e52884b.jpg', 'SHOT 13 [11.92s - 13.36s]')">🔍</button>
+<span class="thumb-time-badge">11.92s - 13.36s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 13</span>
+<h4 class="shot-heading">SHOT 13</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(11.92, 13.36, 'SHOT 13')">
+                        ▶ 11.92s ➔ 13.36s (1.44s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 13</span>
+<span class="shot-time" onclick="jumpToVideo(11.92)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [11.92s - 13.36s • 1.48s]
+                </span>
+<h3 class="shot-heading">Rút Cuốn Sách 'Vietnam': Khớp Nối Hoàn Hảo Với Manh Mối Bản Đồ</h3>
+</div>
+<div class="shot-type-pill">Close-Up Bookshelf Action / Selecting Vietnam Travel Guide</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(48)">
+<img alt="Shot 13 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_128_2e52884b.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(49)">
+<img alt="Shot 13 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_129_580030f0.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(50)">
+<img alt="Shot 13 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_130_753590fe.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Kệ sách du lịch (Central America, Costa Rica, Nepal, Vietnam, Peru)</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc cận cảnh kệ sách với những cuốn cẩm nang du lịch màu sắc sặc sỡ của Lonely Planet. Bàn tay nhân vật vươn vào từ trên, các ngón tay lướt qua gáy các cuốn sách và kẹp chặt lấy cuốn sách màu xanh ngọc có chữ 'Vietnam' rút ra khỏi kệ.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Động tác rút cuốn sách ra khỏi hàng tạo khoảng trống chuyển động.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Sắp xếp gáy sách chữ nổi rõ ràng. Foley tiếng giấy và bìa sách ma sát được đẩy lớn trong bản mix âm thanh.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 50mm f/2.2.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 13 (End) ➔ Shot 14 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(51)">
+<img alt="Transition 13 to 14" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_131_33b0d09c.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt sang Cảnh 14: Góc nhìn từ trên cao xuống mặt bàn nhặt cuốn hộ chiếu Úc.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-14">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(13.4, 14.52, 'SHOT 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_132_e67a2403.jpg" alt="SHOT 14" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_132_e67a2403.jpg', 'SHOT 14 [13.4s - 14.52s]')">🔍</button>
+                    <span class="thumb-time-badge">13.40s - 14.52s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 14</span>
+                        <h4 class="shot-heading">SHOT 14</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(13.4, 14.52, 'SHOT 14')">
+                        ▶ 13.40s ➔ 14.52s (1.12s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(13.4, 14.52, 'SHOT 14')">
+<img alt="SHOT 14" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_132_e67a2403.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_132_e67a2403.jpg', 'SHOT 14 [13.4s - 14.52s]')">🔍</button>
+<span class="thumb-time-badge">13.40s - 14.52s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 14</span>
+<h4 class="shot-heading">SHOT 14</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(13.4, 14.52, 'SHOT 14')">
+                        ▶ 13.40s ➔ 14.52s (1.12s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 14</span>
+<span class="shot-time" onclick="jumpToVideo(13.4)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [13.40s - 14.52s • 1.16s]
+                </span>
+<h3 class="shot-heading">Nguyên Tắc 5: Đổi Cảnh Là Đổi Cận (More Change = More Tights) — Nhặt Hộ Chiếu</h3>
+</div>
+<div class="shot-type-pill">Top-Down Flat Lay Close-Up / Picking Up Passport</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(52)">
+<img alt="Shot 14 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_132_e67a2403.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(53)">
+<img alt="Shot 14 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_133_1375b158.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(54)">
+<img alt="Shot 14 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_134_b46ce5c8.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Mặt bàn gỗ nhìn từ trên cao xuống (Top-Down)</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc máy thẳng đứng 90 độ (Bird's Eye Flat Lay). Cuốn hộ chiếu bìa xanh đen dập quốc huy vàng kim 'AUSTRALIA Passport' nằm trên cuốn sổ tay lò xo. Bàn tay nhân vật lướt vào từ mép phải nhấc bổng cuốn hộ chiếu lên. Dòng chữ 'more change = more tights / use tight shots and keep revealing changing details' hiện lên sắc nét.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Bàn tay nhấc hộ chiếu rời khỏi mặt bàn làm lộ ra hoa văn sổ tay bên dưới.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Gắn máy quay lên thanh ngang (C-stand/Overhead Rig) chúc thẳng 90 độ xuống mặt bàn. Đo sáng chuẩn để chữ dập vàng trên hộ chiếu óng ánh.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 35mm f/2.8, khép khẩu để toàn bộ mặt phẳng đều nét căng.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 14 (End) ➔ Shot 15 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(55)">
+<img alt="Transition 14 to 15" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_135_9f06baad.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt sang Cảnh 15: Góc nhìn sau lưng khoác ba lô lên vai.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-15">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(14.56, 15.36, 'SHOT 15')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_136_419acbfe.jpg" alt="SHOT 15" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_136_419acbfe.jpg', 'SHOT 15 [14.56s - 15.36s]')">🔍</button>
+                    <span class="thumb-time-badge">14.56s - 15.36s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 15</span>
+                        <h4 class="shot-heading">SHOT 15</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(14.56, 15.36, 'SHOT 15')">
+                        ▶ 14.56s ➔ 15.36s (0.80s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(14.56, 15.36, 'SHOT 15')">
+<img alt="SHOT 15" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_136_419acbfe.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_136_419acbfe.jpg', 'SHOT 15 [14.56s - 15.36s]')">🔍</button>
+<span class="thumb-time-badge">14.56s - 15.36s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 15</span>
+<h4 class="shot-heading">SHOT 15</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(14.56, 15.36, 'SHOT 15')">
+                        ▶ 14.56s ➔ 15.36s (0.80s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 15</span>
+<span class="shot-time" onclick="jumpToVideo(14.56)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [14.56s - 15.36s • 0.84s]
+                </span>
+<h3 class="shot-heading">Khoác Ba Lô Lên Vai: Sẵn Sàng Khởi Hành Chuyến Đi</h3>
+</div>
+<div class="shot-type-pill">Over-the-Shoulder Medium Shot / Backpack Slinging Action</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(56)">
+<img alt="Shot 15 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_136_419acbfe.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(57)">
+<img alt="Shot 15 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_137_c9c99b71.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(58)">
+<img alt="Shot 15 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_138_dfafe1dd.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Góc phòng làm việc</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc quay từ sau lưng nhân vật. Bryan Hynes nhấc chiếc ba lô du lịch vải canvas màu be có nắp da bò vintage và quàng quai đeo qua vai phải với động tác dứt khoát.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Cú vung ba lô lên vai tạo lực chuyển động mạnh mẽ hướng về phía trước.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Tận dụng chất liệu thô mộc của ba lô canvas để tạo chất điện ảnh phong trần (Rugged Adventure Aesthetic).</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 35mm f/2.0.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 15 (End) ➔ Shot 16 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(59)">
+<img alt="Transition 15 to 16" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_139_b86239bb.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt sang Cảnh 16: Góc thấp từ sau lưng khi nhân vật bước đi.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-16">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(15.4, 16.08, 'SHOT 16')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_140_a07f9750.jpg" alt="SHOT 16" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_140_a07f9750.jpg', 'SHOT 16 [15.4s - 16.08s]')">🔍</button>
+                    <span class="thumb-time-badge">15.40s - 16.08s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 16</span>
+                        <h4 class="shot-heading">SHOT 16</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(15.4, 16.08, 'SHOT 16')">
+                        ▶ 15.40s ➔ 16.08s (0.68s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(15.4, 16.08, 'SHOT 16')">
+<img alt="SHOT 16" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_140_a07f9750.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_140_a07f9750.jpg', 'SHOT 16 [15.4s - 16.08s]')">🔍</button>
+<span class="thumb-time-badge">15.40s - 16.08s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 16</span>
+<h4 class="shot-heading">SHOT 16</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(15.4, 16.08, 'SHOT 16')">
+                        ▶ 15.40s ➔ 16.08s (0.68s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 16</span>
+<span class="shot-time" onclick="jumpToVideo(15.4)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [15.40s - 16.08s • 0.72s]
+                </span>
+<h3 class="shot-heading">Nguyên Tắc 6: Giữ Kết Nối Với Chủ Thể (Stay Connected with a Subject)</h3>
+</div>
+<div class="shot-type-pill">Low-Angle Rear Tracking / Departure Walk</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(60)">
+<img alt="Shot 16 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_140_a07f9750.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(61)">
+<img alt="Shot 16 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_141_f29a88d4.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(62)">
+<img alt="Shot 16 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_142_ca4c2ce9.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Lối ra căn phòng</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc máy thấp từ phía sau (Low Angle Rear Shot). Nhân vật siết quai ba lô và sải bước rời khỏi bàn làm việc tiến về phía cửa phòng. Tiêu đề 'stay connected with a subject' cùng dòng chú thích 'more facial reactions = more audiences will connect' hiện lên.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Nhân vật bước đi dứt khoát ra khỏi góc làm việc quen thuộc.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Hạ góc máy thấp hướng lên để tạo cảm giác nhân vật cao lớn, kiên định với hành trình mới.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 28mm f/2.2.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 16 (End) ➔ Shot 17 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(63)">
+<img alt="Transition 16 to 17" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_143_10fc1ae5.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt chèn nhanh sang Cảnh 17: Cảnh chèn tay vội vàng nhặt nốt đồ bỏ quên.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-17">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(16.12, 16.8, 'SHOT 17')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_144_0d61d62a.jpg" alt="SHOT 17" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_144_0d61d62a.jpg', 'SHOT 17 [16.12s - 16.8s]')">🔍</button>
+                    <span class="thumb-time-badge">16.12s - 16.80s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 17</span>
+                        <h4 class="shot-heading">SHOT 17</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(16.12, 16.8, 'SHOT 17')">
+                        ▶ 16.12s ➔ 16.80s (0.68s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(16.12, 16.8, 'SHOT 17')">
+<img alt="SHOT 17" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_144_0d61d62a.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_144_0d61d62a.jpg', 'SHOT 17 [16.12s - 16.8s]')">🔍</button>
+<span class="thumb-time-badge">16.12s - 16.80s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 17</span>
+<h4 class="shot-heading">SHOT 17</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(16.12, 16.8, 'SHOT 17')">
+                        ▶ 16.12s ➔ 16.80s (0.68s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 17</span>
+<span class="shot-time" onclick="jumpToVideo(16.12)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [16.12s - 16.80s • 0.72s]
+                </span>
+<h3 class="shot-heading">Cảnh Chèn Tốc Độ (Micro-Insert): Nhặt Nốt Đồ Vật Cạnh Quả Địa Cầu</h3>
+</div>
+<div class="shot-type-pill">Quick Micro-Insert Shot / Last Minute Grab</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(64)">
+<img alt="Shot 17 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_144_0d61d62a.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(65)">
+<img alt="Shot 17 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_145_8209d5f0.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(66)">
+<img alt="Shot 17 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_146_50e26f31.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Mặt bàn gỗ cạnh quả địa cầu</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Cảnh chèn siêu ngắn (0.72s). Bàn tay nhân vật bất ngờ thò lại vào khung hình bên cạnh quả địa cầu để nhặt nốt tấm vé/sổ ghi chú nhỏ bị bỏ quên trên bàn.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Bàn tay thò vào rồi rút đi chớp nhoáng tạo nhịp nhấn vui nhộn (Comedic Beat).</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Chèn một cảnh hành động lỗi/quên đồ cực ngắn trước khi sang đoạn kết giúp câu chuyện sinh động và 'người' hơn rất nhiều.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 50mm f/2.0.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 17 (End) ➔ Shot 18 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(67)">
+<img alt="Transition 17 to 18" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_147_7bb5fac1.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt sang Cảnh 18: Biểu cảm hào hứng tột độ trên gương mặt nhân vật.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-18">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(16.84, 18.72, 'SHOT 18')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_148_c4cbee19.jpg" alt="SHOT 18" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_148_c4cbee19.jpg', 'SHOT 18 [16.84s - 18.72s]')">🔍</button>
+                    <span class="thumb-time-badge">16.84s - 18.72s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 18</span>
+                        <h4 class="shot-heading">SHOT 18</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(16.84, 18.72, 'SHOT 18')">
+                        ▶ 16.84s ➔ 18.72s (1.88s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(16.84, 18.72, 'SHOT 18')">
+<img alt="SHOT 18" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_148_c4cbee19.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_148_c4cbee19.jpg', 'SHOT 18 [16.84s - 18.72s]')">🔍</button>
+<span class="thumb-time-badge">16.84s - 18.72s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 18</span>
+<h4 class="shot-heading">SHOT 18</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(16.84, 18.72, 'SHOT 18')">
+                        ▶ 16.84s ➔ 18.72s (1.88s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 18</span>
+<span class="shot-time" onclick="jumpToVideo(16.84)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [16.84s - 18.72s • 1.92s]
+                </span>
+<h3 class="shot-heading">Nguyên Tắc 7: Thể Hiện Biểu Cảm Nhân Vật (Show Character Reaction)</h3>
+</div>
+<div class="shot-type-pill">Medium Close-Up Expressive Reaction / High Energy Dialogue</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(68)">
+<img alt="Shot 18 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_148_c4cbee19.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(69)">
+<img alt="Shot 18 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_149_6d578dd5.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(70)">
+<img alt="Shot 18 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_150_4ae89d98.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Phía trước bàn làm việc</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc trung cận trực diện (Medium Close-Up Portrait). Bryan Hynes đeo ba lô, tay ôm cuốn sách 'Vietnam', miệng mở to nói chuyện với biểu cảm gương mặt cực kỳ sống động, mắt sáng rực rỡ và nụ cười tràn đầy năng lượng. Tiêu đề 'show character reaction' cùng chú thích 'use medium close ups or try show the eyes' xuất hiện nổi bật.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Cơ mặt biến đổi liên tục từ ngạc nhiên, hào hứng sang tự tin kích thích dopamine người xem.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Đây là chìa khóa kết nối người xem! Hãy để nhân vật thể hiện cảm xúc tự nhiên, không gượng gạo. Đánh sáng Catchlight trong mắt để đôi mắt luôn long lanh có hồn.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 50mm f/1.8, khẩu độ f/2.0.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 18 (End) ➔ Shot 19 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(71)">
+<img alt="Transition 18 to 19" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_151_95d222ae.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt sang Cảnh 19: Cận cảnh ngón tay bấm nút công tắc máy quay.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-19">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(18.76, 19.36, 'SHOT 19')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_152_e03c4477.jpg" alt="SHOT 19" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_152_e03c4477.jpg', 'SHOT 19 [18.76s - 19.36s]')">🔍</button>
+                    <span class="thumb-time-badge">18.76s - 19.36s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 19</span>
+                        <h4 class="shot-heading">SHOT 19</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(18.76, 19.36, 'SHOT 19')">
+                        ▶ 18.76s ➔ 19.36s (0.60s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(18.76, 19.36, 'SHOT 19')">
+<img alt="SHOT 19" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_152_e03c4477.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_152_e03c4477.jpg', 'SHOT 19 [18.76s - 19.36s]')">🔍</button>
+<span class="thumb-time-badge">18.76s - 19.36s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 19</span>
+<h4 class="shot-heading">SHOT 19</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(18.76, 19.36, 'SHOT 19')">
+                        ▶ 18.76s ➔ 19.36s (0.60s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 19</span>
+<span class="shot-time" onclick="jumpToVideo(18.76)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [18.76s - 19.36s • 0.64s]
+                </span>
+<h3 class="shot-heading">Nút Bấm Đóng Khung: Cú 'Click' Cơ Học Kết Thúc Chuỗi Hành Động</h3>
+</div>
+<div class="shot-type-pill">Extreme Macro Switch Insert / Button Press Audio Cue</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(72)">
+<img alt="Shot 19 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_152_e03c4477.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(73)">
+<img alt="Shot 19 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_153_41d1a824.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(74)">
+<img alt="Shot 19 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_154_aca7c16f.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Thiết bị quay / Công tắc bàn</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc đặc tả siêu cận (Macro Insert). Ngón tay cái nhân vật ấn dứt khoát vào nút bấm công tắc/cò máy quay với tiếng 'click' đanh thép.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Động tác ấn ngón tay dứt khoát tạo điểm nhấn âm thanh (Audio Cue) mạnh mẽ.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Âm thanh tiếng click cơ học sắc bén đồng bộ hoàn hảo với nhịp kết của bản nhạc nền.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính Macro 85mm f/2.8.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-header">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<span>Mối Nối Chuyển Cảnh: Shot 19 (End) ➔ Shot 20 (Start)</span>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox(75)">
+<img alt="Transition 19 to 20" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_155_6bdc536b.jpg"/>
+</div>
+<div class="trans-desc">
+<strong>Nguyên lý nối chuyển động:</strong> Cắt sang Cảnh 20: Cảnh kết Outro kêu gọi hành động với nụ cười cắn thanh snack.
+            </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-20">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(19.4, 22.64, 'SHOT 20')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_156_b5ba73e2.jpg" alt="SHOT 20" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_156_b5ba73e2.jpg', 'SHOT 20 [19.4s - 22.64s]')">🔍</button>
+                    <span class="thumb-time-badge">19.40s - 22.64s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 20</span>
+                        <h4 class="shot-heading">SHOT 20</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(19.4, 22.64, 'SHOT 20')">
+                        ▶ 19.40s ➔ 22.64s (3.24s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(19.4, 22.64, 'SHOT 20')">
+<img alt="SHOT 20" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_156_b5ba73e2.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_156_b5ba73e2.jpg', 'SHOT 20 [19.4s - 22.64s]')">🔍</button>
+<span class="thumb-time-badge">19.40s - 22.64s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 20</span>
+<h4 class="shot-heading">SHOT 20</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(19.4, 22.64, 'SHOT 20')">
+                        ▶ 19.40s ➔ 22.64s (3.24s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-title-group">
+<span class="shot-badge">Phân Cảnh 20</span>
+<span class="shot-time" onclick="jumpToVideo(19.4)">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    [19.40s - 22.64s • 3.28s]
+                </span>
+<h3 class="shot-heading">Cảnh Kết (CTA): Cắn Miếng Snack &amp; Lời Kêu Gọi 'Comment FILM'</h3>
+</div>
+<div class="shot-type-pill">Medium Close-Up Outro &amp; Call-to-Action / The Signature Bite</div>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-col" onclick="openLightbox(76)">
+<img alt="Shot 20 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_156_b5ba73e2.jpg"/>
+<span class="thumb-lbl">Start Frame</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(77)">
+<img alt="Shot 20 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_157_8be28032.jpg"/>
+<span class="thumb-lbl primary">Mid Keyframe</span>
+</div>
+<div class="keyframe-col" onclick="openLightbox(78)">
+<img alt="Shot 20 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_158_39ab9c9b.jpg"/>
+<span class="thumb-lbl">End Frame</span>
+</div>
+</div>
+<div class="shot-details">
+<div class="detail-row">
+<div class="detail-label">📍 Bối Cảnh &amp; Đạo Cụ:</div>
+<div class="detail-val">Góc phòng làm việc ấm cúng</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">👁️ Diễn Họa &amp; Thị Giác:</div>
+<div class="detail-val">Góc trung cận trực diện (Medium Close-Up Outro). Bryan Hynes ôm cuốn sách 'Vietnam' dưới cánh tay, đưa một miếng bánh snack/chocolate nhỏ lên miệng cắn một tiếng 'rôm rốp' giòn tan, mỉm cười nhìn thẳng vào camera. Dòng chữ tiêu đề kêu gọi hành động 'comment "FILM" / TO JOIN THE 7-DAY CHALLENGE' xuất hiện trang trọng màu vàng kim.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚡ Động Lực (Mồi Chuyển Động):</div>
+<div class="detail-val">Động tác cắn thanh snack tạo âm thanh Foley giòn giã kết hợp nụ cười duyên dáng tạo cảm giác thân thiện, mời gọi.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">🎬 Chỉ Đạo Đạo Diễn (Director's Note):</div>
+<div class="detail-val">Kết thúc video bằng một khoảnh khắc đời thường, hóm hỉnh giúp phá tan cảm giác bị 'bán hàng', tăng tỷ lệ người xem để lại bình luận 'FILM' lên gấp nhiều lần.</div>
+</div>
+<div class="detail-row">
+<div class="detail-label">⚙️ Kỹ Thuật Ống Kính &amp; Ánh Sáng:</div>
+<div class="detail-val">Ống kính 50mm f/1.8, thu âm trực tiếp tiếng cắn snack bằng mic cài áo chất lượng cao.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+        </div>
+
+        <div class="grid-container" id="gridView" style="display:none;">
+            
+        <div class="grid-card" onclick="playShot(0.0, 3.44, 'SHOT 01')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_080_ae283717.jpg" alt="SHOT 01" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_080_ae283717.jpg', 'SHOT 01 [0.0s - 3.44s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 01</div>
+                <div class="grid-badge-bottom">0.0s - 3.4s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(3.48, 3.92, 'SHOT 02')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_084_86a274b6.jpg" alt="SHOT 02" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_084_86a274b6.jpg', 'SHOT 02 [3.48s - 3.92s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 02</div>
+                <div class="grid-badge-bottom">3.5s - 3.9s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(3.96, 5.32, 'SHOT 03')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_088_9dce67cb.jpg" alt="SHOT 03" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_088_9dce67cb.jpg', 'SHOT 03 [3.96s - 5.32s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 03</div>
+                <div class="grid-badge-bottom">4.0s - 5.3s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(5.36, 6.08, 'SHOT 04')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_092_90f3f4b7.jpg" alt="SHOT 04" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_092_90f3f4b7.jpg', 'SHOT 04 [5.36s - 6.08s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 04</div>
+                <div class="grid-badge-bottom">5.4s - 6.1s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(6.12, 6.6, 'SHOT 05')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_096_0b8b25e9.jpg" alt="SHOT 05" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_096_0b8b25e9.jpg', 'SHOT 05 [6.12s - 6.6s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 05</div>
+                <div class="grid-badge-bottom">6.1s - 6.6s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(6.64, 7.0, 'SHOT 06')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_100_7c8ae49d.jpg" alt="SHOT 06" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_100_7c8ae49d.jpg', 'SHOT 06 [6.64s - 7.0s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 06</div>
+                <div class="grid-badge-bottom">6.6s - 7.0s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(7.04, 7.72, 'SHOT 07')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_104_c01a7cce.jpg" alt="SHOT 07" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_104_c01a7cce.jpg', 'SHOT 07 [7.04s - 7.72s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 07</div>
+                <div class="grid-badge-bottom">7.0s - 7.7s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(7.76, 8.28, 'SHOT 08')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_108_21561698.jpg" alt="SHOT 08" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_108_21561698.jpg', 'SHOT 08 [7.76s - 8.28s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 08</div>
+                <div class="grid-badge-bottom">7.8s - 8.3s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(8.32, 8.64, 'SHOT 09')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_112_f3dfcb6b.jpg" alt="SHOT 09" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_112_f3dfcb6b.jpg', 'SHOT 09 [8.32s - 8.64s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 09</div>
+                <div class="grid-badge-bottom">8.3s - 8.6s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(8.68, 9.92, 'SHOT 10')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_116_02ecd8a4.jpg" alt="SHOT 10" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_116_02ecd8a4.jpg', 'SHOT 10 [8.68s - 9.92s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 10</div>
+                <div class="grid-badge-bottom">8.7s - 9.9s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(9.96, 11.0, 'SHOT 11')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_120_0203c5be.jpg" alt="SHOT 11" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_120_0203c5be.jpg', 'SHOT 11 [9.96s - 11.0s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 11</div>
+                <div class="grid-badge-bottom">10.0s - 11.0s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(11.04, 11.88, 'SHOT 12')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_124_dde02867.jpg" alt="SHOT 12" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_124_dde02867.jpg', 'SHOT 12 [11.04s - 11.88s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 12</div>
+                <div class="grid-badge-bottom">11.0s - 11.9s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(11.92, 13.36, 'SHOT 13')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_128_2e52884b.jpg" alt="SHOT 13" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_128_2e52884b.jpg', 'SHOT 13 [11.92s - 13.36s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 13</div>
+                <div class="grid-badge-bottom">11.9s - 13.4s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(13.4, 14.52, 'SHOT 14')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_132_e67a2403.jpg" alt="SHOT 14" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_132_e67a2403.jpg', 'SHOT 14 [13.4s - 14.52s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 14</div>
+                <div class="grid-badge-bottom">13.4s - 14.5s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(14.56, 15.36, 'SHOT 15')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_136_419acbfe.jpg" alt="SHOT 15" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_136_419acbfe.jpg', 'SHOT 15 [14.56s - 15.36s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 15</div>
+                <div class="grid-badge-bottom">14.6s - 15.4s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(15.4, 16.08, 'SHOT 16')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_140_a07f9750.jpg" alt="SHOT 16" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_140_a07f9750.jpg', 'SHOT 16 [15.4s - 16.08s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 16</div>
+                <div class="grid-badge-bottom">15.4s - 16.1s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(16.12, 16.8, 'SHOT 17')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_144_0d61d62a.jpg" alt="SHOT 17" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_144_0d61d62a.jpg', 'SHOT 17 [16.12s - 16.8s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 17</div>
+                <div class="grid-badge-bottom">16.1s - 16.8s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(16.84, 18.72, 'SHOT 18')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_148_c4cbee19.jpg" alt="SHOT 18" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_148_c4cbee19.jpg', 'SHOT 18 [16.84s - 18.72s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 18</div>
+                <div class="grid-badge-bottom">16.8s - 18.7s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(18.76, 19.36, 'SHOT 19')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_152_e03c4477.jpg" alt="SHOT 19" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_152_e03c4477.jpg', 'SHOT 19 [18.76s - 19.36s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 19</div>
+                <div class="grid-badge-bottom">18.8s - 19.4s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(19.4, 22.64, 'SHOT 20')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_156_b5ba73e2.jpg" alt="SHOT 20" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_156_b5ba73e2.jpg', 'SHOT 20 [19.4s - 22.64s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 20</div>
+                <div class="grid-badge-bottom">19.4s - 22.6s</div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)">
+    <div class="drawer-panel" onclick="event.stopPropagation()">
+        <div class="drawer-header">
+            <div class="drawer-title">📑 MỤC LỤC PHÂN CẢNH (20)</div>
+            <button class="drawer-close-btn" onclick="toggleDrawer(false)">&times;</button>
+        </div>
+        <div class="drawer-list">
+            
+        <div class="drawer-item" onclick="jumpToShot(1, 0.0, 3.44, 'SHOT 01')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_080_ae283717.jpg" alt="SHOT 01" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 01</div>
+                <div class="drawer-shot-time">⏱ 0.00s - 3.44s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(2, 3.48, 3.92, 'SHOT 02')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_084_86a274b6.jpg" alt="SHOT 02" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 02</div>
+                <div class="drawer-shot-time">⏱ 3.48s - 3.92s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(3, 3.96, 5.32, 'SHOT 03')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_088_9dce67cb.jpg" alt="SHOT 03" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 03</div>
+                <div class="drawer-shot-time">⏱ 3.96s - 5.32s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(4, 5.36, 6.08, 'SHOT 04')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_092_90f3f4b7.jpg" alt="SHOT 04" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 04</div>
+                <div class="drawer-shot-time">⏱ 5.36s - 6.08s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(5, 6.12, 6.6, 'SHOT 05')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_096_0b8b25e9.jpg" alt="SHOT 05" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 05</div>
+                <div class="drawer-shot-time">⏱ 6.12s - 6.60s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(6, 6.64, 7.0, 'SHOT 06')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_100_7c8ae49d.jpg" alt="SHOT 06" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 06</div>
+                <div class="drawer-shot-time">⏱ 6.64s - 7.00s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(7, 7.04, 7.72, 'SHOT 07')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_104_c01a7cce.jpg" alt="SHOT 07" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 07</div>
+                <div class="drawer-shot-time">⏱ 7.04s - 7.72s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(8, 7.76, 8.28, 'SHOT 08')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_108_21561698.jpg" alt="SHOT 08" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 08</div>
+                <div class="drawer-shot-time">⏱ 7.76s - 8.28s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(9, 8.32, 8.64, 'SHOT 09')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_112_f3dfcb6b.jpg" alt="SHOT 09" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 09</div>
+                <div class="drawer-shot-time">⏱ 8.32s - 8.64s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(10, 8.68, 9.92, 'SHOT 10')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_116_02ecd8a4.jpg" alt="SHOT 10" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 10</div>
+                <div class="drawer-shot-time">⏱ 8.68s - 9.92s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(11, 9.96, 11.0, 'SHOT 11')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_120_0203c5be.jpg" alt="SHOT 11" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 11</div>
+                <div class="drawer-shot-time">⏱ 9.96s - 11.00s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(12, 11.04, 11.88, 'SHOT 12')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_124_dde02867.jpg" alt="SHOT 12" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 12</div>
+                <div class="drawer-shot-time">⏱ 11.04s - 11.88s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(13, 11.92, 13.36, 'SHOT 13')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_128_2e52884b.jpg" alt="SHOT 13" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 13</div>
+                <div class="drawer-shot-time">⏱ 11.92s - 13.36s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(14, 13.4, 14.52, 'SHOT 14')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_132_e67a2403.jpg" alt="SHOT 14" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 14</div>
+                <div class="drawer-shot-time">⏱ 13.40s - 14.52s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(15, 14.56, 15.36, 'SHOT 15')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_136_419acbfe.jpg" alt="SHOT 15" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 15</div>
+                <div class="drawer-shot-time">⏱ 14.56s - 15.36s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(16, 15.4, 16.08, 'SHOT 16')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_140_a07f9750.jpg" alt="SHOT 16" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 16</div>
+                <div class="drawer-shot-time">⏱ 15.40s - 16.08s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(17, 16.12, 16.8, 'SHOT 17')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_144_0d61d62a.jpg" alt="SHOT 17" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 17</div>
+                <div class="drawer-shot-time">⏱ 16.12s - 16.80s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(18, 16.84, 18.72, 'SHOT 18')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_148_c4cbee19.jpg" alt="SHOT 18" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 18</div>
+                <div class="drawer-shot-time">⏱ 16.84s - 18.72s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(19, 18.76, 19.36, 'SHOT 19')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_152_e03c4477.jpg" alt="SHOT 19" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 19</div>
+                <div class="drawer-shot-time">⏱ 18.76s - 19.36s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(20, 19.4, 22.64, 'SHOT 20')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_156_b5ba73e2.jpg" alt="SHOT 20" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 20</div>
+                <div class="drawer-shot-time">⏱ 19.40s - 22.64s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+<div id="lightboxModal" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImg" src="" onclick="event.stopPropagation()" />
+    <div id="lightboxCaption"></div>
+</div>
+
+<script>
+const rawVideoSrc = "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/The%20Art%20of%20Visual%20Sequence%20-%20%40bryanhynes.mp4";
+let currentEndTime = null;
+
+function getCandidateUrls(src) {
+    if (!src) return [];
+    if (src.startsWith('http://') || src.startsWith('https://')) return [src];
+    let clean = src.replace(/^(\.\/|\.\.\/)+/, '').replace(/^(videos\/|reports\/)/, '');
+    return [
+        'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/' + encodeURI(clean),
+        '../videos/' + clean,
+        './videos/' + clean,
+        './' + clean
+    ];
+}
+
+const candidateUrls = getCandidateUrls(rawVideoSrc);
+let candidateIdx = 0;
+const player = document.getElementById('mainPlayer');
+
+function loadVideoCandidate() {
+    if (candidateIdx >= candidateUrls.length) return;
+    const url = candidateUrls[candidateIdx];
+    player.src = url;
+    document.getElementById('directVidLink').href = url;
+    player.load();
+}
+
+player.onerror = () => {
+    candidateIdx++;
+    if (candidateIdx < candidateUrls.length) {
+        loadVideoCandidate();
+    }
+};
+
+loadVideoCandidate();
+
+function playShot(startTime, endTime, label) {
+    currentEndTime = (typeof endTime === 'number') ? endTime : null;
+    const tag = document.getElementById('shotStatusTag');
+    if (tag) {
+        const endTxt = currentEndTime ? ` - ${currentEndTime.toFixed(2)}s` : '';
+        tag.innerText = `🎬 ${label || 'Phân cảnh'}: [${startTime.toFixed(2)}s${endTxt}]`;
+    }
+    player.currentTime = startTime;
+    const p = player.play();
+    if (p !== undefined) {
+        p.catch(e => {
+            player.muted = true;
+            player.play().catch(err => console.log('Autoplay muted triggered'));
+        });
+    }
+    document.querySelectorAll('.shot-card').forEach(c => c.classList.remove('active-playing'));
+    const matchCard = Array.from(document.querySelectorAll('.shot-card')).find(c => c.innerText.includes(label));
+    if (matchCard) matchCard.classList.add('active-playing');
+
+    if (window.innerWidth < 1024) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
+function setSpeed(speed, btn) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.speed-buttons-row .ctrl-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+}
+
+function stepFrame(frames) {
+    player.pause();
+    player.currentTime += (frames * (1/30));
+}
+
+function toggleMute(btn) {
+    player.muted = !player.muted;
+    if (btn) btn.innerText = player.muted ? '🔇 Tắt Tiếng' : '🔊 Tiếng';
+}
+
+function switchView(view) {
+    const sb = document.getElementById('storyboardView');
+    const grid = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetailBtn');
+    const tabGrid = document.getElementById('tabGridBtn');
+    if (view === 'grid') {
+        sb.style.display = 'none';
+        grid.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    } else {
+        sb.style.display = 'flex';
+        grid.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    }
+}
+
+function toggleDrawer(open) {
+    const drawer = document.getElementById('drawerBackdrop');
+    if (open) drawer.classList.add('open');
+    else drawer.classList.remove('open');
+}
+
+function jumpToShot(shotNum, st, et, label) {
+    toggleDrawer(false);
+    switchView('detail');
+    playShot(st, et, label);
+    const targetCard = document.getElementById('shot-card-' + shotNum);
+    if (targetCard) {
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function openLightbox(src, caption) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCaption');
+    img.src = src;
+    cap.innerText = caption || '';
+    modal.style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').style.display = 'none';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+        toggleDrawer(false);
+    } else if (e.key === ' ') {
+        if (document.activeElement.tagName !== 'INPUT') {
+            e.preventDefault();
+            player.paused ? player.play() : player.pause();
+        }
+    }
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

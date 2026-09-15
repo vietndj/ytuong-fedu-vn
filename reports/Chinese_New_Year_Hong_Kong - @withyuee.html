@@ -1,0 +1,2926 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Phân Tích Đạo Diễn: Không Khí Tết Hong Kong (Chinese New Year)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #070a0f;
+    --bg-card: #0e1420;
+    --bg-card-hover: #151e30;
+    --bg-surface: #121928;
+    --border-color: #1e293b;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-blue: #38bdf8;
+    --accent-amber: #f59e0b;
+    --accent-emerald: #10b981;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: #202d42; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .app-container {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .video-sidebar-col {
+        width: 440px;
+        min-width: 440px;
+        max-width: 480px;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: 1px solid var(--border-color);
+        background: var(--bg-surface);
+        display: flex;
+        flex-direction: column;
+        z-index: 30;
+    }
+    .content-scroll-col {
+        flex: 1;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 24px 32px 60px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    .video-sidebar-col {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(14, 20, 32, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .content-scroll-col {
+        width: 100%;
+        padding: 16px 14px 80px;
+    }
+}
+
+.video-player-container {
+    position: relative;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .video-player-container {
+        aspect-ratio: 9/16;
+        max-height: 60vh;
+    }
+}
+@media (max-width: 1023px) {
+    .video-player-container {
+        max-height: 38vh;
+        aspect-ratio: 16/9;
+    }
+}
+
+video#mainPlayer {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    outline: none;
+}
+
+.video-controls-panel {
+    padding: 12px 16px;
+    background: #0b111c;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.current-status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11.5px;
+}
+
+.speed-buttons-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.ctrl-btn {
+    background: #162032;
+    color: #cbd5e1;
+    border: 1px solid #283750;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+}
+
+.ctrl-btn:hover, .ctrl-btn:active {
+    background: #25334d;
+    color: #fff;
+}
+
+.ctrl-btn.active {
+    background: var(--accent-blue);
+    color: #041324;
+    border-color: var(--accent-blue);
+    font-weight: 800;
+}
+
+.report-header-banner {
+    background: linear-gradient(135deg, #0e1726 0%, #152238 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.genre-badge {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--accent-amber);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.report-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.meta-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+}
+
+.meta-tags-flex strong { color: #fff; }
+
+.overview-card {
+    background: #0e1420;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-blue);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 13.5px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.action-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg-main);
+    padding: 10px 0;
+}
+
+.view-tabs-group {
+    display: flex;
+    gap: 4px;
+    background: #0f1624;
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.view-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+}
+
+.view-tab-btn.active {
+    background: #1e293b;
+    color: #fff;
+    font-weight: 700;
+}
+
+.drawer-trigger-btn {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12.5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.storyboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px;
+    display: flex;
+    gap: 16px;
+    transition: transform 0.15s, border-color 0.15s;
+}
+
+.shot-card:hover {
+    background: var(--bg-card-hover);
+    border-color: #2e3e5a;
+}
+
+.shot-card.active-playing {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+.shot-media-col {
+    width: 120px;
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+.shot-thumb-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.shot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.play-overlay svg { width: 32px; height: 32px; color: #fff; }
+
+.zoom-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.65);
+    border: none;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.thumb-time-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    background: rgba(15, 23, 42, 0.85);
+    font-size: 9.5px;
+    font-weight: 700;
+    color: var(--accent-amber);
+    padding: 2px 4px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: var(--font-mono);
+}
+
+.shot-info-col {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.shot-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-bottom: 1px solid #1a2436;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.shot-badge-num {
+    background: #1e293b;
+    color: var(--accent-blue);
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+
+.shot-heading { font-size: 14.5px; font-weight: 700; color: #fff; display: inline; }
+
+.time-jump-btn {
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--accent-blue);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    cursor: pointer;
+}
+
+.props-list {
+    font-size: 12.5px;
+    color: #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.prop-label { font-weight: 700; color: #94a3b8; }
+.prop-val { color: #e2e8f0; }
+
+.tags-row { display: flex; flex-wrap: wrap; gap: 4px; margin-top: auto; }
+.tag-pill { background: #162032; color: #94a3b8; font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 4px; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+}
+
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.grid-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+}
+
+.grid-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.grid-play-icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+}
+
+.grid-card:hover .grid-play-icon { opacity: 1; }
+
+.grid-zoom-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: rgba(0,0,0,0.7);
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.grid-badge-top {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--accent-blue);
+    font-size: 9px;
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+}
+
+.grid-badge-bottom {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--accent-amber);
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px 4px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: var(--font-mono);
+}
+
+.drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+}
+
+.drawer-backdrop.open { opacity: 1; visibility: visible; }
+
+.drawer-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 85vw;
+    background: #0f172a;
+    border-left: 1px solid var(--border-color);
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-backdrop.open .drawer-panel { transform: translateX(0); }
+
+.drawer-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drawer-title { font-weight: 800; font-size: 15px; color: #fff; }
+.drawer-close-btn { background: #1e293b; border: none; color: #fff; width: 28px; height: 28px; border-radius: 6px; font-size: 16px; cursor: pointer; }
+
+.drawer-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.drawer-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 10px;
+    background: #131d30;
+    border: 1px solid #1e2d48;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.drawer-item:hover, .drawer-item:active {
+    background: #1c2b47;
+    border-color: var(--accent-blue);
+}
+
+.drawer-thumb {
+    width: 44px;
+    height: 58px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #000;
+}
+
+.drawer-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.drawer-info { flex: 1; min-width: 0; }
+.drawer-shot-title { font-weight: 700; font-size: 13px; color: #fff; }
+.drawer-shot-time { font-size: 11.5px; color: var(--accent-amber); font-family: var(--font-mono); }
+.drawer-play-arrow { font-size: 13px; color: var(--accent-blue); }
+
+#lightboxModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    border: 1px solid #334155;
+}
+
+#lightboxCaption {
+    color: #e2e8f0;
+    font-size: 13.5px;
+    margin-top: 14px;
+    text-align: center;
+    background: rgba(15, 23, 42, 0.85);
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid #334155;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* Author Instagram Direct Link Button */
+.author-ig-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(192, 132, 252, 0.12);
+    border: 1px solid rgba(192, 132, 252, 0.35);
+    color: #e879f9;
+    padding: 2px 8px 2px 6px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    vertical-align: middle;
+}
+.author-ig-badge:hover {
+    background: linear-gradient(135deg, rgba(192, 132, 252, 0.3), rgba(244, 63, 94, 0.3));
+    border-color: #f43f5e;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+}
+.author-ig-badge strong {
+    color: #fff;
+}
+.author-ig-badge .ig-ext-btn {
+    background: linear-gradient(135deg, #c084fc, #f43f5e);
+    color: #0b0f17;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: all 0.15s;
+    letter-spacing: 0.2px;
+}
+.author-ig-badge:hover .ig-ext-btn {
+    background: #ffffff;
+    color: #0b0f17;
+}
+
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="video-sidebar-col">
+        <div class="video-player-container">
+            <video id="mainPlayer" controls autoplay muted playsinline preload="auto" loop></video>
+        </div>
+        <div class="video-controls-panel">
+            <div class="current-status-bar">
+                <span class="status-tag" id="shotStatusTag">🎬 Phân cảnh: Toàn bộ video</span>
+                <a id="directVidLink" href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Chinese_New_Year_Hong_Kong%20-%20%40withyuee.mp4" target="_blank" style="color:var(--accent-blue); font-size:11.5px; text-decoration:none;">Tệp gốc ↗</a>
+            </div>
+            <div class="speed-buttons-row">
+                <span style="font-size:11.5px; color:#94a3b8; font-weight:700; margin-right:4px;">Tốc độ:</span>
+                <button class="ctrl-btn" onclick="setSpeed(0.25, this)">0.25x</button>
+                <button class="ctrl-btn" onclick="setSpeed(0.5, this)">0.5x</button>
+                <button class="ctrl-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+                <button class="ctrl-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                <button class="ctrl-btn" onclick="toggleMute(this)">🔊 Tiếng</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-scroll-col">
+        <div class="report-header-banner">
+            <div class="header-top-row">
+                <span class="genre-badge">DIRECTOR BREAKDOWN</span>
+                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">18 SHOTS &bull; 25.97s</span>
+            </div>
+            <h1 class="report-title">Phân Tích Đạo Diễn: Không Khí Tết Hong Kong (Chinese New Year)</h1>
+            <div class="meta-tags-flex">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@withyuee" onclick="handleCreatorClick(event, '@withyuee', 'Andrew Yue')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Andrew Yue trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Andrew Yue</strong>
+                        <span class="author-handle">(@withyuee)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span></a></span>
+                <span>Tệp: <strong>Chinese_New_Year_Hong_Kong - @withyuee.html</strong></span>
+                <span>Trực quan: <strong>9:16 Vertical HD</strong></span>
+            </div>
+        </div>
+
+        <div class="overview-card">
+            <h3 style="color:#fff; font-size:14px; margin-bottom:6px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
+            <div>
+<h3 style="color:#fff; font-size:14px; margin-bottom:6px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
+<div>
+<h3>TỔNG QUAN KỸ THUẬT &amp; PHONG CÁCH QUAY DỰNG</h3>
+<div>Video là một kiệt tác ghi lại không khí đón Tết Nguyên Đán tại Hong Kong với ngôn ngữ thị giác đậm chất điện ảnh đường phố: Nhịp cắt vàng 1.4s bám sát nhịp điệu âm nhạc rộn ràng; Động tác máy dọc đa dạng (Tilt/Pedestal/Truck) liên tục dẫn dắt ánh nhìn; Nghệ thuật khai thác gam màu Đỏ Son (Crimson) và Vàng Kim (Gold) trong bối cảnh chợ truyền thống và đại lộ ánh sáng Lee Tung Avenue.</div>
+<div class="summary-grid">
+<div class="stat-box">
+<div class="stat-val">18</div>
+<div class="stat-lbl">TỔNG SỐ SHOTS</div>
+</div>
+<div class="stat-box">
+<div class="stat-val">1.44s</div>
+<div class="stat-lbl">NHỊP CẮT TRUNG BÌNH</div>
+</div>
+<div class="stat-box">
+<div class="stat-val">iPhone</div>
+<div class="stat-lbl">THIẾT BỊ GHI HÌNH</div>
+</div>
+<div class="stat-box">
+<div class="stat-val">9:16 Vertical</div>
+<div class="stat-lbl">TỶ LỆ KHUNG HÌNH</div>
+</div>
+</div>
+</div>
+</div>
+        </div>
+
+        <div class="action-toolbar">
+            <div class="view-tabs-group">
+                <button class="view-tab-btn active" id="tabDetailBtn" onclick="switchView('detail')">📋 Bóc Tách Chi Tiết</button>
+                <button class="view-tab-btn" id="tabGridBtn" onclick="switchView('grid')">🖼️ Lưới Soi Ảnh (18)</button>
+            </div>
+            <button class="drawer-trigger-btn" onclick="toggleDrawer(true)">📑 Mục Lục Shot</button>
+        </div>
+
+        <div class="storyboard-container" id="storyboardView">
+            
+        <div class="shot-card" id="shot-card-1">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(0.0, 1.57, 'SHOT 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_001_cbc24138.jpg" alt="SHOT 01" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_001_cbc24138.jpg', 'SHOT 01 [0.0s - 1.57s]')">🔍</button>
+                    <span class="thumb-time-badge">0.00s - 1.57s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 01</span>
+                        <h4 class="shot-heading">SHOT 01</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(0.0, 1.57, 'SHOT 01')">
+                        ▶ 0.00s ➔ 1.57s (1.57s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(0.0, 1.57, 'SHOT 01')">
+<img alt="SHOT 01" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_001_cbc24138.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_001_cbc24138.jpg', 'SHOT 01 [0.0s - 1.57s]')">🔍</button>
+<span class="thumb-time-badge">0.00s - 1.57s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 01</span>
+<h4 class="shot-heading">SHOT 01</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(0.0, 1.57, 'SHOT 01')">
+                        ▶ 0.00s ➔ 1.57s (1.57s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 01: Lee Tung Avenue (Wan Chai)</span>
+<span class="shot-time">0.00s - 1.57s (1.57s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_001_cbc24138.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Extreme Low Angle Wide (Góc cực thấp ngước nhìn)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Slow Pedestal Up + Tilt Up (Nâng trục máy dọc vòm lồng đèn)</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Warm Golden Red Glow (Ánh đèn lồng đỏ ấm áp trong bóng chiều)</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Bố cục đối xứng 1 điểm tụ (One-Point Perspective) tạo chiều sâu hun hút</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Mở màn trực diện gây choáng ngợp thị giác.<br/><b>Out:</b> Đẩy máy lên cao mồi cho cận cảnh đung đưa tiếp theo.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Dùng góc cực thấp với ống kính góc rộng 24mm trên iPhone để khuếch đại quy mô vòm lồng đèn đồ sộ.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 01 (Out) → Shot 02 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_002_f65a72d3.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-2">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(1.57, 2.57, 'SHOT 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_003_bafbc8e0.jpg" alt="SHOT 02" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_003_bafbc8e0.jpg', 'SHOT 02 [1.57s - 2.57s]')">🔍</button>
+                    <span class="thumb-time-badge">1.57s - 2.57s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 02</span>
+                        <h4 class="shot-heading">SHOT 02</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(1.57, 2.57, 'SHOT 02')">
+                        ▶ 1.57s ➔ 2.57s (1.00s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(1.57, 2.57, 'SHOT 02')">
+<img alt="SHOT 02" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_003_bafbc8e0.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_003_bafbc8e0.jpg', 'SHOT 02 [1.57s - 2.57s]')">🔍</button>
+<span class="thumb-time-badge">1.57s - 2.57s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 02</span>
+<h4 class="shot-heading">SHOT 02</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(1.57, 2.57, 'SHOT 02')">
+                        ▶ 1.57s ➔ 2.57s (1.00s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 02: Lee Tung Avenue (Wan Chai)</span>
+<span class="shot-time">1.57s - 2.57s (1.00s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_003_bafbc8e0.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Medium Close-up (Cận vừa lồng đèn lụa &amp; tua rua vàng)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Tilt Down nhẹ theo nhịp rơi của tua rua</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Bokeh tròn mềm mại từ hàng trăm bóng đèn led vàng phía sau</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Quy tắc 1/3, đặt quả cầu lồng đèn làm trọng tâm thị giác tiền cảnh</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Bắt trọn chuyển động đung đưa.<br/><b>Out:</b> Trượt xuống mồi cho góc ngước kiến trúc.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Tạo độ sâu trường ảnh (DoF) giả lập chất điện ảnh bằng cách đặt chủ thể thật gần ống kính.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 02 (Out) → Shot 03 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_004_b65662d0.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-3">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(2.57, 3.93, 'SHOT 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_005_da750864.jpg" alt="SHOT 03" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_005_da750864.jpg', 'SHOT 03 [2.57s - 3.93s]')">🔍</button>
+                    <span class="thumb-time-badge">2.57s - 3.93s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 03</span>
+                        <h4 class="shot-heading">SHOT 03</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(2.57, 3.93, 'SHOT 03')">
+                        ▶ 2.57s ➔ 3.93s (1.36s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(2.57, 3.93, 'SHOT 03')">
+<img alt="SHOT 03" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_005_da750864.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_005_da750864.jpg', 'SHOT 03 [2.57s - 3.93s]')">🔍</button>
+<span class="thumb-time-badge">2.57s - 3.93s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 03</span>
+<h4 class="shot-heading">SHOT 03</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(2.57, 3.93, 'SHOT 03')">
+                        ▶ 2.57s ➔ 3.93s (1.36s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 03: The Peninsula Hong Kong (Tsim Sha Tsui)</span>
+<span class="shot-time">2.57s - 3.93s (1.36s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_005_da750864.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Low Angle Architectural Wide (Góc thấp toà nhà di sản)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Pedestal Up ngước nhìn kiến trúc thuộc địa cổ kính</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Ánh sáng tự nhiên làm nổi bật hoa văn đá hoa cương và lồng đèn đỏ</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Khung lồng khung (Framing through architectural pillars) tạo sự uy nghiêm</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Nhận chuyển động nâng từ shot 2.<br/><b>Out:</b> Dừng ở đỉnh toà nhà mồi chuyển sang chợ hoa.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Tương phản thị giác mạnh mẽ giữa kiến trúc phương Tây cổ điển và văn hóa lễ hội Á Đông.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 03 (Out) → Shot 04 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_006_19d9f3f6.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-4">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(3.93, 5.43, 'SHOT 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_007_a2625048.jpg" alt="SHOT 04" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_007_a2625048.jpg', 'SHOT 04 [3.93s - 5.43s]')">🔍</button>
+                    <span class="thumb-time-badge">3.93s - 5.43s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 04</span>
+                        <h4 class="shot-heading">SHOT 04</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(3.93, 5.43, 'SHOT 04')">
+                        ▶ 3.93s ➔ 5.43s (1.50s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(3.93, 5.43, 'SHOT 04')">
+<img alt="SHOT 04" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_007_a2625048.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_007_a2625048.jpg', 'SHOT 04 [3.93s - 5.43s]')">🔍</button>
+<span class="thumb-time-badge">3.93s - 5.43s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 04</span>
+<h4 class="shot-heading">SHOT 04</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(3.93, 5.43, 'SHOT 04')">
+                        ▶ 3.93s ➔ 5.43s (1.50s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 04: Mong Kok Flower Market (Chợ Hoa Mong Kok)</span>
+<span class="shot-time">3.93s - 5.43s (1.50s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_007_a2625048.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Medium Shot (Tầm mắt lướt qua tán hoa đào Tết)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Tilt Down + Subtle Push In dẫn mắt vào không gian sầm uất</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Ánh sáng ban ngày khuếch tán, màu hồng đào và đỏ tươi nổi bật</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Bố cục tiền cảnh mờ (Foreground Layering) với cành hoa làm viền khung</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Cắt đổi bối cảnh nhanh theo nhịp nhạc.<br/><b>Out:</b> Đẩy vào tâm chợ mồi cho cú trượt ngang.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Sử dụng cành hoa làm tiền cảnh che khuất một phần ống kính để tạo cảm giác hòa mình vào dòng người.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 04 (Out) → Shot 05 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_008_c369c9a2.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-5">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(5.43, 6.9, 'SHOT 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_009_f2d24998.jpg" alt="SHOT 05" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_009_f2d24998.jpg', 'SHOT 05 [5.43s - 6.9s]')">🔍</button>
+                    <span class="thumb-time-badge">5.43s - 6.90s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 05</span>
+                        <h4 class="shot-heading">SHOT 05</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(5.43, 6.9, 'SHOT 05')">
+                        ▶ 5.43s ➔ 6.90s (1.47s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(5.43, 6.9, 'SHOT 05')">
+<img alt="SHOT 05" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_009_f2d24998.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_009_f2d24998.jpg', 'SHOT 05 [5.43s - 6.9s]')">🔍</button>
+<span class="thumb-time-badge">5.43s - 6.90s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 05</span>
+<h4 class="shot-heading">SHOT 05</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(5.43, 6.9, 'SHOT 05')">
+                        ▶ 5.43s ➔ 6.90s (1.47s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 05: Mong Kok Flower Market</span>
+<span class="shot-time">5.43s - 6.90s (1.47s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_009_f2d24998.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Medium Dolly / Truck Shot (Góc trượt ngang sạp hoa lan &amp; đào)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Truck Left (Trượt ngang song song với luống hoa)</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Phản chiếu ánh sáng tự nhiên trên cánh hoa ướt sương mai</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> 3-Layer Depth (Tiền cảnh: Hoa lan -&gt; Trung cảnh: Người mua -&gt; Hậu cảnh: Phố)</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Chuyển động ngang liên tục mượt mà.<br/><b>Out:</b> Lướt qua chậu quất mồi cho cú cận cảnh.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Giữ tốc độ bước chân đều đặn (Ninja Walk) để động tác trượt không bị rung lắc trên điện thoại.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 05 (Out) → Shot 06 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_010_7a5a562d.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-6">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(6.9, 8.2, 'SHOT 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_011_e202fae4.jpg" alt="SHOT 06" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_011_e202fae4.jpg', 'SHOT 06 [6.9s - 8.2s]')">🔍</button>
+                    <span class="thumb-time-badge">6.90s - 8.20s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 06</span>
+                        <h4 class="shot-heading">SHOT 06</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(6.9, 8.2, 'SHOT 06')">
+                        ▶ 6.90s ➔ 8.20s (1.30s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(6.9, 8.2, 'SHOT 06')">
+<img alt="SHOT 06" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_011_e202fae4.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_011_e202fae4.jpg', 'SHOT 06 [6.9s - 8.2s]')">🔍</button>
+<span class="thumb-time-badge">6.90s - 8.20s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 06</span>
+<h4 class="shot-heading">SHOT 06</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(6.9, 8.2, 'SHOT 06')">
+                        ▶ 6.90s ➔ 8.20s (1.30s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 06: Mong Kok Flower Market (Cây quất tài lộc)</span>
+<span class="shot-time">6.90s - 8.20s (1.30s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_011_e202fae4.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Close-up Detail Shot (Cận cảnh chùm quả quất vàng trĩu cành)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Tilt Down dọc theo thân cây quất sum sê</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Rim Light (Ánh sáng ven) viền quanh vỏ quả bóng bẩy</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Đường xoắn ốc Fibonacci theo vị trí sắp xếp tự nhiên của chùm quả</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Điểm rơi thị giác vào màu cam tươi.<br/><b>Out:</b> Quét xuống gốc mồi cho tiệm thủ công.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Chọn quả quất căng bóng có lá xanh tương phản để tạo cảm giác căng tràn sức sống mùa xuân.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 06 (Out) → Shot 07 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_012_f5ddfffc.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-7">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(8.2, 10.1, 'SHOT 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_013_81a32455.jpg" alt="SHOT 07" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_013_81a32455.jpg', 'SHOT 07 [8.2s - 10.1s]')">🔍</button>
+                    <span class="thumb-time-badge">8.20s - 10.10s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 07</span>
+                        <h4 class="shot-heading">SHOT 07</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(8.2, 10.1, 'SHOT 07')">
+                        ▶ 8.20s ➔ 10.10s (1.90s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(8.2, 10.1, 'SHOT 07')">
+<img alt="SHOT 07" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_013_81a32455.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_013_81a32455.jpg', 'SHOT 07 [8.2s - 10.1s]')">🔍</button>
+<span class="thumb-time-badge">8.20s - 10.10s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 07</span>
+<h4 class="shot-heading">SHOT 07</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(8.2, 10.1, 'SHOT 07')">
+                        ▶ 8.20s ➔ 10.10s (1.90s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 07: Chu Wing Kei (Tiệm gốm tre truyền thống Sheung Wan)</span>
+<span class="shot-time">8.20s - 10.10s (1.90s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_013_81a32455.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Eye-level Medium Shot (Toàn cảnh quầy hàng đồ tre &amp; lồng đèn)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Pan Right / Truck Right khám phá không gian hoài cổ</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Ánh sáng ấm của tiệm cổ hoà trộn với ánh sáng hắt ngoài phố</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Mật độ thị giác cao (Visual Density) với rọ tre, mẹt trúc và đèn lồng</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Chuyển đổi nhịp điệu từ tĩnh vật sang di sản văn hoá.<br/><b>Out:</b> Lia về phía các vật phẩm đỏ.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Tôn vinh giá trị văn hoá thủ công truyền thống qua việc ghi lại trọn vẹn sự phong phú của không gian.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 07 (Out) → Shot 08 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_014_4013b4ef.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-8">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(10.1, 11.53, 'SHOT 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_015_ac57ff21.jpg" alt="SHOT 08" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_015_ac57ff21.jpg', 'SHOT 08 [10.1s - 11.53s]')">🔍</button>
+                    <span class="thumb-time-badge">10.10s - 11.53s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 08</span>
+                        <h4 class="shot-heading">SHOT 08</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(10.1, 11.53, 'SHOT 08')">
+                        ▶ 10.10s ➔ 11.53s (1.43s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(10.1, 11.53, 'SHOT 08')">
+<img alt="SHOT 08" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_015_ac57ff21.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_015_ac57ff21.jpg', 'SHOT 08 [10.1s - 11.53s]')">🔍</button>
+<span class="thumb-time-badge">10.10s - 11.53s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 08</span>
+<h4 class="shot-heading">SHOT 08</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(10.1, 11.53, 'SHOT 08')">
+                        ▶ 10.10s ➔ 11.53s (1.43s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 08: Fa Yuen Street Market (Mong Kok)</span>
+<span class="shot-time">10.10s - 11.53s (1.43s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_015_ac57ff21.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Close-up Macro Tracking (Cận cảnh hàng phong bao lì xì đỏ)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Pan Right trượt nhanh qua các mẫu bao lì xì kim nhũ</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Phản chiếu lấp lánh của lá nhũ vàng trên nền giấy đỏ son</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Đường dẫn ngang tuần tự lặp lại (Repetition Pattern)</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Tông đỏ áp đảo thị giác.<br/><b>Out:</b> Lướt qua góc quầy mồi cho không gian tiệm bánh.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Tạo cảm giác rộn ràng đặc trưng của chợ Tết với sắc đỏ vàng phủ kín toàn bộ khung hình.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 08 (Out) → Shot 09 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_016_8a9dff11.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-9">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(11.53, 12.93, 'SHOT 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_017_4fbaf698.jpg" alt="SHOT 09" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_017_4fbaf698.jpg', 'SHOT 09 [11.53s - 12.93s]')">🔍</button>
+                    <span class="thumb-time-badge">11.53s - 12.93s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 09</span>
+                        <h4 class="shot-heading">SHOT 09</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(11.53, 12.93, 'SHOT 09')">
+                        ▶ 11.53s ➔ 12.93s (1.40s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(11.53, 12.93, 'SHOT 09')">
+<img alt="SHOT 09" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_017_4fbaf698.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_017_4fbaf698.jpg', 'SHOT 09 [11.53s - 12.93s]')">🔍</button>
+<span class="thumb-time-badge">11.53s - 12.93s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 09</span>
+<h4 class="shot-heading">SHOT 09</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(11.53, 12.93, 'SHOT 09')">
+                        ▶ 11.53s ➔ 12.93s (1.40s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 09: Ki Tsui Cake Shop (Tiệm bánh gia truyền đường Fa Yuen)</span>
+<span class="shot-time">11.53s - 12.93s (1.40s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_017_4fbaf698.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Over-the-Shoulder Medium Shot (Góc nhìn thợ làm bánh truyền thống)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Pan Left theo nhịp bàn tay thoăn thoắt nhào bột bánh tổ</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Ánh sáng đèn vàng ấm áp kết hợp khói bột bay huyền ảo</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Trọng tâm vào đôi bàn tay lao động của nghệ nhân</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Bắt trọn âm thanh và chuyển động làm bánh.<br/><b>Out:</b> Lia xuống bàn mồi cho cú đóng dấu bánh.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Khai thác yếu tố con người và nghệ thuật ẩm thực truyền thống để tạo chiều sâu cảm xúc cho video.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 09 (Out) → Shot 10 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_018_b8d3812c.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-10">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(12.93, 14.37, 'SHOT 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_019_900bfd49.jpg" alt="SHOT 10" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_019_900bfd49.jpg', 'SHOT 10 [12.93s - 14.37s]')">🔍</button>
+                    <span class="thumb-time-badge">12.93s - 14.37s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 10</span>
+                        <h4 class="shot-heading">SHOT 10</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(12.93, 14.37, 'SHOT 10')">
+                        ▶ 12.93s ➔ 14.37s (1.44s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(12.93, 14.37, 'SHOT 10')">
+<img alt="SHOT 10" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_019_900bfd49.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_019_900bfd49.jpg', 'SHOT 10 [12.93s - 14.37s]')">🔍</button>
+<span class="thumb-time-badge">12.93s - 14.37s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 10</span>
+<h4 class="shot-heading">SHOT 10</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(12.93, 14.37, 'SHOT 10')">
+                        ▶ 12.93s ➔ 14.37s (1.44s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 10: Ki Tsui Cake Shop</span>
+<span class="shot-time">12.93s - 14.37s (1.44s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_019_900bfd49.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Top-Down Close-up (Góc nhìn từ trên xuống cận cảnh khuôn bánh)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Tilt Down tập trung vào chi tiết rắc mè vàng và đóng dấu đỏ</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Ánh sáng chiếu thẳng làm nổi bật vân hoa văn trên mặt bánh</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Bố cục trung tâm (Center Framing) hoàn hảo</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Động tác ấn khuôn chuẩn xác.<br/><b>Out:</b> Nhấc khuôn mồi cho khay bánh nướng ra lò.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Góc quay Top-Down tạo cảm giác chân thực, trực quan và hấp dẫn thị giác người xem cực cao.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 10 (Out) → Shot 11 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_020_8809f19a.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-11">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(14.37, 15.77, 'SHOT 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_021_04b724b2.jpg" alt="SHOT 11" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_021_04b724b2.jpg', 'SHOT 11 [14.37s - 15.77s]')">🔍</button>
+                    <span class="thumb-time-badge">14.37s - 15.77s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 11</span>
+                        <h4 class="shot-heading">SHOT 11</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(14.37, 15.77, 'SHOT 11')">
+                        ▶ 14.37s ➔ 15.77s (1.40s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(14.37, 15.77, 'SHOT 11')">
+<img alt="SHOT 11" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_021_04b724b2.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_021_04b724b2.jpg', 'SHOT 11 [14.37s - 15.77s]')">🔍</button>
+<span class="thumb-time-badge">14.37s - 15.77s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 11</span>
+<h4 class="shot-heading">SHOT 11</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(14.37, 15.77, 'SHOT 11')">
+                        ▶ 14.37s ➔ 15.77s (1.40s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 11: Ki Tsui Cake Shop</span>
+<span class="shot-time">14.37s - 15.77s (1.40s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_021_04b724b2.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Close-up Shot (Khay bánh vừa mới nướng vàng ươm)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Pan Right lướt qua hàng bánh bốc khói nghi ngút</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Ánh sáng nghiêng tạo độ bóng bẩy và kết cấu giòn rụm của vỏ bánh</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Bố cục lưới đối xứng (Grid Alignment) xếp lớp đều đặn</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Tiếp nối chuỗi quy trình làm bánh hoàn hảo.<br/><b>Out:</b> Lia khỏi tiệm mồi cho chữ Phúc cửa nhà.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Cận cảnh đồ ăn với độ bóng và khói nóng kích thích mạnh mẽ cảm giác ấm cúng sum vầy gia đình.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 11 (Out) → Shot 12 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_022_5075f33c.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-12">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(15.77, 17.13, 'SHOT 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_023_09ea0f20.jpg" alt="SHOT 12" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_023_09ea0f20.jpg', 'SHOT 12 [15.77s - 17.13s]')">🔍</button>
+                    <span class="thumb-time-badge">15.77s - 17.13s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 12</span>
+                        <h4 class="shot-heading">SHOT 12</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(15.77, 17.13, 'SHOT 12')">
+                        ▶ 15.77s ➔ 17.13s (1.36s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(15.77, 17.13, 'SHOT 12')">
+<img alt="SHOT 12" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_023_09ea0f20.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_023_09ea0f20.jpg', 'SHOT 12 [15.77s - 17.13s]')">🔍</button>
+<span class="thumb-time-badge">15.77s - 17.13s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 12</span>
+<h4 class="shot-heading">SHOT 12</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(15.77, 17.13, 'SHOT 12')">
+                        ▶ 15.77s ➔ 17.13s (1.36s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 12: Phố cổ Sheung Wan</span>
+<span class="shot-time">15.77s - 17.13s (1.36s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_023_09ea0f20.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Low Angle Detail Shot (Câu đối đỏ chữ vàng may mắn)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Tilt Up theo dải liễn thư pháp treo trước cửa gỗ rêu phong</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Ánh sáng tự nhiên hắt chéo, tạo bóng đổ nổi khối chữ Hán dát kim</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Đường chéo dẫn hướng (Diagonal Leading Line) từ dưới lên góc trên</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Điểm nhấn văn hoá chúc xuân.<br/><b>Out:</b> Đẩy lên cao mồi cho không gian bậc thang cổ.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Tương phản chất liệu giữa giấy đỏ mới tinh khôi và cánh cửa gỗ trăm tuổi mang đậm dấu ấn thời gian.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 12 (Out) → Shot 13 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_024_5b2f0259.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-13">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(17.13, 18.53, 'SHOT 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_025_aa406269.jpg" alt="SHOT 13" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_025_aa406269.jpg', 'SHOT 13 [17.13s - 18.53s]')">🔍</button>
+                    <span class="thumb-time-badge">17.13s - 18.53s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 13</span>
+                        <h4 class="shot-heading">SHOT 13</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(17.13, 18.53, 'SHOT 13')">
+                        ▶ 17.13s ➔ 18.53s (1.40s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(17.13, 18.53, 'SHOT 13')">
+<img alt="SHOT 13" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_025_aa406269.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_025_aa406269.jpg', 'SHOT 13 [17.13s - 18.53s]')">🔍</button>
+<span class="thumb-time-badge">17.13s - 18.53s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 13</span>
+<h4 class="shot-heading">SHOT 13</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(17.13, 18.53, 'SHOT 13')">
+                        ▶ 17.13s ➔ 18.53s (1.40s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 13: Ladder Street (Đường Bậc Thang Lịch Sử Sheung Wan)</span>
+<span class="shot-time">17.13s - 18.53s (1.40s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_025_aa406269.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Low Angle Tracking Shot (Góc máy thấp trượt dọc bậc thang đá)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Pan Left / Truck Left song song với lan can và dãy đèn lồng</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Ánh sáng râm mát của tán cây cổ thụ hắt bóng nắng lốm đốm</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Độ dốc bậc thang tạo chiều sâu thẳng đứng (Vertical Steepness)</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Chuyển động lướt theo nhịp dốc.<br/><b>Out:</b> Lia qua đèn lồng mồi cho góc ngước hẻm phố.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Khai thác tối đa địa hình dốc bậc thang đặc trưng không thể trộn lẫn của Hong Kong xưa.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 13 (Out) → Shot 14 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_026_93fb8e5b.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-14">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(18.53, 20.0, 'SHOT 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_027_2b3444ca.jpg" alt="SHOT 14" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_027_2b3444ca.jpg', 'SHOT 14 [18.53s - 20.0s]')">🔍</button>
+                    <span class="thumb-time-badge">18.53s - 20.00s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 14</span>
+                        <h4 class="shot-heading">SHOT 14</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(18.53, 20.0, 'SHOT 14')">
+                        ▶ 18.53s ➔ 20.00s (1.47s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(18.53, 20.0, 'SHOT 14')">
+<img alt="SHOT 14" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_027_2b3444ca.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_027_2b3444ca.jpg', 'SHOT 14 [18.53s - 20.0s]')">🔍</button>
+<span class="thumb-time-badge">18.53s - 20.00s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 14</span>
+<h4 class="shot-heading">SHOT 14</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(18.53, 20.0, 'SHOT 14')">
+                        ▶ 18.53s ➔ 20.00s (1.47s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 14: Hẻm phố cổ Hong Kong</span>
+<span class="shot-time">18.53s - 20.00s (1.47s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_027_2b3444ca.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Extreme Low Angle Worm’s Eye View (Góc nhìn từ sát mặt đất)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Tilt Up ngước nhìn dải lồng đèn căng giữa các toà nhà cao tầng</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Ánh sáng hắt từ hẻm sâu lên vòm trời xanh thẳm</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Bố cục khe hẹp (Canyon Effect) giữa hai bức tường nhà cao vút</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Tầm nhìn từ đáy ngước lên đột ngột.<br/><b>Out:</b> Đẩy lên bầu trời mồi cho đường đá Pottinger.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Sử dụng hiệu ứng khe hẻm thị giác để nhấn mạnh sự đan xen giữa hiện đại và truyền thống.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 14 (Out) → Shot 15 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_028_f576a13c.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-15">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(20.0, 21.4, 'SHOT 15')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_029_e621f9b3.jpg" alt="SHOT 15" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_029_e621f9b3.jpg', 'SHOT 15 [20.0s - 21.4s]')">🔍</button>
+                    <span class="thumb-time-badge">20.00s - 21.40s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 15</span>
+                        <h4 class="shot-heading">SHOT 15</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(20.0, 21.4, 'SHOT 15')">
+                        ▶ 20.00s ➔ 21.40s (1.40s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(20.0, 21.4, 'SHOT 15')">
+<img alt="SHOT 15" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_029_e621f9b3.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_029_e621f9b3.jpg', 'SHOT 15 [20.0s - 21.4s]')">🔍</button>
+<span class="thumb-time-badge">20.00s - 21.40s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 15</span>
+<h4 class="shot-heading">SHOT 15</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(20.0, 21.4, 'SHOT 15')">
+                        ▶ 20.00s ➔ 21.40s (1.40s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 15: Pottinger Street (Đường Đá Phiến Di Sản Central)</span>
+<span class="shot-time">20.00s - 21.40s (1.40s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_029_e621f9b3.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Medium Wide Dutch Angle / Low Angle</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Tilt Up dạo bước qua các quầy hàng trang trí Tết rực rỡ</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Ánh sáng phản chiếu lung linh trên những phiến đá granite mài nhẵn</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Đường dốc bậc đá dẫn thẳng tầm mắt lên đỉnh phố nhộn nhịp</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Chuyển cảnh vào con đường di sản nổi tiếng nhất.<br/><b>Out:</b> Hướng về nghệ nhân thư pháp.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Các phiến đá không bằng phẳng tạo ra kết cấu bề mặt (Texture) tuyệt vời dưới ánh sáng chiều.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 15 (Out) → Shot 16 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_030_26ff55da.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-16">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(21.4, 22.8, 'SHOT 16')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_031_98d2c6bb.jpg" alt="SHOT 16" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_031_98d2c6bb.jpg', 'SHOT 16 [21.4s - 22.8s]')">🔍</button>
+                    <span class="thumb-time-badge">21.40s - 22.80s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 16</span>
+                        <h4 class="shot-heading">SHOT 16</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(21.4, 22.8, 'SHOT 16')">
+                        ▶ 21.40s ➔ 22.80s (1.40s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(21.4, 22.8, 'SHOT 16')">
+<img alt="SHOT 16" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_031_98d2c6bb.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_031_98d2c6bb.jpg', 'SHOT 16 [21.4s - 22.8s]')">🔍</button>
+<span class="thumb-time-badge">21.40s - 22.80s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 16</span>
+<h4 class="shot-heading">SHOT 16</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(21.4, 22.8, 'SHOT 16')">
+                        ▶ 21.40s ➔ 22.80s (1.40s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 16: Quầy Thư Pháp Pottinger Street</span>
+<span class="shot-time">21.40s - 22.80s (1.40s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_031_98d2c6bb.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Macro Extreme Close-up (Cực cận đầu ngọn cọ mực tàu son)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Slow Tilt Up theo từng nét cọ lướt dẻo dai trên giấy đỏ</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Ánh sáng tập trung vào giọt mực đen son óng ánh trên nền giấy đỏ</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Trọng tâm tuyệt đối vào nghệ thuật viết chữ Phúc/Lộc</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Nhịp điệu lắng đọng tinh tế.<br/><b>Out:</b> Nhấc bút mồi cho đại cảnh hoàng hôn rực sáng.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Tạo điểm nhấn linh hồn (Soul Shot) tôn vinh nét đẹp thư pháp thủ công ngàn năm tuổi.</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 16 (Out) → Shot 17 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_032_474bf183.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-17">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(22.8, 24.2, 'SHOT 17')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_033_f1a4de99.jpg" alt="SHOT 17" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_033_f1a4de99.jpg', 'SHOT 17 [22.8s - 24.2s]')">🔍</button>
+                    <span class="thumb-time-badge">22.80s - 24.20s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 17</span>
+                        <h4 class="shot-heading">SHOT 17</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(22.8, 24.2, 'SHOT 17')">
+                        ▶ 22.80s ➔ 24.20s (1.40s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(22.8, 24.2, 'SHOT 17')">
+<img alt="SHOT 17" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_033_f1a4de99.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_033_f1a4de99.jpg', 'SHOT 17 [22.8s - 24.2s]')">🔍</button>
+<span class="thumb-time-badge">22.80s - 24.20s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 17</span>
+<h4 class="shot-heading">SHOT 17</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(22.8, 24.2, 'SHOT 17')">
+                        ▶ 22.80s ➔ 24.20s (1.40s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 17: Lee Tung Avenue (Hoàng Hôn / Giờ Vàng Blue Hour)</span>
+<span class="shot-time">22.80s - 24.20s (1.40s)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_033_f1a4de99.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> High Angle Elevated Wide Shot (Góc cao bao quát đại lộ)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Tilt Down bao quát dòng người du xuân dưới biển lồng đèn phát sáng</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Đèn lồng đồng loạt bật sáng đỏ rực tương phản với bầu trời chạng vạng xanh tím (Blue Hour)</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Bố cục đại cảnh đối xứng đa tầng lớp người và ánh sáng</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Bùng nổ ánh sáng lễ hội ban đêm.<br/><b>Out:</b> Hạ dần mồi cho cú chốt toàn cảnh kết phim.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Tận dụng khoảnh khắc Giờ Xanh (Blue Hour) khi đèn phố vừa lên để đạt độ tương phản màu đỉnh cao (Complementary Teal &amp; Orange/Red).</div>
+</div>
+</div>
+<div class="trans-box">
+<div class="trans-title">Chuyển Cảnh: Shot 17 (Out) → Shot 18 (In)</div>
+<div class="trans-img"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_034_5ad15346.jpg"/></div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-18">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(24.2, 25.97, 'SHOT 18')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_035_3687dd99.jpg" alt="SHOT 18" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_035_3687dd99.jpg', 'SHOT 18 [24.2s - 25.97s]')">🔍</button>
+                    <span class="thumb-time-badge">24.20s - 25.97s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 18</span>
+                        <h4 class="shot-heading">SHOT 18</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(24.2, 25.97, 'SHOT 18')">
+                        ▶ 24.20s ➔ 25.97s (1.77s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(24.2, 25.97, 'SHOT 18')">
+<img alt="SHOT 18" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_035_3687dd99.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_035_3687dd99.jpg', 'SHOT 18 [24.2s - 25.97s]')">🔍</button>
+<span class="thumb-time-badge">24.20s - 25.97s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 18</span>
+<h4 class="shot-heading">SHOT 18</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(24.2, 25.97, 'SHOT 18')">
+                        ▶ 24.20s ➔ 25.97s (1.77s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<span class="shot-title">Shot 18: Lee Tung Avenue (Toàn Cảnh Đêm Giao Thừa)</span>
+<span class="shot-time">24.20s - 25.97s (1.77s - Outro)</span>
+</div>
+<div class="shot-content">
+<div class="shot-imgs">
+<div class="img-frame"><img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_035_3687dd99.jpg"/></div>
+</div>
+<div class="shot-info">
+<div class="info-row"><span class="info-label">Cỡ cảnh &amp; Góc máy:</span> Grand Wide Angle Shot (Đại cảnh kết thúc hoành tráng)</div>
+<div class="info-row"><span class="info-label">Động tác máy:</span> Tilt Up &amp; Slow Hold (Nâng máy chậm hướng về vòm trời rực rỡ lồng đèn)</div>
+<div class="info-row"><span class="info-label">Ánh sáng &amp; Màu sắc:</span> Hàng nghìn đốm sáng đỏ lung linh như biển sao đêm giao thừa</div>
+<div class="info-row"><span class="info-label">Bố cục &amp; Chiều sâu:</span> Bố cục hoàn mỹ hướng thượng, để lại dư âm ấm áp trọn vẹn</div>
+<div class="info-row"><span class="info-label">Kỹ thuật Mồi/Nối:</span> <b>In:</b> Tiếp nhận toàn bộ năng lượng thăng hoa của video.<br/><b>Out:</b> Đóng lại hành trình thị giác đầy cảm xúc.</div>
+<div class="takeaway-box"><b>Đúc kết đạo diễn:</b> Giữ khung hình kết thúc lâu hơn (1.77s) để người xem lắng đọng và cảm nhận trọn vẹn lời chúc năm mới.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+        </div>
+
+        <div class="grid-container" id="gridView" style="display:none;">
+            
+        <div class="grid-card" onclick="playShot(0.0, 1.57, 'SHOT 01')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_001_cbc24138.jpg" alt="SHOT 01" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_001_cbc24138.jpg', 'SHOT 01 [0.0s - 1.57s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 01</div>
+                <div class="grid-badge-bottom">0.0s - 1.6s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(1.57, 2.57, 'SHOT 02')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_003_bafbc8e0.jpg" alt="SHOT 02" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_003_bafbc8e0.jpg', 'SHOT 02 [1.57s - 2.57s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 02</div>
+                <div class="grid-badge-bottom">1.6s - 2.6s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(2.57, 3.93, 'SHOT 03')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_005_da750864.jpg" alt="SHOT 03" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_005_da750864.jpg', 'SHOT 03 [2.57s - 3.93s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 03</div>
+                <div class="grid-badge-bottom">2.6s - 3.9s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(3.93, 5.43, 'SHOT 04')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_007_a2625048.jpg" alt="SHOT 04" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_007_a2625048.jpg', 'SHOT 04 [3.93s - 5.43s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 04</div>
+                <div class="grid-badge-bottom">3.9s - 5.4s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(5.43, 6.9, 'SHOT 05')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_009_f2d24998.jpg" alt="SHOT 05" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_009_f2d24998.jpg', 'SHOT 05 [5.43s - 6.9s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 05</div>
+                <div class="grid-badge-bottom">5.4s - 6.9s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(6.9, 8.2, 'SHOT 06')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_011_e202fae4.jpg" alt="SHOT 06" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_011_e202fae4.jpg', 'SHOT 06 [6.9s - 8.2s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 06</div>
+                <div class="grid-badge-bottom">6.9s - 8.2s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(8.2, 10.1, 'SHOT 07')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_013_81a32455.jpg" alt="SHOT 07" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_013_81a32455.jpg', 'SHOT 07 [8.2s - 10.1s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 07</div>
+                <div class="grid-badge-bottom">8.2s - 10.1s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(10.1, 11.53, 'SHOT 08')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_015_ac57ff21.jpg" alt="SHOT 08" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_015_ac57ff21.jpg', 'SHOT 08 [10.1s - 11.53s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 08</div>
+                <div class="grid-badge-bottom">10.1s - 11.5s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(11.53, 12.93, 'SHOT 09')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_017_4fbaf698.jpg" alt="SHOT 09" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_017_4fbaf698.jpg', 'SHOT 09 [11.53s - 12.93s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 09</div>
+                <div class="grid-badge-bottom">11.5s - 12.9s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(12.93, 14.37, 'SHOT 10')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_019_900bfd49.jpg" alt="SHOT 10" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_019_900bfd49.jpg', 'SHOT 10 [12.93s - 14.37s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 10</div>
+                <div class="grid-badge-bottom">12.9s - 14.4s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(14.37, 15.77, 'SHOT 11')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_021_04b724b2.jpg" alt="SHOT 11" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_021_04b724b2.jpg', 'SHOT 11 [14.37s - 15.77s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 11</div>
+                <div class="grid-badge-bottom">14.4s - 15.8s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(15.77, 17.13, 'SHOT 12')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_023_09ea0f20.jpg" alt="SHOT 12" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_023_09ea0f20.jpg', 'SHOT 12 [15.77s - 17.13s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 12</div>
+                <div class="grid-badge-bottom">15.8s - 17.1s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(17.13, 18.53, 'SHOT 13')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_025_aa406269.jpg" alt="SHOT 13" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_025_aa406269.jpg', 'SHOT 13 [17.13s - 18.53s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 13</div>
+                <div class="grid-badge-bottom">17.1s - 18.5s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(18.53, 20.0, 'SHOT 14')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_027_2b3444ca.jpg" alt="SHOT 14" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_027_2b3444ca.jpg', 'SHOT 14 [18.53s - 20.0s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 14</div>
+                <div class="grid-badge-bottom">18.5s - 20.0s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(20.0, 21.4, 'SHOT 15')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_029_e621f9b3.jpg" alt="SHOT 15" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_029_e621f9b3.jpg', 'SHOT 15 [20.0s - 21.4s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 15</div>
+                <div class="grid-badge-bottom">20.0s - 21.4s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(21.4, 22.8, 'SHOT 16')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_031_98d2c6bb.jpg" alt="SHOT 16" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_031_98d2c6bb.jpg', 'SHOT 16 [21.4s - 22.8s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 16</div>
+                <div class="grid-badge-bottom">21.4s - 22.8s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(22.8, 24.2, 'SHOT 17')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_033_f1a4de99.jpg" alt="SHOT 17" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_033_f1a4de99.jpg', 'SHOT 17 [22.8s - 24.2s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 17</div>
+                <div class="grid-badge-bottom">22.8s - 24.2s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(24.2, 25.97, 'SHOT 18')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_035_3687dd99.jpg" alt="SHOT 18" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_035_3687dd99.jpg', 'SHOT 18 [24.2s - 25.97s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 18</div>
+                <div class="grid-badge-bottom">24.2s - 26.0s</div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)">
+    <div class="drawer-panel" onclick="event.stopPropagation()">
+        <div class="drawer-header">
+            <div class="drawer-title">📑 MỤC LỤC PHÂN CẢNH (18)</div>
+            <button class="drawer-close-btn" onclick="toggleDrawer(false)">&times;</button>
+        </div>
+        <div class="drawer-list">
+            
+        <div class="drawer-item" onclick="jumpToShot(1, 0.0, 1.57, 'SHOT 01')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_001_cbc24138.jpg" alt="SHOT 01" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 01</div>
+                <div class="drawer-shot-time">⏱ 0.00s - 1.57s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(2, 1.57, 2.57, 'SHOT 02')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_003_bafbc8e0.jpg" alt="SHOT 02" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 02</div>
+                <div class="drawer-shot-time">⏱ 1.57s - 2.57s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(3, 2.57, 3.93, 'SHOT 03')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_005_da750864.jpg" alt="SHOT 03" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 03</div>
+                <div class="drawer-shot-time">⏱ 2.57s - 3.93s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(4, 3.93, 5.43, 'SHOT 04')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_007_a2625048.jpg" alt="SHOT 04" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 04</div>
+                <div class="drawer-shot-time">⏱ 3.93s - 5.43s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(5, 5.43, 6.9, 'SHOT 05')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_009_f2d24998.jpg" alt="SHOT 05" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 05</div>
+                <div class="drawer-shot-time">⏱ 5.43s - 6.90s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(6, 6.9, 8.2, 'SHOT 06')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_011_e202fae4.jpg" alt="SHOT 06" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 06</div>
+                <div class="drawer-shot-time">⏱ 6.90s - 8.20s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(7, 8.2, 10.1, 'SHOT 07')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_013_81a32455.jpg" alt="SHOT 07" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 07</div>
+                <div class="drawer-shot-time">⏱ 8.20s - 10.10s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(8, 10.1, 11.53, 'SHOT 08')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_015_ac57ff21.jpg" alt="SHOT 08" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 08</div>
+                <div class="drawer-shot-time">⏱ 10.10s - 11.53s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(9, 11.53, 12.93, 'SHOT 09')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_017_4fbaf698.jpg" alt="SHOT 09" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 09</div>
+                <div class="drawer-shot-time">⏱ 11.53s - 12.93s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(10, 12.93, 14.37, 'SHOT 10')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_019_900bfd49.jpg" alt="SHOT 10" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 10</div>
+                <div class="drawer-shot-time">⏱ 12.93s - 14.37s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(11, 14.37, 15.77, 'SHOT 11')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_021_04b724b2.jpg" alt="SHOT 11" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 11</div>
+                <div class="drawer-shot-time">⏱ 14.37s - 15.77s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(12, 15.77, 17.13, 'SHOT 12')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_023_09ea0f20.jpg" alt="SHOT 12" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 12</div>
+                <div class="drawer-shot-time">⏱ 15.77s - 17.13s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(13, 17.13, 18.53, 'SHOT 13')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_025_aa406269.jpg" alt="SHOT 13" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 13</div>
+                <div class="drawer-shot-time">⏱ 17.13s - 18.53s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(14, 18.53, 20.0, 'SHOT 14')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_027_2b3444ca.jpg" alt="SHOT 14" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 14</div>
+                <div class="drawer-shot-time">⏱ 18.53s - 20.00s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(15, 20.0, 21.4, 'SHOT 15')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_029_e621f9b3.jpg" alt="SHOT 15" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 15</div>
+                <div class="drawer-shot-time">⏱ 20.00s - 21.40s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(16, 21.4, 22.8, 'SHOT 16')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_031_98d2c6bb.jpg" alt="SHOT 16" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 16</div>
+                <div class="drawer-shot-time">⏱ 21.40s - 22.80s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(17, 22.8, 24.2, 'SHOT 17')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_033_f1a4de99.jpg" alt="SHOT 17" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 17</div>
+                <div class="drawer-shot-time">⏱ 22.80s - 24.20s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(18, 24.2, 25.97, 'SHOT 18')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_035_3687dd99.jpg" alt="SHOT 18" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 18</div>
+                <div class="drawer-shot-time">⏱ 24.20s - 25.97s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+<div id="lightboxModal" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImg" src="" onclick="event.stopPropagation()" />
+    <div id="lightboxCaption"></div>
+</div>
+
+<script>
+const rawVideoSrc = "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Chinese_New_Year_Hong_Kong%20-%20%40withyuee.mp4";
+let currentEndTime = null;
+
+function getCandidateUrls(src) {
+    if (!src) return [];
+    if (src.startsWith('http://') || src.startsWith('https://')) return [src];
+    let clean = src.replace(/^(\.\/|\.\.\/)+/, '').replace(/^(videos\/|reports\/)/, '');
+    return [
+        'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/' + encodeURI(clean),
+        '../videos/' + clean,
+        './videos/' + clean,
+        './' + clean
+    ];
+}
+
+const candidateUrls = getCandidateUrls(rawVideoSrc);
+let candidateIdx = 0;
+const player = document.getElementById('mainPlayer');
+
+function loadVideoCandidate() {
+    if (candidateIdx >= candidateUrls.length) return;
+    const url = candidateUrls[candidateIdx];
+    player.src = url;
+    document.getElementById('directVidLink').href = url;
+    player.load();
+}
+
+player.onerror = () => {
+    candidateIdx++;
+    if (candidateIdx < candidateUrls.length) {
+        loadVideoCandidate();
+    }
+};
+
+loadVideoCandidate();
+
+function playShot(startTime, endTime, label) {
+    currentEndTime = (typeof endTime === 'number') ? endTime : null;
+    const tag = document.getElementById('shotStatusTag');
+    if (tag) {
+        const endTxt = currentEndTime ? ` - ${currentEndTime.toFixed(2)}s` : '';
+        tag.innerText = `🎬 ${label || 'Phân cảnh'}: [${startTime.toFixed(2)}s${endTxt}]`;
+    }
+    player.currentTime = startTime;
+    const p = player.play();
+    if (p !== undefined) {
+        p.catch(e => {
+            player.muted = true;
+            player.play().catch(err => console.log('Autoplay muted triggered'));
+        });
+    }
+    document.querySelectorAll('.shot-card').forEach(c => c.classList.remove('active-playing'));
+    const matchCard = Array.from(document.querySelectorAll('.shot-card')).find(c => c.innerText.includes(label));
+    if (matchCard) matchCard.classList.add('active-playing');
+
+    if (window.innerWidth < 1024) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
+function setSpeed(speed, btn) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.speed-buttons-row .ctrl-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+}
+
+function stepFrame(frames) {
+    player.pause();
+    player.currentTime += (frames * (1/30));
+}
+
+function toggleMute(btn) {
+    player.muted = !player.muted;
+    if (btn) btn.innerText = player.muted ? '🔇 Tắt Tiếng' : '🔊 Tiếng';
+}
+
+function switchView(view) {
+    const sb = document.getElementById('storyboardView');
+    const grid = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetailBtn');
+    const tabGrid = document.getElementById('tabGridBtn');
+    if (view === 'grid') {
+        sb.style.display = 'none';
+        grid.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    } else {
+        sb.style.display = 'flex';
+        grid.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    }
+}
+
+function toggleDrawer(open) {
+    const drawer = document.getElementById('drawerBackdrop');
+    if (open) drawer.classList.add('open');
+    else drawer.classList.remove('open');
+}
+
+function jumpToShot(shotNum, st, et, label) {
+    toggleDrawer(false);
+    switchView('detail');
+    playShot(st, et, label);
+    const targetCard = document.getElementById('shot-card-' + shotNum);
+    if (targetCard) {
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function openLightbox(src, caption) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCaption');
+    img.src = src;
+    cap.innerText = caption || '';
+    modal.style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').style.display = 'none';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+        toggleDrawer(false);
+    } else if (e.key === ' ') {
+        if (document.activeElement.tagName !== 'INPUT') {
+            e.preventDefault();
+            player.paused ? player.play() : player.pause();
+        }
+    }
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Smooth Criminal • Cú Đấm Chuyển Cảnh Xuyên Không Gian Lên Đỉnh Núi • Director's Report</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>@font-face {
+font-family: 'FD Aeonik Extended';
+src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+local('FD Aeonik Extended Bold');
+font-weight: 700;
+font-style: normal;
+font-display: swap;
+}
+@font-face {
+font-family: 'FD Aeonik';
+src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+local('FD Aeonik Regular');
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+@font-face {
+font-family: 'FD Aeonik';
+src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+local('FD Aeonik SemiBold');
+font-weight: 600;
+font-style: normal;
+font-display: swap;
+}
+@font-face {
+font-family: 'FD Aeonik';
+src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+local('FD Aeonik Bold');
+font-weight: 700;
+font-style: normal;
+font-display: swap;
+}
+@font-face {
+font-family: 'Tiempos Text';
+src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+local('Tiempos Text Regular');
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+@font-face {
+font-family: 'Tiempos Text';
+src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+local('Tiempos Text Medium');
+font-weight: 500;
+font-style: normal;
+font-display: swap;
+}
+@font-face {
+font-family: 'Tiempos Text';
+src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+local('Tiempos Text Regular Italic');
+font-weight: 400;
+font-style: italic;
+font-display: swap;
+}
+:root {
+--cl-bg-main: #ffffff;
+--cl-bg-tint: #f8fafc;
+--cl-bg-card: #ffffff;
+--cl-bg-card-muted: #f1f5f9;
+--cl-border: rgba(0, 0, 0, 0.08);
+--cl-border-hover: rgba(26, 115, 232, 0.35);
+--cl-line: rgba(0, 0, 0, 0.06);
+--cl-text-primary: #090d16;
+--cl-text-body: #0f172a;
+--cl-text-secondary: #475569;
+--cl-text-muted: #64748b;
+--cl-accent: #1a73e8;
+--cl-accent-tint: rgba(26, 115, 232, 0.08);
+--cl-amber: #d97706;
+--cl-amber-bg: #fffbeb;
+--cl-amber-border: #fef3c7;
+--cl-emerald: #059669;
+--cl-emerald-bg: #f0fdf4;
+--cl-emerald-border: #bbf7d0;
+--cl-rose: #e11d48;
+--cl-rose-bg: #fff1f2;
+--cl-rose-border: #fecdd3;
+--font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+--font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+--font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+--font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+--font-mono: 'JetBrains Mono', monospace;
+--video-aspect-ratio: 9 / 16;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+background-color: var(--cl-bg-main);
+color: var(--cl-text-body);
+font-family: var(--font-body);
+font-size: 15px;
+line-height: 1.75;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+.top-nav {
+background: rgba(255, 255, 255, 0.94);
+backdrop-filter: blur(14px);
+border-bottom: 1px solid var(--cl-line);
+padding: 12px 24px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: sticky;
+top: 0;
+z-index: 200;
+}
+.nav-left {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+.nav-brand {
+display: flex;
+align-items: center;
+gap: 8px;
+font-family: var(--font-heading-short);
+font-weight: 700;
+font-size: 14.5px;
+color: var(--cl-text-primary);
+text-decoration: none;
+letter-spacing: -0.01em;
+}
+.nav-badge {
+background: var(--cl-accent-tint);
+color: var(--cl-accent);
+padding: 3px 9px;
+border-radius: 9999px;
+font-family: var(--font-mono);
+font-size: 11px;
+font-weight: 600;
+border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+font-family: var(--font-ui);
+font-size: 13.5px;
+color: var(--cl-text-secondary);
+font-weight: 500;
+max-width: 480px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.nav-right {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.nav-btn {
+background: #ffffff;
+border: 1px solid var(--cl-border);
+color: var(--cl-text-primary);
+padding: 6px 14px;
+border-radius: 8px;
+font-family: var(--font-ui);
+font-size: 12.5px;
+font-weight: 600;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+gap: 6px;
+cursor: pointer;
+transition: all 0.2s ease;
+}
+.nav-btn:hover {
+background: var(--cl-bg-tint);
+border-color: var(--cl-accent);
+color: var(--cl-accent);
+}
+.nav-btn.primary {
+background: var(--cl-accent);
+border-color: var(--cl-accent);
+color: #ffffff;
+}
+.nav-btn.primary:hover {
+background: #1558b0;
+}
+.layout-container {
+display: flex;
+flex: 1;
+max-width: 1680px;
+margin: 0 auto;
+width: 100%;
+}
+.left-player-col {
+width: 460px;
+flex-shrink: 0;
+padding: 24px;
+border-right: 1px solid var(--cl-line);
+background: var(--cl-bg-tint);
+position: sticky;
+top: 57px;
+height: calc(100vh - 57px);
+overflow-y: auto;
+display: flex;
+flex-direction: column;
+gap: 18px;
+}
+.player-box {
+background: #000000;
+border-radius: 16px;
+overflow: hidden;
+position: relative;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+border: 1px solid rgba(0, 0, 0, 0.1);
+aspect-ratio: var(--video-aspect-ratio);
+max-height: 560px;
+width: 100%;
+}
+.player-box video {
+width: 100%;
+height: 100%;
+object-fit: contain;
+display: block;
+}
+.director-controls {
+background: #ffffff;
+border: 1px solid var(--cl-border);
+border-radius: 12px;
+padding: 12px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.ctrl-row {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 8px;
+}
+.ctrl-btn-group {
+display: flex;
+align-items: center;
+gap: 6px;
+}
+.ctrl-btn {
+background: var(--cl-bg-tint);
+border: 1px solid var(--cl-border);
+color: var(--cl-text-primary);
+padding: 5px 10px;
+border-radius: 6px;
+font-family: var(--font-ui);
+font-size: 11.5px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+background: var(--cl-accent);
+color: #ffffff;
+border-color: var(--cl-accent);
+}
+.time-display {
+font-family: var(--font-mono);
+font-size: 12px;
+color: var(--cl-text-secondary);
+font-weight: 600;
+}
+.video-meta-card {
+background: #ffffff;
+border: 1px solid var(--cl-border);
+border-radius: 12px;
+padding: 16px;
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+.video-meta-title {
+font-family: var(--font-heading-long);
+font-size: 15px;
+font-weight: 700;
+color: var(--cl-text-primary);
+line-height: 1.4;
+}
+.video-meta-author {
+font-family: var(--font-ui);
+font-size: 13px;
+color: var(--cl-text-secondary);
+display: flex;
+align-items: center;
+gap: 6px;
+}
+.author-link {
+color: var(--cl-accent);
+text-decoration: none;
+font-weight: 600;
+}
+.author-link:hover {
+text-decoration: underline;
+}
+.drawer-card {
+background: #ffffff;
+border: 1px solid var(--cl-line);
+border-radius: 12px;
+padding: 14px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.drawer-title {
+font-family: var(--font-heading-short);
+font-size: 12px;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+color: var(--cl-text-muted);
+margin-bottom: 10px;
+font-weight: 700;
+}
+.drawer-list {
+display: flex;
+flex-direction: column;
+gap: 6px;
+max-height: 240px;
+overflow-y: auto;
+padding-right: 4px;
+}
+.drawer-shot-row {
+display: flex;
+align-items: center;
+gap: 8px;
+padding: 8px 10px;
+background: var(--cl-bg-tint);
+border-radius: 6px;
+font-size: 12px;
+cursor: pointer;
+transition: all 0.15s ease;
+border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+background: #eef2f6;
+border-color: var(--cl-accent);
+}
+.d-badge {
+background: var(--cl-accent);
+color: #ffffff;
+font-weight: 700;
+font-size: 11px;
+padding: 2px 6px;
+border-radius: 4px;
+flex-shrink: 0;
+}
+.d-time {
+color: var(--cl-text-muted);
+font-family: var(--font-mono);
+font-size: 11px;
+flex-shrink: 0;
+}
+.d-title {
+color: var(--cl-text-primary);
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+font-size: 12px;
+font-weight: 500;
+}
+.right-content-col {
+flex: 1;
+padding: 32px 40px 80px 40px;
+min-width: 0;
+background: #ffffff;
+}
+.content-header-bar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 28px;
+padding-bottom: 16px;
+border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+display: flex;
+gap: 8px;
+background: var(--cl-bg-tint);
+padding: 4px;
+border-radius: 10px;
+border: 1px solid var(--cl-border);
+}
+.view-tab {
+padding: 6px 14px;
+border-radius: 7px;
+font-family: var(--font-ui);
+font-size: 12.5px;
+font-weight: 600;
+color: var(--cl-text-secondary);
+background: transparent;
+border: none;
+cursor: pointer;
+transition: all 0.2s;
+}
+.view-tab.active {
+background: #ffffff;
+color: var(--cl-text-primary);
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.overview-hero-card {
+background: var(--cl-bg-tint);
+border: 1px solid var(--cl-border);
+border-radius: 18px;
+padding: 24px 28px;
+margin-bottom: 32px;
+}
+.overview-hero-title {
+font-family: var(--font-heading-short);
+font-size: 24px;
+font-weight: 700;
+text-transform: uppercase;
+color: var(--cl-text-primary);
+letter-spacing: -0.01em;
+line-height: 1.35;
+margin-bottom: 12px;
+}
+.overview-hero-desc {
+font-family: var(--font-body);
+font-size: 16px;
+line-height: 1.8;
+color: var(--cl-text-body);
+margin-bottom: 18px;
+}
+.overview-specs-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 12px;
+padding-top: 14px;
+border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+font-family: var(--font-ui);
+font-size: 13px;
+}
+.spec-tag-label {
+color: var(--cl-text-muted);
+font-size: 11.5px;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 0.05em;
+display: block;
+margin-bottom: 2px;
+}
+.spec-tag-value {
+color: var(--cl-text-primary);
+font-weight: 600;
+}
+.shots-container {
+display: flex;
+flex-direction: column;
+gap: 36px;
+}
+.shot-card {
+background: #ffffff;
+border: 1px solid var(--cl-border);
+border-radius: 20px;
+padding: 28px;
+box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+background: var(--cl-bg-tint);
+}
+.shot-card-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 14px;
+}
+.shot-id-pill {
+background: var(--cl-text-primary);
+color: #ffffff;
+padding: 4px 12px;
+border-radius: 9999px;
+font-family: var(--font-mono);
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 0.02em;
+}
+.shot-time-btn {
+background: #ffffff;
+border: 1px solid var(--cl-border);
+color: var(--cl-accent);
+padding: 4px 12px;
+border-radius: 8px;
+font-family: var(--font-mono);
+font-size: 12.5px;
+font-weight: 600;
+display: inline-flex;
+align-items: center;
+gap: 6px;
+cursor: pointer;
+transition: all 0.15s;
+}
+.shot-time-btn:hover {
+background: var(--cl-accent);
+color: #ffffff;
+border-color: var(--cl-accent);
+}
+.shot-headline {
+font-family: var(--font-heading-long);
+font-size: 18.5px;
+font-weight: 700;
+color: var(--cl-text-primary);
+line-height: 1.45;
+margin-bottom: 18px;
+}
+.keyframes-row {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 12px;
+margin-bottom: 22px;
+}
+.kf-card {
+background: #000000;
+border-radius: 12px;
+overflow: hidden;
+position: relative;
+aspect-ratio: var(--video-aspect-ratio);
+cursor: pointer;
+border: 1px solid var(--cl-border);
+}
+.kf-card img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+transform: scale(1.03);
+}
+.kf-label-tag {
+position: absolute;
+bottom: 8px;
+left: 8px;
+background: rgba(0, 0, 0, 0.75);
+backdrop-filter: blur(4px);
+color: #ffffff;
+padding: 3px 8px;
+border-radius: 5px;
+font-family: var(--font-mono);
+font-size: 11px;
+font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+.critique-blocks-grid {
+display: flex;
+flex-direction: column;
+gap: 14px;
+margin-bottom: 20px;
+}
+.block-subject-action {
+background: #ffffff;
+border: 1px solid var(--cl-border);
+border-radius: 12px;
+padding: 16px 20px;
+}
+.block-label {
+font-family: var(--font-ui);
+font-size: 12px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.04em;
+color: var(--cl-text-muted);
+margin-bottom: 6px;
+display: flex;
+align-items: center;
+gap: 6px;
+}
+.block-text {
+font-family: var(--font-body);
+font-size: 15px;
+color: var(--cl-text-body);
+line-height: 1.7;
+}
+.block-two-sided {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+}
+.critique-side {
+padding: 16px;
+border-radius: 12px;
+display: flex;
+flex-direction: column;
+gap: 6px;
+}
+.critique-side.pro {
+background: var(--cl-emerald-bg);
+border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+background: var(--cl-rose-bg);
+border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+font-family: var(--font-ui);
+font-size: 12px;
+font-weight: 700;
+text-transform: uppercase;
+display: flex;
+align-items: center;
+gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+font-family: var(--font-body);
+font-size: 14px;
+line-height: 1.65;
+color: var(--cl-text-body);
+}
+.block-takeaway {
+background: var(--cl-amber-bg);
+border: 1px solid var(--cl-amber-border);
+border-radius: 12px;
+padding: 16px 20px;
+}
+.takeaway-header {
+font-family: var(--font-ui);
+font-size: 12px;
+font-weight: 700;
+text-transform: uppercase;
+color: var(--cl-amber);
+margin-bottom: 6px;
+display: flex;
+align-items: center;
+gap: 6px;
+}
+.takeaway-body {
+font-family: var(--font-body);
+font-size: 15px;
+font-weight: 500;
+color: #78350f;
+line-height: 1.7;
+}
+.shot-specs-strip {
+display: flex;
+flex-wrap: wrap;
+gap: 10px 16px;
+padding: 12px 16px;
+background: var(--cl-bg-tint);
+border-radius: 10px;
+font-family: var(--font-ui);
+font-size: 12.5px;
+color: var(--cl-text-secondary);
+margin-bottom: 18px;
+}
+.spec-pill strong {
+color: var(--cl-text-primary);
+}
+.transition-card {
+background: var(--cl-bg-tint);
+border: 1px dashed var(--cl-border);
+border-radius: 14px;
+padding: 16px;
+}
+.trans-title-bar {
+font-family: var(--font-ui);
+font-size: 12.5px;
+font-weight: 700;
+color: var(--cl-accent);
+margin-bottom: 10px;
+display: flex;
+align-items: center;
+gap: 6px;
+}
+.trans-img-container {
+cursor: pointer;
+border-radius: 10px;
+overflow: hidden;
+position: relative;
+border: 1px solid var(--cl-border);
+background: #000000;
+}
+.trans-img-container img {
+width: 100%;
+height: auto;
+display: block;
+}
+.trans-zoom-badge {
+position: absolute;
+bottom: 8px;
+right: 8px;
+background: rgba(0, 0, 0, 0.7);
+color: #ffffff;
+font-family: var(--font-ui);
+font-size: 11px;
+font-weight: 600;
+padding: 3px 8px;
+border-radius: 4px;
+}
+.visual-grid-view {
+display: none;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+gap: 16px;
+}
+.grid-shot-card {
+background: #ffffff;
+border: 1px solid var(--cl-border);
+border-radius: 12px;
+overflow: hidden;
+cursor: pointer;
+transition: all 0.2s;
+}
+.grid-shot-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+aspect-ratio: var(--video-aspect-ratio);
+position: relative;
+background: #000;
+}
+.grid-thumb-wrap img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+.grid-thumb-badge {
+position: absolute;
+top: 6px;
+left: 6px;
+background: rgba(0, 0, 0, 0.75);
+color: #fff;
+padding: 2px 6px;
+border-radius: 4px;
+font-family: var(--font-mono);
+font-size: 10.5px;
+font-weight: 600;
+}
+.grid-card-body {
+padding: 10px 12px;
+font-family: var(--font-ui);
+font-size: 12px;
+font-weight: 600;
+color: var(--cl-text-primary);
+line-height: 1.4;
+}
+.lightbox-modal {
+position: fixed;
+top: 0; left: 0; width: 100vw; height: 100vh;
+background: rgba(0, 0, 0, 0.88);
+backdrop-filter: blur(10px);
+z-index: 999;
+display: none;
+align-items: center;
+justify-content: center;
+padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+max-width: 92vw;
+max-height: 92vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 12px;
+}
+.lightbox-content img {
+max-width: 100%;
+max-height: 82vh;
+border-radius: 12px;
+box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+color: #ffffff;
+font-family: var(--font-ui);
+font-size: 14px;
+font-weight: 500;
+text-align: center;
+}
+.lightbox-close {
+position: absolute;
+top: 20px; right: 24px;
+color: #ffffff;
+font-size: 32px;
+background: none; border: none;
+cursor: pointer;
+}
+.bottom-links-section {
+margin-top: 50px;
+padding-top: 30px;
+border-top: 1px solid var(--cl-line);
+display: flex;
+flex-direction: column;
+gap: 14px;
+}
+.footer-links-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 12px;
+}
+.footer-link-card {
+background: var(--cl-bg-tint);
+border: 1px solid var(--cl-border);
+border-radius: 10px;
+padding: 12px 16px;
+text-decoration: none;
+color: var(--cl-text-primary);
+font-family: var(--font-ui);
+font-size: 13px;
+font-weight: 600;
+display: flex;
+align-items: center;
+gap: 8px;
+transition: all 0.15s;
+}
+.footer-link-card:hover {
+background: var(--cl-accent);
+color: #ffffff;
+border-color: var(--cl-accent);
+}
+@media (max-width: 992px) {
+.layout-container {
+flex-direction: column;
+}
+.left-player-col {
+width: 100%;
+position: sticky;
+top: 57px;
+height: auto;
+padding: 16px;
+border-right: none;
+border-bottom: 1px solid var(--cl-line);
+z-index: 100;
+}
+.player-box {
+max-height: 420px;
+}
+.right-content-col {
+padding: 20px 16px 60px 16px;
+}
+.block-two-sided {
+grid-template-columns: 1fr;
+}
+.keyframes-row {
+gap: 8px;
+}
+}
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">6 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Smooth Criminal • Cú Đấm Chuyển Cảnh Xuyên Không Gian Lên Đỉnh Núi</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DcvZ-FowD_A/?stkn=Ynd6aGE0bzBtZTF3" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<div class="layout-container">
+    
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcvZ-FowD_A.mp4" type="video/mp4">
+                <source src="videos/Smooth Criminal Punch Transition Travel - @bysuncan.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 17.00s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        
+        <div class="video-meta-card">
+            <div class="video-meta-title">Smooth Criminal • Cú Đấm Chuyển Cảnh Xuyên Không Gian Lên Đỉnh Núi</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@bysuncan" onclick="handleCreatorClick(event, '@bysuncan', 'Bysuncan')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Bysuncan trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Bysuncan</strong>
+                        <span class="author-handle">(@bysuncan)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/DcvZ-FowD_A/?stkn=Ynd6aGE0bzBtZTF3" target="_blank" class="author-link">@bysuncan (Bysun Can • 𝙗𝙮𝙨𝙪𝙣𝙘𝙖𝙣)</a>
+            </div>
+        </div>
+
+        
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+        <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0, 8.47)">
+            <span class="d-badge">Shot 01</span>
+            <span class="d-time">0.00s - 8.47s (8.47s)</span>
+            <span class="d-title">Hook Vũ Đạo Hài Hước Đời Thường & Cú Đấm Trực Diện Che Kín Ố...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(2, 8.5, 10.67)">
+            <span class="d-badge">Shot 02</span>
+            <span class="d-time">8.50s - 10.67s (2.17s)</span>
+            <span class="d-title">Cú Thu Nắm Đấm Mở Ra Đại Ngàn Núi Lửa: Giải Phóng Động Năng ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(3, 10.7, 12.27)">
+            <span class="d-badge">Shot 03</span>
+            <span class="d-time">10.70s - 12.27s (1.57s)</span>
+            <span class="d-title">Cận Cảnh Nghiêng Bán Thân Bí Ẩn (Mysterious Profile Cut): Bắ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(4, 12.3, 14.4)">
+            <span class="d-badge">Shot 04</span>
+            <span class="d-time">12.30s - 14.40s (2.10s)</span>
+            <span class="d-title">Tạo Dáng Che Nắng Chuyển Động Bung Tay: Tôn Vinh Khí Chất Ch...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(5, 14.43, 15.4)">
+            <span class="d-badge">Shot 05</span>
+            <span class="d-time">14.43s - 15.40s (0.97s)</span>
+            <span class="d-title">Góc Máy Vác Gậy Thám Hiểm Lướt Nhanh (Staccato Accented Cut)...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(6, 15.43, 17.0)">
+            <span class="d-badge">Shot 06</span>
+            <span class="d-time">15.43s - 17.00s (1.57s)</span>
+            <span class="d-title">Hero Shot Từ Sau Lưng Đứng Đỉnh Mỏm Đá (Back-View Summit Pos...</span>
+        </div>
+        
+            </div>
+        </div>
+    </aside>
+
+    
+    <main class="right-content-col">
+        
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 17.00s
+            </div>
+        </div>
+
+        
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Smooth Criminal • Cú Đấm Chuyển Cảnh Xuyên Không Gian Lên Đỉnh Núi</h1>
+            <p class="overview-hero-desc">Bóc tách trọn vẹn 6 phân cảnh mẫu mực trong video Reel của @bysuncan: Nghệ thuật In-Camera Action Match Cut dùng cú đấm trực diện che ống kính (Physical Occlusion Transition) để chuyển cảnh ngoạn mục từ phòng làm việc 2m² ra đỉnh núi lửa hoang sơ theo nhịp beat Smooth Criminal, kết hợp bố cục đối xứng quyền lực, nhịp dựng dồn dập và Hero Shot giải phóng năng lượng.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">In-Camera Fist Wipe Match Cut, Momentum Kinetic Transition, Beat-Synced Action, Domestic-to-Epic Contrast, Symmetrical Hero Pose</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">6 Shots • Nhịp trung bình 2.81s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 • 30.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 8.47)">
+                    ▶ 0.00s - 8.47s (8.47s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hook Vũ Đạo Hài Hước Đời Thường & Cú Đấm Trực Diện Che Kín Ống Kính: Tạo Lực Hút Bất Ngờ Bằng Kỹ Thuật Physical Lens Occlusion</h2>
+
+            
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_01_mid.jpg', 'Shot 01 • Giữa (4.24s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (4.24s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_01_end.jpg', 'Shot 01 • Cuối (8.47s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.47s)</span>
+                </div>
+            </div>
+
+            
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Diễn viên (@bysuncan) mặc áo thun dài tay trắng và quần đùi thể thao đen, ban đầu ngồi cúi người tại bàn máy tính góc phòng làm việc (đèn bàn hắt ánh sáng cam ấm). Khi tiếng beat Smooth Criminal nổi lên, anh ta đứng bật dậy tiến sát ống kính, lắc hông, nhún nhảy và múa tay theo vũ đạo khởi động quyền anh cực kỳ dí dỏm. Phía sau lưng, người bạn (@vildokswaraa) bế một chú mèo nhỏ đứng tựa tường quan sát với vẻ mặt thản nhiên (deadpan expression). Đến đúng nhịp cao trào bài hát ('You've been struck by...'), diễn viên bất ngờ tung cú đấm tay phải cực mạnh (Right Cross) lao thẳng vào tâm ống kính camera, khiến nắm đấm choán ngợp và che kín hoàn toàn cảm biến máy quay.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khởi đầu bằng bối cảnh phòng ngủ/studio công nghệ 2m² cực kỳ chân thật, hạ thấp cảnh giác của người xem trước khi tung cú twist. Sự hiện diện của bạn bế mèo tạo yếu tố viral và tiếng cười tự nhiên. Động tác đấm lao thẳng theo trục Z (Z-axis kinetic momentum) tạo xung động thị giác giật mình (Visual Jolt) cực mạnh. Cú đấm che kín 100% cảm biến camera đóng vai trò tấm che vật lý hoàn hảo (Physical In-Camera Masking) để giấu vết cắt tàng hình sang bối cảnh tiếp theo.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng 8.47s cho một cú Hook là hơi dài so với nhịp lướt Reels thông thường (thường cần dưới 3-4s); ánh sáng phòng có sự chênh lệch giữa đèn cam ấm 3200K và đèn trần huỳnh quang mờ khiến vùng da mặt khi sát camera bị bệt sáng nhẹ.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kỹ thuật 'Z-Axis Physical Occlusion Cut': Tận dụng chuyển động cơ thể lao thẳng vào ống kính (nắm đấm, bàn tay, mũ, áo) che kín khung hình tại đúng 1-2 frame để biến nó thành cổng dịch chuyển không gian tự nhiên nhất giữa hai thế giới đối lập.</div>
+                </div>
+            </div>
+
+            
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide Angle 24mm (Camera 1x Smartphone)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Phòng làm việc tại gia / Setup máy tính cá nhân (Indonesia)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng đèn bàn Tungsten cam ấm (~3200K) kết hợp đèn trần tán xạ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> In-Camera Fist Wipe Match Cut (Cú đấm che kín ống kính chuyển cảnh sang đỉnh núi)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • In-Camera Fist Wipe Match Cut (Cú đấm che kín ống kính chuyển cảnh sang đỉnh núi)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 8.5, 10.67)">
+                    ▶ 8.50s - 10.67s (2.17s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Thu Nắm Đấm Mở Ra Đại Ngàn Núi Lửa: Giải Phóng Động Năng & Phong Thái Hero Swagger Bùng Nổ Trên Đỉnh Bromo</h2>
+
+            
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_02_start.jpg', 'Shot 02 • Đầu (8.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.50s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_02_mid.jpg', 'Shot 02 • Giữa (9.59s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.59s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_02_end.jpg', 'Shot 02 • Cuối (10.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.67s)</span>
+                </div>
+            </div>
+
+            
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Tiếp nối động năng cú đấm từ Shot 1, ống kính ngoài trời hé lộ nắm đấm mang găng tay đen trong ống tay áo khoác gió đỏ rực (red technical windbreaker) đang thu về từ mặt kính camera. Động tác thu tay mở toang khung cảnh thiên nhiên hùng vĩ trên đỉnh núi đá khô cằn. Diễn viên chính xuất hiện đầy khí chất: áo khoác gió đỏ nổi bật, kính râm thể thao tráng gương đen, sải bước tự tin tiến về phía trước theo nhịp nhạc. Phía sau lưng anh ta trên sườn dốc là người bạn đồng hành trong trang phục trekking dã ngoại, mang balo và vác gậy leo núi nhìn ngắm cảnh quan.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú Match Cut hoàn hảo 100% về hướng di chuyển và vận tốc tay giữa 2 bối cảnh cách nhau hàng trăm cây số. Sự bùng nổ màu sắc (Color Pop): sắc đỏ rực của áo khoác gió tương phản tột cùng với màu nâu xám của đá núi lửa và màu xanh thẳm của bầu trời (Teal & Orange palette). Bố cục dọc 9:16 tôn vinh tư thế người hùng (Hero Stride) của nhân vật chính.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh nắng gắt buổi trưa (High Noon Sun) trên cao nguyên tạo bóng đổ sâu dưới hốc mắt và cằm; kính râm tráng gương đen che khuất hoàn toàn biểu cảm ánh mắt của nhân vật.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Quy tắc 'Color Pop Outdoor': Khi ghi hình nhân vật giữa thiên nhiên hoang dã, trang bị trang phục màu nóng (đỏ, cam neon) trên nền đất đá núi rừng sẽ tạo điểm nhấn thị giác tách lớp chủ thể sắc lẹm tức thì.</div>
+                </div>
+            </div>
+
+            
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide Angle 28mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Đỉnh sống lưng núi lửa hoang sơ (Bromo Ridge, Indonesia)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh nắng mặt trời trực tiếp gay gắt (High Noon Daylight ~5600K)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut theo nhịp phách trống EDM (Rhythmic Beat Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Hard Cut theo nhịp phách trống EDM (Rhythmic Beat Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 10.7, 12.27)">
+                    ▶ 10.70s - 12.27s (1.57s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cận Cảnh Nghiêng Bán Thân Bí Ẩn (Mysterious Profile Cut): Bắt Trọn Thần Thái Bụi Bặm Của Hiker Giữa Địa Hình Khắc Nghiệt</h2>
+
+            
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_03_start.jpg', 'Shot 03 • Đầu (10.70s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (10.70s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_03_mid.jpg', 'Shot 03 • Giữa (11.48s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (11.48s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_03_end.jpg', 'Shot 03 • Cuối (12.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (12.27s)</span>
+                </div>
+            </div>
+
+            
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình cắt chuyển sang góc cận nghiêng (Profile Medium Close-Up) của người bạn đồng hành leo núi (@callmeido_444). Anh ta trang bị chuẩn phong cách sinh tồn dã ngoại: nón tai bèo safari màu kem, khăn trùm kín mặt ninja/balaclava đen chỉ để lộ đôi mắt sắc bén, áo phông đen lót găng tay ống rằn ri camo, đeo balo dã ngoại có dắt chai nước khoáng bên hông. Anh ta giữ gậy leo núi ngang vai và khẽ xoay đầu nhìn lướt qua vai hướng về ống kính với phong thái thâm trầm, can trường.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Kỹ thuật 'Character Diversity Cut': Cắt đổi sang nhân vật phụ bí ẩn giúp mở rộng chiều sâu câu chuyện chuyến thám hiểm (Expedition Storytelling). Chi tiết phục trang thực địa (găng tay rằn ri, balaclava, gậy trekking) khẳng định độ chân thật của cuộc hành trình. Hậu cảnh vách núi dốc đứng làm nổi bật đường viền của nón tai bèo.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chai nước khoáng vỏ đỏ trắng dắt bên hông balo có logo thương hiệu khá bắt mắt, hơi phân tán điểm nhìn khỏi ánh mắt nhân vật; thời lượng 1.57s hơi ngắn cho một cú chân dung tĩnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kỹ thuật 'Character Anchor': Trong chuỗi hành động của nhân vật chính, xen kẽ 1-2 shot cận cảnh biểu cảm sắc lạnh của đồng đội sẽ biến video du lịch cá nhân thành một thước phim thám hiểm tài liệu đậm chất điện ảnh.</div>
+                </div>
+            </div>
+
+            
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard Lens ~40mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Sườn dốc núi đá sỏi men theo triền núi lửa</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên tạt nghiêng (Side Sun Lighting), đổ bóng khối gò má và vành nón</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut-on-Eye-Line (Cắt cảnh theo trục hướng nhìn của mắt)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Cut-on-Eye-Line (Cắt cảnh theo trục hướng nhìn của mắt)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 12.3, 14.4)">
+                    ▶ 12.30s - 14.40s (2.10s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Tạo Dáng Che Nắng Chuyển Động Bung Tay: Tôn Vinh Khí Chất Chinh Phục Và Bố Cục Đối Xứng Quyền Lực</h2>
+
+            
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_04_start.jpg', 'Shot 04 • Đầu (12.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (12.30s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_04_mid.jpg', 'Shot 04 • Giữa (13.35s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (13.35s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_04_end.jpg', 'Shot 04 • Cuối (14.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (14.40s)</span>
+                </div>
+            </div>
+
+            
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Máy quay trở lại với diễn viên chính, đứng vững trên mỏm đá nhô cao với bộ đồ thể thao leo núi màu đen (áo thun kỹ thuật ôm sát, găng tay chống nắng rằn ri, quần dã ngoại đen). Ban đầu, anh ta chụm hai bàn tay đặt lên trán làm cử chỉ che nắng nhìn xa xăm về phía chân trời. Liền sau đó, anh ta hạ tay xuống, đeo kính râm thể thao đen bóng, nhìn thẳng trực diện vào ống kính và dang rộng hai cánh tay sang hai bên như sải cánh đại bàng đón gió lộng giữa đất trời bao la.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cử động tay biến chuyển nhịp nhàng từ 'khép' (che trán) sang 'mở' (bung rộng hai cánh tay) mở rộng trường nhìn của người xem từ khuôn mặt ra toàn cảnh hùng vĩ. Bố cục đối xứng trung tâm (Symmetrical Central Framing) tạo cảm giác quyền lực, vững chãi của người chinh phục. Biểu cảm cool ngầu hài hước ngầm cực kỳ ăn khớp với tinh thần bài hát.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh nắng rọi thẳng từ đỉnh đầu (Top Light) tạo bóng đổ dưới cằm; các chi tiết trên nền áo đen bị tối nhẹ nếu màn hình điện thoại người xem ở độ sáng thấp.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kỹ thuật 'Frame Expansion Gesture': Sử dụng động tác dang rộng hai cánh tay của chủ thể để phá vỡ giới hạn chật hẹp của khung hình dọc 9:16, kích thích người xem cảm nhận được sự vô tận của không gian xung quanh.</div>
+                </div>
+            </div>
+
+            
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide Angle ~28mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mỏm đá cao nhìn xuống lòng thung lũng núi lửa</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh nắng ban trưa chói chang, bóng đổ vuông góc</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Action Cut theo nhịp chuyển động cơ thể</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Match Action Cut theo nhịp chuyển động cơ thể</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 14.43, 15.4)">
+                    ▶ 14.43s - 15.40s (0.97s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Máy Vác Gậy Thám Hiểm Lướt Nhanh (Staccato Accented Cut): Đẩy Cao Nhịp Điệu Dồn Dập Trước Khi Bung Hồi Kết Toàn Cảnh</h2>
+
+            
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_05_start.jpg', 'Shot 05 • Đầu (14.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (14.43s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_05_mid.jpg', 'Shot 05 • Giữa (14.91s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (14.91s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_05_end.jpg', 'Shot 05 • Cuối (15.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (15.40s)</span>
+                </div>
+            </div>
+
+            
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Người bạn đồng hành xuất hiện trở lại trong góc máy bán diện trung bình, hai tay vác thanh gậy leo núi màu cam ngang sau gáy qua hai vai. Anh ta đứng vững chãi trên sườn núi đá dốc, xoay người nhìn chếch về phía ống kính máy quay với ánh mắt thám hiểm sắc lẹm, sẵn sàng cho những thử thách khắc nghiệt tiếp theo trên cung đường hành quân.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Đường xiên chéo của cây gậy trekking màu cam (Diagonal Leading Line) chia cắt khung hình linh hoạt, định hướng mắt nhìn từ góc trái sang góc phải. Thời lượng siêu ngắn 0.97s đóng vai trò như một nhịp dằn (Accented Staccato Beat), tạo lực đẩy dồn dập trước khi bung shot kết toàn cảnh. Màu cam của gậy tạo điểm nhấn màu sắc (Color Accent) tinh tế.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng dưới 1 giây diễn ra rất nhanh, đòi hỏi người xem phải tập trung cao độ; góc máy tương tự shot 3 nhưng rộng hơn đôi chút.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sử dụng 'Staccato Cut' (Shot đệm cực ngắn < 1s) ngay trước shot kết thúc là công thức kinh điển để gia tăng dopamine, tạo nhịp điệu dồn dập như trailer điện ảnh chuyên nghiệp.</div>
+                </div>
+            </div>
+
+            
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard Wide ~35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Đường mòn sỏi đá men triền núi cao</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên ngược sáng nhẹ (Subtle Rim Light trên vành nón)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Fast Jump Cut sang Hero Back View</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Fast Jump Cut sang Hero Back View</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 15.43, 17.0)">
+                    ▶ 15.43s - 17.00s (1.57s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hero Shot Từ Sau Lưng Đứng Đỉnh Mỏm Đá (Back-View Summit Pose): Biểu Tượng Chinh Phục Tự Do Giữa Vực Thẳm Đại Ngàn</h2>
+
+            
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_06_start.jpg', 'Shot 06 • Đầu (15.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (15.43s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_06_mid.jpg', 'Shot 06 • Giữa (16.21s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (16.21s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_06_end.jpg', 'Shot 06 • Cuối (17.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (17.00s)</span>
+                </div>
+            </div>
+
+            
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Máy quay đặt từ phía sau lưng diễn viên chính (Back POV Hero Shot), hơi ngước nhẹ từ dưới lên. Diễn viên đứng dạng hai chân vững như bàn thạch trên mỏm đá nhô cao nhất ở mép vực, hai cánh tay dang rộng sang hai bên, lưng thẳng kiêu hãnh, hướng ánh nhìn ra không gian bao la của thung lũng núi lửa và những rặng núi trùng điệp phía xa. Cảnh tượng mở ra thiên nhiên kỳ vĩ, khép lại hành trình dịch chuyển ngoạn mục từ căn phòng 4 bức tường ra đỉnh cao thế giới.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc quay mang tính biểu tượng điện ảnh (Wanderer above the Sea of Fog aesthetic): Người xem như được hóa thân vào người lữ hành, hòa mình vào cảm giác tự do giải phóng năng lượng tuyệt đối. Bố cục đối xứng hoàn hảo theo trục dọc cơ thể (hình chữ X cân bằng giữa khung hình). Tác động cảm xúc mạnh mẽ, kích hoạt khát khao xê dịch (High Travel Aspiration & Wanderlust Trigger).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Do thời lượng video dừng ở 17.00s, shot này khép lại khá nhanh khi chưa kịp thực hiện cú lùi máy (Dolly Out / Slow Zoom Out) để tôn thêm độ vĩ đại của khung cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kỹ thuật 'The Victorious Back Pose': Kết thúc video du lịch khám phá bằng một góc quay từ sau lưng nhân vật nhìn ra không gian rộng lớn nhất sẽ kích thích người xem đồng nhất bản thân với câu chuyện, tạo tỷ lệ lưu (Save) và chia sẻ (Share) cao nhất.</div>
+                </div>
+            </div>
+
+            
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide Angle ~24mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mép mỏm đá nhô ra thung lũng núi lửa (Indonesian Volcano Ridge Edge)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ban ngày rực rỡ, chi tiết sắc nét trên bề mặt đá và vân áo</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Reel End / Infinite Loop Ready</span>
+            </div>
+
+            
+        </article>
+        
+        </div>
+
+        
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 8.47)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Hook Vũ Đạo Hài Hước Đời Thường & Cú Đấm Trực Diện Che Kín Ống Kính: Tạo Lực Hút Bất Ngờ Bằng Kỹ Thuật Physical Lens Occlusion</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 8.5, 10.67)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 8.50s</span>
+            </div>
+            <div class="grid-card-body">Cú Thu Nắm Đấm Mở Ra Đại Ngàn Núi Lửa: Giải Phóng Động Năng & Phong Thái Hero Swagger Bùng Nổ Trên Đỉnh Bromo</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 10.7, 12.27)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 10.70s</span>
+            </div>
+            <div class="grid-card-body">Cận Cảnh Nghiêng Bán Thân Bí Ẩn (Mysterious Profile Cut): Bắt Trọn Thần Thái Bụi Bặm Của Hiker Giữa Địa Hình Khắc Nghiệt</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 12.3, 14.4)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 12.30s</span>
+            </div>
+            <div class="grid-card-body">Tạo Dáng Che Nắng Chuyển Động Bung Tay: Tôn Vinh Khí Chất Chinh Phục Và Bố Cục Đối Xứng Quyền Lực</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 14.43, 15.4)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 14.43s</span>
+            </div>
+            <div class="grid-card-body">Góc Máy Vác Gậy Thám Hiểm Lướt Nhanh (Staccato Accented Cut): Đẩy Cao Nhịp Điệu Dồn Dập Trước Khi Bung Hồi Kết Toàn Cảnh</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 15.43, 17.0)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 15.43s</span>
+            </div>
+            <div class="grid-card-body">Hero Shot Từ Sau Lưng Đứng Đỉnh Mỏm Đá (Back-View Summit Pose): Biểu Tượng Chinh Phục Tự Do Giữa Vực Thẳm Đại Ngàn</div>
+        </div>
+        
+        </div>
+
+        
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>const SHOTS_DATA = [{"id": 1, "st_frame": 0, "mid_frame": 127, "en_frame": 254, "st_time": 0.0, "mid_time": 4.23, "en_time": 8.47, "duration": 8.47, "headline": "Hook Vũ Đạo Hài Hước Đời Thường & Cú Đấm Trực Diện Che Kín Ống Kính: Tạo Lực Hút Bất Ngờ Bằng Kỹ Thuật Physical Lens Occlusion", "subject_action": "Diễn viên (@bysuncan) mặc áo thun dài tay trắng và quần đùi thể thao đen, ban đầu ngồi cúi người tại bàn máy tính góc phòng làm việc (đèn bàn hắt ánh sáng cam ấm). Khi tiếng beat Smooth Criminal nổi lên, anh ta đứng bật dậy tiến sát ống kính, lắc hông, nhún nhảy và múa tay theo vũ đạo khởi động quyền anh cực kỳ dí dỏm. Phía sau lưng, người bạn (@vildokswaraa) bế một chú mèo nhỏ đứng tựa tường quan sát với vẻ mặt thản nhiên (deadpan expression). Đến đúng nhịp cao trào bài hát ('You've been struck by...'), diễn viên bất ngờ tung cú đấm tay phải cực mạnh (Right Cross) lao thẳng vào tâm ống kính camera, khiến nắm đấm choán ngợp và che kín hoàn toàn cảm biến máy quay.", "pros": "Khởi đầu bằng bối cảnh phòng ngủ/studio công nghệ 2m² cực kỳ chân thật, hạ thấp cảnh giác của người xem trước khi tung cú twist. Sự hiện diện của bạn bế mèo tạo yếu tố viral và tiếng cười tự nhiên. Động tác đấm lao thẳng theo trục Z (Z-axis kinetic momentum) tạo xung động thị giác giật mình (Visual Jolt) cực mạnh. Cú đấm che kín 100% cảm biến camera đóng vai trò tấm che vật lý hoàn hảo (Physical In-Camera Masking) để giấu vết cắt tàng hình sang bối cảnh tiếp theo.", "cons": "Thời lượng 8.47s cho một cú Hook là hơi dài so với nhịp lướt Reels thông thường (thường cần dưới 3-4s); ánh sáng phòng có sự chênh lệch giữa đèn cam ấm 3200K và đèn trần huỳnh quang mờ khiến vùng da mặt khi sát camera bị bệt sáng nhẹ.", "takeaway": "Kỹ thuật 'Z-Axis Physical Occlusion Cut': Tận dụng chuyển động cơ thể lao thẳng vào ống kính (nắm đấm, bàn tay, mũ, áo) che kín khung hình tại đúng 1-2 frame để biến nó thành cổng dịch chuyển không gian tự nhiên nhất giữa hai thế giới đối lập.", "shot_type": "Medium Shot to Extreme Close-Up (Góc ngang tầm mắt, tripod cố định)", "lens_angle": "Wide Angle 24mm (Camera 1x Smartphone)", "location": "Phòng làm việc tại gia / Setup máy tính cá nhân (Indonesia)", "lighting_color": "Ánh sáng đèn bàn Tungsten cam ấm (~3200K) kết hợp đèn trần tán xạ", "color_grade": "Natural Indoor Lifestyle • Tông màu ấm cúng, tương phản vừa phải", "sound_design": "Beat nhạc Michael Jackson 'Smooth Criminal' remix dồn dập + Tiếng chân nhún nhảy + Tiếng vút gió cú đấm (Whoosh)", "transition": "In-Camera Fist Wipe Match Cut (Cú đấm che kín ống kính chuyển cảnh sang đỉnh núi)"}, {"id": 2, "st_frame": 255, "mid_frame": 287, "en_frame": 320, "st_time": 8.5, "mid_time": 9.57, "en_time": 10.67, "duration": 2.17, "headline": "Cú Thu Nắm Đấm Mở Ra Đại Ngàn Núi Lửa: Giải Phóng Động Năng & Phong Thái Hero Swagger Bùng Nổ Trên Đỉnh Bromo", "subject_action": "Tiếp nối động năng cú đấm từ Shot 1, ống kính ngoài trời hé lộ nắm đấm mang găng tay đen trong ống tay áo khoác gió đỏ rực (red technical windbreaker) đang thu về từ mặt kính camera. Động tác thu tay mở toang khung cảnh thiên nhiên hùng vĩ trên đỉnh núi đá khô cằn. Diễn viên chính xuất hiện đầy khí chất: áo khoác gió đỏ nổi bật, kính râm thể thao tráng gương đen, sải bước tự tin tiến về phía trước theo nhịp nhạc. Phía sau lưng anh ta trên sườn dốc là người bạn đồng hành trong trang phục trekking dã ngoại, mang balo và vác gậy leo núi nhìn ngắm cảnh quan.", "pros": "Cú Match Cut hoàn hảo 100% về hướng di chuyển và vận tốc tay giữa 2 bối cảnh cách nhau hàng trăm cây số. Sự bùng nổ màu sắc (Color Pop): sắc đỏ rực của áo khoác gió tương phản tột cùng với màu nâu xám của đá núi lửa và màu xanh thẳm của bầu trời (Teal & Orange palette). Bố cục dọc 9:16 tôn vinh tư thế người hùng (Hero Stride) của nhân vật chính.", "cons": "Ánh nắng gắt buổi trưa (High Noon Sun) trên cao nguyên tạo bóng đổ sâu dưới hốc mắt và cằm; kính râm tráng gương đen che khuất hoàn toàn biểu cảm ánh mắt của nhân vật.", "takeaway": "Quy tắc 'Color Pop Outdoor': Khi ghi hình nhân vật giữa thiên nhiên hoang dã, trang bị trang phục màu nóng (đỏ, cam neon) trên nền đất đá núi rừng sẽ tạo điểm nhấn thị giác tách lớp chủ thể sắc lẹm tức thì.", "shot_type": "Low-Angle Medium Close-Up (Góc ngước nhẹ từ dưới lên)", "lens_angle": "Wide Angle 28mm", "location": "Đỉnh sống lưng núi lửa hoang sơ (Bromo Ridge, Indonesia)", "lighting_color": "Ánh nắng mặt trời trực tiếp gay gắt (High Noon Daylight ~5600K)", "color_grade": "Cinematic Teal & Orange Outdoor • Áo đỏ bão hòa cao, trời xanh thẫm, đá nâu ấm", "sound_design": "Beat drop bùng nổ theo câu hát 'You've been struck by a Smooth Criminal' + Tiếng gió rít đỉnh núi", "transition": "Hard Cut theo nhịp phách trống EDM (Rhythmic Beat Cut)"}, {"id": 3, "st_frame": 321, "mid_frame": 344, "en_frame": 368, "st_time": 10.7, "mid_time": 11.47, "en_time": 12.27, "duration": 1.57, "headline": "Cận Cảnh Nghiêng Bán Thân Bí Ẩn (Mysterious Profile Cut): Bắt Trọn Thần Thái Bụi Bặm Của Hiker Giữa Địa Hình Khắc Nghiệt", "subject_action": "Khung hình cắt chuyển sang góc cận nghiêng (Profile Medium Close-Up) của người bạn đồng hành leo núi (@callmeido_444). Anh ta trang bị chuẩn phong cách sinh tồn dã ngoại: nón tai bèo safari màu kem, khăn trùm kín mặt ninja/balaclava đen chỉ để lộ đôi mắt sắc bén, áo phông đen lót găng tay ống rằn ri camo, đeo balo dã ngoại có dắt chai nước khoáng bên hông. Anh ta giữ gậy leo núi ngang vai và khẽ xoay đầu nhìn lướt qua vai hướng về ống kính với phong thái thâm trầm, can trường.", "pros": "Kỹ thuật 'Character Diversity Cut': Cắt đổi sang nhân vật phụ bí ẩn giúp mở rộng chiều sâu câu chuyện chuyến thám hiểm (Expedition Storytelling). Chi tiết phục trang thực địa (găng tay rằn ri, balaclava, gậy trekking) khẳng định độ chân thật của cuộc hành trình. Hậu cảnh vách núi dốc đứng làm nổi bật đường viền của nón tai bèo.", "cons": "Chai nước khoáng vỏ đỏ trắng dắt bên hông balo có logo thương hiệu khá bắt mắt, hơi phân tán điểm nhìn khỏi ánh mắt nhân vật; thời lượng 1.57s hơi ngắn cho một cú chân dung tĩnh.", "takeaway": "Kỹ thuật 'Character Anchor': Trong chuỗi hành động của nhân vật chính, xen kẽ 1-2 shot cận cảnh biểu cảm sắc lạnh của đồng đội sẽ biến video du lịch cá nhân thành một thước phim thám hiểm tài liệu đậm chất điện ảnh.", "shot_type": "Medium Close-Up Profile (Cận nghiêng bán thân)", "lens_angle": "Standard Lens ~40mm", "location": "Sườn dốc núi đá sỏi men theo triền núi lửa", "lighting_color": "Ánh sáng tự nhiên tạt nghiêng (Side Sun Lighting), đổ bóng khối gò má và vành nón", "color_grade": "Tactical Earth Tone • Tông màu đất, xanh rêu quân đội và màu kem safari", "sound_design": "Nhịp bass EDM giữ nhịp ổn định + Tiếng sỏi đá dưới chân lạo xạo", "transition": "Cut-on-Eye-Line (Cắt cảnh theo trục hướng nhìn của mắt)"}, {"id": 4, "st_frame": 369, "mid_frame": 400, "en_frame": 432, "st_time": 12.3, "mid_time": 13.33, "en_time": 14.4, "duration": 2.1, "headline": "Tạo Dáng Che Nắng Chuyển Động Bung Tay: Tôn Vinh Khí Chất Chinh Phục Và Bố Cục Đối Xứng Quyền Lực", "subject_action": "Máy quay trở lại với diễn viên chính, đứng vững trên mỏm đá nhô cao với bộ đồ thể thao leo núi màu đen (áo thun kỹ thuật ôm sát, găng tay chống nắng rằn ri, quần dã ngoại đen). Ban đầu, anh ta chụm hai bàn tay đặt lên trán làm cử chỉ che nắng nhìn xa xăm về phía chân trời. Liền sau đó, anh ta hạ tay xuống, đeo kính râm thể thao đen bóng, nhìn thẳng trực diện vào ống kính và dang rộng hai cánh tay sang hai bên như sải cánh đại bàng đón gió lộng giữa đất trời bao la.", "pros": "Cử động tay biến chuyển nhịp nhàng từ 'khép' (che trán) sang 'mở' (bung rộng hai cánh tay) mở rộng trường nhìn của người xem từ khuôn mặt ra toàn cảnh hùng vĩ. Bố cục đối xứng trung tâm (Symmetrical Central Framing) tạo cảm giác quyền lực, vững chãi của người chinh phục. Biểu cảm cool ngầu hài hước ngầm cực kỳ ăn khớp với tinh thần bài hát.", "cons": "Ánh nắng rọi thẳng từ đỉnh đầu (Top Light) tạo bóng đổ dưới cằm; các chi tiết trên nền áo đen bị tối nhẹ nếu màn hình điện thoại người xem ở độ sáng thấp.", "takeaway": "Kỹ thuật 'Frame Expansion Gesture': Sử dụng động tác dang rộng hai cánh tay của chủ thể để phá vỡ giới hạn chật hẹp của khung hình dọc 9:16, kích thích người xem cảm nhận được sự vô tận của không gian xung quanh.", "shot_type": "Low-to-Eye Level Medium Shot (Góc ngang ngực ngước nhẹ)", "lens_angle": "Wide Angle ~28mm", "location": "Mỏm đá cao nhìn xuống lòng thung lũng núi lửa", "lighting_color": "Ánh nắng ban trưa chói chang, bóng đổ vuông góc", "color_grade": "High-Contrast Adventure Grade • Áo đen tuyền tương phản với nền trời xanh thẳm", "sound_design": "Giai điệu synthwave / EDM dâng trào theo từng phách nhạc Smooth Criminal", "transition": "Match Action Cut theo nhịp chuyển động cơ thể"}, {"id": 5, "st_frame": 433, "mid_frame": 447, "en_frame": 462, "st_time": 14.43, "mid_time": 14.9, "en_time": 15.4, "duration": 0.97, "headline": "Góc Máy Vác Gậy Thám Hiểm Lướt Nhanh (Staccato Accented Cut): Đẩy Cao Nhịp Điệu Dồn Dập Trước Khi Bung Hồi Kết Toàn Cảnh", "subject_action": "Người bạn đồng hành xuất hiện trở lại trong góc máy bán diện trung bình, hai tay vác thanh gậy leo núi màu cam ngang sau gáy qua hai vai. Anh ta đứng vững chãi trên sườn núi đá dốc, xoay người nhìn chếch về phía ống kính máy quay với ánh mắt thám hiểm sắc lẹm, sẵn sàng cho những thử thách khắc nghiệt tiếp theo trên cung đường hành quân.", "pros": "Đường xiên chéo của cây gậy trekking màu cam (Diagonal Leading Line) chia cắt khung hình linh hoạt, định hướng mắt nhìn từ góc trái sang góc phải. Thời lượng siêu ngắn 0.97s đóng vai trò như một nhịp dằn (Accented Staccato Beat), tạo lực đẩy dồn dập trước khi bung shot kết toàn cảnh. Màu cam của gậy tạo điểm nhấn màu sắc (Color Accent) tinh tế.", "cons": "Thời lượng dưới 1 giây diễn ra rất nhanh, đòi hỏi người xem phải tập trung cao độ; góc máy tương tự shot 3 nhưng rộng hơn đôi chút.", "takeaway": "Sử dụng 'Staccato Cut' (Shot đệm cực ngắn < 1s) ngay trước shot kết thúc là công thức kinh điển để gia tăng dopamine, tạo nhịp điệu dồn dập như trailer điện ảnh chuyên nghiệp.", "shot_type": "Medium Shot Low-Angle (Góc ngang hông ngước nhẹ)", "lens_angle": "Standard Wide ~35mm", "location": "Đường mòn sỏi đá men triền núi cao", "lighting_color": "Ánh sáng tự nhiên ngược sáng nhẹ (Subtle Rim Light trên vành nón)", "color_grade": "Warm Earth & Tactical Slate • Điểm nhấn cam neon trên thanh gậy leo núi", "sound_design": "Cú gõ beat dồn dập (Snare Riser) chuẩn bị vào hồi kết", "transition": "Fast Jump Cut sang Hero Back View"}, {"id": 6, "st_frame": 463, "mid_frame": 486, "en_frame": 509, "st_time": 15.43, "mid_time": 16.2, "en_time": 17.0, "duration": 1.57, "headline": "Hero Shot Từ Sau Lưng Đứng Đỉnh Mỏm Đá (Back-View Summit Pose): Biểu Tượng Chinh Phục Tự Do Giữa Vực Thẳm Đại Ngàn", "subject_action": "Máy quay đặt từ phía sau lưng diễn viên chính (Back POV Hero Shot), hơi ngước nhẹ từ dưới lên. Diễn viên đứng dạng hai chân vững như bàn thạch trên mỏm đá nhô cao nhất ở mép vực, hai cánh tay dang rộng sang hai bên, lưng thẳng kiêu hãnh, hướng ánh nhìn ra không gian bao la của thung lũng núi lửa và những rặng núi trùng điệp phía xa. Cảnh tượng mở ra thiên nhiên kỳ vĩ, khép lại hành trình dịch chuyển ngoạn mục từ căn phòng 4 bức tường ra đỉnh cao thế giới.", "pros": "Góc quay mang tính biểu tượng điện ảnh (Wanderer above the Sea of Fog aesthetic): Người xem như được hóa thân vào người lữ hành, hòa mình vào cảm giác tự do giải phóng năng lượng tuyệt đối. Bố cục đối xứng hoàn hảo theo trục dọc cơ thể (hình chữ X cân bằng giữa khung hình). Tác động cảm xúc mạnh mẽ, kích hoạt khát khao xê dịch (High Travel Aspiration & Wanderlust Trigger).", "cons": "Do thời lượng video dừng ở 17.00s, shot này khép lại khá nhanh khi chưa kịp thực hiện cú lùi máy (Dolly Out / Slow Zoom Out) để tôn thêm độ vĩ đại của khung cảnh.", "takeaway": "Kỹ thuật 'The Victorious Back Pose': Kết thúc video du lịch khám phá bằng một góc quay từ sau lưng nhân vật nhìn ra không gian rộng lớn nhất sẽ kích thích người xem đồng nhất bản thân với câu chuyện, tạo tỷ lệ lưu (Save) và chia sẻ (Share) cao nhất.", "shot_type": "Low-Angle Wide Back Shot (Góc quay từ sau lưng ngước lên)", "lens_angle": "Wide Angle ~24mm", "location": "Mép mỏm đá nhô ra thung lũng núi lửa (Indonesian Volcano Ridge Edge)", "lighting_color": "Ánh sáng ban ngày rực rỡ, chi tiết sắc nét trên bề mặt đá và vân áo", "color_grade": "Epic Cinematic Landscape • Tương phản sâu, chi tiết sắc cạnh, bầu trời xanh ngắt", "sound_design": "Âm nhạc kết thúc dứt khoát theo cú pose dáng kiêu hãnh", "transition": "Reel End / Infinite Loop Ready"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+let currentLoopShot = null;
+let isLooping = false;
+player.addEventListener('timeupdate', () => {
+const ct = player.currentTime;
+timeDisplay.textContent = ct.toFixed(2) + 's / ' + (player.duration ? player.duration.toFixed(2) : '17.00') + 's';
+if (isLooping && currentLoopShot) {
+if (ct >= currentLoopShot.en_time) {
+player.currentTime = currentLoopShot.st_time;
+}
+}
+});
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+function togglePlay() {
+if (player.paused) player.play();
+else player.pause();
+}
+function setSpeed(speed) {
+player.playbackRate = speed;
+document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+if (b.textContent === speed + 'x') b.classList.add('active');
+else if (b.textContent.includes('x')) b.classList.remove('active');
+});
+}
+function stepFrame(frames) {
+const fps = 30.0 || 24;
+player.currentTime += frames / fps;
+}
+function jumpToShot(shotId, stTime, enTime) {
+player.currentTime = stTime;
+player.play();
+currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+const targetCard = document.getElementById('shot-' + shotId);
+if (targetCard) {
+targetCard.style.borderColor = 'var(--cl-accent)';
+targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+}
+function toggleLoop() {
+isLooping = !isLooping;
+loopBtn.classList.toggle('active', isLooping);
+}
+function switchView(viewName) {
+const detailView = document.getElementById('detailView');
+const gridView = document.getElementById('gridView');
+const tabDetail = document.getElementById('tabDetail');
+const tabGrid = document.getElementById('tabGrid');
+if (viewName === 'detail') {
+detailView.style.display = 'flex';
+gridView.style.display = 'none';
+tabDetail.classList.add('active');
+tabGrid.classList.remove('active');
+} else {
+detailView.style.display = 'none';
+gridView.style.display = 'grid';
+tabDetail.classList.remove('active');
+tabGrid.classList.add('active');
+}
+}
+function openLightbox(src, caption) {
+document.getElementById('lightboxImg').src = src;
+document.getElementById('lightboxCaption').textContent = caption || '';
+document.getElementById('lightboxModal').classList.add('active');
+}
+function closeLightbox() {
+document.getElementById('lightboxModal').classList.remove('active');
+}
+document.addEventListener('keydown', (e) => {
+if (e.key === 'Escape') closeLightbox();
+});
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

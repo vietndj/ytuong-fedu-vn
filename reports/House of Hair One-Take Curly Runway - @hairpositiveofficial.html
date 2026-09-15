@@ -1,0 +1,1915 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>House of Hair • Nghệ Thuật One-Take Runway Phô Diễn Suối Tóc Xoăn Bồng Bềnh Tự Nhiên • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* DRAWER QUICK JUMP MENU */
+.drawer-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-line);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.drawer-title {
+    font-family: var(--font-heading-short);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cl-text-muted);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.drawer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.drawer-shot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: var(--cl-bg-tint);
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+    background: #eef2f6;
+    border-color: var(--cl-accent);
+}
+.d-badge {
+    background: var(--cl-accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.d-time {
+    color: var(--cl-text-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    flex-shrink: 0;
+}
+.d-title {
+    color: var(--cl-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">8 PHÂN CẢNH</span>
+        <span class="nav-meta-title">House of Hair • Nghệ Thuật One-Take Runway Phô Diễn Suối Tóc Xoăn Bồng Bềnh Tự Nhiên</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DbOMM0Pu1HA/?stkn=bDQ5NGxlcDBtNGhz" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DbOMM0Pu1HA.mp4" type="video/mp4">
+                <source src="videos/House of Hair One-Take Curly Runway - @hairpositiveofficial.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 13.08s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">House of Hair • Nghệ Thuật One-Take Runway Phô Diễn Suối Tóc Xoăn Bồng Bềnh Tự Nhiên</div>
+            <div class="video-meta-author">
+                <span>Tác giả:</span>
+                <a href="https://www.instagram.com/reel/DbOMM0Pu1HA/?stkn=bDQ5NGxlcDBtNGhz" target="_blank" class="author-link">@hairpositiveofficial (Hair Positive / House of Hair)</a>
+            </div>
+        </div>
+
+        <!-- DRAWER QUICK JUMP MENU -->
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+        <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0, 2.16)">
+            <span class="d-badge">Shot 01</span>
+            <span class="d-time">0.00s - 2.16s (2.16s)</span>
+            <span class="d-title">Hook Thị Giác Urban Catwalk 'Carrie Bradshaw': Mở Màn Bằng B...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(2, 2.16, 3.4)">
+            <span class="d-badge">Shot 02</span>
+            <span class="d-time">2.16s - 3.40s (1.24s)</span>
+            <span class="d-title">Đòn Bẩy Nhịp Điệu 'The Glanced Moonwalk': Bẻ Gãy Quán Tính B...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(3, 3.4, 5.6)">
+            <span class="d-badge">Shot 03</span>
+            <span class="d-time">3.40s - 5.60s (2.20s)</span>
+            <span class="d-title">Đón Đầu Khung Hình Trực Diện (Frontal Runway Approach): Đưa ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(4, 5.6, 6.8)">
+            <span class="d-badge">Shot 04</span>
+            <span class="d-time">5.60s - 6.80s (1.20s)</span>
+            <span class="d-title">Giao Tiếp Hình Thể Cận Vừa (Medium Conversational Gesture): ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(5, 6.8, 8.4)">
+            <span class="d-badge">Shot 05</span>
+            <span class="d-time">6.80s - 8.40s (1.60s)</span>
+            <span class="d-title">Cú Ép Cận Cảnh Xúc Giác (Tactile Push-In Close-Up): Động Tác...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(6, 8.4, 10.8)">
+            <span class="d-badge">Shot 06</span>
+            <span class="d-time">8.40s - 10.80s (2.40s)</span>
+            <span class="d-title">Trình Diễn Độ Nảy & Khối Tích (Dynamic Curl Bounce & Volume)...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(7, 10.8, 11.6)">
+            <span class="d-badge">Shot 07</span>
+            <span class="d-time">10.80s - 11.60s (0.80s)</span>
+            <span class="d-title">Nghệ Thuật Thoát Khung Dứt Khoát (Clean Stage-Right Exit): G...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(8, 11.6, 13.08)">
+            <span class="d-badge">Shot 08</span>
+            <span class="d-time">11.60s - 13.08s (1.48s)</span>
+            <span class="d-title">Khép Vòng Lặp Vô Tận & Khắc Ghi Logo (Infinite Loop & Brand ...</span>
+        </div>
+        
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 13.08s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">House of Hair • Nghệ Thuật One-Take Runway Phô Diễn Suối Tóc Xoăn Bồng Bềnh Tự Nhiên</h1>
+            <p class="overview-hero-desc">Bóc tách trọn vẹn 8 micro-beats mẫu mực trong thước phim One-Take Plan-Séquence triệu view của @hairpositiveofficial: Nghệ thuật kết hợp giữa thời trang dạo phố Carrie Bradshaw (Sex and the City), cú bẻ quán tính bước lùi Moonwalk, chuyển động rướn người cận cảnh xúc giác và vòng lặp vô tận khắc sâu nhận diện thương hiệu salon tóc cao cấp.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">One-Take Plan Séquence, Carrie Bradshaw Style Runway, Urban Catwalk Pacing, Reverse Moonwalk Beat, Close-Up Push-In Transition, Tactile Hair Play & Curl Bounce, Monochromatic Slate Backdrop, Seamless Infinite Loop Outro</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">8 Shots • Nhịp trung bình 1.64s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 • 25.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 2.16)">
+                    ▶ 0.00s - 2.16s (2.16s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hook Thị Giác Urban Catwalk 'Carrie Bradshaw': Mở Màn Bằng Bức Tường Tối Giản Đón Bước Chân Dạo Phố Cầm Cà Phê & Tạp Chí BAZAAR</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_01_mid.jpg', 'Shot 01 • Giữa (1.08s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.08s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_01_end.jpg', 'Shot 01 • Cuối (2.16s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (2.16s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Mở đầu video từ bức tường xi măng/slate xám xanh tối giản không bóng người. Người mẫu tóc xoăn vàng bồng bềnh bất ngờ bước vào khung hình từ mép phải, diện áo blazer xanh pastel oversized phối cùng áo ren trắng, quần tây ống suông xanh navy và giày sneaker trắng. Một tay cầm ly cà phê giấy nhâm nhi, nách kẹp cuốn tạp chí thời trang Harper's BAZAAR, cô thong thả rảo bước ngang qua màn hình từ phải sang trái như đang sải bước trên sàn diễn thời trang đường phố New York.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bức tường đơn sắc phía sau hoạt động như một phông nền phòng lab đô thị (Urban Cyc Wall), triệt tiêu hoàn toàn rác bối cảnh và hướng mắt người xem 100% vào gu thời trang thời thượng cùng mái tóc xoăn vàng mật ong. Chuyển động lướt ngang (Lateral Movement) kết hợp hành động đời thường (uống cà phê, cắp báo) tạo cảm giác tự nhiên, phóng khoáng, phá vỡ định kiến video quảng cáo salon tóc gượng gạo.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Tốc độ bước chân ở 1 giây đầu hơi nhanh khiến người xem chỉ kịp lướt mắt qua trang phục mà chưa kịp soi kỹ chất tóc; góc máy toàn cố định khiến người mẫu khi đến mép trái khung hình hơi sát cạnh viền.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Muốn quảng cáo dịch vụ tóc/thời trang đắt tiền, đừng bắt đầu bằng chiếc ghế cắt tóc hay lọ thuốc uốn. Hãy bắt đầu bằng 'Lifestyle In Action' - biến người mẫu thành một nhân vật thành thị có gu, sải bước tự tin ngoài phố.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide 28mm (Khẩu độ f/2.8)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bức tường kiến trúc đơn sắc ngoài trời (Minimalist Urban Slate Wall)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên khuếch tán ban ngày (Diffused Daylight ~5500K)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Chuyển động liên tục trong một cú máy (Plan-Séquence Flow)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Chuyển động liên tục trong một cú máy (Plan-Séquence Flow)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 2.16, 3.4)">
+                    ▶ 2.16s - 3.40s (1.24s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Đòn Bẩy Nhịp Điệu 'The Glanced Moonwalk': Bẻ Gãy Quán Tính Bằng Cú Ngoái Nhìn Tinh Quái & Bước Lùi Về Tâm Điểm Khung Hình</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_02_start.jpg', 'Shot 02 • Đầu (2.16s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (2.16s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_02_mid.jpg', 'Shot 02 • Giữa (2.78s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (2.78s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_02_end.jpg', 'Shot 02 • Cuối (3.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (3.40s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Vừa chạm mép trái khung hình, người mẫu không đi thẳng ra ngoài mà bất ngờ dừng lại, ngoái đầu liếc nhìn ống kính với ánh mắt tinh nghịch. Ngay lập tức, cô thực hiện bước lùi uyển chuyển (Moonwalk Step) đi giật lùi về chính giữa khung hình, giữ nguyên tư thế ôm tạp chí và ly cà phê.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú bẻ quán tính chuyển động (Pattern Interrupt) cực kỳ thông minh. Người xem tưởng người mẫu sẽ bước ra khỏi khung hình thì cô bất ngờ lùi lại, tạo sự hồi hộp và lôi cuốn thị giác (Tension & Curiosity). Mái tóc xoăn vàng nảy nhẹ theo từng bước lùi tạo độ rung động cơ học tự nhiên cho thấy độ đàn hồi (Elasticity) hoàn hảo của lọn tóc uốn.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Động tác bước lùi đòi hỏi kỹ năng catwalk điêu luyện; nếu người mẫu không giữ vững thăng bằng hoặc liếc mắt quá sớm, khung hình sẽ có cảm giác diễn xuất bị sượng.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kỹ thuật 'Reversal Movement': Khi một chuyển động có nguy cơ trôi tuột khỏi màn hình, hãy tạo một điểm giật lùi hoặc đảo chiều 180 độ để tái kích hoạt sự chú ý của người lướt ngón tay.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide-Normal 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bức tường xám tối giản ngoài trời</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên êm dịu, không bị bóng gắt</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Chuyển động xoay người 90 độ (Body Pivot Re-alignment)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Chuyển động xoay người 90 độ (Body Pivot Re-alignment)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 3.4, 5.6)">
+                    ▶ 3.40s - 5.60s (2.20s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Đón Đầu Khung Hình Trực Diện (Frontal Runway Approach): Đưa Chủ Thể Tiến Về Ống Kính Phô Diễn Dáng Vóc Cùng Độ Bồng Của Sợi Tóc</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_03_start.jpg', 'Shot 03 • Đầu (3.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (3.40s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_03_mid.jpg', 'Shot 03 • Giữa (4.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (4.50s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_03_end.jpg', 'Shot 03 • Cuối (5.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.60s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Sau khi lùi về vị trí trung tâm, cô xoay người 90 độ đối diện trực tiếp với ống kính và bắt đầu sải bước tiến thẳng về phía camera. Cự ly khung hình thay đổi mượt mà từ Toàn cảnh (Full Shot) lên Cận vừa (Medium Shot). Từng bước chân dứt khoát làm mái tóc xoăn bung nở bồng bềnh theo phương thẳng đứng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khung hình đối xứng tuyệt đối (Frontal Symmetry). Tỷ lệ chủ thể lớn dần trong khung hình (Scale Transition) tạo cảm giác người mẫu đang tự tin bước đến gần để trò chuyện thân mật với khán giả. Ánh sáng tự nhiên làm nổi bật các tầng highlight vàng óng trên nền áo blazer xanh tro.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khi tiến lại gần, khoảng lấy nét (Depth of Field) thay đổi; người quay cần kiểm soát lấy nét bám đuôi chủ thể (Eye-AF Tracking) thật chuẩn xác để tránh hiện tượng lố nét (focus hunting).</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Chuyển động tiến về ống kính (Walk-Towards-Camera) luôn mang lại năng lượng áp đảo và cảm giác mời gọi kết nối mạnh mẽ hơn gấp nhiều lần so với góc lia máy tĩnh.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm (Khoảng cách thu hẹp tự nhiên)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Vỉa hè lát đá trước bức tường kiến trúc</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tán xạ phía trước (Frontal Soft Light)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Thu hẹp khoảng cách vật lý (Continuous Push-In Scale Shift)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Thu hẹp khoảng cách vật lý (Continuous Push-In Scale Shift)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 5.6, 6.8)">
+                    ▶ 5.60s - 6.80s (1.20s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Giao Tiếp Hình Thể Cận Vừa (Medium Conversational Gesture): Nâng Cốc Cà Phê & Điệu Bộ Tự Nhiên Thu Hẹp Khoảng Cách Tâm Lý</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_04_start.jpg', 'Shot 04 • Đầu (5.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.60s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_04_mid.jpg', 'Shot 04 • Giữa (6.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.20s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_04_end.jpg', 'Shot 04 • Cuối (6.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (6.80s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khi đã tiến sát ống kính ở cự ly ngang ngực (Medium Close-Up), người mẫu nhún vai, nhấc nhẹ bàn tay áo ren chỉ về phía mái tóc, miệng mỉm cười nói chuyện tự nhiên không lời thoại. Ly cà phê trắng và bìa báo BAZAAR trở thành phụ kiện thời trang sành điệu tôn lên nét sang trọng, kiêu kỳ của một quý cô thành thị.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khung hình bán thân giúp khán giả quan sát rõ cấu trúc ren tinh xảo ở cổ tay và lọn xoăn uốn lượn ôm sát xương gò má. Sự tự nhiên trong cử chỉ hình thể (Gestural Authenticity) giải phóng cảm giác bị gò bó trước máy quay.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chiếc ly cà phê trắng ở nửa dưới khung hình có màu sáng trắng nổi bật, đôi lúc tranh chấp độ hút mắt với gương mặt của người mẫu.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sử dụng 'Hero Props' (Đạo cụ nâng tầm như cốc takeaway, tạp chí, kính râm) giúp đôi tay của diễn viên/người mẫu không bị thừa thãi, tạo nhịp điệu diễn xuất tự tin tuyệt đối.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Normal 50mm equivalent (Cự ly gần)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Không gian ngoại cảnh tối giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên hắt nhẹ tạo khối gò má</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cú rướn người về phía trước (Forward Lean into Macro Space)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Cú rướn người về phía trước (Forward Lean into Macro Space)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 6.8, 8.4)">
+                    ▶ 6.80s - 8.40s (1.60s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Ép Cận Cảnh Xúc Giác (Tactile Push-In Close-Up): Động Tác Luồn Tay Nâng Tóc Đánh Trúng Khao Khát Sở Hữu Lọn Xoăn Không Xơ Rối</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_05_start.jpg', 'Shot 05 • Đầu (6.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (6.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_05_mid.jpg', 'Shot 05 • Giữa (7.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (7.60s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_05_end.jpg', 'Shot 05 • Cuối (8.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.40s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Camera hoặc người mẫu nhoài người về phía trước, đưa khung hình vào cự ly Cận Cảnh (Close-Up). Người mẫu đưa bàn tay đeo nhẫn vàng luồn sâu vào chân tóc bên tai, nhấc bổng lọn tóc xoăn vàng óng ả lên và buông lơi tự nhiên trước ống kính. Ánh mắt cô nhìn thẳng vào khán giả đầy mê hoặc.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Đòn bẩy xúc giác bậc thầy (Sensory Touchpoint). Thao tác luồn tay qua lọn tóc là bài test tối thượng chứng minh chất lượng uốn tóc của salon: sợi tóc mềm mại, tơi xốp, không bết dính và không hề bị rối rít. Ánh sáng xiên làm nổi bật từng sợi tóc tơ mảnh mai lấp lánh như sợi tơ vàng.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Độ sâu trường ảnh rất mỏng (Shallow DOF); khi người mẫu cúi người hoặc lắc tóc mạnh, một vài lọn tóc trước trán bị out nét nhẹ.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Trong ngành tóc và mỹ phẩm, 'Hành động xúc giác người thật chạm vào sản phẩm' (Tactile Demonstration) có sức thuyết phục và chốt đơn cao gấp 10 lần những lời quảng cáo sáo rỗng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Portrait Prime 50mm - 85mm equivalent</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Ngoại cảnh</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Rim Light tự nhiên làm bừng sáng viền sợi tóc tơ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Chuyển động đầu liên hoàn (Head Tilt Flow)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Chuyển động đầu liên hoàn (Head Tilt Flow)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 8.4, 10.8)">
+                    ▶ 8.40s - 10.80s (2.40s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Trình Diễn Độ Nảy & Khối Tích (Dynamic Curl Bounce & Volume): Nghiêng Đầu Lắc Lọn Xoăn Tỏa Sáng Dưới Ánh Sáng Tự Nhiên</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_06_start.jpg', 'Shot 06 • Đầu (8.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.40s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_06_mid.jpg', 'Shot 06 • Giữa (9.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.60s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_06_end.jpg', 'Shot 06 • Cuối (10.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.80s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Người mẫu tiếp tục duy trì cự ly cận cảnh, nghiêng nhẹ đầu sang hai bên, tay vuốt ve phần đuôi tóc và gáy. Mái tóc xoăn vàng bồng bềnh cuộn sóng theo từng nhịp chuyển động của cơ thể, phô diễn độ đàn hồi 3D (Volumetric Spring) từ mọi góc độ. Nụ cười rạng rỡ và ánh mắt tỏa sáng của cô toát lên vẻ tự tin tuyệt đối (#behairpositive).</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Sự kết hợp hoàn mỹ giữa chuyển động cơ học của tóc và biểu cảm hạnh phúc của nhân vật. Màu tóc vàng ấm tương phản tinh tế với sắc xám lạnh của tường bê tông phía sau, tạo nên bảng màu bổ túc êm mắt chuẩn phong cách editorial của Vogue/Elle.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng của phân cảnh này kéo dài 2.4s là shot dài nhất trong chuỗi; nếu không có sự biến đổi biểu cảm liên tục thì dễ làm nhịp video bị chùng lại.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đỉnh cao của video quảng cáo dịch vụ làm đẹp không phải là khoe 'Tôi làm đẹp thế nào', mà là cho khán giả thấy 'Khách hàng hạnh phúc và tự tin ra sao khi bước ra khỏi salon của bạn'.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Portrait Prime 85mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bối cảnh ngoài trời ánh sáng tự nhiên</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng mềm mịn tôn da và độ bóng mượt của sợi tóc</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Quay lưng dứt khoát (Pivot Body Turn)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Quay lưng dứt khoát (Pivot Body Turn)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 10.8, 11.6)">
+                    ▶ 10.80s - 11.60s (0.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Nghệ Thuật Thoát Khung Dứt Khoát (Clean Stage-Right Exit): Giữ Trọn Sự Kiêu Hãnh & Để Lại Khoảng Trống Cho Nhận Diện Thương Hiệu</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_07_start.jpg', 'Shot 07 • Đầu (10.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (10.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_07_mid.jpg', 'Shot 07 • Giữa (11.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (11.20s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_07_end.jpg', 'Shot 07 • Cuối (11.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (11.60s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Không nấn ná quá lâu, người mẫu mỉm cười tự tin, quay người 90 độ sải bước ra khỏi khung hình về phía mép phải. Bước chân nhanh thoăn thoắt, bóng dáng áo blazer xanh và ly cà phê lướt qua ống kính, để lại bờ vai thanh mảnh và mái tóc xoăn óng ả bay nhẹ trong gió trước khi khuất hẳn khỏi khung hình.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Nhịp thoát cảnh (Exit Timing) cực kỳ dứt khoát và phong thái thời thượng (Effortless Chic). Rời khỏi khung hình khi khán giả vẫn còn đang say đắm tạo cảm giác lưu luyến, thòm thèm (Leave Them Wanting More) thay vì đứng cười trừ gượng gạo.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Tốc độ quay ngoắt của người mẫu làm phần đuôi áo blazer hơi bị nhòe chuyển động (motion blur) trong 2-3 khung hình cuối.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Nguyên tắc 'Always Exit in Style': Hãy để nhân vật tự tin rời khỏi khung hình trước khi video kết thúc. Khung hình trống sau khi nhân vật đi qua là không gian vàng để neo đậu thương hiệu.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bức tường kiến trúc tối giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Rút lui khỏi khung hình (Clean Frame Clearance)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Rút lui khỏi khung hình (Clean Frame Clearance)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 11.6, 13.08)">
+                    ▶ 11.60s - 13.08s (1.48s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Khép Vòng Lặp Vô Tận & Khắc Ghi Logo (Infinite Loop & Brand Reveal): Biểu Tượng 'HAIR POSITIVE' Hiện Ra Trên Bức Tường Tĩnh Lặng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_08_start.jpg', 'Shot 08 • Đầu (11.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (11.60s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_08_mid.jpg', 'Shot 08 • Giữa (12.34s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (12.34s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_08_end.jpg', 'Shot 08 • Cuối (13.08s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (13.08s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Sau khi người mẫu rời đi, khung hình trở lại trạng thái tĩnh lặng nguyên bản với bức tường xám xanh tối giản. Ngay tại vị trí trung tâm, logo thương hiệu màu trắng thanh thoát cùng biểu tượng bông hoa xoăn nghệ thuật nhẹ nhàng hiện ra: 'HAIR POSITIVE • HOUSE OF HAIR'. Khung cảnh tường trống ở giây 13.08s khớp hoàn hảo 100% với khung cảnh trống ở giây 0.00s, tạo nên vòng lặp vô tận (Infinite Loop).</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục tối giản đỉnh cao (Zen Minimalism). Logo xuất hiện trên nền tường đơn sắc không bị bất kỳ chi tiết nào phân tán chú ý. Vòng lặp vô tận khiến người xem trên Instagram Reels không nhận ra video đã hết, tự động xem lại lần 2, kích hoạt thuật toán giữ chân người xem (Watch Time Booster).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Logo xuất hiện tĩnh tương đối nhanh (khoảng 1.4s), người xem lướt vội có thể chưa đọc kịp dòng slogan nhỏ phía dưới.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Công thức 'Seamless Loop Brand Reveal': Luôn thiết kế phân cảnh cuối cùng khớp với phân cảnh đầu tiên về màu sắc và bối cảnh, biến video ngắn thành một tác phẩm lặp tuần hoàn không điểm dừng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide 28mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bức tường kiến trúc xám xanh (Trở về trạng thái ban đầu)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tĩnh lặng đồng nhất</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Khép vòng lặp vô tận sang Shot 01 (Seamless Infinite Loop)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_08_to_01_loop.jpg?v=2', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/transitions/trans_08_to_01_loop.jpg?v=2" alt="Loop Transition" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 2.16)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Hook Thị Giác Urban Catwalk 'Carrie Bradshaw': Mở Màn Bằng Bức Tường Tối Giản Đón Bước Chân Dạo Phố Cầm Cà Phê & Tạp Chí BAZAAR</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 2.16, 3.4)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 2.16s</span>
+            </div>
+            <div class="grid-card-body">Đòn Bẩy Nhịp Điệu 'The Glanced Moonwalk': Bẻ Gãy Quán Tính Bằng Cú Ngoái Nhìn Tinh Quái & Bước Lùi Về Tâm Điểm Khung Hình</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 3.4, 5.6)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 3.40s</span>
+            </div>
+            <div class="grid-card-body">Đón Đầu Khung Hình Trực Diện (Frontal Runway Approach): Đưa Chủ Thể Tiến Về Ống Kính Phô Diễn Dáng Vóc Cùng Độ Bồng Của Sợi Tóc</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 5.6, 6.8)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 5.60s</span>
+            </div>
+            <div class="grid-card-body">Giao Tiếp Hình Thể Cận Vừa (Medium Conversational Gesture): Nâng Cốc Cà Phê & Điệu Bộ Tự Nhiên Thu Hẹp Khoảng Cách Tâm Lý</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 6.8, 8.4)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 6.80s</span>
+            </div>
+            <div class="grid-card-body">Cú Ép Cận Cảnh Xúc Giác (Tactile Push-In Close-Up): Động Tác Luồn Tay Nâng Tóc Đánh Trúng Khao Khát Sở Hữu Lọn Xoăn Không Xơ Rối</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 8.4, 10.8)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 8.40s</span>
+            </div>
+            <div class="grid-card-body">Trình Diễn Độ Nảy & Khối Tích (Dynamic Curl Bounce & Volume): Nghiêng Đầu Lắc Lọn Xoăn Tỏa Sáng Dưới Ánh Sáng Tự Nhiên</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 10.8, 11.6)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 10.80s</span>
+            </div>
+            <div class="grid-card-body">Nghệ Thuật Thoát Khung Dứt Khoát (Clean Stage-Right Exit): Giữ Trọn Sự Kiêu Hãnh & Để Lại Khoảng Trống Cho Nhận Diện Thương Hiệu</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 11.6, 13.08)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 11.60s</span>
+            </div>
+            <div class="grid-card-body">Khép Vòng Lặp Vô Tận & Khắc Ghi Logo (Infinite Loop & Brand Reveal): Biểu Tượng 'HAIR POSITIVE' Hiện Ra Trên Bức Tường Tĩnh Lặng</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1Jxwli-mCsHgBFhUoZhWFH5t9X9W7joNZ" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="file:///Users/vietmac/Documents/CODE/Video phan tich/output_packages/IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "mid_frame": 27, "en_frame": 54, "st_time": 0.0, "mid_time": 1.08, "en_time": 2.16, "duration": 2.16, "headline": "Hook Thị Giác Urban Catwalk 'Carrie Bradshaw': Mở Màn Bằng Bức Tường Tối Giản Đón Bước Chân Dạo Phố Cầm Cà Phê & Tạp Chí BAZAAR", "subject_action": "Mở đầu video từ bức tường xi măng/slate xám xanh tối giản không bóng người. Người mẫu tóc xoăn vàng bồng bềnh bất ngờ bước vào khung hình từ mép phải, diện áo blazer xanh pastel oversized phối cùng áo ren trắng, quần tây ống suông xanh navy và giày sneaker trắng. Một tay cầm ly cà phê giấy nhâm nhi, nách kẹp cuốn tạp chí thời trang Harper's BAZAAR, cô thong thả rảo bước ngang qua màn hình từ phải sang trái như đang sải bước trên sàn diễn thời trang đường phố New York.", "pros": "Bức tường đơn sắc phía sau hoạt động như một phông nền phòng lab đô thị (Urban Cyc Wall), triệt tiêu hoàn toàn rác bối cảnh và hướng mắt người xem 100% vào gu thời trang thời thượng cùng mái tóc xoăn vàng mật ong. Chuyển động lướt ngang (Lateral Movement) kết hợp hành động đời thường (uống cà phê, cắp báo) tạo cảm giác tự nhiên, phóng khoáng, phá vỡ định kiến video quảng cáo salon tóc gượng gạo.", "cons": "Tốc độ bước chân ở 1 giây đầu hơi nhanh khiến người xem chỉ kịp lướt mắt qua trang phục mà chưa kịp soi kỹ chất tóc; góc máy toàn cố định khiến người mẫu khi đến mép trái khung hình hơi sát cạnh viền.", "takeaway": "Muốn quảng cáo dịch vụ tóc/thời trang đắt tiền, đừng bắt đầu bằng chiếc ghế cắt tóc hay lọ thuốc uốn. Hãy bắt đầu bằng 'Lifestyle In Action' - biến người mẫu thành một nhân vật thành thị có gu, sải bước tự tin ngoài phố.", "shot_type": "Wide Establishing Shot (Tripod tĩnh ngang tầm mắt)", "lens_angle": "Wide 28mm (Khẩu độ f/2.8)", "location": "Bức tường kiến trúc đơn sắc ngoài trời (Minimalist Urban Slate Wall)", "lighting_color": "Ánh sáng tự nhiên khuếch tán ban ngày (Diffused Daylight ~5500K)", "color_grade": "Editorial Slate & Warm Honey • Sắc xám xanh lạnh bổ túc cho tóc vàng ấm", "sound_design": "Nhạc nền Hip-Hop/R&B beat dồn dập + tiếng đế giày sải bước trên vỉa hè", "transition": "Chuyển động liên tục trong một cú máy (Plan-Séquence Flow)"}, {"id": 2, "st_frame": 54, "mid_frame": 69, "en_frame": 85, "st_time": 2.16, "mid_time": 2.76, "en_time": 3.4, "duration": 1.24, "headline": "Đòn Bẩy Nhịp Điệu 'The Glanced Moonwalk': Bẻ Gãy Quán Tính Bằng Cú Ngoái Nhìn Tinh Quái & Bước Lùi Về Tâm Điểm Khung Hình", "subject_action": "Vừa chạm mép trái khung hình, người mẫu không đi thẳng ra ngoài mà bất ngờ dừng lại, ngoái đầu liếc nhìn ống kính với ánh mắt tinh nghịch. Ngay lập tức, cô thực hiện bước lùi uyển chuyển (Moonwalk Step) đi giật lùi về chính giữa khung hình, giữ nguyên tư thế ôm tạp chí và ly cà phê.", "pros": "Cú bẻ quán tính chuyển động (Pattern Interrupt) cực kỳ thông minh. Người xem tưởng người mẫu sẽ bước ra khỏi khung hình thì cô bất ngờ lùi lại, tạo sự hồi hộp và lôi cuốn thị giác (Tension & Curiosity). Mái tóc xoăn vàng nảy nhẹ theo từng bước lùi tạo độ rung động cơ học tự nhiên cho thấy độ đàn hồi (Elasticity) hoàn hảo của lọn tóc uốn.", "cons": "Động tác bước lùi đòi hỏi kỹ năng catwalk điêu luyện; nếu người mẫu không giữ vững thăng bằng hoặc liếc mắt quá sớm, khung hình sẽ có cảm giác diễn xuất bị sượng.", "takeaway": "Kỹ thuật 'Reversal Movement': Khi một chuyển động có nguy cơ trôi tuột khỏi màn hình, hãy tạo một điểm giật lùi hoặc đảo chiều 180 độ để tái kích hoạt sự chú ý của người lướt ngón tay.", "shot_type": "Full Shot (Góc ngang toàn cảnh theo dõi chuyển động)", "lens_angle": "Wide-Normal 35mm", "location": "Bức tường xám tối giản ngoài trời", "lighting_color": "Ánh sáng tự nhiên êm dịu, không bị bóng gắt", "color_grade": "Editorial Slate Minimalist", "sound_design": "Beat trống dậm mạnh nhấn vào cú ngoái đầu", "transition": "Chuyển động xoay người 90 độ (Body Pivot Re-alignment)"}, {"id": 3, "st_frame": 85, "mid_frame": 112, "en_frame": 140, "st_time": 3.4, "mid_time": 4.48, "en_time": 5.6, "duration": 2.2, "headline": "Đón Đầu Khung Hình Trực Diện (Frontal Runway Approach): Đưa Chủ Thể Tiến Về Ống Kính Phô Diễn Dáng Vóc Cùng Độ Bồng Của Sợi Tóc", "subject_action": "Sau khi lùi về vị trí trung tâm, cô xoay người 90 độ đối diện trực tiếp với ống kính và bắt đầu sải bước tiến thẳng về phía camera. Cự ly khung hình thay đổi mượt mà từ Toàn cảnh (Full Shot) lên Cận vừa (Medium Shot). Từng bước chân dứt khoát làm mái tóc xoăn bung nở bồng bềnh theo phương thẳng đứng.", "pros": "Khung hình đối xứng tuyệt đối (Frontal Symmetry). Tỷ lệ chủ thể lớn dần trong khung hình (Scale Transition) tạo cảm giác người mẫu đang tự tin bước đến gần để trò chuyện thân mật với khán giả. Ánh sáng tự nhiên làm nổi bật các tầng highlight vàng óng trên nền áo blazer xanh tro.", "cons": "Khi tiến lại gần, khoảng lấy nét (Depth of Field) thay đổi; người quay cần kiểm soát lấy nét bám đuôi chủ thể (Eye-AF Tracking) thật chuẩn xác để tránh hiện tượng lố nét (focus hunting).", "takeaway": "Chuyển động tiến về ống kính (Walk-Towards-Camera) luôn mang lại năng lượng áp đảo và cảm giác mời gọi kết nối mạnh mẽ hơn gấp nhiều lần so với góc lia máy tĩnh.", "shot_type": "Medium Full to Medium Shot (Chủ thể tiến lại gần ống kính)", "lens_angle": "Standard 35mm (Khoảng cách thu hẹp tự nhiên)", "location": "Vỉa hè lát đá trước bức tường kiến trúc", "lighting_color": "Ánh sáng tán xạ phía trước (Frontal Soft Light)", "color_grade": "Balanced Tones • Tôn vinh làn da trắng sáng và màu tóc nổi bật", "sound_design": "Tiếng nhạc bassline dồn dập đồng nhịp với từng bước nện gót giày", "transition": "Thu hẹp khoảng cách vật lý (Continuous Push-In Scale Shift)"}, {"id": 4, "st_frame": 140, "mid_frame": 155, "en_frame": 170, "st_time": 5.6, "mid_time": 6.2, "en_time": 6.8, "duration": 1.2, "headline": "Giao Tiếp Hình Thể Cận Vừa (Medium Conversational Gesture): Nâng Cốc Cà Phê & Điệu Bộ Tự Nhiên Thu Hẹp Khoảng Cách Tâm Lý", "subject_action": "Khi đã tiến sát ống kính ở cự ly ngang ngực (Medium Close-Up), người mẫu nhún vai, nhấc nhẹ bàn tay áo ren chỉ về phía mái tóc, miệng mỉm cười nói chuyện tự nhiên không lời thoại. Ly cà phê trắng và bìa báo BAZAAR trở thành phụ kiện thời trang sành điệu tôn lên nét sang trọng, kiêu kỳ của một quý cô thành thị.", "pros": "Khung hình bán thân giúp khán giả quan sát rõ cấu trúc ren tinh xảo ở cổ tay và lọn xoăn uốn lượn ôm sát xương gò má. Sự tự nhiên trong cử chỉ hình thể (Gestural Authenticity) giải phóng cảm giác bị gò bó trước máy quay.", "cons": "Chiếc ly cà phê trắng ở nửa dưới khung hình có màu sáng trắng nổi bật, đôi lúc tranh chấp độ hút mắt với gương mặt của người mẫu.", "takeaway": "Sử dụng 'Hero Props' (Đạo cụ nâng tầm như cốc takeaway, tạp chí, kính râm) giúp đôi tay của diễn viên/người mẫu không bị thừa thãi, tạo nhịp điệu diễn xuất tự tin tuyệt đối.", "shot_type": "Medium Close-Up (Bán thân trên ngang ngực)", "lens_angle": "Normal 50mm equivalent (Cự ly gần)", "location": "Không gian ngoại cảnh tối giản", "lighting_color": "Ánh sáng tự nhiên hắt nhẹ tạo khối gò má", "color_grade": "High End Lifestyle • Sắc trắng ngà ren tương phản blazer xanh", "sound_design": "Giai điệu du dương hòa quyện tiếng cười duyên dáng", "transition": "Cú rướn người về phía trước (Forward Lean into Macro Space)"}, {"id": 5, "st_frame": 170, "mid_frame": 190, "en_frame": 210, "st_time": 6.8, "mid_time": 7.6, "en_time": 8.4, "duration": 1.6, "headline": "Cú Ép Cận Cảnh Xúc Giác (Tactile Push-In Close-Up): Động Tác Luồn Tay Nâng Tóc Đánh Trúng Khao Khát Sở Hữu Lọn Xoăn Không Xơ Rối", "subject_action": "Camera hoặc người mẫu nhoài người về phía trước, đưa khung hình vào cự ly Cận Cảnh (Close-Up). Người mẫu đưa bàn tay đeo nhẫn vàng luồn sâu vào chân tóc bên tai, nhấc bổng lọn tóc xoăn vàng óng ả lên và buông lơi tự nhiên trước ống kính. Ánh mắt cô nhìn thẳng vào khán giả đầy mê hoặc.", "pros": "Đòn bẩy xúc giác bậc thầy (Sensory Touchpoint). Thao tác luồn tay qua lọn tóc là bài test tối thượng chứng minh chất lượng uốn tóc của salon: sợi tóc mềm mại, tơi xốp, không bết dính và không hề bị rối rít. Ánh sáng xiên làm nổi bật từng sợi tóc tơ mảnh mai lấp lánh như sợi tơ vàng.", "cons": "Độ sâu trường ảnh rất mỏng (Shallow DOF); khi người mẫu cúi người hoặc lắc tóc mạnh, một vài lọn tóc trước trán bị out nét nhẹ.", "takeaway": "Trong ngành tóc và mỹ phẩm, 'Hành động xúc giác người thật chạm vào sản phẩm' (Tactile Demonstration) có sức thuyết phục và chốt đơn cao gấp 10 lần những lời quảng cáo sáo rỗng.", "shot_type": "Intimate Close-Up (Cận cảnh gương mặt và mái tóc)", "lens_angle": "Portrait Prime 50mm - 85mm equivalent", "location": "Ngoại cảnh", "lighting_color": "Rim Light tự nhiên làm bừng sáng viền sợi tóc tơ", "color_grade": "Golden Blonde Glow • Tôn vinh sắc vàng mật ong óng ả", "sound_design": "Tiếng sột soạt nhẹ của ngón tay luồn qua sợi tóc mượt mà", "transition": "Chuyển động đầu liên hoàn (Head Tilt Flow)"}, {"id": 6, "st_frame": 210, "mid_frame": 240, "en_frame": 270, "st_time": 8.4, "mid_time": 9.6, "en_time": 10.8, "duration": 2.4, "headline": "Trình Diễn Độ Nảy & Khối Tích (Dynamic Curl Bounce & Volume): Nghiêng Đầu Lắc Lọn Xoăn Tỏa Sáng Dưới Ánh Sáng Tự Nhiên", "subject_action": "Người mẫu tiếp tục duy trì cự ly cận cảnh, nghiêng nhẹ đầu sang hai bên, tay vuốt ve phần đuôi tóc và gáy. Mái tóc xoăn vàng bồng bềnh cuộn sóng theo từng nhịp chuyển động của cơ thể, phô diễn độ đàn hồi 3D (Volumetric Spring) từ mọi góc độ. Nụ cười rạng rỡ và ánh mắt tỏa sáng của cô toát lên vẻ tự tin tuyệt đối (#behairpositive).", "pros": "Sự kết hợp hoàn mỹ giữa chuyển động cơ học của tóc và biểu cảm hạnh phúc của nhân vật. Màu tóc vàng ấm tương phản tinh tế với sắc xám lạnh của tường bê tông phía sau, tạo nên bảng màu bổ túc êm mắt chuẩn phong cách editorial của Vogue/Elle.", "cons": "Thời lượng của phân cảnh này kéo dài 2.4s là shot dài nhất trong chuỗi; nếu không có sự biến đổi biểu cảm liên tục thì dễ làm nhịp video bị chùng lại.", "takeaway": "Đỉnh cao của video quảng cáo dịch vụ làm đẹp không phải là khoe 'Tôi làm đẹp thế nào', mà là cho khán giả thấy 'Khách hàng hạnh phúc và tự tin ra sao khi bước ra khỏi salon của bạn'.", "shot_type": "Close-Up Beauty Portrait (Chân dung cận cảnh chuyển động)", "lens_angle": "Portrait Prime 85mm", "location": "Bối cảnh ngoài trời ánh sáng tự nhiên", "lighting_color": "Ánh sáng mềm mịn tôn da và độ bóng mượt của sợi tóc", "color_grade": "Editorial Beauty • Màu da ấm hồng hào, tóc xoăn sâu khối", "sound_design": "Nhịp beat cao trào + âm hưởng tươi vui phấn khởi", "transition": "Quay lưng dứt khoát (Pivot Body Turn)"}, {"id": 7, "st_frame": 270, "mid_frame": 280, "en_frame": 290, "st_time": 10.8, "mid_time": 11.2, "en_time": 11.6, "duration": 0.8, "headline": "Nghệ Thuật Thoát Khung Dứt Khoát (Clean Stage-Right Exit): Giữ Trọn Sự Kiêu Hãnh & Để Lại Khoảng Trống Cho Nhận Diện Thương Hiệu", "subject_action": "Không nấn ná quá lâu, người mẫu mỉm cười tự tin, quay người 90 độ sải bước ra khỏi khung hình về phía mép phải. Bước chân nhanh thoăn thoắt, bóng dáng áo blazer xanh và ly cà phê lướt qua ống kính, để lại bờ vai thanh mảnh và mái tóc xoăn óng ả bay nhẹ trong gió trước khi khuất hẳn khỏi khung hình.", "pros": "Nhịp thoát cảnh (Exit Timing) cực kỳ dứt khoát và phong thái thời thượng (Effortless Chic). Rời khỏi khung hình khi khán giả vẫn còn đang say đắm tạo cảm giác lưu luyến, thòm thèm (Leave Them Wanting More) thay vì đứng cười trừ gượng gạo.", "cons": "Tốc độ quay ngoắt của người mẫu làm phần đuôi áo blazer hơi bị nhòe chuyển động (motion blur) trong 2-3 khung hình cuối.", "takeaway": "Nguyên tắc 'Always Exit in Style': Hãy để nhân vật tự tin rời khỏi khung hình trước khi video kết thúc. Khung hình trống sau khi nhân vật đi qua là không gian vàng để neo đậu thương hiệu.", "shot_type": "Medium Exit Shot (Chủ thể lướt nhanh ra khỏi khung hình)", "lens_angle": "Standard 35mm", "location": "Bức tường kiến trúc tối giản", "lighting_color": "Ánh sáng tự nhiên", "color_grade": "Editorial Slate Cool Minimalist", "sound_design": "Âm nhạc hạ nhỏ dần (Fade-out) mở đường cho tiếng không gian", "transition": "Rút lui khỏi khung hình (Clean Frame Clearance)"}, {"id": 8, "st_frame": 290, "mid_frame": 308, "en_frame": 326, "st_time": 11.6, "mid_time": 12.32, "en_time": 13.08, "duration": 1.48, "headline": "Khép Vòng Lặp Vô Tận & Khắc Ghi Logo (Infinite Loop & Brand Reveal): Biểu Tượng 'HAIR POSITIVE' Hiện Ra Trên Bức Tường Tĩnh Lặng", "subject_action": "Sau khi người mẫu rời đi, khung hình trở lại trạng thái tĩnh lặng nguyên bản với bức tường xám xanh tối giản. Ngay tại vị trí trung tâm, logo thương hiệu màu trắng thanh thoát cùng biểu tượng bông hoa xoăn nghệ thuật nhẹ nhàng hiện ra: 'HAIR POSITIVE • HOUSE OF HAIR'. Khung cảnh tường trống ở giây 13.08s khớp hoàn hảo 100% với khung cảnh trống ở giây 0.00s, tạo nên vòng lặp vô tận (Infinite Loop).", "pros": "Bố cục tối giản đỉnh cao (Zen Minimalism). Logo xuất hiện trên nền tường đơn sắc không bị bất kỳ chi tiết nào phân tán chú ý. Vòng lặp vô tận khiến người xem trên Instagram Reels không nhận ra video đã hết, tự động xem lại lần 2, kích hoạt thuật toán giữ chân người xem (Watch Time Booster).", "cons": "Logo xuất hiện tĩnh tương đối nhanh (khoảng 1.4s), người xem lướt vội có thể chưa đọc kịp dòng slogan nhỏ phía dưới.", "takeaway": "Công thức 'Seamless Loop Brand Reveal': Luôn thiết kế phân cảnh cuối cùng khớp với phân cảnh đầu tiên về màu sắc và bối cảnh, biến video ngắn thành một tác phẩm lặp tuần hoàn không điểm dừng.", "shot_type": "Static Wide Architecture Outro (Logo Card tĩnh trên nền tường)", "lens_angle": "Wide 28mm", "location": "Bức tường kiến trúc xám xanh (Trở về trạng thái ban đầu)", "lighting_color": "Ánh sáng tĩnh lặng đồng nhất", "color_grade": "Slate Gray Mono • Chữ trắng tinh khiết nổi bật", "sound_design": "Tiếng reverb ngân vang cuối bài hát hòa nhịp vào nốt đầu tiên của vòng lặp", "transition": "Khép vòng lặp vô tận sang Shot 01 (Seamless Infinite Loop)"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ct.toFixed(2) + 's / ' + (player.duration ? player.duration.toFixed(2) : '13.08') + 's';
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 25.0 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById('shot-' + shotId);
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

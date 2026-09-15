@@ -1,0 +1,2154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>allinB Coffee • Không Gian Quán & Vibe Thư Thái Sài Gòn • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / VIDEO Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 VIDEO DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">12 PHÂN CẢNH</span>
+        <span class="nav-meta-title">allinB Coffee • Không Gian Quán & Vibe Thư Thái Sài Gòn</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/Dc-LDGRsCDN/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dc-LDGRsCDN.mp4" type="video/mp4">
+                <source src="allinB Coffee • Không Gian Quán & Vibe Thư Thái Sài Gòn - @allinbcoffee.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 14.43s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">allinB Coffee • Không Gian Quán & Vibe Thư Thái Sài Gòn</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@allinbcoffee" onclick="handleCreatorClick(event, '@allinbcoffee', 'allinB Coffee Roasters')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của allinB Coffee Roasters trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>allinB Coffee Roasters</strong>
+                        <span class="author-handle">(@allinbcoffee)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/Dc-LDGRsCDN/" target="_blank" class="author-link">allinB Coffee Roasters (@allinbcoffee)</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc</strong> • 14.43s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">allinB Coffee • Không Gian Quán & Vibe Thư Thái Sài Gòn</h1>
+            <p class="overview-hero-desc">Báo cáo phân tích chuyên sâu 12 phân cảnh mẫu mực về nghệ thuật quay B-Roll không gian F&B, kiến trúc sân vườn giếng trời và nhịp sống thư thái tại allinB Coffee Roasters (Sài Gòn). Video sử dụng cấu trúc nhịp dựng 1 giây (1-Second Rhythmic Cadence), kỹ thuật khung trong khung (cầu thang xoắn, lồng đèn giấy Wabi-sabi), đặc tả khách làm việc (Deep Work friendly) và kết màn bằng cú Macro chiết xuất dòng cà phê espresso cùng cử chỉ tay trẻ trung, gần gũi.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Courtyard Garden Establishing, Koi Water Flow Dynamic, Frame-within-a-Frame (Spiral Staircase), Japanese Lantern Layering, 1-Second Rhythmic Cadence, Deep Work Ambiance, Artisanal Tamping Precision, Sensory Espresso Macro Extraction</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">12 Shots • Nhịp trung bình 1.17s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 • 30.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 0.9)">
+                    ▶ 0.00s - 0.90s (0.90s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hook Thiết Lập Bối Cảnh Xanh (Courtyard Garden Establishing): Kéo Người Xem Vào Khoảng Lặng Bình Yên Qua Góc Vườn Giếng Trời & Người Đọc Sách</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_01_mid.jpg', 'Shot 01 • Giữa (0.45s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (0.45s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_01_end.jpg', 'Shot 01 • Cuối (0.90s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (0.90s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy toàn cảnh (Wide Establishing Shot) đặt ngang tầm mắt nhìn ra khu vườn giếng trời xanh mát bên ngoài quán. Dưới bóng râm của cây thân gỗ và hàng cây nhiệt đới rậm rạp, một vị khách nam ngồi thảnh thơi trên bậc thềm đá, chăm chú đọc sách bên cạnh hồ cá koi. Ánh sáng tự nhiên dịu nhẹ len qua tán lá, tiếng nước róc rách và gam màu xanh ngọc bích tạo cảm giác mát lành, tách biệt hoàn toàn khỏi nhịp sống ồn ào của phố thị.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Sự kết hợp giữa mảng xanh thiên nhiên, bậc thềm đá mộc mạc và hình ảnh người ngồi đọc sách tạo nên một visual hook giàu tính thiền và thư thái (sanctuary vibe), lập tức định vị quán là không gian chữa lành lý tưởng.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng mở màn 0.90s khá nhanh khiến người xem chưa kịp thưởng lãm hết toàn bộ thảm thực vật sân vườn, tuy nhiên nhịp cắt này phù hợp với nhịp điệu lướt nhanh của video ngắn hiện đại.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Mở đầu video F&B bằng một khung cảnh sinh hoạt tĩnh lặng (đọc sách, ngắm cá) thay vì quay biển hiệu giúp kích thích cảm xúc muốn ghé quán thư giãn của người xem ngay từ giây đầu tiên.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide Angle 24mm f/2.8</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Sân vườn giếng trời ngoài trời (Courtyard)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên (Soft Daylight) xuyên tán lá</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt nối cảnh không gian (Spatial Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Cắt nối cảnh không gian (Spatial Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 0.93, 1.77)">
+                    ▶ 0.93s - 1.77s (0.84s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Chuyển Động Mặt Nước & Đàn Cá Koi (Water Ripple & Koi Flow): Dẫn Hướng Mắt Chuyển Tiếp Từ Không Gian Tĩnh Sang Nhịp Thở Sống Động</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_02_start.jpg', 'Shot 02 • Đầu (0.93s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.93s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_02_mid.jpg', 'Shot 02 • Giữa (1.35s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.35s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_02_end.jpg', 'Shot 02 • Cuối (1.77s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (1.77s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy cận trung (Medium Close-Up) chếch từ trên cao nhìn dọc theo bờ hồ cá koi lát đá xám chạy sát vách kính lớn của quán. Đàn cá koi nhiều màu sắc (trắng, cam, vàng óng) bơi lội mềm mại dưới làn nước trong vắt phản chiếu bóng cây xanh và ánh trời.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Chuyển động bơi lội tự nhiên của đàn cá koi cùng mặt nước gợn sóng mang đến yếu tố động (kinetic motion), tạo nhịp thở thị giác thư giãn và làm cầu nối chuyển tiếp nhịp nhàng từ không gian sân vườn vào bên trong nhà.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc quay cố định, nếu có một cú tilt nhẹ hoặc pan nhẹ theo hướng đàn cá bơi thì dòng chảy thị giác sẽ còn uyển chuyển hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay B-roll F&B có yếu tố thủy sinh (hồ cá, thác nước, đài phun), hãy dùng chuyển động của nước và sinh vật làm shot đệm để làm mềm nhịp dựng và giữ chân người xem.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm f/2.0</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Hồ cá koi giếng trời sát vách kính</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên phản chiếu bóng nước</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt nhảy không gian vào nội thất (Interior Jump Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Cắt nhảy không gian vào nội thất (Interior Jump Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 1.8, 3.03)">
+                    ▶ 1.80s - 3.03s (1.23s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Đặc Tả Khách Làm Việc Thư Thái (Deep Work Sofa Nook): Khắc Họa Công Năng Quán Bằng Bố Cục Góc Chéo 45° & Bàn Tròn Gỗ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_03_start.jpg', 'Shot 03 • Đầu (1.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (1.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_03_mid.jpg', 'Shot 03 • Giữa (2.42s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (2.42s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_03_end.jpg', 'Shot 03 • Cuối (3.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (3.03s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy trung cảnh (Medium Shot) chếch 45 độ ghi lại một vị khách nam mặc áo thun xanh rêu ngồi tựa lưng thoải mái trên ghế sofa êm ái, đang tập trung gõ phím trên laptop đặt trên bàn gỗ tròn nhỏ. Bên cạnh là ly nước thủy tinh và tách cà phê. Phía sau lưng là vách tường sơn vàng ấm và tranh nghệ thuật tối giản.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục góc chéo 45 độ làm nổi bật sự tiện nghi và ấm cúng; tư thế ngồi thả lỏng của khách hàng truyền tải trực tiếp thông điệp: đây là không gian lý tưởng để chạy deadline hoặc làm việc tự do (work-friendly cafe).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Bàn gỗ tròn hơi nhỏ so với laptop và balo đặt bên cạnh ghế sofa, khiến bố cục hậu cảnh hơi nhiều chi tiết sinh hoạt thực tế.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Để chứng minh quán phù hợp làm việc, hãy ghi lại khoảnh khắc khách hàng đang tương tác thực tế với máy tính và đồ uống thay vì chỉ quay bàn ghế trống.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 50mm f/1.8</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc sofa làm việc ấm cúng tầng trệt</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng đèn vàng nội thất (Warm Tungsten 3200K)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt đổi góc nhìn (Perspective Shift Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Cắt đổi góc nhìn (Perspective Shift Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 3.07, 4.27)">
+                    ▶ 3.07s - 4.27s (1.20s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Nhìn Từ Trên Xuống Bàn Cửa Sổ (High-Angle Window Desk): Tận Dụng Đèn Giấy Cầu Tròn & Chiều Sâu Mảng Xanh Xuyên Kính</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_04_start.jpg', 'Shot 04 • Đầu (3.07s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (3.07s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_04_mid.jpg', 'Shot 04 • Giữa (3.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (3.67s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_04_end.jpg', 'Shot 04 • Cuối (4.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (4.27s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy từ trên cao chúc xuống (High-Angle Bird's Eye View 60°) bao quát góc bàn làm việc dài bằng gỗ chạy dọc theo vách kính lớn. Một nữ khách hàng áo hoa đang chăm chú làm việc trên laptop, bên cạnh là một chiếc đèn lồng giấy hình cầu tròn phát sáng dịu mắt. Phía bên kia lớp kính trong suốt là khu vườn xanh ngập tràn sức sống.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục đa lớp (Layering) xuất sắc: tiền cảnh là mặt bàn gỗ mộc và chiếc đèn lồng giấy phong cách Wabi-sabi; trung cảnh là nhân vật đang tập trung; hậu cảnh là khu vườn xanh ngoài cửa sổ, mở rộng chiều sâu không gian đa tầng.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy đặt từ trên cao phía sau lưng khách hàng khiến không thấy được biểu cảm khuôn mặt, tập trung hoàn toàn vào bối cảnh làm việc tĩnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sử dụng các vật phẩm trang trí đặc trưng (như đèn lồng giấy, chậu cây nhỏ) làm tiền cảnh trong góc máy cao giúp khung hình có điểm neo thị giác ấm cúng và sang trọng hơn.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide-to-Normal 28mm f/2.8</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn gỗ dài cạnh vách kính sân vườn</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Tương phản giữa ánh sáng vàng đèn bàn và ánh sáng ban ngày</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt khung trong khung (Frame-within-a-frame Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Cắt khung trong khung (Frame-within-a-frame Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 4.3, 5.5)">
+                    ▶ 4.30s - 5.50s (1.20s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Khung Trong Khung Cầu Thang Gỗ Xoắn Ốc (Spiral Staircase Framing): Tạo Chiều Sâu Điện Ảnh Kín Đáo Nhìn Xuống Bàn Trà Bánh</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_05_start.jpg', 'Shot 05 • Đầu (4.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (4.30s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_05_mid.jpg', 'Shot 05 • Giữa (4.90s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (4.90s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_05_end.jpg', 'Shot 05 • Cuối (5.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.50s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy từ tầng lửng nhìn xuyên qua khoảng trống uốn lượn của tay vịn cầu thang xoắn ốc bằng gỗ sẫm màu (Frame-within-a-frame). Khung hình lồng ghép hình ảnh một cô gái trẻ đang thong thả dùng thìa thưởng thức miếng bánh ngọt trên đĩa, bên cạnh là ly cà phê đá mát lạnh và cuốn sổ tay ghi chép mở sẵn trên bàn gỗ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Shot quay sáng tạo và điện ảnh nhất: đường cong uốn lượn của cầu thang đóng vai trò như một chiếc khung tự nhiên (Natural Vignette), dẫn dắt toàn bộ ánh nhìn tập trung vào hành động thưởng thức bánh ngọt của thực khách một cách kín đáo và đầy thi vị (Voyeuristic Framing).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Phần tay vịn gỗ tối màu chiếm diện tích khá lớn ở rìa khung hình, đòi hỏi người xem có độ tập trung cao để bắt trọn chi tiết ly nước và đĩa bánh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Luôn tìm kiếm các cấu trúc kiến trúc độc đáo của quán (tay vịn cầu thang, khe nan cửa, chậu cây) để làm tiền cảnh đóng khung (Framing device), biến một cảnh ăn uống thông thường thành phân cảnh điện ảnh giàu chất thơ.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Telephoto 85mm f/2.0</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc nhìn từ cầu thang xoắn xuống bàn tầng trệt</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng gián tiếp êm dịu</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt chuyển cảnh sang quầy bar (Bar Match Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Cắt chuyển cảnh sang quầy bar (Bar Match Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 5.53, 6.77)">
+                    ▶ 5.53s - 6.77s (1.24s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Khoảnh Khắc Tương Tác Barista & Khách Hàng (Hospitality Counter Connection): Gợi Mở Sự Thân Thiện Ấm Áp Của Văn Hóa Cà Phê</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_06_start.jpg', 'Shot 06 • Đầu (5.53s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.53s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_06_mid.jpg', 'Shot 06 • Giữa (6.15s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.15s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_06_end.jpg', 'Shot 06 • Cuối (6.77s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (6.77s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy ngang tầm mắt (Eye-Level Medium Shot) ghi lại quầy bar pha chế bằng gỗ bóng. Barista trẻ đeo kính mặc áo sơ mi đỏ đặc trưng của quán đang tươi cười nghiêng người trò chuyện, tư vấn đồ uống cho vị khách nam ngồi trên ghế cao trước quầy. Phía sau là máy pha cà phê espresso chuyên nghiệp và hệ thống kệ kính trưng bày ly tách.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khắc họa trọn vẹn tinh thần hiếu khách (hospitality) và sự kết nối giữa người pha chế với người thưởng thức; góc quay ngang tầm mắt tạo cảm giác gần gũi, khiến người xem cảm thấy như chính mình đang ngồi tại quầy bar và được chào đón.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khách hàng ngồi quay lưng lại máy quay ở góc 3/4 nên chỉ thấy được biểu cảm của barista, chưa thấy rõ sự tương tác qua lại của đôi mắt.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Một video quảng bá quán cà phê thành công không thể thiếu shot quay tương tác người - người; sự thân thiện của nhân viên chính là yếu tố giữ chân và tạo thiện cảm lớn nhất cho khách hàng mới.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 50mm f/2.0</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Quầy bar pha chế chính diện</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn rọi quầy bar và nền đèn LED vàng hắt tường</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt nới rộng góc máy (Establishing Bar Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Cắt nới rộng góc máy (Establishing Bar Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 6.8, 8.03)">
+                    ▶ 6.80s - 8.03s (1.23s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Toàn Cảnh Quầy Bar Đối Xứng (Symmetrical Bar Showcase): Tôn Vinh Sự Chuyên Nghiệp Đội Ngũ & Dải Đèn LED Vàng Hắt Tường</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_07_start.jpg', 'Shot 07 • Đầu (6.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (6.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_07_mid.jpg', 'Shot 07 • Giữa (7.41s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (7.41s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_07_end.jpg', 'Shot 07 • Cuối (8.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.03s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy chính diện nới rộng (Frontal Wide-Medium Shot) bao quát toàn bộ khu vực pha chế của quán. Hai barista trong đồng phục đen và đỏ đang nhịp nhàng thao tác: một người đang chăm chú chuẩn bị cối xay, một người đang đứng quầy hỗ trợ khách. Phía trên tường là dải gạch ốp màu be được chiếu sáng rực rỡ bởi hệ đèn LED hắt vàng ấm, bên dưới quầy bar bày biện ngay ngắn các gói hạt cà phê specialty đóng gói nhiều màu sắc.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục đối xứng ngang với các đường line gạch ốp và kệ kính song song mang lại cảm giác chỉn chu, ngăn nắp và cực kỳ chuyên nghiệp của một tiệm specialty coffee rang xay chất lượng cao.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh sáng dải đèn LED phía sau lưng barista khá mạnh nên phần nào lấn át chi tiết khuôn mặt nhân vật khi đứng ở vùng sáng yếu hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay quầy bar, hãy dùng góc máy thẳng chính diện kết hợp ánh sáng hắt nền (Backdrop Lighting) để khoe được độ dài quầy, máy móc thiết bị và quy trình làm việc đồng bộ của đội ngũ.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm f/2.8</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khu vực quầy bar trung tâm</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn LED vàng 3000K hắt tường kết hợp đèn trần</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt khung nhìn xuyên rèm (Obstruction Framing Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Cắt khung nhìn xuyên rèm (Obstruction Framing Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 8.07, 9.27)">
+                    ▶ 8.07s - 9.27s (1.20s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Tiền Cảnh Lồng Đèn Giấy Cầu Tròn (Japanese Lantern Foreground): Tách Lớp Không Gian Tĩnh Lặng Qua Nan Cửa Gỗ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_08_start.jpg', 'Shot 08 • Đầu (8.07s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.07s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_08_mid.jpg', 'Shot 08 • Giữa (8.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (8.67s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_08_end.jpg', 'Shot 08 • Cuối (9.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (9.27s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy cận tiền cảnh lồng đèn giấy xếp nếp màu trắng ngà treo lơ lửng bên góc trái màn hình. Xuyên qua khoảng sáng của lồng đèn và các song cửa sổ nan gỗ là hình ảnh hai vị khách đang ngồi trò chuyện thư thả ở góc sân nhiều ánh sáng bên ngoài.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Kỹ thuật chia lớp tiền cảnh - hậu cảnh (Foreground layering) với chiếc lồng đèn giấy tròn tạo phong cách Á Đông tối giản (Japandi / Wabi-sabi), mang lại cảm giác bình yên, tĩnh tại và chiều sâu không gian sâu thẳm.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chiếc lồng đèn chiếm gần một nửa khung hình bên trái, phần nào che khuất các chi tiết kiến trúc của khoảng sân phía sau.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đặt một chi tiết nội thất mang tính biểu tượng (như đèn giấy, chao đèn gốm) chiếm 1/3 khung hình tiền cảnh để tạo hiệu ứng bokeh và tăng tính nghệ thuật cho các shot quay không gian.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Medium Telephoto 70mm f/2.2</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khoảng giao giữa nội thất và hành lang hiên</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Tương phản giữa chao đèn phát sáng và khoảng sân ban ngày</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt trục nhìn sâu (Deep Hallway Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 09 • Cắt trục nhìn sâu (Deep Hallway Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_08_to_09.jpg?v=2', 'Chuyển cảnh Shot 08 sang Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_08_to_09.jpg?v=2" alt="Transition 8 to 9" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-9">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 09</span>
+                <button class="shot-time-btn" onclick="jumpToShot(9, 9.3, 10.03)">
+                    ▶ 9.30s - 10.03s (0.73s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Chiều Sâu Căn Phòng Trưng Bày Tranh (Art Gallery Dining Room): Thể Hiện Sự Tấp Nập Nhưng Yên Bình Của Không Gian Cộng Đồng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_09_start.jpg', 'Shot 09 • Đầu (9.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (9.30s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_09_mid.jpg', 'Shot 09 • Giữa (9.66s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.66s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_09_end.jpg', 'Shot 09 • Cuối (10.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.03s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy thẳng từ lối vào nhìn sâu vào gian phòng cafe phong cách gallery nghệ thuật. Trên bức tường sơn màu kem treo thẳng hàng ba bức tranh trừu tượng khổ lớn lồng khung kính. Các bàn ghế gỗ bọc đệm êm ái đều có khách ngồi quây quần trò chuyện vui vẻ, ánh sáng tự nhiên ngập tràn gian phòng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Dẫn dắt tầm nhìn theo quy luật một điểm tụ (One-point perspective) vào tâm điểm căn phòng; các bức tranh treo tường đồng bộ khẳng định gu thẩm mỹ và phong cách nghệ thuật tinh tế của quán.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng shot 0.73s (23 frames) ngắn nhất trong toàn bộ video, đóng vai trò như một quick flash chuyển nhịp nên người xem chỉ kịp lướt thấy không khí chung chứ chưa ngắm kỹ từng tác phẩm tranh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Các shot quay không gian phòng lớn đông khách nên dùng bố cục thẳng góc cân xứng một điểm tụ để người xem cảm nhận được độ rộng rãi, thoáng đãng và sạch sẽ của quán.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide-Angle 24mm f/3.2</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Gian phòng gallery nghệ thuật tầng lửng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên chan hòa kết hợp đèn rọi tranh</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt cận cảnh thao tác (Craftsmanship Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 10 • Cắt cận cảnh thao tác (Craftsmanship Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_09_to_10.jpg?v=2', 'Chuyển cảnh Shot 09 sang Shot 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_09_to_10.jpg?v=2" alt="Transition 9 to 10" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-10">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 10</span>
+                <button class="shot-time-btn" onclick="jumpToShot(10, 10.07, 10.9)">
+                    ▶ 10.07s - 10.90s (0.83s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cận Cảnh Thao Tác Chuẩn Bị Cốc Đá (Barista Pitcher Prep Craft): Bắt Trọn Từng Chuyển Động Chăm Chút Tại Quầy Pha Chế</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_10_start.jpg', 'Shot 10 • Đầu (10.07s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (10.07s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_10_mid.jpg', 'Shot 10 • Giữa (10.48s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (10.48s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_10_end.jpg', 'Shot 10 • Cuối (10.90s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.90s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy cận cảnh ngang vai (Over-the-Shoulder Medium Close-Up) của barista mặc áo thun đen đang tỉ mỉ chuẩn bị dụng cụ, lau sạch khay và chuẩn bị ly đồ uống bên cạnh bồn rửa và dụng cụ pha pour-over. Ánh sáng ban ngày từ cửa sổ hắt vào làm nổi bật các vệt nước và bề mặt kim loại sáng loáng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Nhịp cắt chuyển từ không gian tổng thể sang chi tiết con người làm việc (Macro Craft); nhịp độ thao tác dứt khoát, sạch sẽ khẳng định quy trình vệ sinh và chất lượng dịch vụ chuẩn mực.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Mặt barista hơi bị khuất bóng do đứng ngược nguồn sáng cửa sổ, góc máy tập trung chủ yếu vào đôi tay và dụng cụ trên quầy.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đan xen các shot quay cận cảnh thao tác tay của barista vào giữa các shot không gian giúp tạo nhịp điệu sinh động và làm nổi bật tính thủ công (Artisanal Craftsmanship) của quán.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 50mm f/2.0</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc quầy chuẩn bị đồ uống bên cửa sổ</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ven (Rim Lighting) từ cửa sổ rọi lên viền áo và dụng cụ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt đồng bộ thao tác nén (Tamping Match Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 11 • Cắt đồng bộ thao tác nén (Tamping Match Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_10_to_11.jpg?v=2', 'Chuyển cảnh Shot 10 sang Shot 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_10_to_11.jpg?v=2" alt="Transition 10 to 11" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-11">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 11</span>
+                <button class="shot-time-btn" onclick="jumpToShot(11, 10.93, 11.77)">
+                    ▶ 10.93s - 11.77s (0.84s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thao Tác Nén Cà Phê Chuyên Nghiệp (Espresso Tamping Precision): Thể Hiện Kỹ Năng Đẳng Cấp Của Barista Specialty</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_11_start.jpg', 'Shot 11 • Đầu (10.93s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (10.93s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_11_mid.jpg', 'Shot 11 • Giữa (11.35s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (11.35s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_11_end.jpg', 'Shot 11 • Cuối (11.77s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (11.77s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy trung cận trực diện của head barista mặc áo sơ mi đỏ đang dồn toàn bộ trọng tâm cơ thể và hai tay nén chặt bột cà phê vào tay cầm (portafilter) bằng dụng cụ nén tamping chuyên dụng. Phía sau lưng là 3 cối xay cà phê hạt espresso cao cấp với bình chứa hạt bằng thủy tinh trong suốt.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Động tác nén dứt khoát, lực tay chuẩn xác và biểu cảm tập trung cao độ của barista tạo niềm tin tuyệt đối về chất lượng tách cà phê; dàn máy xay phía sau là minh chứng rõ nét cho một tiệm specialty coffee thực thụ.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Bố cục khung hình hơi chật ở phần đầu barista do góc máy thấp hướng lên, tuy nhiên lại tạo cảm giác tôn vinh sự lành nghề của người pha chế.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Bắt trọn khoảnh khắc Tamping (nén cà phê) là cú ghi điểm kinh điển trong mọi video ẩm thực đồ uống, bởi nó đại diện cho kỹ thuật, sự chuẩn xác và tâm huyết của người làm nghề.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 40mm f/2.0</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn thao tác nén cà phê cạnh cối xay</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng đèn quầy bar rọi tập trung vào tay cầm portafilter</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt siêu cận giọt cà phê (Macro Climax Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 12 • Cắt siêu cận giọt cà phê (Macro Climax Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_11_to_12.jpg?v=2', 'Chuyển cảnh Shot 11 sang Shot 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/transitions/trans_11_to_12.jpg?v=2" alt="Transition 11 to 12" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-12">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 12</span>
+                <button class="shot-time-btn" onclick="jumpToShot(12, 11.8, 14.43)">
+                    ▶ 11.80s - 14.43s (2.63s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Macro Chiết Xuất Dòng Espresso & Cú Vẫy Tay Đóng Video (Espresso Extraction Flow & Hand Wipe Outro): Đỉnh Cao Cảm Xúc Vị Giác & Điểm Nhấn Nhịp Thở Trẻ Trung</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_12_start.jpg', 'Shot 12 • Đầu (11.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (11.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_12_mid.jpg', 'Shot 12 • Giữa (13.12s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (13.12s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_12_end.jpg', 'Shot 12 • Cuối (14.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (14.43s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy siêu cận cảnh (Macro Shot) ghi lại dòng cà phê espresso sánh đậm màu cánh gián và lớp crema vàng óng đang chảy đều đặn từ họng chiết xuất của máy pha vào chiếc bình thủy tinh trong suốt đặt trên chiếc cân điện tử chuyên dụng (thể hiện trọng lượng tăng dần từ 38.1g lên 43.8g). Ở giây thứ 13, một bàn tay trẻ trung lướt nhanh qua trước ống kính (Foreground Hand Wipe) tạo nên một cú chuyển động bất ngờ, vui tươi khép lại video đầy duyên dáng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khung hình thỏa mãn tối đa cảm giác thị giác (Sensory Satisfaction / Coffee ASMR visual): dòng chảy crema sánh mịn kích thích trực tiếp vị giác của người xem; cú quơ tay cuối video tạo chất ngẫu hứng, đời thường và trẻ trung, tránh cảm giác cứng nhắc của video quảng cáo truyền thống.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cú quơ tay lướt qua làm mờ thoáng qua khung hình trong khoảng 0.5s, nhưng lại mang tính chủ đích của tác giả để tạo cái kết tự nhiên, thân thiện.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kết thúc video bằng một shot Macro đồ uống thơm ngon nhất kết hợp một cử chỉ tay tự nhiên (vẫy tay, che ống kính, nâng ly) là công thức hoàn hảo để đọng lại dư vị ngọt ngào và mời gọi người xem ghé quán.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Macro Lens 100mm f/2.8</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Họng máy pha espresso chuyên nghiệp & cân điện tử</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng studio vàng ấm tôn vinh lớp bọt crema</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Khép lại bằng cú gạt tay tự nhiên (Natural Hand Wipe Outro)</span>
+            </div>
+
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 0.9)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Hook Thiết Lập Bối Cảnh Xanh (Courtyard Garden Establishing): Kéo Người Xem Vào Khoảng Lặng Bình Yên Qua Góc Vườn Giếng Trời & Người Đọc Sách</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 0.93, 1.77)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 0.93s</span>
+            </div>
+            <div class="grid-card-body">Chuyển Động Mặt Nước & Đàn Cá Koi (Water Ripple & Koi Flow): Dẫn Hướng Mắt Chuyển Tiếp Từ Không Gian Tĩnh Sang Nhịp Thở Sống Động</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 1.8, 3.03)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 1.80s</span>
+            </div>
+            <div class="grid-card-body">Đặc Tả Khách Làm Việc Thư Thái (Deep Work Sofa Nook): Khắc Họa Công Năng Quán Bằng Bố Cục Góc Chéo 45° & Bàn Tròn Gỗ</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 3.07, 4.27)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 3.07s</span>
+            </div>
+            <div class="grid-card-body">Góc Nhìn Từ Trên Xuống Bàn Cửa Sổ (High-Angle Window Desk): Tận Dụng Đèn Giấy Cầu Tròn & Chiều Sâu Mảng Xanh Xuyên Kính</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 4.3, 5.5)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 4.30s</span>
+            </div>
+            <div class="grid-card-body">Khung Trong Khung Cầu Thang Gỗ Xoắn Ốc (Spiral Staircase Framing): Tạo Chiều Sâu Điện Ảnh Kín Đáo Nhìn Xuống Bàn Trà Bánh</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 5.53, 6.77)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 5.53s</span>
+            </div>
+            <div class="grid-card-body">Khoảnh Khắc Tương Tác Barista & Khách Hàng (Hospitality Counter Connection): Gợi Mở Sự Thân Thiện Ấm Áp Của Văn Hóa Cà Phê</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 6.8, 8.03)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 6.80s</span>
+            </div>
+            <div class="grid-card-body">Toàn Cảnh Quầy Bar Đối Xứng (Symmetrical Bar Showcase): Tôn Vinh Sự Chuyên Nghiệp Đội Ngũ & Dải Đèn LED Vàng Hắt Tường</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 8.07, 9.27)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 8.07s</span>
+            </div>
+            <div class="grid-card-body">Tiền Cảnh Lồng Đèn Giấy Cầu Tròn (Japanese Lantern Foreground): Tách Lớp Không Gian Tĩnh Lặng Qua Nan Cửa Gỗ</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(9, 9.3, 10.03)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <span class="grid-thumb-badge">Shot 09 • 9.30s</span>
+            </div>
+            <div class="grid-card-body">Chiều Sâu Căn Phòng Trưng Bày Tranh (Art Gallery Dining Room): Thể Hiện Sự Tấp Nập Nhưng Yên Bình Của Không Gian Cộng Đồng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(10, 10.07, 10.9)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+                <span class="grid-thumb-badge">Shot 10 • 10.07s</span>
+            </div>
+            <div class="grid-card-body">Cận Cảnh Thao Tác Chuẩn Bị Cốc Đá (Barista Pitcher Prep Craft): Bắt Trọn Từng Chuyển Động Chăm Chút Tại Quầy Pha Chế</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(11, 10.93, 11.77)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+                <span class="grid-thumb-badge">Shot 11 • 10.93s</span>
+            </div>
+            <div class="grid-card-body">Thao Tác Nén Cà Phê Chuyên Nghiệp (Espresso Tamping Precision): Thể Hiện Kỹ Năng Đẳng Cấp Của Barista Specialty</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(12, 11.8, 14.43)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+                <span class="grid-thumb-badge">Shot 12 • 11.80s</span>
+            </div>
+            <div class="grid-card-body">Macro Chiết Xuất Dòng Espresso & Cú Vẫy Tay Đóng Video (Espresso Extraction Flow & Hand Wipe Outro): Đỉnh Cao Cảm Xúc Vị Giác & Điểm Nhấn Nhịp Thở Trẻ Trung</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1O1c5DsjpV8TGTlSOB-tUalHEfOkSJIcc" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "en_frame": 27, "mid_frame": 14, "st_time": 0.0, "en_time": 0.9, "duration": 0.9, "headline": "Hook Thiết Lập Bối Cảnh Xanh (Courtyard Garden Establishing): Kéo Người Xem Vào Khoảng Lặng Bình Yên Qua Góc Vườn Giếng Trời & Người Đọc Sách", "subject_action": "Góc máy toàn cảnh (Wide Establishing Shot) đặt ngang tầm mắt nhìn ra khu vườn giếng trời xanh mát bên ngoài quán. Dưới bóng râm của cây thân gỗ và hàng cây nhiệt đới rậm rạp, một vị khách nam ngồi thảnh thơi trên bậc thềm đá, chăm chú đọc sách bên cạnh hồ cá koi. Ánh sáng tự nhiên dịu nhẹ len qua tán lá, tiếng nước róc rách và gam màu xanh ngọc bích tạo cảm giác mát lành, tách biệt hoàn toàn khỏi nhịp sống ồn ào của phố thị.", "pros": "Sự kết hợp giữa mảng xanh thiên nhiên, bậc thềm đá mộc mạc và hình ảnh người ngồi đọc sách tạo nên một visual hook giàu tính thiền và thư thái (sanctuary vibe), lập tức định vị quán là không gian chữa lành lý tưởng.", "cons": "Thời lượng mở màn 0.90s khá nhanh khiến người xem chưa kịp thưởng lãm hết toàn bộ thảm thực vật sân vườn, tuy nhiên nhịp cắt này phù hợp với nhịp điệu lướt nhanh của video ngắn hiện đại.", "takeaway": "Mở đầu video F&B bằng một khung cảnh sinh hoạt tĩnh lặng (đọc sách, ngắm cá) thay vì quay biển hiệu giúp kích thích cảm xúc muốn ghé quán thư giãn của người xem ngay từ giây đầu tiên.", "lens_angle": "Wide Angle 24mm f/2.8", "location": "Sân vườn giếng trời ngoài trời (Courtyard)", "lighting_color": "Ánh sáng tự nhiên (Soft Daylight) xuyên tán lá", "transition": "Cắt nối cảnh không gian (Spatial Cut)"}, {"id": 2, "st_frame": 28, "en_frame": 53, "mid_frame": 40, "st_time": 0.93, "en_time": 1.77, "duration": 0.84, "headline": "Chuyển Động Mặt Nước & Đàn Cá Koi (Water Ripple & Koi Flow): Dẫn Hướng Mắt Chuyển Tiếp Từ Không Gian Tĩnh Sang Nhịp Thở Sống Động", "subject_action": "Góc máy cận trung (Medium Close-Up) chếch từ trên cao nhìn dọc theo bờ hồ cá koi lát đá xám chạy sát vách kính lớn của quán. Đàn cá koi nhiều màu sắc (trắng, cam, vàng óng) bơi lội mềm mại dưới làn nước trong vắt phản chiếu bóng cây xanh và ánh trời.", "pros": "Chuyển động bơi lội tự nhiên của đàn cá koi cùng mặt nước gợn sóng mang đến yếu tố động (kinetic motion), tạo nhịp thở thị giác thư giãn và làm cầu nối chuyển tiếp nhịp nhàng từ không gian sân vườn vào bên trong nhà.", "cons": "Góc quay cố định, nếu có một cú tilt nhẹ hoặc pan nhẹ theo hướng đàn cá bơi thì dòng chảy thị giác sẽ còn uyển chuyển hơn.", "takeaway": "Khi quay B-roll F&B có yếu tố thủy sinh (hồ cá, thác nước, đài phun), hãy dùng chuyển động của nước và sinh vật làm shot đệm để làm mềm nhịp dựng và giữ chân người xem.", "lens_angle": "Standard 35mm f/2.0", "location": "Hồ cá koi giếng trời sát vách kính", "lighting_color": "Ánh sáng tự nhiên phản chiếu bóng nước", "transition": "Cắt nhảy không gian vào nội thất (Interior Jump Cut)"}, {"id": 3, "st_frame": 54, "en_frame": 91, "mid_frame": 72, "st_time": 1.8, "en_time": 3.03, "duration": 1.23, "headline": "Đặc Tả Khách Làm Việc Thư Thái (Deep Work Sofa Nook): Khắc Họa Công Năng Quán Bằng Bố Cục Góc Chéo 45° & Bàn Tròn Gỗ", "subject_action": "Góc máy trung cảnh (Medium Shot) chếch 45 độ ghi lại một vị khách nam mặc áo thun xanh rêu ngồi tựa lưng thoải mái trên ghế sofa êm ái, đang tập trung gõ phím trên laptop đặt trên bàn gỗ tròn nhỏ. Bên cạnh là ly nước thủy tinh và tách cà phê. Phía sau lưng là vách tường sơn vàng ấm và tranh nghệ thuật tối giản.", "pros": "Bố cục góc chéo 45 độ làm nổi bật sự tiện nghi và ấm cúng; tư thế ngồi thả lỏng của khách hàng truyền tải trực tiếp thông điệp: đây là không gian lý tưởng để chạy deadline hoặc làm việc tự do (work-friendly cafe).", "cons": "Bàn gỗ tròn hơi nhỏ so với laptop và balo đặt bên cạnh ghế sofa, khiến bố cục hậu cảnh hơi nhiều chi tiết sinh hoạt thực tế.", "takeaway": "Để chứng minh quán phù hợp làm việc, hãy ghi lại khoảnh khắc khách hàng đang tương tác thực tế với máy tính và đồ uống thay vì chỉ quay bàn ghế trống.", "lens_angle": "Standard 50mm f/1.8", "location": "Góc sofa làm việc ấm cúng tầng trệt", "lighting_color": "Ánh sáng đèn vàng nội thất (Warm Tungsten 3200K)", "transition": "Cắt đổi góc nhìn (Perspective Shift Cut)"}, {"id": 4, "st_frame": 92, "en_frame": 128, "mid_frame": 110, "st_time": 3.07, "en_time": 4.27, "duration": 1.2, "headline": "Góc Nhìn Từ Trên Xuống Bàn Cửa Sổ (High-Angle Window Desk): Tận Dụng Đèn Giấy Cầu Tròn & Chiều Sâu Mảng Xanh Xuyên Kính", "subject_action": "Góc máy từ trên cao chúc xuống (High-Angle Bird's Eye View 60°) bao quát góc bàn làm việc dài bằng gỗ chạy dọc theo vách kính lớn. Một nữ khách hàng áo hoa đang chăm chú làm việc trên laptop, bên cạnh là một chiếc đèn lồng giấy hình cầu tròn phát sáng dịu mắt. Phía bên kia lớp kính trong suốt là khu vườn xanh ngập tràn sức sống.", "pros": "Bố cục đa lớp (Layering) xuất sắc: tiền cảnh là mặt bàn gỗ mộc và chiếc đèn lồng giấy phong cách Wabi-sabi; trung cảnh là nhân vật đang tập trung; hậu cảnh là khu vườn xanh ngoài cửa sổ, mở rộng chiều sâu không gian đa tầng.", "cons": "Góc máy đặt từ trên cao phía sau lưng khách hàng khiến không thấy được biểu cảm khuôn mặt, tập trung hoàn toàn vào bối cảnh làm việc tĩnh.", "takeaway": "Sử dụng các vật phẩm trang trí đặc trưng (như đèn lồng giấy, chậu cây nhỏ) làm tiền cảnh trong góc máy cao giúp khung hình có điểm neo thị giác ấm cúng và sang trọng hơn.", "lens_angle": "Wide-to-Normal 28mm f/2.8", "location": "Bàn gỗ dài cạnh vách kính sân vườn", "lighting_color": "Tương phản giữa ánh sáng vàng đèn bàn và ánh sáng ban ngày", "transition": "Cắt khung trong khung (Frame-within-a-frame Cut)"}, {"id": 5, "st_frame": 129, "en_frame": 165, "mid_frame": 147, "st_time": 4.3, "en_time": 5.5, "duration": 1.2, "headline": "Khung Trong Khung Cầu Thang Gỗ Xoắn Ốc (Spiral Staircase Framing): Tạo Chiều Sâu Điện Ảnh Kín Đáo Nhìn Xuống Bàn Trà Bánh", "subject_action": "Góc máy từ tầng lửng nhìn xuyên qua khoảng trống uốn lượn của tay vịn cầu thang xoắn ốc bằng gỗ sẫm màu (Frame-within-a-frame). Khung hình lồng ghép hình ảnh một cô gái trẻ đang thong thả dùng thìa thưởng thức miếng bánh ngọt trên đĩa, bên cạnh là ly cà phê đá mát lạnh và cuốn sổ tay ghi chép mở sẵn trên bàn gỗ.", "pros": "Shot quay sáng tạo và điện ảnh nhất: đường cong uốn lượn của cầu thang đóng vai trò như một chiếc khung tự nhiên (Natural Vignette), dẫn dắt toàn bộ ánh nhìn tập trung vào hành động thưởng thức bánh ngọt của thực khách một cách kín đáo và đầy thi vị (Voyeuristic Framing).", "cons": "Phần tay vịn gỗ tối màu chiếm diện tích khá lớn ở rìa khung hình, đòi hỏi người xem có độ tập trung cao để bắt trọn chi tiết ly nước và đĩa bánh.", "takeaway": "Luôn tìm kiếm các cấu trúc kiến trúc độc đáo của quán (tay vịn cầu thang, khe nan cửa, chậu cây) để làm tiền cảnh đóng khung (Framing device), biến một cảnh ăn uống thông thường thành phân cảnh điện ảnh giàu chất thơ.", "lens_angle": "Telephoto 85mm f/2.0", "location": "Góc nhìn từ cầu thang xoắn xuống bàn tầng trệt", "lighting_color": "Ánh sáng gián tiếp êm dịu", "transition": "Cắt chuyển cảnh sang quầy bar (Bar Match Cut)"}, {"id": 6, "st_frame": 166, "en_frame": 203, "mid_frame": 185, "st_time": 5.53, "en_time": 6.77, "duration": 1.24, "headline": "Khoảnh Khắc Tương Tác Barista & Khách Hàng (Hospitality Counter Connection): Gợi Mở Sự Thân Thiện Ấm Áp Của Văn Hóa Cà Phê", "subject_action": "Góc máy ngang tầm mắt (Eye-Level Medium Shot) ghi lại quầy bar pha chế bằng gỗ bóng. Barista trẻ đeo kính mặc áo sơ mi đỏ đặc trưng của quán đang tươi cười nghiêng người trò chuyện, tư vấn đồ uống cho vị khách nam ngồi trên ghế cao trước quầy. Phía sau là máy pha cà phê espresso chuyên nghiệp và hệ thống kệ kính trưng bày ly tách.", "pros": "Khắc họa trọn vẹn tinh thần hiếu khách (hospitality) và sự kết nối giữa người pha chế với người thưởng thức; góc quay ngang tầm mắt tạo cảm giác gần gũi, khiến người xem cảm thấy như chính mình đang ngồi tại quầy bar và được chào đón.", "cons": "Khách hàng ngồi quay lưng lại máy quay ở góc 3/4 nên chỉ thấy được biểu cảm của barista, chưa thấy rõ sự tương tác qua lại của đôi mắt.", "takeaway": "Một video quảng bá quán cà phê thành công không thể thiếu shot quay tương tác người - người; sự thân thiện của nhân viên chính là yếu tố giữ chân và tạo thiện cảm lớn nhất cho khách hàng mới.", "lens_angle": "Standard 50mm f/2.0", "location": "Quầy bar pha chế chính diện", "lighting_color": "Đèn rọi quầy bar và nền đèn LED vàng hắt tường", "transition": "Cắt nới rộng góc máy (Establishing Bar Cut)"}, {"id": 7, "st_frame": 204, "en_frame": 241, "mid_frame": 222, "st_time": 6.8, "en_time": 8.03, "duration": 1.23, "headline": "Toàn Cảnh Quầy Bar Đối Xứng (Symmetrical Bar Showcase): Tôn Vinh Sự Chuyên Nghiệp Đội Ngũ & Dải Đèn LED Vàng Hắt Tường", "subject_action": "Góc máy chính diện nới rộng (Frontal Wide-Medium Shot) bao quát toàn bộ khu vực pha chế của quán. Hai barista trong đồng phục đen và đỏ đang nhịp nhàng thao tác: một người đang chăm chú chuẩn bị cối xay, một người đang đứng quầy hỗ trợ khách. Phía trên tường là dải gạch ốp màu be được chiếu sáng rực rỡ bởi hệ đèn LED hắt vàng ấm, bên dưới quầy bar bày biện ngay ngắn các gói hạt cà phê specialty đóng gói nhiều màu sắc.", "pros": "Bố cục đối xứng ngang với các đường line gạch ốp và kệ kính song song mang lại cảm giác chỉn chu, ngăn nắp và cực kỳ chuyên nghiệp của một tiệm specialty coffee rang xay chất lượng cao.", "cons": "Ánh sáng dải đèn LED phía sau lưng barista khá mạnh nên phần nào lấn át chi tiết khuôn mặt nhân vật khi đứng ở vùng sáng yếu hơn.", "takeaway": "Khi quay quầy bar, hãy dùng góc máy thẳng chính diện kết hợp ánh sáng hắt nền (Backdrop Lighting) để khoe được độ dài quầy, máy móc thiết bị và quy trình làm việc đồng bộ của đội ngũ.", "lens_angle": "Standard 35mm f/2.8", "location": "Khu vực quầy bar trung tâm", "lighting_color": "Đèn LED vàng 3000K hắt tường kết hợp đèn trần", "transition": "Cắt khung nhìn xuyên rèm (Obstruction Framing Cut)"}, {"id": 8, "st_frame": 242, "en_frame": 278, "mid_frame": 260, "st_time": 8.07, "en_time": 9.27, "duration": 1.2, "headline": "Tiền Cảnh Lồng Đèn Giấy Cầu Tròn (Japanese Lantern Foreground): Tách Lớp Không Gian Tĩnh Lặng Qua Nan Cửa Gỗ", "subject_action": "Góc máy cận tiền cảnh lồng đèn giấy xếp nếp màu trắng ngà treo lơ lửng bên góc trái màn hình. Xuyên qua khoảng sáng của lồng đèn và các song cửa sổ nan gỗ là hình ảnh hai vị khách đang ngồi trò chuyện thư thả ở góc sân nhiều ánh sáng bên ngoài.", "pros": "Kỹ thuật chia lớp tiền cảnh - hậu cảnh (Foreground layering) với chiếc lồng đèn giấy tròn tạo phong cách Á Đông tối giản (Japandi / Wabi-sabi), mang lại cảm giác bình yên, tĩnh tại và chiều sâu không gian sâu thẳm.", "cons": "Chiếc lồng đèn chiếm gần một nửa khung hình bên trái, phần nào che khuất các chi tiết kiến trúc của khoảng sân phía sau.", "takeaway": "Đặt một chi tiết nội thất mang tính biểu tượng (như đèn giấy, chao đèn gốm) chiếm 1/3 khung hình tiền cảnh để tạo hiệu ứng bokeh và tăng tính nghệ thuật cho các shot quay không gian.", "lens_angle": "Medium Telephoto 70mm f/2.2", "location": "Khoảng giao giữa nội thất và hành lang hiên", "lighting_color": "Tương phản giữa chao đèn phát sáng và khoảng sân ban ngày", "transition": "Cắt trục nhìn sâu (Deep Hallway Cut)"}, {"id": 9, "st_frame": 279, "en_frame": 301, "mid_frame": 290, "st_time": 9.3, "en_time": 10.03, "duration": 0.73, "headline": "Chiều Sâu Căn Phòng Trưng Bày Tranh (Art Gallery Dining Room): Thể Hiện Sự Tấp Nập Nhưng Yên Bình Của Không Gian Cộng Đồng", "subject_action": "Góc máy thẳng từ lối vào nhìn sâu vào gian phòng cafe phong cách gallery nghệ thuật. Trên bức tường sơn màu kem treo thẳng hàng ba bức tranh trừu tượng khổ lớn lồng khung kính. Các bàn ghế gỗ bọc đệm êm ái đều có khách ngồi quây quần trò chuyện vui vẻ, ánh sáng tự nhiên ngập tràn gian phòng.", "pros": "Dẫn dắt tầm nhìn theo quy luật một điểm tụ (One-point perspective) vào tâm điểm căn phòng; các bức tranh treo tường đồng bộ khẳng định gu thẩm mỹ và phong cách nghệ thuật tinh tế của quán.", "cons": "Thời lượng shot 0.73s (23 frames) ngắn nhất trong toàn bộ video, đóng vai trò như một quick flash chuyển nhịp nên người xem chỉ kịp lướt thấy không khí chung chứ chưa ngắm kỹ từng tác phẩm tranh.", "takeaway": "Các shot quay không gian phòng lớn đông khách nên dùng bố cục thẳng góc cân xứng một điểm tụ để người xem cảm nhận được độ rộng rãi, thoáng đãng và sạch sẽ của quán.", "lens_angle": "Wide-Angle 24mm f/3.2", "location": "Gian phòng gallery nghệ thuật tầng lửng", "lighting_color": "Ánh sáng tự nhiên chan hòa kết hợp đèn rọi tranh", "transition": "Cắt cận cảnh thao tác (Craftsmanship Cut)"}, {"id": 10, "st_frame": 302, "en_frame": 327, "mid_frame": 315, "st_time": 10.07, "en_time": 10.9, "duration": 0.83, "headline": "Cận Cảnh Thao Tác Chuẩn Bị Cốc Đá (Barista Pitcher Prep Craft): Bắt Trọn Từng Chuyển Động Chăm Chút Tại Quầy Pha Chế", "subject_action": "Góc máy cận cảnh ngang vai (Over-the-Shoulder Medium Close-Up) của barista mặc áo thun đen đang tỉ mỉ chuẩn bị dụng cụ, lau sạch khay và chuẩn bị ly đồ uống bên cạnh bồn rửa và dụng cụ pha pour-over. Ánh sáng ban ngày từ cửa sổ hắt vào làm nổi bật các vệt nước và bề mặt kim loại sáng loáng.", "pros": "Nhịp cắt chuyển từ không gian tổng thể sang chi tiết con người làm việc (Macro Craft); nhịp độ thao tác dứt khoát, sạch sẽ khẳng định quy trình vệ sinh và chất lượng dịch vụ chuẩn mực.", "cons": "Mặt barista hơi bị khuất bóng do đứng ngược nguồn sáng cửa sổ, góc máy tập trung chủ yếu vào đôi tay và dụng cụ trên quầy.", "takeaway": "Đan xen các shot quay cận cảnh thao tác tay của barista vào giữa các shot không gian giúp tạo nhịp điệu sinh động và làm nổi bật tính thủ công (Artisanal Craftsmanship) của quán.", "lens_angle": "Standard 50mm f/2.0", "location": "Góc quầy chuẩn bị đồ uống bên cửa sổ", "lighting_color": "Ánh sáng ven (Rim Lighting) từ cửa sổ rọi lên viền áo và dụng cụ", "transition": "Cắt đồng bộ thao tác nén (Tamping Match Cut)"}, {"id": 11, "st_frame": 328, "en_frame": 353, "mid_frame": 340, "st_time": 10.93, "en_time": 11.77, "duration": 0.84, "headline": "Thao Tác Nén Cà Phê Chuyên Nghiệp (Espresso Tamping Precision): Thể Hiện Kỹ Năng Đẳng Cấp Của Barista Specialty", "subject_action": "Góc máy trung cận trực diện của head barista mặc áo sơ mi đỏ đang dồn toàn bộ trọng tâm cơ thể và hai tay nén chặt bột cà phê vào tay cầm (portafilter) bằng dụng cụ nén tamping chuyên dụng. Phía sau lưng là 3 cối xay cà phê hạt espresso cao cấp với bình chứa hạt bằng thủy tinh trong suốt.", "pros": "Động tác nén dứt khoát, lực tay chuẩn xác và biểu cảm tập trung cao độ của barista tạo niềm tin tuyệt đối về chất lượng tách cà phê; dàn máy xay phía sau là minh chứng rõ nét cho một tiệm specialty coffee thực thụ.", "cons": "Bố cục khung hình hơi chật ở phần đầu barista do góc máy thấp hướng lên, tuy nhiên lại tạo cảm giác tôn vinh sự lành nghề của người pha chế.", "takeaway": "Bắt trọn khoảnh khắc Tamping (nén cà phê) là cú ghi điểm kinh điển trong mọi video ẩm thực đồ uống, bởi nó đại diện cho kỹ thuật, sự chuẩn xác và tâm huyết của người làm nghề.", "lens_angle": "Standard 40mm f/2.0", "location": "Bàn thao tác nén cà phê cạnh cối xay", "lighting_color": "Ánh sáng đèn quầy bar rọi tập trung vào tay cầm portafilter", "transition": "Cắt siêu cận giọt cà phê (Macro Climax Cut)"}, {"id": 12, "st_frame": 354, "en_frame": 432, "mid_frame": 380, "st_time": 11.8, "en_time": 14.43, "duration": 2.63, "headline": "Macro Chiết Xuất Dòng Espresso & Cú Vẫy Tay Đóng Video (Espresso Extraction Flow & Hand Wipe Outro): Đỉnh Cao Cảm Xúc Vị Giác & Điểm Nhấn Nhịp Thở Trẻ Trung", "subject_action": "Góc máy siêu cận cảnh (Macro Shot) ghi lại dòng cà phê espresso sánh đậm màu cánh gián và lớp crema vàng óng đang chảy đều đặn từ họng chiết xuất của máy pha vào chiếc bình thủy tinh trong suốt đặt trên chiếc cân điện tử chuyên dụng (thể hiện trọng lượng tăng dần từ 38.1g lên 43.8g). Ở giây thứ 13, một bàn tay trẻ trung lướt nhanh qua trước ống kính (Foreground Hand Wipe) tạo nên một cú chuyển động bất ngờ, vui tươi khép lại video đầy duyên dáng.", "pros": "Khung hình thỏa mãn tối đa cảm giác thị giác (Sensory Satisfaction / Coffee ASMR visual): dòng chảy crema sánh mịn kích thích trực tiếp vị giác của người xem; cú quơ tay cuối video tạo chất ngẫu hứng, đời thường và trẻ trung, tránh cảm giác cứng nhắc của video quảng cáo truyền thống.", "cons": "Cú quơ tay lướt qua làm mờ thoáng qua khung hình trong khoảng 0.5s, nhưng lại mang tính chủ đích của tác giả để tạo cái kết tự nhiên, thân thiện.", "takeaway": "Kết thúc video bằng một shot Macro đồ uống thơm ngon nhất kết hợp một cử chỉ tay tự nhiên (vẫy tay, che ống kính, nâng ly) là công thức hoàn hảo để đọng lại dư vị ngọt ngào và mời gọi người xem ghé quán.", "lens_angle": "Macro Lens 100mm f/2.8", "location": "Họng máy pha espresso chuyên nghiệp & cân điện tử", "lighting_color": "Ánh sáng studio vàng ấm tôn vinh lớp bọt crema", "transition": "Khép lại bằng cú gạt tay tự nhiên (Natural Hand Wipe Outro)"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ;
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 30.0 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById();
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

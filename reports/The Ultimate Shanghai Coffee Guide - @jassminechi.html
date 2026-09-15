@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Cẩm Nang 15 Quán Cà Phê Đặc Sản Thượng Hải • The Ultimate Shanghai Coffee Guide • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* DRAWER QUICK JUMP MENU */
+.drawer-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-line);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.drawer-title {
+    font-family: var(--font-heading-short);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cl-text-muted);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.drawer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.drawer-shot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: var(--cl-bg-tint);
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+    background: #eef2f6;
+    border-color: var(--cl-accent);
+}
+.d-badge {
+    background: var(--cl-accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.d-time {
+    color: var(--cl-text-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    flex-shrink: 0;
+}
+.d-title {
+    color: var(--cl-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">15 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Cẩm Nang 15 Quán Cà Phê Đặc Sản Thượng Hải • The Ultimate Shanghai Coffee Guide</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DdFBLQMOTwM/?stkn=MXNweGVwdDRyYzA5YQ==" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdFBLQMOTwM.mp4" type="video/mp4">
+                <source src="videos/The Ultimate Shanghai Coffee Guide - @jassminechi.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 12.57s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Cẩm Nang 15 Quán Cà Phê Đặc Sản Thượng Hải • The Ultimate Shanghai Coffee Guide</div>
+            <div class="video-meta-author">
+                <span>Tác giả:</span>
+                <a href="https://www.instagram.com/reel/DdFBLQMOTwM/?stkn=MXNweGVwdDRyYzA5YQ==" target="_blank" class="author-link">@jassminechi (Jasmine | 迟小雨)</a>
+            </div>
+        </div>
+
+        <!-- DRAWER QUICK JUMP MENU -->
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+        <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0, 1.27)">
+            <span class="d-badge">Shot 01</span>
+            <span class="d-time">0.00s - 1.27s (1.27s)</span>
+            <span class="d-title">Hook Thiết Lập Bối Cảnh 'Văn Hóa Vỉa Hè Thượng Hải' (Shangha...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(2, 1.27, 2.17)">
+            <span class="d-badge">Shot 02</span>
+            <span class="d-time">1.27s - 2.17s (0.90s)</span>
+            <span class="d-title">Bố Cục Cân Xứng Chính Diện (Frontal Symmetry) Quán Plusone: ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(3, 2.17, 3.0)">
+            <span class="d-badge">Shot 03</span>
+            <span class="d-time">2.17s - 3.00s (0.83s)</span>
+            <span class="d-title">Cận Cảnh Chiết Xuất Dirty Coffee Qua Ô Cửa Kính (Through-the...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(4, 3.0, 3.83)">
+            <span class="d-badge">Shot 04</span>
+            <span class="d-time">3.00s - 3.83s (0.83s)</span>
+            <span class="d-title">Bắt Trọn Khoảnh Khắc Đời Thường Trước Quán Wuming (Spontaneo...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(5, 3.83, 4.63)">
+            <span class="d-badge">Shot 05</span>
+            <span class="d-time">3.83s - 4.63s (0.80s)</span>
+            <span class="d-title">Góc Máy Nội Cảnh Hướng Ngoại (Inside-Out Perspective) Quán C...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(6, 4.63, 5.43)">
+            <span class="d-badge">Shot 06</span>
+            <span class="d-time">4.63s - 5.43s (0.80s)</span>
+            <span class="d-title">Góc Đường Phố Nghiêng 45 Độ (Angled Corner Perspective) Voya...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(7, 5.43, 6.23)">
+            <span class="d-badge">Shot 07</span>
+            <span class="d-time">5.43s - 6.23s (0.80s)</span>
+            <span class="d-title">Cận Cảnh Bào Vỏ Cam Rắc Lên Kem Béo (Citrus Zest Action Clos...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(8, 6.23, 7.03)">
+            <span class="d-badge">Shot 08</span>
+            <span class="d-time">6.23s - 7.03s (0.80s)</span>
+            <span class="d-title">Cú Chạy Ngang Của Shipper Áo Cam (Motion Interception) Trước...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(9, 7.03, 7.83)">
+            <span class="d-badge">Shot 09</span>
+            <span class="d-time">7.03s - 7.83s (0.80s)</span>
+            <span class="d-title">Bố Cục Khung Trong Khung (Frame-Within-a-Frame) Quán Fat Fac...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(10, 7.83, 8.6)">
+            <span class="d-badge">Shot 10</span>
+            <span class="d-time">7.83s - 8.60s (0.77s)</span>
+            <span class="d-title">Bằng Chứng Xã Hội Hùng Hồn (Social Proof Staging) Trước Quán...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(11, 8.6, 9.4)">
+            <span class="d-badge">Shot 11</span>
+            <span class="d-time">8.60s - 9.40s (0.80s)</span>
+            <span class="d-title">Kiến Trúc Chung Cư Cổ Điển & Cửa Sổ Tròn Độc Bản Quán Manual...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(12, 9.4, 10.2)">
+            <span class="d-badge">Shot 12</span>
+            <span class="d-time">9.40s - 10.20s (0.80s)</span>
+            <span class="d-title">Slogan Truyền Cảm Hứng Viết Tay Trên Ô Kính Tầng 2 Quán Kain...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(13, 10.2, 10.97)">
+            <span class="d-badge">Shot 13</span>
+            <span class="d-time">10.20s - 10.97s (0.77s)</span>
+            <span class="d-title">Hơi Thở Cà Phê Bistro Paris Giữa Lòng Thượng Hải Tại Onirico...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(14, 10.97, 11.77)">
+            <span class="d-badge">Shot 14</span>
+            <span class="d-time">10.97s - 11.77s (0.80s)</span>
+            <span class="d-title">Mặt Tiền Kính Kịch Trần Trong Suốt (Full-Glass Facade) Quán ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(15, 11.77, 12.57)">
+            <span class="d-badge">Shot 15</span>
+            <span class="d-time">11.77s - 12.57s (0.80s)</span>
+            <span class="d-title">Cảnh Kết Yên Bình (Peaceful Outro) Tại Bitter Donkey: Khóa L...</span>
+        </div>
+        
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 12.57s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Cẩm Nang 15 Quán Cà Phê Đặc Sản Thượng Hải • The Ultimate Shanghai Coffee Guide</h1>
+            <p class="overview-hero-desc">Bóc tách trọn vẹn 15 phân cảnh mẫu mực trong video Reel triệu view của @jassminechi: Nghệ thuật Fast-Cut Beat-Synced Travel Guide kết hợp bố cục chính diện cân xứng, nghệ thuật lồng khung hình trong khung hình (Frame-within-a-frame), xếp lớp tiền cảnh hoài cổ và đòn bẩy xúc giác đồ uống để vẽ nên cẩm nang cà phê Thượng Hải đầy chất thơ.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Fast-Cut Beat Sync, Shanghai Al-Fresco Lifestyle, Frontal Symmetry, Sensory Action Close-Up, Look-Through Framing, Social Proof Staging, Narrative Outro</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">15 Shots • Nhịp trung bình 0.84s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1440x2560 • 30.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 1.27)">
+                    ▶ 0.00s - 1.27s (1.27s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hook Thiết Lập Bối Cảnh 'Văn Hóa Vỉa Hè Thượng Hải' (Shanghai Al-Fresco Lifestyle): Định Danh Tọa Độ Bằng Typography Tạp Chí Sang Trọng & Nhịp Thở Đời Thường</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_01_mid.jpg', 'Shot 01 • Giữa (0.64s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (0.64s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_01_end.jpg', 'Shot 01 • Cuối (1.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (1.27s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cảnh mở đầu (Hook thị giác). Toàn cảnh góc phố rợp bóng cây ngô đồng đặc trưng khu Tô Giới Pháp cổ kính (Fuxing West Rd, Thượng Hải). Quán Labelhood House hiện lên với dãy bàn ghế gỗ dài kê dọc vỉa hè trước mặt tiền gạch đỏ cổ điển. Rất đông bạn trẻ, khách sành điệu ngồi thảnh thơi nhâm nhi cà phê dưới những tán dù che trắng mát rượi. Dòng chữ Serif thanh lịch phong cách bìa tạp chí Kinfolk ('somewhere in Shanghai • EPISODE: 20S COFFEE GUIDE • LABELHOOD HOUSE') xếp lớp ngay ngắn ở trung tâm khung hình, khóa chặt cảm giác tò mò của người xem.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục đường dẫn (Leading Lines) chạy dọc dãy ghế gỗ song song lòng đường tạo chiều sâu hút mắt. Ánh nắng rọi lốm đốm qua vòm lá xanh (Dappled Sunlight) lên tường gạch đỏ tạo cảm xúc thư thái, bình yên. Bộ Typography Serif phân cấp chuyên nghiệp định vị ngay nội dung video là một cẩm nang tuyển chọn cao cấp (Curated Guide) chứ không phải clip dạo chơi ngẫu hứng.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy đặt hơi thấp khiến phần mặt đường nhựa chiếm diện tích tương đối lớn ở tiền cảnh; bóng râm của tán dù che làm khuôn mặt một số khách ngồi phía trong hơi bị thiếu sáng.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Quy tắc 'Lifestyle Establishing Hook': Khi làm video du lịch ẩm thực/hướng dẫn cà phê, shot đầu tiên bắt buộc phải là bức tranh phong cách sống (Lifestyle Shot) - không chỉ quay ly nước mà phải quay cả bầu không khí thưởng thức của người bản địa.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide Angle 28mm (Khẩu độ f/2.8)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt tiền Labelhood House (Fuxing West Rd, Shanghai)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên xuyên tán cây ngô đồng (Dappled Morning Daylight ~5200K)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut on Beat (Cắt đổi cảnh sắc lẹm theo nhịp trống)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Hard Cut on Beat (Cắt đổi cảnh sắc lẹm theo nhịp trống)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 1.27, 2.17)">
+                    ▶ 1.27s - 2.17s (0.90s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố Cục Cân Xứng Chính Diện (Frontal Symmetry) Quán Plusone: Tôn Vinh Kiến Trúc Biệt Thự 2 Tầng & Hàng Ghế Camping Hè Phố</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_02_start.jpg', 'Shot 02 • Đầu (1.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (1.27s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_02_mid.jpg', 'Shot 02 • Giữa (1.72s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.72s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_02_end.jpg', 'Shot 02 • Cuối (2.17s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (2.17s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cảnh quay vuông góc 90 độ chính diện mặt tiền quán Plusone Coffee. Tòa nhà 2 tầng với ban công đầy cây xanh và dù che trắng phía trên; tầng trệt mở toang với hàng ghế xếp phong cách cắm trại dã ngoại (Camping Chairs) đặt ngay ngắn dưới mái hiên ngập tràn ánh nắng. Nhóm bạn trẻ ngồi trò chuyện thoải mái, tạo cảm giác thư giãn, gần gũi.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tính đối xứng hoàn hảo dọc theo trục cửa chính tạo cảm giác trật tự, vững chãi và thẩm mỹ kiến trúc chỉn chu. Sự giao thoa giữa biệt thự phong cách Châu Âu cổ và nội thất cắm trại hiện đại (Urban Outdoor Glamping) thể hiện rõ gu thẩm mỹ thời thượng của giới trẻ Thượng Hải.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Mặt đường phía trước chiếm gần 1/3 khung hình bên dưới làm giảm bớt độ tập trung vào các chi tiết trang trí tinh tế bên trong quán.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Góc quay chính diện vuông góc (90° Flat-lay Facade) luôn là lựa chọn hàng đầu để phô diễn trọn vẹn kết cấu hình học và sự bề thế của công trình kiến trúc quán cà phê.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard Wide 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt tiền Plusone Coffee (Shanghai)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh nắng vàng ban mai rực rỡ chiếu xiên nhẹ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut on Beat (Cắt đổi cảnh dứt khoát)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Hard Cut on Beat (Cắt đổi cảnh dứt khoát)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 2.17, 3.0)">
+                    ▶ 2.17s - 3.00s (0.83s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cận Cảnh Chiết Xuất Dirty Coffee Qua Ô Cửa Kính (Through-the-Glass Framing): Đòn Bẩy Xúc Giác Đổi Nhịp Sau 2 Cảnh Toàn Phố Xá</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_03_start.jpg', 'Shot 03 • Đầu (2.17s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (2.17s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_03_mid.jpg', 'Shot 03 • Giữa (2.58s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (2.58s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_03_end.jpg', 'Shot 03 • Cuối (3.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (3.00s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cú máy cận cảnh (Close-Up POV) qua khung cửa sổ kính quán Mahlkönig. Cánh tay barista đang thao tác đặt chiếc ly thủy tinh chứa sữa lạnh béo ngậy dưới họng chiết xuất máy pha espresso đắt giá để tạo nên món Dirty Coffee trứ danh. Phía sau lưng, qua khung kính là bóng xe cộ và hàng cây đường phố Thượng Hải phản chiếu huyền ảo.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Đột ngột chuyển đổi cự ly từ ngoại cảnh sang cận cảnh quầy pha chế (Sensory Pacing Shift) kích hoạt mạnh mẽ vị giác người xem. Khung kính cửa sổ tạo hiệu ứng phân lớp (Visual Layering) phản chiếu phố xá bên ngoài trong khi lấy nét sắc sảo vào ly cà phê sữa nhiều tầng.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh sáng phản quang trên mặt kính hơi gắt làm mờ một phần chi tiết máy pha cà phê; thời lượng 0.83s khá nhanh để cảm nhận trọn vẹn dòng espresso chảy chậm vào lớp sữa.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kỹ thuật xen kẽ 'Toàn Cảnh Bối Cảnh - Cận Cảnh Xúc Giác' (Atmosphere to Sensory Detail): Đừng chỉ lia máy quay toàn bộ không gian, hãy chen ngang 1 shot cận cảnh sản phẩm/thao tác làm đồ uống để neo giữ vị giác người xem.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Normal Prime 50mm (Khẩu độ f/2.0 xóa phông nhẹ)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Quầy bar Mahlkönig Coffee Concept</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ban ngày hắt qua kính kết hợp đèn bar ấm áp</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut on Beat</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Hard Cut on Beat</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 3.0, 3.83)">
+                    ▶ 3.00s - 3.83s (0.83s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bắt Trọn Khoảnh Khắc Đời Thường Trước Quán Wuming (Spontaneous Life Slice): Gắn Kết Con Người Vào Tinh Thần Wabi-Sabi Tối Giản</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_04_start.jpg', 'Shot 04 • Đầu (3.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (3.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_04_mid.jpg', 'Shot 04 • Giữa (3.42s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (3.42s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_04_end.jpg', 'Shot 04 • Cuối (3.83s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (3.83s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Mặt tiền quán Wuming Coffee (Vô Danh Coffee). Hệ cửa kính lớn trong suốt hé lộ không gian nội thất tối giản phong cách Wabi-sabi. Trước bậc thềm vỉa hè lát đá, một phụ nữ trẻ áo hồng đang bế em bé vui vẻ, bên cạnh là một vị khách ngồi tựa ghế thư thái ngắm nhìn nhịp sống qua lại.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bắt trọn khoảnh khắc tương tác mẹ con tự nhiên, mang lại hơi thở đời sống chân thực và cảm xúc ấm áp. Tone màu nâu xám trầm của gạch ốp tường kết hợp biển hiệu chữ Hán tinh gọn '無名 coffee' tạo nét đẹp thiền tịnh, tao nhã.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Nhân vật di chuyển bên mép trái lướt qua nhanh làm lệch hướng chú ý khỏi biển hiệu trung tâm trong chốc lát.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Nghệ thuật 'Human Element in Architecture': Một khung hình kiến trúc đẹp sẽ thực sự có linh hồn khi có sự hiện diện của con người đang tương tác thoải mái, tạo cảm giác thân thiện và đón chào.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt tiền Wuming Coffee (Shanghai)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tán xạ êm dịu, không bị gắt bóng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut on Beat</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Hard Cut on Beat</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 3.83, 4.63)">
+                    ▶ 3.83s - 4.63s (0.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Máy Nội Cảnh Hướng Ngoại (Inside-Out Perspective) Quán CCLAB: Đặt Mâm Đĩa Than Làm Tiền Cảnh Định Hình Phong Cách Hoài Cổ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_05_start.jpg', 'Shot 05 • Đầu (3.83s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (3.83s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_05_mid.jpg', 'Shot 05 • Giữa (4.23s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (4.23s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_05_end.jpg', 'Shot 05 • Cuối (4.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (4.63s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cú máy nhìn từ bên trong quán CCLAB nhìn ra ngoài hè phố (Inside-Out Framing). Ở tiền cảnh là một chiếc máy hát đĩa than cổ điển bằng gỗ (Vinyl Turntable) đang quay êm ái. Qua khung cửa kính mở toang, bên ngoài hè phố ngập nắng là dãy ghế xếp và bóng dáng một cô gái mặc váy đen trắng đang dạo bước.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Kỹ thuật xếp lớp tiền cảnh - hậu cảnh (Foreground Layering) bậc thầy: mâm đĩa than đóng vai trò mỏ neo âm nhạc và thẩm mỹ hoài cổ, dẫn dắt ánh nhìn ra nhịp sống rộn ràng ngoài phố. Độ tương phản sáng tối giữa nội thất trong nhà và nắng hè tạo chiều sâu thị giác ấn tượng.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Độ chênh sáng (Dynamic Range) tương đối lớn khiến các rãnh đĩa than ở tiền cảnh hơi bị chìm vào vùng tối.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kỹ thuật 'Look-Through Framing': Hãy dùng một đồ vật đặc trưng (máy đĩa than, bình pour-over, kệ sách) làm tiền cảnh mờ để nhìn ra thế giới bên ngoài, khung hình sẽ lập tức mang phong vị điện ảnh sâu sắc.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide-Normal 35mm (Khẩu độ f/2.2)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Không gian bên trong quán Mord CCLAB</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tương phản: nội thất đèn vàng dịu - ngoại cảnh nắng chói</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut on Beat</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Hard Cut on Beat</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 4.63, 5.43)">
+                    ▶ 4.63s - 5.43s (0.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Đường Phố Nghiêng 45 Độ (Angled Corner Perspective) Voyage Coffee: Sự Hòa Quyện Giữa Mái Ngói Rêu Phong & Lối Sống Co-Working Đương Đại</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_06_start.jpg', 'Shot 06 • Đầu (4.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (4.63s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_06_mid.jpg', 'Shot 06 • Giữa (5.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.03s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_06_end.jpg', 'Shot 06 • Cuối (5.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.43s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc quán Voyage Coffee nép mình dưới rặng cây cổ thụ bên ngã ba đường. Tòa nhà kết hợp mái ngói âm dương cổ kính với vách kính hiện đại. Khách hàng ngồi mở laptop làm việc và trò chuyện thư thả trên dãy ghế gỗ bậc thềm ngoài trời, bên cạnh là cột biển báo giao thông xanh lam đặc trưng Thượng Hải.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc máy chéo 45 độ ôm trọn cả chiều dài mặt tiền quán và tán cây râm mát; hình ảnh khách mở laptop làm việc ngoài hè phố khắc họa trọn vẹn văn hóa 'Work from Cafe' phóng khoáng. Cột biển báo giao thông xanh lam đóng vai trò điểm nhấn địa phương (Local Anchor).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cột biển báo nằm ngay vị trí 1/3 bên phải vô tình chia cắt tầm nhìn trực tiếp vào mặt tiền quán.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Cinematic Realism: Đừng né tránh các yếu tố đường phố thực tế (biển báo, vạch kẻ đường, cột đèn), hãy biến chúng thành mỏ neo bối cảnh giúp video có chất tài liệu chân thực và sống động.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide 28mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc phố Voyage Coffee Corner (Shanghai)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng bóng râm mát dưới rặng cây xanh</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut on Beat</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Hard Cut on Beat</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 5.43, 6.23)">
+                    ▶ 5.43s - 6.23s (0.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cận Cảnh Bào Vỏ Cam Rắc Lên Kem Béo (Citrus Zest Action Close-Up) Tại Honky Tonk: Kích Hoạt Đa Giác Quan Bằng Nghệ Thuật Mixology</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_07_start.jpg', 'Shot 07 • Đầu (5.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.43s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_07_mid.jpg', 'Shot 07 • Giữa (5.83s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.83s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_07_end.jpg', 'Shot 07 • Cuối (6.23s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (6.23s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cú máy cận cảnh ẩm thực (Food Close-Up POV). Barista đeo găng tay cao su xanh chuyên nghiệp đang cầm quả cam vàng tươi bào vỏ trực tiếp lên lớp kem bọt mịn màng của ly specialty coffee đặt trên đĩa vàng kim sa óng ánh, tạo nên những vụn cam thơm ngát rơi xuống bề mặt.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Hành động bào vỏ cam (Kinetic Action) mang lại động năng dồi dào và kích thích đa giác quan (khứu giác, xúc giác, vị giác). Màu cam vàng rực rỡ tương phản sắc nét với nền kem trắng sữa và ánh vàng kim sa của đĩa lót, tạo cảm giác món đồ uống vô cùng cao cấp và tinh tế.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cánh tay của barista hơi choán mất góc trên bên trái khung hình; thao tác bào vỏ diễn ra khá nhanh trong 0.80s.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Signature Action Shot: Mỗi quán cà phê hay nhà hàng đều có một thao tác pha chế 'đinh' (bào vỏ cam, khò lửa bọt kem, rót latte art) - hãy phóng to vào hành động đó để làm bùng nổ cảm xúc thèm thuồng của người xem.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Macro/Portrait 50mm (Khẩu độ lớn f/1.8)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Quầy Bar Honky Tonk Coffee</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng rọi điểm (Spotlight) ấm áp tập trung vào ly cà phê</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut on Beat</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Hard Cut on Beat</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 6.23, 7.03)">
+                    ▶ 6.23s - 7.03s (0.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Chạy Ngang Của Shipper Áo Cam (Motion Interception) Trước Quán Kopi: Nhịp Điệu Đời Thường Vương Gia Vệ Giữa Lòng Đô Thị</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_08_start.jpg', 'Shot 08 • Đầu (6.23s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (6.23s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_08_mid.jpg', 'Shot 08 • Giữa (6.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.63s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_08_end.jpg', 'Shot 08 • Cuối (7.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (7.03s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Tiệm Kopi Coffee nhỏ nhắn xinh xắn rộng chừng vài mét vuông nép mình giữa hai bức tường nhà cổ với mái hiên xanh lá cây. Ngay khoảnh khắc bấm máy, một nhân viên giao hàng mặc áo khoác cam đội mũ bảo hiểm phóng xe máy điện ngang qua tiền cảnh, tạo một vệt chuyển động nhanh trước cửa tiệm yên ắng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Kỹ thuật 'Motion Interception' ngẫu nhiên nhưng cực kỳ đắt giá: vệt màu cam của người giao hàng lướt qua tạo nhịp chuyển động (Motion Blur) sinh động, đối lập hoàn hảo với sự tĩnh lặng của căn tiệm nhỏ có chú chó cưng nằm dưới chân khách.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chiếc xe máy điện che khuất phần dưới cửa quán trong khoảng 0.3s.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kỹ thuật 'Foreground Motion Blur': Đừng ngại những chiếc xe hay người đi bộ lướt qua ống kính; chính những chuyển động đời thường này tạo nên hơi thở đường phố chân thực như trong các thước phim điện ảnh Hong Kong.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt tiền tiệm Kopi (382 Fumin Rd, Shanghai)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên hè phố dịu mát</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut on Beat</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 09 • Hard Cut on Beat</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_08_to_09.jpg?v=2', 'Chuyển cảnh Shot 08 sang Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_08_to_09.jpg?v=2" alt="Transition 8 to 9" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-9">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 09</span>
+                <button class="shot-time-btn" onclick="jumpToShot(9, 7.03, 7.83)">
+                    ▶ 7.03s - 7.83s (0.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố Cục Khung Trong Khung (Frame-Within-a-Frame) Quán Fat Face: Hút Mắt Bằng Cửa Vòm Trắng & Ánh Đèn Neon Nghệ Thuật Ấm Áp</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_09_start.jpg', 'Shot 09 • Đầu (7.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (7.03s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_09_mid.jpg', 'Shot 09 • Giữa (7.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (7.43s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_09_end.jpg', 'Shot 09 • Cuối (7.83s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (7.83s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Mặt tiền quán Fat Face Coffee thiết kế theo phong cách phòng trưng bày nghệ thuật đương đại (Art Gallery). Khung cửa vòm đá xám mở toang nhìn sâu vào nội thất sáng bừng ánh đèn vàng nghệ thuật uốn cong, quầy pha chế trắng tinh khôi và bảng menu viết tay phấn màu tinh nghịch đặt trên bậc thềm.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục 'Khung trong khung' tự nhiên: khung cửa đá bao bọc tạo phễu thị giác hút thẳng mắt vào chiều sâu không gian bên trong quán. Sự tương phản giữa tường đá ngoại cảnh mát lạnh và ánh đèn nội thất ấm áp tạo cảm giác mời gọi mãnh liệt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy hơi tĩnh và chính diện, chưa thể hiện được nhiều không gian vỉa hè xung quanh quán.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Frame-within-a-frame: Sử dụng khung cửa chính mở rộng như một chiếc khung tranh tự nhiên để khoe trọn không gian ánh sáng bên trong quán, tạo cảm giác thôi thúc người xem bước vào khám phá.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt tiền Fat Face Coffee (Shanghai)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Tương phản ánh sáng: ngoài trời trung tính - trong quán vàng ấm 2700K</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut on Beat</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 10 • Hard Cut on Beat</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_09_to_10.jpg?v=2', 'Chuyển cảnh Shot 09 sang Shot 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_09_to_10.jpg?v=2" alt="Transition 9 to 10" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-10">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 10</span>
+                <button class="shot-time-btn" onclick="jumpToShot(10, 7.83, 8.6)">
+                    ▶ 7.83s - 8.60s (0.77s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bằng Chứng Xã Hội Hùng Hồn (Social Proof Staging) Trước Quán O.P.S: Dòng Người Xếp Hàng Khẳng Định Vị Thế Cà Phê Sáng Tạo Số 1</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_10_start.jpg', 'Shot 10 • Đầu (7.83s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (7.83s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_10_mid.jpg', 'Shot 10 • Giữa (8.21s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (8.21s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_10_end.jpg', 'Shot 10 • Cuối (8.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.60s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cảnh quay trước tiệm O.P.S Cafe (Taiyuan Rd) - một trong những biểu tượng sáng tạo cà phê danh tiếng nhất Thượng Hải. Hàng dài các bạn trẻ sành điệu đứng xếp hàng trật tự dọc theo bờ tường nhà chung cư cũ kỹ rêu phong, kiên nhẫn chờ đến lượt thưởng thức menu seasonal đặc biệt.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Hiệu ứng 'Visual Social Proof' vô cùng đắt giá: không cần dùng bất kỳ lời ca ngợi nào, chỉ một khung hình ghi lại cảnh khách hàng kiên nhẫn xếp hàng dài đã đủ chứng thực vị thế quán 'Must-Visit' số 1. Tỷ lệ tương quan giữa con người và tòa nhà cổ rất hài hòa.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Dòng người đứng đông che kín cửa ra vào chính khiến người xem chưa kịp thấy rõ thiết kế biển hiệu hay bên trong quầy bar.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">The Queue Shot (Bằng chứng xếp hàng): Trong video review địa điểm, 1 shot quay hàng người xếp hàng chân thật có sức thuyết phục gấp nhiều lần mọi lời quảng cáo bằng lời.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Normal 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt tiền O.P.S Cafe (Taiyuan Rd, Shanghai)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ban ngày đều, bóng râm mát khu phố cổ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut on Beat</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 11 • Hard Cut on Beat</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_10_to_11.jpg?v=2', 'Chuyển cảnh Shot 10 sang Shot 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_10_to_11.jpg?v=2" alt="Transition 10 to 11" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-11">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 11</span>
+                <button class="shot-time-btn" onclick="jumpToShot(11, 8.6, 9.4)">
+                    ▶ 8.60s - 9.40s (0.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Kiến Trúc Chung Cư Cổ Điển & Cửa Sổ Tròn Độc Bản Quán Manual: Bức Tranh Cộng Đồng Thượng Hải Thảnh Thơi Cùng Thú Cưng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_11_start.jpg', 'Shot 11 • Đầu (8.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.60s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_11_mid.jpg', 'Shot 11 • Giữa (9.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_11_end.jpg', 'Shot 11 • Cuối (9.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (9.40s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Mặt tiền tiệm Manual Coffee đặt tại tầng trệt của tòa nhà chung cư phong cách Pháp cổ kính. Điểm nhấn là ô cửa sổ tròn độc đáo (porthole window) trên tường tầng 2. Dưới hiên quán, các bạn trẻ ngồi trò chuyện trên ghế gấp, có người dắt theo cún cưng nô đùa, tạo nên không khí cộng đồng cực kỳ cởi mở, văn minh.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Chi tiết cửa sổ tròn ở tầng 2 tạo điểm neo nhận diện kiến trúc độc bản lạ mắt. Sự xuất hiện của chú cún cưng và các bạn trẻ ngồi trò chuyện tự nhiên làm toát lên tinh thần 'Pet-Friendly Cafe' thời thượng của Thượng Hải.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Các đường dây điện chằng chịt ngang tường tòa nhà (nét đặc trưng khu phố cũ) làm phần trên khung hình hơi rối rắm.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Architectural Quirks: Hãy tìm kiếm những góc kiến trúc khác lạ (cửa sổ tròn, ban công sắt uốn lượn) làm điểm nhấn cho khung hình để người xem lập tức nhớ tên quán.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt tiền Manual Coffee (Shanghai)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ban ngày dịu nhẹ, không gắt</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut on Beat</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 12 • Hard Cut on Beat</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_11_to_12.jpg?v=2', 'Chuyển cảnh Shot 11 sang Shot 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_11_to_12.jpg?v=2" alt="Transition 11 to 12" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-12">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 12</span>
+                <button class="shot-time-btn" onclick="jumpToShot(12, 9.4, 10.2)">
+                    ▶ 9.40s - 10.20s (0.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Slogan Truyền Cảm Hứng Viết Tay Trên Ô Kính Tầng 2 Quán Kainos: Tạo Điểm Tựa Ý Niệm (Conceptual Hook) Nâng Tầm Giá Trị Thương Hiệu</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_12_start.jpg', 'Shot 12 • Đầu (9.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (9.40s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_12_mid.jpg', 'Shot 12 • Giữa (9.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_12_end.jpg', 'Shot 12 • Cuối (10.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.20s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Quán Kainos Cafe lúc chớm hoàng hôn. Ô cửa kính lớn tầng 2 được viết dòng chữ slogan trắng đầy cảm hứng: 'CREATE THE THINGS YOU WISH EXISTED'. Tầng trệt quán lên đèn vàng rực rỡ, đông đảo bạn trẻ ngồi thư giãn ở cả khu vực trong nhà và ngoài vỉa hè lát gạch đỏ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thông điệp 'Create the things you wish existed' trên kính tầng 2 trở thành điểm tựa triết lý đắt giá, biến clip review thành nguồn cảm hứng sáng tạo mạnh mẽ. Ánh đèn vàng ấm áp hắt ra từ tầng trệt tương phản với ánh sáng chạng vạng tạo vẻ đẹp điện ảnh cuốn hút.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khu vực tầng trệt hơi đông và tối hơn so với ô kính tầng 2 rực sáng chữ trắng.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Typography as Concept: Khai thác những câu slogan, thông điệp truyền cảm hứng viết trên tường/kính quán để nâng tầm video từ thông tin địa điểm thuần túy lên giá trị cảm xúc và ý niệm sống.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide 28mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt tiền 2 tầng Kainos Cafe (Shanghai)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng hoàng hôn chạng vạng kết hợp đèn vàng ấm nội thất</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut on Beat</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 13 • Hard Cut on Beat</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_12_to_13.jpg?v=2', 'Chuyển cảnh Shot 12 sang Shot 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_12_to_13.jpg?v=2" alt="Transition 12 to 13" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-13">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 13</span>
+                <button class="shot-time-btn" onclick="jumpToShot(13, 10.2, 10.97)">
+                    ▶ 10.20s - 10.97s (0.77s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hơi Thở Cà Phê Bistro Paris Giữa Lòng Thượng Hải Tại Onirico: Tối Giản Trắng Sáng & Tinh Thần Xê Dịch Nhỏ Nhắn</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_13_start.jpg', 'Shot 13 • Đầu (10.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (10.20s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_13_mid.jpg', 'Shot 13 • Giữa (10.59s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (10.59s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_13_end.jpg', 'Shot 13 • Cuối (10.97s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_13_end.jpg" alt="Shot 13 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.97s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Mặt tiền tiệm Onirico Café với tông màu trắng tinh khôi kết hợp mái hiên sọc đỏ thanh lịch phong cách bistro nước Pháp. Cửa kính lớn mở toang nhìn thẳng vào quầy bar ngăn nắp, phía trước hè là chiếc ghế dù cắm trại xếp đặt trên nền đá vỉa hè.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tông màu trắng sáng tinh khiết kết hợp điểm nhấn đỏ ở logo tạo độ nhận diện thương hiệu mạnh mẽ, sạch sẽ. Mô hình quán nhỏ xinh xắn (Pocket Cafe / Micro Cafe) tạo cảm giác tiện lợi và rất thời thượng.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Một phần người đi bộ xuất hiện ở mép trái khung hình hơi làm phân tán sự tập trung vào biển hiệu quán.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Micro Cafe Charm: Với những quán diện tích nhỏ, việc giữ tông màu trắng sáng tối giản và mở toang cửa sổ ra hè phố là cách tốt nhất để tạo cảm giác thoáng đãng và hút khách qua đường.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt tiền Onirico Café (Shanghai)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ban ngày trong trẻo, phản xạ tường trắng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut on Beat</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 14 • Hard Cut on Beat</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_13_to_14.jpg?v=2', 'Chuyển cảnh Shot 13 sang Shot 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_13_to_14.jpg?v=2" alt="Transition 13 to 14" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-14">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 14</span>
+                <button class="shot-time-btn" onclick="jumpToShot(14, 10.97, 11.77)">
+                    ▶ 10.97s - 11.77s (0.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Mặt Tiền Kính Kịch Trần Trong Suốt (Full-Glass Facade) Quán Neotopia: Xóa Nhòa Ranh Giới Giữa Nội Thất Ấm Áp & Đường Phố</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_14_start.jpg', 'Shot 14 • Đầu (10.97s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_14_start.jpg" alt="Shot 14 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (10.97s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_14_mid.jpg', 'Shot 14 • Giữa (11.37s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_14_mid.jpg" alt="Shot 14 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (11.37s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_14_end.jpg', 'Shot 14 • Cuối (11.77s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_14_end.jpg" alt="Shot 14 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (11.77s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Mặt tiền tiệm Neotopia Coffee với vách kính lớn kịch trần trong suốt. Bên trong quán bừng sáng ánh đèn vàng dịu mắt, quầy bar tròn độc đáo và dãy ghế cắm trại xếp ngay ngắn trước cửa kính mời gọi người qua đường dừng chân thưởng thức.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Vách kính trong suốt toàn phần giúp phô diễn trọn vẹn vẻ đẹp sang trọng, ấm cúng của nội thất ra ngoài hè phố. Ánh đèn vàng êm ái từ các chụp đèn thiết kế tương phản tuyệt đẹp với ánh sáng mát của chiều muộn.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chiếc xe máy điện dựng sát tiền cảnh bên trái hơi che khuất một phần góc nhìn vào cửa quán.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">The Glass Lantern Effect: Mặt tiền kính suốt biến quán cà phê thành một chiếc đèn lồng khổng lồ phát sáng rực rỡ khi trời về chiều, thu hút mọi ánh nhìn của người đi đường.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt tiền Neotopia Coffee (Shanghai)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng vàng ấm nội thất tỏa sáng ra hè phố chiều mát</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut on Beat</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 15 • Hard Cut on Beat</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_14_to_15.jpg?v=2', 'Chuyển cảnh Shot 14 sang Shot 15')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_14_to_15.jpg?v=2" alt="Transition 14 to 15" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-15">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 15</span>
+                <button class="shot-time-btn" onclick="jumpToShot(15, 11.77, 12.57)">
+                    ▶ 11.77s - 12.57s (0.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cảnh Kết Yên Bình (Peaceful Outro) Tại Bitter Donkey: Khóa Lại Hành Trình Bằng Khoảnh Khắc Thảnh Thơi Đọc Sách Bên Ly Cà Phê Chiều</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_15_start.jpg', 'Shot 15 • Đầu (11.77s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_15_start.jpg" alt="Shot 15 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (11.77s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_15_mid.jpg', 'Shot 15 • Giữa (12.17s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_15_mid.jpg" alt="Shot 15 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (12.17s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_15_end.jpg', 'Shot 15 • Cuối (12.57s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_15_end.jpg" alt="Shot 15 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (12.57s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Phân cảnh kết thúc (Outro / CTA). Mặt tiền quán Bitter Donkey với cửa kính cao thanh thoát, logo chú lừa tinh nghịch và giờ mở cửa (everyday 10:30 - 18:30). Bên trong quán, một cô gái mặc áo sát nách đen và chân váy trắng đang ngồi thư thái đọc sách thưởng thức cà phê dưới ánh đèn quả cầu tròn phát sáng ấm áp dịu dàng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Chọn một khoảnh khắc yên bình và tĩnh lặng làm nốt nhạc kết thúc sau 14 cảnh cắt nhanh dồn dập, để lại dư âm nhẹ nhàng và khao khát được trải nghiệm cho người xem. Bố cục khung hình dọc tôn vinh chiều cao cửa kính và cảm xúc thư thái của nhân vật.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Logo Bitter Donkey ở góc trên bên phải hơi nhỏ và bị bóng đèn chiếu sáng làm giảm nhẹ độ tương phản.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">The Calming Outro (Nốt trầm kết thúc): Sau một chuỗi fast-cut nhịp độ dồn dập, shot cuối cùng nên là một khoảnh khắc lắng đọng (uống cà phê, đọc sách, mỉm cười) để đọng lại cảm xúc trọn vẹn trong tâm trí khán giả.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt tiền Bitter Donkey (Shanghai)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn quả cầu tròn vàng ấm nội thất dịu mắt</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> End Video (Kết thúc video)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_15_to_01_loop.jpg?v=2', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/transitions/trans_15_to_01_loop.jpg?v=2" alt="Loop Transition" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 1.27)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Hook Thiết Lập Bối Cảnh 'Văn Hóa Vỉa Hè Thượng Hải' (Shanghai Al-Fresco Lifestyle): Định Danh Tọa Độ Bằng Typography Tạp Chí Sang Trọng & Nhịp Thở Đời Thường</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 1.27, 2.17)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 1.27s</span>
+            </div>
+            <div class="grid-card-body">Bố Cục Cân Xứng Chính Diện (Frontal Symmetry) Quán Plusone: Tôn Vinh Kiến Trúc Biệt Thự 2 Tầng & Hàng Ghế Camping Hè Phố</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 2.17, 3.0)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 2.17s</span>
+            </div>
+            <div class="grid-card-body">Cận Cảnh Chiết Xuất Dirty Coffee Qua Ô Cửa Kính (Through-the-Glass Framing): Đòn Bẩy Xúc Giác Đổi Nhịp Sau 2 Cảnh Toàn Phố Xá</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 3.0, 3.83)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 3.00s</span>
+            </div>
+            <div class="grid-card-body">Bắt Trọn Khoảnh Khắc Đời Thường Trước Quán Wuming (Spontaneous Life Slice): Gắn Kết Con Người Vào Tinh Thần Wabi-Sabi Tối Giản</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 3.83, 4.63)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 3.83s</span>
+            </div>
+            <div class="grid-card-body">Góc Máy Nội Cảnh Hướng Ngoại (Inside-Out Perspective) Quán CCLAB: Đặt Mâm Đĩa Than Làm Tiền Cảnh Định Hình Phong Cách Hoài Cổ</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 4.63, 5.43)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 4.63s</span>
+            </div>
+            <div class="grid-card-body">Góc Đường Phố Nghiêng 45 Độ (Angled Corner Perspective) Voyage Coffee: Sự Hòa Quyện Giữa Mái Ngói Rêu Phong & Lối Sống Co-Working Đương Đại</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 5.43, 6.23)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 5.43s</span>
+            </div>
+            <div class="grid-card-body">Cận Cảnh Bào Vỏ Cam Rắc Lên Kem Béo (Citrus Zest Action Close-Up) Tại Honky Tonk: Kích Hoạt Đa Giác Quan Bằng Nghệ Thuật Mixology</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 6.23, 7.03)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 6.23s</span>
+            </div>
+            <div class="grid-card-body">Cú Chạy Ngang Của Shipper Áo Cam (Motion Interception) Trước Quán Kopi: Nhịp Điệu Đời Thường Vương Gia Vệ Giữa Lòng Đô Thị</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(9, 7.03, 7.83)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <span class="grid-thumb-badge">Shot 09 • 7.03s</span>
+            </div>
+            <div class="grid-card-body">Bố Cục Khung Trong Khung (Frame-Within-a-Frame) Quán Fat Face: Hút Mắt Bằng Cửa Vòm Trắng & Ánh Đèn Neon Nghệ Thuật Ấm Áp</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(10, 7.83, 8.6)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+                <span class="grid-thumb-badge">Shot 10 • 7.83s</span>
+            </div>
+            <div class="grid-card-body">Bằng Chứng Xã Hội Hùng Hồn (Social Proof Staging) Trước Quán O.P.S: Dòng Người Xếp Hàng Khẳng Định Vị Thế Cà Phê Sáng Tạo Số 1</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(11, 8.6, 9.4)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+                <span class="grid-thumb-badge">Shot 11 • 8.60s</span>
+            </div>
+            <div class="grid-card-body">Kiến Trúc Chung Cư Cổ Điển & Cửa Sổ Tròn Độc Bản Quán Manual: Bức Tranh Cộng Đồng Thượng Hải Thảnh Thơi Cùng Thú Cưng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(12, 9.4, 10.2)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+                <span class="grid-thumb-badge">Shot 12 • 9.40s</span>
+            </div>
+            <div class="grid-card-body">Slogan Truyền Cảm Hứng Viết Tay Trên Ô Kính Tầng 2 Quán Kainos: Tạo Điểm Tựa Ý Niệm (Conceptual Hook) Nâng Tầm Giá Trị Thương Hiệu</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(13, 10.2, 10.97)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_13_mid.jpg" alt="Shot 13" loading="lazy">
+                <span class="grid-thumb-badge">Shot 13 • 10.20s</span>
+            </div>
+            <div class="grid-card-body">Hơi Thở Cà Phê Bistro Paris Giữa Lòng Thượng Hải Tại Onirico: Tối Giản Trắng Sáng & Tinh Thần Xê Dịch Nhỏ Nhắn</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(14, 10.97, 11.77)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_14_mid.jpg" alt="Shot 14" loading="lazy">
+                <span class="grid-thumb-badge">Shot 14 • 10.97s</span>
+            </div>
+            <div class="grid-card-body">Mặt Tiền Kính Kịch Trần Trong Suốt (Full-Glass Facade) Quán Neotopia: Xóa Nhòa Ranh Giới Giữa Nội Thất Ấm Áp & Đường Phố</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(15, 11.77, 12.57)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_15_mid.jpg" alt="Shot 15" loading="lazy">
+                <span class="grid-thumb-badge">Shot 15 • 11.77s</span>
+            </div>
+            <div class="grid-card-body">Cảnh Kết Yên Bình (Peaceful Outro) Tại Bitter Donkey: Khóa Lại Hành Trình Bằng Khoảnh Khắc Thảnh Thơi Đọc Sách Bên Ly Cà Phê Chiều</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1AbENDdElh2uh30BzczOghjm--9xxeP7f" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="file:///Users/vietmac/Documents/CODE/Video phan tich/output_packages/IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "mid_frame": 18, "en_frame": 37, "st_time": 0.0, "mid_time": 0.6, "en_time": 1.27, "duration": 1.27, "headline": "Hook Thiết Lập Bối Cảnh 'Văn Hóa Vỉa Hè Thượng Hải' (Shanghai Al-Fresco Lifestyle): Định Danh Tọa Độ Bằng Typography Tạp Chí Sang Trọng & Nhịp Thở Đời Thường", "subject_action": "Cảnh mở đầu (Hook thị giác). Toàn cảnh góc phố rợp bóng cây ngô đồng đặc trưng khu Tô Giới Pháp cổ kính (Fuxing West Rd, Thượng Hải). Quán Labelhood House hiện lên với dãy bàn ghế gỗ dài kê dọc vỉa hè trước mặt tiền gạch đỏ cổ điển. Rất đông bạn trẻ, khách sành điệu ngồi thảnh thơi nhâm nhi cà phê dưới những tán dù che trắng mát rượi. Dòng chữ Serif thanh lịch phong cách bìa tạp chí Kinfolk ('somewhere in Shanghai • EPISODE: 20S COFFEE GUIDE • LABELHOOD HOUSE') xếp lớp ngay ngắn ở trung tâm khung hình, khóa chặt cảm giác tò mò của người xem.", "pros": "Bố cục đường dẫn (Leading Lines) chạy dọc dãy ghế gỗ song song lòng đường tạo chiều sâu hút mắt. Ánh nắng rọi lốm đốm qua vòm lá xanh (Dappled Sunlight) lên tường gạch đỏ tạo cảm xúc thư thái, bình yên. Bộ Typography Serif phân cấp chuyên nghiệp định vị ngay nội dung video là một cẩm nang tuyển chọn cao cấp (Curated Guide) chứ không phải clip dạo chơi ngẫu hứng.", "cons": "Góc máy đặt hơi thấp khiến phần mặt đường nhựa chiếm diện tích tương đối lớn ở tiền cảnh; bóng râm của tán dù che làm khuôn mặt một số khách ngồi phía trong hơi bị thiếu sáng.", "takeaway": "Quy tắc 'Lifestyle Establishing Hook': Khi làm video du lịch ẩm thực/hướng dẫn cà phê, shot đầu tiên bắt buộc phải là bức tranh phong cách sống (Lifestyle Shot) - không chỉ quay ly nước mà phải quay cả bầu không khí thưởng thức của người bản địa.", "shot_type": "Wide Establishing Shot (Góc ngang tầm mắt, tripod cố định)", "lens_angle": "Wide Angle 28mm (Khẩu độ f/2.8)", "location": "Mặt tiền Labelhood House (Fuxing West Rd, Shanghai)", "lighting_color": "Ánh sáng tự nhiên xuyên tán cây ngô đồng (Dappled Morning Daylight ~5200K)", "color_grade": "Warm Film Vintage • Tông màu gạch đỏ ấm kết hợp sắc xanh lá mát dịu", "sound_design": "Tiếng beat nhạc lo-fi/indie pop dồn dập + tiếng trò chuyện râm ran góc phố", "transition": "Hard Cut on Beat (Cắt đổi cảnh sắc lẹm theo nhịp trống)"}, {"id": 2, "st_frame": 38, "mid_frame": 51, "en_frame": 64, "st_time": 1.27, "mid_time": 1.7, "en_time": 2.17, "duration": 0.9, "headline": "Bố Cục Cân Xứng Chính Diện (Frontal Symmetry) Quán Plusone: Tôn Vinh Kiến Trúc Biệt Thự 2 Tầng & Hàng Ghế Camping Hè Phố", "subject_action": "Cảnh quay vuông góc 90 độ chính diện mặt tiền quán Plusone Coffee. Tòa nhà 2 tầng với ban công đầy cây xanh và dù che trắng phía trên; tầng trệt mở toang với hàng ghế xếp phong cách cắm trại dã ngoại (Camping Chairs) đặt ngay ngắn dưới mái hiên ngập tràn ánh nắng. Nhóm bạn trẻ ngồi trò chuyện thoải mái, tạo cảm giác thư giãn, gần gũi.", "pros": "Tính đối xứng hoàn hảo dọc theo trục cửa chính tạo cảm giác trật tự, vững chãi và thẩm mỹ kiến trúc chỉn chu. Sự giao thoa giữa biệt thự phong cách Châu Âu cổ và nội thất cắm trại hiện đại (Urban Outdoor Glamping) thể hiện rõ gu thẩm mỹ thời thượng của giới trẻ Thượng Hải.", "cons": "Mặt đường phía trước chiếm gần 1/3 khung hình bên dưới làm giảm bớt độ tập trung vào các chi tiết trang trí tinh tế bên trong quán.", "takeaway": "Góc quay chính diện vuông góc (90° Flat-lay Facade) luôn là lựa chọn hàng đầu để phô diễn trọn vẹn kết cấu hình học và sự bề thế của công trình kiến trúc quán cà phê.", "shot_type": "Medium Full Shot (Góc chính diện vuông góc)", "lens_angle": "Standard Wide 35mm", "location": "Mặt tiền Plusone Coffee (Shanghai)", "lighting_color": "Ánh nắng vàng ban mai rực rỡ chiếu xiên nhẹ", "color_grade": "Clean Aesthetic • Tông màu gỗ sáng kết hợp sắc xanh thiên nhiên", "sound_design": "Nhịp beat dậm mạnh + tiếng chim hót buổi sáng", "transition": "Hard Cut on Beat (Cắt đổi cảnh dứt khoát)"}, {"id": 3, "st_frame": 65, "mid_frame": 77, "en_frame": 89, "st_time": 2.17, "mid_time": 2.57, "en_time": 3.0, "duration": 0.83, "headline": "Cận Cảnh Chiết Xuất Dirty Coffee Qua Ô Cửa Kính (Through-the-Glass Framing): Đòn Bẩy Xúc Giác Đổi Nhịp Sau 2 Cảnh Toàn Phố Xá", "subject_action": "Cú máy cận cảnh (Close-Up POV) qua khung cửa sổ kính quán Mahlkönig. Cánh tay barista đang thao tác đặt chiếc ly thủy tinh chứa sữa lạnh béo ngậy dưới họng chiết xuất máy pha espresso đắt giá để tạo nên món Dirty Coffee trứ danh. Phía sau lưng, qua khung kính là bóng xe cộ và hàng cây đường phố Thượng Hải phản chiếu huyền ảo.", "pros": "Đột ngột chuyển đổi cự ly từ ngoại cảnh sang cận cảnh quầy pha chế (Sensory Pacing Shift) kích hoạt mạnh mẽ vị giác người xem. Khung kính cửa sổ tạo hiệu ứng phân lớp (Visual Layering) phản chiếu phố xá bên ngoài trong khi lấy nét sắc sảo vào ly cà phê sữa nhiều tầng.", "cons": "Ánh sáng phản quang trên mặt kính hơi gắt làm mờ một phần chi tiết máy pha cà phê; thời lượng 0.83s khá nhanh để cảm nhận trọn vẹn dòng espresso chảy chậm vào lớp sữa.", "takeaway": "Kỹ thuật xen kẽ 'Toàn Cảnh Bối Cảnh - Cận Cảnh Xúc Giác' (Atmosphere to Sensory Detail): Đừng chỉ lia máy quay toàn bộ không gian, hãy chen ngang 1 shot cận cảnh sản phẩm/thao tác làm đồ uống để neo giữ vị giác người xem.", "shot_type": "Close-Up Shot (Khung kính cửa sổ nhìn vào quầy pha chế)", "lens_angle": "Normal Prime 50mm (Khẩu độ f/2.0 xóa phông nhẹ)", "location": "Quầy bar Mahlkönig Coffee Concept", "lighting_color": "Ánh sáng ban ngày hắt qua kính kết hợp đèn bar ấm áp", "color_grade": "High Contrast Cafe Style • Sữa trắng tương phản espresso nâu đậm", "sound_design": "Tiếng máy chiết xuất espresso rè nhẹ + tiếng gõ tay pha", "transition": "Hard Cut on Beat"}, {"id": 4, "st_frame": 90, "mid_frame": 102, "en_frame": 114, "st_time": 3.0, "mid_time": 3.4, "en_time": 3.83, "duration": 0.83, "headline": "Bắt Trọn Khoảnh Khắc Đời Thường Trước Quán Wuming (Spontaneous Life Slice): Gắn Kết Con Người Vào Tinh Thần Wabi-Sabi Tối Giản", "subject_action": "Mặt tiền quán Wuming Coffee (Vô Danh Coffee). Hệ cửa kính lớn trong suốt hé lộ không gian nội thất tối giản phong cách Wabi-sabi. Trước bậc thềm vỉa hè lát đá, một phụ nữ trẻ áo hồng đang bế em bé vui vẻ, bên cạnh là một vị khách ngồi tựa ghế thư thái ngắm nhìn nhịp sống qua lại.", "pros": "Bắt trọn khoảnh khắc tương tác mẹ con tự nhiên, mang lại hơi thở đời sống chân thực và cảm xúc ấm áp. Tone màu nâu xám trầm của gạch ốp tường kết hợp biển hiệu chữ Hán tinh gọn '無名 coffee' tạo nét đẹp thiền tịnh, tao nhã.", "cons": "Nhân vật di chuyển bên mép trái lướt qua nhanh làm lệch hướng chú ý khỏi biển hiệu trung tâm trong chốc lát.", "takeaway": "Nghệ thuật 'Human Element in Architecture': Một khung hình kiến trúc đẹp sẽ thực sự có linh hồn khi có sự hiện diện của con người đang tương tác thoải mái, tạo cảm giác thân thiện và đón chào.", "shot_type": "Medium Shot (Góc ngang tầm mắt)", "lens_angle": "Standard 35mm", "location": "Mặt tiền Wuming Coffee (Shanghai)", "lighting_color": "Ánh sáng tán xạ êm dịu, không bị gắt bóng", "color_grade": "Earthy Wabi-Sabi Tones • Màu đất nung ấm, xám xi măng nhã nhặn", "sound_design": "Tiếng cười đùa trẻ thơ hòa trong giai điệu bài hát", "transition": "Hard Cut on Beat"}, {"id": 5, "st_frame": 115, "mid_frame": 126, "en_frame": 138, "st_time": 3.83, "mid_time": 4.23, "en_time": 4.63, "duration": 0.8, "headline": "Góc Máy Nội Cảnh Hướng Ngoại (Inside-Out Perspective) Quán CCLAB: Đặt Mâm Đĩa Than Làm Tiền Cảnh Định Hình Phong Cách Hoài Cổ", "subject_action": "Cú máy nhìn từ bên trong quán CCLAB nhìn ra ngoài hè phố (Inside-Out Framing). Ở tiền cảnh là một chiếc máy hát đĩa than cổ điển bằng gỗ (Vinyl Turntable) đang quay êm ái. Qua khung cửa kính mở toang, bên ngoài hè phố ngập nắng là dãy ghế xếp và bóng dáng một cô gái mặc váy đen trắng đang dạo bước.", "pros": "Kỹ thuật xếp lớp tiền cảnh - hậu cảnh (Foreground Layering) bậc thầy: mâm đĩa than đóng vai trò mỏ neo âm nhạc và thẩm mỹ hoài cổ, dẫn dắt ánh nhìn ra nhịp sống rộn ràng ngoài phố. Độ tương phản sáng tối giữa nội thất trong nhà và nắng hè tạo chiều sâu thị giác ấn tượng.", "cons": "Độ chênh sáng (Dynamic Range) tương đối lớn khiến các rãnh đĩa than ở tiền cảnh hơi bị chìm vào vùng tối.", "takeaway": "Kỹ thuật 'Look-Through Framing': Hãy dùng một đồ vật đặc trưng (máy đĩa than, bình pour-over, kệ sách) làm tiền cảnh mờ để nhìn ra thế giới bên ngoài, khung hình sẽ lập tức mang phong vị điện ảnh sâu sắc.", "shot_type": "Medium Close-Up with Depth (Nội cảnh hướng ra ngoại cảnh)", "lens_angle": "Wide-Normal 35mm (Khẩu độ f/2.2)", "location": "Không gian bên trong quán Mord CCLAB", "lighting_color": "Ánh sáng tương phản: nội thất đèn vàng dịu - ngoại cảnh nắng chói", "color_grade": "Warm Nostalgia • Màu gỗ sồi ấm áp, sắc vàng nắng hè", "sound_design": "Tiếng xước đĩa than vinyl lách tách hòa trong beat nhạc", "transition": "Hard Cut on Beat"}, {"id": 6, "st_frame": 139, "mid_frame": 150, "en_frame": 162, "st_time": 4.63, "mid_time": 5.03, "en_time": 5.43, "duration": 0.8, "headline": "Góc Đường Phố Nghiêng 45 Độ (Angled Corner Perspective) Voyage Coffee: Sự Hòa Quyện Giữa Mái Ngói Rêu Phong & Lối Sống Co-Working Đương Đại", "subject_action": "Góc quán Voyage Coffee nép mình dưới rặng cây cổ thụ bên ngã ba đường. Tòa nhà kết hợp mái ngói âm dương cổ kính với vách kính hiện đại. Khách hàng ngồi mở laptop làm việc và trò chuyện thư thả trên dãy ghế gỗ bậc thềm ngoài trời, bên cạnh là cột biển báo giao thông xanh lam đặc trưng Thượng Hải.", "pros": "Góc máy chéo 45 độ ôm trọn cả chiều dài mặt tiền quán và tán cây râm mát; hình ảnh khách mở laptop làm việc ngoài hè phố khắc họa trọn vẹn văn hóa 'Work from Cafe' phóng khoáng. Cột biển báo giao thông xanh lam đóng vai trò điểm nhấn địa phương (Local Anchor).", "cons": "Cột biển báo nằm ngay vị trí 1/3 bên phải vô tình chia cắt tầm nhìn trực tiếp vào mặt tiền quán.", "takeaway": "Cinematic Realism: Đừng né tránh các yếu tố đường phố thực tế (biển báo, vạch kẻ đường, cột đèn), hãy biến chúng thành mỏ neo bối cảnh giúp video có chất tài liệu chân thực và sống động.", "shot_type": "Medium Long Shot (Góc nghiêng đường phố)", "lens_angle": "Wide 28mm", "location": "Góc phố Voyage Coffee Corner (Shanghai)", "lighting_color": "Ánh sáng bóng râm mát dưới rặng cây xanh", "color_grade": "Urban Documentary • Tông màu ngói cổ trầm kết hợp sắc xanh biển báo", "sound_design": "Tiếng gõ phím laptop + tiếng gió xào xạc cành lá", "transition": "Hard Cut on Beat"}, {"id": 7, "st_frame": 163, "mid_frame": 174, "en_frame": 186, "st_time": 5.43, "mid_time": 5.83, "en_time": 6.23, "duration": 0.8, "headline": "Cận Cảnh Bào Vỏ Cam Rắc Lên Kem Béo (Citrus Zest Action Close-Up) Tại Honky Tonk: Kích Hoạt Đa Giác Quan Bằng Nghệ Thuật Mixology", "subject_action": "Cú máy cận cảnh ẩm thực (Food Close-Up POV). Barista đeo găng tay cao su xanh chuyên nghiệp đang cầm quả cam vàng tươi bào vỏ trực tiếp lên lớp kem bọt mịn màng của ly specialty coffee đặt trên đĩa vàng kim sa óng ánh, tạo nên những vụn cam thơm ngát rơi xuống bề mặt.", "pros": "Hành động bào vỏ cam (Kinetic Action) mang lại động năng dồi dào và kích thích đa giác quan (khứu giác, xúc giác, vị giác). Màu cam vàng rực rỡ tương phản sắc nét với nền kem trắng sữa và ánh vàng kim sa của đĩa lót, tạo cảm giác món đồ uống vô cùng cao cấp và tinh tế.", "cons": "Cánh tay của barista hơi choán mất góc trên bên trái khung hình; thao tác bào vỏ diễn ra khá nhanh trong 0.80s.", "takeaway": "Signature Action Shot: Mỗi quán cà phê hay nhà hàng đều có một thao tác pha chế 'đinh' (bào vỏ cam, khò lửa bọt kem, rót latte art) - hãy phóng to vào hành động đó để làm bùng nổ cảm xúc thèm thuồng của người xem.", "shot_type": "Macro Close-Up Shot (Góc nhìn từ trên xéo 45 độ)", "lens_angle": "Macro/Portrait 50mm (Khẩu độ lớn f/1.8)", "location": "Quầy Bar Honky Tonk Coffee", "lighting_color": "Ánh sáng rọi điểm (Spotlight) ấm áp tập trung vào ly cà phê", "color_grade": "Vibrant Food Color • Sắc cam tươi bão hòa cao trên nền vàng kim sang trọng", "sound_design": "Tiếng sột soạt bào vỏ cam giòn tan + tiếng thở nhẹ", "transition": "Hard Cut on Beat"}, {"id": 8, "st_frame": 187, "mid_frame": 198, "en_frame": 210, "st_time": 6.23, "mid_time": 6.63, "en_time": 7.03, "duration": 0.8, "headline": "Cú Chạy Ngang Của Shipper Áo Cam (Motion Interception) Trước Quán Kopi: Nhịp Điệu Đời Thường Vương Gia Vệ Giữa Lòng Đô Thị", "subject_action": "Tiệm Kopi Coffee nhỏ nhắn xinh xắn rộng chừng vài mét vuông nép mình giữa hai bức tường nhà cổ với mái hiên xanh lá cây. Ngay khoảnh khắc bấm máy, một nhân viên giao hàng mặc áo khoác cam đội mũ bảo hiểm phóng xe máy điện ngang qua tiền cảnh, tạo một vệt chuyển động nhanh trước cửa tiệm yên ắng.", "pros": "Kỹ thuật 'Motion Interception' ngẫu nhiên nhưng cực kỳ đắt giá: vệt màu cam của người giao hàng lướt qua tạo nhịp chuyển động (Motion Blur) sinh động, đối lập hoàn hảo với sự tĩnh lặng của căn tiệm nhỏ có chú chó cưng nằm dưới chân khách.", "cons": "Chiếc xe máy điện che khuất phần dưới cửa quán trong khoảng 0.3s.", "takeaway": "Kỹ thuật 'Foreground Motion Blur': Đừng ngại những chiếc xe hay người đi bộ lướt qua ống kính; chính những chuyển động đời thường này tạo nên hơi thở đường phố chân thực như trong các thước phim điện ảnh Hong Kong.", "shot_type": "Eye-level Medium Shot (Góc ngang đường)", "lens_angle": "Standard 35mm", "location": "Mặt tiền tiệm Kopi (382 Fumin Rd, Shanghai)", "lighting_color": "Ánh sáng tự nhiên hè phố dịu mát", "color_grade": "Wong Kar-wai Inspired • Xanh lá cây mái hiên đối lập sắc cam rực rỡ của shipper", "sound_design": "Tiếng vút xe máy điện chạy qua + tiếng chuông cửa quán reng nhẹ", "transition": "Hard Cut on Beat"}, {"id": 9, "st_frame": 211, "mid_frame": 222, "en_frame": 234, "st_time": 7.03, "mid_time": 7.43, "en_time": 7.83, "duration": 0.8, "headline": "Bố Cục Khung Trong Khung (Frame-Within-a-Frame) Quán Fat Face: Hút Mắt Bằng Cửa Vòm Trắng & Ánh Đèn Neon Nghệ Thuật Ấm Áp", "subject_action": "Mặt tiền quán Fat Face Coffee thiết kế theo phong cách phòng trưng bày nghệ thuật đương đại (Art Gallery). Khung cửa vòm đá xám mở toang nhìn sâu vào nội thất sáng bừng ánh đèn vàng nghệ thuật uốn cong, quầy pha chế trắng tinh khôi và bảng menu viết tay phấn màu tinh nghịch đặt trên bậc thềm.", "pros": "Bố cục 'Khung trong khung' tự nhiên: khung cửa đá bao bọc tạo phễu thị giác hút thẳng mắt vào chiều sâu không gian bên trong quán. Sự tương phản giữa tường đá ngoại cảnh mát lạnh và ánh đèn nội thất ấm áp tạo cảm giác mời gọi mãnh liệt.", "cons": "Góc máy hơi tĩnh và chính diện, chưa thể hiện được nhiều không gian vỉa hè xung quanh quán.", "takeaway": "Frame-within-a-frame: Sử dụng khung cửa chính mở rộng như một chiếc khung tranh tự nhiên để khoe trọn không gian ánh sáng bên trong quán, tạo cảm giác thôi thúc người xem bước vào khám phá.", "shot_type": "Straight-on Medium Shot (Góc chính diện)", "lens_angle": "Standard 35mm", "location": "Mặt tiền Fat Face Coffee (Shanghai)", "lighting_color": "Tương phản ánh sáng: ngoài trời trung tính - trong quán vàng ấm 2700K", "color_grade": "Warm Minimalist • Tường đá trắng sáng kết hợp đèn vàng ấm cúng", "sound_design": "Tiếng nhạc jazz êm dịu vang ra từ trong quán", "transition": "Hard Cut on Beat"}, {"id": 10, "st_frame": 235, "mid_frame": 246, "en_frame": 257, "st_time": 7.83, "mid_time": 8.2, "en_time": 8.6, "duration": 0.77, "headline": "Bằng Chứng Xã Hội Hùng Hồn (Social Proof Staging) Trước Quán O.P.S: Dòng Người Xếp Hàng Khẳng Định Vị Thế Cà Phê Sáng Tạo Số 1", "subject_action": "Cảnh quay trước tiệm O.P.S Cafe (Taiyuan Rd) - một trong những biểu tượng sáng tạo cà phê danh tiếng nhất Thượng Hải. Hàng dài các bạn trẻ sành điệu đứng xếp hàng trật tự dọc theo bờ tường nhà chung cư cũ kỹ rêu phong, kiên nhẫn chờ đến lượt thưởng thức menu seasonal đặc biệt.", "pros": "Hiệu ứng 'Visual Social Proof' vô cùng đắt giá: không cần dùng bất kỳ lời ca ngợi nào, chỉ một khung hình ghi lại cảnh khách hàng kiên nhẫn xếp hàng dài đã đủ chứng thực vị thế quán 'Must-Visit' số 1. Tỷ lệ tương quan giữa con người và tòa nhà cổ rất hài hòa.", "cons": "Dòng người đứng đông che kín cửa ra vào chính khiến người xem chưa kịp thấy rõ thiết kế biển hiệu hay bên trong quầy bar.", "takeaway": "The Queue Shot (Bằng chứng xếp hàng): Trong video review địa điểm, 1 shot quay hàng người xếp hàng chân thật có sức thuyết phục gấp nhiều lần mọi lời quảng cáo bằng lời.", "shot_type": "Eye-level Medium Shot (Góc ngang tầm mắt qua đường)", "lens_angle": "Normal 35mm", "location": "Mặt tiền O.P.S Cafe (Taiyuan Rd, Shanghai)", "lighting_color": "Ánh sáng ban ngày đều, bóng râm mát khu phố cổ", "color_grade": "Cinematic Street Life • Tông màu tường cũ hoài niệm, trang phục giới trẻ đa sắc", "sound_design": "Tiếng xì xào bàn tán háo hức của dòng người chờ đợi", "transition": "Hard Cut on Beat"}, {"id": 11, "st_frame": 258, "mid_frame": 269, "en_frame": 281, "st_time": 8.6, "mid_time": 9.0, "en_time": 9.4, "duration": 0.8, "headline": "Kiến Trúc Chung Cư Cổ Điển & Cửa Sổ Tròn Độc Bản Quán Manual: Bức Tranh Cộng Đồng Thượng Hải Thảnh Thơi Cùng Thú Cưng", "subject_action": "Mặt tiền tiệm Manual Coffee đặt tại tầng trệt của tòa nhà chung cư phong cách Pháp cổ kính. Điểm nhấn là ô cửa sổ tròn độc đáo (porthole window) trên tường tầng 2. Dưới hiên quán, các bạn trẻ ngồi trò chuyện trên ghế gấp, có người dắt theo cún cưng nô đùa, tạo nên không khí cộng đồng cực kỳ cởi mở, văn minh.", "pros": "Chi tiết cửa sổ tròn ở tầng 2 tạo điểm neo nhận diện kiến trúc độc bản lạ mắt. Sự xuất hiện của chú cún cưng và các bạn trẻ ngồi trò chuyện tự nhiên làm toát lên tinh thần 'Pet-Friendly Cafe' thời thượng của Thượng Hải.", "cons": "Các đường dây điện chằng chịt ngang tường tòa nhà (nét đặc trưng khu phố cũ) làm phần trên khung hình hơi rối rắm.", "takeaway": "Architectural Quirks: Hãy tìm kiếm những góc kiến trúc khác lạ (cửa sổ tròn, ban công sắt uốn lượn) làm điểm nhấn cho khung hình để người xem lập tức nhớ tên quán.", "shot_type": "Medium Shot (Góc ngang đường)", "lens_angle": "Standard 35mm", "location": "Mặt tiền Manual Coffee (Shanghai)", "lighting_color": "Ánh sáng ban ngày dịu nhẹ, không gắt", "color_grade": "Vintage Urban • Tường xám xanh nhã nhặn, sắc màu đời sống đô thị", "sound_design": "Tiếng chó sủa vui vẻ + tiếng cười nói", "transition": "Hard Cut on Beat"}, {"id": 12, "st_frame": 282, "mid_frame": 293, "en_frame": 305, "st_time": 9.4, "mid_time": 9.8, "en_time": 10.2, "duration": 0.8, "headline": "Slogan Truyền Cảm Hứng Viết Tay Trên Ô Kính Tầng 2 Quán Kainos: Tạo Điểm Tựa Ý Niệm (Conceptual Hook) Nâng Tầm Giá Trị Thương Hiệu", "subject_action": "Quán Kainos Cafe lúc chớm hoàng hôn. Ô cửa kính lớn tầng 2 được viết dòng chữ slogan trắng đầy cảm hứng: 'CREATE THE THINGS YOU WISH EXISTED'. Tầng trệt quán lên đèn vàng rực rỡ, đông đảo bạn trẻ ngồi thư giãn ở cả khu vực trong nhà và ngoài vỉa hè lát gạch đỏ.", "pros": "Thông điệp 'Create the things you wish existed' trên kính tầng 2 trở thành điểm tựa triết lý đắt giá, biến clip review thành nguồn cảm hứng sáng tạo mạnh mẽ. Ánh đèn vàng ấm áp hắt ra từ tầng trệt tương phản với ánh sáng chạng vạng tạo vẻ đẹp điện ảnh cuốn hút.", "cons": "Khu vực tầng trệt hơi đông và tối hơn so với ô kính tầng 2 rực sáng chữ trắng.", "takeaway": "Typography as Concept: Khai thác những câu slogan, thông điệp truyền cảm hứng viết trên tường/kính quán để nâng tầm video từ thông tin địa điểm thuần túy lên giá trị cảm xúc và ý niệm sống.", "shot_type": "Low-to-Eye Angle Medium Shot", "lens_angle": "Wide 28mm", "location": "Mặt tiền 2 tầng Kainos Cafe (Shanghai)", "lighting_color": "Ánh sáng hoàng hôn chạng vạng kết hợp đèn vàng ấm nội thất", "color_grade": "Warm Twilight • Ánh sáng vàng rực rỡ tương phản bóng chiều mát", "sound_design": "Tiếng beat nhạc dâng cao theo cảm xúc", "transition": "Hard Cut on Beat"}, {"id": 13, "st_frame": 306, "mid_frame": 317, "en_frame": 328, "st_time": 10.2, "mid_time": 10.6, "en_time": 10.97, "duration": 0.77, "headline": "Hơi Thở Cà Phê Bistro Paris Giữa Lòng Thượng Hải Tại Onirico: Tối Giản Trắng Sáng & Tinh Thần Xê Dịch Nhỏ Nhắn", "subject_action": "Mặt tiền tiệm Onirico Café với tông màu trắng tinh khôi kết hợp mái hiên sọc đỏ thanh lịch phong cách bistro nước Pháp. Cửa kính lớn mở toang nhìn thẳng vào quầy bar ngăn nắp, phía trước hè là chiếc ghế dù cắm trại xếp đặt trên nền đá vỉa hè.", "pros": "Tông màu trắng sáng tinh khiết kết hợp điểm nhấn đỏ ở logo tạo độ nhận diện thương hiệu mạnh mẽ, sạch sẽ. Mô hình quán nhỏ xinh xắn (Pocket Cafe / Micro Cafe) tạo cảm giác tiện lợi và rất thời thượng.", "cons": "Một phần người đi bộ xuất hiện ở mép trái khung hình hơi làm phân tán sự tập trung vào biển hiệu quán.", "takeaway": "Micro Cafe Charm: Với những quán diện tích nhỏ, việc giữ tông màu trắng sáng tối giản và mở toang cửa sổ ra hè phố là cách tốt nhất để tạo cảm giác thoáng đãng và hút khách qua đường.", "shot_type": "Straight-on Medium Shot", "lens_angle": "Standard 35mm", "location": "Mặt tiền Onirico Café (Shanghai)", "lighting_color": "Ánh sáng ban ngày trong trẻo, phản xạ tường trắng", "color_grade": "High-Key Clean • Trắng tinh khiết, điểm xuyết đỏ tươi thanh lịch", "sound_design": "Tiếng máy pha cà phê xì hơi nước nhẹ nhàng", "transition": "Hard Cut on Beat"}, {"id": 14, "st_frame": 329, "mid_frame": 340, "en_frame": 352, "st_time": 10.97, "mid_time": 11.37, "en_time": 11.77, "duration": 0.8, "headline": "Mặt Tiền Kính Kịch Trần Trong Suốt (Full-Glass Facade) Quán Neotopia: Xóa Nhòa Ranh Giới Giữa Nội Thất Ấm Áp & Đường Phố", "subject_action": "Mặt tiền tiệm Neotopia Coffee với vách kính lớn kịch trần trong suốt. Bên trong quán bừng sáng ánh đèn vàng dịu mắt, quầy bar tròn độc đáo và dãy ghế cắm trại xếp ngay ngắn trước cửa kính mời gọi người qua đường dừng chân thưởng thức.", "pros": "Vách kính trong suốt toàn phần giúp phô diễn trọn vẹn vẻ đẹp sang trọng, ấm cúng của nội thất ra ngoài hè phố. Ánh đèn vàng êm ái từ các chụp đèn thiết kế tương phản tuyệt đẹp với ánh sáng mát của chiều muộn.", "cons": "Chiếc xe máy điện dựng sát tiền cảnh bên trái hơi che khuất một phần góc nhìn vào cửa quán.", "takeaway": "The Glass Lantern Effect: Mặt tiền kính suốt biến quán cà phê thành một chiếc đèn lồng khổng lồ phát sáng rực rỡ khi trời về chiều, thu hút mọi ánh nhìn của người đi đường.", "shot_type": "Medium Shot (Góc chính diện ngang đường)", "lens_angle": "Standard 35mm", "location": "Mặt tiền Neotopia Coffee (Shanghai)", "lighting_color": "Ánh sáng vàng ấm nội thất tỏa sáng ra hè phố chiều mát", "color_grade": "Golden Hour Glow • Tông màu hổ phách vàng ấm sang trọng", "sound_design": "Giai điệu bài hát chuẩn bị bước vào đoạn điệp khúc kết", "transition": "Hard Cut on Beat"}, {"id": 15, "st_frame": 353, "mid_frame": 365, "en_frame": 376, "st_time": 11.77, "mid_time": 12.17, "en_time": 12.57, "duration": 0.8, "headline": "Cảnh Kết Yên Bình (Peaceful Outro) Tại Bitter Donkey: Khóa Lại Hành Trình Bằng Khoảnh Khắc Thảnh Thơi Đọc Sách Bên Ly Cà Phê Chiều", "subject_action": "Phân cảnh kết thúc (Outro / CTA). Mặt tiền quán Bitter Donkey với cửa kính cao thanh thoát, logo chú lừa tinh nghịch và giờ mở cửa (everyday 10:30 - 18:30). Bên trong quán, một cô gái mặc áo sát nách đen và chân váy trắng đang ngồi thư thái đọc sách thưởng thức cà phê dưới ánh đèn quả cầu tròn phát sáng ấm áp dịu dàng.", "pros": "Chọn một khoảnh khắc yên bình và tĩnh lặng làm nốt nhạc kết thúc sau 14 cảnh cắt nhanh dồn dập, để lại dư âm nhẹ nhàng và khao khát được trải nghiệm cho người xem. Bố cục khung hình dọc tôn vinh chiều cao cửa kính và cảm xúc thư thái của nhân vật.", "cons": "Logo Bitter Donkey ở góc trên bên phải hơi nhỏ và bị bóng đèn chiếu sáng làm giảm nhẹ độ tương phản.", "takeaway": "The Calming Outro (Nốt trầm kết thúc): Sau một chuỗi fast-cut nhịp độ dồn dập, shot cuối cùng nên là một khoảnh khắc lắng đọng (uống cà phê, đọc sách, mỉm cười) để đọng lại cảm xúc trọn vẹn trong tâm trí khán giả.", "shot_type": "Medium Close Shot (Góc nhìn qua cửa kính)", "lens_angle": "Standard 35mm", "location": "Mặt tiền Bitter Donkey (Shanghai)", "lighting_color": "Đèn quả cầu tròn vàng ấm nội thất dịu mắt", "color_grade": "Peaceful Evening Warmth • Tông màu vàng kem nhẹ nhàng, sâu lắng", "sound_design": "Giai điệu bài hát ngân vang nốt cuối cùng và mờ dần (Fade Out)", "transition": "End Video (Kết thúc video)"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ct.toFixed(2) + 's / ' + (player.duration ? player.duration.toFixed(2) : '12.57') + 's';
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 30.0 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById('shot-' + shotId);
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

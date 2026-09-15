@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Đập Hộp Điện Ảnh &amp; Cận Cảnh Macro: Ulanzi LM01 - @_mubeenart • Director's Analysis Report</title>
+<style>
+@font-face {
+    font-family: 'SVN-Acta';
+    src: local('SVN-Acta-Bold'), local('SVN-Acta'), local('SVN Acta');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'SVN-Acta';
+    src: local('SVN-Acta-Medium'), local('SVN-Acta');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'SVN-Acta';
+    src: local('SVN-Acta-Book'), local('SVN-Acta-Regular'), local('SVN-Acta');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'GT America';
+    src: local('GT-America-LCGV-Standard-Regular'), local('GT America');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'GT America';
+    src: local('GT-America-LCGV-Standard-Medium'), local('GT America');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'GT America';
+    src: local('GT-America-LCGV-Standard-Bold'), local('GT America');
+    font-weight: 700;
+}
+
+:root {
+    --bg-main: #0b0f17;
+    --bg-card: #131b2a;
+    --bg-card-hover: #1c273c;
+    --bg-sidebar: #0f1624;
+    --border-color: #202c42;
+    --border-active: #f97316;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-amber: #f59e0b;
+    --accent-orange: #f97316;
+    --accent-blue: #38bdf8;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-purple: #c084fc;
+    --font-heading: 'SVN-Acta', Georgia, 'Times New Roman', serif;
+    --font-body: 'GT America', 'GT-America-LCGV-Standard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.65;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+.top-nav {
+    background: rgba(15, 22, 36, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+.nav-brand .brand-badge {
+    background: linear-gradient(135deg, #f97316, #ef4444);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-btn {
+    background: #1e293b;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 7px 13px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+.nav-btn:hover {
+    background: #334155;
+    border-color: var(--accent-orange);
+}
+
+.main-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 20px 80px;
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 30px;
+}
+
+.sticky-column {
+    position: sticky;
+    top: 75px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.video-player-box {
+    position: relative;
+    width: 100%;
+    background: #000;
+    border-bottom: 1px solid var(--border-color);
+}
+.video-player-box video {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    display: block;
+    object-fit: contain;
+}
+.video-info-box {
+    padding: 16px;
+}
+.video-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.video-meta-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+.meta-tag {
+    background: #1e293b;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+.meta-tag.creator {
+    background: rgba(249, 115, 22, 0.15);
+    color: #fb923c;
+    border-color: rgba(249, 115, 22, 0.3);
+    font-weight: 600;
+}
+.video-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+}
+
+.drawer-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 16px;
+    max-height: 420px;
+    overflow-y: auto;
+}
+.drawer-title {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+}
+.drawer-shot-row {
+    display: flex;
+    flex-direction: column;
+    padding: 7px 9px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-bottom: 4px;
+    transition: all 0.15s;
+    border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-active);
+}
+.drawer-shot-row .d-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    text-transform: uppercase;
+}
+.drawer-shot-row .d-time {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+.drawer-shot-row .d-title {
+    font-size: 0.82rem;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 14px;
+}
+.content-header h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.view-mode-tabs {
+    display: flex;
+    gap: 6px;
+    background: #1e293b;
+    padding: 3px;
+    border-radius: 8px;
+}
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.tab-btn.active {
+    background: var(--accent-orange);
+    color: #fff;
+}
+
+.grid-view-container {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+.grid-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-orange);
+}
+.grid-thumb-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+}
+.grid-thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid-time-tag {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.grid-shot-tag {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: var(--accent-orange);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.grid-card-desc {
+    padding: 10px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.shot-detail-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.shot-id-badge {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    background: rgba(249, 115, 22, 0.12);
+    padding: 4px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(249, 115, 22, 0.25);
+}
+.shot-time-range {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.dur-pill {
+    background: #1e293b;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+.jump-btn {
+    background: #1e293b;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 5px 11px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.jump-btn:hover {
+    background: var(--accent-orange);
+    color: #fff;
+    border-color: var(--accent-orange);
+}
+
+.shot-headline {
+    font-family: var(--font-heading);
+    font-size: 1.18rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.kf-col {
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 9/16;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s;
+}
+.kf-col:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-orange);
+}
+.kf-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.kf-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    color: #fff;
+    font-size: 0.72rem;
+    padding: 6px 8px;
+    text-align: center;
+}
+
+.shot-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+    background: rgba(0,0,0,0.25);
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+.spec-pill {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+.spec-pill strong {
+    color: var(--text-primary);
+}
+.spec-pill.wide {
+    grid-column: span 2;
+}
+
+.shot-narrative {
+    margin-bottom: 16px;
+}
+.narrative-row {
+    background: #0d131f;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-blue);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+}
+.n-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    margin-bottom: 4px;
+}
+
+.critique-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.critique-col {
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 0.84rem;
+    line-height: 1.55;
+}
+.critique-col.pros {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #a7f3d0;
+}
+.critique-col.cons {
+    background: rgba(244, 63, 94, 0.08);
+    border: 1px solid rgba(244, 63, 94, 0.2);
+    color: #fecdd3;
+}
+.critique-col.takeaway {
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    color: #fde68a;
+}
+.critique-title {
+    font-weight: 700;
+    font-size: 0.82rem;
+    margin-bottom: 6px;
+}
+.critique-col.pros .critique-title { color: var(--accent-emerald); }
+.critique-col.cons .critique-title { color: var(--accent-rose); }
+.critique-col.takeaway .critique-title { color: var(--accent-amber); }
+
+.transition-card {
+    background: #0f172a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 14px;
+}
+.trans-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.trans-badge {
+    background: #6366f1;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.trans-title {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+.trans-img-box {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    cursor: pointer;
+    background: #000;
+}
+.trans-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.trans-desc {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+/* Lightbox */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.lightbox-modal.active {
+    display: flex;
+}
+.lightbox-modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 20px;
+    background: #1e293b;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+    .sticky-column {
+        position: static;
+    }
+    .critique-grid {
+        grid-template-columns: 1fr;
+    }
+    .shot-specs-grid {
+        grid-template-columns: 1fr;
+    }
+    .spec-pill.wide {
+        grid-column: span 1;
+    }
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<header class="top-nav">
+    <a href="https://vietndj.github.io/scene.html" class="nav-brand">
+        <span>🎬 VIDEO DIRECTORS</span>
+        <span class="brand-badge">PRO ANALYSIS</span>
+    </a>
+    <div class="nav-actions">
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng YTUONG HUB</span>
+        </a>
+        <a href="https://vietndj.github.io/scene.html" class="nav-btn">
+            <span>🏛️ Cổng Phân Tích Scene</span>
+        </a>
+    </div>
+</header>
+
+<div class="main-container">
+    <div class="sticky-column">
+        <div class="video-card">
+            <div class="video-player-box">
+                <video id="playerVideo" class="modal-video" controls playsinline>
+                    <source src="Dca9-aWotLM.mp4" type="video/mp4">
+                    <source src="../videos/Dca9-aWotLM.mp4" type="video/mp4">
+                    <source src="./videos/Dca9-aWotLM.mp4" type="video/mp4">
+                    <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dca9-aWotLM.mp4" type="video/mp4">
+                    Trình duyệt không hỗ trợ thẻ video.
+                </video>
+            </div>
+            <div class="video-info-box">
+                <h1 class="video-title">Đập Hộp Điện Ảnh &amp; Cận Cảnh Macro: Ulanzi LM01 - @_mubeenart</h1>
+                <div class="video-meta-tags">
+                    <span class="meta-tag creator">@_mubeenart</span>
+                    <span class="meta-tag">⏱️ 23.56s</span>
+                    <span class="meta-tag">🎬 17 Shots</span>
+                    <span class="meta-tag">📱 Công Nghệ &amp; Phụ Kiện Máy Ảnh</span>
+                    <span class="meta-tag">🌍 Trung Đông / Nam Á</span>
+                </div>
+                <p class="video-desc">Phân tích toàn diện nghệ thuật đập hộp ASMR và phô diễn quang học đèn pin mini Ulanzi LM01 của @_mubeenart: Kỹ thuật mở màn bằng Hero Shot tương phản đỏ hoàng hôn (Sunset Lamp Silhouette), chuỗi Staccato Gobo Flash Montage 11 micro-cuts siêu tốc nhịp beat giòn tan, trải nghiệm ASMR bóc seal rọc hộp trên nền gỗ mộc bóng lá Monstera, cận cảnh Macro đĩa Gobo kim loại và thử nghiệm luồng sáng hội tụ trong studio tối.</p>
+            </div>
+        </div>
+
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+    <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0)">
+        <span class="d-badge">Shot 01</span>
+        <span class="d-time">0.00s - 1.08s (1.08s)</span>
+        <span class="d-title">Macro Hook thị giác: Đèn pin Ulanzi LM01 xuất hiện kiêu hãnh...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(2, 1.08)">
+        <span class="d-badge">Shot 02</span>
+        <span class="d-time">1.08s - 2.40s (1.32s)</span>
+        <span class="d-title">Staccato Gobo Flash Montage: Chuỗi 11 micro-cuts siêu tốc ph...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(3, 2.4)">
+        <span class="d-badge">Shot 03</span>
+        <span class="d-time">2.40s - 4.76s (2.36s)</span>
+        <span class="d-title">Bố cục Top-Down & Xoay hộp 4 mặt (360 Box Rotation): Nhịp dừ...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(4, 4.76)">
+        <span class="d-badge">Shot 04</span>
+        <span class="d-time">4.76s - 6.16s (1.40s)</span>
+        <span class="d-title">Rọc seal & Lột màng nilon ASMR (Plastic Peeling): Đánh thức ...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(5, 6.16)">
+        <span class="d-badge">Shot 05</span>
+        <span class="d-time">6.16s - 7.32s (1.16s)</span>
+        <span class="d-title">Mở nắp hộp & Lớp bảo vệ EVA Foam: Nghi thức đập hộp trang tr...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(6, 7.32)">
+        <span class="d-badge">Shot 06</span>
+        <span class="d-time">7.32s - 8.92s (1.60s)</span>
+        <span class="d-title">Khám phá túi đựng chống sốc (Zippered Travel Case): Phụ kiện...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(7, 8.92)">
+        <span class="d-badge">Shot 07</span>
+        <span class="d-time">8.92s - 10.28s (1.36s)</span>
+        <span class="d-title">Chiết xuất thân đèn Ulanzi LM01 từ khuôn đệm: Cảm giác kim l...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(8, 10.28)">
+        <span class="d-badge">Shot 08</span>
+        <span class="d-time">10.28s - 11.80s (1.52s)</span>
+        <span class="d-title">Cận cảnh thân đèn gắn chóa Snoot cao su: Kết cấu vỏ hợp kim ...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(9, 11.8)">
+        <span class="d-badge">Shot 09</span>
+        <span class="d-time">11.80s - 12.36s (0.56s)</span>
+        <span class="d-title">Giải phẫu đáy đèn đa năng: Lỗ ren 1/4 inch & Cổng sạc Type-C...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(10, 12.36)">
+        <span class="d-badge">Shot 10</span>
+        <span class="d-time">12.36s - 14.28s (1.92s)</span>
+        <span class="d-title">Bóc tách bộ đĩa chiếu Gobo kim loại: Vũ khí tạo hoa văn điện...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(11, 14.28)">
+        <span class="d-badge">Shot 11</span>
+        <span class="d-time">14.28s - 16.68s (2.40s)</span>
+        <span class="d-title">Macro đĩa Gobo chấm bi (Honeycomb Dots): Độ hoàn thiện cơ kh...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(12, 16.68)">
+        <span class="d-badge">Shot 12</span>
+        <span class="d-time">16.68s - 17.64s (0.96s)</span>
+        <span class="d-title">Kích hoạt nguồn & Vòng sáng LED chỉ thị (Tactile Green Ring)...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(13, 17.64)">
+        <span class="d-badge">Shot 13</span>
+        <span class="d-time">17.64s - 18.44s (0.80s)</span>
+        <span class="d-title">Thao tác xoay zoom thấu kính hội tụ (Optical Zoom Ring): Cơ ...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(14, 18.44)">
+        <span class="d-badge">Shot 14</span>
+        <span class="d-time">18.44s - 19.36s (0.92s)</span>
+        <span class="d-title">Trình diễn chùm sáng cường độ cao trên nền tối: Luồng sáng x...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(15, 19.36)">
+        <span class="d-badge">Shot 15</span>
+        <span class="d-time">19.36s - 20.48s (1.12s)</span>
+        <span class="d-title">Thử nghiệm phễu tản sáng silicone đàn hồi: Biến đổi ánh sáng...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(16, 20.48)">
+        <span class="d-badge">Shot 16</span>
+        <span class="d-time">20.48s - 22.20s (1.72s)</span>
+        <span class="d-title">Hero Shot điện ảnh đối xứng: Đèn LM01 vươn cao trước vầng hà...</span>
+    </div>
+    <div class="drawer-shot-row" onclick="jumpToShot(17, 22.2)">
+        <span class="d-badge">Shot 17</span>
+        <span class="d-time">22.20s - 23.56s (1.36s)</span>
+        <span class="d-title">Vũ điệu Silhouette & Outro đóng máy: Dư ba điện ảnh khép lại...</span>
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-column">
+        <div class="content-header">
+            <h2>Phân Tích Chi Tiết 17 Phân Cảnh (Director's Storyboard)</h2>
+            <div class="view-mode-tabs">
+                <button class="tab-btn active" id="tabDetail" onclick="setViewMode('detail')">Chi Tiết (List)</button>
+                <button class="tab-btn" id="tabGrid" onclick="setViewMode('grid')">Lưới (Grid)</button>
+            </div>
+        </div>
+
+        <div class="grid-view-container" id="gridView">
+            
+    <div class="grid-card" onclick="jumpToShot(1, 0.0)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+            <div class="grid-time-tag">0.00s - 1.08s</div>
+            <div class="grid-shot-tag">Shot 01</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Macro Hook thị giác: Đèn pin Ulanzi LM01 xuất hiện kiêu hãnh trên nền vầng hào quang mặt trời đỏ rực (Crimson Halo Silhouette)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(2, 1.08)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+            <div class="grid-time-tag">1.08s - 2.40s</div>
+            <div class="grid-shot-tag">Shot 02</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Staccato Gobo Flash Montage: Chuỗi 11 micro-cuts siêu tốc phô diễn kho hiệu ứng Gobo & Gel màu ma thuật (Optical Illusion)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(3, 2.4)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+            <div class="grid-time-tag">2.40s - 4.76s</div>
+            <div class="grid-shot-tag">Shot 03</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Bố cục Top-Down & Xoay hộp 4 mặt (360 Box Rotation): Nhịp dừng thị giác tinh tế trên nền bàn gỗ mộc và bóng lá Monstera</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(4, 4.76)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+            <div class="grid-time-tag">4.76s - 6.16s</div>
+            <div class="grid-shot-tag">Shot 04</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Rọc seal & Lột màng nilon ASMR (Plastic Peeling): Đánh thức thính giác bằng âm thanh bóc hộp nguyên seal giòn tan</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(5, 6.16)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+            <div class="grid-time-tag">6.16s - 7.32s</div>
+            <div class="grid-shot-tag">Shot 05</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Mở nắp hộp & Lớp bảo vệ EVA Foam: Nghi thức đập hộp trang trọng phơi bày cấu trúc đóng gói đẳng cấp</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(6, 7.32)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+            <div class="grid-time-tag">7.32s - 8.92s</div>
+            <div class="grid-shot-tag">Shot 06</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Khám phá túi đựng chống sốc (Zippered Travel Case): Phụ kiện bảo hộ cơ động cho nhà sáng tạo di chuyển</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(7, 8.92)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+            <div class="grid-time-tag">8.92s - 10.28s</div>
+            <div class="grid-shot-tag">Shot 07</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Chiết xuất thân đèn Ulanzi LM01 từ khuôn đệm: Cảm giác kim loại mát lạnh đầm tay (Tactile Extraction)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(8, 10.28)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+            <div class="grid-time-tag">10.28s - 11.80s</div>
+            <div class="grid-shot-tag">Shot 08</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Cận cảnh thân đèn gắn chóa Snoot cao su: Kết cấu vỏ hợp kim nhôm Anodized và logo Ulanzi sắc nét</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(9, 11.8)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+            <div class="grid-time-tag">11.80s - 12.36s</div>
+            <div class="grid-shot-tag">Shot 09</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Giải phẫu đáy đèn đa năng: Lỗ ren 1/4 inch & Cổng sạc Type-C ẩn tích hợp chuẩn quốc tế</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(10, 12.36)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+            <div class="grid-time-tag">12.36s - 14.28s</div>
+            <div class="grid-shot-tag">Shot 10</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Bóc tách bộ đĩa chiếu Gobo kim loại: Vũ khí tạo hoa văn điện ảnh trong túi phụ kiện</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(11, 14.28)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+            <div class="grid-time-tag">14.28s - 16.68s</div>
+            <div class="grid-shot-tag">Shot 11</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Macro đĩa Gobo chấm bi (Honeycomb Dots): Độ hoàn thiện cơ khí CNC siêu chuẩn xác trên lòng bàn tay</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(12, 16.68)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+            <div class="grid-time-tag">16.68s - 17.64s</div>
+            <div class="grid-shot-tag">Shot 12</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Kích hoạt nguồn & Vòng sáng LED chỉ thị (Tactile Green Ring): Khởi động cỗ máy ánh sáng mini</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(13, 17.64)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_13_mid.jpg" alt="Shot 13" loading="lazy">
+            <div class="grid-time-tag">17.64s - 18.44s</div>
+            <div class="grid-shot-tag">Shot 13</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Thao tác xoay zoom thấu kính hội tụ (Optical Zoom Ring): Cơ chế điều chỉnh góc chiếu cơ học mượt mà</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(14, 18.44)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_14_mid.jpg" alt="Shot 14" loading="lazy">
+            <div class="grid-time-tag">18.44s - 19.36s</div>
+            <div class="grid-shot-tag">Shot 14</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Trình diễn chùm sáng cường độ cao trên nền tối: Luồng sáng xanh lạnh xé toang bóng đêm studio</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(15, 19.36)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_15_mid.jpg" alt="Shot 15" loading="lazy">
+            <div class="grid-time-tag">19.36s - 20.48s</div>
+            <div class="grid-shot-tag">Shot 15</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Thử nghiệm phễu tản sáng silicone đàn hồi: Biến đổi ánh sáng gắt thành quầng sáng mềm mại</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(16, 20.48)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_16_mid.jpg" alt="Shot 16" loading="lazy">
+            <div class="grid-time-tag">20.48s - 22.20s</div>
+            <div class="grid-shot-tag">Shot 16</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Hero Shot điện ảnh đối xứng: Đèn LM01 vươn cao trước vầng hào quang Sunset Lamp huyền ảo</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(17, 22.2)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_17_mid.jpg" alt="Shot 17" loading="lazy">
+            <div class="grid-time-tag">22.20s - 23.56s</div>
+            <div class="grid-shot-tag">Shot 17</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Vũ điệu Silhouette & Outro đóng máy: Dư ba điện ảnh khép lại màn đập hộp ma thuật</strong>
+        </div>
+    </div>
+    
+        </div>
+
+        <div class="detail-view-container" id="detailView">
+            
+    <div class="shot-detail-card" id="shotCard_1">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 01</div>
+            <div class="shot-time-range">⏱️ 0.00s - 1.08s <span class="dur-pill">1.08s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(1, 0.0)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Macro Hook thị giác: Đèn pin Ulanzi LM01 xuất hiện kiêu hãnh trên nền vầng hào quang mặt trời đỏ rực (Crimson Halo Silhouette)</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_01_start.jpg')">
+                <div class="kf-label">Start (0.00s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_01_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_01_end.jpg')">
+                <div class="kf-label">End (1.08s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Macro Center Hero Shot • 9:16 Vertical Framing</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Macro Prime 50mm f/2.8</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Sunset Lamp 650nm Red Halo Backdrop kết hợp viền sáng nhẹ</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Moody Crimson & Matte Black • Tương phản bóng đổ Silhouette nghệ thuật</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Âm bass drop ấm áp mở đầu lofi hiphop beat</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut sang chuỗi Gobo Montage nhấp nháy siêu tốc</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Bàn tay cầm chiếc đèn pin Ulanzi LM01 giơ lên ở trung tâm khung hình, nổi bật trên nền một quầng sáng tròn đỏ rực mô phỏng mặt trời lặn (Sunset Lamp). Chữ 'Ulanzi LM01' xuất hiện tinh tế trên góc phải màn hình.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Điểm hook thị giác đỉnh cao: Sự kết hợp giữa dáng silhouette đen tuyền cơ bắp của chiếc đèn và vầng sáng crimson đỏ cam tạo sự tương phản cực mạnh, thu hút thị giác người xem ngay khung hình 0.0s đầu tiên.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Thời lượng 1.08s khá nhanh; logo Ulanzi chữ trắng hơi hòa vào mép quầng sáng nếu người xem dùng màn hình có độ sáng thấp.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Mở đầu video sản phẩm công nghệ bằng một cú Hero Shot silhouette tương phản cao trên nền đèn màu tròn (Halo/Gobo) thay vì đặt sản phẩm đơn điệu trên bàn.</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 01 (1.08s) ➔ Shot 02 (1.08s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_01_to_02.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_01_to_02.jpg" alt="Transition 01 to 02" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut sang chuỗi Gobo Montage nhấp nháy siêu tốc
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_2">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 02</div>
+            <div class="shot-time-range">⏱️ 1.08s - 2.40s <span class="dur-pill">1.32s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(2, 1.08)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Staccato Gobo Flash Montage: Chuỗi 11 micro-cuts siêu tốc phô diễn kho hiệu ứng Gobo & Gel màu ma thuật (Optical Illusion)</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_02_start.jpg')">
+                <div class="kf-label">Start (1.08s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_02_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_02_end.jpg')">
+                <div class="kf-label">End (2.40s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Rapid Staccato Wall Projection Montage • 3-Frame Micro-Cuts</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Standard 35mm f/2.0</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Đèn LM01 gắn Gobo Discs + Đổi Gel màu liên tục (Teal, Amber, Crimson, Yellow)</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Vibrant Color Shift • Biến đổi bảng màu đa sắc tốc độ cao</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Nhịp trống lofi snare giật giòn rụm khớp từng khung hình cắt</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut hạ xuống mặt bàn gỗ chuẩn bị unboxing</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>11 khung hình cắt nhịp 0.12s (3 frames/cut) liên tiếp trên bức tường studio: Vệt sáng cửa sổ ô kính cyan, rèm sáo venetian vàng cam, chùm chấm bi đỏ, hoa văn mây trừu tượng, lưới tổ ong... Chứng minh công năng biến đổi ánh sáng thần kỳ.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Kỹ thuật nhịp dựng Staccato cực kỳ táo bạo: Trình diễn trọn vẹn sức mạnh 'đèn pin chiếu hoa văn Gobo' của Ulanzi LM01 chỉ trong 1.32 giây mà không cần một lời thuyết minh nào. Kích thích dopamine cực độ cho người xem.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Tốc độ chớp nháy nhanh có thể gây choáng ngợp nhẹ; tuy nhiên cực kỳ phù hợp với nhịp tiêu thụ nội dung short-form hiện đại.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Thay vì giải thích bằng lời 'sản phẩm này có nhiều tấm gobo tạo hiệu ứng', hãy cho hình ảnh nhảy nhót liên tục theo từng nhịp trống để khách hàng tự thấy và tự thèm muốn.</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 02 (2.40s) ➔ Shot 03 (2.40s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_02_to_03.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_02_to_03.jpg" alt="Transition 02 to 03" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut hạ xuống mặt bàn gỗ chuẩn bị unboxing
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_3">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 03</div>
+            <div class="shot-time-range">⏱️ 2.40s - 4.76s <span class="dur-pill">2.36s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(3, 2.4)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Bố cục Top-Down & Xoay hộp 4 mặt (360 Box Rotation): Nhịp dừng thị giác tinh tế trên nền bàn gỗ mộc và bóng lá Monstera</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_03_start.jpg')">
+                <div class="kf-label">Start (2.40s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_03_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_03_end.jpg')">
+                <div class="kf-label">End (4.76s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Top-Down 90° Overhead Shot • Mặt bàn gỗ Studio</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Prime 35mm f/2.0 Flat Angle</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Ánh sáng tán xạ qua rèm sáo + Bóng đổ lá cây Monstera tự nhiên</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Warm Studio Wood Look • Tông gỗ mộc ấm áp phối trắng tối giản</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Tiếng ma sát hộp giấy lên mặt bàn gỗ râm ran êm ái</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut chuyển vào cận cảnh mép nilon bóc seal</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Góc máy từ trên cao (Top-down 90 độ) nhìn xuống mặt bàn gỗ ấm áp. Bàn tay xoay hộp sản phẩm qua 4 mặt (mặt đáy hồng sen, 2 mặt hông trắng tinh khôi, mặt trước in hình đèn và logo đỏ). Vệt nắng xiên qua kẽ lá trầu bà tạo họa tiết bóng đổ tự nhiên.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Bố cục tĩnh lặng cân bằng lại năng lượng bùng nổ của 2 shot đầu; ánh sáng ven tự nhiên (Natural dappled light) và chất liệu gỗ ấm áp tôn lên vẻ cao cấp của thiết kế bao bì.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Động tác xoay hộp ở mặt thứ 3 hơi khựng nhẹ khoảng 0.2s do người quay điều chỉnh góc cầm tay.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Sau một đoạn intro dồn dập (Fast Hook), hãy luôn có một nhịp 'thở' (Breathing room) để người xem định hình sản phẩm và chuẩn bị bước vào trải nghiệm ASMR bóc hộp.</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 03 (4.76s) ➔ Shot 04 (4.76s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_03_to_04.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_03_to_04.jpg" alt="Transition 03 to 04" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut chuyển vào cận cảnh mép nilon bóc seal
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_4">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 04</div>
+            <div class="shot-time-range">⏱️ 4.76s - 6.16s <span class="dur-pill">1.40s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(4, 4.76)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Rọc seal & Lột màng nilon ASMR (Plastic Peeling): Đánh thức thính giác bằng âm thanh bóc hộp nguyên seal giòn tan</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_04_start.jpg')">
+                <div class="kf-label">Start (4.76s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_04_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_04_end.jpg')">
+                <div class="kf-label">End (6.16s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Top-Down Tight Close-Up • Thao tác bóc vỏ</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Standard Prime 35mm f/2.0</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Ánh sáng mềm trực diện làm nổi bật độ bóng của lớp màng nhựa bọc</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Crisp High Contrast • Nhấn mạnh ánh phản quang trên lớp nilon</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Tiếng rách nilon 'crackle-rip' giòn tan + Tiếng trượt vỏ hộp carton êm mượt</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut sang phân cảnh mở nắp hộp cứng</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Ngón tay tách góc seal nilon bọc kín hộp, kéo dải màng nhựa trong suốt ra khỏi thân hộp, rồi rút nhẹ chiếc vỏ áo (outer sleeve) trượt êm ái ra khỏi hộp cứng bên trong.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Âm thanh bóc seal cực kỳ sắc nét, tiếng nilon giòn rụm kết hợp tiếng rút khay hộp ma sát êm tai; chuyển động mượt mà không chút ngập ngừng.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Góc máy hơi xa một chút, nếu bổ sung một góc quay Macro 2x đặc tả lưỡi dao rọc giấy hoặc vết rách màng bọc sẽ tăng độ thỏa mãn thị giác hơn nữa.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Âm thanh ASMR bóc seal nguyên bản là bảo chứng tâm lý cho sự 'mới toanh', khơi gợi cảm giác sở hữu mãnh liệt ở người mua hàng online.</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 04 (6.16s) ➔ Shot 05 (6.16s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_04_to_05.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_04_to_05.jpg" alt="Transition 04 to 05" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut sang phân cảnh mở nắp hộp cứng
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_5">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 05</div>
+            <div class="shot-time-range">⏱️ 6.16s - 7.32s <span class="dur-pill">1.16s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(5, 6.16)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Mở nắp hộp & Lớp bảo vệ EVA Foam: Nghi thức đập hộp trang trọng phơi bày cấu trúc đóng gói đẳng cấp</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_05_start.jpg')">
+                <div class="kf-label">Start (6.16s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_05_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_05_end.jpg')">
+                <div class="kf-label">End (7.32s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Top-Down Medium Overhead • Mở hộp carton</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Standard 35mm f/2.2</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Ánh sáng mềm 45 độ hắt mép nắp hộp tạo chiều sâu khối</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Monochrome White & Matte Charcoal • Tối giản thanh lịch</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Tiếng bật nắp hộp carton 'thump' trầm ấm + Tiếng sột soạt mút xốp</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut sang thao tác nhấc túi đựng phụ kiện</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Bàn tay nhấc nắp hộp carton cứng màu trắng, lật nhẹ lớp mút xốp đen bảo vệ bên trên để lộ toàn bộ khoang chứa phụ kiện và thiết bị được bài trí ngăn nắp.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Động tác mở hộp dứt khoát, để lộ sự tương phản giữa vỏ hộp trắng tinh tế và lớp mút xốp đen huyền bí bên trong; ánh sáng viền hắt vào mép hộp làm nổi bật độ dày của bìa carton.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Thời lượng shot mở hộp khá nhanh, người xem chưa kịp quét hết mắt qua các ngăn nhỏ.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Khi làm video unboxing, khâu mở nắp hộp cần thực hiện chậm rãi, dứt khoát và có điểm dừng thị giác 0.5s để tôn vinh sự chỉn chu của nhà sản xuất.</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 05 (7.32s) ➔ Shot 06 (7.32s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_05_to_06.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_05_to_06.jpg" alt="Transition 05 to 06" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut sang thao tác nhấc túi đựng phụ kiện
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_6">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 06</div>
+            <div class="shot-time-range">⏱️ 7.32s - 8.92s <span class="dur-pill">1.60s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(6, 7.32)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Khám phá túi đựng chống sốc (Zippered Travel Case): Phụ kiện bảo hộ cơ động cho nhà sáng tạo di chuyển</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_06_start.jpg')">
+                <div class="kf-label">Start (7.32s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_06_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_06_end.jpg')">
+                <div class="kf-label">End (8.92s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Close-Up 45° Angle • Khám phá túi phụ kiện</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Prime 50mm f/2.5</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Ánh sáng ven mềm tôn vân vải dù dệt nổi và logo cao su</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Stealth Black Look • Đen tuyền nhung phối logo trắng nổi</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Tiếng khóa zip kim loại kéo trơn tru ASMR cực đanh và rõ nét</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut chuyển về khoang chứa nhấc thân đèn</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Bàn tay nhấc chiếc túi đựng phụ kiện màu đen hình oval in logo Ulanzi trắng, kéo khóa zip ASMR mở rộng hai nửa túi để khoe không gian chứa đồ lót vải mềm bên trong.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Điểm cộng lớn cho giá trị gia tăng của sản phẩm: Người mua thấy ngay họ được tặng kèm túi đựng chuyên dụng cao cấp; tiếng kéo khóa zip kim loại trơn tru mang lại cảm giác an tâm về chất lượng.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Đáy túi quay về phía camera có vệt bóng phản chiếu hơi mờ do ánh sáng phòng.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Phô diễn phụ kiện tặng kèm (túi đựng, dây cáp) ngay sau khi mở hộp là đòn bẩy tâm lý khiến khách hàng cảm thấy 'mua một được mười'.</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 06 (8.92s) ➔ Shot 07 (8.92s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_06_to_07.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_06_to_07.jpg" alt="Transition 06 to 07" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut chuyển về khoang chứa nhấc thân đèn
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_7">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 07</div>
+            <div class="shot-time-range">⏱️ 8.92s - 10.28s <span class="dur-pill">1.36s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(7, 8.92)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Chiết xuất thân đèn Ulanzi LM01 từ khuôn đệm: Cảm giác kim loại mát lạnh đầm tay (Tactile Extraction)</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_07_start.jpg')">
+                <div class="kf-label">Start (8.92s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_07_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_07_end.jpg')">
+                <div class="kf-label">End (10.28s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Top-Down Extreme Close-Up • Chiết xuất chủ thể</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Macro 50mm f/2.8</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Ánh sáng nhấn viền (Rim Light) kim loại tạo dải bóng láng</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Industrial Matte Black & Brushed Aluminum</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Tiếng mút EVA nhả thân máy đàn hồi + Tiếng thở phào thỏa mãn</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut sang góc cầm dọc thân đèn phô diễn thiết kế</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Các ngón tay cẩn thận nhấc thân chiếc đèn pin LM01 màu đen mờ ra khỏi khay mút EVA định hình cắt CNC tinh xảo; thân đèn lộ ra với kích thước nhỏ nhắn nằm gọn trong lòng bàn tay.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Cú nhấc sản phẩm dứt khoát; độ tương phản bóng bẩy giữa lớp sơn đen mờ của thân đèn và ánh phản quang từ thấu kính tạo cảm giác công nghệ đắt tiền.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Ngón tay hơi che một phần logo Ulanzi lúc vừa nhấc lên khỏi khay đệm.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Khoảnh khắc sản phẩm chính thức rời khỏi hộp phải là tâm điểm: Ánh sáng phải tập trung tối đa vào bề mặt kim loại để tạo ấn tượng 'đáng đồng tiền bát gạo'.</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 07 (10.28s) ➔ Shot 08 (10.28s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_07_to_08.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_07_to_08.jpg" alt="Transition 07 to 08" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut sang góc cầm dọc thân đèn phô diễn thiết kế
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_8">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 08</div>
+            <div class="shot-time-range">⏱️ 10.28s - 11.80s <span class="dur-pill">1.52s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(8, 10.28)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Cận cảnh thân đèn gắn chóa Snoot cao su: Kết cấu vỏ hợp kim nhôm Anodized và logo Ulanzi sắc nét</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_08_start.jpg')">
+                <div class="kf-label">Start (10.28s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_08_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_08_end.jpg')">
+                <div class="kf-label">End (11.80s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Medium Close-Up Eye Level • Thân máy dọc</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Portrait Prime 50mm f/2.0</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Keylight trực diện mềm + Backlight tách nền nhẹ</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Precision Metallic • Tôn vinh các gân cơ khí và logo sắc nét</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Tiếng cọ xát đầu ngón tay lên bề mặt nhôm phay xước</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut lật ngược đáy đèn hướng vào ống kính</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Người cầm đưa thân đèn lên ngang tầm mắt máy quay, xoay nhẹ thân máy để ánh sáng lướt qua dải vân kim loại phay xước; đầu đèn gắn sẵn phễu cao su silicone xếp tầng tản sáng.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Góc quay thẳng trục phô diễn trọn vẹn tỷ lệ cân đối của chiếc đèn; lớp silicone đen mờ và thân hợp kim nhôm tạo cảm giác cầm nắm chắc chắn, bền bỉ.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Phần phông nền phía sau hơi lộ viền hộp giấy, nếu đẩy phông nền vào vùng tối sâu hơn thì chủ thể sẽ nổi khối 3D hơn.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Luôn có ít nhất một shot quay cận cảnh tĩnh để người xem quan sát kỹ chất liệu hoàn thiện (vỏ kim loại, lớp sơn, đường nét phay viền) của thiết bị.</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 08 (11.80s) ➔ Shot 09 (11.80s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_08_to_09.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_08_to_09.jpg" alt="Transition 08 to 09" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut lật ngược đáy đèn hướng vào ống kính
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_9">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 09</div>
+            <div class="shot-time-range">⏱️ 11.80s - 12.36s <span class="dur-pill">0.56s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(9, 11.8)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Giải phẫu đáy đèn đa năng: Lỗ ren 1/4 inch & Cổng sạc Type-C ẩn tích hợp chuẩn quốc tế</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_09_start.jpg')">
+                <div class="kf-label">Start (11.80s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_09_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_09_end.jpg')">
+                <div class="kf-label">End (12.36s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Extreme Close-Up Macro • Đáy đèn hướng tâm</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Macro 50mm f/2.8</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Ánh sáng khuếch tán đều tránh hiện tượng lóa chữ in laser</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> High Clarity Technical Macro</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Tiếng gõ nhẹ móng tay lên đáy kim loại 'clink' giòn tan</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut sang phụ kiện đĩa Gobo và sách hướng dẫn</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Lật ngược đáy đèn hướng thẳng vào ống kính, hiển thị rõ lỗ ren kim loại 1/4 inch tiêu chuẩn để gắn tripod/rig, nắp đậy cổng sạc USB-C và các chứng nhận an toàn quốc tế FCC, CE, RoHS.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Trả lời tức thì câu hỏi thực dụng của dân quay chụp: 'Đèn này gắn lên chân máy hay máy ảnh bằng cách nào?'. Bố cục trung tâm rõ nét từng ký tự in laser.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Thời lượng 0.56s khá chớp nhoáng, đòi hỏi mắt người xem phải tập trung cao độ.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Đừng quên những chi tiết kỹ thuật cốt lõi (cổng sạc, chân ren ốc); đưa chúng vào bằng một cú lật dứt khoát là cách chứng minh tính chuyên nghiệp của sản phẩm.</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 09 (12.36s) ➔ Shot 10 (12.36s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_09_to_10.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_09_to_10.jpg" alt="Transition 09 to 10" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut sang phụ kiện đĩa Gobo và sách hướng dẫn
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_10">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 10</div>
+            <div class="shot-time-range">⏱️ 12.36s - 14.28s <span class="dur-pill">1.92s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(10, 12.36)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Bóc tách bộ đĩa chiếu Gobo kim loại: Vũ khí tạo hoa văn điện ảnh trong túi phụ kiện</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_10_start.jpg')">
+                <div class="kf-label">Start (12.36s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_10_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_10_end.jpg')">
+                <div class="kf-label">End (14.28s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Top-Down 60° Angled Overview • Trải phụ kiện</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Standard 35mm f/2.2</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Ánh sáng phòng tự nhiên dịu mát</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Clean Catalog Commercial Look</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Tiếng giấy booklet sột soạt ASMR + Tiếng kim loại va chạm leng keng</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut sang macro chiếc đĩa Gobo chấm bi trên tay</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Lấy ra tập catalogue hướng dẫn sử dụng và hai khung tròn chứa các đĩa Gobo kim loại dập lỗ hoa văn; bàn tay lật mở từng phụ kiện thể hiện hệ sinh thái phong phú đi kèm.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Phô bày 'vũ khí bí mật' của đèn: Các đĩa Gobo kim loại chính là điểm ăn tiền biến chiếc đèn thông thường thành đèn chiếu bối cảnh nghệ thuật studio; động tác trải đồ nhịp nhàng.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Các đĩa kim loại nằm san sát nhau nên người xem chưa nhìn rõ từng mẫu hoa văn cụ thể trong shot này.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Sau khi khoe thân máy, hãy lập tức giới thiệu linh kiện mở rộng để tăng giá trị cảm nhận cho combo sản phẩm.</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 10 (14.28s) ➔ Shot 11 (14.28s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_10_to_11.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_10_to_11.jpg" alt="Transition 10 to 11" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut sang macro chiếc đĩa Gobo chấm bi trên tay
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_11">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 11</div>
+            <div class="shot-time-range">⏱️ 14.28s - 16.68s <span class="dur-pill">2.40s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(11, 14.28)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Macro đĩa Gobo chấm bi (Honeycomb Dots): Độ hoàn thiện cơ khí CNC siêu chuẩn xác trên lòng bàn tay</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_11_start.jpg')">
+                <div class="kf-label">Start (14.28s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_11_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_11_end.jpg')">
+                <div class="kf-label">End (16.68s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Extreme Close-Up Macro 1:1 • Đĩa kim loại trong lòng bàn tay</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Macro Lens 90mm f/2.8</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Ánh sáng xiên làm nổi bật kết cấu viền đục lỗ CNC sắc ngọt</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Cinematic High Definition Organic Look</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Tiếng lạo xạo nhẹ khi xoay đĩa kim loại trên lòng bàn tay</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut sang thao tác bật nguồn đèn</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Đặt chiếc đĩa Gobo kim loại đục lỗ chấm bi tổ ong lên lòng bàn tay, ống kính zoom cực cận cho thấy các lỗ tròn được gia công laser sắc sảo, không một vết ba-via thừa.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Cú bấm máy Macro đắt giá nhất video: Tôn vinh tính thủ công chính xác của phụ kiện quang học; da tay tạo chất nền tương phản tự nhiên làm bật lên màu đen nhám của đĩa kim loại.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Độ sâu trường ảnh rất mỏng (DoF nông) khiến các lỗ ở rìa ngoài hơi bị nhòe nhẹ.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Hãy đặt chi tiết nhỏ nhất lên lòng bàn tay để tạo thước đo trực quan về kích thước và tạo cảm giác chân thật gần gũi với người xem.</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 11 (16.68s) ➔ Shot 12 (16.68s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_11_to_12.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_11_to_12.jpg" alt="Transition 11 to 12" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut sang thao tác bật nguồn đèn
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_12">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 12</div>
+            <div class="shot-time-range">⏱️ 16.68s - 17.64s <span class="dur-pill">0.96s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(12, 16.68)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Kích hoạt nguồn & Vòng sáng LED chỉ thị (Tactile Green Ring): Khởi động cỗ máy ánh sáng mini</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_12_start.jpg')">
+                <div class="kf-label">Start (16.68s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_12_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_12_end.jpg')">
+                <div class="kf-label">End (17.64s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Tight Macro • Nút bấm công tắc nguồn</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Macro 50mm f/2.0</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Ánh sáng đèn phòng mờ dần để tôn vầng sáng LED xanh lá cây</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Sci-Fi Cyber Accent • Tương phản LED xanh neon trên nền nhôm đen</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Tiếng tactile button click đanh giòn thỏa mãn thính giác</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut sang thao tác xoay vòng zoom tiêu cự</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Ngón tay cái bấm giữ nút nguồn tròn trên thân máy; vòng đèn LED bao quanh nút phát sáng xanh lá rực rỡ, báo hiệu đèn đã khởi động vào chế độ sẵn sàng.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Hiệu ứng thị giác tức thì: Ánh sáng xanh lá cây nổi bật giữa tổng thể thân máy màu đen; âm thanh bấm nút vật lý 'click' đanh gọn củng cố cảm giác điều khiển chắc chắn.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Thời lượng dưới 1 giây hơi ngắn để người xem kịp chiêm ngưỡng toàn bộ cụm điều khiển.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Luôn đồng bộ cú bấm nút vật lý với tín hiệu phản hồi ánh sáng (LED Indicator) và âm thanh bấm máy để tạo khoảnh khắc 'Power On' đầy thỏa mãn.</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 12 (17.64s) ➔ Shot 13 (17.64s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_12_to_13.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_12_to_13.jpg" alt="Transition 12 to 13" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut sang thao tác xoay vòng zoom tiêu cự
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_13">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 13</div>
+            <div class="shot-time-range">⏱️ 17.64s - 18.44s <span class="dur-pill">0.80s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(13, 17.64)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Thao tác xoay zoom thấu kính hội tụ (Optical Zoom Ring): Cơ chế điều chỉnh góc chiếu cơ học mượt mà</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_13_start.jpg')">
+                <div class="kf-label">Start (17.64s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_13_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_13_end.jpg')">
+                <div class="kf-label">End (18.44s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_13_end.jpg" alt="Shot 13 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Macro Close-Up • Vòng xoay quang học Zoom</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Prime 50mm f/2.0</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Ánh sáng ven chiếu nghiêng theo dải khía ren chống trượt</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Mechanical Metal Precision</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Tiếng ma sát trơn tru của vòng ren cơ khí xoay êm ái</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut sang test chùm sáng rọi mặt bàn tối</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Bàn tay vặn vòng xoay kim loại trên cổ đèn; thấu kính hội tụ bên trong di chuyển tịnh tiến êm ái để phóng to/thu nhỏ luồng sáng quang học.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Trình diễn tính năng cốt lõi: Khả năng zoom quang học cơ học độc đáo mà rất ít đèn pin bỏ túi cùng phân khúc sở hữu; chuyển động xoay dứt khoát, mượt mà.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Góc quay hơi khuất phần thấu kính bên trong một chút.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Khi sản phẩm có chi tiết xoay vặn cơ khí, hãy quay cận cảnh ngón tay thao tác để truyền tải cảm giác hoàn thiện cao cấp (Mechanical feel).</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 13 (18.44s) ➔ Shot 14 (18.44s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_13_to_14.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_13_to_14.jpg" alt="Transition 13 to 14" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut sang test chùm sáng rọi mặt bàn tối
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_14">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 14</div>
+            <div class="shot-time-range">⏱️ 18.44s - 19.36s <span class="dur-pill">0.92s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(14, 18.44)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Trình diễn chùm sáng cường độ cao trên nền tối: Luồng sáng xanh lạnh xé toang bóng đêm studio</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_14_start.jpg')">
+                <div class="kf-label">Start (18.44s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_14_start.jpg" alt="Shot 14 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_14_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_14_mid.jpg" alt="Shot 14 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_14_end.jpg')">
+                <div class="kf-label">End (19.36s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_14_end.jpg" alt="Shot 14 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Low-Light Angled Projection • Rọi sáng không gian tối</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Standard 35mm f/1.8 Low-Light</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Blackout Studio • Luồng sáng spotlight 5600K-6500K xanh lạnh duy nhất</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Deep Blue Midnight & Intense Beam Contrast</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Âm thanh xèo nhẹ của luồng điện quang học (hissing ambiance)</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut sang thử nghiệm phễu tản sáng silicone</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Người quay cầm đèn chiếu chếch xuống mặt bàn và góc tường tối; luồng sáng hình nón xanh lam lạnh viền sắc lẹm rọi thẳng xuống, làm bật lên các chi tiết vật thể xung quanh.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Độ tương phản ánh sáng cực đại: Chứng minh công suất và độ gom sáng mạnh mẽ đáng kinh ngạc của chiếc đèn pin tí hon; quầng sáng không bị méo hay loang viền.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Luồng sáng xanh hơi gắt nhẹ so với tông ấm của bàn gỗ.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Thử nghiệm ánh sáng thực tế trong không gian tối là bài kiểm tra uy tín nhất để thuyết phục khách hàng về độ sáng thực của đèn.</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 14 (19.36s) ➔ Shot 15 (19.36s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_14_to_15.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_14_to_15.jpg" alt="Transition 14 to 15" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut sang thử nghiệm phễu tản sáng silicone
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_15">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 15</div>
+            <div class="shot-time-range">⏱️ 19.36s - 20.48s <span class="dur-pill">1.12s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(15, 19.36)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Thử nghiệm phễu tản sáng silicone đàn hồi: Biến đổi ánh sáng gắt thành quầng sáng mềm mại</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_15_start.jpg')">
+                <div class="kf-label">Start (19.36s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_15_start.jpg" alt="Shot 15 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_15_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_15_mid.jpg" alt="Shot 15 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_15_end.jpg')">
+                <div class="kf-label">End (20.48s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_15_end.jpg" alt="Shot 15 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Close-Up Macro • Thao tác phễu cao su silicone</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Prime 50mm f/2.2</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Ánh sáng tản mềm đều khắp góc bàn gỗ</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Velvety Soft Shadows & Muted Contrast</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Tiếng cao su đàn hồi bóp nắn ASMR êm ái</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut chuyển cảnh sang Hero Shot hoàng hôn</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Bàn tay gắn và uốn nắn chiếc chóa cao su xếp nếp tản sáng (Silicone Collapsible Snoot/Diffuser) lên đầu đèn, chuyển đổi luồng sáng chiếu điểm thành ánh sáng lan tỏa dịu nhẹ.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Phô diễn tính đa dụng và độ bền bỉ của phụ kiện cao su mềm: Có thể kéo dài, thu ngắn hoặc gấp gọn dễ dàng mà không sợ gãy vỡ.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Góc cầm tay che mất một phần thao tác gài nắp.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Giới thiệu phụ kiện biến đổi ánh sáng (Diffuser/Snoot) là cách cho khách hàng thấy họ có thể chụp cả ảnh sản phẩm lẫn chân dung với cùng một thiết bị.</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 15 (20.48s) ➔ Shot 16 (20.48s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_15_to_16.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_15_to_16.jpg" alt="Transition 15 to 16" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut chuyển cảnh sang Hero Shot hoàng hôn
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_16">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 16</div>
+            <div class="shot-time-range">⏱️ 20.48s - 22.20s <span class="dur-pill">1.72s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(16, 20.48)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Hero Shot điện ảnh đối xứng: Đèn LM01 vươn cao trước vầng hào quang Sunset Lamp huyền ảo</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_16_start.jpg')">
+                <div class="kf-label">Start (20.48s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_16_start.jpg" alt="Shot 16 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_16_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_16_mid.jpg" alt="Shot 16 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_16_end.jpg')">
+                <div class="kf-label">End (22.20s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_16_end.jpg" alt="Shot 16 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Cinematic Symmetrical Centerpiece • 9:16 Hero Shot</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Portrait Prime 50mm f/1.8</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Đèn Sunset Lamp đỏ cam rực rỡ làm nền + Rim light ấm quanh cổ tay</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Teal & Orange Hollywood Cinematic Grade</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Tiếng bass trầm vang hòa cùng giai điệu lofi ngân dài</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Hard Cut sang cú chuyển động silhouette kết bài</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Cầm chiếc đèn Ulanzi LM01 giơ thẳng đứng, tạo dáng đối xứng hoàn hảo ngay trước đĩa sáng tròn màu cam đỏ rực rỡ phía sau lưng; thân đèn đen tuyền nổi bật như một cột mốc công nghệ.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Khung hình điện ảnh kinh điển (Cinematic Centerpiece): Phối màu Teal & Orange tương phản bổ trợ hoàn hảo giữa ánh đèn xanh trên thân máy và nền cam hoàng hôn rực cháy; bố cục căn giữa (Center Framing) cực kỳ quyền lực.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Tay cầm đèn hơi rung nhẹ trong 0.2s cuối shot.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Kết thúc hành trình đập hộp bằng một cú Hero Shot hoành tráng để khắc sâu hình ảnh biểu tượng của sản phẩm vào tâm trí người xem.</p>
+            </div>
+        </div>
+
+        
+        <div class="transition-card">
+            <div class="trans-header">
+                <span class="trans-badge">Chuyển Cảnh</span>
+                <span class="trans-title">Từ Shot 16 (22.20s) ➔ Shot 17 (22.20s)</span>
+            </div>
+            <div class="trans-img-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_16_to_17.jpg')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/transitions/trans_16_to_17.jpg" alt="Transition 16 to 17" loading="lazy">
+            </div>
+            <div class="trans-desc">
+                <strong>Phương thức:</strong> Hard Cut sang cú chuyển động silhouette kết bài
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-detail-card" id="shotCard_17">
+        <div class="shot-card-header">
+            <div class="shot-id-badge">Shot 17</div>
+            <div class="shot-time-range">⏱️ 22.20s - 23.56s <span class="dur-pill">1.36s</span></div>
+            <button class="jump-btn" onclick="jumpToShot(17, 22.2)">▶ Phát Đoạn Này</button>
+        </div>
+
+        <h3 class="shot-headline">Vũ điệu Silhouette & Outro đóng máy: Dư ba điện ảnh khép lại màn đập hộp ma thuật</h3>
+
+        <div class="keyframes-row">
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_17_start.jpg')">
+                <div class="kf-label">Start (22.20s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_17_start.jpg" alt="Shot 17 Start" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_17_mid.jpg')">
+                <div class="kf-label">Mid (Key Moment)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_17_mid.jpg" alt="Shot 17 Mid" loading="lazy">
+            </div>
+            <div class="kf-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_17_end.jpg')">
+                <div class="kf-label">End (23.56s)</div>
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_17_end.jpg" alt="Shot 17 End" loading="lazy">
+            </div>
+        </div>
+
+        <div class="shot-specs-grid">
+            <div class="spec-pill"><strong>Loại Cảnh:</strong> Silhouette Motion Downward Tilt • Fade to Black</div>
+            <div class="spec-pill"><strong>Tiêu Cự:</strong> Portrait Prime 50mm f/1.8</div>
+            <div class="spec-pill"><strong>Ánh Sáng:</strong> Đĩa hào quang hoàng hôn đỏ rực dần chìm vào bóng tối</div>
+            <div class="spec-pill"><strong>Color Grade:</strong> Moody Dark Silhouette • Gradient cam đỏ sang đen tuyền</div>
+            <div class="spec-pill wide"><strong>Âm Thanh ASMR:</strong> Giai điệu lofi tan biến dần (Fade out reverb) lắng đọng</div>
+            <div class="spec-pill wide"><strong>Chuyển Tiếp:</strong> Fade to Black kết thúc toàn bộ video</div>
+        </div>
+
+        <div class="shot-narrative">
+            <div class="narrative-row">
+                <span class="n-tag action">Hành Động &amp; Bối Cảnh</span>
+                <p>Chiếc đèn hạ dần xuống tạo bóng đen chuyển động mượt mà xuyên qua vầng hào quang đỏ, màn hình từ từ chuyển mờ (Fade to black) với logo @_mubeenart xuất hiện nhẹ nhàng.</p>
+            </div>
+        </div>
+
+        <div class="critique-grid">
+            <div class="critique-col pros">
+                <div class="critique-title">✅ Ưu Điểm Nổi Bật</div>
+                <p>Kết bài đầy chất thơ điện ảnh: Không dừng lại đột ngột mà để lại dư âm thị giác bằng chuyển động silhouette mượt mà; nhịp điệu kết bài lắng đọng, văn minh.</p>
+            </div>
+            <div class="critique-col cons">
+                <div class="critique-title">⚠️ Nhược Điểm Cần Lưu Ý</div>
+                <p>Chữ logo tác giả xuất hiện khá nhanh trước khi video loop lại.</p>
+            </div>
+            <div class="critique-col takeaway">
+                <div class="critique-title">💡 Bài Học Đạo Diễn Thực Chiến</div>
+                <p>Hãy kết thúc video bằng một chuyển động hạ máy hoặc bóng silhouette để tạo cú out mượt mà, thôi thúc người xem ấn replay xem lại lần thứ hai.</p>
+            </div>
+        </div>
+
+        
+    </div>
+    
+        </div>
+    </div>
+</div>
+
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close">&times;</button>
+    <img id="lightboxImg" src="" alt="Enlarged Keyframe">
+</div>
+
+<script>
+const player = document.getElementById('playerVideo');
+const lightboxModal = document.getElementById('lightboxModal');
+const lightboxImg = document.getElementById('lightboxImg');
+
+function jumpToShot(shotId, timeSec) {
+    if (player) {
+        player.currentTime = timeSec;
+        player.play();
+    }
+    const card = document.getElementById('shotCard_' + shotId);
+    if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function setViewMode(mode) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const btnDetail = document.getElementById('tabDetail');
+    const btnGrid = document.getElementById('tabGrid');
+
+    if (mode === 'grid') {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        btnGrid.classList.add('active');
+        btnDetail.classList.remove('active');
+    } else {
+        detailView.style.display = 'flex';
+        detailView.style.flexDirection = 'column';
+        detailView.style.gap = '24px';
+        gridView.style.display = 'none';
+        btnDetail.classList.add('active');
+        btnGrid.classList.remove('active');
+    }
+}
+
+function openLightbox(imgSrc) {
+    lightboxImg.src = imgSrc;
+    lightboxModal.classList.add('active');
+}
+
+function closeLightbox() {
+    lightboxModal.classList.remove('active');
+}
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>
