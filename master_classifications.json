@@ -14954,5 +14954,79 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann": {
+    "id": "IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann",
+    "creator": "@3413882081",
+    "creator_name": "3413882081",
+    "title": "@3413882081 - Video by syooaann",
+    "shots_count": 1,
+    "duration": "2.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
+    },
+    "purpose": "Instagram Liked 24h: Video, 3 of 18, by @syooaann, shared September 2, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "3 Of 18",
+      "By @syooaann",
+      "Shared September 2",
+      "2026",
+      "Establishing Hook Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 3 of 18, by @syooaann, shared September 2, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Điện Ảnh (Cinematic).",
+    "is_excluded": false,
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 1 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "Dcx7pQpS6zs": {
+    "id": "IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann",
+    "creator": "@3413882081",
+    "creator_name": "3413882081",
+    "title": "@3413882081 - Video by syooaann",
+    "shots_count": 1,
+    "duration": "2.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
+    },
+    "purpose": "Instagram Liked 24h: Video, 3 of 18, by @syooaann, shared September 2, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "3 Of 18",
+      "By @syooaann",
+      "Shared September 2",
+      "2026",
+      "Establishing Hook Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 3 of 18, by @syooaann, shared September 2, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Điện Ảnh (Cinematic).",
+    "is_excluded": false,
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 1 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }

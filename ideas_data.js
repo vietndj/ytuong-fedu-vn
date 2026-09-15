@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 190,
-  "total_unique_ideas": 179,
-  "total_active_ideas": 155,
+  "total_scene_items": 191,
+  "total_unique_ideas": 180,
+  "total_active_ideas": 156,
   "total_excluded_ideas": 24,
-  "total_creators": 112,
+  "total_creators": 113,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -64,7 +64,7 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 10,
     "talking-head": 17,
     "storytelling": 17,
-    "dien-anh": 76,
+    "dien-anh": 77,
     "chuyen-canh": 32
   },
   "industries": [
@@ -158,7 +158,7 @@ var FEDU_IDEAS_DATABASE = {
     "cong-nghe": 21,
     "kien-truc": 12,
     "the-thao": 7,
-    "ky-thuat-quay": 42,
+    "ky-thuat-quay": 43,
     "ugc": 5
   },
   "countries": [
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 69,
+    "us_eu": 70,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -476,6 +476,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@syooaann",
+      "name": "3413882081",
+      "profile_url": "https://www.instagram.com/syooaann/",
+      "video_count": 1,
+      "top_industry": "Bố cục",
+      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%403413882081_Dcx7pQpS6zs_Video_by_syooaann/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann"
       ]
     },
     {
@@ -1503,6 +1514,72 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann",
+      "shortcode": "Dcx7pQpS6zs",
+      "title_vi": "Video by syooaann",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 1 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "key_tech": "Instagram Liked 24h: Video • 3 Of 18 • By @syooaann • Shared September 2 • 2026 • Establishing Hook Shot",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industry": {
+        "id": "ky-thuat-quay",
+        "name": "Bố cục",
+        "en_name": "Filmmaking Mastery",
+        "icon": "🎯",
+        "badge_color": "blue"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 3 of 18, by @syooaann, shared September 2, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "3 Of 18",
+        "By @syooaann",
+        "Shared September 2",
+        "2026",
+        "Establishing Hook Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 3 of 18, by @syooaann, shared September 2, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Điện Ảnh (Cinematic).",
+      "creator": {
+        "raw": "@3413882081",
+        "name": "3413882081",
+        "handle": "@syooaann",
+        "profile_url": "https://www.instagram.com/syooaann/"
+      },
+      "ig_url": "https://www.instagram.com/p/Dcx7pQpS6zs",
+      "gdrive_folder": "https://drive.google.com/open?id=1EK51Jedrou_VlxABkztbqV8V68B_HxKI",
+      "media": {
+        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%403413882081_Dcx7pQpS6zs_Video_by_syooaann/shot_01_mid.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%403413882081_Dcx7pQpS6zs_Video_by_syooaann/shot_03_mid.jpg",
+        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dcx7pQpS6zs.mp4",
+        "report_url": "reports/IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann.html",
+        "shots_count": 1,
+        "duration": "2s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen",
       "shortcode": "DOd8XMMjxcH",
