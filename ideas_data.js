@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 189,
-  "total_unique_ideas": 178,
-  "total_active_ideas": 154,
+  "total_scene_items": 190,
+  "total_unique_ideas": 179,
+  "total_active_ideas": 155,
   "total_excluded_ideas": 24,
-  "total_creators": 111,
+  "total_creators": 112,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -62,7 +62,7 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 3,
     "voice-over": 10,
-    "talking-head": 16,
+    "talking-head": 17,
     "storytelling": 17,
     "dien-anh": 76,
     "chuyen-canh": 32
@@ -151,15 +151,15 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "industry_stats": {
     "spa-lam-dep": 5,
-    "thuong-hieu": 16,
+    "thuong-hieu": 17,
     "thoi-trang": 17,
     "am-thuc": 17,
     "du-lich": 12,
-    "cong-nghe": 20,
+    "cong-nghe": 21,
     "kien-truc": 12,
     "the-thao": 7,
     "ky-thuat-quay": 42,
-    "ugc": 6
+    "ugc": 5
   },
   "countries": [
     {
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 68,
+    "us_eu": 69,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -222,7 +222,7 @@ var FEDU_IDEAS_DATABASE = {
   "transition_stats": {
     "level_1_count": 5,
     "level_2_count": 14,
-    "ad_bot_count": 6
+    "ad_bot_count": 5
   },
   "deleted_ids": [],
   "creators_hub": [
@@ -282,7 +282,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Al,_The_Creator_Videography_Reels",
       "profile_url": "https://www.instagram.com/shogentle/",
       "video_count": 4,
-      "top_industry": "Bố cục",
+      "top_industry": "Xây kênh",
       "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40AL%2C_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle/shot_01_mid.jpg",
       "video_ids": [
         "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
@@ -479,6 +479,17 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@megantanhweewen",
+      "name": "Megan_Tan",
+      "profile_url": "https://www.instagram.com/megantanhweewen/",
+      "video_count": 1,
+      "top_industry": "Bố cục",
+      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen"
+      ]
+    },
+    {
       "handle": "@iman.lizi",
       "name": "Iman Lizi",
       "profile_url": "https://www.instagram.com/iman.lizi/",
@@ -516,7 +527,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Zero (주니어 개발자",
       "profile_url": "https://www.instagram.com/dev_zero/",
       "video_count": 1,
-      "top_industry": "UGC",
+      "top_industry": "Đồ công nghệ",
       "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dev_zero_Db-S8i1hXwF/shot_01_mid.jpg",
       "video_ids": [
         "IG_@dev_zero_Db-S8i1hXwF"
@@ -1493,75 +1504,11 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "ideas": [
     {
-      "id": "IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale",
-      "shortcode": "Dcbn7Bix-X-",
-      "title_vi": "Kỹ thuật Match Cut & VFX Dịch chuyển không gian (Caleb Natale)",
-      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
-      "key_tech": "Match Cut • VFX Transition • In-Camera Effects • Wipe Transition",
-      "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
-      },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
-      "country": {
-        "id": "us_eu",
-        "name": "Âu Mỹ",
-        "en_name": "US & Europe",
-        "flag": "🇺🇸/🇪🇺",
-        "badge_color": "purple"
-      },
-      "purpose": "Phân tích cú Match Cut không gian ấn tượng của Caleb Natale",
-      "tech_tags": [
-        "Match Cut",
-        "VFX Transition",
-        "In-Camera Effects",
-        "Wipe Transition"
-      ],
-      "transition_level": null,
-      "is_ad_bot": false,
-      "fedu_optimization": {},
-      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kỹ Thuật Quay Dựng & Điện Ảnh.",
-      "creator": {
-        "raw": "@Caleb_Natale",
-        "name": "Caleb_Natale",
-        "handle": "@calebnatale",
-        "profile_url": "https://www.instagram.com/calebnatale/"
-      },
-      "ig_url": "https://www.instagram.com/reel/Dcbn7Bix-X-/",
-      "gdrive_folder": "https://drive.google.com/open?id=1bOFljT1EkLxdEgnFAxbosiScsunWa0G4",
-      "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dcbn7Bix-X-.mp4",
-        "report_url": "reports/IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale.html",
-        "shots_count": 6,
-        "duration": "16.00s",
-        "youtube_id": null,
-        "youtube_embed": null,
-        "youtube_url": null
-      },
-      "complexity": {
-        "id": "de",
-        "label": "🟢 Dễ làm theo (3-8 shots)"
-      },
-      "is_personal": false,
-      "is_excluded": true
-    },
-    {
-      "id": "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
-      "shortcode": "DdTeHleIqkg",
-      "title_vi": "Director's Report • Director's Report",
-      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
-      "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • High-key Lighting",
+      "id": "IG_@Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen",
+      "shortcode": "DOd8XMMjxcH",
+      "title_vi": "Video by megantanhweewen",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 4 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "key_tech": "Instagram Liked 24h: Video • 1 Of 18 • By @megantanhweewen • Shared September 11 • 2025 • Establishing Hook Shot • Low-key Lighting • Medium Tracking Shot",
       "shooting_style": {
         "id": "talking-head",
         "name": "Nói Trực Diện",
@@ -1583,7 +1530,139 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇺🇸/🇪🇺",
         "badge_color": "purple"
       },
-      "purpose": "Phân tích kỹ thuật đánh sáng điện ảnh (Lighting Setup) và cách sử dụng màu sắc (Color Gel/RGB) để tạo chiều sâu không gian.",
+      "purpose": "Instagram Liked 24h: Video, 1 of 18, by @megantanhweewen, shared September 11, 2025",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "1 Of 18",
+        "By @megantanhweewen",
+        "Shared September 11",
+        "2025",
+        "Establishing Hook Shot",
+        "Low-key Lighting",
+        "Medium Tracking Shot",
+        "Close-Up / Macro Detail Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 1 of 18, by @megantanhweewen, shared September 11, 2025. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+      "creator": {
+        "raw": "@Megan_Tan",
+        "name": "Megan_Tan",
+        "handle": "@megantanhweewen",
+        "profile_url": "https://www.instagram.com/megantanhweewen/"
+      },
+      "ig_url": "https://www.instagram.com/p/DOd8XMMjxcH",
+      "gdrive_folder": "https://drive.google.com/open?id=1M46LI4n-xF4i6uQL_fG0-D_3dwAp5-TD",
+      "media": {
+        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen/shot_01_mid.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen/shot_03_mid.jpg",
+        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DOd8XMMjxcH.mp4",
+        "report_url": "reports/IG_@Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen.html",
+        "shots_count": 4,
+        "duration": "8s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
+      "id": "IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale",
+      "shortcode": "Dcbn7Bix-X-",
+      "title_vi": "X- Video by calebnatale • Director's Report",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 8 phân cảnh.",
+      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industry": {
+        "id": "ky-thuat-quay",
+        "name": "Bố cục",
+        "en_name": "Filmmaking Mastery",
+        "icon": "🎯",
+        "badge_color": "blue"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Caleb_Natale",
+      "tech_tags": [
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot",
+        "Low-key Lighting"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kỹ Thuật Quay Dựng & Điện Ảnh.",
+      "creator": {
+        "raw": "@Caleb_Natale",
+        "name": "Caleb_Natale",
+        "handle": "@calebnatale",
+        "profile_url": "https://www.instagram.com/calebnatale/"
+      },
+      "ig_url": "https://www.instagram.com/reel/Dcbn7Bix-X-/",
+      "gdrive_folder": "https://drive.google.com/open?id=1bOFljT1EkLxdEgnFAxbosiScsunWa0G4",
+      "media": {
+        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale/shot_01_mid.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale/shot_03_mid.jpg",
+        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dcbn7Bix-X-.mp4",
+        "report_url": "reports/IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale.html",
+        "shots_count": 8,
+        "duration": "16.00s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": true
+    },
+    {
+      "id": "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
+      "shortcode": "DdTeHleIqkg",
+      "title_vi": "Director's Report • Director's Report",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 24 phân cảnh.",
+      "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • High-key Lighting",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industry": {
+        "id": "thuong-hieu",
+        "name": "Xây kênh",
+        "en_name": "Personal Brand",
+        "icon": "💼",
+        "badge_color": "indigo"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @AL,_The_Creator_Videography_Reels",
       "tech_tags": [
         "Establishing Hook Shot",
         "Low-key Lighting",
@@ -1677,8 +1756,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40iman.lizi_Dc6qXoKoYKh/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dc6qXoKoYKh.mp4",
         "report_url": "reports/IG_@iman.lizi_Dc6qXoKoYKh.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -1747,8 +1826,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hayancook_DdSUI9BvhqR/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdSUI9BvhqR.mp4",
         "report_url": "reports/IG_@hayancook_DdSUI9BvhqR.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -1817,8 +1896,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40cushygarden_DdL6pHDSKRc/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdL6pHDSKRc.mp4",
         "report_url": "reports/IG_@cushygarden_DdL6pHDSKRc.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -1833,8 +1912,8 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@dev_zero_Db-S8i1hXwF",
       "shortcode": "Db-S8i1hXwF",
-      "title_vi": "Zero Dev • Vlog Kỷ Luật: Tan làm, Đàn Guitar, Code Đêm & Ăn Dưa Hấu",
-      "quick_takeaway": "Không cần lời thoại, việc ghép các hoạt động với text thời gian đủ tạo nên storytelling mạnh mẽ, thân mật.",
+      "title_vi": "Zero Dev • Routine Sau Giờ Làm: Tự Học Code, Đàn Guitar & Kỷ Luật Bản Thân",
+      "quick_takeaway": "Mẫu video thương hiệu cá nhân kỷ luật: Kể chuyện bằng chuỗi thói quen buổi tối không cần lời thoại.",
       "key_tech": "Công Nghệ & Lập Trình • Desk Setup B-Roll • Time-lapse Study • Guitar Foley Cut • Subtle Screen Glow",
       "shooting_style": {
         "id": "storytelling",
@@ -1844,11 +1923,11 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "amber"
       },
       "industry": {
-        "id": "ugc",
-        "name": "UGC",
-        "en_name": "UGC & Ads",
+        "id": "cong-nghe",
+        "name": "Đồ công nghệ",
+        "en_name": "Tech & Gear",
         "icon": "📱",
-        "badge_color": "amber"
+        "badge_color": "purple"
       },
       "country": {
         "id": "global",
@@ -1866,14 +1945,14 @@ var FEDU_IDEAS_DATABASE = {
         "Relatable Creator Hook"
       ],
       "transition_level": null,
-      "is_ad_bot": true,
+      "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "Xây dựng nhịp điệu sinh hoạt qua 5 bối cảnh đời thường, kết hợp âm thanh mộc (foley) và text time-stamp để định hình dòng thời gian chân thực.",
-        "practice_focus": "Không cần lời thoại, ghép hoạt động (chọn giày, đàn, code, đi dạo, ăn) với text thời gian (06:10 pm -> 10:00 pm) đủ tạo storytelling.",
+        "key_optimization_point": "⚡ Xây dựng thương hiệu chuyên gia không nhất thiết phải thuyết giảng. Đôi khi chỉ cần quay một chuỗi hành động kỷ luật trong không gian làm việc sạch sẽ là đủ tạo niềm tin.",
+        "practice_focus": "Thực hành: Kể chuyện một buổi tối không dùng lời: Từ bàn phím cơ gõ code, chuyển sang ngón tay gảy đàn guitar, rồi xỏ giày chạy bộ. Mỗi hành động đại diện cho 1 mảnh ghép phát triển bản thân.",
         "ig_seeding_hook": "Follow @dev_zero để cập nhật mẫu video Công Nghệ & Lập Trình",
         "course_industry_mapping": "Công Nghệ & Lập Trình"
       },
-      "logic_explanation": "Xây dựng nhịp điệu sinh hoạt qua 5 bối cảnh đời thường. Các góc máy tĩnh tôn vinh sự thư giãn, kết hợp âm thanh mộc (foley) và text time-stamp để định hình dòng thời gian chân thực.",
+      "logic_explanation": "Kể chuyện một buổi tối không dùng lời: Từ bàn phím cơ gõ code, chuyển sang ngón tay gảy đàn guitar, rồi xỏ giày chạy bộ. Mỗi hành động đại diện cho 1 mảnh ghép phát triển bản thân.",
       "creator": {
         "raw": "@dev_zero (Zero (주니어 개발자))",
         "name": "Zero (주니어 개발자",
@@ -1887,8 +1966,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dev_zero_Db-S8i1hXwF/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Db-S8i1hXwF.mp4",
         "report_url": "reports/IG_@dev_zero_Db-S8i1hXwF.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -1903,7 +1982,7 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@nagisa.decor_Dco_DevvUla",
       "shortcode": "Dco_DevvUla",
-      "title_vi": "Nagisa • Nghệ Thuật Decor Căn Hộ Phong Cách Japandi & Phối Màu Cây Xanh Tinh&nbsp;Tế",
+      "title_vi": "Nagisa • Nghệ Thuật Decor Căn Hộ Phong Cách Japandi & Phối Màu Cây Xanh Tinh Tế",
       "quick_takeaway": "Mẫu video kiến trúc nội thất: Cú lia máy mượt mà tôn vinh ánh sáng và đường nét căn hộ Japandi.",
       "key_tech": "Kiến Trúc & Không Gian / Nội Thất • Wide Establishing Shot • Slow Panning Movement • Warm Neutral Tones • Architectural Lines",
       "shooting_style": {
@@ -1938,8 +2017,8 @@ var FEDU_IDEAS_DATABASE = {
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Quay nội thất phải tôn trọng tỷ lệ không gian: Tránh dùng góc siêu rộng 0.5x làm méo tường, dùng cây xanh cỡ lớn để phân tầng không gian và tận dụng ánh sáng ven hắt bóng (shadow play).",
-        "practice_focus": "Thực hành: Cấu trúc báo cáo đã được Audit bởi Đạo Diễn, mô tả chân thực các phân cảnh kiến trúc Japandi chuẩn.",
+        "key_optimization_point": "⚡ Quay nội thất phải tôn trọng tỷ lệ không gian: Tránh dùng góc siêu rộng 0.5x làm méo tường, hãy dùng tiêu cự 24mm - 35mm và lia máy thật đằm tay.",
+        "practice_focus": "Thực hành: Sử dụng các đường thẳng kiến trúc làm khung định hình (framing), camera lia chậm theo phương ngang (slow dolly-pan) giúp người xem cảm nhận trọn vẹn độ sâu và sự thoáng đãng của căn phòng.",
         "ig_seeding_hook": "Follow @nagisa.decor để cập nhật mẫu video Kiến Trúc & Không Gian / Nội Thất",
         "course_industry_mapping": "Kiến Trúc & Không Gian / Nội Thất"
       },
@@ -1957,8 +2036,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40nagisa.decor_Dco_DevvUla/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dco_DevvUla.mp4",
         "report_url": "reports/IG_@nagisa.decor_Dco_DevvUla.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -2028,7 +2107,7 @@ var FEDU_IDEAS_DATABASE = {
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdBlAWRO1Hl.mp4",
         "report_url": "reports/IG_@yuto_creator_DdBlAWRO1Hl.html",
         "shots_count": 6,
-        "duration": "18.38s",
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -2097,8 +2176,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40beixin_DdRGd8evPK-/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdRGd8evPK-.mp4",
         "report_url": "reports/IG_@beixin_DdRGd8evPK-.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -2167,8 +2246,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40layton_video_DdKGq2TMhf4/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdKGq2TMhf4.mp4",
         "report_url": "reports/IG_@layton_video_DdKGq2TMhf4.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -2237,8 +2316,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kienobifilms_DdPLvUpBwCl/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdPLvUpBwCl.mp4",
         "report_url": "reports/IG_@kienobifilms_DdPLvUpBwCl.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -2307,8 +2386,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40aki_japan_DaDFH_TSii8/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DaDFH_TSii8.mp4",
         "report_url": "reports/IG_@aki_japan_DaDFH_TSii8.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -2325,7 +2404,7 @@ var FEDU_IDEAS_DATABASE = {
       "shortcode": "DdRg_ybtlKI",
       "title_vi": "Nathanael • Thử Thách Phối Đồ Thu Dưới €150 & Kỹ Thuật Hook 3s Đổi Outfit Siêu Tốc",
       "quick_takeaway": "Mẫu video thời trang thương mại: Công thức thử thách ngân sách kết hợp chuyển cảnh búng tay siêu tốc.",
-      "key_tech": "How I Shop, How I Style, Lookbook, Lifestyle, Zalando Commercial",
+      "key_tech": "Thời Trang & Phụ Kiện • Budget Challenge Hook • Snap Outfit Match Cut • Upbeat Pacing • Zalando Commercial Collaboration",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh",
@@ -2347,23 +2426,23 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Mẫu video UGC thương mại thời trang kết hợp định dạng Storytelling (Mua sắm & Phối đồ)",
+      "purpose": "Mẫu video UGC thương mại thời trang kết hợp định dạng Challenge (Thử thách ngân sách) kích thích mua sắm",
       "tech_tags": [
-        "How I Shop",
-        "How I Style",
-        "Lookbook",
-        "Lifestyle",
-        "Zalando Commercial"
+        "Budget Challenge Hook",
+        "Snap Outfit Match Cut",
+        "Upbeat Pacing",
+        "Zalando Commercial Collaboration",
+        "Lookbook Showcase"
       ],
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Đừng chỉ show quần áo, hãy kể câu chuyện quá trình sở hữu nó. Việc thêm phân cảnh 'How I Shop' (thêm vào giỏ hàng) giúp định hướng hành vi mua sắm của người xem một cách tự nhiên.",
-        "practice_focus": "Thực hành: Quay 2-3 shot mô tả quá trình lướt web/thêm vào giỏ hàng trước khi chuyển cảnh sang kết quả mặc trên người. Đặt chữ 'How I Shop' và 'How I Style' để neo giữ sự chú ý.",
+        "key_optimization_point": "⚡ Bán hàng thời trang hiệu quả nhất là bọc trong một thử thách có giới hạn (tiền bạc hoặc thời gian): Vừa tạo tính giải trí, vừa xóa tan rào cản giá đắt trong đầu khách.",
+        "practice_focus": "Thực hành: Đặt ra con số ngân sách cụ thể (€150) tạo sự tò mò ngay giây đầu tiên. Từng món đồ được ném vào khung hình và biến thành set đồ hoàn chỉnh chỉ bằng cú búng tay.",
         "ig_seeding_hook": "Follow @nathanael.lct để cập nhật mẫu video Thời Trang & Phụ Kiện",
         "course_industry_mapping": "Thời Trang & Phụ Kiện"
       },
-      "logic_explanation": "Tạo sự đồng cảm bằng cách chia video làm 2 giai đoạn: Giai đoạn 1 (How I Shop) thể hiện hành vi mua sắm online thực tế (ví, laptop, giỏ hàng). Giai đoạn 2 (How I Style) phô diễn thành quả phối đồ tự tin trên phố.",
+      "logic_explanation": "Đặt ra con số ngân sách cụ thể (€150) tạo sự tò mò ngay giây đầu tiên. Từng món đồ được ném vào khung hình và biến thành set đồ hoàn chỉnh chỉ bằng cú búng tay.",
       "creator": {
         "raw": "@nathanael.lct (Nathanael Lucantoni)",
         "name": "Nathanael Lucantoni",
@@ -2377,8 +2456,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40nathanael.lct_DdRg_ybtlKI/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdRg_ybtlKI.mp4",
         "report_url": "reports/IG_@nathanael.lct_DdRg_ybtlKI.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -2447,8 +2526,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40c.j.visuals_DdMrb4ARxHv/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdMrb4ARxHv.mp4",
         "report_url": "reports/IG_@c.j.visuals_DdMrb4ARxHv.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -2463,9 +2542,9 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@genya_jp_Dc3PgRbBp-m",
       "shortcode": "Dc3PgRbBp-m",
-      "title_vi": "Genya • Food Vlog Cận Cảnh Biểu Cảm Tận Hưởng Ẩm Thực Tự Nhiên & Chân Thực",
-      "quick_takeaway": "Mẫu video review ẩm thực: Truyền tải độ ngon món ăn thông qua biểu cảm nhắm mắt thỏa mãn và nụ cười chân thực của người trải nghiệm.",
-      "key_tech": "Ẩm Thực & F&B • Authentic Eating Expression • Eye-level Food Review • Natural Cafe Lighting • Taste Reaction B-Roll",
+      "title_vi": "Genya • Khám Phá Ẩm Thực Vùng Núi Hakone & Nghệ Thuật Quay Đồ Ăn Xúc Giác Nóng Hổi",
+      "quick_takeaway": "Mẫu video ẩm thực xúc giác: Bắt trọn làn khói bốc nghi ngút bằng ánh sáng ngược và cú gắp chậm rãi.",
+      "key_tech": "Ẩm Thực & F&B • Food Macro Glaze • Steam Capture Lighting • Chopstick Lift Action • Warm Wooden Background",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Chỉn Chu",
@@ -2487,22 +2566,23 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Showcase ẩm thực tập trung hoàn toàn vào biểu cảm khuôn mặt khi ăn, truyền tải độ ngon qua sự thỏa mãn chân thực",
+      "purpose": "Review ẩm thực du lịch Nhật Bản với phong cách quay tĩnh tập trung vào độ bóng bẩy và khói bốc của món ăn",
       "tech_tags": [
-        "Authentic Eating Expression",
-        "Eye-level Food Review",
-        "Natural Cafe Lighting",
-        "Taste Reaction B-Roll"
+        "Food Macro Glaze",
+        "Steam Capture Lighting",
+        "Chopstick Lift Action",
+        "Warm Wooden Background",
+        "Sensory Dining B-Roll"
       ],
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Không cần quay đồ ăn quá cầu kỳ, chính biểu cảm thỏa mãn và chân thực của người ăn mới là thứ thuyết phục người xem nhất.",
-        "practice_focus": "Thực hành: Đặt máy quay ngang tầm mắt, lấy nét vào khuôn mặt người ăn. Yêu cầu diễn viên ăn thật, nhắm mắt cảm nhận và mỉm cười tự nhiên.",
+        "key_optimization_point": "⚡ Quay đồ ăn muốn ngon mắt thì chìa khóa là Ánh Sáng Ngược (Backlight) và Chuyển Động Xúc Giác (gắp lên, bẻ đôi, rưới sốt).",
+        "practice_focus": "Thực hành: Kỹ thuật đánh sáng ngược (Backlight) để bắt trọn làn khói nghi ngút bốc lên từ bát mì nóng hổi, cú gắp thức ăn chậm rãi làm nổi bật độ bóng bẩy của nước sốt.",
         "ig_seeding_hook": "Follow @genya_jp để cập nhật mẫu video Ẩm Thực & F&B",
         "course_industry_mapping": "Ẩm Thực & F&B"
       },
-      "logic_explanation": "Kỹ thuật quay ngang tầm mắt (Eye-level) kết hợp với ánh sáng tự nhiên và trung cảnh (Medium shot). Thay vì quay cận đồ ăn, máy quay khóa chặt vào biểu cảm tận hưởng của người ăn (nhắm mắt, mỉm cười) để kích thích vị giác người xem.",
+      "logic_explanation": "Kỹ thuật đánh sáng ngược (Backlight) để bắt trọn làn khói nghi ngút bốc lên từ bát mì nóng hổi, cú gắp thức ăn chậm rãi làm nổi bật độ bóng bẩy của nước sốt.",
       "creator": {
         "raw": "@genya_jp (Genya)",
         "name": "Genya",
@@ -2516,8 +2596,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40genya_jp_Dc3PgRbBp-m/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dc3PgRbBp-m.mp4",
         "report_url": "reports/IG_@genya_jp_Dc3PgRbBp-m.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -2586,8 +2666,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40charlotte.arsenault_DdHGBpZOzIm/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdHGBpZOzIm.mp4",
         "report_url": "reports/IG_@charlotte.arsenault_DdHGBpZOzIm.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -2656,8 +2736,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40arturbr_DdO2XLIKiXo/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdO2XLIKiXo.mp4",
         "report_url": "reports/IG_@arturbr_DdO2XLIKiXo.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -2726,8 +2806,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jazziesillona_Dc6Cxf-QRWh/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dc6Cxf-QRWh.mp4",
         "report_url": "reports/IG_@jazziesillona_Dc6Cxf-QRWh.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -2796,8 +2876,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40c.j.visuals_DdR7dEIxzT9/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdR7dEIxzT9.mp4",
         "report_url": "reports/IG_@c.j.visuals_DdR7dEIxzT9.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -2866,8 +2946,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jusorok_korea_DdBr6LZqkFd/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdBr6LZqkFd.mp4",
         "report_url": "reports/IG_@jusorok_korea_DdBr6LZqkFd.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -2936,8 +3016,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40arianballate_DdRe4-xpHs2/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdRe4-xpHs2.mp4",
         "report_url": "reports/IG_@arianballate_DdRe4-xpHs2.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -3006,8 +3086,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40genya_jp_DdD_QqPB7aW/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdD_QqPB7aW.mp4",
         "report_url": "reports/IG_@genya_jp_DdD_QqPB7aW.html",
-        "shots_count": 6,
-        "duration": "18.38s",
+        "shots_count": 8,
+        "duration": "25.0s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -3132,7 +3212,7 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/LAZADA_Ulanzi_Ch%C3%A2n_%C4%90%E1%BA%BF_T%E1%BB%B1_S%C6%B0%E1%BB%9Bng_C%C3%B3_T%E1%BB%AB_T%C3%ADnh__thumb.jpg",
         "video_url": "https://www.youtube.com/embed/ZUWZ5Uhbz28",
         "report_url": "",
-        "shots_count": 6,
+        "shots_count": 8,
         "duration": "29.1s",
         "youtube_id": "ZUWZ5Uhbz28",
         "youtube_embed": "https://www.youtube.com/embed/ZUWZ5Uhbz28",
@@ -3201,7 +3281,7 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Teaching_Nervous_System_Not_Emergency_-_%40kawoon.lee.mp4",
         "report_url": "reports/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency.html",
-        "shots_count": 6,
+        "shots_count": 8,
         "duration": "27.33s",
         "youtube_id": null,
         "youtube_embed": null,
@@ -3436,7 +3516,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey",
       "shortcode": "DdLedJjsbNW",
       "title_vi": "Asian Dragon Tattoo Journey • Hannya Tattoo Hà Nội",
-      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, nghệ thuật xăm rồng Irezumi, ánh sáng và nhịp dựng 18 phân cảnh.",
       "key_tech": "Irezumi Japanese Tattoo • Dragon & Katana • White Ink Highlights • Phố Cổ Hà Nội • Voice-Over Storytelling • ASMR Wipe",
       "shooting_style": {
         "id": "storytelling",
@@ -3689,7 +3769,7 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdAyywnSxU8.mp4",
         "report_url": "reports/Autumn in Hanoi - @vnexpress_hanoi.html",
-        "shots_count": 6,
+        "shots_count": 8,
         "duration": "14.43s",
         "youtube_id": null,
         "youtube_embed": null,
@@ -3891,7 +3971,7 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DbOMM0Pu1HA.mp4",
         "report_url": "reports/House of Hair One-Take Curly Runway - @hairpositiveofficial.html",
-        "shots_count": 6,
+        "shots_count": 8,
         "duration": "13.08s",
         "youtube_id": null,
         "youtube_embed": null,
@@ -4779,7 +4859,7 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Gunung%20Sumbing%20Trekking%20Match%20Cut%20-%20%40dimasyudhystira.mp4",
         "report_url": "reports/Gunung Sumbing Trekking Match Cut - @dimasyudhystira.html",
-        "shots_count": 6,
+        "shots_count": 8,
         "duration": "15.30s",
         "youtube_id": "",
         "youtube_embed": "",
@@ -5216,7 +5296,7 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://img.youtube.com/vi/adOF33KL6qk/maxresdefault.jpg",
         "video_url": "https://www.youtube.com/embed/adOF33KL6qk",
         "report_url": "",
-        "shots_count": 6,
+        "shots_count": 8,
         "duration": "42.7s",
         "youtube_id": "adOF33KL6qk",
         "youtube_embed": "https://www.youtube.com/embed/adOF33KL6qk",
@@ -5586,7 +5666,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion",
       "shortcode": "DawDiT2M1p8",
       "title_vi": "Jamison Lange • Coffee + Outfit Match Cut Transition",
-      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, match-cut chuyển cảnh trang phục, thao tác pha cà phê và nhịp dựng 22 phân cảnh.",
       "key_tech": "Match Cut Transitions, Visual Sub-framing, Tactile Macro Shots, Wardrobe Continuity, Symmetrical Framing, Dopamine Pacing",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -7493,8 +7573,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Db7_3rpgK5c.mp4",
         "report_url": "reports/IG_@withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery.html",
-        "shots_count": 6,
-        "duration": "12s",
+        "shots_count": 8,
+        "duration": "16s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -8055,8 +8135,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kortafilms_DcdthwaTM3J_Camera_Angles_Mastery/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcdthwaTM3J.mp4",
         "report_url": "reports/IG_@kortafilms_DcdthwaTM3J_Camera_Angles_Mastery.html",
-        "shots_count": 6,
-        "duration": "12s",
+        "shots_count": 8,
+        "duration": "16s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -8901,7 +8981,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai",
       "shortcode": "DakY2EST-Tm",
       "title_vi": "Split City: Shanghai (Bản Giao Hưởng Thượng Hải 3 Tầng Thời Không) - @kyung6film",
-      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, kỹ thuật Kinetic Aspect Ratio Masking, Match Cut đối xứng và cấu trúc Split Screen Triptych 3 tầng thời không.",
       "key_tech": "Kinetic Masking, Triptych Split Screen, Symmetrical Anchor Pose, Match Cut, 3-Layer Urban Depth",
       "shooting_style": {
         "id": "dien-anh",
@@ -8967,7 +9047,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp",
       "shortcode": "Dcvxba1OvrD",
       "title_vi": "Đèn Bàn Di Động Koti & Nghệ Thuật Ánh Sáng Hoàng Hôn (@by.bennnj)",
-      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng tự nhiên và bố cục tương tác phong cách sống 10 phân cảnh cho đèn Koti.",
       "key_tech": "Lifestyle Product Hook, Natural Backlighting, Touch Dimmer Macro, Foreground Wipe, Hygge Warmth",
       "shooting_style": {
         "id": "dien-anh",
@@ -9084,8 +9164,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_%40vietmac/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/practice_cinematic_chay_0903.mp4",
         "report_url": "reports/Practice_Cinematic_Chay_0903 - @vietmac.html",
-        "shots_count": 6,
-        "duration": "12s",
+        "shots_count": 8,
+        "duration": "16s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -9575,8 +9655,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DF2sOsNyNlY_3_Hooks_Mastery/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DF2sOsNyNlY.mp4",
         "report_url": "reports/3 Hooks Mastery - @mridupawasharma.html",
-        "shots_count": 6,
-        "duration": "12s",
+        "shots_count": 8,
+        "duration": "16s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -9659,7 +9739,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video",
       "shortcode": "DcJDJjVJGy6",
       "title_vi": "How to Cook a Video: Ẩn dụ Chế biến Ẩm thực & Quy trình Hậu kỳ Chuẩn chỉ",
-      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy, thủ pháp ẩn dụ thị giác và nhịp dựng 14 phân cảnh đỉnh cao của creator @shogentle.",
       "key_tech": "Visual Metaphor, Momentum Continuity, Diegetic Typography, Match Action, Snap Zooms, SaaS Demo Storytelling",
       "shooting_style": {
         "id": "dien-anh",
@@ -9726,7 +9806,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots",
       "shortcode": "DcgTj56Atlc",
       "title_vi": "7 Shots For Your Next Kitchen Film • @thomasmathewt2",
-      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 8 phân cảnh (Shoot-Through, Kinetic Movement, Overhead Flat Lay, In-Cabinet POV, Action POV, Macro Sizzle 90mm).",
       "key_tech": "Shoot-Through Foreground, Kinetic Toss, Spotify HUD, Overhead Flat Lay, In-Cabinet POV, Action Cam POV, 90mm Food Macro",
       "shooting_style": {
         "id": "dien-anh",
@@ -9779,8 +9859,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots/shot_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/7%20Shots%20For%20Your%20Next%20Kitchen%20Film%20-%20%40thomasmathewt2.mp4",
         "report_url": "reports/7%20Shots%20For%20Your%20Next%20Kitchen%20Film%20-%20%40thomasmathewt2.html",
-        "shots_count": 6,
-        "duration": "12s",
+        "shots_count": 8,
+        "duration": "16s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -9796,7 +9876,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing",
       "shortcode": "Dcil1WWiXOC",
       "title_vi": "Cinematic Unboxing Mastery - Lofree Mechanical Keyboard (@yegor.sky)",
-      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, bóc tách 10 phân cảnh unbox chuẩn ASMR, ánh sáng và góc máy điện ảnh.",
       "key_tech": "Dirty Foreground Framing, Top-Down Flat Lay, Macro CNC Chamfer, Ice Blue Lighting, Kinetic ASMR",
       "shooting_style": {
         "id": "dien-anh",
@@ -10140,7 +10220,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast",
       "shortcode": "xnAU8Pazc6A",
       "title_vi": "Phân Tích Đạo Diễn: Joe Rogan & Elon Musk Podcast | Master Breakdown",
-      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 0 phân cảnh.",
       "key_tech": "Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide",
       "shooting_style": {
         "id": "dien-anh",
@@ -10479,7 +10559,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture",
       "shortcode": "DcOQSCMqho0",
       "title_vi": "Personal Cinema Wherever You Go - @arturbr",
-      "quick_takeaway": "Phân tích cú Match Cut không gian ấn tượng, chuyển tiếp mượt mà từ phòng khách lên máy bay Turkish Airlines.",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy macro, thủ pháp so sánh Problem-Solution và nhịp dựng 18 phân cảnh rạp chiếu phim cá nhân VITURE XR.",
       "key_tech": "Macro POV, Micro-OLED Contrast, Whip Pan Liaison, High-Kinetic Montage, Problem-Solution Framework",
       "shooting_style": {
         "id": "dien-anh",
@@ -11834,8 +11914,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/extracted_shots/slide_03_mid.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/carousel_slides/slide_01_DO8aI3uker6.mp4",
         "report_url": "reports/Hong_Kong_Visual_Rhythm_Carousel - @withyuee.html",
-        "shots_count": 6,
-        "duration": "12s",
+        "shots_count": 8,
+        "duration": "16s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -12175,8 +12255,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%2540jazziesillona/img_003_e0df5078.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/carousel_slides/slide_01.mp4",
         "report_url": "reports/Street_Photography_Carousel - @jazziesillona.html",
-        "shots_count": 6,
-        "duration": "12s",
+        "shots_count": 8,
+        "duration": "16s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -12309,8 +12389,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Mood_and_Tone_Carousel_-_%2540jazziesillona/img_011_b22e8cde.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/carousel_slides/slide_01_DWrDQgoj7Uw.mp4",
         "report_url": "reports/Mood_and_Tone_Carousel - @jazziesillona.html",
-        "shots_count": 6,
-        "duration": "12s",
+        "shots_count": 8,
+        "duration": "16s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
@@ -12449,8 +12529,8 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Urban_Texture_Carousel_-_%2540jazziesillona/img_003_25d59c75.jpg",
         "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/carousel_slides/slide_01.mp4",
         "report_url": "reports/Urban_Texture_Carousel - @jazziesillona.html",
-        "shots_count": 6,
-        "duration": "12s",
+        "shots_count": 8,
+        "duration": "16s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
