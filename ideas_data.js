@@ -2325,7 +2325,7 @@ var FEDU_IDEAS_DATABASE = {
       "shortcode": "DdRg_ybtlKI",
       "title_vi": "Nathanael • Thử Thách Phối Đồ Thu Dưới €150 & Kỹ Thuật Hook 3s Đổi Outfit Siêu Tốc",
       "quick_takeaway": "Mẫu video thời trang thương mại: Công thức thử thách ngân sách kết hợp chuyển cảnh búng tay siêu tốc.",
-      "key_tech": "Thời Trang & Phụ Kiện • Budget Challenge Hook • Snap Outfit Match Cut • Upbeat Pacing • Zalando Commercial Collaboration",
+      "key_tech": "How I Shop, How I Style, Lookbook, Lifestyle, Zalando Commercial",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh",
@@ -2347,23 +2347,23 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Mẫu video UGC thương mại thời trang kết hợp định dạng Challenge (Thử thách ngân sách) kích thích mua sắm",
+      "purpose": "Mẫu video UGC thương mại thời trang kết hợp định dạng Storytelling (Mua sắm & Phối đồ)",
       "tech_tags": [
-        "Budget Challenge Hook",
-        "Snap Outfit Match Cut",
-        "Upbeat Pacing",
-        "Zalando Commercial Collaboration",
-        "Lookbook Showcase"
+        "How I Shop",
+        "How I Style",
+        "Lookbook",
+        "Lifestyle",
+        "Zalando Commercial"
       ],
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Bán hàng thời trang hiệu quả nhất là bọc trong một thử thách có giới hạn (tiền bạc hoặc thời gian): Vừa tạo tính giải trí, vừa xóa tan rào cản giá đắt trong đầu khách.",
-        "practice_focus": "Thực hành: Đặt ra con số ngân sách cụ thể (€150) tạo sự tò mò ngay giây đầu tiên. Từng món đồ được ném vào khung hình và biến thành set đồ hoàn chỉnh chỉ bằng cú búng tay.",
+        "key_optimization_point": "⚡ Đừng chỉ show quần áo, hãy kể câu chuyện quá trình sở hữu nó. Việc thêm phân cảnh 'How I Shop' (thêm vào giỏ hàng) giúp định hướng hành vi mua sắm của người xem một cách tự nhiên.",
+        "practice_focus": "Thực hành: Quay 2-3 shot mô tả quá trình lướt web/thêm vào giỏ hàng trước khi chuyển cảnh sang kết quả mặc trên người. Đặt chữ 'How I Shop' và 'How I Style' để neo giữ sự chú ý.",
         "ig_seeding_hook": "Follow @nathanael.lct để cập nhật mẫu video Thời Trang & Phụ Kiện",
         "course_industry_mapping": "Thời Trang & Phụ Kiện"
       },
-      "logic_explanation": "Đặt ra con số ngân sách cụ thể (€150) tạo sự tò mò ngay giây đầu tiên. Từng món đồ được ném vào khung hình và biến thành set đồ hoàn chỉnh chỉ bằng cú búng tay.",
+      "logic_explanation": "Tạo sự đồng cảm bằng cách chia video làm 2 giai đoạn: Giai đoạn 1 (How I Shop) thể hiện hành vi mua sắm online thực tế (ví, laptop, giỏ hàng). Giai đoạn 2 (How I Style) phô diễn thành quả phối đồ tự tin trên phố.",
       "creator": {
         "raw": "@nathanael.lct (Nathanael Lucantoni)",
         "name": "Nathanael Lucantoni",
