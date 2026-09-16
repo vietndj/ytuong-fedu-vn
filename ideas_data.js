@@ -1811,8 +1811,8 @@ var FEDU_IDEAS_DATABASE = {
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Tĩnh mà động: Xếp đặt bộ ảnh bằng kỹ thuật Cinematic Lighting kết hợp Composition Mastery để tạo độ sâu 3D như cắt ra từ một bộ phim thực sự.",
-        "practice_focus": "⚡ Thực chiến: Xếp luồng ảnh (Visual Rhythm) khéo léo theo thứ tự toàn-trung-cận để người xem trượt ngang Carousel nhưng vẫn thấy được một câu chuyện liền mạch."
+        "key_optimization_point": "⚡ Dựng luồng ảnh (Visual Rhythm) bằng Cinematic Lighting và Composition Mastery để tạo chiều sâu như cắt ra từ phim.",
+        "practice_focus": "⚡ Thực chiến: Xếp ảnh theo thứ tự toàn-trung-cận để khách vuốt ngang Carousel vẫn đọc được câu chuyện liền mạch."
       },
       "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Photo, 15 of 18, by @ru9vn, shared September 14, 2026. Phân loại vào Thương Hiệu Cá Nhân & Dịch Vụ • Điện Ảnh (Cinematic).",
       "creator": {
@@ -1882,8 +1882,8 @@ var FEDU_IDEAS_DATABASE = {
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Biến iPhone thành máy quay điện ảnh: Dùng hook treo lơ lửng máy trong studio để chặn feed ➔ Cắt sang cảnh lộn ngược bóng nước bắt trọn vệt flare anamorphic ngoài trời.",
-        "practice_focus": "⚡ Thực chiến: Lắp lens Anamorphic, lật ngược máy sát mặt vũng nước để lấy hiệu ứng bóng gương (reflection), vừa đi vừa quay lùi để chống rung."
+        "key_optimization_point": "⚡ Dùng hook treo máy thẳng đứng trong studio chặn feed ➔ Chuyển cảnh lật ngược máy lấy bóng nước kết hợp flare anamorphic ngoài trời.",
+        "practice_focus": "⚡ Thực chiến: Lắp lens Anamorphic, lật ngược máy cắm sát vũng nước lấy bóng gương, đi lùi để hãm rung."
       },
       "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 9 of 18, by @pascal_blaurock, shared September 15, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
       "creator": {
@@ -1953,8 +1953,8 @@ var FEDU_IDEAS_DATABASE = {
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Bán phong cách sống thay vì bán sản phẩm: Khóa góc máy nhìn qua khe cửa dẫn vào cảnh gõ laptop ngay trên thuyền kayak giữa hồ để quảng cáo công nghệ tự nhiên 100%.",
-        "practice_focus": "⚡ Thực chiến: Đặt tripod trên bờ lén nhìn qua khe hở (frame-in-frame), để chủ thể tự nhiên dùng sản phẩm giữa bối cảnh hoang dã trái ngược hoàn toàn với văn phòng."
+        "key_optimization_point": "⚡ Lồng sản phẩm vào lối sống: Khóa máy qua khe cửa, đẩy góc nhìn ra cảnh ngồi thuyền kayak gõ laptop giữa hồ để bán công nghệ.",
+        "practice_focus": "⚡ Thực chiến: Cắm tripod lén nhìn qua khe hở (frame-in-frame), để diễn viên tự nhiên dùng sản phẩm giữa bối cảnh thiên nhiên."
       },
       "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 7 of 18, by @megantanhweewen, shared September 15, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
       "creator": {
@@ -2023,8 +2023,8 @@ var FEDU_IDEAS_DATABASE = {
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Cú máy tracking đi lùi Lookbook 1 shot: Tận dụng chiều sâu tiệm tạp hóa retro làm nền, khóa chặt ánh mắt giao tiếp và cử chỉ vuốt tóc tự nhiên để giữ chân người xem.",
-        "practice_focus": "⚡ Thực chiến: Người cầm máy đi lùi giữ khoảng cách không đổi (3 mét), người mẫu vừa tiến lên vừa vuốt tóc/nhìn thẳng ống kính để tạo nhịp điệu tương tác nhịp nhàng."
+        "key_optimization_point": "⚡ Tracking đi lùi 1 shot: Lấy chiều sâu tiệm tạp hóa làm nền, bắt nét thẳng vào mắt và cử chỉ vuốt tóc tự nhiên của mẫu.",
+        "practice_focus": "⚡ Thực chiến: Tay máy lùi giữ cự ly 3 mét, mẫu tiến lên vừa vuốt tóc vừa nhìn thẳng ống kính giữ nhịp."
       },
       "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 5 of 18, by @yuuxeun, shared September 14, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
       "creator": {
@@ -2092,8 +2092,8 @@ var FEDU_IDEAS_DATABASE = {
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Sức mạnh 1 shot: Gây ấn tượng thị giác tuyệt đối chỉ bằng một cú Establishing Hook Shot tĩnh được căn ke bố cục hoàn hảo đến từng centimet.",
-        "practice_focus": "⚡ Thực chiến: Cố định góc máy, để khung cảnh trống tĩnh lặng và đợi chủ thể bước vào khung hình (frame-in-frame) tạo khoảnh khắc đắt giá duy nhất."
+        "key_optimization_point": "⚡ Đóng chết 1 góc Establishing Hook tĩnh, ke bố cục chuẩn xác và để chủ thể tự bước vào vùng bắt nét.",
+        "practice_focus": "⚡ Thực chiến: Fix cứng máy, để hở khoảng trống và đợi người đi vào khung (frame-in-frame) tạo điểm nhấn dứt khoát."
       },
       "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 3 of 18, by @syooaann, shared September 2, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Điện Ảnh (Cinematic).",
       "creator": {
@@ -2164,8 +2164,8 @@ var FEDU_IDEAS_DATABASE = {
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Nhịp điệu Tracking mượt mà: Mở đầu bằng Establishing Hook, ngay sau đó đẩy Medium Tracking Shot di chuyển song song cùng chủ thể dưới ánh sáng Low-key.",
-        "practice_focus": "⚡ Thực chiến: Vừa đẩy máy theo bước chân vừa khóa nét chủ thể, lập tức cắt sang đặc tả Close-Up (bàn tay, biểu cảm) để người xem có cảm giác đồng hành thực sự."
+        "key_optimization_point": "⚡ Mở đầu Establishing Hook rồi lập tức đẩy Medium Tracking đi ngang song song với người dưới ánh sáng Low-key.",
+        "practice_focus": "⚡ Thực chiến: Vừa đẩy máy theo bước chân vừa khóa nét mặt, cắt rụp sang góc cận (tay, biểu cảm) để tạo cảm giác có người đi cùng."
       },
       "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 1 of 18, by @megantanhweewen, shared September 11, 2025. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
       "creator": {
@@ -2230,8 +2230,8 @@ var FEDU_IDEAS_DATABASE = {
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Bí quyết neo giữ ánh nhìn: Thiết lập Establishing Hook bằng không gian tối Low-key, đánh đèn ven sáng sâu (Rim Light) để tách lớp chủ thể khỏi phông nền.",
-        "practice_focus": "⚡ Thực chiến: Dí sát ống kính (Macro Detail) bắt trọn chất liệu bề mặt, chuyển động quay tay nhẹ nhàng kết hợp ánh sáng đánh chéo để tạo khối 3D sống động."
+        "key_optimization_point": "⚡ Đặt Establishing Hook trong không gian tối, đập đèn ven (Rim Light) mạnh để tách hẳn chủ thể khỏi nền.",
+        "practice_focus": "⚡ Thực chiến: Dí sát ống kính (Macro Detail) bắt vân bề mặt, xoay tay máy chậm kết hợp ánh sáng chéo để nổi khối 3D."
       },
       "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kỹ Thuật Quay Dựng & Điện Ảnh.",
       "creator": {
@@ -2297,8 +2297,8 @@ var FEDU_IDEAS_DATABASE = {
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Cuốn hút từ giây đầu: Dùng cú máy Establishing Hook góc siêu rộng, ép sáng Low-key tạo mảng tối bí ẩn để khóa sự tập trung của người xem.",
-        "practice_focus": "⚡ Thực chiến: Liên tục cắt cảnh luân phiên giữa toàn cảnh sáng rực (High-key) và đặc tả chi tiết (Macro Close-Up) trong bóng tối để nhồi nhét sự tương phản thị giác."
+        "key_optimization_point": "⚡ Mở bát bằng Establishing Hook góc siêu rộng, ngay lập tức ép sáng Low-key dìm tối phông nền để dồn mắt vào chủ thể.",
+        "practice_focus": "⚡ Thực chiến: Băm nhịp luân phiên giữa toàn cảnh sáng rực (High-key) và dí sát chi tiết (Macro) trong bóng tối tạo độ gắt."
       },
       "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
       "creator": {
@@ -10330,8 +10330,8 @@ var FEDU_IDEAS_DATABASE = {
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Đẳng cấp mổ xẻ Carousel: Tận dụng luồng Carousel Flow liền mạch kết hợp hệ màu Color Grading điện ảnh để dẫn dắt mắt người xem trượt qua từng khung hình.",
-        "practice_focus": "⚡ Thực chiến: Chia lưới bố cục chuẩn trên từng mặt slide, sử dụng Storyboard Rhythm để phân bố thông tin chữ và hình ảnh không bị ngắt quãng giữa các thao tác vuốt.",
+        "key_optimization_point": "⚡ Đồng bộ Carousel Flow và dải màu Color Grading để khách tự vuốt hết 8 mặt slide mà không bị khựng nhịp.",
+        "practice_focus": "⚡ Thực chiến: Đóng lưới bố cục cố định ở mọi slide, nối thông tin và hình ảnh tràn viền bằng Storyboard Rhythm.",
         "ig_seeding_hook": "Follow @Andrei_Kostromskikh để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
         "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
         "transition_level": null
