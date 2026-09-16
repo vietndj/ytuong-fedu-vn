@@ -1,7 +1,0 @@
-.git/
-.github/
-.wrangler/
-__pycache__/
-*.py
-.env*
-node_modules/
