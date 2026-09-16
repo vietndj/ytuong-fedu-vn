@@ -15960,5 +15960,83 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k": {
+    "id": "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k",
+    "creator": "@규리🍊ㅣCorporate_Girlie🇰🇷",
+    "creator_name": "규리🍊ㅣCorporate_Girlie🇰🇷",
+    "title": "@규리🍊ㅣCorporate_Girlie🇰🇷 - Video by gyuree k",
+    "shots_count": 23,
+    "duration": "46.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Instagram Liked 24h: Video, 4 of 18, by @gyuree_k, shared September 15, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "4 Of 18",
+      "By @gyuree_k",
+      "Shared September 15",
+      "2026",
+      "Establishing Hook Shot",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 4 of 18, by @gyuree_k, shared September 15, 2026. Phân loại vào Công Nghệ & Thiết Bị • Talking Head.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DdTZsoxTVFz": {
+    "id": "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k",
+    "creator": "@규리🍊ㅣCorporate_Girlie🇰🇷",
+    "creator_name": "규리🍊ㅣCorporate_Girlie🇰🇷",
+    "title": "@규리🍊ㅣCorporate_Girlie🇰🇷 - Video by gyuree k",
+    "shots_count": 23,
+    "duration": "46.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Instagram Liked 24h: Video, 4 of 18, by @gyuree_k, shared September 15, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "4 Of 18",
+      "By @gyuree_k",
+      "Shared September 15",
+      "2026",
+      "Establishing Hook Shot",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 4 of 18, by @gyuree_k, shared September 15, 2026. Phân loại vào Công Nghệ & Thiết Bị • Talking Head.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }

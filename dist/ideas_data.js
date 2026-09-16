@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 202,
-  "total_unique_ideas": 191,
-  "total_active_ideas": 166,
+  "total_scene_items": 203,
+  "total_unique_ideas": 192,
+  "total_active_ideas": 167,
   "total_excluded_ideas": 25,
-  "total_creators": 121,
+  "total_creators": 122,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -62,7 +62,7 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 3,
     "voice-over": 10,
-    "talking-head": 20,
+    "talking-head": 21,
     "storytelling": 18,
     "dien-anh": 83,
     "chuyen-canh": 32
@@ -155,7 +155,7 @@ var FEDU_IDEAS_DATABASE = {
     "thoi-trang": 19,
     "am-thuc": 18,
     "du-lich": 12,
-    "cong-nghe": 21,
+    "cong-nghe": 22,
     "kien-truc": 15,
     "the-thao": 7,
     "ky-thuat-quay": 45,
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 80,
+    "us_eu": 81,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -500,6 +500,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@gyuree_k",
+      "name": "규리🍊ㅣCorporate_Girlie🇰🇷",
+      "profile_url": "https://www.instagram.com/gyuree_k/",
+      "video_count": 1,
+      "top_industry": "Đồ công nghệ",
+      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7_DdTZsoxTVFz_Video_by_gyuree_k/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k"
       ]
     },
     {
@@ -1604,6 +1615,74 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k",
+      "shortcode": "DdTZsoxTVFz",
+      "title_vi": "@규리🍊ㅣCorporate_Girlie🇰🇷 - Video by gyuree k",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+      "key_tech": "Instagram Liked 24h: Video • 4 Of 18 • By @gyuree_k • Shared September 15 • 2026 • Establishing Hook Shot • Medium Tracking Shot • Close-Up / Macro Detail Shot",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industry": {
+        "id": "cong-nghe",
+        "name": "Đồ công nghệ",
+        "en_name": "Tech & Gear",
+        "icon": "📱",
+        "badge_color": "purple"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 4 of 18, by @gyuree_k, shared September 15, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "4 Of 18",
+        "By @gyuree_k",
+        "Shared September 15",
+        "2026",
+        "Establishing Hook Shot",
+        "Medium Tracking Shot",
+        "Close-Up / Macro Detail Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 4 of 18, by @gyuree_k, shared September 15, 2026. Phân loại vào Công Nghệ & Thiết Bị • Talking Head.",
+      "creator": {
+        "raw": "@규리🍊ㅣCorporate_Girlie🇰🇷",
+        "name": "규리🍊ㅣCorporate_Girlie🇰🇷",
+        "handle": "@gyuree_k",
+        "profile_url": "https://www.instagram.com/gyuree_k/"
+      },
+      "ig_url": "https://www.instagram.com/p/DdTZsoxTVFz",
+      "gdrive_folder": "https://drive.google.com/open?id=1HdVCAZjV9j82oIE9Z_Bu-_ixwVcH0fyK",
+      "media": {
+        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7_DdTZsoxTVFz_Video_by_gyuree_k/shot_01_mid.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7_DdTZsoxTVFz_Video_by_gyuree_k/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DdTZsoxTVFz.mp4",
+        "report_url": "reports/IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k.html",
+        "shots_count": 23,
+        "duration": "46s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz",
       "shortcode": "DZ8w6MsSMAw",
