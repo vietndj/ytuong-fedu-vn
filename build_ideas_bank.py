@@ -572,16 +572,21 @@ def build_database():
         import urllib.parse
         def normalize_thumb_url(u, fld, default_name):
             if not u:
-                return f"https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/{urllib.parse.quote(fld)}/{default_name}"
+                return f"https://media.fedu.vn/images/{urllib.parse.quote(fld)}/{default_name}"
             if not u.startswith("http"):
                 clean = u.lstrip("./")
                 if clean.startswith("images/"):
                     clean = clean[7:]
-                return f"https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/{urllib.parse.quote(clean, safe='/')}"
+                return f"https://media.fedu.vn/images/{urllib.parse.quote(clean, safe='/')}"
             # Encode non-ascii path characters in R2 URLs
             p = urllib.parse.urlsplit(u)
-            safe_path = urllib.parse.quote(p.path, safe="/")
-            return urllib.parse.urlunsplit((p.scheme, p.netloc, safe_path, p.query, p.fragment))
+            # Fix double encoding by unquoting first
+            safe_path = urllib.parse.quote(urllib.parse.unquote(p.path), safe="/")
+            # Replace old r2 dev url with media.fedu.vn
+            netloc = p.netloc
+            if netloc == "pub-447bd44dfdac4938912655c855b8631c.r2.dev":
+                netloc = "media.fedu.vn"
+            return urllib.parse.urlunsplit((p.scheme, netloc, safe_path, p.query, p.fragment))
 
         thumb_hook = normalize_thumb_url(thumb_hook, folder, "shot_01_mid.jpg")
         thumb_key = normalize_thumb_url(thumb_key, folder, "shot_03_mid.jpg")
@@ -592,40 +597,45 @@ def build_database():
 
         # R2 Video URL Mapping Override for guaranteed 200 OK CDN streaming
         R2_OVERRIDE_MAP = {
-            "IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdCRQnBI4ny.mp4",
-            "IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Tornado%20Kick%20Martial%20Arts%20Kinetic%20Hook%20-%20%40aidana_adilkassym.mp4",
-            "IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcxwKHYoBFv.mp4",
-            "IG_@jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DawDiT2M1p8.mp4",
-            "IG_@mako__go_DaH7X34NTNX_Palermo_Sicily": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DaH7X34NTNX.mp4",
-            "IG_@valenti_k41_DdB_21Yo0Qc_Creative_Phone_Video_Ideas": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Creative%20Phone%20Video%20Ideas%20-%20Routine%20Creator%20-%20%40valenti_k41.mp4",
-            "IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdBDvZph1od.mp4",
-            "IG_@alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Food%20Filming%20%26%20Styling%20Mastery%20-%20%40alena.feda.mp4",
-            "IG_@ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcyS2KEm7-v.mp4",
-            "IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcyDbGmItDV.mp4",
-            "FB_@AnhSacAnh_1964049564715249_Thuong_Hieu_Ca_Nhan_Sinh_Loi": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Thuong_Hieu_Ca_Nhan_Sinh_Loi_Anh_Sac_Anh.mp4",
-            "IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DaB-gO6hvPX.mp4",
-            "IG_@valenti_k41_DctVSroI3UB_Creative_Phone_Video_Ideas": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Creative%20phone%20video%20ideas%20-%20%40valenti_k41.mp4",
-            "IG_@jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Getting%20Ready%20Faster%20Than%20Ever%20-%20%40jesussropero.mp4",
-            "IG_@colecoppolino_DcJiRCrTlG1": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcJiRCrTlG1.mp4",
-            "IG_@withyuee_DcTk0RGgtBO_Hong_Kong_Cinematic_Cityscape": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcTk0RGgtBO.mp4",
-            "IG_@willwfit_DbRak0lsesY_The_Goal_Is_Simple": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DbRak0lsesY.mp4",
-            "IG_@iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DbjCyKgxp8S.mp4",
-            "IG_@lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcTqPjitJl1.mp4",
-            "IG_@fabianamsolano_Dc4u6aOhR9r_Yosemite_National_Park_Music_Video_Beat_Match_Cut": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Yosemite%20National%20Park%20Music%20Video%20-%20%40fabianamsolano.mp4",
-            "IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Teaching_Nervous_System_Not_Emergency_-_%40kawoon.lee.mp4",
-            "IG_@hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/4%20Cu%20May%20Sieu%20Thi%20Bang%20Gia%20Do%20Ulanzi%20MA38%20MT85%20-%20%40hena_film_vlog.mp4",
-            "IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Gunung%20Sumbing%20Trekking%20Match%20Cut%20-%20%40dimasyudhystira.mp4",
-            "IG_@naohasa_DdGp4XftvIn_5_Outfits_Match_Cut_Walk": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdGp4XftvIn.mp4",
-            "IG_@Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/carousel_slides/IG_%40Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis/slide_01.mp4",
-            "Visual_Storytelling_Carousel_@withyuee": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/carousel_slides/slide_01.mp4",
-            "IG_@treechurchlogan_DcoGfdghNwd_Bring_A_Friend_To_Church_Skit": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcoGfdghNwd.mp4"
+            "IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant": "https://media.fedu.vn/videos/DdCRQnBI4ny.mp4",
+            "IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook": "https://media.fedu.vn/videos/Tornado%20Kick%20Martial%20Arts%20Kinetic%20Hook%20-%20%40aidana_adilkassym.mp4",
+            "IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency": "https://media.fedu.vn/videos/DcxwKHYoBFv.mp4",
+            "IG_@jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion": "https://media.fedu.vn/videos/DawDiT2M1p8.mp4",
+            "IG_@mako__go_DaH7X34NTNX_Palermo_Sicily": "https://media.fedu.vn/videos/DaH7X34NTNX.mp4",
+            "IG_@valenti_k41_DdB_21Yo0Qc_Creative_Phone_Video_Ideas": "https://media.fedu.vn/videos/Creative%20Phone%20Video%20Ideas%20-%20Routine%20Creator%20-%20%40valenti_k41.mp4",
+            "IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions": "https://media.fedu.vn/videos/DdBDvZph1od.mp4",
+            "IG_@alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch": "https://media.fedu.vn/videos/Food%20Filming%20%26%20Styling%20Mastery%20-%20%40alena.feda.mp4",
+            "IG_@ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light": "https://media.fedu.vn/videos/DcyS2KEm7-v.mp4",
+            "IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five": "https://media.fedu.vn/videos/DcyDbGmItDV.mp4",
+            "FB_@AnhSacAnh_1964049564715249_Thuong_Hieu_Ca_Nhan_Sinh_Loi": "https://media.fedu.vn/videos/Thuong_Hieu_Ca_Nhan_Sinh_Loi_Anh_Sac_Anh.mp4",
+            "IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing": "https://media.fedu.vn/videos/DaB-gO6hvPX.mp4",
+            "IG_@valenti_k41_DctVSroI3UB_Creative_Phone_Video_Ideas": "https://media.fedu.vn/videos/Creative%20phone%20video%20ideas%20-%20%40valenti_k41.mp4",
+            "IG_@jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever": "https://media.fedu.vn/videos/Getting%20Ready%20Faster%20Than%20Ever%20-%20%40jesussropero.mp4",
+            "IG_@colecoppolino_DcJiRCrTlG1": "https://media.fedu.vn/videos/DcJiRCrTlG1.mp4",
+            "IG_@withyuee_DcTk0RGgtBO_Hong_Kong_Cinematic_Cityscape": "https://media.fedu.vn/videos/DcTk0RGgtBO.mp4",
+            "IG_@willwfit_DbRak0lsesY_The_Goal_Is_Simple": "https://media.fedu.vn/videos/DbRak0lsesY.mp4",
+            "IG_@iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine": "https://media.fedu.vn/videos/DbjCyKgxp8S.mp4",
+            "IG_@lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva": "https://media.fedu.vn/videos/DcTqPjitJl1.mp4",
+            "IG_@fabianamsolano_Dc4u6aOhR9r_Yosemite_National_Park_Music_Video_Beat_Match_Cut": "https://media.fedu.vn/videos/Yosemite%20National%20Park%20Music%20Video%20-%20%40fabianamsolano.mp4",
+            "IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency": "https://media.fedu.vn/videos/Teaching_Nervous_System_Not_Emergency_-_%40kawoon.lee.mp4",
+            "IG_@hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85": "https://media.fedu.vn/videos/4%20Cu%20May%20Sieu%20Thi%20Bang%20Gia%20Do%20Ulanzi%20MA38%20MT85%20-%20%40hena_film_vlog.mp4",
+            "IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut": "https://media.fedu.vn/videos/Gunung%20Sumbing%20Trekking%20Match%20Cut%20-%20%40dimasyudhystira.mp4",
+            "IG_@naohasa_DdGp4XftvIn_5_Outfits_Match_Cut_Walk": "https://media.fedu.vn/videos/DdGp4XftvIn.mp4",
+            "IG_@Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis": "https://media.fedu.vn/videos/carousel_slides/IG_%40Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis/slide_01.mp4",
+            "Visual_Storytelling_Carousel_@withyuee": "https://media.fedu.vn/videos/carousel_slides/slide_01.mp4",
+            "IG_@treechurchlogan_DcoGfdghNwd_Bring_A_Friend_To_Church_Skit": "https://media.fedu.vn/videos/DcoGfdghNwd.mp4"
         }
-        if vid_id in R2_OVERRIDE_MAP:
-            vid_url = R2_OVERRIDE_MAP[vid_id]
+        id_key = vid_id
+        if id_key in R2_OVERRIDE_MAP:
+            vid_url = R2_OVERRIDE_MAP[id_key]
         elif vid_url and not vid_url.startswith("http"):
-            import urllib.parse
+            # Ensure correct fallback to root videos folder on R2
             clean_rel = vid_url.lstrip("./")
-            vid_url = "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/" + urllib.parse.quote(clean_rel, safe="/")
+            if clean_rel.startswith("videos/"):
+                clean_rel = clean_rel[7:]
+            vid_url = "https://media.fedu.vn/videos/" + urllib.parse.quote(clean_rel, safe="/")
+        elif vid_url and vid_url.startswith("https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/"):
+            vid_url = vid_url.replace("https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/", "https://media.fedu.vn/")
             
         html_url = item.get("root_html_rel") or item.get("main_html_rel") or ""
         shots_count = item.get("shots_count", 0)

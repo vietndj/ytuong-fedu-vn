@@ -711,6 +711,16 @@
                     <h3 id="videoModalTitle" class="font-heading font-bold text-sm text-white truncate">Xem Video Mẫu</h3>
                 </div>
                 <div class="flex items-center gap-2 shrink-0">
+                    <!-- Copy Share Link Button -->
+                    <button 
+                        id="videoModalShareBtn"
+                        onclick="copyVideoModalShareLink()"
+                        class="px-2.5 py-1.5 rounded-lg bg-sky-500/20 text-sky-400 hover:bg-sky-500 hover:text-white transition flex items-center gap-1.5 font-bold text-xs cursor-pointer"
+                        title="Chia sẻ Ý Tưởng này"
+                    >
+                        <span>🔗</span>
+                        <span class="hidden sm:inline">Chia Sẻ</span>
+                    </button>
                     <!-- Creator Filter Button in Video Modal -->
                     <button 
                         id="videoModalCreatorBtn" 
@@ -2985,6 +2995,24 @@
         }
 
         // Modal Controls
+        function copyVideoModalShareLink() {
+            if (!window._lastActiveCardId) return;
+            const url = new URL(window.location.href);
+            url.searchParams.delete('nganh'); url.searchParams.delete('industry');
+            url.searchParams.delete('kieu'); url.searchParams.delete('style');
+            url.searchParams.delete('qg'); url.searchParams.delete('country');
+            url.searchParams.delete('creator'); url.searchParams.delete('q');
+            url.searchParams.delete('ky-thuat'); url.searchParams.delete('tech');
+            url.searchParams.delete('muc-dich'); url.searchParams.delete('purpose');
+            url.searchParams.set('id', window._lastActiveCardId);
+            
+            navigator.clipboard.writeText(url.toString()).then(() => {
+                showToast("🔗 Đã copy link chia sẻ ý tưởng này!");
+            }).catch(err => {
+                console.error("Lỗi copy link: ", err);
+            });
+        }
+
         function openVideoModal(id) {
             if (!window.FEDU_IDEAS_DATABASE) return;
             const item = window.FEDU_IDEAS_DATABASE.ideas.find(x => x.id === id);
@@ -3729,6 +3757,7 @@
             let sortParam = params.get('sort') || params.get('sapxep') || '';
             let ugcParam = params.get('ugc');
             let focusParam = params.get('focus') || params.get('f');
+            let idParam = params.get('id');
 
             // Reset state to defaults before parsing
             appState.currentStyle = 'all';
@@ -3737,6 +3766,7 @@
             appState.currentCreator = '';
             appState.currentCreatorName = '';
             appState.currentTech = '';
+            appState.targetIdeaId = idParam;
             appState.currentPurpose = '';
             appState.complexity = '';
             appState.duration = '';
@@ -4329,7 +4359,11 @@
 
             // Phản hồi thị giác khi người dùng mở một link chia sẻ có bộ lọc
             const summaryText = getFilterSummaryText();
-            if (summaryText !== 'Toàn bộ kho') {
+            if (appState.targetIdeaId) {
+                setTimeout(() => {
+                    openVideoModal(appState.targetIdeaId);
+                }, 300);
+            } else if (summaryText !== 'Toàn bộ kho') {
                 const count = document.getElementById('matchCounterText')?.innerText || '';
                 showToast(`🎯 Đang xem bộ lọc: ${summaryText} (${count} video)!`, '🔗');
 
