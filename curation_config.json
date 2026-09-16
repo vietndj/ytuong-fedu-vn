@@ -1,5 +1,7 @@
 {
   "excluded_ids": [
+    "DdSs5rahILb",
+    "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb",
     "IG_@Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast",
     "Practice_Cinematic_Chay_0903_2_@vietmac",
     "FB_@KopDinh_1398467868829887_Lat_Cat_Cam_Xuc_Kop_Dinh",
@@ -54,7 +56,13 @@
     "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01": "thuong-hieu",
     "IG_@pascal_blaurock_Dcd2VeyNJQx_iPhone_Cinema_Settings_Mastery": "cong-nghe",
     "IG_@kortafilms_DcdthwaTM3J_Camera_Angles_Mastery": "cong-nghe",
-    "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds": "ky-thuat-quay"
+    "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds": "ky-thuat-quay",
+    "IG_@Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock": "ky-thuat-quay",
+    "DdT9CF7tGzn": "ky-thuat-quay",
+    "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen": "thuong-hieu",
+    "DdT4EOzveQL": "thuong-hieu",
+    "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun": "thoi-trang",
+    "DdQwL3Ahci1": "thoi-trang"
   },
   "custom_shooting_style_overrides": {
     "IG_@tinanguyen2004_7673468312290037012_Double_Day_luon_la_dip_de_khach_hang_lua_duoc": "walk-and-talk",
@@ -101,7 +109,13 @@
     "IG_@brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession": "chuyen-canh",
     "IG_@Ben_Db6a3tHoWTS_Video_by_by.bennnj": "chuyen-canh",
     "Hong_Kong_Urban_Transitions_@withyuee": "chuyen-canh",
-    "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds": "chuyen-canh"
+    "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds": "chuyen-canh",
+    "IG_@Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock": "dien-anh",
+    "DdT9CF7tGzn": "dien-anh",
+    "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen": "storytelling",
+    "DdT4EOzveQL": "storytelling",
+    "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun": "dien-anh",
+    "DdQwL3Ahci1": "dien-anh"
   },
   "custom_title_overrides": {
     "IG_@tinanguyen2004_7673468312290037012_Double_Day_luon_la_dip_de_khach_hang_lua_duoc": "Tina Nguyễn • Phóng Sự Y Khoa Da Liễu & Flash Sale Double Day 8.8",
@@ -117,6 +131,12 @@
     "IG_@jeromememe_Db-zVchOXV7_People_of_Bhutan": "Jerome Teo • People of Bhutan: Ngôn Ngữ Điện Ảnh & Hạnh Phúc Himalaya",
     "IG_@mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery": "Mridupawan Sharma • 4 Kỹ Thuật Cắt Cảnh Nâng Tầm Video Điện Ảnh",
     "IG_@kenshoji.visuals_DZOzwweTc5a_The_Art_of_Static_Shot": "Ken Shoji • The Art of Static Shot: Triết Lý Để Thế Giới Tự Chuyển Động",
-    "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds": "Layton • 6 Góc Máy Trong 60 Giây: Thao Lược B-Roll Thần Tốc Cầu Đi Bộ"
+    "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds": "Layton • 6 Góc Máy Trong 60 Giây: Thao Lược B-Roll Thần Tốc Cầu Đi Bộ",
+    "IG_@Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock": "Biến iPhone Thành Máy Quay Điện Ảnh Bằng Lens Anamorphic",
+    "DdT9CF7tGzn": "Biến iPhone Thành Máy Quay Điện Ảnh Bằng Lens Anamorphic",
+    "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen": "Lồng Ghép Tài Trợ Công Nghệ Vào Phong Cách Sống Tự Do",
+    "DdT4EOzveQL": "Lồng Ghép Tài Trợ Công Nghệ Vào Phong Cách Sống Tự Do",
+    "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun": "Lookbook Dạo Phố Cổ Điển Hàn Quốc 1 Cú Máy Tracking",
+    "DdQwL3Ahci1": "Lookbook Dạo Phố Cổ Điển Hàn Quốc 1 Cú Máy Tracking"
   }
 }

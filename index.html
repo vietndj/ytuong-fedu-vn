@@ -985,7 +985,7 @@
     </div>
 
     <!-- LOAD DATABASE SCRIPT -->
-    <script src="ideas_data.js?v=1789520131"></script>
+    <script src="ideas_data.js?v=1789535123"></script>
 
     <!-- SPA LOGIC -->
     <script>
@@ -2111,6 +2111,32 @@
                 const isCompActive = appState.complexity === compId;
                 const isDurationActive = !!appState.duration;
 
+                // Làm sạch Điểm Hay Nhất 💡 (loại bỏ triệt để văn mẫu máy móc)
+                let rawKeyOpt = (item.fedu_optimization && item.fedu_optimization.key_optimization_point) || item.quick_takeaway || '';
+                rawKeyOpt = rawKeyOpt.replace(/^Tác phẩm điện ảnh ngắn gồm \d+ phân cảnh được tính toán tỉ mỉ\.\s*/i, '').trim();
+                if (!rawKeyOpt) {
+                    rawKeyOpt = item.title_vi || 'Ý tưởng quay dựng thực chiến';
+                }
+
+                // Làm sạch Mục Đích 🎯 (loại bỏ text debug cào scraper)
+                let cleanPurpose = (item.purpose || '').trim();
+                if (cleanPurpose.includes('Instagram Liked') || cleanPurpose.includes('of 18') || cleanPurpose.includes('shared September')) {
+                    cleanPurpose = '';
+                }
+
+                // Làm sạch Kỹ Thuật Quay 🧠 (chỉ giữ lại các kỹ thuật quay điện ảnh thực tế)
+                let cleanKeyTech = (item.key_tech || '').trim();
+                if (cleanKeyTech.includes('Instagram Liked') || cleanKeyTech.includes('Shared September') || cleanKeyTech.includes('Of 18')) {
+                    const techParts = cleanKeyTech.split(/[•,]/).map(s => s.trim()).filter(s => 
+                        s && !s.toLowerCase().includes('instagram') && !s.toLowerCase().includes('liked') && !s.toLowerCase().includes('shared') && !s.toLowerCase().includes('of 18') && !s.startsWith('@')
+                    );
+                    cleanKeyTech = techParts.slice(0, 3).join(' • ');
+                }
+
+                // Tinh chỉnh tên tác giả & tiêu đề bài
+                const authorDisplayName = (item.creator.name || item.creator.handle || '').replace(/_/g, ' ');
+                let titleDisplayName = (item.title_vi || '').replace(/^@[a-zA-Z0-9._\s]+[\-–—•]\s*/, '').replace(/^Video by\s+[a-zA-Z0-9._\s]+/i, '').trim() || item.title_vi;
+
                 return `
                     <div id="idea-card-${item.id}" class="glass-card rounded-2xl p-4 flex flex-col justify-between relative overflow-hidden ${cardAdminClass}">
                         
@@ -2136,7 +2162,7 @@
                                     type="button"
                                     onclick="event.stopPropagation(); filterByCreator('${escapeJs(item.creator.handle)}', '${escapeJs(item.creator.name)}')"
                                     class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-800 border border-slate-700 text-sm hover:border-sky-400 hover:bg-sky-500/10 hover:scale-105 transition cursor-pointer group"
-                                    title="Lọc video của: ${escapeHtml(item.creator.name)}"
+                                    title="Lọc video của: ${escapeHtml(authorDisplayName)}"
                                 >
                                     <span class="group-hover:hidden">👤</span>
                                     <span class="hidden group-hover:block text-sky-400">🔍</span>
@@ -2149,14 +2175,14 @@
                                             type="button"
                                             onclick="event.stopPropagation(); filterByCreator('${escapeJs(item.creator.handle)}', '${escapeJs(item.creator.name)}')"
                                             class="font-bold text-sm text-white truncate hover:text-sky-400 transition" 
-                                            title="Lọc tác giả: ${escapeHtml(item.creator.name)}"
+                                            title="Lọc tác giả: ${escapeHtml(authorDisplayName)}"
                                         >
-                                            ${escapeHtml(item.creator.name)}
+                                            ${escapeHtml(authorDisplayName)}
                                         </button>
                                         <span class="text-[10px] font-mono text-slate-500 font-bold shrink-0">#${String(idx + 1).padStart(2, '0')}</span>
                                         ${appState.curationMode ? (isExcluded ? `<span class="px-1.5 py-0.5 rounded text-[8px] font-black bg-amber-400 text-slate-950 shrink-0">🔒 ẨN</span>` : `<span class="px-1.5 py-0.5 rounded text-[8px] font-bold bg-emerald-500/20 text-emerald-300 shrink-0">🌐 HIỆN</span>`) : ''}
                                     </div>
-                                    <span class="text-[11px] text-slate-400 truncate w-full mt-0.5" title="${escapeHtml(item.title_vi)}">${highlightText(item.title_vi, appState.searchQuery)}</span>
+                                    <span class="text-[11px] text-slate-400 truncate w-full mt-0.5" title="${escapeHtml(titleDisplayName)}">${highlightText(titleDisplayName, appState.searchQuery)}</span>
                                 </div>
                             </div>
                             
@@ -2198,13 +2224,13 @@
                                     alt="Hook Shot" 
                                     loading="lazy" 
                                     class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                                    onerror="handleCardThumbError(this, '${item.id}', 1, '${item.industry?.icon || '🎬'}', '${escapeHtml(item.title_vi)}')"
+                                    onerror="handleCardThumbError(this, '${item.id}', 1, '${item.industry?.icon || '🎬'}', '${escapeHtml(titleDisplayName)}')"
                                 >
                                 <span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-black/75 text-amber-300 backdrop-blur-sm border border-amber-500/30">
                                     HOOK • 0.0s
                                 </span>
                                 <button 
-                                    onclick="event.stopPropagation(); openImgLightbox('${item.media.thumb_hook}', '${escapeHtml(item.title_vi)} - Khung hình Hook 0.0s')" 
+                                    onclick="event.stopPropagation(); openImgLightbox('${item.media.thumb_hook}', '${escapeHtml(titleDisplayName)} - Khung hình Hook 0.0s')" 
                                     class="absolute bottom-1.5 right-1.5 w-6 h-6 rounded-md bg-black/70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-[11px]"
                                     title="Phóng to"
                                 >🔍</button>
@@ -2217,87 +2243,93 @@
                                     alt="Key Shot" 
                                     loading="lazy" 
                                     class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                                    onerror="handleCardThumbError(this, '${item.id}', 2, '${item.industry?.icon || '🎬'}', '${escapeHtml(item.title_vi)}')"
+                                    onerror="handleCardThumbError(this, '${item.id}', 2, '${item.industry?.icon || '🎬'}', '${escapeHtml(titleDisplayName)}')"
                                 >
                                 <span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-black/75 text-sky-300 backdrop-blur-sm border border-sky-500/30">
                                     KEY SHOT
                                 </span>
                                 <button 
-                                    onclick="event.stopPropagation(); openImgLightbox('${item.media.thumb_key}', '${escapeHtml(item.title_vi)} - Khung hình Key Shot')" 
+                                    onclick="event.stopPropagation(); openImgLightbox('${item.media.thumb_key}', '${escapeHtml(titleDisplayName)} - Khung hình Key Shot')" 
                                     class="absolute bottom-1.5 right-1.5 w-6 h-6 rounded-md bg-black/70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-[11px]"
                                     title="Phóng to"
                                 >🔍</button>
                             </div>
                         </div>
 
-                        <!-- CỐT LÕI THỰC CHIẾN (ĐÃ ÉP PHẲNG) -->
-                        <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800/80 text-[11px] flex flex-col gap-2 mt-auto">
-                            <!-- Dòng 1: Tóm tắt ép 1 dòng -->
-                            <div class="flex items-start gap-1.5">
-                                <span class="shrink-0 text-xs">💡</span>
-                                <span class="text-amber-300 font-semibold line-clamp-1" title="${escapeHtml(item.fedu_optimization?.key_optimization_point || item.quick_takeaway)}">${escapeHtml(item.fedu_optimization?.key_optimization_point || item.quick_takeaway)}</span>
+                        <!-- CỐT LÕI THỰC CHIẾN (BOX ĐIỂM HAY NHẤT MỚI) -->
+                        <div class="mt-auto flex flex-col gap-2">
+                            <!-- Box Điểm Hay Nhất (2 Dòng, Nền Hổ Phách Rực Rỡ, Đọc Trọn Vẹn) -->
+                            <div class="p-2.5 rounded-xl bg-gradient-to-r from-amber-500/15 via-amber-500/10 to-transparent border border-amber-500/30 flex items-start gap-2 shadow-sm">
+                                <span class="shrink-0 text-sm mt-0.5 select-none">💡</span>
+                                <div class="flex-1 min-w-0">
+                                    <span class="text-amber-200 font-semibold text-[11.5px] leading-snug line-clamp-2" title="${escapeHtml(rawKeyOpt)}">
+                                        ${escapeHtml(rawKeyOpt)}
+                                    </span>
+                                </div>
                             </div>
                             
-                            <!-- Dòng 2: Gộp Mục đích & Điểm ăn tiền -->
-                            ${(item.purpose || item.key_tech) ? `
-                                <div class="flex items-center gap-1.5 text-slate-400 truncate border-t border-slate-800/60 pt-1.5">
-                                    ${item.purpose ? `
-                                        <div class="flex items-center gap-1 shrink-0 ${appState.currentPurpose ? 'text-sky-300 font-bold' : ''}">
-                                            <span>🎯</span> <span class="truncate max-w-[80px] sm:max-w-none" title="${escapeHtml(item.purpose)}">${escapeHtml(item.purpose)}</span>
-                                        </div>
-                                    ` : ''}
-                                    
-                                    ${(item.purpose && item.key_tech) ? `<span class="text-slate-600 font-bold shrink-0">•</span>` : ''}
-                                    
-                                    ${item.key_tech ? `
-                                        <div class="flex items-center gap-1 truncate ${appState.currentTech ? 'text-sky-300 font-bold' : ''}">
-                                            <span class="shrink-0">🧠</span> <span class="truncate font-mono text-sky-300/90" title="${escapeHtml(item.key_tech)}">${escapeHtml(item.key_tech)}</span>
-                                        </div>
-                                    ` : ''}
-                                </div>
-                            ` : ''}
-                            
-                            <!-- Dòng 3: BỘ LỌC TƯƠNG TỰ (Tags) -->
-                            <div class="flex items-center gap-1.5 flex-wrap pt-1.5 border-t border-slate-800/60">
-                                <!-- Ngành nghề Badge -->
-                                <button 
-                                    type="button"
-                                    onclick="event.stopPropagation(); selectIndustry('${item.industry.id}')"
-                                    class="px-1.5 py-0.5 rounded text-[9px] uppercase tracking-wide font-bold border transition cursor-pointer hover:scale-105 active:scale-95 flex items-center gap-1 ${isIndActive ? 'bg-sky-500 text-white border-sky-400 shadow-md shadow-sky-500/30 ring-1 ring-sky-300/60' : `${badgeColorClass} opacity-80 hover:opacity-100`}"
-                                    title="Lọc theo ngành: ${escapeHtml(item.industry.name)}"
-                                >
-                                    <span>${item.industry.icon}</span>
-                                    <span>${escapeHtml(item.industry.name)}</span>
-                                </button>
-
-                                <!-- Kiểu quay Badge -->
-                                ${item.shooting_style ? `
+                            <!-- Hộp thông tin phụ: Mục đích & Kỹ thuật & Tags -->
+                            <div class="p-2 rounded-xl bg-slate-900/80 border border-slate-800/80 text-[11px] flex flex-col gap-2">
+                                ${(cleanPurpose || cleanKeyTech) ? `
+                                    <div class="flex items-center gap-1.5 text-slate-400 truncate text-[10.5px]">
+                                        ${cleanPurpose ? `
+                                            <div class="flex items-center gap-1 shrink-0 ${appState.currentPurpose ? 'text-sky-300 font-bold' : ''}">
+                                                <span>🎯</span> <span class="truncate max-w-[120px] sm:max-w-none font-medium" title="${escapeHtml(cleanPurpose)}">${escapeHtml(cleanPurpose)}</span>
+                                            </div>
+                                        ` : ''}
+                                        
+                                        ${(cleanPurpose && cleanKeyTech) ? `<span class="text-slate-600 font-bold shrink-0">•</span>` : ''}
+                                        
+                                        ${cleanKeyTech ? `
+                                            <div class="flex items-center gap-1 truncate ${appState.currentTech ? 'text-sky-300 font-bold' : ''}">
+                                                <span class="shrink-0">🧠</span> <span class="truncate font-mono text-sky-300/90" title="${escapeHtml(cleanKeyTech)}">${escapeHtml(cleanKeyTech)}</span>
+                                            </div>
+                                        ` : ''}
+                                    </div>
+                                ` : ''}
+                                
+                                <!-- Tags: Ngành nghề, Kiểu quay, Số shots -->
+                                <div class="flex items-center gap-1.5 flex-wrap ${(cleanPurpose || cleanKeyTech) ? 'pt-1.5 border-t border-slate-800/60' : ''}">
+                                    <!-- Ngành nghề Badge -->
                                     <button 
                                         type="button"
-                                        onclick="event.stopPropagation(); selectShootingStyle('${item.shooting_style.id}')"
-                                        class="px-1.5 py-0.5 rounded text-[9px] uppercase tracking-wide font-semibold border transition cursor-pointer hover:scale-105 active:scale-95 flex items-center gap-1 ${isStyleActive ? 'bg-purple-500 text-white border-purple-400 shadow-md shadow-purple-500/30 ring-1 ring-purple-300/60' : 'bg-purple-500/15 text-purple-300 border-purple-500/30 hover:bg-purple-500/25'}"
-                                        title="Lọc theo kiểu quay: ${escapeHtml(item.shooting_style.name)}"
+                                        onclick="event.stopPropagation(); selectIndustry('${item.industry.id}')"
+                                        class="px-1.5 py-0.5 rounded text-[9px] uppercase tracking-wide font-bold border transition cursor-pointer hover:scale-105 active:scale-95 flex items-center gap-1 ${isIndActive ? 'bg-sky-500 text-white border-sky-400 shadow-md shadow-sky-500/30 ring-1 ring-sky-300/60' : `${badgeColorClass} opacity-80 hover:opacity-100`}"
+                                        title="Lọc theo ngành: ${escapeHtml(item.industry.name)}"
                                     >
-                                        <span>${item.shooting_style.icon}</span>
-                                        <span>${escapeHtml(item.shooting_style.name)}</span>
+                                        <span>${item.industry.icon}</span>
+                                        <span>${escapeHtml(item.industry.name)}</span>
                                     </button>
-                                ` : ''}
 
-                                <!-- Số cảnh Badge -->
-                                <button 
-                                    type="button"
-                                    onclick="event.stopPropagation(); selectComplexityPill('${compId}')"
-                                    class="text-[9px] font-mono px-1.5 py-0.5 rounded transition cursor-pointer hover:scale-105 active:scale-95 border ${isCompActive ? 'bg-emerald-500 text-slate-950 font-bold border-emerald-400 shadow-sm ring-1 ring-emerald-300/60' : 'text-slate-400 bg-slate-800/60 border-slate-700/60 hover:bg-slate-700/80'}"
-                                    title="Lọc theo độ khó: ${item.media.shots_count} phân cảnh"
-                                >
-                                    🎬 ${item.media.shots_count} shots
-                                </button>
-                                
-                                ${item.is_ad_bot ? `
-                                    <span class="px-1.5 py-0.5 rounded text-[8px] font-bold border bg-purple-950/60 text-purple-300 border-purple-500/50">
-                                        🤖 Bot QC
-                                    </span>
-                                ` : ''}
+                                    <!-- Kiểu quay Badge -->
+                                    ${item.shooting_style ? `
+                                        <button 
+                                            type="button"
+                                            onclick="event.stopPropagation(); selectShootingStyle('${item.shooting_style.id}')"
+                                            class="px-1.5 py-0.5 rounded text-[9px] uppercase tracking-wide font-semibold border transition cursor-pointer hover:scale-105 active:scale-95 flex items-center gap-1 ${isStyleActive ? 'bg-purple-500 text-white border-purple-400 shadow-md shadow-purple-500/30 ring-1 ring-purple-300/60' : 'bg-purple-500/15 text-purple-300 border-purple-500/30 hover:bg-purple-500/25'}"
+                                            title="Lọc theo kiểu quay: ${escapeHtml(item.shooting_style.name)}"
+                                        >
+                                            <span>${item.shooting_style.icon}</span>
+                                            <span>${escapeHtml(item.shooting_style.name)}</span>
+                                        </button>
+                                    ` : ''}
+
+                                    <!-- Số cảnh Badge -->
+                                    <button 
+                                        type="button"
+                                        onclick="event.stopPropagation(); selectComplexityPill('${compId}')"
+                                        class="text-[9px] font-mono px-1.5 py-0.5 rounded transition cursor-pointer hover:scale-105 active:scale-95 border ${isCompActive ? 'bg-emerald-500 text-slate-950 font-bold border-emerald-400 shadow-sm ring-1 ring-emerald-300/60' : 'text-slate-400 bg-slate-800/60 border-slate-700/60 hover:bg-slate-700/80'}"
+                                        title="Lọc theo độ khó: ${item.media.shots_count} phân cảnh"
+                                    >
+                                        🎬 ${item.media.shots_count} shots
+                                    </button>
+                                    
+                                    ${item.is_ad_bot ? `
+                                        <span class="px-1.5 py-0.5 rounded text-[8px] font-bold border bg-purple-950/60 text-purple-300 border-purple-500/50">
+                                            🤖 Bot QC
+                                        </span>
+                                    ` : ''}
+                                </div>
                             </div>
                         </div>
                     </div>

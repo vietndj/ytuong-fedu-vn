@@ -547,6 +547,10 @@ def build_database():
         is_excluded = is_personal or (vid_id in manually_excluded_ids) or (code in manually_excluded_ids)
         
         clean_title, short_takeaway, rep_dur = clean_title_and_takeaway(item, title_overrides)
+        if master and master.get("title") and not master.get("title").startswith("Video by") and not master.get("title").startswith("@"):
+            clean_title = master["title"]
+        if master and master.get("quick_takeaway") and not master.get("quick_takeaway").startswith("Tác phẩm điện ảnh ngắn gồm"):
+            short_takeaway = master["quick_takeaway"]
         style_obj, ind_obj, country_obj, purpose, tech_tags, logic_exp = get_item_classification(
             vid_id, code, clean_title, short_takeaway, item.get("key_tech", ""), c_info["handle"], curation_cfg, master_dict
         )
@@ -769,6 +773,20 @@ def build_database():
 
     with open(OUTPUT_JS_PATH, "w", encoding="utf-8") as f:
         f.write(js_content)
+
+    # Automatically sync output files to dist/ for Cloudflare Pages deployment
+    import shutil
+    dist_dir = os.path.join(BASE_DIR, "dist")
+    if os.path.exists(dist_dir):
+        shutil.copy2(OUTPUT_JS_PATH, os.path.join(dist_dir, "ideas_data.js"))
+        if os.path.exists(MASTER_CLASSIFICATIONS_PATH):
+            shutil.copy2(MASTER_CLASSIFICATIONS_PATH, os.path.join(dist_dir, "master_classifications.json"))
+        if os.path.exists(EXCLUDED_CONFIG_PATH):
+            shutil.copy2(EXCLUDED_CONFIG_PATH, os.path.join(dist_dir, "curation_config.json"))
+        index_path = os.path.join(BASE_DIR, "index.html")
+        if os.path.exists(index_path):
+            shutil.copy2(index_path, os.path.join(dist_dir, "index.html"))
+        print("Synchronized all build files to dist/ directory.")
 
     print(f"Successfully generated {OUTPUT_JS_PATH}")
     print(f"Total active ideas: {len(active_ideas)}")
