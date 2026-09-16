@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 199,
-  "total_unique_ideas": 188,
-  "total_active_ideas": 163,
+  "total_scene_items": 200,
+  "total_unique_ideas": 189,
+  "total_active_ideas": 164,
   "total_excluded_ideas": 25,
-  "total_creators": 118,
+  "total_creators": 119,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -64,7 +64,7 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 10,
     "talking-head": 18,
     "storytelling": 18,
-    "dien-anh": 82,
+    "dien-anh": 83,
     "chuyen-canh": 32
   },
   "industries": [
@@ -156,7 +156,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 18,
     "du-lich": 12,
     "cong-nghe": 21,
-    "kien-truc": 12,
+    "kien-truc": 13,
     "the-thao": 7,
     "ky-thuat-quay": 45,
     "ugc": 5
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 77,
+    "us_eu": 78,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -500,6 +500,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@korea_street_views",
+      "name": "Korea_Street_Views",
+      "profile_url": "https://www.instagram.com/korea_street_views/",
+      "video_count": 1,
+      "top_industry": "Góc nhà đẹp",
+      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views"
       ]
     },
     {
@@ -1572,6 +1583,73 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "ideas": [
     {
+      "id": "IG_@Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views",
+      "shortcode": "DcBXsaezmjo",
+      "title_vi": "Video by korea street views",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Khi quay góc rộng khung dọc, luôn bố trí một trục chuyển động hoặc đường dẫn (Leading Lines) về trung tâm.",
+      "key_tech": "Instagram Liked 24h: Video • 1 Of 18 • By @korea_street_views • Shared August 14 • 2026 • Establishing Hook Shot • Wide Establishing Shot",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Góc nhà đẹp",
+        "en_name": "Architecture & Living",
+        "icon": "🏛️",
+        "badge_color": "emerald"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 1 of 18, by @korea_street_views, shared August 14, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "1 Of 18",
+        "By @korea_street_views",
+        "Shared August 14",
+        "2026",
+        "Establishing Hook Shot",
+        "Wide Establishing Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 1 of 18, by @korea_street_views, shared August 14, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Điện Ảnh (Cinematic).",
+      "creator": {
+        "raw": "@Korea_Street_Views",
+        "name": "Korea_Street_Views",
+        "handle": "@korea_street_views",
+        "profile_url": "https://www.instagram.com/korea_street_views/"
+      },
+      "ig_url": "https://www.instagram.com/p/DcBXsaezmjo",
+      "gdrive_folder": "https://drive.google.com/open?id=1FZUyp_litWf6aWgrlRI25B7tzh7naodt",
+      "media": {
+        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views/shot_01_mid.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DcBXsaezmjo.mp4",
+        "report_url": "reports/IG_@Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views.html",
+        "shots_count": 3,
+        "duration": "6s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
       "id": "IG_@Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis",
       "shortcode": "Dc0-HLUE60-",
       "title_vi": "Video by diego51",
@@ -1849,7 +1927,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb",
       "shortcode": "DdSs5rahILb",
       "title_vi": "@creator DdSs5rahILb Video DdSs5rahILb",
-      "quick_takeaway": "⚡ Tĩnh mà động: Xếp đặt bộ ảnh bằng kỹ thuật Cinematic Lighting kết hợp Composition Mastery để tạo độ sâu 3D như cắt ra từ một bộ phim thực sự.",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Instagram Liked 24h: Photo • 15 Of 18 • By @ru9vn • Shared September 14 • 2026 • Cinematic Lighting • Composition Mastery • Visual Rhythm",
       "shooting_style": {
         "id": "dien-anh",
@@ -1957,8 +2035,8 @@ var FEDU_IDEAS_DATABASE = {
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Dùng hook treo máy thẳng đứng trong studio chặn feed ➔ Chuyển cảnh lật ngược máy lấy bóng nước kết hợp flare anamorphic ngoài trời.",
-        "practice_focus": "⚡ Thực chiến: Lắp lens Anamorphic, lật ngược máy cắm sát vũng nước lấy bóng gương, đi lùi để hãm rung."
+        "key_optimization_point": "⚡ Biến iPhone thành máy quay điện ảnh: Dùng hook treo lơ lửng máy trong studio để chặn feed ➔ Cắt sang cảnh lộn ngược bóng nước bắt trọn vệt flare anamorphic ngoài trời.",
+        "practice_focus": "Kỹ thuật quay iPhone điện ảnh ngoài trời & Thiết lập lens Anamorphic"
       },
       "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 9 of 18, by @pascal_blaurock, shared September 15, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
       "creator": {
@@ -2028,8 +2106,8 @@ var FEDU_IDEAS_DATABASE = {
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Lồng sản phẩm vào lối sống: Khóa máy qua khe cửa, đẩy góc nhìn ra cảnh ngồi thuyền kayak gõ laptop giữa hồ để bán công nghệ.",
-        "practice_focus": "⚡ Thực chiến: Cắm tripod lén nhìn qua khe hở (frame-in-frame), để diễn viên tự nhiên dùng sản phẩm giữa bối cảnh thiên nhiên."
+        "key_optimization_point": "⚡ Bán phong cách sống thay vì bán sản phẩm: Khóa góc máy nhìn qua khe cửa dẫn vào cảnh gõ laptop ngay trên thuyền kayak giữa hồ để quảng cáo công nghệ tự nhiên 100%.",
+        "practice_focus": "Video tài trợ thương hiệu công nghệ & Nghệ thuật lồng ghép sản phẩm tự nhiên"
       },
       "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 7 of 18, by @megantanhweewen, shared September 15, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
       "creator": {
@@ -2098,8 +2176,8 @@ var FEDU_IDEAS_DATABASE = {
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Tracking đi lùi 1 shot: Lấy chiều sâu tiệm tạp hóa làm nền, bắt nét thẳng vào mắt và cử chỉ vuốt tóc tự nhiên của mẫu.",
-        "practice_focus": "⚡ Thực chiến: Tay máy lùi giữ cự ly 3 mét, mẫu tiến lên vừa vuốt tóc vừa nhìn thẳng ống kính giữ nhịp."
+        "key_optimization_point": "⚡ Cú máy tracking đi lùi Lookbook 1 shot: Tận dụng chiều sâu tiệm tạp hóa retro làm nền, khóa chặt ánh mắt giao tiếp và cử chỉ vuốt tóc tự nhiên để giữ chân người xem.",
+        "practice_focus": "Mẫu quay Lookbook thời trang dạo phố & Kỹ thuật tracking camera đi lùi"
       },
       "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 5 of 18, by @yuuxeun, shared September 14, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
       "creator": {
@@ -2132,7 +2210,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann",
       "shortcode": "Dcx7pQpS6zs",
       "title_vi": "Video by syooaann",
-      "quick_takeaway": "⚡ Sức mạnh 1 shot: Gây ấn tượng thị giác tuyệt đối chỉ bằng một cú Establishing Hook Shot tĩnh được căn ke bố cục hoàn hảo đến từng centimet.",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 1 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Instagram Liked 24h: Video • 3 Of 18 • By @syooaann • Shared September 2 • 2026 • Establishing Hook Shot",
       "shooting_style": {
         "id": "dien-anh",
@@ -2201,7 +2279,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen",
       "shortcode": "DOd8XMMjxcH",
       "title_vi": "Video by megantanhweewen",
-      "quick_takeaway": "⚡ Nhịp điệu Tracking mượt mà: Mở đầu bằng Establishing Hook, ngay sau đó đẩy Medium Tracking Shot di chuyển song song cùng chủ thể dưới ánh sáng Low-key.",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 4 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Instagram Liked 24h: Video • 1 Of 18 • By @megantanhweewen • Shared September 11 • 2025 • Establishing Hook Shot • Low-key Lighting • Medium Tracking Shot",
       "shooting_style": {
         "id": "talking-head",
@@ -2273,7 +2351,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale",
       "shortcode": "Dcbn7Bix-X-",
       "title_vi": "X- Video by calebnatale • Director's Report",
-      "quick_takeaway": "⚡ Bí quyết neo giữ ánh nhìn: Thiết lập Establishing Hook bằng không gian tối Low-key, đánh đèn ven sáng sâu (Rim Light) để tách lớp chủ thể khỏi phông nền.",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 8 phân cảnh.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
         "id": "talking-head",
@@ -2339,7 +2417,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
       "shortcode": "DdTeHleIqkg",
       "title_vi": "Director's Report • Director's Report",
-      "quick_takeaway": "⚡ Cuốn hút từ giây đầu: Dùng cú máy Establishing Hook góc siêu rộng, ép sáng Low-key tạo mảng tối bí ẩn để khóa sự tập trung của người xem.",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 24 phân cảnh.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • High-key Lighting",
       "shooting_style": {
         "id": "talking-head",
@@ -10375,7 +10453,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis",
       "shortcode": "DctRykCjcp2",
       "title_vi": "Andrei Kostromskikh • Phân Tích Phân Cảnh Carousel Đa Video & Ngôn Ngữ Điện Ảnh",
-      "quick_takeaway": "⚡ Đẳng cấp mổ xẻ Carousel: Tận dụng luồng Carousel Flow liền mạch kết hợp hệ màu Color Grading điện ảnh để dẫn dắt mắt người xem trượt qua từng khung hình.",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 8 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Cinematic Lighting, Composition Mastery, Color Grading, Storyboard Rhythm, Carousel Flow",
       "shooting_style": {
         "id": "dien-anh",
@@ -10405,8 +10483,8 @@ var FEDU_IDEAS_DATABASE = {
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {
-        "key_optimization_point": "⚡ Đồng bộ Carousel Flow và dải màu Color Grading để khách tự vuốt hết 8 mặt slide mà không bị khựng nhịp.",
-        "practice_focus": "⚡ Thực chiến: Đóng lưới bố cục cố định ở mọi slide, nối thông tin và hình ảnh tràn viền bằng Storyboard Rhythm.",
+        "key_optimization_point": "Tối ưu cho Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Cinematic Lighting, Composition Mastery, Color Grading, Storyboard Rhythm, Carousel Flow",
+        "practice_focus": "Bài tập bóc tách ngôn ngữ điện ảnh: Phân tích tỷ lệ khung hình, hướng sáng chính (Key Light), chiều sâu trường ảnh và tiết tấu nhịp cắt.",
         "ig_seeding_hook": "Follow @Andrei_Kostromskikh để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
         "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
         "transition_level": null
