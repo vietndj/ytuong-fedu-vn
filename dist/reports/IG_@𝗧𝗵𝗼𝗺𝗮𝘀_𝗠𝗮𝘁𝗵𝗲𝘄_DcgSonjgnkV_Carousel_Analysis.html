@@ -954,7 +954,7 @@ function getCandidateUrls(src) {
     if (src.startsWith('http://') || src.startsWith('https://')) return [src];
     let clean = src.replace(/^(\.\/|\.\.\/)+/, '').replace(/^(videos\/|reports\/)/, '');
     return [
-        'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/' + encodeURI(clean),
+        'https://media.fedu.vn/videos/' + encodeURI(clean),
         '../videos/' + clean,
         './videos/' + clean,
         './' + clean
