@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 195,
-  "total_unique_ideas": 184,
-  "total_active_ideas": 159,
-  "total_excluded_ideas": 25,
-  "total_creators": 114,
+  "total_scene_items": 196,
+  "total_unique_ideas": 185,
+  "total_active_ideas": 161,
+  "total_excluded_ideas": 24,
+  "total_creators": 116,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -62,9 +62,9 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 3,
     "voice-over": 10,
-    "talking-head": 17,
-    "storytelling": 18,
-    "dien-anh": 79,
+    "talking-head": 21,
+    "storytelling": 17,
+    "dien-anh": 78,
     "chuyen-canh": 32
   },
   "industries": [
@@ -152,13 +152,13 @@ var FEDU_IDEAS_DATABASE = {
   "industry_stats": {
     "spa-lam-dep": 5,
     "thuong-hieu": 18,
-    "thoi-trang": 18,
+    "thoi-trang": 17,
     "am-thuc": 17,
     "du-lich": 12,
     "cong-nghe": 21,
     "kien-truc": 12,
     "the-thao": 7,
-    "ky-thuat-quay": 44,
+    "ky-thuat-quay": 47,
     "ugc": 5
   },
   "countries": [
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 73,
+    "us_eu": 75,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -375,7 +375,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Megan_Tan",
       "profile_url": "https://www.instagram.com/megantanhweewen/",
       "video_count": 2,
-      "top_industry": "Xây kênh",
+      "top_industry": "Bố cục",
       "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen",
@@ -503,11 +503,33 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@byjacksonsword",
+      "name": "Jackson_Sword",
+      "profile_url": "https://www.instagram.com/byjacksonsword/",
+      "video_count": 1,
+      "top_industry": "Bố cục",
+      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword"
+      ]
+    },
+    {
+      "handle": "@creator",
+      "name": "Creator",
+      "profile_url": "https://www.instagram.com/creator/",
+      "video_count": 1,
+      "top_industry": "Xây kênh",
+      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdSs5rahILb_Video_DdSs5rahILb/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb"
+      ]
+    },
+    {
       "handle": "@yuuxeun",
       "name": "신_유은_Yueun_Shin",
       "profile_url": "https://www.instagram.com/yuuxeun/",
       "video_count": 1,
-      "top_industry": "Thời trang",
+      "top_industry": "Bố cục",
       "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%EC%8B%A0_%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%B3%E1%86%AB_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun/shot_01_mid.jpg",
       "video_ids": [
         "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun"
@@ -1528,6 +1550,73 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "ideas": [
     {
+      "id": "IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword",
+      "shortcode": "DdU4rBeMXZt",
+      "title_vi": "Video by byjacksonsword",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 8 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "key_tech": "Instagram Liked 24h: Video • 1 Of 18 • By @byjacksonsword • Shared September 15 • 2026 • Establishing Hook Shot • Close-Up / Macro Detail Shot",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industry": {
+        "id": "ky-thuat-quay",
+        "name": "Bố cục",
+        "en_name": "Filmmaking Mastery",
+        "icon": "🎯",
+        "badge_color": "blue"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 1 of 18, by @byjacksonsword, shared September 15, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "1 Of 18",
+        "By @byjacksonsword",
+        "Shared September 15",
+        "2026",
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 1 of 18, by @byjacksonsword, shared September 15, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+      "creator": {
+        "raw": "@Jackson_Sword",
+        "name": "Jackson_Sword",
+        "handle": "@byjacksonsword",
+        "profile_url": "https://www.instagram.com/byjacksonsword/"
+      },
+      "ig_url": "https://www.instagram.com/p/DdU4rBeMXZt",
+      "gdrive_folder": "https://drive.google.com/open?id=1H366mWBzK1FYscO4jgpr3RJa4KGpj3-P",
+      "media": {
+        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword/shot_01_mid.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword/shot_03_mid.jpg",
+        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdU4rBeMXZt.mp4",
+        "report_url": "reports/IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword.html",
+        "shots_count": 8,
+        "duration": "16s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
       "id": "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb",
       "shortcode": "DdSs5rahILb",
       "title_vi": "@creator DdSs5rahILb Video DdSs5rahILb",
@@ -1593,20 +1682,20 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": true
+      "is_excluded": false
     },
     {
       "id": "IG_@Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock",
       "shortcode": "DdT9CF7tGzn",
-      "title_vi": "Pascal Blaurock • Bí Quyết Biến iPhone Thành Máy Quay Điện Ảnh Bằng Lens Anamorphic",
-      "quick_takeaway": "Cách biến iPhone thành máy quay điện ảnh: Mở đầu bằng hook treo lơ lửng điện thoại trong studio tối để gây tò mò tức thì, sau đó cắt sang cảnh quay thực tế ngoài rừng với lens Anamorphic, khai thác góc máy lộn ngược soi bóng nước và vệt flare xanh điện ảnh.",
+      "title_vi": "Video by pascal blaurock",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 14 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Instagram Liked 24h: Video • 9 Of 18 • By @pascal_blaurock • Shared September 15 • 2026 • Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
       },
       "industry": {
         "id": "ky-thuat-quay",
@@ -1622,7 +1711,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇺🇸/🇪🇺",
         "badge_color": "purple"
       },
-      "purpose": "Trình diễn tính năng lens Anamorphic cho iPhone & Kỹ thuật quay Cinematic B-roll",
+      "purpose": "Instagram Liked 24h: Video, 9 of 18, by @pascal_blaurock, shared September 15, 2026",
       "tech_tags": [
         "Instagram Liked 24h: Video",
         "9 Of 18",
@@ -1635,9 +1724,7 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "transition_level": null,
       "is_ad_bot": false,
-      "fedu_optimization": {
-        "key_optimization_point": "⚡ Biến iPhone thành máy quay điện ảnh: Dùng hook treo lơ lửng máy trong studio để chặn feed ➔ Cắt sang cảnh lộn ngược bóng nước bắt trọn vệt flare anamorphic ngoài trời."
-      },
+      "fedu_optimization": {},
       "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 9 of 18, by @pascal_blaurock, shared September 15, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
       "creator": {
         "raw": "@Pascal_Blaurock",
@@ -1668,22 +1755,22 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen",
       "shortcode": "DdT4EOzveQL",
-      "title_vi": "Megan Tan • Nghệ Thuật Lồng Ghép Tài Trợ Công Nghệ Vào Phong Cách Sống Tự Do",
-      "quick_takeaway": "Nghệ thuật làm video quảng cáo công nghệ tài liệu: Khởi đầu bằng bố cục khung lồng khung (Frame within Frame) nhìn qua cánh cửa, sau đó chuyển cảnh sang trải nghiệm ngồi thuyền kayak gõ laptop giữa hồ nước để ngầm khẳng định thông điệp tự do làm việc mọi nơi.",
+      "title_vi": "Video by megantanhweewen",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 46 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Instagram Liked 24h: Video • 7 Of 18 • By @megantanhweewen • Shared September 15 • 2026 • Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot",
       "shooting_style": {
-        "id": "storytelling",
-        "name": "Kể Chuyện",
-        "en_name": "Storytelling",
-        "icon": "📖",
-        "badge_color": "amber"
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
       },
       "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
+        "id": "ky-thuat-quay",
+        "name": "Bố cục",
+        "en_name": "Filmmaking Mastery",
+        "icon": "🎯",
+        "badge_color": "blue"
       },
       "country": {
         "id": "us_eu",
@@ -1692,7 +1779,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇺🇸/🇪🇺",
         "badge_color": "purple"
       },
-      "purpose": "Mẫu video tài trợ thương hiệu (Sponsorship/Collab) chuẩn phong cách sống điện ảnh",
+      "purpose": "Instagram Liked 24h: Video, 7 of 18, by @megantanhweewen, shared September 15, 2026",
       "tech_tags": [
         "Instagram Liked 24h: Video",
         "7 Of 18",
@@ -1705,9 +1792,7 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "transition_level": null,
       "is_ad_bot": false,
-      "fedu_optimization": {
-        "key_optimization_point": "⚡ Bán phong cách sống thay vì bán sản phẩm: Khóa góc máy nhìn qua khe cửa dẫn vào cảnh gõ laptop ngay trên thuyền kayak giữa hồ để quảng cáo công nghệ tự nhiên 100%."
-      },
+      "fedu_optimization": {},
       "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 7 of 18, by @megantanhweewen, shared September 15, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
       "creator": {
         "raw": "@Megan_Tan",
@@ -1738,22 +1823,22 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun",
       "shortcode": "DdQwL3Ahci1",
-      "title_vi": "Shin Yueun • Cú Máy Tracking Đi Lùi Lookbook Dạo Phố Cổ Điển Hàn Quốc",
-      "quick_takeaway": "Kỹ thuật quay Lookbook dạo phố 1 shot: Camera đi lùi mượt mà dẫn hướng nhân vật bước ra từ tiệm tạp hóa retro, khai thác độ sâu bối cảnh và mỏ neo ánh mắt (eye contact) kết hợp cử chỉ vuốt tóc để tạo nhịp thở cuốn hút.",
+      "title_vi": "@신_유은_yueun_shin - Video by yuuxeun",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 4 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Instagram Liked 24h: Video • 5 Of 18 • By @yuuxeun • Shared September 14 • 2026 • Establishing Hook Shot • Close-Up / Macro Detail Shot",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
       },
       "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
+        "id": "ky-thuat-quay",
+        "name": "Bố cục",
+        "en_name": "Filmmaking Mastery",
+        "icon": "🎯",
+        "badge_color": "blue"
       },
       "country": {
         "id": "us_eu",
@@ -1762,7 +1847,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇺🇸/🇪🇺",
         "badge_color": "purple"
       },
-      "purpose": "Mẫu quay Lookbook thời trang dạo phố & Kỹ thuật tracking camera đi lùi",
+      "purpose": "Instagram Liked 24h: Video, 5 of 18, by @yuuxeun, shared September 14, 2026",
       "tech_tags": [
         "Instagram Liked 24h: Video",
         "5 Of 18",
@@ -1774,9 +1859,7 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "transition_level": null,
       "is_ad_bot": false,
-      "fedu_optimization": {
-        "key_optimization_point": "⚡ Cú máy tracking đi lùi Lookbook 1 shot: Tận dụng chiều sâu tiệm tạp hóa retro làm nền, khóa chặt ánh mắt giao tiếp và cử chỉ vuốt tóc tự nhiên để giữ chân người xem."
-      },
+      "fedu_optimization": {},
       "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 5 of 18, by @yuuxeun, shared September 14, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
       "creator": {
         "raw": "@신_유은_yueun_shin",
