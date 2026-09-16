@@ -4,9 +4,9 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 197,
-  "total_unique_ideas": 186,
-  "total_active_ideas": 162,
+  "total_scene_items": 198,
+  "total_unique_ideas": 187,
+  "total_active_ideas": 163,
   "total_excluded_ideas": 24,
   "total_creators": 117,
   "shooting_styles": [
@@ -62,7 +62,7 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 3,
     "voice-over": 10,
-    "talking-head": 22,
+    "talking-head": 23,
     "storytelling": 17,
     "dien-anh": 78,
     "chuyen-canh": 32
@@ -151,7 +151,7 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "industry_stats": {
     "spa-lam-dep": 5,
-    "thuong-hieu": 18,
+    "thuong-hieu": 19,
     "thoi-trang": 17,
     "am-thuc": 17,
     "du-lich": 12,
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 76,
+    "us_eu": 77,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -356,6 +356,18 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments",
         "IG_@ioana_iftode_DcYQVYJjHa-_Tokyo_Slow_Life_Visual_Diaries",
         "IG_@ioana_iftode_DbqCYu4DAz2_Kyoto_Slow_Life_Visual_Diaries"
+      ]
+    },
+    {
+      "handle": "@creator",
+      "name": "Creator",
+      "profile_url": "https://www.instagram.com/creator/",
+      "video_count": 2,
+      "top_industry": "Xây kênh",
+      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdVBqUzj3o5_Video_DdVBqUzj3o5/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5",
+        "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb"
       ]
     },
     {
@@ -522,17 +534,6 @@ var FEDU_IDEAS_DATABASE = {
       "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword"
-      ]
-    },
-    {
-      "handle": "@creator",
-      "name": "Creator",
-      "profile_url": "https://www.instagram.com/creator/",
-      "video_count": 1,
-      "top_industry": "Xây kênh",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdSs5rahILb_Video_DdSs5rahILb/shot_01_mid.jpg",
-      "video_ids": [
-        "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb"
       ]
     },
     {
@@ -1560,6 +1561,72 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5",
+      "shortcode": "DdVBqUzj3o5",
+      "title_vi": "@creator DdVBqUzj3o5 Video DdVBqUzj3o5",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 3 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "key_tech": "3 Of 18 • By @hayan_cook • Shared September 15 • 2026 • Establishing Hook Shot • Close-Up / Macro Detail Shot",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industry": {
+        "id": "thuong-hieu",
+        "name": "Xây kênh",
+        "en_name": "Personal Brand",
+        "icon": "💼",
+        "badge_color": "indigo"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Carousel with 13 items, 3 of 18, by @hayan_cook, shared September 15, 2026",
+      "tech_tags": [
+        "3 Of 18",
+        "By @hayan_cook",
+        "Shared September 15",
+        "2026",
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Carousel with 13 items, 3 of 18, by @hayan_cook, shared September 15, 2026. Phân loại vào Thương Hiệu Cá Nhân & Dịch Vụ • Talking Head.",
+      "creator": {
+        "raw": "@creator",
+        "name": "Creator",
+        "handle": "@creator",
+        "profile_url": "https://www.instagram.com/creator/"
+      },
+      "ig_url": "https://www.instagram.com/p/DdVBqUzj3o5",
+      "gdrive_folder": "https://drive.google.com/open?id=1Hs-u5AoGHrd-mg49jmBM8I-O2NutDbwQ",
+      "media": {
+        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdVBqUzj3o5_Video_DdVBqUzj3o5/shot_01_mid.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdVBqUzj3o5_Video_DdVBqUzj3o5/shot_03_mid.jpg",
+        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdVBqUzj3o5.mp4",
+        "report_url": "reports/IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5.html",
+        "shots_count": 3,
+        "duration": "6s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@𝐂𝐢𝐧𝐝𝐲🌼_DcgQDZ_JNIr_Video_by_clarissaacindy",
       "shortcode": "DcgQDZ_JNIr",

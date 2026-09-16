@@ -15492,5 +15492,79 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5": {
+    "id": "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5",
+    "creator": "@creator",
+    "creator_name": "Creator",
+    "title": "@creator - Video DdVBqUzj3o5",
+    "shots_count": 3,
+    "duration": "6.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "thuong-hieu",
+      "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+      "icon": "💼"
+    },
+    "purpose": "Instagram Liked 24h: Carousel with 13 items, 3 of 18, by @hayan_cook, shared September 15, 2026",
+    "tech_tags": [
+      "3 Of 18",
+      "By @hayan_cook",
+      "Shared September 15",
+      "2026",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Carousel with 13 items, 3 of 18, by @hayan_cook, shared September 15, 2026. Phân loại vào Thương Hiệu Cá Nhân & Dịch Vụ • Talking Head.",
+    "is_excluded": false,
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 3 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DdVBqUzj3o5": {
+    "id": "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5",
+    "creator": "@creator",
+    "creator_name": "Creator",
+    "title": "@creator - Video DdVBqUzj3o5",
+    "shots_count": 3,
+    "duration": "6.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "thuong-hieu",
+      "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+      "icon": "💼"
+    },
+    "purpose": "Instagram Liked 24h: Carousel with 13 items, 3 of 18, by @hayan_cook, shared September 15, 2026",
+    "tech_tags": [
+      "3 Of 18",
+      "By @hayan_cook",
+      "Shared September 15",
+      "2026",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Carousel with 13 items, 3 of 18, by @hayan_cook, shared September 15, 2026. Phân loại vào Thương Hiệu Cá Nhân & Dịch Vụ • Talking Head.",
+    "is_excluded": false,
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 3 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }
