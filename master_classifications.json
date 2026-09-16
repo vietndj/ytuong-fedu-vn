@@ -15414,5 +15414,83 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@𝐂𝐢𝐧𝐝𝐲🌼_DcgQDZ_JNIr_Video_by_clarissaacindy": {
+    "id": "IG_@𝐂𝐢𝐧𝐝𝐲🌼_DcgQDZ_JNIr_Video_by_clarissaacindy",
+    "creator": "@𝐂𝐢𝐧𝐝𝐲🌼",
+    "creator_name": "𝐂𝐢𝐧𝐝𝐲🌼",
+    "title": "@𝐂𝐢𝐧𝐝𝐲🌼 - Video by clarissaacindy",
+    "shots_count": 10,
+    "duration": "20.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
+    },
+    "purpose": "Instagram Liked 24h: Video, 2 of 18, by @clarissaacindy, shared August 26, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "2 Of 18",
+      "By @clarissaacindy",
+      "Shared August 26",
+      "2026",
+      "Establishing Hook Shot",
+      "Medium Tracking Shot",
+      "Wide Establishing Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 2 of 18, by @clarissaacindy, shared August 26, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+    "is_excluded": false,
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 10 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DcgQDZ_JNIr": {
+    "id": "IG_@𝐂𝐢𝐧𝐝𝐲🌼_DcgQDZ_JNIr_Video_by_clarissaacindy",
+    "creator": "@𝐂𝐢𝐧𝐝𝐲🌼",
+    "creator_name": "𝐂𝐢𝐧𝐝𝐲🌼",
+    "title": "@𝐂𝐢𝐧𝐝𝐲🌼 - Video by clarissaacindy",
+    "shots_count": 10,
+    "duration": "20.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
+    },
+    "purpose": "Instagram Liked 24h: Video, 2 of 18, by @clarissaacindy, shared August 26, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "2 Of 18",
+      "By @clarissaacindy",
+      "Shared August 26",
+      "2026",
+      "Establishing Hook Shot",
+      "Medium Tracking Shot",
+      "Wide Establishing Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 2 of 18, by @clarissaacindy, shared August 26, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+    "is_excluded": false,
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 10 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }
