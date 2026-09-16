@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 200,
-  "total_unique_ideas": 189,
-  "total_active_ideas": 164,
+  "total_scene_items": 201,
+  "total_unique_ideas": 190,
+  "total_active_ideas": 165,
   "total_excluded_ideas": 25,
-  "total_creators": 119,
+  "total_creators": 120,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -62,7 +62,7 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 3,
     "voice-over": 10,
-    "talking-head": 18,
+    "talking-head": 19,
     "storytelling": 18,
     "dien-anh": 83,
     "chuyen-canh": 32
@@ -156,7 +156,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 18,
     "du-lich": 12,
     "cong-nghe": 21,
-    "kien-truc": 13,
+    "kien-truc": 14,
     "the-thao": 7,
     "ky-thuat-quay": 45,
     "ugc": 5
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 78,
+    "us_eu": 79,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -500,6 +500,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@dreakwon",
+      "name": "이현",
+      "profile_url": "https://www.instagram.com/dreakwon/",
+      "video_count": 1,
+      "top_industry": "Góc nhà đẹp",
+      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40drea_%28%EC%9D%B4%ED%98%84%29_DaClEhzB5WC_Video_by_dreakwon/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@drea_(이현)_DaClEhzB5WC_Video_by_dreakwon"
       ]
     },
     {
@@ -1582,6 +1593,75 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@drea_(이현)_DaClEhzB5WC_Video_by_dreakwon",
+      "shortcode": "DaClEhzB5WC",
+      "title_vi": "@drea_(이현) - Video by dreakwon",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "key_tech": "Instagram Liked 24h: Video • 2 Of 18 • By @dreakwon • Shared June 26 • 2026 • Establishing Hook Shot • Close-Up / Macro Detail Shot • Wide Establishing Shot",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Góc nhà đẹp",
+        "en_name": "Architecture & Living",
+        "icon": "🏛️",
+        "badge_color": "emerald"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 2 of 18, by @dreakwon, shared June 26, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "2 Of 18",
+        "By @dreakwon",
+        "Shared June 26",
+        "2026",
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot",
+        "Wide Establishing Shot",
+        "Medium Tracking Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 2 of 18, by @dreakwon, shared June 26, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Talking Head.",
+      "creator": {
+        "raw": "@drea_(이현)",
+        "name": "이현",
+        "handle": "@dreakwon",
+        "profile_url": "https://www.instagram.com/dreakwon/"
+      },
+      "ig_url": "https://www.instagram.com/p/DaClEhzB5WC",
+      "gdrive_folder": "https://drive.google.com/open?id=1S4sCJFZBrL_26Y6vyEOY3I8xll4SKUQm",
+      "media": {
+        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40drea_%28%EC%9D%B4%ED%98%84%29_DaClEhzB5WC_Video_by_dreakwon/shot_01_mid.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40drea_%28%EC%9D%B4%ED%98%84%29_DaClEhzB5WC_Video_by_dreakwon/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DaClEhzB5WC.mp4",
+        "report_url": "reports/IG_@drea_(이현)_DaClEhzB5WC_Video_by_dreakwon.html",
+        "shots_count": 38,
+        "duration": "76s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views",
       "shortcode": "DcBXsaezmjo",
