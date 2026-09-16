@@ -1,0 +1,1992 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Cách 'Câu' Kẹo Của Bố Vợ • Tuyệt Kỹ Hài Tình Huống Triệu View • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* DRAWER QUICK JUMP MENU */
+.drawer-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-line);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.drawer-title {
+    font-family: var(--font-heading-short);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cl-text-muted);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.drawer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.drawer-shot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: var(--cl-bg-tint);
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+    background: #eef2f6;
+    border-color: var(--cl-accent);
+}
+.d-badge {
+    background: var(--cl-accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.d-time {
+    color: var(--cl-text-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    flex-shrink: 0;
+}
+.d-title {
+    color: var(--cl-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">9 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Cách 'Câu' Kẹo Của Bố Vợ • Tuyệt Kỹ Hài Tình Huống Triệu View</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DbA22ywhMSI/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DbA22ywhMSI.mp4" type="video/mp4">
+                <source src="./DbA22ywhMSI.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 11.95s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Cách 'Câu' Kẹo Của Bố Vợ • Tuyệt Kỹ Hài Tình Huống Triệu View</div>
+            <div class="video-meta-author">
+                <span>Tác giả:</span>
+                <a href="https://www.instagram.com/reel/DbA22ywhMSI/" target="_blank" class="author-link">주서방 Ju Seobang (@ju_seobang)</a>
+            </div>
+        </div>
+
+        <!-- DRAWER QUICK JUMP MENU -->
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+        <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0, 1.33)">
+            <span class="d-badge">Shot 01</span>
+            <span class="d-time">0.00s - 1.33s (1.33s)</span>
+            <span class="d-title">Thiết Lập Trạng Thái Thèm Thuồng Tại Đảo Bếp Để Khóa Chặt Ng...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(2, 1.33, 2.33)">
+            <span class="d-badge">Shot 02</span>
+            <span class="d-time">1.33s - 2.33s (1.00s)</span>
+            <span class="d-title">Cận Cảnh Sàn Gỗ Đón 'Mồi Nhử' Kèm Tiếng Lạch Cạch Kích Hoạt ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(3, 2.33, 3.42)">
+            <span class="d-badge">Shot 03</span>
+            <span class="d-time">2.33s - 3.42s (1.09s)</span>
+            <span class="d-title">Khom Lưng Nhìn Xéo Thăm Dò & Ánh Mắt Nghi Hoặc Qua Tròng Kín...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(4, 3.42, 5.07)">
+            <span class="d-badge">Shot 04</span>
+            <span class="d-time">3.42s - 5.07s (1.65s)</span>
+            <span class="d-title">Cú Liếc Mắt Thần Thái Giả Vờ Say Giấc Thiết Lập Tình Huống K...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(5, 5.07, 6.43)">
+            <span class="d-badge">Shot 05</span>
+            <span class="d-time">5.07s - 6.43s (1.36s)</span>
+            <span class="d-title">Cú Cúi Người Chạm Đất Mở Ra Toàn Bộ Vùng Mù Thị Giác (Blind-...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(6, 6.43, 7.0)">
+            <span class="d-badge">Shot 06</span>
+            <span class="d-time">6.43s - 7.00s (0.57s)</span>
+            <span class="d-title">Góc Nhìn Qua Vai Siêu Tốc 0.57s Khóa Chặt Tọa Độ Thùng Rác (...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(7, 7.0, 7.75)">
+            <span class="d-badge">Shot 07</span>
+            <span class="d-time">7.00s - 7.75s (0.75s)</span>
+            <span class="d-title">Động Tác Vung Tay Ném Kẹo Thản Nhiên Kích Hoạt Cú Ném Định M...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(8, 7.75, 8.4)">
+            <span class="d-badge">Shot 08</span>
+            <span class="d-time">7.75s - 8.40s (0.65s)</span>
+            <span class="d-title">Cú Đớp Mồi Thần Thánh Của Chàng Rể Mai Phục Bên Thùng Rác (T...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(9, 8.4, 11.95)">
+            <span class="d-badge">Shot 09</span>
+            <span class="d-time">8.40s - 11.95s (3.55s)</span>
+            <span class="d-title">Bàn Đảo Trống Trơn, Lia Máy Thần Tốc Về Sofa & Nụ Cười Vô Ca...</span>
+        </div>
+        
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc Chuẩn Instagram Reels</strong> • 11.95s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Cách 'Câu' Kẹo Của Bố Vợ • Tuyệt Kỹ Hài Tình Huống Triệu View</h1>
+            <p class="overview-hero-desc">Bóc tách chuyên sâu kỹ thuật đạo diễn bậc thầy trong video hài gia đình triệu view của Ju Seobang (@ju_seobang): Nghệ thuật đánh lạc hướng bằng âm thanh (Sound Cue Misdirection), khai thác triệt để vùng mù thị giác (Complete Blind Spot), nhịp cắt giật 0.65s (Smash Cut) kích nổ cú cười slapstick và đòn bồi whip-pan dịch chuyển tức thời đỉnh cao.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Situational Comedy • Foley Sound Misdirection • 0.65s Smash Cut Slapstick • Blind Spot Exploitation • Whip-Pan Teleportation</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">9 Shots • Nhịp trung bình 1.33s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 (9:16 Dọc) • 60 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 1.33)">
+                    ▶ 0.00s - 1.33s (1.33s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thiết Lập Trạng Thái Thèm Thuồng Tại Đảo Bếp Để Khóa Chặt Ngữ Cảnh Bị Ăn Cắp (Island Counter Craving Hook)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_01_mid.jpg', 'Shot 01 • Giữa (0.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (0.67s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_01_end.jpg', 'Shot 01 • Cuối (1.33s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (1.33s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bố vợ mặc áo sơ mi kẻ ca rô cộc tay, quần túi hộp đen và đeo Apple Watch, đứng tựa người vào bàn đảo bếp màu xám hiện đại. Trên mặt bàn bày la liệt các gói kẹo cao su, thạch hoa quả và điện thoại thông minh. Hai tay ông đang tỉ mỉ bóc lớp giấy bọc của một thanh kẹo, ánh mắt tập trung cao độ vào miếng mồi ngon.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc quay trung cảnh (Medium Shot) ngang tầm mắt với độ sâu trường ảnh vừa phải, làm nổi bật ngay sự cô đọng của tình huống; đạo cụ bàn ăn (kẹo, bánh) được đặt ở vị trí 1/3 góc trái tiền cảnh giúp khán giả nhận diện tức thì đối tượng tranh chấp trong clip; diễn xuất chuẩn bị ăn kẹo của người cha rất tự nhiên, tạo tiền đề vững chắc cho cú lừa.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Bố vợ đứng hơi khuất sáng ở phía sau lưng bàn đảo, ánh sáng trần căn hộ hơi gắt ở đỉnh đầu tạo bóng nhẹ dưới hốc mắt.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi mở đầu một video hài tình huống (Skit Hook), hãy đặt nhân vật chính vào hành động đời thường nhất (chuẩn bị ăn, uống, xem điện thoại) cùng với vật phẩm làm 'mồi nhử' nổi bật ngay trong 1 giây đầu.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 26mm f/1.8 (Camera 1x) • Medium Eye-Level Static Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bếp đảo căn hộ hiện đại tại Hàn Quốc</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn âm trần downlight kết hợp ánh sáng môi trường ban ngày</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) theo tiếng động rơi ở Shot 02</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Cắt thẳng (Hard Cut) theo tiếng động rơi ở Shot 02</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 1.33, 2.33)">
+                    ▶ 1.33s - 2.33s (1.00s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cận Cảnh Sàn Gỗ Đón 'Mồi Nhử' Kèm Tiếng Lạch Cạch Kích Hoạt Bẫy Đánh Lạc Hướng (Top-Down Audio-Visual Misdirection Bait)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_02_start.jpg', 'Shot 02 • Đầu (1.33s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (1.33s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_02_mid.jpg', 'Shot 02 • Giữa (1.83s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.83s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_02_end.jpg', 'Shot 02 • Cuối (2.33s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (2.33s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Máy quay chúi góc cao nhìn thẳng xuống sàn gỗ sồi sáng màu, ngay sát đôi bàn chân mang tất len xám của bố vợ. Bất ngờ, một viên kẹo caramen vuông vức rơi 'cạch' xuống sàn và nảy nhẹ, nằm chơ vơ cách mũi chân người cha khoảng 40cm.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú máy đặc tả góc sàn (Top-Down Close-Up) đóng vai trò 'điểm mồi' thị giác (Visual Hook); âm thanh viên kẹo nảy khô khốc trên sàn gỗ đánh thẳng vào thính giác, giải thích hợp lý vì sao người lớn tuổi lại phải cúi xuống nhặt; nhịp cắt chỉ đúng 1.0 giây vừa đủ để não bộ người xem kịp xử lý thông tin.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy hơi rung nhẹ do cầm tay (handheld), viên kẹo hơi nhỏ so với tổng diện tích mặt sàn gỗ.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Để đánh lạc hướng nhân vật trong kịch bản một cách thuyết phục nhất, hãy dùng quy tắc 'Âm thanh đi trước - Hành động theo sau' (Foley Cue): một tiếng động rơi bất thường luôn là lý do tự nhiên nhất khiến bất kỳ ai cũng phải quay đầu.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 26mm f/1.8 (Camera 1x) • High-Angle POV Floor Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Sàn gỗ phòng khách cạnh đảo bếp</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tán xạ mặt sàn từ cửa ban công</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) sang phản ứng khuôn mặt ở Shot 03</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Cắt thẳng (Hard Cut) sang phản ứng khuôn mặt ở Shot 03</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 2.33, 3.42)">
+                    ▶ 2.33s - 3.42s (1.09s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Khom Lưng Nhìn Xéo Thăm Dò & Ánh Mắt Nghi Hoặc Qua Tròng Kính (Suspicious Glance Downward Parallax)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_03_start.jpg', 'Shot 03 • Đầu (2.33s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (2.33s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_03_mid.jpg', 'Shot 03 • Giữa (2.88s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (2.88s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_03_end.jpg', 'Shot 03 • Cuối (3.42s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (3.42s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình quay trở lại bố vợ ở góc cận vừa (Medium Close-Up). Nghe tiếng động lạ, ông ngừng động tác bóc kẹo, người khom hẳn sang một bên, kéo trễ cặp kính lão xuống sống mũi và liếc mắt đầy vẻ hoài nghi xuống sàn nhà kiểm tra nguồn gốc âm thanh.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Biểu cảm ngơ ngác và cử chỉ kéo kính hạ tầm nhìn đặc trưng của người lớn tuổi mang lại tính chân thực tuyệt đối (Authentic Body Language); đường cong cơ thể nghiêng 45 độ tạo nên một đường chéo phá vỡ bố cục tĩnh, dẫn hướng mắt khán giả theo góc nhìn của ông xuống sàn.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy giữ nguyên góc giống shot 1 khiến cảm giác chuyển cảnh hơi bị jump-cut nhẹ nếu không có sự thay đổi dáng người của nhân vật.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi nhân vật phản ứng với biến cố, đừng cho họ hành động ngay lập tức mà hãy chêm vào 1 giây biểu cảm ngơ ngác/nghi ngờ để kéo giãn nhịp căng thẳng (Micro-Tension Delay) trước khi hành động xảy ra.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 26mm f/1.8 (Camera 1x) • Medium Close-Up Eye-Level</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Đảo bếp căn hộ gia đình</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ven tường hắt nhẹ lên bờ vai áo ca-rô</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt giật sang hung thủ mai phục ở Shot 04</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Cắt giật sang hung thủ mai phục ở Shot 04</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 3.42, 5.07)">
+                    ▶ 3.42s - 5.07s (1.65s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Liếc Mắt Thần Thái Giả Vờ Say Giấc Thiết Lập Tình Huống Kẻ Chủ Mưu (Poker-Face Pretend Alibi Shot)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_04_start.jpg', 'Shot 04 • Đầu (3.42s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (3.42s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_04_mid.jpg', 'Shot 04 • Giữa (4.25s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (4.25s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_04_end.jpg', 'Shot 04 • Cuối (5.07s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.07s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Máy quay cắt sang chiếc ghế sofa da bò màu nâu vintage ở phòng khách. Con rể (Ju Seobang) mặc áo thun cộc tay xanh rêu, quần jeans thụng rách gối, đang nằm ngả ngớn vắt chân lên đệm ghế. Anh vờ nhắm mắt lim dim như đang ngủ say, nhưng khóe mắt hé mở liếc nhanh về phía đảo bếp để canh me động tĩnh của bố vợ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thiết lập bằng chứng ngoại phạm hoàn hảo (Visual Irony): sự tương phản gay gắt giữa vẻ thư thái 'vô tội' của chàng rể trên sofa và âm mưu đen tối sắp được thi hành; tông màu ấm của sofa da bò tạo điểm nhấn màu sắc tách biệt hoàn toàn với tông xám lạnh của khu bếp; ánh mắt liếc trộm hé lộ vai trò 'kẻ chủ mưu' khiến khán giả bật cười thích thú.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh sáng trên mặt nhân vật hơi chìm do phòng khách không bật đèn trực diện, cánh tay trái đặt ngang tựa sofa che khuất một phần ngực áo.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Trong phim hài tình huống (Comedy Skit), cú cắt cảnh sang kẻ chủ mưu giả vờ vô can (Alibi Setup) là đòn bẩy kích thích tâm lý tò mò: người xem biết hắn sắp làm trò xấu, nhưng chưa biết hắn sẽ ra tay quái chiêu thế nào.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 26mm f/1.8 (Camera 1x) • Low-Angle Sofa Medium Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Sofa da bò nâu phòng khách</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên cửa sổ hắt mềm vào gương mặt</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) trở lại hành động cúi người ở Shot 05</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Cắt thẳng (Hard Cut) trở lại hành động cúi người ở Shot 05</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 5.07, 6.43)">
+                    ▶ 5.07s - 6.43s (1.36s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Cúi Người Chạm Đất Mở Ra Toàn Bộ Vùng Mù Thị Giác (Blind-Spot Deep Squat Execution)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_05_start.jpg', 'Shot 05 • Đầu (5.07s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.07s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_05_mid.jpg', 'Shot 05 • Giữa (5.75s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.75s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_05_end.jpg', 'Shot 05 • Cuối (6.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (6.43s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Toàn cảnh bố vợ cúi gập người sát đất, tay phải chống đầu gối để giữ thăng bằng, tay trái vươn thẳng xuống sàn gỗ nhặt lấy viên kẹo vừa rơi. Toàn bộ tầm nhìn của ông bị khóa chặt xuống mặt đất, lưng quay hẳn về phía phòng khách và bàn đảo bếp.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khai thác triệt để điểm mù thị giác của nhân vật (Complete Blind Spot): khi một người cúi gập lưng sát đất, họ mất 100% khả năng quan sát không gian xung quanh; nhịp quay 1.37s mô tả trọn vẹn sức nặng thể chất của người trung niên khi cúi nhặt đồ, tạo cảm giác chân thực không hề gượng gạo.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Bàn đảo bếp bên trái chiếm diện tích khá lớn tạo cảm giác khung hình bị chia cắt dọc.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Muốn tạo cơ hội cho hành vi 'trộm cắp' hoặc 'tấn công bất ngờ' trong video mà không bị coi là phi lý, hãy ép nhân vật đối diện vào tư thế gập người sát đất hoặc quay mặt vào tường để tạo ra vùng mù tự nhiên 100%.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 26mm f/1.8 (Camera 1x) • Full Medium Eye-Level Static</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khoảng không giữa đảo bếp và bàn tròn</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn rọi góc trần hắt sáng sống lưng áo sơ mi</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt góc nhìn qua vai sang mục tiêu thùng rác ở Shot 06</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Cắt góc nhìn qua vai sang mục tiêu thùng rác ở Shot 06</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 6.43, 7.0)">
+                    ▶ 6.43s - 7.00s (0.57s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Nhìn Qua Vai Siêu Tốc 0.57s Khóa Chặt Tọa Độ Thùng Rác (Over-The-Shoulder Target Lock)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_06_start.jpg', 'Shot 06 • Đầu (6.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (6.43s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_06_mid.jpg', 'Shot 06 • Giữa (6.71s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.71s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_06_end.jpg', 'Shot 06 • Cuối (7.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (7.00s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cú máy đặt sát sau gáy của bố vợ (Over-the-Shoulder Shot), lấy bờ vai áo sơ mi kẻ ca-rô làm tiền cảnh mờ, hướng tầm nhìn thẳng vào chiếc thùng rác nhựa lót túi nilon xanh lá cây đang đặt khiêm tốn ở góc tủ bếp phía xa.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thiết lập mục tiêu hành động (Spatial Target Establishment) chỉ trong 0.57s: cho khán giả thấy rõ ý định của nhân vật (sắp ném viên kẹo bẩn vào thùng rác); thời lượng siêu ngắn tạo cảm giác gấp gáp, nhịp phim tăng tốc đột ngột kích thích sự chú ý cao độ của não bộ trước cú nổ comic.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng quá ngắn (33 frames - 0.57s) đòi hỏi người xem phải cực kỳ tập trung, nếu lướt nhanh có thể không nhận diện kịp chiếc thùng rác nếu không nhìn quen không gian nhà bếp.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Trước một cú ném hoặc cú hành động có tính mục tiêu, luôn cần 1 shot ngắn dưới 0.6s đặc tả đích đến (Target Shot) để não bộ khán giả ngầm tính toán đường bay của vật thể trước khi cú ném diễn ra.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 26mm f/1.8 (Camera 1x) • Over-The-Shoulder (OTS) POV Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc nhìn từ bếp ra thùng rác góc tủ</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Tối hơn không gian chính, tạo tương phản vùng tối góc bếp</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) sang động tác vung tay ở Shot 07</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Cắt thẳng (Hard Cut) sang động tác vung tay ở Shot 07</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 7.0, 7.75)">
+                    ▶ 7.00s - 7.75s (0.75s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Động Tác Vung Tay Ném Kẹo Thản Nhiên Kích Hoạt Cú Ném Định Mệnh (Casual Toss Trigger Shot)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_07_start.jpg', 'Shot 07 • Đầu (7.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (7.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_07_mid.jpg', 'Shot 07 • Giữa (7.38s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (7.38s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_07_end.jpg', 'Shot 07 • Cuối (7.75s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (7.75s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bố vợ đứng thẳng dậy, tay cầm viên kẹo giơ cao ngang cằm rồi vung cổ tay ném nhẹ viên kẹo về phía góc thùng rác. Động tác cực kỳ thản nhiên và dứt khoát theo phản xạ vệ sinh thông thường: kẹo rơi xuống sàn thì phải vứt bỏ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Chuyển động vung tay mượt mà với đường cung ném tự nhiên (Parabolic Arc); khuôn mặt và ánh mắt bố vợ hướng trọn vẹn theo quỹ đạo ném tạo lực quán tính thị giác (Kinetic Continuity); nhịp cắt 0.75s dứt điểm ngay khi viên kẹo rời khỏi đầu ngón tay.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Viên kẹo sau khi rời tay có kích thước nhỏ và tốc độ bay nhanh nên mắt thường khó bám theo quỹ đạo hạt kẹo nếu không có shot kế tiếp.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay các hành động ném hoặc phát lực, hãy cắt cảnh ngay tại khoảnh khắc lực phát ra (Apex of Motion) và chuyển ngay sang điểm va chạm ở shot sau, không nên lưu lại phần dư chuyển động (follow-through) để giữ nhịp comic gãy gọn.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 26mm f/1.8 (Camera 1x) • Medium Upper Body Action Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Cạnh bàn đảo bếp</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng trần hắt bóng lên áo và cánh tay vung</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt giật cực độ (Smash Cut) sang cú đớp kẹo kinh điển ở Shot 08</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Cắt giật cực độ (Smash Cut) sang cú đớp kẹo kinh điển ở Shot 08</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 7.75, 8.4)">
+                    ▶ 7.75s - 8.40s (0.65s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Đớp Mồi Thần Thánh Của Chàng Rể Mai Phục Bên Thùng Rác (The Golden Gag: Aerial Snatch Climax)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_08_start.jpg', 'Shot 08 • Đầu (7.75s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (7.75s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_08_mid.jpg', 'Shot 08 • Giữa (8.07s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (8.07s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_08_end.jpg', 'Shot 08 • Cuối (8.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.40s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">ĐỈNH ĐIỂM HÀI HƯỚC (Punchline Climax): Khung hình cắt giật cực gắt xuống sát mặt sàn trước thùng rác. Chàng rể Ju Seobang đã ngồi bệt từ lúc nào, ngửa hẳn đầu ra sau, mắt trợn tròn, mồm há to hết cỡ đớp trọn viên kẹo bay từ trên trời rơi xuống như một chú chim non háu đói! Hai tay anh chống ra sau để làm điểm tựa chịu lực.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">ĐỈNH CAO VIRAL & SLAPSTICK GAG: Khán giả ngỡ ngàng vì tưởng kẹo vào thùng rác, hóa ra lại rơi thẳng vào mồm con rể; góc máy cận hất từ trên xuống (High-to-Eye Dutch Angle) zoom sát vào biểu cảm há hốc miệng lầy lội không sợ mất hình tượng; cú Smash Cut chỉ vỏn vẹn 0.65s (38 frames) tạo ra cú sốc thị giác (Visual Shock) kích nổ tràng cười và buộc người xem phải replay hoặc tag ngay bạn bè/bố mẹ vợ vào xem.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Tốc độ quá nhanh khiến một số khán giả lớn tuổi phải load lại lần 2 mới nhận ra con rể vừa đớp kẹo thay vì rác (tuy nhiên đây lại là thủ thuật giữ chân retention rate > 120%).</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đây là công thức bí truyền của mọi video triệu view: 'Visual Misdirection + Subverted Expectation' (Đánh lừa hướng nhìn + Bẻ gãy kỳ vọng). Hãy để nhân vật hy sinh hình tượng một cách triệt để nhất trong đúng 0.5s - 0.7s để tạo ra ảnh chụp màn hình đắt giá nhất đời (Meme-worthy Frame).</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 26mm f/1.8 (Camera 1x) • Close-Up Slapstick Gag Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc sàn trước thùng rác bếp</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn bếp chiếu thẳng vào vòm họng mở to</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt giật (Smash Cut) sang sự bàng hoàng của bố vợ ở Shot 09</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 09 • Cắt giật (Smash Cut) sang sự bàng hoàng của bố vợ ở Shot 09</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_08_to_09.jpg?v=2', 'Chuyển cảnh Shot 08 sang Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/transitions/trans_08_to_09.jpg?v=2" alt="Transition 8 to 9" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-9">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 09</span>
+                <button class="shot-time-btn" onclick="jumpToShot(9, 8.4, 11.95)">
+                    ▶ 8.40s - 11.95s (3.55s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bàn Đảo Trống Trơn, Lia Máy Thần Tốc Về Sofa & Nụ Cười Vô Can Đầy Khiêu Khích (The Disappearance & Whip-Pan Innocence)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_09_start.jpg', 'Shot 09 • Đầu (8.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.40s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_09_mid.jpg', 'Shot 09 • Giữa (10.18s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (10.18s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_09_end.jpg', 'Shot 09 • Cuối (11.95s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (11.95s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bố vợ quay trở lại bàn đảo bếp để lấy những gói bánh kẹo còn lại, nhưng kinh ngạc phát hiện mặt bàn đã trống trơn (anh con rể đã nhân lúc ông cúi nhặt kẹo lấy sạch cả mớ bánh kẹo khác). Ông khựng lại nhìn quanh. Ngay lập tức, máy quay lia thật nhanh (Whip-Pan) sang sofa: Chàng rể đã kịp dịch chuyển thần tốc về lại chỗ ngồi ban đầu, nhai kẹo tóp tép ngon lành, tay vuốt tóc vẻ bảnh bao vô tội, miệng mỉm cười đầy đắc thắng như chưa từng rời khỏi sofa dù chỉ nửa bước!</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khép lại câu chuyện bằng kỹ thuật 'Teleportation Gag' (Dịch chuyển tức thời) - nét hài kinh điển của phim hoạt hình Tom & Jerry được tái hiện ngoài đời thực; cú Whip Pan chuyển dịch không gian năng động gắn kết sự ngơ ngác của nạn nhân và sự đắc thắng của thủ phạm; biểu cảm vuốt tóc nhai kẹo chóp chép mang tính khiêu khích hài hước cao, để lại dư vị sảng khoái kéo dài đến hết video.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cú lia máy whip-pan bằng tay có độ giật nhẹ và hơi mờ nét chuyển động (motion blur) ở giữa hành trình.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kết thúc một video hài không bao giờ dừng ở cú đấm chính (Punchline), mà phải có 'Hạ màn bồi đắp' (Aftermath Reaction): cho thấy hậu quả dở khóc dở cười của nạn nhân và thái độ trơ trẽn của thủ phạm để kích thích người xem comment tranh luận rôm rả.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 26mm f/1.8 (Camera 1x) • Medium Pan Shot with Whip-Pan Motion</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Toàn bộ không gian đảo bếp kết nối phòng khách sofa</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng sinh hoạt gia đình chan hòa</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Giữ khung hình đến frame cuối cùng rồi loop lại đầu video</span>
+            </div>
+
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 1.33)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Thiết Lập Trạng Thái Thèm Thuồng Tại Đảo Bếp Để Khóa Chặt Ngữ Cảnh Bị Ăn Cắp (Island Counter Craving Hook)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 1.33, 2.33)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 1.33s</span>
+            </div>
+            <div class="grid-card-body">Cận Cảnh Sàn Gỗ Đón 'Mồi Nhử' Kèm Tiếng Lạch Cạch Kích Hoạt Bẫy Đánh Lạc Hướng (Top-Down Audio-Visual Misdirection Bait)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 2.33, 3.42)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 2.33s</span>
+            </div>
+            <div class="grid-card-body">Khom Lưng Nhìn Xéo Thăm Dò & Ánh Mắt Nghi Hoặc Qua Tròng Kính (Suspicious Glance Downward Parallax)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 3.42, 5.07)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 3.42s</span>
+            </div>
+            <div class="grid-card-body">Cú Liếc Mắt Thần Thái Giả Vờ Say Giấc Thiết Lập Tình Huống Kẻ Chủ Mưu (Poker-Face Pretend Alibi Shot)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 5.07, 6.43)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 5.07s</span>
+            </div>
+            <div class="grid-card-body">Cú Cúi Người Chạm Đất Mở Ra Toàn Bộ Vùng Mù Thị Giác (Blind-Spot Deep Squat Execution)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 6.43, 7.0)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 6.43s</span>
+            </div>
+            <div class="grid-card-body">Góc Nhìn Qua Vai Siêu Tốc 0.57s Khóa Chặt Tọa Độ Thùng Rác (Over-The-Shoulder Target Lock)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 7.0, 7.75)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 7.00s</span>
+            </div>
+            <div class="grid-card-body">Động Tác Vung Tay Ném Kẹo Thản Nhiên Kích Hoạt Cú Ném Định Mệnh (Casual Toss Trigger Shot)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 7.75, 8.4)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 7.75s</span>
+            </div>
+            <div class="grid-card-body">Cú Đớp Mồi Thần Thánh Của Chàng Rể Mai Phục Bên Thùng Rác (The Golden Gag: Aerial Snatch Climax)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(9, 8.4, 11.95)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <span class="grid-thumb-badge">Shot 09 • 8.40s</span>
+            </div>
+            <div class="grid-card-body">Bàn Đảo Trống Trơn, Lia Máy Thần Tốc Về Sofa & Nụ Cười Vô Can Đầy Khiêu Khích (The Disappearance & Whip-Pan Innocence)</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1dEu5s7hxM8wgVI2FdXFzR8eTTNvCI8DK" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "shot_id": 1, "st_frame": 0, "en_frame": 79, "st_time": 0.0, "en_time": 1.33, "duration": 1.33, "headline": "Thiết Lập Trạng Thái Thèm Thuồng Tại Đảo Bếp Để Khóa Chặt Ngữ Cảnh Bị Ăn Cắp (Island Counter Craving Hook)", "subject_action": "Bố vợ mặc áo sơ mi kẻ ca rô cộc tay, quần túi hộp đen và đeo Apple Watch, đứng tựa người vào bàn đảo bếp màu xám hiện đại. Trên mặt bàn bày la liệt các gói kẹo cao su, thạch hoa quả và điện thoại thông minh. Hai tay ông đang tỉ mỉ bóc lớp giấy bọc của một thanh kẹo, ánh mắt tập trung cao độ vào miếng mồi ngon.", "pros": "Góc quay trung cảnh (Medium Shot) ngang tầm mắt với độ sâu trường ảnh vừa phải, làm nổi bật ngay sự cô đọng của tình huống; đạo cụ bàn ăn (kẹo, bánh) được đặt ở vị trí 1/3 góc trái tiền cảnh giúp khán giả nhận diện tức thì đối tượng tranh chấp trong clip; diễn xuất chuẩn bị ăn kẹo của người cha rất tự nhiên, tạo tiền đề vững chắc cho cú lừa.", "cons": "Bố vợ đứng hơi khuất sáng ở phía sau lưng bàn đảo, ánh sáng trần căn hộ hơi gắt ở đỉnh đầu tạo bóng nhẹ dưới hốc mắt.", "takeaway": "Khi mở đầu một video hài tình huống (Skit Hook), hãy đặt nhân vật chính vào hành động đời thường nhất (chuẩn bị ăn, uống, xem điện thoại) cùng với vật phẩm làm 'mồi nhử' nổi bật ngay trong 1 giây đầu.", "location": "Bếp đảo căn hộ hiện đại tại Hàn Quốc", "lens_angle": "26mm f/1.8 (Camera 1x) • Medium Eye-Level Static Shot", "lighting_color": "Đèn âm trần downlight kết hợp ánh sáng môi trường ban ngày", "transition": "Cắt thẳng (Hard Cut) theo tiếng động rơi ở Shot 02"}, {"id": 2, "shot_id": 2, "st_frame": 80, "en_frame": 139, "st_time": 1.33, "en_time": 2.33, "duration": 1.0, "headline": "Cận Cảnh Sàn Gỗ Đón 'Mồi Nhử' Kèm Tiếng Lạch Cạch Kích Hoạt Bẫy Đánh Lạc Hướng (Top-Down Audio-Visual Misdirection Bait)", "subject_action": "Máy quay chúi góc cao nhìn thẳng xuống sàn gỗ sồi sáng màu, ngay sát đôi bàn chân mang tất len xám của bố vợ. Bất ngờ, một viên kẹo caramen vuông vức rơi 'cạch' xuống sàn và nảy nhẹ, nằm chơ vơ cách mũi chân người cha khoảng 40cm.", "pros": "Cú máy đặc tả góc sàn (Top-Down Close-Up) đóng vai trò 'điểm mồi' thị giác (Visual Hook); âm thanh viên kẹo nảy khô khốc trên sàn gỗ đánh thẳng vào thính giác, giải thích hợp lý vì sao người lớn tuổi lại phải cúi xuống nhặt; nhịp cắt chỉ đúng 1.0 giây vừa đủ để não bộ người xem kịp xử lý thông tin.", "cons": "Góc máy hơi rung nhẹ do cầm tay (handheld), viên kẹo hơi nhỏ so với tổng diện tích mặt sàn gỗ.", "takeaway": "Để đánh lạc hướng nhân vật trong kịch bản một cách thuyết phục nhất, hãy dùng quy tắc 'Âm thanh đi trước - Hành động theo sau' (Foley Cue): một tiếng động rơi bất thường luôn là lý do tự nhiên nhất khiến bất kỳ ai cũng phải quay đầu.", "location": "Sàn gỗ phòng khách cạnh đảo bếp", "lens_angle": "26mm f/1.8 (Camera 1x) • High-Angle POV Floor Shot", "lighting_color": "Ánh sáng tán xạ mặt sàn từ cửa ban công", "transition": "Cắt thẳng (Hard Cut) sang phản ứng khuôn mặt ở Shot 03"}, {"id": 3, "shot_id": 3, "st_frame": 140, "en_frame": 204, "st_time": 2.33, "en_time": 3.42, "duration": 1.09, "headline": "Khom Lưng Nhìn Xéo Thăm Dò & Ánh Mắt Nghi Hoặc Qua Tròng Kính (Suspicious Glance Downward Parallax)", "subject_action": "Khung hình quay trở lại bố vợ ở góc cận vừa (Medium Close-Up). Nghe tiếng động lạ, ông ngừng động tác bóc kẹo, người khom hẳn sang một bên, kéo trễ cặp kính lão xuống sống mũi và liếc mắt đầy vẻ hoài nghi xuống sàn nhà kiểm tra nguồn gốc âm thanh.", "pros": "Biểu cảm ngơ ngác và cử chỉ kéo kính hạ tầm nhìn đặc trưng của người lớn tuổi mang lại tính chân thực tuyệt đối (Authentic Body Language); đường cong cơ thể nghiêng 45 độ tạo nên một đường chéo phá vỡ bố cục tĩnh, dẫn hướng mắt khán giả theo góc nhìn của ông xuống sàn.", "cons": "Góc máy giữ nguyên góc giống shot 1 khiến cảm giác chuyển cảnh hơi bị jump-cut nhẹ nếu không có sự thay đổi dáng người của nhân vật.", "takeaway": "Khi nhân vật phản ứng với biến cố, đừng cho họ hành động ngay lập tức mà hãy chêm vào 1 giây biểu cảm ngơ ngác/nghi ngờ để kéo giãn nhịp căng thẳng (Micro-Tension Delay) trước khi hành động xảy ra.", "location": "Đảo bếp căn hộ gia đình", "lens_angle": "26mm f/1.8 (Camera 1x) • Medium Close-Up Eye-Level", "lighting_color": "Ánh sáng ven tường hắt nhẹ lên bờ vai áo ca-rô", "transition": "Cắt giật sang hung thủ mai phục ở Shot 04"}, {"id": 4, "shot_id": 4, "st_frame": 205, "en_frame": 303, "st_time": 3.42, "en_time": 5.07, "duration": 1.65, "headline": "Cú Liếc Mắt Thần Thái Giả Vờ Say Giấc Thiết Lập Tình Huống Kẻ Chủ Mưu (Poker-Face Pretend Alibi Shot)", "subject_action": "Máy quay cắt sang chiếc ghế sofa da bò màu nâu vintage ở phòng khách. Con rể (Ju Seobang) mặc áo thun cộc tay xanh rêu, quần jeans thụng rách gối, đang nằm ngả ngớn vắt chân lên đệm ghế. Anh vờ nhắm mắt lim dim như đang ngủ say, nhưng khóe mắt hé mở liếc nhanh về phía đảo bếp để canh me động tĩnh của bố vợ.", "pros": "Thiết lập bằng chứng ngoại phạm hoàn hảo (Visual Irony): sự tương phản gay gắt giữa vẻ thư thái 'vô tội' của chàng rể trên sofa và âm mưu đen tối sắp được thi hành; tông màu ấm của sofa da bò tạo điểm nhấn màu sắc tách biệt hoàn toàn với tông xám lạnh của khu bếp; ánh mắt liếc trộm hé lộ vai trò 'kẻ chủ mưu' khiến khán giả bật cười thích thú.", "cons": "Ánh sáng trên mặt nhân vật hơi chìm do phòng khách không bật đèn trực diện, cánh tay trái đặt ngang tựa sofa che khuất một phần ngực áo.", "takeaway": "Trong phim hài tình huống (Comedy Skit), cú cắt cảnh sang kẻ chủ mưu giả vờ vô can (Alibi Setup) là đòn bẩy kích thích tâm lý tò mò: người xem biết hắn sắp làm trò xấu, nhưng chưa biết hắn sẽ ra tay quái chiêu thế nào.", "location": "Sofa da bò nâu phòng khách", "lens_angle": "26mm f/1.8 (Camera 1x) • Low-Angle Sofa Medium Shot", "lighting_color": "Ánh sáng tự nhiên cửa sổ hắt mềm vào gương mặt", "transition": "Cắt thẳng (Hard Cut) trở lại hành động cúi người ở Shot 05"}, {"id": 5, "shot_id": 5, "st_frame": 304, "en_frame": 385, "st_time": 5.07, "en_time": 6.43, "duration": 1.36, "headline": "Cú Cúi Người Chạm Đất Mở Ra Toàn Bộ Vùng Mù Thị Giác (Blind-Spot Deep Squat Execution)", "subject_action": "Toàn cảnh bố vợ cúi gập người sát đất, tay phải chống đầu gối để giữ thăng bằng, tay trái vươn thẳng xuống sàn gỗ nhặt lấy viên kẹo vừa rơi. Toàn bộ tầm nhìn của ông bị khóa chặt xuống mặt đất, lưng quay hẳn về phía phòng khách và bàn đảo bếp.", "pros": "Khai thác triệt để điểm mù thị giác của nhân vật (Complete Blind Spot): khi một người cúi gập lưng sát đất, họ mất 100% khả năng quan sát không gian xung quanh; nhịp quay 1.37s mô tả trọn vẹn sức nặng thể chất của người trung niên khi cúi nhặt đồ, tạo cảm giác chân thực không hề gượng gạo.", "cons": "Bàn đảo bếp bên trái chiếm diện tích khá lớn tạo cảm giác khung hình bị chia cắt dọc.", "takeaway": "Muốn tạo cơ hội cho hành vi 'trộm cắp' hoặc 'tấn công bất ngờ' trong video mà không bị coi là phi lý, hãy ép nhân vật đối diện vào tư thế gập người sát đất hoặc quay mặt vào tường để tạo ra vùng mù tự nhiên 100%.", "location": "Khoảng không giữa đảo bếp và bàn tròn", "lens_angle": "26mm f/1.8 (Camera 1x) • Full Medium Eye-Level Static", "lighting_color": "Đèn rọi góc trần hắt sáng sống lưng áo sơ mi", "transition": "Cắt góc nhìn qua vai sang mục tiêu thùng rác ở Shot 06"}, {"id": 6, "shot_id": 6, "st_frame": 386, "en_frame": 419, "st_time": 6.43, "en_time": 7.0, "duration": 0.57, "headline": "Góc Nhìn Qua Vai Siêu Tốc 0.57s Khóa Chặt Tọa Độ Thùng Rác (Over-The-Shoulder Target Lock)", "subject_action": "Cú máy đặt sát sau gáy của bố vợ (Over-the-Shoulder Shot), lấy bờ vai áo sơ mi kẻ ca-rô làm tiền cảnh mờ, hướng tầm nhìn thẳng vào chiếc thùng rác nhựa lót túi nilon xanh lá cây đang đặt khiêm tốn ở góc tủ bếp phía xa.", "pros": "Thiết lập mục tiêu hành động (Spatial Target Establishment) chỉ trong 0.57s: cho khán giả thấy rõ ý định của nhân vật (sắp ném viên kẹo bẩn vào thùng rác); thời lượng siêu ngắn tạo cảm giác gấp gáp, nhịp phim tăng tốc đột ngột kích thích sự chú ý cao độ của não bộ trước cú nổ comic.", "cons": "Thời lượng quá ngắn (33 frames - 0.57s) đòi hỏi người xem phải cực kỳ tập trung, nếu lướt nhanh có thể không nhận diện kịp chiếc thùng rác nếu không nhìn quen không gian nhà bếp.", "takeaway": "Trước một cú ném hoặc cú hành động có tính mục tiêu, luôn cần 1 shot ngắn dưới 0.6s đặc tả đích đến (Target Shot) để não bộ khán giả ngầm tính toán đường bay của vật thể trước khi cú ném diễn ra.", "location": "Góc nhìn từ bếp ra thùng rác góc tủ", "lens_angle": "26mm f/1.8 (Camera 1x) • Over-The-Shoulder (OTS) POV Shot", "lighting_color": "Tối hơn không gian chính, tạo tương phản vùng tối góc bếp", "transition": "Cắt thẳng (Hard Cut) sang động tác vung tay ở Shot 07"}, {"id": 7, "shot_id": 7, "st_frame": 420, "en_frame": 464, "st_time": 7.0, "en_time": 7.75, "duration": 0.75, "headline": "Động Tác Vung Tay Ném Kẹo Thản Nhiên Kích Hoạt Cú Ném Định Mệnh (Casual Toss Trigger Shot)", "subject_action": "Bố vợ đứng thẳng dậy, tay cầm viên kẹo giơ cao ngang cằm rồi vung cổ tay ném nhẹ viên kẹo về phía góc thùng rác. Động tác cực kỳ thản nhiên và dứt khoát theo phản xạ vệ sinh thông thường: kẹo rơi xuống sàn thì phải vứt bỏ.", "pros": "Chuyển động vung tay mượt mà với đường cung ném tự nhiên (Parabolic Arc); khuôn mặt và ánh mắt bố vợ hướng trọn vẹn theo quỹ đạo ném tạo lực quán tính thị giác (Kinetic Continuity); nhịp cắt 0.75s dứt điểm ngay khi viên kẹo rời khỏi đầu ngón tay.", "cons": "Viên kẹo sau khi rời tay có kích thước nhỏ và tốc độ bay nhanh nên mắt thường khó bám theo quỹ đạo hạt kẹo nếu không có shot kế tiếp.", "takeaway": "Khi quay các hành động ném hoặc phát lực, hãy cắt cảnh ngay tại khoảnh khắc lực phát ra (Apex of Motion) và chuyển ngay sang điểm va chạm ở shot sau, không nên lưu lại phần dư chuyển động (follow-through) để giữ nhịp comic gãy gọn.", "location": "Cạnh bàn đảo bếp", "lens_angle": "26mm f/1.8 (Camera 1x) • Medium Upper Body Action Shot", "lighting_color": "Ánh sáng trần hắt bóng lên áo và cánh tay vung", "transition": "Cắt giật cực độ (Smash Cut) sang cú đớp kẹo kinh điển ở Shot 08"}, {"id": 8, "shot_id": 8, "st_frame": 465, "en_frame": 503, "st_time": 7.75, "en_time": 8.4, "duration": 0.65, "headline": "Cú Đớp Mồi Thần Thánh Của Chàng Rể Mai Phục Bên Thùng Rác (The Golden Gag: Aerial Snatch Climax)", "subject_action": "ĐỈNH ĐIỂM HÀI HƯỚC (Punchline Climax): Khung hình cắt giật cực gắt xuống sát mặt sàn trước thùng rác. Chàng rể Ju Seobang đã ngồi bệt từ lúc nào, ngửa hẳn đầu ra sau, mắt trợn tròn, mồm há to hết cỡ đớp trọn viên kẹo bay từ trên trời rơi xuống như một chú chim non háu đói! Hai tay anh chống ra sau để làm điểm tựa chịu lực.", "pros": "ĐỈNH CAO VIRAL & SLAPSTICK GAG: Khán giả ngỡ ngàng vì tưởng kẹo vào thùng rác, hóa ra lại rơi thẳng vào mồm con rể; góc máy cận hất từ trên xuống (High-to-Eye Dutch Angle) zoom sát vào biểu cảm há hốc miệng lầy lội không sợ mất hình tượng; cú Smash Cut chỉ vỏn vẹn 0.65s (38 frames) tạo ra cú sốc thị giác (Visual Shock) kích nổ tràng cười và buộc người xem phải replay hoặc tag ngay bạn bè/bố mẹ vợ vào xem.", "cons": "Tốc độ quá nhanh khiến một số khán giả lớn tuổi phải load lại lần 2 mới nhận ra con rể vừa đớp kẹo thay vì rác (tuy nhiên đây lại là thủ thuật giữ chân retention rate > 120%).", "takeaway": "Đây là công thức bí truyền của mọi video triệu view: 'Visual Misdirection + Subverted Expectation' (Đánh lừa hướng nhìn + Bẻ gãy kỳ vọng). Hãy để nhân vật hy sinh hình tượng một cách triệt để nhất trong đúng 0.5s - 0.7s để tạo ra ảnh chụp màn hình đắt giá nhất đời (Meme-worthy Frame).", "location": "Góc sàn trước thùng rác bếp", "lens_angle": "26mm f/1.8 (Camera 1x) • Close-Up Slapstick Gag Shot", "lighting_color": "Đèn bếp chiếu thẳng vào vòm họng mở to", "transition": "Cắt giật (Smash Cut) sang sự bàng hoàng của bố vợ ở Shot 09"}, {"id": 9, "shot_id": 9, "st_frame": 504, "en_frame": 716, "st_time": 8.4, "en_time": 11.95, "duration": 3.55, "headline": "Bàn Đảo Trống Trơn, Lia Máy Thần Tốc Về Sofa & Nụ Cười Vô Can Đầy Khiêu Khích (The Disappearance & Whip-Pan Innocence)", "subject_action": "Bố vợ quay trở lại bàn đảo bếp để lấy những gói bánh kẹo còn lại, nhưng kinh ngạc phát hiện mặt bàn đã trống trơn (anh con rể đã nhân lúc ông cúi nhặt kẹo lấy sạch cả mớ bánh kẹo khác). Ông khựng lại nhìn quanh. Ngay lập tức, máy quay lia thật nhanh (Whip-Pan) sang sofa: Chàng rể đã kịp dịch chuyển thần tốc về lại chỗ ngồi ban đầu, nhai kẹo tóp tép ngon lành, tay vuốt tóc vẻ bảnh bao vô tội, miệng mỉm cười đầy đắc thắng như chưa từng rời khỏi sofa dù chỉ nửa bước!", "pros": "Khép lại câu chuyện bằng kỹ thuật 'Teleportation Gag' (Dịch chuyển tức thời) - nét hài kinh điển của phim hoạt hình Tom & Jerry được tái hiện ngoài đời thực; cú Whip Pan chuyển dịch không gian năng động gắn kết sự ngơ ngác của nạn nhân và sự đắc thắng của thủ phạm; biểu cảm vuốt tóc nhai kẹo chóp chép mang tính khiêu khích hài hước cao, để lại dư vị sảng khoái kéo dài đến hết video.", "cons": "Cú lia máy whip-pan bằng tay có độ giật nhẹ và hơi mờ nét chuyển động (motion blur) ở giữa hành trình.", "takeaway": "Kết thúc một video hài không bao giờ dừng ở cú đấm chính (Punchline), mà phải có 'Hạ màn bồi đắp' (Aftermath Reaction): cho thấy hậu quả dở khóc dở cười của nạn nhân và thái độ trơ trẽn của thủ phạm để kích thích người xem comment tranh luận rôm rả.", "location": "Toàn bộ không gian đảo bếp kết nối phòng khách sofa", "lens_angle": "26mm f/1.8 (Camera 1x) • Medium Pan Shot with Whip-Pan Motion", "lighting_color": "Ánh sáng sinh hoạt gia đình chan hòa", "transition": "Giữ khung hình đến frame cuối cùng rồi loop lại đầu video"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ct.toFixed(2) + 's / ' + (player.duration ? player.duration.toFixed(2) : '11.95') + 's';
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 60 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById('shot-' + shotId);
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Cú Rơi Giày Biến Hình Khải Hoàn Môn (@parisexplorer) • Director's Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #0b0f17;
+    --bg-card: #131b2a;
+    --bg-card-hover: #1c273c;
+    --bg-sidebar: #0f1624;
+    --border-color: #202c42;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-amber: #f59e0b;
+    --accent-blue: #38bdf8;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-purple: #c084fc;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    font-size: 14.5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Top Navigation Header */
+.top-nav {
+    background: rgba(15, 22, 36, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+.nav-badge {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+    background: var(--bg-card-hover);
+}
+.nav-btn.primary {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    border-color: var(--accent-blue);
+}
+.nav-btn.primary:hover {
+    opacity: 0.9;
+}
+
+/* Main Layout Split Screen */
+.main-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Left Sticky Video Column */
+.player-column {
+    width: 420px;
+    flex-shrink: 0;
+    padding: 24px 16px 24px 24px;
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-right: 1px solid var(--border-color);
+}
+.video-frame-box {
+    background: #000;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    aspect-ratio: 9 / 16;
+    max-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-frame-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.player-controls {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.15s;
+}
+.ctrl-btn:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-blue);
+}
+.ctrl-btn.active {
+    background: rgba(56, 189, 248, 0.2);
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+.speed-pills {
+    display: flex;
+    gap: 4px;
+}
+.speed-pill {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+}
+.speed-pill.active {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    font-weight: 700;
+    border-color: var(--accent-blue);
+}
+
+/* Right Content Column */
+.content-column {
+    flex: 1;
+    padding: 24px 28px 40px 24px;
+    min-width: 0;
+}
+
+/* Header Banner */
+.report-header {
+    margin-bottom: 24px;
+}
+.meta-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.author-ig-badge {
+    background: rgba(244, 63, 94, 0.12);
+    color: #fb7185;
+    border: 1px solid rgba(244, 63, 94, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s;
+}
+.author-ig-badge:hover {
+    background: rgba(244, 63, 94, 0.25);
+    color: #fff;
+}
+.stat-pill {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: var(--font-mono);
+}
+.report-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.35;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+.report-summary {
+    color: var(--text-secondary);
+    font-size: 14.5px;
+    line-height: 1.7;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-amber);
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* View Mode Switcher */
+.view-switch-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 24px;
+}
+.tab-pills {
+    display: flex;
+    gap: 6px;
+}
+.tab-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+}
+.tab-btn.active {
+    background: var(--bg-sidebar);
+    border-color: var(--border-color);
+    color: var(--accent-blue);
+}
+.drawer-toggle-btn {
+    background: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.drawer-toggle-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+}
+
+/* Shot Cards (Detail View) */
+.shots-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 20px;
+    transition: all 0.2s ease;
+    scroll-margin-top: 80px;
+}
+.shot-card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+}
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.shot-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.shot-index-badge {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    font-weight: 800;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+}
+.time-jump-btn {
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    color: var(--accent-blue);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.15s;
+}
+.time-jump-btn:hover {
+    background: var(--accent-blue);
+    color: #0b0f17;
+}
+.dur-pill {
+    opacity: 0.8;
+    font-weight: 400;
+}
+.tech-tag {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11.5px;
+    font-family: var(--font-mono);
+}
+.shot-headline-box {
+    margin-bottom: 16px;
+}
+.shot-headline-title {
+    font-family: var(--font-heading);
+    font-size: 16.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.45;
+}
+
+/* Keyframes Grid (3 items) */
+.keyframes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+}
+.keyframe-item {
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+    background: #000;
+    aspect-ratio: 9 / 16;
+}
+.keyframe-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.keyframe-item:hover img {
+    transform: scale(1.03);
+}
+.kf-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+}
+.kf-badge.start { border-left: 3px solid var(--accent-blue); }
+.kf-badge.mid { border-left: 3px solid var(--accent-amber); }
+.kf-badge.end { border-left: 3px solid var(--accent-emerald); }
+
+/* Analysis 3 Blocks Grid */
+.analysis-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.critique-block {
+    background: rgba(15, 22, 36, 0.7);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 14px 16px;
+}
+.block-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 13.5px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-content {
+    font-size: 13.5px;
+    color: #cbd5e1;
+    line-height: 1.65;
+}
+.two-column-critique {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-col {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.critique-col.pro {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #a7f3d0;
+}
+.critique-col.con {
+    background: rgba(244, 63, 94, 0.08);
+    border: 1px solid rgba(244, 63, 94, 0.2);
+    color: #fecdd3;
+}
+.col-header {
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 12.5px;
+}
+.critique-col.pro .col-header { color: var(--accent-emerald); }
+.critique-col.con .col-header { color: var(--accent-rose); }
+
+.takeaway-block {
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-left: 4px solid var(--accent-amber);
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+.takeaway-title {
+    font-weight: 700;
+    color: var(--accent-amber);
+    font-size: 13px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-size: 13.5px;
+    color: #fef3c7;
+    line-height: 1.6;
+}
+
+/* Tech Specs Footer */
+.shot-specs-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.spec-label {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* Transitions Section */
+.trans-section {
+    margin-top: 16px;
+    background: var(--bg-sidebar);
+    border: 1px dashed var(--border-color);
+    border-radius: 10px;
+    padding: 12px;
+}
+.trans-header {
+    font-size: 12px;
+    color: var(--accent-blue);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.trans-img-wrap {
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+.trans-img-wrap img {
+    width: 100%;
+    display: block;
+}
+.zoom-indicator {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+/* Visual Grid View */
+.grid-view-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-blue);
+}
+.grid-thumb-box {
+    aspect-ratio: 9 / 16;
+    background: #000;
+    position: relative;
+}
+.grid-thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid-time-tag {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: var(--font-mono);
+}
+.grid-shot-tag {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: var(--accent-blue);
+    color: #0b0f17;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+}
+.grid-card-desc {
+    padding: 10px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Drawer Jump Menu */
+.drawer-backdrop {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    z-index: 200;
+    display: none;
+}
+.drawer-container {
+    position: fixed;
+    top: 0; right: -360px; width: 340px; height: 100%;
+    background: var(--bg-sidebar);
+    border-left: 1px solid var(--border-color);
+    z-index: 201;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+}
+.drawer-header {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.drawer-title {
+    font-weight: 700;
+    font-size: 15px;
+}
+.drawer-close {
+    background: none; border: none; color: var(--text-muted);
+    font-size: 20px; cursor: pointer;
+}
+.drawer-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.drawer-shot-row {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: all 0.15s;
+}
+.drawer-shot-row:hover {
+    border-color: var(--accent-blue);
+    background: var(--bg-card-hover);
+}
+.d-badge {
+    color: var(--accent-blue);
+    font-weight: 700;
+    font-size: 11px;
+    font-family: var(--font-mono);
+}
+.d-time {
+    font-size: 10.5px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+.d-title {
+    font-size: 12px;
+    color: var(--text-primary);
+    line-height: 1.35;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(5, 8, 15, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 300;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+}
+.lightbox-caption {
+    margin-top: 14px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .main-wrapper {
+        flex-direction: column;
+    }
+    .player-column {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 16px;
+        z-index: 90;
+        background: var(--bg-main);
+    }
+    .video-frame-box {
+        max-height: 380px;
+    }
+    .two-column-critique {
+        grid-template-columns: 1fr;
+    }
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Top Header Navigation -->
+<header class="top-nav">
+    <a href="https://vietndj.github.io/scene.html" class="nav-brand">
+        <span class="nav-badge">FEDU Master Series</span>
+        <span>Director's Shot Analysis</span>
+    </a>
+    <div class="nav-actions">
+        <a href="https://www.instagram.com/reel/DdJsv1AsGwt/?stkn=eXV3NHppdGRndXlq" target="_blank" class="nav-btn primary">
+            📸 Xem Instagram Gốc ↗
+        </a>
+        <a href="https://vietndj.github.io/scene.html" class="nav-btn">
+            🏛 Cổng Tra Cứu
+        </a>
+    </div>
+</header>
+
+<div class="main-wrapper">
+
+    <!-- Left Column: Video Sticky Player -->
+    <aside class="player-column">
+        <div class="video-frame-box">
+            <video id="mainVideo" playsinline preload="auto">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdJsv1AsGwt.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video thẻ video HTML5.
+            </video>
+        </div>
+
+        <div class="player-controls">
+            <div class="ctrl-row">
+                <button class="ctrl-btn" id="playPauseBtn" onclick="togglePlay()">▶ Phát Video</button>
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                <button class="ctrl-btn" id="muteBtn" onclick="toggleMute()">🔊</button>
+            </div>
+            <div class="ctrl-row">
+                <span style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Tốc Độ:</span>
+                <div class="speed-pills">
+                    <button class="speed-pill" onclick="setSpeed(0.25, this)">0.25x</button>
+                    <button class="speed-pill" onclick="setSpeed(0.5, this)">0.5x</button>
+                    <button class="speed-pill active" onclick="setSpeed(1.0, this)">1.0x</button>
+                    <button class="speed-pill" onclick="setSpeed(1.5, this)">1.5x</button>
+                    <button class="speed-pill" onclick="setSpeed(2.0, this)">2.0x</button>
+                </div>
+            </div>
+            <div class="ctrl-row" style="margin-top: 4px;">
+                <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdJsv1AsGwt.mp4" download class="ctrl-btn" style="flex: 1; justify-content: center; text-decoration: none;">
+                    ⬇ Tải Video Gốc MP4
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Right Column: Detail Content -->
+    <main class="content-column">
+        <header class="report-header">
+            <div class="meta-tags-flex">
+                <a href="https://www.instagram.com/reel/DdJsv1AsGwt/?stkn=eXV3NHppdGRndXlq" target="_blank" class="author-ig-badge">
+                    📸 @parisexplorer ↗
+                </a>
+                <span class="stat-pill">⏱ 8.47s</span>
+                <span class="stat-pill">🎞 3 Phân Cảnh</span>
+                <span class="stat-pill">📐 1080x1920 (9:16)</span>
+            </div>
+            <h1 class="report-title">Cú Rơi Giày Biến Hình Khải Hoàn Môn (@parisexplorer)</h1>
+            <div class="report-summary">
+                Phân tích nghệ thuật thị giác và tư duy bố cục điện ảnh từ cú chuyển cảnh giấu vết cắt bằng giày rơi che kín ống kính (Shoe Drop Lens Occlusion): Khai thác góc quay ngước mặt đất 90 độ (Worm's Eye View) tôn vinh trần vòm Khải Hoàn Môn Paris, kết hợp cú nhấc máy quét không gian (Dynamic Camera Pickup) mở ra góc walking selfie tự nhiên kết nối trực tiếp với khán giả.
+            </div>
+        </header>
+
+        <!-- View Switcher & Drawer Toggle -->
+        <div class="view-switch-bar">
+            <div class="tab-pills">
+                <button class="tab-btn active" id="btnDetail" onclick="switchView('detail')">📋 Chế Độ Chi Tiết</button>
+                <button class="tab-btn" id="btnGrid" onclick="switchView('grid')">🖼 Lưới Khung Hình</button>
+            </div>
+            <button class="drawer-toggle-btn" onclick="toggleDrawer(true)">
+                📑 Danh Sách Shot (3)
+            </button>
+        </div>
+
+        <!-- Detail Timeline Storyboard -->
+        <section class="shots-timeline" id="detailViewSection">
+            
+    <div class="shot-card" id="shot-1" data-start="0.0" data-end="2.63">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 01</span>
+                <button class="time-jump-btn" onclick="jumpToShot(1, 0.0)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    0.00s - 2.63s <span class="dur-pill">(2.63s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Ultra-wide 13mm (0.5x)</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Cú Rơi Giày Che Kín Cảm Biến (Shoe Drop Lens Occlusion): Khóa chặt thị giác bằng kỹ thuật che đen toàn khung hình (Blackout Match Cut)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_01_start.jpg', 'Shot 01 • Khung hình Đầu (0.00s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (0.00s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_01_mid.jpg', 'Shot 01 • Cao trào Giữa (1.31s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (1.31s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_01_end.jpg', 'Shot 01 • Khung hình Cuối (2.63s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (2.63s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Laurent Derossi trong trang phục thể thao đơn giản tại căn hộ Paris trần cao, đặt smartphone nằm ngửa trên sàn với camera góc siêu rộng hướng thẳng lên trần nhà. Anh tung chiếc giày da đen sang trọng lên không trung theo nhịp xuất hiện của chữ 'ARE YOU READY?' trước khi để chiếc giày rơi tự do che kín 100% cảm biến máy ảnh.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Bố cục Worm's Eye View 90° tận dụng trần nhà trắng tinh khiết làm canvas cực sạch để làm nổi bật typography tối giản; chuyển động rơi tự do của chiếc giày tạo gia tốc thị giác lôi cuốn, kích hoạt phản xạ giật mình tự nhiên của mắt người xem; cú che đen toàn phần (Blackout Occlusion) tạo điểm cắt cảnh vật lý hoàn hảo, giấu kín 100% vết chuyển tiếp không gian mà không cần kỹ xảo VFX.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Vùng trần nhà ở 1.5 giây đầu khá trống trải nếu người xem lướt quá nhanh chưa kịp đọc chữ; góc quay trực diện từ dưới sàn lên nếu nhân vật đứng quá gần dễ gây méo phối cảnh cơ thể (chân to hơn đầu).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Sử dụng bất kỳ vật thể đời thường nào (giày, mũ, cốc cà phê, lòng bàn tay) rơi thẳng hoặc che sát bề mặt ống kính để tạo cú chuyển cảnh vô hình (Invisible Occlusion Cut), biến căn phòng ngủ thành kỳ quan thế giới chỉ trong 1 frame duy nhất.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Meta Grid -->
+        <div class="shot-meta-grid">
+            <div class="meta-item">
+                <span class="m-lbl">📍 Bối cảnh</span>
+                <span class="m-val">Căn hộ trần cao tại Paris (Loft Interior)</span>
+            </div>
+            <div class="meta-item">
+                <span class="m-lbl">📐 Góc máy &amp; Tiêu cự</span>
+                <span class="m-val">Ultra-wide 13mm (0.5x) • 90° Floor Worm's Eye View</span>
+            </div>
+            <div class="meta-item">
+                <span class="m-lbl">☀️ Ánh sáng &amp; Tone màu</span>
+                <span class="m-val">Daylight khuếch tán qua cửa sổ trần (Skylight)</span>
+            </div>
+            <div class="meta-item">
+                <span class="m-lbl">⚡ Chuyển cảnh</span>
+                <span class="m-val">Blackout Lens Occlusion sang Shot 02</span>
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 02 • Blackout Lens Occlusion sang Shot 02</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/transitions/trans_01_to_02.jpg', '⚡ Chuyển Cảnh Sang Shot 02 • Blackout Lens Occlusion sang Shot 02')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/transitions/trans_01_to_02.jpg" alt="Transition Shot 01" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-2" data-start="2.67" data-end="6.0">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 02</span>
+                <button class="time-jump-btn" onclick="jumpToShot(2, 2.67)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    2.67s - 6.00s <span class="dur-pill">(3.33s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Ultra-wide 13mm (0.5x)</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Đối Xứng Trục Kiến Trúc Khải Hoàn Môn (Worm's Eye Symmetry): Bùng nổ thị giác bằng màn biến hình thời trang trên nền vòm đá lịch sử</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_02_start.jpg', 'Shot 02 • Khung hình Đầu (2.67s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (2.67s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_02_mid.jpg', 'Shot 02 • Cao trào Giữa (4.33s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (4.33s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_02_end.jpg', 'Shot 02 • Khung hình Cuối (6.00s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (6.00s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Ngay khi chiếc giày nhấc khỏi ống kính, bối cảnh lập tức đổi sang lòng Paris tráng lệ. Laurent xuất hiện trong bộ âu phục gấm dệt hoa văn tinh xảo, sải bước tự tin qua khung máy dưới vòm đá chạm khắc của Khải Hoàn Môn, ngước nhìn kỳ quan trong nắng chiều rồi cúi người lấy máy.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Tận dụng hoàn hảo tính đối xứng hình học và chiều sâu hun hút của vòm đá Arc de Triomphe làm khung viền tự nhiên khổng lồ bao bọc lấy nhân vật; độ tương phản cực mạnh giữa đồ tập thể thao ở shot 1 và âu phục quý ông ở shot 2 tạo hiệu ứng biến hình (Outfit Transformation) bùng nổ cảm xúc; ánh sáng hoàng hôn ấm áp (Golden Hour) đánh xiên vào một bên vòm đá tạo độ tương phản ấm - lạnh ngoạn mục với nền trời xanh.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Đặt máy ngửa trên mặt đá cuội công cộng có thể dễ dính bụi hoặc bóng người đi ngang qua; khi nhân vật bước ra xa tâm máy, chi tiết gương mặt có thể bị thu nhỏ so với quy mô khổng lồ của vòm đá.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Khi đến các địa danh kiến trúc có trần vòm vĩ đại (Khải Hoàn Môn, nhà thờ, mái sảnh bảo tàng), hãy đặt máy nằm ngửa dưới đất góc 90 độ để lấy được cả kiến trúc trần lẫn bầu trời, biến bối cảnh thành phông nền thời trang đẳng cấp thế giới.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Meta Grid -->
+        <div class="shot-meta-grid">
+            <div class="meta-item">
+                <span class="m-lbl">📍 Bối cảnh</span>
+                <span class="m-val">Dưới vòm trung tâm Khải Hoàn Môn (Arc de Triomphe, Paris)</span>
+            </div>
+            <div class="meta-item">
+                <span class="m-lbl">📐 Góc máy &amp; Tiêu cự</span>
+                <span class="m-val">Ultra-wide 13mm (0.5x) • Symmetrical Ground Worm's Eye</span>
+            </div>
+            <div class="meta-item">
+                <span class="m-lbl">☀️ Ánh sáng &amp; Tone màu</span>
+                <span class="m-val">Golden Hour hoàng hôn xiên ấm tương phản trời xanh</span>
+            </div>
+            <div class="meta-item">
+                <span class="m-lbl">⚡ Chuyển cảnh</span>
+                <span class="m-val">Dynamic Camera Pickup & Arc Tilt sang Shot 03</span>
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 03 • Dynamic Camera Pickup & Arc Tilt sang Shot 03</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/transitions/trans_02_to_03.jpg', '⚡ Chuyển Cảnh Sang Shot 03 • Dynamic Camera Pickup & Arc Tilt sang Shot 03')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/transitions/trans_02_to_03.jpg" alt="Transition Shot 02" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-3" data-start="6.03" data-end="8.47">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 03</span>
+                <button class="time-jump-btn" onclick="jumpToShot(3, 6.03)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    6.03s - 8.47s <span class="dur-pill">(2.44s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Wide 24mm (1x)</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Cú Nhấc Máy Quét Không Gian (Dynamic Camera Pickup & Tilt Reveal): Mở rộng toàn cảnh Paris và kết nối cảm xúc trực diện với khán giả</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_03_start.jpg', 'Shot 03 • Khung hình Đầu (6.03s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (6.03s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_03_mid.jpg', 'Shot 03 • Cao trào Giữa (7.25s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (7.25s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_03_end.jpg', 'Shot 03 • Khung hình Cuối (8.47s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (8.47s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Laurent nhấc bổng điện thoại khỏi mặt đất theo đường vòng cung chuyển động mượt mà, chuyển đổi ngoạn mục từ góc nhìn kiến trúc ngước lên sang góc selfie di chuyển (Walking Selfie). Anh tự tin bước đi, mỉm cười trực diện vào ống kính với toàn bộ Khải Hoàn Môn uy nghi tỏa sáng phía sau.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Cú nhấc máy vật lý (Camera Pickup) tạo chuyển động xoay không gian (Rotational Reveal) cực kỳ tự nhiên, đưa người xem từ góc nhìn tĩnh dưới đất lên tầm mắt tương tác trực diện; bố cục 1/3 lệch bên khéo léo chừa trọn vẹn nửa khung hình cho Khải Hoàn Môn hậu cảnh; ánh sáng ven chiều tà phản chiếu chất liệu vải gấm tôn vinh thần thái nhân vật.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Động tác nhấc máy bằng một tay tạo độ rung lắc tự nhiên (handheld jitter), cần giữ chắc cổ tay hoặc dùng tính năng chống rung quang học (Action Mode) để đường lia máy không bị xóc giật; hậu cảnh có một số người đi bộ lọt vào góc rìa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Thay vì cắt cảnh sang một góc máy mới, việc trực tiếp dùng tay nhấc camera từ mặt đất lên mặt mình tạo ra sự chuyển dịch không gian hữu cơ (Organic Spatial Transition), giúp video chân thực, gần gũi và giữ chân khán giả đến giây cuối cùng.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Meta Grid -->
+        <div class="shot-meta-grid">
+            <div class="meta-item">
+                <span class="m-lbl">📍 Bối cảnh</span>
+                <span class="m-val">Quảng trường Charles de Gaulle nhìn về Khải Hoàn Môn</span>
+            </div>
+            <div class="meta-item">
+                <span class="m-lbl">📐 Góc máy &amp; Tiêu cự</span>
+                <span class="m-val">Wide 24mm (1x) • Handheld Tracking Selfie / Dutch Angle</span>
+            </div>
+            <div class="meta-item">
+                <span class="m-lbl">☀️ Ánh sáng &amp; Tone màu</span>
+                <span class="m-val">Soft Ambient Daylight & Sunset Rim Light</span>
+            </div>
+            <div class="meta-item">
+                <span class="m-lbl">⚡ Chuyển cảnh</span>
+                <span class="m-val">Loop Hook về đầu video (Infinite Replay Loop)</span>
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Infinite Loop Hook • Loop Hook về đầu video (Infinite Replay Loop)</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/transitions/trans_03_to_01_loop.jpg', '⚡ Infinite Loop Hook • Loop Hook về đầu video (Infinite Replay Loop)')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/transitions/trans_03_to_01_loop.jpg" alt="Infinite Loop Hook" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+        </section>
+
+        <!-- Visual Grid View Section -->
+        <section class="grid-view-container" id="gridViewSection" style="display: none;">
+            
+    <div class="grid-card" onclick="jumpToShot(1, 0.0)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+            <div class="grid-time-tag">0.00s - 2.63s</div>
+            <div class="grid-shot-tag">Shot 01</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Cú Rơi Giày Che Kín Cảm Biến (Shoe Drop Lens Occlusion): Khóa chặt thị giác bằng kỹ thuật che đen toàn khung hình (Blackout Match Cut)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(2, 2.67)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+            <div class="grid-time-tag">2.67s - 6.00s</div>
+            <div class="grid-shot-tag">Shot 02</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Đối Xứng Trục Kiến Trúc Khải Hoàn Môn (Worm's Eye Symmetry): Bùng nổ thị giác bằng màn biến hình thời trang trên nền vòm đá lịch sử</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(3, 6.03)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+            <div class="grid-time-tag">6.03s - 8.47s</div>
+            <div class="grid-shot-tag">Shot 03</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Cú Nhấc Máy Quét Không Gian (Dynamic Camera Pickup & Tilt Reveal): Mở rộng toàn cảnh Paris và kết nối cảm xúc trực diện với khán giả</strong>
+        </div>
+    </div>
+    
+        </section>
+    </main>
+
+</div>
+
+<!-- Drawer Quick Jump Menu -->
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)"></div>
+<div class="drawer-container" id="drawerContainer">
+    <div class="drawer-header">
+        <span class="drawer-title">📑 Mục Lục Phân Cảnh (3)</span>
+        <button class="drawer-close" onclick="toggleDrawer(false)">✕</button>
+    </div>
+    <div class="drawer-list">
+        
+    <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0)">
+        <span class="d-badge">Shot 01</span>
+        <span class="d-time">0.00s - 2.63s (2.63s)</span>
+        <span class="d-title">Cú Rơi Giày Che Kín Cảm Biến (Shoe Drop Lens Occlusion): Khóa chặ...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(2, 2.67)">
+        <span class="d-badge">Shot 02</span>
+        <span class="d-time">2.67s - 6.00s (3.33s)</span>
+        <span class="d-title">Đối Xứng Trục Kiến Trúc Khải Hoàn Môn (Worm's Eye Symmetry): Bùng...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(3, 6.03)">
+        <span class="d-badge">Shot 03</span>
+        <span class="d-time">6.03s - 8.47s (2.44s)</span>
+        <span class="d-title">Cú Nhấc Máy Quét Không Gian (Dynamic Camera Pickup & Tilt Reveal)...</span>
+    </div>
+    
+    </div>
+</div>
+
+<!-- Lightbox Modal Darkroom -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+    <div class="lightbox-content">
+        <img id="lightboxImg" src="" alt="Zoom Image">
+    </div>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<script>
+const video = document.getElementById('mainVideo');
+const playBtn = document.getElementById('playPauseBtn');
+const muteBtn = document.getElementById('muteBtn');
+
+function togglePlay() {
+    if (video.paused) {
+        video.play();
+        playBtn.innerText = "⏸ Tạm Dừng";
+    } else {
+        video.pause();
+        playBtn.innerText = "▶ Phát Video";
+    }
+}
+
+function toggleMute() {
+    video.muted = !video.muted;
+    muteBtn.innerText = video.muted ? "🔇" : "🔊";
+}
+
+function setSpeed(rate, el) {
+    video.playbackRate = rate;
+    document.querySelectorAll('.speed-pill').forEach(b => b.classList.remove('active'));
+    if (el) el.classList.add('active');
+}
+
+function stepFrame(frames) {
+    video.pause();
+    playBtn.innerText = "▶ Phát Video";
+    video.currentTime = Math.max(0, video.currentTime + (frames * 0.0416));
+}
+
+function jumpToShot(shotId, startTime) {
+    video.currentTime = startTime;
+    video.play();
+    playBtn.innerText = "⏸ Tạm Dừng";
+    toggleDrawer(false);
+    
+    // Switch to detail view if in grid view
+    switchView('detail');
+    
+    const el = document.getElementById('shot-' + shotId);
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        el.style.borderColor = 'var(--accent-blue)';
+        setTimeout(() => {
+            el.style.borderColor = 'var(--border-color)';
+        }, 2000);
+    }
+}
+
+function switchView(mode) {
+    const detailSec = document.getElementById('detailViewSection');
+    const gridSec = document.getElementById('gridViewSection');
+    const btnDetail = document.getElementById('btnDetail');
+    const btnGrid = document.getElementById('btnGrid');
+
+    if (mode === 'grid') {
+        detailSec.style.display = 'none';
+        gridSec.style.display = 'grid';
+        btnGrid.classList.add('active');
+        btnDetail.classList.remove('active');
+    } else {
+        gridSec.style.display = 'none';
+        detailSec.style.display = 'flex';
+        btnDetail.classList.add('active');
+        btnGrid.classList.remove('active');
+    }
+}
+
+function toggleDrawer(open) {
+    const bd = document.getElementById('drawerBackdrop');
+    const dc = document.getElementById('drawerContainer');
+    if (open) {
+        bd.style.display = 'block';
+        dc.style.right = '0';
+    } else {
+        bd.style.display = 'none';
+        dc.style.right = '-360px';
+    }
+}
+
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').innerText = caption;
+    document.getElementById('lightboxModal').style.display = 'flex';
+}
+
+function closeLightbox(e) {
+    if (e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightboxModal').style.display = 'none';
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.getElementById('lightboxModal').style.display = 'none';
+        toggleDrawer(false);
+    }
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2786 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Neolumo • Phóng Sự Trị Liệu Da Liễu Y Khoa & Thẩm Mỹ • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / VIDEO Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 VIDEO DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">20 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Neolumo • Phóng Sự Trị Liệu Da Liễu Y Khoa & Thẩm Mỹ</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DdF-qr0s4Kk/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdF-qr0s4Kk.mp4" type="video/mp4">
+                <source src="DdF-qr0s4Kk.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 44.67s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Neolumo • Phóng Sự Trị Liệu Da Liễu Y Khoa & Thẩm Mỹ</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@neolumo.uralsk" onclick="handleCreatorClick(event, '@neolumo.uralsk', 'Neolumo Luxury Club (Uralsk, Kazakhstan)')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Neolumo Luxury Club (Uralsk, Kazakhstan) trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Neolumo Luxury Club (Uralsk, Kazakhstan)</strong>
+                        <span class="author-handle">(@neolumo.uralsk)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/DdF-qr0s4Kk/" target="_blank" class="author-link">Neolumo Luxury Club (Uralsk, Kazakhstan) (@neolumo.uralsk)</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 44.67s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Neolumo • Phóng Sự Trị Liệu Da Liễu Y Khoa & Thẩm Mỹ</h1>
+            <p class="overview-hero-desc">Bóc tách 20 phân cảnh mẫu mực về nghệ thuật quay phóng sự thương hiệu y tế cao cấp (Medical Aesthetic Storytelling) từ kênh @neolumo.uralsk (Phòng khám da liễu & thẩm mỹ y khoa Neolumo Luxury Club, Uralsk, Kazakhstan). Video thiết lập tiêu chuẩn quay dựng chuẩn mực kết hợp giữa khung hình tư vấn trực diện (Talking Head), cú máy dẫn dắt (Walk-and-Talk), kỹ thuật bóc tách vi mô Macro sủi da siêu âm, gắp nhân mụn vô trùng và liệu pháp đắp mặt nạ Alginate xanh ngọc làm dịu làn da.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Sterile Clinic Walk-and-Talk Hook • Talking Head Medical Authority • Ultrasonic Peeling Micro-Vibration • Sterile Gauze Mechanical Extraction • Uno Loop Macro Visual Proof • Alginate Soothing Gel Therapy • Minimalist Marble Luxury Outro</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">20 Shots • Nhịp trung bình 2.23s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">720x1280 • 30.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 2.53)">
+                    ▶ 0.00s - 2.53s (2.53s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hook Chuyển Động Bước Tới (Dolly In Walk): Tách Lớp Bác Sĩ Áo Trắng Trên Hành Lang Vô Trùng Trắng Tinh Khôi</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_01_mid.jpg', 'Shot 01 • Giữa (1.26s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.26s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_01_end.jpg', 'Shot 01 • Cuối (2.53s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (2.53s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bác sĩ da liễu trong trang phục blouse y khoa trắng tinh tươm cầm hồ sơ bệnh án sải bước thẳng về phía ống kính dọc theo hành lang phòng khám vô trùng dài hun hút. Dòng chữ typography nổi bật 'NEOLUMO LUXURY CLUB' và 'БЕТ ТАЗАЛАУ' (Làm sạch da mặt) xuất hiện ở 1/3 dưới khung hình.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Đường dẫn tuyến tính (leading lines) từ trần đèn LED và tường hành lang trắng hội tụ hút mắt nhìn trực diện vào bác sĩ; trang phục blouse trắng đồng bộ với bối cảnh toát lên tính y khoa chuẩn mực, sạch sẽ tuyệt đối.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh sáng trần có phần phẳng và hơi chói ở hậu cảnh, thiếu một chút tương phản viền (rim light) để tách rõ mái tóc đen của bác sĩ khỏi nền tường.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Mở đầu video dịch vụ y khoa bằng một cú đi thẳng vào camera (Walk-and-Talk Hook) tạo cảm giác chào đón trực tiếp, nâng cao sự tin cậy hơn nhiều so với việc đứng yên nói chuyện.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Standard 35mm f/2.8 • Steadicam Reverse Dolly Tracking</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Hành lang phòng khám chính Neolumo Luxury Club</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng trần vô trùng 5600K kết hợp đèn hành lang khuếch tán</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt không gian (Spatial Cut) sang Shot 02</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Cắt không gian (Spatial Cut) sang Shot 02</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 2.53, 5.9)">
+                    ▶ 2.53s - 5.90s (3.37s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố Cục Bán Thân Đón Tiếp 45° Tại Ngưỡng Cửa: Nụ Cười Ấm Áp Phá Vỡ Rào Cản Tâm Lý Lo Ngại Khám Da</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_02_start.jpg', 'Shot 02 • Đầu (2.53s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (2.53s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_02_mid.jpg', 'Shot 02 • Giữa (4.21s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (4.21s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_02_end.jpg', 'Shot 02 • Cuối (5.90s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.90s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bác sĩ dừng lại ở ngưỡng cửa phòng điều trị, xoay người góc nghiêng 45 độ, mỉm cười tự nhiên và bắt đầu cất lời giải thích về tầm quan trọng của việc làm sạch da chuyên sâu. Text phụ đề 'Процедура' (Quy trình) bổ trợ thông điệp.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Biểu cảm khuôn mặt thân thiện, cởi mở xóa bỏ cảm giác căng thẳng lạnh lùng của bệnh viện; góc nghiêng 45 độ giúp cơ thể mềm mại hơn góc quay thẳng đứng thô ráp.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng 3.37s hơi dài so với nhịp reel trung bình nếu không có thêm chuyển động zoom nhẹ (push-in) để giữ nhịp kịch tính.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi đưa bác sĩ lên hình, hãy chọn góc quay tại cửa phòng hoặc không gian mở thay vì ngồi bàn cứng nhắc, tạo tâm lý thoải mái như một buổi trò chuyện cá nhân.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/2.0 • Medium Close-Up 45° Angle</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Cửa phòng trị liệu da liễu số 1</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng môi trường khuếch tán mềm</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Cut đổi bối cảnh sang Shot 03</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Match Cut đổi bối cảnh sang Shot 03</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 5.9, 7.8)">
+                    ▶ 5.90s - 7.80s (1.90s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Quay Cận Bác Sĩ Nghiêng 45° Thao Tác: Khóa Mỏ Neo Chuyên Nghiệp Với Găng Tay Y Tế Xanh Vô Trùng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_03_start.jpg', 'Shot 03 • Đầu (5.90s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.90s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_03_mid.jpg', 'Shot 03 • Giữa (6.85s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.85s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_03_end.jpg', 'Shot 03 • Cuối (7.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (7.80s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Chuyển cảnh vào phòng điều trị chuyên biệt. Khách hàng nằm trên giường spa với mũ trùm đầu màu xanh y tế. Bác sĩ đeo găng tay nitrile xanh vô trùng, nhẹ nhàng dùng các đầu ngón tay massage và thoa đều gel làm mềm lớp biểu bì.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bác sĩ duy trì ánh nhìn tập trung tuyệt đối vào khuôn mặt bệnh nhân; màu xanh của găng tay và mũ trùm tương phản rõ nét với làn da và chiếc áo trắng, tạo điểm nhấn hành động.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy hơi cao khiến phần thân dưới của bệnh nhân chiếm diện tích lớn ở góc phải dưới khung hình.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Trong video thẩm mỹ/spa, các chi tiết bảo hộ (găng tay vô trùng, mũ trùm tóc, khăn phủ y tế) là 'bằng chứng thị giác ngầm' quan trọng nhất để khách hàng tin tưởng vào độ an toàn vệ sinh.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/1.8 • High-Angle Treatment Medium Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Giường trị liệu phòng khám da liễu</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn LED phòng khám kết hợp đèn rọi điểm</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Jump Cut đổi góc sang Shot 04</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Jump Cut đổi góc sang Shot 04</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 7.8, 11.93)">
+                    ▶ 7.80s - 11.93s (4.13s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thiết Lập Góc Tư Vấn Chuyên Gia (Talking Head Consultation): Ghế Bành Tối Giản & Cây Xanh Tạo Cảm Giác Thư Thái</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_04_start.jpg', 'Shot 04 • Đầu (7.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (7.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_04_mid.jpg', 'Shot 04 • Giữa (9.87s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.87s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_04_end.jpg', 'Shot 04 • Cuối (11.93s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (11.93s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bác sĩ ngồi trên chiếc ghế bành bọc nỉ màu be sang trọng, tay cầm bảng hồ sơ bệnh án, trực tiếp giải thích về cơ chế da tích tụ bã nhờn và lý do tại sao chăm sóc tại nhà là không đủ. Phía sau là vách kính sọc và cây lá xanh mát.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bối cảnh chuyển đổi sang góc lounge tư vấn giúp video có 'nhịp thở', không bị ngợp bởi các cảnh thủ thuật liên tục; màu be của ghế và màu xanh của lá cây cân bằng cảm xúc thư giãn.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh sáng tạt từ cửa sổ bên phải hơi chênh so với đèn bên trái, tạo một vệt bóng đổ nhẹ ở sườn mặt phía sau.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Cấu trúc kịch bản phóng sự y khoa cần xen kẽ các đoạn 'Chuyên gia phân tích nguyên lý' giữa các đoạn 'Thị phạm quy trình' để người xem vừa hiểu bản chất khoa học vừa thấy hấp dẫn thị giác.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm f/2.8 • Eye-Level Talking Head Medium Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc tư vấn VIP Lounge</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Natural Daylight + Softbox Fill Light</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt dựng chuyển tiếp (Cutaway to Action) sang Shot 05</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Cắt dựng chuyển tiếp (Cutaway to Action) sang Shot 05</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 11.93, 13.33)">
+                    ▶ 11.93s - 13.33s (1.40s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Kỹ Thuật Ủ Màng Bọc Sinh Học Giãn Nở Lỗ Chân Lông: Trực Quan Hóa Bước Chuẩn Bị Da Y Khoa Chuẩn Mực</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_05_start.jpg', 'Shot 05 • Đầu (11.93s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (11.93s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_05_mid.jpg', 'Shot 05 • Giữa (12.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (12.63s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_05_end.jpg', 'Shot 05 • Cuối (13.33s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (13.33s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy cận từ phía trên đỉnh đầu. Khuôn mặt bệnh nhân được ủ một lớp màng bọc trong suốt chứa tinh chất làm mềm cồi mụn, hai mắt được che chắn chu đáo bằng miếng bông tròn vô trùng. Bác sĩ cẩn thận điều chỉnh mép màng bọc.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Miếng bông đậy mắt và màng bọc trong suốt tạo hình ảnh đặc thù của liệu trình da liễu chuyên nghiệp, cho thấy sự nâng niu và quy trình bài bản; phản xạ ánh sáng trên màng bọc tạo độ bóng bẩy.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Nhịp cắt 1.4 giây hơi nhanh, chưa kịp cho người xem thấy chuyển động bác sĩ bắt đầu gỡ màng bọc.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đừng bỏ qua các bước chuẩn bị (Pre-treatment) như đắp bông mắt, ủ ấm hay thoa dưỡng chất làm mềm, vì đó là những bước thể hiện tay nghề nâng niu khách hàng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/2.0 • Top-Down Angle</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Giường trị liệu da liễu</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn phẫu thuật điều chỉnh cường độ 4500K</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Action Cut sang Shot 06</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Action Cut sang Shot 06</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 13.33, 14.63)">
+                    ▶ 13.33s - 14.63s (1.30s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Sủi Da Siêu Âm Tầng Nông (Ultrasonic Peeling): Nhịp Cắt Chéo Đón Thao Tác Đầu Máy Rung Kim Loại</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_06_start.jpg', 'Shot 06 • Đầu (13.33s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (13.33s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_06_mid.jpg', 'Shot 06 • Giữa (13.98s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (13.98s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_06_end.jpg', 'Shot 06 • Cuối (14.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (14.63s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bác sĩ cầm tay cầm máy sủi da siêu âm màu trắng, lưỡi kim loại lướt nhẹ trên vùng trán và má bệnh nhân, đẩy trôi lớp màng sừng và tế bào chết.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Độ nghiêng góc máy chéo tạo cảm giác chuyển động trôi chảy; bệnh nhân nhắm mắt thư giãn cho thấy liệu trình hoàn toàn êm ái, không gây đau đớn.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy chưa đủ cận để nhìn thấy các hạt sương li ti bắn ra từ đầu sủi siêu âm.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay thiết bị công nghệ làm đẹp, hãy chọn góc máy đón đầu hướng di chuyển của đầu máy để khán giả cảm nhận được bề mặt da đang được 'là phẳng' sạch sẽ.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 85mm Telephoto f/2.8 • Diagonal Profile Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Giường trị liệu da liễu</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Direct Overhead Examination Light</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Whip Transition nhẹ sang Shot 07</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Whip Transition nhẹ sang Shot 07</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 14.63, 15.9)">
+                    ▶ 14.63s - 15.90s (1.27s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố Cục 2 Lớp (Two-Shot Over Shoulder): Bác Sĩ Chuyên Chú Thao Tác vs Khách Hàng Thư Giãn Thả Lỏng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_07_start.jpg', 'Shot 07 • Đầu (14.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (14.63s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_07_mid.jpg', 'Shot 07 • Giữa (15.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (15.27s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_07_end.jpg', 'Shot 07 • Cuối (15.90s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (15.90s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình trung cận lấy cả nửa thân trên của bác sĩ đang chăm chú cúi nhìn và bệnh nhân đang nằm yên tĩnh. Tay phải cầm máy sủi, tay trái cầm bông gạc sẵn sàng lau sạch cặn bẩn bóc tách.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục 2 người thể hiện mối quan hệ chăm sóc tận tâm; ánh mắt chăm chú của người thực hiện tạo cảm giác trách nhiệm và độ chính xác cao.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Không gian phía trên đầu bác sĩ hơi thừa khoảng trống (excess headroom).</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đan xen góc cận thao tác với góc trung lấy cả khuôn mặt bác sĩ để người xem không chỉ thấy máy móc mà còn cảm nhận được sự tỉ mỉ của con người thực hiện.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/2.2 • Medium Angle Over Shoulder</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Giường trị liệu da liễu</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Medical Ambient Warm & Cool Combo</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Push-In Transition sang Shot 08</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Push-In Transition sang Shot 08</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 15.9, 17.47)">
+                    ▶ 15.90s - 17.47s (1.57s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Macro Cực Cận Sủi Sạch Bã Nhờn Cánh Mũi: Bằng Chứng Thị Giác Đắt Giá Về Sức Mạnh Làm Sạch Tầng Sâu</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_08_start.jpg', 'Shot 08 • Đầu (15.90s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (15.90s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_08_mid.jpg', 'Shot 08 • Giữa (16.68s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (16.68s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_08_end.jpg', 'Shot 08 • Cuối (17.47s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (17.47s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy Macro phóng đại cực cận vùng cánh mũi và gò má. Đầu lưỡi sủi kim loại rung sóng siêu âm tiếp xúc với lớp nước trên bề mặt da, tạo luồng sương mịn đánh bật dầu thừa từ sâu trong nang lông.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Điểm sáng đắt giá nhất của phân đoạn làm sạch cơ học: người xem nhìn thấy rõ ràng từng giọt sương và bã nhờn bị cuốn đi, tạo cảm giác thỏa mãn thị giác (Visual ASMR) cực mạnh.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Độ sâu trường ảnh (DoF) quá mỏng khiến phần đuôi cánh mũi bị mờ nét nhẹ do rung tay máy.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Video spa bắt buộc phải có ít nhất 1-2 shot Macro cực cận bắt trọn khoảnh khắc 'chất bẩn bị tống khứ' hoặc 'dưỡng chất thẩm thấu', đây là cú hích tâm lý quyết định khiến khách hàng muốn đặt lịch ngay.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 100mm Macro f/2.8 • Ultra Close-Up Macro</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Cận cảnh vùng cánh mũi</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Focused Ring Light CRI 95+</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt ngắt nhịp (Pacing Cut) về Shot 09</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 09 • Cắt ngắt nhịp (Pacing Cut) về Shot 09</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_08_to_09.jpg?v=2', 'Chuyển cảnh Shot 08 sang Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_08_to_09.jpg?v=2" alt="Transition 8 to 9" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-9">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 09</span>
+                <button class="shot-time-btn" onclick="jumpToShot(9, 17.47, 19.0)">
+                    ▶ 17.47s - 19.00s (1.53s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Nhịp Cắt Xen Kẽ Củng Cố Kiến Thức (Cutaway Anchor): Bác Sĩ Nhấn Mạnh Tầm Quan Trọng Của Bước Lấy Nhân Mụn</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_09_start.jpg', 'Shot 09 • Đầu (17.47s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (17.47s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_09_mid.jpg', 'Shot 09 • Giữa (18.23s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (18.23s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_09_end.jpg', 'Shot 09 • Cuối (19.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (19.00s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Chuyển cảnh nhanh về bác sĩ ngồi tại ghế bành tư vấn, ánh mắt kiên định, cử chỉ tay dứt khoát khi phân tích vì sao sủi siêu âm chỉ là bước đệm trước khi phải can thiệp nặn mụn cơ học.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cắt đúng lúc khán giả vừa xem xong shot sủi bã nhờn, tạo sự tiếp nối logic hoàn hảo giữa hình ảnh thực tế và lời giải thích chuyên môn.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khung hình lặp lại góc máy của Shot 04 mà chưa có sự thay đổi về cỡ cảnh (zoom-in chặt hơn).</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sử dụng kỹ thuật L-Cut / J-Cut để tiếng nói chuyên gia bắt đầu trước 0.3s khi hình ảnh chuyển cảnh, giúp mạch chuyển mượt mà tự nhiên hơn.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm f/2.8 • Medium Talking Head</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc tư vấn VIP Lounge</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Daylight + Soft Fill</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Cut hành động sang Shot 10</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 10 • Match Cut hành động sang Shot 10</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_09_to_10.jpg?v=2', 'Chuyển cảnh Shot 09 sang Shot 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_09_to_10.jpg?v=2" alt="Transition 9 to 10" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-10">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 10</span>
+                <button class="shot-time-btn" onclick="jumpToShot(10, 19.0, 20.97)">
+                    ▶ 19.00s - 20.97s (1.97s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thao Tác Nặn Mụn Cơ Học Bằng Gạc Vô Trùng: Chuẩn Xác Về Lực & Bảo Vệ Da Khỏi Thâm Sẹo</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_10_start.jpg', 'Shot 10 • Đầu (19.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (19.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_10_mid.jpg', 'Shot 10 • Giữa (19.98s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (19.98s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_10_end.jpg', 'Shot 10 • Cuối (20.97s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (20.97s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy cận từ phía trên. Hai ngón tay trỏ của bác sĩ bọc gạc y tế vô trùng, đặt lực nhẹ nhàng hai bên chân mụn trên gò má và mũi bệnh nhân để đẩy cồi mụn ra ngoài mà không làm dập mô xung quanh.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bác sĩ dùng gạc thay vì bóp tay trần, trực quan hóa kỹ thuật nặn mụn y khoa chuẩn bệnh viện; làn da bệnh nhân được kiểm soát độ ửng đỏ tối thiểu.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ngón tay bác sĩ hơi che khuất một phần điểm mụn đang nặn ở góc nhìn camera.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi ghi hình thao tác nặn mụn, cần căn chỉnh góc camera lệch 30 độ so với hướng tay bác sĩ để ngón tay không che mất tâm điểm cồi mụn được đẩy lên.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 85mm f/2.8 • High-Angle Treatment Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Giường trị liệu da liễu</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Shadowless Examination Lamp</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Zoom In sang Shot 11</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 11 • Zoom In sang Shot 11</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_10_to_11.jpg?v=2', 'Chuyển cảnh Shot 10 sang Shot 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_10_to_11.jpg?v=2" alt="Transition 10 to 11" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-11">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 11</span>
+                <button class="shot-time-btn" onclick="jumpToShot(11, 20.97, 22.7)">
+                    ▶ 20.97s - 22.70s (1.73s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Macro Cực Cận Cây Nặn Mụn Uno Loop: Điểm Chạm Đỉnh Cao Của Phân Đoạn Trị Liệu Cơ Học</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_11_start.jpg', 'Shot 11 • Đầu (20.97s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (20.97s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_11_mid.jpg', 'Shot 11 • Giữa (21.84s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (21.84s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_11_end.jpg', 'Shot 11 • Cuối (22.70s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (22.70s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Máy quay áp sát cực cận. Đầu khuyên kim loại nhỏ (Uno Loop) được ấn với góc nghiêng hoàn hảo xung quanh lỗ chân lông bít tắc, cặn bã nhờn và cồi mụn trồi lên ngay tức khắc trước sự chứng kiến trực quan của người xem.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cảnh quay 'ăn tiền' nhất về tính xác thực: không dùng diễn xuất, không kỹ xảo; thỏa mãn trọn vẹn tâm lý muốn thấy mụn được giải phóng của người có vấn đề về da.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Hình ảnh có tính chất chân thực cao có thể gây cảm giác hơi rợn với một số người xem quá nhạy cảm nếu không chuyển cảnh nhanh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Giữ thời lượng shot nặn mụn cận cảnh dưới 2 giây để vừa đủ tạo ấn tượng hiệu quả mà không gây cảm giác phản cảm hay khó chịu cho người xem.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 100mm Macro f/4.0 • Extreme Close-Up Macro</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Cận cảnh vùng mũi & trán</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> High-CRI Clinical LED Spot</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Spatial Cut sang Shot 12</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 12 • Spatial Cut sang Shot 12</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_11_to_12.jpg?v=2', 'Chuyển cảnh Shot 11 sang Shot 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_11_to_12.jpg?v=2" alt="Transition 11 to 12" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-12">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 12</span>
+                <button class="shot-time-btn" onclick="jumpToShot(12, 22.7, 24.67)">
+                    ▶ 22.70s - 24.67s (1.97s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố Cục Toàn Cảnh Phòng Điều Trị Góc 3/4 Sau Lưng: Khẳng Định Vị Thế & Không Gian Y Khoa Cao Cấp</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_12_start.jpg', 'Shot 12 • Đầu (22.70s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (22.70s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_12_mid.jpg', 'Shot 12 • Giữa (23.69s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (23.69s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_12_end.jpg', 'Shot 12 • Cuối (24.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (24.67s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Máy quay lùi xa, bắt trọn tư thế làm việc tập trung cao độ của bác sĩ dưới ánh đèn vòm y tế chuyên dụng. Khách hàng nằm thư giãn trong không gian phòng khám ốp tường đá sang trọng và rèm cửa hiện đại.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Mở rộng khung hình giúp người xem giải tỏa căng thẳng sau cú quay macro cận mụn; khẳng định quy mô phòng khám tiêu chuẩn 5 sao chứ không phải spa nhỏ lẻ.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Đèn phẫu thuật phía trên tạo một vệt chói sáng mạnh ở góc trên bên phải khung hình.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Quy tắc nhịp thở điện ảnh: Sau 2 cú quay Macro nghẹt thở, bắt buộc phải trả về một cú quay toàn/trung cảnh để giải phóng thị giác và định hình lại không gian tổng thể.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 28mm Wide f/2.8 • Full Treatment Room Environment</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Phòng trị liệu cao cấp Neolumo</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ambient + Surgical Focus Light</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Cut sang Shot 13</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 13 • Match Cut sang Shot 13</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_12_to_13.jpg?v=2', 'Chuyển cảnh Shot 12 sang Shot 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_12_to_13.jpg?v=2" alt="Transition 12 to 13" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-13">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 13</span>
+                <button class="shot-time-btn" onclick="jumpToShot(13, 24.67, 26.43)">
+                    ▶ 24.67s - 26.43s (1.77s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cận Cảnh Hoàn Tất Làm Sạch Vùng Chữ T: Đôi Bàn Tay Khéo Léo Lau Sạch Tinh Tươm Bằng Bông Kháng Khuẩn</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_13_start.jpg', 'Shot 13 • Đầu (24.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (24.67s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_13_mid.jpg', 'Shot 13 • Giữa (25.55s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (25.55s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_13_end.jpg', 'Shot 13 • Cuối (26.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_13_end.jpg" alt="Shot 13 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (26.43s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bác sĩ dùng hai miếng bông tròn tẩm dung dịch sát khuẩn y tế nhẹ nhàng lau sạch toàn bộ vùng mũi, trán và cằm, khép lại giai đoạn làm sạch cơ học để chuẩn bị cho giai đoạn phục hồi.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Động tác lau vuốt mềm mại, êm dịu tạo cảm giác dễ chịu; chuyển tiếp mượt mà từ hành động can thiệp (nặn mụn) sang hành động chăm sóc làm dịu.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy lặp lại góc nhìn của Shot 10.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Hãy cho thấy bước lau sạch và làm dịu ngay sau khi nặn mụn để trấn an khách hàng rằng da sẽ được sát khuẩn và chăm sóc cẩn thận ngay lập tức.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/2.2 • Treatment Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Giường trị liệu da liễu</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Soft Diffused Lighting</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Action Cut sang Shot 14</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 14 • Action Cut sang Shot 14</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_13_to_14.jpg?v=2', 'Chuyển cảnh Shot 13 sang Shot 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_13_to_14.jpg?v=2" alt="Transition 13 to 14" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-14">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 14</span>
+                <button class="shot-time-btn" onclick="jumpToShot(14, 26.43, 28.23)">
+                    ▶ 26.43s - 28.23s (1.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Trải Đều Mặt Nạ Băng Lạnh Alginate Màu Xanh Ngọc Bích: Kích Hoạt Cảm Giác Tươi Mát & Làm Dịu Làn Da</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_14_start.jpg', 'Shot 14 • Đầu (26.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_14_start.jpg" alt="Shot 14 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (26.43s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_14_mid.jpg', 'Shot 14 • Giữa (27.33s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_14_mid.jpg" alt="Shot 14 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (27.33s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_14_end.jpg', 'Shot 14 • Cuối (28.23s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_14_end.jpg" alt="Shot 14 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (28.23s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bác sĩ cầm bát đựng mặt nạ Alginate / dẻo màu xanh ngọc bích (Turquoise Blue) rực rỡ, dùng thìa gạt silicone thoa một lớp gel dày mọng nước lên trán và hai bên má đang hơi ửng hồng của bệnh nhân.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Màu xanh ngọc mát mắt của lớp mặt nạ tạo sự đối lập hoàn hảo với làn da ửng đỏ, mang lại cảm giác làm dịu tức thì (Soothing Visual Therapy); chất gel sóng sánh bắt sáng cực kỳ đẹp mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Bát đựng mặt nạ bị che khuất một phần ở mép trên khung hình.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Trong video spa, màu sắc của sản phẩm đắp mặt (màu xanh ngọc, vàng gold hoặc hồng thạch) là vũ khí thị giác tuyệt vời để kích thích dopamine và tạo ấn tượng thư giãn cao cấp.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/1.8 • Medium Close-Up Slanted Angle</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Giường trị liệu da liễu</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> High-Key Soft Lighting</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut to Wide sang Shot 15</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 15 • Cut to Wide sang Shot 15</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_14_to_15.jpg?v=2', 'Chuyển cảnh Shot 14 sang Shot 15')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_14_to_15.jpg?v=2" alt="Transition 14 to 15" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-15">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 15</span>
+                <button class="shot-time-btn" onclick="jumpToShot(15, 28.23, 30.27)">
+                    ▶ 28.23s - 30.27s (2.03s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Toàn Cảnh Phủ Kín Mặt Nạ Khóa Ẩm Toàn Diện: Trạng Thái Thư Giãn Tối Đa Của Khách Hàng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_15_start.jpg', 'Shot 15 • Đầu (28.23s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_15_start.jpg" alt="Shot 15 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (28.23s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_15_mid.jpg', 'Shot 15 • Giữa (29.25s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_15_mid.jpg" alt="Shot 15 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (29.25s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_15_end.jpg', 'Shot 15 • Cuối (30.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_15_end.jpg" alt="Shot 15 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (30.27s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Toàn bộ khuôn mặt khách hàng được phủ đều lớp mặt nạ màu xanh ngọc bích mịn màng, khách hàng đan hai tay thảnh thơi trên bụng, bác sĩ đang tỉ mỉ vuốt phẳng lớp viền mặt nạ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân xứng, khách hàng thể hiện trạng thái thư giãn tuyệt đối; lớp mặt nạ phủ kín tạo cảm giác liệu trình được chăm sóc trọn gói đến từng milimet da.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Máy xông hơi bên góc trái hơi chiếm tầm nhìn một chút.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đưa hình ảnh khách hàng đan tay thư giãn để truyền thông điệp ngầm: 'Bạn chỉ cần nằm xuống nghỉ ngơi, mọi vấn đề về da đã có bác sĩ giải quyết'.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm f/2.8 • Full Treatment Bed Wide Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Giường trị liệu da liễu</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Balanced Ambient LED Light</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Dolly Pan sang Shot 16</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 16 • Dolly Pan sang Shot 16</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_15_to_16.jpg?v=2', 'Chuyển cảnh Shot 15 sang Shot 16')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_15_to_16.jpg?v=2" alt="Transition 15 to 16" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-16">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 16</span>
+                <button class="shot-time-btn" onclick="jumpToShot(16, 30.27, 32.03)">
+                    ▶ 30.27s - 32.03s (1.77s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Máy Nghiêng Thiết Bị Y Tế Hiện Đại: Tôn Vinh Tiêu Chuẩn Công Nghệ & Độ Tinh Khiết Của Phòng Khám</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_16_start.jpg', 'Shot 16 • Đầu (30.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_16_start.jpg" alt="Shot 16 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (30.27s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_16_mid.jpg', 'Shot 16 • Giữa (31.15s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_16_mid.jpg" alt="Shot 16 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (31.15s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_16_end.jpg', 'Shot 16 • Cuối (32.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_16_end.jpg" alt="Shot 16 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (32.03s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc quay toàn cảnh từ phía chân giường hắt lên, để lộ hệ thống máy móc hỗ trợ hiện đại: máy xông tinh chất, đèn chiếu sinh học và kệ xe đẩy phân tầng ngăn nắp.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thiết lập bối cảnh phòng khám chuẩn quốc tế, giúp khách hàng nhận định được giá trị vượt trội so với các spa nhỏ tự phát.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Dây cắm điện của thiết bị ở góc dưới sàn nhà nếu được giấu gọn hơn sẽ hoàn hảo.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đừng chỉ quay người và mặt nạ; hãy luôn có ít nhất một cú máy khoe được giàn máy móc công nghệ cao để bảo chứng cho giá dịch vụ tương xứng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm Wide f/2.8 • Low-Angle Wide Room Establishing</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Không gian phòng máy công nghệ cao</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Studio Ambient Light</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Close Cut sang Shot 17</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 17 • Close Cut sang Shot 17</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_16_to_17.jpg?v=2', 'Chuyển cảnh Shot 16 sang Shot 17')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_16_to_17.jpg?v=2" alt="Transition 16 to 17" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-17">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 17</span>
+                <button class="shot-time-btn" onclick="jumpToShot(17, 32.03, 33.2)">
+                    ▶ 32.03s - 33.20s (1.17s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cận Cảnh Đường Nét Chăm Chút Cuối Cùng: Sự Tỉ Mỉ Và Tận Tâm Thể Hiện Trong Từng Thao Tác Nhỏ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_17_start.jpg', 'Shot 17 • Đầu (32.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_17_start.jpg" alt="Shot 17 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (32.03s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_17_mid.jpg', 'Shot 17 • Giữa (32.62s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_17_mid.jpg" alt="Shot 17 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (32.62s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_17_end.jpg', 'Shot 17 • Cuối (33.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_17_end.jpg" alt="Shot 17 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (33.20s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy cận lấy nét vào khuôn mặt thanh tú và ánh mắt tập trung của bác sĩ khi dùng que gạt miết nhẹ mép mặt nạ vùng cằm dưới.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tôn vinh vẻ đẹp chuyên môn và sự cẩn trọng của người bác sĩ thẩm mỹ; nhịp cắt ngắn tạo cảm giác liệu trình sắp hoàn tất viên mãn.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh sáng chiếu vào mặt bác sĩ hơi tối hơn một chút so với các cảnh trước.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khép lại quy trình bằng một cú quay cận người làm để khẳng định: Chất lượng dịch vụ phụ thuộc vào sự tận tâm và bàn tay khéo léo của người chuyên gia.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 85mm f/2.0 • Close-Up Focus on Esthetician</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Giường trị liệu da liễu</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Warm Directed Light</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cutaway sang Shot 18</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 18 • Cutaway sang Shot 18</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_17_to_18.jpg?v=2', 'Chuyển cảnh Shot 17 sang Shot 18')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_17_to_18.jpg?v=2" alt="Transition 17 to 18" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-18">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 18</span>
+                <button class="shot-time-btn" onclick="jumpToShot(18, 33.2, 34.43)">
+                    ▶ 33.20s - 34.43s (1.23s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Chuyển Cảnh Trở Lại Ghế Tư Vấn: Chuẩn Bị Bước Vào Thông Điệp Kêu Gọi Hành Động (CTA Prep)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_18_start.jpg', 'Shot 18 • Đầu (33.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_18_start.jpg" alt="Shot 18 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (33.20s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_18_mid.jpg', 'Shot 18 • Giữa (33.81s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_18_mid.jpg" alt="Shot 18 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (33.81s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_18_end.jpg', 'Shot 18 • Cuối (34.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_18_end.jpg" alt="Shot 18 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (34.43s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bác sĩ xuất hiện trở lại tại chiếc ghế bành sang trọng trong góc tư vấn, nở nụ cười tự tin và bắt đầu đưa ra lời khuyên y khoa tổng kết.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Đóng khung nhân vật hoàn chỉnh, chuẩn bị tâm lý người xem đón nhận lời khuyên quan trọng nhất ở cuối video.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng 1.23s là bước đệm chuyển tiếp ngắn trước khi máy zoom vào ở Shot 19.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Trước khi đưa ra lời kêu gọi hành động (CTA), hãy đưa nhân vật trở lại trạng thái giao tiếp 1-1 với khán giả để tạo sự gắn kết trực tiếp.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm f/2.8 • Medium Shot Consultation Nook</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc tư vấn VIP Lounge</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Soft Warm Fill Light</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Push-In Jump Cut sang Shot 19</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 19 • Push-In Jump Cut sang Shot 19</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_18_to_19.jpg?v=2', 'Chuyển cảnh Shot 18 sang Shot 19')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_18_to_19.jpg?v=2" alt="Transition 18 to 19" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-19">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 19</span>
+                <button class="shot-time-btn" onclick="jumpToShot(19, 34.43, 43.67)">
+                    ▶ 34.43s - 43.67s (9.23s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Lời Kêu Gọi Đặt Lịch Tư Vấn Trực Tiếp (Direct Call to Action): Giao Tiếp Ánh Mắt Chân Thành & Bảng Hồ Sơ Bệnh Án</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_19_start.jpg', 'Shot 19 • Đầu (34.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_19_start.jpg" alt="Shot 19 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (34.43s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_19_mid.jpg', 'Shot 19 • Giữa (39.05s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_19_mid.jpg" alt="Shot 19 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (39.05s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_19_end.jpg', 'Shot 19 • Cuối (43.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_19_end.jpg" alt="Shot 19 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (43.67s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cỡ cảnh cận trung (Medium Close-Up). Bác sĩ ngồi thẳng lưng, tay cầm bảng tài liệu, ánh mắt nhìn thẳng vào ống kính giao tiếp với người xem: Khuyên khách hàng hãy để bác sĩ kiểm tra tình trạng da thực tế và inbox ngay số hotline/WhatsApp để nhận phác đồ riêng biệt.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thời lượng hơn 9 giây đủ dài để bác sĩ truyền tải trọn vẹn thông điệp tư vấn một cách điềm đạm, không vội vã; giọng điệu chân thành, ánh mắt tin cậy kích hoạt hành động đặt lịch.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cảnh kéo dài 9 giây liên tục mà không có text chữ động (animated typography) nhấn mạnh số điện thoại hoặc địa chỉ phòng khám.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đoạn kết CTA của video dịch vụ cần để chuyên gia nhìn thẳng ống kính nói chuyện, tạo cảm giác được tư vấn riêng tư và thúc đẩy hành động inbox ngay.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/2.2 • Medium Close-Up Punch-In</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc tư vấn VIP Lounge</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Daylight + Ring Light Catchlight</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Dissolve sang Shot 20</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 20 • Dissolve sang Shot 20</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_19_to_20.jpg?v=2', 'Chuyển cảnh Shot 19 sang Shot 20')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_19_to_20.jpg?v=2" alt="Transition 19 to 20" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-20">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 20</span>
+                <button class="shot-time-btn" onclick="jumpToShot(20, 43.67, 44.67)">
+                    ▶ 43.67s - 44.67s (1.00s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Outro Nhận Diện Thương Hiệu Đẳng Cấp: Nền Vân Đá Cẩm Thạch Sang Trọng Khắc Sâu Logo NEOLUMO LUXURY CLUB</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_20_start.jpg', 'Shot 20 • Đầu (43.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_20_start.jpg" alt="Shot 20 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (43.67s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_20_mid.jpg', 'Shot 20 • Giữa (44.17s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_20_mid.jpg" alt="Shot 20 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (44.17s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_20_end.jpg', 'Shot 20 • Cuối (44.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_20_end.jpg" alt="Shot 20 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (44.67s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Màn hình kết thúc xuất hiện logo tối giản màu xám đậm 'NEOLUMO LUXURY CLUB' trên nền hoa văn đá marble trắng ngà thanh lịch, đóng dấu nhận diện thương hiệu y khoa cao cấp.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thiết kế tối giản, tinh tế, giữ vững đẳng cấp của một Medical Luxury Club; không chèn ép quá nhiều thông tin rườm rà.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thiếu hiển thị địa chỉ chi tiết hoặc hotline ở ngay tấm card này (mặc dù đã có trong caption bài viết).</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Outro kết thúc của thương hiệu cao cấp nên giữ tinh thần tối giản sang trọng (Clean & Minimalist Luxury), để lại dư âm chuyên nghiệp cho người xem.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Motion Graphic Card • Marble Texture Surface</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Brand Card Graphic</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Subtle Vignette Gradient</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Freeze Frame Outro</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_20_to_01_loop.jpg?v=2', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/transitions/trans_20_to_01_loop.jpg?v=2" alt="Loop Transition" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 2.53)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Hook Chuyển Động Bước Tới (Dolly In Walk): Tách Lớp Bác Sĩ Áo Trắng Trên Hành Lang Vô Trùng Trắng Tinh Khôi</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 2.53, 5.9)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 2.53s</span>
+            </div>
+            <div class="grid-card-body">Bố Cục Bán Thân Đón Tiếp 45° Tại Ngưỡng Cửa: Nụ Cười Ấm Áp Phá Vỡ Rào Cản Tâm Lý Lo Ngại Khám Da</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 5.9, 7.8)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 5.90s</span>
+            </div>
+            <div class="grid-card-body">Góc Quay Cận Bác Sĩ Nghiêng 45° Thao Tác: Khóa Mỏ Neo Chuyên Nghiệp Với Găng Tay Y Tế Xanh Vô Trùng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 7.8, 11.93)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 7.80s</span>
+            </div>
+            <div class="grid-card-body">Thiết Lập Góc Tư Vấn Chuyên Gia (Talking Head Consultation): Ghế Bành Tối Giản & Cây Xanh Tạo Cảm Giác Thư Thái</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 11.93, 13.33)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 11.93s</span>
+            </div>
+            <div class="grid-card-body">Kỹ Thuật Ủ Màng Bọc Sinh Học Giãn Nở Lỗ Chân Lông: Trực Quan Hóa Bước Chuẩn Bị Da Y Khoa Chuẩn Mực</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 13.33, 14.63)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 13.33s</span>
+            </div>
+            <div class="grid-card-body">Sủi Da Siêu Âm Tầng Nông (Ultrasonic Peeling): Nhịp Cắt Chéo Đón Thao Tác Đầu Máy Rung Kim Loại</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 14.63, 15.9)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 14.63s</span>
+            </div>
+            <div class="grid-card-body">Bố Cục 2 Lớp (Two-Shot Over Shoulder): Bác Sĩ Chuyên Chú Thao Tác vs Khách Hàng Thư Giãn Thả Lỏng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 15.9, 17.47)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 15.90s</span>
+            </div>
+            <div class="grid-card-body">Macro Cực Cận Sủi Sạch Bã Nhờn Cánh Mũi: Bằng Chứng Thị Giác Đắt Giá Về Sức Mạnh Làm Sạch Tầng Sâu</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(9, 17.47, 19.0)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <span class="grid-thumb-badge">Shot 09 • 17.47s</span>
+            </div>
+            <div class="grid-card-body">Nhịp Cắt Xen Kẽ Củng Cố Kiến Thức (Cutaway Anchor): Bác Sĩ Nhấn Mạnh Tầm Quan Trọng Của Bước Lấy Nhân Mụn</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(10, 19.0, 20.97)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+                <span class="grid-thumb-badge">Shot 10 • 19.00s</span>
+            </div>
+            <div class="grid-card-body">Thao Tác Nặn Mụn Cơ Học Bằng Gạc Vô Trùng: Chuẩn Xác Về Lực & Bảo Vệ Da Khỏi Thâm Sẹo</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(11, 20.97, 22.7)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+                <span class="grid-thumb-badge">Shot 11 • 20.97s</span>
+            </div>
+            <div class="grid-card-body">Macro Cực Cận Cây Nặn Mụn Uno Loop: Điểm Chạm Đỉnh Cao Của Phân Đoạn Trị Liệu Cơ Học</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(12, 22.7, 24.67)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+                <span class="grid-thumb-badge">Shot 12 • 22.70s</span>
+            </div>
+            <div class="grid-card-body">Bố Cục Toàn Cảnh Phòng Điều Trị Góc 3/4 Sau Lưng: Khẳng Định Vị Thế & Không Gian Y Khoa Cao Cấp</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(13, 24.67, 26.43)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_13_mid.jpg" alt="Shot 13" loading="lazy">
+                <span class="grid-thumb-badge">Shot 13 • 24.67s</span>
+            </div>
+            <div class="grid-card-body">Cận Cảnh Hoàn Tất Làm Sạch Vùng Chữ T: Đôi Bàn Tay Khéo Léo Lau Sạch Tinh Tươm Bằng Bông Kháng Khuẩn</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(14, 26.43, 28.23)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_14_mid.jpg" alt="Shot 14" loading="lazy">
+                <span class="grid-thumb-badge">Shot 14 • 26.43s</span>
+            </div>
+            <div class="grid-card-body">Trải Đều Mặt Nạ Băng Lạnh Alginate Màu Xanh Ngọc Bích: Kích Hoạt Cảm Giác Tươi Mát & Làm Dịu Làn Da</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(15, 28.23, 30.27)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_15_mid.jpg" alt="Shot 15" loading="lazy">
+                <span class="grid-thumb-badge">Shot 15 • 28.23s</span>
+            </div>
+            <div class="grid-card-body">Toàn Cảnh Phủ Kín Mặt Nạ Khóa Ẩm Toàn Diện: Trạng Thái Thư Giãn Tối Đa Của Khách Hàng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(16, 30.27, 32.03)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_16_mid.jpg" alt="Shot 16" loading="lazy">
+                <span class="grid-thumb-badge">Shot 16 • 30.27s</span>
+            </div>
+            <div class="grid-card-body">Góc Máy Nghiêng Thiết Bị Y Tế Hiện Đại: Tôn Vinh Tiêu Chuẩn Công Nghệ & Độ Tinh Khiết Của Phòng Khám</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(17, 32.03, 33.2)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_17_mid.jpg" alt="Shot 17" loading="lazy">
+                <span class="grid-thumb-badge">Shot 17 • 32.03s</span>
+            </div>
+            <div class="grid-card-body">Cận Cảnh Đường Nét Chăm Chút Cuối Cùng: Sự Tỉ Mỉ Và Tận Tâm Thể Hiện Trong Từng Thao Tác Nhỏ</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(18, 33.2, 34.43)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_18_mid.jpg" alt="Shot 18" loading="lazy">
+                <span class="grid-thumb-badge">Shot 18 • 33.20s</span>
+            </div>
+            <div class="grid-card-body">Chuyển Cảnh Trở Lại Ghế Tư Vấn: Chuẩn Bị Bước Vào Thông Điệp Kêu Gọi Hành Động (CTA Prep)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(19, 34.43, 43.67)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_19_mid.jpg" alt="Shot 19" loading="lazy">
+                <span class="grid-thumb-badge">Shot 19 • 34.43s</span>
+            </div>
+            <div class="grid-card-body">Lời Kêu Gọi Đặt Lịch Tư Vấn Trực Tiếp (Direct Call to Action): Giao Tiếp Ánh Mắt Chân Thành & Bảng Hồ Sơ Bệnh Án</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(20, 43.67, 44.67)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_20_mid.jpg" alt="Shot 20" loading="lazy">
+                <span class="grid-thumb-badge">Shot 20 • 43.67s</span>
+            </div>
+            <div class="grid-card-body">Outro Nhận Diện Thương Hiệu Đẳng Cấp: Nền Vân Đá Cẩm Thạch Sang Trọng Khắc Sâu Logo NEOLUMO LUXURY CLUB</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "mid_frame": 37, "en_frame": 75, "st_time": 0.0, "mid_time": 1.23, "en_time": 2.53, "duration": 2.53, "headline": "Hook Chuyển Động Bước Tới (Dolly In Walk): Tách Lớp Bác Sĩ Áo Trắng Trên Hành Lang Vô Trùng Trắng Tinh Khôi", "subject_action": "Bác sĩ da liễu trong trang phục blouse y khoa trắng tinh tươm cầm hồ sơ bệnh án sải bước thẳng về phía ống kính dọc theo hành lang phòng khám vô trùng dài hun hút. Dòng chữ typography nổi bật 'NEOLUMO LUXURY CLUB' và 'БЕТ ТАЗАЛАУ' (Làm sạch da mặt) xuất hiện ở 1/3 dưới khung hình.", "pros": "Đường dẫn tuyến tính (leading lines) từ trần đèn LED và tường hành lang trắng hội tụ hút mắt nhìn trực diện vào bác sĩ; trang phục blouse trắng đồng bộ với bối cảnh toát lên tính y khoa chuẩn mực, sạch sẽ tuyệt đối.", "cons": "Ánh sáng trần có phần phẳng và hơi chói ở hậu cảnh, thiếu một chút tương phản viền (rim light) để tách rõ mái tóc đen của bác sĩ khỏi nền tường.", "takeaway": "Mở đầu video dịch vụ y khoa bằng một cú đi thẳng vào camera (Walk-and-Talk Hook) tạo cảm giác chào đón trực tiếp, nâng cao sự tin cậy hơn nhiều so với việc đứng yên nói chuyện.", "specs": {"lens": "Standard 35mm f/2.8 • Steadicam Reverse Dolly Tracking", "location": "Hành lang phòng khám chính Neolumo Luxury Club", "lighting": "Ánh sáng trần vô trùng 5600K kết hợp đèn hành lang khuếch tán", "transition": "Cắt không gian (Spatial Cut) sang Shot 02"}}, {"id": 2, "st_frame": 76, "mid_frame": 126, "en_frame": 176, "st_time": 2.53, "mid_time": 4.2, "en_time": 5.9, "duration": 3.37, "headline": "Bố Cục Bán Thân Đón Tiếp 45° Tại Ngưỡng Cửa: Nụ Cười Ấm Áp Phá Vỡ Rào Cản Tâm Lý Lo Ngại Khám Da", "subject_action": "Bác sĩ dừng lại ở ngưỡng cửa phòng điều trị, xoay người góc nghiêng 45 độ, mỉm cười tự nhiên và bắt đầu cất lời giải thích về tầm quan trọng của việc làm sạch da chuyên sâu. Text phụ đề 'Процедура' (Quy trình) bổ trợ thông điệp.", "pros": "Biểu cảm khuôn mặt thân thiện, cởi mở xóa bỏ cảm giác căng thẳng lạnh lùng của bệnh viện; góc nghiêng 45 độ giúp cơ thể mềm mại hơn góc quay thẳng đứng thô ráp.", "cons": "Thời lượng 3.37s hơi dài so với nhịp reel trung bình nếu không có thêm chuyển động zoom nhẹ (push-in) để giữ nhịp kịch tính.", "takeaway": "Khi đưa bác sĩ lên hình, hãy chọn góc quay tại cửa phòng hoặc không gian mở thay vì ngồi bàn cứng nhắc, tạo tâm lý thoải mái như một buổi trò chuyện cá nhân.", "specs": {"lens": "50mm f/2.0 • Medium Close-Up 45° Angle", "location": "Cửa phòng trị liệu da liễu số 1", "lighting": "Ánh sáng môi trường khuếch tán mềm", "transition": "Match Cut đổi bối cảnh sang Shot 03"}}, {"id": 3, "st_frame": 177, "mid_frame": 205, "en_frame": 233, "st_time": 5.9, "mid_time": 6.83, "en_time": 7.8, "duration": 1.9, "headline": "Góc Quay Cận Bác Sĩ Nghiêng 45° Thao Tác: Khóa Mỏ Neo Chuyên Nghiệp Với Găng Tay Y Tế Xanh Vô Trùng", "subject_action": "Chuyển cảnh vào phòng điều trị chuyên biệt. Khách hàng nằm trên giường spa với mũ trùm đầu màu xanh y tế. Bác sĩ đeo găng tay nitrile xanh vô trùng, nhẹ nhàng dùng các đầu ngón tay massage và thoa đều gel làm mềm lớp biểu bì.", "pros": "Bác sĩ duy trì ánh nhìn tập trung tuyệt đối vào khuôn mặt bệnh nhân; màu xanh của găng tay và mũ trùm tương phản rõ nét với làn da và chiếc áo trắng, tạo điểm nhấn hành động.", "cons": "Góc máy hơi cao khiến phần thân dưới của bệnh nhân chiếm diện tích lớn ở góc phải dưới khung hình.", "takeaway": "Trong video thẩm mỹ/spa, các chi tiết bảo hộ (găng tay vô trùng, mũ trùm tóc, khăn phủ y tế) là 'bằng chứng thị giác ngầm' quan trọng nhất để khách hàng tin tưởng vào độ an toàn vệ sinh.", "specs": {"lens": "50mm f/1.8 • High-Angle Treatment Medium Close-Up", "location": "Giường trị liệu phòng khám da liễu", "lighting": "Đèn LED phòng khám kết hợp đèn rọi điểm", "transition": "Jump Cut đổi góc sang Shot 04"}}, {"id": 4, "st_frame": 234, "mid_frame": 295, "en_frame": 357, "st_time": 7.8, "mid_time": 9.83, "en_time": 11.93, "duration": 4.13, "headline": "Thiết Lập Góc Tư Vấn Chuyên Gia (Talking Head Consultation): Ghế Bành Tối Giản & Cây Xanh Tạo Cảm Giác Thư Thái", "subject_action": "Bác sĩ ngồi trên chiếc ghế bành bọc nỉ màu be sang trọng, tay cầm bảng hồ sơ bệnh án, trực tiếp giải thích về cơ chế da tích tụ bã nhờn và lý do tại sao chăm sóc tại nhà là không đủ. Phía sau là vách kính sọc và cây lá xanh mát.", "pros": "Bối cảnh chuyển đổi sang góc lounge tư vấn giúp video có 'nhịp thở', không bị ngợp bởi các cảnh thủ thuật liên tục; màu be của ghế và màu xanh của lá cây cân bằng cảm xúc thư giãn.", "cons": "Ánh sáng tạt từ cửa sổ bên phải hơi chênh so với đèn bên trái, tạo một vệt bóng đổ nhẹ ở sườn mặt phía sau.", "takeaway": "Cấu trúc kịch bản phóng sự y khoa cần xen kẽ các đoạn 'Chuyên gia phân tích nguyên lý' giữa các đoạn 'Thị phạm quy trình' để người xem vừa hiểu bản chất khoa học vừa thấy hấp dẫn thị giác.", "specs": {"lens": "35mm f/2.8 • Eye-Level Talking Head Medium Shot", "location": "Góc tư vấn VIP Lounge", "lighting": "Natural Daylight + Softbox Fill Light", "transition": "Cắt dựng chuyển tiếp (Cutaway to Action) sang Shot 05"}}, {"id": 5, "st_frame": 358, "mid_frame": 378, "en_frame": 399, "st_time": 11.93, "mid_time": 12.6, "en_time": 13.33, "duration": 1.4, "headline": "Kỹ Thuật Ủ Màng Bọc Sinh Học Giãn Nở Lỗ Chân Lông: Trực Quan Hóa Bước Chuẩn Bị Da Y Khoa Chuẩn Mực", "subject_action": "Góc máy cận từ phía trên đỉnh đầu. Khuôn mặt bệnh nhân được ủ một lớp màng bọc trong suốt chứa tinh chất làm mềm cồi mụn, hai mắt được che chắn chu đáo bằng miếng bông tròn vô trùng. Bác sĩ cẩn thận điều chỉnh mép màng bọc.", "pros": "Miếng bông đậy mắt và màng bọc trong suốt tạo hình ảnh đặc thù của liệu trình da liễu chuyên nghiệp, cho thấy sự nâng niu và quy trình bài bản; phản xạ ánh sáng trên màng bọc tạo độ bóng bẩy.", "cons": "Nhịp cắt 1.4 giây hơi nhanh, chưa kịp cho người xem thấy chuyển động bác sĩ bắt đầu gỡ màng bọc.", "takeaway": "Đừng bỏ qua các bước chuẩn bị (Pre-treatment) như đắp bông mắt, ủ ấm hay thoa dưỡng chất làm mềm, vì đó là những bước thể hiện tay nghề nâng niu khách hàng.", "specs": {"lens": "50mm f/2.0 • Top-Down Angle", "location": "Giường trị liệu da liễu", "lighting": "Đèn phẫu thuật điều chỉnh cường độ 4500K", "transition": "Action Cut sang Shot 06"}}, {"id": 6, "st_frame": 400, "mid_frame": 419, "en_frame": 438, "st_time": 13.33, "mid_time": 13.97, "en_time": 14.63, "duration": 1.3, "headline": "Sủi Da Siêu Âm Tầng Nông (Ultrasonic Peeling): Nhịp Cắt Chéo Đón Thao Tác Đầu Máy Rung Kim Loại", "subject_action": "Bác sĩ cầm tay cầm máy sủi da siêu âm màu trắng, lưỡi kim loại lướt nhẹ trên vùng trán và má bệnh nhân, đẩy trôi lớp màng sừng và tế bào chết.", "pros": "Độ nghiêng góc máy chéo tạo cảm giác chuyển động trôi chảy; bệnh nhân nhắm mắt thư giãn cho thấy liệu trình hoàn toàn êm ái, không gây đau đớn.", "cons": "Góc máy chưa đủ cận để nhìn thấy các hạt sương li ti bắn ra từ đầu sủi siêu âm.", "takeaway": "Khi quay thiết bị công nghệ làm đẹp, hãy chọn góc máy đón đầu hướng di chuyển của đầu máy để khán giả cảm nhận được bề mặt da đang được 'là phẳng' sạch sẽ.", "specs": {"lens": "85mm Telephoto f/2.8 • Diagonal Profile Close-Up", "location": "Giường trị liệu da liễu", "lighting": "Direct Overhead Examination Light", "transition": "Whip Transition nhẹ sang Shot 07"}}, {"id": 7, "st_frame": 439, "mid_frame": 457, "en_frame": 476, "st_time": 14.63, "mid_time": 15.23, "en_time": 15.9, "duration": 1.27, "headline": "Bố Cục 2 Lớp (Two-Shot Over Shoulder): Bác Sĩ Chuyên Chú Thao Tác vs Khách Hàng Thư Giãn Thả Lỏng", "subject_action": "Khung hình trung cận lấy cả nửa thân trên của bác sĩ đang chăm chú cúi nhìn và bệnh nhân đang nằm yên tĩnh. Tay phải cầm máy sủi, tay trái cầm bông gạc sẵn sàng lau sạch cặn bẩn bóc tách.", "pros": "Bố cục 2 người thể hiện mối quan hệ chăm sóc tận tâm; ánh mắt chăm chú của người thực hiện tạo cảm giác trách nhiệm và độ chính xác cao.", "cons": "Không gian phía trên đầu bác sĩ hơi thừa khoảng trống (excess headroom).", "takeaway": "Đan xen góc cận thao tác với góc trung lấy cả khuôn mặt bác sĩ để người xem không chỉ thấy máy móc mà còn cảm nhận được sự tỉ mỉ của con người thực hiện.", "specs": {"lens": "50mm f/2.2 • Medium Angle Over Shoulder", "location": "Giường trị liệu da liễu", "lighting": "Medical Ambient Warm & Cool Combo", "transition": "Push-In Transition sang Shot 08"}}, {"id": 8, "st_frame": 477, "mid_frame": 500, "en_frame": 523, "st_time": 15.9, "mid_time": 16.67, "en_time": 17.47, "duration": 1.57, "headline": "Macro Cực Cận Sủi Sạch Bã Nhờn Cánh Mũi: Bằng Chứng Thị Giác Đắt Giá Về Sức Mạnh Làm Sạch Tầng Sâu", "subject_action": "Góc máy Macro phóng đại cực cận vùng cánh mũi và gò má. Đầu lưỡi sủi kim loại rung sóng siêu âm tiếp xúc với lớp nước trên bề mặt da, tạo luồng sương mịn đánh bật dầu thừa từ sâu trong nang lông.", "pros": "Điểm sáng đắt giá nhất của phân đoạn làm sạch cơ học: người xem nhìn thấy rõ ràng từng giọt sương và bã nhờn bị cuốn đi, tạo cảm giác thỏa mãn thị giác (Visual ASMR) cực mạnh.", "cons": "Độ sâu trường ảnh (DoF) quá mỏng khiến phần đuôi cánh mũi bị mờ nét nhẹ do rung tay máy.", "takeaway": "Video spa bắt buộc phải có ít nhất 1-2 shot Macro cực cận bắt trọn khoảnh khắc 'chất bẩn bị tống khứ' hoặc 'dưỡng chất thẩm thấu', đây là cú hích tâm lý quyết định khiến khách hàng muốn đặt lịch ngay.", "specs": {"lens": "100mm Macro f/2.8 • Ultra Close-Up Macro", "location": "Cận cảnh vùng cánh mũi", "lighting": "Focused Ring Light CRI 95+", "transition": "Cắt ngắt nhịp (Pacing Cut) về Shot 09"}}, {"id": 9, "st_frame": 524, "mid_frame": 546, "en_frame": 569, "st_time": 17.47, "mid_time": 18.2, "en_time": 19.0, "duration": 1.53, "headline": "Nhịp Cắt Xen Kẽ Củng Cố Kiến Thức (Cutaway Anchor): Bác Sĩ Nhấn Mạnh Tầm Quan Trọng Của Bước Lấy Nhân Mụn", "subject_action": "Chuyển cảnh nhanh về bác sĩ ngồi tại ghế bành tư vấn, ánh mắt kiên định, cử chỉ tay dứt khoát khi phân tích vì sao sủi siêu âm chỉ là bước đệm trước khi phải can thiệp nặn mụn cơ học.", "pros": "Cắt đúng lúc khán giả vừa xem xong shot sủi bã nhờn, tạo sự tiếp nối logic hoàn hảo giữa hình ảnh thực tế và lời giải thích chuyên môn.", "cons": "Khung hình lặp lại góc máy của Shot 04 mà chưa có sự thay đổi về cỡ cảnh (zoom-in chặt hơn).", "takeaway": "Sử dụng kỹ thuật L-Cut / J-Cut để tiếng nói chuyên gia bắt đầu trước 0.3s khi hình ảnh chuyển cảnh, giúp mạch chuyển mượt mà tự nhiên hơn.", "specs": {"lens": "35mm f/2.8 • Medium Talking Head", "location": "Góc tư vấn VIP Lounge", "lighting": "Daylight + Soft Fill", "transition": "Match Cut hành động sang Shot 10"}}, {"id": 10, "st_frame": 570, "mid_frame": 599, "en_frame": 628, "st_time": 19.0, "mid_time": 19.97, "en_time": 20.97, "duration": 1.97, "headline": "Thao Tác Nặn Mụn Cơ Học Bằng Gạc Vô Trùng: Chuẩn Xác Về Lực & Bảo Vệ Da Khỏi Thâm Sẹo", "subject_action": "Góc máy cận từ phía trên. Hai ngón tay trỏ của bác sĩ bọc gạc y tế vô trùng, đặt lực nhẹ nhàng hai bên chân mụn trên gò má và mũi bệnh nhân để đẩy cồi mụn ra ngoài mà không làm dập mô xung quanh.", "pros": "Bác sĩ dùng gạc thay vì bóp tay trần, trực quan hóa kỹ thuật nặn mụn y khoa chuẩn bệnh viện; làn da bệnh nhân được kiểm soát độ ửng đỏ tối thiểu.", "cons": "Ngón tay bác sĩ hơi che khuất một phần điểm mụn đang nặn ở góc nhìn camera.", "takeaway": "Khi ghi hình thao tác nặn mụn, cần căn chỉnh góc camera lệch 30 độ so với hướng tay bác sĩ để ngón tay không che mất tâm điểm cồi mụn được đẩy lên.", "specs": {"lens": "85mm f/2.8 • High-Angle Treatment Close-Up", "location": "Giường trị liệu da liễu", "lighting": "Shadowless Examination Lamp", "transition": "Zoom In sang Shot 11"}}, {"id": 11, "st_frame": 629, "mid_frame": 654, "en_frame": 680, "st_time": 20.97, "mid_time": 21.8, "en_time": 22.7, "duration": 1.73, "headline": "Macro Cực Cận Cây Nặn Mụn Uno Loop: Điểm Chạm Đỉnh Cao Của Phân Đoạn Trị Liệu Cơ Học", "subject_action": "Máy quay áp sát cực cận. Đầu khuyên kim loại nhỏ (Uno Loop) được ấn với góc nghiêng hoàn hảo xung quanh lỗ chân lông bít tắc, cặn bã nhờn và cồi mụn trồi lên ngay tức khắc trước sự chứng kiến trực quan của người xem.", "pros": "Cảnh quay 'ăn tiền' nhất về tính xác thực: không dùng diễn xuất, không kỹ xảo; thỏa mãn trọn vẹn tâm lý muốn thấy mụn được giải phóng của người có vấn đề về da.", "cons": "Hình ảnh có tính chất chân thực cao có thể gây cảm giác hơi rợn với một số người xem quá nhạy cảm nếu không chuyển cảnh nhanh.", "takeaway": "Giữ thời lượng shot nặn mụn cận cảnh dưới 2 giây để vừa đủ tạo ấn tượng hiệu quả mà không gây cảm giác phản cảm hay khó chịu cho người xem.", "specs": {"lens": "100mm Macro f/4.0 • Extreme Close-Up Macro", "location": "Cận cảnh vùng mũi & trán", "lighting": "High-CRI Clinical LED Spot", "transition": "Spatial Cut sang Shot 12"}}, {"id": 12, "st_frame": 681, "mid_frame": 710, "en_frame": 739, "st_time": 22.7, "mid_time": 23.67, "en_time": 24.67, "duration": 1.97, "headline": "Bố Cục Toàn Cảnh Phòng Điều Trị Góc 3/4 Sau Lưng: Khẳng Định Vị Thế & Không Gian Y Khoa Cao Cấp", "subject_action": "Máy quay lùi xa, bắt trọn tư thế làm việc tập trung cao độ của bác sĩ dưới ánh đèn vòm y tế chuyên dụng. Khách hàng nằm thư giãn trong không gian phòng khám ốp tường đá sang trọng và rèm cửa hiện đại.", "pros": "Mở rộng khung hình giúp người xem giải tỏa căng thẳng sau cú quay macro cận mụn; khẳng định quy mô phòng khám tiêu chuẩn 5 sao chứ không phải spa nhỏ lẻ.", "cons": "Đèn phẫu thuật phía trên tạo một vệt chói sáng mạnh ở góc trên bên phải khung hình.", "takeaway": "Quy tắc nhịp thở điện ảnh: Sau 2 cú quay Macro nghẹt thở, bắt buộc phải trả về một cú quay toàn/trung cảnh để giải phóng thị giác và định hình lại không gian tổng thể.", "specs": {"lens": "28mm Wide f/2.8 • Full Treatment Room Environment", "location": "Phòng trị liệu cao cấp Neolumo", "lighting": "Ambient + Surgical Focus Light", "transition": "Match Cut sang Shot 13"}}, {"id": 13, "st_frame": 740, "mid_frame": 766, "en_frame": 792, "st_time": 24.67, "mid_time": 25.53, "en_time": 26.43, "duration": 1.77, "headline": "Cận Cảnh Hoàn Tất Làm Sạch Vùng Chữ T: Đôi Bàn Tay Khéo Léo Lau Sạch Tinh Tươm Bằng Bông Kháng Khuẩn", "subject_action": "Bác sĩ dùng hai miếng bông tròn tẩm dung dịch sát khuẩn y tế nhẹ nhàng lau sạch toàn bộ vùng mũi, trán và cằm, khép lại giai đoạn làm sạch cơ học để chuẩn bị cho giai đoạn phục hồi.", "pros": "Động tác lau vuốt mềm mại, êm dịu tạo cảm giác dễ chịu; chuyển tiếp mượt mà từ hành động can thiệp (nặn mụn) sang hành động chăm sóc làm dịu.", "cons": "Góc máy lặp lại góc nhìn của Shot 10.", "takeaway": "Hãy cho thấy bước lau sạch và làm dịu ngay sau khi nặn mụn để trấn an khách hàng rằng da sẽ được sát khuẩn và chăm sóc cẩn thận ngay lập tức.", "specs": {"lens": "50mm f/2.2 • Treatment Close-Up", "location": "Giường trị liệu da liễu", "lighting": "Soft Diffused Lighting", "transition": "Action Cut sang Shot 14"}}, {"id": 14, "st_frame": 793, "mid_frame": 819, "en_frame": 846, "st_time": 26.43, "mid_time": 27.3, "en_time": 28.23, "duration": 1.8, "headline": "Trải Đều Mặt Nạ Băng Lạnh Alginate Màu Xanh Ngọc Bích: Kích Hoạt Cảm Giác Tươi Mát & Làm Dịu Làn Da", "subject_action": "Bác sĩ cầm bát đựng mặt nạ Alginate / dẻo màu xanh ngọc bích (Turquoise Blue) rực rỡ, dùng thìa gạt silicone thoa một lớp gel dày mọng nước lên trán và hai bên má đang hơi ửng hồng của bệnh nhân.", "pros": "Màu xanh ngọc mát mắt của lớp mặt nạ tạo sự đối lập hoàn hảo với làn da ửng đỏ, mang lại cảm giác làm dịu tức thì (Soothing Visual Therapy); chất gel sóng sánh bắt sáng cực kỳ đẹp mắt.", "cons": "Bát đựng mặt nạ bị che khuất một phần ở mép trên khung hình.", "takeaway": "Trong video spa, màu sắc của sản phẩm đắp mặt (màu xanh ngọc, vàng gold hoặc hồng thạch) là vũ khí thị giác tuyệt vời để kích thích dopamine và tạo ấn tượng thư giãn cao cấp.", "specs": {"lens": "50mm f/1.8 • Medium Close-Up Slanted Angle", "location": "Giường trị liệu da liễu", "lighting": "High-Key Soft Lighting", "transition": "Cut to Wide sang Shot 15"}}, {"id": 15, "st_frame": 847, "mid_frame": 877, "en_frame": 907, "st_time": 28.23, "mid_time": 29.23, "en_time": 30.27, "duration": 2.03, "headline": "Toàn Cảnh Phủ Kín Mặt Nạ Khóa Ẩm Toàn Diện: Trạng Thái Thư Giãn Tối Đa Của Khách Hàng", "subject_action": "Toàn bộ khuôn mặt khách hàng được phủ đều lớp mặt nạ màu xanh ngọc bích mịn màng, khách hàng đan hai tay thảnh thơi trên bụng, bác sĩ đang tỉ mỉ vuốt phẳng lớp viền mặt nạ.", "pros": "Bố cục cân xứng, khách hàng thể hiện trạng thái thư giãn tuyệt đối; lớp mặt nạ phủ kín tạo cảm giác liệu trình được chăm sóc trọn gói đến từng milimet da.", "cons": "Máy xông hơi bên góc trái hơi chiếm tầm nhìn một chút.", "takeaway": "Đưa hình ảnh khách hàng đan tay thư giãn để truyền thông điệp ngầm: 'Bạn chỉ cần nằm xuống nghỉ ngơi, mọi vấn đề về da đã có bác sĩ giải quyết'.", "specs": {"lens": "35mm f/2.8 • Full Treatment Bed Wide Shot", "location": "Giường trị liệu da liễu", "lighting": "Balanced Ambient LED Light", "transition": "Dolly Pan sang Shot 16"}}, {"id": 16, "st_frame": 908, "mid_frame": 934, "en_frame": 960, "st_time": 30.27, "mid_time": 31.13, "en_time": 32.03, "duration": 1.77, "headline": "Góc Máy Nghiêng Thiết Bị Y Tế Hiện Đại: Tôn Vinh Tiêu Chuẩn Công Nghệ & Độ Tinh Khiết Của Phòng Khám", "subject_action": "Góc quay toàn cảnh từ phía chân giường hắt lên, để lộ hệ thống máy móc hỗ trợ hiện đại: máy xông tinh chất, đèn chiếu sinh học và kệ xe đẩy phân tầng ngăn nắp.", "pros": "Thiết lập bối cảnh phòng khám chuẩn quốc tế, giúp khách hàng nhận định được giá trị vượt trội so với các spa nhỏ tự phát.", "cons": "Dây cắm điện của thiết bị ở góc dưới sàn nhà nếu được giấu gọn hơn sẽ hoàn hảo.", "takeaway": "Đừng chỉ quay người và mặt nạ; hãy luôn có ít nhất một cú máy khoe được giàn máy móc công nghệ cao để bảo chứng cho giá dịch vụ tương xứng.", "specs": {"lens": "24mm Wide f/2.8 • Low-Angle Wide Room Establishing", "location": "Không gian phòng máy công nghệ cao", "lighting": "Studio Ambient Light", "transition": "Close Cut sang Shot 17"}}, {"id": 17, "st_frame": 961, "mid_frame": 978, "en_frame": 995, "st_time": 32.03, "mid_time": 32.6, "en_time": 33.2, "duration": 1.17, "headline": "Cận Cảnh Đường Nét Chăm Chút Cuối Cùng: Sự Tỉ Mỉ Và Tận Tâm Thể Hiện Trong Từng Thao Tác Nhỏ", "subject_action": "Góc máy cận lấy nét vào khuôn mặt thanh tú và ánh mắt tập trung của bác sĩ khi dùng que gạt miết nhẹ mép mặt nạ vùng cằm dưới.", "pros": "Tôn vinh vẻ đẹp chuyên môn và sự cẩn trọng của người bác sĩ thẩm mỹ; nhịp cắt ngắn tạo cảm giác liệu trình sắp hoàn tất viên mãn.", "cons": "Ánh sáng chiếu vào mặt bác sĩ hơi tối hơn một chút so với các cảnh trước.", "takeaway": "Khép lại quy trình bằng một cú quay cận người làm để khẳng định: Chất lượng dịch vụ phụ thuộc vào sự tận tâm và bàn tay khéo léo của người chuyên gia.", "specs": {"lens": "85mm f/2.0 • Close-Up Focus on Esthetician", "location": "Giường trị liệu da liễu", "lighting": "Warm Directed Light", "transition": "Cutaway sang Shot 18"}}, {"id": 18, "st_frame": 996, "mid_frame": 1014, "en_frame": 1032, "st_time": 33.2, "mid_time": 33.8, "en_time": 34.43, "duration": 1.23, "headline": "Chuyển Cảnh Trở Lại Ghế Tư Vấn: Chuẩn Bị Bước Vào Thông Điệp Kêu Gọi Hành Động (CTA Prep)", "subject_action": "Bác sĩ xuất hiện trở lại tại chiếc ghế bành sang trọng trong góc tư vấn, nở nụ cười tự tin và bắt đầu đưa ra lời khuyên y khoa tổng kết.", "pros": "Đóng khung nhân vật hoàn chỉnh, chuẩn bị tâm lý người xem đón nhận lời khuyên quan trọng nhất ở cuối video.", "cons": "Thời lượng 1.23s là bước đệm chuyển tiếp ngắn trước khi máy zoom vào ở Shot 19.", "takeaway": "Trước khi đưa ra lời kêu gọi hành động (CTA), hãy đưa nhân vật trở lại trạng thái giao tiếp 1-1 với khán giả để tạo sự gắn kết trực tiếp.", "specs": {"lens": "35mm f/2.8 • Medium Shot Consultation Nook", "location": "Góc tư vấn VIP Lounge", "lighting": "Soft Warm Fill Light", "transition": "Push-In Jump Cut sang Shot 19"}}, {"id": 19, "st_frame": 1033, "mid_frame": 1171, "en_frame": 1309, "st_time": 34.43, "mid_time": 39.03, "en_time": 43.67, "duration": 9.23, "headline": "Lời Kêu Gọi Đặt Lịch Tư Vấn Trực Tiếp (Direct Call to Action): Giao Tiếp Ánh Mắt Chân Thành & Bảng Hồ Sơ Bệnh Án", "subject_action": "Cỡ cảnh cận trung (Medium Close-Up). Bác sĩ ngồi thẳng lưng, tay cầm bảng tài liệu, ánh mắt nhìn thẳng vào ống kính giao tiếp với người xem: Khuyên khách hàng hãy để bác sĩ kiểm tra tình trạng da thực tế và inbox ngay số hotline/WhatsApp để nhận phác đồ riêng biệt.", "pros": "Thời lượng hơn 9 giây đủ dài để bác sĩ truyền tải trọn vẹn thông điệp tư vấn một cách điềm đạm, không vội vã; giọng điệu chân thành, ánh mắt tin cậy kích hoạt hành động đặt lịch.", "cons": "Cảnh kéo dài 9 giây liên tục mà không có text chữ động (animated typography) nhấn mạnh số điện thoại hoặc địa chỉ phòng khám.", "takeaway": "Đoạn kết CTA của video dịch vụ cần để chuyên gia nhìn thẳng ống kính nói chuyện, tạo cảm giác được tư vấn riêng tư và thúc đẩy hành động inbox ngay.", "specs": {"lens": "50mm f/2.2 • Medium Close-Up Punch-In", "location": "Góc tư vấn VIP Lounge", "lighting": "Daylight + Ring Light Catchlight", "transition": "Dissolve sang Shot 20"}}, {"id": 20, "st_frame": 1310, "mid_frame": 1324, "en_frame": 1339, "st_time": 43.67, "mid_time": 44.13, "en_time": 44.67, "duration": 1.0, "headline": "Outro Nhận Diện Thương Hiệu Đẳng Cấp: Nền Vân Đá Cẩm Thạch Sang Trọng Khắc Sâu Logo NEOLUMO LUXURY CLUB", "subject_action": "Màn hình kết thúc xuất hiện logo tối giản màu xám đậm 'NEOLUMO LUXURY CLUB' trên nền hoa văn đá marble trắng ngà thanh lịch, đóng dấu nhận diện thương hiệu y khoa cao cấp.", "pros": "Thiết kế tối giản, tinh tế, giữ vững đẳng cấp của một Medical Luxury Club; không chèn ép quá nhiều thông tin rườm rà.", "cons": "Thiếu hiển thị địa chỉ chi tiết hoặc hotline ở ngay tấm card này (mặc dù đã có trong caption bài viết).", "takeaway": "Outro kết thúc của thương hiệu cao cấp nên giữ tinh thần tối giản sang trọng (Clean & Minimalist Luxury), để lại dư âm chuyên nghiệp cho người xem.", "specs": {"lens": "Motion Graphic Card • Marble Texture Surface", "location": "Studio Brand Card Graphic", "lighting": "Subtle Vignette Gradient", "transition": "Freeze Frame Outro"}}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ;
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 30.0 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById();
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

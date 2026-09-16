@@ -1,0 +1,3161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>The Power of Composition • Sức Mạnh Bố Cục Khung Hình Trong Nhiếp Ảnh & Điện Ảnh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #070a0f;
+    --bg-card: #0e1420;
+    --bg-card-hover: #151e30;
+    --bg-surface: #121928;
+    --border-color: #1e293b;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-blue: #38bdf8;
+    --accent-amber: #f59e0b;
+    --accent-emerald: #10b981;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: #202d42; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .app-container {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .video-sidebar-col {
+        width: 440px;
+        min-width: 440px;
+        max-width: 480px;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: 1px solid var(--border-color);
+        background: var(--bg-surface);
+        display: flex;
+        flex-direction: column;
+        z-index: 30;
+    }
+    .content-scroll-col {
+        flex: 1;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 24px 32px 60px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    .video-sidebar-col {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(14, 20, 32, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .content-scroll-col {
+        width: 100%;
+        padding: 16px 14px 80px;
+    }
+}
+
+.video-player-container {
+    position: relative;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .video-player-container {
+        aspect-ratio: 9/16;
+        max-height: 60vh;
+    }
+}
+@media (max-width: 1023px) {
+    .video-player-container {
+        max-height: 38vh;
+        aspect-ratio: 16/9;
+    }
+}
+
+video#mainPlayer {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    outline: none;
+}
+
+.video-controls-panel {
+    padding: 12px 16px;
+    background: #0b111c;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.current-status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11.5px;
+}
+
+.speed-buttons-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.ctrl-btn {
+    background: #162032;
+    color: #cbd5e1;
+    border: 1px solid #283750;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+}
+
+.ctrl-btn:hover, .ctrl-btn:active {
+    background: #25334d;
+    color: #fff;
+}
+
+.ctrl-btn.active {
+    background: var(--accent-blue);
+    color: #041324;
+    border-color: var(--accent-blue);
+    font-weight: 800;
+}
+
+.report-header-banner {
+    background: linear-gradient(135deg, #0e1726 0%, #152238 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.genre-badge {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--accent-amber);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.report-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.meta-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+}
+
+.meta-tags-flex strong { color: #fff; }
+
+.overview-card {
+    background: #0e1420;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-blue);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 13.5px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.action-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg-main);
+    padding: 10px 0;
+}
+
+.view-tabs-group {
+    display: flex;
+    gap: 4px;
+    background: #0f1624;
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.view-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+}
+
+.view-tab-btn.active {
+    background: #1e293b;
+    color: #fff;
+    font-weight: 700;
+}
+
+.drawer-trigger-btn {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12.5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.storyboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px;
+    display: flex;
+    gap: 16px;
+    transition: transform 0.15s, border-color 0.15s;
+}
+
+.shot-card:hover {
+    background: var(--bg-card-hover);
+    border-color: #2e3e5a;
+}
+
+.shot-card.active-playing {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+.shot-media-col {
+    width: 120px;
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+.shot-thumb-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.shot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.play-overlay svg { width: 32px; height: 32px; color: #fff; }
+
+.zoom-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.65);
+    border: none;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.thumb-time-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    background: rgba(15, 23, 42, 0.85);
+    font-size: 9.5px;
+    font-weight: 700;
+    color: var(--accent-amber);
+    padding: 2px 4px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: var(--font-mono);
+}
+
+.shot-info-col {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.shot-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-bottom: 1px solid #1a2436;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.shot-badge-num {
+    background: #1e293b;
+    color: var(--accent-blue);
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+
+.shot-heading { font-size: 14.5px; font-weight: 700; color: #fff; display: inline; }
+
+.time-jump-btn {
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--accent-blue);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    cursor: pointer;
+}
+
+.props-list {
+    font-size: 12.5px;
+    color: #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.prop-label { font-weight: 700; color: #94a3b8; }
+.prop-val { color: #e2e8f0; }
+
+.tags-row { display: flex; flex-wrap: wrap; gap: 4px; margin-top: auto; }
+.tag-pill { background: #162032; color: #94a3b8; font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 4px; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+}
+
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.grid-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+}
+
+.grid-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.grid-play-icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+}
+
+.grid-card:hover .grid-play-icon { opacity: 1; }
+
+.grid-zoom-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: rgba(0,0,0,0.7);
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.grid-badge-top {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--accent-blue);
+    font-size: 9px;
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+}
+
+.grid-badge-bottom {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--accent-amber);
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px 4px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: var(--font-mono);
+}
+
+.drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+}
+
+.drawer-backdrop.open { opacity: 1; visibility: visible; }
+
+.drawer-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 85vw;
+    background: #0f172a;
+    border-left: 1px solid var(--border-color);
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-backdrop.open .drawer-panel { transform: translateX(0); }
+
+.drawer-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drawer-title { font-weight: 800; font-size: 15px; color: #fff; }
+.drawer-close-btn { background: #1e293b; border: none; color: #fff; width: 28px; height: 28px; border-radius: 6px; font-size: 16px; cursor: pointer; }
+
+.drawer-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.drawer-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 10px;
+    background: #131d30;
+    border: 1px solid #1e2d48;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.drawer-item:hover, .drawer-item:active {
+    background: #1c2b47;
+    border-color: var(--accent-blue);
+}
+
+.drawer-thumb {
+    width: 44px;
+    height: 58px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #000;
+}
+
+.drawer-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.drawer-info { flex: 1; min-width: 0; }
+.drawer-shot-title { font-weight: 700; font-size: 13px; color: #fff; }
+.drawer-shot-time { font-size: 11.5px; color: var(--accent-amber); font-family: var(--font-mono); }
+.drawer-play-arrow { font-size: 13px; color: var(--accent-blue); }
+
+#lightboxModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    border: 1px solid #334155;
+}
+
+#lightboxCaption {
+    color: #e2e8f0;
+    font-size: 13.5px;
+    margin-top: 14px;
+    text-align: center;
+    background: rgba(15, 23, 42, 0.85);
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid #334155;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* Author Instagram Direct Link Button */
+.author-ig-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(192, 132, 252, 0.12);
+    border: 1px solid rgba(192, 132, 252, 0.35);
+    color: #e879f9;
+    padding: 2px 8px 2px 6px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    vertical-align: middle;
+}
+.author-ig-badge:hover {
+    background: linear-gradient(135deg, rgba(192, 132, 252, 0.3), rgba(244, 63, 94, 0.3));
+    border-color: #f43f5e;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+}
+.author-ig-badge strong {
+    color: #fff;
+}
+.author-ig-badge .ig-ext-btn {
+    background: linear-gradient(135deg, #c084fc, #f43f5e);
+    color: #0b0f17;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: all 0.15s;
+    letter-spacing: 0.2px;
+}
+.author-ig-badge:hover .ig-ext-btn {
+    background: #ffffff;
+    color: #0b0f17;
+}
+
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="video-sidebar-col">
+        <div class="video-player-container">
+            <video id="mainPlayer" controls autoplay muted playsinline preload="auto" loop></video>
+        </div>
+        <div class="video-controls-panel">
+            <div class="current-status-bar">
+                <span class="status-tag" id="shotStatusTag">🎬 Phân cảnh: Toàn bộ video</span>
+                <a id="directVidLink" href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/The%20Power%20of%20Composition%20-%20%40minhmigoi.mp4" target="_blank" style="color:var(--accent-blue); font-size:11.5px; text-decoration:none;">Tệp gốc ↗</a>
+            </div>
+            <div class="speed-buttons-row">
+                <span style="font-size:11.5px; color:#94a3b8; font-weight:700; margin-right:4px;">Tốc độ:</span>
+                <button class="ctrl-btn" onclick="setSpeed(0.25, this)">0.25x</button>
+                <button class="ctrl-btn" onclick="setSpeed(0.5, this)">0.5x</button>
+                <button class="ctrl-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+                <button class="ctrl-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                <button class="ctrl-btn" onclick="toggleMute(this)">🔊 Tiếng</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-scroll-col">
+        <div class="report-header-banner">
+            <div class="header-top-row">
+                <span class="genre-badge">DIRECTOR BREAKDOWN</span>
+                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">15 SHOTS &bull; 19.87s</span>
+            </div>
+            <h1 class="report-title">The Power of Composition • Sức Mạnh Bố Cục Khung Hình Trong Nhiếp Ảnh & Điện Ảnh</h1>
+            <div class="meta-tags-flex">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@minhmigoi" onclick="handleCreatorClick(event, '@minhmigoi', 'Nguyễn Đức Minh')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Nguyễn Đức Minh trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Nguyễn Đức Minh</strong>
+                        <span class="author-handle">(@minhmigoi)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span></a></span>
+                <span>Tệp: <strong>The Power of Composition - @minhmigoi.html</strong></span>
+                <span>Trực quan: <strong>9:16 Vertical HD</strong></span>
+            </div>
+        </div>
+
+        <div class="overview-card">
+            <h3 style="color:#fff; font-size:14px; margin-bottom:6px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
+            <div>
+<h3 style="color:#fff; font-size:14px; margin-bottom:6px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
+<div>
+<div class="overview-card">
+<h3>🌀 1. Cấu Trúc Nhịp Dựng 'Concept-to-Execution'</h3>
+<p><strong>Cơ chế Ghép Đôi:</strong> Video xây dựng theo cấu trúc nhịp điệu hoàn hảo: mỗi kỹ thuật gồm <strong>0.67s Biểu đồ đồ họa (Concept Diagram)</strong> trên nền đen tối giản ➔ ngay lập tức tiếp nối bằng <strong>1.60s Cảnh quay thực chiến (Live Demonstration)</strong> tuyệt đẹp.</p>
+<p><strong>Hiệu quả truyền tải:</strong> Giúp não bộ người xem tiếp nhận lý thuyết dạng đồ họa hình học trước, rồi lập tức được chứng thực bằng cảm xúc thị giác đời thực, tạo ấn tượng ghi nhớ sâu sắc.</p>
+</div>
+<div class="overview-card">
+<h3>🎨 2. Phối Màu &amp; Ánh Sáng Tự Nhiên (Color &amp; Lighting)</h3>
+<p><strong>Tone Màu Ấm Áp (Warm Cinematic):</strong> Toàn bộ video sử dụng ánh sáng tự nhiên vàng ấm (Golden Hour / Morning Sun), kết hợp giữa sắc vàng nghệ của kiến trúc, xanh lục tươi tắn của thảm thực vật và xanh biếc của mặt nước/bầu trời.</p>
+<p><strong>Độ Tương Phản (Chiaroscuro):</strong> Tận dụng triệt để các vệt nắng xiên qua kẽ lá, bóng đổ cầu thang và ô cửa sổ để tạo chiều sâu khối không gian 3 chiều sống động.</p>
+</div>
+<div class="overview-card">
+<h3>🎵 3. Nhịp Cắt Chuyển Phách Âm Nhạc (Audio-Visual Sync)</h3>
+<p><strong>Đồng bộ Beat &amp; Lyric:</strong> Mọi điểm cắt cảnh (Scene Cut) đều rơi chính xác 100% vào tiếng kick/snare của bài hát <em>'See You Again'</em> và các nhịp ngắt ca từ <em>('Can I get a kiss... / ...as forever?')</em>.</p>
+<p><strong>Cắt Thẳng (Hard Cut):</strong> 100% các phân cảnh sử dụng kỹ thuật Hard Cut dứt khoát, không dùng hiệu ứng chuyển cảnh lòe loẹt, giữ sự thanh thoát chuẩn phong cách điện ảnh cao cấp.</p>
+</div>
+</div>
+</div>
+        </div>
+
+        <div class="action-toolbar">
+            <div class="view-tabs-group">
+                <button class="view-tab-btn active" id="tabDetailBtn" onclick="switchView('detail')">📋 Bóc Tách Chi Tiết</button>
+                <button class="view-tab-btn" id="tabGridBtn" onclick="switchView('grid')">🖼️ Lưới Soi Ảnh (15)</button>
+            </div>
+            <button class="drawer-trigger-btn" onclick="toggleDrawer(true)">📑 Mục Lục Shot</button>
+        </div>
+
+        <div class="storyboard-container" id="storyboardView">
+            
+        <div class="shot-card" id="shot-card-1">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(0.0, 3.97, 'SHOT 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_002_4ee0b6c4.jpg" alt="SHOT 01" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_002_4ee0b6c4.jpg', 'SHOT 01 [0.0s - 3.97s]')">🔍</button>
+                    <span class="thumb-time-badge">0.00s - 3.97s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 01</span>
+                        <h4 class="shot-heading">SHOT 01</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(0.0, 3.97, 'SHOT 01')">
+                        ▶ 0.00s ➔ 3.97s (3.97s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(0.0, 3.97, 'SHOT 01')">
+<img alt="SHOT 01" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_002_4ee0b6c4.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_002_4ee0b6c4.jpg', 'SHOT 01 [0.0s - 3.97s]')">🔍</button>
+<span class="thumb-time-badge">0.00s - 3.97s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 01</span>
+<h4 class="shot-heading">SHOT 01</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(0.0, 3.97, 'SHOT 01')">
+                        ▶ 0.00s ➔ 3.97s (3.97s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-badge-group">
+<span class="shot-pill">PHÂN CẢNH 01</span>
+<span class="time-tag" onclick="jumpToVideo(0.0)" title="Click để nhảy video đến 0.00s - 3.97s">⏱️ 0.00s - 3.97s (4.00s)</span>
+</div>
+<h3 class="shot-title">Mở Màn Ấn Tượng: Tỷ Lệ Vàng (Fibonacci Spiral) &amp; Dòng Chữ 'The Power of Composition'</h3>
+<div class="shot-type-tag">🎬 Golden Ratio (Fibonacci Spiral) / Establishing Hook &amp; Title Card</div>
+</div>
+<div class="shot-media-grid">
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_002_4ee0b6c4.jpg', 'Cảnh 01 - Khung Đầu (Start Frame: 0.00s - 3.97s)')">
+<img alt="Shot 01 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_002_4ee0b6c4.jpg"/>
+<span class="thumb-lbl">START</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_004_47ba0d81.jpg', 'Cảnh 01 - Khung Giữa (Mid Frame: 0.00s - 3.97s)')">
+<img alt="Shot 01 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_004_47ba0d81.jpg"/>
+<span class="thumb-lbl">MID</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_006_df195b94.jpg', 'Cảnh 01 - Khung Cuối (End Frame: 0.00s - 3.97s)')">
+<img alt="Shot 01 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_006_df195b94.jpg"/>
+<span class="thumb-lbl">END</span>
+</div>
+</div>
+<div class="shot-details-grid">
+<div class="detail-row">
+<span class="detail-label">📍 Bối Cảnh:</span>
+<span class="detail-val">Khu biệt thự kiến trúc châu Âu cổ điển sơn màu vàng nghệ, bãi cỏ xanh mướt ngập nắng</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">👁️ Thị Giác:</span>
+<span class="detail-val">Khung hình toàn cảnh tĩnh tuyệt mỹ. Ngôi nhà kiến trúc uốn lượn cổ kính chiếm trọn 2/3 hậu cảnh, nhân vật đứng quay lưng tại tâm xoắn ốc Fibonacci. Đường xoắn ốc Tỷ lệ vàng (Golden Spiral) đồ họa màu trắng thanh mảnh uốn lượn từ viền ngoài rồi hội tụ chính xác vào chủ thể, sau đó chuyển động mượt mà mở ra dòng chữ tiêu đề thanh lịch: 'The power of Composition'.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">⚡ Mở &amp; Nối:</span>
+<span class="detail-val"><strong>Mở:</strong> Đường xoắn ốc Fibonacci chuyển động vẽ nét bao quanh khung cảnh, sau đó dòng chữ 'The power of Composition' xuất hiện trên nền cỏ xanh. <br/><strong>Nối:</strong> Cắt sang Cảnh 2: Khung hình nền đen chuyển tiếp với đồ họa lưới trục đối xứng (Symmetry Grid).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">📐 Kỹ Thuật:</span>
+<span class="detail-val highlight-tech">Golden Ratio (Tỷ lệ vàng $\Phi \approx 1.618$) &amp; Typographic Title Reveal. Kết hợp giữa bố cục toán học tự nhiên và chuyển động đồ họa tối giản nhằm định hình tư duy thị giác ngay giây đầu tiên.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎯 Đạo Diễn:</span>
+<span class="detail-val">Sử dụng đường xoắn ốc Fibonacci để dẫn dắt mắt khán giả từ quy mô kiến trúc tổng thể đến chi tiết con người ở trung tâm. Giữ nhịp mở màn 4.00s đủ dài để thiết lập giai điệu âm nhạc 'See You Again'.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎥 Thiết Bị:</span>
+<span class="detail-val">Ống kính 24-70mm f/2.8 GM tại tiêu cự 35mm, khép khẩu f/5.6 để lấy nét sâu toàn cảnh từ tiền cảnh thảm cỏ đến tường nhà kiến trúc.</span>
+</div>
+</div>
+<div class="trans-container">
+<div class="trans-header">
+<span class="trans-icon">🔄</span>
+<strong>PHÂN TÍCH CHUYỂN CẢNH (TRANSITION: CẢNH 01 ➔ CẢNH 02)</strong>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_008_172f923f.jpg', 'So sánh chuyển cảnh: Cảnh 01 (End) ➔ Cảnh 02 (Start)')">
+<img alt="Transition 01 to 02" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_008_172f923f.jpg"/>
+</div>
+<p class="trans-desc"><strong>Kỹ thuật nối cảnh:</strong> Cắt thẳng (Hard Cut) chuẩn xác theo từng phách nhịp trống bass và ca từ bài hát 'See You Again', tạo nhịp đập thị giác đồng bộ 100% giữa âm thanh và hình ảnh.</p>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-2">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(4.0, 4.63, 'SHOT 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_010_297af04f.jpg" alt="SHOT 02" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_010_297af04f.jpg', 'SHOT 02 [4.0s - 4.63s]')">🔍</button>
+                    <span class="thumb-time-badge">4.00s - 4.63s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 02</span>
+                        <h4 class="shot-heading">SHOT 02</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(4.0, 4.63, 'SHOT 02')">
+                        ▶ 4.00s ➔ 4.63s (0.63s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(4.0, 4.63, 'SHOT 02')">
+<img alt="SHOT 02" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_010_297af04f.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_010_297af04f.jpg', 'SHOT 02 [4.0s - 4.63s]')">🔍</button>
+<span class="thumb-time-badge">4.00s - 4.63s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 02</span>
+<h4 class="shot-heading">SHOT 02</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(4.0, 4.63, 'SHOT 02')">
+                        ▶ 4.00s ➔ 4.63s (0.63s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-badge-group">
+<span class="shot-pill">PHÂN CẢNH 02</span>
+<span class="time-tag" onclick="jumpToVideo(4.0)" title="Click để nhảy video đến 4.00s - 4.63s">⏱️ 4.00s - 4.63s (0.67s)</span>
+</div>
+<h3 class="shot-title">Biểu Đồ Khái Niệm 01: Bố Cục Đối Xứng (Symmetry)</h3>
+<div class="shot-type-tag">🎬 Graphic Concept Diagram / Symmetry Crosshair Axis</div>
+</div>
+<div class="shot-media-grid">
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_010_297af04f.jpg', 'Cảnh 02 - Khung Đầu (Start Frame: 4.00s - 4.63s)')">
+<img alt="Shot 02 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_010_297af04f.jpg"/>
+<span class="thumb-lbl">START</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_014_cfd29a46.jpg', 'Cảnh 02 - Khung Giữa (Mid Frame: 4.00s - 4.63s)')">
+<img alt="Shot 02 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_014_cfd29a46.jpg"/>
+<span class="thumb-lbl">MID</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_014_cfd29a46.jpg', 'Cảnh 02 - Khung Cuối (End Frame: 4.00s - 4.63s)')">
+<img alt="Shot 02 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_014_cfd29a46.jpg"/>
+<span class="thumb-lbl">END</span>
+</div>
+</div>
+<div class="shot-details-grid">
+<div class="detail-row">
+<span class="detail-label">📍 Bối Cảnh:</span>
+<span class="detail-val">Khung đồ họa nền đen kỹ thuật số (Graphic Card)</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">👁️ Thị Giác:</span>
+<span class="detail-val">Nền đen huyền bí tối giản hoàn toàn. Trục chữ thập màu trắng thanh mảnh chia đôi khung hình theo phương ngang và phương dọc (Crosshair Axis Grid), ở tâm là chữ 'Symmetry' tinh tế, định hướng trực tiếp vào mắt người xem về cấu trúc cân bằng thị giác 50/50.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">⚡ Mở &amp; Nối:</span>
+<span class="detail-val"><strong>Mở:</strong> Đồ họa chữ thập xuất hiện chớp nhoáng 0.67s ăn khớp chính xác với nhịp trống chuyển phách của bài hát. <br/><strong>Nối:</strong> Cắt sang Cảnh 3: Minh họa thực tế bố cục đối xứng qua cảnh cầu phao trên hồ nước.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">📐 Kỹ Thuật:</span>
+<span class="detail-val highlight-tech">Minimalist Kinetic Motion Graphics &amp; Rhythmic Pacing (Tạo nhịp đệm thị giác 20 frames chuẩn xác trước khi bùng nổ cảnh quay thực tế).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎯 Đạo Diễn:</span>
+<span class="detail-val">Thiết kế đồ họa màu trắng trên nền đen với độ dày viền 1.5px tạo cảm giác như một bản vẽ kỹ thuật điện ảnh (Cinematography Blueprints).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎥 Thiết Bị:</span>
+<span class="detail-val">Đồ họa dựng trên After Effects với font chữ Sans-serif mảnh, xuất Alpha Channel đồng bộ 30fps.</span>
+</div>
+</div>
+<div class="trans-container">
+<div class="trans-header">
+<span class="trans-icon">🔄</span>
+<strong>PHÂN TÍCH CHUYỂN CẢNH (TRANSITION: CẢNH 02 ➔ CẢNH 03)</strong>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_016_2168caaf.jpg', 'So sánh chuyển cảnh: Cảnh 02 (End) ➔ Cảnh 03 (Start)')">
+<img alt="Transition 02 to 03" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_016_2168caaf.jpg"/>
+</div>
+<p class="trans-desc"><strong>Kỹ thuật nối cảnh:</strong> Cắt thẳng (Hard Cut) chuẩn xác theo từng phách nhịp trống bass và ca từ bài hát 'See You Again', tạo nhịp đập thị giác đồng bộ 100% giữa âm thanh và hình ảnh.</p>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-3">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(4.67, 6.23, 'SHOT 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_018_fc185cfc.jpg" alt="SHOT 03" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_018_fc185cfc.jpg', 'SHOT 03 [4.67s - 6.23s]')">🔍</button>
+                    <span class="thumb-time-badge">4.67s - 6.23s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 03</span>
+                        <h4 class="shot-heading">SHOT 03</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(4.67, 6.23, 'SHOT 03')">
+                        ▶ 4.67s ➔ 6.23s (1.56s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(4.67, 6.23, 'SHOT 03')">
+<img alt="SHOT 03" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_018_fc185cfc.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_018_fc185cfc.jpg', 'SHOT 03 [4.67s - 6.23s]')">🔍</button>
+<span class="thumb-time-badge">4.67s - 6.23s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 03</span>
+<h4 class="shot-heading">SHOT 03</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(4.67, 6.23, 'SHOT 03')">
+                        ▶ 4.67s ➔ 6.23s (1.56s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-badge-group">
+<span class="shot-pill">PHÂN CẢNH 03</span>
+<span class="time-tag" onclick="jumpToVideo(4.67)" title="Click để nhảy video đến 4.67s - 6.23s">⏱️ 4.67s - 6.23s (1.60s)</span>
+</div>
+<h3 class="shot-title">Minh Họa Thực Chiến 01: Cầu Phao Độc Đạo &amp; Tháp Đỏ Trắng Giữa Hồ</h3>
+<div class="shot-type-tag">🎬 Central Symmetrical Forward Tracking / Bridge &amp; Lakeside Pavilion</div>
+</div>
+<div class="shot-media-grid">
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_018_fc185cfc.jpg', 'Cảnh 03 - Khung Đầu (Start Frame: 4.67s - 6.23s)')">
+<img alt="Shot 03 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_018_fc185cfc.jpg"/>
+<span class="thumb-lbl">START</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_020_b7fc0390.jpg', 'Cảnh 03 - Khung Giữa (Mid Frame: 4.67s - 6.23s)')">
+<img alt="Shot 03 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_020_b7fc0390.jpg"/>
+<span class="thumb-lbl">MID</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_022_b9c492aa.jpg', 'Cảnh 03 - Khung Cuối (End Frame: 4.67s - 6.23s)')">
+<img alt="Shot 03 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_022_b9c492aa.jpg"/>
+<span class="thumb-lbl">END</span>
+</div>
+</div>
+<div class="shot-details-grid">
+<div class="detail-row">
+<span class="detail-label">📍 Bối Cảnh:</span>
+<span class="detail-val">Cây cầu bộ hành bắc qua hồ nước phẳng lặng, ngọn tháp kiến trúc đỏ trắng ở hậu cảnh</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">👁️ Thị Giác:</span>
+<span class="detail-val">Góc máy tracking chuyển động lướt theo sau lưng nhân vật đang chạy dọc cây cầu bộ hành hẹp. Hai bên lan can sắt và mặt hồ nước phản chiếu tạo nên hai đường biên đối xứng hoàn hảo dẫn thẳng tới ngọn tháp kiến trúc đỏ trắng uy nghiêm tại trung tâm khung hình.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">⚡ Mở &amp; Nối:</span>
+<span class="detail-val"><strong>Mở:</strong> Nhân vật chạy về phía trước theo trục thẳng, máy quay di chuyển bám đuổi mượt mà trên trục trung tâm. <br/><strong>Nối:</strong> Cắt sang Cảnh 4: Khung đồ họa hình thoi lồng khung (Frame within a Frame).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">📐 Kỹ Thuật:</span>
+<span class="detail-val highlight-tech">Dynamic Symmetrical One-Point Perspective &amp; Kinetic Energy (Kết hợp tính tôn nghiêm của bố cục đối xứng trung tâm với năng lượng chuyển động tiến tới).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎯 Đạo Diễn:</span>
+<span class="detail-val">Giữ gimbal cân bằng tuyệt đối trên đường thẳng tim cầu. Sự xuất hiện của con người chuyển động ở giữa phá vỡ sự tĩnh lặng khô cứng của kiến trúc đối xứng.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎥 Thiết Bị:</span>
+<span class="detail-val">Camera gắn trên Gimbal Ronin RS3, tiêu cự 24mm f/2.8, tốc độ màn trập 1/60s tạo motion blur tự nhiên ở hai bên rìa nước.</span>
+</div>
+</div>
+<div class="trans-container">
+<div class="trans-header">
+<span class="trans-icon">🔄</span>
+<strong>PHÂN TÍCH CHUYỂN CẢNH (TRANSITION: CẢNH 03 ➔ CẢNH 04)</strong>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_024_3d2b4b60.jpg', 'So sánh chuyển cảnh: Cảnh 03 (End) ➔ Cảnh 04 (Start)')">
+<img alt="Transition 03 to 04" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_024_3d2b4b60.jpg"/>
+</div>
+<p class="trans-desc"><strong>Kỹ thuật nối cảnh:</strong> Cắt thẳng (Hard Cut) chuẩn xác theo từng phách nhịp trống bass và ca từ bài hát 'See You Again', tạo nhịp đập thị giác đồng bộ 100% giữa âm thanh và hình ảnh.</p>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-4">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(6.27, 6.9, 'SHOT 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_026_be75706a.jpg" alt="SHOT 04" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_026_be75706a.jpg', 'SHOT 04 [6.27s - 6.9s]')">🔍</button>
+                    <span class="thumb-time-badge">6.27s - 6.90s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 04</span>
+                        <h4 class="shot-heading">SHOT 04</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(6.27, 6.9, 'SHOT 04')">
+                        ▶ 6.27s ➔ 6.90s (0.63s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(6.27, 6.9, 'SHOT 04')">
+<img alt="SHOT 04" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_026_be75706a.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_026_be75706a.jpg', 'SHOT 04 [6.27s - 6.9s]')">🔍</button>
+<span class="thumb-time-badge">6.27s - 6.90s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 04</span>
+<h4 class="shot-heading">SHOT 04</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(6.27, 6.9, 'SHOT 04')">
+                        ▶ 6.27s ➔ 6.90s (0.63s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-badge-group">
+<span class="shot-pill">PHÂN CẢNH 04</span>
+<span class="time-tag" onclick="jumpToVideo(6.27)" title="Click để nhảy video đến 6.27s - 6.90s">⏱️ 6.27s - 6.90s (0.67s)</span>
+</div>
+<h3 class="shot-title">Biểu Đồ Khái Niệm 02: Khung Trong Khung (Frame within a frame)</h3>
+<div class="shot-type-tag">🎬 Graphic Concept Diagram / Diamond Rhombus Geometric Framing</div>
+</div>
+<div class="shot-media-grid">
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_026_be75706a.jpg', 'Cảnh 04 - Khung Đầu (Start Frame: 6.27s - 6.90s)')">
+<img alt="Shot 04 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_026_be75706a.jpg"/>
+<span class="thumb-lbl">START</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_028_54926ff2.jpg', 'Cảnh 04 - Khung Giữa (Mid Frame: 6.27s - 6.90s)')">
+<img alt="Shot 04 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_028_54926ff2.jpg"/>
+<span class="thumb-lbl">MID</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_030_7d38867c.jpg', 'Cảnh 04 - Khung Cuối (End Frame: 6.27s - 6.90s)')">
+<img alt="Shot 04 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_030_7d38867c.jpg"/>
+<span class="thumb-lbl">END</span>
+</div>
+</div>
+<div class="shot-details-grid">
+<div class="detail-row">
+<span class="detail-label">📍 Bối Cảnh:</span>
+<span class="detail-val">Khung đồ họa nền đen kỹ thuật số</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">👁️ Thị Giác:</span>
+<span class="detail-val">Khung đồ họa viền trắng sắc nét hình thoi (Rhombus) vát góc chéo 45 độ, ôm trọn dòng chữ 'Frame within a frame' ở chính giữa, mô phỏng ô trổ kiến trúc hình học.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">⚡ Mở &amp; Nối:</span>
+<span class="detail-val"><strong>Mở:</strong> Khung hình thoi sáng lên đồng điệu với tiếng vocal cất lên trong bài nhạc. <br/><strong>Nối:</strong> Cắt sang Cảnh 5: Minh họa thực tế cảnh đi cầu thang nhìn qua ô tường hình thoi.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">📐 Kỹ Thuật:</span>
+<span class="detail-val highlight-tech">Geometric Framing Vector Iconography (Trực quan hóa nguyên lý giới hạn trường nhìn thị giác).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎯 Đạo Diễn:</span>
+<span class="detail-val">Sử dụng hình thoi thay vì hình chữ nhật truyền thống để tạo sự độc đáo và báo hiệu cho kiến trúc góc cạnh sắp xuất hiện.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎥 Thiết Bị:</span>
+<span class="detail-val">Animation keyframe scale 98% -&gt; 100% tạo hiệu ứng đẩy nhẹ thị giác (Subtle Push).</span>
+</div>
+</div>
+<div class="trans-container">
+<div class="trans-header">
+<span class="trans-icon">🔄</span>
+<strong>PHÂN TÍCH CHUYỂN CẢNH (TRANSITION: CẢNH 04 ➔ CẢNH 05)</strong>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_032_222dbd27.jpg', 'So sánh chuyển cảnh: Cảnh 04 (End) ➔ Cảnh 05 (Start)')">
+<img alt="Transition 04 to 05" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_032_222dbd27.jpg"/>
+</div>
+<p class="trans-desc"><strong>Kỹ thuật nối cảnh:</strong> Cắt thẳng (Hard Cut) chuẩn xác theo từng phách nhịp trống bass và ca từ bài hát 'See You Again', tạo nhịp đập thị giác đồng bộ 100% giữa âm thanh và hình ảnh.</p>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-5">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(6.93, 8.5, 'SHOT 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_034_a0008615.jpg" alt="SHOT 05" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_034_a0008615.jpg', 'SHOT 05 [6.93s - 8.5s]')">🔍</button>
+                    <span class="thumb-time-badge">6.93s - 8.50s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 05</span>
+                        <h4 class="shot-heading">SHOT 05</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(6.93, 8.5, 'SHOT 05')">
+                        ▶ 6.93s ➔ 8.50s (1.57s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(6.93, 8.5, 'SHOT 05')">
+<img alt="SHOT 05" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_034_a0008615.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_034_a0008615.jpg', 'SHOT 05 [6.93s - 8.5s]')">🔍</button>
+<span class="thumb-time-badge">6.93s - 8.50s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 05</span>
+<h4 class="shot-heading">SHOT 05</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(6.93, 8.5, 'SHOT 05')">
+                        ▶ 6.93s ➔ 8.50s (1.57s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-badge-group">
+<span class="shot-pill">PHÂN CẢNH 05</span>
+<span class="time-tag" onclick="jumpToVideo(6.93)" title="Click để nhảy video đến 6.93s - 8.50s">⏱️ 6.93s - 8.50s (1.60s)</span>
+</div>
+<h3 class="shot-title">Minh Họa Thực Chiến 02: Ô Trổ Tường Hình Thoi &amp; Bước Chân Lên Cầu Thang</h3>
+<div class="shot-type-tag">🎬 Low-Angle Interior Architectural Cutout / Staircase Ascent</div>
+</div>
+<div class="shot-media-grid">
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_034_a0008615.jpg', 'Cảnh 05 - Khung Đầu (Start Frame: 6.93s - 8.50s)')">
+<img alt="Shot 05 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_034_a0008615.jpg"/>
+<span class="thumb-lbl">START</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_036_00bdb1c7.jpg', 'Cảnh 05 - Khung Giữa (Mid Frame: 6.93s - 8.50s)')">
+<img alt="Shot 05 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_036_00bdb1c7.jpg"/>
+<span class="thumb-lbl">MID</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_038_dbb995f4.jpg', 'Cảnh 05 - Khung Cuối (End Frame: 6.93s - 8.50s)')">
+<img alt="Shot 05 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_038_dbb995f4.jpg"/>
+<span class="thumb-lbl">END</span>
+</div>
+</div>
+<div class="shot-details-grid">
+<div class="detail-row">
+<span class="detail-label">📍 Bối Cảnh:</span>
+<span class="detail-val">Giếng trời cầu thang trong nhà kiến trúc đương đại với mảng tường màu cam đất ấm áp</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">👁️ Thị Giác:</span>
+<span class="detail-val">Góc máy tĩnh đặt từ dưới tầng thấp nhìn chéo lên qua một ô trổ tường khổng lồ hình thoi vát cạnh. Mảng tường tối đóng vai trò khung tiền cảnh tự nhiên (Natural Mask), đóng khung nhân vật đang thong thả bước lên các bậc cầu thang đá ngập tràn ánh nắng ấm.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">⚡ Mở &amp; Nối:</span>
+<span class="detail-val"><strong>Mở:</strong> Nhân vật bước từ chân cầu thang lên tới chiếu nghỉ, cơ thể di chuyển trọn vẹn trong khoảng hở hình học. <br/><strong>Nối:</strong> Cắt sang Cảnh 6: Khung đồ họa ma trận quy tắc một phần ba (Rule of Thirds).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">📐 Kỹ Thuật:</span>
+<span class="detail-val highlight-tech">Architectural Frame-within-a-frame &amp; Chiaroscuro Contrast (Tương phản sáng tối mạnh giữa khung tường tối phía trước và không gian ngập nắng phía sau).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎯 Đạo Diễn:</span>
+<span class="detail-val">Tìm kiếm các ô cửa sổ, vòm cổng, hay đường cắt giếng trời kiến trúc để tạo chiều sâu nhiều lớp (Layering) cho khung hình thông thường.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎥 Thiết Bị:</span>
+<span class="detail-val">Ống kính 35mm f/2.0, đo sáng vùng Highlight trên áo nhân vật để vùng tường tiền cảnh chìm vào tone bóng đổ mượt mà.</span>
+</div>
+</div>
+<div class="trans-container">
+<div class="trans-header">
+<span class="trans-icon">🔄</span>
+<strong>PHÂN TÍCH CHUYỂN CẢNH (TRANSITION: CẢNH 05 ➔ CẢNH 06)</strong>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_040_7362cc39.jpg', 'So sánh chuyển cảnh: Cảnh 05 (End) ➔ Cảnh 06 (Start)')">
+<img alt="Transition 05 to 06" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_040_7362cc39.jpg"/>
+</div>
+<p class="trans-desc"><strong>Kỹ thuật nối cảnh:</strong> Cắt thẳng (Hard Cut) chuẩn xác theo từng phách nhịp trống bass và ca từ bài hát 'See You Again', tạo nhịp đập thị giác đồng bộ 100% giữa âm thanh và hình ảnh.</p>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-6">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(8.53, 9.17, 'SHOT 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_042_abd51680.jpg" alt="SHOT 06" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_042_abd51680.jpg', 'SHOT 06 [8.53s - 9.17s]')">🔍</button>
+                    <span class="thumb-time-badge">8.53s - 9.17s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 06</span>
+                        <h4 class="shot-heading">SHOT 06</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(8.53, 9.17, 'SHOT 06')">
+                        ▶ 8.53s ➔ 9.17s (0.64s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(8.53, 9.17, 'SHOT 06')">
+<img alt="SHOT 06" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_042_abd51680.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_042_abd51680.jpg', 'SHOT 06 [8.53s - 9.17s]')">🔍</button>
+<span class="thumb-time-badge">8.53s - 9.17s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 06</span>
+<h4 class="shot-heading">SHOT 06</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(8.53, 9.17, 'SHOT 06')">
+                        ▶ 8.53s ➔ 9.17s (0.64s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-badge-group">
+<span class="shot-pill">PHÂN CẢNH 06</span>
+<span class="time-tag" onclick="jumpToVideo(8.53)" title="Click để nhảy video đến 8.53s - 9.17s">⏱️ 8.53s - 9.17s (0.67s)</span>
+</div>
+<h3 class="shot-title">Biểu Đồ Khái Niệm 03: Quy Tắc 1/3 (Rule of thirds)</h3>
+<div class="shot-type-tag">🎬 Graphic Concept Diagram / 3x3 Composition Matrix</div>
+</div>
+<div class="shot-media-grid">
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_042_abd51680.jpg', 'Cảnh 06 - Khung Đầu (Start Frame: 8.53s - 9.17s)')">
+<img alt="Shot 06 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_042_abd51680.jpg"/>
+<span class="thumb-lbl">START</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_044_6b7b3804.jpg', 'Cảnh 06 - Khung Giữa (Mid Frame: 8.53s - 9.17s)')">
+<img alt="Shot 06 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_044_6b7b3804.jpg"/>
+<span class="thumb-lbl">MID</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_046_93659136.jpg', 'Cảnh 06 - Khung Cuối (End Frame: 8.53s - 9.17s)')">
+<img alt="Shot 06 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_046_93659136.jpg"/>
+<span class="thumb-lbl">END</span>
+</div>
+</div>
+<div class="shot-details-grid">
+<div class="detail-row">
+<span class="detail-label">📍 Bối Cảnh:</span>
+<span class="detail-val">Khung đồ họa nền đen kỹ thuật số</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">👁️ Thị Giác:</span>
+<span class="detail-val">Lưới đồ họa 3x3 với 2 đường kẻ dọc và 2 đường kẻ ngang chia khung hình thành 9 ô bằng nhau. Dòng chữ 'Rule of thirds' nằm gọn gàng ở hàng dưới bên trái.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">⚡ Mở &amp; Nối:</span>
+<span class="detail-val"><strong>Mở:</strong> Đồ họa lưới 3x3 hiển thị sắc nét trong 20 frames chuẩn xác. <br/><strong>Nối:</strong> Cắt sang Cảnh 7: Minh họa thực tế nhân vật ngồi lệch tại điểm giao 1/3.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">📐 Kỹ Thuật:</span>
+<span class="detail-val highlight-tech">Classical Golden Grid Visual Matrix (Hệ thống quy chuẩn bố cục kinh điển nhất của nghệ thuật thị giác thế giới).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎯 Đạo Diễn:</span>
+<span class="detail-val">Đồ họa lưới mảnh màu trắng giúp người xem lập tức hiểu nguyên lý đặt chủ thể lệch tâm (Off-center Composition).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎥 Thiết Bị:</span>
+<span class="detail-val">Xuất đồ họa độ phân giải gốc 1920x1080 đồng bộ tỷ lệ hiển thị.</span>
+</div>
+</div>
+<div class="trans-container">
+<div class="trans-header">
+<span class="trans-icon">🔄</span>
+<strong>PHÂN TÍCH CHUYỂN CẢNH (TRANSITION: CẢNH 06 ➔ CẢNH 07)</strong>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_048_bad35f4d.jpg', 'So sánh chuyển cảnh: Cảnh 06 (End) ➔ Cảnh 07 (Start)')">
+<img alt="Transition 06 to 07" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_048_bad35f4d.jpg"/>
+</div>
+<p class="trans-desc"><strong>Kỹ thuật nối cảnh:</strong> Cắt thẳng (Hard Cut) chuẩn xác theo từng phách nhịp trống bass và ca từ bài hát 'See You Again', tạo nhịp đập thị giác đồng bộ 100% giữa âm thanh và hình ảnh.</p>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-7">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(9.2, 10.8, 'SHOT 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_050_e9a12dd5.jpg" alt="SHOT 07" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_050_e9a12dd5.jpg', 'SHOT 07 [9.2s - 10.8s]')">🔍</button>
+                    <span class="thumb-time-badge">9.20s - 10.80s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 07</span>
+                        <h4 class="shot-heading">SHOT 07</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(9.2, 10.8, 'SHOT 07')">
+                        ▶ 9.20s ➔ 10.80s (1.60s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(9.2, 10.8, 'SHOT 07')">
+<img alt="SHOT 07" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_050_e9a12dd5.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_050_e9a12dd5.jpg', 'SHOT 07 [9.2s - 10.8s]')">🔍</button>
+<span class="thumb-time-badge">9.20s - 10.80s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 07</span>
+<h4 class="shot-heading">SHOT 07</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(9.2, 10.8, 'SHOT 07')">
+                        ▶ 9.20s ➔ 10.80s (1.60s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-badge-group">
+<span class="shot-pill">PHÂN CẢNH 07</span>
+<span class="time-tag" onclick="jumpToVideo(9.2)" title="Click để nhảy video đến 9.20s - 10.80s">⏱️ 9.20s - 10.80s (1.63s)</span>
+</div>
+<h3 class="shot-title">Minh Họa Thực Chiến 03: Điểm Nhấn Góc Phải &amp; Tòa Nhà Nghệ Thuật Màu Vàng</h3>
+<div class="shot-type-tag">🎬 Medium Low-Angle Offset Portrait / Yellow Curved Facade &amp; Foreground Leaves</div>
+</div>
+<div class="shot-media-grid">
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_050_e9a12dd5.jpg', 'Cảnh 07 - Khung Đầu (Start Frame: 9.20s - 10.80s)')">
+<img alt="Shot 07 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_050_e9a12dd5.jpg"/>
+<span class="thumb-lbl">START</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_052_32382ecd.jpg', 'Cảnh 07 - Khung Giữa (Mid Frame: 9.20s - 10.80s)')">
+<img alt="Shot 07 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_052_32382ecd.jpg"/>
+<span class="thumb-lbl">MID</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_054_5e7723c9.jpg', 'Cảnh 07 - Khung Cuối (End Frame: 9.20s - 10.80s)')">
+<img alt="Shot 07 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_054_5e7723c9.jpg"/>
+<span class="thumb-lbl">END</span>
+</div>
+</div>
+<div class="shot-details-grid">
+<div class="detail-row">
+<span class="detail-label">📍 Bối Cảnh:</span>
+<span class="detail-val">Khuôn viên biệt thự kiến trúc châu Âu cổ điển sơn màu vàng đất, tiền cảnh cây lá xanh</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">👁️ Thị Giác:</span>
+<span class="detail-val">Nhân vật đeo kính mát ngồi thả lỏng ở góc dưới bên phải khung hình (đúng điểm giao 1/3 dưới phải). Hậu cảnh là tòa nhà màu vàng với các ô cửa sổ vòm uốn lượn nghệ thuật. Tiền cảnh có những nhánh cỏ xanh đung đưa tạo lớp tiền cảnh (Foreground Defocus).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">⚡ Mở &amp; Nối:</span>
+<span class="detail-val"><strong>Mở:</strong> Nhân vật vươn tay ngả người thư thái tận hưởng ánh nắng, tạo cử chỉ sống động trong khung hình tĩnh. <br/><strong>Nối:</strong> Cắt sang Cảnh 8: Khung đồ họa khoảng trống thị giác (Negative Space).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">📐 Kỹ Thuật:</span>
+<span class="detail-val highlight-tech">Off-Center Balance &amp; Foreground Depth Layering (Cân bằng thị giác bất đối xứng: chủ thể người nhỏ ở 1/3 phải đối trọng với khối kiến trúc hùng vĩ bên trái).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎯 Đạo Diễn:</span>
+<span class="detail-val">Góc máy đặt thấp sát bụi cỏ để đưa các ngọn lá vào mép dưới khung hình, gia tăng cảm giác không gian ba chiều (3D Depth) cho ống kính.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎥 Thiết Bị:</span>
+<span class="detail-val">Tiêu cự 50mm f/1.8, xóa phông nhẹ tiền cảnh lá cây để hướng trọn sự chú ý vào thần thái của nhân vật.</span>
+</div>
+</div>
+<div class="trans-container">
+<div class="trans-header">
+<span class="trans-icon">🔄</span>
+<strong>PHÂN TÍCH CHUYỂN CẢNH (TRANSITION: CẢNH 07 ➔ CẢNH 08)</strong>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_056_b014e9cd.jpg', 'So sánh chuyển cảnh: Cảnh 07 (End) ➔ Cảnh 08 (Start)')">
+<img alt="Transition 07 to 08" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_056_b014e9cd.jpg"/>
+</div>
+<p class="trans-desc"><strong>Kỹ thuật nối cảnh:</strong> Cắt thẳng (Hard Cut) chuẩn xác theo từng phách nhịp trống bass và ca từ bài hát 'See You Again', tạo nhịp đập thị giác đồng bộ 100% giữa âm thanh và hình ảnh.</p>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-8">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(10.83, 11.47, 'SHOT 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_058_856cd70c.jpg" alt="SHOT 08" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_058_856cd70c.jpg', 'SHOT 08 [10.83s - 11.47s]')">🔍</button>
+                    <span class="thumb-time-badge">10.83s - 11.47s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 08</span>
+                        <h4 class="shot-heading">SHOT 08</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(10.83, 11.47, 'SHOT 08')">
+                        ▶ 10.83s ➔ 11.47s (0.64s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(10.83, 11.47, 'SHOT 08')">
+<img alt="SHOT 08" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_058_856cd70c.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_058_856cd70c.jpg', 'SHOT 08 [10.83s - 11.47s]')">🔍</button>
+<span class="thumb-time-badge">10.83s - 11.47s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 08</span>
+<h4 class="shot-heading">SHOT 08</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(10.83, 11.47, 'SHOT 08')">
+                        ▶ 10.83s ➔ 11.47s (0.64s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-badge-group">
+<span class="shot-pill">PHÂN CẢNH 08</span>
+<span class="time-tag" onclick="jumpToVideo(10.83)" title="Click để nhảy video đến 10.83s - 11.47s">⏱️ 10.83s - 11.47s (0.67s)</span>
+</div>
+<h3 class="shot-title">Biểu Đồ Khái Niệm 04: Không Gian Âm (Negative space)</h3>
+<div class="shot-type-tag">🎬 Graphic Concept Diagram / Micro-Subject Isolation Box</div>
+</div>
+<div class="shot-media-grid">
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_058_856cd70c.jpg', 'Cảnh 08 - Khung Đầu (Start Frame: 10.83s - 11.47s)')">
+<img alt="Shot 08 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_058_856cd70c.jpg"/>
+<span class="thumb-lbl">START</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_060_09fd72c1.jpg', 'Cảnh 08 - Khung Giữa (Mid Frame: 10.83s - 11.47s)')">
+<img alt="Shot 08 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_060_09fd72c1.jpg"/>
+<span class="thumb-lbl">MID</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_062_39893a20.jpg', 'Cảnh 08 - Khung Cuối (End Frame: 10.83s - 11.47s)')">
+<img alt="Shot 08 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_062_39893a20.jpg"/>
+<span class="thumb-lbl">END</span>
+</div>
+</div>
+<div class="shot-details-grid">
+<div class="detail-row">
+<span class="detail-label">📍 Bối Cảnh:</span>
+<span class="detail-val">Khung đồ họa nền đen kỹ thuật số</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">👁️ Thị Giác:</span>
+<span class="detail-val">Toàn bộ khung hình là nền đen trống trải mênh mông (Negative Space), chỉ duy nhất một ô chữ nhật viền trắng siêu nhỏ đặt cô độc ở góc dưới bên trái, đi kèm dòng chữ 'Negative space' khiêm nhường ở phía trên.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">⚡ Mở &amp; Nối:</span>
+<span class="detail-val"><strong>Mở:</strong> Khung chữ nhật nhỏ bật sáng gợi mở cảm giác cô độc và bao la. <br/><strong>Nối:</strong> Cắt sang Cảnh 9: Minh họa thực tế toàn cảnh thung lũng đồi thông hùng vĩ.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">📐 Kỹ Thuật:</span>
+<span class="detail-val highlight-tech">Minimalist Asymmetric Spatial Isolation (Cô lập không gian và triệt tiêu yếu tố gây nhiễu để nhấn mạnh sự tự do).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎯 Đạo Diễn:</span>
+<span class="detail-val">Sử dụng diện tích trống chiếm tới hơn 85% khung hình đồ họa để chuẩn bị cho cú ngợp thị giác của cảnh phong cảnh thiên nhiên tiếp theo.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎥 Thiết Bị:</span>
+<span class="detail-val">Căn chỉnh ô chữ nhật tỷ lệ 1:10 so với tổng thể khung hình để truyền tải đúng tinh thần Negative Space.</span>
+</div>
+</div>
+<div class="trans-container">
+<div class="trans-header">
+<span class="trans-icon">🔄</span>
+<strong>PHÂN TÍCH CHUYỂN CẢNH (TRANSITION: CẢNH 08 ➔ CẢNH 09)</strong>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_064_068a1541.jpg', 'So sánh chuyển cảnh: Cảnh 08 (End) ➔ Cảnh 09 (Start)')">
+<img alt="Transition 08 to 09" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_064_068a1541.jpg"/>
+</div>
+<p class="trans-desc"><strong>Kỹ thuật nối cảnh:</strong> Cắt thẳng (Hard Cut) chuẩn xác theo từng phách nhịp trống bass và ca từ bài hát 'See You Again', tạo nhịp đập thị giác đồng bộ 100% giữa âm thanh và hình ảnh.</p>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-9">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(11.5, 13.1, 'SHOT 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_066_1495d9cb.jpg" alt="SHOT 09" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_066_1495d9cb.jpg', 'SHOT 09 [11.5s - 13.1s]')">🔍</button>
+                    <span class="thumb-time-badge">11.50s - 13.10s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 09</span>
+                        <h4 class="shot-heading">SHOT 09</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(11.5, 13.1, 'SHOT 09')">
+                        ▶ 11.50s ➔ 13.10s (1.60s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(11.5, 13.1, 'SHOT 09')">
+<img alt="SHOT 09" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_066_1495d9cb.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_066_1495d9cb.jpg', 'SHOT 09 [11.5s - 13.1s]')">🔍</button>
+<span class="thumb-time-badge">11.50s - 13.10s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 09</span>
+<h4 class="shot-heading">SHOT 09</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(11.5, 13.1, 'SHOT 09')">
+                        ▶ 11.50s ➔ 13.10s (1.60s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-badge-group">
+<span class="shot-pill">PHÂN CẢNH 09</span>
+<span class="time-tag" onclick="jumpToVideo(11.5)" title="Click để nhảy video đến 11.50s - 13.10s">⏱️ 11.50s - 13.10s (1.63s)</span>
+</div>
+<h3 class="shot-title">Minh Họa Thực Chiến 04: Rừng Thông Bạt Ngàn &amp; Dòng Suối Nhỏ Thung Lũng</h3>
+<div class="shot-type-tag">🎬 High-Angle Extreme Wide Shot / Pine Forest Canopy &amp; Winding Creek</div>
+</div>
+<div class="shot-media-grid">
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_066_1495d9cb.jpg', 'Cảnh 09 - Khung Đầu (Start Frame: 11.50s - 13.10s)')">
+<img alt="Shot 09 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_066_1495d9cb.jpg"/>
+<span class="thumb-lbl">START</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_068_8d17c46d.jpg', 'Cảnh 09 - Khung Giữa (Mid Frame: 11.50s - 13.10s)')">
+<img alt="Shot 09 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_068_8d17c46d.jpg"/>
+<span class="thumb-lbl">MID</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_070_c16b14c0.jpg', 'Cảnh 09 - Khung Cuối (End Frame: 11.50s - 13.10s)')">
+<img alt="Shot 09 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_070_c16b14c0.jpg"/>
+<span class="thumb-lbl">END</span>
+</div>
+</div>
+<div class="shot-details-grid">
+<div class="detail-row">
+<span class="detail-label">📍 Bối Cảnh:</span>
+<span class="detail-val">Đồi thông ngập tràn ánh nắng sớm, dòng mương suối uốn lượn giữa thảm cỏ</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">👁️ Thị Giác:</span>
+<span class="detail-val">Góc quay toàn cảnh từ trên cao tuyệt đẹp. Rừng thông xanh ngắt và dòng suối uốn lượn ngập tràn ánh nắng xiên chiếm trọn 90% khung hình. Nhân vật đứng nhỏ bé tại góc dưới bên trái, đắm mình trong không gian thiên nhiên bao la rộng lớn.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">⚡ Mở &amp; Nối:</span>
+<span class="detail-val"><strong>Mở:</strong> Nhân vật đứng tĩnh lặng ngắm nhìn dòng suối, gió thổi nhẹ qua tán cây thông tạo chuyển động lá rung rinh. <br/><strong>Nối:</strong> Cắt sang Cảnh 10: Khung đồ họa các đường dẫn hướng (Leading Lines).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">📐 Kỹ Thuật:</span>
+<span class="detail-val highlight-tech">Extreme Wide Nature Immersion &amp; Scale Contrast (Khai thác tối đa khoảng không thiên nhiên để tôn vinh sự bình yên của tâm hồn).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎯 Đạo Diễn:</span>
+<span class="detail-val">Chờ đợi khoảnh khắc nắng sớm chiếu xiên qua tán thông tạo thành các mảng sáng tối (Dappled Sunlight) trên thảm cỏ để bức tranh thiên nhiên giàu cảm xúc nhất.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎥 Thiết Bị:</span>
+<span class="detail-val">Flycam hoặc góc máy tripod trên cao, tiêu cự 24mm f/4.0, filter CPL để giảm chói mặt nước suối và tăng độ bão hòa màu lá thông.</span>
+</div>
+</div>
+<div class="trans-container">
+<div class="trans-header">
+<span class="trans-icon">🔄</span>
+<strong>PHÂN TÍCH CHUYỂN CẢNH (TRANSITION: CẢNH 09 ➔ CẢNH 10)</strong>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_072_c11cd5e1.jpg', 'So sánh chuyển cảnh: Cảnh 09 (End) ➔ Cảnh 10 (Start)')">
+<img alt="Transition 09 to 10" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_072_c11cd5e1.jpg"/>
+</div>
+<p class="trans-desc"><strong>Kỹ thuật nối cảnh:</strong> Cắt thẳng (Hard Cut) chuẩn xác theo từng phách nhịp trống bass và ca từ bài hát 'See You Again', tạo nhịp đập thị giác đồng bộ 100% giữa âm thanh và hình ảnh.</p>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-10">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(13.13, 13.83, 'SHOT 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_074_97d72207.jpg" alt="SHOT 10" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_074_97d72207.jpg', 'SHOT 10 [13.13s - 13.83s]')">🔍</button>
+                    <span class="thumb-time-badge">13.13s - 13.83s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 10</span>
+                        <h4 class="shot-heading">SHOT 10</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(13.13, 13.83, 'SHOT 10')">
+                        ▶ 13.13s ➔ 13.83s (0.70s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(13.13, 13.83, 'SHOT 10')">
+<img alt="SHOT 10" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_074_97d72207.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_074_97d72207.jpg', 'SHOT 10 [13.13s - 13.83s]')">🔍</button>
+<span class="thumb-time-badge">13.13s - 13.83s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 10</span>
+<h4 class="shot-heading">SHOT 10</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(13.13, 13.83, 'SHOT 10')">
+                        ▶ 13.13s ➔ 13.83s (0.70s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-badge-group">
+<span class="shot-pill">PHÂN CẢNH 10</span>
+<span class="time-tag" onclick="jumpToVideo(13.13)" title="Click để nhảy video đến 13.13s - 13.83s">⏱️ 13.13s - 13.83s (0.73s)</span>
+</div>
+<h3 class="shot-title">Biểu Đồ Khái Niệm 05: Đường Dẫn Hướng (Leading lines)</h3>
+<div class="shot-type-tag">🎬 Graphic Concept Diagram / Converging Diagonal Vectors</div>
+</div>
+<div class="shot-media-grid">
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_074_97d72207.jpg', 'Cảnh 10 - Khung Đầu (Start Frame: 13.13s - 13.83s)')">
+<img alt="Shot 10 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_074_97d72207.jpg"/>
+<span class="thumb-lbl">START</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_078_c07010a2.jpg', 'Cảnh 10 - Khung Giữa (Mid Frame: 13.13s - 13.83s)')">
+<img alt="Shot 10 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_078_c07010a2.jpg"/>
+<span class="thumb-lbl">MID</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_078_c07010a2.jpg', 'Cảnh 10 - Khung Cuối (End Frame: 13.13s - 13.83s)')">
+<img alt="Shot 10 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_078_c07010a2.jpg"/>
+<span class="thumb-lbl">END</span>
+</div>
+</div>
+<div class="shot-details-grid">
+<div class="detail-row">
+<span class="detail-label">📍 Bối Cảnh:</span>
+<span class="detail-val">Khung đồ họa nền đen kỹ thuật số</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">👁️ Thị Giác:</span>
+<span class="detail-val">Nền đen với các mũi tên vector màu trắng kéo dài theo các hướng xiên chéo, cùng chỉ về một đường chân trời hội tụ vô tận, đi kèm chữ 'Leading lines'.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">⚡ Mở &amp; Nối:</span>
+<span class="detail-val"><strong>Mở:</strong> Các mũi tên vector chuyển động dẫn hướng tạo cảm giác định vị thị giác mạnh mẽ. <br/><strong>Nối:</strong> Cắt sang Cảnh 11: Minh họa thực tế bậc thang đá dốc với đường xiên nắng chói chang.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">📐 Kỹ Thuật:</span>
+<span class="detail-val highlight-tech">Directional Vector Flow &amp; Visual Compulsion (Ép mắt người xem phải di chuyển theo lộ trình định sẵn của người quay).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎯 Đạo Diễn:</span>
+<span class="detail-val">Vẽ 4 đường vector với góc xiên 30 và 45 độ mô phỏng trực tiếp hướng dốc của bậc thang và lối đi thực tế.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎥 Thiết Bị:</span>
+<span class="detail-val">Motion graphic vector mượt mà với stroke width biến thiên từ dày sang mảnh.</span>
+</div>
+</div>
+<div class="trans-container">
+<div class="trans-header">
+<span class="trans-icon">🔄</span>
+<strong>PHÂN TÍCH CHUYỂN CẢNH (TRANSITION: CẢNH 10 ➔ CẢNH 11)</strong>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_080_c32729f5.jpg', 'So sánh chuyển cảnh: Cảnh 10 (End) ➔ Cảnh 11 (Start)')">
+<img alt="Transition 10 to 11" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_080_c32729f5.jpg"/>
+</div>
+<p class="trans-desc"><strong>Kỹ thuật nối cảnh:</strong> Cắt thẳng (Hard Cut) chuẩn xác theo từng phách nhịp trống bass và ca từ bài hát 'See You Again', tạo nhịp đập thị giác đồng bộ 100% giữa âm thanh và hình ảnh.</p>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-11">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(13.87, 15.2, 'SHOT 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_082_c063fd19.jpg" alt="SHOT 11" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_082_c063fd19.jpg', 'SHOT 11 [13.87s - 15.2s]')">🔍</button>
+                    <span class="thumb-time-badge">13.87s - 15.20s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 11</span>
+                        <h4 class="shot-heading">SHOT 11</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(13.87, 15.2, 'SHOT 11')">
+                        ▶ 13.87s ➔ 15.20s (1.33s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(13.87, 15.2, 'SHOT 11')">
+<img alt="SHOT 11" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_082_c063fd19.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_082_c063fd19.jpg', 'SHOT 11 [13.87s - 15.2s]')">🔍</button>
+<span class="thumb-time-badge">13.87s - 15.20s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 11</span>
+<h4 class="shot-heading">SHOT 11</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(13.87, 15.2, 'SHOT 11')">
+                        ▶ 13.87s ➔ 15.20s (1.33s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-badge-group">
+<span class="shot-pill">PHÂN CẢNH 11</span>
+<span class="time-tag" onclick="jumpToVideo(13.87)" title="Click để nhảy video đến 13.87s - 15.20s">⏱️ 13.87s - 15.20s (1.37s)</span>
+</div>
+<h3 class="shot-title">Minh Họa Thực Chiến 05: Bậc Thang Đá &amp; Vệt Nắng Dẫn Hướng Lối Mòn</h3>
+<div class="shot-type-tag">🎬 High-Angle Diagonal Tracking / Sunlit Stone Staircase &amp; Path</div>
+</div>
+<div class="shot-media-grid">
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_082_c063fd19.jpg', 'Cảnh 11 - Khung Đầu (Start Frame: 13.87s - 15.20s)')">
+<img alt="Shot 11 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_082_c063fd19.jpg"/>
+<span class="thumb-lbl">START</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_084_62834eb4.jpg', 'Cảnh 11 - Khung Giữa (Mid Frame: 13.87s - 15.20s)')">
+<img alt="Shot 11 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_084_62834eb4.jpg"/>
+<span class="thumb-lbl">MID</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_086_77a7cf17.jpg', 'Cảnh 11 - Khung Cuối (End Frame: 13.87s - 15.20s)')">
+<img alt="Shot 11 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_086_77a7cf17.jpg"/>
+<span class="thumb-lbl">END</span>
+</div>
+</div>
+<div class="shot-details-grid">
+<div class="detail-row">
+<span class="detail-label">📍 Bối Cảnh:</span>
+<span class="detail-val">Lối bậc thang đá ven đồi cỏ hoa dại ngập nắng vàng rực rỡ</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">👁️ Thị Giác:</span>
+<span class="detail-val">Góc máy từ trên cao nhìn xuống con đường dốc gồm dải đường xi măng và bậc thang đá chạy chéo từ góc trái dưới lên góc phải trên. Ánh nắng xuyên qua hàng cây tạo thành các vệt sáng song song dẫn mắt người xem theo từng bước chân của nhân vật đang bước đi.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">⚡ Mở &amp; Nối:</span>
+<span class="detail-val"><strong>Mở:</strong> Nhân vật bước đi dứt khoát trên lối mòn theo đường chéo dẫn hướng của khung hình. <br/><strong>Nối:</strong> Cắt sang Cảnh 12: Khung đồ họa dãy khung lặp lại (Patterns / repetition).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">📐 Kỹ Thuật:</span>
+<span class="detail-val highlight-tech">Diagonal Dynamic Axis &amp; Natural Light Leading (Khai thác đường nét địa hình và vệt bóng đổ tự nhiên làm đường ray dẫn dắt thị giác).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎯 Đạo Diễn:</span>
+<span class="detail-val">Đường chéo (Diagonal Line) luôn mang lại cảm giác năng động và chuyển động mạnh mẽ hơn nhiều so với đường ngang hoặc dọc.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎥 Thiết Bị:</span>
+<span class="detail-val">Tiêu cự 70mm trên ống kính tele tầm trung nén nhẹ không gian, làm các bậc thang trông dốc và giàu tính đồ họa hơn.</span>
+</div>
+</div>
+<div class="trans-container">
+<div class="trans-header">
+<span class="trans-icon">🔄</span>
+<strong>PHÂN TÍCH CHUYỂN CẢNH (TRANSITION: CẢNH 11 ➔ CẢNH 12)</strong>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_088_8cc26c54.jpg', 'So sánh chuyển cảnh: Cảnh 11 (End) ➔ Cảnh 12 (Start)')">
+<img alt="Transition 11 to 12" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_088_8cc26c54.jpg"/>
+</div>
+<p class="trans-desc"><strong>Kỹ thuật nối cảnh:</strong> Cắt thẳng (Hard Cut) chuẩn xác theo từng phách nhịp trống bass và ca từ bài hát 'See You Again', tạo nhịp đập thị giác đồng bộ 100% giữa âm thanh và hình ảnh.</p>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-12">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(15.23, 15.87, 'SHOT 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_090_196366bb.jpg" alt="SHOT 12" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_090_196366bb.jpg', 'SHOT 12 [15.23s - 15.87s]')">🔍</button>
+                    <span class="thumb-time-badge">15.23s - 15.87s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 12</span>
+                        <h4 class="shot-heading">SHOT 12</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(15.23, 15.87, 'SHOT 12')">
+                        ▶ 15.23s ➔ 15.87s (0.64s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(15.23, 15.87, 'SHOT 12')">
+<img alt="SHOT 12" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_090_196366bb.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_090_196366bb.jpg', 'SHOT 12 [15.23s - 15.87s]')">🔍</button>
+<span class="thumb-time-badge">15.23s - 15.87s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 12</span>
+<h4 class="shot-heading">SHOT 12</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(15.23, 15.87, 'SHOT 12')">
+                        ▶ 15.23s ➔ 15.87s (0.64s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-badge-group">
+<span class="shot-pill">PHÂN CẢNH 12</span>
+<span class="time-tag" onclick="jumpToVideo(15.23)" title="Click để nhảy video đến 15.23s - 15.87s">⏱️ 15.23s - 15.87s (0.67s)</span>
+</div>
+<h3 class="shot-title">Biểu Đồ Khái Niệm 06: Nhịp Điệu Lặp Lại (Patterns / repetition)</h3>
+<div class="shot-type-tag">🎬 Graphic Concept Diagram / One-Point Linear Repeating Frames</div>
+</div>
+<div class="shot-media-grid">
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_090_196366bb.jpg', 'Cảnh 12 - Khung Đầu (Start Frame: 15.23s - 15.87s)')">
+<img alt="Shot 12 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_090_196366bb.jpg"/>
+<span class="thumb-lbl">START</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_092_bb04e07a.jpg', 'Cảnh 12 - Khung Giữa (Mid Frame: 15.23s - 15.87s)')">
+<img alt="Shot 12 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_092_bb04e07a.jpg"/>
+<span class="thumb-lbl">MID</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_094_4131ce7c.jpg', 'Cảnh 12 - Khung Cuối (End Frame: 15.23s - 15.87s)')">
+<img alt="Shot 12 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_094_4131ce7c.jpg"/>
+<span class="thumb-lbl">END</span>
+</div>
+</div>
+<div class="shot-details-grid">
+<div class="detail-row">
+<span class="detail-label">📍 Bối Cảnh:</span>
+<span class="detail-val">Khung đồ họa nền đen kỹ thuật số</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">👁️ Thị Giác:</span>
+<span class="detail-val">Dãy các khung hình chữ nhật viền trắng lặp lại liên tiếp lùi dần về phía điểm tụ bên trái theo phối cảnh chiều sâu, phía dưới là dòng chữ 'Patterns / repetition'.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">⚡ Mở &amp; Nối:</span>
+<span class="detail-val"><strong>Mở:</strong> Dãy khung chữ nhật đồ họa hiển thị đồng điệu với nhịp bass gõ mạnh. <br/><strong>Nối:</strong> Cắt sang Cảnh 13: Minh họa thực tế hành lang với các ô cửa sổ lặp tăm tắp.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">📐 Kỹ Thuật:</span>
+<span class="detail-val highlight-tech">Architectural Rhythm &amp; Linear Perspective Cadence (Tạo nhịp điệu thị giác lặp lại như các khuôn nhạc liên hồi).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎯 Đạo Diễn:</span>
+<span class="detail-val">Biểu đồ thể hiện trực quan luật phối cảnh tuyến tính (Linear Perspective) với kích thước giảm dần đều theo khoảng cách.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎥 Thiết Bị:</span>
+<span class="detail-val">Thiết kế phối cảnh 1 điểm tụ (One-point perspective wireframe).</span>
+</div>
+</div>
+<div class="trans-container">
+<div class="trans-header">
+<span class="trans-icon">🔄</span>
+<strong>PHÂN TÍCH CHUYỂN CẢNH (TRANSITION: CẢNH 12 ➔ CẢNH 13)</strong>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_096_9900072a.jpg', 'So sánh chuyển cảnh: Cảnh 12 (End) ➔ Cảnh 13 (Start)')">
+<img alt="Transition 12 to 13" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_096_9900072a.jpg"/>
+</div>
+<p class="trans-desc"><strong>Kỹ thuật nối cảnh:</strong> Cắt thẳng (Hard Cut) chuẩn xác theo từng phách nhịp trống bass và ca từ bài hát 'See You Again', tạo nhịp đập thị giác đồng bộ 100% giữa âm thanh và hình ảnh.</p>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-13">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(15.9, 17.5, 'SHOT 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_098_fc86a97d.jpg" alt="SHOT 13" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_098_fc86a97d.jpg', 'SHOT 13 [15.9s - 17.5s]')">🔍</button>
+                    <span class="thumb-time-badge">15.90s - 17.50s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 13</span>
+                        <h4 class="shot-heading">SHOT 13</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(15.9, 17.5, 'SHOT 13')">
+                        ▶ 15.90s ➔ 17.50s (1.60s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(15.9, 17.5, 'SHOT 13')">
+<img alt="SHOT 13" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_098_fc86a97d.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_098_fc86a97d.jpg', 'SHOT 13 [15.9s - 17.5s]')">🔍</button>
+<span class="thumb-time-badge">15.90s - 17.50s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 13</span>
+<h4 class="shot-heading">SHOT 13</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(15.9, 17.5, 'SHOT 13')">
+                        ▶ 15.90s ➔ 17.50s (1.60s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-badge-group">
+<span class="shot-pill">PHÂN CẢNH 13</span>
+<span class="time-tag" onclick="jumpToVideo(15.9)" title="Click để nhảy video đến 15.90s - 17.50s">⏱️ 15.90s - 17.50s (1.63s)</span>
+</div>
+<h3 class="shot-title">Minh Họa Thực Chiến 06: Hành Lang Ô Cửa Sổ Lặp Lại &amp; Cú Nhoài Người Tinh Nghịch</h3>
+<div class="shot-type-tag">🎬 Interior Perspective Corridor Shot / Rhythmic Window Openings &amp; Subject Peak</div>
+</div>
+<div class="shot-media-grid">
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_098_fc86a97d.jpg', 'Cảnh 13 - Khung Đầu (Start Frame: 15.90s - 17.50s)')">
+<img alt="Shot 13 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_098_fc86a97d.jpg"/>
+<span class="thumb-lbl">START</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_100_4547006c.jpg', 'Cảnh 13 - Khung Giữa (Mid Frame: 15.90s - 17.50s)')">
+<img alt="Shot 13 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_100_4547006c.jpg"/>
+<span class="thumb-lbl">MID</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_102_bcff1638.jpg', 'Cảnh 13 - Khung Cuối (End Frame: 15.90s - 17.50s)')">
+<img alt="Shot 13 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_102_bcff1638.jpg"/>
+<span class="thumb-lbl">END</span>
+</div>
+</div>
+<div class="shot-details-grid">
+<div class="detail-row">
+<span class="detail-label">📍 Bối Cảnh:</span>
+<span class="detail-val">Hành lang bên trong công trình kiến trúc hiện đại tường trắng với dãy cửa sổ vuông mở liên tiếp</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">👁️ Thị Giác:</span>
+<span class="detail-val">Góc máy đặt dọc hành lang sâu hun hút với hàng loạt ô cửa sổ khung đen vuông vức lặp lại đều đặn theo chiều sâu phối cảnh. Nhịp điệu lặp lại hoàn hảo bị 'phá vỡ' một cách duyên dáng khi nhân vật bất ngờ nhoài đầu ra từ một ô cửa ở giữa và nhìn về phía ống kính.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">⚡ Mở &amp; Nối:</span>
+<span class="detail-val"><strong>Mở:</strong> Nhân vật thò đầu và vai ra từ ô cửa sổ thứ ba, tạo điểm nhấn phá cách trong dãy hoa văn lặp. <br/><strong>Nối:</strong> Cắt sang Cảnh 14: Khung đồ họa so sánh tỷ lệ kích thước (Scale).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">📐 Kỹ Thuật:</span>
+<span class="detail-val highlight-tech">Rhythm Disruption / Pattern Interruption (Tạo một chuỗi lặp lại thôi miên rồi đặt điểm nhấn bất ngờ vào giữa chuỗi để kích thích sự chú ý).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎯 Đạo Diễn:</span>
+<span class="detail-val">Căn máy sao cho mép tường và các cạnh khung cửa sổ tạo thành các đường thẳng song song hoàn hảo. Điểm phá vỡ nhịp điệu chính là bí quyết tạo nên bức ảnh đạt giải thưởng.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎥 Thiết Bị:</span>
+<span class="detail-val">Tiêu cự 35mm f/4.0 trên máy ảnh Full-frame, kiểm soát độ méo viền (Distortion) ở mức thấp nhất.</span>
+</div>
+</div>
+<div class="trans-container">
+<div class="trans-header">
+<span class="trans-icon">🔄</span>
+<strong>PHÂN TÍCH CHUYỂN CẢNH (TRANSITION: CẢNH 13 ➔ CẢNH 14)</strong>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_104_ae5f65fb.jpg', 'So sánh chuyển cảnh: Cảnh 13 (End) ➔ Cảnh 14 (Start)')">
+<img alt="Transition 13 to 14" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_104_ae5f65fb.jpg"/>
+</div>
+<p class="trans-desc"><strong>Kỹ thuật nối cảnh:</strong> Cắt thẳng (Hard Cut) chuẩn xác theo từng phách nhịp trống bass và ca từ bài hát 'See You Again', tạo nhịp đập thị giác đồng bộ 100% giữa âm thanh và hình ảnh.</p>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-14">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(17.53, 18.17, 'SHOT 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_106_5bed50ad.jpg" alt="SHOT 14" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_106_5bed50ad.jpg', 'SHOT 14 [17.53s - 18.17s]')">🔍</button>
+                    <span class="thumb-time-badge">17.53s - 18.17s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 14</span>
+                        <h4 class="shot-heading">SHOT 14</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(17.53, 18.17, 'SHOT 14')">
+                        ▶ 17.53s ➔ 18.17s (0.64s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(17.53, 18.17, 'SHOT 14')">
+<img alt="SHOT 14" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_106_5bed50ad.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_106_5bed50ad.jpg', 'SHOT 14 [17.53s - 18.17s]')">🔍</button>
+<span class="thumb-time-badge">17.53s - 18.17s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 14</span>
+<h4 class="shot-heading">SHOT 14</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(17.53, 18.17, 'SHOT 14')">
+                        ▶ 17.53s ➔ 18.17s (0.64s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-badge-group">
+<span class="shot-pill">PHÂN CẢNH 14</span>
+<span class="time-tag" onclick="jumpToVideo(17.53)" title="Click để nhảy video đến 17.53s - 18.17s">⏱️ 17.53s - 18.17s (0.67s)</span>
+</div>
+<h3 class="shot-title">Biểu Đồ Khái Niệm 07: Tương Quan Tỷ Lệ (Scale)</h3>
+<div class="shot-type-tag">🎬 Graphic Concept Diagram / Proportional Contrast Geometry</div>
+</div>
+<div class="shot-media-grid">
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_106_5bed50ad.jpg', 'Cảnh 14 - Khung Đầu (Start Frame: 17.53s - 18.17s)')">
+<img alt="Shot 14 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_106_5bed50ad.jpg"/>
+<span class="thumb-lbl">START</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_108_978f5a3c.jpg', 'Cảnh 14 - Khung Giữa (Mid Frame: 17.53s - 18.17s)')">
+<img alt="Shot 14 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_108_978f5a3c.jpg"/>
+<span class="thumb-lbl">MID</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_110_836c95ae.jpg', 'Cảnh 14 - Khung Cuối (End Frame: 17.53s - 18.17s)')">
+<img alt="Shot 14 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_110_836c95ae.jpg"/>
+<span class="thumb-lbl">END</span>
+</div>
+</div>
+<div class="shot-details-grid">
+<div class="detail-row">
+<span class="detail-label">📍 Bối Cảnh:</span>
+<span class="detail-val">Khung đồ họa nền đen kỹ thuật số</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">👁️ Thị Giác:</span>
+<span class="detail-val">Khung đồ họa tương phản cực đại: Một ô chữ nhật đứng siêu nhỏ (đại diện cho con người) đặt cạnh một khối vuông khổng lồ choán hết khung hình (đại diện cho công trình), kèm chữ 'Scale' ở giữa.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">⚡ Mở &amp; Nối:</span>
+<span class="detail-val"><strong>Mở:</strong> Đồ họa so sánh tỷ lệ chớp sáng mạnh mẽ chuẩn bị cho cảnh kết thúc bùng nổ. <br/><strong>Nối:</strong> Cắt sang Cảnh 15: Minh họa thực tế ngọn tháp kiến trúc khổng lồ bên cạnh con người nhỏ bé.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">📐 Kỹ Thuật:</span>
+<span class="detail-val highlight-tech">Monumental Contrast Diagram (Trực quan hóa sự chênh lệch kích thước tuyệt đối giữa con người và thế giới xung quanh).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎯 Đạo Diễn:</span>
+<span class="detail-val">Sự đối lập giữa cái cực nhỏ và cái cực lớn luôn tạo ra cảm xúc choáng ngợp và sự tôn kính sâu sắc trong tâm lý người xem.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎥 Thiết Bị:</span>
+<span class="detail-val">Đồ họa tỷ lệ diện tích 1:25 truyền tải sự chênh lệch kích thước ngoạn mục.</span>
+</div>
+</div>
+<div class="trans-container">
+<div class="trans-header">
+<span class="trans-icon">🔄</span>
+<strong>PHÂN TÍCH CHUYỂN CẢNH (TRANSITION: CẢNH 14 ➔ CẢNH 15)</strong>
+</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_112_905bb112.jpg', 'So sánh chuyển cảnh: Cảnh 14 (End) ➔ Cảnh 15 (Start)')">
+<img alt="Transition 14 to 15" class="trans-img" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_112_905bb112.jpg"/>
+</div>
+<p class="trans-desc"><strong>Kỹ thuật nối cảnh:</strong> Cắt thẳng (Hard Cut) chuẩn xác theo từng phách nhịp trống bass và ca từ bài hát 'See You Again', tạo nhịp đập thị giác đồng bộ 100% giữa âm thanh và hình ảnh.</p>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-15">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(18.2, 19.87, 'SHOT 15')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_114_972dd20b.jpg" alt="SHOT 15" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_114_972dd20b.jpg', 'SHOT 15 [18.2s - 19.87s]')">🔍</button>
+                    <span class="thumb-time-badge">18.20s - 19.87s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 15</span>
+                        <h4 class="shot-heading">SHOT 15</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(18.2, 19.87, 'SHOT 15')">
+                        ▶ 18.20s ➔ 19.87s (1.67s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(18.2, 19.87, 'SHOT 15')">
+<img alt="SHOT 15" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_114_972dd20b.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_114_972dd20b.jpg', 'SHOT 15 [18.2s - 19.87s]')">🔍</button>
+<span class="thumb-time-badge">18.20s - 19.87s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 15</span>
+<h4 class="shot-heading">SHOT 15</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(18.2, 19.87, 'SHOT 15')">
+                        ▶ 18.20s ➔ 19.87s (1.67s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="shot-header">
+<div class="shot-badge-group">
+<span class="shot-pill">PHÂN CẢNH 15</span>
+<span class="time-tag" onclick="jumpToVideo(18.2)" title="Click để nhảy video đến 18.20s - 19.87s">⏱️ 18.20s - 19.87s (1.70s)</span>
+</div>
+<h3 class="shot-title">Minh Họa Thực Chiến 07 (Cảnh Kết): Ngọn Tháp Bê Tông Khổng Lồ &amp; Điểm Dừng Chân</h3>
+<div class="shot-type-tag">🎬 Medium Full Shot / Brutalist Tower Monument vs Human Silhouette Climax</div>
+</div>
+<div class="shot-media-grid">
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_114_972dd20b.jpg', 'Cảnh 15 - Khung Đầu (Start Frame: 18.20s - 19.87s)')">
+<img alt="Shot 15 Start" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_114_972dd20b.jpg"/>
+<span class="thumb-lbl">START</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_116_96a01f94.jpg', 'Cảnh 15 - Khung Giữa (Mid Frame: 18.20s - 19.87s)')">
+<img alt="Shot 15 Mid" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_116_96a01f94.jpg"/>
+<span class="thumb-lbl">MID</span>
+</div>
+<div class="shot-thumb-box" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_118_98aad8d7.jpg', 'Cảnh 15 - Khung Cuối (End Frame: 18.20s - 19.87s)')">
+<img alt="Shot 15 End" class="shot-thumb" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_118_98aad8d7.jpg"/>
+<span class="thumb-lbl">END</span>
+</div>
+</div>
+<div class="shot-details-grid">
+<div class="detail-row">
+<span class="detail-label">📍 Bối Cảnh:</span>
+<span class="detail-val">Cây cầu bên hồ nước dưới chân công trình tháp kiến trúc phong cách Brutalist đồ sộ</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">👁️ Thị Giác:</span>
+<span class="detail-val">Khung hình cận cảnh chân ngọn tháp kiến trúc khổng lồ bằng bê tông sơn sọc đỏ trắng vươn cao sừng sững chiếm trọn 80% diện tích bên phải. Nhân vật đứng tựa lan can bên trái trông nhỏ bé và khiêm nhường nhưng tạo nên điểm tựa cảm xúc sâu lắng khép lại toàn bộ video.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">⚡ Mở &amp; Nối:</span>
+<span class="detail-val"><strong>Mở:</strong> Nhân vật đứng tựa tay ngắm nhìn công trình vĩ đại, hình ảnh dừng lại tĩnh lặng khi giai điệu bài hát ngân dài. <br/><strong>Nối:</strong> Hết video (Loop playback mượt mà trở lại cảnh mở màn Golden Ratio).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">📐 Kỹ Thuật:</span>
+<span class="detail-val highlight-tech">Monumental Architecture vs Human Scale &amp; Visual Anchor Climax (Sử dụng tỷ lệ tương phản để tạo ấn tượng thị giác đọng lại sau cùng trong tâm trí người xem).</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎯 Đạo Diễn:</span>
+<span class="detail-val">Đặt con người ở góc đối trọng với khối kiến trúc khổng lồ giúp người xem cảm nhận trọn vẹn sự kỳ vĩ của không gian.</span>
+</div>
+<div class="detail-row">
+<span class="detail-label">🎥 Thiết Bị:</span>
+<span class="detail-val">Tiêu cự 50mm f/4.0, đo sáng cân bằng trời xanh và bề mặt bê tông của tòa tháp.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+        </div>
+
+        <div class="grid-container" id="gridView" style="display:none;">
+            
+        <div class="grid-card" onclick="playShot(0.0, 3.97, 'SHOT 01')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_002_4ee0b6c4.jpg" alt="SHOT 01" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_002_4ee0b6c4.jpg', 'SHOT 01 [0.0s - 3.97s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 01</div>
+                <div class="grid-badge-bottom">0.0s - 4.0s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(4.0, 4.63, 'SHOT 02')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_010_297af04f.jpg" alt="SHOT 02" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_010_297af04f.jpg', 'SHOT 02 [4.0s - 4.63s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 02</div>
+                <div class="grid-badge-bottom">4.0s - 4.6s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(4.67, 6.23, 'SHOT 03')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_018_fc185cfc.jpg" alt="SHOT 03" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_018_fc185cfc.jpg', 'SHOT 03 [4.67s - 6.23s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 03</div>
+                <div class="grid-badge-bottom">4.7s - 6.2s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(6.27, 6.9, 'SHOT 04')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_026_be75706a.jpg" alt="SHOT 04" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_026_be75706a.jpg', 'SHOT 04 [6.27s - 6.9s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 04</div>
+                <div class="grid-badge-bottom">6.3s - 6.9s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(6.93, 8.5, 'SHOT 05')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_034_a0008615.jpg" alt="SHOT 05" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_034_a0008615.jpg', 'SHOT 05 [6.93s - 8.5s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 05</div>
+                <div class="grid-badge-bottom">6.9s - 8.5s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(8.53, 9.17, 'SHOT 06')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_042_abd51680.jpg" alt="SHOT 06" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_042_abd51680.jpg', 'SHOT 06 [8.53s - 9.17s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 06</div>
+                <div class="grid-badge-bottom">8.5s - 9.2s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(9.2, 10.8, 'SHOT 07')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_050_e9a12dd5.jpg" alt="SHOT 07" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_050_e9a12dd5.jpg', 'SHOT 07 [9.2s - 10.8s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 07</div>
+                <div class="grid-badge-bottom">9.2s - 10.8s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(10.83, 11.47, 'SHOT 08')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_058_856cd70c.jpg" alt="SHOT 08" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_058_856cd70c.jpg', 'SHOT 08 [10.83s - 11.47s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 08</div>
+                <div class="grid-badge-bottom">10.8s - 11.5s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(11.5, 13.1, 'SHOT 09')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_066_1495d9cb.jpg" alt="SHOT 09" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_066_1495d9cb.jpg', 'SHOT 09 [11.5s - 13.1s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 09</div>
+                <div class="grid-badge-bottom">11.5s - 13.1s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(13.13, 13.83, 'SHOT 10')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_074_97d72207.jpg" alt="SHOT 10" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_074_97d72207.jpg', 'SHOT 10 [13.13s - 13.83s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 10</div>
+                <div class="grid-badge-bottom">13.1s - 13.8s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(13.87, 15.2, 'SHOT 11')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_082_c063fd19.jpg" alt="SHOT 11" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_082_c063fd19.jpg', 'SHOT 11 [13.87s - 15.2s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 11</div>
+                <div class="grid-badge-bottom">13.9s - 15.2s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(15.23, 15.87, 'SHOT 12')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_090_196366bb.jpg" alt="SHOT 12" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_090_196366bb.jpg', 'SHOT 12 [15.23s - 15.87s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 12</div>
+                <div class="grid-badge-bottom">15.2s - 15.9s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(15.9, 17.5, 'SHOT 13')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_098_fc86a97d.jpg" alt="SHOT 13" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_098_fc86a97d.jpg', 'SHOT 13 [15.9s - 17.5s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 13</div>
+                <div class="grid-badge-bottom">15.9s - 17.5s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(17.53, 18.17, 'SHOT 14')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_106_5bed50ad.jpg" alt="SHOT 14" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_106_5bed50ad.jpg', 'SHOT 14 [17.53s - 18.17s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 14</div>
+                <div class="grid-badge-bottom">17.5s - 18.2s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(18.2, 19.87, 'SHOT 15')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_114_972dd20b.jpg" alt="SHOT 15" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_114_972dd20b.jpg', 'SHOT 15 [18.2s - 19.87s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 15</div>
+                <div class="grid-badge-bottom">18.2s - 19.9s</div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)">
+    <div class="drawer-panel" onclick="event.stopPropagation()">
+        <div class="drawer-header">
+            <div class="drawer-title">📑 MỤC LỤC PHÂN CẢNH (15)</div>
+            <button class="drawer-close-btn" onclick="toggleDrawer(false)">&times;</button>
+        </div>
+        <div class="drawer-list">
+            
+        <div class="drawer-item" onclick="jumpToShot(1, 0.0, 3.97, 'SHOT 01')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_002_4ee0b6c4.jpg" alt="SHOT 01" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 01</div>
+                <div class="drawer-shot-time">⏱ 0.00s - 3.97s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(2, 4.0, 4.63, 'SHOT 02')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_010_297af04f.jpg" alt="SHOT 02" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 02</div>
+                <div class="drawer-shot-time">⏱ 4.00s - 4.63s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(3, 4.67, 6.23, 'SHOT 03')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_018_fc185cfc.jpg" alt="SHOT 03" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 03</div>
+                <div class="drawer-shot-time">⏱ 4.67s - 6.23s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(4, 6.27, 6.9, 'SHOT 04')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_026_be75706a.jpg" alt="SHOT 04" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 04</div>
+                <div class="drawer-shot-time">⏱ 6.27s - 6.90s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(5, 6.93, 8.5, 'SHOT 05')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_034_a0008615.jpg" alt="SHOT 05" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 05</div>
+                <div class="drawer-shot-time">⏱ 6.93s - 8.50s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(6, 8.53, 9.17, 'SHOT 06')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_042_abd51680.jpg" alt="SHOT 06" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 06</div>
+                <div class="drawer-shot-time">⏱ 8.53s - 9.17s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(7, 9.2, 10.8, 'SHOT 07')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_050_e9a12dd5.jpg" alt="SHOT 07" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 07</div>
+                <div class="drawer-shot-time">⏱ 9.20s - 10.80s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(8, 10.83, 11.47, 'SHOT 08')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_058_856cd70c.jpg" alt="SHOT 08" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 08</div>
+                <div class="drawer-shot-time">⏱ 10.83s - 11.47s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(9, 11.5, 13.1, 'SHOT 09')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_066_1495d9cb.jpg" alt="SHOT 09" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 09</div>
+                <div class="drawer-shot-time">⏱ 11.50s - 13.10s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(10, 13.13, 13.83, 'SHOT 10')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_074_97d72207.jpg" alt="SHOT 10" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 10</div>
+                <div class="drawer-shot-time">⏱ 13.13s - 13.83s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(11, 13.87, 15.2, 'SHOT 11')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_082_c063fd19.jpg" alt="SHOT 11" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 11</div>
+                <div class="drawer-shot-time">⏱ 13.87s - 15.20s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(12, 15.23, 15.87, 'SHOT 12')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_090_196366bb.jpg" alt="SHOT 12" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 12</div>
+                <div class="drawer-shot-time">⏱ 15.23s - 15.87s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(13, 15.9, 17.5, 'SHOT 13')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_098_fc86a97d.jpg" alt="SHOT 13" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 13</div>
+                <div class="drawer-shot-time">⏱ 15.90s - 17.50s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(14, 17.53, 18.17, 'SHOT 14')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_106_5bed50ad.jpg" alt="SHOT 14" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 14</div>
+                <div class="drawer-shot-time">⏱ 17.53s - 18.17s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(15, 18.2, 19.87, 'SHOT 15')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/The_Power_of_Composition_-_%40minhmigoi/img_114_972dd20b.jpg" alt="SHOT 15" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 15</div>
+                <div class="drawer-shot-time">⏱ 18.20s - 19.87s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+<div id="lightboxModal" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImg" src="" onclick="event.stopPropagation()" />
+    <div id="lightboxCaption"></div>
+</div>
+
+<script>
+const rawVideoSrc = "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/The%20Power%20of%20Composition%20-%20%40minhmigoi.mp4";
+let currentEndTime = null;
+
+function getCandidateUrls(src) {
+    if (!src) return [];
+    if (src.startsWith('http://') || src.startsWith('https://')) return [src];
+    let clean = src.replace(/^(\.\/|\.\.\/)+/, '').replace(/^(videos\/|reports\/)/, '');
+    return [
+        'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/' + encodeURI(clean),
+        '../videos/' + clean,
+        './videos/' + clean,
+        './' + clean
+    ];
+}
+
+const candidateUrls = getCandidateUrls(rawVideoSrc);
+let candidateIdx = 0;
+const player = document.getElementById('mainPlayer');
+
+function loadVideoCandidate() {
+    if (candidateIdx >= candidateUrls.length) return;
+    const url = candidateUrls[candidateIdx];
+    player.src = url;
+    document.getElementById('directVidLink').href = url;
+    player.load();
+}
+
+player.onerror = () => {
+    candidateIdx++;
+    if (candidateIdx < candidateUrls.length) {
+        loadVideoCandidate();
+    }
+};
+
+loadVideoCandidate();
+
+function playShot(startTime, endTime, label) {
+    currentEndTime = (typeof endTime === 'number') ? endTime : null;
+    const tag = document.getElementById('shotStatusTag');
+    if (tag) {
+        const endTxt = currentEndTime ? ` - ${currentEndTime.toFixed(2)}s` : '';
+        tag.innerText = `🎬 ${label || 'Phân cảnh'}: [${startTime.toFixed(2)}s${endTxt}]`;
+    }
+    player.currentTime = startTime;
+    const p = player.play();
+    if (p !== undefined) {
+        p.catch(e => {
+            player.muted = true;
+            player.play().catch(err => console.log('Autoplay muted triggered'));
+        });
+    }
+    document.querySelectorAll('.shot-card').forEach(c => c.classList.remove('active-playing'));
+    const matchCard = Array.from(document.querySelectorAll('.shot-card')).find(c => c.innerText.includes(label));
+    if (matchCard) matchCard.classList.add('active-playing');
+
+    if (window.innerWidth < 1024) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
+function setSpeed(speed, btn) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.speed-buttons-row .ctrl-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+}
+
+function stepFrame(frames) {
+    player.pause();
+    player.currentTime += (frames * (1/30));
+}
+
+function toggleMute(btn) {
+    player.muted = !player.muted;
+    if (btn) btn.innerText = player.muted ? '🔇 Tắt Tiếng' : '🔊 Tiếng';
+}
+
+function switchView(view) {
+    const sb = document.getElementById('storyboardView');
+    const grid = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetailBtn');
+    const tabGrid = document.getElementById('tabGridBtn');
+    if (view === 'grid') {
+        sb.style.display = 'none';
+        grid.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    } else {
+        sb.style.display = 'flex';
+        grid.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    }
+}
+
+function toggleDrawer(open) {
+    const drawer = document.getElementById('drawerBackdrop');
+    if (open) drawer.classList.add('open');
+    else drawer.classList.remove('open');
+}
+
+function jumpToShot(shotNum, st, et, label) {
+    toggleDrawer(false);
+    switchView('detail');
+    playShot(st, et, label);
+    const targetCard = document.getElementById('shot-card-' + shotNum);
+    if (targetCard) {
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function openLightbox(src, caption) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCaption');
+    img.src = src;
+    cap.innerText = caption || '';
+    modal.style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').style.display = 'none';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+        toggleDrawer(false);
+    } else if (e.key === ' ') {
+        if (document.activeElement.tagName !== 'INPUT') {
+            e.preventDefault();
+            player.paused ? player.play() : player.pause();
+        }
+    }
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

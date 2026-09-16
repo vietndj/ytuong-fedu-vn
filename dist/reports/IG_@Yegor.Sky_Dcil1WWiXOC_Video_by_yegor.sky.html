@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Cinematic Unboxing Mastery • Báo Cáo Đạo Diễn 10 Phân Cảnh - @yegor.sky</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-dark:#080c14; --bg-surface:#0f172a; --bg-card:#131f37; --bg-card-hover:#1a2a4a;
+  --accent-amber:#f59e0b; --accent-cyan:#06b6d4; --accent-blue:#38bdf8; --accent-emerald:#10b981; --accent-rose:#f43f5e;
+  --border-color:#1e293b; --border-glow:#38bdf840; --text-main:#f8fafc; --text-sub:#94a3b8; --text-muted:#64748b;
+  --font-heading:'Plus Jakarta Sans',sans-serif; --font-body:'Be Vietnam Pro',sans-serif; --font-mono:'JetBrains Mono',monospace;
+}
+* { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+body { background-color:var(--bg-dark); color:var(--text-main); font-family:var(--font-body); line-height:1.6; font-size:14.5px; overflow-x:hidden; }
+.app-container { display:flex; flex-direction:column; min-height:100vh; }
+@media (min-width:1024px) { .app-container { display:grid; grid-template-columns:440px 1fr; height:100vh; overflow:hidden; } }
+.player-column { background:#040711; border-bottom:1px solid var(--border-color); position:sticky; top:0; z-index:100; }
+@media (min-width:1024px) { .player-column { border-bottom:none; border-right:1px solid var(--border-color); height:100vh; overflow-y:auto; display:flex; flex-direction:column; } }
+.video-player-wrapper { position:relative; width:100%; background:#000; aspect-ratio:9/16; max-height:46vh; display:flex; align-items:center; justify-content:center; }
+@media (min-width:1024px) { .video-player-wrapper { max-height:none; width:100%; } }
+video#mainVideo { width:100%; height:100%; object-fit:contain; background:#000; }
+.director-controls { background:var(--bg-surface); padding:10px 14px; border-top:1px solid var(--border-color); display:flex; flex-direction:column; gap:8px; }
+.control-row { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; }
+.control-group { display:flex; align-items:center; gap:5px; }
+.ctrl-btn { background:var(--bg-card); border:1px solid var(--border-color); color:var(--text-main); padding:5px 9px; border-radius:6px; font-size:12px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:4px; transition:all 0.2s ease; }
+.ctrl-btn:hover, .ctrl-btn.active { background:var(--accent-blue); color:#040711; border-color:var(--accent-blue); }
+.time-display { font-family:var(--font-mono); font-size:12px; color:var(--accent-amber); font-weight:700; }
+.content-column { flex:1; background:var(--bg-dark); padding:16px; overflow-y:auto; }
+@media (min-width:1024px) { .content-column { padding:28px 36px 80px 36px; height:100vh; overflow-y:auto; } }
+.report-header { background:linear-gradient(135deg,rgba(15,23,42,0.9),rgba(19,31,55,0.95)); border:1px solid var(--border-color); border-radius:14px; padding:20px; margin-bottom:24px; box-shadow:0 10px 30px rgba(0,0,0,0.4); }
+.header-badge-row { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:12px; flex-wrap:wrap; }
+.badge-tag { display:inline-flex; align-items:center; gap:6px; background:rgba(245,158,11,0.15); color:var(--accent-amber); border:1px solid rgba(245,158,11,0.3); font-size:11px; font-weight:700; padding:4px 10px; border-radius:6px; text-transform:uppercase; letter-spacing:0.5px; }
+.author-ig-badge { display:inline-flex; align-items:center; gap:6px; background:linear-gradient(135deg,#e1306c,#f77737); color:#fff; padding:5px 12px; border-radius:20px; font-size:12px; font-weight:700; text-decoration:none; transition:transform 0.2s ease,box-shadow 0.2s ease; }
+.author-ig-badge:hover { transform:translateY(-1px); box-shadow:0 4px 15px rgba(225,48,108,0.4); }
+.report-title { font-family:var(--font-heading); font-size:22px; font-weight:800; color:#fff; line-height:1.3; margin-bottom:8px; }
+@media (min-width:768px) { .report-title { font-size:28px; } }
+.report-subtitle { color:var(--text-sub); font-size:14px; margin-bottom:16px; }
+.stats-bar { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.08); }
+.stat-item { display:flex; flex-direction:column; }
+.stat-num { font-family:var(--font-mono); font-size:16px; font-weight:700; color:var(--accent-cyan); }
+.stat-lbl { font-size:11px; color:var(--text-muted); text-transform:uppercase; }
+.nav-toolbar { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:20px; position:sticky; top:0; background:rgba(8,12,20,0.95); backdrop-filter:blur(10px); padding:10px 0; z-index:50; }
+.view-switcher { display:flex; background:var(--bg-surface); border:1px solid var(--border-color); padding:3px; border-radius:8px; gap:4px; }
+.switch-btn { background:transparent; border:none; color:var(--text-sub); padding:6px 14px; border-radius:6px; font-size:12.5px; font-weight:600; cursor:pointer; transition:all 0.2s ease; display:inline-flex; align-items:center; gap:6px; }
+.switch-btn.active { background:var(--bg-card); color:var(--accent-cyan); box-shadow:0 2px 8px rgba(0,0,0,0.3); }
+.drawer-toggle-btn { background:var(--bg-surface); border:1px solid var(--border-color); color:var(--text-main); padding:6px 14px; border-radius:8px; font-size:12.5px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:6px; transition:all 0.2s ease; }
+.drawer-toggle-btn:hover { border-color:var(--accent-blue); color:var(--accent-blue); }
+.shot-card { background:var(--bg-surface); border:1px solid var(--border-color); border-radius:14px; padding:20px; margin-bottom:24px; box-shadow:0 4px 20px rgba(0,0,0,0.25); transition:border-color 0.3s ease; }
+.shot-card:hover { border-color:var(--border-glow); }
+.shot-card-header { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:16px; flex-wrap:wrap; }
+.shot-number-badge { display:flex; align-items:center; gap:10px; }
+.shot-idx { background:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan)); color:#040711; font-family:var(--font-heading); font-weight:800; font-size:12px; padding:4px 10px; border-radius:6px; letter-spacing:0.5px; }
+.time-play-btn { background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.3); color:var(--accent-blue); padding:4px 10px; border-radius:6px; font-family:var(--font-mono); font-size:12px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:6px; transition:all 0.2s ease; }
+.time-play-btn:hover { background:var(--accent-blue); color:#040711; }
+.dur-chip { color:var(--text-muted); font-weight:400; }
+.shot-type-pill { background:var(--bg-card); border:1px solid var(--border-color); color:var(--accent-amber); padding:3px 10px; border-radius:6px; font-size:11.5px; font-weight:600; }
+.card-section { margin-bottom:16px; }
+.section-label { font-size:11px; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px; }
+.shot-headline { font-family:var(--font-heading); font-size:17px; font-weight:700; color:#fff; line-height:1.4; margin-bottom:4px; }
+.shot-headline-en { font-size:12.5px; color:var(--accent-cyan); font-family:var(--font-mono); margin-bottom:12px; }
+.subject-action-box { background:rgba(19,31,55,0.5); border-left:3px solid var(--accent-blue); padding:10px 14px; border-radius:0 8px 8px 0; margin-top:8px; font-size:14px; color:var(--text-main); }
+.keyframes-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:16px 0; }
+.kf-col { cursor:pointer; position:relative; border-radius:8px; overflow:hidden; border:1px solid var(--border-color); transition:transform 0.2s ease,border-color 0.2s ease; }
+.kf-col:hover { transform:translateY(-2px); border-color:var(--accent-blue); }
+.kf-img-wrap { position:relative; aspect-ratio:9/16; background:#000; }
+.kf-img-wrap img { width:100%; height:100%; object-fit:cover; display:block; }
+.kf-tag { position:absolute; bottom:6px; left:6px; background:rgba(0,0,0,0.75); backdrop-filter:blur(4px); color:#fff; font-family:var(--font-mono); font-size:10px; padding:2px 6px; border-radius:4px; font-weight:600; }
+.kf-tag-mid { background:rgba(56,189,248,0.85); color:#040711; }
+.critique-grid { display:grid; grid-template-columns:1fr; gap:10px; margin-top:6px; }
+@media (min-width:768px) { .critique-grid { grid-template-columns:1fr 1fr; } }
+.critique-box { border-radius:10px; padding:12px 14px; font-size:13.5px; }
+.pro-box { background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.25); }
+.con-box { background:rgba(244,63,94,0.08); border:1px solid rgba(244,63,94,0.25); }
+.critique-title { display:flex; align-items:center; gap:6px; font-size:11.5px; font-weight:700; margin-bottom:6px; letter-spacing:0.5px; }
+.pro-box .critique-title { color:var(--accent-emerald); }
+.con-box .critique-title { color:var(--accent-rose); }
+.takeaway-box { background:linear-gradient(135deg,rgba(245,158,11,0.1),rgba(245,158,11,0.03)); border:1px solid rgba(245,158,11,0.3); border-radius:10px; padding:12px 16px; margin-top:6px; }
+.takeaway-title { display:flex; align-items:center; gap:6px; font-size:12px; font-weight:700; color:var(--accent-amber); margin-bottom:6px; text-transform:uppercase; }
+.takeaway-text { color:#fff; font-weight:500; font-size:13.5px; }
+.tech-specs-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:8px; background:var(--bg-card); border-radius:8px; padding:10px 14px; margin-top:14px; font-size:12px; }
+.spec-item { display:flex; gap:6px; }
+.spec-label { color:var(--text-muted); font-weight:600; }
+.spec-val { color:var(--text-sub); }
+.trans-container { margin-top:16px; border-top:1px dashed var(--border-color); padding-top:14px; }
+.trans-header { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:8px; flex-wrap:wrap; }
+.trans-badge { background:rgba(192,132,252,0.15); color:#c084fc; border:1px solid rgba(192,132,252,0.3); font-size:11px; font-weight:700; padding:2px 8px; border-radius:4px; }
+.trans-desc { font-size:12px; color:var(--text-sub); }
+.trans-img-wrap { position:relative; border-radius:8px; overflow:hidden; border:1px solid var(--border-color); cursor:pointer; }
+.trans-img-wrap img { width:100%; display:block; }
+.trans-overlay-tag { position:absolute; bottom:6px; right:6px; background:rgba(0,0,0,0.7); color:var(--text-sub); font-size:10px; padding:2px 6px; border-radius:4px; }
+.visual-grid-container { display:none; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+.grid-card { background:var(--bg-surface); border:1px solid var(--border-color); border-radius:12px; overflow:hidden; cursor:pointer; transition:transform 0.2s ease,border-color 0.2s ease; }
+.grid-card:hover { transform:translateY(-3px); border-color:var(--accent-cyan); }
+.grid-thumb { position:relative; aspect-ratio:9/16; background:#000; }
+.grid-thumb img { width:100%; height:100%; object-fit:cover; }
+.grid-badge { position:absolute; top:8px; left:8px; background:var(--accent-blue); color:#040711; font-weight:700; font-size:10.5px; padding:2px 6px; border-radius:4px; }
+.grid-dur { position:absolute; top:8px; right:8px; background:rgba(0,0,0,0.7); color:#fff; font-family:var(--font-mono); font-size:10.5px; padding:2px 6px; border-radius:4px; }
+.grid-body { padding:12px; }
+.grid-time-tag { font-family:var(--font-mono); font-size:11px; color:var(--accent-amber); margin-bottom:4px; }
+.grid-title { font-size:13.5px; font-weight:700; color:#fff; line-height:1.4; margin-bottom:6px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.grid-takeaway { font-size:12px; color:var(--text-sub); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.drawer-backdrop { position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); backdrop-filter:blur(4px); z-index:1000; opacity:0; pointer-events:none; transition:opacity 0.3s ease; }
+.drawer-backdrop.open { opacity:1; pointer-events:auto; }
+.drawer-panel { position:fixed; top:0; right:-360px; width:320px; max-width:85vw; height:100vh; background:var(--bg-surface); border-left:1px solid var(--border-color); z-index:1001; display:flex; flex-direction:column; transition:right 0.3s cubic-bezier(0.16,1,0.3,1); box-shadow:-10px 0 30px rgba(0,0,0,0.5); }
+.drawer-panel.open { right:0; }
+.drawer-header { padding:16px; border-bottom:1px solid var(--border-color); display:flex; align-items:center; justify-content:space-between; }
+.drawer-title { font-family:var(--font-heading); font-weight:700; font-size:16px; color:#fff; }
+.drawer-close-btn { background:transparent; border:none; color:var(--text-muted); font-size:20px; cursor:pointer; }
+.drawer-list { flex:1; overflow-y:auto; padding:10px; }
+.drawer-item { display:flex; align-items:center; gap:10px; padding:8px; border-radius:8px; cursor:pointer; transition:background 0.2s ease; border-bottom:1px solid rgba(255,255,255,0.04); }
+.drawer-item:hover { background:var(--bg-card); }
+.drawer-thumb-wrap { position:relative; width:44px; aspect-ratio:9/16; border-radius:4px; overflow:hidden; background:#000; flex-shrink:0; }
+.drawer-thumb-wrap img { width:100%; height:100%; object-fit:cover; }
+.drawer-time { position:absolute; bottom:2px; left:2px; background:rgba(0,0,0,0.7); font-size:8px; color:#fff; padding:1px 3px; border-radius:2px; font-family:var(--font-mono); }
+.drawer-info { flex:1; overflow:hidden; }
+.drawer-shot-title { font-size:12.5px; font-weight:600; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.drawer-shot-sub { font-size:11px; color:var(--text-muted); }
+.lightbox-modal { position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); backdrop-filter:blur(10px); z-index:2000; display:none; flex-direction:column; align-items:center; justify-content:center; padding:20px; }
+.lightbox-modal.open { display:flex; }
+.lightbox-content { position:relative; max-width:90vw; max-height:80vh; display:flex; flex-direction:column; align-items:center; }
+.lightbox-content img { max-width:100%; max-height:75vh; object-fit:contain; border-radius:8px; box-shadow:0 10px 40px rgba(0,0,0,0.8); }
+.lightbox-caption { margin-top:12px; color:var(--text-main); font-size:14px; text-align:center; font-weight:600; }
+.lightbox-close { position:absolute; top:20px; right:24px; background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:24px; width:40px; height:40px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+.bottom-links-card { background:var(--bg-surface); border:1px solid var(--border-color); border-radius:12px; padding:16px; margin-top:30px; font-size:13px; }
+.bottom-links-title { font-weight:700; color:var(--accent-cyan); margin-bottom:10px; text-transform:uppercase; font-size:11.5px; }
+.links-grid { display:flex; flex-direction:column; gap:8px; }
+.link-row { display:flex; align-items:center; gap:8px; color:var(--text-sub); text-decoration:none; }
+.link-row:hover { color:var(--accent-blue); }
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="player-column">
+        <div class="video-player-wrapper">
+            <video id="mainVideo" playsinline preload="auto" poster="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing/shot_01_mid.jpg">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Cinematic%20Unboxing%20Mastery%20-%20%40yegor.sky.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="director-controls">
+            <div class="control-row">
+                <div class="control-group">
+                    <button class="ctrl-btn" id="playBtn" onclick="togglePlay()">
+                        <span id="playIcon">▶ Phát</span>
+                    </button>
+                    <button class="ctrl-btn" onclick="toggleMute()" id="muteBtn">🔊 Bật tiếng</button>
+                    <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp</button>
+                </div>
+                <div class="time-display" id="timeDisplay">0.00s / 15.00s</div>
+            </div>
+            <div class="control-row">
+                <div class="control-group">
+                    <span style="font-size:11px;color:var(--text-muted);font-weight:600;">TỐC ĐỘ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25, this)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5, this)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(2.0, this)">2.0x</button>
+                </div>
+                <div class="control-group">
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-column">
+        <header class="report-header">
+            <div class="header-badge-row">
+                <div class="badge-tag">🎬 Báo Cáo Đạo Diễn Điện Ảnh Mobile-First</div>
+                <a href="https://www.instagram.com/reel/Dcil1WWiXOC/" target="_blank" class="author-ig-badge">
+                    <span>📸 @yegor.sky ↗</span>
+                </a>
+            </div>
+            <h1 class="report-title">Cinematic Unboxing Mastery</h1>
+            <p class="report-subtitle">Bóc tách 10 phân cảnh quay unbox bàn phím cơ Lofree HYZEN • Chuẩn tỷ lệ thị giác, nghệ thuật chuyển cảnh ASMR & ánh sáng điện ảnh</p>
+            <div class="stats-bar">
+                <div class="stat-item"><span class="stat-num">10 Shots</span><span class="stat-lbl">Tổng Phân Cảnh</span></div>
+                <div class="stat-item"><span class="stat-num">15.00 Giây</span><span class="stat-lbl">Thời Lượng Chuẩn</span></div>
+                <div class="stat-item"><span class="stat-num">1.50s / shot</span><span class="stat-lbl">Nhịp Dựng Trung Bình</span></div>
+                <div class="stat-item"><span class="stat-num">24 FPS</span><span class="stat-lbl">Khung Hình Điện Ảnh</span></div>
+            </div>
+        </header>
+
+        <div class="nav-toolbar">
+            <div class="view-switcher">
+                <button class="switch-btn active" id="btnDetailView" onclick="switchView('detail')"><span>📋 Storyboard Chi Tiết</span></button>
+                <button class="switch-btn" id="btnGridView" onclick="switchView('grid')"><span>🖼️ Lưới Khung Hình</span></button>
+            </div>
+            <button class="drawer-toggle-btn" onclick="toggleDrawer(true)"><span>📑 Mục Lục Phân Cảnh</span></button>
+        </div>
+
+        <main id="detailView" class="storyboard-container"></main>
+        <main id="gridView" class="visual-grid-container"></main>
+
+        <footer class="bottom-links-card">
+            <div class="bottom-links-title">📁 Liên Kết Tài Nguyên & Hệ Thống</div>
+            <div class="links-grid">
+                <a href="https://drive.google.com/open?id=1CC76FHu-MM8sC3XQIV2khq9SdSAT-6bZ" target="_blank" class="link-row">
+                    <span>📁 Mở Thư Mục Google Drive Dự Án ↗</span>
+                </a>
+                <a href="https://vietndj.github.io/scene.html" target="_blank" class="link-row">
+                    <span>🌐 Mở Cổng Tra Cứu Điện Ảnh Trực Tuyến (scene.html) ↗</span>
+                </a>
+                <a href="https://www.instagram.com/reel/Dcil1WWiXOC/" target="_blank" class="link-row">
+                    <span>📸 Xem Video Gốc Trên Instagram @yegor.sky ↗</span>
+                </a>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)"></div>
+<div class="drawer-panel" id="drawerPanel">
+    <div class="drawer-header">
+        <div class="drawer-title">📑 Danh Sách Phân Cảnh</div>
+        <button class="drawer-close-btn" onclick="toggleDrawer(false)">✕</button>
+    </div>
+    <div class="drawer-list" id="drawerList"></div>
+</div>
+
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCap"></div>
+    </div>
+</div>
+
+<script>
+const R2_IMG_DIR = "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing";
+const shotsData = [{"id": 1, "st_frame": 0, "en_frame": 45, "st_time": 0.0, "en_time": 1.88, "duration": 1.92, "title": "Cú Hook Tiền Cảnh Xuyên Tán Cây (Dirty Foreground Framing): Giấu không gian qua kẽ lá và ánh đèn nấm để kích thích tò mò về kiện hàng", "title_en": "Dirty Foreground Peeping Hook • Workspace Depth Staging", "shot_type": "Low-Angle Peeping Shot (Wide 24mm f/1.8)", "location": "Góc bàn làm việc tối giản (Minimalist Workspace Desk Setup)", "lighting": "Ambient Warm Desk Lamp (3200K) đối lập ánh sáng xanh lạnh màn hình (6500K)", "color_grade": "Warm Golden Glow vs Cool Cyan Contrast • Tông màu điện ảnh ấm cúng", "transition": "Action Momentum Cut (Hạ hộp xuống mặt bàn khớp điểm chuyển cảnh)", "subject_action": "Creator bưng kiện hàng carton từ ngoài bước vào phòng làm việc. Ống kính đặt thấp sau những tán lá cây cọ xanh (tiền cảnh làm mờ nhòe), hướng về chiếc bàn làm việc trắng tinh khôi với đèn nấm màu vàng ấm và màn hình máy tính phát sáng.", "pros": "Kỹ thuật 'Dirty Foreground' (lá cây tiền cảnh) tạo chiều sâu 3 lớp rõ rệt (Foreground Lá cây -> Midground Bàn làm việc -> Background Nhân vật bước vào). Sự đối lập màu sắc giữa đèn vàng 3200K và màn hình xanh 6500K tạo nên không khí điện ảnh ấm cúng ngay giây đầu tiên.", "cons": "Tốc độ bước chân của nhân vật vào khung hình hơi nhanh trong 0.3s đầu khiến hộp hàng bị rung lắc nhẹ; phần góc dưới bên phải hơi thiếu sáng cục bộ do bóng đổ của chậu cây.", "takeaway": "Luôn đặt một vật thể tiền cảnh (lá cây, cốc nước, gờ cửa) chiếm 15-20% khung hình ở shot mở đầu để xóa bỏ cảm giác phẳng lì của video quay bàn làm việc, biến cảnh quay bình thường thành một góc nhìn rình rập điện ảnh (Voyeuristic Framing)."}, {"id": 2, "st_frame": 46, "en_frame": 77, "st_time": 1.92, "en_time": 3.21, "duration": 1.33, "title": "Góc Nghiêng Hạ Hộp Tĩnh Tại (Profile Landing Shot): Khẳng định khối tích 3D và độ đầm chắc của bao bì đóng gói", "title_en": "Table-Level Profile Shot • Physical Volume & Weight Staging", "shot_type": "Eye-Level Side Profile Shot (Standard 35mm f/2.0)", "location": "Mặt bàn làm việc góc nhìn ngang cạnh bên", "lighting": "Ánh sáng tản mềm bên hông (Side Key Light) kết hợp đèn nấm vàng", "color_grade": "Natural Wood & Crisp White • Tông ấm dịu mắt, bóng đổ mềm mại", "transition": "Axis Shift Cut (Đổi trục 90 độ sang góc nhìn thẳng đứng từ trên cao)", "subject_action": "Creator dùng hai tay đặt vững chãi chiếc hộp carton Lofree màu nâu nhạt xuống mặt bàn làm việc từ góc nhìn nghiêng ngang tầm mắt. Phía sau bên trái là tai nghe over-ear màu bạc đặt trên giá nâng gỗ và đèn nấm vàng.", "pros": "Góc máy ngang song song với mặt bàn giúp phô diễn trọn vẹn tỷ lệ hình hộp chữ nhật và độ dày của bao bì. Ánh sáng xiên từ bên hông làm nổi bật logo Lofree in dập chìm trên bìa carton và tạo cảm giác tiếp đất dứt khoát.", "cons": "Mảng áo đen của nhân vật bên phải khung hình chiếm diện tích khá lớn và che một phần ánh sáng dội từ tường, khiến mép phải khung hình hơi nặng nề.", "takeaway": "Khi quay cận cảnh sản phẩm, hãy đặt máy quay ngang trục mặt bàn (Table-level Profile) thay vì nhìn từ trên cao xuống để nhấn mạnh cảm giác trọng lượng và sự chắc chắn khi đặt sản phẩm xuống."}, {"id": 3, "st_frame": 78, "en_frame": 104, "st_time": 3.25, "en_time": 4.33, "duration": 1.12, "title": "Góc Nhìn Thẳng Đứng 90° (Top-Down Flat Lay): Cú vuốt tay khai mở cấu trúc đồ họa và định vị thương hiệu Lofree", "title_en": "Overhead Top-Down Flat Lay • Branding & Graphic Reveal", "shot_type": "90° Overhead Top-Down Shot (Wide 28mm f/2.8)", "location": "Góc nhìn thẳng từ đỉnh xuống mặt bàn làm việc", "lighting": "Ánh sáng trần khuếch tán đều kết hợp đèn hắt màn hình (Monitor Backlight)", "color_grade": "Clean Minimalist Tech • Tương phản giữa bìa carton kraft và màn hình xanh", "transition": "Punch-in Macro Cut (Phóng cận cảnh vào ngàm khóa hộp bên hông)", "subject_action": "Góc quay 90 độ thẳng đứng từ trên đỉnh đầu. Chiếc hộp bàn phím cơ Lofree HYZEN được căn chỉnh song song hoàn hảo dưới chân màn hình monitor. Bàn tay creator vuốt nhẹ ngang qua logo Lofree và sơ đồ bàn phím in trên mặt hộp.", "pros": "Bố cục Flat-lay cực kỳ ngăn nắp, tính đối xứng cao. Cú vuốt tay dẫn hướng mắt người xem đọc từ thương hiệu 'Lofree' sang tên model 'HYZEN' và bản vẽ kỹ thuật của bàn phím.", "cons": "Cạnh trên của khung hình hơi dính mép dưới của viền màn hình máy tính khiến khoảng thở (Headroom) ở đỉnh khung hình hơi chật chội.", "takeaway": "Góc Top-Down 90° là bắt buộc để người xem định hình tổng thể quy mô và thông tin bao bì (Layout & Branding) trước khi đi vào các chi tiết bóc mở phức tạp."}, {"id": 4, "st_frame": 105, "en_frame": 137, "st_time": 4.38, "en_time": 5.71, "duration": 1.38, "title": "Cận Cảnh Xé Nắp Hộp ASMR (Tactile Unboxing Tension): Kích hoạt cảm xúc xúc giác bằng thao tác mở ngàm carton dứt khoát", "title_en": "Tactile Unboxing Tension • Close-Up Precision Action", "shot_type": "45° Tight Close-Up (Macro 50mm f/1.8)", "location": "Cận cảnh cạnh mép hộp bàn phím", "lighting": "Directional ScreenBar Overhead Key Light kết hợp ánh sáng hậu cảnh xanh dịu", "color_grade": "Warm Cardboard Texture • Nổi bật thớ giấy carton và bóng đổ góc vát", "transition": "Match Action Cut (Mở nắp carton nối sang lớp bảo vệ nỉ bên trong)", "subject_action": "Góc máy cận cảnh chéo bắt trọn từng ngón tay creator gạt mở chốt gài nắp hộp carton bên hông. Hậu cảnh mờ nhòe mượt mà hiển thị thanh đèn treo màn hình (ScreenBar) và ánh sáng xanh phát ra từ màn hình.", "pros": "Độ sâu trường ảnh mỏng (Shallow DOF) cô lập hoàn toàn hành động ngón tay mở khóa nắp hộp. Ánh sáng từ ScreenBar chiếu thẳng xuống làm nổi bật thớ giấy carton nhám và đường gấp nếp chính xác.", "cons": "Chuyển động ngón tay mở nắp hơi nhanh (dưới 1.4s), nếu kéo chậm lại 0.5s sẽ gia tăng tối đa sự kích thích xúc giác ASMR.", "takeaway": "Luôn chèn ít nhất một cú Close-up cận cảnh vào khoảnh khắc xé seal hoặc mở ngàm khóa hộp để tạo nhịp 'căng - xả' (Tension & Release) trong chuỗi video unbox."}, {"id": 5, "st_frame": 138, "en_frame": 187, "st_time": 5.75, "en_time": 7.79, "duration": 2.08, "title": "Kéo Khóa Hộp Nỉ Đa Tầng (Layered Texture Unzipping): Trải nghiệm mở lớp bảo vệ thứ 2 đầy đắt giá với điểm nhấn dây kéo đỏ", "title_en": "Multi-Layered Texture Unboxing • Crimson Zipper Action", "shot_type": "90° Overhead Top-Down Shot (Standard 35mm f/2.8)", "location": "Mặt bàn làm việc góc thẳng đứng 90°", "lighting": "Neutral Balanced Ambient Light chiếu đều lên bề mặt vải nỉ", "color_grade": "Charcoal Grey vs Vivid Crimson Red • Tông nỉ xám than đối lập dây kéo đỏ", "transition": "Spatial Jump Cut (Chuyển không gian sang góc máy ngang vai Over-the-Shoulder)", "subject_action": "Trở lại góc nhìn Top-Down 90°, chiếc hộp đựng bàn phím bằng chất liệu nỉ đúc cao cấp (Molded Felt Hardcase) màu xám than xuất hiện ở vị trí trung tâm. Hai tay creator nhẹ nhàng kéo sợi dây khóa màu đỏ tương phản chạy vòng quanh mép hộp.", "pros": "Chi tiết sợi dây kéo màu đỏ (Red Zipper Puller) tạo điểm nhấn màu sắc rực rỡ (Color Accent) trên nền nỉ xám và mặt bàn trắng. Logo dập nổi 'LOFREE' giữa thân hộp đón ánh sáng phản xạ tinh tế.", "cons": "Tay trái giữ cố định mép hộp hơi che một phần góc chữ L của logo ở frame đầu tiên.", "takeaway": "Khi sản phẩm có phụ kiện hoặc túi đựng cao cấp, hãy dành riêng một shot Top-down để tôn vinh sự tinh xảo của phụ kiện trước khi để nhân vật chính (sản phẩm) lộ diện."}, {"id": 6, "st_frame": 188, "en_frame": 222, "st_time": 7.83, "en_time": 9.25, "duration": 1.46, "title": "Góc Qua Vai Trực Quan (Over-The-Shoulder Immersion): Chuyển hóa người xem thành chủ thể bóc lớp nilon bảo vệ", "title_en": "Over-The-Shoulder Immersion • Unwrapping First Reveal", "shot_type": "Over-the-Shoulder (OTS) Medium Shot (Wide 24mm f/2.0)", "location": "Góc làm việc nhìn từ phía sau vai trái creator", "lighting": "Ambient Room Light kết hợp ScreenBar Task Lighting", "color_grade": "Cinematic Cyber Workspace • Điểm xuyết chậu cây xanh tươi tắn", "transition": "Perspective Pivot Cut (Chuyển trục sang góc nhìn ngôi thứ nhất POV trực diện)", "subject_action": "Góc máy đặt sau vai trái (OTS) của creator, thu trọn không gian bàn làm việc, màn hình máy tính và chậu cây xanh nhỏ. Đôi tay creator nâng bàn phím nhôm nguyên khối lên và nhẹ nhàng rút lớp túi bọc nilon mờ ra khỏi thân máy.", "pros": "Góc nhìn OTS đặt người xem vào đúng góc nhìn của người sở hữu, tạo sự đồng cảm và khao khát sở hữu mạnh mẽ. Ánh sáng từ màn hình máy tính hắt viền lên cạnh vát kim loại của bàn phím.", "cons": "Lớp nilon mờ bị nhăn nhẹ tạo phản xạ lóa sáng trắng ở góc trái trên trong 0.2s đầu.", "takeaway": "Góc Over-The-Shoulder là cầu nối tâm lý hoàn hảo giữa video đánh giá khách quan và trải nghiệm chủ quan cá nhân, kích hoạt phản xạ 'gương' (Mirror Neurons) trong não bộ khán giả."}, {"id": 7, "st_frame": 223, "en_frame": 257, "st_time": 9.29, "en_time": 10.71, "duration": 1.46, "title": "Cú Nâng Hero Shot Ngôi Thứ Nhất (First-Person Hero Presentation): Nghiêng góc phô diễn toàn vẹn khung phím nhôm Anodized", "title_en": "First-Person Hero Presentation • Anodized Aluminum Showcase", "shot_type": "POV Center Eye-Level Hero Shot (Normal 35mm f/2.2)", "location": "Không gian trung tâm trước màn hình máy tính", "lighting": "High-Contrast Cyber Backlight từ màn hình lớn kết hợp ánh sáng trần", "color_grade": "Deep Space Blue & Matte Anodized Aluminium • Tương phản kim loại và đồ họa", "transition": "Extreme Macro Zoom-in Cut (Phóng cận vào góc vát kim cương CNC)", "subject_action": "Đôi tay creator nâng bổng chiếc bàn phím Lofree HYZEN lên không trung, nghiêng 30 độ về phía máy quay trên nền màn hình monitor xanh thẫm. Bàn phím với layout 75%, keycaps PBT màu đen than và núm xoay kim loại nổi bật hoàn toàn.", "pros": "Độ tương phản tuyệt hảo giữa phần cứng cơ khí kim loại xám/đen và phông nền màn hình xanh dương kỹ thuật số. Góc nghiêng nhẹ giúp phô diễn đồng thời cả mặt trên keycaps lẫn độ vát của viền bezel.", "cons": "Cổ tay người cầm hơi rung nhẹ khi giữ thăng bằng chiếc bàn phím nặng trước ống kính ở frame cuối.", "takeaway": "Trong video unboxing, sau khi bóc vỏ phải có một shot 'Hero Display' nâng sản phẩm lên ngang tầm mắt để tôn vinh toàn bộ hình hài thiết kế trước khi đặt xuống sử dụng."}, {"id": 8, "st_frame": 258, "en_frame": 280, "st_time": 10.75, "en_time": 11.67, "duration": 0.96, "title": "Cận Cảnh Góc Vát CNC & Chữ Khắc Lofree (Macro CNC Chamfer): Bắt trọn độ hoàn thiện kim khí đỉnh cao", "title_en": "Macro CNC Chamfer & Laser Etching • Premium Texture Highlight", "shot_type": "Extreme Close-Up 45° Dutch Angle (Macro 85mm f/2.8)", "location": "Cận cảnh góc vát cạnh phải thân bàn phím", "lighting": "Focused Hard Edge Light quét ngang đường vát (Specular Highlight)", "color_grade": "Gunmetal Grey & Laser-Etched Silver • Độ chi tiết vi mô cực nét", "transition": "Rapid Snap Cut (Chuyển nhanh sang núm xoay chức năng)", "subject_action": "Ống kính Macro zoom sát vào góc dưới bên phải của bàn phím. Ánh sáng trượt qua đường vát kim cương (Chamfered Edge), làm nổi bật logo 'LOFREE' khắc chìm sâu trên thân nhôm xám súng (Gunmetal) và cụm phím điều hướng (PGUP, PGDN, INS, DEL).", "pros": "Độ sắc nét cực đại trên từng vân nhám của bề mặt kim loại. Vệt sáng quét ngang (Specular Highlight Sweep) tạo cảm giác bóng bẩy, cao cấp vượt bậc.", "cons": "Thời lượng 0.96s hơi ngắn đối với một chi tiết gia công tinh xảo, người xem chưa kịp ngắm trọn chữ khắc.", "takeaway": "Sử dụng nguồn sáng hẹp quét qua các cạnh vát kim loại khi quay Macro Detail để tạo ra các vệt sáng phản chiếu (Specular Flare), nâng tầm giá trị cảm nhận (Perceived Value) của sản phẩm lên gấp nhiều lần."}, {"id": 9, "st_frame": 281, "en_frame": 301, "st_time": 11.71, "en_time": 12.54, "duration": 0.88, "title": "Macro Xoay Núm Volume Vô Cực (Tactile Dial Engagement): Nhấn mạnh tương tác vật lý trực quan và độ mượt cơ khí", "title_en": "Tactile Rotary Dial Engagement • Mechanical Precision ASMR", "shot_type": "Extreme Macro Close-Up (Macro 85mm f/2.8)", "location": "Cận cảnh cạnh trên thân bàn phím", "lighting": "Soft Top Key Light phản xạ viền núm xoay kim loại", "color_grade": "Matte Silver & Sleek Aluminium Dial • Tinh tế từng nấc vặn", "transition": "Match-on-Action Cut (Cắt vào cú hạ phím gõ nhạc nền cao trào)", "subject_action": "Ngón tay trỏ của creator nhẹ nhàng xoay núm vặn âm lượng bằng nhôm tiện CNC (Rotary Volume Knob) ở gờ trên bên phải bàn phím, bên cạnh là công tắc chuyển chế độ kết nối (Wireless / Bluetooth / Cable).", "pros": "Bắt trọn khoảnh khắc tương tác xúc giác ngón tay với núm xoay kim loại. Độ chuyển động mượt mà của chi tiết cơ học gợi liên tưởng trực tiếp đến cảm giác điều khiển âm thanh cao cấp.", "cons": "Góc máy hơi nghiêng về phía sau khiến ký hiệu 'vol+' bị khuất nhẹ dưới bóng ngón tay.", "takeaway": "Đừng chỉ quay sản phẩm ở trạng thái tĩnh; hãy quay các chuyển động tương tác cơ khí (xoay núm, gạt công tắc, bấm phím) để mang lại trải nghiệm đa giác quan cho người xem."}, {"id": 10, "st_frame": 302, "en_frame": 359, "st_time": 12.58, "en_time": 15.0, "duration": 2.42, "title": "POV Gõ Phím LED Băng Thanh Tỏa Sáng (Typing Climax & Luminescence): Cú chốt hạ mỹ mãn với ánh sáng xuyên LED và nhịp gõ ASMR điêu luyện", "title_en": "Ice Blue Luminescence & Typing Climax • Sensory Satisfaction Payoff", "shot_type": "POV High-Angle Desk Typing Shot (Wide 28mm f/2.0)", "location": "Bàn làm việc hoàn chỉnh với hệ thống LED bàn phím kích hoạt", "lighting": "Cyberpunk Ice Blue Backlight kết hợp Natural Warm Ambient Room Light", "color_grade": "Ice Blue Glow vs Dark Slate Keycaps • Đỉnh cao thẩm mỹ công nghệ", "transition": "End of Video / Seamless Loopable Return", "subject_action": "Đặt máy quay POV từ phía trên ngực hướng xuống. Bàn phím được đặt vững chãi trên bàn làm việc, hệ thống LED nền xanh băng (Ice Blue Underglow & Keycaps Backlight) bừng sáng rực rỡ. Hai bàn tay creator lướt điêu luyện trên các phím gõ tạo ra âm thanh gõ phím đanh giòn, mãn nhãn.", "pros": "Hiệu ứng ánh sáng LED xuyên phím màu xanh băng hòa hợp hoàn hảo với hình nền monitor và chậu cây xanh, tạo nên một tổng thể setup công nghệ thanh lịch, tối giản nhưng đậm chất điện ảnh.", "cons": "Video bị cắt kết thúc hơi đột ngột ở 15.0s khi đôi tay vẫn đang gõ phím, nếu có thêm 0.5s fade out âm thanh gõ sẽ tạo cảm giác trọn vẹn hơn.", "takeaway": "Đoạn kết của mọi video review / unbox thiết bị công nghệ bắt buộc phải là cảnh sản phẩm đang hoạt động ở trạng thái đẹp nhất (Typing Sound Test + RGB LED Active), đem lại cảm giác thỏa mãn tối đa (Visual & Auditory Payoff)."}];
+
+const video = document.getElementById('mainVideo');
+const playBtn = document.getElementById('playBtn');
+const playIcon = document.getElementById('playIcon');
+const timeDisplay = document.getElementById('timeDisplay');
+const muteBtn = document.getElementById('muteBtn');
+const loopBtn = document.getElementById('loopBtn');
+const FPS = 24.0;
+let isLooping = false;
+
+function renderShots() {
+    const detailContainer = document.getElementById('detailView');
+    const gridContainer = document.getElementById('gridView');
+    const drawerContainer = document.getElementById('drawerList');
+
+    let detailHTML = '';
+    let gridHTML = '';
+    let drawerHTML = '';
+
+    shotsData.forEach(s => {
+        const sid = s.id;
+        const sidStr = sid < 10 ? '0' + sid : '' + sid;
+        const imgStart = `${R2_IMG_DIR}/shot_${sidStr}_start.jpg`;
+        const imgMid = `${R2_IMG_DIR}/shot_${sidStr}_mid.jpg`;
+        const imgEnd = `${R2_IMG_DIR}/shot_${sidStr}_end.jpg`;
+        const nextSidStr = (sid + 1) < 10 ? '0' + (sid + 1) : '' + (sid + 1);
+        const transImg = sid < 10 ? `${R2_IMG_DIR}/transitions/trans_${sidStr}_to_${nextSidStr}.jpg` : '';
+
+        // Drawer
+        drawerHTML += `
+        <div class="drawer-item" onclick="jumpToShot(${sid}, ${s.st_time})">
+            <div class="drawer-thumb-wrap">
+                <img src="${imgMid}" alt="Shot ${sidStr}" loading="lazy">
+                <span class="drawer-time">${s.st_time.toFixed(2)}s</span>
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">Shot ${sidStr}: ${s.shot_type.split('(')[0].trim()}</div>
+                <div class="drawer-shot-sub">${s.duration.toFixed(2)}s • ${s.location}</div>
+            </div>
+        </div>`;
+
+        // Grid
+        gridHTML += `
+        <div class="grid-card" onclick="jumpToShot(${sid}, ${s.st_time})">
+            <div class="grid-thumb">
+                <img src="${imgMid}" alt="Shot ${sidStr}" loading="lazy" onclick="openLightbox('${imgMid}', 'Shot ${sidStr}: ${s.title}'); event.stopPropagation();">
+                <span class="grid-badge">Shot ${sidStr}</span>
+                <span class="grid-dur">${s.duration.toFixed(2)}s</span>
+            </div>
+            <div class="grid-body">
+                <div class="grid-time-tag">⏱ ${s.st_time.toFixed(2)}s - ${s.en_time.toFixed(2)}s</div>
+                <h4 class="grid-title">${s.title}</h4>
+                <p class="grid-takeaway">💡 ${s.takeaway}</p>
+            </div>
+        </div>`;
+
+        // Transition block
+        let transHTML = '';
+        if (transImg) {
+            transHTML = `
+            <div class="trans-container">
+                <div class="trans-header">
+                    <span class="trans-badge">Chuyển Cảnh: Shot ${sidStr} ➔ Shot ${nextSidStr}</span>
+                    <span class="trans-desc">${s.transition}</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('${transImg}', 'Chuyển Cảnh Shot ${sidStr} ➔ Shot ${nextSidStr}')">
+                    <img src="${transImg}" alt="Transition ${sid} to ${sid+1}" loading="lazy">
+                    <div class="trans-overlay-tag">🔍 Phóng to ảnh chuyển cảnh</div>
+                </div>
+            </div>`;
+        }
+
+        // Detail Storyboard
+        detailHTML += `
+        <article class="shot-card" id="shot-${sid}">
+            <div class="shot-card-header">
+                <div class="shot-number-badge">
+                    <span class="shot-idx">SHOT ${sidStr}</span>
+                    <button class="time-play-btn" onclick="seekVideo(${s.st_time})">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        <span>${s.st_time.toFixed(2)}s - ${s.en_time.toFixed(2)}s</span>
+                        <span class="dur-chip">(${s.duration.toFixed(2)}s)</span>
+                    </button>
+                </div>
+                <div class="shot-type-pill">${s.shot_type}</div>
+            </div>
+
+            <div class="card-section headline-section">
+                <h3 class="shot-headline">${s.title}</h3>
+                <div class="shot-headline-en">${s.title_en}</div>
+                <div class="subject-action-box">
+                    <div class="section-label">🎬 MÔ TẢ ĐỐI TƯỢNG & DIỄN BIẾN</div>
+                    <p>${s.subject_action}</p>
+                </div>
+            </div>
+
+            <div class="keyframes-grid">
+                <div class="kf-col" onclick="openLightbox('${imgStart}', 'Shot ${sidStr} Start (${s.st_time.toFixed(2)}s)')">
+                    <div class="kf-img-wrap">
+                        <img src="${imgStart}" alt="Shot ${sidStr} Start" loading="lazy">
+                        <span class="kf-tag">START: ${s.st_time.toFixed(2)}s</span>
+                    </div>
+                </div>
+                <div class="kf-col main-kf" onclick="openLightbox('${imgMid}', 'Shot ${sidStr} Mid (${((s.st_time+s.en_time)/2).toFixed(2)}s)')">
+                    <div class="kf-img-wrap">
+                        <img src="${imgMid}" alt="Shot ${sidStr} Mid" loading="lazy">
+                        <span class="kf-tag kf-tag-mid">MID (CHÍNH): ${((s.st_time+s.en_time)/2).toFixed(2)}s</span>
+                    </div>
+                </div>
+                <div class="kf-col" onclick="openLightbox('${imgEnd}', 'Shot ${sidStr} End (${s.en_time.toFixed(2)}s)')">
+                    <div class="kf-img-wrap">
+                        <img src="${imgEnd}" alt="Shot ${sidStr} End" loading="lazy">
+                        <span class="kf-tag">END: ${s.en_time.toFixed(2)}s</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-section critique-section">
+                <div class="section-label">⚖️ ĐÁNH GIÁ BỐ CỤC & PHÊ BÌNH THỊ GIÁC 2 CHIỀU</div>
+                <div class="critique-grid">
+                    <div class="critique-box pro-box">
+                        <div class="critique-title"><span class="icon">✅</span><span>ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM)</span></div>
+                        <p>${s.pros}</p>
+                    </div>
+                    <div class="critique-box con-box">
+                        <div class="critique-title"><span class="icon">⚠️</span><span>HẠN CHẾ / CẦN LƯU Ý (NHƯỢC ĐIỂM)</span></div>
+                        <p>${s.cons}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-section takeaway-section">
+                <div class="takeaway-box">
+                    <div class="takeaway-title"><span class="icon">💡</span><span>BÀI HỌC THỰC CHIẾN CHO CREATOR & ĐẠO DIỄN</span></div>
+                    <p class="takeaway-text">${s.takeaway}</p>
+                </div>
+            </div>
+
+            <div class="tech-specs-grid">
+                <div class="spec-item"><span class="spec-label">📍 Bối Cảnh:</span><span class="spec-val">${s.location}</span></div>
+                <div class="spec-item"><span class="spec-label">💡 Ánh Sáng:</span><span class="spec-val">${s.lighting}</span></div>
+                <div class="spec-item"><span class="spec-label">🎨 Bảng Màu:</span><span class="spec-val">${s.color_grade}</span></div>
+                <div class="spec-item"><span class="spec-label">🔄 Chuyển Cảnh:</span><span class="spec-val">${s.transition}</span></div>
+            </div>
+
+            ${transHTML}
+        </article>`;
+    });
+
+    detailContainer.innerHTML = detailHTML;
+    gridContainer.innerHTML = gridHTML;
+    drawerContainer.innerHTML = drawerHTML;
+}
+
+renderShots();
+
+function togglePlay() {
+    if (video.paused) {
+        video.play();
+        playIcon.textContent = '⏸ Tạm dừng';
+        playBtn.classList.add('active');
+    } else {
+        video.pause();
+        playIcon.textContent = '▶ Phát';
+        playBtn.classList.remove('active');
+    }
+}
+
+video.addEventListener('timeupdate', () => {
+    if (!video.duration) return;
+    timeDisplay.textContent = video.currentTime.toFixed(2) + 's / ' + video.duration.toFixed(2) + 's';
+});
+
+video.addEventListener('ended', () => {
+    if (!isLooping) {
+        playIcon.textContent = '▶ Phát lại';
+        playBtn.classList.remove('active');
+    }
+});
+
+function seekVideo(timeSec) {
+    video.currentTime = timeSec;
+    video.play();
+    playIcon.textContent = '⏸ Tạm dừng';
+    playBtn.classList.add('active');
+}
+
+function setSpeed(speed, btn) {
+    video.playbackRate = speed;
+    document.querySelectorAll('.control-group .ctrl-btn').forEach(b => {
+        if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+    if (btn) btn.classList.add('active');
+}
+
+function stepFrame(delta) {
+    video.pause();
+    playIcon.textContent = '▶ Phát';
+    playBtn.classList.remove('active');
+    video.currentTime = Math.max(0, Math.min(video.duration, video.currentTime + (delta / FPS)));
+}
+
+function toggleMute() {
+    video.muted = !video.muted;
+    muteBtn.textContent = video.muted ? '🔇 Tắt tiếng' : '🔊 Bật tiếng';
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    video.loop = isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function jumpToShot(shotId, timeSec) {
+    toggleDrawer(false);
+    if (document.getElementById('detailView').style.display === 'none') {
+        switchView('detail');
+    }
+    seekVideo(timeSec);
+    const el = document.getElementById('shot-' + shotId);
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        el.style.borderColor = 'var(--accent-blue)';
+        setTimeout(() => { el.style.borderColor = ''; }, 2000);
+    }
+}
+
+function switchView(view) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const btnDetail = document.getElementById('btnDetailView');
+    const btnGrid = document.getElementById('btnGridView');
+
+    if (view === 'detail') {
+        detailView.style.display = 'block';
+        gridView.style.display = 'none';
+        btnDetail.classList.add('active');
+        btnGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        btnGrid.classList.add('active');
+        btnDetail.classList.remove('active');
+    }
+}
+
+function toggleDrawer(open) {
+    const panel = document.getElementById('drawerPanel');
+    const backdrop = document.getElementById('drawerBackdrop');
+    if (open) {
+        panel.classList.add('open');
+        backdrop.classList.add('open');
+    } else {
+        panel.classList.remove('open');
+        backdrop.classList.remove('open');
+    }
+}
+
+function openLightbox(imgSrc, caption) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCap');
+    img.src = imgSrc;
+    cap.textContent = caption || '';
+    modal.classList.add('open');
+}
+
+function closeLightbox() {
+    const modal = document.getElementById('lightboxModal');
+    modal.classList.remove('open');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === ' ') {
+        e.preventDefault();
+        togglePlay();
+    }
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

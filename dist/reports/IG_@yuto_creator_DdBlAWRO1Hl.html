@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Yuto • Cảnh Sắc Mùa Hè Nagano & Gifu: Nghệ Thuật Quay Phong Cảnh Điện Ảnh Trong Ngày Mưa • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    cursor: pointer;
+}
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: var(--cl-amber-bg);
+    color: #b45309;
+    border-color: var(--cl-amber-border);
+    font-weight: 700;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7;
+    color: #92400e;
+    border-color: #fcd34d;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* DRAWER QUICK JUMP MENU */
+.drawer-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-line);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.drawer-title {
+    font-family: var(--font-heading-short);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cl-text-muted);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.drawer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.drawer-shot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: var(--cl-bg-tint);
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+    background: #eef2f6;
+    border-color: var(--cl-accent);
+}
+.d-badge {
+    background: var(--cl-accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.d-time {
+    color: var(--cl-text-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    flex-shrink: 0;
+}
+.d-title {
+    color: var(--cl-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">6 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Yuto • Cảnh Sắc Mùa Hè Nagano & Gifu: Nghệ Thuật Quay Phong Cảnh Điện Ảnh Trong Ngày Mưa</span>
+    </div>
+    <div class="nav-right">
+        <a href="#" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box" style="position: relative;">
+            <video id="mainPlayer" playsinline preload="metadata" ondblclick="togglePlayerFullscreen()">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdBlAWRO1Hl.mp4" type="video/mp4">
+                <source src="DdBlAWRO1Hl.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+            <button class="player-fs-btn" onclick="togglePlayerFullscreen()" title="Toàn màn hình (Phím F hoặc nhấp đúp)">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                <span>Toàn màn hình</span>
+            </button>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 25.00s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+                    <button class="ctrl-btn fs-ctrl-btn" onclick="togglePlayerFullscreen()" title="Toàn màn hình (Phím F)">⛶ Toàn màn hình</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Yuto • Cảnh Sắc Mùa Hè Nagano & Gifu: Nghệ Thuật Quay Phong Cảnh Điện Ảnh Trong Ngày Mưa</div>
+            <div class="video-meta-author">
+                <span>Tác giả:</span>
+                <a href="#" target="_blank" class="author-link"></a>
+            </div>
+        </div>
+
+        <!-- DRAWER QUICK JUMP MENU -->
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+        <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0, 5.7)">
+            <span class="d-badge">Shot 01</span>
+            <span class="d-time">0.00s - 5.70s (5.70s)</span>
+            <span class="d-title">Bố cục Meta 'Người quan sát': Sử dụng tiền cảnh là thiết bị ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(2, 5.73, 11.43)">
+            <span class="d-badge">Shot 02</span>
+            <span class="d-time">5.73s - 11.43s (5.70s)</span>
+            <span class="d-title">Đường dẫn hội tụ (Leading lines): Tận dụng phối cảnh kiến tr...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(3, 11.47, 17.17)">
+            <span class="d-badge">Shot 03</span>
+            <span class="d-time">11.47s - 17.17s (5.70s)</span>
+            <span class="d-title">Tương phản màu sắc & Bố cục 1/3: Khóa mỏ neo chủ thể bằng án...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(4, 17.2, 22.9)">
+            <span class="d-badge">Shot 04</span>
+            <span class="d-time">17.20s - 22.90s (5.70s)</span>
+            <span class="d-title">Tiền cảnh đóng khung (Natural Framing): Sử dụng tán lá để tô...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(5, 22.93, 28.63)">
+            <span class="d-badge">Shot 05</span>
+            <span class="d-time">22.93s - 28.63s (5.70s)</span>
+            <span class="d-title">Góc nhìn chim bay (Bird's-eye view) nén không gian: Lột tả s...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(6, 28.67, 34.5)">
+            <span class="d-badge">Shot 06</span>
+            <span class="d-time">28.67s - 34.50s (5.83s)</span>
+            <span class="d-title">Độ sâu trường ảnh nông (Shallow DOF): Tách biệt tuyệt đối cả...</span>
+        </div>
+        
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc</strong> • 25.00s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Yuto • Cảnh Sắc Mùa Hè Nagano & Gifu: Nghệ Thuật Quay Phong Cảnh Điện Ảnh Trong Ngày Mưa</h1>
+            <p class="overview-hero-desc"></p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Cinematic Visual Storytelling</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">6 Shots • Nhịp trung bình 5.72s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 • 24 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 5.7)">
+                    ▶ 0.00s - 5.70s (5.70s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố cục Meta 'Người quan sát': Sử dụng tiền cảnh là thiết bị ghi hình để tăng chiều sâu chân thực</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_01_mid.jpg', 'Shot 01 • Giữa (2.85s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (2.85s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_01_end.jpg', 'Shot 01 • Cuối (5.70s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.70s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Chủ thể (creator) đang chạy dọc theo con đường ở một khu phố cổ Nhật Bản. Ở tiền cảnh, một chiếc máy ảnh đặt trên chân máy đang ghi lại chính khoảnh khắc này, hiển thị hình ảnh thu nhỏ trên màn hình LCD.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tiền cảnh máy ảnh tạo chiều sâu 3D cực tốt, dẫn dắt ánh mắt từ màn hình LCD thẳng đến chủ thể. Cảm giác 'hậu trường' (BTS) tạo sự gần gũi và kể được câu chuyện quá trình làm video.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khối lượng thiết bị tiền cảnh chiếm khá nhiều diện tích khung hình đen mờ, đôi khi làm phân tán nhẹ sự chú ý nếu người xem tập trung vào thông số trên màn hình.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Dùng chính thiết bị ghi hình làm tiền cảnh là thủ thuật hiệu quả để kể câu chuyện 'hành trình sáng tạo' thay vì chỉ là một cú máy phong cảnh du lịch thông thường.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu cự góc rộng (~24mm).</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bối cảnh phố cổ Nhật Bản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng khuếch tán mây mù (Overcast)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt cảnh trực tiếp</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Cắt cảnh trực tiếp</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 5.73, 11.43)">
+                    ▶ 5.73s - 11.43s (5.70s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Đường dẫn hội tụ (Leading lines): Tận dụng phối cảnh kiến trúc hai bên đường để hút mắt người xem</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_02_start.jpg', 'Shot 02 • Đầu (5.73s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.73s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_02_mid.jpg', 'Shot 02 • Giữa (8.58s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (8.58s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_02_end.jpg', 'Shot 02 • Cuối (11.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (11.43s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Chủ thể tiếp tục chạy xa dần về phía cuối con đường, lọt thỏm giữa dãy nhà gỗ cổ kính hai bên và ngọn núi phía xa.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cấu trúc mặt đường và các đường vát của mái hiên nhà tạo thành các đường dẫn tuyến tính hoàn hảo, hội tụ chính xác về phía chủ thể. Sự thay đổi kích thước của chủ thể nhấn mạnh cảm giác về khoảng cách và độ sâu.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ở khoảng cách xa, trang phục tối màu của chủ thể bị thiếu độ tương phản với mặt đường, dễ bị chìm và hòa lẫn vào hậu cảnh xám.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay chủ thể di chuyển ra xa, hãy thiết lập góc máy sao cho các đường nét của bối cảnh hội tụ về một điểm (vanishing point) để giữ mắt người xem luôn khóa vào tâm điểm.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu cự góc rộng (~24mm).</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bối cảnh đường phố truyền thống Nhật Bản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên mờ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt cảnh trực tiếp</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Cắt cảnh trực tiếp</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 11.47, 17.17)">
+                    ▶ 11.47s - 17.17s (5.70s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Tương phản màu sắc & Bố cục 1/3: Khóa mỏ neo chủ thể bằng ánh sáng tạt và nền vách gỗ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_03_start.jpg', 'Shot 03 • Đầu (11.47s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (11.47s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_03_mid.jpg', 'Shot 03 • Giữa (14.32s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (14.32s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_03_end.jpg', 'Shot 03 • Cuối (17.17s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (17.17s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Nam thanh niên mặc trang phục đen tối giản ngồi thư giãn trên bậu cửa hành lang của một ngôi nhà gỗ (machiya), mặt hướng ra ngoài đón ánh sáng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Màu đen tuyền của trang phục tương phản cực kỳ mạnh mẽ với vách tường gỗ màu cam đỏ ấm áp. Ánh sáng tạt ngang (side lighting) tôn lên rõ nét chi tiết vân gỗ và tạo khối cho khuôn mặt chủ thể.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Vùng tối (crushed shadows) ở khu vực bên trong nhà khá bết, làm mất đi chi tiết của không gian kiến trúc nội thất đằng sau.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Chọn trang phục có sắc độ tương phản cao với màu nền là cách thiết lập sự nổi bật cho chủ thể nhanh nhất mà không cần đến hệ thống ánh sáng nhân tạo phức tạp.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu cự chuẩn (~50mm).</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bối cảnh hiên nhà cổ</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tạt ngang có định hướng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt cảnh trực tiếp</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Cắt cảnh trực tiếp</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 17.2, 22.9)">
+                    ▶ 17.20s - 22.90s (5.70s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Tiền cảnh đóng khung (Natural Framing): Sử dụng tán lá để tôn lên quy mô của cụm kiến trúc di sản</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_04_start.jpg', 'Shot 04 • Đầu (17.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (17.20s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_04_mid.jpg', 'Shot 04 • Giữa (20.05s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (20.05s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_04_end.jpg', 'Shot 04 • Cuối (22.90s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (22.90s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Tốp du khách đang tản bộ trên con đường mòn, hậu cảnh là 3 ngôi nhà mái tranh khổng lồ (Gassho-zukuri) sừng sững giữa núi rừng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Việc sử dụng tán cây rủ xuống ở cạnh trên và khóm cây dưới góc trái làm lớp viền đóng khung (framing) tự nhiên giúp che lấp bớt khoảng không chết, đồng thời tạo ra 3 lớp không gian (tiền - trung - hậu) rõ rệt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Phần khóm lá ở tiền cảnh góc dưới hơi lộn xộn và vướng nhẹ vào đường di chuyển của nhóm người đi bộ, gây rối mắt cục bộ ở khu vực phía dưới khung hình.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Luôn chủ động tìm kiếm các vật thể tự nhiên (cành cây, mái hiên) để thêm vào tiền cảnh, giúp phong cảnh tĩnh có thêm lớp lang và chiều sâu thị giác.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu cự Telephoto nén không gian (~85mm).</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bối cảnh làng cổ Shirakawa-go</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng khuếch tán dịu nhẹ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt cảnh trực tiếp</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Cắt cảnh trực tiếp</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 22.93, 28.63)">
+                    ▶ 22.93s - 28.63s (5.70s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc nhìn chim bay (Bird's-eye view) nén không gian: Lột tả sự bề thế của quần thể làng cổ qua tiêu cự Tele</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_05_start.jpg', 'Shot 05 • Đầu (22.93s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (22.93s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_05_mid.jpg', 'Shot 05 • Giữa (25.78s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (25.78s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_05_end.jpg', 'Shot 05 • Cuối (28.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (28.63s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc quay bao quát từ trên cao nhìn dọc xuống trục đường chính của ngôi làng, với những dòng người nhỏ xíu đang tản bộ giữa các mái nhà tranh và nhà gỗ san sát.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Việc dùng tiêu cự Telephoto cực dài đã nén không gian hiệu quả, làm khoảng cách giữa các ngôi nhà và con người trông sát lại với nhau, tạo ra nhịp điệu kiến trúc trùng điệp và hoành tráng. Lớp lá cây mờ (out focus) bao quanh khung hình tạo cảm giác góc nhìn quan sát bí mật.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Là một cú Establishing Shot (cảnh thiết lập) chuẩn mực nên khung hình hơi tĩnh và thiếu các điểm nhấn chuyển động mạnh mẽ, dễ gây trôi nhịp nếu giữ hình quá lâu.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sử dụng ống kính Telephoto khi quay từ vị trí trên cao là phương thức tối ưu nhất để lột tả sự sầm uất, nhịp điệu mái nhà và quy mô đồ sộ của một quần thể kiến trúc.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu cự Tele dài (>100mm).</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bối cảnh quan sát toàn cảnh làng cổ</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng mây mù đồng đều</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt cảnh trực tiếp</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Cắt cảnh trực tiếp</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 28.67, 34.5)">
+                    ▶ 28.67s - 34.50s (5.83s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Độ sâu trường ảnh nông (Shallow DOF): Tách biệt tuyệt đối cảm xúc chủ thể khỏi hậu cảnh rừng rối rắm</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_06_start.jpg', 'Shot 06 • Đầu (28.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (28.67s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_06_mid.jpg', 'Shot 06 • Giữa (31.59s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (31.59s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_06_end.jpg', 'Shot 06 • Cuối (34.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (34.50s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Ba chú khỉ tuyết Nhật Bản đang tương tác trên lan can gỗ: khỉ mẹ đang chải lông cho khỉ con đang nằm ngửa, trong khi một chú khỉ nhỏ khác bám tay vịn nhìn xa xăm.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khẩu độ mở lớn xóa mờ hoàn toàn hậu cảnh rừng cây xanh, giữ cho ánh mắt người xem chỉ tập trung vào hành động chải lông và biểu cảm rất 'người' của gia đình khỉ. Đường ven sáng (rim light) trên lớp lông khỉ đánh bật chúng lên nền tối rực rỡ.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Lan can gỗ có độ bóng khá cao ở góc phải dưới bắt sáng mạnh, thỉnh thoảng thu hút sự chú ý không đáng có, tranh chấp nhẹ với chủ thể chính.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay thiên nhiên/động vật hoang dã, luôn ưu tiên tiêu cự dài kết hợp khẩu độ lớn để cô lập chủ thể, đồng thời chọn góc có ánh sáng ven để chi tiết lông/tóc không bị bết vào nền.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu cự Telephoto dài (~200mm).</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bối cảnh công viên khỉ tuyết</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng mặt trời tự nhiên có ven (Backlight/Rim light)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt cảnh trực tiếp</span>
+            </div>
+
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 5.7)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Bố cục Meta 'Người quan sát': Sử dụng tiền cảnh là thiết bị ghi hình để tăng chiều sâu chân thực</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 5.73, 11.43)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 5.73s</span>
+            </div>
+            <div class="grid-card-body">Đường dẫn hội tụ (Leading lines): Tận dụng phối cảnh kiến trúc hai bên đường để hút mắt người xem</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 11.47, 17.17)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 11.47s</span>
+            </div>
+            <div class="grid-card-body">Tương phản màu sắc & Bố cục 1/3: Khóa mỏ neo chủ thể bằng ánh sáng tạt và nền vách gỗ</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 17.2, 22.9)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 17.20s</span>
+            </div>
+            <div class="grid-card-body">Tiền cảnh đóng khung (Natural Framing): Sử dụng tán lá để tôn lên quy mô của cụm kiến trúc di sản</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 22.93, 28.63)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 22.93s</span>
+            </div>
+            <div class="grid-card-body">Góc nhìn chim bay (Bird's-eye view) nén không gian: Lột tả sự bề thế của quần thể làng cổ qua tiêu cự Tele</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 28.67, 34.5)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yuto_creator_DdBlAWRO1Hl/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 28.67s</span>
+            </div>
+            <div class="grid-card-body">Độ sâu trường ảnh nông (Shallow DOF): Tách biệt tuyệt đối cảm xúc chủ thể khỏi hậu cảnh rừng rối rắm</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_time": 0.0, "en_time": 5.7, "duration": 5.7, "headline": "Bố cục Meta 'Người quan sát': Sử dụng tiền cảnh là thiết bị ghi hình để tăng chiều sâu chân thực", "subject_action": "Chủ thể (creator) đang chạy dọc theo con đường ở một khu phố cổ Nhật Bản. Ở tiền cảnh, một chiếc máy ảnh đặt trên chân máy đang ghi lại chính khoảnh khắc này, hiển thị hình ảnh thu nhỏ trên màn hình LCD.", "pros": "Tiền cảnh máy ảnh tạo chiều sâu 3D cực tốt, dẫn dắt ánh mắt từ màn hình LCD thẳng đến chủ thể. Cảm giác 'hậu trường' (BTS) tạo sự gần gũi và kể được câu chuyện quá trình làm video.", "cons": "Khối lượng thiết bị tiền cảnh chiếm khá nhiều diện tích khung hình đen mờ, đôi khi làm phân tán nhẹ sự chú ý nếu người xem tập trung vào thông số trên màn hình.", "takeaway": "Dùng chính thiết bị ghi hình làm tiền cảnh là thủ thuật hiệu quả để kể câu chuyện 'hành trình sáng tạo' thay vì chỉ là một cú máy phong cảnh du lịch thông thường.", "lens": "Tiêu cự góc rộng (~24mm).", "lighting": "Ánh sáng khuếch tán mây mù (Overcast)", "location": "Bối cảnh phố cổ Nhật Bản", "transition": "Cắt cảnh trực tiếp"}, {"id": 2, "st_time": 5.73, "en_time": 11.43, "duration": 5.7, "headline": "Đường dẫn hội tụ (Leading lines): Tận dụng phối cảnh kiến trúc hai bên đường để hút mắt người xem", "subject_action": "Chủ thể tiếp tục chạy xa dần về phía cuối con đường, lọt thỏm giữa dãy nhà gỗ cổ kính hai bên và ngọn núi phía xa.", "pros": "Cấu trúc mặt đường và các đường vát của mái hiên nhà tạo thành các đường dẫn tuyến tính hoàn hảo, hội tụ chính xác về phía chủ thể. Sự thay đổi kích thước của chủ thể nhấn mạnh cảm giác về khoảng cách và độ sâu.", "cons": "Ở khoảng cách xa, trang phục tối màu của chủ thể bị thiếu độ tương phản với mặt đường, dễ bị chìm và hòa lẫn vào hậu cảnh xám.", "takeaway": "Khi quay chủ thể di chuyển ra xa, hãy thiết lập góc máy sao cho các đường nét của bối cảnh hội tụ về một điểm (vanishing point) để giữ mắt người xem luôn khóa vào tâm điểm.", "lens": "Tiêu cự góc rộng (~24mm).", "lighting": "Ánh sáng tự nhiên mờ", "location": "Bối cảnh đường phố truyền thống Nhật Bản", "transition": "Cắt cảnh trực tiếp"}, {"id": 3, "st_time": 11.47, "en_time": 17.17, "duration": 5.7, "headline": "Tương phản màu sắc & Bố cục 1/3: Khóa mỏ neo chủ thể bằng ánh sáng tạt và nền vách gỗ", "subject_action": "Nam thanh niên mặc trang phục đen tối giản ngồi thư giãn trên bậu cửa hành lang của một ngôi nhà gỗ (machiya), mặt hướng ra ngoài đón ánh sáng.", "pros": "Màu đen tuyền của trang phục tương phản cực kỳ mạnh mẽ với vách tường gỗ màu cam đỏ ấm áp. Ánh sáng tạt ngang (side lighting) tôn lên rõ nét chi tiết vân gỗ và tạo khối cho khuôn mặt chủ thể.", "cons": "Vùng tối (crushed shadows) ở khu vực bên trong nhà khá bết, làm mất đi chi tiết của không gian kiến trúc nội thất đằng sau.", "takeaway": "Chọn trang phục có sắc độ tương phản cao với màu nền là cách thiết lập sự nổi bật cho chủ thể nhanh nhất mà không cần đến hệ thống ánh sáng nhân tạo phức tạp.", "lens": "Tiêu cự chuẩn (~50mm).", "lighting": "Ánh sáng tạt ngang có định hướng", "location": "Bối cảnh hiên nhà cổ", "transition": "Cắt cảnh trực tiếp"}, {"id": 4, "st_time": 17.2, "en_time": 22.9, "duration": 5.7, "headline": "Tiền cảnh đóng khung (Natural Framing): Sử dụng tán lá để tôn lên quy mô của cụm kiến trúc di sản", "subject_action": "Tốp du khách đang tản bộ trên con đường mòn, hậu cảnh là 3 ngôi nhà mái tranh khổng lồ (Gassho-zukuri) sừng sững giữa núi rừng.", "pros": "Việc sử dụng tán cây rủ xuống ở cạnh trên và khóm cây dưới góc trái làm lớp viền đóng khung (framing) tự nhiên giúp che lấp bớt khoảng không chết, đồng thời tạo ra 3 lớp không gian (tiền - trung - hậu) rõ rệt.", "cons": "Phần khóm lá ở tiền cảnh góc dưới hơi lộn xộn và vướng nhẹ vào đường di chuyển của nhóm người đi bộ, gây rối mắt cục bộ ở khu vực phía dưới khung hình.", "takeaway": "Luôn chủ động tìm kiếm các vật thể tự nhiên (cành cây, mái hiên) để thêm vào tiền cảnh, giúp phong cảnh tĩnh có thêm lớp lang và chiều sâu thị giác.", "lens": "Tiêu cự Telephoto nén không gian (~85mm).", "lighting": "Ánh sáng khuếch tán dịu nhẹ", "location": "Bối cảnh làng cổ Shirakawa-go", "transition": "Cắt cảnh trực tiếp"}, {"id": 5, "st_time": 22.93, "en_time": 28.63, "duration": 5.7, "headline": "Góc nhìn chim bay (Bird's-eye view) nén không gian: Lột tả sự bề thế của quần thể làng cổ qua tiêu cự Tele", "subject_action": "Góc quay bao quát từ trên cao nhìn dọc xuống trục đường chính của ngôi làng, với những dòng người nhỏ xíu đang tản bộ giữa các mái nhà tranh và nhà gỗ san sát.", "pros": "Việc dùng tiêu cự Telephoto cực dài đã nén không gian hiệu quả, làm khoảng cách giữa các ngôi nhà và con người trông sát lại với nhau, tạo ra nhịp điệu kiến trúc trùng điệp và hoành tráng. Lớp lá cây mờ (out focus) bao quanh khung hình tạo cảm giác góc nhìn quan sát bí mật.", "cons": "Là một cú Establishing Shot (cảnh thiết lập) chuẩn mực nên khung hình hơi tĩnh và thiếu các điểm nhấn chuyển động mạnh mẽ, dễ gây trôi nhịp nếu giữ hình quá lâu.", "takeaway": "Sử dụng ống kính Telephoto khi quay từ vị trí trên cao là phương thức tối ưu nhất để lột tả sự sầm uất, nhịp điệu mái nhà và quy mô đồ sộ của một quần thể kiến trúc.", "lens": "Tiêu cự Tele dài (>100mm).", "lighting": "Ánh sáng mây mù đồng đều", "location": "Bối cảnh quan sát toàn cảnh làng cổ", "transition": "Cắt cảnh trực tiếp"}, {"id": 6, "st_time": 28.67, "en_time": 34.5, "duration": 5.83, "headline": "Độ sâu trường ảnh nông (Shallow DOF): Tách biệt tuyệt đối cảm xúc chủ thể khỏi hậu cảnh rừng rối rắm", "subject_action": "Ba chú khỉ tuyết Nhật Bản đang tương tác trên lan can gỗ: khỉ mẹ đang chải lông cho khỉ con đang nằm ngửa, trong khi một chú khỉ nhỏ khác bám tay vịn nhìn xa xăm.", "pros": "Khẩu độ mở lớn xóa mờ hoàn toàn hậu cảnh rừng cây xanh, giữ cho ánh mắt người xem chỉ tập trung vào hành động chải lông và biểu cảm rất 'người' của gia đình khỉ. Đường ven sáng (rim light) trên lớp lông khỉ đánh bật chúng lên nền tối rực rỡ.", "cons": "Lan can gỗ có độ bóng khá cao ở góc phải dưới bắt sáng mạnh, thỉnh thoảng thu hút sự chú ý không đáng có, tranh chấp nhẹ với chủ thể chính.", "takeaway": "Khi quay thiên nhiên/động vật hoang dã, luôn ưu tiên tiêu cự dài kết hợp khẩu độ lớn để cô lập chủ thể, đồng thời chọn góc có ánh sáng ven để chi tiết lông/tóc không bị bết vào nền.", "lens": "Tiêu cự Telephoto dài (~200mm).", "lighting": "Ánh sáng mặt trời tự nhiên có ven (Backlight/Rim light)", "location": "Bối cảnh công viên khỉ tuyết", "transition": "Cắt cảnh trực tiếp"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ct.toFixed(2) + 's / ' + (player.duration ? player.duration.toFixed(2) : '25.00') + 's';
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 24 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById('shot-' + shotId);
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+</script>
+
+</body>
+</html>

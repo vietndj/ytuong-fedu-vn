@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Nghệ Thuật Match-Cut Từ Căn Hộ Lên Đỉnh Núi Sumbing (@dimasyudhystira) • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* DRAWER QUICK JUMP MENU */
+.drawer-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-line);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.drawer-title {
+    font-family: var(--font-heading-short);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cl-text-muted);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.drawer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.drawer-shot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: var(--cl-bg-tint);
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+    background: #eef2f6;
+    border-color: var(--cl-accent);
+}
+.d-badge {
+    background: var(--cl-accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.d-time {
+    color: var(--cl-text-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    flex-shrink: 0;
+}
+.d-title {
+    color: var(--cl-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">8 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Nghệ Thuật Match-Cut Từ Căn Hộ Lên Đỉnh Núi Sumbing (@dimasyudhystira)</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/Dc3DUsvpkrP/?stkn=eDBybW93OWo3bWlz" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Gunung_Sumbing_Trekking_Match_Cut_-_@dimasyudhystira.mp4" type="video/mp4">
+                <source src="../videos/Gunung Sumbing Trekking Match Cut - @dimasyudhystira.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 15.30s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Nghệ Thuật Match-Cut Từ Căn Hộ Lên Đỉnh Núi Sumbing (@dimasyudhystira)</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@dimasyudhystira" onclick="handleCreatorClick(event, '@dimasyudhystira', 'Dimas Yudhystira')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Dimas Yudhystira trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Dimas Yudhystira</strong>
+                        <span class="author-handle">(@dimasyudhystira)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/Dc3DUsvpkrP/?stkn=eDBybW93OWo3bWlz" target="_blank" class="author-link">Dimas Yudhystira (@dimasyudhystira)</a>
+            </div>
+        </div>
+
+        <!-- DRAWER QUICK JUMP MENU -->
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+        <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0, 2.33)">
+            <span class="d-badge">Shot 01</span>
+            <span class="d-time">0.00s - 2.33s (2.33s)</span>
+            <span class="d-title">Neo Điểm Tựa Khởi Đầu Tại Căn Hộ Tạo Cú Hích Tương Phản Đột ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(2, 2.33, 3.1)">
+            <span class="d-badge">Shot 02</span>
+            <span class="d-time">2.33s - 3.10s (0.77s)</span>
+            <span class="d-title">Cú Nhảy Dịch Chuyển Tức Thời Về Làng Chân Núi Khóa Trục Ngọn...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(3, 3.1, 3.83)">
+            <span class="d-badge">Shot 03</span>
+            <span class="d-time">3.10s - 3.83s (0.73s)</span>
+            <span class="d-title">Đột Phá Vào Rừng Thông Rậm Rạp Tái Định Vị Trang Bị Kính Mát...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(4, 3.83, 4.5)">
+            <span class="d-badge">Shot 04</span>
+            <span class="d-time">3.83s - 4.50s (0.67s)</span>
+            <span class="d-title">Thu Hẹp Bối Cảnh Vào Bậc Thang Bụi Đất Nhấn Mạnh Thử Thách V...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(5, 4.5, 10.5)">
+            <span class="d-badge">Shot 05</span>
+            <span class="d-time">4.50s - 10.50s (6.00s)</span>
+            <span class="d-title">Bùng Nổ Khung Cảnh Đỉnh Núi Sumbing Hùng Vĩ Đưa Tầm Mắt Thu ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(6, 10.5, 13.27)">
+            <span class="d-badge">Shot 06</span>
+            <span class="d-time">10.50s - 13.27s (2.77s)</span>
+            <span class="d-title">Cú Jump-Cut Bật Bắp Tay Thể Hiện Ý Chí Chiến Thắng Và Năng L...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(7, 13.27, 14.3)">
+            <span class="d-badge">Shot 07</span>
+            <span class="d-time">13.27s - 14.30s (1.03s)</span>
+            <span class="d-title">Góc Nghiêng Tươi Tắn Trao Nụ Cười Thả Like Khẳng Định Trải N...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(8, 14.3, 15.3)">
+            <span class="d-badge">Shot 08</span>
+            <span class="d-time">14.30s - 15.30s (1.00s)</span>
+            <span class="d-title">Vũ Điệu Ăn Mừng Kết Màn Nhí Nhảnh Tạo Dư Ba Tươi Vui Và Sẵn ...</span>
+        </div>
+        
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 15.30s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Nghệ Thuật Match-Cut Từ Căn Hộ Lên Đỉnh Núi Sumbing (@dimasyudhystira)</h1>
+            <p class="overview-hero-desc">Báo cáo phân tích chuyên sâu 8 phân cảnh mẫu mực trong video 15.3s của Dimas Yudhystira: Tuyệt kỹ Match-Cut chuyển động vi mô (Micro-Motion Match Cut) dịch chuyển tức thời từ căn hộ lên chân núi Sumbing, bứt phá qua rừng thông sương mờ và đường dốc hiểm trở, bùng nổ khung hình đỉnh núi lửa ngắm nhìn núi Sindoro, vầng trăng khuyết và biển mây ngút ngàn.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Micro-Motion Match Cut, Teleportation Hook, Spatial Convergence, Gear Foreshadowing, Summit Hero Contrast, Kinetic Jump Cut, Closed-Loop Visual Rhythm</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">8 Shots • Nhịp trung bình 1.91s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 • 30.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 2.33)">
+                    ▶ 0.00s - 2.33s (2.33s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Neo Điểm Tựa Khởi Đầu Tại Căn Hộ Tạo Cú Hích Tương Phản Đột Ngột Cho Mạch Hành Trình</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_01_mid.jpg', 'Shot 01 • Giữa (1.17s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.17s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_01_end.jpg', 'Shot 01 • Cuối (2.33s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (2.33s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Creator đứng tựa tay phải vào vách tủ gỗ căn hộ hiện đại, mặc áo thun nâu form rộng và quần kaki be, ánh mắt nhìn máy quay trước khi nghiêng đầu và vung tay bắt đầu nhịp đếm. Trên kệ tủ là khay vàng đựng bộ kính râm leo núi.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thiết lập cú neo đời thường (Mundane Everyday Anchor) tương phản cực đại với cảnh quan núi cao hùng vĩ sắp tới; khay kính mắt trên bàn là một chi tiết gài cắm thông minh (Chekhov's Gun / Visual Foreshadowing).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Nhịp mở đầu kéo dài hơn 2 giây với tư thế tĩnh có thể hơi chậm so với các nhịp cắt cực nhanh về sau; tuy nhiên đây là khoảng đệm cần thiết để khán giả định hình bối cảnh trước cú bẻ lái.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Để tạo cú sốc thị giác khi chuyển bối cảnh (Context Whiplash), hãy luôn bắt đầu từ không gian bình dị, khép kín nhất trước khi bung mở ra thiên nhiên khoáng đạt.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 28mm Góc rộng trong nhà (Interior Wide Eye-level)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Sảnh hành lang căn hộ hiện đại</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng đèn trần âm ấm áp kết hợp ambient mờ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Kinetic Match-Cut (Cắt nối chuyển động vung tay & xoay trục)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Kinetic Match-Cut (Cắt nối chuyển động vung tay & xoay trục)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 2.33, 3.1)">
+                    ▶ 2.33s - 3.10s (0.77s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Nhảy Dịch Chuyển Tức Thời Về Làng Chân Núi Khóa Trục Ngọn Núi Sumbing Kỳ Vĩ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_02_start.jpg', 'Shot 02 • Đầu (2.33s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (2.33s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_02_mid.jpg', 'Shot 02 • Giữa (2.71s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (2.71s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_02_end.jpg', 'Shot 02 • Cuối (3.10s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (3.10s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình dịch chuyển tức thời ra con đường làng chân núi Sumbing. Creator đổi sang áo hoodie xám trùm đầu, đeo balo Salomon, tay chỉ sang trái theo đúng hướng nhìn, phía sau là ngọn núi lửa Sumbing sừng sững dưới bầu trời xanh ngắt.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú Match-cut dịch chuyển không gian (Spatial Teleportation Match-Cut) giữ nguyên góc mặt 3/4 và cử chỉ tay; đưa ngay biểu tượng ngọn núi vào hậu cảnh làm mỏ neo thị giác cho toàn bộ mục tiêu hành trình.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh nắng chiếu trực diện bên phải làm đổ bóng gắt trên má và một phần trán; đường dây điện phía trên hơi rối bố cục bầu trời.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi thực hiện cú cắt dịch chuyển không gian, việc giữ nguyên góc máy tương đối và hướng chuyển động của cơ thể (Motion Vector) là yếu tố quyết định độ mượt (seamlessness) chứ không phải kỹ xảo phức tạp.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm Góc rộng ngoại cảnh (Outdoor Wide Angle)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Làng bản chân núi Sumbing (Basecamp village)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Nắng sớm rực rỡ góc thấp, tương phản cao</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Action Vector Match-Cut (Nối tiếp hướng chỉ tay)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Action Vector Match-Cut (Nối tiếp hướng chỉ tay)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 3.1, 3.83)">
+                    ▶ 3.10s - 3.83s (0.73s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Đột Phá Vào Rừng Thông Rậm Rạp Tái Định Vị Trang Bị Kính Mát Đã Cài Cắm Từ Khung Hình Đầu</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_03_start.jpg', 'Shot 03 • Đầu (3.10s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (3.10s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_03_mid.jpg', 'Shot 03 • Giữa (3.46s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (3.46s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_03_end.jpg', 'Shot 03 • Cuối (3.83s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (3.83s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt vào lối mòn xuyên qua rừng thông sương mờ. Creator đã đeo chiếc kính râm thể thao (từng xuất hiện ở khay đồ Shot 01), mặc áo thun đen Nike thể thao và quần short rằn ri camo, tay tiếp tục vung chỉ sang phải mở đường trekking.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Nhịp chuyển cảnh siêu ngắn (0.70s) tạo đà tiến liên tục; sự xuất hiện của chiếc kính mát và trang phục dã ngoại hoàn chỉnh tạo tính logic chặt chẽ cho sự biến đổi nhân vật (Gear Progression).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh sáng tán xạ qua tán cây thông hơi âm u làm giảm độ bão hòa màu của chủ thể so với shot trước.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khéo léo cho nhân vật mặc/dùng những món đồ đã xuất hiện thoáng qua ở shot mở đầu giúp video có chiều sâu cốt truyện vi mô (Visual Payoff).</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm Góc trung cận rừng thông (Medium Trekking Shot)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Rừng thông dốc núi Sumbing</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tán xạ qua tán thông (Overcast Diffused)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Directional Whip Cut nối sang cú nhấc gậy</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Directional Whip Cut nối sang cú nhấc gậy</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 3.83, 4.5)">
+                    ▶ 3.83s - 4.50s (0.67s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thu Hẹp Bối Cảnh Vào Bậc Thang Bụi Đất Nhấn Mạnh Thử Thách Vượt Dốc Với Gậy Trekking</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_04_start.jpg', 'Shot 04 • Đầu (3.83s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (3.83s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_04_mid.jpg', 'Shot 04 • Giữa (4.17s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (4.17s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_04_end.jpg', 'Shot 04 • Cuối (4.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (4.50s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Camera đặt từ góc cao nhìn xuống bậc dốc đất. Creator đứng chân rộng vững chãi, tay phải chống gậy trekking leo núi, tay trái thu quyền giật mạnh thể hiện sự dốc sức vượt địa hình hiểm trở.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thêm đạo cụ gậy leo núi và địa hình bậc đất dốc tạo cảm giác leo trèo chân thực, nhọc nhằn nhưng tràn đầy năng lượng; tạo bước đệm cảm xúc hoàn hảo trước cú bùng nổ đỉnh cao.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khung hình hơi nghiêng và chuyển động tay giật nhanh tạo vệt nhòe nhẹ ở rìa nắm tay.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Muốn khán giả cảm nhận được sự vất vả của một chuyến leo núi trong video ngắn, hãy chèn một shot trung gian thể hiện đạo cụ trợ lực và địa hình dốc gắt trước khi show cảnh đỉnh.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 28mm Góc dốc bậc thang (High-Angle Slope Trail)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Đường dốc gắt xuyên bụi rậm cận đỉnh</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Sương mù núi cao và ánh sáng dịu</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Punch-in Match Cut sang tư thế đỉnh núi</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Punch-in Match Cut sang tư thế đỉnh núi</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 4.5, 10.5)">
+                    ▶ 4.50s - 10.50s (6.00s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bùng Nổ Khung Cảnh Đỉnh Núi Sumbing Hùng Vĩ Đưa Tầm Mắt Thu Trọn Núi Sindoro Và Biển Mây</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_05_start.jpg', 'Shot 05 • Đầu (4.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (4.50s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_05_mid.jpg', 'Shot 05 • Giữa (7.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (7.50s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_05_end.jpg', 'Shot 05 • Cuối (10.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.50s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cú cắt bùng nổ lên đỉnh núi lửa Sumbing (3,371m). Creator đứng hiên ngang trên mỏm đá nham thạch, mặc áo khoác gió có mũ trùm kín cổ, trỏ tay thẳng lên bầu trời xanh nơi có vầng trăng khuyết ban ngày, phía sau là ngọn núi lửa Sindoro hình nón hoàn hảo và biển mây ngút ngàn. Sau đó anh khoanh tay tự hào ngắm nhìn kỳ quan.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khung hình Cinematic đắt giá nhất video: Tỷ lệ bố cục vàng với nhân vật làm mỏ neo tiền cảnh, núi Sindoro đối xứng hậu cảnh và vầng trăng khuyết lơ lửng trên nền trời xanh thẳm. Kéo dài 6 giây để giải phóng toàn bộ năng lượng dồn nén từ các shot cắt nhanh trước đó (Tension & Release).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy tĩnh hoàn toàn; nếu có một chuyển động pan nhẹ hoặc drone orbit sẽ càng tăng độ choáng ngợp của không gian 360 độ.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sau một chuỗi nhịp dựng cắt nhanh dồn dập (Fast Cuts), BẮT BUỘC phải neo lại bằng một shot toàn cảnh đắt giá giữ tối thiểu 3-5 giây để khán giả kịp thẩm thấu vẻ đẹp thị giác.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm Toàn cảnh đỉnh núi (Summit Hero Shot)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Đỉnh Puncak Gunung Sumbing (~3,371m ASL)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Nắng gắt trên tầng mây, bầu trời xanh trong vắt (Deep Blue Sky)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut đổi tư thế trên cùng bối cảnh</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Hard Cut đổi tư thế trên cùng bối cảnh</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 10.5, 13.27)">
+                    ▶ 10.50s - 13.27s (2.77s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Jump-Cut Bật Bắp Tay Thể Hiện Ý Chí Chiến Thắng Và Năng Lượng Chinh Phục Cực Điểm</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_06_start.jpg', 'Shot 06 • Đầu (10.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (10.50s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_06_mid.jpg', 'Shot 06 • Giữa (11.88s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (11.88s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_06_end.jpg', 'Shot 06 • Cuối (13.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (13.27s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Giữ nguyên vị trí đứng trên mỏm đá đỉnh Sumbing, Creator nhảy nhịp sang tư thế gồng hai bắp tay chiến thắng, sau đó giơ hai nắm đấm lên trời ăn mừng đầy phấn khích trước không gian bao la.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Jump-cut giữ nguyên trục tọa độ nhưng thay đổi hành động đột ngột (Kinetic Jump-cut) gia tăng tính giải trí và nhịp điệu âm nhạc; truyền cảm hứng mạnh mẽ về tinh thần thể thao outdoor.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc chân có sự dịch chuyển nhẹ tạo cảm giác giật hình nhẹ ở phần mỏm đá.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Thay vì quay một shot dài đơn điệu trên đỉnh, việc ngắt nhịp bằng các cú jump-cut đổi tư thế ăn mừng sẽ giữ chân người xem đến những giây cuối cùng của Reel.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm Góc toàn đỉnh núi (Summit Action Jump)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bãi đá nham thạch đỉnh Sumbing</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng đỉnh đầu rực rỡ, độ trong trẻo không khí cao</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Jump Cut đổi thế ăn mừng</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Jump Cut đổi thế ăn mừng</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 13.27, 14.3)">
+                    ▶ 13.27s - 14.30s (1.03s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Nghiêng Tươi Tắn Trao Nụ Cười Thả Like Khẳng Định Trải Nghiệm Đáng Giá</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_07_start.jpg', 'Shot 07 • Đầu (13.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (13.27s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_07_mid.jpg', 'Shot 07 • Giữa (13.79s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (13.79s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_07_end.jpg', 'Shot 07 • Cuối (14.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (14.30s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Creator xoay người góc 3/4, nở nụ cười tươi tắn sau lớp kính râm và hướng ngón tay cái 'Like' về phía ống kính máy quay, ngọn núi Sindoro phía sau đóng vai trò phông nền tự nhiên hùng tráng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Kết nối cảm xúc trực tiếp với người xem (Direct Viewer Engagement) qua nụ cười và cử chỉ 'Like/Thumbs up'; làm mềm mại lại tính nghiêm túc của chuyến leo núi bằng sự thân thiện, gần gũi.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng 1.00s hơi ngắn để người xem kịp đón nhận trọn vẹn nụ cười trước khi nhảy sang động tác nhảy.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Luôn có ít nhất một khoảnh khắc nhân vật tương tác trực tiếp với khán giả (phá vỡ bức tường thứ 4) để tăng tỷ lệ thả tim và chia sẻ trên mạng xã hội.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm Góc 3/4 thân trên (Semi-Profile Engagement)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Đỉnh Sumbing ngắm Sindoro</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh nắng đổ bóng nhẹ sườn mặt</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Quick Beat Cut sang vũ điệu kết thúc</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Quick Beat Cut sang vũ điệu kết thúc</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 14.3, 15.3)">
+                    ▶ 14.30s - 15.30s (1.00s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Vũ Điệu Ăn Mừng Kết Màn Nhí Nhảnh Tạo Dư Ba Tươi Vui Và Sẵn Sàng Cho Vòng Lặp Mới</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_08_start.jpg', 'Shot 08 • Đầu (14.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (14.30s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_08_mid.jpg', 'Shot 08 • Giữa (14.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (14.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_08_end.jpg', 'Shot 08 • Cuối (15.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (15.30s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Creator chuyển sang động tác nhún nhảy ăn mừng nhí nhảnh (Victory Groove Dance), hai tay co gập theo điệu nhạc, thân người lắc lư uyển chuyển trên đỉnh mỏm đá trước khi video kết thúc để lặp lại từ đầu.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Kết thúc bằng một nốt thăng vui tươi, xóa tan cảm giác nặng nề của hành trình leo núi; tạo cảm giác sảng khoái và kích thích người xem muốn xem lại từ shot 1 (Seamless Loop potential).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cắt kết thúc khi động tác nhảy vẫn đang tiếp diễn, tạo chút hụt hẫng nhẹ nhưng chính điều này lại kích hoạt replay tự nhiên trên Instagram.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kết thúc một video hành trình mạo hiểm bằng một nụ cười hoặc vũ điệu hóm hỉnh là công thức vàng giúp video lan tỏa (Viral appeal).</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm Toàn thân ngoại cảnh (Full Body Dynamic Summit)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Đỉnh núi Sumbing</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng mặt trời trên cao</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Loop Back Cut (Kết thúc mở kích hoạt vòng lặp)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_08_to_01_loop.jpg?v=2', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/transitions/trans_08_to_01_loop.jpg?v=2" alt="Loop Transition" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 2.33)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Neo Điểm Tựa Khởi Đầu Tại Căn Hộ Tạo Cú Hích Tương Phản Đột Ngột Cho Mạch Hành Trình</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 2.33, 3.1)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 2.33s</span>
+            </div>
+            <div class="grid-card-body">Cú Nhảy Dịch Chuyển Tức Thời Về Làng Chân Núi Khóa Trục Ngọn Núi Sumbing Kỳ Vĩ</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 3.1, 3.83)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 3.10s</span>
+            </div>
+            <div class="grid-card-body">Đột Phá Vào Rừng Thông Rậm Rạp Tái Định Vị Trang Bị Kính Mát Đã Cài Cắm Từ Khung Hình Đầu</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 3.83, 4.5)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 3.83s</span>
+            </div>
+            <div class="grid-card-body">Thu Hẹp Bối Cảnh Vào Bậc Thang Bụi Đất Nhấn Mạnh Thử Thách Vượt Dốc Với Gậy Trekking</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 4.5, 10.5)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 4.50s</span>
+            </div>
+            <div class="grid-card-body">Bùng Nổ Khung Cảnh Đỉnh Núi Sumbing Hùng Vĩ Đưa Tầm Mắt Thu Trọn Núi Sindoro Và Biển Mây</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 10.5, 13.27)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 10.50s</span>
+            </div>
+            <div class="grid-card-body">Cú Jump-Cut Bật Bắp Tay Thể Hiện Ý Chí Chiến Thắng Và Năng Lượng Chinh Phục Cực Điểm</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 13.27, 14.3)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 13.27s</span>
+            </div>
+            <div class="grid-card-body">Góc Nghiêng Tươi Tắn Trao Nụ Cười Thả Like Khẳng Định Trải Nghiệm Đáng Giá</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 14.3, 15.3)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/extracted_shots/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 14.30s</span>
+            </div>
+            <div class="grid-card-body">Vũ Điệu Ăn Mừng Kết Màn Nhí Nhảnh Tạo Dư Ba Tươi Vui Và Sẵn Sàng Cho Vòng Lặp Mới</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1gZ8vi0mkdIejL6YPvrSIGtAYT02YQ5Cz" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_time": 0.0, "en_time": 2.33, "duration": 2.33, "st_frame": 0, "en_frame": 69, "headline": "Neo Điểm Tựa Khởi Đầu Tại Căn Hộ Tạo Cú Hích Tương Phản Đột Ngột Cho Mạch Hành Trình", "subject_action": "Creator đứng tựa tay phải vào vách tủ gỗ căn hộ hiện đại, mặc áo thun nâu form rộng và quần kaki be, ánh mắt nhìn máy quay trước khi nghiêng đầu và vung tay bắt đầu nhịp đếm. Trên kệ tủ là khay vàng đựng bộ kính râm leo núi.", "pros": "Thiết lập cú neo đời thường (Mundane Everyday Anchor) tương phản cực đại với cảnh quan núi cao hùng vĩ sắp tới; khay kính mắt trên bàn là một chi tiết gài cắm thông minh (Chekhov's Gun / Visual Foreshadowing).", "cons": "Nhịp mở đầu kéo dài hơn 2 giây với tư thế tĩnh có thể hơi chậm so với các nhịp cắt cực nhanh về sau; tuy nhiên đây là khoảng đệm cần thiết để khán giả định hình bối cảnh trước cú bẻ lái.", "takeaway": "Để tạo cú sốc thị giác khi chuyển bối cảnh (Context Whiplash), hãy luôn bắt đầu từ không gian bình dị, khép kín nhất trước khi bung mở ra thiên nhiên khoáng đạt.", "lens_angle": "28mm Góc rộng trong nhà (Interior Wide Eye-level)", "location": "Sảnh hành lang căn hộ hiện đại", "lighting_color": "Ánh sáng đèn trần âm ấm áp kết hợp ambient mờ", "transition": "Kinetic Match-Cut (Cắt nối chuyển động vung tay & xoay trục)"}, {"id": 2, "st_time": 2.33, "en_time": 3.1, "duration": 0.77, "st_frame": 70, "en_frame": 92, "headline": "Cú Nhảy Dịch Chuyển Tức Thời Về Làng Chân Núi Khóa Trục Ngọn Núi Sumbing Kỳ Vĩ", "subject_action": "Khung hình dịch chuyển tức thời ra con đường làng chân núi Sumbing. Creator đổi sang áo hoodie xám trùm đầu, đeo balo Salomon, tay chỉ sang trái theo đúng hướng nhìn, phía sau là ngọn núi lửa Sumbing sừng sững dưới bầu trời xanh ngắt.", "pros": "Cú Match-cut dịch chuyển không gian (Spatial Teleportation Match-Cut) giữ nguyên góc mặt 3/4 và cử chỉ tay; đưa ngay biểu tượng ngọn núi vào hậu cảnh làm mỏ neo thị giác cho toàn bộ mục tiêu hành trình.", "cons": "Ánh nắng chiếu trực diện bên phải làm đổ bóng gắt trên má và một phần trán; đường dây điện phía trên hơi rối bố cục bầu trời.", "takeaway": "Khi thực hiện cú cắt dịch chuyển không gian, việc giữ nguyên góc máy tương đối và hướng chuyển động của cơ thể (Motion Vector) là yếu tố quyết định độ mượt (seamlessness) chứ không phải kỹ xảo phức tạp.", "lens_angle": "24mm Góc rộng ngoại cảnh (Outdoor Wide Angle)", "location": "Làng bản chân núi Sumbing (Basecamp village)", "lighting_color": "Nắng sớm rực rỡ góc thấp, tương phản cao", "transition": "Action Vector Match-Cut (Nối tiếp hướng chỉ tay)"}, {"id": 3, "st_time": 3.1, "en_time": 3.83, "duration": 0.73, "st_frame": 93, "en_frame": 114, "headline": "Đột Phá Vào Rừng Thông Rậm Rạp Tái Định Vị Trang Bị Kính Mát Đã Cài Cắm Từ Khung Hình Đầu", "subject_action": "Cắt vào lối mòn xuyên qua rừng thông sương mờ. Creator đã đeo chiếc kính râm thể thao (từng xuất hiện ở khay đồ Shot 01), mặc áo thun đen Nike thể thao và quần short rằn ri camo, tay tiếp tục vung chỉ sang phải mở đường trekking.", "pros": "Nhịp chuyển cảnh siêu ngắn (0.70s) tạo đà tiến liên tục; sự xuất hiện của chiếc kính mát và trang phục dã ngoại hoàn chỉnh tạo tính logic chặt chẽ cho sự biến đổi nhân vật (Gear Progression).", "cons": "Ánh sáng tán xạ qua tán cây thông hơi âm u làm giảm độ bão hòa màu của chủ thể so với shot trước.", "takeaway": "Khéo léo cho nhân vật mặc/dùng những món đồ đã xuất hiện thoáng qua ở shot mở đầu giúp video có chiều sâu cốt truyện vi mô (Visual Payoff).", "lens_angle": "35mm Góc trung cận rừng thông (Medium Trekking Shot)", "location": "Rừng thông dốc núi Sumbing", "lighting_color": "Ánh sáng tán xạ qua tán thông (Overcast Diffused)", "transition": "Directional Whip Cut nối sang cú nhấc gậy"}, {"id": 4, "st_time": 3.83, "en_time": 4.5, "duration": 0.67, "st_frame": 115, "en_frame": 134, "headline": "Thu Hẹp Bối Cảnh Vào Bậc Thang Bụi Đất Nhấn Mạnh Thử Thách Vượt Dốc Với Gậy Trekking", "subject_action": "Camera đặt từ góc cao nhìn xuống bậc dốc đất. Creator đứng chân rộng vững chãi, tay phải chống gậy trekking leo núi, tay trái thu quyền giật mạnh thể hiện sự dốc sức vượt địa hình hiểm trở.", "pros": "Thêm đạo cụ gậy leo núi và địa hình bậc đất dốc tạo cảm giác leo trèo chân thực, nhọc nhằn nhưng tràn đầy năng lượng; tạo bước đệm cảm xúc hoàn hảo trước cú bùng nổ đỉnh cao.", "cons": "Khung hình hơi nghiêng và chuyển động tay giật nhanh tạo vệt nhòe nhẹ ở rìa nắm tay.", "takeaway": "Muốn khán giả cảm nhận được sự vất vả của một chuyến leo núi trong video ngắn, hãy chèn một shot trung gian thể hiện đạo cụ trợ lực và địa hình dốc gắt trước khi show cảnh đỉnh.", "lens_angle": "28mm Góc dốc bậc thang (High-Angle Slope Trail)", "location": "Đường dốc gắt xuyên bụi rậm cận đỉnh", "lighting_color": "Sương mù núi cao và ánh sáng dịu", "transition": "Punch-in Match Cut sang tư thế đỉnh núi"}, {"id": 5, "st_time": 4.5, "en_time": 10.5, "duration": 6.0, "st_frame": 135, "en_frame": 314, "headline": "Bùng Nổ Khung Cảnh Đỉnh Núi Sumbing Hùng Vĩ Đưa Tầm Mắt Thu Trọn Núi Sindoro Và Biển Mây", "subject_action": "Cú cắt bùng nổ lên đỉnh núi lửa Sumbing (3,371m). Creator đứng hiên ngang trên mỏm đá nham thạch, mặc áo khoác gió có mũ trùm kín cổ, trỏ tay thẳng lên bầu trời xanh nơi có vầng trăng khuyết ban ngày, phía sau là ngọn núi lửa Sindoro hình nón hoàn hảo và biển mây ngút ngàn. Sau đó anh khoanh tay tự hào ngắm nhìn kỳ quan.", "pros": "Khung hình Cinematic đắt giá nhất video: Tỷ lệ bố cục vàng với nhân vật làm mỏ neo tiền cảnh, núi Sindoro đối xứng hậu cảnh và vầng trăng khuyết lơ lửng trên nền trời xanh thẳm. Kéo dài 6 giây để giải phóng toàn bộ năng lượng dồn nén từ các shot cắt nhanh trước đó (Tension & Release).", "cons": "Góc máy tĩnh hoàn toàn; nếu có một chuyển động pan nhẹ hoặc drone orbit sẽ càng tăng độ choáng ngợp của không gian 360 độ.", "takeaway": "Sau một chuỗi nhịp dựng cắt nhanh dồn dập (Fast Cuts), BẮT BUỘC phải neo lại bằng một shot toàn cảnh đắt giá giữ tối thiểu 3-5 giây để khán giả kịp thẩm thấu vẻ đẹp thị giác.", "lens_angle": "24mm Toàn cảnh đỉnh núi (Summit Hero Shot)", "location": "Đỉnh Puncak Gunung Sumbing (~3,371m ASL)", "lighting_color": "Nắng gắt trên tầng mây, bầu trời xanh trong vắt (Deep Blue Sky)", "transition": "Hard Cut đổi tư thế trên cùng bối cảnh"}, {"id": 6, "st_time": 10.5, "en_time": 13.27, "duration": 2.77, "st_frame": 315, "en_frame": 397, "headline": "Cú Jump-Cut Bật Bắp Tay Thể Hiện Ý Chí Chiến Thắng Và Năng Lượng Chinh Phục Cực Điểm", "subject_action": "Giữ nguyên vị trí đứng trên mỏm đá đỉnh Sumbing, Creator nhảy nhịp sang tư thế gồng hai bắp tay chiến thắng, sau đó giơ hai nắm đấm lên trời ăn mừng đầy phấn khích trước không gian bao la.", "pros": "Jump-cut giữ nguyên trục tọa độ nhưng thay đổi hành động đột ngột (Kinetic Jump-cut) gia tăng tính giải trí và nhịp điệu âm nhạc; truyền cảm hứng mạnh mẽ về tinh thần thể thao outdoor.", "cons": "Góc chân có sự dịch chuyển nhẹ tạo cảm giác giật hình nhẹ ở phần mỏm đá.", "takeaway": "Thay vì quay một shot dài đơn điệu trên đỉnh, việc ngắt nhịp bằng các cú jump-cut đổi tư thế ăn mừng sẽ giữ chân người xem đến những giây cuối cùng của Reel.", "lens_angle": "24mm Góc toàn đỉnh núi (Summit Action Jump)", "location": "Bãi đá nham thạch đỉnh Sumbing", "lighting_color": "Ánh sáng đỉnh đầu rực rỡ, độ trong trẻo không khí cao", "transition": "Jump Cut đổi thế ăn mừng"}, {"id": 7, "st_time": 13.27, "en_time": 14.3, "duration": 1.03, "st_frame": 398, "en_frame": 428, "headline": "Góc Nghiêng Tươi Tắn Trao Nụ Cười Thả Like Khẳng Định Trải Nghiệm Đáng Giá", "subject_action": "Creator xoay người góc 3/4, nở nụ cười tươi tắn sau lớp kính râm và hướng ngón tay cái 'Like' về phía ống kính máy quay, ngọn núi Sindoro phía sau đóng vai trò phông nền tự nhiên hùng tráng.", "pros": "Kết nối cảm xúc trực tiếp với người xem (Direct Viewer Engagement) qua nụ cười và cử chỉ 'Like/Thumbs up'; làm mềm mại lại tính nghiêm túc của chuyến leo núi bằng sự thân thiện, gần gũi.", "cons": "Thời lượng 1.00s hơi ngắn để người xem kịp đón nhận trọn vẹn nụ cười trước khi nhảy sang động tác nhảy.", "takeaway": "Luôn có ít nhất một khoảnh khắc nhân vật tương tác trực tiếp với khán giả (phá vỡ bức tường thứ 4) để tăng tỷ lệ thả tim và chia sẻ trên mạng xã hội.", "lens_angle": "24mm Góc 3/4 thân trên (Semi-Profile Engagement)", "location": "Đỉnh Sumbing ngắm Sindoro", "lighting_color": "Ánh nắng đổ bóng nhẹ sườn mặt", "transition": "Quick Beat Cut sang vũ điệu kết thúc"}, {"id": 8, "st_time": 14.3, "en_time": 15.3, "duration": 1.0, "st_frame": 429, "en_frame": 458, "headline": "Vũ Điệu Ăn Mừng Kết Màn Nhí Nhảnh Tạo Dư Ba Tươi Vui Và Sẵn Sàng Cho Vòng Lặp Mới", "subject_action": "Creator chuyển sang động tác nhún nhảy ăn mừng nhí nhảnh (Victory Groove Dance), hai tay co gập theo điệu nhạc, thân người lắc lư uyển chuyển trên đỉnh mỏm đá trước khi video kết thúc để lặp lại từ đầu.", "pros": "Kết thúc bằng một nốt thăng vui tươi, xóa tan cảm giác nặng nề của hành trình leo núi; tạo cảm giác sảng khoái và kích thích người xem muốn xem lại từ shot 1 (Seamless Loop potential).", "cons": "Cắt kết thúc khi động tác nhảy vẫn đang tiếp diễn, tạo chút hụt hẫng nhẹ nhưng chính điều này lại kích hoạt replay tự nhiên trên Instagram.", "takeaway": "Kết thúc một video hành trình mạo hiểm bằng một nụ cười hoặc vũ điệu hóm hỉnh là công thức vàng giúp video lan tỏa (Viral appeal).", "lens_angle": "24mm Toàn thân ngoại cảnh (Full Body Dynamic Summit)", "location": "Đỉnh núi Sumbing", "lighting_color": "Ánh sáng mặt trời trên cao", "transition": "Loop Back Cut (Kết thúc mở kích hoạt vòng lặp)"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ct.toFixed(2) + 's / ' + (player.duration ? player.duration.toFixed(2) : '15.30') + 's';
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 30.0 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById('shot-' + shotId);
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

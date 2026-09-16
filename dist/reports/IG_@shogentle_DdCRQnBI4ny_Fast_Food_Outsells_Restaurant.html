@@ -1,0 +1,2474 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Triết Lý Fast Food Outsells Restaurant: Phân Tích Bố Cục Ẩn Dụ Thị Giác & Tâm Lý Khán Giả Mạng Xã Hội • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">16 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Triết Lý Fast Food Outsells Restaurant: Phân Tích Bố Cục Ẩn Dụ Thị Giác & Tâm Lý Khán Giả Mạng Xã Hội</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DdCRQnBI4ny/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdCRQnBI4ny.mp4" type="video/mp4">
+                <source src="../videos/Fast Food Outsells Restaurant - @shogentle.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 43.00s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Triết Lý Fast Food Outsells Restaurant: Phân Tích Bố Cục Ẩn Dụ Thị Giác & Tâm Lý Khán Giả Mạng Xã Hội</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@shogentle" onclick="handleCreatorClick(event, '@shogentle', 'AL (Shogentle)')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của AL (Shogentle) trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>AL (Shogentle)</strong>
+                        <span class="author-handle">(@shogentle)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/DdCRQnBI4ny/" target="_blank" class="author-link">@shogentle (AL, The Creator)</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 43.00s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Triết Lý Fast Food Outsells Restaurant: Phân Tích Bố Cục Ẩn Dụ Thị Giác & Tâm Lý Khán Giả Mạng Xã Hội</h1>
+            <p class="overview-hero-desc">Báo cáo đạo diễn phân tích chuyên sâu 16 phân cảnh video của @shogentle: Phản biện nghịch lý view rác triệu views, ẩn dụ thị giác băng chuyền đồ ăn nhanh nuốt chửng điện thoại, giải phẫu tâm lý khán giả vãng lai và nghệ thuật giữ chân bằng mỏ neo kỳ dị.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Visual Metaphor, Proof Stacking, Pattern Interrupt, Scale Match Cut, Kinetic Typography Slate, Trapdoor Pun, Silhouette Crowd Dissolve, Zero-G Clones</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">16 Shots • Nhịp trung bình 2.69s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 • 30.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 0.37)">
+                    ▶ 0.00s - 0.37s (0.37s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hook Cảm Xúc Bằng Cử Chỉ Tuyệt Vọng (Head-in-Hands Despair) • Phá Vỡ Mẫu Đơn Điệu Ngay Khung Hình 0s</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_01_mid.jpg', 'Shot 01 • Giữa (0.18s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (0.18s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_01_end.jpg', 'Shot 01 • Cuối (0.37s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (0.37s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">AL ngồi gục đầu, hai bàn tay ôm chặt lấy thái dương trong tư thế bất lực hoàn toàn, bóng đổ gắt sau lưng trên phông xám tối giản. Chưa có lời thoại, chỉ có tiếng thở dài nặng nề tạo khoảng lặng tò mò cực độ (Curiosity Gap) giữ chân người xem ngay tích tắc đầu tiên.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Không mở đầu bằng câu chào vô nghĩa; dùng ngôn ngữ hình thể (Body Language) thể hiện sự thất bại, chạm thẳng vào nỗi đau của mọi content creator khi video tâm huyết bị flop.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng cực ngắn (0.37s / 11 frames), nếu người xem lướt quá nhanh có thể chưa kịp nhận diện rõ khuôn mặt; tuy nhiên đây là nhịp đệm hoàn hảo để kích hoạt cú punch-in ở shot tiếp theo.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Hãy bắt đầu video bằng một trạng thái cảm xúc cực đoan (đau khổ, tức giận, ngỡ ngàng) thay vì đứng cười nói; người xem dừng lại vì tò mò chuyện gì vừa xảy ra.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Trung rộng (Medium Shot 35mm), Góc ngang tầm mắt</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Phông Xám Tối Giản (Minimal Grey Cyclorama)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Soft Key Light 45° + Subtle Rim Light, Tone Lạnh Xám</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt nhảy tăng kích cỡ (Jump Punch-in Zoom Cut 120%)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Cắt nhảy tăng kích cỡ (Jump Punch-in Zoom Cut 120%)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 0.37, 1.8)">
+                    ▶ 0.37s - 1.80s (1.43s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Punch-in Cắt Nhảy (Jump Punch-in) 120% + Graphic Bốc Hỏa Trên Đầu • Cường Hóa Sự Ức Chế Tột Cùng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_02_start.jpg', 'Shot 02 • Đầu (0.37s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.37s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_02_mid.jpg', 'Shot 02 • Giữa (1.08s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.08s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_02_end.jpg', 'Shot 02 • Cuối (1.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (1.80s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt nhảy giật cục (Jump Cut Punch-in) vào cận ngực (Medium Close-Up). AL ngẩng phắt đầu lên, hai tay co giật giơ lên trời biểu lộ sự phẫn uất, mắt trợn to qua cặp kính xanh đặc trưng. Đỉnh đầu xuất hiện animation khói lửa bốc cháy. Lời thoại đanh thép: "Doesn't it drive you crazy?". Text typography "DOESN'T IT DRIVE YOU CRAZY?" giật nảy đồng bộ âm thanh.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú đấm thị giác kép: punch-in zoom 120% + graphic doodle bốc khói tạo nhịp điệu kích động thị giác, đồng bộ hoàn hảo với câu hỏi tu từ đánh trúng tâm lý người làm nội dung.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần kiểm soát biểu cảm gương mặt để không bị lố bịch hoặc kịch hóa quá đà; kính màu xanh nổi bật giúp cố định nhận diện thương hiệu cá nhân (Personal Brand Icon).</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Dùng Jump-Cut kết hợp Scale-up khi thốt ra câu hỏi trọng tâm (Hook Line) để dồn áp lực hình ảnh thẳng vào mắt người xem.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Cận ngực (Medium Close-Up 50mm), Chính diện</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Phông Xám Tối Giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Key Light trực diện + Fill Light dịu, Tương phản cao</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Chuyển động xoay người sang bên kèm xuất hiện điện thoại</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Chuyển động xoay người sang bên kèm xuất hiện điện thoại</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 1.8, 5.2)">
+                    ▶ 1.80s - 5.20s (3.40s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố Cục Tương Phản Nhận Thức (Floating Phone Contrast) • Đối Lập 20.7 Triệu Views vs Con Số 0 Tròn Trĩnh</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_03_start.jpg', 'Shot 03 • Đầu (1.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (1.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_03_mid.jpg', 'Shot 03 • Giữa (3.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (3.50s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_03_end.jpg', 'Shot 03 • Cuối (5.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.20s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">AL xoay người góc nghiêng 3/4 sang phải, nâng bàn tay trái đỡ một chiếc smartphone lơ lửng giữa không trung. Màn hình điện thoại phát video meme mèo nhảy ngớ ngẩn với badge đỏ chót "20.7M Views", sau đó đổi sang video chỉn chu của chính anh chỉ lèo tèo vài trăm view. Lời thoại: "Dumb videos get millions of views... and yours nothing." Text chữ xanh biển đậm xuất hiện từng từ đè lên khoảng trống.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Chuyển đổi góc quay từ chính diện sang 3/4 phá vỡ tính đơn điệu của Talking Head; visual hóa bằng chứng thực tế (Proof Stacking) ngay trên lòng bàn tay giúp người xem hiểu ngay nghịch lý bất công.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Màn hình smartphone cần đủ độ sáng và tương phản để không bị chìm vào nền xám; chuyển động tay nâng điện thoại cần mượt mà, tránh rung lắc tracking.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đừng chỉ kể khổ bằng lời nói; hãy cụ thể hóa con số và hình ảnh thực tế (20M vs vài trăm) để kích hoạt sự đồng cảm phẫn nộ tức thì của người xem.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Góc nghiêng 3/4 (3/4 Profile Medium 50mm)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Phông Xám Tối Giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng viền xanh nhạt (Teal Rim) + Key Light 45°</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt cứng sang góc nghiêng 90° (Hard Cut to Full Profile)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Cắt cứng sang góc nghiêng 90° (Hard Cut to Full Profile)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 5.2, 8.3)">
+                    ▶ 5.20s - 8.30s (3.10s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố Cục Cột Thẻ Dọc (Vertical Feed Stacking) + Búp Bê Tí Hon Bước Lên Mũi • Giữ Chân Bằng Chi Tiết Kỳ Lạ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_04_start.jpg', 'Shot 04 • Đầu (5.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.20s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_04_mid.jpg', 'Shot 04 • Giữa (6.75s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.75s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_04_end.jpg', 'Shot 04 • Cuối (8.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.30s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt sang góc nghiêng hoàn toàn 90° (Extreme Profile). Bên trái khung hình xếp chồng một cột gồm 3 video rác nhảm nhí (chó nhảy, ngã cầu thang, nhảy múa vô nghĩa). Lời thoại: "You know the ones. Zero profit, 10 million views." Ở cuối phân cảnh, một bản sao người tí hon (mini-me) của AL xuất hiện và bước đi thăng bằng ngay trên sống mũi của anh.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Áp dụng nguyên lý "Visual Curiosity Anchor" (mỏ neo thị giác kỳ lạ): người xem vừa nghe phân tích vừa dán mắt vào chuyển động của người tí hon bước trên mũi, đẩy thời gian xem trung bình (Watch Time) lên đỉnh điểm.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Kỹ thuật cắt ghép rotoscoping người tí hon đòi hỏi sự tỉ mỉ ở mép tóc và bóng đổ để không tạo cảm giác giả tạo thô thiển.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi truyền tải thông điệp mang tính lý thuyết hoặc thống kê, hãy lồng ghép một chuyển động vi mô siêu thực (Surreal Micro-movement) ở góc máy để thôi miên ánh mắt người xem.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Cận góc nghiêng 90° (Full Profile Close-up 85mm)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Phông Xám Tối Giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Chiaroscuro Side Light, Một bên mặt sáng rõ, một bên chìm</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Phóng to người tí hon chuyển cảnh sang Toàn Thân (Match Scale Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Phóng to người tí hon chuyển cảnh sang Toàn Thân (Match Scale Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 8.3, 11.97)">
+                    ▶ 8.30s - 11.97s (3.67s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Toàn Thân Bộ Đồ Thể Thao Xanh (Full-body Teal Tracksuit) • Bước Đi Trực Diện Xóa Bỏ Sự Tự Ti</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_05_start.jpg', 'Shot 05 • Đầu (8.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.30s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_05_mid.jpg', 'Shot 05 • Giữa (10.14s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (10.14s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_05_end.jpg', 'Shot 05 • Cuối (11.97s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (11.97s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Người tí hon trên mũi bỗng phóng to toàn màn hình, chuyển cảnh liền mạch sang AL đứng trọn vẹn toàn thân (Full Body Cowboy) trong bộ tracksuit màu xanh mòng két (teal) đồng màu kính. Anh bước đi ung dung, chắp hai tay trước ngực phân trần: "It's not because your videos are worse. Those reels aren't made for you." Text chữ đỏ và xanh uốn cong quanh người.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Giải phóng không gian ngột ngạt của các cú máy cận trước đó bằng khung hình toàn cảnh (Full Shot); bộ đồ xanh đơn sắc tạo tính đồ họa phẳng (Flat Graphic Chic) hiện đại và chuyên nghiệp.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Nhân vật đứng toàn thân dễ bị trôi nếu không có cử chỉ tay dứt khoát hoặc bước di chuyển tạo động lượng (momentum).</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đổi cỡ cảnh đột ngột từ Siêu Cận (Extreme Close-Up) sang Toàn Cảnh (Full Shot) là cách hữu hiệu nhất để tạo nhịp thở (Visual Rhythm Reset) cho video ngắn.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Toàn thân cao bồi (Full-body Cowboy 35mm)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Phông Xám Tối Giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Flat Studio Light, Đều màu toàn thân, Không đổ bóng sàn</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt giật sang cận cảnh xoay trục (Jump Cut to Close-up)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Cắt giật sang cận cảnh xoay trục (Jump Cut to Close-up)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 11.97, 13.3)">
+                    ▶ 11.97s - 13.30s (1.33s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Quay Trục Cận Mặt Động (Dynamic Axis Whip Rotate) • Nhấn Mạnh Đối Tượng Đại Chúng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_06_start.jpg', 'Shot 06 • Đầu (11.97s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (11.97s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_06_mid.jpg', 'Shot 06 • Giữa (12.64s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (12.64s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_06_end.jpg', 'Shot 06 • Cuối (13.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (13.30s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Đột ngột cắt vào cận cảnh gương mặt ở góc nghiêng 90°, sau đó đầu AL từ từ xoay mượt mà 60 độ về phía máy quay với nụ cười nhếch mép thấu hiểu. Lời thoại: "They are made for the widest audience possible." Text xanh uốn cong bay bám theo chuyển động xoay đầu.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Chuyển động xoay đầu vật lý kết hợp zoom cận cảnh tạo hiệu ứng thị giác 3D dù nền xám 2D phẳng; nụ cười tự tin tái lập uy quyền của người kể chuyện.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Nhịp xoay cần tính toán trùng khớp với từng âm tiết của chữ "widest audience" để đạt hiệu ứng đồng bộ thính giác - thị giác.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Thay vì để camera xoay quanh nhân vật (tốn rig phức tạp), hãy để nhân vật tự xoay trục đầu trước ống kính cố định để tạo cảm giác chuyển động camera giả lập.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Cận cảnh xoay trục (Macro Face Rotation 50mm)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Phông Xám Tối Giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Rim Light viền tóc + Soft Key Light 45°</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt nhảy góc nghiêng đẩy nhanh tiết tấu (Fast Punch Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Cắt nhảy góc nghiêng đẩy nhanh tiết tấu (Fast Punch Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 13.3, 14.5)">
+                    ▶ 13.30s - 14.50s (1.20s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cắt Nhịp Cận Nghiêng Đẩy Nhanh Tiết Tấu • Cầu Nối Khớp Cắn Cho Ẩn Dụ Đồ Ăn Nhanh</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_07_start.jpg', 'Shot 07 • Đầu (13.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (13.30s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_07_mid.jpg', 'Shot 07 • Giữa (13.90s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (13.90s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_07_end.jpg', 'Shot 07 • Cuối (14.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (14.50s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt giật sang góc nghiêng bên trái, miệng bắt đầu há mở chuẩn bị cho hành động tiếp theo. Lời thoại: "They work on reflexes...". Bố cục dạt hẳn sang mép phải khung hình chừa 2/3 khoảng trống bên trái cho hiệu ứng kế tiếp.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cố tình để khoảng trống tiêu cực (Negative Space) ở hướng nhìn của nhân vật để chuẩn bị cho cú xuất hiện của các đồ vật bay vào miệng; giữ nhịp cắt siêu nhanh (1.2s) chống nhàm chán.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Shot quá ngắn chỉ đóng vai trò đệm nhịp, nếu tách riêng sẽ không có giá trị độc lập.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Luôn dạt chủ thể sang một bên khung hình ở shot trước nếu ở shot sau bạn dự định bắn hiệu ứng đồ họa hoặc vật thể xuất hiện vào khoảng trống đó.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Cận góc nghiêng (Profile Medium Close-Up 85mm)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Phông Xám Tối Giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Key Light cạnh bên, Chìm dần hậu cảnh</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Xuất hiện luồng điện thoại bay vào miệng liên tục</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Xuất hiện luồng điện thoại bay vào miệng liên tục</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 14.5, 17.63)">
+                    ▶ 14.50s - 17.63s (3.13s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Ẩn Dụ Thị Giác Băng Chuyền Đồ Ăn Nhanh (Fast-Food Conveyor Ingestion) + Phun Khói • Định Nghĩa Reflex Content</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_08_start.jpg', 'Shot 08 • Đầu (14.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (14.50s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_08_mid.jpg', 'Shot 08 • Giữa (16.06s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (16.06s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_08_end.jpg', 'Shot 08 • Cuối (17.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (17.63s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Miệng AL mở to, hàng loạt video điện thoại ngắn nối đuôi nhau như băng chuyền thức ăn nhanh bay thẳng tắp vào miệng anh và bị nuốt chửng liên tục. Lời thoại: "...not on taste. Like fast food." Khi nói dứt câu "Like fast food", miệng anh khép lại và thở phì ra một làn khói trắng đồ họa uốn lượn.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Đỉnh cao ẩn dụ thị giác (Visual Metaphor): biến khái niệm trừu tượng "nội dung phản xạ tiêu thụ nhanh như đồ ăn nhanh" thành hình ảnh nuốt chửng điện thoại; khói phì ra giải tỏa sự châm biếm hài hước cực kỳ thông minh.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Hiệu ứng motion path của điện thoại bay vào miệng cần căn chuẩn phối cảnh (Perspective Warp) để tạo cảm giác thật sự đi vào trong vòm họng.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Thay vì giải thích khái niệm bằng từ ngữ hàn lâm, hãy biến nó thành một hành động vật lý kỳ dị hoặc một ẩn dụ đồ họa mà ai nhìn cũng hiểu ngay trong 1 giây.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Cận góc nghiêng (Profile Close-Up 85mm)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Phông Xám Tối Giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> High Contrast Profile Light, Nhấn mạnh đường viền môi miệng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt tức thì sang Toàn Cảnh Ngồi Thiền Trên Cán Cân</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 09 • Cắt tức thì sang Toàn Cảnh Ngồi Thiền Trên Cán Cân</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_08_to_09.jpg?v=2', 'Chuyển cảnh Shot 08 sang Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_08_to_09.jpg?v=2" alt="Transition 8 to 9" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-9">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 09</span>
+                <button class="shot-time-btn" onclick="jumpToShot(9, 17.63, 19.93)">
+                    ▶ 17.63s - 19.93s (2.30s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Ghế Thăng Bằng Cân Đo Đong Đếm (Levitating Balance Scale) • Khuyên Dừng So Sánh Khập Khiễng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_09_start.jpg', 'Shot 09 • Đầu (17.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (17.63s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_09_mid.jpg', 'Shot 09 • Giữa (18.78s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (18.78s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_09_end.jpg', 'Shot 09 • Cuối (19.93s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (19.93s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt ngay sang cảnh AL ngồi xếp bằng kiểu thiền trên một chiếc đĩa cân cơ học, đĩa cân đối diện đặt một chiếc smartphone đang phát video nhảm. Cán cân bập bênh qua lại. Lời thoại: "So just stop measuring yourself against them." Nút đồ họa "Compare" hiển thị ở trục cân.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Biến câu nói "ngừng so sánh bản thân" thành một chiếc cân bập bênh vật lý; tư thế ngồi thiền thanh tịnh đối lập với sự náo động của video mạng xã hội bên kia cán cân.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Phông nền phẳng cần bóng đổ tiếp xúc nhẹ dưới chân đế cân để chiếc cân không bị trôi lơ lửng mất trọng lực.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi khuyên người xem "ngừng làm một việc gì đó", hãy dùng hình tượng cán cân hoặc bàn cờ để họ thấy rõ sự khập khiễng của hành vi đó.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Toàn cảnh tĩnh (Full Shot Medium Wide 35mm)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Phông Xám Tối Giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng đồng đều hai phía, Cân bằng thị giác đối xứng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Zoom giật cực đại vào trán và mắt kính (Extreme Macro Zoom)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 10 • Zoom giật cực đại vào trán và mắt kính (Extreme Macro Zoom)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_09_to_10.jpg?v=2', 'Chuyển cảnh Shot 09 sang Shot 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_09_to_10.jpg?v=2" alt="Transition 9 to 10" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-10">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 10</span>
+                <button class="shot-time-btn" onclick="jumpToShot(10, 19.93, 22.37)">
+                    ▶ 19.93s - 22.37s (2.44s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Chiếu Chữ Lên Trán & Phản Chiếu Kính Xanh (Forehead Projection & Glass Reflection) • Chuyển Đổi Hệ Giá Trị</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_10_start.jpg', 'Shot 10 • Đầu (19.93s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (19.93s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_10_mid.jpg', 'Shot 10 • Giữa (21.15s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (21.15s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_10_end.jpg', 'Shot 10 • Cuối (22.37s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (22.37s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt cực cận (Extreme Macro Close-Up) vào vầng trán và đôi mắt đeo kính xanh. Dòng chữ "LOOK AT SAVES AND SHARES" được áp chất liệu (Displacement Map) như in nổi trực tiếp lên nếp nhăn trán. Hai tròng kính xanh phản chiếu rực sáng biểu tượng Bookmark (Lưu) và Nút Share (Chia sẻ). Lời thoại: "Look at saves and shares instead of views."</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Sử dụng chính gương mặt và phụ kiện (kính) làm màn hình chiếu thông điệp; biểu tượng phản chiếu trong tròng kính tạo chiều sâu quang học điện ảnh đẳng cấp.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Đòi hỏi kỹ thuật Displacement Map và Blend Mode chính xác theo độ cong hộp sọ để chữ không bị phẳng lẹt như dán sticker.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Tận dụng bề mặt cơ thể hoặc vật dụng đặc trưng (mắt kính, nón, áo) để in thông điệp then chốt; người xem sẽ không thể rời mắt khỏi vùng chữ đó.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Siêu cận trán mắt (Extreme Macro 100mm)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Phông Xám Tối Giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Chiếu sáng cục bộ vùng trán, Tròng kính phát sáng biểu tượng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Chuyển màu nền sang tấm thẻ đồ họa chữ đơn sắc (Cut to Slate)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 11 • Chuyển màu nền sang tấm thẻ đồ họa chữ đơn sắc (Cut to Slate)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_10_to_11.jpg?v=2', 'Chuyển cảnh Shot 10 sang Shot 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_10_to_11.jpg?v=2" alt="Transition 10 to 11" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-11">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 11</span>
+                <button class="shot-time-btn" onclick="jumpToShot(11, 22.37, 24.73)">
+                    ▶ 22.37s - 24.73s (2.36s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Tấm Thẻ Đồ Họa Chữ Đơn Sắc (Kinetic Typography Slate) • Đóng Đinh Định Nghĩa Giá Trị Thực</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_11_start.jpg', 'Shot 11 • Đầu (22.37s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (22.37s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_11_mid.jpg', 'Shot 11 • Giữa (23.55s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (23.55s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_11_end.jpg', 'Shot 11 • Cuối (24.73s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (24.73s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Toàn bộ khung hình chuyển thành tấm thẻ màu xanh xám tối giản không người. Dòng chữ màu vàng nghệ/cam đất (Warm Amber) xếp tầng giật nảy theo từng nhịp nói: "THAT'S THE NUMBER THAT MEANS SOMEONE ACTUALLY VALUED IT." Lời thoại đọc dứt khoát từng từ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">"Pattern Interrupt" triệt để: loại bỏ hoàn toàn con người trong 2 giây để khán giả tập trung 100% não bộ vào việc đọc thông điệp cốt lõi; màu vàng cam trên nền xanh lam tạo độ tương phản bổ túc (Complementary Contrast) tuyệt hảo.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Không nên để thẻ chữ quá 2.5 giây vì bản chất video ngắn là chuyển động; nhịp rơi chữ phải khớp tuyệt đối từng mili-giây với giọng nói.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đôi khi shot hình đắt giá nhất lại không có hình ảnh người hay b-roll; một tấm typographic slate sạch sẽ xuất hiện đúng lúc sẽ khóa chặt thông điệp vào tâm trí khán giả.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Đồ họa chữ toàn màn hình (Full-frame Motion Graphic Slate)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Graphic Motion Canvas</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Nền xanh xám Slate + Chữ Cam Đất Amber tương phản cao</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt đột ngột trở lại toàn thân đứng trên vạch sàn đen</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 12 • Cắt đột ngột trở lại toàn thân đứng trên vạch sàn đen</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_11_to_12.jpg?v=2', 'Chuyển cảnh Shot 11 sang Shot 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_11_to_12.jpg?v=2" alt="Transition 11 to 12" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-12">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 12</span>
+                <button class="shot-time-btn" onclick="jumpToShot(12, 24.73, 26.87)">
+                    ▶ 24.73s - 26.87s (2.14s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Rơi Tự Do Qua Cửa Bẫy Đáy Sàn (Trapdoor Floor Drop) • Visual Pun Tuyệt Kỹ Cho Chữ 'Underneath'</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_12_start.jpg', 'Shot 12 • Đầu (24.73s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (24.73s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_12_mid.jpg', 'Shot 12 • Giữa (25.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (25.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_12_end.jpg', 'Shot 12 • Cuối (26.87s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (26.87s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt lại toàn thân AL đang cúi khom người trên vạch kẻ sàn màu đen: "But that's a small fix." Anh đứng thẳng dậy: "There's a bigger problem..." Đột nhiên, vạch đen dưới chân anh mở toang như một cánh cửa bẫy (trapdoor), AL rơi tụt thẳng xuống đáy màn hình và lộn nhào rơi từ trần nhà xuống tầng dưới: "...UNDERNEATH".</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Chơi chữ thị giác (Visual Pun) đỉnh cao: minh họa chữ "bên dưới" (underneath) bằng hành động rơi xuyên thủng sàn nhà; động tác rơi tự do kích hoạt phản xạ giật mình thích thú của mắt người.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Đường cắt mặt sàn đen cần thẳng thớm, chuyển động rơi cần gia tốc trọng trường tự nhiên (Ease-In Quadratic).</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi kịch bản có các từ chỉ không gian (bên dưới, trên cao, xoay vòng, vỡ vụn), hãy dùng kỹ xảo để chủ thể thực hiện đúng hành động vật lý đó.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Toàn cảnh (Full Shot 35mm)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Phông Xám Tối Giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Studio Flat Light, Viền sắc nét tách bạch với vạch đen</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Rơi xuyên qua trần tầng dưới (Continuous Gravity Fall)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 13 • Rơi xuyên qua trần tầng dưới (Continuous Gravity Fall)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_12_to_13.jpg?v=2', 'Chuyển cảnh Shot 12 sang Shot 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_12_to_13.jpg?v=2" alt="Transition 12 to 13" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-13">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 13</span>
+                <button class="shot-time-btn" onclick="jumpToShot(13, 26.87, 29.5)">
+                    ▶ 26.87s - 29.50s (2.63s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Phân Thân Đuổi Theo 'Bả Số Lượng' (View Count Bait Chase) • Bi Kịch Đánh Mất Bản Thân</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_13_start.jpg', 'Shot 13 • Đầu (26.87s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (26.87s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_13_mid.jpg', 'Shot 13 • Giữa (28.19s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (28.19s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_13_end.jpg', 'Shot 13 • Cuối (29.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_13_end.jpg" alt="Shot 13 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (29.50s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Sau cú tiếp đất, xuất hiện hai bản sao của AL: một bản sao đứng trầm ngâm nhìn về phía trước, bản sao thứ hai bắt đầu lao theo đuổi bắt những huy hiệu lượt xem khổng lồ ("201M Views", "3.9M Views") đang lơ lửng như những miếng mồi câu. Lời thoại cảnh tỉnh: "The moment you chase their numbers, you start making their videos."</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Hình tượng hóa bi kịch của creator: biến các con số view ảo thành mồi câu và người làm nội dung thành kẻ mù quáng đuổi theo con mồi; bố cục phân thân (Split Clone) truyền tải sự phân liệt nội tâm sâu sắc.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần tạo chuyển động chạy khom người hài hước nhưng chua chát, tránh để hai nhân vật đè lên nhau gây rối mắt.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Thay vì nói suông "đừng chạy theo view ảo", hãy cho khán giả thấy hình ảnh chính họ đang cắm đầu đuổi theo những chiếc huy hiệu view vô nghĩa.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Trung toàn phân thân (Split-screen Dual Clone 35mm)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Phông Xám Tối Giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Key Light hai chiều, Đổ bóng mờ nhẹ sàn</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Đám đông bóng đen ùa vào che lấp khung hình (Crowd Wipe)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 14 • Đám đông bóng đen ùa vào che lấp khung hình (Crowd Wipe)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_13_to_14.jpg?v=2', 'Chuyển cảnh Shot 13 sang Shot 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_13_to_14.jpg?v=2" alt="Transition 13 to 14" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-14">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 14</span>
+                <button class="shot-time-btn" onclick="jumpToShot(14, 29.5, 35.13)">
+                    ▶ 29.50s - 35.13s (5.63s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bóng Đen Đám Đông Bủa Vây Rồi Tan Biến (Crowd Silhouette Swarm & Abandonment) • Bi Kịch Khán Giả Vãng Lai</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_14_start.jpg', 'Shot 14 • Đầu (29.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_14_start.jpg" alt="Shot 14 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (29.50s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_14_mid.jpg', 'Shot 14 • Giữa (32.31s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_14_mid.jpg" alt="Shot 14 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (32.31s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_14_end.jpg', 'Shot 14 • Cuối (35.13s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_14_end.jpg" alt="Shot 14 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (35.13s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Hàng chục bóng đen (black silhouettes) của đám đông từ hai bên tràn vào, vây kín mít AL cho đến khi anh hoàn toàn biến mất trong đám đông đen kịt: "And that audience isn't yours." Sau đó, ngay khi anh cất lời: "They leave the second you make something that needs attention", toàn bộ đám đông bóng đen đồng loạt quay lưng bỏ đi, để lại một mình AL đứng trơ trọi, cô độc giữa không gian xám mênh mông.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cảnh quay mang tính điện ảnh cao nhất video: hiệu ứng đám đông bóng đen đối lập với chủ thể màu xanh; khoảnh khắc cả đám đông bỏ đi để lại nhân vật đứng một mình truyền tải trọn vẹn cảm giác cô đơn và bài học đắt giá về tệp khán giả sai lầm.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần tạo hình bóng đen đa dạng (nam, nữ, cử chỉ giơ tay xôn xao) để tạo cảm giác đám đông thực thụ thay vì một khối đen vô tri.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sự tương phản giữa "đông đúc ồn ào" và "trơ trọi cô đơn" là công cụ dẫn dắt cảm xúc mạnh nhất để kết thúc phần thân bài của video.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Toàn cảnh trung tâm (Centered Medium Long Shot 35mm)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Phông Xám Tối Giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Silhouettes đen tuyền 100% tương phản nền xám sáng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt giật sang cận nghiêng với bản sao lơ lửng (Hard Jump Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 15 • Cắt giật sang cận nghiêng với bản sao lơ lửng (Hard Jump Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_14_to_15.jpg?v=2', 'Chuyển cảnh Shot 14 sang Shot 15')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_14_to_15.jpg?v=2" alt="Transition 14 to 15" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-15">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 15</span>
+                <button class="shot-time-btn" onclick="jumpToShot(15, 35.13, 40.37)">
+                    ▶ 35.13s - 40.37s (5.24s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bản Sao Tí Hon Lơ Lửng Không Trọng Lực (Zero-Gravity Floating Clones) • Khẳng Định Thẩm Quyền Chuyên Gia</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_15_start.jpg', 'Shot 15 • Đầu (35.13s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_15_start.jpg" alt="Shot 15 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (35.13s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_15_mid.jpg', 'Shot 15 • Giữa (37.75s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_15_mid.jpg" alt="Shot 15 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (37.75s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_15_end.jpg', 'Shot 15 • Cuối (40.37s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_15_end.jpg" alt="Shot 15 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (40.37s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt vào cận cảnh góc nghiêng quen thuộc của AL, nở nụ cười kiêu hãnh và điềm đạm. Đằng sau anh, hàng loạt bản sao tí hon của chính anh trong nhiều tư thế nằm, bay, lộn nhào lơ lửng giữa không trung như phi hành gia không trọng lực. Lời thoại chuyển đổi giải pháp: "I spent two years learning how to make videos worth watching twice. It's all in one mini course."</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tái sử dụng motif "người tí hon" nhưng nâng cấp thành vũ trụ không trọng lực; tạo cảm giác tác giả đã làm chủ hoàn toàn không gian và kỹ nghệ sản xuất video; chuyển đổi mượt mà từ nỗi đau sang giải pháp (Pitching).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Vị trí các bản sao bay cần tránh che khuất gương mặt và ánh mắt của nhân vật chính.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi bắt đầu giới thiệu sản phẩm/khóa học, hãy nâng tầm không gian hình ảnh để thể hiện sự vượt trội về kỹ năng và sự tự tin đĩnh đạc.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Cận cảnh góc nghiêng (Profile Close-Up 85mm)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Phông Xám Tối Giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Soft Key Light dịu mắt + Ambient Fill Light</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Xoay mặt nhìn thẳng vào ống kính (Whip Pan / Head Turn)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 16 • Xoay mặt nhìn thẳng vào ống kính (Whip Pan / Head Turn)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_15_to_16.jpg?v=2', 'Chuyển cảnh Shot 15 sang Shot 16')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_15_to_16.jpg?v=2" alt="Transition 15 to 16" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-16">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 16</span>
+                <button class="shot-time-btn" onclick="jumpToShot(16, 40.37, 43.0)">
+                    ▶ 40.37s - 43.00s (2.63s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Nhìn Thẳng Trực Diện Kêu Gọi Hành Động (Frontal Eye-Contact CTA) • Nụ Cười Thân Thiện Chốt Hạ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_16_start.jpg', 'Shot 16 • Đầu (40.37s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_16_start.jpg" alt="Shot 16 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (40.37s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_16_mid.jpg', 'Shot 16 • Giữa (41.69s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_16_mid.jpg" alt="Shot 16 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (41.69s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_16_end.jpg', 'Shot 16 • Cuối (43.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_16_end.jpg" alt="Shot 16 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (43.00s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">AL xoay phắt mặt từ góc nghiêng sang nhìn thẳng 100% vào mắt khán giả, nụ cười rạng rỡ, biểu cảm chân thành và ấm áp: "Comment MINI to get it, and follow me." Các bản sao tí hon vẫn tiếp tục bay lơ lửng phía sau tạo nhịp động nền. Text chữ xanh biển nổi bật "COMMENT MINI TO GET IT".</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Phá vỡ góc nghiêng để kết nối trực tiếp 1-1 (Direct Address); nụ cười ấm áp xua tan toàn bộ sự căng thẳng của 40 giây trước đó, biến lời kêu gọi hành động (Call to Action) thành một lời mời hấp dẫn tự nhiên.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần có trigger keyword ("MINI") rõ ràng và dễ gõ trên bàn phím di động; nhịp kết thúc mở chuẩn bị cho việc xem lại video.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Luôn kết thúc video bằng cú nhìn thẳng vào ống kính và nụ cười thật tươi khi đưa ra CTA; sự chân thành trực diện có tỉ lệ chuyển đổi cao hơn bất kỳ chiêu trò nào.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Cận chính diện (Frontal Medium Close-Up 50mm)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Phông Xám Tối Giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Key Light rực rỡ nụ cười + Catchlight long lanh trong mắt</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Khép vòng lặp vô tận (Loop) sang Shot 01</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_16_to_01_loop.jpg?v=2', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/transitions/trans_16_to_01_loop.jpg?v=2" alt="Loop Transition" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 0.37)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Hook Cảm Xúc Bằng Cử Chỉ Tuyệt Vọng (Head-in-Hands Despair) • Phá Vỡ Mẫu Đơn Điệu Ngay Khung Hình 0s</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 0.37, 1.8)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 0.37s</span>
+            </div>
+            <div class="grid-card-body">Punch-in Cắt Nhảy (Jump Punch-in) 120% + Graphic Bốc Hỏa Trên Đầu • Cường Hóa Sự Ức Chế Tột Cùng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 1.8, 5.2)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 1.80s</span>
+            </div>
+            <div class="grid-card-body">Bố Cục Tương Phản Nhận Thức (Floating Phone Contrast) • Đối Lập 20.7 Triệu Views vs Con Số 0 Tròn Trĩnh</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 5.2, 8.3)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 5.20s</span>
+            </div>
+            <div class="grid-card-body">Bố Cục Cột Thẻ Dọc (Vertical Feed Stacking) + Búp Bê Tí Hon Bước Lên Mũi • Giữ Chân Bằng Chi Tiết Kỳ Lạ</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 8.3, 11.97)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 8.30s</span>
+            </div>
+            <div class="grid-card-body">Toàn Thân Bộ Đồ Thể Thao Xanh (Full-body Teal Tracksuit) • Bước Đi Trực Diện Xóa Bỏ Sự Tự Ti</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 11.97, 13.3)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 11.97s</span>
+            </div>
+            <div class="grid-card-body">Quay Trục Cận Mặt Động (Dynamic Axis Whip Rotate) • Nhấn Mạnh Đối Tượng Đại Chúng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 13.3, 14.5)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 13.30s</span>
+            </div>
+            <div class="grid-card-body">Cắt Nhịp Cận Nghiêng Đẩy Nhanh Tiết Tấu • Cầu Nối Khớp Cắn Cho Ẩn Dụ Đồ Ăn Nhanh</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 14.5, 17.63)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 14.50s</span>
+            </div>
+            <div class="grid-card-body">Ẩn Dụ Thị Giác Băng Chuyền Đồ Ăn Nhanh (Fast-Food Conveyor Ingestion) + Phun Khói • Định Nghĩa Reflex Content</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(9, 17.63, 19.93)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <span class="grid-thumb-badge">Shot 09 • 17.63s</span>
+            </div>
+            <div class="grid-card-body">Ghế Thăng Bằng Cân Đo Đong Đếm (Levitating Balance Scale) • Khuyên Dừng So Sánh Khập Khiễng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(10, 19.93, 22.37)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+                <span class="grid-thumb-badge">Shot 10 • 19.93s</span>
+            </div>
+            <div class="grid-card-body">Chiếu Chữ Lên Trán & Phản Chiếu Kính Xanh (Forehead Projection & Glass Reflection) • Chuyển Đổi Hệ Giá Trị</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(11, 22.37, 24.73)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+                <span class="grid-thumb-badge">Shot 11 • 22.37s</span>
+            </div>
+            <div class="grid-card-body">Tấm Thẻ Đồ Họa Chữ Đơn Sắc (Kinetic Typography Slate) • Đóng Đinh Định Nghĩa Giá Trị Thực</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(12, 24.73, 26.87)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+                <span class="grid-thumb-badge">Shot 12 • 24.73s</span>
+            </div>
+            <div class="grid-card-body">Rơi Tự Do Qua Cửa Bẫy Đáy Sàn (Trapdoor Floor Drop) • Visual Pun Tuyệt Kỹ Cho Chữ 'Underneath'</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(13, 26.87, 29.5)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_13_mid.jpg" alt="Shot 13" loading="lazy">
+                <span class="grid-thumb-badge">Shot 13 • 26.87s</span>
+            </div>
+            <div class="grid-card-body">Phân Thân Đuổi Theo 'Bả Số Lượng' (View Count Bait Chase) • Bi Kịch Đánh Mất Bản Thân</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(14, 29.5, 35.13)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_14_mid.jpg" alt="Shot 14" loading="lazy">
+                <span class="grid-thumb-badge">Shot 14 • 29.50s</span>
+            </div>
+            <div class="grid-card-body">Bóng Đen Đám Đông Bủa Vây Rồi Tan Biến (Crowd Silhouette Swarm & Abandonment) • Bi Kịch Khán Giả Vãng Lai</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(15, 35.13, 40.37)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_15_mid.jpg" alt="Shot 15" loading="lazy">
+                <span class="grid-thumb-badge">Shot 15 • 35.13s</span>
+            </div>
+            <div class="grid-card-body">Bản Sao Tí Hon Lơ Lửng Không Trọng Lực (Zero-Gravity Floating Clones) • Khẳng Định Thẩm Quyền Chuyên Gia</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(16, 40.37, 43.0)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/extracted_shots/shot_16_mid.jpg" alt="Shot 16" loading="lazy">
+                <span class="grid-thumb-badge">Shot 16 • 40.37s</span>
+            </div>
+            <div class="grid-card-body">Nhìn Thẳng Trực Diện Kêu Gọi Hành Động (Frontal Eye-Contact CTA) • Nụ Cười Thân Thiện Chốt Hạ</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1LcqCpSfJI4OSltUd_8SHkyUvJWsVL3b7" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "en_frame": 10, "st_time": 0.0, "en_time": 0.37, "duration": 0.37, "headline": "Hook Cảm Xúc Bằng Cử Chỉ Tuyệt Vọng (Head-in-Hands Despair) • Phá Vỡ Mẫu Đơn Điệu Ngay Khung Hình 0s", "subject_action": "AL ngồi gục đầu, hai bàn tay ôm chặt lấy thái dương trong tư thế bất lực hoàn toàn, bóng đổ gắt sau lưng trên phông xám tối giản. Chưa có lời thoại, chỉ có tiếng thở dài nặng nề tạo khoảng lặng tò mò cực độ (Curiosity Gap) giữ chân người xem ngay tích tắc đầu tiên.", "pros": "Không mở đầu bằng câu chào vô nghĩa; dùng ngôn ngữ hình thể (Body Language) thể hiện sự thất bại, chạm thẳng vào nỗi đau của mọi content creator khi video tâm huyết bị flop.", "cons": "Thời lượng cực ngắn (0.37s / 11 frames), nếu người xem lướt quá nhanh có thể chưa kịp nhận diện rõ khuôn mặt; tuy nhiên đây là nhịp đệm hoàn hảo để kích hoạt cú punch-in ở shot tiếp theo.", "takeaway": "Hãy bắt đầu video bằng một trạng thái cảm xúc cực đoan (đau khổ, tức giận, ngỡ ngàng) thay vì đứng cười nói; người xem dừng lại vì tò mò chuyện gì vừa xảy ra.", "lens_angle": "Trung rộng (Medium Shot 35mm), Góc ngang tầm mắt", "location": "Studio Phông Xám Tối Giản (Minimal Grey Cyclorama)", "lighting_color": "Soft Key Light 45° + Subtle Rim Light, Tone Lạnh Xám", "transition": "Cắt nhảy tăng kích cỡ (Jump Punch-in Zoom Cut 120%)", "best_mid_frame": 5}, {"id": 2, "st_frame": 11, "en_frame": 53, "st_time": 0.37, "en_time": 1.8, "duration": 1.43, "headline": "Punch-in Cắt Nhảy (Jump Punch-in) 120% + Graphic Bốc Hỏa Trên Đầu • Cường Hóa Sự Ức Chế Tột Cùng", "subject_action": "Cắt nhảy giật cục (Jump Cut Punch-in) vào cận ngực (Medium Close-Up). AL ngẩng phắt đầu lên, hai tay co giật giơ lên trời biểu lộ sự phẫn uất, mắt trợn to qua cặp kính xanh đặc trưng. Đỉnh đầu xuất hiện animation khói lửa bốc cháy. Lời thoại đanh thép: \"Doesn't it drive you crazy?\". Text typography \"DOESN'T IT DRIVE YOU CRAZY?\" giật nảy đồng bộ âm thanh.", "pros": "Cú đấm thị giác kép: punch-in zoom 120% + graphic doodle bốc khói tạo nhịp điệu kích động thị giác, đồng bộ hoàn hảo với câu hỏi tu từ đánh trúng tâm lý người làm nội dung.", "cons": "Cần kiểm soát biểu cảm gương mặt để không bị lố bịch hoặc kịch hóa quá đà; kính màu xanh nổi bật giúp cố định nhận diện thương hiệu cá nhân (Personal Brand Icon).", "takeaway": "Dùng Jump-Cut kết hợp Scale-up khi thốt ra câu hỏi trọng tâm (Hook Line) để dồn áp lực hình ảnh thẳng vào mắt người xem.", "lens_angle": "Cận ngực (Medium Close-Up 50mm), Chính diện", "location": "Studio Phông Xám Tối Giản", "lighting_color": "Key Light trực diện + Fill Light dịu, Tương phản cao", "transition": "Chuyển động xoay người sang bên kèm xuất hiện điện thoại", "best_mid_frame": 28}, {"id": 3, "st_frame": 54, "en_frame": 155, "st_time": 1.8, "en_time": 5.2, "duration": 3.4, "headline": "Bố Cục Tương Phản Nhận Thức (Floating Phone Contrast) • Đối Lập 20.7 Triệu Views vs Con Số 0 Tròn Trĩnh", "subject_action": "AL xoay người góc nghiêng 3/4 sang phải, nâng bàn tay trái đỡ một chiếc smartphone lơ lửng giữa không trung. Màn hình điện thoại phát video meme mèo nhảy ngớ ngẩn với badge đỏ chót \"20.7M Views\", sau đó đổi sang video chỉn chu của chính anh chỉ lèo tèo vài trăm view. Lời thoại: \"Dumb videos get millions of views... and yours nothing.\" Text chữ xanh biển đậm xuất hiện từng từ đè lên khoảng trống.", "pros": "Chuyển đổi góc quay từ chính diện sang 3/4 phá vỡ tính đơn điệu của Talking Head; visual hóa bằng chứng thực tế (Proof Stacking) ngay trên lòng bàn tay giúp người xem hiểu ngay nghịch lý bất công.", "cons": "Màn hình smartphone cần đủ độ sáng và tương phản để không bị chìm vào nền xám; chuyển động tay nâng điện thoại cần mượt mà, tránh rung lắc tracking.", "takeaway": "Đừng chỉ kể khổ bằng lời nói; hãy cụ thể hóa con số và hình ảnh thực tế (20M vs vài trăm) để kích hoạt sự đồng cảm phẫn nộ tức thì của người xem.", "lens_angle": "Góc nghiêng 3/4 (3/4 Profile Medium 50mm)", "location": "Studio Phông Xám Tối Giản", "lighting_color": "Ánh sáng viền xanh nhạt (Teal Rim) + Key Light 45°", "transition": "Cắt cứng sang góc nghiêng 90° (Hard Cut to Full Profile)", "best_mid_frame": 90}, {"id": 4, "st_frame": 156, "en_frame": 249, "st_time": 5.2, "en_time": 8.3, "duration": 3.1, "headline": "Bố Cục Cột Thẻ Dọc (Vertical Feed Stacking) + Búp Bê Tí Hon Bước Lên Mũi • Giữ Chân Bằng Chi Tiết Kỳ Lạ", "subject_action": "Cắt sang góc nghiêng hoàn toàn 90° (Extreme Profile). Bên trái khung hình xếp chồng một cột gồm 3 video rác nhảm nhí (chó nhảy, ngã cầu thang, nhảy múa vô nghĩa). Lời thoại: \"You know the ones. Zero profit, 10 million views.\" Ở cuối phân cảnh, một bản sao người tí hon (mini-me) của AL xuất hiện và bước đi thăng bằng ngay trên sống mũi của anh.", "pros": "Áp dụng nguyên lý \"Visual Curiosity Anchor\" (mỏ neo thị giác kỳ lạ): người xem vừa nghe phân tích vừa dán mắt vào chuyển động của người tí hon bước trên mũi, đẩy thời gian xem trung bình (Watch Time) lên đỉnh điểm.", "cons": "Kỹ thuật cắt ghép rotoscoping người tí hon đòi hỏi sự tỉ mỉ ở mép tóc và bóng đổ để không tạo cảm giác giả tạo thô thiển.", "takeaway": "Khi truyền tải thông điệp mang tính lý thuyết hoặc thống kê, hãy lồng ghép một chuyển động vi mô siêu thực (Surreal Micro-movement) ở góc máy để thôi miên ánh mắt người xem.", "lens_angle": "Cận góc nghiêng 90° (Full Profile Close-up 85mm)", "location": "Studio Phông Xám Tối Giản", "lighting_color": "Chiaroscuro Side Light, Một bên mặt sáng rõ, một bên chìm", "transition": "Phóng to người tí hon chuyển cảnh sang Toàn Thân (Match Scale Cut)", "best_mid_frame": 248}, {"id": 5, "st_frame": 250, "en_frame": 358, "st_time": 8.3, "en_time": 11.97, "duration": 3.67, "headline": "Toàn Thân Bộ Đồ Thể Thao Xanh (Full-body Teal Tracksuit) • Bước Đi Trực Diện Xóa Bỏ Sự Tự Ti", "subject_action": "Người tí hon trên mũi bỗng phóng to toàn màn hình, chuyển cảnh liền mạch sang AL đứng trọn vẹn toàn thân (Full Body Cowboy) trong bộ tracksuit màu xanh mòng két (teal) đồng màu kính. Anh bước đi ung dung, chắp hai tay trước ngực phân trần: \"It's not because your videos are worse. Those reels aren't made for you.\" Text chữ đỏ và xanh uốn cong quanh người.", "pros": "Giải phóng không gian ngột ngạt của các cú máy cận trước đó bằng khung hình toàn cảnh (Full Shot); bộ đồ xanh đơn sắc tạo tính đồ họa phẳng (Flat Graphic Chic) hiện đại và chuyên nghiệp.", "cons": "Nhân vật đứng toàn thân dễ bị trôi nếu không có cử chỉ tay dứt khoát hoặc bước di chuyển tạo động lượng (momentum).", "takeaway": "Đổi cỡ cảnh đột ngột từ Siêu Cận (Extreme Close-Up) sang Toàn Cảnh (Full Shot) là cách hữu hiệu nhất để tạo nhịp thở (Visual Rhythm Reset) cho video ngắn.", "lens_angle": "Toàn thân cao bồi (Full-body Cowboy 35mm)", "location": "Studio Phông Xám Tối Giản", "lighting_color": "Flat Studio Light, Đều màu toàn thân, Không đổ bóng sàn", "transition": "Cắt giật sang cận cảnh xoay trục (Jump Cut to Close-up)", "best_mid_frame": 300}, {"id": 6, "st_frame": 359, "en_frame": 398, "st_time": 11.97, "en_time": 13.3, "duration": 1.33, "headline": "Quay Trục Cận Mặt Động (Dynamic Axis Whip Rotate) • Nhấn Mạnh Đối Tượng Đại Chúng", "subject_action": "Đột ngột cắt vào cận cảnh gương mặt ở góc nghiêng 90°, sau đó đầu AL từ từ xoay mượt mà 60 độ về phía máy quay với nụ cười nhếch mép thấu hiểu. Lời thoại: \"They are made for the widest audience possible.\" Text xanh uốn cong bay bám theo chuyển động xoay đầu.", "pros": "Chuyển động xoay đầu vật lý kết hợp zoom cận cảnh tạo hiệu ứng thị giác 3D dù nền xám 2D phẳng; nụ cười tự tin tái lập uy quyền của người kể chuyện.", "cons": "Nhịp xoay cần tính toán trùng khớp với từng âm tiết của chữ \"widest audience\" để đạt hiệu ứng đồng bộ thính giác - thị giác.", "takeaway": "Thay vì để camera xoay quanh nhân vật (tốn rig phức tạp), hãy để nhân vật tự xoay trục đầu trước ống kính cố định để tạo cảm giác chuyển động camera giả lập.", "lens_angle": "Cận cảnh xoay trục (Macro Face Rotation 50mm)", "location": "Studio Phông Xám Tối Giản", "lighting_color": "Rim Light viền tóc + Soft Key Light 45°", "transition": "Cắt nhảy góc nghiêng đẩy nhanh tiết tấu (Fast Punch Cut)", "best_mid_frame": 380}, {"id": 7, "st_frame": 399, "en_frame": 434, "st_time": 13.3, "en_time": 14.5, "duration": 1.2, "headline": "Cắt Nhịp Cận Nghiêng Đẩy Nhanh Tiết Tấu • Cầu Nối Khớp Cắn Cho Ẩn Dụ Đồ Ăn Nhanh", "subject_action": "Cắt giật sang góc nghiêng bên trái, miệng bắt đầu há mở chuẩn bị cho hành động tiếp theo. Lời thoại: \"They work on reflexes...\". Bố cục dạt hẳn sang mép phải khung hình chừa 2/3 khoảng trống bên trái cho hiệu ứng kế tiếp.", "pros": "Cố tình để khoảng trống tiêu cực (Negative Space) ở hướng nhìn của nhân vật để chuẩn bị cho cú xuất hiện của các đồ vật bay vào miệng; giữ nhịp cắt siêu nhanh (1.2s) chống nhàm chán.", "cons": "Shot quá ngắn chỉ đóng vai trò đệm nhịp, nếu tách riêng sẽ không có giá trị độc lập.", "takeaway": "Luôn dạt chủ thể sang một bên khung hình ở shot trước nếu ở shot sau bạn dự định bắn hiệu ứng đồ họa hoặc vật thể xuất hiện vào khoảng trống đó.", "lens_angle": "Cận góc nghiêng (Profile Medium Close-Up 85mm)", "location": "Studio Phông Xám Tối Giản", "lighting_color": "Key Light cạnh bên, Chìm dần hậu cảnh", "transition": "Xuất hiện luồng điện thoại bay vào miệng liên tục", "best_mid_frame": 415}, {"id": 8, "st_frame": 435, "en_frame": 528, "st_time": 14.5, "en_time": 17.63, "duration": 3.13, "headline": "Ẩn Dụ Thị Giác Băng Chuyền Đồ Ăn Nhanh (Fast-Food Conveyor Ingestion) + Phun Khói • Định Nghĩa Reflex Content", "subject_action": "Miệng AL mở to, hàng loạt video điện thoại ngắn nối đuôi nhau như băng chuyền thức ăn nhanh bay thẳng tắp vào miệng anh và bị nuốt chửng liên tục. Lời thoại: \"...not on taste. Like fast food.\" Khi nói dứt câu \"Like fast food\", miệng anh khép lại và thở phì ra một làn khói trắng đồ họa uốn lượn.", "pros": "Đỉnh cao ẩn dụ thị giác (Visual Metaphor): biến khái niệm trừu tượng \"nội dung phản xạ tiêu thụ nhanh như đồ ăn nhanh\" thành hình ảnh nuốt chửng điện thoại; khói phì ra giải tỏa sự châm biếm hài hước cực kỳ thông minh.", "cons": "Hiệu ứng motion path của điện thoại bay vào miệng cần căn chuẩn phối cảnh (Perspective Warp) để tạo cảm giác thật sự đi vào trong vòm họng.", "takeaway": "Thay vì giải thích khái niệm bằng từ ngữ hàn lâm, hãy biến nó thành một hành động vật lý kỳ dị hoặc một ẩn dụ đồ họa mà ai nhìn cũng hiểu ngay trong 1 giây.", "lens_angle": "Cận góc nghiêng (Profile Close-Up 85mm)", "location": "Studio Phông Xám Tối Giản", "lighting_color": "High Contrast Profile Light, Nhấn mạnh đường viền môi miệng", "transition": "Cắt tức thì sang Toàn Cảnh Ngồi Thiền Trên Cán Cân", "best_mid_frame": 480}, {"id": 9, "st_frame": 529, "en_frame": 597, "st_time": 17.63, "en_time": 19.93, "duration": 2.3, "headline": "Ghế Thăng Bằng Cân Đo Đong Đếm (Levitating Balance Scale) • Khuyên Dừng So Sánh Khập Khiễng", "subject_action": "Cắt ngay sang cảnh AL ngồi xếp bằng kiểu thiền trên một chiếc đĩa cân cơ học, đĩa cân đối diện đặt một chiếc smartphone đang phát video nhảm. Cán cân bập bênh qua lại. Lời thoại: \"So just stop measuring yourself against them.\" Nút đồ họa \"Compare\" hiển thị ở trục cân.", "pros": "Biến câu nói \"ngừng so sánh bản thân\" thành một chiếc cân bập bênh vật lý; tư thế ngồi thiền thanh tịnh đối lập với sự náo động của video mạng xã hội bên kia cán cân.", "cons": "Phông nền phẳng cần bóng đổ tiếp xúc nhẹ dưới chân đế cân để chiếc cân không bị trôi lơ lửng mất trọng lực.", "takeaway": "Khi khuyên người xem \"ngừng làm một việc gì đó\", hãy dùng hình tượng cán cân hoặc bàn cờ để họ thấy rõ sự khập khiễng của hành vi đó.", "lens_angle": "Toàn cảnh tĩnh (Full Shot Medium Wide 35mm)", "location": "Studio Phông Xám Tối Giản", "lighting_color": "Ánh sáng đồng đều hai phía, Cân bằng thị giác đối xứng", "transition": "Zoom giật cực đại vào trán và mắt kính (Extreme Macro Zoom)", "best_mid_frame": 570}, {"id": 10, "st_frame": 598, "en_frame": 670, "st_time": 19.93, "en_time": 22.37, "duration": 2.44, "headline": "Chiếu Chữ Lên Trán & Phản Chiếu Kính Xanh (Forehead Projection & Glass Reflection) • Chuyển Đổi Hệ Giá Trị", "subject_action": "Cắt cực cận (Extreme Macro Close-Up) vào vầng trán và đôi mắt đeo kính xanh. Dòng chữ \"LOOK AT SAVES AND SHARES\" được áp chất liệu (Displacement Map) như in nổi trực tiếp lên nếp nhăn trán. Hai tròng kính xanh phản chiếu rực sáng biểu tượng Bookmark (Lưu) và Nút Share (Chia sẻ). Lời thoại: \"Look at saves and shares instead of views.\"", "pros": "Sử dụng chính gương mặt và phụ kiện (kính) làm màn hình chiếu thông điệp; biểu tượng phản chiếu trong tròng kính tạo chiều sâu quang học điện ảnh đẳng cấp.", "cons": "Đòi hỏi kỹ thuật Displacement Map và Blend Mode chính xác theo độ cong hộp sọ để chữ không bị phẳng lẹt như dán sticker.", "takeaway": "Tận dụng bề mặt cơ thể hoặc vật dụng đặc trưng (mắt kính, nón, áo) để in thông điệp then chốt; người xem sẽ không thể rời mắt khỏi vùng chữ đó.", "lens_angle": "Siêu cận trán mắt (Extreme Macro 100mm)", "location": "Studio Phông Xám Tối Giản", "lighting_color": "Chiếu sáng cục bộ vùng trán, Tròng kính phát sáng biểu tượng", "transition": "Chuyển màu nền sang tấm thẻ đồ họa chữ đơn sắc (Cut to Slate)", "best_mid_frame": 630}, {"id": 11, "st_frame": 671, "en_frame": 741, "st_time": 22.37, "en_time": 24.73, "duration": 2.36, "headline": "Tấm Thẻ Đồ Họa Chữ Đơn Sắc (Kinetic Typography Slate) • Đóng Đinh Định Nghĩa Giá Trị Thực", "subject_action": "Toàn bộ khung hình chuyển thành tấm thẻ màu xanh xám tối giản không người. Dòng chữ màu vàng nghệ/cam đất (Warm Amber) xếp tầng giật nảy theo từng nhịp nói: \"THAT'S THE NUMBER THAT MEANS SOMEONE ACTUALLY VALUED IT.\" Lời thoại đọc dứt khoát từng từ.", "pros": "\"Pattern Interrupt\" triệt để: loại bỏ hoàn toàn con người trong 2 giây để khán giả tập trung 100% não bộ vào việc đọc thông điệp cốt lõi; màu vàng cam trên nền xanh lam tạo độ tương phản bổ túc (Complementary Contrast) tuyệt hảo.", "cons": "Không nên để thẻ chữ quá 2.5 giây vì bản chất video ngắn là chuyển động; nhịp rơi chữ phải khớp tuyệt đối từng mili-giây với giọng nói.", "takeaway": "Đôi khi shot hình đắt giá nhất lại không có hình ảnh người hay b-roll; một tấm typographic slate sạch sẽ xuất hiện đúng lúc sẽ khóa chặt thông điệp vào tâm trí khán giả.", "lens_angle": "Đồ họa chữ toàn màn hình (Full-frame Motion Graphic Slate)", "location": "Graphic Motion Canvas", "lighting_color": "Nền xanh xám Slate + Chữ Cam Đất Amber tương phản cao", "transition": "Cắt đột ngột trở lại toàn thân đứng trên vạch sàn đen", "best_mid_frame": 710}, {"id": 12, "st_frame": 742, "en_frame": 805, "st_time": 24.73, "en_time": 26.87, "duration": 2.14, "headline": "Rơi Tự Do Qua Cửa Bẫy Đáy Sàn (Trapdoor Floor Drop) • Visual Pun Tuyệt Kỹ Cho Chữ 'Underneath'", "subject_action": "Cắt lại toàn thân AL đang cúi khom người trên vạch kẻ sàn màu đen: \"But that's a small fix.\" Anh đứng thẳng dậy: \"There's a bigger problem...\" Đột nhiên, vạch đen dưới chân anh mở toang như một cánh cửa bẫy (trapdoor), AL rơi tụt thẳng xuống đáy màn hình và lộn nhào rơi từ trần nhà xuống tầng dưới: \"...UNDERNEATH\".", "pros": "Chơi chữ thị giác (Visual Pun) đỉnh cao: minh họa chữ \"bên dưới\" (underneath) bằng hành động rơi xuyên thủng sàn nhà; động tác rơi tự do kích hoạt phản xạ giật mình thích thú của mắt người.", "cons": "Đường cắt mặt sàn đen cần thẳng thớm, chuyển động rơi cần gia tốc trọng trường tự nhiên (Ease-In Quadratic).", "takeaway": "Khi kịch bản có các từ chỉ không gian (bên dưới, trên cao, xoay vòng, vỡ vụn), hãy dùng kỹ xảo để chủ thể thực hiện đúng hành động vật lý đó.", "lens_angle": "Toàn cảnh (Full Shot 35mm)", "location": "Studio Phông Xám Tối Giản", "lighting_color": "Studio Flat Light, Viền sắc nét tách bạch với vạch đen", "transition": "Rơi xuyên qua trần tầng dưới (Continuous Gravity Fall)", "best_mid_frame": 794}, {"id": 13, "st_frame": 806, "en_frame": 885, "st_time": 26.87, "en_time": 29.5, "duration": 2.63, "headline": "Phân Thân Đuổi Theo 'Bả Số Lượng' (View Count Bait Chase) • Bi Kịch Đánh Mất Bản Thân", "subject_action": "Sau cú tiếp đất, xuất hiện hai bản sao của AL: một bản sao đứng trầm ngâm nhìn về phía trước, bản sao thứ hai bắt đầu lao theo đuổi bắt những huy hiệu lượt xem khổng lồ (\"201M Views\", \"3.9M Views\") đang lơ lửng như những miếng mồi câu. Lời thoại cảnh tỉnh: \"The moment you chase their numbers, you start making their videos.\"", "pros": "Hình tượng hóa bi kịch của creator: biến các con số view ảo thành mồi câu và người làm nội dung thành kẻ mù quáng đuổi theo con mồi; bố cục phân thân (Split Clone) truyền tải sự phân liệt nội tâm sâu sắc.", "cons": "Cần tạo chuyển động chạy khom người hài hước nhưng chua chát, tránh để hai nhân vật đè lên nhau gây rối mắt.", "takeaway": "Thay vì nói suông \"đừng chạy theo view ảo\", hãy cho khán giả thấy hình ảnh chính họ đang cắm đầu đuổi theo những chiếc huy hiệu view vô nghĩa.", "lens_angle": "Trung toàn phân thân (Split-screen Dual Clone 35mm)", "location": "Studio Phông Xám Tối Giản", "lighting_color": "Key Light hai chiều, Đổ bóng mờ nhẹ sàn", "transition": "Đám đông bóng đen ùa vào che lấp khung hình (Crowd Wipe)", "best_mid_frame": 854}, {"id": 14, "st_frame": 886, "en_frame": 1053, "st_time": 29.5, "en_time": 35.13, "duration": 5.63, "headline": "Bóng Đen Đám Đông Bủa Vây Rồi Tan Biến (Crowd Silhouette Swarm & Abandonment) • Bi Kịch Khán Giả Vãng Lai", "subject_action": "Hàng chục bóng đen (black silhouettes) của đám đông từ hai bên tràn vào, vây kín mít AL cho đến khi anh hoàn toàn biến mất trong đám đông đen kịt: \"And that audience isn't yours.\" Sau đó, ngay khi anh cất lời: \"They leave the second you make something that needs attention\", toàn bộ đám đông bóng đen đồng loạt quay lưng bỏ đi, để lại một mình AL đứng trơ trọi, cô độc giữa không gian xám mênh mông.", "pros": "Cảnh quay mang tính điện ảnh cao nhất video: hiệu ứng đám đông bóng đen đối lập với chủ thể màu xanh; khoảnh khắc cả đám đông bỏ đi để lại nhân vật đứng một mình truyền tải trọn vẹn cảm giác cô đơn và bài học đắt giá về tệp khán giả sai lầm.", "cons": "Cần tạo hình bóng đen đa dạng (nam, nữ, cử chỉ giơ tay xôn xao) để tạo cảm giác đám đông thực thụ thay vì một khối đen vô tri.", "takeaway": "Sự tương phản giữa \"đông đúc ồn ào\" và \"trơ trọi cô đơn\" là công cụ dẫn dắt cảm xúc mạnh nhất để kết thúc phần thân bài của video.", "lens_angle": "Toàn cảnh trung tâm (Centered Medium Long Shot 35mm)", "location": "Studio Phông Xám Tối Giản", "lighting_color": "Silhouettes đen tuyền 100% tương phản nền xám sáng", "transition": "Cắt giật sang cận nghiêng với bản sao lơ lửng (Hard Jump Cut)", "best_mid_frame": 965}, {"id": 15, "st_frame": 1054, "en_frame": 1210, "st_time": 35.13, "en_time": 40.37, "duration": 5.24, "headline": "Bản Sao Tí Hon Lơ Lửng Không Trọng Lực (Zero-Gravity Floating Clones) • Khẳng Định Thẩm Quyền Chuyên Gia", "subject_action": "Cắt vào cận cảnh góc nghiêng quen thuộc của AL, nở nụ cười kiêu hãnh và điềm đạm. Đằng sau anh, hàng loạt bản sao tí hon của chính anh trong nhiều tư thế nằm, bay, lộn nhào lơ lửng giữa không trung như phi hành gia không trọng lực. Lời thoại chuyển đổi giải pháp: \"I spent two years learning how to make videos worth watching twice. It's all in one mini course.\"", "pros": "Tái sử dụng motif \"người tí hon\" nhưng nâng cấp thành vũ trụ không trọng lực; tạo cảm giác tác giả đã làm chủ hoàn toàn không gian và kỹ nghệ sản xuất video; chuyển đổi mượt mà từ nỗi đau sang giải pháp (Pitching).", "cons": "Vị trí các bản sao bay cần tránh che khuất gương mặt và ánh mắt của nhân vật chính.", "takeaway": "Khi bắt đầu giới thiệu sản phẩm/khóa học, hãy nâng tầm không gian hình ảnh để thể hiện sự vượt trội về kỹ năng và sự tự tin đĩnh đạc.", "lens_angle": "Cận cảnh góc nghiêng (Profile Close-Up 85mm)", "location": "Studio Phông Xám Tối Giản", "lighting_color": "Soft Key Light dịu mắt + Ambient Fill Light", "transition": "Xoay mặt nhìn thẳng vào ống kính (Whip Pan / Head Turn)", "best_mid_frame": 1140}, {"id": 16, "st_frame": 1211, "en_frame": 1289, "st_time": 40.37, "en_time": 43.0, "duration": 2.63, "headline": "Nhìn Thẳng Trực Diện Kêu Gọi Hành Động (Frontal Eye-Contact CTA) • Nụ Cười Thân Thiện Chốt Hạ", "subject_action": "AL xoay phắt mặt từ góc nghiêng sang nhìn thẳng 100% vào mắt khán giả, nụ cười rạng rỡ, biểu cảm chân thành và ấm áp: \"Comment MINI to get it, and follow me.\" Các bản sao tí hon vẫn tiếp tục bay lơ lửng phía sau tạo nhịp động nền. Text chữ xanh biển nổi bật \"COMMENT MINI TO GET IT\".", "pros": "Phá vỡ góc nghiêng để kết nối trực tiếp 1-1 (Direct Address); nụ cười ấm áp xua tan toàn bộ sự căng thẳng của 40 giây trước đó, biến lời kêu gọi hành động (Call to Action) thành một lời mời hấp dẫn tự nhiên.", "cons": "Cần có trigger keyword (\"MINI\") rõ ràng và dễ gõ trên bàn phím di động; nhịp kết thúc mở chuẩn bị cho việc xem lại video.", "takeaway": "Luôn kết thúc video bằng cú nhìn thẳng vào ống kính và nụ cười thật tươi khi đưa ra CTA; sự chân thành trực diện có tỉ lệ chuyển đổi cao hơn bất kỳ chiêu trò nào.", "lens_angle": "Cận chính diện (Frontal Medium Close-Up 50mm)", "location": "Studio Phông Xám Tối Giản", "lighting_color": "Key Light rực rỡ nụ cười + Catchlight long lanh trong mắt", "transition": "Khép vòng lặp vô tận (Loop) sang Shot 01", "best_mid_frame": 1250}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ;
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 30.0 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById();
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

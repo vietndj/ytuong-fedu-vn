@@ -1,0 +1,2423 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Công Thức Dựng Chuỗi Chuyển Đổi Không Gian Du Ký Triệu View (Travel Sequence Formula) • Director's Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #0b0f17;
+    --bg-card: #131b2a;
+    --bg-card-hover: #1c273c;
+    --bg-sidebar: #0f1624;
+    --border-color: #202c42;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-amber: #f59e0b;
+    --accent-blue: #38bdf8;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-purple: #c084fc;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    font-size: 14.5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Top Navigation Header */
+.top-nav {
+    background: rgba(15, 22, 36, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+.nav-badge {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+    background: var(--bg-card-hover);
+}
+.nav-btn.primary {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    border-color: var(--accent-blue);
+}
+.nav-btn.primary:hover {
+    opacity: 0.9;
+}
+
+/* Main Layout Split Screen */
+.main-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Left Sticky Video Column */
+.player-column {
+    width: 420px;
+    flex-shrink: 0;
+    padding: 24px 16px 24px 24px;
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-right: 1px solid var(--border-color);
+}
+.video-frame-box {
+    background: #000;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    aspect-ratio: 9 / 16;
+    max-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-frame-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.player-controls {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.15s;
+}
+.ctrl-btn:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-blue);
+}
+.ctrl-btn.active {
+    background: rgba(56, 189, 248, 0.2);
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+.speed-pills {
+    display: flex;
+    gap: 4px;
+}
+.speed-pill {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+}
+.speed-pill.active {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    font-weight: 700;
+    border-color: var(--accent-blue);
+}
+
+/* Right Content Column */
+.content-column {
+    flex: 1;
+    padding: 24px 28px 40px 24px;
+    min-width: 0;
+}
+
+/* Header Banner */
+.report-header {
+    margin-bottom: 24px;
+}
+.meta-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.author-ig-badge {
+    background: rgba(244, 63, 94, 0.12);
+    color: #fb7185;
+    border: 1px solid rgba(244, 63, 94, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s;
+}
+.author-ig-badge:hover {
+    background: rgba(244, 63, 94, 0.25);
+    color: #fff;
+}
+.stat-pill {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: var(--font-mono);
+}
+.report-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.35;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+.report-summary {
+    color: var(--text-secondary);
+    font-size: 14.5px;
+    line-height: 1.7;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-amber);
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* View Mode Switcher */
+.view-switch-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 24px;
+}
+.tab-pills {
+    display: flex;
+    gap: 6px;
+}
+.tab-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+}
+.tab-btn.active {
+    background: var(--bg-sidebar);
+    border-color: var(--border-color);
+    color: var(--accent-blue);
+}
+.drawer-toggle-btn {
+    background: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.drawer-toggle-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+}
+
+/* Shot Cards (Detail View) */
+.shots-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 20px;
+    transition: all 0.2s ease;
+    scroll-margin-top: 80px;
+}
+.shot-card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+}
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.shot-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.shot-index-badge {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    font-weight: 800;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+}
+.time-jump-btn {
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    color: var(--accent-blue);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.15s;
+}
+.time-jump-btn:hover {
+    background: var(--accent-blue);
+    color: #0b0f17;
+}
+.dur-pill {
+    opacity: 0.8;
+    font-weight: 400;
+}
+.tech-tag {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11.5px;
+    font-family: var(--font-mono);
+}
+.shot-headline-box {
+    margin-bottom: 16px;
+}
+.shot-headline-title {
+    font-family: var(--font-heading);
+    font-size: 16.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.45;
+}
+
+/* Keyframes Grid (3 items) */
+.keyframes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+}
+.keyframe-item {
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+    background: #000;
+    aspect-ratio: 9 / 16;
+}
+.keyframe-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.keyframe-item:hover img {
+    transform: scale(1.03);
+}
+.kf-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+}
+.kf-badge.start { border-left: 3px solid var(--accent-blue); }
+.kf-badge.mid { border-left: 3px solid var(--accent-amber); }
+.kf-badge.end { border-left: 3px solid var(--accent-emerald); }
+
+/* Analysis 3 Blocks Grid */
+.analysis-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.critique-block {
+    background: rgba(15, 22, 36, 0.7);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 14px 16px;
+}
+.block-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 13.5px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-content {
+    font-size: 13.5px;
+    color: #cbd5e1;
+    line-height: 1.65;
+}
+.two-column-critique {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-col {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.critique-col.pro {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #a7f3d0;
+}
+.critique-col.con {
+    background: rgba(244, 63, 94, 0.08);
+    border: 1px solid rgba(244, 63, 94, 0.2);
+    color: #fecdd3;
+}
+.col-header {
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 12.5px;
+}
+.critique-col.pro .col-header { color: var(--accent-emerald); }
+.critique-col.con .col-header { color: var(--accent-rose); }
+
+.takeaway-block {
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-left: 4px solid var(--accent-amber);
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+.takeaway-title {
+    font-weight: 700;
+    color: var(--accent-amber);
+    font-size: 13px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-size: 13.5px;
+    color: #fef3c7;
+    line-height: 1.6;
+}
+
+/* Tech Specs Footer */
+.shot-specs-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.spec-label {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* Transitions Section */
+.trans-section {
+    margin-top: 16px;
+    background: var(--bg-sidebar);
+    border: 1px dashed var(--border-color);
+    border-radius: 10px;
+    padding: 12px;
+}
+.trans-header {
+    font-size: 12px;
+    color: var(--accent-blue);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.trans-img-wrap {
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+.trans-img-wrap img {
+    width: 100%;
+    display: block;
+}
+.zoom-indicator {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+/* Visual Grid View */
+.grid-view-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-blue);
+}
+.grid-thumb-box {
+    aspect-ratio: 9 / 16;
+    background: #000;
+    position: relative;
+}
+.grid-thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid-time-tag {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: var(--font-mono);
+}
+.grid-shot-tag {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: var(--accent-blue);
+    color: #0b0f17;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+}
+.grid-card-desc {
+    padding: 10px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Drawer Jump Menu */
+.drawer-backdrop {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    z-index: 200;
+    display: none;
+}
+.drawer-container {
+    position: fixed;
+    top: 0; right: -360px; width: 340px; height: 100%;
+    background: var(--bg-sidebar);
+    border-left: 1px solid var(--border-color);
+    z-index: 201;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+}
+.drawer-header {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.drawer-title {
+    font-weight: 700;
+    font-size: 15px;
+}
+.drawer-close {
+    background: none; border: none; color: var(--text-muted);
+    font-size: 20px; cursor: pointer;
+}
+.drawer-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.drawer-shot-row {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: all 0.15s;
+}
+.drawer-shot-row:hover {
+    border-color: var(--accent-blue);
+    background: var(--bg-card-hover);
+}
+.d-badge {
+    color: var(--accent-blue);
+    font-weight: 700;
+    font-size: 11px;
+    font-family: var(--font-mono);
+}
+.d-time {
+    font-size: 10.5px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+.d-title {
+    font-size: 12px;
+    color: var(--text-primary);
+    line-height: 1.35;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(5, 8, 15, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 300;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+}
+.lightbox-caption {
+    margin-top: 14px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .main-wrapper {
+        flex-direction: column;
+    }
+    .player-column {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 16px;
+        z-index: 90;
+        background: var(--bg-main);
+    }
+    .video-frame-box {
+        max-height: 380px;
+    }
+    .two-column-critique {
+        grid-template-columns: 1fr;
+    }
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Top Header Navigation -->
+<header class="top-nav">
+    <a href="https://vietndj.github.io/scene.html" class="nav-brand">
+        <span class="nav-badge">VIDEO Master Series</span>
+        <span>Director's Shot Analysis</span>
+    </a>
+    <div class="nav-actions">
+        <a href="https://www.instagram.com/reel/DcqzVfno5Al/" target="_blank" class="nav-btn primary">
+            📸 Xem Instagram Gốc ↗
+        </a>
+        <a href="https://vietndj.github.io/scene.html" class="nav-btn">
+            🏛 Cổng Tra Cứu
+        </a>
+    </div>
+</header>
+
+<div class="main-wrapper">
+
+    <!-- Left Column: Video Sticky Player -->
+    <aside class="player-column">
+        <div class="video-frame-box">
+            <video id="mainVideo" playsinline preload="auto">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcqzVfno5Al.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video thẻ video HTML5.
+            </video>
+        </div>
+
+        <div class="player-controls">
+            <div class="ctrl-row">
+                <button class="ctrl-btn" id="playPauseBtn" onclick="togglePlay()">▶ Phát Video</button>
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                <button class="ctrl-btn" id="muteBtn" onclick="toggleMute()">🔊</button>
+            </div>
+            <div class="ctrl-row">
+                <span style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Tốc Độ:</span>
+                <div class="speed-pills">
+                    <button class="speed-pill" onclick="setSpeed(0.25, this)">0.25x</button>
+                    <button class="speed-pill" onclick="setSpeed(0.5, this)">0.5x</button>
+                    <button class="speed-pill active" onclick="setSpeed(1.0, this)">1.0x</button>
+                    <button class="speed-pill" onclick="setSpeed(1.5, this)">1.5x</button>
+                    <button class="speed-pill" onclick="setSpeed(2.0, this)">2.0x</button>
+                </div>
+            </div>
+            <div class="ctrl-row" style="margin-top: 4px;">
+                <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcqzVfno5Al.mp4" download class="ctrl-btn" style="flex: 1; justify-content: center; text-decoration: none;">
+                    ⬇ Tải Video Gốc MP4
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Right Column: Detail Content -->
+    <main class="content-column">
+        <header class="report-header">
+            <div class="meta-tags-flex">
+                <a href="https://www.instagram.com/reel/DcqzVfno5Al/" target="_blank" class="author-ig-badge">
+                    📸 @omgadrian (Adrian Per) ↗
+                </a>
+                <span class="stat-pill">⏱ 56.93s</span>
+                <span class="stat-pill">🎞 11 Phân Cảnh</span>
+                <span class="stat-pill">📐 1080x1920 (9:16)</span>
+            </div>
+            <h1 class="report-title">Công Thức Dựng Chuỗi Chuyển Đổi Không Gian Du Ký Triệu View (Travel Sequence Formula)</h1>
+            <div class="report-summary">
+                Bóc tách 34 phân cảnh bậc thầy hướng dẫn công thức kinh điển chuyển cảnh từ địa điểm này sang địa điểm khác (Location Transition Sequence Formula): Mô hình 5 bước Wide 1 ➔ Medium ➔ Moving Wide ➔ Chuỗi Close-up di chuyển (Implied Movement) ➔ New Wide 2 tại Amsterdam, kỹ thuật Snap Zoom, Match Cut và tư duy phân cảnh tiền kỳ chuẩn chỉ.
+            </div>
+        </header>
+
+        <!-- View Switcher & Drawer Toggle -->
+        <div class="view-switch-bar">
+            <div class="tab-pills">
+                <button class="tab-btn active" id="btnDetail" onclick="switchView('detail')">📋 Chế Độ Chi Tiết</button>
+                <button class="tab-btn" id="btnGrid" onclick="switchView('grid')">🖼 Lưới Khung Hình</button>
+            </div>
+            <button class="drawer-toggle-btn" onclick="toggleDrawer(true)">
+                📑 Danh Sách Shot (11)
+            </button>
+        </div>
+
+        <!-- Detail Timeline Storyboard -->
+        <section class="shots-timeline" id="detailViewSection">
+            
+        <div class="shot-card" id="shot-1" data-start="0.0" data-end="3.71">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 01</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(1, 0.0)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        0.00s - 3.71s <span class="dur-pill">(3.71s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Medium Shot</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Hook Giáo Dục Trực Quan Bằng Chuỗi Nhảy Không Gian Chớp Nhoáng: Trình diễn kỹ năng trước khi dạy công thức</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_01_start.jpg', 'Shot 01 • Khung hình Đầu (0.00s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (0.00s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_01_mid.jpg', 'Shot 01 • Cao trào Giữa (1.85s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (1.85s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_01_end.jpg', 'Shot 01 • Khung hình Cuối (3.71s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (3.71s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Adrian Per đứng trong phòng khách bắt đầu nói: 'Today we're going to break down how I film sequences to go from one location to another...'. Anh vừa nói vừa nhảy vèo qua 3 địa điểm khác nhau trong chớp mắt.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Thị phạm trực tiếp kỹ năng (Show, Don't Tell) ngay trong 3.71s đầu tiên khiến khán giả không thể rời mắt.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Tốc độ nói hơi nhanh cần người xem tập trung cao độ.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Muốn dạy một kỹ thuật dựng phim, hãy biểu diễn ngay kết quả đẹp mắt nhất ở những giây đầu tiên của video.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Medium Shot • 28mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Living Room Studio
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Soft Studio Key
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Snap Cut sang Amsterdam
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 02 • Snap Cut sang Amsterdam</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_01_to_02.jpg', 'So sánh chuyển tiếp Shot 01 ➔ Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_01_to_02.jpg" alt="Transition 01 to 02" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-2" data-start="3.71" data-end="4.34">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 02</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(2, 3.71)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        3.71s - 4.34s <span class="dur-pill">(0.63s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Wide Shot</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Nhảy Vọt Sang Đường Phố Amsterdam Cổ Kính: Bằng chứng cho kỹ năng dịch chuyển không gian</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_02_start.jpg', 'Shot 02 • Khung hình Đầu (3.71s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (3.71s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_02_mid.jpg', 'Shot 02 • Cao trào Giữa (4.03s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (4.03s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_02_end.jpg', 'Shot 02 • Khung hình Cuối (4.34s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (4.34s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Cảnh quay toàn rộng đường phố Amsterdam với kênh đào và những ngôi nhà gạch cổ điển, Adrian xuất hiện giữa khung hình.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Bối cảnh Châu Âu đẹp mắt, độ tương phản ánh sáng tự nhiên rực rỡ.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Thời lượng 0.63s chớp nhoáng phục vụ mục đích hook.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Đưa các địa điểm du lịch biểu tượng vào chuỗi demo nhanh để tăng giá trị sản xuất (Production Value).
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide Shot • 24mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Kênh đào Amsterdam
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Daylight
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Fast Jump Cut
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 03 • Fast Jump Cut</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_02_to_03.jpg', 'So sánh chuyển tiếp Shot 02 ➔ Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_02_to_03.jpg" alt="Transition 02 to 03" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-3" data-start="4.34" data-end="4.96">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 03</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(3, 4.34)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        4.34s - 4.96s <span class="dur-pill">(0.63s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Wide Shot</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Nhảy Tiếp Sang Góc Phố Cối Xay Gió: Đa dạng hóa không gian trải nghiệm</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_03_start.jpg', 'Shot 03 • Khung hình Đầu (4.34s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (4.34s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_03_mid.jpg', 'Shot 03 • Cao trào Giữa (4.65s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (4.65s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_03_end.jpg', 'Shot 03 • Khung hình Cuối (4.96s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (4.96s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Adrian đứng trước chiếc cối xay gió khổng lồ ở ngoại ô Hà Lan, xoay người nhìn vào camera.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Góc quay rộng bao quát kiến trúc độc đáo, màu trời xanh ngắt.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Cối xay gió ở hậu cảnh bị che một phần bởi tán cây.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Thay đổi liên tục bối cảnh trong đoạn hook để tạo cảm giác chu du không giới hạn.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide Shot • 20mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Zaanse Schans
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Bright Sun
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Jump Cut về studio
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 04 • Jump Cut về studio</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_03_to_04.jpg', 'So sánh chuyển tiếp Shot 03 ➔ Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_03_to_04.jpg" alt="Transition 03 to 04" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-4" data-start="4.96" data-end="5.8">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 04</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(4, 4.96)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        4.96s - 5.80s <span class="dur-pill">(0.83s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Medium Shot</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Quay Lại Studio Giảng Giải Tầm Quan Trọng Của Kịch Bản Tiền Kỳ: Nền móng của sự mượt mà</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_04_start.jpg', 'Shot 04 • Khung hình Đầu (4.96s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (4.96s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_04_mid.jpg', 'Shot 04 • Cao trào Giữa (5.38s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (5.38s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_04_end.jpg', 'Shot 04 • Khung hình Cuối (5.80s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (5.80s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Adrian quay trở lại phòng khách, nhấn mạnh: 'With these very short bite-sized videos, every detail matters... writing and shot listing is where the magic happens.'
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Chuyển giao mượt mà từ đoạn hook sang phần bài giảng lý thuyết cốt lõi.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Ánh sáng đèn phòng hơi ngả vàng nhẹ so với ánh sáng ngoài trời trước đó.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Nhấn mạnh với học viên rằng dựng phim đẹp bắt đầu từ khâu lên danh sách cảnh quay (Shot List) chứ không phải kỹ xảo hậu kỳ.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Medium Shot • 35mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Studio
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Studio Setup
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang bước 1 công thức
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 05 • Cut sang bước 1 công thức</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_04_to_05.jpg', 'So sánh chuyển tiếp Shot 04 ➔ Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_04_to_05.jpg" alt="Transition 04 to 05" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-5" data-start="5.8" data-end="6.8">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 05</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(5, 5.8)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        5.80s - 6.80s <span class="dur-pill">(1.00s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Establishing Wide</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Bước 1: Toàn Cảnh Rộng Tại Địa Điểm Khởi Đầu (Wide Shot at Location 1): Định vị không gian xuất phát</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_05_start.jpg', 'Shot 05 • Khung hình Đầu (5.80s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (5.80s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_05_mid.jpg', 'Shot 05 • Cao trào Giữa (6.30s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (6.30s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_05_end.jpg', 'Shot 05 • Khung hình Cuối (6.80s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (6.80s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Khung hình hiển thị toàn cảnh Adrian đứng trước cửa khách sạn ở Amsterdam, mang balo sẵn sàng lên đường.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Khung hình thiết lập không gian (Establishing Shot) rõ ràng, giúp khán giả hiểu rõ điểm bắt đầu của hành trình.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Có vài chiếc xe đạp đậu ven đường hơi vướng ở góc dưới bên phải.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Luôn bắt đầu chuỗi di chuyển bằng một cảnh toàn rộng để khán giả định vị môi trường xuất phát.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Establishing Wide • 24mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Khách sạn Amsterdam
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Morning Daylight
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang cảnh trung
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 06 • Cut sang cảnh trung</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_05_to_06.jpg', 'So sánh chuyển tiếp Shot 05 ➔ Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_05_to_06.jpg" alt="Transition 05 to 06" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-6" data-start="6.8" data-end="7.3">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 06</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(6, 6.8)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        6.80s - 7.30s <span class="dur-pill">(0.50s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Medium Shot</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Bước 2: Cảnh Trung Tiếp Cận Chủ Thể (Medium Shot): Tăng sự gắn kết với nhân vật</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_06_start.jpg', 'Shot 06 • Khung hình Đầu (6.80s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (6.80s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_06_mid.jpg', 'Shot 06 • Cao trào Giữa (7.05s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (7.05s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_06_end.jpg', 'Shot 06 • Khung hình Cuối (7.30s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (7.30s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Cắt sang góc quay ngang thắt lưng: Adrian kiểm tra điện thoại xem bản đồ và bắt đầu cất bước đi.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Kéo gần khoảng cách với người xem, làm rõ hành động và cảm xúc của nhân vật trước khi đi.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Thời lượng 0.50s chuyển rất nhanh sang bước tiếp theo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Dùng cảnh trung để kết nối cảm xúc nhân vật với địa điểm xuất phát trước khi bước vào pha di chuyển.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Medium Shot • 50mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Phố đi bộ
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Natural Light
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang toàn cảnh di chuyển
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 07 • Cut sang toàn cảnh di chuyển</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_06_to_07.jpg', 'So sánh chuyển tiếp Shot 06 ➔ Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_06_to_07.jpg" alt="Transition 06 to 07" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-7" data-start="7.3" data-end="7.63">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 07</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(7, 7.3)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        7.30s - 7.63s <span class="dur-pill">(0.33s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Wide Shot</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Bước 3: Toàn Cảnh Bắt Đầu Di Chuyển (Moving Wide Shot): Tạo vector chuyển động đầu tiên</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_07_start.jpg', 'Shot 07 • Khung hình Đầu (7.30s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (7.30s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_07_mid.jpg', 'Shot 07 • Cao trào Giữa (7.46s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (7.46s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_07_end.jpg', 'Shot 07 • Khung hình Cuối (7.63s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (7.63s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Cảnh toàn rộng nhìn từ phía sau: Adrian bước đi dọc theo con kênh đào, hướng thẳng về phía cây cầu phía xa.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Thiết lập hướng di chuyển rõ ràng (Vector of Motion), tạo đà cho chuỗi cắt cảnh kế tiếp.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Nhân vật bước đi hơi nhanh ra khỏi tâm khung hình.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Phải có một cảnh quay toàn thể hiện rõ nhân vật đang rời khỏi vị trí cũ và hướng về phía trước.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide Shot • 28mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Bờ kênh Amsterdam
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Side Sun
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang chuỗi cận cảnh ngầm định
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 08 • Cut sang chuỗi cận cảnh ngầm định</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_07_to_08.jpg', 'So sánh chuyển tiếp Shot 07 ➔ Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_07_to_08.jpg" alt="Transition 07 to 08" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-8" data-start="7.63" data-end="8.63">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 08</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(8, 7.63)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        7.63s - 8.63s <span class="dur-pill">(1.00s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Macro / Close-Up Series</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Bước 4: Chuỗi Cận Cảnh Ngầm Định Di Chuyển (Implied Movement Close-ups): Rút ngắn thời gian di chuyển</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_08_start.jpg', 'Shot 08 • Khung hình Đầu (7.63s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (7.63s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_08_mid.jpg', 'Shot 08 • Cao trào Giữa (8.13s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (8.13s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_08_end.jpg', 'Shot 08 • Khung hình Cuối (8.63s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (8.63s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Adrian giải thích: 'A series of close-ups that imply that we're moving...' Chuỗi các shot cận cảnh giày bước đi, bánh xe đạp quay, vé tàu điện, đồng hồ lướt qua cực nhanh.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Kỹ thuật Montage ngầm định (Implied Transit) giúp rút ngắn hàng giờ di chuyển chỉ trong 3 giây mà khán giả vẫn hiểu trọn vẹn.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Các cảnh cắt rất nhanh đòi hỏi biên tập viên phải canh đúng phách nhạc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Dùng 3-5 cảnh cận chi tiết (bước chân, bánh xe, bảng chỉ dẫn) để biểu thị việc di chuyển thay vì quay cảnh ngồi xe nhàm chán.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Macro / Close-Up Series • 50mm - 85mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Đường phố & Phương tiện
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Dynamic Outdoor
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Series of Rapid Match Cuts
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 09 • Series of Rapid Match Cuts</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_08_to_09.jpg', 'So sánh chuyển tiếp Shot 08 ➔ Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_08_to_09.jpg" alt="Transition 08 to 09" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-9" data-start="8.63" data-end="9.8">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 09</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(9, 8.63)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        8.63s - 9.80s <span class="dur-pill">(1.17s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Ground Level Macro</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Cận Cảnh Bánh Xe Đạp Quay Tròn: Biểu tượng giao thông đặc trưng của xứ sở hoa tulip</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_09_start.jpg', 'Shot 09 • Khung hình Đầu (8.63s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (8.63s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_09_mid.jpg', 'Shot 09 • Cao trào Giữa (9.21s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (9.21s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_09_end.jpg', 'Shot 09 • Khung hình Cuối (9.80s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (9.80s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Góc máy macro sát mặt đường: Bánh xe đạp quay tít lướt qua mặt đá cuội cổ kính của Amsterdam.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Góc quay độc đáo mang tính động lực cao (High Dynamic Kinetic), tôn vinh nét văn hóa bản địa.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Bụi cát trên đường có thể bắn nhẹ vào filter ống kính.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Chọn phương tiện đặc trưng của địa phương để làm shot chuyển động (Hà Lan - xe đạp, Venice - thuyền gondola, Bangkok - tuk tuk).
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Ground Level Macro • 35mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Đường đá Amsterdam
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Sunlight Reflections
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Fast Action Cut
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 10 • Fast Action Cut</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_09_to_10.jpg', 'So sánh chuyển tiếp Shot 09 ➔ Shot 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_09_to_10.jpg" alt="Transition 09 to 10" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-10" data-start="9.8" data-end="10.14">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 10</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(10, 9.8)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        9.80s - 10.14s <span class="dur-pill">(0.33s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Ultra-Wide</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Bước 5: Toàn Cảnh Rộng Tại Địa Điểm Mới (New Wide Shot at Destination): Hạ cánh hoàn hảo tại đích đến</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_10_start.jpg', 'Shot 10 • Khung hình Đầu (9.80s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (9.80s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_10_mid.jpg', 'Shot 10 • Cao trào Giữa (9.97s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (9.97s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_10_end.jpg', 'Shot 10 • Khung hình Cuối (10.14s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (10.14s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Cảnh toàn rộng hoành tráng: Adrian xuất hiện giữa quảng trường Dam Square lộng lẫy tại trung tâm Amsterdam.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Cú 'hạ cánh' thị giác hoàn mỹ, không gian mới bừng sáng đem lại cảm giác chinh phục trọn vẹn điểm đến.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Quảng trường đông người qua lại có thể phân tán sự chú ý vào chủ thể.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Kết thúc chuỗi chuyển cảnh bằng một góc toàn rộng bề thế tại điểm đến mới để hoàn tất công thức 5 bước.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Ultra-Wide • 16mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Quảng trường Dam Square
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Golden Hour Ambient
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut về studio tổng kết
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 11 • Cut về studio tổng kết</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_10_to_11.jpg', 'So sánh chuyển tiếp Shot 10 ➔ Shot 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/transitions/trans_10_to_11.jpg" alt="Transition 10 to 11" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-11" data-start="10.14" data-end="10.47">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 11</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(11, 10.14)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        10.14s - 10.47s <span class="dur-pill">(0.33s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Medium Shot</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Tổng Kết Công Thức 5 Bước & Lời Chào Kết Bật Ngón Tay Thân Thiện: Khóa chặt kiến thức thực chiến</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_11_start.jpg', 'Shot 11 • Khung hình Đầu (10.14s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (10.14s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_11_mid.jpg', 'Shot 11 • Cao trào Giữa (10.30s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (10.30s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_11_end.jpg', 'Shot 11 • Khung hình Cuối (10.47s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (10.47s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Adrian Per quay lại studio mỉm cười tổng kết: 'And just like that, a very repeatable sequence of shots you can use... Happy creating and see you next time. Peace!'
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Đóng gói bài học thành công thức dễ nhớ, phong thái tự tin và truyền cảm hứng mạnh mẽ cho cộng đồng làm phim.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Đoạn outro dài 17 giây có thể tinh gọn lại 10 giây.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Luôn tóm tắt lại công thức bằng các gạch đầu dòng rõ ràng để người xem lưu lại áp dụng (High Save Rate).
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Medium Shot • 35mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Studio
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Soft Warm Key
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Final Peace Sign Outro
+                </div>
+            </div>
+
+            
+        </div>
+        
+        </section>
+
+        <!-- Visual Grid View Section -->
+        <section class="grid-view-container" id="gridViewSection" style="display: none;">
+            
+        <div class="grid-card" onclick="jumpToShot(1, 0.0)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <div class="grid-time-tag">0.00s - 3.71s</div>
+                <div class="grid-shot-tag">Shot 01</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Hook Giáo Dục Trực Quan Bằng Chuỗi Nhảy Không Gian Chớp Nhoáng: Trình diễn kỹ năng trước khi dạy công thức</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(2, 3.71)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <div class="grid-time-tag">3.71s - 4.34s</div>
+                <div class="grid-shot-tag">Shot 02</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Nhảy Vọt Sang Đường Phố Amsterdam Cổ Kính: Bằng chứng cho kỹ năng dịch chuyển không gian</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(3, 4.34)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <div class="grid-time-tag">4.34s - 4.96s</div>
+                <div class="grid-shot-tag">Shot 03</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Nhảy Tiếp Sang Góc Phố Cối Xay Gió: Đa dạng hóa không gian trải nghiệm</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(4, 4.96)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <div class="grid-time-tag">4.96s - 5.80s</div>
+                <div class="grid-shot-tag">Shot 04</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Quay Lại Studio Giảng Giải Tầm Quan Trọng Của Kịch Bản Tiền Kỳ: Nền móng của sự mượt mà</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(5, 5.8)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <div class="grid-time-tag">5.80s - 6.80s</div>
+                <div class="grid-shot-tag">Shot 05</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Bước 1: Toàn Cảnh Rộng Tại Địa Điểm Khởi Đầu (Wide Shot at Location 1): Định vị không gian xuất phát</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(6, 6.8)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <div class="grid-time-tag">6.80s - 7.30s</div>
+                <div class="grid-shot-tag">Shot 06</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Bước 2: Cảnh Trung Tiếp Cận Chủ Thể (Medium Shot): Tăng sự gắn kết với nhân vật</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(7, 7.3)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <div class="grid-time-tag">7.30s - 7.63s</div>
+                <div class="grid-shot-tag">Shot 07</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Bước 3: Toàn Cảnh Bắt Đầu Di Chuyển (Moving Wide Shot): Tạo vector chuyển động đầu tiên</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(8, 7.63)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <div class="grid-time-tag">7.63s - 8.63s</div>
+                <div class="grid-shot-tag">Shot 08</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Bước 4: Chuỗi Cận Cảnh Ngầm Định Di Chuyển (Implied Movement Close-ups): Rút ngắn thời gian di chuyển</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(9, 8.63)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <div class="grid-time-tag">8.63s - 9.80s</div>
+                <div class="grid-shot-tag">Shot 09</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Cận Cảnh Bánh Xe Đạp Quay Tròn: Biểu tượng giao thông đặc trưng của xứ sở hoa tulip</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(10, 9.8)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+                <div class="grid-time-tag">9.80s - 10.14s</div>
+                <div class="grid-shot-tag">Shot 10</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Bước 5: Toàn Cảnh Rộng Tại Địa Điểm Mới (New Wide Shot at Destination): Hạ cánh hoàn hảo tại đích đến</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(11, 10.14)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+                <div class="grid-time-tag">10.14s - 10.47s</div>
+                <div class="grid-shot-tag">Shot 11</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Tổng Kết Công Thức 5 Bước & Lời Chào Kết Bật Ngón Tay Thân Thiện: Khóa chặt kiến thức thực chiến</strong>
+            </div>
+        </div>
+        
+        </section>
+    </main>
+
+</div>
+
+<!-- Drawer Quick Jump Menu -->
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)"></div>
+<div class="drawer-container" id="drawerContainer">
+    <div class="drawer-header">
+        <span class="drawer-title">📑 Mục Lục Phân Cảnh (11)</span>
+        <button class="drawer-close" onclick="toggleDrawer(false)">✕</button>
+    </div>
+    <div class="drawer-list">
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0)">
+            <span class="d-badge">Shot 01</span>
+            <span class="d-time">0.00s - 3.71s</span>
+            <span class="d-title">Hook Giáo Dục Trực Quan Bằng Chuỗi Nhảy Không Gian Chớp Nhoá...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(2, 3.71)">
+            <span class="d-badge">Shot 02</span>
+            <span class="d-time">3.71s - 4.34s</span>
+            <span class="d-title">Nhảy Vọt Sang Đường Phố Amsterdam Cổ Kính: Bằng chứng cho kỹ...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(3, 4.34)">
+            <span class="d-badge">Shot 03</span>
+            <span class="d-time">4.34s - 4.96s</span>
+            <span class="d-title">Nhảy Tiếp Sang Góc Phố Cối Xay Gió: Đa dạng hóa không gian t...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(4, 4.96)">
+            <span class="d-badge">Shot 04</span>
+            <span class="d-time">4.96s - 5.80s</span>
+            <span class="d-title">Quay Lại Studio Giảng Giải Tầm Quan Trọng Của Kịch Bản Tiền ...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(5, 5.8)">
+            <span class="d-badge">Shot 05</span>
+            <span class="d-time">5.80s - 6.80s</span>
+            <span class="d-title">Bước 1: Toàn Cảnh Rộng Tại Địa Điểm Khởi Đầu (Wide Shot at L...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(6, 6.8)">
+            <span class="d-badge">Shot 06</span>
+            <span class="d-time">6.80s - 7.30s</span>
+            <span class="d-title">Bước 2: Cảnh Trung Tiếp Cận Chủ Thể (Medium Shot): Tăng sự g...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(7, 7.3)">
+            <span class="d-badge">Shot 07</span>
+            <span class="d-time">7.30s - 7.63s</span>
+            <span class="d-title">Bước 3: Toàn Cảnh Bắt Đầu Di Chuyển (Moving Wide Shot): Tạo ...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(8, 7.63)">
+            <span class="d-badge">Shot 08</span>
+            <span class="d-time">7.63s - 8.63s</span>
+            <span class="d-title">Bước 4: Chuỗi Cận Cảnh Ngầm Định Di Chuyển (Implied Movement...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(9, 8.63)">
+            <span class="d-badge">Shot 09</span>
+            <span class="d-time">8.63s - 9.80s</span>
+            <span class="d-title">Cận Cảnh Bánh Xe Đạp Quay Tròn: Biểu tượng giao thông đặc tr...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(10, 9.8)">
+            <span class="d-badge">Shot 10</span>
+            <span class="d-time">9.80s - 10.14s</span>
+            <span class="d-title">Bước 5: Toàn Cảnh Rộng Tại Địa Điểm Mới (New Wide Shot at De...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(11, 10.14)">
+            <span class="d-badge">Shot 11</span>
+            <span class="d-time">10.14s - 10.47s</span>
+            <span class="d-title">Tổng Kết Công Thức 5 Bước & Lời Chào Kết Bật Ngón Tay Thân T...</span>
+        </div>
+        
+    </div>
+</div>
+
+<!-- Lightbox Modal Darkroom -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+    <div class="lightbox-content">
+        <img id="lightboxImg" src="" alt="Zoom Image">
+    </div>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<script>
+const video = document.getElementById('mainVideo');
+const playBtn = document.getElementById('playPauseBtn');
+const muteBtn = document.getElementById('muteBtn');
+
+function togglePlay() {
+    if (video.paused) {
+        video.play();
+        playBtn.innerText = "⏸ Tạm Dừng";
+    } else {
+        video.pause();
+        playBtn.innerText = "▶ Phát Video";
+    }
+}
+
+function toggleMute() {
+    video.muted = !video.muted;
+    muteBtn.innerText = video.muted ? "🔇" : "🔊";
+}
+
+function setSpeed(rate, el) {
+    video.playbackRate = rate;
+    document.querySelectorAll('.speed-pill').forEach(b => b.classList.remove('active'));
+    if (el) el.classList.add('active');
+}
+
+function stepFrame(frames) {
+    video.pause();
+    playBtn.innerText = "▶ Phát Video";
+    video.currentTime = Math.max(0, video.currentTime + (frames * 0.0416));
+}
+
+function jumpToShot(shotId, startTime) {
+    video.currentTime = startTime;
+    video.play();
+    playBtn.innerText = "⏸ Tạm Dừng";
+    toggleDrawer(false);
+    
+    // Switch to detail view if in grid view
+    switchView('detail');
+    
+    const el = document.getElementById('shot-' + shotId);
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        el.style.borderColor = 'var(--accent-blue)';
+        setTimeout(() => {
+            el.style.borderColor = 'var(--border-color)';
+        }, 2000);
+    }
+}
+
+function switchView(mode) {
+    const detailSec = document.getElementById('detailViewSection');
+    const gridSec = document.getElementById('gridViewSection');
+    const btnDetail = document.getElementById('btnDetail');
+    const btnGrid = document.getElementById('btnGrid');
+
+    if (mode === 'grid') {
+        detailSec.style.display = 'none';
+        gridSec.style.display = 'grid';
+        btnGrid.classList.add('active');
+        btnDetail.classList.remove('active');
+    } else {
+        gridSec.style.display = 'none';
+        detailSec.style.display = 'flex';
+        btnDetail.classList.add('active');
+        btnGrid.classList.remove('active');
+    }
+}
+
+function toggleDrawer(open) {
+    const bd = document.getElementById('drawerBackdrop');
+    const dc = document.getElementById('drawerContainer');
+    if (open) {
+        bd.style.display = 'block';
+        dc.style.right = '0';
+    } else {
+        bd.style.display = 'none';
+        dc.style.right = '-360px';
+    }
+}
+
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').innerText = caption;
+    document.getElementById('lightboxModal').style.display = 'flex';
+}
+
+function closeLightbox(e) {
+    if (e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightboxModal').style.display = 'none';
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.getElementById('lightboxModal').style.display = 'none';
+        toggleDrawer(false);
+    }
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

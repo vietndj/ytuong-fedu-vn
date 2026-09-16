@@ -1,0 +1,3021 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>@Aayush_Swamy - The Yap Triangle: How to Yap on Camera and Hook Viewers Instantly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #070a0f;
+    --bg-card: #0e1420;
+    --bg-card-hover: #151e30;
+    --bg-surface: #121928;
+    --border-color: #1e293b;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-blue: #38bdf8;
+    --accent-amber: #f59e0b;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-purple: #c084fc;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.55;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: #202d42; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .app-container {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .video-sidebar-col {
+        width: 440px;
+        min-width: 440px;
+        max-width: 480px;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: 1px solid var(--border-color);
+        background: var(--bg-surface);
+        display: flex;
+        flex-direction: column;
+        z-index: 30;
+    }
+    .content-scroll-col {
+        flex: 1;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 24px 32px 60px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    .video-sidebar-col {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(14, 20, 32, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .content-scroll-col {
+        width: 100%;
+        padding: 16px 14px 80px;
+    }
+}
+
+.video-player-container {
+    position: relative;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .video-player-container {
+        aspect-ratio: 9/16;
+        max-height: 60vh;
+    }
+}
+@media (max-width: 1023px) {
+    .video-player-container {
+        max-height: 38vh;
+        aspect-ratio: 16/9;
+    }
+}
+
+video#mainPlayer {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    outline: none;
+}
+
+.video-controls-panel {
+    padding: 12px 16px;
+    background: #0b111c;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.current-status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11.5px;
+}
+
+.speed-buttons-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.ctrl-btn {
+    background: #162032;
+    color: #cbd5e1;
+    border: 1px solid #283750;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+}
+
+.ctrl-btn:hover, .ctrl-btn:active {
+    background: #25334d;
+    color: #fff;
+}
+
+.ctrl-btn.active {
+    background: var(--accent-blue);
+    color: #041324;
+    border-color: var(--accent-blue);
+    font-weight: 800;
+}
+
+.report-header-banner {
+    background: linear-gradient(135deg, #0e1726 0%, #152238 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.genre-badge {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--accent-amber);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.report-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.meta-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+}
+
+.meta-tags-flex strong {
+    color: #fff;
+}
+
+.overview-card {
+    background: #0e1420;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-blue);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 13.5px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.action-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg-main);
+    padding: 10px 0;
+}
+
+.view-tabs-group {
+    display: flex;
+    gap: 4px;
+    background: #0f1624;
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.view-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+}
+
+.view-tab-btn.active {
+    background: #1e293b;
+    color: #fff;
+    font-weight: 700;
+}
+
+.drawer-trigger-btn {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12.5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.storyboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    gap: 18px;
+    transition: transform 0.15s, border-color 0.15s;
+}
+
+@media (max-width: 768px) {
+    .shot-card {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .shot-media-col {
+        width: 100% !important;
+        min-width: 100% !important;
+    }
+    .shot-thumb-wrap {
+        max-height: 240px;
+    }
+}
+
+.shot-card:hover {
+    background: var(--bg-card-hover);
+    border-color: #2e3e5a;
+}
+
+.shot-card.active-playing {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+.shot-media-col {
+    width: 135px;
+    min-width: 135px;
+    flex-shrink: 0;
+}
+
+.shot-thumb-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.shot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.play-overlay svg {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+}
+
+.zoom-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.65);
+    border: none;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.thumb-time-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    background: rgba(15, 23, 42, 0.85);
+    font-size: 9.5px;
+    font-weight: 700;
+    color: var(--accent-amber);
+    padding: 2px 4px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: var(--font-mono);
+}
+
+.shot-info-col {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.shot-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-bottom: 1px solid #1a2436;
+    padding-bottom: 8px;
+}
+
+.shot-title-wrap {
+    flex: 1;
+    min-width: 200px;
+}
+
+.shot-badge-num {
+    background: #1e293b;
+    color: var(--accent-blue);
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 6px;
+    display: inline-block;
+}
+
+.shot-heading {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    display: inline;
+    line-height: 1.4;
+}
+
+.time-jump-btn {
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--accent-blue);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.shot-narrative-box {
+    background: #121a29;
+    border-left: 3px solid #38bdf8;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #e2e8f0;
+    line-height: 1.5;
+}
+
+.narrative-tag {
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-right: 4px;
+    display: block;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.critique-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+@media (max-width: 640px) {
+    .critique-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.critique-box {
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    line-height: 1.45;
+}
+
+.critique-good {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.critique-good .critique-title {
+    color: var(--accent-emerald);
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.critique-good .critique-content {
+    color: #cbd5e1;
+}
+
+.critique-bad {
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.critique-bad .critique-title {
+    color: var(--accent-amber);
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.critique-bad .critique-content {
+    color: #cbd5e1;
+}
+
+.takeaway-box {
+    background: rgba(192, 132, 252, 0.08);
+    border: 1px solid rgba(192, 132, 252, 0.25);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 12.5px;
+    line-height: 1.45;
+}
+
+.takeaway-title {
+    color: var(--accent-purple);
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.takeaway-content {
+    color: #e2e8f0;
+}
+
+.props-list {
+    font-size: 12px;
+    color: #cbd5e1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 12px;
+    background: #0b1019;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #182234;
+}
+
+@media (max-width: 640px) {
+    .props-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+.prop-label { font-weight: 700; color: #94a3b8; }
+.prop-val { color: #e2e8f0; }
+
+
+.tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+.tag-pill {
+    background: #162032;
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 4px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+}
+
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+}
+
+.grid-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.grid-play-icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+}
+
+.grid-card:hover .grid-play-icon { opacity: 1; }
+
+.grid-zoom-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: rgba(0,0,0,0.7);
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.grid-badge-top {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--accent-blue);
+    font-size: 9px;
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+}
+
+.grid-badge-bottom {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--accent-amber);
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px 4px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: var(--font-mono);
+}
+
+.grid-title-snippet {
+    padding: 6px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #cbd5e1;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+}
+
+.drawer-backdrop.open { opacity: 1; visibility: visible; }
+
+.drawer-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 85vw;
+    background: #0f172a;
+    border-left: 1px solid var(--border-color);
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-backdrop.open .drawer-panel { transform: translateX(0); }
+
+.drawer-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drawer-title { font-weight: 800; font-size: 15px; color: #fff; }
+.drawer-close-btn { background: #1e293b; border: none; color: #fff; width: 28px; height: 28px; border-radius: 6px; font-size: 16px; cursor: pointer; }
+
+.drawer-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.drawer-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 10px;
+    background: #131d30;
+    border: 1px solid #1e2d48;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.drawer-item:hover, .drawer-item:active {
+    background: #1c2b47;
+    border-color: var(--accent-blue);
+}
+
+.drawer-thumb {
+    width: 44px;
+    height: 58px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #000;
+}
+
+.drawer-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.drawer-info { flex: 1; min-width: 0; }
+.drawer-shot-title { font-weight: 700; font-size: 12.5px; color: var(--accent-blue); }
+.drawer-shot-headline { font-size: 11.5px; color: #fff; margin: 1px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.drawer-shot-time { font-size: 11px; color: var(--accent-amber); font-family: var(--font-mono); }
+.drawer-play-arrow { font-size: 13px; color: var(--accent-blue); }
+
+#lightboxModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    border: 1px solid #334155;
+}
+
+#lightboxCaption {
+    color: #e2e8f0;
+    font-size: 13.5px;
+    margin-top: 14px;
+    text-align: center;
+    background: rgba(15, 23, 42, 0.85);
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid #334155;
+    max-width: 90vw;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="video-sidebar-col">
+        <div class="video-player-container">
+            <video id="mainPlayer" controls autoplay muted playsinline preload="auto" loop></video>
+        </div>
+        <div class="video-controls-panel">
+            <div class="current-status-bar">
+                <span class="status-tag" id="shotStatusTag">🎬 Phân cảnh: Toàn bộ video</span>
+                <a id="directVidLink" href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcwPu99sDKI.mp4" target="_blank" style="color:var(--accent-blue); font-size:11.5px; text-decoration:none;">Tệp gốc ↗</a>
+            </div>
+            <div class="speed-buttons-row">
+                <span style="font-size:11.5px; color:#94a3b8; font-weight:700; margin-right:4px;">Tốc độ:</span>
+                <button class="ctrl-btn" onclick="setSpeed(0.25, this)">0.25x</button>
+                <button class="ctrl-btn" onclick="setSpeed(0.5, this)">0.5x</button>
+                <button class="ctrl-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+                <button class="ctrl-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                <button class="ctrl-btn" onclick="toggleMute(this)">🔊 Tiếng</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-scroll-col">
+        <div class="report-header-banner">
+            <div class="header-top-row">
+                <span class="genre-badge">DIRECTOR STORYBOARD BREAKDOWN</span>
+                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">22 SHOTS &bull; 68.44s</span>
+            </div>
+            <h1 class="report-title">@Aayush_Swamy - The Yap Triangle: How to Yap on Camera and Hook Viewers Instantly</h1>
+            <div class="meta-tags-flex">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@iamaayushswamy" onclick="handleCreatorClick(event, '@iamaayushswamy', 'Iamaayushswamy')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Iamaayushswamy trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Iamaayushswamy</strong>
+                        <span class="author-handle">(@iamaayushswamy)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <span>Tệp: <strong>IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy.html</strong></span>
+                <span>Trực quan: <strong>9:16 Vertical HD</strong></span>
+            </div>
+        </div>
+
+        <div class="overview-card">
+            <h3 style="color:#fff; font-size:14px; margin-bottom:6px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
+            <div>Bản phân tích đạo diễn chuyên sâu bóc tách cấu trúc 22 phân cảnh của chuyên gia video Aayush Swamy (@iamaayushswamy). Video áp dụng mô hình "The Yap Triangle" (D-S-G: Drop-in, Solve it, Give direction) cùng kỹ thuật dựng hình đối lập thị giác (Visual Parody & Monochrome Antipattern), bối cảnh High-Status và Call-To-Action tự nhiên kích thích chuyển đổi cực cao.</div>
+        </div>
+
+        <div class="action-toolbar">
+            <div class="view-tabs-group">
+                <button class="view-tab-btn active" id="tabDetailBtn" onclick="switchView('detail')">📋 Bóc Tách Chi Tiết</button>
+                <button class="view-tab-btn" id="tabGridBtn" onclick="switchView('grid')">🖼️ Lưới Soi Ảnh (22)</button>
+            </div>
+            <button class="drawer-trigger-btn" onclick="toggleDrawer(true)">📑 Mục Lục Shot</button>
+        </div>
+
+        <div class="storyboard-container" id="storyboardView">
+            
+        <div class="shot-card" id="shot-card-1">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(0.0, 3.63, 'SHOT 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_01_mid.jpg" alt="SHOT 01" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_01_mid.jpg', 'SHOT 01 [0.0s - 3.63s] • Direct Hook Đánh Thẳng Nỗi Sợ: Khóa chặt sự chú ý bằng câu hỏi xoáy sâu tâm lý creator')">🔍</button>
+                    <span class="thumb-time-badge">0.00s - 3.63s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 01</span>
+                        <h4 class="shot-heading">Direct Hook Đánh Thẳng Nỗi Sợ: Khóa chặt sự chú ý bằng câu hỏi xoáy sâu tâm lý creator</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(0.0, 3.63, 'SHOT 01')">
+                        ▶ 0.00s ➔ 3.63s (3.63s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Aayush Swamy ngồi tựa ghế bành trong phòng khách, cầm ly nước nhìn thẳng vào ống kính và tung ra câu mở đầu đầy thách thức: "Why the fuck is it so hard to yap on camera?".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Bố cục trung tâm 1/3 (Center-Framed) kết hợp ánh sáng Low-key có chọn lọc; Typography 2 tầng màu (Trắng/Đỏ) với phông chữ Editorial serif xen kẽ Sans-serif đậm tạo nhịp nhấn mạnh chữ "SO HARD".</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Chữ phụ đề đặt chiếm diện tích khá lớn ở trung tâm ngực, có thể che một phần chuyển động cơ thể nếu xem trên màn hình nhỏ.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Hook video hiệu quả nhất không phải là giới thiệu bản thân mà là gọi tên chính xác cảm giác ức chế/bế tắc lớn nhất của người xem.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Phòng khách Studio (Living Room Ambient)</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Medium Close-Up (Góc trung cận trực diện)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Low-key Key Light ấm kết hợp đèn hậu cảnh dịu</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 01</span>
+                    <span class="tag-pill">⏱ 3.63s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-2">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(3.67, 5.59, 'SHOT 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_02_mid.jpg" alt="SHOT 02" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_02_mid.jpg', 'SHOT 02 [3.67s - 5.59s] • Visual Parody Trực Quan: Vẽ mặt hề giễu nhại lỗi mở màn sáo rỗng kinh điển')">🔍</button>
+                    <span class="thumb-time-badge">3.67s - 5.59s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 02</span>
+                        <h4 class="shot-heading">Visual Parody Trực Quan: Vẽ mặt hề giễu nhại lỗi mở màn sáo rỗng kinh điển</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(3.67, 5.59, 'SHOT 02')">
+                        ▶ 3.67s ➔ 5.59s (1.92s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Aayush xuất hiện với khuôn mặt vẽ hóa trang hề lem luốc, cười giả tạo và ra dấu tay chào kiểu: "Hey guys, it's Steve!".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Sử dụng kỹ thuật tương phản thị giác cực đoan (Visual Juxtaposition) để tạo shock và tiếng cười mỉa mai, làm nổi bật ngay sự ngớ ngẩn của lối chào truyền thống.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Hậu cảnh rèm cửa sáng trắng hơi chói nhẹ làm giảm độ tách bạch phần vai áo màu be.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Thay vì chỉ nói "đừng làm A", hãy diễn hoạt trực quan sự nực cười của "A" để găm chặt bài học vào tâm trí khán giả.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Góc rèm cửa đón sáng tự nhiên</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up Parody (Cận cảnh diễn xuất châm biếm)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">High-key Diffused Window Light (Ánh sáng ban ngày mềm)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 02</span>
+                    <span class="tag-pill">⏱ 1.92s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-3">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(5.63, 6.63, 'SHOT 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_03_mid.jpg" alt="SHOT 03" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_03_mid.jpg', 'SHOT 03 [5.63s - 6.63s] • Dứt Khoát Phủ Quyết (Pattern Interrupt): Lập tức dập tắt hành vi sai bằng mệnh lệnh ngắn')">🔍</button>
+                    <span class="thumb-time-badge">5.63s - 6.63s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 03</span>
+                        <h4 class="shot-heading">Dứt Khoát Phủ Quyết (Pattern Interrupt): Lập tức dập tắt hành vi sai bằng mệnh lệnh ngắn</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(5.63, 6.63, 'SHOT 03')">
+                        ▶ 5.63s ➔ 6.63s (1.00s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Aayush lập tức trở về trạng thái nghiêm túc trong không gian tối, nhìn thẳng ống kính và ra lệnh dứt khoát: "Never do that.".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Cắt cảnh cực nhanh (1.0s) tạo nhịp giật thị giác (Visual Staccato), định vị lại tư thế chuyên gia quyền lực.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Thời lượng 1s quá ngắn, đòi hỏi khán giả phải tập trung 100% thị giác.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Sau một cú troll hài hước, hãy dùng một shot cực ngắn và nghiêm nghị để lấy lại uy quyền.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Phòng khách Studio</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Medium Shot (Góc trung dứt khoát)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Low-key Moody Light</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 03</span>
+                    <span class="tag-pill">⏱ 1.00s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-4">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(6.67, 9.55, 'SHOT 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_04_mid.jpg" alt="SHOT 04" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_04_mid.jpg', 'SHOT 04 [6.67s - 9.55s] • Low-Angle Foreground Framing: Góc thấp gác chân tạo phong thái làm chủ không gian')">🔍</button>
+                    <span class="thumb-time-badge">6.67s - 9.55s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 04</span>
+                        <h4 class="shot-heading">Low-Angle Foreground Framing: Góc thấp gác chân tạo phong thái làm chủ không gian</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(6.67, 9.55, 'SHOT 04')">
+                        ▶ 6.67s ➔ 9.55s (2.88s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Aayush ngồi tựa sâu vào sofa, gác chân lên bàn (tiền cảnh) và nói về lý do thất bại: "Your videos don't come off articulate and you don't have a framework for it.".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Khai thác tiền cảnh sâu (Shoe in foreground) tạo lớp lang 3D hút mắt; tư thế ngồi thoải mái thể hiện sự tự tin của người làm chủ cuộc chơi.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Chiếc giày chiếm 1/4 khung hình bên trái có thể hơi lấn át phần chuyển động tay.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Thay đổi góc máy từ ngang tầm mắt sang góc thấp có tiền cảnh giúp phá vỡ sự đơn điệu của dạng video nói chuyện.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Phòng khách Sofa Relax</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Low-Angle Foreground POV</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Warm Ambient Interior Light</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 04</span>
+                    <span class="tag-pill">⏱ 2.88s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-5">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(9.59, 12.89, 'SHOT 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_05_mid.jpg" alt="SHOT 05" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_05_mid.jpg', 'SHOT 05 [9.59s - 12.89s] • Minimalist Motion Identity: Đóng gói giải pháp thành mô hình hình học dễ nhớ')">🔍</button>
+                    <span class="thumb-time-badge">9.59s - 12.89s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 05</span>
+                        <h4 class="shot-heading">Minimalist Motion Identity: Đóng gói giải pháp thành mô hình hình học dễ nhớ</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(9.59, 12.89, 'SHOT 05')">
+                        ▶ 9.59s ➔ 12.89s (3.30s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Đồ họa chuyển động 2D xuất hiện tam giác màu be trên nền lưới tối với dòng chữ đỏ nổi bật: "YAP TRIANGLE".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Thiết kế tối giản phong cách Swiss Design / Cyber Grid; hình khối tam giác tạo điểm neo ghi nhớ (Mental Anchor) tức thì cho khán giả.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Nền đen đơn sắc có thể hơi phẳng nếu không có hiệu ứng chuyển động vi tế (Micro-animation).</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Luôn đóng gói phương pháp phức tạp thành một mô hình hình học có tên riêng (The Triangle, The Loop, The Matrix) để tăng tính lan truyền.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">2D Motion Graphic Canvas</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">2D Graphic Animation</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Digital Screen Light</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 05</span>
+                    <span class="tag-pill">⏱ 3.30s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-6">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(12.93, 16.27, 'SHOT 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_06_mid.jpg" alt="SHOT 06" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_06_mid.jpg', 'SHOT 06 [12.93s - 16.27s] • Dynamic Tracking & UI Overlay: Minh chứng bằng số liệu view thực tế tăng tiến')">🔍</button>
+                    <span class="thumb-time-badge">12.93s - 16.27s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 06</span>
+                        <h4 class="shot-heading">Dynamic Tracking & UI Overlay: Minh chứng bằng số liệu view thực tế tăng tiến</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(12.93, 16.27, 'SHOT 06')">
+                        ▶ 12.93s ➔ 16.27s (3.34s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Aayush cầm ly bước đi từ hành lang tối về phía camera, trên đầu hiện huy hiệu "175 views" kèm vòm cung thể hiện sự chuyển hóa ngoạn mục: "from this to this. Let's get into it.".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Chuyển động tiến về phía trước (Forward Dolly) tạo lực đẩy năng lượng; vòm kiến trúc cửa hình bán nguyệt đóng khung chủ thể (Architectural Framing).</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Không gian hành lang hơi thiếu sáng ở phần chân và tường bên.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Sử dụng UI badges (lượt view, chỉ số) kết hợp chuyển động cơ thể giúp cụ thể hóa kết quả mà người xem sẽ nhận được.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Hành lang sảnh chính (Archway Hallway)</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Full-Body Dolly In (Góc toàn di chuyển tiến)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Ambient Dim Hallway Light</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 06</span>
+                    <span class="tag-pill">⏱ 3.34s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-7">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(16.31, 18.81, 'SHOT 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_07_mid.jpg" alt="SHOT 07" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_07_mid.jpg', 'SHOT 07 [16.31s - 18.81s] • Macro Mirror Reflection: Tách chương cấu trúc bằng đồ vật vật lý sang trọng')">🔍</button>
+                    <span class="thumb-time-badge">16.31s - 18.81s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 07</span>
+                        <h4 class="shot-heading">Macro Mirror Reflection: Tách chương cấu trúc bằng đồ vật vật lý sang trọng</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(16.31, 18.81, 'SHOT 07')">
+                        ▶ 16.31s ➔ 18.81s (2.50s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Cận cảnh nghệ thuật một chiếc điện thoại đặt trên mặt bàn kính đen bóng, màn hình hiển thị nền đỏ rực: "D STANDS FOR DROP IN" phản chiếu hoàn hảo xuống mặt gương bên dưới lọ hoa khô.</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Khung hình tĩnh tinh tế với tỷ lệ phản chiếu 1:1 đối xứng (Mirror Symmetry); hoa khô ở hậu cảnh tạo độ sâu trường ảnh mờ ảo (Soft Bokeh).</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Chữ D to màu trắng có độ sáng gắt so với tổng thể nền đen xung quanh.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Dùng màn hình điện thoại thực tế làm bảng chỉ mục chuyển chương thay vì chèn text đồ họa nhàm chán.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bàn kính Studio Darkroom</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Macro Product Shot (Đặc tả sản phẩm phản chiếu)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Moody Top Light & Screen Glow</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 07</span>
+                    <span class="tag-pill">⏱ 2.50s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-8">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(18.85, 19.89, 'SHOT 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_08_mid.jpg" alt="SHOT 08" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_08_mid.jpg', 'SHOT 08 [18.85s - 19.89s] • Monochrome Antipattern: Biến cảnh báo thành hình ảnh đen trắng gây ấn tượng mạnh')">🔍</button>
+                    <span class="thumb-time-badge">18.85s - 19.89s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 08</span>
+                        <h4 class="shot-heading">Monochrome Antipattern: Biến cảnh báo thành hình ảnh đen trắng gây ấn tượng mạnh</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(18.85, 19.89, 'SHOT 08')">
+                        ▶ 18.85s ➔ 19.89s (1.04s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Khung hình chuyển hẳn sang tông đen trắng, Aayush ngồi vẫy tay tươi cười minh họa điều cấm kỵ: "The first thing out of your mouth is never an intro.".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Màu đen trắng đóng vai trò ký hiệu thị giác (Visual Cue) cho hành vi "sai lầm/lỗi thời", giúp não bộ người xem phân loại thông tin ngay tức thì.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Chuyển đổi màu gắt có thể gây chói nhẹ nếu chuyển tiếp quá đột ngột.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Dùng tông màu Desaturated / B&W để đại diện cho những gì KHÔNG NÊN LÀM.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Phòng khách Sofa B&W</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Medium Shot (Góc trung bán thân)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Diffused Soft B&W Lighting</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 08</span>
+                    <span class="tag-pill">⏱ 1.04s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-9">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(19.94, 21.02, 'SHOT 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_09_mid.jpg" alt="SHOT 09" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_09_mid.jpg', 'SHOT 09 [19.94s - 21.02s] • Side-Profile Cyber Mood: Góc nghiêng bàn làm việc đèn neon khắc họa trạng thái tư duy')">🔍</button>
+                    <span class="thumb-time-badge">19.94s - 21.02s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 09</span>
+                        <h4 class="shot-heading">Side-Profile Cyber Mood: Góc nghiêng bàn làm việc đèn neon khắc họa trạng thái tư duy</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(19.94, 21.02, 'SHOT 09')">
+                        ▶ 19.94s ➔ 21.02s (1.08s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Aayush ngồi bên bàn làm việc với dải đèn LED xanh neon, tay chống cằm suy tư trước laptop: "It's a specific thought, a pain point, or a claim...".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Ánh sáng viền xanh neon (Cyan Edge Light) tương phản với tông da ấm tạo bảng màu Teal & Orange kinh điển; tranh Anime phía sau tạo chất trẻ trung.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Góc nhìn bị che khuất một phần mắt do tư thế quay góc nghiêng 90 độ.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Đổi bối cảnh sang không gian làm việc thực tế để tăng tính chân thực và chuyên môn hóa cho người nói.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Góc bàn làm việc Creator Desk</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Side-Profile Medium Close-Up</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Cyan LED Table Strip + Warm Practical Light</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 09</span>
+                    <span class="tag-pill">⏱ 1.08s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-10">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(21.06, 21.73, 'SHOT 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_10_mid.jpg" alt="SHOT 10" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_10_mid.jpg', 'SHOT 10 [21.06s - 21.73s] • Micro Cut Sensory Pulse: Cắt vụn khung hình tạo nhịp chuyển tiếp thần tốc')">🔍</button>
+                    <span class="thumb-time-badge">21.06s - 21.73s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 10</span>
+                        <h4 class="shot-heading">Micro Cut Sensory Pulse: Cắt vụn khung hình tạo nhịp chuyển tiếp thần tốc</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(21.06, 21.73, 'SHOT 10')">
+                        ▶ 21.06s ➔ 21.73s (0.67s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Phân đoạn cắt nhanh bàn tay thao tác trên không gian số, đẩy mạnh tốc độ lời thoại: "...right in the middle of the conversation...".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Nhịp cắt siêu ngắn (0.67s) giữ cho mắt người xem không bị thụ động, tạo cảm giác mạch suy nghĩ tuôn trào không ngắt quãng.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Người xem lướt qua nhanh khó kịp nhận diện toàn bộ chi tiết vi tế trong cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Dùng micro-cuts (< 1s) tại các liên từ hoặc cụm từ nối để đẩy nhanh nhịp điệu video.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Creator Desk</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Detail Insert Shot</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Desk Ambient Light</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 10</span>
+                    <span class="tag-pill">⏱ 0.67s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-11">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(21.77, 26.99, 'SHOT 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_11_mid.jpg" alt="SHOT 11" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_11_mid.jpg', 'SHOT 11 [21.77s - 26.99s] • Whiteboard Physical Anchor: Dùng bảng trắng vật lý làm điểm tựa thị giác cho ví dụ')">🔍</button>
+                    <span class="thumb-time-badge">21.77s - 26.99s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 11</span>
+                        <h4 class="shot-heading">Whiteboard Physical Anchor: Dùng bảng trắng vật lý làm điểm tựa thị giác cho ví dụ</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(21.77, 26.99, 'SHOT 11')">
+                        ▶ 21.77s ➔ 26.99s (5.22s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Một chiếc bảng trắng di động đặt chính giữa khung hình với dòng chữ viết hoa nghệ thuật "Like this:", chuẩn bị trình diễn câu hook Drop-in thực chiến.</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Bố cục cân xứng tuyệt đối (Symmetrical Architecture) với chiếc bảng trắng đặt trước cánh cửa lớn; không gian tối bao quanh làm nổi bật bề mặt bảng.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">5.22s là shot dài nhất từ đầu video, cần sự hỗ trợ của hiệu ứng chữ xuất hiện để giữ nhịp.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Bảng trắng là công cụ visual storytelling tuyệt vời giúp chuyển đổi lời nói trừu tượng thành con chữ hữu hình.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Sảnh chính Studio</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Frontal Symmetrical Wide (Toàn cảnh trực diện cân xứng)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Spotlight chiếu thẳng mặt bảng trắng</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 11</span>
+                    <span class="tag-pill">⏱ 5.22s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-12">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(27.03, 28.4, 'SHOT 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_12_mid.jpg" alt="SHOT 12" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_12_mid.jpg', 'SHOT 12 [27.03s - 28.4s] • Visual Rhythm Continuity: Giữ vững tính nhất quán cho bộ nhận diện 3 bước')">🔍</button>
+                    <span class="thumb-time-badge">27.03s - 28.40s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 12</span>
+                        <h4 class="shot-heading">Visual Rhythm Continuity: Giữ vững tính nhất quán cho bộ nhận diện 3 bước</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(27.03, 28.4, 'SHOT 12')">
+                        ▶ 27.03s ➔ 28.40s (1.37s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Màn hình điện thoại phản chiếu đổi sang thẻ chữ trắng trên nền đỏ tươi: "S STANDS FOR SOLVE IT".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Duy trì góc máy và bố cục tương đồng shot 7 (Visual Continuity) giúp người xem nhận biết ngay đây là bước thứ 2 trong tam giác.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Chữ S lớn chiếm trọn nửa trái màn hình điện thoại, tạo độ bất đối xứng nhẹ.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Tính lặp lại có chủ đích của một góc máy đẹp (Recurring Motif) giúp củng cố nhận diện cấu trúc bài giảng.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bàn kính Studio Darkroom</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Macro Chapter Cue</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Red Screen Luminance & Ambient Dark</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 12</span>
+                    <span class="tag-pill">⏱ 1.37s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-13">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(28.45, 31.16, 'SHOT 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_13_mid.jpg" alt="SHOT 13" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_13_mid.jpg', 'SHOT 13 [28.45s - 31.16s] • Direct Explanation Framing: Truyền tải giải pháp với năng lượng cao độ')">🔍</button>
+                    <span class="thumb-time-badge">28.45s - 31.16s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 13</span>
+                        <h4 class="shot-heading">Direct Explanation Framing: Truyền tải giải pháp với năng lượng cao độ</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(28.45, 31.16, 'SHOT 13')">
+                        ▶ 28.45s ➔ 31.16s (2.71s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Aayush giải thích nguyên lý bước Solve: "The second you state your drop-in, you get straight into the fix. Give them a reason to stay.".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Ánh sáng ấm tôn vinh chi tiết biểu cảm khuôn mặt; ngôn ngữ cơ thể nhấn mạnh tính cấp bách của việc đưa ra giải pháp ngay.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Góc quay sofa quen thuộc, cần phụ thuộc vào nhịp điệu thoại để duy trì sự chú ý.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Đừng bao giờ để người xem chờ đợi giải pháp quá lâu sau cú Hook, hãy đưa ra lý do ở lại ngay giây thứ 3.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Phòng khách Studio</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Medium Close-Up Talking Head</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Warm Key Light + Soft Fill</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 13</span>
+                    <span class="tag-pill">⏱ 2.71s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-14">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(31.2, 40.0, 'SHOT 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_14_mid.jpg" alt="SHOT 14" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_14_mid.jpg', 'SHOT 14 [31.2s - 40.0s] • Step-by-Step Script Construction: Bóc tách từng tầng kịch bản trên bảng trắng')">🔍</button>
+                    <span class="thumb-time-badge">31.20s - 40.00s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 14</span>
+                        <h4 class="shot-heading">Step-by-Step Script Construction: Bóc tách từng tầng kịch bản trên bảng trắng</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(31.2, 40.0, 'SHOT 14')">
+                        ▶ 31.20s ➔ 40.00s (8.80s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Bảng trắng hiển thị trọn vẹn kịch bản mẫu từ Hook đau đớn đến Giải pháp khẩn cấp: "...it made me realize most families have no emergency plan... here's how to grandma-proof your home in the next 24 hours.".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Phân tầng chữ rõ rệt (Bold vs Normal vs Grayed out) mô phỏng dòng chảy tư duy của người viết kịch bản chuyên nghiệp.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Khối văn bản nhiều chữ đòi hỏi thời lượng dài (8.8s) nên cần phối hợp đọc khớp từng từ.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Khi dạy viết kịch bản, hãy hiển thị nguyên văn đoạn script mẫu để người học có thể sao chép cấu trúc ngữ pháp.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Sảnh chính Studio</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Frontal Board Close-Up</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Even Diffused Board Illumination</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 14</span>
+                    <span class="tag-pill">⏱ 8.80s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-15">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(40.04, 41.5, 'SHOT 15')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_15_mid.jpg" alt="SHOT 15" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_15_mid.jpg', 'SHOT 15 [40.04s - 41.5s] • Affirmation Nod Cut: Gật đầu khẳng định giá trị công thức vừa trình bày')">🔍</button>
+                    <span class="thumb-time-badge">40.04s - 41.50s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 15</span>
+                        <h4 class="shot-heading">Affirmation Nod Cut: Gật đầu khẳng định giá trị công thức vừa trình bày</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(40.04, 41.5, 'SHOT 15')">
+                        ▶ 40.04s ➔ 41.50s (1.46s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Aayush gật đầu chắc nịch tóm gọn bài học: "Now there's a hook and a promise.".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Khoảnh khắc giao tiếp mắt (Eye-contact) chân thành, tạo sự gắn kết và tin tưởng tuyệt đối từ người xem.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Khung hình hơi tối ở góc dưới bên phải.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Một câu kết luận ngắn và chắc nịch sẽ chốt lại toàn bộ giá trị của phần ví dụ trước đó.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Phòng khách Studio</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Tight Close-Up (Góc cận đặc tả biểu cảm)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Warm Focused Rim & Key Light</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 15</span>
+                    <span class="tag-pill">⏱ 1.46s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-16">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(41.54, 43.42, 'SHOT 16')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_16_mid.jpg" alt="SHOT 16" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_16_mid.jpg', 'SHOT 16 [41.54s - 43.42s] • Triad Completion Cue: Hoàn thiện mảnh ghép cuối cùng của tam giác')">🔍</button>
+                    <span class="thumb-time-badge">41.54s - 43.42s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 16</span>
+                        <h4 class="shot-heading">Triad Completion Cue: Hoàn thiện mảnh ghép cuối cùng của tam giác</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(41.54, 43.42, 'SHOT 16')">
+                        ▶ 41.54s ➔ 43.42s (1.88s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Màn hình điện thoại hiển thị chữ cái cuối cùng: "G STANDS FOR GIVE DIRECTION" phản chiếu trên mặt kính.</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Khép lại bộ ba nhận diện thị giác (D-S-G) một cách đồng bộ và chuyên nghiệp.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Chữ G tròn trịa lớn tạo cảm giác thị giác hơi nặng ở góc trái.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Sự lặp lại có hệ thống (Systematic Repetition) là vũ khí tối thượng của giáo dục thị giác ngắn hạn.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bàn kính Studio Darkroom</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Macro Chapter Cue</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Red Screen Luminance</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 16</span>
+                    <span class="tag-pill">⏱ 1.88s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-17">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(43.46, 50.01, 'SHOT 17')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_17_mid.jpg" alt="SHOT 17" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_17_mid.jpg', 'SHOT 17 [43.46s - 50.01s] • Social Proof B-Roll: Cảnh giao tiếp tiệc tối thực tế thể hiện kỹ năng kết nối')">🔍</button>
+                    <span class="thumb-time-badge">43.46s - 50.01s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 17</span>
+                        <h4 class="shot-heading">Social Proof B-Roll: Cảnh giao tiếp tiệc tối thực tế thể hiện kỹ năng kết nối</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(43.46, 50.01, 'SHOT 17')">
+                        ▶ 43.46s ➔ 50.01s (6.55s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Thước phim B-Roll đen trắng tại một bữa tiệc ngoài trời, Aayush cầm điện thoại và micro trò chuyện, hướng dẫn cô gái trẻ: "Don't just drop info... Tell them exactly what to do next step-by-step. Make the action so obvious, they feel stupid not taking it.".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Dây đèn trang trí (Fairy Lights) ngoài trời tạo hiệu ứng ánh sáng lung linh ở hậu cảnh; phụ đề Typography uốn lượn phong cách Editorial "step by step" cực kỳ nghệ thuật.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Hai nhân vật đứng chiếm hết chiều cao khung hình dọc, không gian tiệc phía sau bị che một phần.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Chèn B-Roll tương tác xã hội ngoài đời thực giúp chứng minh người hướng dẫn thực sự thực hành những gì họ dạy.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Sân vườn tiệc tối ngoài trời</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Medium Full Shot (Góc toàn trung đôi)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Outdoor String Lights + Ambient B&W Night</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 17</span>
+                    <span class="tag-pill">⏱ 6.55s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-18">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(50.05, 52.76, 'SHOT 18')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_18_mid.jpg" alt="SHOT 18" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_18_mid.jpg', 'SHOT 18 [50.05s - 52.76s] • Conversion Philosophy: Chuyển dịch từ người xem thụ động thành người hành động')">🔍</button>
+                    <span class="thumb-time-badge">50.05s - 52.76s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 18</span>
+                        <h4 class="shot-heading">Conversion Philosophy: Chuyển dịch từ người xem thụ động thành người hành động</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(50.05, 52.76, 'SHOT 18')">
+                        ▶ 50.05s ➔ 52.76s (2.71s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Aayush nhấn mạnh bản chất của việc điều hướng hành động: "That's what turns a viewer into someone that actually does something.".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Bố cục vững chãi, ánh mắt kiên định truyền cảm hứng hành động thực tế cho người xem.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Chuyển động tay hơi nhanh làm nhòe nhẹ (Motion Blur) ở một vài frame giữa.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Mục tiêu tối thượng của content creator là kích hoạt hành động cụ thể chứ không chỉ câu like vô bổ.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Phòng khách Studio</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Medium Close-Up</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Warm Ambient Lighting</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 18</span>
+                    <span class="tag-pill">⏱ 2.71s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-19">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(52.8, 56.64, 'SHOT 19')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_19_mid.jpg" alt="SHOT 19" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_19_mid.jpg', 'SHOT 19 [52.8s - 56.64s] • High-Status Supercar Authority: Khẳng định uy quyền và định vị chuyên gia cao cấp')">🔍</button>
+                    <span class="thumb-time-badge">52.80s - 56.64s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 19</span>
+                        <h4 class="shot-heading">High-Status Supercar Authority: Khẳng định uy quyền và định vị chuyên gia cao cấp</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(52.8, 56.64, 'SHOT 19')">
+                        ▶ 52.80s ➔ 56.64s (3.84s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Khung hình ngoài trời rực rỡ ánh nắng ban ngày, Aayush diện quần âu trắng, áo phông đen ngồi trên nắp ca-pô siêu xe Ferrari trắng sang trọng: "Founders who can't communicate their authority on camera stay invisible to their ideal clients.".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Ánh sáng tự nhiên vàng ấm rực rỡ tôn vinh các đường cong khí động học của siêu xe; phụ đề uốn lượn mềm mại "on camera" tạo sự xa hoa đẳng cấp (High-ticket Lifestyle).</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Độ chênh sáng giữa bầu trời và xe có thể hơi cao, nhưng được kiểm soát tốt ở dải tương phản động.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Bối cảnh High-Status (siêu xe, kiến trúc sang trọng) được đưa vào đúng thời điểm đòn bẩy để củng cố mạnh mẽ luận điểm về "Uy quyền chuyên gia (Authority)".</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Biệt thự ngoại ô bên siêu xe Ferrari</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Full-Body Lifestyle Authority Shot</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Golden Natural Daylight (Nắng tự nhiên vàng ươm)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 19</span>
+                    <span class="tag-pill">⏱ 3.84s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-20">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(56.68, 60.14, 'SHOT 20')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_20_mid.jpg" alt="SHOT 20" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_20_mid.jpg', 'SHOT 20 [56.68s - 60.14s] • Model Synthesis Graphic: Tóm lược toàn bộ 3 đỉnh tam giác thành công thức bất bại')">🔍</button>
+                    <span class="thumb-time-badge">56.68s - 60.14s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 20</span>
+                        <h4 class="shot-heading">Model Synthesis Graphic: Tóm lược toàn bộ 3 đỉnh tam giác thành công thức bất bại</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(56.68, 60.14, 'SHOT 20')">
+                        ▶ 56.68s ➔ 60.14s (3.46s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Đồ họa 2D Tam giác Yap sáng lên từng đỉnh với chấm đỏ và nhãn chữ: "DROP IN -> SOLVE IT -> GIVE DIRECTION".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Tái hiện lại cấu trúc mô hình giúp củng cố kiến thức trước khi đi vào phần kêu gọi hành động cuối cùng.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Chuyển động đồ họa tối giản, tập trung hoàn toàn vào thông điệp lý thuyết.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Luôn có một shot tổng kết (Recap Shot) trước khi tung đòn Call-To-Action (CTA).</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">2D Motion Graphic Canvas</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Recap Animation Diagram</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Vector Screen Luminance</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 20</span>
+                    <span class="tag-pill">⏱ 3.46s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-21">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(60.19, 64.73, 'SHOT 21')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_21_mid.jpg" alt="SHOT 21" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_21_mid.jpg', 'SHOT 21 [60.19s - 64.73s] • Transformation Promise: Vẽ ra viễn cảnh video được xem ngấu nghiến không dừng')">🔍</button>
+                    <span class="thumb-time-badge">60.19s - 64.73s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 21</span>
+                        <h4 class="shot-heading">Transformation Promise: Vẽ ra viễn cảnh video được xem ngấu nghiến không dừng</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(60.19, 64.73, 'SHOT 21')">
+                        ▶ 60.19s ➔ 64.73s (4.54s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Aayush tựa lưng sofa nói về sự chuyển dịch ngoạn mục: "Use it and your videos go from something that nobody wants to watch to something that people can't stop bingeing.".</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Biểu cảm tự tin, nhịp điệu nói chậm rãi nhưng đanh thép gieo niềm tin tuyệt đối vào kết quả.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Không gian phòng khách lặp lại từ các shot trước, nhưng được bù đắp bởi cảm xúc thăng hoa.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Vẽ ra bức tranh kết quả mong muốn (Dream Outcome) để thúc đẩy người xem hành động ngay lập tức.</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Phòng khách Studio</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Medium Talking Head</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Warm Ambient Interior</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 21</span>
+                    <span class="tag-pill">⏱ 4.54s</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-22">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(64.77, 68.44, 'SHOT 22')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_22_mid.jpg" alt="SHOT 22" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_22_mid.jpg', 'SHOT 22 [64.77s - 68.44s] • Conversational Chatbot CTA: Kêu gọi bình luận nhận quà mồi (Lead Magnet) tự nhiên')">🔍</button>
+                    <span class="thumb-time-badge">64.77s - 68.44s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 22</span>
+                        <h4 class="shot-heading">Conversational Chatbot CTA: Kêu gọi bình luận nhận quà mồi (Lead Magnet) tự nhiên</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(64.77, 68.44, 'SHOT 22')">
+                        ▶ 64.77s ➔ 68.44s (3.67s)
+                    </button>
+                </div>
+
+                <div class="shot-narrative-box">
+                    <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
+                    <span class="narrative-text">Aayush ngồi thư giãn trên ghế bành nhung trắng bên cạnh chú chó cưng, cầm ly nước đưa ra lời mời: "If you comment YAP, I'll send you three video templates so you can get your first yap to go viral.". Nút bình luận "YAP" xuất hiện trực quan trên màn hình.</span>
+                </div>
+
+                <div class="critique-container">
+                    <div class="critique-box critique-good">
+                        <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
+                        <div class="critique-content">Khung cảnh thư giãn cùng thú cưng (Pet in foreground) tạo sự ấm áp, gần gũi và giảm thiểu tối đa cảm giác bị "bán hàng"; huy hiệu comment giả lập UI bấm nút kích thích tương tác.</div>
+                    </div>
+                    <div class="critique-box critique-bad">
+                        <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
+                        <div class="critique-content">Vùng chân chú chó ở tiền cảnh hơi tối nhẹ nhưng tạo nét tự nhiên ấm cúng.</div>
+                    </div>
+                </div>
+
+                <div class="takeaway-box">
+                    <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
+                    <div class="takeaway-content">Cách tốt nhất để kết thúc video ngắn là tặng tài liệu miễn phí (Lead Magnet) qua từ khóa bình luận 1 chạm (Comment Keyword Trigger).</div>
+                </div>
+
+                <div class="props-list">
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Phòng khách nhung trắng cùng thú cưng</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Medium Full Cozy CTA Shot</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Warm Cozy Ambient Lighting</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                </div>
+
+                <div class="tags-row">
+                    <span class="tag-pill">9:16 Vertical</span>
+                    <span class="tag-pill">Shot 22</span>
+                    <span class="tag-pill">⏱ 3.67s</span>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+
+        <div class="grid-container" id="gridView" style="display:none;">
+            
+        <div class="grid-card" onclick="playShot(0.0, 3.63, 'SHOT 01')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_01_mid.jpg', 'SHOT 01 [0.0s - 3.63s] • Direct Hook Đánh Thẳng Nỗi Sợ: Khóa chặt sự chú ý bằng câu hỏi xoáy sâu tâm lý creator')">🔍</button>
+                <div class="grid-badge-top">SHOT 01</div>
+                <div class="grid-badge-bottom">0.0s - 3.6s</div>
+            </div>
+            <div class="grid-title-snippet">Direct Hook Đánh Thẳng Nỗi Sợ: Khóa chặt sự chú ý bằng câu hỏi xoáy sâu tâm lý creator</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(3.67, 5.59, 'SHOT 02')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_02_mid.jpg', 'SHOT 02 [3.67s - 5.59s] • Visual Parody Trực Quan: Vẽ mặt hề giễu nhại lỗi mở màn sáo rỗng kinh điển')">🔍</button>
+                <div class="grid-badge-top">SHOT 02</div>
+                <div class="grid-badge-bottom">3.7s - 5.6s</div>
+            </div>
+            <div class="grid-title-snippet">Visual Parody Trực Quan: Vẽ mặt hề giễu nhại lỗi mở màn sáo rỗng kinh điển</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(5.63, 6.63, 'SHOT 03')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_03_mid.jpg', 'SHOT 03 [5.63s - 6.63s] • Dứt Khoát Phủ Quyết (Pattern Interrupt): Lập tức dập tắt hành vi sai bằng mệnh lệnh ngắn')">🔍</button>
+                <div class="grid-badge-top">SHOT 03</div>
+                <div class="grid-badge-bottom">5.6s - 6.6s</div>
+            </div>
+            <div class="grid-title-snippet">Dứt Khoát Phủ Quyết (Pattern Interrupt): Lập tức dập tắt hành vi sai bằng mệnh lệnh ngắn</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(6.67, 9.55, 'SHOT 04')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_04_mid.jpg', 'SHOT 04 [6.67s - 9.55s] • Low-Angle Foreground Framing: Góc thấp gác chân tạo phong thái làm chủ không gian')">🔍</button>
+                <div class="grid-badge-top">SHOT 04</div>
+                <div class="grid-badge-bottom">6.7s - 9.6s</div>
+            </div>
+            <div class="grid-title-snippet">Low-Angle Foreground Framing: Góc thấp gác chân tạo phong thái làm chủ không gian</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(9.59, 12.89, 'SHOT 05')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_05_mid.jpg', 'SHOT 05 [9.59s - 12.89s] • Minimalist Motion Identity: Đóng gói giải pháp thành mô hình hình học dễ nhớ')">🔍</button>
+                <div class="grid-badge-top">SHOT 05</div>
+                <div class="grid-badge-bottom">9.6s - 12.9s</div>
+            </div>
+            <div class="grid-title-snippet">Minimalist Motion Identity: Đóng gói giải pháp thành mô hình hình học dễ nhớ</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(12.93, 16.27, 'SHOT 06')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_06_mid.jpg', 'SHOT 06 [12.93s - 16.27s] • Dynamic Tracking & UI Overlay: Minh chứng bằng số liệu view thực tế tăng tiến')">🔍</button>
+                <div class="grid-badge-top">SHOT 06</div>
+                <div class="grid-badge-bottom">12.9s - 16.3s</div>
+            </div>
+            <div class="grid-title-snippet">Dynamic Tracking & UI Overlay: Minh chứng bằng số liệu view thực tế tăng tiến</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(16.31, 18.81, 'SHOT 07')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_07_mid.jpg', 'SHOT 07 [16.31s - 18.81s] • Macro Mirror Reflection: Tách chương cấu trúc bằng đồ vật vật lý sang trọng')">🔍</button>
+                <div class="grid-badge-top">SHOT 07</div>
+                <div class="grid-badge-bottom">16.3s - 18.8s</div>
+            </div>
+            <div class="grid-title-snippet">Macro Mirror Reflection: Tách chương cấu trúc bằng đồ vật vật lý sang trọng</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(18.85, 19.89, 'SHOT 08')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_08_mid.jpg', 'SHOT 08 [18.85s - 19.89s] • Monochrome Antipattern: Biến cảnh báo thành hình ảnh đen trắng gây ấn tượng mạnh')">🔍</button>
+                <div class="grid-badge-top">SHOT 08</div>
+                <div class="grid-badge-bottom">18.9s - 19.9s</div>
+            </div>
+            <div class="grid-title-snippet">Monochrome Antipattern: Biến cảnh báo thành hình ảnh đen trắng gây ấn tượng mạnh</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(19.94, 21.02, 'SHOT 09')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_09_mid.jpg', 'SHOT 09 [19.94s - 21.02s] • Side-Profile Cyber Mood: Góc nghiêng bàn làm việc đèn neon khắc họa trạng thái tư duy')">🔍</button>
+                <div class="grid-badge-top">SHOT 09</div>
+                <div class="grid-badge-bottom">19.9s - 21.0s</div>
+            </div>
+            <div class="grid-title-snippet">Side-Profile Cyber Mood: Góc nghiêng bàn làm việc đèn neon khắc họa trạng thái tư duy</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(21.06, 21.73, 'SHOT 10')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_10_mid.jpg" alt="SHOT 10" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_10_mid.jpg', 'SHOT 10 [21.06s - 21.73s] • Micro Cut Sensory Pulse: Cắt vụn khung hình tạo nhịp chuyển tiếp thần tốc')">🔍</button>
+                <div class="grid-badge-top">SHOT 10</div>
+                <div class="grid-badge-bottom">21.1s - 21.7s</div>
+            </div>
+            <div class="grid-title-snippet">Micro Cut Sensory Pulse: Cắt vụn khung hình tạo nhịp chuyển tiếp thần tốc</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(21.77, 26.99, 'SHOT 11')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_11_mid.jpg" alt="SHOT 11" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_11_mid.jpg', 'SHOT 11 [21.77s - 26.99s] • Whiteboard Physical Anchor: Dùng bảng trắng vật lý làm điểm tựa thị giác cho ví dụ')">🔍</button>
+                <div class="grid-badge-top">SHOT 11</div>
+                <div class="grid-badge-bottom">21.8s - 27.0s</div>
+            </div>
+            <div class="grid-title-snippet">Whiteboard Physical Anchor: Dùng bảng trắng vật lý làm điểm tựa thị giác cho ví dụ</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(27.03, 28.4, 'SHOT 12')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_12_mid.jpg" alt="SHOT 12" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_12_mid.jpg', 'SHOT 12 [27.03s - 28.4s] • Visual Rhythm Continuity: Giữ vững tính nhất quán cho bộ nhận diện 3 bước')">🔍</button>
+                <div class="grid-badge-top">SHOT 12</div>
+                <div class="grid-badge-bottom">27.0s - 28.4s</div>
+            </div>
+            <div class="grid-title-snippet">Visual Rhythm Continuity: Giữ vững tính nhất quán cho bộ nhận diện 3 bước</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(28.45, 31.16, 'SHOT 13')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_13_mid.jpg" alt="SHOT 13" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_13_mid.jpg', 'SHOT 13 [28.45s - 31.16s] • Direct Explanation Framing: Truyền tải giải pháp với năng lượng cao độ')">🔍</button>
+                <div class="grid-badge-top">SHOT 13</div>
+                <div class="grid-badge-bottom">28.4s - 31.2s</div>
+            </div>
+            <div class="grid-title-snippet">Direct Explanation Framing: Truyền tải giải pháp với năng lượng cao độ</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(31.2, 40.0, 'SHOT 14')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_14_mid.jpg" alt="SHOT 14" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_14_mid.jpg', 'SHOT 14 [31.2s - 40.0s] • Step-by-Step Script Construction: Bóc tách từng tầng kịch bản trên bảng trắng')">🔍</button>
+                <div class="grid-badge-top">SHOT 14</div>
+                <div class="grid-badge-bottom">31.2s - 40.0s</div>
+            </div>
+            <div class="grid-title-snippet">Step-by-Step Script Construction: Bóc tách từng tầng kịch bản trên bảng trắng</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(40.04, 41.5, 'SHOT 15')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_15_mid.jpg" alt="SHOT 15" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_15_mid.jpg', 'SHOT 15 [40.04s - 41.5s] • Affirmation Nod Cut: Gật đầu khẳng định giá trị công thức vừa trình bày')">🔍</button>
+                <div class="grid-badge-top">SHOT 15</div>
+                <div class="grid-badge-bottom">40.0s - 41.5s</div>
+            </div>
+            <div class="grid-title-snippet">Affirmation Nod Cut: Gật đầu khẳng định giá trị công thức vừa trình bày</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(41.54, 43.42, 'SHOT 16')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_16_mid.jpg" alt="SHOT 16" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_16_mid.jpg', 'SHOT 16 [41.54s - 43.42s] • Triad Completion Cue: Hoàn thiện mảnh ghép cuối cùng của tam giác')">🔍</button>
+                <div class="grid-badge-top">SHOT 16</div>
+                <div class="grid-badge-bottom">41.5s - 43.4s</div>
+            </div>
+            <div class="grid-title-snippet">Triad Completion Cue: Hoàn thiện mảnh ghép cuối cùng của tam giác</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(43.46, 50.01, 'SHOT 17')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_17_mid.jpg" alt="SHOT 17" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_17_mid.jpg', 'SHOT 17 [43.46s - 50.01s] • Social Proof B-Roll: Cảnh giao tiếp tiệc tối thực tế thể hiện kỹ năng kết nối')">🔍</button>
+                <div class="grid-badge-top">SHOT 17</div>
+                <div class="grid-badge-bottom">43.5s - 50.0s</div>
+            </div>
+            <div class="grid-title-snippet">Social Proof B-Roll: Cảnh giao tiếp tiệc tối thực tế thể hiện kỹ năng kết nối</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(50.05, 52.76, 'SHOT 18')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_18_mid.jpg" alt="SHOT 18" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_18_mid.jpg', 'SHOT 18 [50.05s - 52.76s] • Conversion Philosophy: Chuyển dịch từ người xem thụ động thành người hành động')">🔍</button>
+                <div class="grid-badge-top">SHOT 18</div>
+                <div class="grid-badge-bottom">50.0s - 52.8s</div>
+            </div>
+            <div class="grid-title-snippet">Conversion Philosophy: Chuyển dịch từ người xem thụ động thành người hành động</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(52.8, 56.64, 'SHOT 19')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_19_mid.jpg" alt="SHOT 19" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_19_mid.jpg', 'SHOT 19 [52.8s - 56.64s] • High-Status Supercar Authority: Khẳng định uy quyền và định vị chuyên gia cao cấp')">🔍</button>
+                <div class="grid-badge-top">SHOT 19</div>
+                <div class="grid-badge-bottom">52.8s - 56.6s</div>
+            </div>
+            <div class="grid-title-snippet">High-Status Supercar Authority: Khẳng định uy quyền và định vị chuyên gia cao cấp</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(56.68, 60.14, 'SHOT 20')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_20_mid.jpg" alt="SHOT 20" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_20_mid.jpg', 'SHOT 20 [56.68s - 60.14s] • Model Synthesis Graphic: Tóm lược toàn bộ 3 đỉnh tam giác thành công thức bất bại')">🔍</button>
+                <div class="grid-badge-top">SHOT 20</div>
+                <div class="grid-badge-bottom">56.7s - 60.1s</div>
+            </div>
+            <div class="grid-title-snippet">Model Synthesis Graphic: Tóm lược toàn bộ 3 đỉnh tam giác thành công thức bất bại</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(60.19, 64.73, 'SHOT 21')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_21_mid.jpg" alt="SHOT 21" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_21_mid.jpg', 'SHOT 21 [60.19s - 64.73s] • Transformation Promise: Vẽ ra viễn cảnh video được xem ngấu nghiến không dừng')">🔍</button>
+                <div class="grid-badge-top">SHOT 21</div>
+                <div class="grid-badge-bottom">60.2s - 64.7s</div>
+            </div>
+            <div class="grid-title-snippet">Transformation Promise: Vẽ ra viễn cảnh video được xem ngấu nghiến không dừng</div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(64.77, 68.44, 'SHOT 22')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_22_mid.jpg" alt="SHOT 22" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_22_mid.jpg', 'SHOT 22 [64.77s - 68.44s] • Conversational Chatbot CTA: Kêu gọi bình luận nhận quà mồi (Lead Magnet) tự nhiên')">🔍</button>
+                <div class="grid-badge-top">SHOT 22</div>
+                <div class="grid-badge-bottom">64.8s - 68.4s</div>
+            </div>
+            <div class="grid-title-snippet">Conversational Chatbot CTA: Kêu gọi bình luận nhận quà mồi (Lead Magnet) tự nhiên</div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)">
+    <div class="drawer-panel" onclick="event.stopPropagation()">
+        <div class="drawer-header">
+            <div class="drawer-title">📑 MỤC LỤC PHÂN CẢNH (22)</div>
+            <button class="drawer-close-btn" onclick="toggleDrawer(false)">&times;</button>
+        </div>
+        <div class="drawer-list">
+            
+        <div class="drawer-item" onclick="jumpToShot(1, 0.0, 3.63, 'SHOT 01')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 01</div>
+                <div class="drawer-shot-headline">Direct Hook Đánh Thẳng Nỗi Sợ: Khóa chặt s...</div>
+                <div class="drawer-shot-time">⏱ 0.00s - 3.63s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(2, 3.67, 5.59, 'SHOT 02')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 02</div>
+                <div class="drawer-shot-headline">Visual Parody Trực Quan: Vẽ mặt hề giễu nh...</div>
+                <div class="drawer-shot-time">⏱ 3.67s - 5.59s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(3, 5.63, 6.63, 'SHOT 03')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 03</div>
+                <div class="drawer-shot-headline">Dứt Khoát Phủ Quyết (Pattern Interrupt): L...</div>
+                <div class="drawer-shot-time">⏱ 5.63s - 6.63s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(4, 6.67, 9.55, 'SHOT 04')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 04</div>
+                <div class="drawer-shot-headline">Low-Angle Foreground Framing: Góc thấp gác...</div>
+                <div class="drawer-shot-time">⏱ 6.67s - 9.55s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(5, 9.59, 12.89, 'SHOT 05')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 05</div>
+                <div class="drawer-shot-headline">Minimalist Motion Identity: Đóng gói giải ...</div>
+                <div class="drawer-shot-time">⏱ 9.59s - 12.89s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(6, 12.93, 16.27, 'SHOT 06')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 06</div>
+                <div class="drawer-shot-headline">Dynamic Tracking & UI Overlay: Minh chứng ...</div>
+                <div class="drawer-shot-time">⏱ 12.93s - 16.27s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(7, 16.31, 18.81, 'SHOT 07')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 07</div>
+                <div class="drawer-shot-headline">Macro Mirror Reflection: Tách chương cấu t...</div>
+                <div class="drawer-shot-time">⏱ 16.31s - 18.81s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(8, 18.85, 19.89, 'SHOT 08')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 08</div>
+                <div class="drawer-shot-headline">Monochrome Antipattern: Biến cảnh báo thàn...</div>
+                <div class="drawer-shot-time">⏱ 18.85s - 19.89s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(9, 19.94, 21.02, 'SHOT 09')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 09</div>
+                <div class="drawer-shot-headline">Side-Profile Cyber Mood: Góc nghiêng bàn l...</div>
+                <div class="drawer-shot-time">⏱ 19.94s - 21.02s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(10, 21.06, 21.73, 'SHOT 10')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_10_mid.jpg" alt="SHOT 10" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 10</div>
+                <div class="drawer-shot-headline">Micro Cut Sensory Pulse: Cắt vụn khung hìn...</div>
+                <div class="drawer-shot-time">⏱ 21.06s - 21.73s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(11, 21.77, 26.99, 'SHOT 11')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_11_mid.jpg" alt="SHOT 11" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 11</div>
+                <div class="drawer-shot-headline">Whiteboard Physical Anchor: Dùng bảng trắn...</div>
+                <div class="drawer-shot-time">⏱ 21.77s - 26.99s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(12, 27.03, 28.4, 'SHOT 12')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_12_mid.jpg" alt="SHOT 12" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 12</div>
+                <div class="drawer-shot-headline">Visual Rhythm Continuity: Giữ vững tính nh...</div>
+                <div class="drawer-shot-time">⏱ 27.03s - 28.40s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(13, 28.45, 31.16, 'SHOT 13')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_13_mid.jpg" alt="SHOT 13" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 13</div>
+                <div class="drawer-shot-headline">Direct Explanation Framing: Truyền tải giả...</div>
+                <div class="drawer-shot-time">⏱ 28.45s - 31.16s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(14, 31.2, 40.0, 'SHOT 14')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_14_mid.jpg" alt="SHOT 14" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 14</div>
+                <div class="drawer-shot-headline">Step-by-Step Script Construction: Bóc tách...</div>
+                <div class="drawer-shot-time">⏱ 31.20s - 40.00s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(15, 40.04, 41.5, 'SHOT 15')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_15_mid.jpg" alt="SHOT 15" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 15</div>
+                <div class="drawer-shot-headline">Affirmation Nod Cut: Gật đầu khẳng định gi...</div>
+                <div class="drawer-shot-time">⏱ 40.04s - 41.50s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(16, 41.54, 43.42, 'SHOT 16')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_16_mid.jpg" alt="SHOT 16" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 16</div>
+                <div class="drawer-shot-headline">Triad Completion Cue: Hoàn thiện mảnh ghép...</div>
+                <div class="drawer-shot-time">⏱ 41.54s - 43.42s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(17, 43.46, 50.01, 'SHOT 17')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_17_mid.jpg" alt="SHOT 17" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 17</div>
+                <div class="drawer-shot-headline">Social Proof B-Roll: Cảnh giao tiếp tiệc t...</div>
+                <div class="drawer-shot-time">⏱ 43.46s - 50.01s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(18, 50.05, 52.76, 'SHOT 18')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_18_mid.jpg" alt="SHOT 18" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 18</div>
+                <div class="drawer-shot-headline">Conversion Philosophy: Chuyển dịch từ ngườ...</div>
+                <div class="drawer-shot-time">⏱ 50.05s - 52.76s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(19, 52.8, 56.64, 'SHOT 19')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_19_mid.jpg" alt="SHOT 19" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 19</div>
+                <div class="drawer-shot-headline">High-Status Supercar Authority: Khẳng định...</div>
+                <div class="drawer-shot-time">⏱ 52.80s - 56.64s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(20, 56.68, 60.14, 'SHOT 20')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_20_mid.jpg" alt="SHOT 20" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 20</div>
+                <div class="drawer-shot-headline">Model Synthesis Graphic: Tóm lược toàn bộ ...</div>
+                <div class="drawer-shot-time">⏱ 56.68s - 60.14s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(21, 60.19, 64.73, 'SHOT 21')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_21_mid.jpg" alt="SHOT 21" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 21</div>
+                <div class="drawer-shot-headline">Transformation Promise: Vẽ ra viễn cảnh vi...</div>
+                <div class="drawer-shot-time">⏱ 60.19s - 64.73s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(22, 64.77, 68.44, 'SHOT 22')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_22_mid.jpg" alt="SHOT 22" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 22</div>
+                <div class="drawer-shot-headline">Conversational Chatbot CTA: Kêu gọi bình l...</div>
+                <div class="drawer-shot-time">⏱ 64.77s - 68.44s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+<div id="lightboxModal" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImg" src="" onclick="event.stopPropagation()" />
+    <div id="lightboxCaption"></div>
+</div>
+
+<script>
+const rawVideoSrc = "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcwPu99sDKI.mp4";
+let currentEndTime = null;
+
+function getCandidateUrls(src) {
+    if (!src) return [];
+    if (src.startsWith('http://') || src.startsWith('https://')) return [src];
+    let clean = src.replace(/^(\.\/|\.\.\/)+/, '').replace(/^(videos\/|reports\/)/, '');
+    return [
+        'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/' + encodeURI(clean),
+        '../videos/' + clean,
+        './videos/' + clean,
+        './' + clean
+    ];
+}
+
+const candidateUrls = getCandidateUrls(rawVideoSrc);
+let candidateIdx = 0;
+const player = document.getElementById('mainPlayer');
+
+function loadVideoCandidate() {
+    if (candidateIdx >= candidateUrls.length) return;
+    const url = candidateUrls[candidateIdx];
+    player.src = url;
+    document.getElementById('directVidLink').href = url;
+    player.load();
+}
+
+player.onerror = () => {
+    candidateIdx++;
+    if (candidateIdx < candidateUrls.length) {
+        loadVideoCandidate();
+    }
+};
+
+loadVideoCandidate();
+
+function playShot(startTime, endTime, label) {
+    currentEndTime = (typeof endTime === 'number') ? endTime : null;
+    const tag = document.getElementById('shotStatusTag');
+    if (tag) {
+        const endTxt = currentEndTime ? ` - ${currentEndTime.toFixed(2)}s` : '';
+        tag.innerText = `🎬 ${label || 'Phân cảnh'}: [${startTime.toFixed(2)}s${endTxt}]`;
+    }
+    player.currentTime = startTime;
+    const p = player.play();
+    if (p !== undefined) {
+        p.catch(e => {
+            player.muted = true;
+            player.play().catch(err => console.log('Autoplay muted triggered'));
+        });
+    }
+    document.querySelectorAll('.shot-card').forEach(c => c.classList.remove('active-playing'));
+    const matchCard = Array.from(document.querySelectorAll('.shot-card')).find(c => c.innerText.includes(label));
+    if (matchCard) matchCard.classList.add('active-playing');
+
+    if (window.innerWidth < 1024) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
+function setSpeed(speed, btn) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.speed-buttons-row .ctrl-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+}
+
+function stepFrame(frames) {
+    player.pause();
+    player.currentTime += (frames * (1/30));
+}
+
+function toggleMute(btn) {
+    player.muted = !player.muted;
+    if (btn) btn.innerText = player.muted ? '🔇 Tắt Tiếng' : '🔊 Tiếng';
+}
+
+function switchView(view) {
+    const sb = document.getElementById('storyboardView');
+    const grid = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetailBtn');
+    const tabGrid = document.getElementById('tabGridBtn');
+    if (view === 'grid') {
+        sb.style.display = 'none';
+        grid.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    } else {
+        sb.style.display = 'flex';
+        grid.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    }
+}
+
+function toggleDrawer(open) {
+    const drawer = document.getElementById('drawerBackdrop');
+    if (open) drawer.classList.add('open');
+    else drawer.classList.remove('open');
+}
+
+function jumpToShot(shotNum, st, et, label) {
+    toggleDrawer(false);
+    switchView('detail');
+    playShot(st, et, label);
+    const targetCard = document.getElementById('shot-card-' + shotNum);
+    if (targetCard) {
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function openLightbox(src, caption) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCaption');
+    img.src = src;
+    cap.innerText = caption || '';
+    modal.style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').style.display = 'none';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+        toggleDrawer(false);
+    } else if (e.key === ' ') {
+        if (document.activeElement.tagName !== 'INPUT') {
+            e.preventDefault();
+            player.paused ? player.play() : player.pause();
+        }
+    }
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

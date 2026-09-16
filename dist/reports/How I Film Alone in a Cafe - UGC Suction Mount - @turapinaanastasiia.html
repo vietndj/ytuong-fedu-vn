@@ -1,0 +1,2403 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Nghệ Thuật Tự Quay Video Một Mình Ở Quán Cà Phê • Bóc Tách Kỹ Thuật UGC Giá Đỡ Hút Chân Không Mini • @turapinaanastasiia • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* DRAWER QUICK JUMP MENU */
+.drawer-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-line);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.drawer-title {
+    font-family: var(--font-heading-short);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cl-text-muted);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.drawer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.drawer-shot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: var(--cl-bg-tint);
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+    background: #eef2f6;
+    border-color: var(--cl-accent);
+}
+.d-badge {
+    background: var(--cl-accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.d-time {
+    color: var(--cl-text-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    flex-shrink: 0;
+}
+.d-title {
+    color: var(--cl-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">13 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Nghệ Thuật Tự Quay Video Một Mình Ở Quán Cà Phê • Bóc Tách Kỹ Thuật UGC Giá Đỡ Hút Chân Không Mini • @turapinaanastasiia</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DdBorQ2KEli/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdBorQ2KEli.mp4" type="video/mp4">
+                <source src="DdBorQ2KEli.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 11.37s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Nghệ Thuật Tự Quay Video Một Mình Ở Quán Cà Phê • Bóc Tách Kỹ Thuật UGC Giá Đỡ Hút Chân Không Mini • @turapinaanastasiia</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@turapinaanastasiia" onclick="handleCreatorClick(event, '@turapinaanastasiia', 'Анастасия Турапина (Anastasiia Turapina)')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Анастасия Турапина (Anastasiia Turapina) trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Анастасия Турапина (Anastasiia Turapina)</strong>
+                        <span class="author-handle">(@turapinaanastasiia)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/DdBorQ2KEli/" target="_blank" class="author-link">@turapinaanastasiia (Анастасия Турапина)</a>
+            </div>
+        </div>
+
+        <!-- DRAWER QUICK JUMP MENU -->
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+        <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0, 0.57)">
+            <span class="d-badge">Shot 01</span>
+            <span class="d-time">0.00s - 0.57s (0.57s)</span>
+            <span class="d-title">Toàn Cảnh Cửa Sổ Quán Cà Phê Mưa Mở Đầu Tò Mò Bằng Câu Hỏi H...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(2, 0.57, 1.1)">
+            <span class="d-badge">Shot 02</span>
+            <span class="d-time">0.57s - 1.10s (0.53s)</span>
+            <span class="d-title">Cận Cảnh Áp Giá Đỡ Hút Chân Không Lên Mặt Kính Giải Pháp Vô ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(3, 1.1, 1.87)">
+            <span class="d-badge">Shot 03</span>
+            <span class="d-time">1.10s - 1.87s (0.77s)</span>
+            <span class="d-title">Thao Tác Gắn Điện Thoại Lên Khớp Nối MagSafe Khẳng Định Độ T...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(4, 1.87, 2.63)">
+            <span class="d-badge">Shot 04</span>
+            <span class="d-time">1.87s - 2.63s (0.76s)</span>
+            <span class="d-title">Trung Cảnh Bước Chân Dạo Quán Chuẩn Bị Cho Góc Máy Thành Phẩ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(5, 2.63, 3.63)">
+            <span class="d-badge">Shot 05</span>
+            <span class="d-time">2.63s - 3.63s (1.00s)</span>
+            <span class="d-title">Góc Quay Thành Phẩm Từ Cửa Kính Đưa Nhân Vật Vào Bố Cục Trun...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(6, 3.63, 4.8)">
+            <span class="d-badge">Shot 06</span>
+            <span class="d-time">3.63s - 4.80s (1.17s)</span>
+            <span class="d-title">Đặt Giá Đỡ Hút Xuống Mặt Bàn Gỗ Tròn Khám Phá Vị Trí Đặt Máy...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(7, 4.8, 5.67)">
+            <span class="d-badge">Shot 07</span>
+            <span class="d-time">4.80s - 5.67s (0.87s)</span>
+            <span class="d-title">Cận Cảnh Gắn Điện Thoại Dọc Trên Bàn Giữ Vững Khung Hình Bằn...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(8, 5.67, 6.5)">
+            <span class="d-badge">Shot 08</span>
+            <span class="d-time">5.67s - 6.50s (0.83s)</span>
+            <span class="d-title">Góc Máy Phía Sau Khung Hình Điện Thoại Tái Hiện Cảm Giác Cam...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(9, 6.5, 8.03)">
+            <span class="d-badge">Shot 09</span>
+            <span class="d-time">6.50s - 8.03s (1.53s)</span>
+            <span class="d-title">Thước Phim Thành Phẩm Dạo Bước Bên Tủ Bánh Tái Hiện Phong Cá...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(10, 8.03, 8.9)">
+            <span class="d-badge">Shot 10</span>
+            <span class="d-time">8.03s - 8.90s (0.87s)</span>
+            <span class="d-title">Bố Cục Chéo Hướng Về Khung Kính Góc Cao Thao Tác Chạm Bật Gh...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(11, 8.9, 9.87)">
+            <span class="d-badge">Shot 11</span>
+            <span class="d-time">8.90s - 9.87s (0.97s)</span>
+            <span class="d-title">Góc Selfie Từ Trên Cao Xuống Đầy Thơ Mộng Bắt Trọn Nụ Cười T...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(12, 9.87, 10.6)">
+            <span class="d-badge">Shot 12</span>
+            <span class="d-time">9.87s - 10.60s (0.73s)</span>
+            <span class="d-title">Macro Xoay Tròn Chiếc Giá Đỡ Chân Không Nhỏ Gọn Trong Lòng B...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(13, 10.6, 11.37)">
+            <span class="d-badge">Shot 13</span>
+            <span class="d-time">10.60s - 11.37s (0.77s)</span>
+            <span class="d-title">Thả Nhẹ Phụ Kiện Vào Giỏ Túi Xách Chốt Hạ Tính Di Động Tối T...</span>
+        </div>
+        
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 11.37s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Nghệ Thuật Tự Quay Video Một Mình Ở Quán Cà Phê • Bóc Tách Kỹ Thuật UGC Giá Đỡ Hút Chân Không Mini • @turapinaanastasiia</h1>
+            <p class="overview-hero-desc">Phân tích đạo diễn chuyên sâu 13 phân cảnh trong video UGC 11.37s của @turapinaanastasiia: Bậc thầy nghệ thuật ghép cặp [Setup Hậu Trường (BTS)] -> [Thành Phẩm Góc Quay (Result)] giải quyết triệt để nỗi sợ e ngại khi quay video nơi công cộng. Khám phá 3 góc đặt máy đột phá: hít cửa kính ngang ngực, để bàn thay tripod và gắn kính trên cao chúc xuống tạo góc selfie nịnh mắt, kết thúc bằng cú cận cảnh 360 độ chốt chuyển đổi bán hàng mẫu mực.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">UGC BTS vs Result Pair • Vacuum Suction Cup Mount • High-Angle Downward Window • Frame-in-Frame Camera Phone • 1-Second Conversion Macro</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">13 Shots • Nhịp trung bình 0.87s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 • 30.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 0.57)">
+                    ▶ 0.00s - 0.57s (0.57s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Toàn Cảnh Cửa Sổ Quán Cà Phê Mưa Mở Đầu Tò Mò Bằng Câu Hỏi Hook Nhắm Trúng Nỗi Đau Quay Một Mình (Establishing Cafe Rain Window & Relatable Solo-Shooting Hook Text)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_mid.jpg', 'Shot 01 • Giữa (0.28s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (0.28s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_end.jpg', 'Shot 01 • Cuối (0.57s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (0.57s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình góc rộng (Wide Shot) bao quát không gian tiệm bánh cà phê cổ điển Châu Âu với sàn gạch hoa đỏ, dãy bàn gỗ dài và ô cửa sổ kính chạm trần nhìn ra đường phố mưa giăng. Nhân vật nữ (Anastasiia) diện áo blazer xám oversize, quần jeans xanh nhạt, tóc đen dài bước chậm về phía cửa sổ. Dòng text hook chữ trắng viền đen nằm nổi bật ở 1/3 trên khung hình: 'как я снимаю видео в кофейне одна? ☕️📸' (Làm thế nào tôi tự quay video một mình ở quán cà phê?).</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cảnh toàn mở màn thiết lập không gian (Establishing Shot) ấm cúng, sang trọng; câu hỏi hook trực diện đánh trúng tâm lý e dè lớn nhất của các nhà sáng tạo nội dung cá nhân khi phải quay phim nơi công cộng đông người; đường dẫn sàn gạch và vách tường gỗ hướng mắt tự nhiên vào nhân vật.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng 0.57s khá chớp nhoáng, người xem chỉ vừa kịp đọc lướt câu hỏi hook trước khi bị chuyển cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi làm video dạng giải pháp/mẹo sáng tạo (How-to / UGC), hãy bắt đầu bằng một cú toàn cảnh đặt bối cảnh thực tế kèm câu hỏi mở (Open Hook) gợi trúng nỗi băn khoăn của tệp khán giả mục tiêu.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm Wide Angle • Eye-Level Perspective</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Tiệm bánh cà phê phong cách Châu Âu</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên khuếch tán từ cửa sổ kính (Overcast Diffused 5600K)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut cắt thẳng vào cận cảnh bàn tay thao tác ở Shot 02</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Hard Cut cắt thẳng vào cận cảnh bàn tay thao tác ở Shot 02</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 0.57, 1.1)">
+                    ▶ 0.57s - 1.10s (0.53s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cận Cảnh Áp Giá Đỡ Hút Chân Không Lên Mặt Kính Giải Pháp Vô Hình Hóa Chân Máy Truyền Thống (Macro Vacuum Suction Cup Window Attachment & Invisible Tripod Solution)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_02_start.jpg', 'Shot 02 • Đầu (0.57s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.57s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_02_mid.jpg', 'Shot 02 • Giữa (0.83s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (0.83s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_02_end.jpg', 'Shot 02 • Cuối (1.10s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (1.10s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc cận cảnh (Close-Up) đặc tả bàn tay thon thả của cô gái với tay áo len hồng pastel lộ ra dưới tay áo khoác blazer xám. Cô ấn nhẹ chiếc đế hút chân không mini màu đen (AYRO Vacuum Mount) trực tiếp lên bề mặt kính cửa sổ quán cà phê. Cơ chế hút chân không bám chặt vào kính phát ra âm thanh nén khí gọn gàng. Hậu cảnh ngoài cửa sổ là cảnh xe cộ và tòa nhà mờ ảo trong mưa.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thao tác ấn đế hút lên kính diễn ra dứt khoát trong 0.53s, mang lại sự ngạc nhiên thú vị (Aha Moment) cho người xem vì không cần kê chân máy tripod to lớn; tương phản màu sắc rõ rệt giữa tay áo len hồng pastel và chiếc đế hút đen mờ.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Mặt kính hơi có vệt nước mưa và ánh phản chiếu từ bên trong đèn quán làm giảm nhẹ độ sắc nét của bề mặt giác hút.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Show giải pháp ngay ở giây thứ 2 bằng một hành động vật lý lạ mắt (ấn phụ kiện lên kính/tường) thay vì giải thích bằng lời; sự khác biệt về hành động sẽ lập tức giữ chân người xem tiếp tục theo dõi.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/2.2 • Handheld Macro Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt kính cửa sổ quán cà phê</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên hắt ngược qua kính</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Cut theo chuỗi hành động sang Shot 03</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Match Cut theo chuỗi hành động sang Shot 03</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 1.1, 1.87)">
+                    ▶ 1.10s - 1.87s (0.77s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thao Tác Gắn Điện Thoại Lên Khớp Nối MagSafe Khẳng Định Độ Tiện Lợi Và Vững Chãi Tuyệt Đối (MagSafe Snap Attachment & Instant Phone Stabilization)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_03_start.jpg', 'Shot 03 • Đầu (1.10s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (1.10s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_03_mid.jpg', 'Shot 03 • Giữa (1.49s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.49s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_03_end.jpg', 'Shot 03 • Cuối (1.87s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (1.87s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc cận cảnh tiếp nối nhịp thao tác: Hai bàn tay cô gái cầm chiếc iPhone màu trắng vỏ viền đỏ đưa sát vào vòng hít MagSafe của chiếc đế gắn kính. Điện thoại hít chặt vào đế trong một tích tắc không cần vặn ốc hay kẹp ngàm phức tạp. Màn hình iPhone lập tức sáng đèn ở chế độ quay video sẵn sàng tác nghiệp.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Kỹ thuật hít nam châm MagSafe mang lại cảm giác công nghệ hiện đại, tiện lợi tối đa ('1-chạm'); việc thấy cả chiếc điện thoại được giữ lơ lửng trên kính kích thích sự tò mò của người xem về kết quả góc quay sẽ như thế nào.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc quay cận hơi chật, ngón tay che một phần vòng khớp nối giữa đế hút và điện thoại.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay video UGC đồ công nghệ, luôn nhấn mạnh tính năng 'One-Touch' (thao tác 1 chạm siêu nhanh) để kích hoạt tâm lý muốn sở hữu sự tiện lợi ngay lập tức của khách hàng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 40mm f/2.0 • OTS Handheld Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt kính cửa sổ quán cà phê</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng cửa sổ ban ngày</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut cắt sang góc toàn cảnh cô gái di chuyển ở Shot 04</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Hard Cut cắt sang góc toàn cảnh cô gái di chuyển ở Shot 04</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 1.87, 2.63)">
+                    ▶ 1.87s - 2.63s (0.76s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Trung Cảnh Bước Chân Dạo Quán Chuẩn Bị Cho Góc Máy Thành Phẩm Điện Ảnh (Medium Tracking Walk & Staging Transition Anchor)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_04_start.jpg', 'Shot 04 • Đầu (1.87s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (1.87s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_04_mid.jpg', 'Shot 04 • Giữa (2.25s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (2.25s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_04_end.jpg', 'Shot 04 • Cuối (2.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (2.63s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc trung cảnh (Medium Shot) ghi lại cảnh cô gái sải bước dọc theo dãy ghế đệm dài cạnh cửa sổ, tay xách chiếc túi đan cói màu trắng be trang nhã. Cô vừa đi vừa ngoái nhìn nhẹ về phía chiếc máy quay đang gắn trên kính, chuẩn bị nhịp thở cho cú máy thành phẩm tiếp theo.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Đóng vai trò là cảnh nối hậu trường (BTS Bridge), giúp người xem hiểu được khoảng cách từ chỗ gắn điện thoại đến vị trí nhân vật sẽ diễn xuất; trang phục blazer phối quần ống rộng tôn lên phong cách Parisian Chic thanh lịch.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chuyển động bước chân hơi vội do thời lượng ngắn (0.77s), phần chân dưới bị cắt khỏi khung hình ở những frame cuối.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Chèn một phân cảnh hậu trường ngắn (BTS setup) ngay trước khi hiển thị kết quả thành phẩm là bí quyết cốt lõi để tạo hiệu ứng 'Trước & Sau' (Before & After) đầy thuyết phục.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 28mm f/2.8 • Handheld Tracking Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Dọc lối đi cửa sổ tiệm cà phê</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng cửa sổ chiếu nghiêng 45 độ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut chuyển thẳng vào cảnh quay thành phẩm từ điện thoại ở Shot 05</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Hard Cut chuyển thẳng vào cảnh quay thành phẩm từ điện thoại ở Shot 05</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 2.63, 3.63)">
+                    ▶ 2.63s - 3.63s (1.00s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Quay Thành Phẩm Từ Cửa Kính Đưa Nhân Vật Vào Bố Cục Trung Tâm Tự Nhiên Như Phim (Window-Mounted Camera Output & Effortless Runway Elegance)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_05_start.jpg', 'Shot 05 • Đầu (2.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (2.63s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_05_mid.jpg', 'Shot 05 • Giữa (3.13s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (3.13s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_05_end.jpg', 'Shot 05 • Cuối (3.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (3.63s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc nhìn thực tế được ghi lại trực tiếp từ chiếc iPhone gắn trên cửa kính ở Shot 02-03. Nhân vật xuất hiện ở góc trung cận chính diện (Medium Close-Up): cô cầm ly cà phê giấy nóng trên tay trái, túi cói tay phải, bước tới trước ống kính rồi dừng lại tạo dáng tự nhiên, nở một ánh nhìn cuốn hút về phía máy quay. Phía sau là quầy bánh ngọt lung linh ánh đèn vàng ấm áp và bảng thực đơn chữ nổi.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thành phẩm góc quay tuyệt đẹp chứng minh sức mạnh của chiếc giá đỡ: góc máy ngang tầm ngực cực kỳ ổn định, không hề rung lắc, không ai nghĩ đây là video tự quay một mình; bảng màu gỗ nâu và đèn vàng quầy bánh tạo độ sâu trường ảnh điện ảnh (Cinematic Depth).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khoảng trần phía trên đầu hơi nhiều (Headroom hơi rộng), nếu hạ góc máy xuống 5 độ sẽ tạo tỷ lệ vàng hoàn hảo hơn cho tỷ lệ 9:16.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đây là công thức 'Bằng Chứng Thị Giác' (Visual Proof) tối thượng trong UGC: Phải cho khách hàng thấy ngay thước phim thành phẩm sắc nét, mượt mà được tạo ra từ chính công cụ vừa giới thiệu.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 26mm (iPhone Main Camera) • Static Window POV</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Không gian trung tâm quán cà phê</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn chùm quầy bánh kết hợp ánh sáng tự nhiên cửa sổ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut chuyển sang vị trí đặt máy thứ hai trên mặt bàn ở Shot 06</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Hard Cut chuyển sang vị trí đặt máy thứ hai trên mặt bàn ở Shot 06</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 3.63, 4.8)">
+                    ▶ 3.63s - 4.80s (1.17s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Đặt Giá Đỡ Hút Xuống Mặt Bàn Gỗ Tròn Khám Phá Vị Trí Đặt Máy Độc Đáo Mới (Tabletop Mount Placement & Alternative Angle Exploration)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_06_start.jpg', 'Shot 06 • Đầu (3.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (3.63s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_06_mid.jpg', 'Shot 06 • Giữa (4.21s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (4.21s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_06_end.jpg', 'Shot 06 • Cuối (4.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (4.80s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc toàn trung (Medium Long Shot) nhìn từ xa: Cô gái cúi người đặt chiếc giá đỡ hút chân không lên chiếc bàn gỗ tròn nhỏ kê sát ghế đệm. Cô khéo léo chọn góc nhìn hướng thẳng về phía quầy thu ngân và kệ bánh nướng phía xa. Chiếc áo blazer xám buông rủ tạo phom dáng thời thượng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thể hiện tính đa năng của sản phẩm: không chỉ hít được trên kính đứng mà còn đứng vững như một mini tripod trên mặt bàn gỗ nhẵn; bố cục đường dẫn từ dãy ghế hướng thẳng về quầy bánh trung tâm tạo cảm giác không gian đa chiều.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc quay hậu trường đặt hơi xa khiến bàn tay thao tác trên mặt bàn bị lưng của nhân vật che khuất một phần trong 10 frames đầu.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Hãy cho khách hàng thấy nhiều tình huống sử dụng khác nhau của cùng một sản phẩm (hút kính, để bàn, gắn tường) để tối đa hóa giá trị cảm nhận (Perceived Value).</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 28mm f/2.4 • Eye-Level Third-Person View</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khu vực bàn cafe nhỏ cạnh cửa sổ</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên pha đèn trần 3500K</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Cut vào cận cảnh gắn điện thoại trên bàn ở Shot 07</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Match Cut vào cận cảnh gắn điện thoại trên bàn ở Shot 07</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 4.8, 5.67)">
+                    ▶ 4.80s - 5.67s (0.87s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cận Cảnh Gắn Điện Thoại Dọc Trên Bàn Giữ Vững Khung Hình Bằng Lực Hút Chắc Chắn (Tabletop Phone Mount Lock & Secure Stabilization Macro)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_07_start.jpg', 'Shot 07 • Đầu (4.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (4.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_07_mid.jpg', 'Shot 07 • Giữa (5.23s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.23s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_07_end.jpg', 'Shot 07 • Cuối (5.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.67s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc cận cảnh (Close-Up) từ phía sau: Bàn tay cô gái với chiếc nhẫn bạc tinh tế đặt chiếc iPhone lên chiếc giá đỡ đang đứng vững trên mặt bàn gỗ. Màn hình iPhone hiển thị giao diện camera dọc, khóa nét vào khung cảnh quầy thu ngân và lối đi chính của quán.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc máy cận đặc tả độ vững chắc của chiếc đế: điện thoại đứng thẳng tắp 90 độ mà không hề bị lật hay nghiêng ngả; chi tiết đồ họa giao diện camera iPhone tạo cảm giác chân thực của một creator đang tác nghiệp thực tế.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khung hình hơi thiếu ánh sáng trực diện vào mặt sau của điện thoại khiến chi tiết logo hơi tối.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay cảnh hậu trường setup máy, việc quay được màn hình điện thoại đang ở chế độ xem trước (Camera Live View) giúp tăng 200% độ uy tín và tính xác thực cho thước phim.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 45mm f/2.0 • Over-The-Shoulder Table Macro</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Mặt bàn gỗ tròn tiệm cà phê</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tán xạ gián tiếp</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut lùi máy ra xa để xem góc quay bao quát ở Shot 08</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Hard Cut lùi máy ra xa để xem góc quay bao quát ở Shot 08</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 5.67, 6.5)">
+                    ▶ 5.67s - 6.50s (0.83s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Máy Phía Sau Khung Hình Điện Thoại Tái Hiện Cảm Giác Cameraman Ẩn Danh (Over-The-Screen Third Person Perspective & Anonymous Cameraman Vibe)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_08_start.jpg', 'Shot 08 • Đầu (5.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.67s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_08_mid.jpg', 'Shot 08 • Giữa (6.08s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.08s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_08_end.jpg', 'Shot 08 • Cuối (6.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (6.50s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy trung cận đặt ngay sau chiếc điện thoại trên bàn. Khung hình iPhone chiếm vị trí trung tâm tiền cảnh, bên trong màn hình hiển thị toàn bộ không gian quầy bánh với các khay bánh mì baguette, bánh sừng bò vàng ruộm. Phía xa ngoài đời thực, cô gái bắt đầu bước vào khung hình để gọi món.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục lồng khung (Frame-in-Frame) đỉnh cao: màn hình điện thoại nhỏ nằm gọn gàng bên trong khung hình video lớn, tạo sự tương phản thú vị giữa 'cảnh đang được quay' và 'cảnh thực tế bên ngoài'.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Vùng tối xung quanh thân máy điện thoại hơi bị bệt do camera ngoài lấy nét vào màn hình sáng.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Bố cục lồng khung hình điện thoại (Phone-in-Phone composition) là tuyệt chiêu thu hút mắt nhìn hiệu quả nhất để chứng minh quy trình làm video độc lập.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm f/2.2 • Frame-in-Frame Perspective</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn cafe nhìn ra quầy bánh</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Độ tương phản cao giữa màn hình điện thoại và ánh sáng quán</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut cắt thẳng vào thành phẩm cảnh quay tại quầy bánh ở Shot 09</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 09 • Hard Cut cắt thẳng vào thành phẩm cảnh quay tại quầy bánh ở Shot 09</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_08_to_09.jpg?v=2', 'Chuyển cảnh Shot 08 sang Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_08_to_09.jpg?v=2" alt="Transition 8 to 9" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-9">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 09</span>
+                <button class="shot-time-btn" onclick="jumpToShot(9, 6.5, 8.03)">
+                    ▶ 6.50s - 8.03s (1.53s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thước Phim Thành Phẩm Dạo Bước Bên Tủ Bánh Tái Hiện Phong Cách B-Roll Ẩm Thực Tự Nhiên (Bakery Showcase Finished Footage & Cinematic Food Tour B-Roll)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_09_start.jpg', 'Shot 09 • Đầu (6.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (6.50s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_09_mid.jpg', 'Shot 09 • Giữa (7.26s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (7.26s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_09_end.jpg', 'Shot 09 • Cuối (8.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.03s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Thước phim thành phẩm tuyệt mỹ được ghi lại từ chiếc điện thoại đặt trên bàn ở Shot 07-08. Góc quay ngang tầm eo hướng lên (Low-to-Mid Angle) bao trọn vẻ đẹp hoành tráng của tủ bánh nướng với hàng chục loại bánh pastry, pretzel treo trên móc gỗ. Cô gái thong thả sải bước ngang qua quầy bánh, tay xách túi cói, mắt ngắm nghía từng món bánh thơm ngon như một thước phim quảng cáo du lịch Châu Âu.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc máy cực kỳ ổn định, tôn lên toàn bộ không gian kiến trúc nội thất lộng lẫy của tiệm bánh; sự kết hợp giữa ánh đèn vàng ấm, các loại bánh nướng màu hổ phách và dáng vẻ thư thái của nhân vật tạo nên xúc cảm thị giác ấm áp, ngon mắt (Appetizing Aesthetic).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Nhân vật đi hơi xa tâm máy quay khiến nét mặt không được thể hiện chi tiết bằng Shot 05.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đặt camera ở góc thấp nhìn lên (Low-Angle) khi quay trong không gian có trần cao hoặc tủ đồ trang trí đẹp sẽ làm cho khung cảnh trở nên nguy nga, điện ảnh hơn rất nhiều so với góc nhìn ngang tầm mắt thông thường.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 26mm (iPhone Main Camera) • Static Low-Angle Counter View</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Quầy bánh ngọt & Thu ngân tiệm cà phê</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Hệ thống đèn vàng trưng bày bánh 3000K ấm áp</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut chuyển sang vị trí đặt máy thứ ba trên cửa kính ở Shot 10</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 10 • Hard Cut chuyển sang vị trí đặt máy thứ ba trên cửa kính ở Shot 10</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_09_to_10.jpg?v=2', 'Chuyển cảnh Shot 09 sang Shot 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_09_to_10.jpg?v=2" alt="Transition 9 to 10" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-10">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 10</span>
+                <button class="shot-time-btn" onclick="jumpToShot(10, 8.03, 8.9)">
+                    ▶ 8.03s - 8.90s (0.87s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố Cục Chéo Hướng Về Khung Kính Góc Cao Thao Tác Chạm Bật Ghi Hình Thần Thái (High Window Suction Angle & Casual Hand Tap Trigger)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_10_start.jpg', 'Shot 10 • Đầu (8.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.03s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_10_mid.jpg', 'Shot 10 • Giữa (8.46s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (8.46s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_10_end.jpg', 'Shot 10 • Cuối (8.90s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.90s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy từ góc phòng nhìn chéo về phía dãy cửa sổ lớn. Cô gái ngồi trên đệm bọc da màu xanh xám, một tay giơ cao lên góc trên mép kính cửa sổ để bấm quay chiếc điện thoại đang được gắn ở vị trí trên cao chúc xuống. Dưới bàn là ly cà phê nóng sẵn sàng cho buổi trò chuyện hoặc thư giãn.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khám phá thêm một góc máy 'High-Angle POV' độc đáo mà chỉ có giác hút chân không mới làm được (gắn trên cao mà chân tripod không thể vươn tới); tư thế ngồi tự nhiên, biểu cảm thoải mái xóa tan định kiến quay video là phải gồng mình.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy hậu trường hơi bị ngược sáng do quay thẳng về phía cửa sổ mưa lớn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Tận dụng triệt để các mặt phẳng thẳng đứng trên cao (cửa kính, cột trụ, tủ gương) để tạo ra góc máy nhìn từ trên xuống (High Downward Angle), mang lại sự mới lạ hoàn toàn cho video selfie routine.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 30mm f/2.4 • Diagonal Room Angle</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc ngồi thưởng thức cafe cạnh cửa sổ</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ngược sáng tự nhiên từ cửa kính lớn</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut cắt thẳng vào thành phẩm góc selfie ngồi thưởng thức cafe ở Shot 11</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 11 • Hard Cut cắt thẳng vào thành phẩm góc selfie ngồi thưởng thức cafe ở Shot 11</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_10_to_11.jpg?v=2', 'Chuyển cảnh Shot 10 sang Shot 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_10_to_11.jpg?v=2" alt="Transition 10 to 11" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-11">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 11</span>
+                <button class="shot-time-btn" onclick="jumpToShot(11, 8.9, 9.87)">
+                    ▶ 8.90s - 9.87s (0.97s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Selfie Từ Trên Cao Xuống Đầy Thơ Mộng Bắt Trọn Nụ Cười Thư Thái Bên Tách Cà Phê (High-Angle Cozy Coffee Sip & Warm Magnetic Connection)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_11_start.jpg', 'Shot 11 • Đầu (8.90s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.90s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_11_mid.jpg', 'Shot 11 • Giữa (9.38s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.38s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_11_end.jpg', 'Shot 11 • Cuối (9.87s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (9.87s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Thước phim thành phẩm thu được từ chiếc điện thoại gắn trên kính cao ở Shot 10. Góc quay từ trên cao chúc xuống 45 độ (High-Angle Close Shot) bắt trọn khuôn mặt rạng rỡ, xinh đẹp của Anastasiia. Cô hơi nghiêng đầu, tay nâng ly cà phê giấy nóng, mỉm cười nhẹ nhàng và tự nhiên trước ống kính. Ánh sáng xiên dịu làm nổi bật làn da mịn màng và ánh mắt lấp lánh đầy tự tin.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc máy từ trên cao chúc xuống giúp khuôn mặt trông thon gọn, tôn sống mũi và đôi mắt (Flattering Beauty Angle); biểu cảm thư giãn, không hề có nét ngượng ngùng chứng minh thông điệp 'sự e thẹn sẽ biến mất 100% khi có phụ kiện trợ thủ đắc lực'.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ly cà phê giấy che mất một phần cằm của nhân vật trong một số frames giữa.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Góc quay từ trên cao nhìn xuống (High Down-Angle) là góc quay nịnh mặt nhất cho các cảnh thưởng thức đồ uống hoặc trò chuyện tâm tình; hãy luôn có ít nhất một shot góc này trong các vlog cá nhân.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 26mm (iPhone Main Camera) • High-Angle 45° Downward View</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn cafe cạnh cửa sổ mưa</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng mềm tán xạ tự nhiên ban ngày</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut chuyển sang cận cảnh cầm sản phẩm trên tay ở Shot 12</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 12 • Hard Cut chuyển sang cận cảnh cầm sản phẩm trên tay ở Shot 12</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_11_to_12.jpg?v=2', 'Chuyển cảnh Shot 11 sang Shot 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_11_to_12.jpg?v=2" alt="Transition 11 to 12" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-12">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 12</span>
+                <button class="shot-time-btn" onclick="jumpToShot(12, 9.87, 10.6)">
+                    ▶ 9.87s - 10.60s (0.73s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Macro Xoay Tròn Chiếc Giá Đỡ Chân Không Nhỏ Gọn Trong Lòng Bàn Tay Nhấn Mạnh Bản Quyền AYRO (AYRO Compact Vacuum Mount Macro Showcase & MagSafe Ring Detail)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_12_start.jpg', 'Shot 12 • Đầu (9.87s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (9.87s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_12_mid.jpg', 'Shot 12 • Giữa (10.23s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (10.23s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_12_end.jpg', 'Shot 12 • Cuối (10.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.60s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc quay cận cảnh tuyệt đối (Macro Extreme Close-Up) trên nền không gian tiệm cafe ấm áp. Bàn tay thon thả của cô gái với những chiếc nhẫn ngọc trai và hoa bạc tinh xảo cầm chiếc giá đỡ hút chân không mini màu đen, xoay nhẹ giữa các ngón tay để khoe trọn thiết kế hình nón công thái học, bề mặt giác hút cao su đen mờ phía dưới và vòng hít nam châm MagSafe in logo AYRO sắc nét ở mặt trên.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Phô diễn trọn vẹn chi tiết hoàn thiện cao cấp và kích thước siêu nhỏ gọn (nằm gọn trong lòng bàn tay) của sản phẩm; đây là điểm rơi hoàn hảo để chốt chuyển đổi bán hàng (Conversion Trigger) sau khi đã chứng minh công năng ở 11 shot trước đó.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Vòng xoay tay hơi nhanh (0.73s) khiến logo AYRO chỉ hiển thị rõ ràng trong khoảng 10 frames.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đừng giới thiệu sản phẩm ngay từ đầu; hãy để sản phẩm xuất hiện ở cuối video như một 'người hùng thầm lặng' đã tạo nên tất cả những thước phim lung linh vừa xem.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 60mm Macro f/2.8 • Handheld Product Showcase</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Trước ngực nhân vật tại bàn cafe</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ven viền làm nổi bật chất liệu hợp kim và cao su</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Cut theo chuyển động thả đồ vào túi xách ở Shot 13</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 13 • Match Cut theo chuyển động thả đồ vào túi xách ở Shot 13</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_12_to_13.jpg?v=2', 'Chuyển cảnh Shot 12 sang Shot 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_12_to_13.jpg?v=2" alt="Transition 12 to 13" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-13">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 13</span>
+                <button class="shot-time-btn" onclick="jumpToShot(13, 10.6, 11.37)">
+                    ▶ 10.60s - 11.37s (0.77s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thả Nhẹ Phụ Kiện Vào Giỏ Túi Xách Chốt Hạ Tính Di Động Tối Thượng Cho Mọi Chuyến Đi (Effortless Basket Bag Pack-Up & Ultimate Portability Call-To-Action)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_13_start.jpg', 'Shot 13 • Đầu (10.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (10.60s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_13_mid.jpg', 'Shot 13 • Giữa (10.98s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (10.98s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_13_end.jpg', 'Shot 13 • Cuối (11.37s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_13_end.jpg" alt="Shot 13 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (11.37s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy từ trên nhìn xuống đùi của cô gái diện quần vải dệt kim mềm mại. Bàn tay cô nhẹ nhàng thả chiếc giá đỡ AYRO mini rơi gọn gàng vào trong chiếc túi xách đan cói vintage. Chiếc túi nhỏ bé chỉ vừa đủ đựng son môi và ví tiền nay chứa vừa vặn chiếc giá đỡ thay thế hoàn toàn chiếc chân máy tripod cồng kềnh. Khung hình khép lại nhẹ nhàng, hoàn tất chuỗi hành trình trải nghiệm một ngày đi cafe sáng tạo một mình.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Hành động thả vào túi xách mang tính ẩn dụ đắt giá: 'gói gọn cả một studio quay phim vào chiếc túi xách nhỏ xíu'; thỏa mãn trọn vẹn mong muốn của phái đẹp về một thiết bị quay phim không cồng kềnh, không gây chú ý.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Phần miệng túi hơi tối, cần một chút ánh sáng hắt nhẹ vào trong túi để thấy rõ chiếc giá đỡ nằm êm ái bên trong.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kết thúc video bán phụ kiện quay phim bằng hành động cất gọn vào túi xách/balo là cú chốt hạ tâm lý mua hàng (Buying Decision Closer) cực mạnh, xóa bỏ rào cản 'lười mang vác' của khách hàng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm f/2.0 • Top-Down Bag Pack-Up Angle</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Trên đùi nhân vật tại quán cafe</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng phòng tự nhiên dịu nhẹ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut / Loop nối mượt mà về Shot 01</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_13_to_01_loop.jpg?v=2', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/transitions/trans_13_to_01_loop.jpg?v=2" alt="Loop Transition" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 0.57)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Toàn Cảnh Cửa Sổ Quán Cà Phê Mưa Mở Đầu Tò Mò Bằng Câu Hỏi Hook Nhắm Trúng Nỗi Đau Quay Một Mình (Establishing Cafe Rain Window & Relatable Solo-Shooting Hook Text)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 0.57, 1.1)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 0.57s</span>
+            </div>
+            <div class="grid-card-body">Cận Cảnh Áp Giá Đỡ Hút Chân Không Lên Mặt Kính Giải Pháp Vô Hình Hóa Chân Máy Truyền Thống (Macro Vacuum Suction Cup Window Attachment & Invisible Tripod Solution)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 1.1, 1.87)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 1.10s</span>
+            </div>
+            <div class="grid-card-body">Thao Tác Gắn Điện Thoại Lên Khớp Nối MagSafe Khẳng Định Độ Tiện Lợi Và Vững Chãi Tuyệt Đối (MagSafe Snap Attachment & Instant Phone Stabilization)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 1.87, 2.63)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 1.87s</span>
+            </div>
+            <div class="grid-card-body">Trung Cảnh Bước Chân Dạo Quán Chuẩn Bị Cho Góc Máy Thành Phẩm Điện Ảnh (Medium Tracking Walk & Staging Transition Anchor)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 2.63, 3.63)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 2.63s</span>
+            </div>
+            <div class="grid-card-body">Góc Quay Thành Phẩm Từ Cửa Kính Đưa Nhân Vật Vào Bố Cục Trung Tâm Tự Nhiên Như Phim (Window-Mounted Camera Output & Effortless Runway Elegance)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 3.63, 4.8)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 3.63s</span>
+            </div>
+            <div class="grid-card-body">Đặt Giá Đỡ Hút Xuống Mặt Bàn Gỗ Tròn Khám Phá Vị Trí Đặt Máy Độc Đáo Mới (Tabletop Mount Placement & Alternative Angle Exploration)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 4.8, 5.67)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 4.80s</span>
+            </div>
+            <div class="grid-card-body">Cận Cảnh Gắn Điện Thoại Dọc Trên Bàn Giữ Vững Khung Hình Bằng Lực Hút Chắc Chắn (Tabletop Phone Mount Lock & Secure Stabilization Macro)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 5.67, 6.5)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 5.67s</span>
+            </div>
+            <div class="grid-card-body">Góc Máy Phía Sau Khung Hình Điện Thoại Tái Hiện Cảm Giác Cameraman Ẩn Danh (Over-The-Screen Third Person Perspective & Anonymous Cameraman Vibe)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(9, 6.5, 8.03)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <span class="grid-thumb-badge">Shot 09 • 6.50s</span>
+            </div>
+            <div class="grid-card-body">Thước Phim Thành Phẩm Dạo Bước Bên Tủ Bánh Tái Hiện Phong Cách B-Roll Ẩm Thực Tự Nhiên (Bakery Showcase Finished Footage & Cinematic Food Tour B-Roll)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(10, 8.03, 8.9)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+                <span class="grid-thumb-badge">Shot 10 • 8.03s</span>
+            </div>
+            <div class="grid-card-body">Bố Cục Chéo Hướng Về Khung Kính Góc Cao Thao Tác Chạm Bật Ghi Hình Thần Thái (High Window Suction Angle & Casual Hand Tap Trigger)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(11, 8.9, 9.87)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+                <span class="grid-thumb-badge">Shot 11 • 8.90s</span>
+            </div>
+            <div class="grid-card-body">Góc Selfie Từ Trên Cao Xuống Đầy Thơ Mộng Bắt Trọn Nụ Cười Thư Thái Bên Tách Cà Phê (High-Angle Cozy Coffee Sip & Warm Magnetic Connection)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(12, 9.87, 10.6)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+                <span class="grid-thumb-badge">Shot 12 • 9.87s</span>
+            </div>
+            <div class="grid-card-body">Macro Xoay Tròn Chiếc Giá Đỡ Chân Không Nhỏ Gọn Trong Lòng Bàn Tay Nhấn Mạnh Bản Quyền AYRO (AYRO Compact Vacuum Mount Macro Showcase & MagSafe Ring Detail)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(13, 10.6, 11.37)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_13_mid.jpg" alt="Shot 13" loading="lazy">
+                <span class="grid-thumb-badge">Shot 13 • 10.60s</span>
+            </div>
+            <div class="grid-card-body">Thả Nhẹ Phụ Kiện Vào Giỏ Túi Xách Chốt Hạ Tính Di Động Tối Thượng Cho Mọi Chuyến Đi (Effortless Basket Bag Pack-Up & Ultimate Portability Call-To-Action)</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1_edbje9S5JP2TMQ-TXsl0h1UUA3Nz5_s" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "en_frame": 16, "headline": "Toàn Cảnh Cửa Sổ Quán Cà Phê Mưa Mở Đầu Tò Mò Bằng Câu Hỏi Hook Nhắm Trúng Nỗi Đau Quay Một Mình (Establishing Cafe Rain Window & Relatable Solo-Shooting Hook Text)", "subject_action": "Khung hình góc rộng (Wide Shot) bao quát không gian tiệm bánh cà phê cổ điển Châu Âu với sàn gạch hoa đỏ, dãy bàn gỗ dài và ô cửa sổ kính chạm trần nhìn ra đường phố mưa giăng. Nhân vật nữ (Anastasiia) diện áo blazer xám oversize, quần jeans xanh nhạt, tóc đen dài bước chậm về phía cửa sổ. Dòng text hook chữ trắng viền đen nằm nổi bật ở 1/3 trên khung hình: 'как я снимаю видео в кофейне одна? ☕️📸' (Làm thế nào tôi tự quay video một mình ở quán cà phê?).", "pros": "Cảnh toàn mở màn thiết lập không gian (Establishing Shot) ấm cúng, sang trọng; câu hỏi hook trực diện đánh trúng tâm lý e dè lớn nhất của các nhà sáng tạo nội dung cá nhân khi phải quay phim nơi công cộng đông người; đường dẫn sàn gạch và vách tường gỗ hướng mắt tự nhiên vào nhân vật.", "cons": "Thời lượng 0.57s khá chớp nhoáng, người xem chỉ vừa kịp đọc lướt câu hỏi hook trước khi bị chuyển cảnh.", "takeaway": "Khi làm video dạng giải pháp/mẹo sáng tạo (How-to / UGC), hãy bắt đầu bằng một cú toàn cảnh đặt bối cảnh thực tế kèm câu hỏi mở (Open Hook) gợi trúng nỗi băn khoăn của tệp khán giả mục tiêu.", "specs": {"lens": "24mm Wide Angle • Eye-Level Perspective", "location": "Tiệm bánh cà phê phong cách Châu Âu", "lighting": "Ánh sáng tự nhiên khuếch tán từ cửa sổ kính (Overcast Diffused 5600K)", "transition": "Hard Cut cắt thẳng vào cận cảnh bàn tay thao tác ở Shot 02"}, "st_time": 0.0, "en_time": 0.57, "duration": 0.57, "keyframe_start": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_start.jpg", "keyframe_mid": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_mid.jpg", "keyframe_end": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_end.jpg"}, {"id": 2, "st_frame": 17, "en_frame": 32, "headline": "Cận Cảnh Áp Giá Đỡ Hút Chân Không Lên Mặt Kính Giải Pháp Vô Hình Hóa Chân Máy Truyền Thống (Macro Vacuum Suction Cup Window Attachment & Invisible Tripod Solution)", "subject_action": "Góc cận cảnh (Close-Up) đặc tả bàn tay thon thả của cô gái với tay áo len hồng pastel lộ ra dưới tay áo khoác blazer xám. Cô ấn nhẹ chiếc đế hút chân không mini màu đen (AYRO Vacuum Mount) trực tiếp lên bề mặt kính cửa sổ quán cà phê. Cơ chế hút chân không bám chặt vào kính phát ra âm thanh nén khí gọn gàng. Hậu cảnh ngoài cửa sổ là cảnh xe cộ và tòa nhà mờ ảo trong mưa.", "pros": "Thao tác ấn đế hút lên kính diễn ra dứt khoát trong 0.53s, mang lại sự ngạc nhiên thú vị (Aha Moment) cho người xem vì không cần kê chân máy tripod to lớn; tương phản màu sắc rõ rệt giữa tay áo len hồng pastel và chiếc đế hút đen mờ.", "cons": "Mặt kính hơi có vệt nước mưa và ánh phản chiếu từ bên trong đèn quán làm giảm nhẹ độ sắc nét của bề mặt giác hút.", "takeaway": "Show giải pháp ngay ở giây thứ 2 bằng một hành động vật lý lạ mắt (ấn phụ kiện lên kính/tường) thay vì giải thích bằng lời; sự khác biệt về hành động sẽ lập tức giữ chân người xem tiếp tục theo dõi.", "specs": {"lens": "50mm f/2.2 • Handheld Macro Close-Up", "location": "Mặt kính cửa sổ quán cà phê", "lighting": "Ánh sáng tự nhiên hắt ngược qua kính", "transition": "Match Cut theo chuỗi hành động sang Shot 03"}, "st_time": 0.57, "en_time": 1.1, "duration": 0.53, "keyframe_start": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_02_start.jpg", "keyframe_mid": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_02_mid.jpg", "keyframe_end": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_02_end.jpg"}, {"id": 3, "st_frame": 33, "en_frame": 55, "headline": "Thao Tác Gắn Điện Thoại Lên Khớp Nối MagSafe Khẳng Định Độ Tiện Lợi Và Vững Chãi Tuyệt Đối (MagSafe Snap Attachment & Instant Phone Stabilization)", "subject_action": "Góc cận cảnh tiếp nối nhịp thao tác: Hai bàn tay cô gái cầm chiếc iPhone màu trắng vỏ viền đỏ đưa sát vào vòng hít MagSafe của chiếc đế gắn kính. Điện thoại hít chặt vào đế trong một tích tắc không cần vặn ốc hay kẹp ngàm phức tạp. Màn hình iPhone lập tức sáng đèn ở chế độ quay video sẵn sàng tác nghiệp.", "pros": "Kỹ thuật hít nam châm MagSafe mang lại cảm giác công nghệ hiện đại, tiện lợi tối đa ('1-chạm'); việc thấy cả chiếc điện thoại được giữ lơ lửng trên kính kích thích sự tò mò của người xem về kết quả góc quay sẽ như thế nào.", "cons": "Góc quay cận hơi chật, ngón tay che một phần vòng khớp nối giữa đế hút và điện thoại.", "takeaway": "Khi quay video UGC đồ công nghệ, luôn nhấn mạnh tính năng 'One-Touch' (thao tác 1 chạm siêu nhanh) để kích hoạt tâm lý muốn sở hữu sự tiện lợi ngay lập tức của khách hàng.", "specs": {"lens": "40mm f/2.0 • OTS Handheld Close-Up", "location": "Mặt kính cửa sổ quán cà phê", "lighting": "Ánh sáng cửa sổ ban ngày", "transition": "Hard Cut cắt sang góc toàn cảnh cô gái di chuyển ở Shot 04"}, "st_time": 1.1, "en_time": 1.87, "duration": 0.77, "keyframe_start": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_03_start.jpg", "keyframe_mid": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_03_mid.jpg", "keyframe_end": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_03_end.jpg"}, {"id": 4, "st_frame": 56, "en_frame": 78, "headline": "Trung Cảnh Bước Chân Dạo Quán Chuẩn Bị Cho Góc Máy Thành Phẩm Điện Ảnh (Medium Tracking Walk & Staging Transition Anchor)", "subject_action": "Góc trung cảnh (Medium Shot) ghi lại cảnh cô gái sải bước dọc theo dãy ghế đệm dài cạnh cửa sổ, tay xách chiếc túi đan cói màu trắng be trang nhã. Cô vừa đi vừa ngoái nhìn nhẹ về phía chiếc máy quay đang gắn trên kính, chuẩn bị nhịp thở cho cú máy thành phẩm tiếp theo.", "pros": "Đóng vai trò là cảnh nối hậu trường (BTS Bridge), giúp người xem hiểu được khoảng cách từ chỗ gắn điện thoại đến vị trí nhân vật sẽ diễn xuất; trang phục blazer phối quần ống rộng tôn lên phong cách Parisian Chic thanh lịch.", "cons": "Chuyển động bước chân hơi vội do thời lượng ngắn (0.77s), phần chân dưới bị cắt khỏi khung hình ở những frame cuối.", "takeaway": "Chèn một phân cảnh hậu trường ngắn (BTS setup) ngay trước khi hiển thị kết quả thành phẩm là bí quyết cốt lõi để tạo hiệu ứng 'Trước & Sau' (Before & After) đầy thuyết phục.", "specs": {"lens": "28mm f/2.8 • Handheld Tracking Shot", "location": "Dọc lối đi cửa sổ tiệm cà phê", "lighting": "Ánh sáng cửa sổ chiếu nghiêng 45 độ", "transition": "Hard Cut chuyển thẳng vào cảnh quay thành phẩm từ điện thoại ở Shot 05"}, "st_time": 1.87, "en_time": 2.63, "duration": 0.76, "keyframe_start": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_04_start.jpg", "keyframe_mid": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_04_mid.jpg", "keyframe_end": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_04_end.jpg"}, {"id": 5, "st_frame": 79, "en_frame": 108, "headline": "Góc Quay Thành Phẩm Từ Cửa Kính Đưa Nhân Vật Vào Bố Cục Trung Tâm Tự Nhiên Như Phim (Window-Mounted Camera Output & Effortless Runway Elegance)", "subject_action": "Góc nhìn thực tế được ghi lại trực tiếp từ chiếc iPhone gắn trên cửa kính ở Shot 02-03. Nhân vật xuất hiện ở góc trung cận chính diện (Medium Close-Up): cô cầm ly cà phê giấy nóng trên tay trái, túi cói tay phải, bước tới trước ống kính rồi dừng lại tạo dáng tự nhiên, nở một ánh nhìn cuốn hút về phía máy quay. Phía sau là quầy bánh ngọt lung linh ánh đèn vàng ấm áp và bảng thực đơn chữ nổi.", "pros": "Thành phẩm góc quay tuyệt đẹp chứng minh sức mạnh của chiếc giá đỡ: góc máy ngang tầm ngực cực kỳ ổn định, không hề rung lắc, không ai nghĩ đây là video tự quay một mình; bảng màu gỗ nâu và đèn vàng quầy bánh tạo độ sâu trường ảnh điện ảnh (Cinematic Depth).", "cons": "Khoảng trần phía trên đầu hơi nhiều (Headroom hơi rộng), nếu hạ góc máy xuống 5 độ sẽ tạo tỷ lệ vàng hoàn hảo hơn cho tỷ lệ 9:16.", "takeaway": "Đây là công thức 'Bằng Chứng Thị Giác' (Visual Proof) tối thượng trong UGC: Phải cho khách hàng thấy ngay thước phim thành phẩm sắc nét, mượt mà được tạo ra từ chính công cụ vừa giới thiệu.", "specs": {"lens": "26mm (iPhone Main Camera) • Static Window POV", "location": "Không gian trung tâm quán cà phê", "lighting": "Đèn chùm quầy bánh kết hợp ánh sáng tự nhiên cửa sổ", "transition": "Hard Cut chuyển sang vị trí đặt máy thứ hai trên mặt bàn ở Shot 06"}, "st_time": 2.63, "en_time": 3.63, "duration": 1.0, "keyframe_start": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_05_start.jpg", "keyframe_mid": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_05_mid.jpg", "keyframe_end": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_05_end.jpg"}, {"id": 6, "st_frame": 109, "en_frame": 143, "headline": "Đặt Giá Đỡ Hút Xuống Mặt Bàn Gỗ Tròn Khám Phá Vị Trí Đặt Máy Độc Đáo Mới (Tabletop Mount Placement & Alternative Angle Exploration)", "subject_action": "Góc toàn trung (Medium Long Shot) nhìn từ xa: Cô gái cúi người đặt chiếc giá đỡ hút chân không lên chiếc bàn gỗ tròn nhỏ kê sát ghế đệm. Cô khéo léo chọn góc nhìn hướng thẳng về phía quầy thu ngân và kệ bánh nướng phía xa. Chiếc áo blazer xám buông rủ tạo phom dáng thời thượng.", "pros": "Thể hiện tính đa năng của sản phẩm: không chỉ hít được trên kính đứng mà còn đứng vững như một mini tripod trên mặt bàn gỗ nhẵn; bố cục đường dẫn từ dãy ghế hướng thẳng về quầy bánh trung tâm tạo cảm giác không gian đa chiều.", "cons": "Góc quay hậu trường đặt hơi xa khiến bàn tay thao tác trên mặt bàn bị lưng của nhân vật che khuất một phần trong 10 frames đầu.", "takeaway": "Hãy cho khách hàng thấy nhiều tình huống sử dụng khác nhau của cùng một sản phẩm (hút kính, để bàn, gắn tường) để tối đa hóa giá trị cảm nhận (Perceived Value).", "specs": {"lens": "28mm f/2.4 • Eye-Level Third-Person View", "location": "Khu vực bàn cafe nhỏ cạnh cửa sổ", "lighting": "Ánh sáng tự nhiên pha đèn trần 3500K", "transition": "Match Cut vào cận cảnh gắn điện thoại trên bàn ở Shot 07"}, "st_time": 3.63, "en_time": 4.8, "duration": 1.17, "keyframe_start": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_06_start.jpg", "keyframe_mid": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_06_mid.jpg", "keyframe_end": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_06_end.jpg"}, {"id": 7, "st_frame": 144, "en_frame": 169, "headline": "Cận Cảnh Gắn Điện Thoại Dọc Trên Bàn Giữ Vững Khung Hình Bằng Lực Hút Chắc Chắn (Tabletop Phone Mount Lock & Secure Stabilization Macro)", "subject_action": "Góc cận cảnh (Close-Up) từ phía sau: Bàn tay cô gái với chiếc nhẫn bạc tinh tế đặt chiếc iPhone lên chiếc giá đỡ đang đứng vững trên mặt bàn gỗ. Màn hình iPhone hiển thị giao diện camera dọc, khóa nét vào khung cảnh quầy thu ngân và lối đi chính của quán.", "pros": "Góc máy cận đặc tả độ vững chắc của chiếc đế: điện thoại đứng thẳng tắp 90 độ mà không hề bị lật hay nghiêng ngả; chi tiết đồ họa giao diện camera iPhone tạo cảm giác chân thực của một creator đang tác nghiệp thực tế.", "cons": "Khung hình hơi thiếu ánh sáng trực diện vào mặt sau của điện thoại khiến chi tiết logo hơi tối.", "takeaway": "Khi quay cảnh hậu trường setup máy, việc quay được màn hình điện thoại đang ở chế độ xem trước (Camera Live View) giúp tăng 200% độ uy tín và tính xác thực cho thước phim.", "specs": {"lens": "45mm f/2.0 • Over-The-Shoulder Table Macro", "location": "Mặt bàn gỗ tròn tiệm cà phê", "lighting": "Ánh sáng tán xạ gián tiếp", "transition": "Hard Cut lùi máy ra xa để xem góc quay bao quát ở Shot 08"}, "st_time": 4.8, "en_time": 5.67, "duration": 0.87, "keyframe_start": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_07_start.jpg", "keyframe_mid": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_07_mid.jpg", "keyframe_end": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_07_end.jpg"}, {"id": 8, "st_frame": 170, "en_frame": 194, "headline": "Góc Máy Phía Sau Khung Hình Điện Thoại Tái Hiện Cảm Giác Cameraman Ẩn Danh (Over-The-Screen Third Person Perspective & Anonymous Cameraman Vibe)", "subject_action": "Góc máy trung cận đặt ngay sau chiếc điện thoại trên bàn. Khung hình iPhone chiếm vị trí trung tâm tiền cảnh, bên trong màn hình hiển thị toàn bộ không gian quầy bánh với các khay bánh mì baguette, bánh sừng bò vàng ruộm. Phía xa ngoài đời thực, cô gái bắt đầu bước vào khung hình để gọi món.", "pros": "Bố cục lồng khung (Frame-in-Frame) đỉnh cao: màn hình điện thoại nhỏ nằm gọn gàng bên trong khung hình video lớn, tạo sự tương phản thú vị giữa 'cảnh đang được quay' và 'cảnh thực tế bên ngoài'.", "cons": "Vùng tối xung quanh thân máy điện thoại hơi bị bệt do camera ngoài lấy nét vào màn hình sáng.", "takeaway": "Bố cục lồng khung hình điện thoại (Phone-in-Phone composition) là tuyệt chiêu thu hút mắt nhìn hiệu quả nhất để chứng minh quy trình làm video độc lập.", "specs": {"lens": "35mm f/2.2 • Frame-in-Frame Perspective", "location": "Bàn cafe nhìn ra quầy bánh", "lighting": "Độ tương phản cao giữa màn hình điện thoại và ánh sáng quán", "transition": "Hard Cut cắt thẳng vào thành phẩm cảnh quay tại quầy bánh ở Shot 09"}, "st_time": 5.67, "en_time": 6.5, "duration": 0.83, "keyframe_start": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_08_start.jpg", "keyframe_mid": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_08_mid.jpg", "keyframe_end": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_08_end.jpg"}, {"id": 9, "st_frame": 195, "en_frame": 240, "headline": "Thước Phim Thành Phẩm Dạo Bước Bên Tủ Bánh Tái Hiện Phong Cách B-Roll Ẩm Thực Tự Nhiên (Bakery Showcase Finished Footage & Cinematic Food Tour B-Roll)", "subject_action": "Thước phim thành phẩm tuyệt mỹ được ghi lại từ chiếc điện thoại đặt trên bàn ở Shot 07-08. Góc quay ngang tầm eo hướng lên (Low-to-Mid Angle) bao trọn vẻ đẹp hoành tráng của tủ bánh nướng với hàng chục loại bánh pastry, pretzel treo trên móc gỗ. Cô gái thong thả sải bước ngang qua quầy bánh, tay xách túi cói, mắt ngắm nghía từng món bánh thơm ngon như một thước phim quảng cáo du lịch Châu Âu.", "pros": "Góc máy cực kỳ ổn định, tôn lên toàn bộ không gian kiến trúc nội thất lộng lẫy của tiệm bánh; sự kết hợp giữa ánh đèn vàng ấm, các loại bánh nướng màu hổ phách và dáng vẻ thư thái của nhân vật tạo nên xúc cảm thị giác ấm áp, ngon mắt (Appetizing Aesthetic).", "cons": "Nhân vật đi hơi xa tâm máy quay khiến nét mặt không được thể hiện chi tiết bằng Shot 05.", "takeaway": "Đặt camera ở góc thấp nhìn lên (Low-Angle) khi quay trong không gian có trần cao hoặc tủ đồ trang trí đẹp sẽ làm cho khung cảnh trở nên nguy nga, điện ảnh hơn rất nhiều so với góc nhìn ngang tầm mắt thông thường.", "specs": {"lens": "26mm (iPhone Main Camera) • Static Low-Angle Counter View", "location": "Quầy bánh ngọt & Thu ngân tiệm cà phê", "lighting": "Hệ thống đèn vàng trưng bày bánh 3000K ấm áp", "transition": "Hard Cut chuyển sang vị trí đặt máy thứ ba trên cửa kính ở Shot 10"}, "st_time": 6.5, "en_time": 8.03, "duration": 1.53, "keyframe_start": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_09_start.jpg", "keyframe_mid": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_09_mid.jpg", "keyframe_end": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_09_end.jpg"}, {"id": 10, "st_frame": 241, "en_frame": 266, "headline": "Bố Cục Chéo Hướng Về Khung Kính Góc Cao Thao Tác Chạm Bật Ghi Hình Thần Thái (High Window Suction Angle & Casual Hand Tap Trigger)", "subject_action": "Góc máy từ góc phòng nhìn chéo về phía dãy cửa sổ lớn. Cô gái ngồi trên đệm bọc da màu xanh xám, một tay giơ cao lên góc trên mép kính cửa sổ để bấm quay chiếc điện thoại đang được gắn ở vị trí trên cao chúc xuống. Dưới bàn là ly cà phê nóng sẵn sàng cho buổi trò chuyện hoặc thư giãn.", "pros": "Khám phá thêm một góc máy 'High-Angle POV' độc đáo mà chỉ có giác hút chân không mới làm được (gắn trên cao mà chân tripod không thể vươn tới); tư thế ngồi tự nhiên, biểu cảm thoải mái xóa tan định kiến quay video là phải gồng mình.", "cons": "Góc máy hậu trường hơi bị ngược sáng do quay thẳng về phía cửa sổ mưa lớn.", "takeaway": "Tận dụng triệt để các mặt phẳng thẳng đứng trên cao (cửa kính, cột trụ, tủ gương) để tạo ra góc máy nhìn từ trên xuống (High Downward Angle), mang lại sự mới lạ hoàn toàn cho video selfie routine.", "specs": {"lens": "30mm f/2.4 • Diagonal Room Angle", "location": "Góc ngồi thưởng thức cafe cạnh cửa sổ", "lighting": "Ngược sáng tự nhiên từ cửa kính lớn", "transition": "Hard Cut cắt thẳng vào thành phẩm góc selfie ngồi thưởng thức cafe ở Shot 11"}, "st_time": 8.03, "en_time": 8.9, "duration": 0.87, "keyframe_start": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_10_start.jpg", "keyframe_mid": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_10_mid.jpg", "keyframe_end": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_10_end.jpg"}, {"id": 11, "st_frame": 267, "en_frame": 295, "headline": "Góc Selfie Từ Trên Cao Xuống Đầy Thơ Mộng Bắt Trọn Nụ Cười Thư Thái Bên Tách Cà Phê (High-Angle Cozy Coffee Sip & Warm Magnetic Connection)", "subject_action": "Thước phim thành phẩm thu được từ chiếc điện thoại gắn trên kính cao ở Shot 10. Góc quay từ trên cao chúc xuống 45 độ (High-Angle Close Shot) bắt trọn khuôn mặt rạng rỡ, xinh đẹp của Anastasiia. Cô hơi nghiêng đầu, tay nâng ly cà phê giấy nóng, mỉm cười nhẹ nhàng và tự nhiên trước ống kính. Ánh sáng xiên dịu làm nổi bật làn da mịn màng và ánh mắt lấp lánh đầy tự tin.", "pros": "Góc máy từ trên cao chúc xuống giúp khuôn mặt trông thon gọn, tôn sống mũi và đôi mắt (Flattering Beauty Angle); biểu cảm thư giãn, không hề có nét ngượng ngùng chứng minh thông điệp 'sự e thẹn sẽ biến mất 100% khi có phụ kiện trợ thủ đắc lực'.", "cons": "Ly cà phê giấy che mất một phần cằm của nhân vật trong một số frames giữa.", "takeaway": "Góc quay từ trên cao nhìn xuống (High Down-Angle) là góc quay nịnh mặt nhất cho các cảnh thưởng thức đồ uống hoặc trò chuyện tâm tình; hãy luôn có ít nhất một shot góc này trong các vlog cá nhân.", "specs": {"lens": "26mm (iPhone Main Camera) • High-Angle 45° Downward View", "location": "Bàn cafe cạnh cửa sổ mưa", "lighting": "Ánh sáng mềm tán xạ tự nhiên ban ngày", "transition": "Hard Cut chuyển sang cận cảnh cầm sản phẩm trên tay ở Shot 12"}, "st_time": 8.9, "en_time": 9.87, "duration": 0.97, "keyframe_start": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_11_start.jpg", "keyframe_mid": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_11_mid.jpg", "keyframe_end": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_11_end.jpg"}, {"id": 12, "st_frame": 296, "en_frame": 317, "headline": "Macro Xoay Tròn Chiếc Giá Đỡ Chân Không Nhỏ Gọn Trong Lòng Bàn Tay Nhấn Mạnh Bản Quyền AYRO (AYRO Compact Vacuum Mount Macro Showcase & MagSafe Ring Detail)", "subject_action": "Góc quay cận cảnh tuyệt đối (Macro Extreme Close-Up) trên nền không gian tiệm cafe ấm áp. Bàn tay thon thả của cô gái với những chiếc nhẫn ngọc trai và hoa bạc tinh xảo cầm chiếc giá đỡ hút chân không mini màu đen, xoay nhẹ giữa các ngón tay để khoe trọn thiết kế hình nón công thái học, bề mặt giác hút cao su đen mờ phía dưới và vòng hít nam châm MagSafe in logo AYRO sắc nét ở mặt trên.", "pros": "Phô diễn trọn vẹn chi tiết hoàn thiện cao cấp và kích thước siêu nhỏ gọn (nằm gọn trong lòng bàn tay) của sản phẩm; đây là điểm rơi hoàn hảo để chốt chuyển đổi bán hàng (Conversion Trigger) sau khi đã chứng minh công năng ở 11 shot trước đó.", "cons": "Vòng xoay tay hơi nhanh (0.73s) khiến logo AYRO chỉ hiển thị rõ ràng trong khoảng 10 frames.", "takeaway": "Đừng giới thiệu sản phẩm ngay từ đầu; hãy để sản phẩm xuất hiện ở cuối video như một 'người hùng thầm lặng' đã tạo nên tất cả những thước phim lung linh vừa xem.", "specs": {"lens": "60mm Macro f/2.8 • Handheld Product Showcase", "location": "Trước ngực nhân vật tại bàn cafe", "lighting": "Ánh sáng ven viền làm nổi bật chất liệu hợp kim và cao su", "transition": "Match Cut theo chuyển động thả đồ vào túi xách ở Shot 13"}, "st_time": 9.87, "en_time": 10.6, "duration": 0.73, "keyframe_start": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_12_start.jpg", "keyframe_mid": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_12_mid.jpg", "keyframe_end": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_12_end.jpg"}, {"id": 13, "st_frame": 318, "en_frame": 340, "headline": "Thả Nhẹ Phụ Kiện Vào Giỏ Túi Xách Chốt Hạ Tính Di Động Tối Thượng Cho Mọi Chuyến Đi (Effortless Basket Bag Pack-Up & Ultimate Portability Call-To-Action)", "subject_action": "Góc máy từ trên nhìn xuống đùi của cô gái diện quần vải dệt kim mềm mại. Bàn tay cô nhẹ nhàng thả chiếc giá đỡ AYRO mini rơi gọn gàng vào trong chiếc túi xách đan cói vintage. Chiếc túi nhỏ bé chỉ vừa đủ đựng son môi và ví tiền nay chứa vừa vặn chiếc giá đỡ thay thế hoàn toàn chiếc chân máy tripod cồng kềnh. Khung hình khép lại nhẹ nhàng, hoàn tất chuỗi hành trình trải nghiệm một ngày đi cafe sáng tạo một mình.", "pros": "Hành động thả vào túi xách mang tính ẩn dụ đắt giá: 'gói gọn cả một studio quay phim vào chiếc túi xách nhỏ xíu'; thỏa mãn trọn vẹn mong muốn của phái đẹp về một thiết bị quay phim không cồng kềnh, không gây chú ý.", "cons": "Phần miệng túi hơi tối, cần một chút ánh sáng hắt nhẹ vào trong túi để thấy rõ chiếc giá đỡ nằm êm ái bên trong.", "takeaway": "Kết thúc video bán phụ kiện quay phim bằng hành động cất gọn vào túi xách/balo là cú chốt hạ tâm lý mua hàng (Buying Decision Closer) cực mạnh, xóa bỏ rào cản 'lười mang vác' của khách hàng.", "specs": {"lens": "35mm f/2.0 • Top-Down Bag Pack-Up Angle", "location": "Trên đùi nhân vật tại quán cafe", "lighting": "Ánh sáng phòng tự nhiên dịu nhẹ", "transition": "Hard Cut / Loop nối mượt mà về Shot 01"}, "st_time": 10.6, "en_time": 11.37, "duration": 0.77, "keyframe_start": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_13_start.jpg", "keyframe_mid": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_13_mid.jpg", "keyframe_end": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_13_end.jpg"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ct.toFixed(2) + 's / ' + (player.duration ? player.duration.toFixed(2) : '11.37') + 's';
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 30.0 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById('shot-' + shotId);
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

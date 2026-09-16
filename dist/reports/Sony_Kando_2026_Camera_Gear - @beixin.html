@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Sony Kando 2026: Thao Lược Ống Kính &amp; Nghệ Thuật Thị Giác • @beixin Director Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+--bg-main: #0a0d14;
+--bg-card: #121824;
+--bg-card-hover: #1a2232;
+--bg-sidebar: #0e1420;
+--border-color: #1e293b;
+--border-active: #38bdf8;
+--text-primary: #f8fafc;
+--text-secondary: #94a3b8;
+--text-muted: #64748b;
+--accent-amber: #f59e0b;
+--accent-blue: #38bdf8;
+--accent-emerald: #10b981;
+--accent-rose: #f43f5e;
+--accent-purple: #c084fc;
+--font-heading: 'Plus Jakarta Sans', sans-serif;
+--font-body: 'Be Vietnam Pro', sans-serif;
+--font-mono: 'JetBrains Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+background-color: var(--bg-main);
+color: var(--text-primary);
+font-family: var(--font-body);
+line-height: 1.6;
+font-size: 14px;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+.top-nav {
+background: rgba(14, 20, 32, 0.95);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid var(--border-color);
+padding: 10px 16px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+.nav-brand {
+display: flex;
+align-items: center;
+gap: 8px;
+font-family: var(--font-heading);
+font-weight: 700;
+font-size: 14px;
+color: var(--text-primary);
+text-decoration: none;
+}
+.nav-badge {
+background: rgba(56, 189, 248, 0.15);
+color: var(--accent-blue);
+padding: 2px 7px;
+border-radius: 4px;
+font-size: 10.5px;
+font-weight: 700;
+border: 1px solid rgba(56, 189, 248, 0.3);
+}
+.nav-actions {
+display: flex;
+align-items: center;
+gap: 8px;
+}
+.nav-btn {
+background: var(--bg-card);
+color: var(--text-secondary);
+border: 1px solid var(--border-color);
+padding: 5px 10px;
+border-radius: 6px;
+font-size: 12px;
+font-weight: 600;
+cursor: pointer;
+text-decoration: none;
+transition: all 0.2s;
+}
+.nav-btn:hover {
+color: #fff;
+border-color: var(--accent-blue);
+}
+/* Main Layout */
+.main-wrapper {
+display: flex;
+flex: 1;
+width: 100%;
+max-width: 1600px;
+margin: 0 auto;
+}
+/* Left Sticky Video Column */
+.player-column {
+width: 420px;
+flex-shrink: 0;
+padding: 20px 16px;
+position: sticky;
+top: 49px;
+height: calc(100vh - 49px);
+overflow-y: auto;
+display: flex;
+flex-direction: column;
+gap: 12px;
+border-right: 1px solid var(--border-color);
+background: var(--bg-sidebar);
+}
+.video-frame-box {
+background: #000;
+border-radius: 12px;
+overflow: hidden;
+border: 1px solid var(--border-color);
+box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+aspect-ratio: 4 / 3;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.video-frame-box video {
+width: 100%;
+height: 100%;
+object-fit: contain;
+background: #000;
+}
+.player-controls {
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+border-radius: 10px;
+padding: 10px 12px;
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+.player-status-tag {
+font-size: 11.5px;
+font-family: var(--font-mono);
+color: var(--accent-blue);
+font-weight: 600;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.ctrl-row {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 6px;
+flex-wrap: wrap;
+}
+.ctrl-btn {
+background: var(--bg-main);
+border: 1px solid var(--border-color);
+color: var(--text-primary);
+padding: 4px 8px;
+border-radius: 5px;
+font-size: 11.5px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.15s;
+}
+.ctrl-btn:hover {
+border-color: var(--accent-blue);
+color: var(--accent-blue);
+}
+.speed-pills {
+display: flex;
+gap: 4px;
+}
+.speed-pill {
+background: var(--bg-main);
+border: 1px solid var(--border-color);
+color: var(--text-secondary);
+padding: 3px 6px;
+border-radius: 4px;
+font-size: 10.5px;
+cursor: pointer;
+font-family: var(--font-mono);
+}
+.speed-pill.active {
+background: var(--accent-blue);
+color: #0b0f17;
+font-weight: 700;
+border-color: var(--accent-blue);
+}
+/* Slide Carousel Navigator Pills */
+.slide-picker-wrap {
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+border-radius: 10px;
+padding: 8px 10px;
+}
+.slide-picker-label {
+font-size: 11px;
+font-weight: 700;
+color: var(--text-muted);
+text-transform: uppercase;
+letter-spacing: 0.5px;
+margin-bottom: 6px;
+}
+.slide-pills-row {
+display: flex;
+gap: 5px;
+overflow-x: auto;
+padding-bottom: 2px;
+}
+.slide-pill-btn {
+background: var(--bg-main);
+border: 1px solid var(--border-color);
+color: var(--text-secondary);
+padding: 3px 8px;
+border-radius: 5px;
+font-size: 11px;
+cursor: pointer;
+white-space: nowrap;
+font-family: var(--font-mono);
+transition: all 0.15s;
+}
+.slide-pill-btn:hover, .slide-pill-btn.active {
+background: var(--accent-amber);
+color: #0b0f17;
+font-weight: 700;
+border-color: var(--accent-amber);
+}
+/* Right Content Column */
+.content-column {
+flex: 1;
+padding: 20px 24px 40px;
+min-width: 0;
+}
+/* Header Banner */
+.report-header {
+margin-bottom: 20px;
+}
+.meta-tags-flex {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+gap: 8px;
+margin-bottom: 10px;
+}
+.author-ig-badge {
+background: rgba(244, 63, 94, 0.12);
+color: #fb7185;
+border: 1px solid rgba(244, 63, 94, 0.3);
+padding: 4px 10px;
+border-radius: 6px;
+font-size: 12px;
+font-weight: 700;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+gap: 4px;
+transition: all 0.2s;
+}
+.author-ig-badge:hover {
+background: rgba(244, 63, 94, 0.25);
+color: #fff;
+}
+.stat-pill {
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+color: var(--text-secondary);
+padding: 3px 8px;
+border-radius: 5px;
+font-size: 11.5px;
+font-family: var(--font-mono);
+}
+.stat-pill strong { color: #fff; }
+.report-title {
+font-family: var(--font-heading);
+font-size: 22px;
+font-weight: 800;
+line-height: 1.35;
+margin-bottom: 12px;
+color: var(--text-primary);
+}
+.report-summary {
+color: var(--text-secondary);
+font-size: 13.5px;
+line-height: 1.7;
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+border-left: 4px solid var(--accent-amber);
+padding: 14px 16px;
+border-radius: 8px;
+margin-bottom: 20px;
+}
+/* View Mode Switcher */
+.view-switch-bar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+border-radius: 10px;
+padding: 6px 10px;
+margin-bottom: 20px;
+}
+.tab-pills {
+display: flex;
+gap: 6px;
+}
+.tab-btn {
+background: transparent;
+border: 1px solid transparent;
+color: var(--text-secondary);
+padding: 6px 12px;
+border-radius: 6px;
+font-size: 12.5px;
+font-weight: 600;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+gap: 6px;
+transition: all 0.15s;
+}
+.tab-btn.active {
+background: var(--bg-sidebar);
+border-color: var(--border-color);
+color: var(--accent-blue);
+}
+.drawer-toggle-btn {
+background: var(--bg-sidebar);
+border: 1px solid var(--border-color);
+color: var(--text-secondary);
+padding: 6px 12px;
+border-radius: 6px;
+font-size: 12.5px;
+font-weight: 600;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+gap: 6px;
+}
+.drawer-toggle-btn:hover {
+color: #fff;
+border-color: var(--accent-blue);
+}
+/* Shot Cards (Detail View) */
+.shots-timeline {
+display: flex;
+flex-direction: column;
+gap: 24px;
+}
+.shot-card {
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+border-radius: 14px;
+padding: 18px;
+transition: all 0.2s ease;
+scroll-margin-top: 70px;
+}
+.shot-card:hover, .shot-card.active-playing {
+border-color: rgba(56, 189, 248, 0.5);
+box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+}
+.shot-card-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 12px;
+padding-bottom: 10px;
+border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.shot-header-left {
+display: flex;
+align-items: center;
+gap: 8px;
+}
+.shot-index-badge {
+background: var(--accent-blue);
+color: #0b0f17;
+font-weight: 800;
+font-size: 11.5px;
+padding: 3px 8px;
+border-radius: 5px;
+font-family: var(--font-mono);
+}
+.time-jump-btn {
+background: rgba(56, 189, 248, 0.12);
+border: 1px solid rgba(56, 189, 248, 0.25);
+color: var(--accent-blue);
+padding: 3px 8px;
+border-radius: 5px;
+font-size: 11.5px;
+font-family: var(--font-mono);
+font-weight: 600;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+gap: 4px;
+transition: all 0.15s;
+}
+.time-jump-btn:hover {
+background: var(--accent-blue);
+color: #0b0f17;
+}
+.dur-pill {
+opacity: 0.8;
+font-weight: 400;
+}
+.tech-tag {
+background: var(--bg-main);
+border: 1px solid var(--border-color);
+color: var(--text-secondary);
+padding: 3px 8px;
+border-radius: 4px;
+font-size: 11px;
+font-family: var(--font-mono);
+}
+.shot-headline-box {
+margin-bottom: 14px;
+}
+.shot-headline-title {
+font-family: var(--font-heading);
+font-size: 15.5px;
+font-weight: 700;
+color: var(--text-primary);
+line-height: 1.45;
+}
+/* Keyframes Grid (3 items) */
+.keyframes-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 8px;
+margin-bottom: 14px;
+}
+.keyframe-item {
+cursor: pointer;
+border-radius: 8px;
+overflow: hidden;
+position: relative;
+border: 1px solid var(--border-color);
+background: #000;
+aspect-ratio: 4 / 3;
+}
+.keyframe-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+transition: transform 0.25s ease;
+}
+.keyframe-item:hover img {
+transform: scale(1.03);
+}
+.kf-badge {
+position: absolute;
+bottom: 5px;
+left: 5px;
+background: rgba(0,0,0,0.75);
+backdrop-filter: blur(4px);
+color: #fff;
+padding: 2px 5px;
+border-radius: 4px;
+font-size: 9.5px;
+font-family: var(--font-mono);
+font-weight: 600;
+}
+.kf-badge.start { border-left: 3px solid var(--accent-blue); }
+.kf-badge.mid { border-left: 3px solid var(--accent-amber); }
+.kf-badge.end { border-left: 3px solid var(--accent-emerald); }
+/* Transition Preview Box */
+.trans-preview-box {
+background: rgba(14, 20, 32, 0.5);
+border: 1px dashed var(--border-color);
+border-radius: 8px;
+padding: 8px 10px;
+margin-bottom: 14px;
+}
+.trans-title {
+font-size: 11px;
+font-family: var(--font-mono);
+color: var(--accent-amber);
+margin-bottom: 6px;
+font-weight: 600;
+}
+.trans-img-wrap {
+position: relative;
+border-radius: 6px;
+overflow: hidden;
+cursor: pointer;
+border: 1px solid var(--border-color);
+aspect-ratio: 8 / 3;
+}
+.trans-img-wrap img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+/* Analysis Blocks Grid */
+.analysis-blocks-grid {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.critique-block {
+background: rgba(14, 20, 32, 0.6);
+border: 1px solid var(--border-color);
+border-radius: 8px;
+padding: 12px 14px;
+}
+.block-title {
+font-family: var(--font-heading);
+font-weight: 700;
+font-size: 12.5px;
+color: var(--text-primary);
+margin-bottom: 6px;
+}
+.block-content {
+font-size: 13px;
+color: #cbd5e1;
+line-height: 1.6;
+}
+.two-column-critique {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+}
+.critique-col {
+padding: 8px 10px;
+border-radius: 6px;
+font-size: 12.5px;
+line-height: 1.55;
+}
+.critique-col.pro {
+background: rgba(16, 185, 129, 0.08);
+border: 1px solid rgba(16, 185, 129, 0.2);
+color: #a7f3d0;
+}
+.critique-col.con {
+background: rgba(244, 63, 94, 0.08);
+border: 1px solid rgba(244, 63, 94, 0.2);
+color: #fecdd3;
+}
+.col-header {
+font-weight: 700;
+margin-bottom: 4px;
+font-size: 11.5px;
+}
+.critique-col.pro .col-header { color: var(--accent-emerald); }
+.critique-col.con .col-header { color: var(--accent-rose); }
+.takeaway-block {
+background: rgba(245, 158, 11, 0.08);
+border: 1px solid rgba(245, 158, 11, 0.25);
+border-left: 3px solid var(--accent-amber);
+border-radius: 6px;
+padding: 10px 12px;
+}
+.takeaway-title {
+font-weight: 700;
+color: var(--accent-amber);
+font-size: 12px;
+margin-bottom: 3px;
+}
+.takeaway-text {
+font-size: 13px;
+color: #fde68a;
+line-height: 1.55;
+}
+.specs-pill-row {
+display: flex;
+flex-wrap: wrap;
+gap: 6px;
+margin-top: 4px;
+}
+.spec-pill {
+background: var(--bg-main);
+border: 1px solid var(--border-color);
+color: var(--text-secondary);
+padding: 2px 7px;
+border-radius: 4px;
+font-size: 11px;
+font-family: var(--font-mono);
+}
+/* Grid View */
+.grid-container {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 16px;
+}
+.grid-shot-card {
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+border-radius: 10px;
+overflow: hidden;
+cursor: pointer;
+transition: all 0.2s;
+}
+.grid-shot-card:hover {
+border-color: var(--accent-blue);
+transform: translateY(-2px);
+}
+.grid-img-wrap {
+position: relative;
+aspect-ratio: 4 / 3;
+background: #000;
+}
+.grid-img-wrap img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.grid-idx {
+position: absolute;
+top: 6px;
+left: 6px;
+background: var(--accent-blue);
+color: #0b0f17;
+font-weight: 800;
+font-size: 10.5px;
+padding: 2px 5px;
+border-radius: 4px;
+font-family: var(--font-mono);
+}
+.grid-dur {
+position: absolute;
+bottom: 6px;
+right: 6px;
+background: rgba(0,0,0,0.75);
+color: #fff;
+font-size: 10px;
+padding: 2px 5px;
+border-radius: 4px;
+font-family: var(--font-mono);
+}
+.grid-card-body {
+padding: 10px 12px;
+}
+.grid-gear-tag {
+font-size: 10.5px;
+color: var(--accent-amber);
+font-family: var(--font-mono);
+margin-bottom: 4px;
+}
+.grid-headline {
+font-size: 12.5px;
+font-weight: 700;
+color: #fff;
+line-height: 1.4;
+margin-bottom: 8px;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+overflow: hidden;
+}
+.grid-footer {
+display: flex;
+justify-content: flex-end;
+}
+.grid-play-btn {
+background: rgba(56, 189, 248, 0.12);
+border: 1px solid rgba(56, 189, 248, 0.3);
+color: var(--accent-blue);
+padding: 3px 8px;
+border-radius: 4px;
+font-size: 11px;
+cursor: pointer;
+font-weight: 600;
+}
+/* Drawer Menu */
+.drawer-backdrop {
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.7);
+backdrop-filter: blur(4px);
+z-index: 200;
+display: none;
+}
+.drawer-panel {
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+width: 380px;
+max-width: 85vw;
+background: var(--bg-sidebar);
+border-left: 1px solid var(--border-color);
+display: flex;
+flex-direction: column;
+z-index: 201;
+}
+.drawer-header {
+padding: 14px 16px;
+border-bottom: 1px solid var(--border-color);
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.drawer-title {
+font-family: var(--font-heading);
+font-weight: 700;
+font-size: 14px;
+color: #fff;
+}
+.drawer-close-btn {
+background: none;
+border: none;
+color: var(--text-muted);
+font-size: 20px;
+cursor: pointer;
+}
+.drawer-list {
+flex: 1;
+overflow-y: auto;
+padding: 10px;
+display: flex;
+flex-direction: column;
+gap: 6px;
+}
+.drawer-item {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+padding: 8px 10px;
+border-radius: 6px;
+cursor: pointer;
+transition: all 0.15s;
+}
+.drawer-item:hover {
+border-color: var(--accent-blue);
+}
+.drawer-item-left {
+display: flex;
+align-items: center;
+gap: 8px;
+min-width: 0;
+}
+.drawer-idx {
+background: var(--bg-main);
+color: var(--accent-blue);
+font-weight: 700;
+font-size: 11px;
+padding: 2px 5px;
+border-radius: 3px;
+font-family: var(--font-mono);
+}
+.drawer-meta {
+min-width: 0;
+}
+.drawer-name {
+font-size: 12px;
+font-weight: 600;
+color: #fff;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.drawer-sub {
+font-size: 10.5px;
+color: var(--text-muted);
+font-family: var(--font-mono);
+}
+.drawer-play-btn {
+background: none;
+border: 1px solid var(--border-color);
+color: var(--accent-blue);
+padding: 3px 6px;
+border-radius: 4px;
+font-size: 11px;
+cursor: pointer;
+}
+/* Lightbox Modal */
+#lightboxModal {
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.92);
+backdrop-filter: blur(8px);
+z-index: 300;
+display: none;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+padding: 20px;
+}
+#lightboxImg {
+max-width: 90vw;
+max-height: 80vh;
+border-radius: 8px;
+box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+border: 1px solid var(--border-color);
+}
+#lightboxCaption {
+color: #cbd5e1;
+font-size: 13px;
+margin-top: 12px;
+text-align: center;
+font-family: var(--font-heading);
+}
+.lightbox-close {
+position: absolute;
+top: 16px;
+right: 20px;
+color: #fff;
+font-size: 28px;
+cursor: pointer;
+}
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+.main-wrapper {
+flex-direction: column;
+}
+.player-column {
+width: 100%;
+height: auto;
+position: sticky;
+top: 49px;
+z-index: 90;
+border-right: none;
+border-bottom: 1px solid var(--border-color);
+padding: 12px 16px;
+}
+.video-frame-box {
+max-height: 380px;
+}
+.content-column {
+padding: 16px;
+}
+.two-column-critique {
+grid-template-columns: 1fr;
+}
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+<header class="top-nav">
+<a href="https://fedu.vn/scene.html" class="nav-brand">
+<span class="nav-badge">VIDEO DIRECTOR</span>
+<span>AI Scene Analysis</span>
+</a>
+<div class="nav-actions">
+<a href="https://fedu.vn/scene.html" class="nav-btn">🌐 Cổng Phân Cảnh</a>
+<a href="https://www.instagram.com/p/Dc0zzrWj8Vu/" target="_blank" class="nav-btn" style="color:var(--accent-rose); border-color:rgba(244,63,94,0.4);">📸 Bài Đăng Instagram ↗</a>
+</div>
+</header>
+<main class="main-wrapper">
+<!-- Left Sticky Video Column -->
+<aside class="player-column">
+<div class="video-frame-box">
+<video id="mainPlayer" controls playsinline preload="auto">
+<source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dc0zzrWj8Vu.mp4" type="video/mp4">
+Trình duyệt không hỗ trợ thẻ video HTML5.
+</video>
+</div>
+<div class="player-controls">
+<div class="player-status-tag" id="shotStatusTag">🎬 Master Reel: Toàn Bộ 7 Phân Cảnh (34.52s)</div>
+<div class="ctrl-row">
+<div class="speed-pills">
+<button class="speed-pill" onclick="setSpeed(0.25, this)">0.25x</button>
+<button class="speed-pill" onclick="setSpeed(0.5, this)">0.5x</button>
+<button class="speed-pill active" onclick="setSpeed(1.0, this)">1.0x</button>
+<button class="speed-pill" onclick="setSpeed(1.5, this)">1.5x</button>
+<button class="speed-pill" onclick="setSpeed(2.0, this)">2.0x</button>
+</div>
+<div style="display:flex; gap:4px;">
+<button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+<button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+<button class="ctrl-btn" id="muteBtn" onclick="toggleMute()">🔊 Tiếng</button>
+<button class="ctrl-btn" id="loopBtn" onclick="toggleLoop()">🔁 Loop</button>
+</div>
+</div>
+</div>
+<div class="slide-picker-wrap">
+<div class="slide-picker-label">🎞️ CHỌN NHANH SLIDE / PHÂN ĐOẠN:</div>
+<div class="slide-pills-row">
+<button class="slide-pill-btn active" onclick="playShot(0.0, 34.52, 'Master Reel')">Tất Cả (Master)</button>
+<button class="slide-pill-btn" onclick="playShot(0.0, 2.62, 'Shot #01')">#01 Intro</button>
+<button class="slide-pill-btn" onclick="playShot(2.62, 7.84, 'Shot #02')">#02 Lọng Cung</button>
+<button class="slide-pill-btn" onclick="playShot(7.84, 12.91, 'Shot #03')">#03 Múa Lân</button>
+<button class="slide-pill-btn" onclick="playShot(12.91, 17.28, 'Shot #04')">#04 Cá Koi</button>
+<button class="slide-pill-btn" onclick="playShot(17.28, 22.25, 'Shot #05')">#05 Áo Dài</button>
+<button class="slide-pill-btn" onclick="playShot(22.25, 29.55, 'Shot #06')">#06 Xe Drift</button>
+<button class="slide-pill-btn" onclick="playShot(29.55, 34.52, 'Shot #07')">#07 Cổ Phục</button>
+</div>
+</div>
+</aside>
+<!-- Right Content Column -->
+<section class="content-column">
+<div class="report-header">
+<div class="meta-tags-flex">
+<a href="https://www.instagram.com/p/Dc0zzrWj8Vu/" target="_blank" class="author-ig-badge">📸 @beixin (Instagram Gốc ↗)</a>
+<span class="stat-pill">Mã: <strong>Dc0zzrWj8Vu</strong></span>
+<span class="stat-pill">Thời lượng: <strong>34.52s</strong> (7 Slides)</span>
+<span class="stat-pill">Thiết bị: <strong>Sony A1 II &bull; Sony FX5</strong></span>
+<span class="stat-pill">Ống kính: <strong>FE 28-70mm F2 GM &bull; FE 16-35mm F2.8 &bull; FE 70-200mm F2.8</strong></span>
+</div>
+<h1 class="report-title">Sony Kando 2026 Trip: Thao Lược Ống Kính &amp; Nghệ Thuật Kể Chuyện Thị Giác</h1>
+<div class="report-summary">
+<strong>🎯 TỔNG QUAN TƯ DUY ĐẠO DIỄN &amp; CHIẾN LƯỢC NỘI DUNG:</strong><br>
+Bộ tác phẩm Carousel Album 7 phân cảnh của đạo diễn hình ảnh <strong>@beixin</strong> tại sự kiện Sony Kando Trip 2026 là một trường hợp kinh điển về việc đóng gói video thiết bị công nghệ (Camera Gear Showcase). Thay vì giới thiệu tính năng thông số khô khan, tác giả đã khéo léo kết hợp giữa vẻ đẹp di sản văn hóa Việt Nam (cung đình Huế, tà Áo Dài, diều phượng hoàng, nghệ thuật múa lân, cổ phục Nhật Bình) với những phân cảnh thể thao tốc độ cao (xe drift đốt lốp). Mỗi phân cảnh đều được thiết kế bố cục chia đôi (Split-Screen) hoàn hảo: nửa trên là cảnh quay điện ảnh đỉnh cao khai thác triệt để thế mạnh quang học của từng ống kính (khẩu độ siêu sáng F2 của lens 28-70mm GM, góc nhìn siêu rộng bắt trọn vệt chuyển động múa lân của 16-35mm GM II, và hiệu ứng nén không gian telephoto kết hợp lăng kính tán sắc cầu vồng của 70-200mm GM OSS II).
+</div>
+</div>
+<div class="view-switch-bar">
+<div class="tab-pills">
+<button class="tab-btn active" id="tabDetailBtn" onclick="switchView('detail')">📋 Bóc Tách Chi Tiết (7 Shots)</button>
+<button class="tab-btn" id="tabGridBtn" onclick="switchView('grid')">🖼️ Lưới Soi Ảnh Toàn Cảnh</button>
+</div>
+<button class="drawer-toggle-btn" onclick="toggleDrawer(true)">📑 Mục Lục Phân Cảnh</button>
+</div>
+<!-- Detail Storyboard View -->
+<div class="shots-timeline" id="storyboardView">
+<div class="shot-card" id="shot-1">
+<div class="shot-card-header">
+<div class="shot-header-left">
+<span class="shot-index-badge">SHOT #01</span>
+<button class="time-jump-btn" onclick="playShot(0.0, 2.62, 'Shot #01')">
+▶ 0.00s - 2.62s <span class="dur-pill">(2.62s)</span>
+</button>
+</div>
+<div class="shot-header-right">
+<span class="tech-tag" title="Thiết bị">Sony Cinema Line (FX5 / FX3) + Macro / Close-up Lens</span>
+</div>
+</div>
+<div class="shot-headline-box">
+<h3 class="shot-headline-title">Hook Nhịp Kép (Rapid Flash Cut + Macro Button Press): Đánh thức tò mò bằng chất liệu văn hóa Việt rồi khóa sự chú ý vào nút bấm máy quay</h3>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_01_start.jpg', 'Shot #01 Start Frame (0.00s)')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_01_start.jpg" alt="Shot #01 Start" loading="lazy" />
+<span class="kf-badge start">START (0.00s)</span>
+</div>
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_01_mid.jpg', 'Shot #01 Mid Keyframe')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_01_mid.jpg" alt="Shot #01 Mid" loading="lazy" />
+<span class="kf-badge mid">MID KEYFRAME</span>
+</div>
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_01_end.jpg', 'Shot #01 End Frame (2.62s)')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_01_end.jpg" alt="Shot #01 End" loading="lazy" />
+<span class="kf-badge end">END (2.62s)</span>
+</div>
+</div>
+<div class="trans-preview-box">
+<div class="trans-title">🔄 CHUYỂN CẢNH: SHOT #01 ➔ SHOT #02 (Match Cut / Direct Cut theo nhịp gõ phím)</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/trans_01_to_02.jpg', 'So sánh chuyển cảnh Shot #01 sang #02')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/trans_01_to_02.jpg" alt="Chuyển cảnh #01" loading="lazy" />
+<span class="kf-badge end">Shot #01 End</span>
+<span class="kf-badge start" style="left:auto; right:6px;">Shot #02 Start</span>
+</div>
+</div>
+<div class="analysis-blocks-grid">
+<div class="critique-block">
+<div class="block-title">🎬 ĐỐI TƯỢNG &amp; DIỄN BIẾN THỰC TẾ</div>
+<div class="block-content">Hai khung hình chớp nhoáng (flash cut) 0.3s giới thiệu vẻ đẹp cổ trang cung đình Huế (chân dung thiếu nữ đội khăn vành tỏa vệt sáng quang học, hành lang đỏ Đại Nội với cánh diều phượng hoàng), tiếp nối bằng cú quay siêu cận cảnh (Macro Detail) ngón tay cái ấn phím bấm trên thân máy cinema Sony FX5/FX3 với tựa đề serif sang trọng CAMERA GEAR.</div>
+</div>
+<div class="critique-block">
+<div class="block-title">⚖️ ĐÁNH GIÁ BỐ CỤC &amp; PHÊ BÌNH THỊ GIÁC 2 CHIỀU</div>
+<div class="two-column-critique">
+<div class="critique-col pro">
+<div class="col-header">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM)</div>
+<div>Cú cắt nhịp nhanh (Fast Montage) kích thích sự tò mò ngay giây đầu tiên; ánh sáng tự nhiên đổ bóng kịch tính trên bề mặt thân máy kim loại magiê; chữ tiêu đề Serif trắng ngà đặt ngay trọng tâm ngón tay tạo điểm neo thị giác không thể rời mắt.</div>
+</div>
+<div class="critique-col con">
+<div class="col-header">⚠️ ĐIỂM CẦN KHẮC PHỤC (HẠN CHẾ)</div>
+<div>Hai shot chớp đầu lướt quá nhanh (chỉ khoảng 8-10 frames) khiến người xem chưa kịp thẩm thấu chi tiết hoa văn trang phục cổ trang và kiến trúc cung đình trước khi bị chuyển ngoắt sang cận cảnh máy ảnh.</div>
+</div>
+</div>
+</div>
+<div class="takeaway-block">
+<div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐẠO DIỄN</div>
+<div class="takeaway-text">Muốn mở màn video giới thiệu đồ nghề (gear) không bị khô khan kỹ thuật, hãy chèn 1-2 shot cinematic footage đỉnh cao nhất đã quay bằng chính bộ gear đó trước khi đặc tả chiếc máy.</div>
+</div>
+<div class="specs-pill-row">
+<span class="spec-pill">📍 Đại Nội Huế & Studio Cận Cảnh Thiết Bị</span>
+<span class="spec-pill">🎥 Rapid Montage + Extreme Close-Up / Macro (Siêu cận cảnh)</span>
+<span class="spec-pill">💡 Low-key viền sáng kết hợp tia quang học (Prism Flare)</span>
+<span class="spec-pill">🎨 Tông màu Điện ảnh Cổ điển (Cinematic Muted Tone)</span>
+</div>
+</div>
+</div>
+<div class="shot-card" id="shot-2">
+<div class="shot-card-header">
+<div class="shot-header-left">
+<span class="shot-index-badge">SHOT #02</span>
+<button class="time-jump-btn" onclick="playShot(2.62, 7.84, 'Shot #02')">
+▶ 2.62s - 7.84s <span class="dur-pill">(5.22s)</span>
+</button>
+</div>
+<div class="shot-header-right">
+<span class="tech-tag" title="Thiết bị">Sony A1 II + Sony FE 28-70mm F2 GM</span>
+</div>
+</div>
+<div class="shot-headline-box">
+<h3 class="shot-headline-title">Bố Cục Đối Xứng Tỏa Tròn (Radial Symmetry) Dưới Tán Lọng Hoàng Cung: Tận dụng khẩu độ F2 siêu sáng của lens 28-70mm GM xóa nhòa hậu cảnh</h3>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_02_start.jpg', 'Shot #02 Start Frame (2.62s)')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_02_start.jpg" alt="Shot #02 Start" loading="lazy" />
+<span class="kf-badge start">START (2.62s)</span>
+</div>
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_02_mid.jpg', 'Shot #02 Mid Keyframe')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_02_mid.jpg" alt="Shot #02 Mid" loading="lazy" />
+<span class="kf-badge mid">MID KEYFRAME</span>
+</div>
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_02_end.jpg', 'Shot #02 End Frame (7.84s)')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_02_end.jpg" alt="Shot #02 End" loading="lazy" />
+<span class="kf-badge end">END (7.84s)</span>
+</div>
+</div>
+<div class="trans-preview-box">
+<div class="trans-title">🔄 CHUYỂN CẢNH: SHOT #02 ➔ SHOT #03 (Hard Cut đồng bộ nhịp chuyển slide)</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/trans_02_to_03.jpg', 'So sánh chuyển cảnh Shot #02 sang #03')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/trans_02_to_03.jpg" alt="Chuyển cảnh #02" loading="lazy" />
+<span class="kf-badge end">Shot #02 End</span>
+<span class="kf-badge start" style="left:auto; right:6px;">Shot #03 Start</span>
+</div>
+</div>
+<div class="analysis-blocks-grid">
+<div class="critique-block">
+<div class="block-title">🎬 ĐỐI TƯỢNG &amp; DIỄN BIẾN THỰC TẾ</div>
+<div class="block-content">Camera chuyển động nghiêng nhẹ từ dưới lên (Low-angle Tilt-up) ngắm trọn vòm trong của chiếc lọng che cung đình Huế; ánh sáng rọi xuyên qua lớp vải lụa đỏ làm rực lên họa tiết thêu rồng phượng kim tuyến, cấu trúc nan lọng tre đối xứng và những chùm tua rua vàng rủ xuống lộng lẫy.</div>
+</div>
+<div class="critique-block">
+<div class="block-title">⚖️ ĐÁNH GIÁ BỐ CỤC &amp; PHÊ BÌNH THỊ GIÁC 2 CHIỀU</div>
+<div class="two-column-critique">
+<div class="critique-col pro">
+<div class="col-header">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM)</div>
+<div>Đỉnh vòm lọng đặt đúng tâm trục thị giác (Center Framing); độ sâu trường ảnh mỏng (DoF) từ khẩu độ F2 giúp tách bạch các tầng nan lọng và tua rua vàng; gam màu đỏ - vàng hoàng gia tương phản mạnh mẽ với nền đen hiển thị bộ đôi Sony A1 II + 28-70mm F2 GM bên dưới.</div>
+</div>
+<div class="critique-col con">
+<div class="col-header">⚠️ ĐIỂM CẦN KHẮC PHỤC (HẠN CHẾ)</div>
+<div>Phần tối ở góc phải bên dưới hơi chìm do bóng của vành lọng, nếu có một đèn hắt (fill light) nhẹ từ góc thấp lên thì chi tiết hoa văn góc khuất bên phải sẽ no sáng đều hơn.</div>
+</div>
+</div>
+</div>
+<div class="takeaway-block">
+<div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐẠO DIỄN</div>
+<div class="takeaway-text">Khi quay đồ vật thủ công mỹ nghệ mang tính đối xứng, hãy đặt ống kính tiêu cự chuẩn (28-70mm) góc ngước vào tâm đối xứng để biến vật thể tĩnh thành một vòm trời kỳ vĩ.</div>
+</div>
+<div class="specs-pill-row">
+<span class="spec-pill">📍 Điện Cung Đình Huế / Di Tích Cố Đô</span>
+<span class="spec-pill">🎥 Low-Angle Radial Tilt (Góc thấp đối xứng tỏa tròn)</span>
+<span class="spec-pill">💡 Spotlight Warm Tungsten rọi điểm xuyên qua lụa đỏ</span>
+<span class="spec-pill">🎨 Sắc Đỏ Hoàng Tộc & Vàng Đồng (Imperial Crimson & Gold)</span>
+</div>
+</div>
+</div>
+<div class="shot-card" id="shot-3">
+<div class="shot-card-header">
+<div class="shot-header-left">
+<span class="shot-index-badge">SHOT #03</span>
+<button class="time-jump-btn" onclick="playShot(7.84, 12.91, 'Shot #03')">
+▶ 7.84s - 12.91s <span class="dur-pill">(5.07s)</span>
+</button>
+</div>
+<div class="shot-header-right">
+<span class="tech-tag" title="Thiết bị">Sony FX5 + Sony FE 16-35mm F2.8 GM II</span>
+</div>
+</div>
+<div class="shot-headline-box">
+<h3 class="shot-headline-title">Kỹ Thuật Vệt Quét Chuyển Động (Shutter Drag / Motion Blur) Góc Siêu Rộng: Đóng băng không khí ma mị của màn múa lân bằng góc 16-35mm GM II</h3>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_03_start.jpg', 'Shot #03 Start Frame (7.84s)')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_03_start.jpg" alt="Shot #03 Start" loading="lazy" />
+<span class="kf-badge start">START (7.84s)</span>
+</div>
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_03_mid.jpg', 'Shot #03 Mid Keyframe')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_03_mid.jpg" alt="Shot #03 Mid" loading="lazy" />
+<span class="kf-badge mid">MID KEYFRAME</span>
+</div>
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_03_end.jpg', 'Shot #03 End Frame (12.91s)')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_03_end.jpg" alt="Shot #03 End" loading="lazy" />
+<span class="kf-badge end">END (12.91s)</span>
+</div>
+</div>
+<div class="trans-preview-box">
+<div class="trans-title">🔄 CHUYỂN CẢNH: SHOT #03 ➔ SHOT #04 (Direct Cut theo nhịp gõ trống lân)</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/trans_03_to_04.jpg', 'So sánh chuyển cảnh Shot #03 sang #04')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/trans_03_to_04.jpg" alt="Chuyển cảnh #03" loading="lazy" />
+<span class="kf-badge end">Shot #03 End</span>
+<span class="kf-badge start" style="left:auto; right:6px;">Shot #04 Start</span>
+</div>
+</div>
+<div class="analysis-blocks-grid">
+<div class="critique-block">
+<div class="block-title">🎬 ĐỐI TƯỢNG &amp; DIỄN BIẾN THỰC TẾ</div>
+<div class="block-content">Nghệ sĩ biểu diễn xoay tròn liên tục ở trung tâm khung hình trong màn múa lân sư rồng truyền thống; tốc độ trập thấp kéo dải thắt lưng vàng và trang phục đỏ thành vệt mờ ánh sáng xoáy tròn ma mị, được đóng khung bởi hai đầu lân đỏ rực mắt sáng quắc canh giữ hai bên trong bóng đêm.</div>
+</div>
+<div class="critique-block">
+<div class="block-title">⚖️ ĐÁNH GIÁ BỐ CỤC &amp; PHÊ BÌNH THỊ GIÁC 2 CHIỀU</div>
+<div class="two-column-critique">
+<div class="critique-col pro">
+<div class="col-header">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM)</div>
+<div>Bố cục đóng khung đối xứng hoàn hảo bằng hai đầu lân phát sáng ở hai bên (Framing within a frame); tương phản cực hạn giữa chủ thể chuyển động mờ ảo và hai điểm neo tĩnh bên rìa tạo cảm giác thôi miên thị giác; góc rộng 16-35mm thu trọn năng lượng biểu diễn sân khấu tối.</div>
+</div>
+<div class="critique-col con">
+<div class="col-header">⚠️ ĐIỂM CẦN KHẮC PHỤC (HẠN CHẾ)</div>
+<div>Vùng tối hậu cảnh chiếm tỷ lệ khá lớn, người xem khó nhận biết rõ sàn diễn hoặc không gian xung quanh; vệt mờ chuyển động che khuất hoàn toàn đường nét gương mặt người biểu diễn.</div>
+</div>
+</div>
+</div>
+<div class="takeaway-block">
+<div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐẠO DIỄN</div>
+<div class="takeaway-text">Hạ tốc độ màn trập (1/25s hoặc 1/15s) kết hợp ống kính góc rộng 16-35mm khi quay các màn múa truyền thống để biến chuyển động thành những vệt cọ ánh sáng đầy chất hội họa.</div>
+</div>
+<div class="specs-pill-row">
+<span class="spec-pill">📍 Sân Khấu Múa Lân Đêm Tối</span>
+<span class="spec-pill">🎥 Wide Low Shutter Drag Shot (Góc rộng quét vệt chuyển động)</span>
+<span class="spec-pill">💡 Chiaroscuro tương phản cao, đèn lân rọi rực rỡ</span>
+<span class="spec-pill">🎨 Đỏ Rực & Vàng Lân Đêm (Fiery Red & Stage Gold)</span>
+</div>
+</div>
+</div>
+<div class="shot-card" id="shot-4">
+<div class="shot-card-header">
+<div class="shot-header-left">
+<span class="shot-index-badge">SHOT #04</span>
+<button class="time-jump-btn" onclick="playShot(12.91, 17.28, 'Shot #04')">
+▶ 12.91s - 17.28s <span class="dur-pill">(4.37s)</span>
+</button>
+</div>
+<div class="shot-header-right">
+<span class="tech-tag" title="Thiết bị">Sony A1 II + Sony FE 70-200mm F2.8 GM OSS II</span>
+</div>
+</div>
+<div class="shot-headline-box">
+<h3 class="shot-headline-title">Nén Tiêu Cự Telephoto 70-200mm GM OSS II Qua Lăng Kính Quang Học: Biến đàn cá Koi thành bức tranh sơn dầu sống động bằng tia sáng khúc xạ</h3>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_04_start.jpg', 'Shot #04 Start Frame (12.91s)')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_04_start.jpg" alt="Shot #04 Start" loading="lazy" />
+<span class="kf-badge start">START (12.91s)</span>
+</div>
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_04_mid.jpg', 'Shot #04 Mid Keyframe')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_04_mid.jpg" alt="Shot #04 Mid" loading="lazy" />
+<span class="kf-badge mid">MID KEYFRAME</span>
+</div>
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_04_end.jpg', 'Shot #04 End Frame (17.28s)')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_04_end.jpg" alt="Shot #04 End" loading="lazy" />
+<span class="kf-badge end">END (17.28s)</span>
+</div>
+</div>
+<div class="trans-preview-box">
+<div class="trans-title">🔄 CHUYỂN CẢNH: SHOT #04 ➔ SHOT #05 (Match Cut nhịp chuyển động nước sang lụa)</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/trans_04_to_05.jpg', 'So sánh chuyển cảnh Shot #04 sang #05')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/trans_04_to_05.jpg" alt="Chuyển cảnh #04" loading="lazy" />
+<span class="kf-badge end">Shot #04 End</span>
+<span class="kf-badge start" style="left:auto; right:6px;">Shot #05 Start</span>
+</div>
+</div>
+<div class="analysis-blocks-grid">
+<div class="critique-block">
+<div class="block-title">🎬 ĐỐI TƯỢNG &amp; DIỄN BIẾN THỰC TẾ</div>
+<div class="block-content">Góc nhìn từ trên cao xuống (High-Angle Lookdown) mặt hồ cá cảnh; hai chú cá Koi vàng óng và đỏ cam bơi lững lờ giữa đám rong rêu xanh mướt; luồng tia sáng mặt trời tán sắc cầu vồng (Prism Flare) cắt xéo góc 45 độ tạo nên làn sóng ánh sáng lấp lánh trên bề mặt nước.</div>
+</div>
+<div class="critique-block">
+<div class="block-title">⚖️ ĐÁNH GIÁ BỐ CỤC &amp; PHÊ BÌNH THỊ GIÁC 2 CHIỀU</div>
+<div class="two-column-critique">
+<div class="critique-col pro">
+<div class="col-header">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM)</div>
+<div>Tông màu xanh lục bảo (Emerald Green) của mặt nước và rong rêu tôn vinh tuyệt đối sắc đỏ - vàng của cá chép; hiệu ứng vệt sáng cầu vồng tạo chất thơ điện ảnh (dreamy aesthetic); hệ thống chống rung quang học OSS II trên lens 70-200mm giữ khung hình tĩnh tuyệt đối dù cầm tay lia nhẹ.</div>
+</div>
+<div class="critique-col con">
+<div class="col-header">⚠️ ĐIỂM CẦN KHẮC PHỤC (HẠN CHẾ)</div>
+<div>Tia flare quang học hơi dày ở góc dưới bên phải, đôi lúc làm mờ và che khuất một phần bóng dáng của chú cá thứ hai khi bơi lướt qua góc khung hình.</div>
+</div>
+</div>
+</div>
+<div class="takeaway-block">
+<div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐẠO DIỄN</div>
+<div class="takeaway-text">Đừng ngại đặt thêm một mảnh lăng kính pha lê hoặc kính lọc vệt sáng (Streak Filter) trước ống kính Telephoto khi quay mặt nước nắng xiên để mang lại chất thơ hữu cơ (organic look) cho khung hình.</div>
+</div>
+<div class="specs-pill-row">
+<span class="spec-pill">📍 Hồ Cá Thủy Sinh / Nhà Vườn Huế</span>
+<span class="spec-pill">🎥 High-Angle Telephoto Lookdown (Góc cao nén tiêu cự tele)</span>
+<span class="spec-pill">💡 Nắng sớm xiên góc khúc xạ qua lăng kính quang học</span>
+<span class="spec-pill">🎨 Xanh Lục Bảo & Đỏ Cam Tươi Sáng (Emerald & Vivid Koi)</span>
+</div>
+</div>
+</div>
+<div class="shot-card" id="shot-5">
+<div class="shot-card-header">
+<div class="shot-header-left">
+<span class="shot-index-badge">SHOT #05</span>
+<button class="time-jump-btn" onclick="playShot(17.28, 22.25, 'Shot #05')">
+▶ 17.28s - 22.25s <span class="dur-pill">(4.97s)</span>
+</button>
+</div>
+<div class="shot-header-right">
+<span class="tech-tag" title="Thiết bị">Sony A1 II + Sony FE 28-70mm F2 GM</span>
+</div>
+</div>
+<div class="shot-headline-box">
+<h3 class="shot-headline-title">Đối Lập Tĩnh - Động (Dynamic Motion Blur vs Sharp Subject): Tái hiện nét duyên Áo Dài xứ Huế qua dải lụa tím bay bổng với lens 28-70mm F2</h3>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_05_start.jpg', 'Shot #05 Start Frame (17.28s)')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_05_start.jpg" alt="Shot #05 Start" loading="lazy" />
+<span class="kf-badge start">START (17.28s)</span>
+</div>
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_05_mid.jpg', 'Shot #05 Mid Keyframe')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_05_mid.jpg" alt="Shot #05 Mid" loading="lazy" />
+<span class="kf-badge mid">MID KEYFRAME</span>
+</div>
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_05_end.jpg', 'Shot #05 End Frame (22.25s)')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_05_end.jpg" alt="Shot #05 End" loading="lazy" />
+<span class="kf-badge end">END (22.25s)</span>
+</div>
+</div>
+<div class="trans-preview-box">
+<div class="trans-title">🔄 CHUYỂN CẢNH: SHOT #05 ➔ SHOT #06 (Cut chuyển tiếp sang cảnh tốc độ cao)</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/trans_05_to_06.jpg', 'So sánh chuyển cảnh Shot #05 sang #06')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/trans_05_to_06.jpg" alt="Chuyển cảnh #05" loading="lazy" />
+<span class="kf-badge end">Shot #05 End</span>
+<span class="kf-badge start" style="left:auto; right:6px;">Shot #06 Start</span>
+</div>
+</div>
+<div class="analysis-blocks-grid">
+<div class="critique-block">
+<div class="block-title">🎬 ĐỐI TƯỢNG &amp; DIỄN BIẾN THỰC TẾ</div>
+<div class="block-content">Ba thiếu nữ Việt Nam trong tà Áo Dài trắng và Nón Lá truyền thống múa tung dải lụa tím trước cổng Ngọ Môn lầu ngũ phụng; kỹ thuật kéo vệt chuyển động (Motion Drag) tạo hiệu ứng mờ nhòe ma mị cho cô gái bên trái, đối lập với cô gái bên phải giữ Nón Lá với nụ cười duyên nét căng dưới nền trời xanh.</div>
+</div>
+<div class="critique-block">
+<div class="block-title">⚖️ ĐÁNH GIÁ BỐ CỤC &amp; PHÊ BÌNH THỊ GIÁC 2 CHIỀU</div>
+<div class="two-column-critique">
+<div class="critique-col pro">
+<div class="col-header">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM)</div>
+<div>Bảng màu mang tính biểu tượng văn hóa sâu sắc (Áo Dài trắng, Nón Lá vàng, dải lụa tím Huế trên nền tường thành gạch nung cổ kính); kỹ thuật kéo vệt chuyển động ở nửa trái khung hình tạo độ động thị giác phá cách so với ảnh chụp Áo Dài truyền thống.</div>
+</div>
+<div class="critique-col con">
+<div class="col-header">⚠️ ĐIỂM CẦN KHẮC PHỤC (HẠN CHẾ)</div>
+<div>Dải lụa tím ở giữa khung hình che khuất một phần khuôn mặt của cô gái ở trung tâm; góc máy có thể hạ thấp hơn một chút để tà Áo Dài và Nón Lá vút cao lên trên đường chân trời của kiến trúc cung thành.</div>
+</div>
+</div>
+</div>
+<div class="takeaway-block">
+<div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐẠO DIỄN</div>
+<div class="takeaway-text">Kết hợp tốc độ trập thấp với tiêu cự zoom chuẩn F2 để tạo sự phân tầng thời gian ngay trong một khung hình: một chủ thể tĩnh nét căng bên cạnh các chủ thể chuyển động kéo vệt nghệ thuật.</div>
+</div>
+<div class="specs-pill-row">
+<span class="spec-pill">📍 Cổng Ngọ Môn / Hoàng Thành Huế</span>
+<span class="spec-pill">🎥 Medium Cultural Tableau (Góc trung bố cục văn hóa đa tầng)</span>
+<span class="spec-pill">💡 Ánh sáng tự nhiên ban ngày (Daylight 5600K) trời trong</span>
+<span class="spec-pill">🎨 Tím Mộng Huế, Trắng Tinh Khôi & Xanh Cung Đình</span>
+</div>
+</div>
+</div>
+<div class="shot-card" id="shot-6">
+<div class="shot-card-header">
+<div class="shot-header-left">
+<span class="shot-index-badge">SHOT #06</span>
+<button class="time-jump-btn" onclick="playShot(22.25, 29.55, 'Shot #06')">
+▶ 22.25s - 29.55s <span class="dur-pill">(7.30s)</span>
+</button>
+</div>
+<div class="shot-header-right">
+<span class="tech-tag" title="Thiết bị">Sony FX5 + Sony FE 70-200mm F2.8 GM OSS II</span>
+</div>
+</div>
+<div class="shot-headline-box">
+<h3 class="shot-headline-title">Nén Không Gian Telephoto 70-200mm GM OSS II & Quay Chậm (High Frame Rate): Khóa chặt khoảnh khắc xe drift đốt lốp cuộn khói trắng dữ dội</h3>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_06_start.jpg', 'Shot #06 Start Frame (22.25s)')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_06_start.jpg" alt="Shot #06 Start" loading="lazy" />
+<span class="kf-badge start">START (22.25s)</span>
+</div>
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_06_mid.jpg', 'Shot #06 Mid Keyframe')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_06_mid.jpg" alt="Shot #06 Mid" loading="lazy" />
+<span class="kf-badge mid">MID KEYFRAME</span>
+</div>
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_06_end.jpg', 'Shot #06 End Frame (29.55s)')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_06_end.jpg" alt="Shot #06 End" loading="lazy" />
+<span class="kf-badge end">END (29.55s)</span>
+</div>
+</div>
+<div class="trans-preview-box">
+<div class="trans-title">🔄 CHUYỂN CẢNH: SHOT #06 ➔ SHOT #07 (Cut chuyển cảnh đối nghịch sang cảnh tĩnh cung đình)</div>
+<div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/trans_06_to_07.jpg', 'So sánh chuyển cảnh Shot #06 sang #07')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/trans_06_to_07.jpg" alt="Chuyển cảnh #06" loading="lazy" />
+<span class="kf-badge end">Shot #06 End</span>
+<span class="kf-badge start" style="left:auto; right:6px;">Shot #07 Start</span>
+</div>
+</div>
+<div class="analysis-blocks-grid">
+<div class="critique-block">
+<div class="block-title">🎬 ĐỐI TƯỢNG &amp; DIỄN BIẾN THỰC TẾ</div>
+<div class="block-content">Chiếc xe thể thao Nissan/Silvia dán tem VIETNAM - SONY - TECKWRAP thực hiện cú bẻ lái văng đuôi (Drift) cực gắt trên đường nhựa; bánh sau quay tít phát cuộn khói trắng mù mịt; ống kính tele lia máy bám theo (Panning Track) từ góc thấp qua hàng cọc tiêu màu hồng ở tiền cảnh.</div>
+</div>
+<div class="critique-block">
+<div class="block-title">⚖️ ĐÁNH GIÁ BỐ CỤC &amp; PHÊ BÌNH THỊ GIÁC 2 CHIỀU</div>
+<div class="two-column-critique">
+<div class="critique-col pro">
+<div class="col-header">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM)</div>
+<div>Tiền cảnh cọc tiêu màu hồng tạo chiều sâu tầng lớp (Foreground Depth); hiệu ứng nén tiêu cự telephoto kéo khói lốp xe và rào chắn lại gần nhau tạo độ kịch tính nghẹt thở; chuyển động lia máy (panning) mượt mà giữ xe đua luôn nằm ở điểm 1/3 góc phải khung hình.</div>
+</div>
+<div class="critique-col con">
+<div class="col-header">⚠️ ĐIỂM CẦN KHẮC PHỤC (HẠN CHẾ)</div>
+<div>Khói xe ở cuối shot bao phủ gần kín nửa sau xe làm mất chi tiết lazang bánh xe; ánh sáng giữa trưa hơi gắt tạo bóng đen đậm đặc dưới gầm xe làm giảm chi tiết cơ khí sàn xe.</div>
+</div>
+</div>
+</div>
+<div class="takeaway-block">
+<div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐẠO DIỄN</div>
+<div class="takeaway-text">Khi quay đối tượng tốc độ cao (xe đua, thể thao mạo hiểm), hãy sử dụng ống kính 70-200mm đứng từ xa lia máy qua các vật thể tiền cảnh (cọc tiêu, hàng rào) để gia tăng ảo giác tốc độ và tạo chiều sâu không gian điện ảnh.</div>
+</div>
+<div class="specs-pill-row">
+<span class="spec-pill">📍 Đường Đua Drift Asphalt / Sự Kiện Kando Trip</span>
+<span class="spec-pill">🎥 Low-Angle Telephoto Panning Track (Lia máy góc thấp nén tele)</span>
+<span class="spec-pill">💡 Ánh sáng mặt trời trực tiếp gay gắt (Hard Daylight)</span>
+<span class="spec-pill">🎨 Tương Phản Thể Thao Đỏ - Trắng - Khói Lam (High Contrast Drift)</span>
+</div>
+</div>
+</div>
+<div class="shot-card" id="shot-7">
+<div class="shot-card-header">
+<div class="shot-header-left">
+<span class="shot-index-badge">SHOT #07</span>
+<button class="time-jump-btn" onclick="playShot(29.55, 34.52, 'Shot #07')">
+▶ 29.55s - 34.52s <span class="dur-pill">(4.97s)</span>
+</button>
+</div>
+<div class="shot-header-right">
+<span class="tech-tag" title="Thiết bị">Sony A1 II + Sony FE 70-200mm F2.8 GM OSS II</span>
+</div>
+</div>
+<div class="shot-headline-box">
+<h3 class="shot-headline-title">Góc Thấp Đặc Tả Hoa Văn Thủy Ba Sóng Nước Triều Nguyễn: Ống kính Tele 70-200mm GM II tôn vinh nghệ thuật may thêu cổ phục Việt Nam</h3>
+</div>
+<div class="keyframes-grid">
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_07_start.jpg', 'Shot #07 Start Frame (29.55s)')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_07_start.jpg" alt="Shot #07 Start" loading="lazy" />
+<span class="kf-badge start">START (29.55s)</span>
+</div>
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_07_mid.jpg', 'Shot #07 Mid Keyframe')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_07_mid.jpg" alt="Shot #07 Mid" loading="lazy" />
+<span class="kf-badge mid">MID KEYFRAME</span>
+</div>
+<div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_07_end.jpg', 'Shot #07 End Frame (34.52s)')">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_07_end.jpg" alt="Shot #07 End" loading="lazy" />
+<span class="kf-badge end">END (34.52s)</span>
+</div>
+</div>
+<div class="analysis-blocks-grid">
+<div class="critique-block">
+<div class="block-title">🎬 ĐỐI TƯỢNG &amp; DIỄN BIẾN THỰC TẾ</div>
+<div class="block-content">Cận cảnh góc cực thấp (Extreme Low-Angle Tracking) đặc tả đôi chân và tà áo Nhật Bình cung đình triều Nguyễn lộng lẫy; hoa văn thêu rồng phượng, sóng nước thủy ba ngũ sắc và viền chỉ đỏ di chuyển nhẹ nhàng, gót sen bước khoan thai trên nền đá hoa cung điện trong ánh sáng vàng ấm áp.</div>
+</div>
+<div class="critique-block">
+<div class="block-title">⚖️ ĐÁNH GIÁ BỐ CỤC &amp; PHÊ BÌNH THỊ GIÁC 2 CHIỀU</div>
+<div class="two-column-critique">
+<div class="critique-col pro">
+<div class="col-header">✅ ĐIỂM SÁNG THỊ GIÁC (ƯU ĐIỂM)</div>
+<div>Độ mở khẩu F2.8 trên tiêu cự tele tạo độ mờ nhòe hậu cảnh mịn như bơ, tôn trọn vẹn từng thớ vải thêu kim tuyến tinh xảo; góc máy sát sàn độc đáo mang tính điện ảnh cao, phá vỡ lối mòn chụp cổ phục toàn thân thông thường.</div>
+</div>
+<div class="critique-col con">
+<div class="col-header">⚠️ ĐIỂM CẦN KHẮC PHỤC (HẠN CHẾ)</div>
+<div>Chuyển động bước chân hơi nhanh ở đầu cảnh khiến một vài khung hình bị rung nhẹ trước khi ống kính bắt kịp nhịp bước khoan thai của nhân vật.</div>
+</div>
+</div>
+</div>
+<div class="takeaway-block">
+<div class="takeaway-title">💡 BÀI HỌC THỰC CHIẾN ĐẠO DIỄN</div>
+<div class="takeaway-text">Muốn tôn vinh trang phục hoặc di sản văn hóa, đừng chỉ quay góc toàn tĩnh; hãy dùng ống kính tele đặt sát mặt đất bắt trọn hoa văn viền tà áo khi nhân vật chuyển động để tạo cảm giác sang trọng và hoài niệm.</div>
+</div>
+<div class="specs-pill-row">
+<span class="spec-pill">📍 Nội Điện Hoàng Thành / Sàn Gạch Cổ Kính</span>
+<span class="spec-pill">🎥 Extreme Low-Angle Tracking Detail (Góc cực thấp đặc tả bước chân)</span>
+<span class="spec-pill">💡 Ánh sáng hắt dịu (Soft Warm Ambient) pha ánh nến/đèn lồng</span>
+<span class="spec-pill">🎨 Vàng Hoàng Gia & Ngũ Sắc Thủy Ba (Royal Gold & Imperial Silk)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Grid View -->
+<div class="grid-container" id="gridView" style="display:none;">
+<div class="grid-shot-card" onclick="scrollToShot(1)">
+<div class="grid-img-wrap">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_01_mid.jpg" alt="Shot #01" loading="lazy" />
+<span class="grid-idx">#01</span>
+<span class="grid-dur">2.62s</span>
+</div>
+<div class="grid-card-body">
+<div class="grid-gear-tag">Sony Cinema Line (FX5 / FX3) &bull; Macro / Close-up Lens</div>
+<div class="grid-headline">Hook Nhịp Kép (Rapid Flash Cut + Macro Button Press): Đánh thức tò mò bằng chất liệu văn hóa Việt rồi khóa sự chú ý vào nút bấm máy quay</div>
+<div class="grid-footer">
+<button class="grid-play-btn" onclick="event.stopPropagation(); playShot(0.0, 2.62, 'Shot #01')">▶ Phát Phân Đoạn</button>
+</div>
+</div>
+</div>
+<div class="grid-shot-card" onclick="scrollToShot(2)">
+<div class="grid-img-wrap">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_02_mid.jpg" alt="Shot #02" loading="lazy" />
+<span class="grid-idx">#02</span>
+<span class="grid-dur">5.22s</span>
+</div>
+<div class="grid-card-body">
+<div class="grid-gear-tag">Sony A1 II &bull; Sony FE 28-70mm F2 GM</div>
+<div class="grid-headline">Bố Cục Đối Xứng Tỏa Tròn (Radial Symmetry) Dưới Tán Lọng Hoàng Cung: Tận dụng khẩu độ F2 siêu sáng của lens 28-70mm GM xóa nhòa hậu cảnh</div>
+<div class="grid-footer">
+<button class="grid-play-btn" onclick="event.stopPropagation(); playShot(2.62, 7.84, 'Shot #02')">▶ Phát Phân Đoạn</button>
+</div>
+</div>
+</div>
+<div class="grid-shot-card" onclick="scrollToShot(3)">
+<div class="grid-img-wrap">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_03_mid.jpg" alt="Shot #03" loading="lazy" />
+<span class="grid-idx">#03</span>
+<span class="grid-dur">5.07s</span>
+</div>
+<div class="grid-card-body">
+<div class="grid-gear-tag">Sony FX5 &bull; Sony FE 16-35mm F2.8 GM II</div>
+<div class="grid-headline">Kỹ Thuật Vệt Quét Chuyển Động (Shutter Drag / Motion Blur) Góc Siêu Rộng: Đóng băng không khí ma mị của màn múa lân bằng góc 16-35mm GM II</div>
+<div class="grid-footer">
+<button class="grid-play-btn" onclick="event.stopPropagation(); playShot(7.84, 12.91, 'Shot #03')">▶ Phát Phân Đoạn</button>
+</div>
+</div>
+</div>
+<div class="grid-shot-card" onclick="scrollToShot(4)">
+<div class="grid-img-wrap">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_04_mid.jpg" alt="Shot #04" loading="lazy" />
+<span class="grid-idx">#04</span>
+<span class="grid-dur">4.37s</span>
+</div>
+<div class="grid-card-body">
+<div class="grid-gear-tag">Sony A1 II &bull; Sony FE 70-200mm F2.8 GM OSS II</div>
+<div class="grid-headline">Nén Tiêu Cự Telephoto 70-200mm GM OSS II Qua Lăng Kính Quang Học: Biến đàn cá Koi thành bức tranh sơn dầu sống động bằng tia sáng khúc xạ</div>
+<div class="grid-footer">
+<button class="grid-play-btn" onclick="event.stopPropagation(); playShot(12.91, 17.28, 'Shot #04')">▶ Phát Phân Đoạn</button>
+</div>
+</div>
+</div>
+<div class="grid-shot-card" onclick="scrollToShot(5)">
+<div class="grid-img-wrap">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_05_mid.jpg" alt="Shot #05" loading="lazy" />
+<span class="grid-idx">#05</span>
+<span class="grid-dur">4.97s</span>
+</div>
+<div class="grid-card-body">
+<div class="grid-gear-tag">Sony A1 II &bull; Sony FE 28-70mm F2 GM</div>
+<div class="grid-headline">Đối Lập Tĩnh - Động (Dynamic Motion Blur vs Sharp Subject): Tái hiện nét duyên Áo Dài xứ Huế qua dải lụa tím bay bổng với lens 28-70mm F2</div>
+<div class="grid-footer">
+<button class="grid-play-btn" onclick="event.stopPropagation(); playShot(17.28, 22.25, 'Shot #05')">▶ Phát Phân Đoạn</button>
+</div>
+</div>
+</div>
+<div class="grid-shot-card" onclick="scrollToShot(6)">
+<div class="grid-img-wrap">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_06_mid.jpg" alt="Shot #06" loading="lazy" />
+<span class="grid-idx">#06</span>
+<span class="grid-dur">7.30s</span>
+</div>
+<div class="grid-card-body">
+<div class="grid-gear-tag">Sony FX5 &bull; Sony FE 70-200mm F2.8 GM OSS II</div>
+<div class="grid-headline">Nén Không Gian Telephoto 70-200mm GM OSS II & Quay Chậm (High Frame Rate): Khóa chặt khoảnh khắc xe drift đốt lốp cuộn khói trắng dữ dội</div>
+<div class="grid-footer">
+<button class="grid-play-btn" onclick="event.stopPropagation(); playShot(22.25, 29.55, 'Shot #06')">▶ Phát Phân Đoạn</button>
+</div>
+</div>
+</div>
+<div class="grid-shot-card" onclick="scrollToShot(7)">
+<div class="grid-img-wrap">
+<img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_07_mid.jpg" alt="Shot #07" loading="lazy" />
+<span class="grid-idx">#07</span>
+<span class="grid-dur">4.97s</span>
+</div>
+<div class="grid-card-body">
+<div class="grid-gear-tag">Sony A1 II &bull; Sony FE 70-200mm F2.8 GM OSS II</div>
+<div class="grid-headline">Góc Thấp Đặc Tả Hoa Văn Thủy Ba Sóng Nước Triều Nguyễn: Ống kính Tele 70-200mm GM II tôn vinh nghệ thuật may thêu cổ phục Việt Nam</div>
+<div class="grid-footer">
+<button class="grid-play-btn" onclick="event.stopPropagation(); playShot(29.55, 34.52, 'Shot #07')">▶ Phát Phân Đoạn</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Drawer Jump Menu -->
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)">
+<div class="drawer-panel" onclick="event.stopPropagation()">
+<div class="drawer-header">
+<div class="drawer-title">📑 MỤC LỤC PHÂN CẢNH (7 SHOTS)</div>
+<button class="drawer-close-btn" onclick="toggleDrawer(false)">&times;</button>
+</div>
+<div class="drawer-list">
+<div class="drawer-item" onclick="scrollToShot(1); toggleDrawer(false);">
+<div class="drawer-item-left">
+<span class="drawer-idx">#01</span>
+<div class="drawer-meta">
+<div class="drawer-name">Hook Nhịp Kép (Rapid Flash Cut + Macro Button Press): Đánh thức tò mò bằng chất liệu văn hóa Việt rồi khóa sự chú ý vào nút bấm máy quay</div>
+<div class="drawer-sub">Sony Cinema Line (FX5 / FX3) + Macro / Close-up Lens &bull; 2.62s</div>
+</div>
+</div>
+<button class="drawer-play-btn" onclick="event.stopPropagation(); playShot(0.0, 2.62, 'Shot #01'); toggleDrawer(false);">▶</button>
+</div>
+<div class="drawer-item" onclick="scrollToShot(2); toggleDrawer(false);">
+<div class="drawer-item-left">
+<span class="drawer-idx">#02</span>
+<div class="drawer-meta">
+<div class="drawer-name">Bố Cục Đối Xứng Tỏa Tròn (Radial Symmetry) Dưới Tán Lọng Hoàng Cung: Tận dụng khẩu độ F2 siêu sáng của lens 28-70mm GM xóa nhòa hậu cảnh</div>
+<div class="drawer-sub">Sony A1 II + Sony FE 28-70mm F2 GM &bull; 5.22s</div>
+</div>
+</div>
+<button class="drawer-play-btn" onclick="event.stopPropagation(); playShot(2.62, 7.84, 'Shot #02'); toggleDrawer(false);">▶</button>
+</div>
+<div class="drawer-item" onclick="scrollToShot(3); toggleDrawer(false);">
+<div class="drawer-item-left">
+<span class="drawer-idx">#03</span>
+<div class="drawer-meta">
+<div class="drawer-name">Kỹ Thuật Vệt Quét Chuyển Động (Shutter Drag / Motion Blur) Góc Siêu Rộng: Đóng băng không khí ma mị của màn múa lân bằng góc 16-35mm GM II</div>
+<div class="drawer-sub">Sony FX5 + Sony FE 16-35mm F2.8 GM II &bull; 5.07s</div>
+</div>
+</div>
+<button class="drawer-play-btn" onclick="event.stopPropagation(); playShot(7.84, 12.91, 'Shot #03'); toggleDrawer(false);">▶</button>
+</div>
+<div class="drawer-item" onclick="scrollToShot(4); toggleDrawer(false);">
+<div class="drawer-item-left">
+<span class="drawer-idx">#04</span>
+<div class="drawer-meta">
+<div class="drawer-name">Nén Tiêu Cự Telephoto 70-200mm GM OSS II Qua Lăng Kính Quang Học: Biến đàn cá Koi thành bức tranh sơn dầu sống động bằng tia sáng khúc xạ</div>
+<div class="drawer-sub">Sony A1 II + Sony FE 70-200mm F2.8 GM OSS II &bull; 4.37s</div>
+</div>
+</div>
+<button class="drawer-play-btn" onclick="event.stopPropagation(); playShot(12.91, 17.28, 'Shot #04'); toggleDrawer(false);">▶</button>
+</div>
+<div class="drawer-item" onclick="scrollToShot(5); toggleDrawer(false);">
+<div class="drawer-item-left">
+<span class="drawer-idx">#05</span>
+<div class="drawer-meta">
+<div class="drawer-name">Đối Lập Tĩnh - Động (Dynamic Motion Blur vs Sharp Subject): Tái hiện nét duyên Áo Dài xứ Huế qua dải lụa tím bay bổng với lens 28-70mm F2</div>
+<div class="drawer-sub">Sony A1 II + Sony FE 28-70mm F2 GM &bull; 4.97s</div>
+</div>
+</div>
+<button class="drawer-play-btn" onclick="event.stopPropagation(); playShot(17.28, 22.25, 'Shot #05'); toggleDrawer(false);">▶</button>
+</div>
+<div class="drawer-item" onclick="scrollToShot(6); toggleDrawer(false);">
+<div class="drawer-item-left">
+<span class="drawer-idx">#06</span>
+<div class="drawer-meta">
+<div class="drawer-name">Nén Không Gian Telephoto 70-200mm GM OSS II & Quay Chậm (High Frame Rate): Khóa chặt khoảnh khắc xe drift đốt lốp cuộn khói trắng dữ dội</div>
+<div class="drawer-sub">Sony FX5 + Sony FE 70-200mm F2.8 GM OSS II &bull; 7.30s</div>
+</div>
+</div>
+<button class="drawer-play-btn" onclick="event.stopPropagation(); playShot(22.25, 29.55, 'Shot #06'); toggleDrawer(false);">▶</button>
+</div>
+<div class="drawer-item" onclick="scrollToShot(7); toggleDrawer(false);">
+<div class="drawer-item-left">
+<span class="drawer-idx">#07</span>
+<div class="drawer-meta">
+<div class="drawer-name">Góc Thấp Đặc Tả Hoa Văn Thủy Ba Sóng Nước Triều Nguyễn: Ống kính Tele 70-200mm GM II tôn vinh nghệ thuật may thêu cổ phục Việt Nam</div>
+<div class="drawer-sub">Sony A1 II + Sony FE 70-200mm F2.8 GM OSS II &bull; 4.97s</div>
+</div>
+</div>
+<button class="drawer-play-btn" onclick="event.stopPropagation(); playShot(29.55, 34.52, 'Shot #07'); toggleDrawer(false);">▶</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Lightbox Modal -->
+<div id="lightboxModal" onclick="closeLightbox()">
+<span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+<img id="lightboxImg" src="" alt="Zoom Keyframe" onclick="event.stopPropagation()">
+<div id="lightboxCaption"></div>
+</div>
+<script>
+const player = document.getElementById('mainPlayer');
+let currentEndTime = null;
+function playShot(startTime, endTime, label) {
+currentEndTime = (typeof endTime === 'number') ? endTime : null;
+const tag = document.getElementById('shotStatusTag');
+if (tag) {
+const endTxt = currentEndTime ? ` - ${currentEndTime.toFixed(2)}s` : '';
+tag.innerText = `🎬 ${label || 'Phân cảnh'}: [${startTime.toFixed(2)}s${endTxt}]`;
+}
+player.currentTime = startTime;
+const p = player.play();
+if (p !== undefined) {
+p.catch(() => {
+player.muted = true;
+player.play().catch(e => console.log('Autoplay muted'));
+});
+}
+document.querySelectorAll('.shot-card').forEach(c => c.classList.remove('active-playing'));
+const matchCard = document.getElementById('shot-' + (label.match(/\d+/) ? parseInt(label.match(/\d+/)[0]) : 0));
+if (matchCard) matchCard.classList.add('active-playing');
+// Sync slide pills
+document.querySelectorAll('.slide-pill-btn').forEach(b => {
+if (b.innerText.includes(label)) b.classList.add('active');
+else b.classList.remove('active');
+});
+if (window.innerWidth < 1024) {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+}
+player.ontimeupdate = () => {
+if (currentEndTime !== null && player.currentTime >= currentEndTime) {
+if (player.loop) {
+player.currentTime = 0;
+player.play();
+}
+}
+};
+function setSpeed(spd, btn) {
+player.playbackRate = spd;
+document.querySelectorAll('.speed-pills .speed-pill').forEach(b => b.classList.remove('active'));
+if (btn) btn.classList.add('active');
+}
+function stepFrame(delta) {
+player.pause();
+player.currentTime += (delta * (1 / 30));
+}
+function toggleMute() {
+player.muted = !player.muted;
+const btn = document.getElementById('muteBtn');
+if (btn) btn.innerText = player.muted ? '🔇 Tắt Tiếng' : '🔊 Tiếng';
+}
+function toggleLoop() {
+player.loop = !player.loop;
+const btn = document.getElementById('loopBtn');
+if (btn) {
+if (player.loop) btn.style.background = 'rgba(56, 189, 248, 0.2)';
+else btn.style.background = '';
+}
+}
+function switchView(mode) {
+const sb = document.getElementById('storyboardView');
+const grid = document.getElementById('gridView');
+const tabD = document.getElementById('tabDetailBtn');
+const tabG = document.getElementById('tabGridBtn');
+if (mode === 'grid') {
+sb.style.display = 'none';
+grid.style.display = 'grid';
+tabD.classList.remove('active');
+tabG.classList.add('active');
+} else {
+sb.style.display = 'flex';
+grid.style.display = 'none';
+tabD.classList.add('active');
+tabG.classList.remove('active');
+}
+}
+function toggleDrawer(open) {
+document.getElementById('drawerBackdrop').style.display = open ? 'block' : 'none';
+}
+function scrollToShot(sid) {
+switchView('detail');
+const el = document.getElementById('shot-' + sid);
+if (el) {
+el.scrollIntoView({ behavior: 'smooth' });
+el.classList.add('active-playing');
+setTimeout(() => el.classList.remove('active-playing'), 2500);
+}
+}
+function openLightbox(src, caption) {
+const modal = document.getElementById('lightboxModal');
+const img = document.getElementById('lightboxImg');
+const cap = document.getElementById('lightboxCaption');
+img.src = src;
+cap.innerText = caption || '';
+modal.style.display = 'flex';
+}
+function closeLightbox() {
+document.getElementById('lightboxModal').style.display = 'none';
+}
+document.addEventListener('keydown', (e) => {
+if (e.key === 'Escape') {
+closeLightbox();
+toggleDrawer(false);
+}
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

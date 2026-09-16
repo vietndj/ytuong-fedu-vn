@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Josh Diaz • Lifestyle Habit & Cinematic B-Roll Routine • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">9 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Josh Diaz • Lifestyle Habit & Cinematic B-Roll Routine</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DdEshZtz9Rb/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdEshZtz9Rb.mp4" type="video/mp4">
+                <source src="../Lifestyle Habit & Cinematic Routine - @joshdiazfilms.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 18.39s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Josh Diaz • Lifestyle Habit & Cinematic B-Roll Routine</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@joshdiazfilms" onclick="handleCreatorClick(event, '@joshdiazfilms', 'Josh Diaz')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Josh Diaz trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Josh Diaz</strong>
+                        <span class="author-handle">(@joshdiazfilms)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/DdEshZtz9Rb/" target="_blank" class="author-link">Josh Diaz (@joshdiazfilms)</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 18.39s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Josh Diaz • Lifestyle Habit & Cinematic B-Roll Routine</h1>
+            <p class="overview-hero-desc">Báo cáo đạo diễn phân tích chuyên sâu ngôn ngữ điện ảnh, góc quay Overhead Top-Down, ống kính Fisheye Circular Vignette, nghệ thuật ánh sáng xiên Dappled Light và cú Twist bẻ lái thị giác độc đáo.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Overhead Top-Down, Fisheye Vignette, Dappled Light, Visual Punchline Twist</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">9 Shots • Nhịp trung bình 2.0s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 • 23.976 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 2.54)">
+                    ▶ 0.00s - 2.54s (2.54s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hook Góc Nhìn Trên Cao (Top-Down Overhead) Đầy Thư Thái: Phá vỡ định kiến 'dậy sớm thành công' bằng lời thú nhận thành thật ngay trên giường ngủ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_01_mid.jpg', 'Shot 01 • Giữa (1.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.27s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_01_end.jpg', 'Shot 01 • Cuối (2.54s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (2.54s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Josh Diaz nằm gối đầu thảnh thơi trên chiếc giường nệm trắng, đội mũ lụa đen satin bonnet và mặc áo nỉ thể thao dài tay 'The Mecca of Bodybuilding'. Ánh nắng ban mai rọi xiên qua kẽ lá ngoài cửa sổ, in những vệt bóng loang lổ đầy chất thơ lên ga giường và gương mặt nhân vật. Anh nhìn thẳng ống kính, mỉm cười tự nhiên và thốt lên lời tự sự mở đầu: 'I\'d be lying to you if I said I was a morning person'. Dòng chữ vàng bơ cổ điển 'TO YOU I\'D BE LYING IF I SAID' hiển thị đồng bộ với khẩu hình.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục Top-Down vuông góc 90 độ phá cách so với góc quay selfie thông thường. Sự tương phản sắc nét giữa trang phục/mũ đen tuyền với ga giường trắng ngà giúp chủ thể nổi bật tuyệt đối. Hiệu ứng Dappled Light tự nhiên mang lại chất điện ảnh hữu cơ (Organic Cinematic Look) vô cùng cuốn hút.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Vệt bóng đổ của cành cây cắt ngang vùng trán và mắt trong 0.5s đầu tiên có thể làm phân tán ánh nhìn nhẹ nếu người xem lướt quá nhanh qua feed.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Mở đầu video bằng một lời phản biện ngược dòng định kiến xã hội (Counter-intuitive Hook) kết hợp góc quay từ trên trần nhà xuống sẽ tạo cảm giác thân mật, lôi cuốn khán giả vào câu chuyện tức thì.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Overhead Bird's-Eye View (Góc nhìn từ trên cao vuông góc) • 24mm f/2.8</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Phòng ngủ gia đình (Bed Top-Down)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên nắng sớm xiên qua tán cây (Dappled Morning Sunlight)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut (Cắt thẳng) theo nhịp câu thoại sang Shot 02</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Hard Cut (Cắt thẳng) theo nhịp câu thoại sang Shot 02</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 2.59, 3.59)">
+                    ▶ 2.59s - 3.59s (1.00s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Ống Kính Mắt Cá (Fisheye Vignette) Cận Cảnh Tab Đầu Giường: Khắc họa phản xạ tìm điện thoại trong vô thức của buổi sáng bằng ngôn ngữ B-Roll đời thực</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_02_start.jpg', 'Shot 02 • Đầu (2.59s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (2.59s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_02_mid.jpg', 'Shot 02 • Giữa (3.09s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (3.09s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_02_end.jpg', 'Shot 02 • Cuối (3.59s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (3.59s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình đột ngột đổi sang góc cận chiếc tủ đầu giường mang hơi hướng vintage với viền tối tròn phong cách ống kính mắt cá. Bàn tay của Josh với hình xăm vươn từ mép giường vào, lần mò sờ soạng trên mặt bàn gỗ trắng dưới ánh nắng xiên rèm chớp Venetian blinds. Phía trên là chiếc đèn ngủ chụp mây tre đan tạo điểm nhấn thị giác có chiều sâu dọc. Text overlay 'AND I\'VE' màu vàng bơ xuất hiện giữa tủ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Hiệu ứng viền đen tròn (Circular Vignette) kết hợp góc fisheye tạo góc nhìn gián điệp/hoài niệm độc đáo. Bóng sọc ngang của rèm chớp in lên tường màu hồng đất (terracotta) và mặt tủ trắng tạo chất cảm thị giác (rich texture) đậm phong cách Lifestyle cao cấp.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cánh tay vươn vào sờ trên bàn trống mà không cầm điện thoại, khiến bước chuyển sang shot 3 (đã cầm điện thoại trên tai) bị nhảy mất một vi hành động kết nối.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sử dụng B-Roll cận cảnh đồ vật sinh hoạt (đèn ngủ, tủ đầu giường, mặt bàn) với góc rộng hoặc hiệu ứng viền tối để đổi nhịp thị giác giữa các câu nói, tránh cảm giác đơn điệu của vlog truyền thống.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Fisheye / Ultra-wide với Circular Vignette • 12mm Equivalent</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc tab đầu giường phòng ngủ</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Nắng xiên qua rèm chớp tạo bóng sọc ngang (Venetian Blinds Shadows)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Jump Cut / Match Cut nhịp điệu trở lại giường ngủ ở Shot 03</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Jump Cut / Match Cut nhịp điệu trở lại giường ngủ ở Shot 03</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 3.63, 6.63)">
+                    ▶ 3.63s - 6.63s (3.00s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Diễn Xuất Biểu Cảm Kịch Nghệ 'Thanh Minh Khi Vừa Thức Giấc': Khai thác tình huống hài hước đời thường qua góc nhìn cố định từ trần nhà</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_03_start.jpg', 'Shot 03 • Đầu (3.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (3.63s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_03_mid.jpg', 'Shot 03 • Giữa (5.13s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.13s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_03_end.jpg', 'Shot 03 • Cuối (6.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (6.63s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Quay trở lại góc máy Top-Down từ trần nhà, Josh Diaz đang cầm chiếc smartphone áp vào tai, khuôn mặt nhăn nhó ngái ngủ, mắt lim dim vừa nghe máy vừa lắp bắp phân trần: '...telling people the truth. No, just wake up...'. Bàn tay còn lại vung vẩy giải thích vào không trung đầy bất lực rồi kéo chăn trùm lại che người. Cụm chữ 'TRUTH / NO' in đậm giật nảy theo lời thoại.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Duy trì góc máy Top-Down đồng nhất tạo tính liên kết không gian chặt chẽ (Spatial Continuity). Biểu cảm khuôn mặt 100% tự nhiên không giả tạo, đánh trúng tâm lý người xem khi bị hỏi 'đã dậy chưa' vào sáng sớm, kích hoạt sự đồng cảm sâu sắc.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc chăn phía dưới bên trái bị xô lệch nhiều để lộ mép đệm, tuy nhiên sự bừa bộn này lại củng cố thêm tính chân thực của buổi sáng ngủ nướng.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đưa những tình huống nói dối vô hại đời thường (như giả vờ đã dậy từ lâu) vào video là mỏ neo cảm xúc tuyệt vời giúp video đạt tương tác và chia sẻ viral cao.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Bird's-Eye View Top-Down • 24mm f/2.8</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Giường ngủ (Overhead Shot)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng nắng sớm xiên qua lá cây</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut dứt khoát chuyển không gian sang phòng tắm ở Shot 04</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Hard Cut dứt khoát chuyển không gian sang phòng tắm ở Shot 04</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 6.67, 7.55)">
+                    ▶ 6.67s - 7.55s (0.88s)
+                </button>
+            </div>
+            <h2 class="shot-headline">B-Roll Thao Tác Nhấn Vòi Sữa Rửa Mặt (Tactile Skincare Detail): Đưa nhịp sinh hoạt buổi sáng vào quy trình chăm sóc bản thân đầy thẩm mỹ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_04_start.jpg', 'Shot 04 • Đầu (6.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (6.67s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_04_mid.jpg', 'Shot 04 • Giữa (7.11s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (7.11s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_04_end.jpg', 'Shot 04 • Cuối (7.55s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (7.55s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Chai sữa rửa mặt CeraVe Hydrating Facial Cleanser màu xanh lá - trắng đặt vững chãi trên mặt đá lavabo sáng bóng dưới vệt nắng sớm. Hai bàn tay rám nắng có hình xăm của Josh đưa vào từ hai bên khung hình, một tay giữ đầu vòi bơm, tay kia xòe ra hứng trọn giọt gel sữa rửa mặt trong 1 nhịp nhấn dứt khoát. Text 'I GUESS' lướt qua phía dưới chai.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc quay cận cảnh đặc tả (Tactile Insert Shot) chuẩn mực điện ảnh. Ánh nắng sớm rọi xuyên qua thân chai trong suốt làm nổi bật chất gel và thương hiệu một cách hữu cơ (Organic Product Placement), không hề có cảm giác gượng ép của quảng cáo.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng cực ngắn (chỉ 0.88s / 21 frames), đòi hỏi ánh mắt người xem phải lập tức định vị vòi bơm và chuyển động tay ngay khoảnh khắc cắt cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Để lồng ghép sản phẩm vào video phong cách sống, hãy quay cận cảnh thao tác sử dụng thực tế (action-oriented B-roll) thay vì cầm chai giơ thẳng vào mặt người xem.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tight Product Close-Up • 50mm f/1.8 (Độ sâu trường ảnh mỏng)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn lavabo phòng tắm</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên buổi sáng rọi xiên qua cửa sổ phòng tắm</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Cut hành động từ nhấn gel sang thoa bọt lên mặt ở Shot 05</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Match Cut hành động từ nhấn gel sang thoa bọt lên mặt ở Shot 05</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 7.59, 11.47)">
+                    ▶ 7.59s - 11.47s (3.88s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Phá Vỡ Bức Tường Thứ Tư Với Khuôn Mặt Đầy Bọt Rửa Mặt: Biến không gian riêng tư phòng tắm thành sân khấu độc thoại triết lý sống</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_05_start.jpg', 'Shot 05 • Đầu (7.59s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (7.59s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_05_mid.jpg', 'Shot 05 • Giữa (9.53s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.53s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_05_end.jpg', 'Shot 05 • Cuối (11.47s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (11.47s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Từ góc nhìn trên cao của chiếc gương phòng tắm với hiệu ứng viền tối tròn Fisheye, Josh Diaz ngước khuôn mặt phủ đầy bọt xà phòng trắng xóa lên nhìn thẳng vào ống kính máy quay. Anh vừa rửa mặt vừa tranh luận đầy tâm huyết: '...there's this idea that enjoying the next hour or two makes you lazy'. Biểu cảm đôi mắt mở to đầy trăn trở, chữ 'OR 2' xuất hiện nổi bật giữa ngực áo.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tạo xung đột thị giác (Visual Irony) đắt giá: Một diện mạo ngộ nghĩnh phủ bọt trắng đi kèm một luận điểm triết lý sống sắc sảo. Góc máy Fisheye từ trên gương nhìn xuống mở rộng không gian hẹp và tăng cường kịch tính biểu cảm.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Bọt xà phòng có xu hướng chảy nhẹ xuống ria mép khi nói chuyện, tuy hơi nhếch nhác nhưng lại là bằng chứng thuyết phục cho sự chân thực 100% không diễn xuất màu mè.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Nói những thông điệp phản biện nghiêm túc trong những khoảnh khắc đời thường nhất (như khi đang rửa mặt) chính là vũ khí tối thượng để giữ chân người xem không lướt qua.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> High-Angle Fisheye với Circular Vignette • 12mm Equivalent</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Gương soi phòng tắm (POV Mirror High-Angle)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng đèn phòng tắm kết hợp nắng sớm từ cửa sổ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut cắt cảnh sang góc làm việc / Home Studio ở Shot 06</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Hard Cut cắt cảnh sang góc làm việc / Home Studio ở Shot 06</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 11.51, 12.39)">
+                    ▶ 11.51s - 12.39s (0.88s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cận Cảnh Xoay Micro Shure SM7B Bắt Ánh Nắng Xiên: Tuyên ngôn chuyển đổi trạng thái từ thư giãn sang chế độ sáng tạo chuyên nghiệp</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_06_start.jpg', 'Shot 06 • Đầu (11.51s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (11.51s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_06_mid.jpg', 'Shot 06 • Giữa (11.95s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (11.95s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_06_end.jpg', 'Shot 06 • Cuối (12.39s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (12.39s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Ống kính máy quay khóa chặt vào chiếc micro chuyên nghiệp Shure SM7B gắn trên cần xoay boom arm màu đen nhám. Bàn tay rám nắng của Josh vươn tới xoay nhẹ góc mic về phía người nói. Nắng sớm vàng ấm rọi xuyên qua kẽ lá in hoa văn bóng đổ lên màng bọc micro và bàn tay. Phía hậu cảnh nhòe mờ là Josh đang ngồi ngay ngắn. Text 'IF YOU ASK ME' xuất hiện trên đỉnh khung hình.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Độ sâu trường ảnh (Shallow DOF) tuyệt đẹp với bokeh mịn màng. Chiếc micro Shure SM7B là biểu tượng đẳng cấp của giới Podcaster/Creator, đóng vai trò bảo chứng thị giác cho tính chuyên nghiệp của nhân vật. Ánh sáng vàng cam rim-light tôn nét bàn tay.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng chuyển tiếp chỉ 0.88s, đóng vai trò như một nhịp đệm (Cut-in Setup) chuẩn bị cho cú chốt hạ luận điểm ở shot tiếp theo.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Trước khi đưa ra kết luận quan trọng, hãy chèn 1 shot cận cảnh đồ nghề chuyên nghiệp để tạo nhịp thở thị giác và nâng tầm uy tín cho nhân vật.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Macro / Tight Close-Up • 50mm f/1.4</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc bàn làm việc / Home Studio</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh nắng vàng ấm xiên ngang cửa sổ (Golden Morning Rim Light)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut trực diện sang góc Talking Head chính diện ở Shot 07</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Hard Cut trực diện sang góc Talking Head chính diện ở Shot 07</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 12.43, 13.97)">
+                    ▶ 12.43s - 13.97s (1.54s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Talking Head Chân Thực Đầy Năng Lượng Bên Bàn Làm Việc: Điểm tựa lý lẽ đanh thép trước khi tung ra cú Twist thị giác bất ngờ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_07_start.jpg', 'Shot 07 • Đầu (12.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (12.43s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_07_mid.jpg', 'Shot 07 • Giữa (13.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (13.20s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_07_end.jpg', 'Shot 07 • Cuối (13.97s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (13.97s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Josh Diaz ngồi vững chãi trên chiếc ghế công thái học trước bàn làm việc, khuôn mặt đã rửa sạch sáng láng, ánh mắt tự tin nhìn thẳng vào ống kính máy quay qua chiếc micro Shure SM7B ở tiền cảnh. Anh nhăn mũi mỉm cười đầy dứt khoát: '...it doesn't make sense'. Từ 'MAKE' màu vàng bơ xuất hiện nhấn mạnh ngay phía trên micro.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục 1/3 hoàn hảo với micro làm tiền cảnh tạo chiều sâu không gian (Foreground Layering). Ánh sáng Key Light mềm mại rọi lên mặt làm nổi bật ánh mắt kiên định và thần thái đầy sức thuyết phục.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Hậu cảnh góc bên phải hơi tối so với nguồn sáng chính bên trái, nhưng lại giúp chủ thể và micro nổi bật hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Một cú Talking Head sắc bén không cần dài dòng, chỉ cần 1.5s với giao tiếp mắt trực diện (Eye Contact) và một câu đúc kết đanh thép là đủ để chiếm trọn niềm tin của khán giả.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Eye-Level Medium Close-Up • 35mm f/1.4</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn làm việc Studio (Work Desk)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Key Light tự nhiên kết hợp đèn ấm hậu cảnh</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Cut giật lùi (Reverse Jump Cut) quay ngoắt về giường ngủ ở Shot 08</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Match Cut giật lùi (Reverse Jump Cut) quay ngoắt về giường ngủ ở Shot 08</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 14.01, 16.85)">
+                    ▶ 14.01s - 16.85s (2.84s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Bẻ Lái Thị Giác (Visual Punchline Twist): Quay ngoắt trở lại giường ngủ khẳng định tuyên ngôn 'làm việc ca khác' bằng hành động thực tế</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_08_start.jpg', 'Shot 08 • Đầu (14.01s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (14.01s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_08_mid.jpg', 'Shot 08 • Giữa (15.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (15.43s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_08_end.jpg', 'Shot 08 • Cuối (16.85s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (16.85s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Sau khi người xem tin rằng Josh đã sẵn sàng cho một ngày làm việc cật lực, khung hình bất ngờ cắt phắt trở lại chiếc giường ngủ ban đầu từ góc Top-Down trên trần nhà. Josh Diaz nằm cuộn tròn dưới lớp chăn sọc caro nâu be, đầu vẫn đội mũ lụa đen, mỉm cười đắc thắng nhìn lên trần nhà và thốt ra câu kết đắt giá: 'My productive hours just look different'. Toàn bộ text biến mất để khán giả cảm nhận trọn vẹn cú lật kèo hài hước.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú Twist bẻ lái ngoạn mục (Visual Punchline) khép lại cấu trúc vòng tròn hoàn hảo (Circular Storytelling). Chiếc chăn kẻ sọc caro mang lại cảm giác ấm áp, thư thái, biến sự 'lười biếng' thành một phong cách sống có chủ đích đầy quyến rũ.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cú cắt cảnh diễn ra đột ngột trong 1 frame, nếu người xem lơ đễnh sẽ cần xem lại lần thứ hai — điều này gián tiếp thúc đẩy chỉ số Replay Rate tăng vọt.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đỉnh cao của nghệ thuật giữ chân và viral là tạo ra kỳ vọng (Setup) rồi bất ngờ lật ngược tình thế (Subversion) bằng hình ảnh đối lập hoàn toàn với lời nói.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Bird's-Eye View Overhead • 24mm f/2.8</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Giường ngủ (Bed Overhead Top-Down)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng nắng sớm ấm áp trên giường ngủ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut sang màn hình đen Outro ở Shot 09</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 09 • Hard Cut sang màn hình đen Outro ở Shot 09</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_08_to_09.jpg?v=2', 'Chuyển cảnh Shot 08 sang Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_08_to_09.jpg?v=2" alt="Transition 8 to 9" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-9">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 09</span>
+                <button class="shot-time-btn" onclick="jumpToShot(9, 16.89, 18.35)">
+                    ▶ 16.89s - 18.35s (1.46s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Card Đóng Dấu Bản Quyền Tối Giản (Minimalist Signature Outro): Khắc sâu nhận diện thương hiệu cá nhân 'by josh' bằng Typography vàng bơ cổ điển</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_09_start.jpg', 'Shot 09 • Đầu (16.89s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (16.89s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_09_mid.jpg', 'Shot 09 • Giữa (17.62s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (17.62s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_09_end.jpg', 'Shot 09 • Cuối (18.35s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (18.35s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Màn hình chuyển sang màu đen tuyền tối giản (#000000), chữ ký thương hiệu cá nhân 'by josh' bằng phông chữ sans-serif slab vàng bơ hiển thị khiêm tốn nhưng đanh thép ngay giữa tâm điểm khung hình trong 1.46s trước khi video tự động tua lại.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cực kỳ sạch sẽ, không hề có những nút CTA xin like, share rẻ tiền. Khẳng định phong cách tối giản và tự tin của một Filmmaker độc lập hàng đầu. Màu chữ vàng bơ đồng bộ xuyên suốt từ shot 1 đến shot cuối cùng.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Màn hình đen tĩnh có thể làm giảm nhẹ cảm xúc nếu không có nhạc nền fade out mượt mà, nhưng ở đây âm thanh kết bài hòa quyện hoàn hảo.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Nhận diện thương hiệu cá nhân bền vững nhất đến từ sự tinh giản và tính nhất quán: Một chữ ký nhỏ, đúng font, đúng màu xuất hiện ở cuối mỗi tác phẩm là đủ để khán giả khắc ghi suốt đời.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Motion Graphic Card 1080x1920</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Graphic Title Screen (Hậu kỳ đồ họa)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Solid Black Screen (#000000)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Seamless Loop (Khép vòng lặp vô tận) sang Shot 01</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_09_to_01_loop.jpg?v=2', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/transitions/trans_09_to_01_loop.jpg?v=2" alt="Loop Transition" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 2.54)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Hook Góc Nhìn Trên Cao (Top-Down Overhead) Đầy Thư Thái: Phá vỡ định kiến 'dậy sớm thành công' bằng lời thú nhận thành thật ngay trên giường ngủ</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 2.59, 3.59)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 2.59s</span>
+            </div>
+            <div class="grid-card-body">Góc Ống Kính Mắt Cá (Fisheye Vignette) Cận Cảnh Tab Đầu Giường: Khắc họa phản xạ tìm điện thoại trong vô thức của buổi sáng bằng ngôn ngữ B-Roll đời thực</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 3.63, 6.63)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 3.63s</span>
+            </div>
+            <div class="grid-card-body">Diễn Xuất Biểu Cảm Kịch Nghệ 'Thanh Minh Khi Vừa Thức Giấc': Khai thác tình huống hài hước đời thường qua góc nhìn cố định từ trần nhà</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 6.67, 7.55)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 6.67s</span>
+            </div>
+            <div class="grid-card-body">B-Roll Thao Tác Nhấn Vòi Sữa Rửa Mặt (Tactile Skincare Detail): Đưa nhịp sinh hoạt buổi sáng vào quy trình chăm sóc bản thân đầy thẩm mỹ</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 7.59, 11.47)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 7.59s</span>
+            </div>
+            <div class="grid-card-body">Phá Vỡ Bức Tường Thứ Tư Với Khuôn Mặt Đầy Bọt Rửa Mặt: Biến không gian riêng tư phòng tắm thành sân khấu độc thoại triết lý sống</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 11.51, 12.39)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 11.51s</span>
+            </div>
+            <div class="grid-card-body">Cận Cảnh Xoay Micro Shure SM7B Bắt Ánh Nắng Xiên: Tuyên ngôn chuyển đổi trạng thái từ thư giãn sang chế độ sáng tạo chuyên nghiệp</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 12.43, 13.97)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 12.43s</span>
+            </div>
+            <div class="grid-card-body">Góc Talking Head Chân Thực Đầy Năng Lượng Bên Bàn Làm Việc: Điểm tựa lý lẽ đanh thép trước khi tung ra cú Twist thị giác bất ngờ</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 14.01, 16.85)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 14.01s</span>
+            </div>
+            <div class="grid-card-body">Cú Bẻ Lái Thị Giác (Visual Punchline Twist): Quay ngoắt trở lại giường ngủ khẳng định tuyên ngôn 'làm việc ca khác' bằng hành động thực tế</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(9, 16.89, 18.35)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <span class="grid-thumb-badge">Shot 09 • 16.89s</span>
+            </div>
+            <div class="grid-card-body">Card Đóng Dấu Bản Quyền Tối Giản (Minimalist Signature Outro): Khắc sâu nhận diện thương hiệu cá nhân 'by josh' bằng Typography vàng bơ cổ điển</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1Px04k5l7_xJAuv3BpaSd7LZLNz-9HjDT/open?id=1Px04k5l7_xJAuv3BpaSd7LZLNz-9HjDT" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "en_frame": 61, "st_time": 0.0, "en_time": 2.54, "duration": 2.54, "headline": "Hook Góc Nhìn Trên Cao (Top-Down Overhead) Đầy Thư Thái: Phá vỡ định kiến 'dậy sớm thành công' bằng lời thú nhận thành thật ngay trên giường ngủ", "subject_action": "Josh Diaz nằm gối đầu thảnh thơi trên chiếc giường nệm trắng, đội mũ lụa đen satin bonnet và mặc áo nỉ thể thao dài tay 'The Mecca of Bodybuilding'. Ánh nắng ban mai rọi xiên qua kẽ lá ngoài cửa sổ, in những vệt bóng loang lổ đầy chất thơ lên ga giường và gương mặt nhân vật. Anh nhìn thẳng ống kính, mỉm cười tự nhiên và thốt lên lời tự sự mở đầu: 'I\\'d be lying to you if I said I was a morning person'. Dòng chữ vàng bơ cổ điển 'TO YOU I\\'D BE LYING IF I SAID' hiển thị đồng bộ với khẩu hình.", "pros": "Bố cục Top-Down vuông góc 90 độ phá cách so với góc quay selfie thông thường. Sự tương phản sắc nét giữa trang phục/mũ đen tuyền với ga giường trắng ngà giúp chủ thể nổi bật tuyệt đối. Hiệu ứng Dappled Light tự nhiên mang lại chất điện ảnh hữu cơ (Organic Cinematic Look) vô cùng cuốn hút.", "cons": "Vệt bóng đổ của cành cây cắt ngang vùng trán và mắt trong 0.5s đầu tiên có thể làm phân tán ánh nhìn nhẹ nếu người xem lướt quá nhanh qua feed.", "takeaway": "Mở đầu video bằng một lời phản biện ngược dòng định kiến xã hội (Counter-intuitive Hook) kết hợp góc quay từ trên trần nhà xuống sẽ tạo cảm giác thân mật, lôi cuốn khán giả vào câu chuyện tức thì.", "location": "Phòng ngủ gia đình (Bed Top-Down)", "lens_angle": "Overhead Bird's-Eye View (Góc nhìn từ trên cao vuông góc) • 24mm f/2.8", "lighting_color": "Ánh sáng tự nhiên nắng sớm xiên qua tán cây (Dappled Morning Sunlight)", "transition": "Hard Cut (Cắt thẳng) theo nhịp câu thoại sang Shot 02"}, {"id": 2, "st_frame": 62, "en_frame": 86, "st_time": 2.59, "en_time": 3.59, "duration": 1.0, "headline": "Góc Ống Kính Mắt Cá (Fisheye Vignette) Cận Cảnh Tab Đầu Giường: Khắc họa phản xạ tìm điện thoại trong vô thức của buổi sáng bằng ngôn ngữ B-Roll đời thực", "subject_action": "Khung hình đột ngột đổi sang góc cận chiếc tủ đầu giường mang hơi hướng vintage với viền tối tròn phong cách ống kính mắt cá. Bàn tay của Josh với hình xăm vươn từ mép giường vào, lần mò sờ soạng trên mặt bàn gỗ trắng dưới ánh nắng xiên rèm chớp Venetian blinds. Phía trên là chiếc đèn ngủ chụp mây tre đan tạo điểm nhấn thị giác có chiều sâu dọc. Text overlay 'AND I\\'VE' màu vàng bơ xuất hiện giữa tủ.", "pros": "Hiệu ứng viền đen tròn (Circular Vignette) kết hợp góc fisheye tạo góc nhìn gián điệp/hoài niệm độc đáo. Bóng sọc ngang của rèm chớp in lên tường màu hồng đất (terracotta) và mặt tủ trắng tạo chất cảm thị giác (rich texture) đậm phong cách Lifestyle cao cấp.", "cons": "Cánh tay vươn vào sờ trên bàn trống mà không cầm điện thoại, khiến bước chuyển sang shot 3 (đã cầm điện thoại trên tai) bị nhảy mất một vi hành động kết nối.", "takeaway": "Sử dụng B-Roll cận cảnh đồ vật sinh hoạt (đèn ngủ, tủ đầu giường, mặt bàn) với góc rộng hoặc hiệu ứng viền tối để đổi nhịp thị giác giữa các câu nói, tránh cảm giác đơn điệu của vlog truyền thống.", "location": "Góc tab đầu giường phòng ngủ", "lens_angle": "Fisheye / Ultra-wide với Circular Vignette • 12mm Equivalent", "lighting_color": "Nắng xiên qua rèm chớp tạo bóng sọc ngang (Venetian Blinds Shadows)", "transition": "Jump Cut / Match Cut nhịp điệu trở lại giường ngủ ở Shot 03"}, {"id": 3, "st_frame": 87, "en_frame": 159, "st_time": 3.63, "en_time": 6.63, "duration": 3.0, "headline": "Diễn Xuất Biểu Cảm Kịch Nghệ 'Thanh Minh Khi Vừa Thức Giấc': Khai thác tình huống hài hước đời thường qua góc nhìn cố định từ trần nhà", "subject_action": "Quay trở lại góc máy Top-Down từ trần nhà, Josh Diaz đang cầm chiếc smartphone áp vào tai, khuôn mặt nhăn nhó ngái ngủ, mắt lim dim vừa nghe máy vừa lắp bắp phân trần: '...telling people the truth. No, just wake up...'. Bàn tay còn lại vung vẩy giải thích vào không trung đầy bất lực rồi kéo chăn trùm lại che người. Cụm chữ 'TRUTH / NO' in đậm giật nảy theo lời thoại.", "pros": "Duy trì góc máy Top-Down đồng nhất tạo tính liên kết không gian chặt chẽ (Spatial Continuity). Biểu cảm khuôn mặt 100% tự nhiên không giả tạo, đánh trúng tâm lý người xem khi bị hỏi 'đã dậy chưa' vào sáng sớm, kích hoạt sự đồng cảm sâu sắc.", "cons": "Góc chăn phía dưới bên trái bị xô lệch nhiều để lộ mép đệm, tuy nhiên sự bừa bộn này lại củng cố thêm tính chân thực của buổi sáng ngủ nướng.", "takeaway": "Đưa những tình huống nói dối vô hại đời thường (như giả vờ đã dậy từ lâu) vào video là mỏ neo cảm xúc tuyệt vời giúp video đạt tương tác và chia sẻ viral cao.", "location": "Giường ngủ (Overhead Shot)", "lens_angle": "Bird's-Eye View Top-Down • 24mm f/2.8", "lighting_color": "Ánh sáng nắng sớm xiên qua lá cây", "transition": "Hard Cut dứt khoát chuyển không gian sang phòng tắm ở Shot 04"}, {"id": 4, "st_frame": 160, "en_frame": 181, "st_time": 6.67, "en_time": 7.55, "duration": 0.88, "headline": "B-Roll Thao Tác Nhấn Vòi Sữa Rửa Mặt (Tactile Skincare Detail): Đưa nhịp sinh hoạt buổi sáng vào quy trình chăm sóc bản thân đầy thẩm mỹ", "subject_action": "Chai sữa rửa mặt CeraVe Hydrating Facial Cleanser màu xanh lá - trắng đặt vững chãi trên mặt đá lavabo sáng bóng dưới vệt nắng sớm. Hai bàn tay rám nắng có hình xăm của Josh đưa vào từ hai bên khung hình, một tay giữ đầu vòi bơm, tay kia xòe ra hứng trọn giọt gel sữa rửa mặt trong 1 nhịp nhấn dứt khoát. Text 'I GUESS' lướt qua phía dưới chai.", "pros": "Góc quay cận cảnh đặc tả (Tactile Insert Shot) chuẩn mực điện ảnh. Ánh nắng sớm rọi xuyên qua thân chai trong suốt làm nổi bật chất gel và thương hiệu một cách hữu cơ (Organic Product Placement), không hề có cảm giác gượng ép của quảng cáo.", "cons": "Thời lượng cực ngắn (chỉ 0.88s / 21 frames), đòi hỏi ánh mắt người xem phải lập tức định vị vòi bơm và chuyển động tay ngay khoảnh khắc cắt cảnh.", "takeaway": "Để lồng ghép sản phẩm vào video phong cách sống, hãy quay cận cảnh thao tác sử dụng thực tế (action-oriented B-roll) thay vì cầm chai giơ thẳng vào mặt người xem.", "location": "Bàn lavabo phòng tắm", "lens_angle": "Tight Product Close-Up • 50mm f/1.8 (Độ sâu trường ảnh mỏng)", "lighting_color": "Ánh sáng tự nhiên buổi sáng rọi xiên qua cửa sổ phòng tắm", "transition": "Match Cut hành động từ nhấn gel sang thoa bọt lên mặt ở Shot 05"}, {"id": 5, "st_frame": 182, "en_frame": 275, "st_time": 7.59, "en_time": 11.47, "duration": 3.88, "headline": "Phá Vỡ Bức Tường Thứ Tư Với Khuôn Mặt Đầy Bọt Rửa Mặt: Biến không gian riêng tư phòng tắm thành sân khấu độc thoại triết lý sống", "subject_action": "Từ góc nhìn trên cao của chiếc gương phòng tắm với hiệu ứng viền tối tròn Fisheye, Josh Diaz ngước khuôn mặt phủ đầy bọt xà phòng trắng xóa lên nhìn thẳng vào ống kính máy quay. Anh vừa rửa mặt vừa tranh luận đầy tâm huyết: '...there's this idea that enjoying the next hour or two makes you lazy'. Biểu cảm đôi mắt mở to đầy trăn trở, chữ 'OR 2' xuất hiện nổi bật giữa ngực áo.", "pros": "Tạo xung đột thị giác (Visual Irony) đắt giá: Một diện mạo ngộ nghĩnh phủ bọt trắng đi kèm một luận điểm triết lý sống sắc sảo. Góc máy Fisheye từ trên gương nhìn xuống mở rộng không gian hẹp và tăng cường kịch tính biểu cảm.", "cons": "Bọt xà phòng có xu hướng chảy nhẹ xuống ria mép khi nói chuyện, tuy hơi nhếch nhác nhưng lại là bằng chứng thuyết phục cho sự chân thực 100% không diễn xuất màu mè.", "takeaway": "Nói những thông điệp phản biện nghiêm túc trong những khoảnh khắc đời thường nhất (như khi đang rửa mặt) chính là vũ khí tối thượng để giữ chân người xem không lướt qua.", "location": "Gương soi phòng tắm (POV Mirror High-Angle)", "lens_angle": "High-Angle Fisheye với Circular Vignette • 12mm Equivalent", "lighting_color": "Ánh sáng đèn phòng tắm kết hợp nắng sớm từ cửa sổ", "transition": "Hard Cut cắt cảnh sang góc làm việc / Home Studio ở Shot 06"}, {"id": 6, "st_frame": 276, "en_frame": 297, "st_time": 11.51, "en_time": 12.39, "duration": 0.88, "headline": "Cận Cảnh Xoay Micro Shure SM7B Bắt Ánh Nắng Xiên: Tuyên ngôn chuyển đổi trạng thái từ thư giãn sang chế độ sáng tạo chuyên nghiệp", "subject_action": "Ống kính máy quay khóa chặt vào chiếc micro chuyên nghiệp Shure SM7B gắn trên cần xoay boom arm màu đen nhám. Bàn tay rám nắng của Josh vươn tới xoay nhẹ góc mic về phía người nói. Nắng sớm vàng ấm rọi xuyên qua kẽ lá in hoa văn bóng đổ lên màng bọc micro và bàn tay. Phía hậu cảnh nhòe mờ là Josh đang ngồi ngay ngắn. Text 'IF YOU ASK ME' xuất hiện trên đỉnh khung hình.", "pros": "Độ sâu trường ảnh (Shallow DOF) tuyệt đẹp với bokeh mịn màng. Chiếc micro Shure SM7B là biểu tượng đẳng cấp của giới Podcaster/Creator, đóng vai trò bảo chứng thị giác cho tính chuyên nghiệp của nhân vật. Ánh sáng vàng cam rim-light tôn nét bàn tay.", "cons": "Thời lượng chuyển tiếp chỉ 0.88s, đóng vai trò như một nhịp đệm (Cut-in Setup) chuẩn bị cho cú chốt hạ luận điểm ở shot tiếp theo.", "takeaway": "Trước khi đưa ra kết luận quan trọng, hãy chèn 1 shot cận cảnh đồ nghề chuyên nghiệp để tạo nhịp thở thị giác và nâng tầm uy tín cho nhân vật.", "location": "Góc bàn làm việc / Home Studio", "lens_angle": "Macro / Tight Close-Up • 50mm f/1.4", "lighting_color": "Ánh nắng vàng ấm xiên ngang cửa sổ (Golden Morning Rim Light)", "transition": "Hard Cut trực diện sang góc Talking Head chính diện ở Shot 07"}, {"id": 7, "st_frame": 298, "en_frame": 335, "st_time": 12.43, "en_time": 13.97, "duration": 1.54, "headline": "Góc Talking Head Chân Thực Đầy Năng Lượng Bên Bàn Làm Việc: Điểm tựa lý lẽ đanh thép trước khi tung ra cú Twist thị giác bất ngờ", "subject_action": "Josh Diaz ngồi vững chãi trên chiếc ghế công thái học trước bàn làm việc, khuôn mặt đã rửa sạch sáng láng, ánh mắt tự tin nhìn thẳng vào ống kính máy quay qua chiếc micro Shure SM7B ở tiền cảnh. Anh nhăn mũi mỉm cười đầy dứt khoát: '...it doesn't make sense'. Từ 'MAKE' màu vàng bơ xuất hiện nhấn mạnh ngay phía trên micro.", "pros": "Bố cục 1/3 hoàn hảo với micro làm tiền cảnh tạo chiều sâu không gian (Foreground Layering). Ánh sáng Key Light mềm mại rọi lên mặt làm nổi bật ánh mắt kiên định và thần thái đầy sức thuyết phục.", "cons": "Hậu cảnh góc bên phải hơi tối so với nguồn sáng chính bên trái, nhưng lại giúp chủ thể và micro nổi bật hơn.", "takeaway": "Một cú Talking Head sắc bén không cần dài dòng, chỉ cần 1.5s với giao tiếp mắt trực diện (Eye Contact) và một câu đúc kết đanh thép là đủ để chiếm trọn niềm tin của khán giả.", "location": "Bàn làm việc Studio (Work Desk)", "lens_angle": "Eye-Level Medium Close-Up • 35mm f/1.4", "lighting_color": "Key Light tự nhiên kết hợp đèn ấm hậu cảnh", "transition": "Match Cut giật lùi (Reverse Jump Cut) quay ngoắt về giường ngủ ở Shot 08"}, {"id": 8, "st_frame": 336, "en_frame": 404, "st_time": 14.01, "en_time": 16.85, "duration": 2.84, "headline": "Cú Bẻ Lái Thị Giác (Visual Punchline Twist): Quay ngoắt trở lại giường ngủ khẳng định tuyên ngôn 'làm việc ca khác' bằng hành động thực tế", "subject_action": "Sau khi người xem tin rằng Josh đã sẵn sàng cho một ngày làm việc cật lực, khung hình bất ngờ cắt phắt trở lại chiếc giường ngủ ban đầu từ góc Top-Down trên trần nhà. Josh Diaz nằm cuộn tròn dưới lớp chăn sọc caro nâu be, đầu vẫn đội mũ lụa đen, mỉm cười đắc thắng nhìn lên trần nhà và thốt ra câu kết đắt giá: 'My productive hours just look different'. Toàn bộ text biến mất để khán giả cảm nhận trọn vẹn cú lật kèo hài hước.", "pros": "Cú Twist bẻ lái ngoạn mục (Visual Punchline) khép lại cấu trúc vòng tròn hoàn hảo (Circular Storytelling). Chiếc chăn kẻ sọc caro mang lại cảm giác ấm áp, thư thái, biến sự 'lười biếng' thành một phong cách sống có chủ đích đầy quyến rũ.", "cons": "Cú cắt cảnh diễn ra đột ngột trong 1 frame, nếu người xem lơ đễnh sẽ cần xem lại lần thứ hai — điều này gián tiếp thúc đẩy chỉ số Replay Rate tăng vọt.", "takeaway": "Đỉnh cao của nghệ thuật giữ chân và viral là tạo ra kỳ vọng (Setup) rồi bất ngờ lật ngược tình thế (Subversion) bằng hình ảnh đối lập hoàn toàn với lời nói.", "location": "Giường ngủ (Bed Overhead Top-Down)", "lens_angle": "Bird's-Eye View Overhead • 24mm f/2.8", "lighting_color": "Ánh sáng nắng sớm ấm áp trên giường ngủ", "transition": "Hard Cut sang màn hình đen Outro ở Shot 09"}, {"id": 9, "st_frame": 405, "en_frame": 440, "st_time": 16.89, "en_time": 18.35, "duration": 1.46, "headline": "Card Đóng Dấu Bản Quyền Tối Giản (Minimalist Signature Outro): Khắc sâu nhận diện thương hiệu cá nhân 'by josh' bằng Typography vàng bơ cổ điển", "subject_action": "Màn hình chuyển sang màu đen tuyền tối giản (#000000), chữ ký thương hiệu cá nhân 'by josh' bằng phông chữ sans-serif slab vàng bơ hiển thị khiêm tốn nhưng đanh thép ngay giữa tâm điểm khung hình trong 1.46s trước khi video tự động tua lại.", "pros": "Cực kỳ sạch sẽ, không hề có những nút CTA xin like, share rẻ tiền. Khẳng định phong cách tối giản và tự tin của một Filmmaker độc lập hàng đầu. Màu chữ vàng bơ đồng bộ xuyên suốt từ shot 1 đến shot cuối cùng.", "cons": "Màn hình đen tĩnh có thể làm giảm nhẹ cảm xúc nếu không có nhạc nền fade out mượt mà, nhưng ở đây âm thanh kết bài hòa quyện hoàn hảo.", "takeaway": "Nhận diện thương hiệu cá nhân bền vững nhất đến từ sự tinh giản và tính nhất quán: Một chữ ký nhỏ, đúng font, đúng màu xuất hiện ở cuối mỗi tác phẩm là đủ để khán giả khắc ghi suốt đời.", "location": "Graphic Title Screen (Hậu kỳ đồ họa)", "lens_angle": "Motion Graphic Card 1080x1920", "lighting_color": "Solid Black Screen (#000000)", "transition": "Seamless Loop (Khép vòng lặp vô tận) sang Shot 01"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ;
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 23.976 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById();
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

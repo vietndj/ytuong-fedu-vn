@@ -1,0 +1,3263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Personal Cinema Wherever You Go • @arturbr x VITURE (Phân Tích Đạo Diễn)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #070a0f;
+    --bg-card: #0e1420;
+    --bg-card-hover: #151e30;
+    --bg-surface: #121928;
+    --border-color: #1e293b;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-blue: #38bdf8;
+    --accent-amber: #f59e0b;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-purple: #c084fc;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: #202d42; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .app-container {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .video-sidebar-col {
+        width: 440px;
+        min-width: 440px;
+        max-width: 480px;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: 1px solid var(--border-color);
+        background: var(--bg-surface);
+        display: flex;
+        flex-direction: column;
+        z-index: 30;
+    }
+    .content-scroll-col {
+        flex: 1;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 24px 32px 60px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    .video-sidebar-col {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(14, 20, 32, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .content-scroll-col {
+        width: 100%;
+        padding: 16px 14px 80px;
+    }
+}
+
+/* Sticky Video Player Box */
+.video-player-container {
+    position: relative;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .video-player-container {
+        aspect-ratio: 9/16;
+        max-height: 58vh;
+    }
+}
+@media (max-width: 1023px) {
+    .video-player-container {
+        max-height: 36vh;
+        aspect-ratio: 16/9;
+    }
+}
+
+video#mainPlayer {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    outline: none;
+}
+
+.video-controls-panel {
+    padding: 12px 16px;
+    background: #0b111c;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.current-status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11.5px;
+}
+
+.speed-buttons-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.ctrl-btn {
+    background: #162032;
+    color: #cbd5e1;
+    border: 1px solid #283750;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+}
+
+.ctrl-btn:hover, .ctrl-btn:active {
+    background: #25334d;
+    color: #fff;
+    border-color: var(--accent-blue);
+}
+
+.ctrl-btn.active {
+    background: var(--accent-blue);
+    color: #040810;
+    border-color: var(--accent-blue);
+}
+
+.sidebar-meta-section {
+    padding: 16px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.meta-video-title {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.meta-author-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    background: #0d1522;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.author-name {
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+.author-ig-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: linear-gradient(135deg, #e1306c, #fd1d1d, #f56040);
+    color: #fff;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.author-ig-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
+.quick-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.stat-chip {
+    background: #111a28;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #1c2a3f;
+}
+
+.stat-chip .lbl {
+    font-size: 10.5px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-chip .val {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--accent-blue);
+    margin-top: 2px;
+}
+
+/* View Mode Switcher Header */
+.view-switcher-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.view-tabs {
+    display: flex;
+    gap: 6px;
+    background: #0f1726;
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.view-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.view-tab-btn.active {
+    background: #202e45;
+    color: var(--accent-blue);
+}
+
+.drawer-trigger-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #152238;
+    color: var(--accent-blue);
+    border: 1px solid #283e60;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Storyboard Cards */
+.storyboard-view {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.shot-card:hover {
+    border-color: #2b3d5b;
+}
+
+.shot-card.current-playing {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+}
+
+.shot-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.shot-header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.shot-index-badge {
+    background: #1e2d44;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.time-jump-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--accent-blue);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.time-jump-btn:hover {
+    background: var(--accent-blue);
+    color: #070a0f;
+}
+
+.dur-pill {
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.tech-tag {
+    font-size: 11.5px;
+    background: #151e2e;
+    color: var(--text-muted);
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid #202b3d;
+}
+
+.shot-headline-box {
+    margin-bottom: 16px;
+}
+
+.shot-headline-title {
+    font-family: var(--font-heading);
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #f1f5f9;
+    line-height: 1.45;
+}
+
+/* Keyframes 3 Column Grid */
+.keyframes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.keyframe-item {
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid #1a2638;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.keyframe-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-blue);
+}
+
+.kf-img-wrap {
+    position: relative;
+    aspect-ratio: 9/16;
+    width: 100%;
+}
+
+.kf-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.kf-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    backdrop-filter: blur(6px);
+}
+
+.kf-badge.start { background: rgba(16, 185, 129, 0.85); color: #fff; }
+.kf-badge.mid { background: rgba(56, 189, 248, 0.85); color: #070a0f; font-weight: 800; }
+.kf-badge.end { background: rgba(244, 63, 94, 0.85); color: #fff; }
+
+/* 3 Structured Critique Blocks */
+.analysis-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.critique-block {
+    background: #0b1018;
+    border-radius: 8px;
+    padding: 12px 14px;
+    border: 1px solid #172233;
+}
+
+.block-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 12.5px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.block-content {
+    font-size: 13.5px;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+.two-column-critique {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+@media (max-width: 640px) {
+    .two-column-critique {
+        grid-template-columns: 1fr;
+    }
+}
+
+.critique-col {
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.critique-col.pro {
+    background: rgba(16, 185, 129, 0.08);
+    border-left: 3px solid var(--accent-emerald);
+}
+
+.critique-col.con {
+    background: rgba(245, 158, 11, 0.08);
+    border-left: 3px solid var(--accent-amber);
+}
+
+.col-header {
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.critique-col.pro .col-header { color: var(--accent-emerald); }
+.critique-col.con .col-header { color: var(--accent-amber); }
+
+.highlight-takeaway {
+    color: #38bdf8;
+    font-weight: 600;
+    background: rgba(56, 189, 248, 0.08);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border-left: 3px solid var(--accent-blue);
+}
+
+/* Specs Bar */
+.specs-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+    background: #090e16;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #94a3b8;
+    border: 1px solid #151f2e;
+}
+
+.spec-item .lbl {
+    color: #64748b;
+    font-weight: 600;
+}
+
+/* Transition section */
+.trans-section {
+    margin-top: 14px;
+    background: #090d14;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px dashed #202e44;
+}
+
+.trans-header {
+    margin-bottom: 8px;
+}
+
+.trans-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-purple);
+}
+
+.trans-img-wrap {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #000;
+}
+
+.trans-img-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.zoom-indicator {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    font-size: 10.5px;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Grid View */
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 14px;
+}
+
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.grid-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-blue);
+}
+
+.grid-thumb-box {
+    position: relative;
+    aspect-ratio: 9/16;
+    background: #000;
+}
+
+.grid-thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-time-tag {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    background: rgba(0,0,0,0.8);
+    color: var(--accent-blue);
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+}
+
+.grid-shot-tag {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(15, 23, 42, 0.85);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.grid-card-desc {
+    padding: 10px;
+    font-size: 12px;
+    color: #cbd5e1;
+    line-height: 1.4;
+}
+
+/* Drawer Menu Modal */
+.drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    display: none;
+    justify-content: flex-end;
+}
+
+.drawer-content {
+    width: 380px;
+    max-width: 85vw;
+    height: 100%;
+    background: #0e1522;
+    border-left: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.drawer-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 16px;
+    color: #fff;
+}
+
+.drawer-close-btn {
+    background: #1a2538;
+    border: none;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.drawer-list {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.drawer-shot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background: #141c2b;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.drawer-shot-row:hover {
+    background: #1f2c42;
+}
+
+.d-badge {
+    background: #23344d;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.d-time {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent-blue);
+}
+
+.d-title {
+    font-size: 12px;
+    color: #94a3b8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+}
+
+/* Lightbox Darkroom Modal */
+.lightbox-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(3, 5, 8, 0.95);
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lightbox-img-wrap {
+    max-width: 90vw;
+    max-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-img-wrap img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.9);
+}
+
+.lightbox-caption {
+    margin-top: 14px;
+    color: #e2e8f0;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #1e293b;
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Bottom Direct Links Block */
+.bottom-links-box {
+    margin-top: 40px;
+    padding: 20px;
+    background: #0c121d;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.bottom-links-title {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.link-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.link-item:hover {
+    text-decoration: underline;
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<div class="app-container">
+    <!-- Left Sidebar: Sticky Video Player & Controls -->
+    <aside class="video-sidebar-col">
+        <div class="video-player-container">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcOQSCMqho0.mp4" type="video/mp4">
+                Trình duyệt không hỗ trợ video HTML5.
+            </video>
+        </div>
+
+        <div class="video-controls-panel">
+            <div class="current-status-bar">
+                <span class="status-tag" id="currentShotTag">Shot 01 / 18</span>
+                <span id="timeDisplay" style="font-family: var(--font-mono); font-size: 12px; color: #94a3b8;">0.00s / 20.00s</span>
+            </div>
+
+            <div class="speed-buttons-row">
+                <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x (Match Cut)</button>
+                <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                <button class="ctrl-btn" onclick="setSpeed(2.0)">2.0x</button>
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ Frame</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">Frame ⏭</button>
+                <button class="ctrl-btn" id="loopBtn" onclick="toggleLoop()">🔁 Loop</button>
+            </div>
+        </div>
+
+        <div class="sidebar-meta-section">
+            <h1 class="meta-video-title">Personal Cinema Wherever You Go</h1>
+            
+            <div class="meta-author-box">
+                <div class="author-info">
+                    <span style="font-size: 18px;">🇪🇸</span>
+                    <div>
+                        <div class="author-name">ArturBr (@arturbr)</div>
+                        <div style="font-size: 11px; color: #64748b;">VIDEO BARCELONA • Commercial Creator</div>
+                    </div>
+                </div>
+                <a href="https://www.instagram.com/reel/DcOQSCMqho0/" target="_blank" class="author-ig-btn">
+                    📸 Xem IG Gốc ↗
+                </a>
+            </div>
+
+            <div class="quick-stats-grid">
+                <div class="stat-chip">
+                    <div class="lbl">Tổng Phân Cảnh</div>
+                    <div class="val">18 Shots</div>
+                </div>
+                <div class="stat-chip">
+                    <div class="lbl">Thời Lượng</div>
+                    <div class="val">20.00s (25 FPS)</div>
+                </div>
+                <div class="stat-chip">
+                    <div class="lbl">Thiết Bị Tài Trợ</div>
+                    <div class="val">VITURE Pro XR</div>
+                </div>
+                <div class="stat-chip">
+                    <div class="lbl">Kỹ Thuật Cốt Lõi</div>
+                    <div class="val">Macro POV / Montage</div>
+                </div>
+            </div>
+
+            <div style="font-size: 12.5px; color: #94a3b8; line-height: 1.5; background: #0c131f; padding: 12px; border-radius: 8px; border: 1px solid #182436;">
+                <strong>🎬 Tóm tắt Đạo Diễn:</strong> Video quảng cáo định dạng ngắn bậc thầy kết hợp giữa giải quyết nỗi đau người dùng (Problem/Solution) với trải nghiệm rạp chiếu cá nhân Micro-OLED. Sử dụng kỹ thuật chuyển cảnh nhịp nhàng (Lia Whip Pan, Macro Plug &amp; Play, POV Cinema) biến một sản phẩm kính XR công nghệ thành một tuyên ngôn phong cách sống thượng lưu.
+            </div>
+        </div>
+    </aside>
+
+    <!-- Right Content Scroll Area -->
+    <main class="content-scroll-col">
+        <!-- Switcher Header -->
+        <div class="view-switcher-bar">
+            <div class="view-tabs">
+                <button class="view-tab-btn active" id="tabDetail" onclick="switchView('detail')">📑 Storyboard Chi Tiết</button>
+                <button class="view-tab-btn" id="tabGrid" onclick="switchView('grid')">🖼️ Lưới Khung Hình (Visual Grid)</button>
+            </div>
+            <button class="drawer-trigger-btn" onclick="toggleDrawer()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                Mục Lục 18 Shots (Jump Menu)
+            </button>
+        </div>
+
+        <!-- Detail Storyboard View -->
+        <div class="storyboard-view" id="detailView">
+            
+    <div class="shot-card" id="shot-1" data-start="0.0" data-end="2.88">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 01</span>
+                <button class="time-jump-btn" onclick="jumpToShot(1, 0.0)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    0.00s - 2.88s <span class="dur-pill">(2.88s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Low-Angle Medium Shot</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Hook Thị Giác Trực Diện Bằng Hành Động Đeo Kính & Ánh Sáng Tương Phản Thấp: Khóa chặt sự tò mò ngay giây đầu tiên qua cử chỉ chuẩn bị bước vào không gian ảo</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_01_start.jpg', 'Shot 01 • Khung hình Đầu (0.00s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (0.00s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_01_mid.jpg', 'Shot 01 • Cao trào Giữa (1.44s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (1.44s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_01_end.jpg', 'Shot 01 • Khung hình Cuối (2.88s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (2.88s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Artur (Creator) đứng trong phòng với ánh sáng nền dịu nhẹ từ cửa sổ mờ, hai tay cầm chiếc kính thông minh Viture XR glasses đưa từ từ lên ngang tầm mắt rồi dứt khoát đeo lên sống mũi. Cử chỉ tự nhiên, thần thái tập trung, góc máy hơi hất nhẹ từ dưới lên (Low-Angle Medium Shot) tạo cảm giác làm chủ công nghệ.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Ánh sáng mood Teal/Cyan hiện đại, độ bão hòa màu êm dịu làm nổi bật tông da nhân vật và gọng kính đen mờ sắc nét. Khoảng cách chủ thể vừa vặn trong khung hình 9:16, hướng mắt nhân vật nhìn thẳng vào camera trước khi đeo kính tạo tương tác trực diện (Eye-contact Hook).</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Bối cảnh phía sau có bức tranh treo tường hơi lệch trục và rèm cửa bên phải có độ sáng hơi gắt nhẹ so với vùng mặt, nếu hạ exposure hậu cảnh xuống 0.5 stop thì chủ thể sẽ tách khối còn ấn tượng hơn nữa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Mở đầu video sản phẩm công nghệ bằng một hành động vật lý dứt khoát (đeo kính, cắm sạc, mở hộp) sẽ giữ chân người xem tốt hơn nhiều so với việc chỉ đứng nói hoặc giới thiệu tính năng trừu tượng.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Phòng ngủ Master / Home Studio</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Low-Angle Medium Shot • 35mm Equivalent</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> Ánh sáng tự nhiên khuếch tán qua rèm + Mood Teal/Cyan điện ảnh</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Match Cut sang Cận Cảnh Mắt (Macro Eye Transition)</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 02 • Match Cut sang Cận Cảnh Mắt (Macro Eye Transition)</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_01_to_02.jpg', 'So sánh chuyển tiếp Shot 01 ➔ Shot 02')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_01_to_02.jpg" alt="Transition 01 to 02" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-2" data-start="2.88" data-end="3.96">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 02</span>
+                <button class="time-jump-btn" onclick="jumpToShot(2, 2.88)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    2.88s - 3.96s <span class="dur-pill">(1.08s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Extreme Macro Close-Up</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Đặc Tả Ánh Mắt Macro Mở To Qua Thấu Kính Micro-OLED: Phản chiếu khoảnh khắc 'Aha Moment' kích hoạt giác quan khi nhìn thấy màn hình ảo</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_02_start.jpg', 'Shot 02 • Khung hình Đầu (2.88s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (2.88s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_02_mid.jpg', 'Shot 02 • Cao trào Giữa (3.42s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (3.42s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_02_end.jpg', 'Shot 02 • Khung hình Cuối (3.96s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (3.96s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Góc quay siêu cận cảnh (Extreme Macro Close-Up) vào một bên mắt của nhân vật qua gọng kính Viture Pro. Khi vừa đeo kính vào, đồng tử và mắt nhân vật khẽ mở to, con ngươi đảo nhẹ để quét nhìn màn hình ảo đang bừng sáng bên trong lăng kính quang học.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Độ sâu trường ảnh cực nông (Shallow Depth of Field), lấy nét chuẩn xác từng sợi lông mày và tia sáng phản chiếu trong đáy mắt. Cắt cảnh nhanh 1.08s tạo cú hích nhịp điệu (Visual Punch), giải thích ngay lập tức phản ứng ngạc nhiên của người dùng.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Ánh sáng trên gò má hơi tối (Underexposed) ở vùng rìa phải, khiến chi tiết viền gọng kính hòa lẫn nhẹ vào nền da nếu xem trên màn hình độ sáng thấp.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Dùng cảnh quay biểu cảm mắt (Micro-expression) để truyền tải cảm xúc ngạc nhiên thay cho lời nói – mắt mở to chính là bằng chứng xác thực nhất về độ hoành tráng của màn hình ảo.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Home Studio</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Extreme Macro Close-Up • 85mm-100mm Macro</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> Low-Key Lighting nhấn vào tia sáng phản chiếu đồng tử</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Hard Cut chuyển sang góc nhìn thực tế chủ quan (POV)</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 03 • Hard Cut chuyển sang góc nhìn thực tế chủ quan (POV)</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_02_to_03.jpg', 'So sánh chuyển tiếp Shot 02 ➔ Shot 03')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_02_to_03.jpg" alt="Transition 02 to 03" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-3" data-start="3.96" data-end="5.44">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 03</span>
+                <button class="time-jump-btn" onclick="jumpToShot(3, 3.96)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    3.96s - 5.44s <span class="dur-pill">(1.48s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Subjective First-Person POV</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Góc Nhìn Chủ Quan (POV) Màn Chiếu Ảo Trong Không Gian Thật: Hiện thực hóa trải nghiệm rạp chiếu phim 120-inch lơ lửng ngay phòng khách</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_03_start.jpg', 'Shot 03 • Khung hình Đầu (3.96s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (3.96s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_03_mid.jpg', 'Shot 03 • Cao trào Giữa (4.70s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (4.70s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_03_end.jpg', 'Shot 03 • Khung hình Cuối (5.44s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (5.44s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Camera đặt ở góc nhìn thứ nhất (Subjective POV) từ bên trong mắt kính nhìn ra: Màn hình điện ảnh ảo tỷ lệ 21:9 hiển thị phân đoạn hành động chiến binh Spartan/Hy Lạp cổ đại cầm giáo mác tiến quân xuyên qua rừng thông, nổi bật trên nền tối của căn phòng ngủ/phòng khách.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Hiệu ứng mô phỏng màn hình Micro-OLED lơ lửng giữa không gian thực cực kỳ thuyết phục. Độ tương phản đen sâu (True Black) hòa quyện hoàn hảo vào bóng tối căn phòng, tạo ảo giác về một màn hình cinema khổng lồ đang bay lơ lửng.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Cạnh dưới của màn hình ảo hơi sát đáy khung hình (chạm mép nệm), nếu nâng màn hình ảo lên cao hơn 5% theo trục Y thì cảm giác không gian trần nhà sẽ thoáng đãng và bề thế hơn.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Đối với sản phẩm kính XR/AR, bắt buộc phải có shot POV quay qua thấu kính thật để người xem 'thấy điều người dùng thấy', xóa tan mọi nghi ngờ về quảng cáo phóng đại.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Phòng ngủ tối / Phòng khách</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Subjective First-Person POV • 24mm Wide</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> Ánh sáng phát quang từ màn hình Micro-OLED ảo tương phản với bóng tối căn phòng</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Smash Cut sang thiết bị máy chiếu truyền thống</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 04 • Smash Cut sang thiết bị máy chiếu truyền thống</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_03_to_04.jpg', 'So sánh chuyển tiếp Shot 03 ➔ Shot 04')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_03_to_04.jpg" alt="Transition 03 to 04" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-4" data-start="5.44" data-end="6.08">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 04</span>
+                <button class="time-jump-btn" onclick="jumpToShot(4, 5.44)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    5.44s - 6.08s <span class="dur-pill">(0.64s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Medium Close-Up</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Tạo Xung Đột So Sánh Bằng Đèn Chiếu Máy Chiếu Mini: Giới thiệu giải pháp truyền thống để chuẩn bị bộc lộ nhược điểm</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_04_start.jpg', 'Shot 04 • Khung hình Đầu (5.44s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (5.44s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_04_mid.jpg', 'Shot 04 • Cao trào Giữa (5.76s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (5.76s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_04_end.jpg', 'Shot 04 • Khung hình Cuối (6.08s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (6.08s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Góc quay cận trung vào một chiếc máy chiếu mini di động (Samsung The Freestyle) màu trắng đặt trên tủ, bóng đèn chiếu lens thủy tinh đột ngột bật sáng rực rỡ và xoay nghiêng hướng về phía bức tường.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Thời lượng cắt cực ngắn (0.64s - Fast cut) giữ nhịp điệu nhanh. Đèn projector bừng sáng tạo điểm nhấn sáng chói (Specular Flare) lập tức kéo mắt người xem vào công cụ so sánh.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Máy chiếu đặt ở góc nghiêng hơi lệch trục đối xứng, nền tường phía sau hơi trơn đơn điệu thiếu điểm nhấn môi trường.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Đặt đối thủ hoặc giải pháp truyền thống vào video dạng chớp nhoáng (Micro-beat) để xây dựng thế trận so sánh 'Vấn đề vs Giải pháp' (Problem vs Solution framework).
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Phòng ngủ ban ngày</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Medium Close-Up • 50mm Lens</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> High-Key Ambient Light + Đèn Lens Projector chói sáng</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Cut sang hình ảnh chiếu thực tế trên tường</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 05 • Cut sang hình ảnh chiếu thực tế trên tường</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_04_to_05.jpg', 'So sánh chuyển tiếp Shot 04 ➔ Shot 05')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_04_to_05.jpg" alt="Transition 04 to 05" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-5" data-start="6.08" data-end="6.84">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 05</span>
+                <button class="time-jump-btn" onclick="jumpToShot(5, 6.08)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    6.08s - 6.84s <span class="dur-pill">(0.76s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Wide Shot</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Vạch Trần 'Nỗi Đau' Hình Ảnh Bị Mờ Cháy (Washout) Của Máy Chiếu: Chứng minh thực tế sự bất tiện khi phòng có ánh sáng ban ngày</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_05_start.jpg', 'Shot 05 • Khung hình Đầu (6.08s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (6.08s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_05_mid.jpg', 'Shot 05 • Cao trào Giữa (6.46s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (6.46s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_05_end.jpg', 'Shot 05 • Khung hình Cuối (6.84s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (6.84s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Toàn cảnh bức tường phòng ngủ màu trắng: Máy chiếu hắt hình ảnh thước phim lên tường nhưng do ánh sáng ban ngày trong phòng quá mạnh, hình ảnh chiếu bị mờ nhạt, bạc màu, mất sạch chi tiết tương phản đen (Washout effect).
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Tính chân thực cao, lột tả trọn vẹn điểm yếu chí mạng của máy chiếu gia đình mà hầu hết người dùng đều từng trải qua. Bố cục rộng cho thấy bức tường trắng và tủ kệ thực tế.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Khung hình có chuyển động máy hơi rung nhẹ ở 5 frame cuối do cầm tay không gimbal, tuy nhiên điều này vô tình tăng tính chân thực đời thường.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Muốn bán giải pháp vượt trội, hãy phơi bày chân thực nhược điểm của công nghệ cũ trong điều kiện thực tế nhất (không cần dàn dựng quá mức).
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Phòng ngủ ban ngày</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Wide Shot • 24mm Wide-Angle</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> Ánh sáng tự nhiên tràn ngập (Ambient Daylight Washout)</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Whip Pan chuyển cảnh sang biểu cảm nhân vật</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 06 • Whip Pan chuyển cảnh sang biểu cảm nhân vật</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_05_to_06.jpg', 'So sánh chuyển tiếp Shot 05 ➔ Shot 06')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_05_to_06.jpg" alt="Transition 05 to 06" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-6" data-start="6.84" data-end="8.32">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 06</span>
+                <button class="time-jump-btn" onclick="jumpToShot(6, 6.84)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    6.84s - 8.32s <span class="dur-pill">(1.48s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Medium Close-Up</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Cú Liaison Whip Pan Bắt Trọn Thần Thái Ngán Ngẩm & Tương Tác Kéo Đồng Cảm: Chốt hạ lý do người xem cần một giải pháp thay thế</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_06_start.jpg', 'Shot 06 • Khung hình Đầu (6.84s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (6.84s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_06_mid.jpg', 'Shot 06 • Cao trào Giữa (7.58s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (7.58s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_06_end.jpg', 'Shot 06 • Khung hình Cuối (8.32s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (8.32s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Camera quét lia nhanh (Whip Pan) từ bức tường sang góc nghiêng cận của Artur. Anh nhìn vào màn hình máy chiếu mờ nhạt với ánh mắt thất vọng, khóe môi khẽ nhếch biểu lộ sự ngán ngẩm, rồi từ từ quay đầu nhìn thẳng vào camera như muốn hỏi người xem 'Bạn cũng thấy vậy đúng không?'.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Cú lia Whip Pan tạo độ mượt chuyển cảnh hoàn hảo không cần hiệu ứng đồ họa giả. Diễn xuất tinh tế, không gượng gạo, ánh sáng tự nhiên hắt chéo (Rembrandt light) tạo chiều sâu cho gương mặt.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Phần tóc gáy phía sau có vài sợi bị hòa lẫn vào mảng bóng râm phía sau cổ, có thể bổ sung 1 đèn kẹp tóc (Hair light) để tách bạch hơn.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Biểu cảm 'thấu hiểu nỗi đau' của người sáng tạo là chiếc cầu nối cảm xúc mạnh mẽ nhất để dẫn dắt khán giả sang giải pháp công nghệ mới.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Phòng ngủ</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Medium Close-Up • 50mm Lens</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> Ánh sáng xiên cửa sổ tự nhiên tạo khối khuôn mặt</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Whip Pan + Dynamic Cut sang thao tác cắm dây</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 07 • Whip Pan + Dynamic Cut sang thao tác cắm dây</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_06_to_07.jpg', 'So sánh chuyển tiếp Shot 06 ➔ Shot 07')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_06_to_07.jpg" alt="Transition 06 to 07" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-7" data-start="8.32" data-end="8.72">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 07</span>
+                <button class="time-jump-btn" onclick="jumpToShot(7, 8.32)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    8.32s - 8.72s <span class="dur-pill">(0.40s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Extreme Macro Shot</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Macro Plug & Play Cắm Cáp Type-C Vào iPhone: Trực quan hóa sự đơn giản 'chỉ cần cắm là chạy' không cần cài đặt rườm rà</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_07_start.jpg', 'Shot 07 • Khung hình Đầu (8.32s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (8.32s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_07_mid.jpg', 'Shot 07 • Cao trào Giữa (8.52s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (8.52s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_07_end.jpg', 'Shot 07 • Khung hình Cuối (8.72s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (8.72s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Cận cảnh macro cực đại vào cổng USB-C ở cạnh dưới điện thoại iPhone titan. Đầu cáp bọc cao su đen của Viture được đưa vào và cắm phập dứt khoát vào cổng kết nối.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Thời lượng siêu nhanh 0.40s kèm hiệu ứng âm thanh 'Click' dứt khoát. Góc máy chếch 45 độ làm nổi bật viền titan sắc sảo của điện thoại và đầu cắm cao cấp.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Do tốc độ cắm nhanh nên có hiện tượng motion blur nhẹ ở 2 frame đầu khi đưa cáp vào.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Thể hiện tính năng tiện lợi bằng một thao tác duy nhất diễn ra trong chưa đầy nửa giây – giải quyết rào cản sợ phức tạp công nghệ của khách hàng.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Bàn làm việc</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Extreme Macro Shot • 100mm Macro Lens</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> Ánh sáng studio mềm làm rõ từng đường vân kim loại</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Quick Action Cut sang chốt hít từ tính</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 08 • Quick Action Cut sang chốt hít từ tính</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_07_to_08.jpg', 'So sánh chuyển tiếp Shot 07 ➔ Shot 08')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_07_to_08.jpg" alt="Transition 07 to 08" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-8" data-start="8.72" data-end="9.0">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 08</span>
+                <button class="time-jump-btn" onclick="jumpToShot(8, 8.72)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    8.72s - 9.00s <span class="dur-pill">(0.28s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Extreme Close-Up</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Cú Bắt Khớp Chốt Nam Châm Từ Tính Viture Góc L: Khẳng định độ hoàn thiện cơ khí cao cấp và tính công thái học</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_08_start.jpg', 'Shot 08 • Khung hình Đầu (8.72s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (8.72s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_08_mid.jpg', 'Shot 08 • Cao trào Giữa (8.86s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (8.86s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_08_end.jpg', 'Shot 08 • Khung hình Cuối (9.00s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (9.00s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Hai đầu ngón tay cầm đầu cáp góc chữ L có khắc chìm logo VITURE và cắm nối vào khớp hít từ tính của kính. Khớp nam châm tự động hút chặt vào nhau chỉ trong 0.28s.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Làm nổi bật chi tiết logo VITURE sắc nét và cơ chế hít thông minh. Nhịp cắt siêu tốc (0.28s) tiếp nối năng lượng dồn dập của chuỗi hành động kết nối (Montage Sequence).</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Đầu ngón tay ở tiền cảnh chiếm diện tích khá lớn, che mất một phần dây cáp phía sau.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Nhịp dựng Montage dồn dập (3 shot liên tiếp dưới 1 giây) tạo cảm giác hiện đại, công nghệ cao và thao tác trong nháy mắt.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Bàn làm việc</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Extreme Close-Up • 85mm Lens</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> Ánh sáng dịu trong phòng</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Rapid Cut sang màn hình điện thoại</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 09 • Rapid Cut sang màn hình điện thoại</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_08_to_09.jpg', 'So sánh chuyển tiếp Shot 08 ➔ Shot 09')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_08_to_09.jpg" alt="Transition 08 to 09" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-9" data-start="9.0" data-end="9.28">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 09</span>
+                <button class="time-jump-btn" onclick="jumpToShot(9, 9.0)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    9.00s - 9.28s <span class="dur-pill">(0.28s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Macro Close-Up</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Ngón Tay Chạm Chạm Vào Icon Ứng Dụng Xem Phim: Kích hoạt dòng chảy trải nghiệm giải trí tức thì</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_09_start.jpg', 'Shot 09 • Khung hình Đầu (9.00s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (9.00s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_09_mid.jpg', 'Shot 09 • Cao trào Giữa (9.14s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (9.14s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_09_end.jpg', 'Shot 09 • Khung hình Cuối (9.28s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (9.28s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Ngón tay trỏ lướt xuống và chạm vào phím điều hướng/mở ứng dụng trên màn hình cảm ứng điện thoại hiển thị giao diện tối giản.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Biểu tượng hình tam giác màu trắng phát sáng nổi bật trên nền đen OLED sâu thẳm. Góc máy macro focus chuẩn xác vào điểm chạm.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Bề mặt màn hình có vài hạt bụi li ti nhỏ phản chiếu dưới đèn, nên lau sạch màn hình trước khi quay macro cận cảnh.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Tối giản hóa giao diện trên màn hình để khán giả không bị phân tâm bởi các thông tin thừa, chỉ tập trung vào hành động cốt lõi.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Màn hình cảm ứng</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Macro Close-Up • 100mm Macro</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> Màn hình OLED tự phát sáng</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Match Cut sang biểu tượng Play</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 10 • Match Cut sang biểu tượng Play</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_09_to_10.jpg', 'So sánh chuyển tiếp Shot 09 ➔ Shot 10')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_09_to_10.jpg" alt="Transition 09 to 10" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-10" data-start="9.28" data-end="9.6">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 10</span>
+                <button class="time-jump-btn" onclick="jumpToShot(10, 9.28)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    9.28s - 9.60s <span class="dur-pill">(0.32s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Macro UI Shot</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Chuyển Đổi Trạng Thái Nút Play Sang Pause: Cú 'Bật Công Tắc' Khởi Động Không Gian Điện Ảnh Cá Nhân</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_10_start.jpg', 'Shot 10 • Khung hình Đầu (9.28s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (9.28s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_10_mid.jpg', 'Shot 10 • Cao trào Giữa (9.44s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (9.44s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_10_end.jpg', 'Shot 10 • Khung hình Cuối (9.60s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (9.60s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Biểu tượng hình tam giác Play lập tức biến chuyển thành 2 vạch song song (Pause Icon) phát sáng trắng tinh khiết, biểu thị bộ phim đã bắt đầu phát.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Đồ họa UI tối giản, độ tương phản tuyệt đối giữa trắng và đen tạo cảm giác công nghệ cao cấp (Futuristic UI). Cú cắt khớp chuẩn xác theo nhịp beat âm thanh.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Chuyển động icon là cut trực tiếp, nếu có animation morph mượt mà 0.05s thì hiệu ứng thị giác sẽ tinh xảo hơn.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Sử dụng tín hiệu thị giác rõ ràng (icon play chuyển pause) để báo hiệu cho người xem biết câu chuyện chuẩn bị bước vào giai đoạn thưởng thức cao trào.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Màn hình smartphone</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Macro UI Shot • 100mm Macro</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> OLED Self-lit contrast</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Hard Cut chuyển sang toàn cảnh tận hưởng trên giường</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 11 • Hard Cut chuyển sang toàn cảnh tận hưởng trên giường</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_10_to_11.jpg', 'So sánh chuyển tiếp Shot 10 ➔ Shot 11')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_10_to_11.jpg" alt="Transition 10 to 11" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-11" data-start="9.6" data-end="11.4">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 11</span>
+                <button class="time-jump-btn" onclick="jumpToShot(11, 9.6)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    9.60s - 11.40s <span class="dur-pill">(1.80s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Low Dolly Back / Pull-back Medium Shot</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Cú Dolly Out Khám Phá Không Gian Thư Giãn Tột Đỉnh Trên Giường Ngủ: Trình diễn phong cách sống rạp chiếu phim riêng tư tại gia</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_11_start.jpg', 'Shot 11 • Khung hình Đầu (9.60s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (9.60s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_11_mid.jpg', 'Shot 11 • Cao trào Giữa (10.50s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (10.50s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_11_end.jpg', 'Shot 11 • Khung hình Cuối (11.40s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (11.40s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Cú máy lùi xa dần (Dolly Back / Smooth Gimbal Pull-back): Artur ngồi xếp bằng thoải mái giữa chiếc giường ngủ trải ga sọc trang nhã, một tay cầm bát gỗ bắp rang bơ, tay kia bốc bỏng ngô cho vào miệng, mắt ngước nhìn lên không gian với vẻ mặt tận hưởng thư thái tuyệt đối cùng kính Viture.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Bố cục đối xứng trung tâm (Central Composition) hoàn mỹ, đường dẫn thị giác từ các nếp gấp chăn ga hướng thẳng vào nhân vật chính. Tone màu be, trắng và gỗ tạo cảm giác ấm cúng, sang trọng và thư thái (Cozy Lifestyle Aesthetic).</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Sợi dây cáp nối từ kính xuống điện thoại để cạnh đùi hơi cuộn nhẹ, nếu khéo léo giấu dây sau lưng thì khung hình sẽ liền mạch và gọn gàng hơn nữa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Bán trải nghiệm và cảm xúc phong cách sống (Lifestyle Empathy) thay vì chỉ nói thông số kỹ thuật – hình ảnh vừa ăn bắp rang vừa xem phim trên giường là ước mơ của mọi người xem.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Phòng ngủ Master</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Low Dolly Back / Pull-back Medium Shot • 28mm Wide</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> Ánh sáng tự nhiên êm dịu từ cửa sổ kết hợp đèn ngủ ấm áp</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Push In sang góc cận thấp qua bát bỏng ngô</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 12 • Push In sang góc cận thấp qua bát bỏng ngô</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_11_to_12.jpg', 'So sánh chuyển tiếp Shot 11 ➔ Shot 12')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_11_to_12.jpg" alt="Transition 11 to 12" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-12" data-start="11.4" data-end="12.36">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 12</span>
+                <button class="time-jump-btn" onclick="jumpToShot(12, 11.4)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    11.40s - 12.36s <span class="dur-pill">(0.96s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Low-Angle Over-the-Popcorn Medium Close-Up</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Góc Thấp (Low-Angle) Đặt Bát Bắp Rang Ở Tiền Cảnh: Gia tăng chiều sâu tiền cảnh - hậu cảnh và độ chân thực của trải nghiệm xem phim</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_12_start.jpg', 'Shot 12 • Khung hình Đầu (11.40s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (11.40s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_12_mid.jpg', 'Shot 12 • Cao trào Giữa (11.88s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (11.88s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_12_end.jpg', 'Shot 12 • Khung hình Cuối (12.36s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (12.36s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Góc máy đặt thấp từ dưới nệm hướng lên: Bát gỗ bắp rang bơ chiếm trọn 1/3 góc trái tiền cảnh, Artur ngồi phía sau vừa nhai vừa mỉm cười nhẹ thích thú khi theo dõi bộ phim bom tấn trên màn hình ảo.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Kỹ thuật tách lớp 3 tầng (Tiền cảnh bát bắp rang -> Trung cảnh nhân vật & kính XR -> Hậu cảnh tường phòng ngủ) tạo chiều sâu không gian điện ảnh cực kỳ ấn tượng. Ánh sáng xiên tạo khối rõ nét trên gương mặt.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Góc máy hơi thấp khiến cằm nhân vật hơi bị che nhẹ bởi bát bắp rang ở một vài frame đầu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Tận dụng đạo cụ quen thuộc (bát bắp rang bơ, cốc nước) làm tiền cảnh để biến video review sản phẩm thành một tác phẩm điện ảnh có chiều sâu và đời sống.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Phòng ngủ Master</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Low-Angle Over-the-Popcorn Medium Close-Up • 35mm Lens</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> Ánh sáng xiên tạo khối rõ rệt</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Cut sang màn hình hành động Wolverine</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 13 • Cut sang màn hình hành động Wolverine</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_12_to_13.jpg', 'So sánh chuyển tiếp Shot 12 ➔ Shot 13')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_12_to_13.jpg" alt="Transition 12 to 13" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-13" data-start="12.36" data-end="13.56">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 13</span>
+                <button class="time-jump-btn" onclick="jumpToShot(13, 12.36)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    12.36s - 13.56s <span class="dur-pill">(1.20s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">POV Virtual Screen Display</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">POV Màn Chiếu OLED Siêu Tối Chiếu Phim Wolverine Chiến Đấu: Thể hiện độ tương phản vô cực và màu vàng rực rỡ của trang phục siêu anh hùng</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_13_start.jpg', 'Shot 13 • Khung hình Đầu (12.36s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (12.36s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_13_mid.jpg', 'Shot 13 • Cao trào Giữa (12.96s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (12.96s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_13_end.jpg', 'Shot 13 • Khung hình Cuối (13.56s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_13_end.jpg" alt="Shot 13 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (13.56s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Góc nhìn POV hiển thị phân đoạn chiến đấu nghẹt thở của người sói Wolverine (Hugh Jackman trong trang phục vàng cổ điển) tung đòn hạ gục đối thủ trên nền kho xưởng kim loại, viền màn hình chìm ngập hoàn toàn trong bóng đen tuyệt đối của phòng ngủ.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Độ tương phản màu sắc cực kỳ ấn tượng (Màu vàng rực rỡ của suit Wolverine tương phản mạnh mẽ với nền kim loại xám xanh). Tỷ lệ hiển thị điện ảnh siêu rộng (Ultrawide Aspect Ratio) mang lại cảm giác phòng chiếu IMAX cá nhân.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Đoạn phim hành động di chuyển nhanh nên có một chút motion blur trong source phim gốc, nếu chọn đoạn có tia lửa bay thì hiệu ứng thị giác sẽ còn lung linh hơn.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Chọn các đoạn phim có màu sắc đối lập mạnh (Vàng / Xanh / Lửa đỏ) để phô diễn tối đa dải màu hiển thị (Color Gamut) và độ tương phản của tấm nền kính thông minh.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Phòng ngủ tối</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> POV Virtual Screen Display • 24mm Wide</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> Ánh sáng tự phát từ màn hình ảo Micro-OLED</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Cut sang góc cận sản phẩm trên bàn</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 14 • Cut sang góc cận sản phẩm trên bàn</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_13_to_14.jpg', 'So sánh chuyển tiếp Shot 13 ➔ Shot 14')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_13_to_14.jpg" alt="Transition 13 to 14" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-14" data-start="13.56" data-end="15.84">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 14</span>
+                <button class="time-jump-btn" onclick="jumpToShot(14, 13.56)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    13.56s - 15.84s <span class="dur-pill">(2.28s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Macro Slider Tracking Shot</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Cú Trượt Máy Macro Nghệ Thuật Qua Thấu Kính Kính Viture: Tôn vinh thiết kế thời trang tinh tế tựa kính mát cao cấp</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_14_start.jpg', 'Shot 14 • Khung hình Đầu (13.56s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_14_start.jpg" alt="Shot 14 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (13.56s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_14_mid.jpg', 'Shot 14 • Cao trào Giữa (14.70s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_14_mid.jpg" alt="Shot 14 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (14.70s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_14_end.jpg', 'Shot 14 • Khung hình Cuối (15.84s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_14_end.jpg" alt="Shot 14 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (15.84s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Cú lia máy trượt macro mượt mà (Macro Slider Pan) ngang qua mặt trước của kính Viture Pro đặt trên mặt bàn da màu xanh đen sang trọng. Ánh sáng phản chiếu lướt nhẹ trên mặt kính cong và viền logo màu xanh dương hiện đại.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Chất lượng hình ảnh sắc nét đến từng đường nét vát cạnh của gọng kính. Ánh sáng studio quét ngang (Light Sweep) tạo hiệu ứng bóng bẩy, cao cấp, xóa bỏ định kiến kính XR là thô kệch, nặng nề.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Tốc độ lia máy hơi chậm lại ở 0.5s cuối khiến nhịp phim hơi chùng xuống nhẹ so với nhịp dồn dập trước đó.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Phải có một cảnh quay 'Hero Product Shot' đạt chuẩn quảng cáo truyền hình (Commercial Grade) để định vị giá trị sản phẩm cao cấp trong tâm trí khách hàng.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Mặt bàn da cao cấp Studio</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Macro Slider Tracking Shot • 85mm Macro Lens</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> Commercial Studio Rim & Sweep Light</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Cut sang góc điều khiển điện thoại</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 15 • Cut sang góc điều khiển điện thoại</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_14_to_15.jpg', 'So sánh chuyển tiếp Shot 14 ➔ Shot 15')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_14_to_15.jpg" alt="Transition 14 to 15" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-15" data-start="15.84" data-end="16.8">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 15</span>
+                <button class="time-jump-btn" onclick="jumpToShot(15, 15.84)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    15.84s - 16.80s <span class="dur-pill">(0.96s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Low-Angle Hands Close-Up</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Góc Nghiêng Thao Tác Bấm Chọn Bằng iPhone: Minh họa khả năng điều hướng mượt mà giữa các nội dung phim ảnh</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_15_start.jpg', 'Shot 15 • Khung hình Đầu (15.84s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_15_start.jpg" alt="Shot 15 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (15.84s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_15_mid.jpg', 'Shot 15 • Cao trào Giữa (16.32s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_15_mid.jpg" alt="Shot 15 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (16.32s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_15_end.jpg', 'Shot 15 • Khung hình Cuối (16.80s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_15_end.jpg" alt="Shot 15 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (16.80s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Artur cầm ngang chiếc iPhone bằng hai tay, ngón tay nhẹ nhàng thao tác lướt chọn chuyển đổi danh sách phim trên màn hình trong khi mắt vẫn hướng về phía trước theo dõi không gian ảo.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Bố cục chia khung hợp lý: Mặt lưng cụm 3 camera iPhone bằng titan ở tiền cảnh, gương mặt nhân vật đeo kính ở hậu cảnh. Ánh sáng viền hắt nhẹ lên ngón tay tạo cảm giác công nghệ cao.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Cạnh điện thoại che một phần miệng của nhân vật, nếu hạ điện thoại xuống 3cm thì bố cục khuôn mặt sẽ trọn vẹn hơn.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Đặt sản phẩm điều khiển (điện thoại) và thiết bị hiển thị (kính XR) trong cùng một khung hình để nhấn mạnh sự đồng bộ mượt mà của hệ sinh thái.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Phòng ngủ Master</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Low-Angle Hands Close-Up • 50mm Lens</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> Low-Key Studio Lighting</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Cut sang cảnh phim Spider-Man</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 16 • Cut sang cảnh phim Spider-Man</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_15_to_16.jpg', 'So sánh chuyển tiếp Shot 15 ➔ Shot 16')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_15_to_16.jpg" alt="Transition 15 to 16" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-16" data-start="16.8" data-end="17.76">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 16</span>
+                <button class="time-jump-btn" onclick="jumpToShot(16, 16.8)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    16.80s - 17.76s <span class="dur-pill">(0.96s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Subjective POV Action Scene</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">POV Cảnh Spider-Man Bắn Tơ Đu Lượn Giữa Tòa Nhà Chọc Trời: Mang trải nghiệm rạp chiếu IMAX 3D tốc độ cao vào phòng ngủ</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_16_start.jpg', 'Shot 16 • Khung hình Đầu (16.80s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_16_start.jpg" alt="Shot 16 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (16.80s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_16_mid.jpg', 'Shot 16 • Cao trào Giữa (17.28s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_16_mid.jpg" alt="Shot 16 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (17.28s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_16_end.jpg', 'Shot 16 • Khung hình Cuối (17.76s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_16_end.jpg" alt="Shot 16 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (17.76s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Góc nhìn POV qua kính Viture hiển thị cảnh Người Nhện (Spider-Man) trong trang phục đỏ xanh phóng tơ nhào lộn giữa hẻm phố các tòa nhà chọc trời New York với góc quay lao dốc từ trên không trung xuống mặt đường.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Chuyển động máy quay trong phim Spider-Man có tính động lực học cực cao (High Kinetic Motion), tạo cảm giác chóng mặt nghẹt thở như đang trực tiếp bay lượn trong không gian 3D.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Ánh sáng của cảnh phim hơi tối ở góc dưới bên trái do cảnh quay ban đêm trong phim.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Sử dụng cảnh phim hành động tốc độ cao (Fast Paced Action / First-person Swing) để chứng minh tần số quét mượt mà (120Hz Refresh Rate) không bị xé hình hay giật lag của màn hình kính.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Không gian tối</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Subjective POV Action Scene • 24mm Wide</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> Ánh sáng màn hình ảo rực rỡ trong bóng tối</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Fast Cut sang phân đoạn nổ tháp nước</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 17 • Fast Cut sang phân đoạn nổ tháp nước</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_16_to_17.jpg', 'So sánh chuyển tiếp Shot 16 ➔ Shot 17')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_16_to_17.jpg" alt="Transition 16 to 17" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-17" data-start="17.76" data-end="18.8">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 17</span>
+                <button class="time-jump-btn" onclick="jumpToShot(17, 17.76)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    17.76s - 18.80s <span class="dur-pill">(1.04s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Subjective POV Climax Scene</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Cao Trào Cháy Nổ Tháp Nước & Hiệu Ứng Ánh Sáng Bùng Cháy: Đỉnh điểm kích thích thị giác trước khi khép lại trải nghiệm</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_17_start.jpg', 'Shot 17 • Khung hình Đầu (17.76s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_17_start.jpg" alt="Shot 17 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (17.76s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_17_mid.jpg', 'Shot 17 • Cao trào Giữa (18.28s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_17_mid.jpg" alt="Shot 17 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (18.28s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_17_end.jpg', 'Shot 17 • Khung hình Cuối (18.80s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_17_end.jpg" alt="Shot 17 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (18.80s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Màn hình ảo hiển thị cảnh tháp nước kim loại phát nổ tung tóe các mảnh vỡ và khói bụi cuồn cuộn bay lên bầu trời, tạo chớp sáng trắng bùng nổ toàn bộ không gian phòng tối.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Cú bùng nổ ánh sáng (Visual Flash Explosion) tạo đỉnh cao cảm xúc cho người xem, kết thúc chuỗi demo phim ảnh bằng một ấn tượng thị giác choáng ngợp.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Ánh sáng trắng bùng nổ hơi mạnh ở những frame đầu có thể gây chói nhẹ cho mắt người xem trong tích tắc.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Kết thúc chuỗi demo tính năng bằng một cú nổ thị giác (Climax Shot) để đẩy sự phấn khích của khách hàng lên mức cao nhất trước khi đưa ra Call to Action.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Không gian tối</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Subjective POV Climax Scene • 24mm Wide</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> High-Contrast Explosion Flare</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Whip/Spin Cut sang hộp sản phẩm</div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 18 • Whip/Spin Cut sang hộp sản phẩm</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_17_to_18.jpg', 'So sánh chuyển tiếp Shot 17 ➔ Shot 18')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/transitions/trans_17_to_18.jpg" alt="Transition 17 to 18" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-18" data-start="18.8" data-end="20.0">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 18</span>
+                <button class="time-jump-btn" onclick="jumpToShot(18, 18.8)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    18.80s - 20.00s <span class="dur-pill">(1.20s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Top-Down 45° Diagonal Flat Lay</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Cú Xoay Trọng Tâm (Spin Transition) Khóa Chặt Vào Hộp Đựng Viture Cao Cấp Trên Thảm Đỏ: CTA Thị Giác Đẳng Cấp Sang Trọng</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_18_start.jpg', 'Shot 18 • Khung hình Đầu (18.80s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_18_start.jpg" alt="Shot 18 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (18.80s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_18_mid.jpg', 'Shot 18 • Cao trào Giữa (19.40s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_18_mid.jpg" alt="Shot 18 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (19.40s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_18_end.jpg', 'Shot 18 • Khung hình Cuối (20.00s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_18_end.jpg" alt="Shot 18 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (20.00s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Cú chuyển cảnh xoay tròn tốc độ cao (Spin / Whip Blur Transition) hạ cánh chính xác xuống góc quay thẳng từ trên xuống (Top-Down Flat Lay): Chiếc kính Viture Pro nằm hoàn hảo trong hộp bảo vệ nhung xanh cao cấp mở nắp trên nền thảm lông đỏ rực, logo 'VITURE - THE FUTURE IS ON SIGHT' khắc chìm đầy tinh tế.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Bố cục Flat Lay chéo góc 45 độ vô cùng năng động và cao cấp. Màu xanh cobalt của lòng hộp tương phản bổ trợ tuyệt đẹp với màu đỏ của thảm sàn (Color Blocking Red vs Blue), tạo ấn tượng thị giác mạnh mẽ khó quên ở giây cuối cùng.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Cú xoay spin ở 4 frame đầu hơi gắt nếu người xem nhạy cảm với chuyển động xoay tròn nhanh.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critique-block takeaway-block">
+                <div class="block-title">
+                    <span class="icon">💡</span> Bài Học Thực Chiến Rút Ra
+                </div>
+                <div class="block-content highlight-takeaway">
+                    Cảnh kết (Outro / CTA) cần đóng gói trọn vẹn sản phẩm trong bao bì cao cấp nhất, kết hợp độ tương phản màu sắc bắt mắt để lưu giữ hình ảnh thương hiệu sâu đậm trong tâm trí người xem.
+                </div>
+            </div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="specs-bar">
+            <div class="spec-item"><span class="lbl">📍 Bối cảnh:</span> Studio / Phòng khách</div>
+            <div class="spec-item"><span class="lbl">📷 Ống kính:</span> Top-Down 45° Diagonal Flat Lay • 35mm Lens</div>
+            <div class="spec-item"><span class="lbl">🎨 Ánh sáng &amp; Màu:</span> Ánh sáng Studio mềm làm nổi bật chất liệu da và nhung</div>
+            <div class="spec-item"><span class="lbl">🔄 Chuyển tiếp:</span> Final Outro Cut</div>
+        </div>
+
+        
+    </div>
+    
+        </div>
+
+        <!-- Visual Grid View -->
+        <div class="grid-view" id="gridView" style="display: none;">
+            
+    <div class="grid-card" onclick="jumpToShot(1, 0.0)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+            <div class="grid-time-tag">0.00s - 2.88s</div>
+            <div class="grid-shot-tag">Shot 01</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Hook Thị Giác Trực Diện Bằng Hành Động Đeo Kính & Ánh Sáng Tương Phản Thấp: Khóa chặt sự tò mò ngay giây đầu tiên qua cử chỉ chuẩn bị bước vào không gian ảo</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(2, 2.88)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+            <div class="grid-time-tag">2.88s - 3.96s</div>
+            <div class="grid-shot-tag">Shot 02</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Đặc Tả Ánh Mắt Macro Mở To Qua Thấu Kính Micro-OLED: Phản chiếu khoảnh khắc 'Aha Moment' kích hoạt giác quan khi nhìn thấy màn hình ảo</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(3, 3.96)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+            <div class="grid-time-tag">3.96s - 5.44s</div>
+            <div class="grid-shot-tag">Shot 03</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Góc Nhìn Chủ Quan (POV) Màn Chiếu Ảo Trong Không Gian Thật: Hiện thực hóa trải nghiệm rạp chiếu phim 120-inch lơ lửng ngay phòng khách</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(4, 5.44)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+            <div class="grid-time-tag">5.44s - 6.08s</div>
+            <div class="grid-shot-tag">Shot 04</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Tạo Xung Đột So Sánh Bằng Đèn Chiếu Máy Chiếu Mini: Giới thiệu giải pháp truyền thống để chuẩn bị bộc lộ nhược điểm</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(5, 6.08)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+            <div class="grid-time-tag">6.08s - 6.84s</div>
+            <div class="grid-shot-tag">Shot 05</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Vạch Trần 'Nỗi Đau' Hình Ảnh Bị Mờ Cháy (Washout) Của Máy Chiếu: Chứng minh thực tế sự bất tiện khi phòng có ánh sáng ban ngày</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(6, 6.84)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+            <div class="grid-time-tag">6.84s - 8.32s</div>
+            <div class="grid-shot-tag">Shot 06</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Cú Liaison Whip Pan Bắt Trọn Thần Thái Ngán Ngẩm & Tương Tác Kéo Đồng Cảm: Chốt hạ lý do người xem cần một giải pháp thay thế</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(7, 8.32)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+            <div class="grid-time-tag">8.32s - 8.72s</div>
+            <div class="grid-shot-tag">Shot 07</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Macro Plug & Play Cắm Cáp Type-C Vào iPhone: Trực quan hóa sự đơn giản 'chỉ cần cắm là chạy' không cần cài đặt rườm rà</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(8, 8.72)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+            <div class="grid-time-tag">8.72s - 9.00s</div>
+            <div class="grid-shot-tag">Shot 08</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Cú Bắt Khớp Chốt Nam Châm Từ Tính Viture Góc L: Khẳng định độ hoàn thiện cơ khí cao cấp và tính công thái học</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(9, 9.0)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+            <div class="grid-time-tag">9.00s - 9.28s</div>
+            <div class="grid-shot-tag">Shot 09</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Ngón Tay Chạm Chạm Vào Icon Ứng Dụng Xem Phim: Kích hoạt dòng chảy trải nghiệm giải trí tức thì</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(10, 9.28)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+            <div class="grid-time-tag">9.28s - 9.60s</div>
+            <div class="grid-shot-tag">Shot 10</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Chuyển Đổi Trạng Thái Nút Play Sang Pause: Cú 'Bật Công Tắc' Khởi Động Không Gian Điện Ảnh Cá Nhân</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(11, 9.6)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+            <div class="grid-time-tag">9.60s - 11.40s</div>
+            <div class="grid-shot-tag">Shot 11</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Cú Dolly Out Khám Phá Không Gian Thư Giãn Tột Đỉnh Trên Giường Ngủ: Trình diễn phong cách sống rạp chiếu phim riêng tư tại gia</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(12, 11.4)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+            <div class="grid-time-tag">11.40s - 12.36s</div>
+            <div class="grid-shot-tag">Shot 12</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Góc Thấp (Low-Angle) Đặt Bát Bắp Rang Ở Tiền Cảnh: Gia tăng chiều sâu tiền cảnh - hậu cảnh và độ chân thực của trải nghiệm xem phim</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(13, 12.36)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_13_mid.jpg" alt="Shot 13" loading="lazy">
+            <div class="grid-time-tag">12.36s - 13.56s</div>
+            <div class="grid-shot-tag">Shot 13</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>POV Màn Chiếu OLED Siêu Tối Chiếu Phim Wolverine Chiến Đấu: Thể hiện độ tương phản vô cực và màu vàng rực rỡ của trang phục siêu anh hùng</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(14, 13.56)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_14_mid.jpg" alt="Shot 14" loading="lazy">
+            <div class="grid-time-tag">13.56s - 15.84s</div>
+            <div class="grid-shot-tag">Shot 14</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Cú Trượt Máy Macro Nghệ Thuật Qua Thấu Kính Kính Viture: Tôn vinh thiết kế thời trang tinh tế tựa kính mát cao cấp</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(15, 15.84)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_15_mid.jpg" alt="Shot 15" loading="lazy">
+            <div class="grid-time-tag">15.84s - 16.80s</div>
+            <div class="grid-shot-tag">Shot 15</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Góc Nghiêng Thao Tác Bấm Chọn Bằng iPhone: Minh họa khả năng điều hướng mượt mà giữa các nội dung phim ảnh</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(16, 16.8)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_16_mid.jpg" alt="Shot 16" loading="lazy">
+            <div class="grid-time-tag">16.80s - 17.76s</div>
+            <div class="grid-shot-tag">Shot 16</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>POV Cảnh Spider-Man Bắn Tơ Đu Lượn Giữa Tòa Nhà Chọc Trời: Mang trải nghiệm rạp chiếu IMAX 3D tốc độ cao vào phòng ngủ</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(17, 17.76)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_17_mid.jpg" alt="Shot 17" loading="lazy">
+            <div class="grid-time-tag">17.76s - 18.80s</div>
+            <div class="grid-shot-tag">Shot 17</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Cao Trào Cháy Nổ Tháp Nước & Hiệu Ứng Ánh Sáng Bùng Cháy: Đỉnh điểm kích thích thị giác trước khi khép lại trải nghiệm</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(18, 18.8)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_18_mid.jpg" alt="Shot 18" loading="lazy">
+            <div class="grid-time-tag">18.80s - 20.00s</div>
+            <div class="grid-shot-tag">Shot 18</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Cú Xoay Trọng Tâm (Spin Transition) Khóa Chặt Vào Hộp Đựng Viture Cao Cấp Trên Thảm Đỏ: CTA Thị Giác Đẳng Cấp Sang Trọng</strong>
+        </div>
+    </div>
+    
+        </div>
+
+        <!-- Bottom Reference Links -->
+        <div class="bottom-links-box">
+            <div class="bottom-links-title">📁 Liên Kết Tài Nguyên &amp; Báo Cáo Gốc</div>
+            <div class="links-list">
+                <a href="https://vietndj.github.io/scene.html" target="_blank" class="link-item">
+                    🌐 <b>Cổng Tra Cứu Điện Ảnh Trực Tuyến:</b> https://vietndj.github.io/scene.html
+                </a>
+                <a href="https://www.instagram.com/reel/DcOQSCMqho0/" target="_blank" class="link-item">
+                    📸 <b>Bài Đăng Instagram Reel Gốc:</b> https://www.instagram.com/reel/DcOQSCMqho0/
+                </a>
+                <a href="https://www.instagram.com/arturbr/" target="_blank" class="link-item">
+                    👤 <b>Hồ Sơ Tác Giả ArturBr:</b> @arturbr (Barcelona, Spain)
+                </a>
+                <a href="https://www.instagram.com/getviture/" target="_blank" class="link-item">
+                    🕶️ <b>Thương Hiệu Tài Trợ:</b> @getviture (VITURE Official)
+                </a>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- Drawer Menu Modal -->
+<div class="drawer-overlay" id="drawerModal" onclick="if(event.target===this) toggleDrawer()">
+    <div class="drawer-content">
+        <div class="drawer-header">
+            <div class="drawer-title">Danh Sách 18 Phân Cảnh</div>
+            <button class="drawer-close-btn" onclick="toggleDrawer()">✕</button>
+        </div>
+        <div class="drawer-list">
+            
+    <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0)">
+        <span class="d-badge">Shot 01</span>
+        <span class="d-time">0.00s - 2.88s</span>
+        <span class="d-title">Hook Thị Giác Trực Diện Bằng Hành Động Đeo Kính & Ánh Sáng T...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(2, 2.88)">
+        <span class="d-badge">Shot 02</span>
+        <span class="d-time">2.88s - 3.96s</span>
+        <span class="d-title">Đặc Tả Ánh Mắt Macro Mở To Qua Thấu Kính Micro-OLED: Phản ch...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(3, 3.96)">
+        <span class="d-badge">Shot 03</span>
+        <span class="d-time">3.96s - 5.44s</span>
+        <span class="d-title">Góc Nhìn Chủ Quan (POV) Màn Chiếu Ảo Trong Không Gian Thật: ...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(4, 5.44)">
+        <span class="d-badge">Shot 04</span>
+        <span class="d-time">5.44s - 6.08s</span>
+        <span class="d-title">Tạo Xung Đột So Sánh Bằng Đèn Chiếu Máy Chiếu Mini: Giới thi...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(5, 6.08)">
+        <span class="d-badge">Shot 05</span>
+        <span class="d-time">6.08s - 6.84s</span>
+        <span class="d-title">Vạch Trần 'Nỗi Đau' Hình Ảnh Bị Mờ Cháy (Washout) Của Máy Ch...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(6, 6.84)">
+        <span class="d-badge">Shot 06</span>
+        <span class="d-time">6.84s - 8.32s</span>
+        <span class="d-title">Cú Liaison Whip Pan Bắt Trọn Thần Thái Ngán Ngẩm & Tương Tác...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(7, 8.32)">
+        <span class="d-badge">Shot 07</span>
+        <span class="d-time">8.32s - 8.72s</span>
+        <span class="d-title">Macro Plug & Play Cắm Cáp Type-C Vào iPhone: Trực quan hóa s...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(8, 8.72)">
+        <span class="d-badge">Shot 08</span>
+        <span class="d-time">8.72s - 9.00s</span>
+        <span class="d-title">Cú Bắt Khớp Chốt Nam Châm Từ Tính Viture Góc L: Khẳng định đ...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(9, 9.0)">
+        <span class="d-badge">Shot 09</span>
+        <span class="d-time">9.00s - 9.28s</span>
+        <span class="d-title">Ngón Tay Chạm Chạm Vào Icon Ứng Dụng Xem Phim: Kích hoạt dòn...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(10, 9.28)">
+        <span class="d-badge">Shot 10</span>
+        <span class="d-time">9.28s - 9.60s</span>
+        <span class="d-title">Chuyển Đổi Trạng Thái Nút Play Sang Pause: Cú 'Bật Công Tắc'...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(11, 9.6)">
+        <span class="d-badge">Shot 11</span>
+        <span class="d-time">9.60s - 11.40s</span>
+        <span class="d-title">Cú Dolly Out Khám Phá Không Gian Thư Giãn Tột Đỉnh Trên Giườ...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(12, 11.4)">
+        <span class="d-badge">Shot 12</span>
+        <span class="d-time">11.40s - 12.36s</span>
+        <span class="d-title">Góc Thấp (Low-Angle) Đặt Bát Bắp Rang Ở Tiền Cảnh: Gia tăng ...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(13, 12.36)">
+        <span class="d-badge">Shot 13</span>
+        <span class="d-time">12.36s - 13.56s</span>
+        <span class="d-title">POV Màn Chiếu OLED Siêu Tối Chiếu Phim Wolverine Chiến Đấu: ...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(14, 13.56)">
+        <span class="d-badge">Shot 14</span>
+        <span class="d-time">13.56s - 15.84s</span>
+        <span class="d-title">Cú Trượt Máy Macro Nghệ Thuật Qua Thấu Kính Kính Viture: Tôn...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(15, 15.84)">
+        <span class="d-badge">Shot 15</span>
+        <span class="d-time">15.84s - 16.80s</span>
+        <span class="d-title">Góc Nghiêng Thao Tác Bấm Chọn Bằng iPhone: Minh họa khả năng...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(16, 16.8)">
+        <span class="d-badge">Shot 16</span>
+        <span class="d-time">16.80s - 17.76s</span>
+        <span class="d-title">POV Cảnh Spider-Man Bắn Tơ Đu Lượn Giữa Tòa Nhà Chọc Trời: M...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(17, 17.76)">
+        <span class="d-badge">Shot 17</span>
+        <span class="d-time">17.76s - 18.80s</span>
+        <span class="d-title">Cao Trào Cháy Nổ Tháp Nước & Hiệu Ứng Ánh Sáng Bùng Cháy: Đỉ...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(18, 18.8)">
+        <span class="d-badge">Shot 18</span>
+        <span class="d-time">18.80s - 20.00s</span>
+        <span class="d-title">Cú Xoay Trọng Tâm (Spin Transition) Khóa Chặt Vào Hộp Đựng V...</span>
+    </div>
+    
+        </div>
+    </div>
+</div>
+
+<!-- Darkroom Lightbox Modal -->
+<div class="lightbox-modal" id="lightboxModal" onclick="if(event.target===this) closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <div class="lightbox-img-wrap">
+        <img src="" alt="" id="lightboxImg">
+    </div>
+    <div class="lightbox-caption" id="lightboxCap"></div>
+</div>
+
+<script>
+const player = document.getElementById('mainPlayer');
+const timeDisplay = document.getElementById('timeDisplay');
+const currentShotTag = document.getElementById('currentShotTag');
+const shotsData = [{"id": 1, "st_frame": 0, "en_frame": 71, "st_time": 0.0, "en_time": 2.88, "duration": 2.88, "headline": "Hook Th\u1ecb Gi\u00e1c Tr\u1ef1c Di\u1ec7n B\u1eb1ng H\u00e0nh \u0110\u1ed9ng \u0110eo K\u00ednh & \u00c1nh S\u00e1ng T\u01b0\u01a1ng Ph\u1ea3n Th\u1ea5p: Kh\u00f3a ch\u1eb7t s\u1ef1 t\u00f2 m\u00f2 ngay gi\u00e2y \u0111\u1ea7u ti\u00ean qua c\u1eed ch\u1ec9 chu\u1ea9n b\u1ecb b\u01b0\u1edbc v\u00e0o kh\u00f4ng gian \u1ea3o", "subject_action": "Artur (Creator) \u0111\u1ee9ng trong ph\u00f2ng v\u1edbi \u00e1nh s\u00e1ng n\u1ec1n d\u1ecbu nh\u1eb9 t\u1eeb c\u1eeda s\u1ed5 m\u1edd, hai tay c\u1ea7m chi\u1ebfc k\u00ednh th\u00f4ng minh Viture XR glasses \u0111\u01b0a t\u1eeb t\u1eeb l\u00ean ngang t\u1ea7m m\u1eaft r\u1ed3i d\u1ee9t kho\u00e1t \u0111eo l\u00ean s\u1ed1ng m\u0169i. C\u1eed ch\u1ec9 t\u1ef1 nhi\u00ean, th\u1ea7n th\u00e1i t\u1eadp trung, g\u00f3c m\u00e1y h\u01a1i h\u1ea5t nh\u1eb9 t\u1eeb d\u01b0\u1edbi l\u00ean (Low-Angle Medium Shot) t\u1ea1o c\u1ea3m gi\u00e1c l\u00e0m ch\u1ee7 c\u00f4ng ngh\u1ec7.", "pros": "\u00c1nh s\u00e1ng mood Teal/Cyan hi\u1ec7n \u0111\u1ea1i, \u0111\u1ed9 b\u00e3o h\u00f2a m\u00e0u \u00eam d\u1ecbu l\u00e0m n\u1ed5i b\u1eadt t\u00f4ng da nh\u00e2n v\u1eadt v\u00e0 g\u1ecdng k\u00ednh \u0111en m\u1edd s\u1eafc n\u00e9t. Kho\u1ea3ng c\u00e1ch ch\u1ee7 th\u1ec3 v\u1eeba v\u1eb7n trong khung h\u00ecnh 9:16, h\u01b0\u1edbng m\u1eaft nh\u00e2n v\u1eadt nh\u00ecn th\u1eb3ng v\u00e0o camera tr\u01b0\u1edbc khi \u0111eo k\u00ednh t\u1ea1o t\u01b0\u01a1ng t\u00e1c tr\u1ef1c di\u1ec7n (Eye-contact Hook).", "cons": "B\u1ed1i c\u1ea3nh ph\u00eda sau c\u00f3 b\u1ee9c tranh treo t\u01b0\u1eddng h\u01a1i l\u1ec7ch tr\u1ee5c v\u00e0 r\u00e8m c\u1eeda b\u00ean ph\u1ea3i c\u00f3 \u0111\u1ed9 s\u00e1ng h\u01a1i g\u1eaft nh\u1eb9 so v\u1edbi v\u00f9ng m\u1eb7t, n\u1ebfu h\u1ea1 exposure h\u1eadu c\u1ea3nh xu\u1ed1ng 0.5 stop th\u00ec ch\u1ee7 th\u1ec3 s\u1ebd t\u00e1ch kh\u1ed1i c\u00f2n \u1ea5n t\u01b0\u1ee3ng h\u01a1n n\u1eefa.", "takeaway": "M\u1edf \u0111\u1ea7u video s\u1ea3n ph\u1ea9m c\u00f4ng ngh\u1ec7 b\u1eb1ng m\u1ed9t h\u00e0nh \u0111\u1ed9ng v\u1eadt l\u00fd d\u1ee9t kho\u00e1t (\u0111eo k\u00ednh, c\u1eafm s\u1ea1c, m\u1edf h\u1ed9p) s\u1ebd gi\u1eef ch\u00e2n ng\u01b0\u1eddi xem t\u1ed1t h\u01a1n nhi\u1ec1u so v\u1edbi vi\u1ec7c ch\u1ec9 \u0111\u1ee9ng n\u00f3i ho\u1eb7c gi\u1edbi thi\u1ec7u t\u00ednh n\u0103ng tr\u1eebu t\u01b0\u1ee3ng.", "location": "Ph\u00f2ng ng\u1ee7 Master / Home Studio", "lens_angle": "Low-Angle Medium Shot \u2022 35mm Equivalent", "lighting_color": "\u00c1nh s\u00e1ng t\u1ef1 nhi\u00ean khu\u1ebfch t\u00e1n qua r\u00e8m + Mood Teal/Cyan \u0111i\u1ec7n \u1ea3nh", "transition": "Match Cut sang C\u1eadn C\u1ea3nh M\u1eaft (Macro Eye Transition)"}, {"id": 2, "st_frame": 72, "en_frame": 98, "st_time": 2.88, "en_time": 3.96, "duration": 1.08, "headline": "\u0110\u1eb7c T\u1ea3 \u00c1nh M\u1eaft Macro M\u1edf To Qua Th\u1ea5u K\u00ednh Micro-OLED: Ph\u1ea3n chi\u1ebfu kho\u1ea3nh kh\u1eafc 'Aha Moment' k\u00edch ho\u1ea1t gi\u00e1c quan khi nh\u00ecn th\u1ea5y m\u00e0n h\u00ecnh \u1ea3o", "subject_action": "G\u00f3c quay si\u00eau c\u1eadn c\u1ea3nh (Extreme Macro Close-Up) v\u00e0o m\u1ed9t b\u00ean m\u1eaft c\u1ee7a nh\u00e2n v\u1eadt qua g\u1ecdng k\u00ednh Viture Pro. Khi v\u1eeba \u0111eo k\u00ednh v\u00e0o, \u0111\u1ed3ng t\u1eed v\u00e0 m\u1eaft nh\u00e2n v\u1eadt kh\u1ebd m\u1edf to, con ng\u01b0\u01a1i \u0111\u1ea3o nh\u1eb9 \u0111\u1ec3 qu\u00e9t nh\u00ecn m\u00e0n h\u00ecnh \u1ea3o \u0111ang b\u1eebng s\u00e1ng b\u00ean trong l\u0103ng k\u00ednh quang h\u1ecdc.", "pros": "\u0110\u1ed9 s\u00e2u tr\u01b0\u1eddng \u1ea3nh c\u1ef1c n\u00f4ng (Shallow Depth of Field), l\u1ea5y n\u00e9t chu\u1ea9n x\u00e1c t\u1eebng s\u1ee3i l\u00f4ng m\u00e0y v\u00e0 tia s\u00e1ng ph\u1ea3n chi\u1ebfu trong \u0111\u00e1y m\u1eaft. C\u1eaft c\u1ea3nh nhanh 1.08s t\u1ea1o c\u00fa h\u00edch nh\u1ecbp \u0111i\u1ec7u (Visual Punch), gi\u1ea3i th\u00edch ngay l\u1eadp t\u1ee9c ph\u1ea3n \u1ee9ng ng\u1ea1c nhi\u00ean c\u1ee7a ng\u01b0\u1eddi d\u00f9ng.", "cons": "\u00c1nh s\u00e1ng tr\u00ean g\u00f2 m\u00e1 h\u01a1i t\u1ed1i (Underexposed) \u1edf v\u00f9ng r\u00eca ph\u1ea3i, khi\u1ebfn chi ti\u1ebft vi\u1ec1n g\u1ecdng k\u00ednh h\u00f2a l\u1eabn nh\u1eb9 v\u00e0o n\u1ec1n da n\u1ebfu xem tr\u00ean m\u00e0n h\u00ecnh \u0111\u1ed9 s\u00e1ng th\u1ea5p.", "takeaway": "D\u00f9ng c\u1ea3nh quay bi\u1ec3u c\u1ea3m m\u1eaft (Micro-expression) \u0111\u1ec3 truy\u1ec1n t\u1ea3i c\u1ea3m x\u00fac ng\u1ea1c nhi\u00ean thay cho l\u1eddi n\u00f3i \u2013 m\u1eaft m\u1edf to ch\u00ednh l\u00e0 b\u1eb1ng ch\u1ee9ng x\u00e1c th\u1ef1c nh\u1ea5t v\u1ec1 \u0111\u1ed9 ho\u00e0nh tr\u00e1ng c\u1ee7a m\u00e0n h\u00ecnh \u1ea3o.", "location": "Home Studio", "lens_angle": "Extreme Macro Close-Up \u2022 85mm-100mm Macro", "lighting_color": "Low-Key Lighting nh\u1ea5n v\u00e0o tia s\u00e1ng ph\u1ea3n chi\u1ebfu \u0111\u1ed3ng t\u1eed", "transition": "Hard Cut chuy\u1ec3n sang g\u00f3c nh\u00ecn th\u1ef1c t\u1ebf ch\u1ee7 quan (POV)"}, {"id": 3, "st_frame": 99, "en_frame": 135, "st_time": 3.96, "en_time": 5.44, "duration": 1.48, "headline": "G\u00f3c Nh\u00ecn Ch\u1ee7 Quan (POV) M\u00e0n Chi\u1ebfu \u1ea2o Trong Kh\u00f4ng Gian Th\u1eadt: Hi\u1ec7n th\u1ef1c h\u00f3a tr\u1ea3i nghi\u1ec7m r\u1ea1p chi\u1ebfu phim 120-inch l\u01a1 l\u1eedng ngay ph\u00f2ng kh\u00e1ch", "subject_action": "Camera \u0111\u1eb7t \u1edf g\u00f3c nh\u00ecn th\u1ee9 nh\u1ea5t (Subjective POV) t\u1eeb b\u00ean trong m\u1eaft k\u00ednh nh\u00ecn ra: M\u00e0n h\u00ecnh \u0111i\u1ec7n \u1ea3nh \u1ea3o t\u1ef7 l\u1ec7 21:9 hi\u1ec3n th\u1ecb ph\u00e2n \u0111o\u1ea1n h\u00e0nh \u0111\u1ed9ng chi\u1ebfn binh Spartan/Hy L\u1ea1p c\u1ed5 \u0111\u1ea1i c\u1ea7m gi\u00e1o m\u00e1c ti\u1ebfn qu\u00e2n xuy\u00ean qua r\u1eebng th\u00f4ng, n\u1ed5i b\u1eadt tr\u00ean n\u1ec1n t\u1ed1i c\u1ee7a c\u0103n ph\u00f2ng ng\u1ee7/ph\u00f2ng kh\u00e1ch.", "pros": "Hi\u1ec7u \u1ee9ng m\u00f4 ph\u1ecfng m\u00e0n h\u00ecnh Micro-OLED l\u01a1 l\u1eedng gi\u1eefa kh\u00f4ng gian th\u1ef1c c\u1ef1c k\u1ef3 thuy\u1ebft ph\u1ee5c. \u0110\u1ed9 t\u01b0\u01a1ng ph\u1ea3n \u0111en s\u00e2u (True Black) h\u00f2a quy\u1ec7n ho\u00e0n h\u1ea3o v\u00e0o b\u00f3ng t\u1ed1i c\u0103n ph\u00f2ng, t\u1ea1o \u1ea3o gi\u00e1c v\u1ec1 m\u1ed9t m\u00e0n h\u00ecnh cinema kh\u1ed5ng l\u1ed3 \u0111ang bay l\u01a1 l\u1eedng.", "cons": "C\u1ea1nh d\u01b0\u1edbi c\u1ee7a m\u00e0n h\u00ecnh \u1ea3o h\u01a1i s\u00e1t \u0111\u00e1y khung h\u00ecnh (ch\u1ea1m m\u00e9p n\u1ec7m), n\u1ebfu n\u00e2ng m\u00e0n h\u00ecnh \u1ea3o l\u00ean cao h\u01a1n 5% theo tr\u1ee5c Y th\u00ec c\u1ea3m gi\u00e1c kh\u00f4ng gian tr\u1ea7n nh\u00e0 s\u1ebd tho\u00e1ng \u0111\u00e3ng v\u00e0 b\u1ec1 th\u1ebf h\u01a1n.", "takeaway": "\u0110\u1ed1i v\u1edbi s\u1ea3n ph\u1ea9m k\u00ednh XR/AR, b\u1eaft bu\u1ed9c ph\u1ea3i c\u00f3 shot POV quay qua th\u1ea5u k\u00ednh th\u1eadt \u0111\u1ec3 ng\u01b0\u1eddi xem 'th\u1ea5y \u0111i\u1ec1u ng\u01b0\u1eddi d\u00f9ng th\u1ea5y', x\u00f3a tan m\u1ecdi nghi ng\u1edd v\u1ec1 qu\u1ea3ng c\u00e1o ph\u00f3ng \u0111\u1ea1i.", "location": "Ph\u00f2ng ng\u1ee7 t\u1ed1i / Ph\u00f2ng kh\u00e1ch", "lens_angle": "Subjective First-Person POV \u2022 24mm Wide", "lighting_color": "\u00c1nh s\u00e1ng ph\u00e1t quang t\u1eeb m\u00e0n h\u00ecnh Micro-OLED \u1ea3o t\u01b0\u01a1ng ph\u1ea3n v\u1edbi b\u00f3ng t\u1ed1i c\u0103n ph\u00f2ng", "transition": "Smash Cut sang thi\u1ebft b\u1ecb m\u00e1y chi\u1ebfu truy\u1ec1n th\u1ed1ng"}, {"id": 4, "st_frame": 136, "en_frame": 151, "st_time": 5.44, "en_time": 6.08, "duration": 0.64, "headline": "T\u1ea1o Xung \u0110\u1ed9t So S\u00e1nh B\u1eb1ng \u0110\u00e8n Chi\u1ebfu M\u00e1y Chi\u1ebfu Mini: Gi\u1edbi thi\u1ec7u gi\u1ea3i ph\u00e1p truy\u1ec1n th\u1ed1ng \u0111\u1ec3 chu\u1ea9n b\u1ecb b\u1ed9c l\u1ed9 nh\u01b0\u1ee3c \u0111i\u1ec3m", "subject_action": "G\u00f3c quay c\u1eadn trung v\u00e0o m\u1ed9t chi\u1ebfc m\u00e1y chi\u1ebfu mini di \u0111\u1ed9ng (Samsung The Freestyle) m\u00e0u tr\u1eafng \u0111\u1eb7t tr\u00ean t\u1ee7, b\u00f3ng \u0111\u00e8n chi\u1ebfu lens th\u1ee7y tinh \u0111\u1ed9t ng\u1ed9t b\u1eadt s\u00e1ng r\u1ef1c r\u1ee1 v\u00e0 xoay nghi\u00eang h\u01b0\u1edbng v\u1ec1 ph\u00eda b\u1ee9c t\u01b0\u1eddng.", "pros": "Th\u1eddi l\u01b0\u1ee3ng c\u1eaft c\u1ef1c ng\u1eafn (0.64s - Fast cut) gi\u1eef nh\u1ecbp \u0111i\u1ec7u nhanh. \u0110\u00e8n projector b\u1eebng s\u00e1ng t\u1ea1o \u0111i\u1ec3m nh\u1ea5n s\u00e1ng ch\u00f3i (Specular Flare) l\u1eadp t\u1ee9c k\u00e9o m\u1eaft ng\u01b0\u1eddi xem v\u00e0o c\u00f4ng c\u1ee5 so s\u00e1nh.", "cons": "M\u00e1y chi\u1ebfu \u0111\u1eb7t \u1edf g\u00f3c nghi\u00eang h\u01a1i l\u1ec7ch tr\u1ee5c \u0111\u1ed1i x\u1ee9ng, n\u1ec1n t\u01b0\u1eddng ph\u00eda sau h\u01a1i tr\u01a1n \u0111\u01a1n \u0111i\u1ec7u thi\u1ebfu \u0111i\u1ec3m nh\u1ea5n m\u00f4i tr\u01b0\u1eddng.", "takeaway": "\u0110\u1eb7t \u0111\u1ed1i th\u1ee7 ho\u1eb7c gi\u1ea3i ph\u00e1p truy\u1ec1n th\u1ed1ng v\u00e0o video d\u1ea1ng ch\u1edbp nho\u00e1ng (Micro-beat) \u0111\u1ec3 x\u00e2y d\u1ef1ng th\u1ebf tr\u1eadn so s\u00e1nh 'V\u1ea5n \u0111\u1ec1 vs Gi\u1ea3i ph\u00e1p' (Problem vs Solution framework).", "location": "Ph\u00f2ng ng\u1ee7 ban ng\u00e0y", "lens_angle": "Medium Close-Up \u2022 50mm Lens", "lighting_color": "High-Key Ambient Light + \u0110\u00e8n Lens Projector ch\u00f3i s\u00e1ng", "transition": "Cut sang h\u00ecnh \u1ea3nh chi\u1ebfu th\u1ef1c t\u1ebf tr\u00ean t\u01b0\u1eddng"}, {"id": 5, "st_frame": 152, "en_frame": 170, "st_time": 6.08, "en_time": 6.84, "duration": 0.76, "headline": "V\u1ea1ch Tr\u1ea7n 'N\u1ed7i \u0110au' H\u00ecnh \u1ea2nh B\u1ecb M\u1edd Ch\u00e1y (Washout) C\u1ee7a M\u00e1y Chi\u1ebfu: Ch\u1ee9ng minh th\u1ef1c t\u1ebf s\u1ef1 b\u1ea5t ti\u1ec7n khi ph\u00f2ng c\u00f3 \u00e1nh s\u00e1ng ban ng\u00e0y", "subject_action": "To\u00e0n c\u1ea3nh b\u1ee9c t\u01b0\u1eddng ph\u00f2ng ng\u1ee7 m\u00e0u tr\u1eafng: M\u00e1y chi\u1ebfu h\u1eaft h\u00ecnh \u1ea3nh th\u01b0\u1edbc phim l\u00ean t\u01b0\u1eddng nh\u01b0ng do \u00e1nh s\u00e1ng ban ng\u00e0y trong ph\u00f2ng qu\u00e1 m\u1ea1nh, h\u00ecnh \u1ea3nh chi\u1ebfu b\u1ecb m\u1edd nh\u1ea1t, b\u1ea1c m\u00e0u, m\u1ea5t s\u1ea1ch chi ti\u1ebft t\u01b0\u01a1ng ph\u1ea3n \u0111en (Washout effect).", "pros": "T\u00ednh ch\u00e2n th\u1ef1c cao, l\u1ed9t t\u1ea3 tr\u1ecdn v\u1eb9n \u0111i\u1ec3m y\u1ebfu ch\u00ed m\u1ea1ng c\u1ee7a m\u00e1y chi\u1ebfu gia \u0111\u00ecnh m\u00e0 h\u1ea7u h\u1ebft ng\u01b0\u1eddi d\u00f9ng \u0111\u1ec1u t\u1eebng tr\u1ea3i qua. B\u1ed1 c\u1ee5c r\u1ed9ng cho th\u1ea5y b\u1ee9c t\u01b0\u1eddng tr\u1eafng v\u00e0 t\u1ee7 k\u1ec7 th\u1ef1c t\u1ebf.", "cons": "Khung h\u00ecnh c\u00f3 chuy\u1ec3n \u0111\u1ed9ng m\u00e1y h\u01a1i rung nh\u1eb9 \u1edf 5 frame cu\u1ed1i do c\u1ea7m tay kh\u00f4ng gimbal, tuy nhi\u00ean \u0111i\u1ec1u n\u00e0y v\u00f4 t\u00ecnh t\u0103ng t\u00ednh ch\u00e2n th\u1ef1c \u0111\u1eddi th\u01b0\u1eddng.", "takeaway": "Mu\u1ed1n b\u00e1n gi\u1ea3i ph\u00e1p v\u01b0\u1ee3t tr\u1ed9i, h\u00e3y ph\u01a1i b\u00e0y ch\u00e2n th\u1ef1c nh\u01b0\u1ee3c \u0111i\u1ec3m c\u1ee7a c\u00f4ng ngh\u1ec7 c\u0169 trong \u0111i\u1ec1u ki\u1ec7n th\u1ef1c t\u1ebf nh\u1ea5t (kh\u00f4ng c\u1ea7n d\u00e0n d\u1ef1ng qu\u00e1 m\u1ee9c).", "location": "Ph\u00f2ng ng\u1ee7 ban ng\u00e0y", "lens_angle": "Wide Shot \u2022 24mm Wide-Angle", "lighting_color": "\u00c1nh s\u00e1ng t\u1ef1 nhi\u00ean tr\u00e0n ng\u1eadp (Ambient Daylight Washout)", "transition": "Whip Pan chuy\u1ec3n c\u1ea3nh sang bi\u1ec3u c\u1ea3m nh\u00e2n v\u1eadt"}, {"id": 6, "st_frame": 171, "en_frame": 207, "st_time": 6.84, "en_time": 8.32, "duration": 1.48, "headline": "C\u00fa Liaison Whip Pan B\u1eaft Tr\u1ecdn Th\u1ea7n Th\u00e1i Ng\u00e1n Ng\u1ea9m & T\u01b0\u01a1ng T\u00e1c K\u00e9o \u0110\u1ed3ng C\u1ea3m: Ch\u1ed1t h\u1ea1 l\u00fd do ng\u01b0\u1eddi xem c\u1ea7n m\u1ed9t gi\u1ea3i ph\u00e1p thay th\u1ebf", "subject_action": "Camera qu\u00e9t lia nhanh (Whip Pan) t\u1eeb b\u1ee9c t\u01b0\u1eddng sang g\u00f3c nghi\u00eang c\u1eadn c\u1ee7a Artur. Anh nh\u00ecn v\u00e0o m\u00e0n h\u00ecnh m\u00e1y chi\u1ebfu m\u1edd nh\u1ea1t v\u1edbi \u00e1nh m\u1eaft th\u1ea5t v\u1ecdng, kh\u00f3e m\u00f4i kh\u1ebd nh\u1ebfch bi\u1ec3u l\u1ed9 s\u1ef1 ng\u00e1n ng\u1ea9m, r\u1ed3i t\u1eeb t\u1eeb quay \u0111\u1ea7u nh\u00ecn th\u1eb3ng v\u00e0o camera nh\u01b0 mu\u1ed1n h\u1ecfi ng\u01b0\u1eddi xem 'B\u1ea1n c\u0169ng th\u1ea5y v\u1eady \u0111\u00fang kh\u00f4ng?'.", "pros": "C\u00fa lia Whip Pan t\u1ea1o \u0111\u1ed9 m\u01b0\u1ee3t chuy\u1ec3n c\u1ea3nh ho\u00e0n h\u1ea3o kh\u00f4ng c\u1ea7n hi\u1ec7u \u1ee9ng \u0111\u1ed3 h\u1ecda gi\u1ea3. Di\u1ec5n xu\u1ea5t tinh t\u1ebf, kh\u00f4ng g\u01b0\u1ee3ng g\u1ea1o, \u00e1nh s\u00e1ng t\u1ef1 nhi\u00ean h\u1eaft ch\u00e9o (Rembrandt light) t\u1ea1o chi\u1ec1u s\u00e2u cho g\u01b0\u01a1ng m\u1eb7t.", "cons": "Ph\u1ea7n t\u00f3c g\u00e1y ph\u00eda sau c\u00f3 v\u00e0i s\u1ee3i b\u1ecb h\u00f2a l\u1eabn v\u00e0o m\u1ea3ng b\u00f3ng r\u00e2m ph\u00eda sau c\u1ed5, c\u00f3 th\u1ec3 b\u1ed5 sung 1 \u0111\u00e8n k\u1eb9p t\u00f3c (Hair light) \u0111\u1ec3 t\u00e1ch b\u1ea1ch h\u01a1n.", "takeaway": "Bi\u1ec3u c\u1ea3m 'th\u1ea5u hi\u1ec3u n\u1ed7i \u0111au' c\u1ee7a ng\u01b0\u1eddi s\u00e1ng t\u1ea1o l\u00e0 chi\u1ebfc c\u1ea7u n\u1ed1i c\u1ea3m x\u00fac m\u1ea1nh m\u1ebd nh\u1ea5t \u0111\u1ec3 d\u1eabn d\u1eaft kh\u00e1n gi\u1ea3 sang gi\u1ea3i ph\u00e1p c\u00f4ng ngh\u1ec7 m\u1edbi.", "location": "Ph\u00f2ng ng\u1ee7", "lens_angle": "Medium Close-Up \u2022 50mm Lens", "lighting_color": "\u00c1nh s\u00e1ng xi\u00ean c\u1eeda s\u1ed5 t\u1ef1 nhi\u00ean t\u1ea1o kh\u1ed1i khu\u00f4n m\u1eb7t", "transition": "Whip Pan + Dynamic Cut sang thao t\u00e1c c\u1eafm d\u00e2y"}, {"id": 7, "st_frame": 208, "en_frame": 217, "st_time": 8.32, "en_time": 8.72, "duration": 0.4, "headline": "Macro Plug & Play C\u1eafm C\u00e1p Type-C V\u00e0o iPhone: Tr\u1ef1c quan h\u00f3a s\u1ef1 \u0111\u01a1n gi\u1ea3n 'ch\u1ec9 c\u1ea7n c\u1eafm l\u00e0 ch\u1ea1y' kh\u00f4ng c\u1ea7n c\u00e0i \u0111\u1eb7t r\u01b0\u1eddm r\u00e0", "subject_action": "C\u1eadn c\u1ea3nh macro c\u1ef1c \u0111\u1ea1i v\u00e0o c\u1ed5ng USB-C \u1edf c\u1ea1nh d\u01b0\u1edbi \u0111i\u1ec7n tho\u1ea1i iPhone titan. \u0110\u1ea7u c\u00e1p b\u1ecdc cao su \u0111en c\u1ee7a Viture \u0111\u01b0\u1ee3c \u0111\u01b0a v\u00e0o v\u00e0 c\u1eafm ph\u1eadp d\u1ee9t kho\u00e1t v\u00e0o c\u1ed5ng k\u1ebft n\u1ed1i.", "pros": "Th\u1eddi l\u01b0\u1ee3ng si\u00eau nhanh 0.40s k\u00e8m hi\u1ec7u \u1ee9ng \u00e2m thanh 'Click' d\u1ee9t kho\u00e1t. G\u00f3c m\u00e1y ch\u1ebfch 45 \u0111\u1ed9 l\u00e0m n\u1ed5i b\u1eadt vi\u1ec1n titan s\u1eafc s\u1ea3o c\u1ee7a \u0111i\u1ec7n tho\u1ea1i v\u00e0 \u0111\u1ea7u c\u1eafm cao c\u1ea5p.", "cons": "Do t\u1ed1c \u0111\u1ed9 c\u1eafm nhanh n\u00ean c\u00f3 hi\u1ec7n t\u01b0\u1ee3ng motion blur nh\u1eb9 \u1edf 2 frame \u0111\u1ea7u khi \u0111\u01b0a c\u00e1p v\u00e0o.", "takeaway": "Th\u1ec3 hi\u1ec7n t\u00ednh n\u0103ng ti\u1ec7n l\u1ee3i b\u1eb1ng m\u1ed9t thao t\u00e1c duy nh\u1ea5t di\u1ec5n ra trong ch\u01b0a \u0111\u1ea7y n\u1eeda gi\u00e2y \u2013 gi\u1ea3i quy\u1ebft r\u00e0o c\u1ea3n s\u1ee3 ph\u1ee9c t\u1ea1p c\u00f4ng ngh\u1ec7 c\u1ee7a kh\u00e1ch h\u00e0ng.", "location": "B\u00e0n l\u00e0m vi\u1ec7c", "lens_angle": "Extreme Macro Shot \u2022 100mm Macro Lens", "lighting_color": "\u00c1nh s\u00e1ng studio m\u1ec1m l\u00e0m r\u00f5 t\u1eebng \u0111\u01b0\u1eddng v\u00e2n kim lo\u1ea1i", "transition": "Quick Action Cut sang ch\u1ed1t h\u00edt t\u1eeb t\u00ednh"}, {"id": 8, "st_frame": 218, "en_frame": 224, "st_time": 8.72, "en_time": 9.0, "duration": 0.28, "headline": "C\u00fa B\u1eaft Kh\u1edbp Ch\u1ed1t Nam Ch\u00e2m T\u1eeb T\u00ednh Viture G\u00f3c L: Kh\u1eb3ng \u0111\u1ecbnh \u0111\u1ed9 ho\u00e0n thi\u1ec7n c\u01a1 kh\u00ed cao c\u1ea5p v\u00e0 t\u00ednh c\u00f4ng th\u00e1i h\u1ecdc", "subject_action": "Hai \u0111\u1ea7u ng\u00f3n tay c\u1ea7m \u0111\u1ea7u c\u00e1p g\u00f3c ch\u1eef L c\u00f3 kh\u1eafc ch\u00ecm logo VITURE v\u00e0 c\u1eafm n\u1ed1i v\u00e0o kh\u1edbp h\u00edt t\u1eeb t\u00ednh c\u1ee7a k\u00ednh. Kh\u1edbp nam ch\u00e2m t\u1ef1 \u0111\u1ed9ng h\u00fat ch\u1eb7t v\u00e0o nhau ch\u1ec9 trong 0.28s.", "pros": "L\u00e0m n\u1ed5i b\u1eadt chi ti\u1ebft logo VITURE s\u1eafc n\u00e9t v\u00e0 c\u01a1 ch\u1ebf h\u00edt th\u00f4ng minh. Nh\u1ecbp c\u1eaft si\u00eau t\u1ed1c (0.28s) ti\u1ebfp n\u1ed1i n\u0103ng l\u01b0\u1ee3ng d\u1ed3n d\u1eadp c\u1ee7a chu\u1ed7i h\u00e0nh \u0111\u1ed9ng k\u1ebft n\u1ed1i (Montage Sequence).", "cons": "\u0110\u1ea7u ng\u00f3n tay \u1edf ti\u1ec1n c\u1ea3nh chi\u1ebfm di\u1ec7n t\u00edch kh\u00e1 l\u1edbn, che m\u1ea5t m\u1ed9t ph\u1ea7n d\u00e2y c\u00e1p ph\u00eda sau.", "takeaway": "Nh\u1ecbp d\u1ef1ng Montage d\u1ed3n d\u1eadp (3 shot li\u00ean ti\u1ebfp d\u01b0\u1edbi 1 gi\u00e2y) t\u1ea1o c\u1ea3m gi\u00e1c hi\u1ec7n \u0111\u1ea1i, c\u00f4ng ngh\u1ec7 cao v\u00e0 thao t\u00e1c trong nh\u00e1y m\u1eaft.", "location": "B\u00e0n l\u00e0m vi\u1ec7c", "lens_angle": "Extreme Close-Up \u2022 85mm Lens", "lighting_color": "\u00c1nh s\u00e1ng d\u1ecbu trong ph\u00f2ng", "transition": "Rapid Cut sang m\u00e0n h\u00ecnh \u0111i\u1ec7n tho\u1ea1i"}, {"id": 9, "st_frame": 225, "en_frame": 231, "st_time": 9.0, "en_time": 9.28, "duration": 0.28, "headline": "Ng\u00f3n Tay Ch\u1ea1m Ch\u1ea1m V\u00e0o Icon \u1ee8ng D\u1ee5ng Xem Phim: K\u00edch ho\u1ea1t d\u00f2ng ch\u1ea3y tr\u1ea3i nghi\u1ec7m gi\u1ea3i tr\u00ed t\u1ee9c th\u00ec", "subject_action": "Ng\u00f3n tay tr\u1ecf l\u01b0\u1edbt xu\u1ed1ng v\u00e0 ch\u1ea1m v\u00e0o ph\u00edm \u0111i\u1ec1u h\u01b0\u1edbng/m\u1edf \u1ee9ng d\u1ee5ng tr\u00ean m\u00e0n h\u00ecnh c\u1ea3m \u1ee9ng \u0111i\u1ec7n tho\u1ea1i hi\u1ec3n th\u1ecb giao di\u1ec7n t\u1ed1i gi\u1ea3n.", "pros": "Bi\u1ec3u t\u01b0\u1ee3ng h\u00ecnh tam gi\u00e1c m\u00e0u tr\u1eafng ph\u00e1t s\u00e1ng n\u1ed5i b\u1eadt tr\u00ean n\u1ec1n \u0111en OLED s\u00e2u th\u1eb3m. G\u00f3c m\u00e1y macro focus chu\u1ea9n x\u00e1c v\u00e0o \u0111i\u1ec3m ch\u1ea1m.", "cons": "B\u1ec1 m\u1eb7t m\u00e0n h\u00ecnh c\u00f3 v\u00e0i h\u1ea1t b\u1ee5i li ti nh\u1ecf ph\u1ea3n chi\u1ebfu d\u01b0\u1edbi \u0111\u00e8n, n\u00ean lau s\u1ea1ch m\u00e0n h\u00ecnh tr\u01b0\u1edbc khi quay macro c\u1eadn c\u1ea3nh.", "takeaway": "T\u1ed1i gi\u1ea3n h\u00f3a giao di\u1ec7n tr\u00ean m\u00e0n h\u00ecnh \u0111\u1ec3 kh\u00e1n gi\u1ea3 kh\u00f4ng b\u1ecb ph\u00e2n t\u00e2m b\u1edfi c\u00e1c th\u00f4ng tin th\u1eeba, ch\u1ec9 t\u1eadp trung v\u00e0o h\u00e0nh \u0111\u1ed9ng c\u1ed1t l\u00f5i.", "location": "M\u00e0n h\u00ecnh c\u1ea3m \u1ee9ng", "lens_angle": "Macro Close-Up \u2022 100mm Macro", "lighting_color": "M\u00e0n h\u00ecnh OLED t\u1ef1 ph\u00e1t s\u00e1ng", "transition": "Match Cut sang bi\u1ec3u t\u01b0\u1ee3ng Play"}, {"id": 10, "st_frame": 232, "en_frame": 239, "st_time": 9.28, "en_time": 9.6, "duration": 0.32, "headline": "Chuy\u1ec3n \u0110\u1ed5i Tr\u1ea1ng Th\u00e1i N\u00fat Play Sang Pause: C\u00fa 'B\u1eadt C\u00f4ng T\u1eafc' Kh\u1edfi \u0110\u1ed9ng Kh\u00f4ng Gian \u0110i\u1ec7n \u1ea2nh C\u00e1 Nh\u00e2n", "subject_action": "Bi\u1ec3u t\u01b0\u1ee3ng h\u00ecnh tam gi\u00e1c Play l\u1eadp t\u1ee9c bi\u1ebfn chuy\u1ec3n th\u00e0nh 2 v\u1ea1ch song song (Pause Icon) ph\u00e1t s\u00e1ng tr\u1eafng tinh khi\u1ebft, bi\u1ec3u th\u1ecb b\u1ed9 phim \u0111\u00e3 b\u1eaft \u0111\u1ea7u ph\u00e1t.", "pros": "\u0110\u1ed3 h\u1ecda UI t\u1ed1i gi\u1ea3n, \u0111\u1ed9 t\u01b0\u01a1ng ph\u1ea3n tuy\u1ec7t \u0111\u1ed1i gi\u1eefa tr\u1eafng v\u00e0 \u0111en t\u1ea1o c\u1ea3m gi\u00e1c c\u00f4ng ngh\u1ec7 cao c\u1ea5p (Futuristic UI). C\u00fa c\u1eaft kh\u1edbp chu\u1ea9n x\u00e1c theo nh\u1ecbp beat \u00e2m thanh.", "cons": "Chuy\u1ec3n \u0111\u1ed9ng icon l\u00e0 cut tr\u1ef1c ti\u1ebfp, n\u1ebfu c\u00f3 animation morph m\u01b0\u1ee3t m\u00e0 0.05s th\u00ec hi\u1ec7u \u1ee9ng th\u1ecb gi\u00e1c s\u1ebd tinh x\u1ea3o h\u01a1n.", "takeaway": "S\u1eed d\u1ee5ng t\u00edn hi\u1ec7u th\u1ecb gi\u00e1c r\u00f5 r\u00e0ng (icon play chuy\u1ec3n pause) \u0111\u1ec3 b\u00e1o hi\u1ec7u cho ng\u01b0\u1eddi xem bi\u1ebft c\u00e2u chuy\u1ec7n chu\u1ea9n b\u1ecb b\u01b0\u1edbc v\u00e0o giai \u0111o\u1ea1n th\u01b0\u1edfng th\u1ee9c cao tr\u00e0o.", "location": "M\u00e0n h\u00ecnh smartphone", "lens_angle": "Macro UI Shot \u2022 100mm Macro", "lighting_color": "OLED Self-lit contrast", "transition": "Hard Cut chuy\u1ec3n sang to\u00e0n c\u1ea3nh t\u1eadn h\u01b0\u1edfng tr\u00ean gi\u01b0\u1eddng"}, {"id": 11, "st_frame": 240, "en_frame": 284, "st_time": 9.6, "en_time": 11.4, "duration": 1.8, "headline": "C\u00fa Dolly Out Kh\u00e1m Ph\u00e1 Kh\u00f4ng Gian Th\u01b0 Gi\u00e3n T\u1ed9t \u0110\u1ec9nh Tr\u00ean Gi\u01b0\u1eddng Ng\u1ee7: Tr\u00ecnh di\u1ec5n phong c\u00e1ch s\u1ed1ng r\u1ea1p chi\u1ebfu phim ri\u00eang t\u01b0 t\u1ea1i gia", "subject_action": "C\u00fa m\u00e1y l\u00f9i xa d\u1ea7n (Dolly Back / Smooth Gimbal Pull-back): Artur ng\u1ed3i x\u1ebfp b\u1eb1ng tho\u1ea3i m\u00e1i gi\u1eefa chi\u1ebfc gi\u01b0\u1eddng ng\u1ee7 tr\u1ea3i ga s\u1ecdc trang nh\u00e3, m\u1ed9t tay c\u1ea7m b\u00e1t g\u1ed7 b\u1eafp rang b\u01a1, tay kia b\u1ed1c b\u1ecfng ng\u00f4 cho v\u00e0o mi\u1ec7ng, m\u1eaft ng\u01b0\u1edbc nh\u00ecn l\u00ean kh\u00f4ng gian v\u1edbi v\u1ebb m\u1eb7t t\u1eadn h\u01b0\u1edfng th\u01b0 th\u00e1i tuy\u1ec7t \u0111\u1ed1i c\u00f9ng k\u00ednh Viture.", "pros": "B\u1ed1 c\u1ee5c \u0111\u1ed1i x\u1ee9ng trung t\u00e2m (Central Composition) ho\u00e0n m\u1ef9, \u0111\u01b0\u1eddng d\u1eabn th\u1ecb gi\u00e1c t\u1eeb c\u00e1c n\u1ebfp g\u1ea5p ch\u0103n ga h\u01b0\u1edbng th\u1eb3ng v\u00e0o nh\u00e2n v\u1eadt ch\u00ednh. Tone m\u00e0u be, tr\u1eafng v\u00e0 g\u1ed7 t\u1ea1o c\u1ea3m gi\u00e1c \u1ea5m c\u00fang, sang tr\u1ecdng v\u00e0 th\u01b0 th\u00e1i (Cozy Lifestyle Aesthetic).", "cons": "S\u1ee3i d\u00e2y c\u00e1p n\u1ed1i t\u1eeb k\u00ednh xu\u1ed1ng \u0111i\u1ec7n tho\u1ea1i \u0111\u1ec3 c\u1ea1nh \u0111\u00f9i h\u01a1i cu\u1ed9n nh\u1eb9, n\u1ebfu kh\u00e9o l\u00e9o gi\u1ea5u d\u00e2y sau l\u01b0ng th\u00ec khung h\u00ecnh s\u1ebd li\u1ec1n m\u1ea1ch v\u00e0 g\u1ecdn g\u00e0ng h\u01a1n n\u1eefa.", "takeaway": "B\u00e1n tr\u1ea3i nghi\u1ec7m v\u00e0 c\u1ea3m x\u00fac phong c\u00e1ch s\u1ed1ng (Lifestyle Empathy) thay v\u00ec ch\u1ec9 n\u00f3i th\u00f4ng s\u1ed1 k\u1ef9 thu\u1eadt \u2013 h\u00ecnh \u1ea3nh v\u1eeba \u0103n b\u1eafp rang v\u1eeba xem phim tr\u00ean gi\u01b0\u1eddng l\u00e0 \u01b0\u1edbc m\u01a1 c\u1ee7a m\u1ecdi ng\u01b0\u1eddi xem.", "location": "Ph\u00f2ng ng\u1ee7 Master", "lens_angle": "Low Dolly Back / Pull-back Medium Shot \u2022 28mm Wide", "lighting_color": "\u00c1nh s\u00e1ng t\u1ef1 nhi\u00ean \u00eam d\u1ecbu t\u1eeb c\u1eeda s\u1ed5 k\u1ebft h\u1ee3p \u0111\u00e8n ng\u1ee7 \u1ea5m \u00e1p", "transition": "Push In sang g\u00f3c c\u1eadn th\u1ea5p qua b\u00e1t b\u1ecfng ng\u00f4"}, {"id": 12, "st_frame": 285, "en_frame": 308, "st_time": 11.4, "en_time": 12.36, "duration": 0.96, "headline": "G\u00f3c Th\u1ea5p (Low-Angle) \u0110\u1eb7t B\u00e1t B\u1eafp Rang \u1ede Ti\u1ec1n C\u1ea3nh: Gia t\u0103ng chi\u1ec1u s\u00e2u ti\u1ec1n c\u1ea3nh - h\u1eadu c\u1ea3nh v\u00e0 \u0111\u1ed9 ch\u00e2n th\u1ef1c c\u1ee7a tr\u1ea3i nghi\u1ec7m xem phim", "subject_action": "G\u00f3c m\u00e1y \u0111\u1eb7t th\u1ea5p t\u1eeb d\u01b0\u1edbi n\u1ec7m h\u01b0\u1edbng l\u00ean: B\u00e1t g\u1ed7 b\u1eafp rang b\u01a1 chi\u1ebfm tr\u1ecdn 1/3 g\u00f3c tr\u00e1i ti\u1ec1n c\u1ea3nh, Artur ng\u1ed3i ph\u00eda sau v\u1eeba nhai v\u1eeba m\u1ec9m c\u01b0\u1eddi nh\u1eb9 th\u00edch th\u00fa khi theo d\u00f5i b\u1ed9 phim bom t\u1ea5n tr\u00ean m\u00e0n h\u00ecnh \u1ea3o.", "pros": "K\u1ef9 thu\u1eadt t\u00e1ch l\u1edbp 3 t\u1ea7ng (Ti\u1ec1n c\u1ea3nh b\u00e1t b\u1eafp rang -> Trung c\u1ea3nh nh\u00e2n v\u1eadt & k\u00ednh XR -> H\u1eadu c\u1ea3nh t\u01b0\u1eddng ph\u00f2ng ng\u1ee7) t\u1ea1o chi\u1ec1u s\u00e2u kh\u00f4ng gian \u0111i\u1ec7n \u1ea3nh c\u1ef1c k\u1ef3 \u1ea5n t\u01b0\u1ee3ng. \u00c1nh s\u00e1ng xi\u00ean t\u1ea1o kh\u1ed1i r\u00f5 n\u00e9t tr\u00ean g\u01b0\u01a1ng m\u1eb7t.", "cons": "G\u00f3c m\u00e1y h\u01a1i th\u1ea5p khi\u1ebfn c\u1eb1m nh\u00e2n v\u1eadt h\u01a1i b\u1ecb che nh\u1eb9 b\u1edfi b\u00e1t b\u1eafp rang \u1edf m\u1ed9t v\u00e0i frame \u0111\u1ea7u.", "takeaway": "T\u1eadn d\u1ee5ng \u0111\u1ea1o c\u1ee5 quen thu\u1ed9c (b\u00e1t b\u1eafp rang b\u01a1, c\u1ed1c n\u01b0\u1edbc) l\u00e0m ti\u1ec1n c\u1ea3nh \u0111\u1ec3 bi\u1ebfn video review s\u1ea3n ph\u1ea9m th\u00e0nh m\u1ed9t t\u00e1c ph\u1ea9m \u0111i\u1ec7n \u1ea3nh c\u00f3 chi\u1ec1u s\u00e2u v\u00e0 \u0111\u1eddi s\u1ed1ng.", "location": "Ph\u00f2ng ng\u1ee7 Master", "lens_angle": "Low-Angle Over-the-Popcorn Medium Close-Up \u2022 35mm Lens", "lighting_color": "\u00c1nh s\u00e1ng xi\u00ean t\u1ea1o kh\u1ed1i r\u00f5 r\u1ec7t", "transition": "Cut sang m\u00e0n h\u00ecnh h\u00e0nh \u0111\u1ed9ng Wolverine"}, {"id": 13, "st_frame": 309, "en_frame": 338, "st_time": 12.36, "en_time": 13.56, "duration": 1.2, "headline": "POV M\u00e0n Chi\u1ebfu OLED Si\u00eau T\u1ed1i Chi\u1ebfu Phim Wolverine Chi\u1ebfn \u0110\u1ea5u: Th\u1ec3 hi\u1ec7n \u0111\u1ed9 t\u01b0\u01a1ng ph\u1ea3n v\u00f4 c\u1ef1c v\u00e0 m\u00e0u v\u00e0ng r\u1ef1c r\u1ee1 c\u1ee7a trang ph\u1ee5c si\u00eau anh h\u00f9ng", "subject_action": "G\u00f3c nh\u00ecn POV hi\u1ec3n th\u1ecb ph\u00e2n \u0111o\u1ea1n chi\u1ebfn \u0111\u1ea5u ngh\u1eb9t th\u1edf c\u1ee7a ng\u01b0\u1eddi s\u00f3i Wolverine (Hugh Jackman trong trang ph\u1ee5c v\u00e0ng c\u1ed5 \u0111i\u1ec3n) tung \u0111\u00f2n h\u1ea1 g\u1ee5c \u0111\u1ed1i th\u1ee7 tr\u00ean n\u1ec1n kho x\u01b0\u1edfng kim lo\u1ea1i, vi\u1ec1n m\u00e0n h\u00ecnh ch\u00ecm ng\u1eadp ho\u00e0n to\u00e0n trong b\u00f3ng \u0111en tuy\u1ec7t \u0111\u1ed1i c\u1ee7a ph\u00f2ng ng\u1ee7.", "pros": "\u0110\u1ed9 t\u01b0\u01a1ng ph\u1ea3n m\u00e0u s\u1eafc c\u1ef1c k\u1ef3 \u1ea5n t\u01b0\u1ee3ng (M\u00e0u v\u00e0ng r\u1ef1c r\u1ee1 c\u1ee7a suit Wolverine t\u01b0\u01a1ng ph\u1ea3n m\u1ea1nh m\u1ebd v\u1edbi n\u1ec1n kim lo\u1ea1i x\u00e1m xanh). T\u1ef7 l\u1ec7 hi\u1ec3n th\u1ecb \u0111i\u1ec7n \u1ea3nh si\u00eau r\u1ed9ng (Ultrawide Aspect Ratio) mang l\u1ea1i c\u1ea3m gi\u00e1c ph\u00f2ng chi\u1ebfu IMAX c\u00e1 nh\u00e2n.", "cons": "\u0110o\u1ea1n phim h\u00e0nh \u0111\u1ed9ng di chuy\u1ec3n nhanh n\u00ean c\u00f3 m\u1ed9t ch\u00fat motion blur trong source phim g\u1ed1c, n\u1ebfu ch\u1ecdn \u0111o\u1ea1n c\u00f3 tia l\u1eeda bay th\u00ec hi\u1ec7u \u1ee9ng th\u1ecb gi\u00e1c s\u1ebd c\u00f2n lung linh h\u01a1n.", "takeaway": "Ch\u1ecdn c\u00e1c \u0111o\u1ea1n phim c\u00f3 m\u00e0u s\u1eafc \u0111\u1ed1i l\u1eadp m\u1ea1nh (V\u00e0ng / Xanh / L\u1eeda \u0111\u1ecf) \u0111\u1ec3 ph\u00f4 di\u1ec5n t\u1ed1i \u0111a d\u1ea3i m\u00e0u hi\u1ec3n th\u1ecb (Color Gamut) v\u00e0 \u0111\u1ed9 t\u01b0\u01a1ng ph\u1ea3n c\u1ee7a t\u1ea5m n\u1ec1n k\u00ednh th\u00f4ng minh.", "location": "Ph\u00f2ng ng\u1ee7 t\u1ed1i", "lens_angle": "POV Virtual Screen Display \u2022 24mm Wide", "lighting_color": "\u00c1nh s\u00e1ng t\u1ef1 ph\u00e1t t\u1eeb m\u00e0n h\u00ecnh \u1ea3o Micro-OLED", "transition": "Cut sang g\u00f3c c\u1eadn s\u1ea3n ph\u1ea9m tr\u00ean b\u00e0n"}, {"id": 14, "st_frame": 339, "en_frame": 395, "st_time": 13.56, "en_time": 15.84, "duration": 2.28, "headline": "C\u00fa Tr\u01b0\u1ee3t M\u00e1y Macro Ngh\u1ec7 Thu\u1eadt Qua Th\u1ea5u K\u00ednh K\u00ednh Viture: T\u00f4n vinh thi\u1ebft k\u1ebf th\u1eddi trang tinh t\u1ebf t\u1ef1a k\u00ednh m\u00e1t cao c\u1ea5p", "subject_action": "C\u00fa lia m\u00e1y tr\u01b0\u1ee3t macro m\u01b0\u1ee3t m\u00e0 (Macro Slider Pan) ngang qua m\u1eb7t tr\u01b0\u1edbc c\u1ee7a k\u00ednh Viture Pro \u0111\u1eb7t tr\u00ean m\u1eb7t b\u00e0n da m\u00e0u xanh \u0111en sang tr\u1ecdng. \u00c1nh s\u00e1ng ph\u1ea3n chi\u1ebfu l\u01b0\u1edbt nh\u1eb9 tr\u00ean m\u1eb7t k\u00ednh cong v\u00e0 vi\u1ec1n logo m\u00e0u xanh d\u01b0\u01a1ng hi\u1ec7n \u0111\u1ea1i.", "pros": "Ch\u1ea5t l\u01b0\u1ee3ng h\u00ecnh \u1ea3nh s\u1eafc n\u00e9t \u0111\u1ebfn t\u1eebng \u0111\u01b0\u1eddng n\u00e9t v\u00e1t c\u1ea1nh c\u1ee7a g\u1ecdng k\u00ednh. \u00c1nh s\u00e1ng studio qu\u00e9t ngang (Light Sweep) t\u1ea1o hi\u1ec7u \u1ee9ng b\u00f3ng b\u1ea9y, cao c\u1ea5p, x\u00f3a b\u1ecf \u0111\u1ecbnh ki\u1ebfn k\u00ednh XR l\u00e0 th\u00f4 k\u1ec7ch, n\u1eb7ng n\u1ec1.", "cons": "T\u1ed1c \u0111\u1ed9 lia m\u00e1y h\u01a1i ch\u1eadm l\u1ea1i \u1edf 0.5s cu\u1ed1i khi\u1ebfn nh\u1ecbp phim h\u01a1i ch\u00f9ng xu\u1ed1ng nh\u1eb9 so v\u1edbi nh\u1ecbp d\u1ed3n d\u1eadp tr\u01b0\u1edbc \u0111\u00f3.", "takeaway": "Ph\u1ea3i c\u00f3 m\u1ed9t c\u1ea3nh quay 'Hero Product Shot' \u0111\u1ea1t chu\u1ea9n qu\u1ea3ng c\u00e1o truy\u1ec1n h\u00ecnh (Commercial Grade) \u0111\u1ec3 \u0111\u1ecbnh v\u1ecb gi\u00e1 tr\u1ecb s\u1ea3n ph\u1ea9m cao c\u1ea5p trong t\u00e2m tr\u00ed kh\u00e1ch h\u00e0ng.", "location": "M\u1eb7t b\u00e0n da cao c\u1ea5p Studio", "lens_angle": "Macro Slider Tracking Shot \u2022 85mm Macro Lens", "lighting_color": "Commercial Studio Rim & Sweep Light", "transition": "Cut sang g\u00f3c \u0111i\u1ec1u khi\u1ec3n \u0111i\u1ec7n tho\u1ea1i"}, {"id": 15, "st_frame": 396, "en_frame": 419, "st_time": 15.84, "en_time": 16.8, "duration": 0.96, "headline": "G\u00f3c Nghi\u00eang Thao T\u00e1c B\u1ea5m Ch\u1ecdn B\u1eb1ng iPhone: Minh h\u1ecda kh\u1ea3 n\u0103ng \u0111i\u1ec1u h\u01b0\u1edbng m\u01b0\u1ee3t m\u00e0 gi\u1eefa c\u00e1c n\u1ed9i dung phim \u1ea3nh", "subject_action": "Artur c\u1ea7m ngang chi\u1ebfc iPhone b\u1eb1ng hai tay, ng\u00f3n tay nh\u1eb9 nh\u00e0ng thao t\u00e1c l\u01b0\u1edbt ch\u1ecdn chuy\u1ec3n \u0111\u1ed5i danh s\u00e1ch phim tr\u00ean m\u00e0n h\u00ecnh trong khi m\u1eaft v\u1eabn h\u01b0\u1edbng v\u1ec1 ph\u00eda tr\u01b0\u1edbc theo d\u00f5i kh\u00f4ng gian \u1ea3o.", "pros": "B\u1ed1 c\u1ee5c chia khung h\u1ee3p l\u00fd: M\u1eb7t l\u01b0ng c\u1ee5m 3 camera iPhone b\u1eb1ng titan \u1edf ti\u1ec1n c\u1ea3nh, g\u01b0\u01a1ng m\u1eb7t nh\u00e2n v\u1eadt \u0111eo k\u00ednh \u1edf h\u1eadu c\u1ea3nh. \u00c1nh s\u00e1ng vi\u1ec1n h\u1eaft nh\u1eb9 l\u00ean ng\u00f3n tay t\u1ea1o c\u1ea3m gi\u00e1c c\u00f4ng ngh\u1ec7 cao.", "cons": "C\u1ea1nh \u0111i\u1ec7n tho\u1ea1i che m\u1ed9t ph\u1ea7n mi\u1ec7ng c\u1ee7a nh\u00e2n v\u1eadt, n\u1ebfu h\u1ea1 \u0111i\u1ec7n tho\u1ea1i xu\u1ed1ng 3cm th\u00ec b\u1ed1 c\u1ee5c khu\u00f4n m\u1eb7t s\u1ebd tr\u1ecdn v\u1eb9n h\u01a1n.", "takeaway": "\u0110\u1eb7t s\u1ea3n ph\u1ea9m \u0111i\u1ec1u khi\u1ec3n (\u0111i\u1ec7n tho\u1ea1i) v\u00e0 thi\u1ebft b\u1ecb hi\u1ec3n th\u1ecb (k\u00ednh XR) trong c\u00f9ng m\u1ed9t khung h\u00ecnh \u0111\u1ec3 nh\u1ea5n m\u1ea1nh s\u1ef1 \u0111\u1ed3ng b\u1ed9 m\u01b0\u1ee3t m\u00e0 c\u1ee7a h\u1ec7 sinh th\u00e1i.", "location": "Ph\u00f2ng ng\u1ee7 Master", "lens_angle": "Low-Angle Hands Close-Up \u2022 50mm Lens", "lighting_color": "Low-Key Studio Lighting", "transition": "Cut sang c\u1ea3nh phim Spider-Man"}, {"id": 16, "st_frame": 420, "en_frame": 443, "st_time": 16.8, "en_time": 17.76, "duration": 0.96, "headline": "POV C\u1ea3nh Spider-Man B\u1eafn T\u01a1 \u0110u L\u01b0\u1ee3n Gi\u1eefa T\u00f2a Nh\u00e0 Ch\u1ecdc Tr\u1eddi: Mang tr\u1ea3i nghi\u1ec7m r\u1ea1p chi\u1ebfu IMAX 3D t\u1ed1c \u0111\u1ed9 cao v\u00e0o ph\u00f2ng ng\u1ee7", "subject_action": "G\u00f3c nh\u00ecn POV qua k\u00ednh Viture hi\u1ec3n th\u1ecb c\u1ea3nh Ng\u01b0\u1eddi Nh\u1ec7n (Spider-Man) trong trang ph\u1ee5c \u0111\u1ecf xanh ph\u00f3ng t\u01a1 nh\u00e0o l\u1ed9n gi\u1eefa h\u1ebbm ph\u1ed1 c\u00e1c t\u00f2a nh\u00e0 ch\u1ecdc tr\u1eddi New York v\u1edbi g\u00f3c quay lao d\u1ed1c t\u1eeb tr\u00ean kh\u00f4ng trung xu\u1ed1ng m\u1eb7t \u0111\u01b0\u1eddng.", "pros": "Chuy\u1ec3n \u0111\u1ed9ng m\u00e1y quay trong phim Spider-Man c\u00f3 t\u00ednh \u0111\u1ed9ng l\u1ef1c h\u1ecdc c\u1ef1c cao (High Kinetic Motion), t\u1ea1o c\u1ea3m gi\u00e1c ch\u00f3ng m\u1eb7t ngh\u1eb9t th\u1edf nh\u01b0 \u0111ang tr\u1ef1c ti\u1ebfp bay l\u01b0\u1ee3n trong kh\u00f4ng gian 3D.", "cons": "\u00c1nh s\u00e1ng c\u1ee7a c\u1ea3nh phim h\u01a1i t\u1ed1i \u1edf g\u00f3c d\u01b0\u1edbi b\u00ean tr\u00e1i do c\u1ea3nh quay ban \u0111\u00eam trong phim.", "takeaway": "S\u1eed d\u1ee5ng c\u1ea3nh phim h\u00e0nh \u0111\u1ed9ng t\u1ed1c \u0111\u1ed9 cao (Fast Paced Action / First-person Swing) \u0111\u1ec3 ch\u1ee9ng minh t\u1ea7n s\u1ed1 qu\u00e9t m\u01b0\u1ee3t m\u00e0 (120Hz Refresh Rate) kh\u00f4ng b\u1ecb x\u00e9 h\u00ecnh hay gi\u1eadt lag c\u1ee7a m\u00e0n h\u00ecnh k\u00ednh.", "location": "Kh\u00f4ng gian t\u1ed1i", "lens_angle": "Subjective POV Action Scene \u2022 24mm Wide", "lighting_color": "\u00c1nh s\u00e1ng m\u00e0n h\u00ecnh \u1ea3o r\u1ef1c r\u1ee1 trong b\u00f3ng t\u1ed1i", "transition": "Fast Cut sang ph\u00e2n \u0111o\u1ea1n n\u1ed5 th\u00e1p n\u01b0\u1edbc"}, {"id": 17, "st_frame": 444, "en_frame": 469, "st_time": 17.76, "en_time": 18.8, "duration": 1.04, "headline": "Cao Tr\u00e0o Ch\u00e1y N\u1ed5 Th\u00e1p N\u01b0\u1edbc & Hi\u1ec7u \u1ee8ng \u00c1nh S\u00e1ng B\u00f9ng Ch\u00e1y: \u0110\u1ec9nh \u0111i\u1ec3m k\u00edch th\u00edch th\u1ecb gi\u00e1c tr\u01b0\u1edbc khi kh\u00e9p l\u1ea1i tr\u1ea3i nghi\u1ec7m", "subject_action": "M\u00e0n h\u00ecnh \u1ea3o hi\u1ec3n th\u1ecb c\u1ea3nh th\u00e1p n\u01b0\u1edbc kim lo\u1ea1i ph\u00e1t n\u1ed5 tung t\u00f3e c\u00e1c m\u1ea3nh v\u1ee1 v\u00e0 kh\u00f3i b\u1ee5i cu\u1ed3n cu\u1ed9n bay l\u00ean b\u1ea7u tr\u1eddi, t\u1ea1o ch\u1edbp s\u00e1ng tr\u1eafng b\u00f9ng n\u1ed5 to\u00e0n b\u1ed9 kh\u00f4ng gian ph\u00f2ng t\u1ed1i.", "pros": "C\u00fa b\u00f9ng n\u1ed5 \u00e1nh s\u00e1ng (Visual Flash Explosion) t\u1ea1o \u0111\u1ec9nh cao c\u1ea3m x\u00fac cho ng\u01b0\u1eddi xem, k\u1ebft th\u00fac chu\u1ed7i demo phim \u1ea3nh b\u1eb1ng m\u1ed9t \u1ea5n t\u01b0\u1ee3ng th\u1ecb gi\u00e1c cho\u00e1ng ng\u1ee3p.", "cons": "\u00c1nh s\u00e1ng tr\u1eafng b\u00f9ng n\u1ed5 h\u01a1i m\u1ea1nh \u1edf nh\u1eefng frame \u0111\u1ea7u c\u00f3 th\u1ec3 g\u00e2y ch\u00f3i nh\u1eb9 cho m\u1eaft ng\u01b0\u1eddi xem trong t\u00edch t\u1eafc.", "takeaway": "K\u1ebft th\u00fac chu\u1ed7i demo t\u00ednh n\u0103ng b\u1eb1ng m\u1ed9t c\u00fa n\u1ed5 th\u1ecb gi\u00e1c (Climax Shot) \u0111\u1ec3 \u0111\u1ea9y s\u1ef1 ph\u1ea5n kh\u00edch c\u1ee7a kh\u00e1ch h\u00e0ng l\u00ean m\u1ee9c cao nh\u1ea5t tr\u01b0\u1edbc khi \u0111\u01b0a ra Call to Action.", "location": "Kh\u00f4ng gian t\u1ed1i", "lens_angle": "Subjective POV Climax Scene \u2022 24mm Wide", "lighting_color": "High-Contrast Explosion Flare", "transition": "Whip/Spin Cut sang h\u1ed9p s\u1ea3n ph\u1ea9m"}, {"id": 18, "st_frame": 470, "en_frame": 499, "st_time": 18.8, "en_time": 20.0, "duration": 1.2, "headline": "C\u00fa Xoay Tr\u1ecdng T\u00e2m (Spin Transition) Kh\u00f3a Ch\u1eb7t V\u00e0o H\u1ed9p \u0110\u1ef1ng Viture Cao C\u1ea5p Tr\u00ean Th\u1ea3m \u0110\u1ecf: CTA Th\u1ecb Gi\u00e1c \u0110\u1eb3ng C\u1ea5p Sang Tr\u1ecdng", "subject_action": "C\u00fa chuy\u1ec3n c\u1ea3nh xoay tr\u00f2n t\u1ed1c \u0111\u1ed9 cao (Spin / Whip Blur Transition) h\u1ea1 c\u00e1nh ch\u00ednh x\u00e1c xu\u1ed1ng g\u00f3c quay th\u1eb3ng t\u1eeb tr\u00ean xu\u1ed1ng (Top-Down Flat Lay): Chi\u1ebfc k\u00ednh Viture Pro n\u1eb1m ho\u00e0n h\u1ea3o trong h\u1ed9p b\u1ea3o v\u1ec7 nhung xanh cao c\u1ea5p m\u1edf n\u1eafp tr\u00ean n\u1ec1n th\u1ea3m l\u00f4ng \u0111\u1ecf r\u1ef1c, logo 'VITURE - THE FUTURE IS ON SIGHT' kh\u1eafc ch\u00ecm \u0111\u1ea7y tinh t\u1ebf.", "pros": "B\u1ed1 c\u1ee5c Flat Lay ch\u00e9o g\u00f3c 45 \u0111\u1ed9 v\u00f4 c\u00f9ng n\u0103ng \u0111\u1ed9ng v\u00e0 cao c\u1ea5p. M\u00e0u xanh cobalt c\u1ee7a l\u00f2ng h\u1ed9p t\u01b0\u01a1ng ph\u1ea3n b\u1ed5 tr\u1ee3 tuy\u1ec7t \u0111\u1eb9p v\u1edbi m\u00e0u \u0111\u1ecf c\u1ee7a th\u1ea3m s\u00e0n (Color Blocking Red vs Blue), t\u1ea1o \u1ea5n t\u01b0\u1ee3ng th\u1ecb gi\u00e1c m\u1ea1nh m\u1ebd kh\u00f3 qu\u00ean \u1edf gi\u00e2y cu\u1ed1i c\u00f9ng.", "cons": "C\u00fa xoay spin \u1edf 4 frame \u0111\u1ea7u h\u01a1i g\u1eaft n\u1ebfu ng\u01b0\u1eddi xem nh\u1ea1y c\u1ea3m v\u1edbi chuy\u1ec3n \u0111\u1ed9ng xoay tr\u00f2n nhanh.", "takeaway": "C\u1ea3nh k\u1ebft (Outro / CTA) c\u1ea7n \u0111\u00f3ng g\u00f3i tr\u1ecdn v\u1eb9n s\u1ea3n ph\u1ea9m trong bao b\u00ec cao c\u1ea5p nh\u1ea5t, k\u1ebft h\u1ee3p \u0111\u1ed9 t\u01b0\u01a1ng ph\u1ea3n m\u00e0u s\u1eafc b\u1eaft m\u1eaft \u0111\u1ec3 l\u01b0u gi\u1eef h\u00ecnh \u1ea3nh th\u01b0\u01a1ng hi\u1ec7u s\u00e2u \u0111\u1eadm trong t\u00e2m tr\u00ed ng\u01b0\u1eddi xem.", "location": "Studio / Ph\u00f2ng kh\u00e1ch", "lens_angle": "Top-Down 45\u00b0 Diagonal Flat Lay \u2022 35mm Lens", "lighting_color": "\u00c1nh s\u00e1ng Studio m\u1ec1m l\u00e0m n\u1ed5i b\u1eadt ch\u1ea5t li\u1ec7u da v\u00e0 nhung", "transition": "Final Outro Cut"}];
+
+let isLooping = false;
+let currentActiveShot = null;
+
+// Time update & sync
+player.addEventListener('timeupdate', () => {
+    const cur = player.currentTime;
+    timeDisplay.innerText = cur.toFixed(2) + 's / 20.00s';
+
+    // Find active shot
+    const active = shotsData.find(s => cur >= s.st_time && cur < s.en_time);
+    if (active && active.id !== currentActiveShot) {
+        currentActiveShot = active.id;
+        currentShotTag.innerText = 'Shot ' + (active.id < 10 ? '0' + active.id : active.id) + ' / 18';
+        
+        // Highlight active card
+        document.querySelectorAll('.shot-card').forEach(card => card.classList.remove('current-playing'));
+        const activeCard = document.getElementById('shot-' + active.id);
+        if (activeCard) {
+            activeCard.classList.add('current-playing');
+        }
+    }
+});
+
+function jumpToShot(id, st_time) {
+    player.currentTime = st_time;
+    player.play();
+    currentActiveShot = id;
+    currentShotTag.innerText = 'Shot ' + (id < 10 ? '0' + id : id) + ' / 18';
+
+    // Scroll to card in detail view
+    const card = document.getElementById('shot-' + id);
+    if (card && document.getElementById('detailView').style.display !== 'none') {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    if (document.getElementById('drawerModal').style.display === 'flex') {
+        toggleDrawer();
+    }
+}
+
+function setSpeed(spd) {
+    player.playbackRate = spd;
+    document.querySelectorAll('.speed-buttons-row .ctrl-btn').forEach(btn => {
+        if (btn.innerText.startsWith(spd + 'x')) {
+            btn.classList.add('active');
+        } else if (btn.innerText.includes('x')) {
+            btn.classList.remove('active');
+        }
+    });
+}
+
+function stepFrame(dir) {
+    player.pause();
+    player.currentTime = Math.max(0, Math.min(20.0, player.currentTime + (dir * 1/25.0)));
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    player.loop = isLooping;
+    const btn = document.getElementById('loopBtn');
+    if (isLooping) {
+        btn.classList.add('active');
+    } else {
+        btn.classList.remove('active');
+    }
+}
+
+function switchView(mode) {
+    const tabD = document.getElementById('tabDetail');
+    const tabG = document.getElementById('tabGrid');
+    const viewD = document.getElementById('detailView');
+    const viewG = document.getElementById('gridView');
+
+    if (mode === 'detail') {
+        tabD.classList.add('active');
+        tabG.classList.remove('active');
+        viewD.style.display = 'flex';
+        viewG.style.display = 'none';
+    } else {
+        tabG.classList.add('active');
+        tabD.classList.remove('active');
+        viewG.style.display = 'grid';
+        viewD.style.display = 'none';
+    }
+}
+
+function toggleDrawer() {
+    const modal = document.getElementById('drawerModal');
+    if (modal.style.display === 'flex') {
+        modal.style.display = 'none';
+    } else {
+        modal.style.display = 'flex';
+    }
+}
+
+function openLightbox(src, caption) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCap');
+    img.src = src;
+    cap.innerText = caption;
+    modal.style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').style.display = 'none';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+        document.getElementById('drawerModal').style.display = 'none';
+    }
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

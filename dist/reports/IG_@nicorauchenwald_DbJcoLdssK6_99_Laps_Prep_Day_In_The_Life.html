@@ -1,0 +1,3093 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Quy Trình Chuẩn Bị Giải Đua 99 Laps & Nghệ Thuật Montage Nhịp Nhanh Thể Thao - @nicorauchenwald • Director's Analysis Report</title>
+<style>
+@font-face {
+    font-family: 'SVN-Acta';
+    src: local('SVN-Acta-Bold'), local('SVN-Acta'), local('SVN Acta');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'SVN-Acta';
+    src: local('SVN-Acta-Medium'), local('SVN-Acta');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'SVN-Acta';
+    src: local('SVN-Acta-Book'), local('SVN-Acta-Regular'), local('SVN-Acta');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'GT America';
+    src: local('GT-America-LCGV-Standard-Regular'), local('GT America');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'GT America';
+    src: local('GT-America-LCGV-Standard-Medium'), local('GT America');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'GT America';
+    src: local('GT-America-LCGV-Standard-Bold'), local('GT America');
+    font-weight: 700;
+}
+
+:root {
+    --bg-main: #0b0f17;
+    --bg-card: #131b2a;
+    --bg-card-hover: #1c273c;
+    --bg-sidebar: #0f1624;
+    --border-color: #202c42;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-amber: #f59e0b;
+    --accent-blue: #38bdf8;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-purple: #c084fc;
+    --font-heading: 'SVN-Acta', Georgia, 'Times New Roman', serif;
+    --font-body: 'GT America', 'GT-America-LCGV-Standard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.65;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Top Navigation Header */
+.top-nav {
+    background: rgba(15, 22, 36, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+.nav-brand .brand-badge {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-btn {
+    background: #1e293b;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 7px 13px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+.nav-btn:hover {
+    background: #334155;
+    border-color: var(--accent-blue);
+}
+
+/* Main Layout */
+.main-container {
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 20px 80px;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 30px;
+}
+
+/* Sticky Left Column: Video Player & Overview */
+.sticky-column {
+    position: sticky;
+    top: 76px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+.video-player-box {
+    position: relative;
+    background: #000;
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.video-info-box {
+    padding: 18px;
+}
+.video-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+.video-meta-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+.meta-tag {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 5px;
+    background: #1e293b;
+    color: var(--text-secondary);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+.meta-tag.creator {
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+.video-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+}
+
+/* Drawer Jump Controls */
+.drawer-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 16px;
+}
+.drawer-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+.drawer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.drawer-shot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    background: #172133;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: background 0.15s;
+    border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+    background: #22314a;
+    border-color: var(--accent-blue);
+}
+.d-badge {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    font-weight: 700;
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+.d-time {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    white-space: nowrap;
+}
+.d-title {
+    color: var(--text-secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Right Column: Content, Grid Toggle & Storyboard */
+.content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* View Mode Switcher Header */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-card);
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+.content-header h2 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: #ffffff;
+}
+.view-mode-tabs {
+    display: flex;
+    gap: 6px;
+    background: #0f1624;
+    padding: 3px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+.tab-btn.active {
+    background: #1e293b;
+    color: var(--text-primary);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Grid View Mode */
+.grid-view-container {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+}
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+.grid-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-blue);
+}
+.grid-thumb-box {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: #000;
+    overflow: hidden;
+}
+.grid-thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid-time-tag {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.75);
+    color: #ffffff;
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+.grid-shot-tag {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: var(--accent-blue);
+    color: #0b0f17;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+.grid-card-desc {
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Storyboard Cards View Mode */
+.storyboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: border-color 0.3s;
+}
+.shot-card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.shot-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.shot-index-badge {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    font-weight: 800;
+    font-size: 0.82rem;
+    padding: 3px 9px;
+    border-radius: 5px;
+}
+.time-jump-btn {
+    background: #172133;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-size: 0.82rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+.time-jump-btn:hover {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    border-color: var(--accent-blue);
+}
+.dur-pill {
+    color: var(--accent-amber);
+    font-weight: 600;
+}
+.tech-tag {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    background: #0f1624;
+    padding: 3px 8px;
+    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.shot-headline-box {
+    margin-top: -4px;
+}
+.shot-headline-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    line-height: 1.4;
+    color: #ffffff;
+}
+
+/* Keyframes 3-column Grid */
+.keyframes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+.keyframe-item {
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: #000;
+    transition: transform 0.2s;
+}
+.keyframe-item:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-blue);
+}
+.kf-img-wrap {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    width: 100%;
+}
+.kf-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.kf-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: #ffffff;
+    backdrop-filter: blur(4px);
+}
+.kf-badge.start { background: rgba(56, 189, 248, 0.85); }
+.kf-badge.mid { background: rgba(245, 158, 11, 0.85); }
+.kf-badge.end { background: rgba(244, 63, 94, 0.85); }
+
+/* Analysis Blocks */
+.analysis-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.critique-block {
+    background: #0e1523;
+    border-radius: 8px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+.block-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-primary);
+}
+.block-content {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.two-column-critique {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 6px;
+}
+.critique-col {
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    line-height: 1.55;
+}
+.critique-col.pro {
+    background: rgba(16, 185, 129, 0.08);
+    border-left: 3px solid var(--accent-emerald);
+}
+.critique-col.con {
+    background: rgba(244, 63, 94, 0.08);
+    border-left: 3px solid var(--accent-rose);
+}
+.col-header {
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+.critique-col.pro .col-header { color: var(--accent-emerald); }
+.critique-col.con .col-header { color: var(--accent-rose); }
+
+.takeaway-block {
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+.takeaway-title {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--accent-amber);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-size: 0.88rem;
+    color: var(--text-primary);
+    line-height: 1.55;
+}
+
+/* Shot Specs Bar */
+.shot-specs-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+    background: #090e17;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+.spec-item {
+    color: var(--text-secondary);
+}
+.spec-label {
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Transition Block */
+.trans-section {
+    margin-top: 8px;
+    background: #0c121d;
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px dashed var(--border-color);
+}
+.trans-header {
+    margin-bottom: 8px;
+}
+.trans-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--accent-amber);
+}
+.trans-img-wrap {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #000;
+}
+.trans-img-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.zoom-indicator {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.7);
+    font-size: 0.72rem;
+    color: #ffffff;
+    padding: 2px 7px;
+    border-radius: 4px;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.lightbox-content {
+    max-width: 92%;
+    max-height: 82vh;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+}
+.lightbox-caption {
+    margin-top: 14px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    text-align: center;
+    max-width: 800px;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2.2rem;
+    cursor: pointer;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 960px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+    .sticky-column {
+        position: relative;
+        top: 0;
+    }
+    .two-column-critique {
+        grid-template-columns: 1fr;
+    }
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<header class="top-nav">
+    <a href="../scene.html" class="nav-brand">
+        <span class="brand-badge">DIRECTOR CUT</span>
+        <span>@nicorauchenwald • Quy Trình Chuẩn Bị Giải Đua 99 Laps & Nghệ Thuật Montage Nhịp Nhanh Thể Thao - @nicorauchenwald</span>
+    </a>
+    <div class="nav-actions">
+        <a href="../scene.html" class="nav-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Cổng Điện Ảnh
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            💡 Kho Ý Tưởng HUB
+        </a>
+    </div>
+</header>
+
+<div class="main-container">
+    <!-- Left Column: Video Sticky & Quick Drawer -->
+    <div class="sticky-column">
+        <div class="video-card">
+            <div class="video-player-box">
+                <video id="playerVideo" class="modal-video" controls playsinline>
+                    <source src="DbJcoLdssK6.mp4" type="video/mp4">
+                    <source src="../videos/DbJcoLdssK6.mp4" type="video/mp4">
+                    <source src="./videos/DbJcoLdssK6.mp4" type="video/mp4">
+                    <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DbJcoLdssK6.mp4" type="video/mp4">
+                    Trình duyệt không hỗ trợ thẻ video.
+                </video>
+            </div>
+            <div class="video-info-box">
+                <h1 class="video-title">Quy Trình Chuẩn Bị Giải Đua 99 Laps & Nghệ Thuật Montage Nhịp Nhanh Thể Thao - @nicorauchenwald</h1>
+                <div class="video-meta-tags">
+                    <span class="meta-tag creator">@nicorauchenwald</span>
+                    <span class="meta-tag">⏱️ 11.8s</span>
+                    <span class="meta-tag">🎬 18 Shots</span>
+                    <span class="meta-tag">⚡ 90 BPM Beat-Synced</span>
+                    <span class="meta-tag">🏃 99 Laps Endurance</span>
+                </div>
+                <p class="video-desc">Phân tích chuyên sâu 18 phân cảnh thể thao & phong cách sống của nhà sáng tạo nội dung / vận động viên người Áo Nico Rauchenwald. Video khai thác nhịp dựng cắt cảnh siêu tốc (Beat-Synced Montage) chuẩn xác từng 20 khung hình (~0.67s) theo nhịp beat trống 90 BPM bản rap huyền thoại 'No Church in the Wild'. Mở đầu bằng thủ pháp Macro-Hook thị giác neo giữ cụm chữ 'DAY IN THE LIFE.' xuyên suốt 6 cảnh đầu, sau đó bùng nổ sang chuỗi B-roll điện ảnh đan xen giữa rèn luyện thể lực khắc nghiệt, pha chế cà phê tinh tế, dinh dưỡng thể thao và quy trình hậu kỳ sáng tạo nội dung, dẫn dắt người xem chuyển tiếp sang tập dài YouTube.</p>
+            </div>
+        </div>
+
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+    <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0)">
+        <span class="d-badge">Shot 01</span>
+        <span class="d-time">0.00s - 0.63s (0.63s)</span>
+        <span class="d-title">Khởi Động Động Lực Chạy Bộ Thẳng Ống Kính (Head-On Forest Tr...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(2, 0.63)">
+        <span class="d-badge">Shot 02</span>
+        <span class="d-time">0.63s - 1.30s (0.67s)</span>
+        <span class="d-title">Nghi Thức Pha Cà Phê Chuyên Nghiệp Tại Home Studio (Morning ...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(3, 1.3)">
+        <span class="d-badge">Shot 03</span>
+        <span class="d-time">1.30s - 1.97s (0.67s)</span>
+        <span class="d-title">Bài Tập Ép Bụng & Giãn Cơ Trong Phòng Gym Low-Key (Dark Low-...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(4, 1.97)">
+        <span class="d-badge">Shot 04</span>
+        <span class="d-time">1.97s - 2.73s (0.76s)</span>
+        <span class="d-title">Chuẩn Bị Giày Chạy Sau Cốp Xe Giữa Rừng (Car Trunk Shoe Lace...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(5, 2.73)">
+        <span class="d-badge">Shot 05</span>
+        <span class="d-time">2.73s - 3.40s (0.67s)</span>
+        <span class="d-title">Cú Chạy Bứt Tốc Băng Qua Đồng Cỏ Rộng Lớn (Ultra-Wide Meadow...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(6, 3.4)">
+        <span class="d-badge">Shot 06</span>
+        <span class="d-time">3.40s - 4.07s (0.67s)</span>
+        <span class="d-title">Nạp Năng Lượng Với Bánh Mì Nướng Phô Mai & Bơ (High-Protein ...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(7, 4.07)">
+        <span class="d-badge">Shot 07</span>
+        <span class="d-time">4.07s - 4.73s (0.66s)</span>
+        <span class="d-title">Đu Xà Kéo Người Ngược Sáng Đầy Uy Lực (Backlit Gym Pull-Up S...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(8, 4.73)">
+        <span class="d-badge">Shot 08</span>
+        <span class="d-time">4.73s - 5.30s (0.57s)</span>
+        <span class="d-title">Bàn Làm Việc Dựng Phim & Tư Duy Sáng Tạo Nội Dung (Creator D...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(9, 5.3)">
+        <span class="d-badge">Shot 09</span>
+        <span class="d-time">5.30s - 5.97s (0.67s)</span>
+        <span class="d-title">Nấu Trứng Ốp Bếp Từ Trong Trang Phục On Running (Morning Kit...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(10, 5.97)">
+        <span class="d-badge">Shot 10</span>
+        <span class="d-time">5.97s - 6.63s (0.66s)</span>
+        <span class="d-title">Sải Bước Chạy Bộ Thư Thái Giữa Rừng Thông (Smooth Forest Tra...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(11, 6.63)">
+        <span class="d-badge">Shot 11</span>
+        <span class="d-time">6.63s - 7.30s (0.67s)</span>
+        <span class="d-title">Uống Nước Dưới Ánh Đèn LED Dải Bếp Đêm Sang Trọng (Futuristi...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(12, 7.3)">
+        <span class="d-badge">Shot 12</span>
+        <span class="d-time">7.30s - 7.93s (0.63s)</span>
+        <span class="d-title">Thao Tác Bấm Giờ Đồng Hồ GPS Thông Minh (Smartwatch Run Star...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(13, 7.93)">
+        <span class="d-badge">Shot 13</span>
+        <span class="d-time">7.93s - 8.60s (0.67s)</span>
+        <span class="d-title">Xả Hơi Nước Vòi Đánh Sữa Espresso Ngược Sáng (Dramatic Steam...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(14, 8.6)">
+        <span class="d-badge">Shot 14</span>
+        <span class="d-time">8.60s - 9.27s (0.67s)</span>
+        <span class="d-title">Đứng Hít Thở Trên Ban Công Hướng Về Thung Lũng Rừng (Terrace...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(15, 9.27)">
+        <span class="d-badge">Shot 15</span>
+        <span class="d-time">9.27s - 9.97s (0.70s)</span>
+        <span class="d-title">Guồng Chân Tiếp Đất & Cơ Bắp Đùi Siêu Khỏe Khoắn (Low-Angle ...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(16, 9.97)">
+        <span class="d-badge">Shot 16</span>
+        <span class="d-time">9.97s - 10.53s (0.56s)</span>
+        <span class="d-title">Tập Trung Cao Độ Gõ Phím Hậu Kỳ Nội Dung (Mechanical Keyboar...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(17, 10.53)">
+        <span class="d-badge">Shot 17</span>
+        <span class="d-time">10.53s - 11.20s (0.67s)</span>
+        <span class="d-title">Đổ Bọt Sữa Tạo Hình Trái Tim Nghệ Thuật (Barista Latte Art P...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(18, 11.2)">
+        <span class="d-badge">Shot 18</span>
+        <span class="d-time">11.20s - 11.80s (0.60s)</span>
+        <span class="d-title">Uống Nước Hồi Phục Bên Cốp Xe Chốt Đuôi Video (Tailgate Hydr...</span>
+    </div>
+    
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Column: Detail Content & Storyboard -->
+    <div class="content-column">
+        <div class="content-header">
+            <h2>Phân Tích Chi Tiết 18 Phân Cảnh (Director's Storyboard)</h2>
+            <div class="view-mode-tabs">
+                <button class="tab-btn active" id="tabDetail" onclick="setViewMode('detail')">Chi Tiết (List)</button>
+                <button class="tab-btn" id="tabGrid" onclick="setViewMode('grid')">Lưới (Grid)</button>
+            </div>
+        </div>
+
+        <!-- Grid View Mode -->
+        <div class="grid-view-container" id="gridView">
+            
+    <div class="grid-card" onclick="jumpToShot(1, 0.0)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+            <div class="grid-time-tag">0.00s - 0.63s</div>
+            <div class="grid-shot-tag">Shot 01</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Khởi Động Động Lực Chạy Bộ Thẳng Ống Kính (Head-On Forest Trail Running Hook)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(2, 0.63)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+            <div class="grid-time-tag">0.63s - 1.30s</div>
+            <div class="grid-shot-tag">Shot 02</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Nghi Thức Pha Cà Phê Chuyên Nghiệp Tại Home Studio (Morning Coffee Ritual & Discipline)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(3, 1.3)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+            <div class="grid-time-tag">1.30s - 1.97s</div>
+            <div class="grid-shot-tag">Shot 03</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Bài Tập Ép Bụng & Giãn Cơ Trong Phòng Gym Low-Key (Dark Low-Key Gym Core Workout)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(4, 1.97)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+            <div class="grid-time-tag">1.97s - 2.73s</div>
+            <div class="grid-shot-tag">Shot 04</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Chuẩn Bị Giày Chạy Sau Cốp Xe Giữa Rừng (Car Trunk Shoe Lace Prep)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(5, 2.73)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+            <div class="grid-time-tag">2.73s - 3.40s</div>
+            <div class="grid-shot-tag">Shot 05</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Cú Chạy Bứt Tốc Băng Qua Đồng Cỏ Rộng Lớn (Ultra-Wide Meadow Sprint)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(6, 3.4)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+            <div class="grid-time-tag">3.40s - 4.07s</div>
+            <div class="grid-shot-tag">Shot 06</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Nạp Năng Lượng Với Bánh Mì Nướng Phô Mai & Bơ (High-Protein Pre-Race Nutrition Prep)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(7, 4.07)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+            <div class="grid-time-tag">4.07s - 4.73s</div>
+            <div class="grid-shot-tag">Shot 07</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Đu Xà Kéo Người Ngược Sáng Đầy Uy Lực (Backlit Gym Pull-Up Silhouette)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(8, 4.73)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+            <div class="grid-time-tag">4.73s - 5.30s</div>
+            <div class="grid-shot-tag">Shot 08</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Bàn Làm Việc Dựng Phim & Tư Duy Sáng Tạo Nội Dung (Creator Desk & Video Editing Workflow)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(9, 5.3)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+            <div class="grid-time-tag">5.30s - 5.97s</div>
+            <div class="grid-shot-tag">Shot 09</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Nấu Trứng Ốp Bếp Từ Trong Trang Phục On Running (Morning Kitchen Scrambled Eggs)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(10, 5.97)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+            <div class="grid-time-tag">5.97s - 6.63s</div>
+            <div class="grid-shot-tag">Shot 10</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Sải Bước Chạy Bộ Thư Thái Giữa Rừng Thông (Smooth Forest Trail Strides)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(11, 6.63)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+            <div class="grid-time-tag">6.63s - 7.30s</div>
+            <div class="grid-shot-tag">Shot 11</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Uống Nước Dưới Ánh Đèn LED Dải Bếp Đêm Sang Trọng (Futuristic Under-Cabinet Kitchen Glow)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(12, 7.3)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+            <div class="grid-time-tag">7.30s - 7.93s</div>
+            <div class="grid-shot-tag">Shot 12</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Thao Tác Bấm Giờ Đồng Hồ GPS Thông Minh (Smartwatch Run Start POV)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(13, 7.93)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_13_mid.jpg" alt="Shot 13" loading="lazy">
+            <div class="grid-time-tag">7.93s - 8.60s</div>
+            <div class="grid-shot-tag">Shot 13</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Xả Hơi Nước Vòi Đánh Sữa Espresso Ngược Sáng (Dramatic Steam Wand Purge)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(14, 8.6)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_14_mid.jpg" alt="Shot 14" loading="lazy">
+            <div class="grid-time-tag">8.60s - 9.27s</div>
+            <div class="grid-shot-tag">Shot 14</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Đứng Hít Thở Trên Ban Công Hướng Về Thung Lũng Rừng (Terrace Horizon Contemplation)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(15, 9.27)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_15_mid.jpg" alt="Shot 15" loading="lazy">
+            <div class="grid-time-tag">9.27s - 9.97s</div>
+            <div class="grid-shot-tag">Shot 15</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Guồng Chân Tiếp Đất & Cơ Bắp Đùi Siêu Khỏe Khoắn (Low-Angle Quads & Shoes Action)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(16, 9.97)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_16_mid.jpg" alt="Shot 16" loading="lazy">
+            <div class="grid-time-tag">9.97s - 10.53s</div>
+            <div class="grid-shot-tag">Shot 16</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Tập Trung Cao Độ Gõ Phím Hậu Kỳ Nội Dung (Mechanical Keyboard Creator Focus)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(17, 10.53)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_17_mid.jpg" alt="Shot 17" loading="lazy">
+            <div class="grid-time-tag">10.53s - 11.20s</div>
+            <div class="grid-shot-tag">Shot 17</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Đổ Bọt Sữa Tạo Hình Trái Tim Nghệ Thuật (Barista Latte Art Precision Pour)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(18, 11.2)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_18_mid.jpg" alt="Shot 18" loading="lazy">
+            <div class="grid-time-tag">11.20s - 11.80s</div>
+            <div class="grid-shot-tag">Shot 18</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Uống Nước Hồi Phục Bên Cốp Xe Chốt Đuôi Video (Tailgate Hydration Peak Outro)</strong>
+        </div>
+    </div>
+    
+        </div>
+
+        <!-- Detailed Storyboard Cards -->
+        <div class="storyboard-container" id="storyboardView">
+            
+    <div class="shot-card" id="shot-1" data-start="0.0" data-end="0.63">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 01</span>
+                <button class="time-jump-btn" onclick="jumpToShot(1, 0.0)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    0.00s - 0.63s <span class="dur-pill">(0.63s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Standard 35mm f/2.8</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Khởi Động Động Lực Chạy Bộ Thẳng Ống Kính (Head-On Forest Trail Running Hook)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_01_start.jpg', 'Shot 01 • Khung hình Đầu (0.00s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (0.00s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_01_mid.jpg', 'Shot 01 • Cao trào Giữa (0.32s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (0.32s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_01_end.jpg', 'Shot 01 • Khung hình Cuối (0.63s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (0.63s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Nico chạy bộ hướng thẳng về phía ống kính máy quay trên cung đường rừng trải nhựa ngoại ô nước Áo. Góc máy trung bình đối diện trực diện, cơ thể săn chắc, nhịp thở đều đặn, ánh mắt tập trung cao độ về phía trước. Trên màn hình xuất hiện typography lớn màu trắng in hoa: 'DAY IN THE LIFE.'
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Thiết lập ngay lập tức danh tính vận động viên (Hybrid Athlete); chuyển động hướng thẳng vào người xem tạo lực hút thị giác (Visual Gravity) kéo người xem vào câu chuyện ngay từ 0.1s đầu; ánh sáng tản tự nhiên dưới tán rừng tạo độ tương phản dịu mắt nhưng sắc nét.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Thời lượng cực ngắn (0.63s) cắt rất nhanh theo beat nhạc, đòi hỏi người xem phải tập trung cao độ; typography ở giữa che một phần cơ thể nhưng tạo được độ bám thị giác vững chắc (Visual Anchor).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Khi mở đầu một video phong cách 'Day in the life', thay vì quay cảnh thức dậy mở mắt chậm rãi gây buồn ngủ, hãy mở đầu bằng một hành động có cường độ vận động cao (High-intensity action) để kích hoạt dopamine của khán giả ngay tích tắc đầu tiên.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Standard 35mm f/2.8 • Eye-Level Tracking Shot
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Cung đường rừng ngoại ô nước Áo
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng tán xạ tự nhiên (Soft Overcast Woods)
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Cut dứt khoát theo nhịp trống snare sang Shot 02
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 02 • Hard Cut dứt khoát theo nhịp trống snare sang Shot 02</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_01_to_02.jpg', '⚡ Chuyển Cảnh Sang Shot 02 • Hard Cut dứt khoát theo nhịp trống snare sang Shot 02')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_01_to_02.jpg" alt="Transition Shot 01" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-2" data-start="0.63" data-end="1.3">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 02</span>
+                <button class="time-jump-btn" onclick="jumpToShot(2, 0.63)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    0.63s - 1.30s <span class="dur-pill">(0.67s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Medium 50mm f/2.0</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Nghi Thức Pha Cà Phê Chuyên Nghiệp Tại Home Studio (Morning Coffee Ritual & Discipline)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_02_start.jpg', 'Shot 02 • Khung hình Đầu (0.63s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (0.63s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_02_mid.jpg', 'Shot 02 • Cao trào Giữa (0.97s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (0.97s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_02_end.jpg', 'Shot 02 • Khung hình Cuối (1.30s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (1.30s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Cắt đột ngột từ rừng rậm về góc quầy bar tại gia sang trọng với máy pha cà phê espresso chuyên nghiệp (La Marzocco / Linea Mini) và máy xay hạt. Nico mặc áo thun xám oversized, đội mũ lưỡi trai ngược, đang tỉ mỉ cân đo hạt cà phê và thao tác pha chế. Typography 'DAY IN THE LIFE.' vẫn neo giữ cố định ở trung tâm khung hình.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Sự đối lập mạnh mẽ (Contrast & Juxtaposition) giữa vận động ngoài trời khắc nghiệt và không gian nội thất tối giản, ấm cúng; máy móc pha cà phê cao cấp ngầm định vị phong cách sống chỉn chu, gu thẩm mỹ tinh tế và tính kỷ luật cao của một creator chuyên nghiệp.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Góc quay từ phía sau/nghiêng chưa bắt được biểu cảm khuôn mặt nhưng tôn lên sự tập trung của đôi tay và không gian sống.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Tạo sự tương phản nhịp điệu giữa hai thái cực (Ngoại cảnh vận động mạnh vs Nội cảnh tĩnh tại chỉn chu) giúp câu chuyện không bị đơn điệu, xây dựng hình tượng nhân vật đa chiều: vừa là chiến binh thể lực vừa là nghệ sĩ tỉ mỉ.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Medium 50mm f/2.0 • Half-Body Profile Shot
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Không gian Home Studio / Kitchen Bar hiện đại
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng tự nhiên từ cửa sổ hắt mềm vào bề mặt gỗ
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Cut sang Shot 03
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 03 • Hard Beat Cut sang Shot 03</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_02_to_03.jpg', '⚡ Chuyển Cảnh Sang Shot 03 • Hard Beat Cut sang Shot 03')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_02_to_03.jpg" alt="Transition Shot 02" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-3" data-start="1.3" data-end="1.97">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 03</span>
+                <button class="time-jump-btn" onclick="jumpToShot(3, 1.3)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    1.30s - 1.97s <span class="dur-pill">(0.67s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Wide 24mm f/2.8</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Bài Tập Ép Bụng & Giãn Cơ Trong Phòng Gym Low-Key (Dark Low-Key Gym Core Workout)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_03_start.jpg', 'Shot 03 • Khung hình Đầu (1.30s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (1.30s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_03_mid.jpg', 'Shot 03 • Cao trào Giữa (1.64s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (1.64s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_03_end.jpg', 'Shot 03 • Khung hình Cuối (1.97s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (1.97s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Cắt sang không gian phòng gym bóng tối low-key với dàn tạ đòn nặng và máy móc chuyên dụng. Nico nằm trên thảm sàn, hai chân co lên thực hiện động tác kéo giãn cơ hông/gập bụng (Ab/Core Exercise) chuẩn bị cho giải chạy. Đồng hồ thông minh trên cổ tay nổi bật. Typography 'DAY IN THE LIFE.' tiếp tục neo ở giữa khung hình.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Phong cách ánh sáng Low-key với đèn rọi hẹp tạo khối cơ bắp và cảm giác phòng tập ngầm (Underground Grind); thể hiện sự khổ luyện đằng sau thành tích thể thao, không chỉ chạy mà còn tập luyện bổ trợ (Cross-training / Strength & Conditioning).</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Khung cảnh hơi tối, người xem lướt qua có thể mất 0.2s để nhận diện tư thế nằm nếu không chú ý.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Để kể câu chuyện thể thao chân thực, đừng chỉ khoe khoảnh khắc vinh quang về đích hay chạy cảnh đẹp; hãy cho thấy những giây phút gồng mình trên sàn gym lạnh lẽo để khán giả cảm nhận được cái giá của sự kỷ luật.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide 24mm f/2.8 • Low-Angle Ground Level Shot
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Phòng gym thể hình chuyên nghiệp
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng hẹp High-Contrast Rim Light
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Cut sang Shot 04
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 04 • Hard Beat Cut sang Shot 04</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_03_to_04.jpg', '⚡ Chuyển Cảnh Sang Shot 04 • Hard Beat Cut sang Shot 04')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_03_to_04.jpg" alt="Transition Shot 03" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-4" data-start="1.97" data-end="2.73">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 04</span>
+                <button class="time-jump-btn" onclick="jumpToShot(4, 1.97)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    1.97s - 2.73s <span class="dur-pill">(0.76s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Standard 40mm f/2.8</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Chuẩn Bị Giày Chạy Sau Cốp Xe Giữa Rừng (Car Trunk Shoe Lace Prep)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_04_start.jpg', 'Shot 04 • Khung hình Đầu (1.97s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (1.97s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_04_mid.jpg', 'Shot 04 • Cao trào Giữa (2.35s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (2.35s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_04_end.jpg', 'Shot 04 • Khung hình Cuối (2.73s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (2.73s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Nico ngồi ở cốp sau chiếc xe SUV/crossover màu xám than mở nắp, đỗ giữa con đường mòn rừng sâu. Anh đang xỏ đôi giày chạy bộ On Running và kéo đôi tất trắng cổ cao. Dưới đất là đôi dép sandal Birkenstock vừa tháo ra. Phía trên xuất hiện thêm nhãn tiêu đề: '99 Laps Race Prep' (góc trên bên trái), 'DAY IN THE LIFE.' (chính giữa) và 'Nico Rauchenwald' (góc dưới bên phải).
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Bố cục khung hình đối xứng tự nhiên với cửa cốp xe tạo thành vòm khung (Frame within Frame); trang bị gear thể thao cao cấp (On Cloudboom/Echo, thùng đồ chuyên dụng Peli case) tạo độ tin cậy tuyệt đối về mặt chuyên môn; mốc thông tin 99 Laps xác lập bối cảnh chuẩn bị cho giải đấu siêu cự ly khắc nghiệt.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Lượng text trên màn hình hơi nhiều (3 cụm text cùng lúc), nhưng typography sans-serif dày dặn vẫn giữ được tính thẩm mỹ tạp chí thể thao hiện đại.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Cốp xe mở (Tailgate) là một bối cảnh kinh điển của dân chạy trail và outdoor. Nó vừa là trạm tiếp tế cơ động, vừa là nơi chuyển giao tâm lý từ đời thường bước vào trạng thái thi đấu.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Standard 40mm f/2.8 • Symmetrical Centered Shot
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Cốp sau xe SUV giữa đường rừng sỏi đá
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng ngược dịu xuyên qua tán lá râm mát
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Cut sang Shot 05
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 05 • Hard Beat Cut sang Shot 05</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_04_to_05.jpg', '⚡ Chuyển Cảnh Sang Shot 05 • Hard Beat Cut sang Shot 05')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_04_to_05.jpg" alt="Transition Shot 04" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-5" data-start="2.73" data-end="3.4">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 05</span>
+                <button class="time-jump-btn" onclick="jumpToShot(5, 2.73)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    2.73s - 3.40s <span class="dur-pill">(0.67s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Ultra-Wide 16mm f/5.6</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Cú Chạy Bứt Tốc Băng Qua Đồng Cỏ Rộng Lớn (Ultra-Wide Meadow Sprint)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_05_start.jpg', 'Shot 05 • Khung hình Đầu (2.73s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (2.73s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_05_mid.jpg', 'Shot 05 • Cao trào Giữa (3.06s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (3.06s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_05_end.jpg', 'Shot 05 • Khung hình Cuối (3.40s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (3.40s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Khung hình toàn cảnh cực rộng (Extreme Wide Shot). Nico mặc áo chạy màu sáng và quần short bó cơ đang chạy guồng chân thoăn thoắt băng qua thảm cỏ bao la, phía sau là bìa rừng rậm rạp cao vút. Cụm chữ 'DAY IN THE LIFE.' và 'Nico Rauchenwald' vẫn hiện diện.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Tỷ lệ con người nhỏ bé tương phản với thiên nhiên hùng vĩ (Man vs Nature) tôn lên sự cô độc và kiên trì của vận động viên chạy bền; chuyển động cắt ngang khung hình (Horizontal Tracking Vector) tạo cảm giác tốc độ và sự thanh thoát; phá vỡ chuỗi góc cận trước đó.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Do chủ thể ở rất xa, các chi tiết trang phục và cơ bắp bị chìm, chỉ nhận diện được dáng chạy và hướng chuyển động.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Xen kẽ một cú Extreme Wide Shot vào giữa chuỗi cận cảnh giúp thị giác người xem được hít thở (Visual Relief), đồng thời truyền tải thông điệp về sự tự do phóng khoáng của chạy bộ địa hình.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Ultra-Wide 16mm f/5.6 • Extreme Long Shot
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Thảo nguyên ven rừng nước Áo
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng ban ngày rộng thoáng
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Cut sang Shot 06
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 06 • Hard Beat Cut sang Shot 06</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_05_to_06.jpg', '⚡ Chuyển Cảnh Sang Shot 06 • Hard Beat Cut sang Shot 06')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_05_to_06.jpg" alt="Transition Shot 05" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-6" data-start="3.4" data-end="4.07">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 06</span>
+                <button class="time-jump-btn" onclick="jumpToShot(6, 3.4)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    3.40s - 4.07s <span class="dur-pill">(0.67s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Macro 50mm f/2.2</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Nạp Năng Lượng Với Bánh Mì Nướng Phô Mai & Bơ (High-Protein Pre-Race Nutrition Prep)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_06_start.jpg', 'Shot 06 • Khung hình Đầu (3.40s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (3.40s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_06_mid.jpg', 'Shot 06 • Cao trào Giữa (3.74s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (3.74s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_06_end.jpg', 'Shot 06 • Khung hình Cuối (4.07s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (4.07s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Góc quay cận cảnh từ trên xuống (Top-down 45-degree POV) trên bàn ăn nhà bếp. Đôi bàn tay khéo léo của Nico dùng nĩa phết phô mai tươi (cottage cheese) lên hai lát bánh mì vòng bagel nướng vàng ươm, bên cạnh là quả bơ, sữa chua và bình lắc dinh dưỡng. Chữ 'DAY IN THE LIFE.' xuất hiện lần cuối cùng trước khi biến mất.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Chi tiết cận cảnh sắc nét, cảm giác ngon miệng và ấm cúng; nhấn mạnh khía cạnh dinh dưỡng nghiêm ngặt (Nutrition & Fueling) – yếu tố sống còn đối với một vận động viên thi đấu thể lực bền bỉ.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Chuyển động tay khá nhanh trong 0.67s, chưa kịp thấy anh cắn miếng bánh nhưng đủ để não bộ tiếp nhận thông điệp bữa ăn lành mạnh.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Trong video lifestyle thể thao, B-roll thức ăn không chỉ để trang trí mà phải thể hiện được tính kỷ luật của chế độ ăn (Clean Diet), bổ trợ cho mục tiêu rèn luyện thể chất.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Macro 50mm f/2.2 • High-Angle Close-Up
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Bàn bếp lát đá sáng màu
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng hắt mềm từ cửa sổ cạnh
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Drop Cut sang Shot 07
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 07 • Hard Beat Drop Cut sang Shot 07</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_06_to_07.jpg', '⚡ Chuyển Cảnh Sang Shot 07 • Hard Beat Drop Cut sang Shot 07')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_06_to_07.jpg" alt="Transition Shot 06" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-7" data-start="4.07" data-end="4.73">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 07</span>
+                <button class="time-jump-btn" onclick="jumpToShot(7, 4.07)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    4.07s - 4.73s <span class="dur-pill">(0.66s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Standard 35mm f/1.8</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Đu Xà Kéo Người Ngược Sáng Đầy Uy Lực (Backlit Gym Pull-Up Silhouette)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_07_start.jpg', 'Shot 07 • Khung hình Đầu (4.07s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (4.07s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_07_mid.jpg', 'Shot 07 • Cao trào Giữa (4.40s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (4.40s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_07_end.jpg', 'Shot 07 • Khung hình Cuối (4.73s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (4.73s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Chữ 'DAY IN THE LIFE.' biến mất hoàn toàn, nhịp điệu bước vào giai đoạn tăng tốc dồn dập (Fast Montage Phase). Nico đang thực hiện động tác kéo xà đơn (Pull-Up) với cơ lưng xô cuộn sóng, đối diện trực tiếp với nguồn đèn rọi ngược cực sáng (Backlight / Rim Light), tạo nên hình bóng đổ (Silhouette) điêu khắc cơ thể đầy ấn tượng.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Cú nổ thị giác (Visual Pop) từ hai ngọn đèn rọi trực diện vào ống kính; cơ bắp lưng xô hiện rõ từng múi cơ; động tác kéo xà dứt khoát thể hiện sức mạnh bùng nổ; loại bỏ toàn bộ text để người xem tập trung 100% vào chất điện ảnh.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Luồng sáng ngược có thể gây lóa (flare) mạnh nếu ống kính không phủ lớp tráng chống lóa tốt, tuy nhiên ở đây đạo diễn đã tận dụng nó như một thủ pháp nghệ thuật cố ý.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Sử dụng ánh sáng ngược cực mạnh (Backlight Rim) để biến một động tác gym thông thường thành một bức tượng điêu khắc sống động, khơi dậy bản năng chiến đấu của người xem.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Standard 35mm f/1.8 • Low-Angle Backlit Silhouette Shot
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Phòng tập thể hình chuyên dụng
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Đèn rọi LED Spotlights đôi chiếu thẳng từ trần
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Cut sang Shot 08
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 08 • Hard Beat Cut sang Shot 08</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_07_to_08.jpg', '⚡ Chuyển Cảnh Sang Shot 08 • Hard Beat Cut sang Shot 08')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_07_to_08.jpg" alt="Transition Shot 07" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-8" data-start="4.73" data-end="5.3">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 08</span>
+                <button class="time-jump-btn" onclick="jumpToShot(8, 4.73)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    4.73s - 5.30s <span class="dur-pill">(0.57s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Wide 28mm f/2.5</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Bàn Làm Việc Dựng Phim & Tư Duy Sáng Tạo Nội Dung (Creator Desk & Video Editing Workflow)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_08_start.jpg', 'Shot 08 • Khung hình Đầu (4.73s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (4.73s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_08_mid.jpg', 'Shot 08 • Cao trào Giữa (5.02s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (5.02s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_08_end.jpg', 'Shot 08 • Khung hình Cuối (5.30s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (5.30s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Góc nhìn từ phía sau qua vai (Over-The-Shoulder) tại bàn làm việc cao cấp. Nico ngồi trên ghế công thái học, chống cằm suy tư trước màn hình cong siêu rộng (Ultrawide Monitor) đang mở timeline dựng video Premiere/DaVinci với hàng chục track video & audio. Cửa sổ gỗ lớn nhìn ra đồi thông xanh ngát.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Định vị Nico không chỉ là vận động viên mà còn là một nhà làm phim độc lập (Filmmaker / Solo Creator); sự kết hợp giữa bàn làm việc hiện đại và khung cảnh thiên nhiên bên ngoài thể hiện cuộc sống trong mơ của một digital creator tự do.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Thời lượng 0.57s chỉ đủ để người xem nhận ra màn hình dựng video và cử chỉ chống cằm suy ngẫm.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Thể hiện quy trình hậu kỳ (Behind-the-scenes editing) là mỏ neo kết nối mạnh mẽ nhất giữa người sáng tạo nội dung và khán giả. Nó ngầm thông báo: 'Những thước phim đẹp mắt bạn đang xem được nhào nặn tỉ mỉ ngay tại chiếc bàn này.'
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide 28mm f/2.5 • Over-The-Shoulder Medium Shot
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Bàn làm việc tối giản gỗ sồi tại Studio gia đình
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng tự nhiên tràn ngập từ ô cửa sổ lớn
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Cut sang Shot 09
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 09 • Hard Beat Cut sang Shot 09</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_08_to_09.jpg', '⚡ Chuyển Cảnh Sang Shot 09 • Hard Beat Cut sang Shot 09')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_08_to_09.jpg" alt="Transition Shot 08" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-9" data-start="5.3" data-end="5.97">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 09</span>
+                <button class="time-jump-btn" onclick="jumpToShot(9, 5.3)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    5.30s - 5.97s <span class="dur-pill">(0.67s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Standard 35mm f/2.2</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Nấu Trứng Ốp Bếp Từ Trong Trang Phục On Running (Morning Kitchen Scrambled Eggs)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_09_start.jpg', 'Shot 09 • Khung hình Đầu (5.30s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (5.30s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_09_mid.jpg', 'Shot 09 • Cao trào Giữa (5.63s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (5.63s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_09_end.jpg', 'Shot 09 • Khung hình Cuối (5.97s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (5.97s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Góc trung cận trước bàn đảo bếp (Kitchen Island). Nico mặc áo hoodie đen có logo On Running màu trắng, tay cầm muôi gỗ đang đảo trứng trong chảo rán trên mặt bếp từ hiện đại. Trên bàn bày biện trứng tươi, quả bơ, sữa chua Hy Lạp và gia vị. Anh nở nụ cười nhẹ hướng về món ăn.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Thần thái thư thái, gần gũi; chiếc áo hoodie đen in logo On Running tạo mỏ neo thương hiệu (Brand Placement) cực kỳ tự nhiên không gượng ép; ánh sáng tự nhiên qua rèm chớp ngang tạo các đường kẻ bóng đổ kiến trúc sang trọng.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Bố cục cân đối nhưng camera hơi lệch nhẹ sang trái, tuy nhiên tạo cảm giác chân thực không sắp đặt quá mức.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Lồng ghép sản phẩm thương hiệu (Sponsorship/Merch) vào những hành vi sinh hoạt đời thường mộc mạc (nấu ăn, uống nước) mang lại hiệu quả chuyển đổi tự nhiên và thiện cảm cao hơn gấp nhiều lần so với cầm sản phẩm lên tay quảng cáo thô thiển.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Standard 35mm f/2.2 • Medium Waist-Up Shot
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Bàn đảo bếp hiện đại châu Âu
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng tự nhiên qua rèm chớp ngang kết hợp đèn trần
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Cut sang Shot 10
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 10 • Hard Beat Cut sang Shot 10</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_09_to_10.jpg', '⚡ Chuyển Cảnh Sang Shot 10 • Hard Beat Cut sang Shot 10')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_09_to_10.jpg" alt="Transition Shot 09" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-10" data-start="5.97" data-end="6.63">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 10</span>
+                <button class="time-jump-btn" onclick="jumpToShot(10, 5.97)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    5.97s - 6.63s <span class="dur-pill">(0.66s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Medium 50mm f/2.0</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Sải Bước Chạy Bộ Thư Thái Giữa Rừng Thông (Smooth Forest Trail Strides)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_10_start.jpg', 'Shot 10 • Khung hình Đầu (5.97s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (5.97s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_10_mid.jpg', 'Shot 10 • Cao trào Giữa (6.30s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (6.30s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_10_end.jpg', 'Shot 10 • Khung hình Cuối (6.63s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (6.63s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Nico đeo kính râm thể thao, áo thun chạy bộ màu be, sải bước chạy nhịp nhàng lướt qua tán cây rừng thông rợp bóng. Góc máy theo dấu (Tracking Shot) đi lùi phía trước, bắt trọn dáng người thanh thoát và biểu cảm ung dung thưởng ngoạn không khí trong lành.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Chuyển động máy mượt mà đồng bộ với tốc độ chạy; màu xanh của rừng thông và màu áo be trung tính tạo bảng màu điện ảnh thanh lịch chuẩn phong cách Bắc Âu / Trung Âu (Earthy Tones); năng lượng tích cực lan tỏa mạnh mẽ.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Nhịp chạy thư thả ở shot này tương phản với nhịp bứt tốc ở các shot khác, nhưng chính điều này tạo nên dải cung bậc cảm xúc phong phú cho buổi tập (từ chạy dặm thư giãn đến bài tập biến tốc).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Chạy bộ không chỉ là đau đớn và thử thách; việc khắc họa những khoảnh khắc chạy thư thái kết nối với thiên nhiên sẽ truyền cảm hứng mãnh liệt cho những ai muốn bắt đầu lối sống lành mạnh.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Medium 50mm f/2.0 • Medium Tracking Gimbal Shot
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Đường mòn rừng thông
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng chiều tà xuyên kẽ lá (Dappled Sunlight)
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Cut sang Shot 11
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 11 • Hard Beat Cut sang Shot 11</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_10_to_11.jpg', '⚡ Chuyển Cảnh Sang Shot 11 • Hard Beat Cut sang Shot 11')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_10_to_11.jpg" alt="Transition Shot 10" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-11" data-start="6.63" data-end="7.3">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 11</span>
+                <button class="time-jump-btn" onclick="jumpToShot(11, 6.63)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    6.63s - 7.30s <span class="dur-pill">(0.67s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Wide 24mm f/1.8</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Uống Nước Dưới Ánh Đèn LED Dải Bếp Đêm Sang Trọng (Futuristic Under-Cabinet Kitchen Glow)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_11_start.jpg', 'Shot 11 • Khung hình Đầu (6.63s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (6.63s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_11_mid.jpg', 'Shot 11 • Cao trào Giữa (6.96s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (6.96s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_11_end.jpg', 'Shot 11 • Khung hình Cuối (7.30s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (7.30s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Bối cảnh gian bếp chìm trong bóng tối lúc rạng sáng hoặc đêm muộn. Dải đèn LED profile chạy dọc mép dưới mặt đá bàn bếp phát ra ánh sáng trắng tinh khiết hiện đại. Nico đứng ở trung tâm mặc áo ba lỗ đen và quần short trắng, ngửa cổ uống cạn ly nước/bình lắc phục hồi sau buổi tập.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Thủ pháp ánh sáng đường viền (Linear Edge Lighting) cực kỳ độc đáo và hiện đại; bóng lưng của Nico nổi bật trên nền ánh sáng trắng, tôn lên cơ bắp săn chắc; tạo cảm giác tĩnh mịch của những giờ phút luyện tập trước bình minh hoặc sau hoàng hôn khi mọi người còn đang ngủ.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Ánh sáng yếu và hướng từ dưới lên (Uplighting) có thể tạo bóng đổ gắt nếu không có đèn nền phụ, nhưng ở đây tạo được chất nghệ thuật thị giác rất cao.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Khai thác những nguồn sáng sẵn có trong kiến trúc nội thất (dải LED gầm tủ, đèn chân tường) để tạo nên bối cảnh quay độc bản mà không cần mang vác dàn đèn studio cồng kềnh.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide 24mm f/1.8 • Symmetrical Wide Shot
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Bếp tối giản hiện đại
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Đèn LED Profile dưới gầm bàn bếp làm nguồn sáng chính
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Cut sang Shot 12
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 12 • Hard Beat Cut sang Shot 12</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_11_to_12.jpg', '⚡ Chuyển Cảnh Sang Shot 12 • Hard Beat Cut sang Shot 12')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_11_to_12.jpg" alt="Transition Shot 11" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-12" data-start="7.3" data-end="7.93">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 12</span>
+                <button class="time-jump-btn" onclick="jumpToShot(12, 7.3)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    7.30s - 7.93s <span class="dur-pill">(0.63s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Macro 60mm f/2.8</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Thao Tác Bấm Giờ Đồng Hồ GPS Thông Minh (Smartwatch Run Start POV)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_12_start.jpg', 'Shot 12 • Khung hình Đầu (7.30s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (7.30s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_12_mid.jpg', 'Shot 12 • Cao trào Giữa (7.62s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (7.62s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_12_end.jpg', 'Shot 12 • Khung hình Cuối (7.93s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (7.93s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Góc quay cực cận (Extreme Close-Up POV) trên cổ tay Nico khi ngồi ở cốp xe. Đôi bàn tay gân guốc, đeo vòng bạc cá tính, ngón trỏ nhấn nút bắt đầu ghi lại cung đường chạy trên chiếc đồng hồ thể thao chuyên dụng màn hình tròn viền đen.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Chi tiết mang tính biểu tượng số một của giới chạy bộ: tiếng bíp kích hoạt đồng hồ thể thao báo hiệu buổi tập chính thức bắt đầu; bắt trọn gân tay và độ tỉ mỉ trong từng cử chỉ; tạo sự đồng cảm sâu sắc với mọi runner xem video.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Màn hình đồng hồ hơi nhỏ và góc nghiêng nên không nhìn rõ thông số số liệu, nhưng hành vi bấm nút được truyền tải trọn vẹn.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Bổ sung các cú Insert Shot ghi lại thao tác bấm nút (đồng hồ, máy ảnh, khóa giày) giúp video có tính nhịp điệu và neo giữ tính xác thực thực tế (Grounding Reality) cho toàn bộ câu chuyện.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Macro 60mm f/2.8 • Point-of-View Close-Up
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Cốp sau xe bên ngoài thiên nhiên
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng ngoài trời khuất bóng râm
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Cut sang Shot 13
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 13 • Hard Beat Cut sang Shot 13</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_12_to_13.jpg', '⚡ Chuyển Cảnh Sang Shot 13 • Hard Beat Cut sang Shot 13')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_12_to_13.jpg" alt="Transition Shot 12" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-13" data-start="7.93" data-end="8.6">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 13</span>
+                <button class="time-jump-btn" onclick="jumpToShot(13, 7.93)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    7.93s - 8.60s <span class="dur-pill">(0.67s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Macro 50mm f/2.0</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Xả Hơi Nước Vòi Đánh Sữa Espresso Ngược Sáng (Dramatic Steam Wand Purge)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_13_start.jpg', 'Shot 13 • Khung hình Đầu (7.93s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (7.93s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_13_mid.jpg', 'Shot 13 • Cao trào Giữa (8.27s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (8.27s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_13_end.jpg', 'Shot 13 • Khung hình Cuối (8.60s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_13_end.jpg" alt="Shot 13 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (8.60s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Cận cảnh bên cạnh chiếc máy pha cà phê espresso đen mờ. Đôi bàn tay vặn van xả vòi đánh sữa, luồng hơi nước áp suất cao phun trào cuồn cuộn thành làn khói trắng xóa ngược hướng ánh nắng vàng rực rỡ từ cửa sổ rọi vào.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Hiệu ứng thị giác khói sương (Volumetric Steam Smoke) bắt trọn tia nắng ngược sáng (Backlight / God Rays) cực kỳ mãn nhãn; tạo cảm giác xúc giác và âm thanh xì xèo sống động trong tâm trí khán giả; là một cú cut-away hoàn hảo kích thích thị giác.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Cú xả hơi diễn ra trong tích tắc 0.67s, hơi nước bay nhanh và tan biến ngay khi chuyển shot tiếp theo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Những hiện tượng vật lý có chuyển động tán xạ (hơi nước, khói, bột phấn, nước bắn) khi kết hợp với góc chiếu ngược sáng luôn là 'vũ khí bí mật' giúp nâng cấp chất lượng điện ảnh của một video lên gấp nhiều lần.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Macro 50mm f/2.0 • Low-Angle Side Close-Up
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Khu vực máy pha cà phê gia đình
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng tự nhiên ngược sáng xiên góc (Backlit Sunbeam)
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Cut sang Shot 14
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 14 • Hard Beat Cut sang Shot 14</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_13_to_14.jpg', '⚡ Chuyển Cảnh Sang Shot 14 • Hard Beat Cut sang Shot 14')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_13_to_14.jpg" alt="Transition Shot 13" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-14" data-start="8.6" data-end="9.27">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 14</span>
+                <button class="time-jump-btn" onclick="jumpToShot(14, 8.6)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    8.60s - 9.27s <span class="dur-pill">(0.67s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Wide 28mm f/2.8</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Đứng Hít Thở Trên Ban Công Hướng Về Thung Lũng Rừng (Terrace Horizon Contemplation)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_14_start.jpg', 'Shot 14 • Khung hình Đầu (8.60s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_14_start.jpg" alt="Shot 14 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (8.60s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_14_mid.jpg', 'Shot 14 • Cao trào Giữa (8.93s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_14_mid.jpg" alt="Shot 14 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (8.93s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_14_end.jpg', 'Shot 14 • Khung hình Cuối (9.27s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_14_end.jpg" alt="Shot 14 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (9.27s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Cảnh quay từ phía sau Nico đứng ở mép ban công kính của ngôi nhà trên đồi, hai tay chống hông ngắm nhìn thung lũng rừng bạt ngàn trải dài tới tận chân trời lúc hoàng hôn. Bầu trời ửng hồng tím nhẹ nhàng sau rặng núi.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Tạo ra một nốt lặng thiền định (Zen / Mindful Pause) sau hàng loạt chuyển động dồn dập; bố cục một phần ba đặt nhân vật ở tâm điểm hướng tầm mắt ra không gian vô tận; truyền tải trọn vẹn triết lý sống hòa hợp giữa thể chất và tinh thần.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Nhân vật đứng tĩnh hoàn toàn, nhưng sự tĩnh lặng này đóng vai trò nhịp thở cân bằng thị giác trước khi bùng nổ cú chạy tiếp theo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Đan cài những khoảnh khắc chiêm nghiệm (Contemplative Beats) giữa các chuỗi hành động tốc độ cao giúp khán giả không bị bội thực giác quan và cảm nhận được chiều sâu nội tâm của nhân vật.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide 28mm f/2.8 • Centered Back View Shot
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Ban công gỗ hướng núi
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng chạng vạng hoàng hôn dịu ngọt (Golden/Blue Hour)
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Cut sang Shot 15
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 15 • Hard Beat Cut sang Shot 15</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_14_to_15.jpg', '⚡ Chuyển Cảnh Sang Shot 15 • Hard Beat Cut sang Shot 15')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_14_to_15.jpg" alt="Transition Shot 14" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-15" data-start="9.27" data-end="9.97">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 15</span>
+                <button class="time-jump-btn" onclick="jumpToShot(15, 9.27)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    9.27s - 9.97s <span class="dur-pill">(0.70s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Standard 35mm f/2.0</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Guồng Chân Tiếp Đất & Cơ Bắp Đùi Siêu Khỏe Khoắn (Low-Angle Quads & Shoes Action)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_15_start.jpg', 'Shot 15 • Khung hình Đầu (9.27s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_15_start.jpg" alt="Shot 15 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (9.27s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_15_mid.jpg', 'Shot 15 • Cao trào Giữa (9.62s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_15_mid.jpg" alt="Shot 15 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (9.62s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_15_end.jpg', 'Shot 15 • Khung hình Cuối (9.97s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_15_end.jpg" alt="Shot 15 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (9.97s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Góc máy thấp sát mặt đất lia theo chuyển động chạy của đôi chân. Cơ đùi trước (Quadriceps) cuộn gân săn chắc, đôi giày chạy On Running màu trắng tiếp đất giảm chấn hoàn hảo rồi bật nảy lao về phía trước trên nền đất dốc rừng.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Tôn vinh sức mạnh giải phẫu học cơ thể vận động viên; góc quay bám thấp đặc tả chuyển động tiếp đất tạo cảm giác tốc độ chóng mặt; minh chứng sống động cho cường độ chuẩn bị cho giải 99 Laps.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Chuyển động cực nhanh dễ gây mờ chuyển động (motion blur) nếu không để tốc độ màn trập (shutter speed) cao từ 1/500s trở lên.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Với nội dung thể thao, những góc máy cận bộ phận chuyển động chính (cơ bắp chân, khớp cổ chân, bàn tay nắm chặt) tạo ra sức thuyết phục thị giác mạnh hơn nhiều so với chỉ quay khuôn mặt.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Standard 35mm f/2.0 • Low-Angle Tracking Shot
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Đường dốc rừng sỏi
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng tự nhiên trong rừng râm mát
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Cut sang Shot 16
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 16 • Hard Beat Cut sang Shot 16</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_15_to_16.jpg', '⚡ Chuyển Cảnh Sang Shot 16 • Hard Beat Cut sang Shot 16')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_15_to_16.jpg" alt="Transition Shot 15" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-16" data-start="9.97" data-end="10.53">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 16</span>
+                <button class="time-jump-btn" onclick="jumpToShot(16, 9.97)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    9.97s - 10.53s <span class="dur-pill">(0.56s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Standard 50mm f/1.8</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Tập Trung Cao Độ Gõ Phím Hậu Kỳ Nội Dung (Mechanical Keyboard Creator Focus)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_16_start.jpg', 'Shot 16 • Khung hình Đầu (9.97s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_16_start.jpg" alt="Shot 16 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (9.97s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_16_mid.jpg', 'Shot 16 • Cao trào Giữa (10.25s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_16_mid.jpg" alt="Shot 16 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (10.25s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_16_end.jpg', 'Shot 16 • Khung hình Cuối (10.53s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_16_end.jpg" alt="Shot 16 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (10.53s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Góc quay nghiêng cận mặt và hai bàn tay. Nico đội mũ lưỡi trai ngược, ánh mắt găm chặt vào màn hình máy tính sáng rực, mười đầu ngón tay lướt thoăn thoắt trên bàn phím cơ màu trắng, thể hiện tinh thần làm việc miệt mài không ngừng nghỉ.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Thể hiện sự tập trung cao độ (Deep Work / Flow State); tạo nên sự kết nối logic với Shot 08; khẳng định sự thành công của một creator đến từ cả việc đổ mồ hôi trên sân tập lẫn sự kiên trì bên bàn phím.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Thời lượng ngắn chỉ 0.56s, đóng vai trò như một mắt xích tăng tốc trong chuỗi cao trào cuối video.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Nhấn mạnh văn hóa 'Hustle & Flow' – làm việc nghiêm túc, tập luyện hết mình – tạo nên tính cách thương hiệu truyền cảm hứng được giới trẻ đặc biệt ngưỡng mộ.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Standard 50mm f/1.8 • Medium Close-Up Profile
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Góc bàn làm việc phòng dựng
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng hắt từ màn hình kết hợp đèn bàn dịu
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Cut sang Shot 17
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 17 • Hard Beat Cut sang Shot 17</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_16_to_17.jpg', '⚡ Chuyển Cảnh Sang Shot 17 • Hard Beat Cut sang Shot 17')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_16_to_17.jpg" alt="Transition Shot 16" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-17" data-start="10.53" data-end="11.2">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 17</span>
+                <button class="time-jump-btn" onclick="jumpToShot(17, 10.53)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    10.53s - 11.20s <span class="dur-pill">(0.67s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Macro 60mm f/2.8</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Đổ Bọt Sữa Tạo Hình Trái Tim Nghệ Thuật (Barista Latte Art Precision Pour)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_17_start.jpg', 'Shot 17 • Khung hình Đầu (10.53s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_17_start.jpg" alt="Shot 17 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (10.53s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_17_mid.jpg', 'Shot 17 • Cao trào Giữa (10.86s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_17_mid.jpg" alt="Shot 17 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (10.86s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_17_end.jpg', 'Shot 17 • Khung hình Cuối (11.20s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_17_end.jpg" alt="Shot 17 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (11.20s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Góc nhìn từ trên cao xuống cốc cà phê đen tuyền. Bàn tay Nico cầm ca inox đánh sữa điêu luyện, rót dòng sữa trắng mịn màng vào tách espresso, lắc nhẹ cổ tay tạo nên hình trái tim latte art hoàn hảo, mềm mại.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Tính thỏa mãn thị giác tột bậc (Oddly Satisfying ASMR Visual); dòng bọt sữa trắng tương phản nổi bật trên nền cafe crema nâu cánh gián và thành cốc đen mờ; chứng minh sự tài hoa, khéo léo trong từng sở thích nhỏ nhất.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Cắt cảnh ngay khi hình trái tim vừa hoàn thành, để lại dư vị thòm thèm cho người xem.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Kỹ năng tạo latte art hoặc những hành động đòi hỏi sự khéo léo vi mô luôn là chất liệu vàng để giữ chân người xem đến những giây cuối cùng.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Macro 60mm f/2.8 • Top-Down 60-degree Close-Up
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Quầy bar pha cà phê
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng trần dịu mát tán đều
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Beat Cut sang Shot 18
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 18 • Hard Beat Cut sang Shot 18</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_17_to_18.jpg', '⚡ Chuyển Cảnh Sang Shot 18 • Hard Beat Cut sang Shot 18')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/transitions/trans_17_to_18.jpg" alt="Transition Shot 17" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-18" data-start="11.2" data-end="11.8">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 18</span>
+                <button class="time-jump-btn" onclick="jumpToShot(18, 11.2)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    11.20s - 11.80s <span class="dur-pill">(0.60s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Wide 35mm f/2.5</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Uống Nước Hồi Phục Bên Cốp Xe Chốt Đuôi Video (Tailgate Hydration Peak Outro)</h3>
+        </div>
+
+        <!-- 3 Keyframes Gallery -->
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_18_start.jpg', 'Shot 18 • Khung hình Đầu (11.20s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_18_start.jpg" alt="Shot 18 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (11.20s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_18_mid.jpg', 'Shot 18 • Cao trào Giữa (11.50s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_18_mid.jpg" alt="Shot 18 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (11.50s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_18_end.jpg', 'Shot 18 • Khung hình Cuối (11.80s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_18_end.jpg" alt="Shot 18 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (11.80s)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Structured Critique Blocks -->
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Nico đứng thẳng người bên cạnh cốp sau xe SUV mở nắp giữa rừng xanh, một tay chống hông, một tay cầm bình nước inox ngửa cổ uống một ngụm sảng khoái. Toàn bộ vóc dáng thể thao rắn rỏi, đôi chân mang tất và giày On Running trắng tinh khôi, ánh nắng nhẹ chiếu lên người tạo cảm giác đắc thắng và trọn vẹn. Khung hình kết thúc, sẵn sàng tạo vòng lặp vô tận (Infinite Loop) quay lại cú chạy bộ ở Shot 01.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Cái kết mở đầy sảng khoái (Satisfying Open-Ended Outro); hoàn thiện chu trình chuẩn bị cho giải đấu 99 Laps; kích thích người xem nhấn vào trang cá nhân hoặc chuyển tiếp sang xem tập dài trên YouTube như lời kêu gọi trong caption ('YT EP now live 🏁🎥').</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Thời lượng video dừng lại ở 11.8s, người xem muốn xem thêm hành trình thực tế của cuộc đua phải tìm đến YouTube.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Một video ngắn trên mạng xã hội đóng vai trò là 'Trailer cảm xúc' (Emotional Teaser). Hãy để nó dồn nén năng lượng đến mức cao nhất rồi dẫn dắt khán giả sang kênh dài hạn (YouTube) để tiêu thụ nội dung chuyên sâu.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide 35mm f/2.5 • Full Athletic Stance Shot
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Rừng thông bên cốp xe SUV
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng tự nhiên êm dịu
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Vòng lặp liền mạch (Seamless Loop) quay lại Shot 01
+            </div>
+        </div>
+
+        
+    </div>
+    
+        </div>
+    </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img src="" alt="Enlarged Keyframe" class="lightbox-content" id="lightboxImg">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<script>
+function setViewMode(mode) {
+    const detailView = document.getElementById('storyboardView');
+    const gridView = document.getElementById('gridView');
+    const btnDetail = document.getElementById('tabDetail');
+    const btnGrid = document.getElementById('tabGrid');
+
+    if (mode === 'grid') {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        btnGrid.classList.add('active');
+        btnDetail.classList.remove('active');
+    } else {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        btnDetail.classList.add('active');
+        btnGrid.classList.remove('active');
+    }
+}
+
+function jumpToShot(shotId, timeSec) {
+    const video = document.getElementById('playerVideo');
+    if (video) {
+        video.currentTime = timeSec;
+        video.play().catch(() => {});
+    }
+    setViewMode('detail');
+    const el = document.getElementById('shot-' + shotId);
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        el.style.borderColor = 'var(--accent-blue)';
+        setTimeout(() => {
+            el.style.borderColor = '';
+        }, 1500);
+    }
+}
+
+function openLightbox(imgSrc, captionText) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCaption');
+    img.src = imgSrc;
+    cap.innerText = captionText;
+    modal.style.display = 'flex';
+}
+
+function closeLightbox() {
+    const modal = document.getElementById('lightboxModal');
+    modal.style.display = 'none';
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    }
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

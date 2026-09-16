@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Báo Cáo Phân Tích Tuyển Tập Video Carousel: "Moving Postcards From Hong Kong"</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #070a0f;
+    --bg-card: #0e1420;
+    --bg-card-hover: #151e30;
+    --bg-surface: #121928;
+    --border-color: #1e293b;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-blue: #38bdf8;
+    --accent-amber: #f59e0b;
+    --accent-emerald: #10b981;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: #202d42; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .app-container {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .video-sidebar-col {
+        width: 440px;
+        min-width: 440px;
+        max-width: 480px;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: 1px solid var(--border-color);
+        background: var(--bg-surface);
+        display: flex;
+        flex-direction: column;
+        z-index: 30;
+    }
+    .content-scroll-col {
+        flex: 1;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 24px 32px 60px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    .video-sidebar-col {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(14, 20, 32, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .content-scroll-col {
+        width: 100%;
+        padding: 16px 14px 80px;
+    }
+}
+
+.video-player-container {
+    position: relative;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .video-player-container {
+        aspect-ratio: 9/16;
+        max-height: 60vh;
+    }
+}
+@media (max-width: 1023px) {
+    .video-player-container {
+        max-height: 38vh;
+        aspect-ratio: 16/9;
+    }
+}
+
+video#mainPlayer {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    outline: none;
+}
+
+.video-controls-panel {
+    padding: 12px 16px;
+    background: #0b111c;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.current-status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11.5px;
+}
+
+.speed-buttons-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.ctrl-btn {
+    background: #162032;
+    color: #cbd5e1;
+    border: 1px solid #283750;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+}
+
+.ctrl-btn:hover, .ctrl-btn:active {
+    background: #25334d;
+    color: #fff;
+}
+
+.ctrl-btn.active {
+    background: var(--accent-blue);
+    color: #041324;
+    border-color: var(--accent-blue);
+    font-weight: 800;
+}
+
+.report-header-banner {
+    background: linear-gradient(135deg, #0e1726 0%, #152238 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.genre-badge {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--accent-amber);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.report-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.meta-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+}
+
+.meta-tags-flex strong { color: #fff; }
+
+.overview-card {
+    background: #0e1420;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-blue);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 13.5px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.action-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg-main);
+    padding: 10px 0;
+}
+
+.view-tabs-group {
+    display: flex;
+    gap: 4px;
+    background: #0f1624;
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.view-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+}
+
+.view-tab-btn.active {
+    background: #1e293b;
+    color: #fff;
+    font-weight: 700;
+}
+
+.drawer-trigger-btn {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12.5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.storyboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px;
+    display: flex;
+    gap: 16px;
+    transition: transform 0.15s, border-color 0.15s;
+}
+
+.shot-card:hover {
+    background: var(--bg-card-hover);
+    border-color: #2e3e5a;
+}
+
+.shot-card.active-playing {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+.shot-media-col {
+    width: 120px;
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+.shot-thumb-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.shot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.play-overlay svg { width: 32px; height: 32px; color: #fff; }
+
+.zoom-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.65);
+    border: none;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.thumb-time-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    background: rgba(15, 23, 42, 0.85);
+    font-size: 9.5px;
+    font-weight: 700;
+    color: var(--accent-amber);
+    padding: 2px 4px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: var(--font-mono);
+}
+
+.shot-info-col {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.shot-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-bottom: 1px solid #1a2436;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.shot-badge-num {
+    background: #1e293b;
+    color: var(--accent-blue);
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+
+.shot-heading { font-size: 14.5px; font-weight: 700; color: #fff; display: inline; }
+
+.time-jump-btn {
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--accent-blue);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    cursor: pointer;
+}
+
+.props-list {
+    font-size: 12.5px;
+    color: #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.prop-label { font-weight: 700; color: #94a3b8; }
+.prop-val { color: #e2e8f0; }
+
+.tags-row { display: flex; flex-wrap: wrap; gap: 4px; margin-top: auto; }
+.tag-pill { background: #162032; color: #94a3b8; font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 4px; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+}
+
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.grid-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    background: #000;
+}
+
+.grid-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.grid-play-icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+}
+
+.grid-card:hover .grid-play-icon { opacity: 1; }
+
+.grid-zoom-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: rgba(0,0,0,0.7);
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.grid-badge-top {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--accent-blue);
+    font-size: 9px;
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+}
+
+.grid-badge-bottom {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--accent-amber);
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px 4px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: var(--font-mono);
+}
+
+.drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+}
+
+.drawer-backdrop.open { opacity: 1; visibility: visible; }
+
+.drawer-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 85vw;
+    background: #0f172a;
+    border-left: 1px solid var(--border-color);
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-backdrop.open .drawer-panel { transform: translateX(0); }
+
+.drawer-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drawer-title { font-weight: 800; font-size: 15px; color: #fff; }
+.drawer-close-btn { background: #1e293b; border: none; color: #fff; width: 28px; height: 28px; border-radius: 6px; font-size: 16px; cursor: pointer; }
+
+.drawer-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.drawer-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 10px;
+    background: #131d30;
+    border: 1px solid #1e2d48;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.drawer-item:hover, .drawer-item:active {
+    background: #1c2b47;
+    border-color: var(--accent-blue);
+}
+
+.drawer-thumb {
+    width: 44px;
+    height: 58px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #000;
+}
+
+.drawer-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.drawer-info { flex: 1; min-width: 0; }
+.drawer-shot-title { font-weight: 700; font-size: 13px; color: #fff; }
+.drawer-shot-time { font-size: 11.5px; color: var(--accent-amber); font-family: var(--font-mono); }
+.drawer-play-arrow { font-size: 13px; color: var(--accent-blue); }
+
+#lightboxModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    border: 1px solid #334155;
+}
+
+#lightboxCaption {
+    color: #e2e8f0;
+    font-size: 13.5px;
+    margin-top: 14px;
+    text-align: center;
+    background: rgba(15, 23, 42, 0.85);
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid #334155;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* Author Instagram Direct Link Button */
+.author-ig-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(192, 132, 252, 0.12);
+    border: 1px solid rgba(192, 132, 252, 0.35);
+    color: #e879f9;
+    padding: 2px 8px 2px 6px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    vertical-align: middle;
+}
+.author-ig-badge:hover {
+    background: linear-gradient(135deg, rgba(192, 132, 252, 0.3), rgba(244, 63, 94, 0.3));
+    border-color: #f43f5e;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+}
+.author-ig-badge strong {
+    color: #fff;
+}
+.author-ig-badge .ig-ext-btn {
+    background: linear-gradient(135deg, #c084fc, #f43f5e);
+    color: #0b0f17;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: all 0.15s;
+    letter-spacing: 0.2px;
+}
+.author-ig-badge:hover .ig-ext-btn {
+    background: #ffffff;
+    color: #0b0f17;
+}
+
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="video-sidebar-col">
+        <div class="video-player-container">
+            <video id="mainPlayer" controls autoplay muted playsinline preload="auto" loop></video>
+        </div>
+        <div class="video-controls-panel">
+            <div class="current-status-bar">
+                <span class="status-tag" id="shotStatusTag">🎬 Phân cảnh: Toàn bộ video</span>
+                <a id="directVidLink" href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/carousel_slides/slide_01.mp4" target="_blank" style="color:var(--accent-blue); font-size:11.5px; text-decoration:none;">Tệp gốc ↗</a>
+            </div>
+            <div class="speed-buttons-row">
+                <span style="font-size:11.5px; color:#94a3b8; font-weight:700; margin-right:4px;">Tốc độ:</span>
+                <button class="ctrl-btn" onclick="setSpeed(0.25, this)">0.25x</button>
+                <button class="ctrl-btn" onclick="setSpeed(0.5, this)">0.5x</button>
+                <button class="ctrl-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+                <button class="ctrl-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                <button class="ctrl-btn" onclick="toggleMute(this)">🔊 Tiếng</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-scroll-col">
+        <div class="report-header-banner">
+            <div class="header-top-row">
+                <span class="genre-badge">DIRECTOR BREAKDOWN</span>
+                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">8 SHOTS &bull; 20.00s</span>
+            </div>
+            <h1 class="report-title">Báo Cáo Phân Tích Tuyển Tập Video Carousel: "Moving Postcards From Hong Kong"</h1>
+            <div class="meta-tags-flex">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@jazziesillona" onclick="handleCreatorClick(event, '@jazziesillona', 'Jazzie Sillona')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Jazzie Sillona trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Jazzie Sillona</strong>
+                        <span class="author-handle">(@jazziesillona)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span></a></span>
+                <span>Tệp: <strong>Street_Photography_Carousel - @jazziesillona.html</strong></span>
+                <span>Trực quan: <strong>9:16 Vertical HD</strong></span>
+            </div>
+        </div>
+
+        <div class="overview-card">
+            <h3 style="color:#fff; font-size:14px; margin-bottom:6px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
+            <div>
+<h3 style="color:#fff; font-size:14px; margin-bottom:6px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
+<div>
+<strong>🎯 Tổng Quan Nghệ Thuật (Art Direction):</strong> Tuyển tập 8 video phong cách "Moving Postcards" (Bưu thiếp động) đưa người xem qua từng góc nhìn văn hóa, nhịp sống và màu sắc Hong Kong. Sử dụng kỹ thuật máy khóa tĩnh (Locked-off Camera), tốc độ chuẩn điện ảnh 24fps, tỷ lệ 4:3 và phong cách màu phim 35mm hoài cổ (Pastel, Cyan-Green Highlights, Warm Shadows).
+</div>
+</div>
+        </div>
+
+        <div class="action-toolbar">
+            <div class="view-tabs-group">
+                <button class="view-tab-btn active" id="tabDetailBtn" onclick="switchView('detail')">📋 Bóc Tách Chi Tiết</button>
+                <button class="view-tab-btn" id="tabGridBtn" onclick="switchView('grid')">🖼️ Lưới Soi Ảnh (8)</button>
+            </div>
+            <button class="drawer-trigger-btn" onclick="toggleDrawer(true)">📑 Mục Lục Shot</button>
+        </div>
+
+        <div class="storyboard-container" id="storyboardView">
+            
+        <div class="shot-card" id="shot-card-1">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(0.0, 2.5, 'SHOT 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg" alt="SHOT 01" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg', 'SHOT 01 [0.0s - 2.5s]')">🔍</button>
+                    <span class="thumb-time-badge">0.00s - 2.50s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 01</span>
+                        <h4 class="shot-heading">SHOT 01</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(0.0, 2.5, 'SHOT 01')">
+                        ▶ 0.00s ➔ 2.50s (2.50s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(0.0, 3.0, 'Slide 01: Visual Hook &amp; Moving Postcard Title (Mở Màn Đậm Chất Điện Ảnh)')">
+<img alt="Slide 01: Visual Hook &amp; Moving Postcard Title (Mở Màn Đậm Chất Điện Ảnh)" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg', 'Slide 01: Visual Hook &amp; Moving Postcard Title (Mở Màn Đậm Chất Điện Ảnh) [0.0s - 3.0s]')">🔍</button>
+<span class="thumb-time-badge">0.00s - 3.00s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 01</span>
+<h4 class="shot-heading">Slide 01: Visual Hook &amp; Moving Postcard Title (Mở Màn Đậm Chất Điện Ảnh)</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(0.0, 3.0, 'Slide 01: Visual Hook &amp; Moving Postcard Title (Mở Màn Đậm Chất Điện Ảnh)')">
+                        ▶ 0.00s ➔ 3.00s (3.00s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="slide-img-box">
+<img alt="Slide 01: Visual Hook &amp; Moving Postcard Title (Mở Màn Đậm Chất Điện Ảnh)" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg"/>
+</div>
+<div class="slide-info">
+<div class="slide-header">
+<span class="slide-title">Slide 01: Visual Hook &amp; Moving Postcard Title (Mở Màn Đậm Chất Điện Ảnh)</span>
+<span class="slide-meta">18.04s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
+</div>
+<div class="slide-desc">
+<strong>Góc máy &amp; Bố cục:</strong> Medium Wide Shot (MWS) / 4:3 Film Frame (960x720) | Máy tĩnh (Locked-off Tripod), tiêu cự 35mm - 50mm, ánh sáng dịu nhẹ tự nhiên (Soft ambient daylight).<br/>
+<strong>Nội dung hình ảnh:</strong> Khung cảnh sạp đồ cổ/báo chí Hong Kong với chú mèo nằm ngủ say trên tấm gỗ tiền cảnh, người đi bộ lướt qua bậc thang. Xuất hiện Typography tiêu đề: 'MOVING POSTCARDS FROM HONG KONG'.<br/>
+<strong>Tâm lý giữ chân:</strong> Định vị phong cách nghệ thuật Living Photography (Bưu thiếp động), giữ chân người xem bằng nét tĩnh lặng đầy chất thơ giữa nhịp sống chuyển động.
+        </div>
+<div class="tip-box">
+            💡 <strong>Mẹo Tác Nghiệp:</strong> Khóa chặt khung hình trên tripod, để chuyển động tự nhiên của người đi đường và chú mèo làm sinh động khung hình mà không cần lia máy.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+<span class="tag-pill">Carousel Slide</span>
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-2">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(2.5, 5.0, 'SHOT 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg" alt="SHOT 02" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg', 'SHOT 02 [2.5s - 5.0s]')">🔍</button>
+                    <span class="thumb-time-badge">2.50s - 5.00s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 02</span>
+                        <h4 class="shot-heading">SHOT 02</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(2.5, 5.0, 'SHOT 02')">
+                        ▶ 2.50s ➔ 5.00s (2.50s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(3.0, 6.0, 'Slide 02: Coastline Solitude &amp; Leading Lines (Khoảng Lặng Bờ Biển)')">
+<img alt="Slide 02: Coastline Solitude &amp; Leading Lines (Khoảng Lặng Bờ Biển)" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg', 'Slide 02: Coastline Solitude &amp; Leading Lines (Khoảng Lặng Bờ Biển) [3.0s - 6.0s]')">🔍</button>
+<span class="thumb-time-badge">3.00s - 6.00s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 02</span>
+<h4 class="shot-heading">Slide 02: Coastline Solitude &amp; Leading Lines (Khoảng Lặng Bờ Biển)</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(3.0, 6.0, 'Slide 02: Coastline Solitude &amp; Leading Lines (Khoảng Lặng Bờ Biển)')">
+                        ▶ 3.00s ➔ 6.00s (3.00s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="slide-img-box">
+<img alt="Slide 02: Coastline Solitude &amp; Leading Lines (Khoảng Lặng Bờ Biển)" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg"/>
+</div>
+<div class="slide-info">
+<div class="slide-header">
+<span class="slide-title">Slide 02: Coastline Solitude &amp; Leading Lines (Khoảng Lặng Bờ Biển)</span>
+<span class="slide-meta">10.04s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
+</div>
+<div class="slide-desc">
+<strong>Góc máy &amp; Bố cục:</strong> Wide Environmental Shot / Rule of Thirds | Góc máy tĩnh tầm mắt (Eye-level), tận dụng cột biển báo chữ P làm điểm neo thị giác thẳng đứng đối xứng với đường chân trời biển.<br/>
+<strong>Nội dung hình ảnh:</strong> Người đàn ông trung niên đứng câu cá bên thanh chắn lan can kim loại ven biển Victoria Harbour, xa xa là cầu dây văng và núi non trong làn nước biển ngọc bích.<br/>
+<strong>Tâm lý giữ chân:</strong> Chuyển đổi không gian từ phố thị nhộn nhịp sang bờ biển thoáng đãng, tạo nhịp thở thị giác (Visual Breathing Space) giúp người xem không bị ngợp.
+        </div>
+<div class="tip-box">
+            💡 <strong>Mẹo Tác Nghiệp:</strong> Tận dụng các đường ngang (Horizontal Lines) của rào chắn và đường chân trời biển để tạo cảm giác bình yên, vững chãi.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+<span class="tag-pill">Carousel Slide</span>
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-3">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(5.0, 7.5, 'SHOT 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg" alt="SHOT 03" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg', 'SHOT 03 [5.0s - 7.5s]')">🔍</button>
+                    <span class="thumb-time-badge">5.00s - 7.50s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 03</span>
+                        <h4 class="shot-heading">SHOT 03</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(5.0, 7.5, 'SHOT 03')">
+                        ▶ 5.00s ➔ 7.50s (2.50s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(6.0, 9.0, 'Slide 03: Street Life &amp; Intimate Details (Nhịp Sống Hẻm Phố &amp; Chú Mèo)')">
+<img alt="Slide 03: Street Life &amp; Intimate Details (Nhịp Sống Hẻm Phố &amp; Chú Mèo)" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg', 'Slide 03: Street Life &amp; Intimate Details (Nhịp Sống Hẻm Phố &amp; Chú Mèo) [6.0s - 9.0s]')">🔍</button>
+<span class="thumb-time-badge">6.00s - 9.00s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 03</span>
+<h4 class="shot-heading">Slide 03: Street Life &amp; Intimate Details (Nhịp Sống Hẻm Phố &amp; Chú Mèo)</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(6.0, 9.0, 'Slide 03: Street Life &amp; Intimate Details (Nhịp Sống Hẻm Phố &amp; Chú Mèo)')">
+                        ▶ 6.00s ➔ 9.00s (3.00s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="slide-img-box">
+<img alt="Slide 03: Street Life &amp; Intimate Details (Nhịp Sống Hẻm Phố &amp; Chú Mèo)" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg"/>
+</div>
+<div class="slide-info">
+<div class="slide-header">
+<span class="slide-title">Slide 03: Street Life &amp; Intimate Details (Nhịp Sống Hẻm Phố &amp; Chú Mèo)</span>
+<span class="slide-meta">10.72s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
+</div>
+<div class="slide-desc">
+<strong>Góc máy &amp; Bố cục:</strong> Medium Wide Shot / High Detail Focus | Máy tĩnh, bảng màu xanh rêu - đỏ đất ấm áp đặc trưng của những con phố cổ điển tại Central / Sheung Wan.<br/>
+<strong>Nội dung hình ảnh:</strong> Khung cảnh sạp hàng retro không còn Text Title, hé lộ trọn vẹn các tủ kính đồ gốm sứ phong thủy, áp phích nghệ thuật và dòng người tấp nập ngược xuôi.<br/>
+<strong>Tâm lý giữ chân:</strong> Kích thích khám phá chi tiết vi mô (Micro-exploration), tăng thời gian dừng lại quan sát từng ngóc ngách của bức tranh đời sống.
+        </div>
+<div class="tip-box">
+            💡 <strong>Mẹo Tác Nghiệp:</strong> Bắt trọn sự tương phản giữa nhịp sống hối hả của con người và sự bình thản tuyệt đối của chú mèo đang ngủ say.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+<span class="tag-pill">Carousel Slide</span>
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-4">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(7.5, 10.0, 'SHOT 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg" alt="SHOT 04" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg', 'SHOT 04 [7.5s - 10.0s]')">🔍</button>
+                    <span class="thumb-time-badge">7.50s - 10.00s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 04</span>
+                        <h4 class="shot-heading">SHOT 04</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(7.5, 10.0, 'SHOT 04')">
+                        ▶ 7.50s ➔ 10.00s (2.50s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(9.0, 12.0, 'Slide 04: Urban Slice &amp; Street Geometry (Hình Khối Góc Phố &amp; Nhịp Bước)')">
+<img alt="Slide 04: Urban Slice &amp; Street Geometry (Hình Khối Góc Phố &amp; Nhịp Bước)" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg', 'Slide 04: Urban Slice &amp; Street Geometry (Hình Khối Góc Phố &amp; Nhịp Bước) [9.0s - 12.0s]')">🔍</button>
+<span class="thumb-time-badge">9.00s - 12.00s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 04</span>
+<h4 class="shot-heading">Slide 04: Urban Slice &amp; Street Geometry (Hình Khối Góc Phố &amp; Nhịp Bước)</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(9.0, 12.0, 'Slide 04: Urban Slice &amp; Street Geometry (Hình Khối Góc Phố &amp; Nhịp Bước)')">
+                        ▶ 9.00s ➔ 12.00s (3.00s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="slide-img-box">
+<img alt="Slide 04: Urban Slice &amp; Street Geometry (Hình Khối Góc Phố &amp; Nhịp Bước)" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg"/>
+</div>
+<div class="slide-info">
+<div class="slide-header">
+<span class="slide-title">Slide 04: Urban Slice &amp; Street Geometry (Hình Khối Góc Phố &amp; Nhịp Bước)</span>
+<span class="slide-meta">11.59s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
+</div>
+<div class="slide-desc">
+<strong>Góc máy &amp; Bố cục:</strong> Medium Street Corner Shot / Multi-layer Depth | Bố cục phân 3 lớp: Tiền cảnh rào chắn &amp; biển báo đỏ -&gt; Trung cảnh bà cụ bước đi -&gt; Hậu cảnh quán cafe và nhà kính phía trên.<br/>
+<strong>Nội dung hình ảnh:</strong> Quán cafe sơn màu xanh teal cổ điển ở góc ngã ba, người phụ nữ lớn tuổi đeo khẩu trang chống gậy bước qua đường, cạnh biển báo cấm xe máy màu đỏ nổi bật.<br/>
+<strong>Tâm lý giữ chân:</strong> Khắc họa câu chuyện con người đô thị (Human Element in Urban Space), tạo sự đồng cảm và tò mò về cuộc sống thường nhật.
+        </div>
+<div class="tip-box">
+            💡 <strong>Mẹo Tác Nghiệp:</strong> Sử dụng các mảng màu tương phản tự nhiên (Đỏ biển báo - Xanh tường nhà - Vàng vạch kẻ đường) để dẫn mắt người xem.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+<span class="tag-pill">Carousel Slide</span>
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-5">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(10.0, 12.5, 'SHOT 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg" alt="SHOT 05" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg', 'SHOT 05 [10.0s - 12.5s]')">🔍</button>
+                    <span class="thumb-time-badge">10.00s - 12.50s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 05</span>
+                        <h4 class="shot-heading">SHOT 05</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(10.0, 12.5, 'SHOT 05')">
+                        ▶ 10.00s ➔ 12.50s (2.50s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(30.0, 17.0, 'Slide 05: Top-down Geometry &amp; Golden Light (Góc Nhìn Chim Bay &amp; Ánh Vàng Rực Rỡ)')">
+<img alt="Slide 05: Top-down Geometry &amp; Golden Light (Góc Nhìn Chim Bay &amp; Ánh Vàng Rực Rỡ)" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg', 'Slide 05: Top-down Geometry &amp; Golden Light (Góc Nhìn Chim Bay &amp; Ánh Vàng Rực Rỡ) [30.0s - 17.0s]')">🔍</button>
+<span class="thumb-time-badge">30.00s - 17.00s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 05</span>
+<h4 class="shot-heading">Slide 05: Top-down Geometry &amp; Golden Light (Góc Nhìn Chim Bay &amp; Ánh Vàng Rực Rỡ)</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(30.0, 17.0, 'Slide 05: Top-down Geometry &amp; Golden Light (Góc Nhìn Chim Bay &amp; Ánh Vàng Rực Rỡ)')">
+                        ▶ 30.00s ➔ 17.00s (-13.00s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="slide-img-box">
+<img alt="Slide 05: Top-down Geometry &amp; Golden Light (Góc Nhìn Chim Bay &amp; Ánh Vàng Rực Rỡ)" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg"/>
+</div>
+<div class="slide-info">
+<div class="slide-header">
+<span class="slide-title">Slide 05: Top-down Geometry &amp; Golden Light (Góc Nhìn Chim Bay &amp; Ánh Vàng Rực Rỡ)</span>
+<span class="slide-meta">7.63s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
+</div>
+<div class="slide-desc">
+<strong>Góc máy &amp; Bố cục:</strong> High Angle Bird's Eye View / Geometric Grid | Góc quay từ trên cao nhìn xuống từ cầu vượt bộ hành, đón ánh nắng chiều vàng (Golden Hour) rọi xiên 45 độ tạo bóng đổ dài tuyệt đẹp.<br/>
+<strong>Nội dung hình ảnh:</strong> Giao lộ đường ray tàu điện (Tram tracks) với mạng lưới vạch kẻ vàng đan chéo. Người đàn ông đẩy xe chất đầy hàng hóa đổ bóng dài in trên mặt đường.<br/>
+<strong>Tâm lý giữ chân:</strong> Đỉnh cao về bố cục hình học (Geometric Symmetry) và ánh sáng, là slide có 'Stopping Power' mạnh nhất giữ chân người xem.
+        </div>
+<div class="tip-box">
+            💡 <strong>Mẹo Tác Nghiệp:</strong> Canh thời điểm nắng chiều xiên sâu từ 16h30 - 17h30 trên cầu đi bộ để bắt được bóng đổ điện ảnh và độ tương phản ánh sáng gắt.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+<span class="tag-pill">Carousel Slide</span>
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-6">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(12.5, 15.0, 'SHOT 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg" alt="SHOT 06" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg', 'SHOT 06 [12.5s - 15.0s]')">🔍</button>
+                    <span class="thumb-time-badge">12.50s - 15.00s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 06</span>
+                        <h4 class="shot-heading">SHOT 06</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(12.5, 15.0, 'SHOT 06')">
+                        ▶ 12.50s ➔ 15.00s (2.50s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(70.0, 85.0, 'Slide 06: Frame within a Frame &amp; Coffee Culture (Khung Trong Khung &amp; Góc Ban Mai)')">
+<img alt="Slide 06: Frame within a Frame &amp; Coffee Culture (Khung Trong Khung &amp; Góc Ban Mai)" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg', 'Slide 06: Frame within a Frame &amp; Coffee Culture (Khung Trong Khung &amp; Góc Ban Mai) [70.0s - 85.0s]')">🔍</button>
+<span class="thumb-time-badge">70.00s - 85.00s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 06</span>
+<h4 class="shot-heading">Slide 06: Frame within a Frame &amp; Coffee Culture (Khung Trong Khung &amp; Góc Ban Mai)</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(70.0, 85.0, 'Slide 06: Frame within a Frame &amp; Coffee Culture (Khung Trong Khung &amp; Góc Ban Mai)')">
+                        ▶ 70.00s ➔ 85.00s (15.00s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="slide-img-box">
+<img alt="Slide 06: Frame within a Frame &amp; Coffee Culture (Khung Trong Khung &amp; Góc Ban Mai)" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg"/>
+</div>
+<div class="slide-info">
+<div class="slide-header">
+<span class="slide-title">Slide 06: Frame within a Frame &amp; Coffee Culture (Khung Trong Khung &amp; Góc Ban Mai)</span>
+<span class="slide-meta">11.43s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
+</div>
+<div class="slide-desc">
+<strong>Góc máy &amp; Bố cục:</strong> Frame within a Frame / Architectural Framing | Máy tĩnh, tiêu cự nén không gian (Telephoto 70-85mm), có người đi bộ lướt ngang tiền cảnh tạo hiệu ứng chuyển động tự nhiên.<br/>
+<strong>Nội dung hình ảnh:</strong> Khung hình nhìn xuyên qua lối đi bộ có hai cột trụ xanh và lan can gạch để đóng khung ô cửa sổ quán cafe vẽ tranh tường nghệ thuật, nơi các vị khách đang ngồi thưởng thức đồ uống.<br/>
+<strong>Tâm lý giữ chân:</strong> Kỹ thuật đóng khung thị giác dẫn dắt ánh nhìn tập trung tuyệt đối vào không gian ấm cúng bên trong ô cửa sổ.
+        </div>
+<div class="tip-box">
+            💡 <strong>Mẹo Tác Nghiệp:</strong> Căn tiêu cự 50mm - 85mm để nén không gian, tạo chiều sâu 3 lớp rõ rệt: Tiền cảnh tối -&gt; Trung cảnh chủ thể -&gt; Hậu cảnh quán sáng ấm.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+<span class="tag-pill">Carousel Slide</span>
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-7">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(15.0, 17.5, 'SHOT 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg" alt="SHOT 07" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg', 'SHOT 07 [15.0s - 17.5s]')">🔍</button>
+                    <span class="thumb-time-badge">15.00s - 17.50s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 07</span>
+                        <h4 class="shot-heading">SHOT 07</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(15.0, 17.5, 'SHOT 07')">
+                        ▶ 15.00s ➔ 17.50s (2.50s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(18.0, 21.0, 'Slide 07: Symmetrical Floral Harmony (Bố Cục Đối Xứng Tiệm Hoa)')">
+<img alt="Slide 07: Symmetrical Floral Harmony (Bố Cục Đối Xứng Tiệm Hoa)" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg', 'Slide 07: Symmetrical Floral Harmony (Bố Cục Đối Xứng Tiệm Hoa) [18.0s - 21.0s]')">🔍</button>
+<span class="thumb-time-badge">18.00s - 21.00s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 07</span>
+<h4 class="shot-heading">Slide 07: Symmetrical Floral Harmony (Bố Cục Đối Xứng Tiệm Hoa)</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(18.0, 21.0, 'Slide 07: Symmetrical Floral Harmony (Bố Cục Đối Xứng Tiệm Hoa)')">
+                        ▶ 18.00s ➔ 21.00s (3.00s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="slide-img-box">
+<img alt="Slide 07: Symmetrical Floral Harmony (Bố Cục Đối Xứng Tiệm Hoa)" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg"/>
+</div>
+<div class="slide-info">
+<div class="slide-header">
+<span class="slide-title">Slide 07: Symmetrical Floral Harmony (Bố Cục Đối Xứng Tiệm Hoa)</span>
+<span class="slide-meta">9.09s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
+</div>
+<div class="slide-desc">
+<strong>Góc máy &amp; Bố cục:</strong> Frontal Symmetrical Shot / Color Explosion | Máy tĩnh chính diện đối xứng hoàn hảo, ánh đèn huỳnh quang kết hợp ánh sáng ban ngày làm nổi bật độ bão hòa màu sắc tươi tắn.<br/>
+<strong>Nội dung hình ảnh:</strong> Sạp hoa tươi truyền thống rực rỡ sắc màu với biển hiệu chữ Hán đỏ '鮮花軒鮮花公司', hàng chục bình hoa xếp tầng lớp quanh người phụ nữ đang cần mẫn cắm hoa.<br/>
+<strong>Tâm lý giữ chân:</strong> Bùng nổ thị giác về màu sắc (Color Explosion), đem lại nguồn năng lượng tươi mới và sự mãn nhãn thị giác sau các cảnh phố thị.
+        </div>
+<div class="tip-box">
+            💡 <strong>Mẹo Tác Nghiệp:</strong> Căn chỉnh trục giữa khung hình đi qua người cắm hoa và logo biển hiệu để đạt độ cân bằng thị giác 100% phong cách Wes Anderson.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+<span class="tag-pill">Carousel Slide</span>
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="shot-card" id="shot-card-8">
+            <div class="shot-media-col">
+                <div class="shot-thumb-wrap" onclick="playShot(17.5, 20.0, 'SHOT 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg" alt="SHOT 08" class="shot-img" loading="lazy" />
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg', 'SHOT 08 [17.5s - 20.0s]')">🔍</button>
+                    <span class="thumb-time-badge">17.50s - 20.00s</span>
+                </div>
+            </div>
+            <div class="shot-info-col">
+                <div class="shot-card-header">
+                    <div class="shot-title-wrap">
+                        <span class="shot-badge-num">SHOT 08</span>
+                        <h4 class="shot-heading">SHOT 08</h4>
+                    </div>
+                    <button class="time-jump-btn" onclick="playShot(17.5, 20.0, 'SHOT 08')">
+                        ▶ 17.50s ➔ 20.00s (2.50s)
+                    </button>
+                </div>
+                <div class="props-list">
+                    <div class="raw-card-content">
+<div class="shot-media-col">
+<div class="shot-thumb-wrap" onclick="playShot(21.0, 24.0, 'Slide 08: Poetic Stillness &amp; Coastal Farewell (Khoảnh Khắc Bình Yên &amp; Lời Tạm Biệt)')">
+<img alt="Slide 08: Poetic Stillness &amp; Coastal Farewell (Khoảnh Khắc Bình Yên &amp; Lời Tạm Biệt)" class="shot-img" loading="lazy" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg"/>
+<div class="play-overlay">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg', 'Slide 08: Poetic Stillness &amp; Coastal Farewell (Khoảnh Khắc Bình Yên &amp; Lời Tạm Biệt) [21.0s - 24.0s]')">🔍</button>
+<span class="thumb-time-badge">21.00s - 24.00s</span>
+</div>
+</div>
+<div class="shot-info-col">
+<div class="shot-card-header">
+<div class="shot-title-wrap">
+<span class="shot-badge-num">SHOT 08</span>
+<h4 class="shot-heading">Slide 08: Poetic Stillness &amp; Coastal Farewell (Khoảnh Khắc Bình Yên &amp; Lời Tạm Biệt)</h4>
+</div>
+<button class="time-jump-btn" onclick="playShot(21.0, 24.0, 'Slide 08: Poetic Stillness &amp; Coastal Farewell (Khoảnh Khắc Bình Yên &amp; Lời Tạm Biệt)')">
+                        ▶ 21.00s ➔ 24.00s (3.00s)
+                    </button>
+</div>
+<div class="props-list">
+<div class="raw-card-content">
+<div class="slide-img-box">
+<img alt="Slide 08: Poetic Stillness &amp; Coastal Farewell (Khoảnh Khắc Bình Yên &amp; Lời Tạm Biệt)" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg"/>
+</div>
+<div class="slide-info">
+<div class="slide-header">
+<span class="slide-title">Slide 08: Poetic Stillness &amp; Coastal Farewell (Khoảnh Khắc Bình Yên &amp; Lời Tạm Biệt)</span>
+<span class="slide-meta">9.51s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
+</div>
+<div class="slide-desc">
+<strong>Góc máy &amp; Bố cục:</strong> Medium Back Shot / Atmospheric Coastal Horizon | Máy tĩnh sau lưng nhân vật, bầu trời phủ lớp sương mù điện ảnh (Atmospheric Haze), ánh sáng pastel dịu nhẹ.<br/>
+<strong>Nội dung hình ảnh:</strong> Hai người phụ nữ cao tuổi (áo đỏ và áo len sáng) ngồi tâm tình bên chiếc ghế gỗ nhìn ra vịnh biển xanh ngọc bích, phía xa có chiếc phà rẽ sóng và nhành hoa đào vươn góc trên.<br/>
+<strong>Tâm lý giữ chân:</strong> Đem lại cảm xúc lắng đọng, thư thái và trọn vẹn cho toàn bộ hành trình 'Moving Postcards', thúc đẩy người xem thả tim, lưu bài và chia sẻ.
+        </div>
+<div class="tip-box">
+            💡 <strong>Mẹo Tác Nghiệp:</strong> Chọn góc quay sau lưng để khán giả tự đặt mình vào vị trí của nhân vật, phóng tầm mắt ra đại dương vô tận.
+        </div>
+</div>
+</div>
+</div>
+<div class="tags-row">
+<span class="tag-pill">Carousel Slide</span>
+</div>
+</div>
+</div>
+                </div>
+                <div class="tags-row">
+                    
+                </div>
+            </div>
+        </div>
+        
+        </div>
+
+        <div class="grid-container" id="gridView" style="display:none;">
+            
+        <div class="grid-card" onclick="playShot(0.0, 2.5, 'SHOT 01')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg" alt="SHOT 01" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg', 'SHOT 01 [0.0s - 2.5s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 01</div>
+                <div class="grid-badge-bottom">0.0s - 2.5s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(2.5, 5.0, 'SHOT 02')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg" alt="SHOT 02" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg', 'SHOT 02 [2.5s - 5.0s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 02</div>
+                <div class="grid-badge-bottom">2.5s - 5.0s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(5.0, 7.5, 'SHOT 03')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg" alt="SHOT 03" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg', 'SHOT 03 [5.0s - 7.5s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 03</div>
+                <div class="grid-badge-bottom">5.0s - 7.5s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(7.5, 10.0, 'SHOT 04')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg" alt="SHOT 04" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg', 'SHOT 04 [7.5s - 10.0s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 04</div>
+                <div class="grid-badge-bottom">7.5s - 10.0s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(10.0, 12.5, 'SHOT 05')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg" alt="SHOT 05" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg', 'SHOT 05 [10.0s - 12.5s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 05</div>
+                <div class="grid-badge-bottom">10.0s - 12.5s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(12.5, 15.0, 'SHOT 06')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg" alt="SHOT 06" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg', 'SHOT 06 [12.5s - 15.0s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 06</div>
+                <div class="grid-badge-bottom">12.5s - 15.0s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(15.0, 17.5, 'SHOT 07')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg" alt="SHOT 07" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg', 'SHOT 07 [15.0s - 17.5s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 07</div>
+                <div class="grid-badge-bottom">15.0s - 17.5s</div>
+            </div>
+        </div>
+        
+
+        <div class="grid-card" onclick="playShot(17.5, 20.0, 'SHOT 08')">
+            <div class="grid-img-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg" alt="SHOT 08" loading="lazy" />
+                <div class="grid-play-icon">▶</div>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg', 'SHOT 08 [17.5s - 20.0s]')">🔍</button>
+                <div class="grid-badge-top">SHOT 08</div>
+                <div class="grid-badge-bottom">17.5s - 20.0s</div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)">
+    <div class="drawer-panel" onclick="event.stopPropagation()">
+        <div class="drawer-header">
+            <div class="drawer-title">📑 MỤC LỤC PHÂN CẢNH (8)</div>
+            <button class="drawer-close-btn" onclick="toggleDrawer(false)">&times;</button>
+        </div>
+        <div class="drawer-list">
+            
+        <div class="drawer-item" onclick="jumpToShot(1, 0.0, 2.5, 'SHOT 01')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg" alt="SHOT 01" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 01</div>
+                <div class="drawer-shot-time">⏱ 0.00s - 2.50s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(2, 2.5, 5.0, 'SHOT 02')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg" alt="SHOT 02" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 02</div>
+                <div class="drawer-shot-time">⏱ 2.50s - 5.00s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(3, 5.0, 7.5, 'SHOT 03')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg" alt="SHOT 03" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 03</div>
+                <div class="drawer-shot-time">⏱ 5.00s - 7.50s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(4, 7.5, 10.0, 'SHOT 04')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg" alt="SHOT 04" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 04</div>
+                <div class="drawer-shot-time">⏱ 7.50s - 10.00s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(5, 10.0, 12.5, 'SHOT 05')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg" alt="SHOT 05" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 05</div>
+                <div class="drawer-shot-time">⏱ 10.00s - 12.50s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(6, 12.5, 15.0, 'SHOT 06')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg" alt="SHOT 06" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 06</div>
+                <div class="drawer-shot-time">⏱ 12.50s - 15.00s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(7, 15.0, 17.5, 'SHOT 07')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg" alt="SHOT 07" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 07</div>
+                <div class="drawer-shot-time">⏱ 15.00s - 17.50s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+
+        <div class="drawer-item" onclick="jumpToShot(8, 17.5, 20.0, 'SHOT 08')">
+            <div class="drawer-thumb">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg" alt="SHOT 08" loading="lazy" />
+            </div>
+            <div class="drawer-info">
+                <div class="drawer-shot-title">SHOT 08</div>
+                <div class="drawer-shot-time">⏱ 17.50s - 20.00s</div>
+            </div>
+            <div class="drawer-play-arrow">▶</div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+<div id="lightboxModal" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImg" src="" onclick="event.stopPropagation()" />
+    <div id="lightboxCaption"></div>
+</div>
+
+<script>
+const rawVideoSrc = "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/carousel_slides/slide_01.mp4";
+let currentEndTime = null;
+
+function getCandidateUrls(src) {
+    if (!src) return [];
+    if (src.startsWith('http://') || src.startsWith('https://')) return [src];
+    let clean = src.replace(/^(\.\/|\.\.\/)+/, '').replace(/^(videos\/|reports\/)/, '');
+    return [
+        'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/' + encodeURI(clean),
+        '../videos/' + clean,
+        './videos/' + clean,
+        './' + clean
+    ];
+}
+
+const candidateUrls = getCandidateUrls(rawVideoSrc);
+let candidateIdx = 0;
+const player = document.getElementById('mainPlayer');
+
+function loadVideoCandidate() {
+    if (candidateIdx >= candidateUrls.length) return;
+    const url = candidateUrls[candidateIdx];
+    player.src = url;
+    document.getElementById('directVidLink').href = url;
+    player.load();
+}
+
+player.onerror = () => {
+    candidateIdx++;
+    if (candidateIdx < candidateUrls.length) {
+        loadVideoCandidate();
+    }
+};
+
+loadVideoCandidate();
+
+function playShot(startTime, endTime, label) {
+    currentEndTime = (typeof endTime === 'number') ? endTime : null;
+    const tag = document.getElementById('shotStatusTag');
+    if (tag) {
+        const endTxt = currentEndTime ? ` - ${currentEndTime.toFixed(2)}s` : '';
+        tag.innerText = `🎬 ${label || 'Phân cảnh'}: [${startTime.toFixed(2)}s${endTxt}]`;
+    }
+    player.currentTime = startTime;
+    const p = player.play();
+    if (p !== undefined) {
+        p.catch(e => {
+            player.muted = true;
+            player.play().catch(err => console.log('Autoplay muted triggered'));
+        });
+    }
+    document.querySelectorAll('.shot-card').forEach(c => c.classList.remove('active-playing'));
+    const matchCard = Array.from(document.querySelectorAll('.shot-card')).find(c => c.innerText.includes(label));
+    if (matchCard) matchCard.classList.add('active-playing');
+
+    if (window.innerWidth < 1024) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
+function setSpeed(speed, btn) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.speed-buttons-row .ctrl-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+}
+
+function stepFrame(frames) {
+    player.pause();
+    player.currentTime += (frames * (1/30));
+}
+
+function toggleMute(btn) {
+    player.muted = !player.muted;
+    if (btn) btn.innerText = player.muted ? '🔇 Tắt Tiếng' : '🔊 Tiếng';
+}
+
+function switchView(view) {
+    const sb = document.getElementById('storyboardView');
+    const grid = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetailBtn');
+    const tabGrid = document.getElementById('tabGridBtn');
+    if (view === 'grid') {
+        sb.style.display = 'none';
+        grid.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    } else {
+        sb.style.display = 'flex';
+        grid.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    }
+}
+
+function toggleDrawer(open) {
+    const drawer = document.getElementById('drawerBackdrop');
+    if (open) drawer.classList.add('open');
+    else drawer.classList.remove('open');
+}
+
+function jumpToShot(shotNum, st, et, label) {
+    toggleDrawer(false);
+    switchView('detail');
+    playShot(st, et, label);
+    const targetCard = document.getElementById('shot-card-' + shotNum);
+    if (targetCard) {
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function openLightbox(src, caption) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCaption');
+    img.src = src;
+    cap.innerText = caption || '';
+    modal.style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').style.display = 'none';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+        toggleDrawer(false);
+    } else if (e.key === ' ') {
+        if (document.activeElement.tagName !== 'INPUT') {
+            e.preventDefault();
+            player.paused ? player.play() : player.pause();
+        }
+    }
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

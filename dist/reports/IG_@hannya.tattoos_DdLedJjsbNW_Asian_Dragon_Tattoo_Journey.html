@@ -1,0 +1,2963 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Asian Dragon Tattoo Journey • Hannya Tattoo Phố Cổ Hà Nội • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* DRAWER QUICK JUMP MENU */
+.drawer-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-line);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.drawer-title {
+    font-family: var(--font-heading-short);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cl-text-muted);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.drawer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.drawer-shot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: var(--cl-bg-tint);
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+    background: #eef2f6;
+    border-color: var(--cl-accent);
+}
+.d-badge {
+    background: var(--cl-accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.d-time {
+    color: var(--cl-text-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    flex-shrink: 0;
+}
+.d-title {
+    color: var(--cl-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">18 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Asian Dragon Tattoo Journey • Hannya Tattoo Phố Cổ Hà Nội</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/p/DdLedJjsbNW/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Asian%20Dragon%20Tattoo%20Journey%20-%20%40hannya.tattoos.mp4" type="video/mp4">
+                <source src="Asian Dragon Tattoo Journey - @hannya.tattoos.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 63.03s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Asian Dragon Tattoo Journey • Hannya Tattoo Phố Cổ Hà Nội</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@hannya.tattoos" onclick="handleCreatorClick(event, '@hannya.tattoos', 'Hannya Tattoos')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Hannya Tattoos trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Hannya Tattoos</strong>
+                        <span class="author-handle">(@hannya.tattoos)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/p/DdLedJjsbNW/" target="_blank" class="author-link">Hannya Tattoo Studio (@hannya.tattoos)</a>
+            </div>
+        </div>
+
+        <!-- DRAWER QUICK JUMP MENU -->
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+        <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0, 5.01)">
+            <span class="d-badge">Shot 01</span>
+            <span class="d-time">0.00s - 5.01s (5.01s)</span>
+            <span class="d-title">Nghi Thức Rót Trà Đạo Chào Đón Khách: Chuyển dịch tâm lý từ ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(2, 5.04, 6.47)">
+            <span class="d-badge">Shot 02</span>
+            <span class="d-time">5.04s - 6.47s (1.43s)</span>
+            <span class="d-title">Bể Kính Trò Chơi Thả Đồng Xu (Tattoo Coin Game): Kích hoạt t...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(3, 6.51, 7.31)">
+            <span class="d-badge">Shot 03</span>
+            <span class="d-time">6.51s - 7.31s (0.80s)</span>
+            <span class="d-title">Góc Cận Máy Xăm Cầm Tay Khởi Động: Nhấn mạnh tiêu chuẩn y tế...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(4, 7.34, 10.11)">
+            <span class="d-badge">Shot 04</span>
+            <span class="d-time">7.34s - 10.11s (2.77s)</span>
+            <span class="d-title">Góc Máy Từ Trên Cao (Top-down Angle): Bắt trọn tư thế đi nét...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(5, 10.14, 13.48)">
+            <span class="d-badge">Shot 05</span>
+            <span class="d-time">10.14s - 13.48s (3.34s)</span>
+            <span class="d-title">Cú Vuốt Khăn Thấm Mực (The Wipe Reveal): Khoảnh khắc thỏa mã...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(6, 13.51, 15.45)">
+            <span class="d-badge">Shot 06</span>
+            <span class="d-time">13.51s - 15.45s (1.94s)</span>
+            <span class="d-title">Đặc Tả Đốt Kim Thân Rồng Cực Nhỏ: Phô diễn độ chính xác vi m...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(7, 15.48, 17.58)">
+            <span class="d-badge">Shot 07</span>
+            <span class="d-time">15.48s - 17.58s (2.10s)</span>
+            <span class="d-title">Thiết Lập Không Gian Tương Tác Toàn Cảnh: Giải tỏa căng thẳn...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(8, 17.62, 20.75)">
+            <span class="d-badge">Shot 08</span>
+            <span class="d-time">17.62s - 20.75s (3.13s)</span>
+            <span class="d-title">Thao Tác Chùi Mực Vùng Đầu Rồng: Nhấn mạnh sự nâng niu chăm ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(9, 20.79, 27.93)">
+            <span class="d-badge">Shot 09</span>
+            <span class="d-time">20.79s - 27.93s (7.14s)</span>
+            <span class="d-title">Cú Máy Dài Bám Sát Nét Vẽ Râu Rồng Uốn Lượn: Tạo cảm giác nh...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(10, 27.96, 28.6)">
+            <span class="d-badge">Shot 10</span>
+            <span class="d-time">27.96s - 28.60s (0.64s)</span>
+            <span class="d-title">Cú Cắt Nhanh Đánh Thức Nhịp Dựng (Micro Rhythm Cut): Chuyển ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(11, 28.63, 33.33)">
+            <span class="d-badge">Shot 11</span>
+            <span class="d-time">28.63s - 33.33s (4.70s)</span>
+            <span class="d-title">Lau Sạch Tổng Thể Đầu Rồng Và Chuôi Kiếm: Sự tương phản kịch...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(12, 33.37, 34.17)">
+            <span class="d-badge">Shot 12</span>
+            <span class="d-time">33.37s - 34.17s (0.80s)</span>
+            <span class="d-title">Không Gian Xưởng Xăm Chuyên Nghiệp (Studio Atmosphere): Khẳn...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(13, 34.2, 37.87)">
+            <span class="d-badge">Shot 13</span>
+            <span class="d-time">34.20s - 37.87s (3.67s)</span>
+            <span class="d-title">Kỹ Thuật Đánh Bóng Khối Đen (Blackwork Shading): Thổi hồn và...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(14, 37.9, 45.01)">
+            <span class="d-badge">Shot 14</span>
+            <span class="d-time">37.90s - 45.01s (7.11s)</span>
+            <span class="d-title">Tô Khối Đen Đặc Chuôi Kiếm & Hoa Văn Sóng Nước: Tạo độ tương...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(15, 45.05, 55.12)">
+            <span class="d-badge">Shot 15</span>
+            <span class="d-time">45.05s - 55.12s (10.07s)</span>
+            <span class="d-title">Điểm Nhấn Sắc Trắng (White Ink Highlights) Trên Nền Mặt Trời...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(16, 55.16, 58.83)">
+            <span class="d-badge">Shot 16</span>
+            <span class="d-time">55.16s - 58.83s (3.67s)</span>
+            <span class="d-title">Kiệt Tác Hoàn Thiện Trên Cẳng Tay: Sự giao thoa hoàn hảo giữ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(17, 58.86, 59.19)">
+            <span class="d-badge">Shot 17</span>
+            <span class="d-time">58.86s - 59.19s (0.33s)</span>
+            <span class="d-title">Chuyển Cảnh Khóa Mỏ Neo Thương Hiệu: Lồng ghép logo Hannya T...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(18, 59.23, 63.0)">
+            <span class="d-badge">Shot 18</span>
+            <span class="d-time">59.23s - 63.00s (3.77s)</span>
+            <span class="d-title">Màn Hình Nhận Diện Thương Hiệu Cuối (Brand Outro): Khắc sâu ...</span>
+        </div>
+        
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 63.03s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Asian Dragon Tattoo Journey • Hannya Tattoo Phố Cổ Hà Nội</h1>
+            <p class="overview-hero-desc"></p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Irezumi Japanese Tattoo • Dragon & Katana • White Ink Highlights • Phố Cổ Hà Nội • Voice-Over Storytelling • Satisfying Wipe</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">18 Shots • Nhịp trung bình 3.47s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 • 29.97 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 5.01)">
+                    ▶ 0.00s - 5.01s (5.01s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Nghi Thức Rót Trà Đạo Chào Đón Khách: Chuyển dịch tâm lý từ ồn ào phố thị sang trạng thái tĩnh lặng an yên</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_01_mid.jpg', 'Shot 01 • Giữa (2.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (2.50s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_01_end.jpg', 'Shot 01 • Cuối (5.01s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.01s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Dòng nước trà xanh trong vắt được rót mềm mại từ vòi ấm đun vào chén trà sứ cổ in chữ Hán thanh nhã, đặt trên chiếc đĩa sứ đặt tại bàn trà ban công. Phía sau là tán lá cây xanh mướt và ban công phố cổ Hà Nội ngập tràn ánh sáng tự nhiên dịu nhẹ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khung hình mở đầu tạo cảm giác thanh thản bất ngờ, đối lập hoàn toàn với định kiến thông thường về tiệm xăm ồn ào gai góc. Tốc độ dòng nước chảy đều, bọt trà lăn tăn và ánh sáng tự nhiên khuếch tán tạo cảm giác hiếu khách, chữa lành đậm chất văn hóa phương Đông.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Vòi ấm rót đi từ góc trên bên phải hơi sát mép khung hình và bị cắt cụt thân ấm; nếu lùi máy ra xa 10cm hoặc hạ thấp góc quay thêm 15 độ sẽ thấy trọn vẹn bàn tay nghệ nhân rót trà, tăng thêm tính kết nối con người.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Dùng một nghi thức tĩnh tại (uống trà, thắp hương, rửa tay) để mở đầu video dịch vụ giúp hạ nhịp tim người xem và xây dựng sự tin cậy tuyệt đối trước khi bước vào quy trình chính.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Medium Close-up • 35mm (f/2.8)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Ban công thưởng trà Studio Hannya, Phố Cổ Hà Nội</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ban ngày tự nhiên mềm mại khuếch tán qua tán lá</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Direct Cut sang không gian trải nghiệm tương tác</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Direct Cut sang không gian trải nghiệm tương tác</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 5.04, 6.47)">
+                    ▶ 5.04s - 6.47s (1.43s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bể Kính Trò Chơi Thả Đồng Xu (Tattoo Coin Game): Kích hoạt tính tương tác trải nghiệm bằng luồng sáng xanh ngọc Emerald huyền ảo</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_02_start.jpg', 'Shot 02 • Đầu (5.04s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.04s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_02_mid.jpg', 'Shot 02 • Giữa (5.75s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.75s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_02_end.jpg', 'Shot 02 • Cuối (6.47s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (6.47s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc nhìn ngang qua thành bể kính chứa nước phát quang ánh xanh ngọc lục bảo. Một đồng xu kim loại màu vàng rơi chìm từ từ qua mặt nước, xoay nghiêng rồi đáp xuống chiếc ly thủy tinh nhỏ đặt giữa đáy bể phủ đầy những đồng xu may mắn.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Sự kết hợp ánh sáng đèn LED ngầm dưới nước (Submersible LED) màu Emerald tạo hiệu ứng thị giác kỳ ảo như thủy cung. Chuyển động đồng xu rơi chìm chậm rãi trong làn nước tạo điểm rơi thị giác tập trung tuyệt đối vào đáy ly.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chữ phản quang 'TATTOO COIN GAME!' trên mặt kính phía sau hơi bị nhòe mờ do độ sâu trường ảnh nông, khiến người xem lướt qua có thể chưa kịp đọc rõ luật chơi.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Tạo ra một 'Mini-game vật lý' tại không gian chờ của dịch vụ vừa giúp khách bớt căng thẳng, vừa cung cấp chất liệu B-roll quay video cực kỳ cuốn hút và có tính chia sẻ cao.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Macro Close-up • 50mm (f/2.0)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khu vực sảnh đón tiếp Hannya Tattoo</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng xanh ngọc Emerald phát quang dưới nước tạo tương phản cao</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Direct Cut sang thao tác xăm chuyên nghiệp</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Direct Cut sang thao tác xăm chuyên nghiệp</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 6.51, 7.31)">
+                    ▶ 6.51s - 7.31s (0.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Cận Máy Xăm Cầm Tay Khởi Động: Nhấn mạnh tiêu chuẩn y tế vô trùng qua găng tay đen và mũi kim sắc bén</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_03_start.jpg', 'Shot 03 • Đầu (6.51s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (6.51s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_03_mid.jpg', 'Shot 03 • Giữa (6.91s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.91s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_03_end.jpg', 'Shot 03 • Cuối (7.31s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (7.31s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Nghệ nhân mang găng tay cao su đen chuyên dụng cầm chiếc máy xăm pen kim loại đen nhám, đầu kim chuẩn bị chạm vào nét vẽ phác thảo tím hình rồng cuộn thanh kiếm Katana trên cẳng tay khách hàng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Sự tương phản rõ nét giữa găng tay đen y tế và làn da sáng màu của khách hàng củng cố ngay lập tức thông điệp về sự an toàn, vệ sinh và tính chuyên nghiệp. Góc máy nghiêng 45 độ làm nổi bật thiết kế khí động học của máy xăm.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng shot hơi ngắn (0.8s) nên mắt người xem chưa kịp cảm nhận độ rung vi mô của máy xăm thì đã chuyển cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đối với ngành làm đẹp/xăm hình/phẫu thuật, luôn cho thấy găng tay y tế, đầu kim mới và thiết bị cao cấp ở những giây đầu tiên để triệt tiêu nỗi sợ rủi ro vệ sinh của khách hàng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Close-up • 50mm (f/2.4)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn xăm vô trùng Studio</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn LED vòng chuyên dụng Studio dịu mắt</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut nối tiếp hành động (Action Match Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Cut nối tiếp hành động (Action Match Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 7.34, 10.11)">
+                    ▶ 7.34s - 10.11s (2.77s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Máy Từ Trên Cao (Top-down Angle): Bắt trọn tư thế đi nét đường viền kiếm rồng dứt khoát và điêu luyện</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_04_start.jpg', 'Shot 04 • Đầu (7.34s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (7.34s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_04_mid.jpg', 'Shot 04 • Giữa (8.72s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (8.72s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_04_end.jpg', 'Shot 04 • Cuối (10.11s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.11s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy từ trên nhìn xuống cánh tay khách hàng đặt vững chãi trên bệ đỡ bọc da đen. Hai bàn tay nghệ nhân phối hợp nhịp nhàng: tay phải điều khiển máy xăm đi đường nét đen tuyền theo bản scan tím, tay trái căng da giữ bề mặt phẳng mịn.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục đường chéo mạnh mẽ (Diagonal Composition) từ góc trên bên phải xuống góc dưới bên trái tạo chiều sâu thị giác. Bề mặt bệ đỡ gỗ mộc phong hóa tạo phông nền vintage tôn lên sự hiện đại của kỹ thuật xăm.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh sáng phản chiếu từ bóng máy xăm đôi lúc hơi che mất một phần nhỏ đầu kim tại thời điểm tiếp xúc với da.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Góc quay Top-Down 45 độ luôn là góc nhìn khách quan và đáng tin cậy nhất để phô diễn trình độ kỹ thuật khéo léo của người thợ thủ công.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> High-Angle Medium Shot • 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn xăm Studio Hannya</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng Studio trung tính 5600K</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Direct Cut sang cận cảnh lau mực</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Direct Cut sang cận cảnh lau mực</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 10.14, 13.48)">
+                    ▶ 10.14s - 13.48s (3.34s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Vuốt Khăn Thấm Mực (The Wipe Reveal): Khoảnh khắc thỏa mãn giác quan hé lộ đường nét vảy rồng đen sắc nét</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_05_start.jpg', 'Shot 05 • Đầu (10.14s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (10.14s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_05_mid.jpg', 'Shot 05 • Giữa (11.81s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (11.81s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_05_end.jpg', 'Shot 05 • Cuối (13.48s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (13.48s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Nghệ nhân dùng miếng khăn giấy y tế trắng nhẹ nhàng vuốt sạch vệt mực đen loang trên da, để lộ những đường kim đi viền thân rồng uốn lượn sắc sảo và sạch sẽ đến kinh ngạc.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cung cấp khoảnh khắc 'Satisfying / ASMR thị giác' cực mạnh—thao tác lau mực vừa thỏa mãn trí tò mò vừa cho thấy nét mực đen chuẩn xác, không bị loang vỡ dưới da.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Tay nghệ nhân khi lau khăn vô tình che khuất tâm điểm khung hình trong khoảng 0.5s ở giữa phân cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Hiệu ứng 'Wipe to Reveal' (lau để lộ nét) là thủ pháp giữ chân kinh điển trong video xăm hình và spa/làm đẹp, luôn tạo cảm giác thỏa mãn và kích thích người xem xem tiếp.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Extreme Close-up • 85mm Macro</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn xăm chuyên dụng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng mềm trực diện làm nổi bật chất da thật</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut chuyển tiếp sang góc cận đi kim chi tiết</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Cut chuyển tiếp sang góc cận đi kim chi tiết</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 13.51, 15.45)">
+                    ▶ 13.51s - 15.45s (1.94s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Đặc Tả Đốt Kim Thân Rồng Cực Nhỏ: Phô diễn độ chính xác vi mô khi khắc họa từng phiến vảy rồng Á Đông</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_06_start.jpg', 'Shot 06 • Đầu (13.51s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (13.51s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_06_mid.jpg', 'Shot 06 • Giữa (14.48s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (14.48s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_06_end.jpg', 'Shot 06 • Cuối (15.45s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (15.45s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Đầu kim xăm di chuyển với tốc độ ổn định, tỉ mỉ khắc từng đường cong của lớp vảy rồng trên nền bản vẽ tím. Mực đen thấm đều vào từng tế bào biểu bì tạo nên đường nét thanh mảnh nhưng đanh chắc.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Độ sắc nét cực cao, bắt trọn từng giọt mực vi mô đọng ở mũi kim. Độ sâu trường ảnh nông làm mờ hậu cảnh, dồn toàn bộ sự chú ý của mắt vào mũi kim đang chuyển động.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy đặt hơi sát tạo cảm giác hơi chật chội ở rìa phải khung hình 9:16.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đặc tả siêu cận cảnh các chi tiết phức tạp chứng minh độ khéo léo và công phu mà không cần một từ ngữ quảng cáo khoa trương nào.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Macro Close-up • 90mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Phòng xăm vô trùng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn LED phẫu thuật hội tụ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut mở rộng sang không gian toàn cảnh (Spatial Cut)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Cut mở rộng sang không gian toàn cảnh (Spatial Cut)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 15.48, 17.58)">
+                    ▶ 15.48s - 17.58s (2.10s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thiết Lập Không Gian Tương Tác Toàn Cảnh: Giải tỏa căng thẳng bằng hình ảnh khách du lịch thư thái trò chuyện</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_07_start.jpg', 'Shot 07 • Đầu (15.48s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (15.48s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_07_mid.jpg', 'Shot 07 • Giữa (16.53s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (16.53s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_07_end.jpg', 'Shot 07 • Cuối (17.58s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (17.58s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy trung rộng thu trọn cảnh người nghệ nhân xăm Việt Nam ngồi ghế thấp chăm chú thao tác trên cánh tay của vị khách du lịch quốc tế vạm vỡ đang tựa lưng thư thái trên ghế đệm trắng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Phá vỡ chuỗi cảnh cận cảnh liên tiếp, giúp mắt người xem được thở (Visual Breathing Room). Tư thế thả lỏng của khách hàng chứng minh quá trình xăm diễn ra êm ái, nhẹ nhàng và an toàn.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Hậu cảnh phía sau có một số dây điện và thiết bị hơi lộn xộn ở góc trái trên, cần bố trí giấu dây gọn gàng hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Luôn chèn xen kẽ các shot toàn cảnh (Master / Medium Shot) giữa các cú máy cận để người xem nắm bắt bối cảnh không gian và cảm xúc thoải mái của khách hàng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Medium Wide Shot • 28mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khu vực làm việc mở Studio</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tổng thể Studio kết hợp đèn bàn làm việc</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Direct Cut trở lại cận cảnh thao tác kỹ thuật</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Direct Cut trở lại cận cảnh thao tác kỹ thuật</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 17.62, 20.75)">
+                    ▶ 17.62s - 20.75s (3.13s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thao Tác Chùi Mực Vùng Đầu Rồng: Nhấn mạnh sự nâng niu chăm sóc cẩn trọng trên từng milimet da</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_08_start.jpg', 'Shot 08 • Đầu (17.62s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (17.62s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_08_mid.jpg', 'Shot 08 • Giữa (19.19s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (19.19s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_08_end.jpg', 'Shot 08 • Cuối (20.75s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (20.75s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Nghệ nhân nhẹ nhàng gập khăn y tế, chấm và lau nhẹ nhàng quanh mắt và sừng rồng, kiểm tra độ đều màu của nét mực viền.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Động tác êm dịu, không gây đỏ rát da, thể hiện tay nghề lão luyện và sự tôn trọng đối với cơ thể khách hàng.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Màu sắc hơi ngả vàng nhẹ do cân bằng trắng tự động (Auto White Balance) bị ảnh hưởng bởi ánh đèn vàng xung quanh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Cố định cân bằng trắng (Manual White Balance) khi quay cận cảnh da người để tránh hiện tượng màu da nhảy sắc độ giữa các cảnh.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Close-up • 50mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn xăm Studio</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn chụp LED Studio</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut nhịp nhàng sang chi tiết râu rồng</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 09 • Cut nhịp nhàng sang chi tiết râu rồng</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_08_to_09.jpg?v=2', 'Chuyển cảnh Shot 08 sang Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_08_to_09.jpg?v=2" alt="Transition 8 to 9" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-9">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 09</span>
+                <button class="shot-time-btn" onclick="jumpToShot(9, 20.79, 27.93)">
+                    ▶ 20.79s - 27.93s (7.14s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Máy Dài Bám Sát Nét Vẽ Râu Rồng Uốn Lượn: Tạo cảm giác nhập tâm (Flow State) vào kỹ nghệ thủ công đỉnh cao</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_09_start.jpg', 'Shot 09 • Đầu (20.79s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (20.79s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_09_mid.jpg', 'Shot 09 • Giữa (24.36s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (24.36s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_09_end.jpg', 'Shot 09 • Cuối (27.93s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (27.93s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Máy quay giữ tĩnh góc cận cảnh trong 7.14 giây, theo dõi nghệ nhân uốn từng đường kim dài mượt mà khắc họa chùm râu rồng bay bổng quanh sống kiếm Katana.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thời lượng dài nhất trong toàn bộ video (7.14s) tạo ra nhịp điệu tĩnh lặng, đưa người xem vào trạng thái chiêm ngưỡng chăm chú như đang xem một buổi trình diễn thư pháp hội họa phương Đông.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cú máy tĩnh hơi lâu có thể gây cảm giác chậm nhịp với một số người xem lướt; có thể thêm chuyển động lia máy vi mô (Micro-Pan) 2-3% để tăng tính sinh động.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay một thao tác đỉnh cao của nghệ nhân, đừng cắt cảnh quá nhanh—hãy để cú máy thở và người xem tự cảm nhận sự tập trung phi thường của đôi bàn tay.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Close-up • 60mm Macro</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Phòng xăm nghệ thuật Hannya</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn LED ringlight ánh sáng trắng tự nhiên</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Fast Whip Cut sang dặm mực vi mô</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 10 • Fast Whip Cut sang dặm mực vi mô</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_09_to_10.jpg?v=2', 'Chuyển cảnh Shot 09 sang Shot 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_09_to_10.jpg?v=2" alt="Transition 9 to 10" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-10">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 10</span>
+                <button class="shot-time-btn" onclick="jumpToShot(10, 27.96, 28.6)">
+                    ▶ 27.96s - 28.60s (0.64s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Cắt Nhanh Đánh Thức Nhịp Dựng (Micro Rhythm Cut): Chuyển nhịp nhanh gọn tạo sự thay đổi năng lượng dứt khoát</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_10_start.jpg', 'Shot 10 • Đầu (27.96s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (27.96s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_10_mid.jpg', 'Shot 10 • Giữa (28.28s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (28.28s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_10_end.jpg', 'Shot 10 • Cuối (28.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (28.60s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc quay cận sát thao tác dặm mực với chuyển động tay nhanh gọn dứt khoát trong tích tắc 0.67s.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Đóng vai trò như một cú gõ nhịp (Beat Drop) thị giác, ngăn chặn cảm giác đơn điệu sau cú máy dài 7 giây của Shot 09.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chớp nhoáng quá nhanh khiến người xem khó nhận biết chi tiết cụ thể nếu không tua lại.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sử dụng các micro-cut dưới 1s xen kẽ giữa các cảnh quay dài để tạo nhịp điệu tương phản (Rhythmic Contrast), kích thích não bộ tiết Dopamine giữ chân người xem.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Extreme Close-up • 85mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn xăm</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng điểm trực diện</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Cut sang toàn bộ phần đầu rồng hoàn chỉnh</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 11 • Match Cut sang toàn bộ phần đầu rồng hoàn chỉnh</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_10_to_11.jpg?v=2', 'Chuyển cảnh Shot 10 sang Shot 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_10_to_11.jpg?v=2" alt="Transition 10 to 11" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-11">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 11</span>
+                <button class="shot-time-btn" onclick="jumpToShot(11, 28.63, 33.33)">
+                    ▶ 28.63s - 33.33s (4.70s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Lau Sạch Tổng Thể Đầu Rồng Và Chuôi Kiếm: Sự tương phản kịch tính giữa nét mực đen sâu thẳm và bản can tím</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_11_start.jpg', 'Shot 11 • Đầu (28.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (28.63s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_11_mid.jpg', 'Shot 11 • Giữa (30.98s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (30.98s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_11_end.jpg', 'Shot 11 • Cuối (33.33s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (33.33s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cánh khăn vuốt một đường rộng từ chuôi kiếm qua toàn bộ khuôn mặt rồng đang nhe nanh uy dũng, làm nổi bật cấu trúc hình họa cân đối tuyệt mỹ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cung cấp cái nhìn toàn vẹn đầu tiên về thần thái của con rồng—đôi mắt sắc lẹm, vảy sừng góc cạnh, bờm tóc cuộn sóng tạo cảm giác uy quyền và bảo hộ tâm linh.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc trên bên trái của khung hình hơi bị cháy sáng nhẹ (Overexposed) do ánh đèn phản xạ trên bề mặt da ẩm.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Luôn có một shot 'Check-point' hiển thị toàn bộ khối hình họa lớn sau khi hoàn tất các nét chi tiết rời rạc.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Close-up • 50mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio Hannya</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn rọi điểm Studio</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Smash Cut mở rộng ra không gian studio đa chiều</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 12 • Smash Cut mở rộng ra không gian studio đa chiều</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_11_to_12.jpg?v=2', 'Chuyển cảnh Shot 11 sang Shot 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_11_to_12.jpg?v=2" alt="Transition 11 to 12" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-12">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 12</span>
+                <button class="shot-time-btn" onclick="jumpToShot(12, 33.37, 34.17)">
+                    ▶ 33.37s - 34.17s (0.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Không Gian Xưởng Xăm Chuyên Nghiệp (Studio Atmosphere): Khẳng định quy mô, sự bài bản và bầu không khí sáng tạo tập thể</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_12_start.jpg', 'Shot 12 • Đầu (33.37s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (33.37s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_12_mid.jpg', 'Shot 12 • Giữa (33.77s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (33.77s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_12_end.jpg', 'Shot 12 • Cuối (34.17s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (34.17s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc nhìn từ cửa phòng nhìn vào không gian studio dài và sâu: các bàn xăm đặt thẳng hàng, đèn ring light sáng trắng, tranh nghệ thuật Nhật Bản treo kín tường, các nghệ nhân khác đang chăm sóc khách hàng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khẳng định uy tín thương hiệu: đây là một studio xăm chuyên nghiệp có quy mô lớn, đầu tư bài bản, không gian sạch sẽ thoáng mát chứ không phải tiệm xăm tự phát nhỏ lẻ.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng 0.8s hơi gấp để người xem cảm nhận được toàn bộ các bức tranh nghệ thuật treo trên tường.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Trong video bán dịch vụ trải nghiệm, nhất thiết phải có cảnh thể hiện văn hóa không gian xưởng/tiệm để khách hàng hình dung được trải nghiệm của chính họ khi bước chân tới.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide Angle • 20mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Toàn cảnh Studio Hannya Tattoo Hà Nội</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Hệ thống đèn LED trần hiện đại kết hợp đèn công nghiệp</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Direct Cut trở lại quy trình đi bóng (Shading)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 13 • Direct Cut trở lại quy trình đi bóng (Shading)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_12_to_13.jpg?v=2', 'Chuyển cảnh Shot 12 sang Shot 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_12_to_13.jpg?v=2" alt="Transition 12 to 13" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-13">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 13</span>
+                <button class="shot-time-btn" onclick="jumpToShot(13, 34.2, 37.87)">
+                    ▶ 34.20s - 37.87s (3.67s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Kỹ Thuật Đánh Bóng Khối Đen (Blackwork Shading): Thổi hồn và chiều sâu 3D vào từng múi cơ bắp của rồng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_13_start.jpg', 'Shot 13 • Đầu (34.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (34.20s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_13_mid.jpg', 'Shot 13 • Giữa (36.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (36.03s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_13_end.jpg', 'Shot 13 • Cuối (37.87s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_13_end.jpg" alt="Shot 13 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (37.87s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Mũi kim chùm bản rộng di chuyển thoăn thoắt tạo hiệu ứng chuyển sắc (Gradient) mịn màng từ đen đậm sang xám khói trên thanh kiếm và thân rồng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thấy rõ sự khác biệt giữa nét viền cứng (Line) và vùng bóng mềm (Shading), mang lại chiều sâu khối lập thể sống động như một bức tranh mực nho phương Đông.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc tay nghệ nhân hơi che khuất một phần đường chuyển sắc mờ.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Cho thấy giai đoạn tạo khối và đánh bóng là minh chứng rõ nét nhất cho tay nghề của nghệ nhân bậc thầy.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Macro Close-up • 85mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn xăm Hannya</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng xuyên góc 45 độ làm nổi khối cơ da</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Direct Cut sang mảng đen sâu</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 14 • Direct Cut sang mảng đen sâu</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_13_to_14.jpg?v=2', 'Chuyển cảnh Shot 13 sang Shot 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_13_to_14.jpg?v=2" alt="Transition 13 to 14" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-14">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 14</span>
+                <button class="shot-time-btn" onclick="jumpToShot(14, 37.9, 45.01)">
+                    ▶ 37.90s - 45.01s (7.11s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Tô Khối Đen Đặc Chuôi Kiếm & Hoa Văn Sóng Nước: Tạo độ tương phản tột bậc cho phong cách Nhật Cổ (Irezumi)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_14_start.jpg', 'Shot 14 • Đầu (37.90s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_14_start.jpg" alt="Shot 14 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (37.90s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_14_mid.jpg', 'Shot 14 • Giữa (41.45s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_14_mid.jpg" alt="Shot 14 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (41.45s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_14_end.jpg', 'Shot 14 • Cuối (45.01s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_14_end.jpg" alt="Shot 14 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (45.01s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Kim xăm lướt đều tạo mảng mực đen đặc (Solid Black) cho chuôi kiếm Katana và những cuộn mây uốn lượn xung quanh.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Sự kết hợp giữa mảng đen tuyền đặc và những đường nét trắng tạo độ tương phản thị giác tối đa, phong cách xăm Irezumi truyền thống hiện lên mạnh mẽ và dứt khoát.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khung hình hơi rung nhẹ ở giây thứ 42 do người quay chuyển trọng tâm chân.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay cảnh thao tác dài bằng tay cầm máy (Handheld), cần dùng lồng khung tì vào thân hoặc sử dụng chống rung quang học để giữ khung hình ổn định như dolly.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Close-up • 50mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn xăm Studio</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn LED Studio</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut sang công đoạn điểm xuyết màu trắng</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 15 • Cut sang công đoạn điểm xuyết màu trắng</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_14_to_15.jpg?v=2', 'Chuyển cảnh Shot 14 sang Shot 15')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_14_to_15.jpg?v=2" alt="Transition 14 to 15" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-15">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 15</span>
+                <button class="shot-time-btn" onclick="jumpToShot(15, 45.05, 55.12)">
+                    ▶ 45.05s - 55.12s (10.07s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Điểm Nhấn Sắc Trắng (White Ink Highlights) Trên Nền Mặt Trời Đỏ: Phép màu hoàn thiện kích hoạt toàn bộ sức sống của tác phẩm</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_15_start.jpg', 'Shot 15 • Đầu (45.05s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_15_start.jpg" alt="Shot 15 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (45.05s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_15_mid.jpg', 'Shot 15 • Giữa (50.08s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_15_mid.jpg" alt="Shot 15 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (50.08s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_15_end.jpg', 'Shot 15 • Cuối (55.12s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_15_end.jpg" alt="Shot 15 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (55.12s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cú máy dài 10.07 giây quay cận cảnh nghệ nhân dùng mực trắng tinh khiết tỉ mỉ điểm từng tia sáng trên viền bờm rồng, mắt rồng và mũi kiếm, nổi bật rực rỡ trên khối mặt trời đỏ thắm (Red Sun).</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cao trào thị giác của toàn bộ video! Nền đỏ của mặt trời kết hợp nét đen của rồng và điểm nhấn mực trắng tạo nên bảng màu kinh điển: Đen - Đỏ - Trắng của hội họa Nhật Bản. Từng nét trắng như thổi luồng sinh khí bừng sáng vào tác phẩm.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Bờ viền da xung quanh có vết mực loang nhẹ chưa kịp lau ở giây 48.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Luôn dành thời lượng dài và góc quay đẹp nhất cho bước 'Final Polish / Finishing Touch'—bởi vì đây chính là khoảnh khắc biến một tác phẩm bình thường thành kiệt tác nghệ thuật.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Extreme Macro Close-up • 100mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn xăm Studio</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng phân kỳ mềm dịu tôn vinh sắc đỏ mặt trời</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Smash Cut sang thành phẩm hoàn thiện cuối cùng</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 16 • Smash Cut sang thành phẩm hoàn thiện cuối cùng</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_15_to_16.jpg?v=2', 'Chuyển cảnh Shot 15 sang Shot 16')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_15_to_16.jpg?v=2" alt="Transition 15 to 16" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-16">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 16</span>
+                <button class="shot-time-btn" onclick="jumpToShot(16, 55.16, 58.83)">
+                    ▶ 55.16s - 58.83s (3.67s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Kiệt Tác Hoàn Thiện Trên Cẳng Tay: Sự giao thoa hoàn hảo giữa rồng Á Đông, kiếm Katana và mặt trời đỏ rực</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_16_start.jpg', 'Shot 16 • Đầu (55.16s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_16_start.jpg" alt="Shot 16 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (55.16s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_16_mid.jpg', 'Shot 16 • Giữa (56.99s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_16_mid.jpg" alt="Shot 16 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (56.99s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_16_end.jpg', 'Shot 16 • Cuối (58.83s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_16_end.jpg" alt="Shot 16 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (58.83s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cú lia máy mượt mà từ dưới lên trên cẳng tay vị khách: tác phẩm hình xăm đã được làm sạch hoàn hảo, các nét đen đanh thép, vảy rồng sáng tối phân minh, mặt trời đỏ trầm ấm và điểm nhấn trắng lấp lánh như vảy bạc.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khung hình kết mãn nhãn, trả lời cho toàn bộ hành trình 6 tiếng lao động nghệ thuật. Tỷ lệ hình xăm ôm vừa vặn cấu trúc giải phẫu cơ cẳng tay, chuyển động khi xoay nhẹ cánh tay tạo cảm giác con rồng đang chuyển động.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Phần nền phía sau cẳng tay hơi tối, nếu có một viền đèn tóc (Rim Light) nhẹ phía sau để tách cẳng tay khỏi phông nền thì tác phẩm sẽ còn nổi khối hơn nữa.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Ảnh/video thành phẩm cuối cùng phải được quay ở trạng thái sạch sẽ nhất, ánh sáng hoàn hảo nhất và phô diễn góc độ ăn nhập với cơ thể con người.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Medium Close-up • 50mm (f/2.8)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc chụp thành phẩm Studio</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn Studio 3 điểm tôn vinh chi tiết mực xăm</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Dissolve sang biểu tượng thương hiệu</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 17 • Match Dissolve sang biểu tượng thương hiệu</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_16_to_17.jpg?v=2', 'Chuyển cảnh Shot 16 sang Shot 17')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_16_to_17.jpg?v=2" alt="Transition 16 to 17" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-17">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 17</span>
+                <button class="shot-time-btn" onclick="jumpToShot(17, 58.86, 59.19)">
+                    ▶ 58.86s - 59.19s (0.33s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Chuyển Cảnh Khóa Mỏ Neo Thương Hiệu: Lồng ghép logo Hannya Tattoo trên nền tác phẩm vừa hoàn thành</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_17_start.jpg', 'Shot 17 • Đầu (58.86s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_17_start.jpg" alt="Shot 17 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (58.86s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_17_mid.jpg', 'Shot 17 • Giữa (59.02s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_17_mid.jpg" alt="Shot 17 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (59.02s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_17_end.jpg', 'Shot 17 • Cuối (59.19s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_17_end.jpg" alt="Shot 17 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (59.19s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Hình ảnh tác phẩm xăm tối dần và xuất hiện logo mặt nạ Hannya Tattoo & Piercing in chìm giữa trung tâm khung hình.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Kết nối ngay lập tức giữa vẻ đẹp của tác phẩm và tên tuổi thương hiệu, định vị đẳng cấp studio trong tâm trí người xem.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời gian hiển thị 0.33s hơi quá chớp nhoáng đối với người xem lần đầu.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Gắn logo ở nhịp chuyển cảnh áp chót giúp người xem ghi nhớ thương hiệu một cách tự nhiên trước khi bước vào outro.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Digital Overlay</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Đồ họa hậu kỳ</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Low-key fade</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Fade to Black sang Outro</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 18 • Fade to Black sang Outro</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_17_to_18.jpg?v=2', 'Chuyển cảnh Shot 17 sang Shot 18')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/transitions/trans_17_to_18.jpg?v=2" alt="Transition 17 to 18" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-18">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 18</span>
+                <button class="shot-time-btn" onclick="jumpToShot(18, 59.23, 63.0)">
+                    ▶ 59.23s - 63.00s (3.77s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Màn Hình Nhận Diện Thương Hiệu Cuối (Brand Outro): Khắc sâu biểu tượng mặt nạ Hannya trên nền đen sâu thẳm</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_18_start.jpg', 'Shot 18 • Đầu (59.23s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_18_start.jpg" alt="Shot 18 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (59.23s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_18_mid.jpg', 'Shot 18 • Giữa (61.11s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_18_mid.jpg" alt="Shot 18 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (61.11s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_18_end.jpg', 'Shot 18 • Cuối (63.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_18_end.jpg" alt="Shot 18 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (63.00s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Logo Hannya Tattoo & Piercing tròn với biểu tượng mặt nạ quỷ Hannya Nhật Bản sắc trắng tương phản nổi bật trên nền đen tuyền (True Black #000000), khép lại video một cách đĩnh đạc và uy quyền.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thiết kế tối giản, tương phản cao (Black & White), không rườm rà chữ rác hay nút bấm giả tạo. Tạo dư âm đọng lại về một thương hiệu xăm nghệ thuật nghiêm túc, đậm chất Á Đông.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chưa có lời kêu gọi hành động (Call To Action) dạng chữ nhỏ như địa chỉ phố cổ hoặc tài khoản Instagram để khách du lịch tiện lưu lại.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Outro tối giản trên nền đen luôn mang lại cảm giác sang trọng và bí ẩn, đặc biệt phù hợp với các thương hiệu nghệ thuật cá tính.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Graphic Outro</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Đồ họa thương hiệu Hannya</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Độ tương phản đen trắng cực đại</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Kết thúc video (Black Out)</span>
+            </div>
+
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 5.01)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Nghi Thức Rót Trà Đạo Chào Đón Khách: Chuyển dịch tâm lý từ ồn ào phố thị sang trạng thái tĩnh lặng an yên</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 5.04, 6.47)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 5.04s</span>
+            </div>
+            <div class="grid-card-body">Bể Kính Trò Chơi Thả Đồng Xu (Tattoo Coin Game): Kích hoạt tính tương tác trải nghiệm bằng luồng sáng xanh ngọc Emerald huyền ảo</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 6.51, 7.31)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 6.51s</span>
+            </div>
+            <div class="grid-card-body">Góc Cận Máy Xăm Cầm Tay Khởi Động: Nhấn mạnh tiêu chuẩn y tế vô trùng qua găng tay đen và mũi kim sắc bén</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 7.34, 10.11)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 7.34s</span>
+            </div>
+            <div class="grid-card-body">Góc Máy Từ Trên Cao (Top-down Angle): Bắt trọn tư thế đi nét đường viền kiếm rồng dứt khoát và điêu luyện</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 10.14, 13.48)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 10.14s</span>
+            </div>
+            <div class="grid-card-body">Cú Vuốt Khăn Thấm Mực (The Wipe Reveal): Khoảnh khắc thỏa mãn giác quan hé lộ đường nét vảy rồng đen sắc nét</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 13.51, 15.45)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 13.51s</span>
+            </div>
+            <div class="grid-card-body">Đặc Tả Đốt Kim Thân Rồng Cực Nhỏ: Phô diễn độ chính xác vi mô khi khắc họa từng phiến vảy rồng Á Đông</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 15.48, 17.58)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 15.48s</span>
+            </div>
+            <div class="grid-card-body">Thiết Lập Không Gian Tương Tác Toàn Cảnh: Giải tỏa căng thẳng bằng hình ảnh khách du lịch thư thái trò chuyện</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 17.62, 20.75)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 17.62s</span>
+            </div>
+            <div class="grid-card-body">Thao Tác Chùi Mực Vùng Đầu Rồng: Nhấn mạnh sự nâng niu chăm sóc cẩn trọng trên từng milimet da</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(9, 20.79, 27.93)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <span class="grid-thumb-badge">Shot 09 • 20.79s</span>
+            </div>
+            <div class="grid-card-body">Cú Máy Dài Bám Sát Nét Vẽ Râu Rồng Uốn Lượn: Tạo cảm giác nhập tâm (Flow State) vào kỹ nghệ thủ công đỉnh cao</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(10, 27.96, 28.6)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+                <span class="grid-thumb-badge">Shot 10 • 27.96s</span>
+            </div>
+            <div class="grid-card-body">Cú Cắt Nhanh Đánh Thức Nhịp Dựng (Micro Rhythm Cut): Chuyển nhịp nhanh gọn tạo sự thay đổi năng lượng dứt khoát</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(11, 28.63, 33.33)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+                <span class="grid-thumb-badge">Shot 11 • 28.63s</span>
+            </div>
+            <div class="grid-card-body">Lau Sạch Tổng Thể Đầu Rồng Và Chuôi Kiếm: Sự tương phản kịch tính giữa nét mực đen sâu thẳm và bản can tím</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(12, 33.37, 34.17)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+                <span class="grid-thumb-badge">Shot 12 • 33.37s</span>
+            </div>
+            <div class="grid-card-body">Không Gian Xưởng Xăm Chuyên Nghiệp (Studio Atmosphere): Khẳng định quy mô, sự bài bản và bầu không khí sáng tạo tập thể</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(13, 34.2, 37.87)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_13_mid.jpg" alt="Shot 13" loading="lazy">
+                <span class="grid-thumb-badge">Shot 13 • 34.20s</span>
+            </div>
+            <div class="grid-card-body">Kỹ Thuật Đánh Bóng Khối Đen (Blackwork Shading): Thổi hồn và chiều sâu 3D vào từng múi cơ bắp của rồng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(14, 37.9, 45.01)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_14_mid.jpg" alt="Shot 14" loading="lazy">
+                <span class="grid-thumb-badge">Shot 14 • 37.90s</span>
+            </div>
+            <div class="grid-card-body">Tô Khối Đen Đặc Chuôi Kiếm & Hoa Văn Sóng Nước: Tạo độ tương phản tột bậc cho phong cách Nhật Cổ (Irezumi)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(15, 45.05, 55.12)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_15_mid.jpg" alt="Shot 15" loading="lazy">
+                <span class="grid-thumb-badge">Shot 15 • 45.05s</span>
+            </div>
+            <div class="grid-card-body">Điểm Nhấn Sắc Trắng (White Ink Highlights) Trên Nền Mặt Trời Đỏ: Phép màu hoàn thiện kích hoạt toàn bộ sức sống của tác phẩm</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(16, 55.16, 58.83)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_16_mid.jpg" alt="Shot 16" loading="lazy">
+                <span class="grid-thumb-badge">Shot 16 • 55.16s</span>
+            </div>
+            <div class="grid-card-body">Kiệt Tác Hoàn Thiện Trên Cẳng Tay: Sự giao thoa hoàn hảo giữa rồng Á Đông, kiếm Katana và mặt trời đỏ rực</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(17, 58.86, 59.19)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_17_mid.jpg" alt="Shot 17" loading="lazy">
+                <span class="grid-thumb-badge">Shot 17 • 58.86s</span>
+            </div>
+            <div class="grid-card-body">Chuyển Cảnh Khóa Mỏ Neo Thương Hiệu: Lồng ghép logo Hannya Tattoo trên nền tác phẩm vừa hoàn thành</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(18, 59.23, 63.0)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_18_mid.jpg" alt="Shot 18" loading="lazy">
+                <span class="grid-thumb-badge">Shot 18 • 59.23s</span>
+            </div>
+            <div class="grid-card-body">Màn Hình Nhận Diện Thương Hiệu Cuối (Brand Outro): Khắc sâu biểu tượng mặt nạ Hannya trên nền đen sâu thẳm</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    
+<!-- BẢNG KỊCH BẢN THOẠI 2 CỘT & PROMPT ÁNH XẠ STU -->
+<section class="critique-overview-card" style="margin-top:24px; padding:24px; background:#ffffff; border-radius:16px; border:1px solid rgba(0,0,0,0.08); box-shadow:0 4px 20px rgba(0,0,0,0.03);">
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
+        <span style="background:rgba(26,115,232,0.1); color:#1a73e8; font-family:'FD Aeonik Extended',sans-serif; font-weight:700; font-size:12px; padding:4px 10px; border-radius:6px; letter-spacing:0.04em;">🎙️ KỊCH BẢN VOICE-OVER 2 CỘT</span>
+        <span style="font-size:12px; color:#64748b;">Khớp 100% thời gian thực • Kể chuyện giữ chân người xem</span>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 72% 28%; gap:20px; align-items:start;">
+        <div style="background:#f8fafc; padding:18px; border-radius:12px; border:1px solid rgba(0,0,0,0.05);">
+            <div style="font-family:'FD Aeonik',sans-serif; font-weight:600; font-size:13px; color:#090d16; margin-bottom:14px; text-transform:uppercase; letter-spacing:0.03em;">Bản Dịch Tiếng Việt Mộc Mạc (Đọc Liền Mạch)</div>
+            
+    <div class="vn-script-para" onclick="jumpToShot(1, 0.0, 6.0)">
+        <div class="para-meta-line" style="display:flex; justify-content:space-between; margin-bottom:4px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#1a73e8; font-weight:600;">▶ 0.00s - 6.00s</span>
+            <span style="font-size:11px; color:#64748b; font-weight:500;">Nhịp 1: Chốn an yên phố cổ</span>
+        </div>
+        <div style="font-family:'Tiempos Text',serif; font-size:15px; line-height:1.6; color:#0f172a;">"Giữa nhịp sống sôi động nơi góc phố cổ Hà Nội,"</div>
+    </div>
+    
+    <div class="vn-script-para" onclick="jumpToShot(1, 6.0, 17.0)">
+        <div class="para-meta-line" style="display:flex; justify-content:space-between; margin-bottom:4px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#1a73e8; font-weight:600;">▶ 6.00s - 17.00s</span>
+            <span style="font-size:11px; color:#64748b; font-weight:500;">Nhịp 2: Thanh âm & Không gian chữa lành</span>
+        </div>
+        <div style="font-family:'Tiempos Text',serif; font-size:15px; line-height:1.6; color:#0f172a;">"Hannya Tattoo mở ra một chốn an yên tách biệt, nơi hương trầm dịu nhẹ, sắc xanh tươi mát, tiếng chim hót và giai điệu du dương hòa quyện tạo nên một không gian lắng đọng."</div>
+    </div>
+    
+    <div class="vn-script-para" onclick="jumpToShot(1, 17.0, 28.0)">
+        <div class="para-meta-line" style="display:flex; justify-content:space-between; margin-bottom:4px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#1a73e8; font-weight:600;">▶ 17.00s - 28.00s</span>
+            <span style="font-size:11px; color:#64748b; font-weight:500;">Nhịp 3: Chạm vào văn hóa Á Đông</span>
+        </div>
+        <div style="font-family:'Tiempos Text',serif; font-size:15px; line-height:1.6; color:#0f172a;">"Những ồn ào phố thị dần tan biến, nhường chỗ cho sự tĩnh lặng để bạn chạm vào vẻ đẹp văn hóa Việt Nam qua một trải nghiệm nghệ thuật đậm chất Á Đông."</div>
+    </div>
+    
+    <div class="vn-script-para" onclick="jumpToShot(1, 28.0, 37.0)">
+        <div class="para-meta-line" style="display:flex; justify-content:space-between; margin-bottom:4px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#1a73e8; font-weight:600;">▶ 28.00s - 37.00s</span>
+            <span style="font-size:11px; color:#64748b; font-weight:500;">Nhịp 4: Tiêu chuẩn vệ sinh & Tay nghề bản địa</span>
+        </div>
+        <div style="font-family:'Tiempos Text',serif; font-size:15px; line-height:1.6; color:#0f172a;">"Đội ngũ nghệ nhân bản địa tay nghề cao kết hợp kỹ thuật xăm điêu luyện cùng tiêu chuẩn vệ sinh khắt khe và sự tỉ mỉ đến từng chi tiết nhỏ."</div>
+    </div>
+    
+    <div class="vn-script-para" onclick="jumpToShot(1, 37.0, 46.0)">
+        <div class="para-meta-line" style="display:flex; justify-content:space-between; margin-bottom:4px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#1a73e8; font-weight:600;">▶ 37.00s - 46.00s</span>
+            <span style="font-size:11px; color:#64748b; font-weight:500;">Nhịp 5: 6 tiếng lao động nghệ thuật</span>
+        </div>
+        <div style="font-family:'Tiempos Text',serif; font-size:15px; line-height:1.6; color:#0f172a;">"Từng tác phẩm được hoàn thiện bằng sự tập trung cao độ, chuẩn xác và gu thẩm mỹ sắc sảo—6 tiếng đồng hồ dồn trọn tâm huyết cho nghệ thuật."</div>
+    </div>
+    
+    <div class="vn-script-para" onclick="jumpToShot(1, 46.0, 55.0)">
+        <div class="para-meta-line" style="display:flex; justify-content:space-between; margin-bottom:4px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#1a73e8; font-weight:600;">▶ 46.00s - 55.00s</span>
+            <span style="font-size:11px; color:#64748b; font-weight:500;">Nhịp 6: Ký ức du lịch không làm lỡ hành trình</span>
+        </div>
+        <div style="font-family:'Tiempos Text',serif; font-size:15px; line-height:1.6; color:#0f172a;">"Vừa thư giãn vừa thể hiện bản ngã, trở thành một dấu ấn đáng nhớ trong hành trình Hà Nội mà không làm lỡ mất thời gian khám phá thành phố của bạn."</div>
+    </div>
+    
+    <div class="vn-script-para" onclick="jumpToShot(1, 55.0, 59.0)">
+        <div class="para-meta-line" style="display:flex; justify-content:space-between; margin-bottom:4px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#1a73e8; font-weight:600;">▶ 55.00s - 59.00s</span>
+            <span style="font-size:11px; color:#64748b; font-weight:500;">Nhịp 7: Ký ức hóa thành nghệ thuật</span>
+        </div>
+        <div style="font-family:'Tiempos Text',serif; font-size:15px; line-height:1.6; color:#0f172a;">"Hannya Tattoo—nơi ký ức du lịch hóa thành tác phẩm nghệ thuật trên da."</div>
+    </div>
+    
+        </div>
+        <div style="background:#fafafa; padding:14px; border-radius:12px; border:1px solid rgba(0,0,0,0.04);">
+            <div style="font-family:'FD Aeonik',sans-serif; font-weight:600; font-size:11px; color:#94a3b8; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.04em;">Original Audio (Whisper)</div>
+            
+    <div class="en-line-item" style="margin-bottom:12px; padding-bottom:8px; border-bottom:1px dashed rgba(0,0,0,0.06);" onclick="jumpToShot(1, 0.0, 6.0)">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#94a3b8;">0.00s</span>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; line-height:1.45; color:#64748b;">"Amid the vibrant energy of Hanoi's old corner,"</div>
+    </div>
+    
+    <div class="en-line-item" style="margin-bottom:12px; padding-bottom:8px; border-bottom:1px dashed rgba(0,0,0,0.06);" onclick="jumpToShot(1, 6.0, 17.0)">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#94a3b8;">6.00s</span>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; line-height:1.45; color:#64748b;">"Hannya Tattoo offers a peaceful retreat where the gentle scent of incense, lush greenery, bird song, and soft melodies create a truly immersive atmosphere here."</div>
+    </div>
+    
+    <div class="en-line-item" style="margin-bottom:12px; padding-bottom:8px; border-bottom:1px dashed rgba(0,0,0,0.06);" onclick="jumpToShot(1, 17.0, 28.0)">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#94a3b8;">17.00s</span>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; line-height:1.45; color:#64748b;">"The rhythm of the city fades away, inviting you to slow down and connect with the beauty of Vietnamese culture through an inspiring, distinctly Asian experience."</div>
+    </div>
+    
+    <div class="en-line-item" style="margin-bottom:12px; padding-bottom:8px; border-bottom:1px dashed rgba(0,0,0,0.06);" onclick="jumpToShot(1, 28.0, 37.0)">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#94a3b8;">28.00s</span>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; line-height:1.45; color:#64748b;">"Our skilled local artists combine refined tattooing techniques with professional hygiene standards and meticulous attention to detail."</div>
+    </div>
+    
+    <div class="en-line-item" style="margin-bottom:12px; padding-bottom:8px; border-bottom:1px dashed rgba(0,0,0,0.06);" onclick="jumpToShot(1, 37.0, 46.0)">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#94a3b8;">37.00s</span>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; line-height:1.45; color:#64748b;">"Their efficient approach ensures that every piece is crafted with care, precision, and a strong sense of aesthetics, six hours dedicated to art."</div>
+    </div>
+    
+    <div class="en-line-item" style="margin-bottom:12px; padding-bottom:8px; border-bottom:1px dashed rgba(0,0,0,0.06);" onclick="jumpToShot(1, 46.0, 55.0)">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#94a3b8;">46.00s</span>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; line-height:1.45; color:#64748b;">"Relaxation and self-expression, a memorable part of your Hanoi journey, without taking too much time away from exploring the city."</div>
+    </div>
+    
+    <div class="en-line-item" style="margin-bottom:12px; padding-bottom:8px; border-bottom:1px dashed rgba(0,0,0,0.06);" onclick="jumpToShot(1, 55.0, 59.0)">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#94a3b8;">55.00s</span>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; line-height:1.45; color:#64748b;">"Hannya Tattoo, where your travel memories become art."</div>
+    </div>
+    
+        </div>
+    </div>
+
+    <!-- MEGA PROMPT STU -->
+    <div style="margin-top:24px; background:#fffbeb; border:1px solid #fef3c7; border-radius:12px; padding:20px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <div style="font-family:'FD Aeonik',sans-serif; font-weight:700; font-size:14px; color:#92400e;">✨ MEGA PROMPT: ÁNH XẠ KỊCH BẢN THOẠI &amp; KỸ THUẬT QUAY SANG NGÀNH NGHỀ HỌC VIÊN STU</div>
+            <button onclick="copyPromptText()" style="background:#d97706; color:#ffffff; border:none; padding:6px 14px; border-radius:6px; font-size:12px; font-weight:600; cursor:pointer;">📋 Sao Chép Prompt</button>
+        </div>
+        <div id="stuPromptContent" style="font-family:'JetBrains Mono',monospace; font-size:12px; line-height:1.6; color:#78350f; max-height:220px; overflow-y:auto; background:#ffffff; padding:14px; border-radius:8px; border:1px solid #fde68a;">
+Bạn là một Đạo diễn &amp; Biên kịch Video ngắn thực chiến hàng đầu. Dựa trên cấu trúc kịch bản 7 nhịp và nghệ thuật thị giác của video xăm nghệ thuật tại Phố Cổ Hà Nội (@hannya.tattoos):
+1. Nhịp 1 (0-6s): Chuyển cảnh từ phố phường ồn ào vào không gian an yên bằng nghi thức chào đón tĩnh lặng.
+2. Nhịp 2 (6-17s): Đánh thức xúc giác (hương thơm, sắc xanh, âm nhạc, đồ uống/trò chơi tương tác).
+3. Nhịp 3 (17-28s): Chạm vào giá trị văn hóa bản địa, khơi gợi cảm xúc thuộc về và gắn kết.
+4. Nhịp 4 (28-37s): Bằng chứng thị giác thép về sự an toàn, vệ sinh y tế, tay nghề tỉ mỉ của nghệ nhân.
+5. Nhịp 5 (37-46s): Phô diễn sự tập trung cao độ (Flow State) và thời lượng tâm huyết lao động.
+6. Nhịp 6 (46-55s): Thư giãn, chữa lành và tôn vinh cá tính cá nhân mà không làm mất nhiều thời gian.
+7. Nhịp 7 (55-63s): Thành phẩm mãn nhãn + Slogan đúc kết "Nơi ký ức hóa thành tác phẩm nghệ thuật".
+
+HÃY VIẾT LẠI KỊCH BẢN VOICE-OVER 7 CÂU KÈM SHOTLIST QUAY CHO 4 NHÓM NGÀNH SAU:
+- Nhóm 1: Spa &amp; Thẩm Mỹ Chăm Sóc Da (Nghi thức rửa tay tinh dầu -&gt; Không gian thiền -&gt; Tay nghề điều trị mụn/nám chuẩn y khoa -&gt; Làn da mộc bừng sáng).
+- Nhóm 2: Nhà Hàng Ẩm Thực &amp; Trà Đạo Bản Địa (Rót trà mạn phố cổ -&gt; Không gian gốm sứ -&gt; Thao tác nấu nướng chuẩn xác của bếp trưởng -&gt; Món ăn thăng hoa vị giác).
+- Nhóm 3: Xưởng Thủ Công &amp; Mỹ Nghệ Gỗ/Gốm (Không gian bụi gỗ/bàn xoay -&gt; Đôi tay người thợ lành nghề -&gt; 6 tiếng đục khắc tinh xảo -&gt; Món quà độc bản lưu giữ thời gian).
+- Nhóm 4: Thời Trang Thiết Kế May Đo Thủ Công (Đo thước dây êm ái -&gt; Chọn vải sợi tự nhiên -&gt; Từng đường kim mũi chỉ chuẩn xác -&gt; Bộ trang phục vừa vặn tôn vinh vóc dáng).
+        </div>
+    </div>
+</section>
+<script>
+function copyPromptText() {
+    const el = document.getElementById('stuPromptContent');
+    navigator.clipboard.writeText(el.innerText).then(() => {
+        alert('Đã sao chép Mega Prompt! Hãy dán vào Gemini để tạo kịch bản ngành nghề của bạn.');
+    });
+}
+</script>
+
+</main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_time": 0.0, "en_time": 5.01, "duration": 5.01, "headline": "Nghi Thức Rót Trà Đạo Chào Đón Khách: Chuyển dịch tâm lý từ ồn ào phố thị sang trạng thái tĩnh lặng an yên", "subject_action": "Dòng nước trà xanh trong vắt được rót mềm mại từ vòi ấm đun vào chén trà sứ cổ in chữ Hán thanh nhã, đặt trên chiếc đĩa sứ đặt tại bàn trà ban công. Phía sau là tán lá cây xanh mướt và ban công phố cổ Hà Nội ngập tràn ánh sáng tự nhiên dịu nhẹ.", "pros": "Khung hình mở đầu tạo cảm giác thanh thản bất ngờ, đối lập hoàn toàn với định kiến thông thường về tiệm xăm ồn ào gai góc. Tốc độ dòng nước chảy đều, bọt trà lăn tăn và ánh sáng tự nhiên khuếch tán tạo cảm giác hiếu khách, chữa lành đậm chất văn hóa phương Đông.", "cons": "Vòi ấm rót đi từ góc trên bên phải hơi sát mép khung hình và bị cắt cụt thân ấm; nếu lùi máy ra xa 10cm hoặc hạ thấp góc quay thêm 15 độ sẽ thấy trọn vẹn bàn tay nghệ nhân rót trà, tăng thêm tính kết nối con người.", "takeaway": "Dùng một nghi thức tĩnh tại (uống trà, thắp hương, rửa tay) để mở đầu video dịch vụ giúp hạ nhịp tim người xem và xây dựng sự tin cậy tuyệt đối trước khi bước vào quy trình chính.", "location": "Ban công thưởng trà Studio Hannya, Phố Cổ Hà Nội", "lens_angle": "Medium Close-up • 35mm (f/2.8)", "lighting_color": "Ánh sáng ban ngày tự nhiên mềm mại khuếch tán qua tán lá", "transition": "Direct Cut sang không gian trải nghiệm tương tác"}, {"id": 2, "st_time": 5.04, "en_time": 6.47, "duration": 1.43, "headline": "Bể Kính Trò Chơi Thả Đồng Xu (Tattoo Coin Game): Kích hoạt tính tương tác trải nghiệm bằng luồng sáng xanh ngọc Emerald huyền ảo", "subject_action": "Góc nhìn ngang qua thành bể kính chứa nước phát quang ánh xanh ngọc lục bảo. Một đồng xu kim loại màu vàng rơi chìm từ từ qua mặt nước, xoay nghiêng rồi đáp xuống chiếc ly thủy tinh nhỏ đặt giữa đáy bể phủ đầy những đồng xu may mắn.", "pros": "Sự kết hợp ánh sáng đèn LED ngầm dưới nước (Submersible LED) màu Emerald tạo hiệu ứng thị giác kỳ ảo như thủy cung. Chuyển động đồng xu rơi chìm chậm rãi trong làn nước tạo điểm rơi thị giác tập trung tuyệt đối vào đáy ly.", "cons": "Chữ phản quang 'TATTOO COIN GAME!' trên mặt kính phía sau hơi bị nhòe mờ do độ sâu trường ảnh nông, khiến người xem lướt qua có thể chưa kịp đọc rõ luật chơi.", "takeaway": "Tạo ra một 'Mini-game vật lý' tại không gian chờ của dịch vụ vừa giúp khách bớt căng thẳng, vừa cung cấp chất liệu B-roll quay video cực kỳ cuốn hút và có tính chia sẻ cao.", "location": "Khu vực sảnh đón tiếp Hannya Tattoo", "lens_angle": "Macro Close-up • 50mm (f/2.0)", "lighting_color": "Ánh sáng xanh ngọc Emerald phát quang dưới nước tạo tương phản cao", "transition": "Direct Cut sang thao tác xăm chuyên nghiệp"}, {"id": 3, "st_time": 6.51, "en_time": 7.31, "duration": 0.8, "headline": "Góc Cận Máy Xăm Cầm Tay Khởi Động: Nhấn mạnh tiêu chuẩn y tế vô trùng qua găng tay đen và mũi kim sắc bén", "subject_action": "Nghệ nhân mang găng tay cao su đen chuyên dụng cầm chiếc máy xăm pen kim loại đen nhám, đầu kim chuẩn bị chạm vào nét vẽ phác thảo tím hình rồng cuộn thanh kiếm Katana trên cẳng tay khách hàng.", "pros": "Sự tương phản rõ nét giữa găng tay đen y tế và làn da sáng màu của khách hàng củng cố ngay lập tức thông điệp về sự an toàn, vệ sinh và tính chuyên nghiệp. Góc máy nghiêng 45 độ làm nổi bật thiết kế khí động học của máy xăm.", "cons": "Thời lượng shot hơi ngắn (0.8s) nên mắt người xem chưa kịp cảm nhận độ rung vi mô của máy xăm thì đã chuyển cảnh.", "takeaway": "Đối với ngành làm đẹp/xăm hình/phẫu thuật, luôn cho thấy găng tay y tế, đầu kim mới và thiết bị cao cấp ở những giây đầu tiên để triệt tiêu nỗi sợ rủi ro vệ sinh của khách hàng.", "location": "Bàn xăm vô trùng Studio", "lens_angle": "Close-up • 50mm (f/2.4)", "lighting_color": "Đèn LED vòng chuyên dụng Studio dịu mắt", "transition": "Cut nối tiếp hành động (Action Match Cut)"}, {"id": 4, "st_time": 7.34, "en_time": 10.11, "duration": 2.77, "headline": "Góc Máy Từ Trên Cao (Top-down Angle): Bắt trọn tư thế đi nét đường viền kiếm rồng dứt khoát và điêu luyện", "subject_action": "Góc máy từ trên nhìn xuống cánh tay khách hàng đặt vững chãi trên bệ đỡ bọc da đen. Hai bàn tay nghệ nhân phối hợp nhịp nhàng: tay phải điều khiển máy xăm đi đường nét đen tuyền theo bản scan tím, tay trái căng da giữ bề mặt phẳng mịn.", "pros": "Bố cục đường chéo mạnh mẽ (Diagonal Composition) từ góc trên bên phải xuống góc dưới bên trái tạo chiều sâu thị giác. Bề mặt bệ đỡ gỗ mộc phong hóa tạo phông nền vintage tôn lên sự hiện đại của kỹ thuật xăm.", "cons": "Ánh sáng phản chiếu từ bóng máy xăm đôi lúc hơi che mất một phần nhỏ đầu kim tại thời điểm tiếp xúc với da.", "takeaway": "Góc quay Top-Down 45 độ luôn là góc nhìn khách quan và đáng tin cậy nhất để phô diễn trình độ kỹ thuật khéo léo của người thợ thủ công.", "location": "Bàn xăm Studio Hannya", "lens_angle": "High-Angle Medium Shot • 35mm", "lighting_color": "Ánh sáng Studio trung tính 5600K", "transition": "Direct Cut sang cận cảnh lau mực"}, {"id": 5, "st_time": 10.14, "en_time": 13.48, "duration": 3.34, "headline": "Cú Vuốt Khăn Thấm Mực (The Wipe Reveal): Khoảnh khắc thỏa mãn giác quan hé lộ đường nét vảy rồng đen sắc nét", "subject_action": "Nghệ nhân dùng miếng khăn giấy y tế trắng nhẹ nhàng vuốt sạch vệt mực đen loang trên da, để lộ những đường kim đi viền thân rồng uốn lượn sắc sảo và sạch sẽ đến kinh ngạc.", "pros": "Cung cấp khoảnh khắc 'Satisfying / ASMR thị giác' cực mạnh—thao tác lau mực vừa thỏa mãn trí tò mò vừa cho thấy nét mực đen chuẩn xác, không bị loang vỡ dưới da.", "cons": "Tay nghệ nhân khi lau khăn vô tình che khuất tâm điểm khung hình trong khoảng 0.5s ở giữa phân cảnh.", "takeaway": "Hiệu ứng 'Wipe to Reveal' (lau để lộ nét) là thủ pháp giữ chân kinh điển trong video xăm hình và spa/làm đẹp, luôn tạo cảm giác thỏa mãn và kích thích người xem xem tiếp.", "location": "Bàn xăm chuyên dụng", "lens_angle": "Extreme Close-up • 85mm Macro", "lighting_color": "Ánh sáng mềm trực diện làm nổi bật chất da thật", "transition": "Cut chuyển tiếp sang góc cận đi kim chi tiết"}, {"id": 6, "st_time": 13.51, "en_time": 15.45, "duration": 1.94, "headline": "Đặc Tả Đốt Kim Thân Rồng Cực Nhỏ: Phô diễn độ chính xác vi mô khi khắc họa từng phiến vảy rồng Á Đông", "subject_action": "Đầu kim xăm di chuyển với tốc độ ổn định, tỉ mỉ khắc từng đường cong của lớp vảy rồng trên nền bản vẽ tím. Mực đen thấm đều vào từng tế bào biểu bì tạo nên đường nét thanh mảnh nhưng đanh chắc.", "pros": "Độ sắc nét cực cao, bắt trọn từng giọt mực vi mô đọng ở mũi kim. Độ sâu trường ảnh nông làm mờ hậu cảnh, dồn toàn bộ sự chú ý của mắt vào mũi kim đang chuyển động.", "cons": "Góc máy đặt hơi sát tạo cảm giác hơi chật chội ở rìa phải khung hình 9:16.", "takeaway": "Đặc tả siêu cận cảnh các chi tiết phức tạp chứng minh độ khéo léo và công phu mà không cần một từ ngữ quảng cáo khoa trương nào.", "location": "Phòng xăm vô trùng", "lens_angle": "Macro Close-up • 90mm", "lighting_color": "Đèn LED phẫu thuật hội tụ", "transition": "Cut mở rộng sang không gian toàn cảnh (Spatial Cut)"}, {"id": 7, "st_time": 15.48, "en_time": 17.58, "duration": 2.1, "headline": "Thiết Lập Không Gian Tương Tác Toàn Cảnh: Giải tỏa căng thẳng bằng hình ảnh khách du lịch thư thái trò chuyện", "subject_action": "Góc máy trung rộng thu trọn cảnh người nghệ nhân xăm Việt Nam ngồi ghế thấp chăm chú thao tác trên cánh tay của vị khách du lịch quốc tế vạm vỡ đang tựa lưng thư thái trên ghế đệm trắng.", "pros": "Phá vỡ chuỗi cảnh cận cảnh liên tiếp, giúp mắt người xem được thở (Visual Breathing Room). Tư thế thả lỏng của khách hàng chứng minh quá trình xăm diễn ra êm ái, nhẹ nhàng và an toàn.", "cons": "Hậu cảnh phía sau có một số dây điện và thiết bị hơi lộn xộn ở góc trái trên, cần bố trí giấu dây gọn gàng hơn.", "takeaway": "Luôn chèn xen kẽ các shot toàn cảnh (Master / Medium Shot) giữa các cú máy cận để người xem nắm bắt bối cảnh không gian và cảm xúc thoải mái của khách hàng.", "location": "Khu vực làm việc mở Studio", "lens_angle": "Medium Wide Shot • 28mm", "lighting_color": "Ánh sáng tổng thể Studio kết hợp đèn bàn làm việc", "transition": "Direct Cut trở lại cận cảnh thao tác kỹ thuật"}, {"id": 8, "st_time": 17.62, "en_time": 20.75, "duration": 3.13, "headline": "Thao Tác Chùi Mực Vùng Đầu Rồng: Nhấn mạnh sự nâng niu chăm sóc cẩn trọng trên từng milimet da", "subject_action": "Nghệ nhân nhẹ nhàng gập khăn y tế, chấm và lau nhẹ nhàng quanh mắt và sừng rồng, kiểm tra độ đều màu của nét mực viền.", "pros": "Động tác êm dịu, không gây đỏ rát da, thể hiện tay nghề lão luyện và sự tôn trọng đối với cơ thể khách hàng.", "cons": "Màu sắc hơi ngả vàng nhẹ do cân bằng trắng tự động (Auto White Balance) bị ảnh hưởng bởi ánh đèn vàng xung quanh.", "takeaway": "Cố định cân bằng trắng (Manual White Balance) khi quay cận cảnh da người để tránh hiện tượng màu da nhảy sắc độ giữa các cảnh.", "location": "Bàn xăm Studio", "lens_angle": "Close-up • 50mm", "lighting_color": "Đèn chụp LED Studio", "transition": "Cut nhịp nhàng sang chi tiết râu rồng"}, {"id": 9, "st_time": 20.79, "en_time": 27.93, "duration": 7.14, "headline": "Cú Máy Dài Bám Sát Nét Vẽ Râu Rồng Uốn Lượn: Tạo cảm giác nhập tâm (Flow State) vào kỹ nghệ thủ công đỉnh cao", "subject_action": "Máy quay giữ tĩnh góc cận cảnh trong 7.14 giây, theo dõi nghệ nhân uốn từng đường kim dài mượt mà khắc họa chùm râu rồng bay bổng quanh sống kiếm Katana.", "pros": "Thời lượng dài nhất trong toàn bộ video (7.14s) tạo ra nhịp điệu tĩnh lặng, đưa người xem vào trạng thái chiêm ngưỡng chăm chú như đang xem một buổi trình diễn thư pháp hội họa phương Đông.", "cons": "Cú máy tĩnh hơi lâu có thể gây cảm giác chậm nhịp với một số người xem lướt; có thể thêm chuyển động lia máy vi mô (Micro-Pan) 2-3% để tăng tính sinh động.", "takeaway": "Khi quay một thao tác đỉnh cao của nghệ nhân, đừng cắt cảnh quá nhanh—hãy để cú máy thở và người xem tự cảm nhận sự tập trung phi thường của đôi bàn tay.", "location": "Phòng xăm nghệ thuật Hannya", "lens_angle": "Close-up • 60mm Macro", "lighting_color": "Đèn LED ringlight ánh sáng trắng tự nhiên", "transition": "Fast Whip Cut sang dặm mực vi mô"}, {"id": 10, "st_time": 27.96, "en_time": 28.6, "duration": 0.64, "headline": "Cú Cắt Nhanh Đánh Thức Nhịp Dựng (Micro Rhythm Cut): Chuyển nhịp nhanh gọn tạo sự thay đổi năng lượng dứt khoát", "subject_action": "Góc quay cận sát thao tác dặm mực với chuyển động tay nhanh gọn dứt khoát trong tích tắc 0.67s.", "pros": "Đóng vai trò như một cú gõ nhịp (Beat Drop) thị giác, ngăn chặn cảm giác đơn điệu sau cú máy dài 7 giây của Shot 09.", "cons": "Chớp nhoáng quá nhanh khiến người xem khó nhận biết chi tiết cụ thể nếu không tua lại.", "takeaway": "Sử dụng các micro-cut dưới 1s xen kẽ giữa các cảnh quay dài để tạo nhịp điệu tương phản (Rhythmic Contrast), kích thích não bộ tiết Dopamine giữ chân người xem.", "location": "Bàn xăm", "lens_angle": "Extreme Close-up • 85mm", "lighting_color": "Ánh sáng điểm trực diện", "transition": "Match Cut sang toàn bộ phần đầu rồng hoàn chỉnh"}, {"id": 11, "st_time": 28.63, "en_time": 33.33, "duration": 4.7, "headline": "Lau Sạch Tổng Thể Đầu Rồng Và Chuôi Kiếm: Sự tương phản kịch tính giữa nét mực đen sâu thẳm và bản can tím", "subject_action": "Cánh khăn vuốt một đường rộng từ chuôi kiếm qua toàn bộ khuôn mặt rồng đang nhe nanh uy dũng, làm nổi bật cấu trúc hình họa cân đối tuyệt mỹ.", "pros": "Cung cấp cái nhìn toàn vẹn đầu tiên về thần thái của con rồng—đôi mắt sắc lẹm, vảy sừng góc cạnh, bờm tóc cuộn sóng tạo cảm giác uy quyền và bảo hộ tâm linh.", "cons": "Góc trên bên trái của khung hình hơi bị cháy sáng nhẹ (Overexposed) do ánh đèn phản xạ trên bề mặt da ẩm.", "takeaway": "Luôn có một shot 'Check-point' hiển thị toàn bộ khối hình họa lớn sau khi hoàn tất các nét chi tiết rời rạc.", "location": "Studio Hannya", "lens_angle": "Close-up • 50mm", "lighting_color": "Đèn rọi điểm Studio", "transition": "Smash Cut mở rộng ra không gian studio đa chiều"}, {"id": 12, "st_time": 33.37, "en_time": 34.17, "duration": 0.8, "headline": "Không Gian Xưởng Xăm Chuyên Nghiệp (Studio Atmosphere): Khẳng định quy mô, sự bài bản và bầu không khí sáng tạo tập thể", "subject_action": "Góc nhìn từ cửa phòng nhìn vào không gian studio dài và sâu: các bàn xăm đặt thẳng hàng, đèn ring light sáng trắng, tranh nghệ thuật Nhật Bản treo kín tường, các nghệ nhân khác đang chăm sóc khách hàng.", "pros": "Khẳng định uy tín thương hiệu: đây là một studio xăm chuyên nghiệp có quy mô lớn, đầu tư bài bản, không gian sạch sẽ thoáng mát chứ không phải tiệm xăm tự phát nhỏ lẻ.", "cons": "Thời lượng 0.8s hơi gấp để người xem cảm nhận được toàn bộ các bức tranh nghệ thuật treo trên tường.", "takeaway": "Trong video bán dịch vụ trải nghiệm, nhất thiết phải có cảnh thể hiện văn hóa không gian xưởng/tiệm để khách hàng hình dung được trải nghiệm của chính họ khi bước chân tới.", "location": "Toàn cảnh Studio Hannya Tattoo Hà Nội", "lens_angle": "Wide Angle • 20mm", "lighting_color": "Hệ thống đèn LED trần hiện đại kết hợp đèn công nghiệp", "transition": "Direct Cut trở lại quy trình đi bóng (Shading)"}, {"id": 13, "st_time": 34.2, "en_time": 37.87, "duration": 3.67, "headline": "Kỹ Thuật Đánh Bóng Khối Đen (Blackwork Shading): Thổi hồn và chiều sâu 3D vào từng múi cơ bắp của rồng", "subject_action": "Mũi kim chùm bản rộng di chuyển thoăn thoắt tạo hiệu ứng chuyển sắc (Gradient) mịn màng từ đen đậm sang xám khói trên thanh kiếm và thân rồng.", "pros": "Thấy rõ sự khác biệt giữa nét viền cứng (Line) và vùng bóng mềm (Shading), mang lại chiều sâu khối lập thể sống động như một bức tranh mực nho phương Đông.", "cons": "Góc tay nghệ nhân hơi che khuất một phần đường chuyển sắc mờ.", "takeaway": "Cho thấy giai đoạn tạo khối và đánh bóng là minh chứng rõ nét nhất cho tay nghề của nghệ nhân bậc thầy.", "location": "Bàn xăm Hannya", "lens_angle": "Macro Close-up • 85mm", "lighting_color": "Ánh sáng xuyên góc 45 độ làm nổi khối cơ da", "transition": "Direct Cut sang mảng đen sâu"}, {"id": 14, "st_time": 37.9, "en_time": 45.01, "duration": 7.11, "headline": "Tô Khối Đen Đặc Chuôi Kiếm & Hoa Văn Sóng Nước: Tạo độ tương phản tột bậc cho phong cách Nhật Cổ (Irezumi)", "subject_action": "Kim xăm lướt đều tạo mảng mực đen đặc (Solid Black) cho chuôi kiếm Katana và những cuộn mây uốn lượn xung quanh.", "pros": "Sự kết hợp giữa mảng đen tuyền đặc và những đường nét trắng tạo độ tương phản thị giác tối đa, phong cách xăm Irezumi truyền thống hiện lên mạnh mẽ và dứt khoát.", "cons": "Khung hình hơi rung nhẹ ở giây thứ 42 do người quay chuyển trọng tâm chân.", "takeaway": "Khi quay cảnh thao tác dài bằng tay cầm máy (Handheld), cần dùng lồng khung tì vào thân hoặc sử dụng chống rung quang học để giữ khung hình ổn định như dolly.", "location": "Bàn xăm Studio", "lens_angle": "Close-up • 50mm", "lighting_color": "Đèn LED Studio", "transition": "Cut sang công đoạn điểm xuyết màu trắng"}, {"id": 15, "st_time": 45.05, "en_time": 55.12, "duration": 10.07, "headline": "Điểm Nhấn Sắc Trắng (White Ink Highlights) Trên Nền Mặt Trời Đỏ: Phép màu hoàn thiện kích hoạt toàn bộ sức sống của tác phẩm", "subject_action": "Cú máy dài 10.07 giây quay cận cảnh nghệ nhân dùng mực trắng tinh khiết tỉ mỉ điểm từng tia sáng trên viền bờm rồng, mắt rồng và mũi kiếm, nổi bật rực rỡ trên khối mặt trời đỏ thắm (Red Sun).", "pros": "Cao trào thị giác của toàn bộ video! Nền đỏ của mặt trời kết hợp nét đen của rồng và điểm nhấn mực trắng tạo nên bảng màu kinh điển: Đen - Đỏ - Trắng của hội họa Nhật Bản. Từng nét trắng như thổi luồng sinh khí bừng sáng vào tác phẩm.", "cons": "Bờ viền da xung quanh có vết mực loang nhẹ chưa kịp lau ở giây 48.", "takeaway": "Luôn dành thời lượng dài và góc quay đẹp nhất cho bước 'Final Polish / Finishing Touch'—bởi vì đây chính là khoảnh khắc biến một tác phẩm bình thường thành kiệt tác nghệ thuật.", "location": "Bàn xăm Studio", "lens_angle": "Extreme Macro Close-up • 100mm", "lighting_color": "Ánh sáng phân kỳ mềm dịu tôn vinh sắc đỏ mặt trời", "transition": "Smash Cut sang thành phẩm hoàn thiện cuối cùng"}, {"id": 16, "st_time": 55.16, "en_time": 58.83, "duration": 3.67, "headline": "Kiệt Tác Hoàn Thiện Trên Cẳng Tay: Sự giao thoa hoàn hảo giữa rồng Á Đông, kiếm Katana và mặt trời đỏ rực", "subject_action": "Cú lia máy mượt mà từ dưới lên trên cẳng tay vị khách: tác phẩm hình xăm đã được làm sạch hoàn hảo, các nét đen đanh thép, vảy rồng sáng tối phân minh, mặt trời đỏ trầm ấm và điểm nhấn trắng lấp lánh như vảy bạc.", "pros": "Khung hình kết mãn nhãn, trả lời cho toàn bộ hành trình 6 tiếng lao động nghệ thuật. Tỷ lệ hình xăm ôm vừa vặn cấu trúc giải phẫu cơ cẳng tay, chuyển động khi xoay nhẹ cánh tay tạo cảm giác con rồng đang chuyển động.", "cons": "Phần nền phía sau cẳng tay hơi tối, nếu có một viền đèn tóc (Rim Light) nhẹ phía sau để tách cẳng tay khỏi phông nền thì tác phẩm sẽ còn nổi khối hơn nữa.", "takeaway": "Ảnh/video thành phẩm cuối cùng phải được quay ở trạng thái sạch sẽ nhất, ánh sáng hoàn hảo nhất và phô diễn góc độ ăn nhập với cơ thể con người.", "location": "Góc chụp thành phẩm Studio", "lens_angle": "Medium Close-up • 50mm (f/2.8)", "lighting_color": "Đèn Studio 3 điểm tôn vinh chi tiết mực xăm", "transition": "Match Dissolve sang biểu tượng thương hiệu"}, {"id": 17, "st_time": 58.86, "en_time": 59.19, "duration": 0.33, "headline": "Chuyển Cảnh Khóa Mỏ Neo Thương Hiệu: Lồng ghép logo Hannya Tattoo trên nền tác phẩm vừa hoàn thành", "subject_action": "Hình ảnh tác phẩm xăm tối dần và xuất hiện logo mặt nạ Hannya Tattoo & Piercing in chìm giữa trung tâm khung hình.", "pros": "Kết nối ngay lập tức giữa vẻ đẹp của tác phẩm và tên tuổi thương hiệu, định vị đẳng cấp studio trong tâm trí người xem.", "cons": "Thời gian hiển thị 0.33s hơi quá chớp nhoáng đối với người xem lần đầu.", "takeaway": "Gắn logo ở nhịp chuyển cảnh áp chót giúp người xem ghi nhớ thương hiệu một cách tự nhiên trước khi bước vào outro.", "location": "Đồ họa hậu kỳ", "lens_angle": "Digital Overlay", "lighting_color": "Low-key fade", "transition": "Fade to Black sang Outro"}, {"id": 18, "st_time": 59.23, "en_time": 63.0, "duration": 3.77, "headline": "Màn Hình Nhận Diện Thương Hiệu Cuối (Brand Outro): Khắc sâu biểu tượng mặt nạ Hannya trên nền đen sâu thẳm", "subject_action": "Logo Hannya Tattoo & Piercing tròn với biểu tượng mặt nạ quỷ Hannya Nhật Bản sắc trắng tương phản nổi bật trên nền đen tuyền (True Black #000000), khép lại video một cách đĩnh đạc và uy quyền.", "pros": "Thiết kế tối giản, tương phản cao (Black & White), không rườm rà chữ rác hay nút bấm giả tạo. Tạo dư âm đọng lại về một thương hiệu xăm nghệ thuật nghiêm túc, đậm chất Á Đông.", "cons": "Chưa có lời kêu gọi hành động (Call To Action) dạng chữ nhỏ như địa chỉ phố cổ hoặc tài khoản Instagram để khách du lịch tiện lưu lại.", "takeaway": "Outro tối giản trên nền đen luôn mang lại cảm giác sang trọng và bí ẩn, đặc biệt phù hợp với các thương hiệu nghệ thuật cá tính.", "location": "Đồ họa thương hiệu Hannya", "lens_angle": "Graphic Outro", "lighting_color": "Độ tương phản đen trắng cực đại", "transition": "Kết thúc video (Black Out)"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ct.toFixed(2) + 's / ' + (player.duration ? player.duration.toFixed(2) : '63.03') + 's';
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 29.97 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById('shot-' + shotId);
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

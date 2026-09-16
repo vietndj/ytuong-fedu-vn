@@ -1,0 +1,2474 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Phân Tích Video Điện Ảnh - @shogentle_DcyDbGmItDV_One_Lamp_Beats_Five • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">16 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Phân Tích Video Điện Ảnh - @shogentle_DcyDbGmItDV_One_Lamp_Beats_Five</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DcyDbGmItDV/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/shogentle_D.mp4" type="video/mp4">
+                <source src="videos/shogentle_D.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 26.00s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Phân Tích Video Điện Ảnh - @shogentle_DcyDbGmItDV_One_Lamp_Beats_Five</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@shogentle" onclick="handleCreatorClick(event, '@shogentle', 'AL, The Creator')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của AL, The Creator trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>AL, The Creator</strong>
+                        <span class="author-handle">(@shogentle)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/DcyDbGmItDV/" target="_blank" class="author-link">@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 26.00s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Phân Tích Video Điện Ảnh - @shogentle_DcyDbGmItDV_One_Lamp_Beats_Five</h1>
+            <p class="overview-hero-desc">Bóc tách chi tiết 2 phân cảnh theo chuẩn đạo diễn chuyên nghiệp.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Cinematic Storytelling, Composition Critique, Micro-Beats Pacing</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">16 Shots • Nhịp trung bình 1.62s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 • 30.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 2.8)">
+                    ▶ 0.00s - 2.80s (2.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc quay thẳng đứng đảo ngược không gian: Visual Hook nằm ngửa phá vỡ khuôn mẫu Talking Head truyền thống</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_01_mid.jpg', 'Shot 01 • Giữa (1.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.40s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_01_end.jpg', 'Shot 01 • Cuối (2.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (2.80s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Tác giả AL nằm ngửa trên tấm thảm thổ cẩm đỏ cổ điển (oriental rug), mặc áo len dệt kim xanh cốm chói (acid lime green) và đeo kính lục cá tính. Hai tay vung vẩy, biểu cảm kịch tính nói: 'This one thing is killing your videos'. Dòng chữ typography đậm nét xuất hiện đồng bộ theo nhịp nói.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Muốn video giáo dục/talking head thoát khỏi bẫy lướt qua (Scroll Trap), hãy đổi góc camera 90 độ hoặc thay đổi tư thế cơ thể (nằm, ngồi bệt, nghiêng người) thay vì ngồi ngay ngắn trước bàn làm việc.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Sàn nhà trải thảm thổ cẩm đỏ (Studio Rug)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Soft Key Light từ trên cao tỏa đều</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Action Cut sang góc thấp nhìn lên</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Match Action Cut sang góc thấp nhìn lên</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 2.8, 5.2)">
+                    ▶ 2.80s - 5.20s (2.40s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Đảo góc máy 180° từ dưới lên (Worm's Eye View): Dẫn nhập phản biện định kiến 'Ánh sáng là tất cả'</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_02_start.jpg', 'Shot 02 • Đầu (2.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (2.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_02_mid.jpg', 'Shot 02 • Giữa (4.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (4.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_02_end.jpg', 'Shot 02 • Cuối (5.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.20s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy chuyển đột ngột xuống thấp sát nền sàn, quay cận nghiêng (Low-Angle Profile). AL ngửa đầu lên trần nhà rồi ngoảnh mặt nhìn xoáy vào ống kính máy quay với nụ cười châm biếm: 'Oh, every expert says...'. Tay phải đưa lên làm cử chỉ nhại lại các chuyên gia.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi chuẩn bị phản biện một quan niệm sai lầm phổ biến, hãy dùng góc quay thấp kết hợp ngôn ngữ cơ thể mỉa mai để tăng tính kịch nghệ và khơi gợi sự tò mò của khán giả.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Phòng tối studio</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Side Rim Light viền sắc cạnh má & cằm</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Quick Jump Cut sang nhịp đệm Shot 03</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Quick Jump Cut sang nhịp đệm Shot 03</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 5.2, 5.7)">
+                    ▶ 5.20s - 5.70s (0.50s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Nhịp đệm trung cảnh nghiêm trang (Pacing Pause): Khoảng lặng 0.5s tạo đà cho cú nổ đồ họa</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_03_start.jpg', 'Shot 03 • Đầu (5.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.20s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_03_mid.jpg', 'Shot 03 • Giữa (5.45s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.45s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_03_end.jpg', 'Shot 03 • Cuối (5.70s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.70s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt sang góc quay chính diện (Medium Shot) ngang ngực. AL đứng nghiêm túc, khoanh tay bắt chéo trước ngực, mắt nhìn lơ đãng như học sinh chăm chú. Chữ 'LIGHTING' đỏ rực hiện lên phía trên đầu.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đừng duy trì một nhịp cắt đều đều. Hãy xen kẽ các shot siêu ngắn (0.3 - 0.5s) giữa các phân cảnh dài để tạo nhịp tim thị giác (Visual Heartbeat) dồn dập cho video ngắn.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio tối</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ambient Backlight dịu nhẹ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Cut sang đồ họa hoạt hình Pop-Art Shot 04</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Match Cut sang đồ họa hoạt hình Pop-Art Shot 04</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 5.7, 6.83)">
+                    ▶ 5.70s - 6.83s (1.13s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Biến hình Pop-Art bóng đèn phát sáng: Ẩn dụ đồ họa hóa 'Lighting is everything' theo phong cách Paper-Cutout</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_04_start.jpg', 'Shot 04 • Đầu (5.70s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.70s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_04_mid.jpg', 'Shot 04 • Giữa (6.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.27s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_04_end.jpg', 'Shot 04 • Cuối (6.83s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (6.83s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Chuyển phong cách đồ họa hoạt hình 2D kết hợp người thật (Mixed Media Pop-Art): Nhân vật AL được tách nền (Rotoscoped) thu nhỏ đứng trọn bên trong một bóng đèn dây tóc khổng lồ màu vàng sáng chói với các tia hào quang phát ra trên nền xám. Dòng chữ đỏ 'LIGHTING IS EVERYTHING' đập mạnh vào tâm trí.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Để video kiến thức kỹ thuật không bị khô khan, hãy dùng kỹ thuật tách nền hoạt hình kết hợp các biểu tượng đồ họa quen thuộc (bóng đèn, công tắc, đồng hồ) để tạo tiếng cười châm biếm.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Phông nền đồ họa hoạt hình 2D</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Flat Digital Graphic Glow</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut trở về không gian thực tế Shot 05</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Hard Cut trở về không gian thực tế Shot 05</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 6.83, 11.63)">
+                    ▶ 6.83s - 11.63s (4.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thủ pháp leo thang đạo cụ thực tế (Staging Escalation): 5 nguồn sáng dồn dập xuất hiện biến studio thành lò nướng phẳng lẹt</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_05_start.jpg', 'Shot 05 • Đầu (6.83s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (6.83s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_05_mid.jpg', 'Shot 05 • Giữa (9.23s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.23s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_05_end.jpg', 'Shot 05 • Cuối (11.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (11.63s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">AL đứng giữa phòng tối, bắt đầu diễn giải quá trình 'sa lầy' mua sắm thiết bị. Cứ mỗi lần nói 'buy a light', một cây đèn chuyên dụng lại bật sáng: F:235 bật Softbox bát giác khổng lồ; F:261 bật đèn LED panel bên trái; F:295 bật đèn trần + micro phòng thu; F:327 bật đèn tuýp LED wand. Căn phòng từ tối dần dần bị bao phủ bởi ánh sáng chói lòa khắp mọi hướng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Thay vì nói lý thuyết 'đừng dùng quá nhiều đèn', hãy cho khán giả thấy hậu quả trực tiếp trên khung hình bằng cách bật từng cây đèn lên. Sự tương phản giữa mong đợi (càng nhiều đèn càng đẹp) và thực tế (chói lóa mất khối) sẽ thuyết phục người xem 100%.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio thực tế</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Multi-point Flat Lighting (5 nguồn đèn chồng chéo chói lòa)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Jump Cut vào cận cảnh Shot 06</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Jump Cut vào cận cảnh Shot 06</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 11.63, 13.43)">
+                    ▶ 11.63s - 13.43s (1.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú tát thị giác 'NO!' rung chuyển khung hình: Điểm gãy nhận thức (Pattern Interrupt) lật ngược niềm tin</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_06_start.jpg', 'Shot 06 • Đầu (11.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (11.63s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_06_mid.jpg', 'Shot 06 • Giữa (12.53s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (12.53s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_06_end.jpg', 'Shot 06 • Cuối (13.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (13.43s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt vào cận trung (Medium Close-Up): AL nhăn mặt, nhún hai vai, hai bàn tay mở ra vẻ ái ngại: 'Looks professional?'. Đúng lúc khán giả đang phân vân thì một khối chữ 'NO!' màu đỏ khổng lồ giáng thẳng xuống chiếm 80% chiều cao màn hình kèm hiệu ứng rung giật camera cực mạnh.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Dùng các từ phủ định dứt khoát ('NO!', 'SAI!', 'DỪNG LẠI!') với kích thước ngoại cỡ và âm thanh va chạm mạnh để ngắt dòng suy nghĩ của khán giả, chuẩn bị cho giải pháp mang tính cách mạng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio 5 đèn chói sáng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Chói sáng toàn diện (Over-exposed Flat Light)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut sang dải phim nhựa 35mm Shot 07</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Hard Cut sang dải phim nhựa 35mm Shot 07</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 13.43, 14.27)">
+                    ▶ 13.43s - 14.27s (0.84s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Dẫn chứng điện ảnh 1: Dải phim nhựa 35mm đưa Robert Pattinson (The Batman) vào bóng tối huyền bí</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_07_start.jpg', 'Shot 07 • Đầu (13.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (13.43s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_07_mid.jpg', 'Shot 07 • Giữa (13.85s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (13.85s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_07_end.jpg', 'Shot 07 • Cuối (14.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (14.27s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình biến đổi thành dải phim nhựa 35mm với lỗ đục film strip hai bên. Phân cảnh Robert Pattinson trong 'The Batman' hiện ra với ánh mắt u buồn, một nửa gương mặt chìm trong bóng tối thăm thẳm. Mũi tên vàng chỉ thẳng vào vùng tối kèm nhãn 'SHADOW'. Lời bình: 'Now look at people in movies'.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi muốn thuyết phục về tính thẩm mỹ cao cấp, hãy trích dẫn các tác phẩm điện ảnh hàng đầu thế giới đã được kiểm chứng bởi thời gian và hàng triệu khán giả.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Trích đoạn phim The Batman (Matt Reeves)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Chiaroscuro Single Key Light + Deep Shadow</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut liền mạch sang Shot 08 trên dải phim</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Cut liền mạch sang Shot 08 trên dải phim</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 14.27, 15.0)">
+                    ▶ 14.27s - 15.00s (0.73s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Dẫn chứng điện ảnh 2: Vẻ đẹp điêu khắc của Zendaya dưới góc chiếu sáng bất đối xứng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_08_start.jpg', 'Shot 08 • Đầu (14.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (14.27s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_08_mid.jpg', 'Shot 08 • Giữa (14.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (14.63s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_08_end.jpg', 'Shot 08 • Cuối (15.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (15.00s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Tiếp tục dải phim 35mm: Khung hình chuyển sang gương mặt thanh tú của minh tinh Zendaya. Ánh sáng xiên một bên làm nổi bật sống mũi và bờ môi, nửa mặt bên kia chìm trong bóng mờ gợi cảm. Mũi tên vàng tiếp tục định vị 'SHADOW'.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Chứng minh một nguyên lý bằng nhiều nhóm đối tượng khác nhau (nam giới gai góc -> nữ giới quyến rũ) để quy luật có tính phổ quát tuyệt đối.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Chân dung điện ảnh Zendaya</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Asymmetrical Side Key Light</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut sang Shot 09 trên dải phim</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 09 • Cut sang Shot 09 trên dải phim</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_08_to_09.jpg?v=2', 'Chuyển cảnh Shot 08 sang Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_08_to_09.jpg?v=2" alt="Transition 8 to 9" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-9">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 09</span>
+                <button class="shot-time-btn" onclick="jumpToShot(9, 15.0, 16.0)">
+                    ▶ 15.00s - 16.00s (1.00s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Dẫn chứng điện ảnh 3: Samuel L. Jackson trong Pulp Fiction - Đòn bẩy thương hiệu Quentin Tarantino</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_09_start.jpg', 'Shot 09 • Đầu (15.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (15.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_09_mid.jpg', 'Shot 09 • Giữa (15.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (15.50s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_09_end.jpg', 'Shot 09 • Cuối (16.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (16.00s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình dải phim 35mm đưa người xem đến phân cảnh kinh điển của Samuel L. Jackson (Pulp Fiction) đang hút ly nước soda, ánh mắt lạnh lùng nhìn chằm chằm. Nửa khuôn mặt bên trái chìm vào bóng tối sâu. Mũi tên vàng chỉ rõ 'SHADOW'. Tiếng voice cất lên: 'Nobody's face...'</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Hãy chọn các trích đoạn phim có nhân vật mang tính biểu tượng văn hóa cao để video vừa có tính học thuật vừa tạo cảm giác gần gũi, thích thú cho người sành sỏi.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Pulp Fiction (Quentin Tarantino)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Hard Side Key Light + Dramatic Shadow</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut sang Shot 10 trên dải phim</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 10 • Cut sang Shot 10 trên dải phim</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_09_to_10.jpg?v=2', 'Chuyển cảnh Shot 09 sang Shot 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_09_to_10.jpg?v=2" alt="Transition 9 to 10" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-10">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 10</span>
+                <button class="shot-time-btn" onclick="jumpToShot(10, 16.0, 17.17)">
+                    ▶ 16.00s - 17.17s (1.17s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Dẫn chứng điện ảnh 4: Kingsman khép lại chuỗi chứng minh 'Nobody's face is fully lit'</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_10_start.jpg', 'Shot 10 • Đầu (16.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (16.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_10_mid.jpg', 'Shot 10 • Giữa (16.59s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (16.59s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_10_end.jpg', 'Shot 10 • Cuối (17.17s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (17.17s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Trích đoạn phim Kingsman: The Secret Service trong quán pub cổ điển Anh Quốc. Taron Egerton và Colin Firth ngồi đối diện, ánh sáng ấm từ cửa sổ hông chiếu rọi bờ vai và một bên mặt, phần còn lại chìm vào không gian quán tối ấm áp. Chữ 'IS FULLY LIT' hoàn thành câu nói.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Dùng chuỗi 'Proof Stacking' (Xếp chồng bằng chứng liên hoàn 4 lớp) trong vòng 3.7 giây để đè bẹp mọi nghi ngờ của khán giả trước khi đưa ra giải pháp thực hành.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Kingsman Pub (Matthew Vaughn)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Practical Window Side Light + Amber Fill</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut trở lại studio thực tế Shot 11</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 11 • Cut trở lại studio thực tế Shot 11</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_10_to_11.jpg?v=2', 'Chuyển cảnh Shot 10 sang Shot 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_10_to_11.jpg?v=2" alt="Transition 10 to 11" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-11">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 11</span>
+                <button class="shot-time-btn" onclick="jumpToShot(11, 17.17, 18.57)">
+                    ▶ 17.17s - 18.57s (1.40s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Thiết lập trạng thái trước biến chuyển: 'Một ngọn đèn từ cạnh bên là đủ'</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_11_start.jpg', 'Shot 11 • Đầu (17.17s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (17.17s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_11_mid.jpg', 'Shot 11 • Giữa (17.87s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (17.87s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_11_end.jpg', 'Shot 11 • Cuối (18.57s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (18.57s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt trở lại AL đang đứng giữa căn phòng rực sáng 5 ngọn đèn. Anh giơ bàn tay phải lên cao, chuẩn bị tư thế búng tay (Snap). Lời thoại hướng dẫn: 'One light from the side...'</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Trước khi thực hiện một cú thay đổi ngoạn mục, hãy dừng lại 1-1.5 giây để ra hiệu cho người xem (bằng hành động giơ tay, đếm 1-2-3 hoặc nhìn thẳng ống kính).</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio 5 đèn</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Over-exposed Flat Light</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Jump Cut tức thì tại điểm búng tay Shot 12</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 12 • Jump Cut tức thì tại điểm búng tay Shot 12</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_11_to_12.jpg?v=2', 'Chuyển cảnh Shot 11 sang Shot 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_11_to_12.jpg?v=2" alt="Transition 11 to 12" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-12">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 12</span>
+                <button class="shot-time-btn" onclick="jumpToShot(12, 18.57, 19.57)">
+                    ▶ 18.57s - 19.57s (1.00s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú búng tay dập tắt 4 ngọn đèn thừa: Cú sốc tương phản thị giác (Visual Contrast Shock)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_12_start.jpg', 'Shot 12 • Đầu (18.57s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (18.57s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_12_mid.jpg', 'Shot 12 • Giữa (19.07s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (19.07s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_12_end.jpg', 'Shot 12 • Cuối (19.57s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (19.57s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">AL búng tay một tiếng 'TÁCH' đanh thép! Ngay tức khắc, 4 cây đèn thừa (Softbox, LED panel, tube light, mic light) vụt tắt hoàn toàn! Toàn bộ căn phòng rơi vào bóng tối u tịch, chỉ còn duy nhất một luồng sáng hẹp từ cạnh bên hắt vào sườn vai và góc mặt của AL.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kỹ thuật tối thượng trong dựng phim ngắn là tạo ra sự thay đổi trạng thái cực hạn (Extreme State Change) ngay tại chỗ. Người xem sẽ replay nhiều lần chỉ để ngắm nhìn khoảnh khắc biến chuyển kỳ ảo này.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio tối sâu</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Single Side Key Light (Bóng tối bao trùm 80% khung hình)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Punch-in vào cận cảnh Shot 13</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 13 • Punch-in vào cận cảnh Shot 13</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_12_to_13.jpg?v=2', 'Chuyển cảnh Shot 12 sang Shot 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_12_to_13.jpg?v=2" alt="Transition 12 to 13" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-13">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 13</span>
+                <button class="shot-time-btn" onclick="jumpToShot(13, 19.57, 21.67)">
+                    ▶ 19.57s - 21.67s (2.10s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Đẩy cận cảnh chân dung Chiaroscuro: 'Bóng tối mới chính là thứ tạo nên phép màu điện ảnh'</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_13_start.jpg', 'Shot 13 • Đầu (19.57s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (19.57s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_13_mid.jpg', 'Shot 13 • Giữa (20.62s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (20.62s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_13_end.jpg', 'Shot 13 • Cuối (21.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_13_end.jpg" alt="Shot 13 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (21.67s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Camera giật nhẹ đẩy vào cận cảnh (Medium Close-Up Punch-in): Nụ cười rạng rỡ của AL hiện rõ. Một nửa khuôn mặt bừng sáng sắc thái ấm áp, nửa còn lại chìm trong bóng tối Rembrandt sâu thẳm. Mắt sáng lấp lánh qua tròng kính xanh. Dòng chữ 'THE SHADOW IS WHAT MAKES IT CINEMATIC' hiện lên kiêu hãnh.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Muốn video của bạn trông đắt tiền và đậm chất điện ảnh, hãy mạnh dạn tắt bớt đèn và để một nửa gương mặt chìm vào bóng tối. Sự bí ẩn và tương phản cao (High Contrast) luôn thu hút não bộ con người hơn ánh sáng đều đặn.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Nền đen studio điện ảnh</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Chiaroscuro / Rembrandt Split Lighting (Key Light 90° bên phải)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut sang góc thấp ngồi xổm Shot 14</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 14 • Cut sang góc thấp ngồi xổm Shot 14</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_13_to_14.jpg?v=2', 'Chuyển cảnh Shot 13 sang Shot 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_13_to_14.jpg?v=2" alt="Transition 13 to 14" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-14">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 14</span>
+                <button class="shot-time-btn" onclick="jumpToShot(14, 21.67, 24.2)">
+                    ▶ 21.67s - 24.20s (2.53s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc thấp ngồi xổm ngang tầm mắt (Low Squat Stance): Kêu gọi hành động quyền năng 'Shoot like a Tarantino'</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_14_start.jpg', 'Shot 14 • Đầu (21.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_14_start.jpg" alt="Shot 14 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (21.67s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_14_mid.jpg', 'Shot 14 • Giữa (22.94s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_14_mid.jpg" alt="Shot 14 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (22.94s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_14_end.jpg', 'Shot 14 • Cuối (24.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_14_end.jpg" alt="Shot 14 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (24.20s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt đổi góc máy độc đáo: AL hạ thấp trọng tâm ngồi xổm sát mặt sàn trên tấm thảm thổ cẩm, hai tay vung về phía ống kính máy quay với phong thái tự tin tuyệt đối: 'Follow me, and you'll shoot like a Tarantino'. Ánh sáng xiên một bên tạo khối nổi bật trên vai áo len dệt kim.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi kêu gọi Follow / CTA, hãy thay đổi vị trí cơ thể hoặc tiến sát lại gần ống kính. Đừng chỉ đứng yên một chỗ và nói 'nhớ follow nhé', hãy trao cho họ một lời hứa danh giá (Shoot like Tarantino!).</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Sàn thảm thổ cẩm đỏ</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Single Edge/Rim Light ấm áp</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cut giật vào cực cận Shot 15</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 15 • Cut giật vào cực cận Shot 15</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_14_to_15.jpg?v=2', 'Chuyển cảnh Shot 14 sang Shot 15')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_14_to_15.jpg?v=2" alt="Transition 14 to 15" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-15">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 15</span>
+                <button class="shot-time-btn" onclick="jumpToShot(15, 24.2, 24.63)">
+                    ▶ 24.20s - 24.63s (0.43s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú cắt giật cực cận thảng thốt: 'WAIT!' - Cú phanh thị giác khẩn cấp (Emergency Visual Brake)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_15_start.jpg', 'Shot 15 • Đầu (24.20s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_15_start.jpg" alt="Shot 15 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (24.20s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_15_mid.jpg', 'Shot 15 • Giữa (24.41s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_15_mid.jpg" alt="Shot 15 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (24.41s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_15_end.jpg', 'Shot 15 • Cuối (24.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_15_end.jpg" alt="Shot 15 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (24.63s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt giật cực cận (Tight Close-Up): AL ngoảnh đầu sang bên, mắt mở to thảng thốt, miệng há hốc như vừa bị ai đó đánh thức hoặc chợt ngộ ra một nghịch lý: 'WAIT!'. Chữ 'WAIT!' màu vàng cam đập thẳng vào mắt người xem trong vỏn vẹn 0.43 giây.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sau khi hoàn thành CTA, hãy luôn thêm một cú 'Hook Outro' bất ngờ (một câu hỏi ngớ ngẩn, một tiếng thét giật mình hoặc một phát hiện mới) để kéo dài thời gian xem thêm 2-3 giây quý giá.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Studio tối</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Side Key Light gắt</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Action ngã ngửa sang Shot 16</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 16 • Match Action ngã ngửa sang Shot 16</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_15_to_16.jpg?v=2', 'Chuyển cảnh Shot 15 sang Shot 16')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_15_to_16.jpg?v=2" alt="Transition 15 to 16" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-16">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 16</span>
+                <button class="shot-time-btn" onclick="jumpToShot(16, 24.63, 26.0)">
+                    ▶ 24.63s - 26.00s (1.37s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Vòng lặp vô tận (Infinite Narrative Loop): Ngã ngửa về cảnh mở đầu, khép kín cấu trúc video hoàn mỹ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_16_start.jpg', 'Shot 16 • Đầu (24.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_16_start.jpg" alt="Shot 16 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (24.63s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_16_mid.jpg', 'Shot 16 • Giữa (25.31s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_16_mid.jpg" alt="Shot 16 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (25.31s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_16_end.jpg', 'Shot 16 • Cuối (26.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_16_end.jpg" alt="Shot 16 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (26.00s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt Match Action rơi ngửa người: AL ngã ngửa người nằm trọn trên tấm thảm đỏ đúng vị trí và góc quay của Shot 01, ngước mặt nhìn lên trần nhà: '...so that means light...'. Video kết thúc lửng lơ ngay trước từ khóa quan trọng nhất, tự động nối tiếp liền mạch vào câu mở đầu Shot 01: 'This one thing is killing your videos!'.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục cân đối, bắt mắt.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cần chú ý nhịp cắt hoặc ánh sáng hậu cảnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Hãy viết kịch bản từ câu kết thúc trước. Khi câu kết nối liền thành một câu hoàn chỉnh với câu mở đầu, thuật toán của các nền tảng video ngắn sẽ đẩy video lên hàng triệu view nhờ chỉ số xem lặp lại (Loop Count) kỷ lục.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Tiêu chuẩn</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Sàn nhà trải thảm đỏ (Studio Rug)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Overhead Soft Light dịu mát</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Tự động nối vòng lặp vô tận vào Shot 01</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_16_to_01_loop.jpg?v=2', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/transitions/trans_16_to_01_loop.jpg?v=2" alt="Loop Transition" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 2.8)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Góc quay thẳng đứng đảo ngược không gian: Visual Hook nằm ngửa phá vỡ khuôn mẫu Talking Head truyền thống</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 2.8, 5.2)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 2.80s</span>
+            </div>
+            <div class="grid-card-body">Đảo góc máy 180° từ dưới lên (Worm's Eye View): Dẫn nhập phản biện định kiến 'Ánh sáng là tất cả'</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 5.2, 5.7)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 5.20s</span>
+            </div>
+            <div class="grid-card-body">Nhịp đệm trung cảnh nghiêm trang (Pacing Pause): Khoảng lặng 0.5s tạo đà cho cú nổ đồ họa</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 5.7, 6.83)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 5.70s</span>
+            </div>
+            <div class="grid-card-body">Biến hình Pop-Art bóng đèn phát sáng: Ẩn dụ đồ họa hóa 'Lighting is everything' theo phong cách Paper-Cutout</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 6.83, 11.63)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 6.83s</span>
+            </div>
+            <div class="grid-card-body">Thủ pháp leo thang đạo cụ thực tế (Staging Escalation): 5 nguồn sáng dồn dập xuất hiện biến studio thành lò nướng phẳng lẹt</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 11.63, 13.43)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 11.63s</span>
+            </div>
+            <div class="grid-card-body">Cú tát thị giác 'NO!' rung chuyển khung hình: Điểm gãy nhận thức (Pattern Interrupt) lật ngược niềm tin</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 13.43, 14.27)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 13.43s</span>
+            </div>
+            <div class="grid-card-body">Dẫn chứng điện ảnh 1: Dải phim nhựa 35mm đưa Robert Pattinson (The Batman) vào bóng tối huyền bí</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 14.27, 15.0)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 14.27s</span>
+            </div>
+            <div class="grid-card-body">Dẫn chứng điện ảnh 2: Vẻ đẹp điêu khắc của Zendaya dưới góc chiếu sáng bất đối xứng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(9, 15.0, 16.0)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <span class="grid-thumb-badge">Shot 09 • 15.00s</span>
+            </div>
+            <div class="grid-card-body">Dẫn chứng điện ảnh 3: Samuel L. Jackson trong Pulp Fiction - Đòn bẩy thương hiệu Quentin Tarantino</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(10, 16.0, 17.17)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+                <span class="grid-thumb-badge">Shot 10 • 16.00s</span>
+            </div>
+            <div class="grid-card-body">Dẫn chứng điện ảnh 4: Kingsman khép lại chuỗi chứng minh 'Nobody's face is fully lit'</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(11, 17.17, 18.57)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+                <span class="grid-thumb-badge">Shot 11 • 17.17s</span>
+            </div>
+            <div class="grid-card-body">Thiết lập trạng thái trước biến chuyển: 'Một ngọn đèn từ cạnh bên là đủ'</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(12, 18.57, 19.57)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+                <span class="grid-thumb-badge">Shot 12 • 18.57s</span>
+            </div>
+            <div class="grid-card-body">Cú búng tay dập tắt 4 ngọn đèn thừa: Cú sốc tương phản thị giác (Visual Contrast Shock)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(13, 19.57, 21.67)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_13_mid.jpg" alt="Shot 13" loading="lazy">
+                <span class="grid-thumb-badge">Shot 13 • 19.57s</span>
+            </div>
+            <div class="grid-card-body">Đẩy cận cảnh chân dung Chiaroscuro: 'Bóng tối mới chính là thứ tạo nên phép màu điện ảnh'</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(14, 21.67, 24.2)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_14_mid.jpg" alt="Shot 14" loading="lazy">
+                <span class="grid-thumb-badge">Shot 14 • 21.67s</span>
+            </div>
+            <div class="grid-card-body">Góc thấp ngồi xổm ngang tầm mắt (Low Squat Stance): Kêu gọi hành động quyền năng 'Shoot like a Tarantino'</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(15, 24.2, 24.63)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_15_mid.jpg" alt="Shot 15" loading="lazy">
+                <span class="grid-thumb-badge">Shot 15 • 24.20s</span>
+            </div>
+            <div class="grid-card-body">Cú cắt giật cực cận thảng thốt: 'WAIT!' - Cú phanh thị giác khẩn cấp (Emergency Visual Brake)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(16, 24.63, 26.0)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_16_mid.jpg" alt="Shot 16" loading="lazy">
+                <span class="grid-thumb-badge">Shot 16 • 24.63s</span>
+            </div>
+            <div class="grid-card-body">Vòng lặp vô tận (Infinite Narrative Loop): Ngã ngửa về cảnh mở đầu, khép kín cấu trúc video hoàn mỹ</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1K-HsLMQnyrJPtNaW71H0IQC6OtGybNrq" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "en_frame": 83, "st_time": 0.0, "en_time": 2.8, "duration": 2.8, "headline": "Góc quay thẳng đứng đảo ngược không gian: Visual Hook nằm ngửa phá vỡ khuôn mẫu Talking Head truyền thống", "subject_action": "Tác giả AL nằm ngửa trên tấm thảm thổ cẩm đỏ cổ điển (oriental rug), mặc áo len dệt kim xanh cốm chói (acid lime green) và đeo kính lục cá tính. Hai tay vung vẩy, biểu cảm kịch tính nói: 'This one thing is killing your videos'. Dòng chữ typography đậm nét xuất hiện đồng bộ theo nhịp nói.", "critique_good": "Góc quay Top-Down (Bird's Eye View) đảo ngược trọng lực hoàn toàn so với tư thế ngồi nói trước camera thông thường. Sự kết hợp giữa màu áo xanh neon và nền thảm đỏ tạo độ tương phản bổ túc (Complementary Color Pop: Xanh - Đỏ) lập tức ghim chặt ánh mắt người lướt feed trong 1 giây đầu.", "critique_bad": "Góc quay từ trên xuống khiến bóng đổ ở hốc mắt hơi sâu trong vài frame đầu trước khi nhân vật ngửa cổ hoàn toàn.", "takeaway": "Muốn video giáo dục/talking head thoát khỏi bẫy lướt qua (Scroll Trap), hãy đổi góc camera 90 độ hoặc thay đổi tư thế cơ thể (nằm, ngồi bệt, nghiêng người) thay vì ngồi ngay ngắn trước bàn làm việc.", "specs": {"location": "Sàn nhà trải thảm thổ cẩm đỏ (Studio Rug)", "focal_length": "Overhead Top-Down 24mm Wide", "lighting": "Soft Key Light từ trên cao tỏa đều", "transition": "Match Action Cut sang góc thấp nhìn lên"}}, {"id": 2, "st_frame": 84, "en_frame": 155, "st_time": 2.8, "en_time": 5.2, "duration": 2.4, "headline": "Đảo góc máy 180° từ dưới lên (Worm's Eye View): Dẫn nhập phản biện định kiến 'Ánh sáng là tất cả'", "subject_action": "Góc máy chuyển đột ngột xuống thấp sát nền sàn, quay cận nghiêng (Low-Angle Profile). AL ngửa đầu lên trần nhà rồi ngoảnh mặt nhìn xoáy vào ống kính máy quay với nụ cười châm biếm: 'Oh, every expert says...'. Tay phải đưa lên làm cử chỉ nhại lại các chuyên gia.", "critique_good": "Kỹ thuật tương phản góc máy (Extreme Angle Contrast): từ Top-Down nhìn xuống chuyển thẳng sang Low-Angle nhìn lên tạo ra một cú lắc thị giác mạnh mẽ. Ánh sáng xiên tạo viền tóc và khối cằm rõ rệt.", "critique_bad": "Biên độ cử động tay khá rộng ở rìa dưới khung hình, đôi khi lọt ra ngoài vùng an toàn 9:16.", "takeaway": "Khi chuẩn bị phản biện một quan niệm sai lầm phổ biến, hãy dùng góc quay thấp kết hợp ngôn ngữ cơ thể mỉa mai để tăng tính kịch nghệ và khơi gợi sự tò mò của khán giả.", "specs": {"location": "Phòng tối studio", "focal_length": "Low-Angle Profile 35mm", "lighting": "Side Rim Light viền sắc cạnh má & cằm", "transition": "Quick Jump Cut sang nhịp đệm Shot 03"}}, {"id": 3, "st_frame": 156, "en_frame": 170, "st_time": 5.2, "en_time": 5.7, "duration": 0.5, "headline": "Nhịp đệm trung cảnh nghiêm trang (Pacing Pause): Khoảng lặng 0.5s tạo đà cho cú nổ đồ họa", "subject_action": "Cắt sang góc quay chính diện (Medium Shot) ngang ngực. AL đứng nghiêm túc, khoanh tay bắt chéo trước ngực, mắt nhìn lơ đãng như học sinh chăm chú. Chữ 'LIGHTING' đỏ rực hiện lên phía trên đầu.", "critique_good": "Khoảng dừng ngắn đúng 15 frame (0.5 giây) đóng vai trò như một nhịp hít thở (Visual Inhale) trong âm nhạc, dồn nén năng lượng thị giác trước khi giải phóng ở phân cảnh tiếp theo.", "critique_bad": "Thời lượng 0.5s quá nhanh, phụ đề cần xuất hiện tức thì ngay frame đầu để người xem không bị lỡ chữ.", "takeaway": "Đừng duy trì một nhịp cắt đều đều. Hãy xen kẽ các shot siêu ngắn (0.3 - 0.5s) giữa các phân cảnh dài để tạo nhịp tim thị giác (Visual Heartbeat) dồn dập cho video ngắn.", "specs": {"location": "Studio tối", "focal_length": "Eye-Level Medium 50mm", "lighting": "Ambient Backlight dịu nhẹ", "transition": "Match Cut sang đồ họa hoạt hình Pop-Art Shot 04"}}, {"id": 4, "st_frame": 171, "en_frame": 204, "st_time": 5.7, "en_time": 6.83, "duration": 1.13, "headline": "Biến hình Pop-Art bóng đèn phát sáng: Ẩn dụ đồ họa hóa 'Lighting is everything' theo phong cách Paper-Cutout", "subject_action": "Chuyển phong cách đồ họa hoạt hình 2D kết hợp người thật (Mixed Media Pop-Art): Nhân vật AL được tách nền (Rotoscoped) thu nhỏ đứng trọn bên trong một bóng đèn dây tóc khổng lồ màu vàng sáng chói với các tia hào quang phát ra trên nền xám. Dòng chữ đỏ 'LIGHTING IS EVERYTHING' đập mạnh vào tâm trí.", "critique_good": "Thủ pháp trực quan hóa ẩn dụ (Visual Metaphor): Đưa con người vào bên trong bóng đèn châm biếm sâu sắc sự phụ thuộc mù quáng vào thiết bị chiếu sáng. Màu vàng chanh - đỏ rực trên nền xám trung tính tạo độ bật đồ họa cực mạnh.", "critique_bad": "Đường viền tách nền (mask edge) quanh đôi giày hơi thô, tuy nhiên lại hòa hợp với chất retro cutout.", "takeaway": "Để video kiến thức kỹ thuật không bị khô khan, hãy dùng kỹ thuật tách nền hoạt hình kết hợp các biểu tượng đồ họa quen thuộc (bóng đèn, công tắc, đồng hồ) để tạo tiếng cười châm biếm.", "specs": {"location": "Phông nền đồ họa hoạt hình 2D", "focal_length": "Graphic Illustration Pop-Art", "lighting": "Flat Digital Graphic Glow", "transition": "Hard Cut trở về không gian thực tế Shot 05"}}, {"id": 5, "st_frame": 205, "en_frame": 348, "st_time": 6.83, "en_time": 11.63, "duration": 4.8, "headline": "Thủ pháp leo thang đạo cụ thực tế (Staging Escalation): 5 nguồn sáng dồn dập xuất hiện biến studio thành lò nướng phẳng lẹt", "subject_action": "AL đứng giữa phòng tối, bắt đầu diễn giải quá trình 'sa lầy' mua sắm thiết bị. Cứ mỗi lần nói 'buy a light', một cây đèn chuyên dụng lại bật sáng: F:235 bật Softbox bát giác khổng lồ; F:261 bật đèn LED panel bên trái; F:295 bật đèn trần + micro phòng thu; F:327 bật đèn tuýp LED wand. Căn phòng từ tối dần dần bị bao phủ bởi ánh sáng chói lòa khắp mọi hướng.", "critique_good": "Thực tế hóa sai lầm của người mới ngay trước mắt người xem. Hiệu ứng cộng dồn ánh sáng liên tiếp khiến khán giả tận mắt thấy khuôn mặt nhân vật từ có chiều sâu chuyển thành phẳng lẹt, mất hết khối, bóng đổ hỗn loạn.", "critique_bad": "Thời lượng 4.8s là shot dài nhất video, nhưng được bù đắp bởi 4 lần xuất hiện đạo cụ liên tục giữ chặt mắt người xem.", "takeaway": "Thay vì nói lý thuyết 'đừng dùng quá nhiều đèn', hãy cho khán giả thấy hậu quả trực tiếp trên khung hình bằng cách bật từng cây đèn lên. Sự tương phản giữa mong đợi (càng nhiều đèn càng đẹp) và thực tế (chói lóa mất khối) sẽ thuyết phục người xem 100%.", "specs": {"location": "Studio thực tế", "focal_length": "Wide 28mm Studio Shot", "lighting": "Multi-point Flat Lighting (5 nguồn đèn chồng chéo chói lòa)", "transition": "Jump Cut vào cận cảnh Shot 06"}}, {"id": 6, "st_frame": 349, "en_frame": 402, "st_time": 11.63, "en_time": 13.43, "duration": 1.8, "headline": "Cú tát thị giác 'NO!' rung chuyển khung hình: Điểm gãy nhận thức (Pattern Interrupt) lật ngược niềm tin", "subject_action": "Cắt vào cận trung (Medium Close-Up): AL nhăn mặt, nhún hai vai, hai bàn tay mở ra vẻ ái ngại: 'Looks professional?'. Đúng lúc khán giả đang phân vân thì một khối chữ 'NO!' màu đỏ khổng lồ giáng thẳng xuống chiếm 80% chiều cao màn hình kèm hiệu ứng rung giật camera cực mạnh.", "critique_good": "Điểm gãy nhận thức kinh điển (Pattern Interrupt). Sự kết hợp giữa biểu cảm gương mặt tự tiếu phi tiếu và cú đập của chữ 'NO!' dập tắt hoàn toàn ảo tưởng của người dùng về việc 'nhiều đèn là chuyên nghiệp'.", "critique_bad": "Chữ 'NO' che khuất gần hết nửa thân trên nhân vật trong 10 frame, nhưng đó chính là chủ đích thị giác.", "takeaway": "Dùng các từ phủ định dứt khoát ('NO!', 'SAI!', 'DỪNG LẠI!') với kích thước ngoại cỡ và âm thanh va chạm mạnh để ngắt dòng suy nghĩ của khán giả, chuẩn bị cho giải pháp mang tính cách mạng.", "specs": {"location": "Studio 5 đèn chói sáng", "focal_length": "Medium Close-Up 50mm", "lighting": "Chói sáng toàn diện (Over-exposed Flat Light)", "transition": "Hard Cut sang dải phim nhựa 35mm Shot 07"}}, {"id": 7, "st_frame": 403, "en_frame": 427, "st_time": 13.43, "en_time": 14.27, "duration": 0.84, "headline": "Dẫn chứng điện ảnh 1: Dải phim nhựa 35mm đưa Robert Pattinson (The Batman) vào bóng tối huyền bí", "subject_action": "Khung hình biến đổi thành dải phim nhựa 35mm với lỗ đục film strip hai bên. Phân cảnh Robert Pattinson trong 'The Batman' hiện ra với ánh mắt u buồn, một nửa gương mặt chìm trong bóng tối thăm thẳm. Mũi tên vàng chỉ thẳng vào vùng tối kèm nhãn 'SHADOW'. Lời bình: 'Now look at people in movies'.", "critique_good": "Sử dụng Cinematic Film Strip Border nâng tầm uy tín nội dung từ video TikTok thông thường lên tầm nghiên cứu điện ảnh kinh điển. Robert Pattinson là mỏ neo biểu tượng hiện đại về phong cách Low-Key / Film Noir.", "critique_bad": "Thời lượng lướt qua nhanh (0.83s), người xem chỉ kịp bắt trọn ấn tượng thị giác về vùng bóng tối.", "takeaway": "Khi muốn thuyết phục về tính thẩm mỹ cao cấp, hãy trích dẫn các tác phẩm điện ảnh hàng đầu thế giới đã được kiểm chứng bởi thời gian và hàng triệu khán giả.", "specs": {"location": "Trích đoạn phim The Batman (Matt Reeves)", "focal_length": "35mm Film Strip Cinematic Aspect", "lighting": "Chiaroscuro Single Key Light + Deep Shadow", "transition": "Cut liền mạch sang Shot 08 trên dải phim"}}, {"id": 8, "st_frame": 428, "en_frame": 449, "st_time": 14.27, "en_time": 15.0, "duration": 0.73, "headline": "Dẫn chứng điện ảnh 2: Vẻ đẹp điêu khắc của Zendaya dưới góc chiếu sáng bất đối xứng", "subject_action": "Tiếp tục dải phim 35mm: Khung hình chuyển sang gương mặt thanh tú của minh tinh Zendaya. Ánh sáng xiên một bên làm nổi bật sống mũi và bờ môi, nửa mặt bên kia chìm trong bóng mờ gợi cảm. Mũi tên vàng tiếp tục định vị 'SHADOW'.", "critique_good": "Đập tan định kiến rằng 'chỉ có phim hành động đen tối u ám mới dùng bóng tối'. Cho thấy ngay cả chân dung phụ nữ xinh đẹp, quyến rũ cũng cần bóng tối để tạo nên chiều sâu cảm xúc và độ điêu khắc gương mặt.", "critique_bad": "Tốc độ chuyển shot 0.73s rất gấp gáp đòi hỏi người xem phải đảo mắt liên tục.", "takeaway": "Chứng minh một nguyên lý bằng nhiều nhóm đối tượng khác nhau (nam giới gai góc -> nữ giới quyến rũ) để quy luật có tính phổ quát tuyệt đối.", "specs": {"location": "Chân dung điện ảnh Zendaya", "focal_length": "35mm Film Strip Cinematic", "lighting": "Asymmetrical Side Key Light", "transition": "Cut sang Shot 09 trên dải phim"}}, {"id": 9, "st_frame": 450, "en_frame": 479, "st_time": 15.0, "en_time": 16.0, "duration": 1.0, "headline": "Dẫn chứng điện ảnh 3: Samuel L. Jackson trong Pulp Fiction - Đòn bẩy thương hiệu Quentin Tarantino", "subject_action": "Khung hình dải phim 35mm đưa người xem đến phân cảnh kinh điển của Samuel L. Jackson (Pulp Fiction) đang hút ly nước soda, ánh mắt lạnh lùng nhìn chằm chằm. Nửa khuôn mặt bên trái chìm vào bóng tối sâu. Mũi tên vàng chỉ rõ 'SHADOW'. Tiếng voice cất lên: 'Nobody's face...'", "critique_good": "Cài cắm mỏ neo văn hóa đại chúng (Pop-Culture Anchor). Phân cảnh Pulp Fiction không chỉ củng cố triết lý bóng tối mà còn gieo mầm (Seed) cho câu chốt 'shoot like a Tarantino' ở Shot 14.", "critique_bad": "Độ sáng trích đoạn phim gốc hơi tối so với màn hình điện thoại ở nơi có ánh sáng ban ngày.", "takeaway": "Hãy chọn các trích đoạn phim có nhân vật mang tính biểu tượng văn hóa cao để video vừa có tính học thuật vừa tạo cảm giác gần gũi, thích thú cho người sành sỏi.", "specs": {"location": "Pulp Fiction (Quentin Tarantino)", "focal_length": "35mm Film Strip Cinematic", "lighting": "Hard Side Key Light + Dramatic Shadow", "transition": "Cut sang Shot 10 trên dải phim"}}, {"id": 10, "st_frame": 480, "en_frame": 514, "st_time": 16.0, "en_time": 17.17, "duration": 1.17, "headline": "Dẫn chứng điện ảnh 4: Kingsman khép lại chuỗi chứng minh 'Nobody's face is fully lit'", "subject_action": "Trích đoạn phim Kingsman: The Secret Service trong quán pub cổ điển Anh Quốc. Taron Egerton và Colin Firth ngồi đối diện, ánh sáng ấm từ cửa sổ hông chiếu rọi bờ vai và một bên mặt, phần còn lại chìm vào không gian quán tối ấm áp. Chữ 'IS FULLY LIT' hoàn thành câu nói.", "critique_good": "Đóng gói trọn vẹn luận điểm cốt lõi bằng 4 ví dụ đa dạng (DC Batman, Euphoria, Pulp Fiction, Kingsman). Khán giả bị thuyết phục hoàn toàn rằng bóng tối là DNA của điện ảnh.", "critique_bad": "Cảnh phim 2 nhân vật có trường nhìn rộng hơn 3 cảnh trước nên chi tiết khuôn mặt nhỏ hơn.", "takeaway": "Dùng chuỗi 'Proof Stacking' (Xếp chồng bằng chứng liên hoàn 4 lớp) trong vòng 3.7 giây để đè bẹp mọi nghi ngờ của khán giả trước khi đưa ra giải pháp thực hành.", "specs": {"location": "Kingsman Pub (Matthew Vaughn)", "focal_length": "35mm Film Strip Cinematic", "lighting": "Practical Window Side Light + Amber Fill", "transition": "Cut trở lại studio thực tế Shot 11"}}, {"id": 11, "st_frame": 515, "en_frame": 556, "st_time": 17.17, "en_time": 18.57, "duration": 1.4, "headline": "Thiết lập trạng thái trước biến chuyển: 'Một ngọn đèn từ cạnh bên là đủ'", "subject_action": "Cắt trở lại AL đang đứng giữa căn phòng rực sáng 5 ngọn đèn. Anh giơ bàn tay phải lên cao, chuẩn bị tư thế búng tay (Snap). Lời thoại hướng dẫn: 'One light from the side...'", "critique_good": "Tạo cảm giác đón đợi (Anticipation). Khán giả biết một sự biến đổi ngoạn mục sắp xảy ra ngay sau tiếng búng tay, kích hoạt sự tập trung cao độ.", "critique_bad": "Ánh sáng phản xạ từ 5 cây đèn tạo nhiều bóng lộn xộn dưới chân thảm.", "takeaway": "Trước khi thực hiện một cú thay đổi ngoạn mục, hãy dừng lại 1-1.5 giây để ra hiệu cho người xem (bằng hành động giơ tay, đếm 1-2-3 hoặc nhìn thẳng ống kính).", "specs": {"location": "Studio 5 đèn", "focal_length": "Medium Cowboy Shot 35mm", "lighting": "Over-exposed Flat Light", "transition": "Jump Cut tức thì tại điểm búng tay Shot 12"}}, {"id": 12, "st_frame": 557, "en_frame": 586, "st_time": 18.57, "en_time": 19.57, "duration": 1.0, "headline": "Cú búng tay dập tắt 4 ngọn đèn thừa: Cú sốc tương phản thị giác (Visual Contrast Shock)", "subject_action": "AL búng tay một tiếng 'TÁCH' đanh thép! Ngay tức khắc, 4 cây đèn thừa (Softbox, LED panel, tube light, mic light) vụt tắt hoàn toàn! Toàn bộ căn phòng rơi vào bóng tối u tịch, chỉ còn duy nhất một luồng sáng hẹp từ cạnh bên hắt vào sườn vai và góc mặt của AL.", "critique_good": "Cú sốc thị giác (Visual Shock) tột độ: chuyển từ độ sáng 100% xuống 20% trong 1 frame duy nhất mà không cần đổi bối cảnh. Cho thấy sự kỳ diệu của việc 'bớt đi thay vì cộng thêm'.", "critique_bad": "Căn phòng chuyển tối đột ngột có thể khiến mắt người xem cần 0.2s để thích nghi.", "takeaway": "Kỹ thuật tối thượng trong dựng phim ngắn là tạo ra sự thay đổi trạng thái cực hạn (Extreme State Change) ngay tại chỗ. Người xem sẽ replay nhiều lần chỉ để ngắm nhìn khoảnh khắc biến chuyển kỳ ảo này.", "specs": {"location": "Studio tối sâu", "focal_length": "Cowboy Shot 35mm", "lighting": "Single Side Key Light (Bóng tối bao trùm 80% khung hình)", "transition": "Punch-in vào cận cảnh Shot 13"}}, {"id": 13, "st_frame": 587, "en_frame": 649, "st_time": 19.57, "en_time": 21.67, "duration": 2.1, "headline": "Đẩy cận cảnh chân dung Chiaroscuro: 'Bóng tối mới chính là thứ tạo nên phép màu điện ảnh'", "subject_action": "Camera giật nhẹ đẩy vào cận cảnh (Medium Close-Up Punch-in): Nụ cười rạng rỡ của AL hiện rõ. Một nửa khuôn mặt bừng sáng sắc thái ấm áp, nửa còn lại chìm trong bóng tối Rembrandt sâu thẳm. Mắt sáng lấp lánh qua tròng kính xanh. Dòng chữ 'THE SHADOW IS WHAT MAKES IT CINEMATIC' hiện lên kiêu hãnh.", "critique_good": "Khuôn mặt nhân vật ngay lập tức trở nên có chiều sâu điêu khắc, các góc cạnh xương gò má, sống mũi và tròng mắt nổi khối 3D rõ rệt. Chứng minh hùng hồn cho câu nói: Bóng tối mới là thứ kiến tạo nên vẻ đẹp điện ảnh.", "critique_bad": "Vùng tối bên má trái sâu gần như 0 IRE, đòi hỏi màn hình OLED hiển thị tốt nhất.", "takeaway": "Muốn video của bạn trông đắt tiền và đậm chất điện ảnh, hãy mạnh dạn tắt bớt đèn và để một nửa gương mặt chìm vào bóng tối. Sự bí ẩn và tương phản cao (High Contrast) luôn thu hút não bộ con người hơn ánh sáng đều đặn.", "specs": {"location": "Nền đen studio điện ảnh", "focal_length": "Medium Close-Up 50mm f/2.0", "lighting": "Chiaroscuro / Rembrandt Split Lighting (Key Light 90° bên phải)", "transition": "Cut sang góc thấp ngồi xổm Shot 14"}}, {"id": 14, "st_frame": 650, "en_frame": 725, "st_time": 21.67, "en_time": 24.2, "duration": 2.53, "headline": "Góc thấp ngồi xổm ngang tầm mắt (Low Squat Stance): Kêu gọi hành động quyền năng 'Shoot like a Tarantino'", "subject_action": "Cắt đổi góc máy độc đáo: AL hạ thấp trọng tâm ngồi xổm sát mặt sàn trên tấm thảm thổ cẩm, hai tay vung về phía ống kính máy quay với phong thái tự tin tuyệt đối: 'Follow me, and you'll shoot like a Tarantino'. Ánh sáng xiên một bên tạo khối nổi bật trên vai áo len dệt kim.", "critique_good": "Tư thế ngồi xổm (Low Squatting) phá bỏ hoàn toàn khoảng cách giữa người hướng dẫn và người xem, tạo cảm giác thân mật, bí truyền nhưng đầy quyền lực. Câu CTA gắn tên Quentin Tarantino kích hoạt khao khát làm phim đỉnh cao.", "critique_bad": "Tư thế ngồi xổm khiến hai đầu gối che khuất một phần thảm, nhưng lại tạo đường dẫn thị giác vào khuôn mặt.", "takeaway": "Khi kêu gọi Follow / CTA, hãy thay đổi vị trí cơ thể hoặc tiến sát lại gần ống kính. Đừng chỉ đứng yên một chỗ và nói 'nhớ follow nhé', hãy trao cho họ một lời hứa danh giá (Shoot like Tarantino!).", "specs": {"location": "Sàn thảm thổ cẩm đỏ", "focal_length": "Low-Angle 28mm", "lighting": "Single Edge/Rim Light ấm áp", "transition": "Cut giật vào cực cận Shot 15"}}, {"id": 15, "st_frame": 726, "en_frame": 738, "st_time": 24.2, "en_time": 24.63, "duration": 0.43, "headline": "Cú cắt giật cực cận thảng thốt: 'WAIT!' - Cú phanh thị giác khẩn cấp (Emergency Visual Brake)", "subject_action": "Cắt giật cực cận (Tight Close-Up): AL ngoảnh đầu sang bên, mắt mở to thảng thốt, miệng há hốc như vừa bị ai đó đánh thức hoặc chợt ngộ ra một nghịch lý: 'WAIT!'. Chữ 'WAIT!' màu vàng cam đập thẳng vào mắt người xem trong vỏn vẹn 0.43 giây.", "critique_good": "Cú phanh thị giác khẩn cấp ngăn chặn người xem lướt sang video khác (Anti-Scroll Brake). Người xem tưởng video đã hết ở câu CTA, nhưng tiếng 'WAIT!' kéo giật sự chú ý quay trở lại 100%.", "critique_bad": "Chớp nhoáng 13 frame đòi hỏi biểu cảm giật mình của diễn viên phải cực kỳ chuẩn xác và cơ mặt co giãn tối đa.", "takeaway": "Sau khi hoàn thành CTA, hãy luôn thêm một cú 'Hook Outro' bất ngờ (một câu hỏi ngớ ngẩn, một tiếng thét giật mình hoặc một phát hiện mới) để kéo dài thời gian xem thêm 2-3 giây quý giá.", "specs": {"location": "Studio tối", "focal_length": "Tight Close-Up 85mm Macro", "lighting": "Side Key Light gắt", "transition": "Match Action ngã ngửa sang Shot 16"}}, {"id": 16, "st_frame": 739, "en_frame": 779, "st_time": 24.63, "en_time": 26.0, "duration": 1.37, "headline": "Vòng lặp vô tận (Infinite Narrative Loop): Ngã ngửa về cảnh mở đầu, khép kín cấu trúc video hoàn mỹ", "subject_action": "Cắt Match Action rơi ngửa người: AL ngã ngửa người nằm trọn trên tấm thảm đỏ đúng vị trí và góc quay của Shot 01, ngước mặt nhìn lên trần nhà: '...so that means light...'. Video kết thúc lửng lơ ngay trước từ khóa quan trọng nhất, tự động nối tiếp liền mạch vào câu mở đầu Shot 01: 'This one thing is killing your videos!'.", "critique_good": "Cấu trúc vòng lặp vô tận (Seamless Infinite Loop) hoàn hảo cả về hình ảnh (nằm trên cùng tấm thảm, cùng góc Top-Down) lẫn ngữ nghĩa âm thanh ('So that means light [is killing your videos]'). Biến video thành một chiếc nhẫn Mobius không có điểm dừng, đẩy tỷ lệ Retention Rate lên trên 120%.", "critique_bad": "Đòi hỏi người xem phải bật tự động lặp (Auto-Loop) trên Instagram / TikTok để cảm nhận trọn vẹn phép màu này.", "takeaway": "Hãy viết kịch bản từ câu kết thúc trước. Khi câu kết nối liền thành một câu hoàn chỉnh với câu mở đầu, thuật toán của các nền tảng video ngắn sẽ đẩy video lên hàng triệu view nhờ chỉ số xem lặp lại (Loop Count) kỷ lục.", "specs": {"location": "Sàn nhà trải thảm đỏ (Studio Rug)", "focal_length": "Overhead Top-Down 24mm Wide", "lighting": "Overhead Soft Light dịu mát", "transition": "Tự động nối vòng lặp vô tận vào Shot 01"}}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ;
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 30.0 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById();
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

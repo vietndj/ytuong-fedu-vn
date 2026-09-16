@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Aidana • Tornado Kick Martial Arts Kinetic Hook • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">7 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Aidana • Tornado Kick Martial Arts Kinetic Hook</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DcQy-eEOIHc/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Tornado Kick Martial Arts Kinetic Hook - @aidana_adilkassym.mp4" type="video/mp4">
+                <source src="../videos/Tornado Kick Martial Arts Kinetic Hook - @aidana_adilkassym.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 10.90s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Aidana • Tornado Kick Martial Arts Kinetic Hook</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@aidana_adilkassym" onclick="handleCreatorClick(event, '@aidana_adilkassym', 'Aidana Adilkassym')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Aidana Adilkassym trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Aidana Adilkassym</strong>
+                        <span class="author-handle">(@aidana_adilkassym)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/DcQy-eEOIHc/" target="_blank" class="author-link">Aidana • Martial Arts & Fashion (@aidana_adilkassym)</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc (Vertical Reel)</strong> • 10.90s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Aidana • Tornado Kick Martial Arts Kinetic Hook</h1>
+            <p class="overview-hero-desc">Bóc tách 7 phân cảnh mẫu mực trong video triệu view của nữ võ sĩ kiêm creator Aidana Adilkassym (@aidana_adilkassym): Đòn bẩy thị giác Kinetic Hook với cú đá xoay Tornado Kick (Dollyo Chagi 360/540) xuất phát từ trang phục mặc nhà giản dị, thực hiện cú Match Cut thần sầu ngay đỉnh điểm cú xoay trên không để hóa thân tức thì thành set đồ High-Fashion mùa thu đẳng cấp (áo khoác dạ blazer dáng rộng, quần suông lụa satin champagne, clutch da). Nối tiếp là chuỗi phân cảnh phô diễn chuyển động vật lý chất liệu vải lụa (Fluid Fabric Physics), cú ngoái nhìn qua vai (Over-the-Shoulder Glance) và cú tiến sát khung hình đầy mê hoặc (Intimate Hero Walk-In).</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Martial Arts Tornado Kick Hook • Peak Momentum Action Match Cut • Editorial Stare Transition • Fluid Silk Fabric Physics • Over-The-Shoulder Silhouette • Intimate Hero Walk-In</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">7 Shots • Nhịp trung bình 1.53s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">720x1280 • 30.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 2.1)">
+                    ▶ 0.00s - 2.10s (2.10s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Kinetic Tension Hook: Khởi động từ trang phục mặc nhà giản dị tạo đòn bẩy tương phản trước cú bùng nổ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_01_mid.jpg', 'Shot 01 • Giữa (1.05s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.05s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_01_end.jpg', 'Shot 01 • Cuối (2.10s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (2.10s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Aidana đứng trong không gian phòng khách hiện đại tối giản với sàn gỗ sáng và tường trắng. Cô diện set đồ mặc nhà thoải mái (áo thun xanh cobalt oversize, quần legging đen, tất trắng) và cầm chiếc sneaker trắng trên tay phải. Cô chuẩn bị tư thế, mắt tập trung cao độ, rồi bất ngờ dậm chân bật cao tung cú đá xoay Tornado Kick (Dollyo Chagi 360/540) cực kỳ nội lực xé gió.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khởi đầu bằng hình tượng đời thường (Understated Casual Hook) làm hạ thấp phòng vệ tâm lý của người xem; cú bật nhảy xoay người trên không (Aerial Kinetic Energy) bùng nổ bất ngờ tạo sự tương phản cực đại, kích thích dopamine giữ chân khán giả tuyệt đối ngay 2 giây đầu.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chiếc thảm lông trắng ở góc dưới bên trái hơi chồi vào khung hình làm phân tán nhẹ điểm nhìn vào bước chân; ánh sáng phòng hơi phẳng, chưa có đèn viền (rim light) tách chủ thể rõ nét khỏi mảng tường trắng phía sau.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Để tạo hook biến hình triệu view, hãy khởi đầu bằng hình ảnh đời thường và giản dị nhất. Sự chênh lệch giữa 'vẻ ngoài mộc mạc' và 'kỹ năng võ thuật siêu đẳng' là công thức giữ chân người xem mạnh nhất trên Reels.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Wide Eye-Level Shot 24mm (Full Body)</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Phòng khách căn hộ tối giản</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên từ cửa sổ lớn kết hợp đèn trần khuếch tán</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Action Match Cut trên đỉnh cao trào cú đá xoay sang Shot 02</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Action Match Cut trên đỉnh cao trào cú đá xoay sang Shot 02</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 2.13, 4.07)">
+                    ▶ 2.13s - 4.07s (1.94s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Match Cut Đỉnh Cao Trên Không: Đồng bộ trục quán tính biến hình từ võ thuật sang High-Fashion mượt mà không tì vết</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_02_start.jpg', 'Shot 02 • Đầu (2.13s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (2.13s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_02_mid.jpg', 'Shot 02 • Giữa (3.10s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (3.10s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_02_end.jpg', 'Shot 02 • Cuối (4.07s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (4.07s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Ngay tại đỉnh cao nhất của cú vung chân Tornado Kick trên không (Frame 64), cú cắt cảnh khớp chuyển động (Match Cut on Action) diễn ra: Aidana lập tức biến hóa thành set đồ High-Fashion mùa thu đẳng cấp với áo blazer dạ kẻ nâu oversize, quần suông lụa satin màu champagne, tóc xõa mượt bồng bềnh và clutch da trên tay. Chân cô quét một vòng bán nguyệt xé gió rồi tiếp đất hoàn hảo, vạt áo blazer bay phấp phới theo quán tính.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khớp chuyển động (Action Continuity) chuẩn xác tới từng khung hình giữa trục xoay cơ thể và góc mở chân; hiệu ứng thị giác của vạt áo blazer và lọn tóc xoay theo quán tính (Secondary Motion / Follow-Through) tạo cảm giác uyển chuyển, quyền lực và sang trọng tột bậc.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Do thực hiện cú đá ở tốc độ cao, một số khung hình tiếp đất bị motion blur nhẹ ở phần bàn chân; nếu quay ở tốc độ khung hình cao (60fps/120fps) rồi ramp tốc độ (Speed Ramping) thì khoảnh khắc tiếp đất sẽ còn sắc nét hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Điểm mấu chốt của cú Match Cut biến hình không phải là vị trí đứng, mà là hướng và vận tốc của chuyển động (Vector Momentum). Luôn cắt cảnh ở khung hình có vận tốc cao nhất để mắt người xem bị cuốn theo quán tính chuyển động.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Medium-Wide Shot 28mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Gian phòng khách căn hộ</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng cửa sổ ban ngày tạt nghiêng làm nổi bật chất liệu vải dạ và lụa</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Jump Cut cắt nhịp thần thái sang Shot 03</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Jump Cut cắt nhịp thần thái sang Shot 03</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 4.1, 5.4)">
+                    ▶ 4.10s - 5.40s (1.30s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Editorial Stare & Layering Reveal: Chuyển hóa năng lượng từ võ thuật sang thần thái người mẫu thời trang cao cấp</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_03_start.jpg', 'Shot 03 • Đầu (4.10s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (4.10s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_03_mid.jpg', 'Shot 03 • Giữa (4.75s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (4.75s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_03_end.jpg', 'Shot 03 • Cuối (5.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.40s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt góc đối diện trực diện, Aidana quay thẳng vào ống kính với gương mặt thần thái sắc lạnh chuẩn bìa tạp chí Vogue. Tay trái cô nhẹ nhàng đưa lên vuốt chỉnh mái tóc bồng bềnh ra sau vai, áo blazer mở rộng để lộ áo trong dệt kim màu nâu mocha ôm sát tôn vòng eo và xương quai xanh điểm xuyết mặt ngọc trai thanh lịch. Tay phải cầm chiếc túi clutch da mềm mại.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Chuyển nhịp hoàn hảo từ động sang tĩnh (Kinetic to Still Pacing); khóa chặt ánh mắt người xem bằng biểu cảm tự tin, lạnh lùng (Editorial Stare); sự tương phản giữa nét mạnh mẽ của võ thuật và vẻ nữ tính kiêu kỳ của thời trang tạo sức hút khó cưỡng.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng 1.30s tương đối ngắn để khán giả chiêm ngưỡng kỹ từng món phụ kiện trang sức; cử chỉ vuốt tóc diễn ra hơi nhanh trước khi kịp định hình dáng tay hoàn chỉnh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sau một pha hành động nghẹt thở (Action Hook), hãy cho khán giả một 'Hero Shot' tĩnh với ánh nhìn trực diện (Direct Eye Contact). Đây là khoảnh khắc khắc sâu thần thái và định vị phong cách cá nhân vào tâm trí người xem.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Medium Portrait Shot 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc sảnh phòng khách</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tạt nghiêng 45 độ tạo khối gò má và bóng đổ mềm trên xương quai xanh</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Jump Cut cắt nhịp dáng đứng sang Shot 04</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Jump Cut cắt nhịp dáng đứng sang Shot 04</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 5.43, 6.43)">
+                    ▶ 5.43s - 6.43s (1.00s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Body Attitude Check: Điểm dừng nhịp thở thị giác kiểm soát phom dáng và tạo đà cho cú catwalk</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_04_start.jpg', 'Shot 04 • Đầu (5.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.43s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_04_mid.jpg', 'Shot 04 • Giữa (5.93s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.93s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_04_end.jpg', 'Shot 04 • Cuối (6.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (6.43s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Aidana hạ ánh mắt nhìn lướt xuống cơ thể và nếp gấp của trang phục, hai tay buông tự nhiên, tay phải hạ chiếc túi clutch xuống ngang hông. Động tác chỉnh áo và kiểm tra dáng đứng diễn ra tự nhiên như một thói quen thường nhật của các fashionista trước khi bước ra phố.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tạo nhịp thở tự nhiên (Casual Micro-beat) giúp video không bị cảm giác diễn xuất gượng gạo; phô diễn độ rủ thanh thoát của chiếc quần ống rộng chất liệu lụa satin khi đứng yên.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh mắt nhìn xuống sàn hơi lâu (khoảng 0.8s) khiến kết nối mắt với khán giả bị gián đoạn chốc lát; góc máy cố định hơi thiếu sự chuyển động tương tác.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Những cử chỉ micro-movement đời thường (nhìn xuống trang phục, chỉnh cổ áo) giúp 'nhân tính hóa' và tăng độ chân thật cho video lookbook, xóa bỏ cảm giác cứng nhắc của video quảng cáo truyền thống.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Medium Shot 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Gian phòng khách</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ban ngày tự nhiên dịu nhẹ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut tiếp nối bước chân sang Shot 05</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Hard Cut tiếp nối bước chân sang Shot 05</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 6.47, 7.57)">
+                    ▶ 6.47s - 7.57s (1.10s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Fluid Fabric Physics: Tôn vinh chuyển động mềm mại của chất liệu lụa satin đối lập với phom cứng blazer</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_05_start.jpg', 'Shot 05 • Đầu (6.47s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (6.47s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_05_mid.jpg', 'Shot 05 • Giữa (7.02s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (7.02s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_05_end.jpg', 'Shot 05 • Cuối (7.57s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (7.57s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Aidana bắt đầu nhấc chân sải bước catwalk nhẹ nhàng về phía trước. Ống quần lụa satin dập dềnh theo từng nhịp bước chân tạo nên làn sóng vải mềm mại, tương phản mạnh mẽ với cấu trúc vuông vức, đứng phom của chiếc áo khoác dạ blazer oversized.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khai thác triệt để vật lý chất liệu chuyển động (Fabric Physics in Motion); nhịp bước chân dứt khoát mang phong thái tự tin, sang trọng của sàn diễn quốc tế.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khung hình bị giới hạn bởi không gian phòng khách nhỏ, khiến sải bước chưa đủ dài và thoáng như trên đường phố hoặc studio chuyên nghiệp.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Trong video thời trang, trang phục chỉ thực sự 'sống' khi nó chuyển động. Hãy kết hợp giữa một item có phom dáng cứng cáp (Structure - Blazer) với một item có chất liệu bay bổng (Flow - Silk/Satin) để tạo sự tương phản vật liệu mê hoặc.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Medium Full Shot 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Sàn gỗ phòng khách</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng khuếch tán đều, nhấn sáng nếp lụa satin</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Jump Cut cắt nhịp xoay hông sang Shot 06</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Jump Cut cắt nhịp xoay hông sang Shot 06</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 7.6, 9.4)">
+                    ▶ 7.60s - 9.40s (1.80s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Over-the-Shoulder Glance: Khai thác góc quay 3/4 phô diễn đường cắt may sau lưng và ánh nhìn quyến rũ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_06_start.jpg', 'Shot 06 • Đầu (7.60s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (7.60s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_06_mid.jpg', 'Shot 06 • Giữa (8.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (8.50s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_06_end.jpg', 'Shot 06 • Cuối (9.40s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (9.40s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Aidana xoay người bước chéo góc về phía sau bên phải, khoe trọn vẹn đường xẻ tà và kết cấu lưng áo của chiếc blazer oversized. Trong lúc đang sải bước rời đi, cô bất ngờ xoay đầu ngoái nhìn lại ống kính qua vai (Over-the-shoulder gaze) với nụ cười mỉm nhẹ và ánh mắt sắc sảo đầy bí ẩn.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục 3/4 lưng (Over-the-Shoulder) kinh điển trong điện ảnh; góc quay phô diễn toàn bộ 360 độ của set trang phục; ánh nhìn ngoái lại tạo cảm giác quyến luyến, lôi cuốn và giữ chân người xem đến những giây cuối.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc đi hơi sát với mép tường và công tắc điện màu đen trên tường sau lưng; có thể tạo cảm giác hơi chật chội ở rìa trái khung hình.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Cú ngoái nhìn qua vai (The Backward Glance) là vũ khí tối thượng để kết thúc một chuỗi chuyển động quay lưng. Nó vừa giúp khoe được chi tiết sau lưng trang phục, vừa tái lập kết nối cảm xúc với khán giả trước khi vào cảnh kết.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Medium Shot 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc phòng khách gần cửa</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng cửa sổ chiếu chếch từ bên phải tạo ven sáng trên mái tóc dài</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Jump Cut tiến sát cận cảnh sang Shot 07</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Jump Cut tiến sát cận cảnh sang Shot 07</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 9.43, 10.87)">
+                    ▶ 9.43s - 10.87s (1.44s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hero Walk-In & Close-up Climax: Kéo gần cự ly cảm xúc bằng cú tiến sát khung hình đầy mê hoặc</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_07_start.jpg', 'Shot 07 • Đầu (9.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (9.43s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_07_mid.jpg', 'Shot 07 • Giữa (10.15s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (10.15s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_07_end.jpg', 'Shot 07 • Cuối (10.87s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.87s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cắt cảnh trực diện chính diện. Aidana cầm chiếc túi clutch bằng hai tay trước bụng, bước thẳng dứt khoát về phía camera. Cự ly thu hẹp dần từ trung cảnh (Medium) sang cận cảnh bán thân (Medium Close-Up). Ánh mắt nhìn thẳng vào tâm ống kính với bờ môi hờ hững đầy tự tin, kết thúc video bằng một điểm dừng quyền lực.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tận dụng chuyển động tiến sát ống kính (Forward Camera Approach) để tăng tính thân mật (Intimacy); ánh mắt và cơ mặt ở cự ly gần thể hiện trọn vẹn thần thái của một nữ vận động viên kiêm người mẫu hiện đại; tạo cảm giác tràn đầy năng lượng tích cực.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Điểm cắt kết thúc hơi đột ngột ở cự ly gần; nếu có một chuyển động che ống kính (Whip Pan hoặc Hand Cover) thì video sẽ khép thành vòng lặp vô tận (Seamless Loop) hoàn hảo hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kết thúc video lookbook bằng một cú tiến thẳng vào ống kính (In-Your-Face Walk) luôn tạo ấn tượng mạnh mẽ hơn là đứng yên tại chỗ. Sự thu hẹp khoảng cách vật lý cũng chính là sự gia tăng kết nối cảm xúc giữa người xem và nhà sáng tạo.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Medium Close-Up 35mm</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Trung tâm phòng khách</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng mặt chính diện mềm mại, nổi bật lớp trang điểm tự nhiên</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Dừng khung hình kết thúc hoặc chuẩn bị khép vòng lặp vô tận</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/transitions/trans_07_to_01_loop.jpg?v=2', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/transitions/trans_07_to_01_loop.jpg?v=2" alt="Loop Transition" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 2.1)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Kinetic Tension Hook: Khởi động từ trang phục mặc nhà giản dị tạo đòn bẩy tương phản trước cú bùng nổ</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 2.13, 4.07)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 2.13s</span>
+            </div>
+            <div class="grid-card-body">Match Cut Đỉnh Cao Trên Không: Đồng bộ trục quán tính biến hình từ võ thuật sang High-Fashion mượt mà không tì vết</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 4.1, 5.4)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 4.10s</span>
+            </div>
+            <div class="grid-card-body">Editorial Stare & Layering Reveal: Chuyển hóa năng lượng từ võ thuật sang thần thái người mẫu thời trang cao cấp</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 5.43, 6.43)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 5.43s</span>
+            </div>
+            <div class="grid-card-body">Body Attitude Check: Điểm dừng nhịp thở thị giác kiểm soát phom dáng và tạo đà cho cú catwalk</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 6.47, 7.57)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 6.47s</span>
+            </div>
+            <div class="grid-card-body">Fluid Fabric Physics: Tôn vinh chuyển động mềm mại của chất liệu lụa satin đối lập với phom cứng blazer</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 7.6, 9.4)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 7.60s</span>
+            </div>
+            <div class="grid-card-body">Over-the-Shoulder Glance: Khai thác góc quay 3/4 phô diễn đường cắt may sau lưng và ánh nhìn quyến rũ</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 9.43, 10.87)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 9.43s</span>
+            </div>
+            <div class="grid-card-body">Hero Walk-In & Close-up Climax: Kéo gần cự ly cảm xúc bằng cú tiến sát khung hình đầy mê hoặc</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1EsMUc49uYY3H7kLSkqwiN4h8xWAMLT9y" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "en_frame": 63, "st_time": 0.0, "en_time": 2.1, "duration": 2.1, "headline": "Kinetic Tension Hook: Khởi động từ trang phục mặc nhà giản dị tạo đòn bẩy tương phản trước cú bùng nổ", "subject_action": "Aidana đứng trong không gian phòng khách hiện đại tối giản với sàn gỗ sáng và tường trắng. Cô diện set đồ mặc nhà thoải mái (áo thun xanh cobalt oversize, quần legging đen, tất trắng) và cầm chiếc sneaker trắng trên tay phải. Cô chuẩn bị tư thế, mắt tập trung cao độ, rồi bất ngờ dậm chân bật cao tung cú đá xoay Tornado Kick (Dollyo Chagi 360/540) cực kỳ nội lực xé gió.", "pros": "Khởi đầu bằng hình tượng đời thường (Understated Casual Hook) làm hạ thấp phòng vệ tâm lý của người xem; cú bật nhảy xoay người trên không (Aerial Kinetic Energy) bùng nổ bất ngờ tạo sự tương phản cực đại, kích thích dopamine giữ chân khán giả tuyệt đối ngay 2 giây đầu.", "cons": "Chiếc thảm lông trắng ở góc dưới bên trái hơi chồi vào khung hình làm phân tán nhẹ điểm nhìn vào bước chân; ánh sáng phòng hơi phẳng, chưa có đèn viền (rim light) tách chủ thể rõ nét khỏi mảng tường trắng phía sau.", "takeaway": "Để tạo hook biến hình triệu view, hãy khởi đầu bằng hình ảnh đời thường và giản dị nhất. Sự chênh lệch giữa 'vẻ ngoài mộc mạc' và 'kỹ năng võ thuật siêu đẳng' là công thức giữ chân người xem mạnh nhất trên Reels.", "specs": {"lens": "Wide Eye-Level Shot 24mm (Full Body)", "location": "Phòng khách căn hộ tối giản", "lighting": "Ánh sáng tự nhiên từ cửa sổ lớn kết hợp đèn trần khuếch tán", "transition": "Action Match Cut trên đỉnh cao trào cú đá xoay sang Shot 02"}, "lens_angle": "Wide Eye-Level Shot 24mm (Full Body)", "location": "Phòng khách căn hộ tối giản", "lighting_color": "Ánh sáng tự nhiên từ cửa sổ lớn kết hợp đèn trần khuếch tán", "transition": "Action Match Cut trên đỉnh cao trào cú đá xoay sang Shot 02"}, {"id": 2, "st_frame": 64, "en_frame": 122, "st_time": 2.13, "en_time": 4.07, "duration": 1.94, "headline": "Match Cut Đỉnh Cao Trên Không: Đồng bộ trục quán tính biến hình từ võ thuật sang High-Fashion mượt mà không tì vết", "subject_action": "Ngay tại đỉnh cao nhất của cú vung chân Tornado Kick trên không (Frame 64), cú cắt cảnh khớp chuyển động (Match Cut on Action) diễn ra: Aidana lập tức biến hóa thành set đồ High-Fashion mùa thu đẳng cấp với áo blazer dạ kẻ nâu oversize, quần suông lụa satin màu champagne, tóc xõa mượt bồng bềnh và clutch da trên tay. Chân cô quét một vòng bán nguyệt xé gió rồi tiếp đất hoàn hảo, vạt áo blazer bay phấp phới theo quán tính.", "pros": "Khớp chuyển động (Action Continuity) chuẩn xác tới từng khung hình giữa trục xoay cơ thể và góc mở chân; hiệu ứng thị giác của vạt áo blazer và lọn tóc xoay theo quán tính (Secondary Motion / Follow-Through) tạo cảm giác uyển chuyển, quyền lực và sang trọng tột bậc.", "cons": "Do thực hiện cú đá ở tốc độ cao, một số khung hình tiếp đất bị motion blur nhẹ ở phần bàn chân; nếu quay ở tốc độ khung hình cao (60fps/120fps) rồi ramp tốc độ (Speed Ramping) thì khoảnh khắc tiếp đất sẽ còn sắc nét hơn.", "takeaway": "Điểm mấu chốt của cú Match Cut biến hình không phải là vị trí đứng, mà là hướng và vận tốc của chuyển động (Vector Momentum). Luôn cắt cảnh ở khung hình có vận tốc cao nhất để mắt người xem bị cuốn theo quán tính chuyển động.", "specs": {"lens": "Medium-Wide Shot 28mm", "location": "Gian phòng khách căn hộ", "lighting": "Ánh sáng cửa sổ ban ngày tạt nghiêng làm nổi bật chất liệu vải dạ và lụa", "transition": "Jump Cut cắt nhịp thần thái sang Shot 03"}, "lens_angle": "Medium-Wide Shot 28mm", "location": "Gian phòng khách căn hộ", "lighting_color": "Ánh sáng cửa sổ ban ngày tạt nghiêng làm nổi bật chất liệu vải dạ và lụa", "transition": "Jump Cut cắt nhịp thần thái sang Shot 03"}, {"id": 3, "st_frame": 123, "en_frame": 162, "st_time": 4.1, "en_time": 5.4, "duration": 1.3, "headline": "Editorial Stare & Layering Reveal: Chuyển hóa năng lượng từ võ thuật sang thần thái người mẫu thời trang cao cấp", "subject_action": "Cắt góc đối diện trực diện, Aidana quay thẳng vào ống kính với gương mặt thần thái sắc lạnh chuẩn bìa tạp chí Vogue. Tay trái cô nhẹ nhàng đưa lên vuốt chỉnh mái tóc bồng bềnh ra sau vai, áo blazer mở rộng để lộ áo trong dệt kim màu nâu mocha ôm sát tôn vòng eo và xương quai xanh điểm xuyết mặt ngọc trai thanh lịch. Tay phải cầm chiếc túi clutch da mềm mại.", "pros": "Chuyển nhịp hoàn hảo từ động sang tĩnh (Kinetic to Still Pacing); khóa chặt ánh mắt người xem bằng biểu cảm tự tin, lạnh lùng (Editorial Stare); sự tương phản giữa nét mạnh mẽ của võ thuật và vẻ nữ tính kiêu kỳ của thời trang tạo sức hút khó cưỡng.", "cons": "Thời lượng 1.30s tương đối ngắn để khán giả chiêm ngưỡng kỹ từng món phụ kiện trang sức; cử chỉ vuốt tóc diễn ra hơi nhanh trước khi kịp định hình dáng tay hoàn chỉnh.", "takeaway": "Sau một pha hành động nghẹt thở (Action Hook), hãy cho khán giả một 'Hero Shot' tĩnh với ánh nhìn trực diện (Direct Eye Contact). Đây là khoảnh khắc khắc sâu thần thái và định vị phong cách cá nhân vào tâm trí người xem.", "specs": {"lens": "Medium Portrait Shot 35mm", "location": "Góc sảnh phòng khách", "lighting": "Ánh sáng tạt nghiêng 45 độ tạo khối gò má và bóng đổ mềm trên xương quai xanh", "transition": "Jump Cut cắt nhịp dáng đứng sang Shot 04"}, "lens_angle": "Medium Portrait Shot 35mm", "location": "Góc sảnh phòng khách", "lighting_color": "Ánh sáng tạt nghiêng 45 độ tạo khối gò má và bóng đổ mềm trên xương quai xanh", "transition": "Jump Cut cắt nhịp dáng đứng sang Shot 04"}, {"id": 4, "st_frame": 163, "en_frame": 193, "st_time": 5.43, "en_time": 6.43, "duration": 1.0, "headline": "Body Attitude Check: Điểm dừng nhịp thở thị giác kiểm soát phom dáng và tạo đà cho cú catwalk", "subject_action": "Aidana hạ ánh mắt nhìn lướt xuống cơ thể và nếp gấp của trang phục, hai tay buông tự nhiên, tay phải hạ chiếc túi clutch xuống ngang hông. Động tác chỉnh áo và kiểm tra dáng đứng diễn ra tự nhiên như một thói quen thường nhật của các fashionista trước khi bước ra phố.", "pros": "Tạo nhịp thở tự nhiên (Casual Micro-beat) giúp video không bị cảm giác diễn xuất gượng gạo; phô diễn độ rủ thanh thoát của chiếc quần ống rộng chất liệu lụa satin khi đứng yên.", "cons": "Ánh mắt nhìn xuống sàn hơi lâu (khoảng 0.8s) khiến kết nối mắt với khán giả bị gián đoạn chốc lát; góc máy cố định hơi thiếu sự chuyển động tương tác.", "takeaway": "Những cử chỉ micro-movement đời thường (nhìn xuống trang phục, chỉnh cổ áo) giúp 'nhân tính hóa' và tăng độ chân thật cho video lookbook, xóa bỏ cảm giác cứng nhắc của video quảng cáo truyền thống.", "specs": {"lens": "Medium Shot 35mm", "location": "Gian phòng khách", "lighting": "Ánh sáng ban ngày tự nhiên dịu nhẹ", "transition": "Hard Cut tiếp nối bước chân sang Shot 05"}, "lens_angle": "Medium Shot 35mm", "location": "Gian phòng khách", "lighting_color": "Ánh sáng ban ngày tự nhiên dịu nhẹ", "transition": "Hard Cut tiếp nối bước chân sang Shot 05"}, {"id": 5, "st_frame": 194, "en_frame": 227, "st_time": 6.47, "en_time": 7.57, "duration": 1.1, "headline": "Fluid Fabric Physics: Tôn vinh chuyển động mềm mại của chất liệu lụa satin đối lập với phom cứng blazer", "subject_action": "Aidana bắt đầu nhấc chân sải bước catwalk nhẹ nhàng về phía trước. Ống quần lụa satin dập dềnh theo từng nhịp bước chân tạo nên làn sóng vải mềm mại, tương phản mạnh mẽ với cấu trúc vuông vức, đứng phom của chiếc áo khoác dạ blazer oversized.", "pros": "Khai thác triệt để vật lý chất liệu chuyển động (Fabric Physics in Motion); nhịp bước chân dứt khoát mang phong thái tự tin, sang trọng của sàn diễn quốc tế.", "cons": "Khung hình bị giới hạn bởi không gian phòng khách nhỏ, khiến sải bước chưa đủ dài và thoáng như trên đường phố hoặc studio chuyên nghiệp.", "takeaway": "Trong video thời trang, trang phục chỉ thực sự 'sống' khi nó chuyển động. Hãy kết hợp giữa một item có phom dáng cứng cáp (Structure - Blazer) với một item có chất liệu bay bổng (Flow - Silk/Satin) để tạo sự tương phản vật liệu mê hoặc.", "specs": {"lens": "Medium Full Shot 35mm", "location": "Sàn gỗ phòng khách", "lighting": "Ánh sáng khuếch tán đều, nhấn sáng nếp lụa satin", "transition": "Jump Cut cắt nhịp xoay hông sang Shot 06"}, "lens_angle": "Medium Full Shot 35mm", "location": "Sàn gỗ phòng khách", "lighting_color": "Ánh sáng khuếch tán đều, nhấn sáng nếp lụa satin", "transition": "Jump Cut cắt nhịp xoay hông sang Shot 06"}, {"id": 6, "st_frame": 228, "en_frame": 282, "st_time": 7.6, "en_time": 9.4, "duration": 1.8, "headline": "Over-the-Shoulder Glance: Khai thác góc quay 3/4 phô diễn đường cắt may sau lưng và ánh nhìn quyến rũ", "subject_action": "Aidana xoay người bước chéo góc về phía sau bên phải, khoe trọn vẹn đường xẻ tà và kết cấu lưng áo của chiếc blazer oversized. Trong lúc đang sải bước rời đi, cô bất ngờ xoay đầu ngoái nhìn lại ống kính qua vai (Over-the-shoulder gaze) với nụ cười mỉm nhẹ và ánh mắt sắc sảo đầy bí ẩn.", "pros": "Bố cục 3/4 lưng (Over-the-Shoulder) kinh điển trong điện ảnh; góc quay phô diễn toàn bộ 360 độ của set trang phục; ánh nhìn ngoái lại tạo cảm giác quyến luyến, lôi cuốn và giữ chân người xem đến những giây cuối.", "cons": "Góc đi hơi sát với mép tường và công tắc điện màu đen trên tường sau lưng; có thể tạo cảm giác hơi chật chội ở rìa trái khung hình.", "takeaway": "Cú ngoái nhìn qua vai (The Backward Glance) là vũ khí tối thượng để kết thúc một chuỗi chuyển động quay lưng. Nó vừa giúp khoe được chi tiết sau lưng trang phục, vừa tái lập kết nối cảm xúc với khán giả trước khi vào cảnh kết.", "specs": {"lens": "Medium Shot 35mm", "location": "Góc phòng khách gần cửa", "lighting": "Ánh sáng cửa sổ chiếu chếch từ bên phải tạo ven sáng trên mái tóc dài", "transition": "Jump Cut tiến sát cận cảnh sang Shot 07"}, "lens_angle": "Medium Shot 35mm", "location": "Góc phòng khách gần cửa", "lighting_color": "Ánh sáng cửa sổ chiếu chếch từ bên phải tạo ven sáng trên mái tóc dài", "transition": "Jump Cut tiến sát cận cảnh sang Shot 07"}, {"id": 7, "st_frame": 283, "en_frame": 326, "st_time": 9.43, "en_time": 10.87, "duration": 1.44, "headline": "Hero Walk-In & Close-up Climax: Kéo gần cự ly cảm xúc bằng cú tiến sát khung hình đầy mê hoặc", "subject_action": "Cắt cảnh trực diện chính diện. Aidana cầm chiếc túi clutch bằng hai tay trước bụng, bước thẳng dứt khoát về phía camera. Cự ly thu hẹp dần từ trung cảnh (Medium) sang cận cảnh bán thân (Medium Close-Up). Ánh mắt nhìn thẳng vào tâm ống kính với bờ môi hờ hững đầy tự tin, kết thúc video bằng một điểm dừng quyền lực.", "pros": "Tận dụng chuyển động tiến sát ống kính (Forward Camera Approach) để tăng tính thân mật (Intimacy); ánh mắt và cơ mặt ở cự ly gần thể hiện trọn vẹn thần thái của một nữ vận động viên kiêm người mẫu hiện đại; tạo cảm giác tràn đầy năng lượng tích cực.", "cons": "Điểm cắt kết thúc hơi đột ngột ở cự ly gần; nếu có một chuyển động che ống kính (Whip Pan hoặc Hand Cover) thì video sẽ khép thành vòng lặp vô tận (Seamless Loop) hoàn hảo hơn.", "takeaway": "Kết thúc video lookbook bằng một cú tiến thẳng vào ống kính (In-Your-Face Walk) luôn tạo ấn tượng mạnh mẽ hơn là đứng yên tại chỗ. Sự thu hẹp khoảng cách vật lý cũng chính là sự gia tăng kết nối cảm xúc giữa người xem và nhà sáng tạo.", "specs": {"lens": "Medium Close-Up 35mm", "location": "Trung tâm phòng khách", "lighting": "Ánh sáng mặt chính diện mềm mại, nổi bật lớp trang điểm tự nhiên", "transition": "Dừng khung hình kết thúc hoặc chuẩn bị khép vòng lặp vô tận"}, "lens_angle": "Medium Close-Up 35mm", "location": "Trung tâm phòng khách", "lighting_color": "Ánh sáng mặt chính diện mềm mại, nổi bật lớp trang điểm tự nhiên", "transition": "Dừng khung hình kết thúc hoặc chuẩn bị khép vòng lặp vô tận"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ;
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 30.0 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById();
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

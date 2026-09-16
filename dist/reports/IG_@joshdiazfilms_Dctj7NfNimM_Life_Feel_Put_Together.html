@@ -1,0 +1,3284 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>3 Thói Quen Nhỏ Để Cảm Thấy Cuộc Sống Vào Nếp (3 Things That Make Life Feel Put Together) • Director's Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #0b0f17;
+    --bg-card: #131b2a;
+    --bg-card-hover: #1c273c;
+    --bg-sidebar: #0f1624;
+    --border-color: #202c42;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-amber: #f59e0b;
+    --accent-blue: #38bdf8;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-purple: #c084fc;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    font-size: 14.5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Top Navigation Header */
+.top-nav {
+    background: rgba(15, 22, 36, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+.nav-badge {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+    background: var(--bg-card-hover);
+}
+.nav-btn.primary {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    border-color: var(--accent-blue);
+}
+.nav-btn.primary:hover {
+    opacity: 0.9;
+}
+
+/* Main Layout Split Screen */
+.main-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Left Sticky Video Column */
+.player-column {
+    width: 420px;
+    flex-shrink: 0;
+    padding: 24px 16px 24px 24px;
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-right: 1px solid var(--border-color);
+}
+.video-frame-box {
+    background: #000;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    aspect-ratio: 9 / 16;
+    max-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-frame-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.player-controls {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.15s;
+}
+.ctrl-btn:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-blue);
+}
+.ctrl-btn.active {
+    background: rgba(56, 189, 248, 0.2);
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+.speed-pills {
+    display: flex;
+    gap: 4px;
+}
+.speed-pill {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+}
+.speed-pill.active {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    font-weight: 700;
+    border-color: var(--accent-blue);
+}
+
+/* Right Content Column */
+.content-column {
+    flex: 1;
+    padding: 24px 28px 40px 24px;
+    min-width: 0;
+}
+
+/* Header Banner */
+.report-header {
+    margin-bottom: 24px;
+}
+.meta-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.author-ig-badge {
+    background: rgba(244, 63, 94, 0.12);
+    color: #fb7185;
+    border: 1px solid rgba(244, 63, 94, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s;
+}
+.author-ig-badge:hover {
+    background: rgba(244, 63, 94, 0.25);
+    color: #fff;
+}
+.stat-pill {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: var(--font-mono);
+}
+.report-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.35;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+.report-summary {
+    color: var(--text-secondary);
+    font-size: 14.5px;
+    line-height: 1.7;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-amber);
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* View Mode Switcher */
+.view-switch-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 24px;
+}
+.tab-pills {
+    display: flex;
+    gap: 6px;
+}
+.tab-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+}
+.tab-btn.active {
+    background: var(--bg-sidebar);
+    border-color: var(--border-color);
+    color: var(--accent-blue);
+}
+.drawer-toggle-btn {
+    background: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.drawer-toggle-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+}
+
+/* Shot Cards (Detail View) */
+.shots-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 20px;
+    transition: all 0.2s ease;
+    scroll-margin-top: 80px;
+}
+.shot-card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+}
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.shot-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.shot-index-badge {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    font-weight: 800;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+}
+.time-jump-btn {
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    color: var(--accent-blue);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.15s;
+}
+.time-jump-btn:hover {
+    background: var(--accent-blue);
+    color: #0b0f17;
+}
+.dur-pill {
+    opacity: 0.8;
+    font-weight: 400;
+}
+.tech-tag {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11.5px;
+    font-family: var(--font-mono);
+}
+.shot-headline-box {
+    margin-bottom: 16px;
+}
+.shot-headline-title {
+    font-family: var(--font-heading);
+    font-size: 16.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.45;
+}
+
+/* Keyframes Grid (3 items) */
+.keyframes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+}
+.keyframe-item {
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+    background: #000;
+    aspect-ratio: 9 / 16;
+}
+.keyframe-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.keyframe-item:hover img {
+    transform: scale(1.03);
+}
+.kf-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+}
+.kf-badge.start { border-left: 3px solid var(--accent-blue); }
+.kf-badge.mid { border-left: 3px solid var(--accent-amber); }
+.kf-badge.end { border-left: 3px solid var(--accent-emerald); }
+
+/* Analysis 3 Blocks Grid */
+.analysis-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.critique-block {
+    background: rgba(15, 22, 36, 0.7);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 14px 16px;
+}
+.block-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 13.5px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-content {
+    font-size: 13.5px;
+    color: #cbd5e1;
+    line-height: 1.65;
+}
+.two-column-critique {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-col {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.critique-col.pro {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #a7f3d0;
+}
+.critique-col.con {
+    background: rgba(244, 63, 94, 0.08);
+    border: 1px solid rgba(244, 63, 94, 0.2);
+    color: #fecdd3;
+}
+.col-header {
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 12.5px;
+}
+.critique-col.pro .col-header { color: var(--accent-emerald); }
+.critique-col.con .col-header { color: var(--accent-rose); }
+
+.takeaway-block {
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-left: 4px solid var(--accent-amber);
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+.takeaway-title {
+    font-weight: 700;
+    color: var(--accent-amber);
+    font-size: 13px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-size: 13.5px;
+    color: #fef3c7;
+    line-height: 1.6;
+}
+
+/* Tech Specs Footer */
+.shot-specs-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.spec-label {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* Transitions Section */
+.trans-section {
+    margin-top: 16px;
+    background: var(--bg-sidebar);
+    border: 1px dashed var(--border-color);
+    border-radius: 10px;
+    padding: 12px;
+}
+.trans-header {
+    font-size: 12px;
+    color: var(--accent-blue);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.trans-img-wrap {
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+.trans-img-wrap img {
+    width: 100%;
+    display: block;
+}
+.zoom-indicator {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+/* Visual Grid View */
+.grid-view-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-blue);
+}
+.grid-thumb-box {
+    aspect-ratio: 9 / 16;
+    background: #000;
+    position: relative;
+}
+.grid-thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid-time-tag {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: var(--font-mono);
+}
+.grid-shot-tag {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: var(--accent-blue);
+    color: #0b0f17;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+}
+.grid-card-desc {
+    padding: 10px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Drawer Jump Menu */
+.drawer-backdrop {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    z-index: 200;
+    display: none;
+}
+.drawer-container {
+    position: fixed;
+    top: 0; right: -360px; width: 340px; height: 100%;
+    background: var(--bg-sidebar);
+    border-left: 1px solid var(--border-color);
+    z-index: 201;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+}
+.drawer-header {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.drawer-title {
+    font-weight: 700;
+    font-size: 15px;
+}
+.drawer-close {
+    background: none; border: none; color: var(--text-muted);
+    font-size: 20px; cursor: pointer;
+}
+.drawer-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.drawer-shot-row {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: all 0.15s;
+}
+.drawer-shot-row:hover {
+    border-color: var(--accent-blue);
+    background: var(--bg-card-hover);
+}
+.d-badge {
+    color: var(--accent-blue);
+    font-weight: 700;
+    font-size: 11px;
+    font-family: var(--font-mono);
+}
+.d-time {
+    font-size: 10.5px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+.d-title {
+    font-size: 12px;
+    color: var(--text-primary);
+    line-height: 1.35;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(5, 8, 15, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 300;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+}
+.lightbox-caption {
+    margin-top: 14px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .main-wrapper {
+        flex-direction: column;
+    }
+    .player-column {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 16px;
+        z-index: 90;
+        background: var(--bg-main);
+    }
+    .video-frame-box {
+        max-height: 380px;
+    }
+    .two-column-critique {
+        grid-template-columns: 1fr;
+    }
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Top Header Navigation -->
+<header class="top-nav">
+    <a href="https://vietndj.github.io/scene.html" class="nav-brand">
+        <span class="nav-badge">VIDEO Master Series</span>
+        <span>Director's Shot Analysis</span>
+    </a>
+    <div class="nav-actions">
+        <a href="https://www.instagram.com/reel/Dctj7NfNimM/" target="_blank" class="nav-btn primary">
+            📸 Xem Instagram Gốc ↗
+        </a>
+        <a href="https://vietndj.github.io/scene.html" class="nav-btn">
+            🏛 Cổng Tra Cứu
+        </a>
+    </div>
+</header>
+
+<div class="main-wrapper">
+
+    <!-- Left Column: Video Sticky Player -->
+    <aside class="player-column">
+        <div class="video-frame-box">
+            <video id="mainVideo" playsinline preload="auto">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dctj7NfNimM.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video thẻ video HTML5.
+            </video>
+        </div>
+
+        <div class="player-controls">
+            <div class="ctrl-row">
+                <button class="ctrl-btn" id="playPauseBtn" onclick="togglePlay()">▶ Phát Video</button>
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                <button class="ctrl-btn" id="muteBtn" onclick="toggleMute()">🔊</button>
+            </div>
+            <div class="ctrl-row">
+                <span style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Tốc Độ:</span>
+                <div class="speed-pills">
+                    <button class="speed-pill" onclick="setSpeed(0.25, this)">0.25x</button>
+                    <button class="speed-pill" onclick="setSpeed(0.5, this)">0.5x</button>
+                    <button class="speed-pill active" onclick="setSpeed(1.0, this)">1.0x</button>
+                    <button class="speed-pill" onclick="setSpeed(1.5, this)">1.5x</button>
+                    <button class="speed-pill" onclick="setSpeed(2.0, this)">2.0x</button>
+                </div>
+            </div>
+            <div class="ctrl-row" style="margin-top: 4px;">
+                <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dctj7NfNimM.mp4" download class="ctrl-btn" style="flex: 1; justify-content: center; text-decoration: none;">
+                    ⬇ Tải Video Gốc MP4
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Right Column: Detail Content -->
+    <main class="content-column">
+        <header class="report-header">
+            <div class="meta-tags-flex">
+                <a href="https://www.instagram.com/reel/Dctj7NfNimM/" target="_blank" class="author-ig-badge">
+                    📸 @joshdiazfilms (Josh Diaz) ↗
+                </a>
+                <span class="stat-pill">⏱ 15.93s</span>
+                <span class="stat-pill">🎞 18 Phân Cảnh</span>
+                <span class="stat-pill">📐 1080x1920 (9:16)</span>
+            </div>
+            <h1 class="report-title">3 Thói Quen Nhỏ Để Cảm Thấy Cuộc Sống Vào Nếp (3 Things That Make Life Feel Put Together)</h1>
+            <div class="report-summary">
+                Bóc tách 18 phân cảnh nhịp nhanh (Micro-beat Editing) mẫu mực về đời sống và năng suất cá nhân: Nghệ thuật dùng hành động vật lý dọn dẹp giường ngủ, pha cà phê và sắp xếp bàn làm việc để tạo cảm giác kiểm soát cuộc sống, kết hợp ánh sáng tự nhiên dịu nhẹ và nhịp cắt dồn dập kích thích thị giác.
+            </div>
+        </header>
+
+        <!-- View Switcher & Drawer Toggle -->
+        <div class="view-switch-bar">
+            <div class="tab-pills">
+                <button class="tab-btn active" id="btnDetail" onclick="switchView('detail')">📋 Chế Độ Chi Tiết</button>
+                <button class="tab-btn" id="btnGrid" onclick="switchView('grid')">🖼 Lưới Khung Hình</button>
+            </div>
+            <button class="drawer-toggle-btn" onclick="toggleDrawer(true)">
+                📑 Danh Sách Shot (18)
+            </button>
+        </div>
+
+        <!-- Detail Timeline Storyboard -->
+        <section class="shots-timeline" id="detailViewSection">
+            
+        <div class="shot-card" id="shot-1" data-start="0.0" data-end="2.88">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 01</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(1, 0.0)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        0.00s - 2.88s <span class="dur-pill">(2.88s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Medium Shot</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Hook Thị Giác Trực Diện Bằng Tiêu Đề Nổi Bật & Gương Mặt Tỉnh Táo: Khóa chặt sự chú ý bằng lời hứa hẹn 3 thói quen đổi đời</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_01_start.jpg', 'Shot 01 • Khung hình Đầu (0.00s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (0.00s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_01_mid.jpg', 'Shot 01 • Cao trào Giữa (1.44s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (1.44s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_01_end.jpg', 'Shot 01 • Khung hình Cuối (2.88s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (2.88s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Josh Diaz đứng trực diện trước ống kính trong phòng khách sáng sủa, vừa nhấp ngụm nước vừa nhìn thẳng vào camera. Dòng chữ '3 THINGS THAT MAKE MY LIFE FEEL PUT TOGETHER' xuất hiện nổi bật chính giữa khung hình.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Bố cục đối xứng trung tâm hoàn hảo, ánh sáng tự nhiên từ cửa sổ hắt vào làm nổi bật gương mặt thân thiện, tạo cảm giác gần gũi và chân thật ngay từ giây 0.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Khoảng cách giữa đỉnh đầu và mép trên khung hình hơi chật (Headroom thấp), nếu hạ camera xuống 3cm thì bố cục sẽ thoáng hơn.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Mở đầu video đời sống bằng một lời hứa cụ thể (3 điều) kết hợp ánh mắt nhìn thẳng (Eye-contact Hook) để giữ chân người xem trước khi chuyển sang chuỗi hành động.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Medium Shot • 35mm Equivalent
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Phòng khách / Studio
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng tự nhiên khuếch tán từ cửa sổ
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Hard Cut sang chuỗi việc nhà
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 02 • Hard Cut sang chuỗi việc nhà</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_01_to_02.jpg', 'So sánh chuyển tiếp Shot 01 ➔ Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_01_to_02.jpg" alt="Transition 01 to 02" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-2" data-start="2.88" data-end="3.75">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 02</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(2, 2.88)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        2.88s - 3.75s <span class="dur-pill">(0.88s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Medium Close-Up</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Cú Kéo Thẳng Ga Giường Phẳng Phiu: Khởi động thói quen số 1 bằng hành động dứt khoát</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_02_start.jpg', 'Shot 02 • Khung hình Đầu (2.88s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (2.88s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_02_mid.jpg', 'Shot 02 • Cao trào Giữa (3.31s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (3.31s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_02_end.jpg', 'Shot 02 • Khung hình Cuối (3.75s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (3.75s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Góc quay ngang giường ngủ: Hai bàn tay kéo căng tấm chăn ga màu xám trắng, làm phẳng các nếp nhăn chỉ trong một động tác duy nhất.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Tạo cảm giác thỏa mãn thị giác (Oddly Satisfying) khi thấy sự gọn gàng tức thì, tốc độ cắt nhanh 0.88s giữ nhịp năng lượng tích cực.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Ánh sáng trên nệm có một mảng bóng đổ nhẹ từ mép giường phía dưới.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Dùng các thao tác cơ bản nhưng đạt độ gọn gàng cao để kích hoạt tâm lý hài lòng của khán giả.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Medium Close-Up • 50mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Phòng ngủ Master
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Soft Daylight
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Fast Cut sang vỗ gối
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 03 • Fast Cut sang vỗ gối</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_02_to_03.jpg', 'So sánh chuyển tiếp Shot 02 ➔ Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_02_to_03.jpg" alt="Transition 02 to 03" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-3" data-start="3.75" data-end="4.42">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 03</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(3, 3.75)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        3.75s - 4.42s <span class="dur-pill">(0.67s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Close-Up</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Vỗ Gối Định Hình Khối Vuông Vắn: Nhấn mạnh sự chỉn chu đến từng chi tiết nhỏ</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_03_start.jpg', 'Shot 03 • Khung hình Đầu (3.75s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (3.75s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_03_mid.jpg', 'Shot 03 • Cao trào Giữa (4.08s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (4.08s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_03_end.jpg', 'Shot 03 • Khung hình Cuối (4.42s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (4.42s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Bàn tay vỗ nhẹ hai bên chiếc gối nằm màu trắng, căn chỉnh gối đặt ngay ngắn trên đầu giường.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Độ tương phản vân vải mềm mại, nhịp cắt siêu ngắn 0.67s đóng vai trò như một nhịp beat âm nhạc trong bản dựng montage.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Góc máy hơi nghiêng nhẹ 2 độ so với đường chân trời của thành giường.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Chia nhỏ một công việc lớn (dọn phòng) thành chuỗi micro-shots (kéo ga -> đập gối) để tạo cảm giác năng động.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Close-Up • 50mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Phòng ngủ
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Natural Ambient
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Match Action sang mở rèm
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 04 • Match Action sang mở rèm</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_03_to_04.jpg', 'So sánh chuyển tiếp Shot 03 ➔ Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_03_to_04.jpg" alt="Transition 03 to 04" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-4" data-start="4.42" data-end="4.92">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 04</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(4, 4.42)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        4.42s - 4.92s <span class="dur-pill">(0.50s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Medium Shot</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Kéo Rèm Đón Trọn Ánh Sáng Ban Mai: Đưa luồng sinh khí mới bừng sáng không gian</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_04_start.jpg', 'Shot 04 • Khung hình Đầu (4.42s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (4.42s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_04_mid.jpg', 'Shot 04 • Cao trào Giữa (4.67s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (4.67s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_04_end.jpg', 'Shot 04 • Khung hình Cuối (4.92s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (4.92s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Bàn tay kéo nhẹ dải rèm cửa sổ màu be, để ánh nắng ban mai tràn ngập căn phòng.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Hiệu ứng thay đổi độ sáng bùng nổ (Exposure Bloom) mang lại cảm giác tích cực và sảng khoái.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Chênh lệch sáng gắt tức thì có thể khiến vùng viền rèm hơi cháy sáng nhẹ (Overexposed highlight).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Sử dụng sự thay đổi ánh sáng tự nhiên để tạo bước ngoặt cảm xúc thị giác giữa các phân đoạn.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Medium Shot • 28mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Cửa sổ phòng ngủ
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Direct Morning Sunlight
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang khu vực bếp
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 05 • Cut sang khu vực bếp</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_04_to_05.jpg', 'So sánh chuyển tiếp Shot 04 ➔ Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_04_to_05.jpg" alt="Transition 04 to 05" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-5" data-start="4.92" data-end="5.42">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 05</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(5, 4.92)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        4.92s - 5.42s <span class="dur-pill">(0.50s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">High-Angle Medium</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Xếp Gọn Đồ Đạc Bàn Ăn: Thiết lập trật tự không gian sống ngăn nắp</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_05_start.jpg', 'Shot 05 • Khung hình Đầu (4.92s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (4.92s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_05_mid.jpg', 'Shot 05 • Cao trào Giữa (5.17s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (5.17s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_05_end.jpg', 'Shot 05 • Khung hình Cuối (5.42s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (5.42s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Cảnh quay từ trên cao (High Angle): Đẩy chiếc ghế ăn vào gầm bàn và căn chỉnh lọ hoa trang trí vào đúng tâm điểm.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Đường nét kỷ hà của mặt bàn gỗ tạo bố cục hình học vững chãi, nhịp điệu dứt khoát.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Mặt bàn gỗ bóng phản chiếu ánh đèn trần có một vệt lóa nhẹ.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Bố cục hình học gọn gàng truyền tải thông điệp về sự kỷ luật và trật tự nội tâm.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> High-Angle Medium • 35mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Phòng ăn
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Warm Ambient
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang pha cà phê
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 06 • Cut sang pha cà phê</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_05_to_06.jpg', 'So sánh chuyển tiếp Shot 05 ➔ Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_05_to_06.jpg" alt="Transition 05 to 06" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-6" data-start="5.42" data-end="6.09">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 06</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(6, 5.42)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        5.42s - 6.09s <span class="dur-pill">(0.67s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Macro Close-Up</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Xay Hạt Cà Phê Thơm Ngon: Kích hoạt thói quen số 2 - Nghi thức chào ngày mới</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_06_start.jpg', 'Shot 06 • Khung hình Đầu (5.42s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (5.42s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_06_mid.jpg', 'Shot 06 • Cao trào Giữa (5.75s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (5.75s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_06_end.jpg', 'Shot 06 • Khung hình Cuối (6.09s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (6.09s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Cận cảnh máy xay cà phê kim loại hoạt động, bột cà phê nâu mịn rơi đều xuống khay chứa kèm âm thanh giòn giã.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Chi tiết kết cấu hạt bột sắc nét, tạo cảm giác kích thích xúc giác và thính giác (ASMR Sensory Appeal).</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Độ sâu trường ảnh mỏng khiến phần thân máy xay hơi mờ nét.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Đưa các yếu tố cảm giác (mùi vị, âm thanh xay hạt) vào khung hình để tăng tính trải nghiệm cho người xem.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Macro Close-Up • 85mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Khu pha chế bếp
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Direct Side Spotlight
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Action Cut sang nén cà phê
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 07 • Action Cut sang nén cà phê</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_06_to_07.jpg', 'So sánh chuyển tiếp Shot 06 ➔ Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_06_to_07.jpg" alt="Transition 06 to 07" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-7" data-start="6.09" data-end="6.51">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 07</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(7, 6.09)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        6.09s - 6.51s <span class="dur-pill">(0.42s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Close-Up</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Nén Bột Cà Phê (Tamper Tamp): Khoảnh khắc chuẩn xác của một barista tại gia</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_07_start.jpg', 'Shot 07 • Khung hình Đầu (6.09s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (6.09s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_07_mid.jpg', 'Shot 07 • Cao trào Giữa (6.30s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (6.30s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_07_end.jpg', 'Shot 07 • Khung hình Cuối (6.51s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (6.51s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Tay cầm tamper kim loại đặt thẳng đứng và ép chặt bột cà phê vào tay cầm portafilter.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Góc quay cận cảnh nhấn mạnh sự tỉ mỉ, bề mặt kim loại sáng bóng toát lên vẻ cao cấp.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Thời lượng 0.42s cực ngắn, người xem vừa kịp nhận diện thao tác thì đã chuyển cảnh.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Duy trì nhịp cắt dưới 0.5s cho các thao tác phụ để đẩy nhanh tốc độ tiến triển của video.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Close-Up • 50mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Bàn pha cà phê
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Warm Studio Key
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang chiết xuất
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 08 • Cut sang chiết xuất</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_07_to_08.jpg', 'So sánh chuyển tiếp Shot 07 ➔ Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_07_to_08.jpg" alt="Transition 07 to 08" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-8" data-start="6.51" data-end="7.34">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 08</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(8, 6.51)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        6.51s - 7.34s <span class="dur-pill">(0.83s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Macro Shot</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Dòng Chảy Espresso Sóng Sánh: Đỉnh cao thị giác của quy trình chuẩn bị đồ uống</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_08_start.jpg', 'Shot 08 • Khung hình Đầu (6.51s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (6.51s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_08_mid.jpg', 'Shot 08 • Cao trào Giữa (6.92s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (6.92s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_08_end.jpg', 'Shot 08 • Khung hình Cuối (7.34s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (7.34s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Dòng cà phê espresso vàng óng chảy đều đặn từ hai vòi chiết xuất xuống ly thủy tinh trong suốt.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Lớp crema dày mịn màu nâu caramel cực kỳ hấp dẫn, ánh sáng hắt lưng làm bừng sáng chất lỏng.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Thành ly thủy tinh có một giọt cà phê nhỏ bắn lên ở giây cuối.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Chiết xuất cà phê luôn là 'Hero Visual' kinh điển trong các video lifestyle, hãy đầu tư góc máy và ánh sáng đẹp nhất.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Macro Shot • 100mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Máy pha cà phê
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Backlit Rim Light
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang rót sữa
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 09 • Cut sang rót sữa</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_08_to_09.jpg', 'So sánh chuyển tiếp Shot 08 ➔ Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_08_to_09.jpg" alt="Transition 08 to 09" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-9" data-start="7.34" data-end="8.13">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 09</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(9, 7.34)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        7.34s - 8.13s <span class="dur-pill">(0.79s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Medium Close-Up</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Rót Sữa Yến Mạch Tươi Mát: Hòa quyện hương vị buổi sáng</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_09_start.jpg', 'Shot 09 • Khung hình Đầu (7.34s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (7.34s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_09_mid.jpg', 'Shot 09 • Cao trào Giữa (7.74s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (7.74s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_09_end.jpg', 'Shot 09 • Khung hình Cuối (8.13s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (8.13s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Dòng sữa trắng ngà rót từ từ vào ly đá đầy ắp espresso, tạo hiệu ứng mây cuộn lơ lửng trong ly.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Hiệu ứng dòng chảy hòa tan (Liquid Swirl) tuyệt đẹp, độ tương phản màu sắc mạnh giữa trắng sữa và nâu đậm.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Mặt ngoài của ly đá có hơi nước ngưng tụ hơi nhiều làm nhòe nhẹ chi tiết phía sau.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Tận dụng chuyển động tự nhiên của chất lỏng để tạo điểm nghỉ thị giác êm ái.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Medium Close-Up • 50mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Quầy bar
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Soft Side Light
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang bàn làm việc
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 10 • Cut sang bàn làm việc</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_09_to_10.jpg', 'So sánh chuyển tiếp Shot 09 ➔ Shot 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_09_to_10.jpg" alt="Transition 09 to 10" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-10" data-start="8.13" data-end="8.59">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 10</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(10, 8.13)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        8.13s - 8.59s <span class="dur-pill">(0.46s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Overhead 45°</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Đặt Cốc Cà Phê Lên Bàn Làm Việc: Bắt đầu thói quen số 3 - Thiết lập không gian tập trung</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_10_start.jpg', 'Shot 10 • Khung hình Đầu (8.13s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (8.13s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_10_mid.jpg', 'Shot 10 • Cao trào Giữa (8.36s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (8.36s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_10_end.jpg', 'Shot 10 • Khung hình Cuối (8.59s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (8.59s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Bàn tay đặt nhẹ nhàng ly cà phê đá lên chiếc lót ly bằng da trên bàn làm việc tối giản.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Tiếp nối mượt mà từ phân đoạn ẩm thực sang phân đoạn làm việc, âm thanh đặt cốc êm ái.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Mép bàn bên phải hơi trống trải so với cụm đồ sộ bên trái.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Sử dụng đạo cụ (ly cà phê) làm vật dẫn dắt chuyển dời không gian từ bếp sang bàn làm việc.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Overhead 45° • 35mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Bàn làm việc Desk Setup
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Desk Lamp & Daylight
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang bật đèn
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 11 • Cut sang bật đèn</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_10_to_11.jpg', 'So sánh chuyển tiếp Shot 10 ➔ Shot 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_10_to_11.jpg" alt="Transition 10 to 11" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-11" data-start="8.59" data-end="9.63">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 11</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(11, 8.59)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        8.59s - 9.63s <span class="dur-pill">(1.04s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Medium Shot</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Bật Đèn Bàn Thanh Lịch (ScreenBar): Ánh sáng ấm cúng định hình vùng tập trung</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_11_start.jpg', 'Shot 11 • Khung hình Đầu (8.59s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (8.59s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_11_mid.jpg', 'Shot 11 • Cao trào Giữa (9.11s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (9.11s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_11_end.jpg', 'Shot 11 • Khung hình Cuối (9.63s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (9.63s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Ngón tay chạm nhẹ vào công tắc điều khiển không dây, đèn treo màn hình bật sáng soi rọi mặt bàn.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Ánh sáng lan tỏa đều mặt bàn làm việc, tôn lên vẻ hiện đại của bàn phím cơ và sổ tay.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Cạnh trên màn hình máy tính hơi bị tối do góc chiếu tập trung xuống dưới.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Hành động bật đèn là biểu tượng tâm lý của việc 'bật chế độ tập trung sâu'.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Medium Shot • 35mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Desk Setup
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Screenbar LED Light
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang mở sổ tay
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 12 • Cut sang mở sổ tay</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_11_to_12.jpg', 'So sánh chuyển tiếp Shot 11 ➔ Shot 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_11_to_12.jpg" alt="Transition 11 to 12" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-12" data-start="9.63" data-end="10.09">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 12</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(12, 9.63)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        9.63s - 10.09s <span class="dur-pill">(0.46s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Top-Down Flat Lay</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Mở Sổ Tay Ghi Chép Bìa Da: Kế hoạch hóa các mục tiêu trong ngày</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_12_start.jpg', 'Shot 12 • Khung hình Đầu (9.63s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (9.63s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_12_mid.jpg', 'Shot 12 • Cao trào Giữa (9.86s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (9.86s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_12_end.jpg', 'Shot 12 • Khung hình Cuối (10.09s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (10.09s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Bàn tay lật mở trang sổ tay kẻ dòng sạch sẽ, cây bút máy cao cấp đặt sẵn sàng bên cạnh.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Chất liệu giấy và da toát lên vẻ cổ điển, tạo cảm giác tĩnh tại và có chủ đích.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Trang sổ tay chưa viết chữ nên hơi đơn điệu trong 0.46s hiển thị.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Đồ dùng analog (sổ tay, bút giấy) luôn mang lại cảm xúc kết nối sâu sắc hơn màn hình kỹ thuật số.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Top-Down Flat Lay • 35mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Mặt bàn làm việc
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Warm Desk Ambient
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang viết mục tiêu
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 13 • Cut sang viết mục tiêu</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_12_to_13.jpg', 'So sánh chuyển tiếp Shot 12 ➔ Shot 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_12_to_13.jpg" alt="Transition 12 to 13" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-13" data-start="10.09" data-end="11.01">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 13</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(13, 10.09)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        10.09s - 11.01s <span class="dur-pill">(0.92s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Close-Up Over-the-Hand</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Viết 3 Đầu Việc Quan Trọng Nhất: Tối giản hóa danh sách công việc (Rule of 3)</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_13_start.jpg', 'Shot 13 • Khung hình Đầu (10.09s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (10.09s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_13_mid.jpg', 'Shot 13 • Cao trào Giữa (10.55s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (10.55s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_13_end.jpg', 'Shot 13 • Khung hình Cuối (11.01s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_13_end.jpg" alt="Shot 13 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (11.01s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Ngòi bút lướt nhẹ trên trang giấy, gạch 3 đầu dòng rõ ràng cho các nhiệm vụ ưu tiên trong ngày.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Âm thanh ngòi bút sột soạt trên mặt giấy tạo cảm giác xúc giác chân thật, chữ viết gọn gàng.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Tay viết che khuất một phần góc trái trang sổ.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Trực quan hóa việc lên kế hoạch để người xem thấy sự kiểm soát thời gian là hoàn toàn khả thi.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Close-Up Over-the-Hand • 50mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Desk Setup
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Focused Task Light
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang mở laptop
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 14 • Cut sang mở laptop</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_13_to_14.jpg', 'So sánh chuyển tiếp Shot 13 ➔ Shot 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_13_to_14.jpg" alt="Transition 13 to 14" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-14" data-start="11.01" data-end="11.68">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 14</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(14, 11.01)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        11.01s - 11.68s <span class="dur-pill">(0.67s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Medium Shot</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Mở Nắp MacBook Sắc Nét: Sẵn sàng bước vào phiên làm việc năng suất cao</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_14_start.jpg', 'Shot 14 • Khung hình Đầu (11.01s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_14_start.jpg" alt="Shot 14 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (11.01s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_14_mid.jpg', 'Shot 14 • Cao trào Giữa (11.34s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_14_mid.jpg" alt="Shot 14 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (11.34s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_14_end.jpg', 'Shot 14 • Khung hình Cuối (11.68s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_14_end.jpg" alt="Shot 14 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (11.68s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Bàn tay nhấc nhẹ nắp chiếc MacBook Space Gray, màn hình Retina sáng bừng với hình nền tối giản.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Chuyển động mở màn hình mượt mà, ánh sáng màn hình phản chiếu nhẹ lên mặt bàn tạo chiều sâu.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Bản lề máy mở hơi nhanh làm rung nhẹ góc máy trong 2 frame.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Động tác mở máy tính là cột mốc chính thức bắt đầu công việc, cần quay dứt khoát.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Medium Shot • 35mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Desk Setup
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ambient Room & Screen Glow
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang gõ phím
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 15 • Cut sang gõ phím</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_14_to_15.jpg', 'So sánh chuyển tiếp Shot 14 ➔ Shot 15')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_14_to_15.jpg" alt="Transition 14 to 15" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-15" data-start="11.68" data-end="12.51">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 15</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(15, 11.68)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        11.68s - 12.51s <span class="dur-pill">(0.83s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Low-Angle Close-Up</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Gõ Phím Cơ Nhịp Nhàng: Giai điệu của sự sáng tạo và hành động</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_15_start.jpg', 'Shot 15 • Khung hình Đầu (11.68s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_15_start.jpg" alt="Shot 15 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (11.68s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_15_mid.jpg', 'Shot 15 • Cao trào Giữa (12.09s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_15_mid.jpg" alt="Shot 15 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (12.09s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_15_end.jpg', 'Shot 15 • Khung hình Cuối (12.51s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_15_end.jpg" alt="Shot 15 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (12.51s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Các đầu ngón tay lướt nhanh trên bàn phím cơ custom, âm thanh tactile trầm ấm phát ra đều đặn.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Góc quay nghiêng thấp bắt trọn độ nảy của từng phím bấm, ánh sáng RGB dịu nhẹ.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Cổ tay áo hơi xắn cao làm lộ vết nhăn trên tay áo sơ mi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Âm thanh gõ phím cơ là yếu tố gây nghiện thính giác không thể thiếu trong các video workspace.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Low-Angle Close-Up • 50mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Desk Setup
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Side Soft Light
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang nhìn màn hình
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 16 • Cut sang nhìn màn hình</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_15_to_16.jpg', 'So sánh chuyển tiếp Shot 15 ➔ Shot 16')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_15_to_16.jpg" alt="Transition 15 to 16" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-16" data-start="12.51" data-end="13.14">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 16</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(16, 12.51)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        12.51s - 13.14s <span class="dur-pill">(0.63s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Close-Up Face</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Ánh Mắt Tập Trung Cao Độ: Biểu cảm của sự làm chủ nhịp sống</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_16_start.jpg', 'Shot 16 • Khung hình Đầu (12.51s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_16_start.jpg" alt="Shot 16 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (12.51s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_16_mid.jpg', 'Shot 16 • Cao trào Giữa (12.82s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_16_mid.jpg" alt="Shot 16 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (12.82s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_16_end.jpg', 'Shot 16 • Khung hình Cuối (13.14s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_16_end.jpg" alt="Shot 16 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (13.14s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Góc cận khuôn mặt Josh Diaz đang chăm chú theo dõi dòng công việc trên màn hình, ánh mắt điềm tĩnh và tự tin.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Bắt trọn thần thái tự tin, ánh sáng màn hình hắt nhẹ lên khuôn mặt tạo khối điện ảnh sắc nét.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Hậu cảnh phía sau có phần giá sách hơi mờ tối.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Gương mặt của creator là chiếc gương phản chiếu cảm xúc thành công của cả quy trình.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Close-Up Face • 85mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Studio Desk
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Screen Glow + Soft Key Light
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang ngụm cà phê
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 17 • Cut sang ngụm cà phê</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_16_to_17.jpg', 'So sánh chuyển tiếp Shot 16 ➔ Shot 17')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_16_to_17.jpg" alt="Transition 16 to 17" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-17" data-start="13.14" data-end="13.64">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 17</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(17, 13.14)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        13.14s - 13.64s <span class="dur-pill">(0.50s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Medium Close-Up</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Thưởng Thức Ngụm Cà Phê Cuối: Phần thưởng cho sự ngăn nắp và kỷ luật</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_17_start.jpg', 'Shot 17 • Khung hình Đầu (13.14s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_17_start.jpg" alt="Shot 17 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (13.14s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_17_mid.jpg', 'Shot 17 • Cao trào Giữa (13.39s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_17_mid.jpg" alt="Shot 17 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (13.39s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_17_end.jpg', 'Shot 17 • Khung hình Cuối (13.64s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_17_end.jpg" alt="Shot 17 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (13.64s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Josh cầm ly cà phê đưa lên miệng nhấp một ngụm thư thái, khẽ mỉm cười nhẹ hài lòng.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Khoảnh khắc thư giãn ngắn ngủi nhưng đắt giá, kết nối vòng tròn câu chuyện về lại ly cà phê ban đầu.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Thời lượng 0.5s hơi nhanh để cảm nhận trọn vẹn sự thư thái.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Tạo cấu trúc vòng tròn (Circular Narrative) bằng cách đưa yếu tố mở đầu (ly nước/cà phê) quay lại ở phần kết.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Medium Close-Up • 50mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Desk Setup
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Warm Ambient
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Cut sang nụ cười kết thúc
+                </div>
+            </div>
+
+            
+            <div class="trans-section">
+                <div class="trans-header">
+                    <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 18 • Cut sang nụ cười kết thúc</span>
+                </div>
+                <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_17_to_18.jpg', 'So sánh chuyển tiếp Shot 17 ➔ Shot 18')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/transitions/trans_17_to_18.jpg" alt="Transition 17 to 18" loading="lazy">
+                    <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shot-card" id="shot-18" data-start="13.64" data-end="15.89">
+            <div class="shot-card-header">
+                <div class="shot-header-left">
+                    <span class="shot-index-badge">Shot 18</span>
+                    <button class="time-jump-btn" onclick="jumpToShot(18, 13.64)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        13.64s - 15.89s <span class="dur-pill">(2.25s)</span>
+                    </button>
+                </div>
+                <div class="shot-header-right">
+                    <span class="tech-tag">Medium Shot</span>
+                </div>
+            </div>
+
+            <div class="shot-headline-box">
+                <h3 class="shot-headline-title">Nụ Cười Kết Thúc Trực Diện & Thông Điệp 'Cuộc Sống Đã Vào Nếp': Chốt hạ cảm xúc tích cực cho người xem</h3>
+            </div>
+
+            <!-- 3 Keyframes Gallery -->
+            <div class="keyframes-grid">
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_18_start.jpg', 'Shot 18 • Khung hình Đầu (13.64s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_18_start.jpg" alt="Shot 18 Start" loading="lazy">
+                        <span class="kf-badge start">Đầu (13.64s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_18_mid.jpg', 'Shot 18 • Cao trào Giữa (14.77s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_18_mid.jpg" alt="Shot 18 Mid" loading="lazy">
+                        <span class="kf-badge mid">Giữa (14.77s)</span>
+                    </div>
+                </div>
+                <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_18_end.jpg', 'Shot 18 • Khung hình Cuối (15.89s)')">
+                    <div class="kf-img-wrap">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_18_end.jpg" alt="Shot 18 End" loading="lazy">
+                        <span class="kf-badge end">Cuối (15.89s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="analysis-blocks-grid">
+                <div class="critique-block action-block">
+                    <div class="block-title">
+                        <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                    </div>
+                    <div class="block-content">
+                        Josh quay đầu nhìn thẳng vào camera, mỉm cười tự tin và gật đầu nhẹ như muốn nhắn nhủ người xem hãy bắt đầu ngày mới như thế.
+                    </div>
+                </div>
+
+                <div class="critique-block two-sided-critique">
+                    <div class="block-title">
+                        <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                    </div>
+                    <div class="two-column-critique">
+                        <div class="critique-col pro">
+                            <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                            <p>Góc nhìn trực diện tạo sự kết nối chân thành, ánh sáng rạng rỡ khép lại video đầy cảm hứng.</p>
+                        </div>
+                        <div class="critique-col con">
+                            <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                            <p>Video dừng lại hơi nhanh ở frame cuối trước khi loop lại.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="takeaway-block">
+                    <div class="takeaway-title">
+                        <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                    </div>
+                    <div class="takeaway-body">
+                        Kết thúc video bằng một cử chỉ ấm áp và thông điệp khẳng định giúp giữ chân khán giả bấm xem lại (High Replay Value).
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Specs -->
+            <div class="shot-specs-bar">
+                <div class="spec-item">
+                    <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Medium Shot • 35mm
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">📍 Bối cảnh:</span> Studio
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Bright Natural Daylight
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">⚡ Chuyển cảnh:</span> Final Loop Outro
+                </div>
+            </div>
+
+            
+        </div>
+        
+        </section>
+
+        <!-- Visual Grid View Section -->
+        <section class="grid-view-container" id="gridViewSection" style="display: none;">
+            
+        <div class="grid-card" onclick="jumpToShot(1, 0.0)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <div class="grid-time-tag">0.00s - 2.88s</div>
+                <div class="grid-shot-tag">Shot 01</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Hook Thị Giác Trực Diện Bằng Tiêu Đề Nổi Bật & Gương Mặt Tỉnh Táo: Khóa chặt sự chú ý bằng lời hứa hẹn 3 thói quen đổi đời</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(2, 2.88)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <div class="grid-time-tag">2.88s - 3.75s</div>
+                <div class="grid-shot-tag">Shot 02</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Cú Kéo Thẳng Ga Giường Phẳng Phiu: Khởi động thói quen số 1 bằng hành động dứt khoát</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(3, 3.75)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <div class="grid-time-tag">3.75s - 4.42s</div>
+                <div class="grid-shot-tag">Shot 03</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Vỗ Gối Định Hình Khối Vuông Vắn: Nhấn mạnh sự chỉn chu đến từng chi tiết nhỏ</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(4, 4.42)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <div class="grid-time-tag">4.42s - 4.92s</div>
+                <div class="grid-shot-tag">Shot 04</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Kéo Rèm Đón Trọn Ánh Sáng Ban Mai: Đưa luồng sinh khí mới bừng sáng không gian</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(5, 4.92)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <div class="grid-time-tag">4.92s - 5.42s</div>
+                <div class="grid-shot-tag">Shot 05</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Xếp Gọn Đồ Đạc Bàn Ăn: Thiết lập trật tự không gian sống ngăn nắp</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(6, 5.42)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <div class="grid-time-tag">5.42s - 6.09s</div>
+                <div class="grid-shot-tag">Shot 06</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Xay Hạt Cà Phê Thơm Ngon: Kích hoạt thói quen số 2 - Nghi thức chào ngày mới</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(7, 6.09)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <div class="grid-time-tag">6.09s - 6.51s</div>
+                <div class="grid-shot-tag">Shot 07</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Nén Bột Cà Phê (Tamper Tamp): Khoảnh khắc chuẩn xác của một barista tại gia</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(8, 6.51)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <div class="grid-time-tag">6.51s - 7.34s</div>
+                <div class="grid-shot-tag">Shot 08</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Dòng Chảy Espresso Sóng Sánh: Đỉnh cao thị giác của quy trình chuẩn bị đồ uống</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(9, 7.34)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <div class="grid-time-tag">7.34s - 8.13s</div>
+                <div class="grid-shot-tag">Shot 09</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Rót Sữa Yến Mạch Tươi Mát: Hòa quyện hương vị buổi sáng</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(10, 8.13)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+                <div class="grid-time-tag">8.13s - 8.59s</div>
+                <div class="grid-shot-tag">Shot 10</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Đặt Cốc Cà Phê Lên Bàn Làm Việc: Bắt đầu thói quen số 3 - Thiết lập không gian tập trung</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(11, 8.59)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+                <div class="grid-time-tag">8.59s - 9.63s</div>
+                <div class="grid-shot-tag">Shot 11</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Bật Đèn Bàn Thanh Lịch (ScreenBar): Ánh sáng ấm cúng định hình vùng tập trung</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(12, 9.63)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+                <div class="grid-time-tag">9.63s - 10.09s</div>
+                <div class="grid-shot-tag">Shot 12</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Mở Sổ Tay Ghi Chép Bìa Da: Kế hoạch hóa các mục tiêu trong ngày</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(13, 10.09)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_13_mid.jpg" alt="Shot 13" loading="lazy">
+                <div class="grid-time-tag">10.09s - 11.01s</div>
+                <div class="grid-shot-tag">Shot 13</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Viết 3 Đầu Việc Quan Trọng Nhất: Tối giản hóa danh sách công việc (Rule of 3)</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(14, 11.01)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_14_mid.jpg" alt="Shot 14" loading="lazy">
+                <div class="grid-time-tag">11.01s - 11.68s</div>
+                <div class="grid-shot-tag">Shot 14</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Mở Nắp MacBook Sắc Nét: Sẵn sàng bước vào phiên làm việc năng suất cao</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(15, 11.68)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_15_mid.jpg" alt="Shot 15" loading="lazy">
+                <div class="grid-time-tag">11.68s - 12.51s</div>
+                <div class="grid-shot-tag">Shot 15</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Gõ Phím Cơ Nhịp Nhàng: Giai điệu của sự sáng tạo và hành động</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(16, 12.51)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_16_mid.jpg" alt="Shot 16" loading="lazy">
+                <div class="grid-time-tag">12.51s - 13.14s</div>
+                <div class="grid-shot-tag">Shot 16</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Ánh Mắt Tập Trung Cao Độ: Biểu cảm của sự làm chủ nhịp sống</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(17, 13.14)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_17_mid.jpg" alt="Shot 17" loading="lazy">
+                <div class="grid-time-tag">13.14s - 13.64s</div>
+                <div class="grid-shot-tag">Shot 17</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Thưởng Thức Ngụm Cà Phê Cuối: Phần thưởng cho sự ngăn nắp và kỷ luật</strong>
+            </div>
+        </div>
+        
+        <div class="grid-card" onclick="jumpToShot(18, 13.64)">
+            <div class="grid-thumb-box">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_18_mid.jpg" alt="Shot 18" loading="lazy">
+                <div class="grid-time-tag">13.64s - 15.89s</div>
+                <div class="grid-shot-tag">Shot 18</div>
+            </div>
+            <div class="grid-card-desc">
+                <strong>Nụ Cười Kết Thúc Trực Diện & Thông Điệp 'Cuộc Sống Đã Vào Nếp': Chốt hạ cảm xúc tích cực cho người xem</strong>
+            </div>
+        </div>
+        
+        </section>
+    </main>
+
+</div>
+
+<!-- Drawer Quick Jump Menu -->
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)"></div>
+<div class="drawer-container" id="drawerContainer">
+    <div class="drawer-header">
+        <span class="drawer-title">📑 Mục Lục Phân Cảnh (18)</span>
+        <button class="drawer-close" onclick="toggleDrawer(false)">✕</button>
+    </div>
+    <div class="drawer-list">
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0)">
+            <span class="d-badge">Shot 01</span>
+            <span class="d-time">0.00s - 2.88s</span>
+            <span class="d-title">Hook Thị Giác Trực Diện Bằng Tiêu Đề Nổi Bật & Gương Mặt Tỉn...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(2, 2.88)">
+            <span class="d-badge">Shot 02</span>
+            <span class="d-time">2.88s - 3.75s</span>
+            <span class="d-title">Cú Kéo Thẳng Ga Giường Phẳng Phiu: Khởi động thói quen số 1 ...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(3, 3.75)">
+            <span class="d-badge">Shot 03</span>
+            <span class="d-time">3.75s - 4.42s</span>
+            <span class="d-title">Vỗ Gối Định Hình Khối Vuông Vắn: Nhấn mạnh sự chỉn chu đến t...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(4, 4.42)">
+            <span class="d-badge">Shot 04</span>
+            <span class="d-time">4.42s - 4.92s</span>
+            <span class="d-title">Kéo Rèm Đón Trọn Ánh Sáng Ban Mai: Đưa luồng sinh khí mới bừ...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(5, 4.92)">
+            <span class="d-badge">Shot 05</span>
+            <span class="d-time">4.92s - 5.42s</span>
+            <span class="d-title">Xếp Gọn Đồ Đạc Bàn Ăn: Thiết lập trật tự không gian sống ngă...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(6, 5.42)">
+            <span class="d-badge">Shot 06</span>
+            <span class="d-time">5.42s - 6.09s</span>
+            <span class="d-title">Xay Hạt Cà Phê Thơm Ngon: Kích hoạt thói quen số 2 - Nghi th...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(7, 6.09)">
+            <span class="d-badge">Shot 07</span>
+            <span class="d-time">6.09s - 6.51s</span>
+            <span class="d-title">Nén Bột Cà Phê (Tamper Tamp): Khoảnh khắc chuẩn xác của một ...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(8, 6.51)">
+            <span class="d-badge">Shot 08</span>
+            <span class="d-time">6.51s - 7.34s</span>
+            <span class="d-title">Dòng Chảy Espresso Sóng Sánh: Đỉnh cao thị giác của quy trìn...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(9, 7.34)">
+            <span class="d-badge">Shot 09</span>
+            <span class="d-time">7.34s - 8.13s</span>
+            <span class="d-title">Rót Sữa Yến Mạch Tươi Mát: Hòa quyện hương vị buổi sáng...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(10, 8.13)">
+            <span class="d-badge">Shot 10</span>
+            <span class="d-time">8.13s - 8.59s</span>
+            <span class="d-title">Đặt Cốc Cà Phê Lên Bàn Làm Việc: Bắt đầu thói quen số 3 - Th...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(11, 8.59)">
+            <span class="d-badge">Shot 11</span>
+            <span class="d-time">8.59s - 9.63s</span>
+            <span class="d-title">Bật Đèn Bàn Thanh Lịch (ScreenBar): Ánh sáng ấm cúng định hì...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(12, 9.63)">
+            <span class="d-badge">Shot 12</span>
+            <span class="d-time">9.63s - 10.09s</span>
+            <span class="d-title">Mở Sổ Tay Ghi Chép Bìa Da: Kế hoạch hóa các mục tiêu trong n...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(13, 10.09)">
+            <span class="d-badge">Shot 13</span>
+            <span class="d-time">10.09s - 11.01s</span>
+            <span class="d-title">Viết 3 Đầu Việc Quan Trọng Nhất: Tối giản hóa danh sách công...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(14, 11.01)">
+            <span class="d-badge">Shot 14</span>
+            <span class="d-time">11.01s - 11.68s</span>
+            <span class="d-title">Mở Nắp MacBook Sắc Nét: Sẵn sàng bước vào phiên làm việc năn...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(15, 11.68)">
+            <span class="d-badge">Shot 15</span>
+            <span class="d-time">11.68s - 12.51s</span>
+            <span class="d-title">Gõ Phím Cơ Nhịp Nhàng: Giai điệu của sự sáng tạo và hành độn...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(16, 12.51)">
+            <span class="d-badge">Shot 16</span>
+            <span class="d-time">12.51s - 13.14s</span>
+            <span class="d-title">Ánh Mắt Tập Trung Cao Độ: Biểu cảm của sự làm chủ nhịp sống...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(17, 13.14)">
+            <span class="d-badge">Shot 17</span>
+            <span class="d-time">13.14s - 13.64s</span>
+            <span class="d-title">Thưởng Thức Ngụm Cà Phê Cuối: Phần thưởng cho sự ngăn nắp và...</span>
+        </div>
+        
+        <div class="drawer-shot-row" onclick="jumpToShot(18, 13.64)">
+            <span class="d-badge">Shot 18</span>
+            <span class="d-time">13.64s - 15.89s</span>
+            <span class="d-title">Nụ Cười Kết Thúc Trực Diện & Thông Điệp 'Cuộc Sống Đã Vào Nế...</span>
+        </div>
+        
+    </div>
+</div>
+
+<!-- Lightbox Modal Darkroom -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+    <div class="lightbox-content">
+        <img id="lightboxImg" src="" alt="Zoom Image">
+    </div>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<script>
+const video = document.getElementById('mainVideo');
+const playBtn = document.getElementById('playPauseBtn');
+const muteBtn = document.getElementById('muteBtn');
+
+function togglePlay() {
+    if (video.paused) {
+        video.play();
+        playBtn.innerText = "⏸ Tạm Dừng";
+    } else {
+        video.pause();
+        playBtn.innerText = "▶ Phát Video";
+    }
+}
+
+function toggleMute() {
+    video.muted = !video.muted;
+    muteBtn.innerText = video.muted ? "🔇" : "🔊";
+}
+
+function setSpeed(rate, el) {
+    video.playbackRate = rate;
+    document.querySelectorAll('.speed-pill').forEach(b => b.classList.remove('active'));
+    if (el) el.classList.add('active');
+}
+
+function stepFrame(frames) {
+    video.pause();
+    playBtn.innerText = "▶ Phát Video";
+    video.currentTime = Math.max(0, video.currentTime + (frames * 0.0416));
+}
+
+function jumpToShot(shotId, startTime) {
+    video.currentTime = startTime;
+    video.play();
+    playBtn.innerText = "⏸ Tạm Dừng";
+    toggleDrawer(false);
+    
+    // Switch to detail view if in grid view
+    switchView('detail');
+    
+    const el = document.getElementById('shot-' + shotId);
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        el.style.borderColor = 'var(--accent-blue)';
+        setTimeout(() => {
+            el.style.borderColor = 'var(--border-color)';
+        }, 2000);
+    }
+}
+
+function switchView(mode) {
+    const detailSec = document.getElementById('detailViewSection');
+    const gridSec = document.getElementById('gridViewSection');
+    const btnDetail = document.getElementById('btnDetail');
+    const btnGrid = document.getElementById('btnGrid');
+
+    if (mode === 'grid') {
+        detailSec.style.display = 'none';
+        gridSec.style.display = 'grid';
+        btnGrid.classList.add('active');
+        btnDetail.classList.remove('active');
+    } else {
+        gridSec.style.display = 'none';
+        detailSec.style.display = 'flex';
+        btnDetail.classList.add('active');
+        btnGrid.classList.remove('active');
+    }
+}
+
+function toggleDrawer(open) {
+    const bd = document.getElementById('drawerBackdrop');
+    const dc = document.getElementById('drawerContainer');
+    if (open) {
+        bd.style.display = 'block';
+        dc.style.right = '0';
+    } else {
+        bd.style.display = 'none';
+        dc.style.right = '-360px';
+    }
+}
+
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').innerText = caption;
+    document.getElementById('lightboxModal').style.display = 'flex';
+}
+
+function closeLightbox(e) {
+    if (e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightboxModal').style.display = 'none';
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.getElementById('lightboxModal').style.display = 'none';
+        toggleDrawer(false);
+    }
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

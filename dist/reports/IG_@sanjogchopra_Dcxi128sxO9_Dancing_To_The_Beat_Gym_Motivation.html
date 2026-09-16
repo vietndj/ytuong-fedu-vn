@@ -1,0 +1,2743 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Dancing to the Beat • Phân Tích 17 Phân Cảnh B-Roll Gym Điện Ảnh & Tài Trợ Khéo Léo • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 9 / 16;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* DRAWER QUICK JUMP MENU */
+.drawer-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-line);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.drawer-title {
+    font-family: var(--font-heading-short);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cl-text-muted);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.drawer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.drawer-shot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: var(--cl-bg-tint);
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+    background: #eef2f6;
+    border-color: var(--cl-accent);
+}
+.d-badge {
+    background: var(--cl-accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.d-time {
+    color: var(--cl-text-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    flex-shrink: 0;
+}
+.d-title {
+    color: var(--cl-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">17 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Dancing to the Beat • Phân Tích 17 Phân Cảnh B-Roll Gym Điện Ảnh & Tài Trợ Khéo Léo</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/Dcxi128sxO9/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dcxi128sxO9.mp4" type="video/mp4">
+                <source src="./Dcxi128sxO9.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 9.84s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Dancing to the Beat • Phân Tích 17 Phân Cảnh B-Roll Gym Điện Ảnh & Tài Trợ Khéo Léo</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@sanjogchopra" onclick="handleCreatorClick(event, '@sanjogchopra', 'Sanjogchopra')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Sanjogchopra trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Sanjogchopra</strong>
+                        <span class="author-handle">(@sanjogchopra)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/Dcxi128sxO9/" target="_blank" class="author-link">Sanjog Chopra (@sanjogchopra)</a>
+            </div>
+        </div>
+
+        <!-- DRAWER QUICK JUMP MENU -->
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+        <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0, 1.1)">
+            <span class="d-badge">Shot 01</span>
+            <span class="d-time">0.00s - 1.10s (1.13s)</span>
+            <span class="d-title">Đặc Tả Cận Cảnh Mắt Mở Đen Trắng Đột Phá Khởi Động Nhịp Sinh...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(2, 1.13, 1.3)">
+            <span class="d-badge">Shot 02</span>
+            <span class="d-time">1.13s - 1.30s (0.20s)</span>
+            <span class="d-title">Bơm Bọt Cạo Râu Top-Down Cực Nhanh Kích Hoạt Xúc Giác Buổi S...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(3, 1.33, 1.53)">
+            <span class="d-badge">Shot 03</span>
+            <span class="d-time">1.33s - 1.53s (0.23s)</span>
+            <span class="d-title">Lưỡi Dao Cạo Lướt Vệt Bọt Trắng Bộc Lộ Làn Da Khỏe Khoắn (Cl...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(4, 1.57, 1.7)">
+            <span class="d-badge">Shot 04</span>
+            <span class="d-time">1.57s - 1.70s (0.17s)</span>
+            <span class="d-title">Lật Tờ Lịch Bàn Định Vị Dấu Mốc Kỷ Luật Thời Gian (Desk Cale...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(5, 1.74, 2.94)">
+            <span class="d-badge">Shot 05</span>
+            <span class="d-time">1.74s - 2.94s (1.23s)</span>
+            <span class="d-title">Đồng Hồ Chuông Đôi Kim Loại Rung Chuông 5:00 AM Báo Hiệu Giờ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(6, 2.97, 4.0)">
+            <span class="d-badge">Shot 06</span>
+            <span class="d-time">2.97s - 4.00s (1.07s)</span>
+            <span class="d-title">Dằn Mạnh Hộp MuscleBlaze CreAMP Lên Ghế Tập Khẳng Định Tâm Đ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(7, 4.04, 4.24)">
+            <span class="d-badge">Shot 07</span>
+            <span class="d-time">4.04s - 4.24s (0.23s)</span>
+            <span class="d-title">Xà Kép Đeo Xích Tạ Xanh Đẩy Cơ Ngực Căng Cực Hạn (Weighted D...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(8, 4.27, 4.44)">
+            <span class="d-badge">Shot 08</span>
+            <span class="d-time">4.27s - 4.44s (0.20s)</span>
+            <span class="d-title">Góc Nhìn Ngước Dưới Đẩy Đòn Tạ Bumper Xanh Lên Trần Gym Tổ O...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(9, 4.47, 4.64)">
+            <span class="d-badge">Shot 09</span>
+            <span class="d-time">4.47s - 4.64s (0.20s)</span>
+            <span class="d-title">Cận Cảnh Cổ Tay Siết Tạ Dumbbell Khổng Lồ Khóa Chặt Bắp Tay ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(10, 4.67, 5.71)">
+            <span class="d-badge">Shot 10</span>
+            <span class="d-time">4.67s - 5.71s (1.07s)</span>
+            <span class="d-title">Rót Muỗng Bột Creatine Trắng Vào Bình Nước Trong Suốt Tạo Hi...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(11, 5.74, 6.44)">
+            <span class="d-badge">Shot 11</span>
+            <span class="d-time">5.74s - 6.44s (0.73s)</span>
+            <span class="d-title">Cầm Bình Lắc Đã Pha Sải Bước Tự Tin Giữa Không Gian Máy Tập ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(12, 6.47, 6.94)">
+            <span class="d-badge">Shot 12</span>
+            <span class="d-time">6.47s - 6.94s (0.50s)</span>
+            <span class="d-title">Cú Vỗ Phấn Trắng Nổ Tung Dưới Đèn Lục Giác Kích Hoạt Trạng T...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(13, 6.97, 7.17)">
+            <span class="d-badge">Shot 13</span>
+            <span class="d-time">6.97s - 7.17s (0.23s)</span>
+            <span class="d-title">Kéo Xô T-Bar Tựa Ngực Bánh Tạ 15KG Khóa Chặt Khối Lưng Dày (...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(14, 7.21, 7.51)">
+            <span class="d-badge">Shot 14</span>
+            <span class="d-time">7.21s - 7.51s (0.33s)</span>
+            <span class="d-title">Cú Gập Người Kéo Tạ Đòn 20KG Trong Khung Gantry Vàng Rực (Ba...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(15, 7.54, 8.01)">
+            <span class="d-badge">Shot 15</span>
+            <span class="d-time">7.54s - 8.01s (0.50s)</span>
+            <span class="d-title">Cú Kéo Deadlift Khóa Tạ Bumper Nhiều Tầng Trên Sàn Gỗ Chuyên...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(16, 8.04, 8.74)">
+            <span class="d-badge">Shot 16</span>
+            <span class="d-time">8.04s - 8.74s (0.73s)</span>
+            <span class="d-title">Ngước Nhìn Cáp Kéo Xô Dưới Ánh Đèn Trần Lục Giác Tương Lai (...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(17, 8.78, 9.81)">
+            <span class="d-badge">Shot 17</span>
+            <span class="d-time">8.78s - 9.81s (1.07s)</span>
+            <span class="d-title">Tiền Cảnh Quả Tạ Sàn Đen & Bước Chân Rời Khung Hình Đậm Chất...</span>
+        </div>
+        
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>9:16 Dọc Chuẩn Instagram Reels</strong> • 9.84s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Dancing to the Beat • Phân Tích 17 Phân Cảnh B-Roll Gym Điện Ảnh & Tài Trợ Khéo Léo</h1>
+            <p class="overview-hero-desc">Bóc tách chuyên sâu kỹ thuật dựng phim nhịp nhanh (Fast-Cut Beat Sync) của creator Sanjog Chopra (@sanjogchopra) hợp tác cùng MuscleBlaze CreAMP: Khởi đầu bằng cận cảnh mắt đen trắng, nhịp cạo râu và lật lịch dồn dập, cú dằn hộp creatine khẳng định tâm điểm tài trợ, chuỗi bài tập gym nặng theo từng nốt guitar điện và kết thúc bằng cú máy thong dong rời sàn tập.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Fast-Cut Beat Sync • B&W Noir Hook • Organic Product Placement • Backlit Chalk Burst</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">17 Shots • Nhịp trung bình 0.58s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1080x1920 (9:16 Vertical Reel) • 29.97 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 1.1)">
+                    ▶ 0.00s - 1.10s (1.13s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Đặc Tả Cận Cảnh Mắt Mở Đen Trắng Đột Phá Khởi Động Nhịp Sinh Học (Macro Eye Opening & B&W Routine Anchor)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_01_mid.jpg', 'Shot 01 • Giữa (0.55s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (0.55s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_01_end.jpg', 'Shot 01 • Cuối (1.10s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (1.10s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình đen trắng (Monochrome Noir) siêu cận (Extreme Close-Up) đặc tả mắt phải của Sanjog mở to thức giấc sau giấc ngủ sâu. Dòng chữ typography tối giản màu trắng 'routine' xuất hiện trang nhã ngay giữa khung hình dưới hàng mi. Nhãn cầu đen láy đảo nhẹ, lông mi sắc nét dưới ánh sáng vi mô mềm, mở màn cho chuỗi ngày rèn luyện kỷ luật.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tạo cú sốc thị giác tĩnh tại (Quiet Hook) đối lập hoàn toàn với âm thanh bùng nổ phía sau; tỷ lệ đen trắng tôn lên cấu trúc nhãn cầu và chi tiết da mộc mạc; từ khóa 'routine' neo giữ tâm lý người xem về kỷ luật bản thân.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh sáng trắng đen hơi chìm nhẹ ở góc mí mắt trên; nếu có một vệt sáng quét (light streak) qua đồng tử sẽ tạo cảm giác thức tỉnh mãnh liệt hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Để mở đầu video kỷ luật/lifestyle, hãy bắt đầu bằng một cú Extreme Close-Up mở mắt đen trắng kèm chữ 'routine' để thiết lập trạng thái tâm lý đồng bộ với khán giả trước khi tăng tốc nhịp dựng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 85mm Macro f/2.8 • Extreme Close-Up Eye Level</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Giường ngủ / Không gian thức giấc buổi sáng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng hắt dịu đơn sắc (High-Contrast B&W Softbox)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng giật nhịp (Hard Beat Cut) chuyển đột ngột sang cảnh màu sinh hoạt</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Cắt thẳng giật nhịp (Hard Beat Cut) chuyển đột ngột sang cảnh màu sinh hoạt</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 1.13, 1.3)">
+                    ▶ 1.13s - 1.30s (0.20s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bơm Bọt Cạo Râu Top-Down Cực Nhanh Kích Hoạt Xúc Giác Buổi Sáng (Top-Down Shaving Foam Pump Kinetic Pop)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_02_start.jpg', 'Shot 02 • Đầu (1.13s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (1.13s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_02_mid.jpg', 'Shot 02 • Giữa (1.21s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.21s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_02_end.jpg', 'Shot 02 • Cuối (1.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (1.30s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy nhìn thẳng từ trên xuống (Top-Down POV) bồn rửa mặt màu trắng. Bàn tay nhấn mạnh vòi xịt chai bọt cạo râu Gillette màu xanh ngọc (cyan), bọt kem trắng mịn phồng xốp bung trào trực tiếp lên lòng bàn tay chỉ trong 6 frame hình (0.2s).</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tốc độ chuyển cảnh siêu chớp (micro-shot 6 frame) khớp hoàn hảo từng nhịp gõ đệm BGM; màu bọt kem trắng tương phản mạnh với thân chai xanh ngọc tạo kích thích xúc giác thị giác (Tactile ASMR).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng quá ngắn (0.2s) nên người xem chỉ kịp cảm nhận chuyển động bọt xốp mà chưa kịp nhận thức trọn vẹn bối cảnh phòng tắm.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay các thao tác sinh hoạt buổi sáng (grooming), hãy cắt bỏ giai đoạn chuẩn bị, chỉ lấy đúng 5-6 khung hình khoảnh khắc chất lỏng hoặc bọt xốp bung ra để tạo nhịp phim dồn dập.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/2.0 • Top-Down Overhead POV</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bồn rửa mặt phòng tắm gia đình</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn gương phòng tắm nhiệt độ màu 5000K sắc nét</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt giật theo phách nhạc (Match Cut by Action) sang động tác cạo râu</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Cắt giật theo phách nhạc (Match Cut by Action) sang động tác cạo râu</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 1.33, 1.53)">
+                    ▶ 1.33s - 1.53s (0.23s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Lưỡi Dao Cạo Lướt Vệt Bọt Trắng Bộc Lộ Làn Da Khỏe Khoắn (Close-Up Razor Glide & Skin Reveal)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_03_start.jpg', 'Shot 03 • Đầu (1.33s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (1.33s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_03_mid.jpg', 'Shot 03 • Giữa (1.43s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.43s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_03_end.jpg', 'Shot 03 • Cuối (1.53s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (1.53s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cận cảnh góc nghiêng gò má và xương quai hàm sắc cạnh phủ bọt trắng. Lưỡi dao cạo bằng kim loại sáng bóng kéo một đường dứt khoát từ trên xuống dưới, cạo sạch dải bọt và để lộ làn da rám nắng rắn rỏi bên dưới.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Hiệu ứng 'reveal' (bóc tách/làm sạch) kích thích cảm giác thỏa mãn thị giác (Oddly Satisfying); góc máy nghiêng tôn lên đường nét quai hàm nam tính, khẳng định hình thể creator; nhịp cạo ăn khớp nốt gõ guitar.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chuyển động lướt dao hơi nhanh khiến lưỡi dao bị nhòe chuyển động (Motion Blur) nhẹ ở đuôi khung hình.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Cảnh cạo râu hoặc chăm sóc da mặt nên chọn góc máy cận chéo 45 độ ngang quai hàm, đón ánh sáng xiên để làm nổi bật khối cơ mặt và kết cấu da.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/1.8 • Close-Up 45-Degree Cheek Angle</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Trước gương phòng tắm</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tạt ngang (Side Light) tôn khối xương hàm</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt dứt khoát sang góc bàn làm việc ở Shot 04</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Cắt dứt khoát sang góc bàn làm việc ở Shot 04</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 1.57, 1.7)">
+                    ▶ 1.57s - 1.70s (0.17s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Lật Tờ Lịch Bàn Định Vị Dấu Mốc Kỷ Luật Thời Gian (Desk Calendar Page Flip Anchor)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_04_start.jpg', 'Shot 04 • Đầu (1.57s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (1.57s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_04_mid.jpg', 'Shot 04 • Giữa (1.64s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.64s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_04_end.jpg', 'Shot 04 • Cuối (1.70s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (1.70s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy từ trên bàn làm việc gỗ nhìn xuống. Ngón tay creator gạt nhanh tờ lịch để bàn cổ điển màu be ('08 AUGUST 2026') sang ngày mới, xác lập mốc thời gian bắt đầu một ngày tập luyện nghiêm túc.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Đóng vai trò mỏ neo thị giác (Visual Narrative Anchor) báo hiệu ngày mới bắt đầu; chi tiết số in đậm và giấy kraft cổ điển mang hơi thở hoài niệm (vintage aesthetic).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khung hình chỉ vỏn vẹn 5 frames (0.17s) có thể gây hụt hẫng nhẹ nếu người xem chưa kịp đọc chữ trên tờ lịch.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đưa các chi tiết thực tế như lịch bàn, sổ tay ghi chép hoặc đồng hồ vào video routine giúp câu chuyện có tính cam kết và chân thực hơn gấp nhiều lần lời nói.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm f/2.0 • Top-Down Desk Angle</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn làm việc cá nhân</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng đèn bàn vàng ấm (Warm 3200K Desk Lamp)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng sang tiếng chuông đồng hồ báo thức ở Shot 05</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Cắt thẳng sang tiếng chuông đồng hồ báo thức ở Shot 05</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 1.74, 2.94)">
+                    ▶ 1.74s - 2.94s (1.23s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Đồng Hồ Chuông Đôi Kim Loại Rung Chuông 5:00 AM Báo Hiệu Giờ Thức Giấc Kỷ Luật (Vintage Twin-Bell Alarm Clock Ringing at 5:00 AM)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_05_start.jpg', 'Shot 05 • Đầu (1.74s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (1.74s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_05_mid.jpg', 'Shot 05 • Giữa (2.34s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (2.34s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_05_end.jpg', 'Shot 05 • Cuối (2.94s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (2.94s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc thấp trực diện (Low-Angle Close-Up) đặc tả chiếc đồng hồ báo thức hai chuông kim loại màu bạc cổ điển. Hai kim chỉ đúng 5 giờ sáng, búa gõ kim loại giữa hai quả chuông rung bần bật với biên độ cực cao, âm thanh chuông reo hòa vào nhịp dồn dập của bản nhạc rock/guitar.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Âm thanh và hình ảnh rung chuông cộng hưởng cực mạnh tạo cảm giác cấp bách và thúc đẩy adrenaline; chất liệu chrome sáng bóng phản chiếu ánh sáng phòng mang phong cách retro đẳng cấp; mốc 5:00 AM là biểu tượng tối thượng của câu lạc bộ dậy sớm rèn luyện kỷ luật (5 AM Club).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Bố cục trung tâm tĩnh, giá như có một bàn tay đập tắt chuông ở cuối shot sẽ tạo nút thắt hành động liền mạch hơn sang phòng gym.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sử dụng một đạo cụ mang tính biểu tượng văn hóa mạnh mẽ (như đồng hồ chuông đôi 5:00 AM) để truyền tải thông điệp dậy sớm mà không cần phải nói một câu thuyết minh nào.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/1.8 • Low-Angle Table Macro</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn đầu giường / Kệ phòng ngủ</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng chạng vạng sáng sớm (Moody Dawn Ambient)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt sập (Impact Cut) chuyển thẳng vào sàn gym với cú dằn hộp creatine</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Cắt sập (Impact Cut) chuyển thẳng vào sàn gym với cú dằn hộp creatine</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 2.97, 4.0)">
+                    ▶ 2.97s - 4.00s (1.07s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Dằn Mạnh Hộp MuscleBlaze CreAMP Lên Ghế Tập Khẳng Định Tâm Điểm Sản Phẩm (Impact Drop MuscleBlaze CreAMP on Gym Bench)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_06_start.jpg', 'Shot 06 • Đầu (2.97s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (2.97s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_06_mid.jpg', 'Shot 06 • Giữa (3.49s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (3.49s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_06_end.jpg', 'Shot 06 • Cuối (4.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (4.00s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Máy quay đặt ngang mặt ghế tập da đen có gân nhám trong phòng gym hiện đại. Bàn tay cơ bắp của Sanjog dằn dứt khoát hộp MuscleBlaze CreAMP Micronised Creatine Monohydrate (vị Virgin Mojito) xuống mặt ghế. Phía sau là dàn đèn trần lục giác LED màu xanh dương và vàng rực rỡ, làm nổi bật nhãn bạc và logo MB dập nổi.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú đặt hộp có lực dằn vật lý (Impact Drop) tạo cảm giác uy lực, nam tính; ánh đèn LED neon xanh-vàng hậu cảnh tạo chiều sâu bối cảnh gym chuyên nghiệp; nhãn sản phẩm xoay đúng hướng ống kính, nhận diện thương hiệu 100% không gượng ép.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Mặt ghế tập có vài hạt bụi mồ hôi nhỏ, nếu được lau bóng trước khi bấm máy thì texture da ghế sẽ sang trọng hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Quảng cáo sản phẩm trong video thể thao (Product Placement) cần phải gắn với hành động dứt khoát, đặt mạnh lên đạo cụ tập luyện thay vì cầm giơ lên tạo dáng sến súa.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm f/1.8 • Low-Angle Bench Level Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Ghế tập tạ phẳng trong phòng tập Multifit</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng đèn trần lục giác LED neon kết hợp rim light xanh dương</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt liên hoàn theo chùm nốt phách nhanh (Burst Montage Cuts) sang các bài tập nặng</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Cắt liên hoàn theo chùm nốt phách nhanh (Burst Montage Cuts) sang các bài tập nặng</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 4.04, 4.24)">
+                    ▶ 4.04s - 4.24s (0.23s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Xà Kép Đeo Xích Tạ Xanh Đẩy Cơ Ngực Căng Cực Hạn (Weighted Dips with Chain & 10KG Bumper Plate)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_07_start.jpg', 'Shot 07 • Đầu (4.04s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (4.04s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_07_mid.jpg', 'Shot 07 • Giữa (4.14s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (4.14s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_07_end.jpg', 'Shot 07 • Cuối (4.24s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (4.24s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình bừng sáng giữa phòng gym. Creator mặc áo ba lỗ đen, đeo đai xích sắt treo tạ bánh xanh lá 10KG (Multifit), thực hiện động tác xà kép (Weighted Dips) hạ sâu người khóa cơ ngực dưới và tay sau. Chân gập nhẹ, cơ bắp căng phồng theo nhịp nhạc dồn dập.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thể hiện đẳng cấp sức mạnh bằng tạ xích (Weighted Dips thể hiện level tập luyện cao); bánh tạ xanh lá tạo điểm nhấn màu sắc rực rỡ trên nền tối; góc máy đón trọn biên độ chuyển động cơ thể.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng quá ngắn (0.23s) chỉ thấy pha hạ người xuống mà chưa kịp thấy pha đẩy thẳng tay lên.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi dựng video highlight thể hình, hãy lồng ghép các bài tập dùng xích sắt (chain) hoặc đai tạ nặng để tạo ấn tượng thị giác thô ráp (raw strength) và uy lực.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/2.0 • Medium Full Shot Eye Level</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khu vực xà kép phòng gym Multifit</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn led trần tổ ong rọi từ trên đỉnh đầu xuống</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt giật (Flash Cut) sang góc nhìn POV đẩy ngực đòn tạ ở Shot 08</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Cắt giật (Flash Cut) sang góc nhìn POV đẩy ngực đòn tạ ở Shot 08</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 4.27, 4.44)">
+                    ▶ 4.27s - 4.44s (0.20s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Nhìn Ngước Dưới Đẩy Đòn Tạ Bumper Xanh Lên Trần Gym Tổ Ong (Worm-Eye POV Barbell Bench Press)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_08_start.jpg', 'Shot 08 • Đầu (4.27s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (4.27s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_08_mid.jpg', 'Shot 08 • Giữa (4.36s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (4.36s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_08_end.jpg', 'Shot 08 • Cuối (4.44s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (4.44s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy ngước thẳng từ dưới ngực lên (Worm-Eye / Low-Angle POV) theo hướng đẩy của thanh đòn tạ mạ chrome. Bánh tạ cao su xanh lá 10KG MULTIFIT được đẩy vút lên không trung, hướng về trần nhà sơn đen lấp lánh đốm vàng và dàn máy tập màu vàng rực phía sau.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc máy từ dưới ngước lên tạo cảm giác thanh đòn khổng lồ và đè nặng uy lực; sự tương phản giữa cánh tay gân guốc, thanh đòn bóng loáng và trần gym tạo cảm giác điện ảnh nhập vai (Immersive POV).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khung hình bị rung lắc nhẹ do gia tốc đẩy tạ của cánh tay.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Thay vì quay ngang hông thông thường khi đẩy tạ, hãy đặt máy quay ngửa lên sát nách hoặc dưới thanh đòn để người xem cảm nhận được sức nặng đang ép xuống ngực mình.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 20mm Ultra-Wide f/2.8 • Worm-Eye Upward Angle</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Ghế nằm đẩy tạ đòn (Flat Bench Press)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn led trần chiếu ngược từ trên xuống tạo viền sáng cánh tay</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt giật tiếp tục sang cận cảnh tạ tay bicep curl ở Shot 09</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 09 • Cắt giật tiếp tục sang cận cảnh tạ tay bicep curl ở Shot 09</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_08_to_09.jpg?v=2', 'Chuyển cảnh Shot 08 sang Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_08_to_09.jpg?v=2" alt="Transition 8 to 9" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-9">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 09</span>
+                <button class="shot-time-btn" onclick="jumpToShot(9, 4.47, 4.64)">
+                    ▶ 4.47s - 4.64s (0.20s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cận Cảnh Cổ Tay Siết Tạ Dumbbell Khổng Lồ Khóa Chặt Bắp Tay Trước (Close-Up Dumbbell Hammer Curl Grip & Bicep Contraction)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_09_start.jpg', 'Shot 09 • Đầu (4.47s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (4.47s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_09_mid.jpg', 'Shot 09 • Giữa (4.55s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (4.55s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_09_end.jpg', 'Shot 09 • Cuối (4.64s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (4.64s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Ống kính góc siêu rộng đặc tả bàn tay gân guốc đeo đồng hồ thể thao đỏ đen siết chặt cán tạ tay dumbbell lục giác khổng lồ, cuộn mạnh lên trước ngực. Hậu cảnh là dàn đèn led chùm rực sáng và gương phòng tập phản chiếu cơ bắp cuồn cuộn.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Độ phóng đại góc rộng (Wide-Angle Perspective Distortion) khiến quả tạ tay trông to lớn dị thường, làm nổi bật đường gân máu trên cẳng tay; chuyển động cuộn tạ mạnh mẽ khép lại bộ ba cú cắt thần tốc (Dips - Bench - Curl).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc trên bên phải bị lóa sáng mạnh (Lens Flare) từ bóng đèn trần phòng gym.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay các bài tạ tay (Dumbbells), hãy hạ máy quay xuống thấp hơn quả tạ và dùng ống kính góc rộng 24mm để tạo hiệu ứng tạ đồ sộ gấp đôi thực tế.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/2.0 • Ultra Low-Angle Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khu vực giá tạ tự do (Free Weights Dumbbell Rack)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh đèn rọi Spotlight trần chiếu thẳng vào mu bàn tay</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt trở về nhịp thư thả mô tả chi tiết sản phẩm ở Shot 10</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 10 • Cắt trở về nhịp thư thả mô tả chi tiết sản phẩm ở Shot 10</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_09_to_10.jpg?v=2', 'Chuyển cảnh Shot 09 sang Shot 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_09_to_10.jpg?v=2" alt="Transition 9 to 10" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-10">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 10</span>
+                <button class="shot-time-btn" onclick="jumpToShot(10, 4.67, 5.71)">
+                    ▶ 4.67s - 5.71s (1.07s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Rót Muỗng Bột Creatine Trắng Vào Bình Nước Trong Suốt Tạo Hiệu Ứng ASMR Thị Giác (Scooping CreAMP Powder into Clear Shaker ASMR)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_10_start.jpg', 'Shot 10 • Đầu (4.67s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (4.67s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_10_mid.jpg', 'Shot 10 • Giữa (5.19s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.19s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_10_end.jpg', 'Shot 10 • Cuối (5.71s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (5.71s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bố cục tĩnh cận cảnh hoàn hảo. Bình lắc trong suốt in chữ 'CRE AMP' đỏ rực đặt vững chãi cạnh hộp MuscleBlaze CreAMP trên mặt ghế bọc da. Tay creator cầm muỗng đong (scoop) gõ nhẹ, đổ một dòng bột creatine trắng mịn rơi tơi xốp xuống làn nước tinh khiết sủi bọt khí lăn tăn bên trong bình.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cảnh quay 'Money Shot' đắt giá nhất của hợp đồng tài trợ: bột tan chậm trong nước tạo cảm giác ngon lành, sảng khoái và kích thích giác quan (Sensory Appeal); nhãn hiệu trên cả bình và hộp đều lọt trọn vẹn vào vùng an toàn thị giác; hậu cảnh mờ ảo xóa phông mượt mà.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Lượng nước trong bình hơi ít (khoảng 1/3 bình) khiến khoảng rơi của bột kết thúc nhanh hơn dự kiến.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay video quảng cáo thực phẩm bổ sung, hãy luôn dùng bình lắc trong suốt (Clear Shaker) và quay ở tốc độ khung hình cao (Slow-Mo 60/120fps) để bắt trọn từng làn mây bột hòa tan vào nước.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/1.8 • Static Eye-Level Macro Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn ghế tập tạ phòng gym</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tạt hai bên (Dual Side Kickers) làm trong suốt làn nước</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt sang chuyển động cầm bình lắc sải bước ở Shot 11</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 11 • Cắt sang chuyển động cầm bình lắc sải bước ở Shot 11</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_10_to_11.jpg?v=2', 'Chuyển cảnh Shot 10 sang Shot 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_10_to_11.jpg?v=2" alt="Transition 10 to 11" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-11">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 11</span>
+                <button class="shot-time-btn" onclick="jumpToShot(11, 5.74, 6.44)">
+                    ▶ 5.74s - 6.44s (0.73s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cầm Bình Lắc Đã Pha Sải Bước Tự Tin Giữa Không Gian Máy Tập Vàng Đen (Tracking Walk with Closed CRE AMP Shaker)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_11_start.jpg', 'Shot 11 • Đầu (5.74s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (5.74s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_11_mid.jpg', 'Shot 11 • Giữa (6.09s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.09s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_11_end.jpg', 'Shot 11 • Cuối (6.44s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (6.44s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Máy quay cầm tay di chuyển lùi (Backward Tracking Shot) đặc tả bàn tay creator cầm chiếc bình lắc CRE AMP đã đậy nắp đỏ chắc chắn, bên trong nước creatine đã hòa tan đều màu trắng sữa. Phía sau là không gian sàn tập đẳng cấp với dãy máy móc màu vàng rực rỡ và ánh đèn trang trí hiện đại.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Chuyển tiếp mượt mà từ khâu pha chế sang khâu chuẩn bị bùng nổ năng lượng; chuyển động bước chân tạo nhịp điệu hành động (Pacing & Momentum); thương hiệu CRE AMP luôn được giữ ở vị trí trung tâm khung hình.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Tay lắc bình hơi che khuất một phần chữ 'AMP' khi ngón tay di chuyển.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sau màn pha chế sản phẩm, luôn cần một cú máy di động (Tracking/Walking) để truyền tải cảm giác 'nạp năng lượng xong là sẵn sàng vào trận'.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 28mm f/2.2 • Handheld Backward Tracking Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Lối đi trung tâm phòng gym Multifit</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng đèn trần phản chiếu trên vỏ nhựa trong của bình lắc</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt sang nghi thức vỗ bột phấn trắng ở Shot 12</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 12 • Cắt sang nghi thức vỗ bột phấn trắng ở Shot 12</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_11_to_12.jpg?v=2', 'Chuyển cảnh Shot 11 sang Shot 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_11_to_12.jpg?v=2" alt="Transition 11 to 12" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-12">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 12</span>
+                <button class="shot-time-btn" onclick="jumpToShot(12, 6.47, 6.94)">
+                    ▶ 6.47s - 6.94s (0.50s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Vỗ Phấn Trắng Nổ Tung Dưới Đèn Lục Giác Kích Hoạt Trạng Thái Chiến Đấu (Chalk Dust Explosion Under Hexagonal Light)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_12_start.jpg', 'Shot 12 • Đầu (6.47s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (6.47s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_12_mid.jpg', 'Shot 12 • Giữa (6.71s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.71s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_12_end.jpg', 'Shot 12 • Cuối (6.94s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (6.94s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy ngang hông đặc tả hai bàn tay gân guốc chà xát và vỗ mạnh bột phấn tập tạ (Lifting Chalk). Một đám mây bụi phấn trắng tinh nổ bung ra dữ dội, các hạt bụi li ti bay lơ lửng trong không khí và bắt trọn vầng sáng rực rỡ từ chiếc đèn trần tổ ong lục giác phía sau lưng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Hiệu ứng hạt bụi phát sáng (Atmospheric Backlit Dust) tạo nên chất điện ảnh đỉnh cao thường thấy trong các TVC của Nike hay Under Armour; nghi thức vỗ phấn báo hiệu giai đoạn tập nặng nhất sắp diễn ra, đẩy cảm xúc người xem lên tột đỉnh.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Bụi phấn tan khá nhanh trong 15 frames, nếu kéo dài thêm 0.3s nữa sẽ bắt trọn khoảnh khắc khói phấn lắng xuống.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Bụi phấn gym (Chalk) là 'vũ khí bí mật' của mọi video thể hình; luôn đặt nguồn sáng mạnh trực tiếp sau lưng chủ thể (Backlight) để từng hạt phấn phát sáng như kim cương trong khung hình.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/1.8 • Medium Close-Up Torso Level</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khu vực cử tạ tạ nặng (Powerlifting Platform)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ngược sáng hoàn toàn (Hard Backlight) từ đèn trần tổ ong</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt giật theo tiếng nổ trống sang bài kéo xô T-Bar Row ở Shot 13</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 13 • Cắt giật theo tiếng nổ trống sang bài kéo xô T-Bar Row ở Shot 13</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_12_to_13.jpg?v=2', 'Chuyển cảnh Shot 12 sang Shot 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_12_to_13.jpg?v=2" alt="Transition 12 to 13" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-13">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 13</span>
+                <button class="shot-time-btn" onclick="jumpToShot(13, 6.97, 7.17)">
+                    ▶ 6.97s - 7.17s (0.23s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Kéo Xô T-Bar Tựa Ngực Bánh Tạ 15KG Khóa Chặt Khối Lưng Dày (Chest-Supported T-Bar Row 15KG Plate Contraction)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_13_start.jpg', 'Shot 13 • Đầu (6.97s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (6.97s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_13_mid.jpg', 'Shot 13 • Giữa (7.07s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (7.07s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_13_end.jpg', 'Shot 13 • Cuối (7.17s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_13_end.jpg" alt="Shot 13 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (7.17s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy nghiêng thấp đặc tả Sanjog đang ghì chặt ngực vào đệm máy tập chèo lưng, hai tay giật mạnh tay cầm kéo bánh tạ cao su xám 15KG ép sát lồng ngực. Khối cơ lưng xô (lats) và cơ trám (rhomboids) thít chặt lại, lộ rõ từng thớ cơ cuồn cuộn.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Động tác kéo tạ dứt khoát, chuẩn form kỹ thuật; bánh tạ 15KG tạo cảm giác trọng lượng chân thực; góc máy hất lên tôn vinh độ dày của vòm ngực và cánh tay.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Cảnh quay chỉ có 7 frames nên người xem chưa kịp thấy điểm khóa cơ cực đại (peak contraction).</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay các bài tập kéo lưng xô, hãy đặt máy quay chếch 45 độ từ phía trước hoặc sau vai để bắt trọn rãnh cơ lưng chuyển động thay vì quay từ một bên sườn phẳng lì.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm f/2.0 • Low-Angle 45-Degree Front-Side Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Máy kéo T-Bar Row có đệm tựa ngực</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn trần rọi từ đỉnh tạo bóng đổ sâu giữa các múi cơ lưng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt tiếp tục theo phách guitar sang bài kéo đòn tạ ở Shot 14</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 14 • Cắt tiếp tục theo phách guitar sang bài kéo đòn tạ ở Shot 14</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_13_to_14.jpg?v=2', 'Chuyển cảnh Shot 13 sang Shot 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_13_to_14.jpg?v=2" alt="Transition 13 to 14" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-14">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 14</span>
+                <button class="shot-time-btn" onclick="jumpToShot(14, 7.21, 7.51)">
+                    ▶ 7.21s - 7.51s (0.33s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Gập Người Kéo Tạ Đòn 20KG Trong Khung Gantry Vàng Rực (Barbell Bent-Over Row Inside Yellow Power Rack)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_14_start.jpg', 'Shot 14 • Đầu (7.21s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_14_start.jpg" alt="Shot 14 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (7.21s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_14_mid.jpg', 'Shot 14 • Giữa (7.36s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_14_mid.jpg" alt="Shot 14 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (7.36s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_14_end.jpg', 'Shot 14 • Cuối (7.51s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_14_end.jpg" alt="Shot 14 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (7.51s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc quay toàn thân nghiêng một bên ghi lại Sanjog đứng trong khung giá tạ vàng (Power Rack). Lưng giữ thẳng song song mặt đất, anh kéo mạnh thanh đòn lắp bánh tạ đen 20KG lên sát bụng dưới. Gân cổ nổi rõ, cơ đùi và mông gồng cứng chịu lực.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khung giàn tạ sắt màu vàng rực đóng vai trò viền khung tự nhiên (Natural Framing); tư thế chuẩn chỉ của vận động viên chuyên nghiệp tạo uy tín tuyệt đối cho phong thái thể thao; ánh sáng dải led sau lưng tôn vinh bờ vai rộng.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Độ sáng tổng thể hơi tối ở phần thân dưới của vận động viên do bóng đổ của giá tạ.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Tận dụng các cột thép của Power Rack hoặc Smith Machine làm tiền cảnh (Foreground) để tạo cảm giác không gian tập luyện gồ ghề và có chiều sâu lớp lang.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 28mm f/2.0 • Side Profile Medium Full Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khung gantry tập tạ vàng đa năng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn led thanh dài phía sau tạo ven sáng dọc sống lưng</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng sang đỉnh cao Deadlift ở Shot 15</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 15 • Cắt thẳng sang đỉnh cao Deadlift ở Shot 15</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_14_to_15.jpg?v=2', 'Chuyển cảnh Shot 14 sang Shot 15')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_14_to_15.jpg?v=2" alt="Transition 14 to 15" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-15">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 15</span>
+                <button class="shot-time-btn" onclick="jumpToShot(15, 7.54, 8.01)">
+                    ▶ 7.54s - 8.01s (0.50s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú Kéo Deadlift Khóa Tạ Bumper Nhiều Tầng Trên Sàn Gỗ Chuyên Nghiệp (Heavy Deadlift Lockout on Lifting Platform)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_15_start.jpg', 'Shot 15 • Đầu (7.54s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_15_start.jpg" alt="Shot 15 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (7.54s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_15_mid.jpg', 'Shot 15 • Giữa (7.78s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_15_mid.jpg" alt="Shot 15 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (7.78s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_15_end.jpg', 'Shot 15 • Cuối (8.01s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_15_end.jpg" alt="Shot 15 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.01s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy toàn cảnh đặt thấp trên sàn nâng tạ gỗ bóng loáng. Sanjog trong bộ đồ đen viền sọc trắng, chân đi tất đen, đang thực hiện cú khóa hông (lockout) đỉnh cao của bài Deadlift với đòn tạ chất đầy các bánh tạ sắc màu Jerai Fitness (bánh xanh lá, vàng, xanh dương - tổng khối lượng cực nặng). Anh hít sâu thở phào, toàn bộ cơ thể căng tràn năng lượng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cảnh quay thể hiện sức mạnh tối thượng (Ultimate Power Display); các tầng tạ màu sắc rực rỡ xếp cạnh nhau tạo ấn tượng trực quan về mức tạ khổng lồ; bục nâng tạ gỗ phản chiếu ánh sáng tôn lên vẻ sang trọng của phòng gym.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Máy quay đặt hơi lệch nhẹ sang bên phải, nếu căn giữa đối xứng hoàn toàn thì bố cục sẽ mang tính tượng đài hơn nữa.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Cảnh kết của chuỗi bài tập gym nên luôn là một bài Compound kinh điển (Deadlift hoặc Squat) với góc quay toàn thân trên sàn tập để khẳng định sức mạnh và kết quả của quá trình bổ sung dinh dưỡng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/2.2 • Low-Angle Full-Body Platform Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Sàn gỗ nâng tạ Deadlift chuyên dụng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên từ cửa kính lớn hắt vào kết hợp đèn trần gym</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt sang động tác kéo xô cáp cao ở Shot 16</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 16 • Cắt sang động tác kéo xô cáp cao ở Shot 16</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_15_to_16.jpg?v=2', 'Chuyển cảnh Shot 15 sang Shot 16')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_15_to_16.jpg?v=2" alt="Transition 15 to 16" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-16">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 16</span>
+                <button class="shot-time-btn" onclick="jumpToShot(16, 8.04, 8.74)">
+                    ▶ 8.04s - 8.74s (0.73s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Ngước Nhìn Cáp Kéo Xô Dưới Ánh Đèn Trần Lục Giác Tương Lai (Cable Lat Pulldown Adjustment Under Hexagonal Neon)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_16_start.jpg', 'Shot 16 • Đầu (8.04s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_16_start.jpg" alt="Shot 16 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.04s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_16_mid.jpg', 'Shot 16 • Giữa (8.39s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_16_mid.jpg" alt="Shot 16 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (8.39s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_16_end.jpg', 'Shot 16 • Cuối (8.74s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_16_end.jpg" alt="Shot 16 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.74s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy ngước góc thấp cực đoan (Extreme Low-Angle) từ dưới ghế nhìn thẳng lên trần nhà. Sanjog với cơ vai và bắp tay sau cuồn cuộn vươn hai tay kéo thanh đòn cáp lat pulldown xuống. Phía sau đầu anh là một chiếc đèn trần hình lục giác màu trắng tinh khôi tỏa sáng như một vầng hào quang công nghệ tương lai.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Sự kết hợp hoàn mỹ giữa cơ bắp con người và hình học kiến trúc viễn tưởng (Sci-Fi Hexagonal Glow); góc máy ngước tôn vinh độ vạm vỡ của lồng ngực và cánh tay; độ tương phản đen-trắng rực rỡ tạo cảm giác hiện đại, sang chảnh.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thanh đòn cáp ở đầu shot che khuất một phần khuôn mặt của creator.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay các bài tập máy kéo xô trên cao, hãy đặt điện thoại ngửa mặt trên đệm ghế hoặc dưới sàn, bạn sẽ có ngay một khung hình góc ngước siêu rộng ôm trọn trần nhà và cơ bắp cuồn cuộn.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 20mm Ultra-Wide f/2.0 • Worm-Eye Upward Looking View</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Máy kéo xô cáp cao (Lat Pulldown Station)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Đèn led neon lục giác chiếu thẳng vào ống kính tạo hiệu ứng halo</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt sang cú máy sát sàn kết thúc video ở Shot 17</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 17 • Cắt sang cú máy sát sàn kết thúc video ở Shot 17</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_16_to_17.jpg?v=2', 'Chuyển cảnh Shot 16 sang Shot 17')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_16_to_17.jpg?v=2" alt="Transition 16 to 17" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-17">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 17</span>
+                <button class="shot-time-btn" onclick="jumpToShot(17, 8.78, 9.81)">
+                    ▶ 8.78s - 9.81s (1.07s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Tiền Cảnh Quả Tạ Sàn Đen & Bước Chân Rời Khung Hình Đậm Chất Thong Dong (Floor-Level Dumbbell Foreground & Confident Walk-Away Outro)</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_17_start.jpg', 'Shot 17 • Đầu (8.78s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_17_start.jpg" alt="Shot 17 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.78s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_17_mid.jpg', 'Shot 17 • Giữa (9.29s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_17_mid.jpg" alt="Shot 17 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.29s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_17_end.jpg', 'Shot 17 • Cuối (9.81s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_17_end.jpg" alt="Shot 17 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (9.81s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Máy quay đặt sát mặt sàn cao su đen của phòng tập. Ở tiền cảnh (Foreground) là cặp tạ tay dumbbell màu đen sừng sững, phía sau là hàng ghế dốc tập bụng và khung cửa kính vòm đón ánh sáng tự nhiên. Creator với đôi tất đen họa tiết ngọn lửa tím sải bước thong thả lướt qua bên phải ống kính, hoàn tất buổi tập một cách nhẹ nhàng, mãn nguyện.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục tiền cảnh - hậu cảnh (Foreground Depth) cực kỳ mẫu mực với quả tạ đen neo giữ khung hình; bước chân rời đi (Walk-away Outro) tạo cảm giác kết thúc mở đầy phóng khoáng và tự tin sau buổi tập cật lực; ánh sáng đèn trần lục giác phản chiếu lung linh trên mặt kính.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc trên cùng hơi tối do đường ống thông gió trên trần nhà.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kết thúc một video hành động nhịp nhanh bằng một cú máy tĩnh đặt sát sàn cho chủ thể thong dong bước ra khỏi khung hình là kỹ thuật Outro kinh điển giúp video có điểm dừng ngọt ngào và kích thích người xem replay.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 24mm f/2.8 • Ground-Level Static Floor Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Sàn cao su khu vực tạ tự do</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên từ cửa sổ vòm kết hợp đèn trần tổ ong</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Giữ khung hình tĩnh đến hết thời lượng 9.81s, tạo vòng lặp vô tận (Infinite Loop) trở lại Shot 01</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_17_to_01_loop.jpg?v=2', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/transitions/trans_17_to_01_loop.jpg?v=2" alt="Loop Transition" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 1.1)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Đặc Tả Cận Cảnh Mắt Mở Đen Trắng Đột Phá Khởi Động Nhịp Sinh Học (Macro Eye Opening & B&W Routine Anchor)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 1.13, 1.3)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 1.13s</span>
+            </div>
+            <div class="grid-card-body">Bơm Bọt Cạo Râu Top-Down Cực Nhanh Kích Hoạt Xúc Giác Buổi Sáng (Top-Down Shaving Foam Pump Kinetic Pop)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 1.33, 1.53)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 1.33s</span>
+            </div>
+            <div class="grid-card-body">Lưỡi Dao Cạo Lướt Vệt Bọt Trắng Bộc Lộ Làn Da Khỏe Khoắn (Close-Up Razor Glide & Skin Reveal)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 1.57, 1.7)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 1.57s</span>
+            </div>
+            <div class="grid-card-body">Lật Tờ Lịch Bàn Định Vị Dấu Mốc Kỷ Luật Thời Gian (Desk Calendar Page Flip Anchor)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 1.74, 2.94)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 1.74s</span>
+            </div>
+            <div class="grid-card-body">Đồng Hồ Chuông Đôi Kim Loại Rung Chuông 5:00 AM Báo Hiệu Giờ Thức Giấc Kỷ Luật (Vintage Twin-Bell Alarm Clock Ringing at 5:00 AM)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 2.97, 4.0)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 2.97s</span>
+            </div>
+            <div class="grid-card-body">Dằn Mạnh Hộp MuscleBlaze CreAMP Lên Ghế Tập Khẳng Định Tâm Điểm Sản Phẩm (Impact Drop MuscleBlaze CreAMP on Gym Bench)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 4.04, 4.24)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 4.04s</span>
+            </div>
+            <div class="grid-card-body">Xà Kép Đeo Xích Tạ Xanh Đẩy Cơ Ngực Căng Cực Hạn (Weighted Dips with Chain & 10KG Bumper Plate)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 4.27, 4.44)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 4.27s</span>
+            </div>
+            <div class="grid-card-body">Góc Nhìn Ngước Dưới Đẩy Đòn Tạ Bumper Xanh Lên Trần Gym Tổ Ong (Worm-Eye POV Barbell Bench Press)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(9, 4.47, 4.64)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <span class="grid-thumb-badge">Shot 09 • 4.47s</span>
+            </div>
+            <div class="grid-card-body">Cận Cảnh Cổ Tay Siết Tạ Dumbbell Khổng Lồ Khóa Chặt Bắp Tay Trước (Close-Up Dumbbell Hammer Curl Grip & Bicep Contraction)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(10, 4.67, 5.71)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+                <span class="grid-thumb-badge">Shot 10 • 4.67s</span>
+            </div>
+            <div class="grid-card-body">Rót Muỗng Bột Creatine Trắng Vào Bình Nước Trong Suốt Tạo Hiệu Ứng ASMR Thị Giác (Scooping CreAMP Powder into Clear Shaker ASMR)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(11, 5.74, 6.44)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+                <span class="grid-thumb-badge">Shot 11 • 5.74s</span>
+            </div>
+            <div class="grid-card-body">Cầm Bình Lắc Đã Pha Sải Bước Tự Tin Giữa Không Gian Máy Tập Vàng Đen (Tracking Walk with Closed CRE AMP Shaker)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(12, 6.47, 6.94)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+                <span class="grid-thumb-badge">Shot 12 • 6.47s</span>
+            </div>
+            <div class="grid-card-body">Cú Vỗ Phấn Trắng Nổ Tung Dưới Đèn Lục Giác Kích Hoạt Trạng Thái Chiến Đấu (Chalk Dust Explosion Under Hexagonal Light)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(13, 6.97, 7.17)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_13_mid.jpg" alt="Shot 13" loading="lazy">
+                <span class="grid-thumb-badge">Shot 13 • 6.97s</span>
+            </div>
+            <div class="grid-card-body">Kéo Xô T-Bar Tựa Ngực Bánh Tạ 15KG Khóa Chặt Khối Lưng Dày (Chest-Supported T-Bar Row 15KG Plate Contraction)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(14, 7.21, 7.51)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_14_mid.jpg" alt="Shot 14" loading="lazy">
+                <span class="grid-thumb-badge">Shot 14 • 7.21s</span>
+            </div>
+            <div class="grid-card-body">Cú Gập Người Kéo Tạ Đòn 20KG Trong Khung Gantry Vàng Rực (Barbell Bent-Over Row Inside Yellow Power Rack)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(15, 7.54, 8.01)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_15_mid.jpg" alt="Shot 15" loading="lazy">
+                <span class="grid-thumb-badge">Shot 15 • 7.54s</span>
+            </div>
+            <div class="grid-card-body">Cú Kéo Deadlift Khóa Tạ Bumper Nhiều Tầng Trên Sàn Gỗ Chuyên Nghiệp (Heavy Deadlift Lockout on Lifting Platform)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(16, 8.04, 8.74)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_16_mid.jpg" alt="Shot 16" loading="lazy">
+                <span class="grid-thumb-badge">Shot 16 • 8.04s</span>
+            </div>
+            <div class="grid-card-body">Ngước Nhìn Cáp Kéo Xô Dưới Ánh Đèn Trần Lục Giác Tương Lai (Cable Lat Pulldown Adjustment Under Hexagonal Neon)</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(17, 8.78, 9.81)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_17_mid.jpg" alt="Shot 17" loading="lazy">
+                <span class="grid-thumb-badge">Shot 17 • 8.78s</span>
+            </div>
+            <div class="grid-card-body">Tiền Cảnh Quả Tạ Sàn Đen & Bước Chân Rời Khung Hình Đậm Chất Thong Dong (Floor-Level Dumbbell Foreground & Confident Walk-Away Outro)</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1-7BlIChO1_mFvDRdYTDQAFApRQmeNOrI" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "en_frame": 33, "st_time": 0.0, "en_time": 1.1, "duration": 1.13, "start_time": "0.00s", "end_time": "1.10s", "headline": "Đặc Tả Cận Cảnh Mắt Mở Đen Trắng Đột Phá Khởi Động Nhịp Sinh Học (Macro Eye Opening & B&W Routine Anchor)", "subject_action": "Khung hình đen trắng (Monochrome Noir) siêu cận (Extreme Close-Up) đặc tả mắt phải của Sanjog mở to thức giấc sau giấc ngủ sâu. Dòng chữ typography tối giản màu trắng 'routine' xuất hiện trang nhã ngay giữa khung hình dưới hàng mi. Nhãn cầu đen láy đảo nhẹ, lông mi sắc nét dưới ánh sáng vi mô mềm, mở màn cho chuỗi ngày rèn luyện kỷ luật.", "pros": "Tạo cú sốc thị giác tĩnh tại (Quiet Hook) đối lập hoàn toàn với âm thanh bùng nổ phía sau; tỷ lệ đen trắng tôn lên cấu trúc nhãn cầu và chi tiết da mộc mạc; từ khóa 'routine' neo giữ tâm lý người xem về kỷ luật bản thân.", "cons": "Ánh sáng trắng đen hơi chìm nhẹ ở góc mí mắt trên; nếu có một vệt sáng quét (light streak) qua đồng tử sẽ tạo cảm giác thức tỉnh mãnh liệt hơn.", "takeaway": "Để mở đầu video kỷ luật/lifestyle, hãy bắt đầu bằng một cú Extreme Close-Up mở mắt đen trắng kèm chữ 'routine' để thiết lập trạng thái tâm lý đồng bộ với khán giả trước khi tăng tốc nhịp dựng.", "specs": {"lens": "85mm Macro f/2.8 • Extreme Close-Up Eye Level", "location": "Giường ngủ / Không gian thức giấc buổi sáng", "lighting": "Ánh sáng hắt dịu đơn sắc (High-Contrast B&W Softbox)", "transition": "Cắt thẳng giật nhịp (Hard Beat Cut) chuyển đột ngột sang cảnh màu sinh hoạt"}}, {"id": 2, "st_frame": 34, "en_frame": 39, "st_time": 1.13, "en_time": 1.3, "duration": 0.2, "start_time": "1.13s", "end_time": "1.30s", "headline": "Bơm Bọt Cạo Râu Top-Down Cực Nhanh Kích Hoạt Xúc Giác Buổi Sáng (Top-Down Shaving Foam Pump Kinetic Pop)", "subject_action": "Góc máy nhìn thẳng từ trên xuống (Top-Down POV) bồn rửa mặt màu trắng. Bàn tay nhấn mạnh vòi xịt chai bọt cạo râu Gillette màu xanh ngọc (cyan), bọt kem trắng mịn phồng xốp bung trào trực tiếp lên lòng bàn tay chỉ trong 6 frame hình (0.2s).", "pros": "Tốc độ chuyển cảnh siêu chớp (micro-shot 6 frame) khớp hoàn hảo từng nhịp gõ đệm BGM; màu bọt kem trắng tương phản mạnh với thân chai xanh ngọc tạo kích thích xúc giác thị giác (Tactile ASMR).", "cons": "Thời lượng quá ngắn (0.2s) nên người xem chỉ kịp cảm nhận chuyển động bọt xốp mà chưa kịp nhận thức trọn vẹn bối cảnh phòng tắm.", "takeaway": "Khi quay các thao tác sinh hoạt buổi sáng (grooming), hãy cắt bỏ giai đoạn chuẩn bị, chỉ lấy đúng 5-6 khung hình khoảnh khắc chất lỏng hoặc bọt xốp bung ra để tạo nhịp phim dồn dập.", "specs": {"lens": "24mm f/2.0 • Top-Down Overhead POV", "location": "Bồn rửa mặt phòng tắm gia đình", "lighting": "Đèn gương phòng tắm nhiệt độ màu 5000K sắc nét", "transition": "Cắt giật theo phách nhạc (Match Cut by Action) sang động tác cạo râu"}}, {"id": 3, "st_frame": 40, "en_frame": 46, "st_time": 1.33, "en_time": 1.53, "duration": 0.23, "start_time": "1.33s", "end_time": "1.53s", "headline": "Lưỡi Dao Cạo Lướt Vệt Bọt Trắng Bộc Lộ Làn Da Khỏe Khoắn (Close-Up Razor Glide & Skin Reveal)", "subject_action": "Cận cảnh góc nghiêng gò má và xương quai hàm sắc cạnh phủ bọt trắng. Lưỡi dao cạo bằng kim loại sáng bóng kéo một đường dứt khoát từ trên xuống dưới, cạo sạch dải bọt và để lộ làn da rám nắng rắn rỏi bên dưới.", "pros": "Hiệu ứng 'reveal' (bóc tách/làm sạch) kích thích cảm giác thỏa mãn thị giác (Oddly Satisfying); góc máy nghiêng tôn lên đường nét quai hàm nam tính, khẳng định hình thể creator; nhịp cạo ăn khớp nốt gõ guitar.", "cons": "Chuyển động lướt dao hơi nhanh khiến lưỡi dao bị nhòe chuyển động (Motion Blur) nhẹ ở đuôi khung hình.", "takeaway": "Cảnh cạo râu hoặc chăm sóc da mặt nên chọn góc máy cận chéo 45 độ ngang quai hàm, đón ánh sáng xiên để làm nổi bật khối cơ mặt và kết cấu da.", "specs": {"lens": "50mm f/1.8 • Close-Up 45-Degree Cheek Angle", "location": "Trước gương phòng tắm", "lighting": "Ánh sáng tạt ngang (Side Light) tôn khối xương hàm", "transition": "Cắt dứt khoát sang góc bàn làm việc ở Shot 04"}}, {"id": 4, "st_frame": 47, "en_frame": 51, "st_time": 1.57, "en_time": 1.7, "duration": 0.17, "start_time": "1.57s", "end_time": "1.70s", "headline": "Lật Tờ Lịch Bàn Định Vị Dấu Mốc Kỷ Luật Thời Gian (Desk Calendar Page Flip Anchor)", "subject_action": "Góc máy từ trên bàn làm việc gỗ nhìn xuống. Ngón tay creator gạt nhanh tờ lịch để bàn cổ điển màu be ('08 AUGUST 2026') sang ngày mới, xác lập mốc thời gian bắt đầu một ngày tập luyện nghiêm túc.", "pros": "Đóng vai trò mỏ neo thị giác (Visual Narrative Anchor) báo hiệu ngày mới bắt đầu; chi tiết số in đậm và giấy kraft cổ điển mang hơi thở hoài niệm (vintage aesthetic).", "cons": "Khung hình chỉ vỏn vẹn 5 frames (0.17s) có thể gây hụt hẫng nhẹ nếu người xem chưa kịp đọc chữ trên tờ lịch.", "takeaway": "Đưa các chi tiết thực tế như lịch bàn, sổ tay ghi chép hoặc đồng hồ vào video routine giúp câu chuyện có tính cam kết và chân thực hơn gấp nhiều lần lời nói.", "specs": {"lens": "35mm f/2.0 • Top-Down Desk Angle", "location": "Bàn làm việc cá nhân", "lighting": "Ánh sáng đèn bàn vàng ấm (Warm 3200K Desk Lamp)", "transition": "Cắt thẳng sang tiếng chuông đồng hồ báo thức ở Shot 05"}}, {"id": 5, "st_frame": 52, "en_frame": 88, "st_time": 1.74, "en_time": 2.94, "duration": 1.23, "start_time": "1.74s", "end_time": "2.94s", "headline": "Đồng Hồ Chuông Đôi Kim Loại Rung Chuông 5:00 AM Báo Hiệu Giờ Thức Giấc Kỷ Luật (Vintage Twin-Bell Alarm Clock Ringing at 5:00 AM)", "subject_action": "Góc thấp trực diện (Low-Angle Close-Up) đặc tả chiếc đồng hồ báo thức hai chuông kim loại màu bạc cổ điển. Hai kim chỉ đúng 5 giờ sáng, búa gõ kim loại giữa hai quả chuông rung bần bật với biên độ cực cao, âm thanh chuông reo hòa vào nhịp dồn dập của bản nhạc rock/guitar.", "pros": "Âm thanh và hình ảnh rung chuông cộng hưởng cực mạnh tạo cảm giác cấp bách và thúc đẩy adrenaline; chất liệu chrome sáng bóng phản chiếu ánh sáng phòng mang phong cách retro đẳng cấp; mốc 5:00 AM là biểu tượng tối thượng của câu lạc bộ dậy sớm rèn luyện kỷ luật (5 AM Club).", "cons": "Bố cục trung tâm tĩnh, giá như có một bàn tay đập tắt chuông ở cuối shot sẽ tạo nút thắt hành động liền mạch hơn sang phòng gym.", "takeaway": "Sử dụng một đạo cụ mang tính biểu tượng văn hóa mạnh mẽ (như đồng hồ chuông đôi 5:00 AM) để truyền tải thông điệp dậy sớm mà không cần phải nói một câu thuyết minh nào.", "specs": {"lens": "50mm f/1.8 • Low-Angle Table Macro", "location": "Bàn đầu giường / Kệ phòng ngủ", "lighting": "Ánh sáng chạng vạng sáng sớm (Moody Dawn Ambient)", "transition": "Cắt sập (Impact Cut) chuyển thẳng vào sàn gym với cú dằn hộp creatine"}}, {"id": 6, "st_frame": 89, "en_frame": 120, "st_time": 2.97, "en_time": 4.0, "duration": 1.07, "start_time": "2.97s", "end_time": "4.00s", "headline": "Dằn Mạnh Hộp MuscleBlaze CreAMP Lên Ghế Tập Khẳng Định Tâm Điểm Sản Phẩm (Impact Drop MuscleBlaze CreAMP on Gym Bench)", "subject_action": "Máy quay đặt ngang mặt ghế tập da đen có gân nhám trong phòng gym hiện đại. Bàn tay cơ bắp của Sanjog dằn dứt khoát hộp MuscleBlaze CreAMP Micronised Creatine Monohydrate (vị Virgin Mojito) xuống mặt ghế. Phía sau là dàn đèn trần lục giác LED màu xanh dương và vàng rực rỡ, làm nổi bật nhãn bạc và logo MB dập nổi.", "pros": "Cú đặt hộp có lực dằn vật lý (Impact Drop) tạo cảm giác uy lực, nam tính; ánh đèn LED neon xanh-vàng hậu cảnh tạo chiều sâu bối cảnh gym chuyên nghiệp; nhãn sản phẩm xoay đúng hướng ống kính, nhận diện thương hiệu 100% không gượng ép.", "cons": "Mặt ghế tập có vài hạt bụi mồ hôi nhỏ, nếu được lau bóng trước khi bấm máy thì texture da ghế sẽ sang trọng hơn.", "takeaway": "Quảng cáo sản phẩm trong video thể thao (Product Placement) cần phải gắn với hành động dứt khoát, đặt mạnh lên đạo cụ tập luyện thay vì cầm giơ lên tạo dáng sến súa.", "specs": {"lens": "35mm f/1.8 • Low-Angle Bench Level Shot", "location": "Ghế tập tạ phẳng trong phòng tập Multifit", "lighting": "Ánh sáng đèn trần lục giác LED neon kết hợp rim light xanh dương", "transition": "Cắt liên hoàn theo chùm nốt phách nhanh (Burst Montage Cuts) sang các bài tập nặng"}}, {"id": 7, "st_frame": 121, "en_frame": 127, "st_time": 4.04, "en_time": 4.24, "duration": 0.23, "start_time": "4.04s", "end_time": "4.24s", "headline": "Xà Kép Đeo Xích Tạ Xanh Đẩy Cơ Ngực Căng Cực Hạn (Weighted Dips with Chain & 10KG Bumper Plate)", "subject_action": "Khung hình bừng sáng giữa phòng gym. Creator mặc áo ba lỗ đen, đeo đai xích sắt treo tạ bánh xanh lá 10KG (Multifit), thực hiện động tác xà kép (Weighted Dips) hạ sâu người khóa cơ ngực dưới và tay sau. Chân gập nhẹ, cơ bắp căng phồng theo nhịp nhạc dồn dập.", "pros": "Thể hiện đẳng cấp sức mạnh bằng tạ xích (Weighted Dips thể hiện level tập luyện cao); bánh tạ xanh lá tạo điểm nhấn màu sắc rực rỡ trên nền tối; góc máy đón trọn biên độ chuyển động cơ thể.", "cons": "Thời lượng quá ngắn (0.23s) chỉ thấy pha hạ người xuống mà chưa kịp thấy pha đẩy thẳng tay lên.", "takeaway": "Khi dựng video highlight thể hình, hãy lồng ghép các bài tập dùng xích sắt (chain) hoặc đai tạ nặng để tạo ấn tượng thị giác thô ráp (raw strength) và uy lực.", "specs": {"lens": "24mm f/2.0 • Medium Full Shot Eye Level", "location": "Khu vực xà kép phòng gym Multifit", "lighting": "Đèn led trần tổ ong rọi từ trên đỉnh đầu xuống", "transition": "Cắt giật (Flash Cut) sang góc nhìn POV đẩy ngực đòn tạ ở Shot 08"}}, {"id": 8, "st_frame": 128, "en_frame": 133, "st_time": 4.27, "en_time": 4.44, "duration": 0.2, "start_time": "4.27s", "end_time": "4.44s", "headline": "Góc Nhìn Ngước Dưới Đẩy Đòn Tạ Bumper Xanh Lên Trần Gym Tổ Ong (Worm-Eye POV Barbell Bench Press)", "subject_action": "Góc máy ngước thẳng từ dưới ngực lên (Worm-Eye / Low-Angle POV) theo hướng đẩy của thanh đòn tạ mạ chrome. Bánh tạ cao su xanh lá 10KG MULTIFIT được đẩy vút lên không trung, hướng về trần nhà sơn đen lấp lánh đốm vàng và dàn máy tập màu vàng rực phía sau.", "pros": "Góc máy từ dưới ngước lên tạo cảm giác thanh đòn khổng lồ và đè nặng uy lực; sự tương phản giữa cánh tay gân guốc, thanh đòn bóng loáng và trần gym tạo cảm giác điện ảnh nhập vai (Immersive POV).", "cons": "Khung hình bị rung lắc nhẹ do gia tốc đẩy tạ của cánh tay.", "takeaway": "Thay vì quay ngang hông thông thường khi đẩy tạ, hãy đặt máy quay ngửa lên sát nách hoặc dưới thanh đòn để người xem cảm nhận được sức nặng đang ép xuống ngực mình.", "specs": {"lens": "20mm Ultra-Wide f/2.8 • Worm-Eye Upward Angle", "location": "Ghế nằm đẩy tạ đòn (Flat Bench Press)", "lighting": "Đèn led trần chiếu ngược từ trên xuống tạo viền sáng cánh tay", "transition": "Cắt giật tiếp tục sang cận cảnh tạ tay bicep curl ở Shot 09"}}, {"id": 9, "st_frame": 134, "en_frame": 139, "st_time": 4.47, "en_time": 4.64, "duration": 0.2, "start_time": "4.47s", "end_time": "4.64s", "headline": "Cận Cảnh Cổ Tay Siết Tạ Dumbbell Khổng Lồ Khóa Chặt Bắp Tay Trước (Close-Up Dumbbell Hammer Curl Grip & Bicep Contraction)", "subject_action": "Ống kính góc siêu rộng đặc tả bàn tay gân guốc đeo đồng hồ thể thao đỏ đen siết chặt cán tạ tay dumbbell lục giác khổng lồ, cuộn mạnh lên trước ngực. Hậu cảnh là dàn đèn led chùm rực sáng và gương phòng tập phản chiếu cơ bắp cuồn cuộn.", "pros": "Độ phóng đại góc rộng (Wide-Angle Perspective Distortion) khiến quả tạ tay trông to lớn dị thường, làm nổi bật đường gân máu trên cẳng tay; chuyển động cuộn tạ mạnh mẽ khép lại bộ ba cú cắt thần tốc (Dips - Bench - Curl).", "cons": "Góc trên bên phải bị lóa sáng mạnh (Lens Flare) từ bóng đèn trần phòng gym.", "takeaway": "Khi quay các bài tạ tay (Dumbbells), hãy hạ máy quay xuống thấp hơn quả tạ và dùng ống kính góc rộng 24mm để tạo hiệu ứng tạ đồ sộ gấp đôi thực tế.", "specs": {"lens": "24mm f/2.0 • Ultra Low-Angle Close-Up", "location": "Khu vực giá tạ tự do (Free Weights Dumbbell Rack)", "lighting": "Ánh đèn rọi Spotlight trần chiếu thẳng vào mu bàn tay", "transition": "Cắt trở về nhịp thư thả mô tả chi tiết sản phẩm ở Shot 10"}}, {"id": 10, "st_frame": 140, "en_frame": 171, "st_time": 4.67, "en_time": 5.71, "duration": 1.07, "start_time": "4.67s", "end_time": "5.71s", "headline": "Rót Muỗng Bột Creatine Trắng Vào Bình Nước Trong Suốt Tạo Hiệu Ứng ASMR Thị Giác (Scooping CreAMP Powder into Clear Shaker ASMR)", "subject_action": "Bố cục tĩnh cận cảnh hoàn hảo. Bình lắc trong suốt in chữ 'CRE AMP' đỏ rực đặt vững chãi cạnh hộp MuscleBlaze CreAMP trên mặt ghế bọc da. Tay creator cầm muỗng đong (scoop) gõ nhẹ, đổ một dòng bột creatine trắng mịn rơi tơi xốp xuống làn nước tinh khiết sủi bọt khí lăn tăn bên trong bình.", "pros": "Cảnh quay 'Money Shot' đắt giá nhất của hợp đồng tài trợ: bột tan chậm trong nước tạo cảm giác ngon lành, sảng khoái và kích thích giác quan (Sensory Appeal); nhãn hiệu trên cả bình và hộp đều lọt trọn vẹn vào vùng an toàn thị giác; hậu cảnh mờ ảo xóa phông mượt mà.", "cons": "Lượng nước trong bình hơi ít (khoảng 1/3 bình) khiến khoảng rơi của bột kết thúc nhanh hơn dự kiến.", "takeaway": "Khi quay video quảng cáo thực phẩm bổ sung, hãy luôn dùng bình lắc trong suốt (Clear Shaker) và quay ở tốc độ khung hình cao (Slow-Mo 60/120fps) để bắt trọn từng làn mây bột hòa tan vào nước.", "specs": {"lens": "50mm f/1.8 • Static Eye-Level Macro Shot", "location": "Bàn ghế tập tạ phòng gym", "lighting": "Ánh sáng tạt hai bên (Dual Side Kickers) làm trong suốt làn nước", "transition": "Cắt sang chuyển động cầm bình lắc sải bước ở Shot 11"}}, {"id": 11, "st_frame": 172, "en_frame": 193, "st_time": 5.74, "en_time": 6.44, "duration": 0.73, "start_time": "5.74s", "end_time": "6.44s", "headline": "Cầm Bình Lắc Đã Pha Sải Bước Tự Tin Giữa Không Gian Máy Tập Vàng Đen (Tracking Walk with Closed CRE AMP Shaker)", "subject_action": "Máy quay cầm tay di chuyển lùi (Backward Tracking Shot) đặc tả bàn tay creator cầm chiếc bình lắc CRE AMP đã đậy nắp đỏ chắc chắn, bên trong nước creatine đã hòa tan đều màu trắng sữa. Phía sau là không gian sàn tập đẳng cấp với dãy máy móc màu vàng rực rỡ và ánh đèn trang trí hiện đại.", "pros": "Chuyển tiếp mượt mà từ khâu pha chế sang khâu chuẩn bị bùng nổ năng lượng; chuyển động bước chân tạo nhịp điệu hành động (Pacing & Momentum); thương hiệu CRE AMP luôn được giữ ở vị trí trung tâm khung hình.", "cons": "Tay lắc bình hơi che khuất một phần chữ 'AMP' khi ngón tay di chuyển.", "takeaway": "Sau màn pha chế sản phẩm, luôn cần một cú máy di động (Tracking/Walking) để truyền tải cảm giác 'nạp năng lượng xong là sẵn sàng vào trận'.", "specs": {"lens": "28mm f/2.2 • Handheld Backward Tracking Shot", "location": "Lối đi trung tâm phòng gym Multifit", "lighting": "Ánh sáng đèn trần phản chiếu trên vỏ nhựa trong của bình lắc", "transition": "Cắt sang nghi thức vỗ bột phấn trắng ở Shot 12"}}, {"id": 12, "st_frame": 194, "en_frame": 208, "st_time": 6.47, "en_time": 6.94, "duration": 0.5, "start_time": "6.47s", "end_time": "6.94s", "headline": "Cú Vỗ Phấn Trắng Nổ Tung Dưới Đèn Lục Giác Kích Hoạt Trạng Thái Chiến Đấu (Chalk Dust Explosion Under Hexagonal Light)", "subject_action": "Góc máy ngang hông đặc tả hai bàn tay gân guốc chà xát và vỗ mạnh bột phấn tập tạ (Lifting Chalk). Một đám mây bụi phấn trắng tinh nổ bung ra dữ dội, các hạt bụi li ti bay lơ lửng trong không khí và bắt trọn vầng sáng rực rỡ từ chiếc đèn trần tổ ong lục giác phía sau lưng.", "pros": "Hiệu ứng hạt bụi phát sáng (Atmospheric Backlit Dust) tạo nên chất điện ảnh đỉnh cao thường thấy trong các TVC của Nike hay Under Armour; nghi thức vỗ phấn báo hiệu giai đoạn tập nặng nhất sắp diễn ra, đẩy cảm xúc người xem lên tột đỉnh.", "cons": "Bụi phấn tan khá nhanh trong 15 frames, nếu kéo dài thêm 0.3s nữa sẽ bắt trọn khoảnh khắc khói phấn lắng xuống.", "takeaway": "Bụi phấn gym (Chalk) là 'vũ khí bí mật' của mọi video thể hình; luôn đặt nguồn sáng mạnh trực tiếp sau lưng chủ thể (Backlight) để từng hạt phấn phát sáng như kim cương trong khung hình.", "specs": {"lens": "50mm f/1.8 • Medium Close-Up Torso Level", "location": "Khu vực cử tạ tạ nặng (Powerlifting Platform)", "lighting": "Ngược sáng hoàn toàn (Hard Backlight) từ đèn trần tổ ong", "transition": "Cắt giật theo tiếng nổ trống sang bài kéo xô T-Bar Row ở Shot 13"}}, {"id": 13, "st_frame": 209, "en_frame": 215, "st_time": 6.97, "en_time": 7.17, "duration": 0.23, "start_time": "6.97s", "end_time": "7.17s", "headline": "Kéo Xô T-Bar Tựa Ngực Bánh Tạ 15KG Khóa Chặt Khối Lưng Dày (Chest-Supported T-Bar Row 15KG Plate Contraction)", "subject_action": "Góc máy nghiêng thấp đặc tả Sanjog đang ghì chặt ngực vào đệm máy tập chèo lưng, hai tay giật mạnh tay cầm kéo bánh tạ cao su xám 15KG ép sát lồng ngực. Khối cơ lưng xô (lats) và cơ trám (rhomboids) thít chặt lại, lộ rõ từng thớ cơ cuồn cuộn.", "pros": "Động tác kéo tạ dứt khoát, chuẩn form kỹ thuật; bánh tạ 15KG tạo cảm giác trọng lượng chân thực; góc máy hất lên tôn vinh độ dày của vòm ngực và cánh tay.", "cons": "Cảnh quay chỉ có 7 frames nên người xem chưa kịp thấy điểm khóa cơ cực đại (peak contraction).", "takeaway": "Khi quay các bài tập kéo lưng xô, hãy đặt máy quay chếch 45 độ từ phía trước hoặc sau vai để bắt trọn rãnh cơ lưng chuyển động thay vì quay từ một bên sườn phẳng lì.", "specs": {"lens": "35mm f/2.0 • Low-Angle 45-Degree Front-Side Shot", "location": "Máy kéo T-Bar Row có đệm tựa ngực", "lighting": "Đèn trần rọi từ đỉnh tạo bóng đổ sâu giữa các múi cơ lưng", "transition": "Cắt tiếp tục theo phách guitar sang bài kéo đòn tạ ở Shot 14"}}, {"id": 14, "st_frame": 216, "en_frame": 225, "st_time": 7.21, "en_time": 7.51, "duration": 0.33, "start_time": "7.21s", "end_time": "7.51s", "headline": "Cú Gập Người Kéo Tạ Đòn 20KG Trong Khung Gantry Vàng Rực (Barbell Bent-Over Row Inside Yellow Power Rack)", "subject_action": "Góc quay toàn thân nghiêng một bên ghi lại Sanjog đứng trong khung giá tạ vàng (Power Rack). Lưng giữ thẳng song song mặt đất, anh kéo mạnh thanh đòn lắp bánh tạ đen 20KG lên sát bụng dưới. Gân cổ nổi rõ, cơ đùi và mông gồng cứng chịu lực.", "pros": "Khung giàn tạ sắt màu vàng rực đóng vai trò viền khung tự nhiên (Natural Framing); tư thế chuẩn chỉ của vận động viên chuyên nghiệp tạo uy tín tuyệt đối cho phong thái thể thao; ánh sáng dải led sau lưng tôn vinh bờ vai rộng.", "cons": "Độ sáng tổng thể hơi tối ở phần thân dưới của vận động viên do bóng đổ của giá tạ.", "takeaway": "Tận dụng các cột thép của Power Rack hoặc Smith Machine làm tiền cảnh (Foreground) để tạo cảm giác không gian tập luyện gồ ghề và có chiều sâu lớp lang.", "specs": {"lens": "28mm f/2.0 • Side Profile Medium Full Shot", "location": "Khung gantry tập tạ vàng đa năng", "lighting": "Đèn led thanh dài phía sau tạo ven sáng dọc sống lưng", "transition": "Cắt thẳng sang đỉnh cao Deadlift ở Shot 15"}}, {"id": 15, "st_frame": 226, "en_frame": 240, "st_time": 7.54, "en_time": 8.01, "duration": 0.5, "start_time": "7.54s", "end_time": "8.01s", "headline": "Cú Kéo Deadlift Khóa Tạ Bumper Nhiều Tầng Trên Sàn Gỗ Chuyên Nghiệp (Heavy Deadlift Lockout on Lifting Platform)", "subject_action": "Góc máy toàn cảnh đặt thấp trên sàn nâng tạ gỗ bóng loáng. Sanjog trong bộ đồ đen viền sọc trắng, chân đi tất đen, đang thực hiện cú khóa hông (lockout) đỉnh cao của bài Deadlift với đòn tạ chất đầy các bánh tạ sắc màu Jerai Fitness (bánh xanh lá, vàng, xanh dương - tổng khối lượng cực nặng). Anh hít sâu thở phào, toàn bộ cơ thể căng tràn năng lượng.", "pros": "Cảnh quay thể hiện sức mạnh tối thượng (Ultimate Power Display); các tầng tạ màu sắc rực rỡ xếp cạnh nhau tạo ấn tượng trực quan về mức tạ khổng lồ; bục nâng tạ gỗ phản chiếu ánh sáng tôn lên vẻ sang trọng của phòng gym.", "cons": "Máy quay đặt hơi lệch nhẹ sang bên phải, nếu căn giữa đối xứng hoàn toàn thì bố cục sẽ mang tính tượng đài hơn nữa.", "takeaway": "Cảnh kết của chuỗi bài tập gym nên luôn là một bài Compound kinh điển (Deadlift hoặc Squat) với góc quay toàn thân trên sàn tập để khẳng định sức mạnh và kết quả của quá trình bổ sung dinh dưỡng.", "specs": {"lens": "24mm f/2.2 • Low-Angle Full-Body Platform Shot", "location": "Sàn gỗ nâng tạ Deadlift chuyên dụng", "lighting": "Ánh sáng tự nhiên từ cửa kính lớn hắt vào kết hợp đèn trần gym", "transition": "Cắt sang động tác kéo xô cáp cao ở Shot 16"}}, {"id": 16, "st_frame": 241, "en_frame": 262, "st_time": 8.04, "en_time": 8.74, "duration": 0.73, "start_time": "8.04s", "end_time": "8.74s", "headline": "Ngước Nhìn Cáp Kéo Xô Dưới Ánh Đèn Trần Lục Giác Tương Lai (Cable Lat Pulldown Adjustment Under Hexagonal Neon)", "subject_action": "Góc máy ngước góc thấp cực đoan (Extreme Low-Angle) từ dưới ghế nhìn thẳng lên trần nhà. Sanjog với cơ vai và bắp tay sau cuồn cuộn vươn hai tay kéo thanh đòn cáp lat pulldown xuống. Phía sau đầu anh là một chiếc đèn trần hình lục giác màu trắng tinh khôi tỏa sáng như một vầng hào quang công nghệ tương lai.", "pros": "Sự kết hợp hoàn mỹ giữa cơ bắp con người và hình học kiến trúc viễn tưởng (Sci-Fi Hexagonal Glow); góc máy ngước tôn vinh độ vạm vỡ của lồng ngực và cánh tay; độ tương phản đen-trắng rực rỡ tạo cảm giác hiện đại, sang chảnh.", "cons": "Thanh đòn cáp ở đầu shot che khuất một phần khuôn mặt của creator.", "takeaway": "Khi quay các bài tập máy kéo xô trên cao, hãy đặt điện thoại ngửa mặt trên đệm ghế hoặc dưới sàn, bạn sẽ có ngay một khung hình góc ngước siêu rộng ôm trọn trần nhà và cơ bắp cuồn cuộn.", "specs": {"lens": "20mm Ultra-Wide f/2.0 • Worm-Eye Upward Looking View", "location": "Máy kéo xô cáp cao (Lat Pulldown Station)", "lighting": "Đèn led neon lục giác chiếu thẳng vào ống kính tạo hiệu ứng halo", "transition": "Cắt sang cú máy sát sàn kết thúc video ở Shot 17"}}, {"id": 17, "st_frame": 263, "en_frame": 294, "st_time": 8.78, "en_time": 9.81, "duration": 1.07, "start_time": "8.78s", "end_time": "9.81s", "headline": "Tiền Cảnh Quả Tạ Sàn Đen & Bước Chân Rời Khung Hình Đậm Chất Thong Dong (Floor-Level Dumbbell Foreground & Confident Walk-Away Outro)", "subject_action": "Máy quay đặt sát mặt sàn cao su đen của phòng tập. Ở tiền cảnh (Foreground) là cặp tạ tay dumbbell màu đen sừng sững, phía sau là hàng ghế dốc tập bụng và khung cửa kính vòm đón ánh sáng tự nhiên. Creator với đôi tất đen họa tiết ngọn lửa tím sải bước thong thả lướt qua bên phải ống kính, hoàn tất buổi tập một cách nhẹ nhàng, mãn nguyện.", "pros": "Bố cục tiền cảnh - hậu cảnh (Foreground Depth) cực kỳ mẫu mực với quả tạ đen neo giữ khung hình; bước chân rời đi (Walk-away Outro) tạo cảm giác kết thúc mở đầy phóng khoáng và tự tin sau buổi tập cật lực; ánh sáng đèn trần lục giác phản chiếu lung linh trên mặt kính.", "cons": "Góc trên cùng hơi tối do đường ống thông gió trên trần nhà.", "takeaway": "Kết thúc một video hành động nhịp nhanh bằng một cú máy tĩnh đặt sát sàn cho chủ thể thong dong bước ra khỏi khung hình là kỹ thuật Outro kinh điển giúp video có điểm dừng ngọt ngào và kích thích người xem replay.", "specs": {"lens": "24mm f/2.8 • Ground-Level Static Floor Shot", "location": "Sàn cao su khu vực tạ tự do", "lighting": "Ánh sáng tự nhiên từ cửa sổ vòm kết hợp đèn trần tổ ong", "transition": "Giữ khung hình tĩnh đến hết thời lượng 9.81s, tạo vòng lặp vô tận (Infinite Loop) trở lại Shot 01"}}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ct.toFixed(2) + 's / ' + (player.duration ? player.duration.toFixed(2) : '9.84') + 's';
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 29.97 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById('shot-' + shotId);
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

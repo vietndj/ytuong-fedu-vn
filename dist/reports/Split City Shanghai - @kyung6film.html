@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Split City: Shanghai (Bản Giao Hưởng Thượng Hải 3 Tầng Thời Không) • Director's Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #0b0f17;
+    --bg-card: #131b2a;
+    --bg-card-hover: #1c273c;
+    --bg-sidebar: #0f1624;
+    --border-color: #202c42;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-amber: #f59e0b;
+    --accent-blue: #38bdf8;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-purple: #c084fc;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    font-size: 14.5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    background: rgba(15, 22, 36, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+.nav-badge {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+    background: var(--bg-card-hover);
+}
+.nav-btn.primary {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    border-color: var(--accent-blue);
+}
+.nav-btn.primary:hover {
+    opacity: 0.9;
+}
+
+/* Main Layout Split Screen */
+.main-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Left Sticky Video Column */
+.player-column {
+    width: 420px;
+    flex-shrink: 0;
+    padding: 24px 16px 24px 24px;
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-right: 1px solid var(--border-color);
+}
+.video-frame-box {
+    background: #000;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    aspect-ratio: 9 / 16;
+    max-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-frame-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.player-controls {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.15s;
+}
+.ctrl-btn:hover {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+.ctrl-btn.active {
+    background: rgba(56, 189, 248, 0.2);
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+.speed-group {
+    display: flex;
+    gap: 4px;
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent-amber);
+    background: rgba(245, 158, 11, 0.1);
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+/* Right Analysis Column */
+.content-column {
+    flex: 1;
+    padding: 28px 32px;
+    overflow-y: auto;
+}
+
+/* Header Meta Block */
+.report-header {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+}
+.report-header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, #f43f5e, #38bdf8, #f59e0b);
+}
+.header-badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.badge-tech {
+    background: rgba(192, 132, 252, 0.15);
+    color: var(--accent-purple);
+    border: 1px solid rgba(192, 132, 252, 0.3);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+.badge-status {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--accent-emerald);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+.report-title {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 14px;
+    color: var(--text-primary);
+}
+.meta-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-secondary);
+    font-size: 13.5px;
+    margin-bottom: 16px;
+}
+.author-ig-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(244, 63, 94, 0.15);
+    color: #f43f5e;
+    padding: 4px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid rgba(244, 63, 94, 0.3);
+    transition: all 0.2s;
+}
+.author-ig-badge:hover {
+    background: rgba(244, 63, 94, 0.25);
+    border-color: #f43f5e;
+}
+.core-summary-box {
+    background: rgba(11, 15, 23, 0.6);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-left: 4px solid var(--accent-blue);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 14px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* View Switcher & Toolbar */
+.toolbar-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 10px 16px;
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+}
+.view-tab {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    border-color: var(--accent-blue);
+}
+.drawer-toggle-btn {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--accent-amber);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Shot Detail Cards */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.2s;
+    scroll-margin-top: 80px;
+}
+.shot-card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+}
+.shot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-color);
+}
+.shot-num-title {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.shot-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.shot-pill {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+.shot-timestamp-jump {
+    background: rgba(245, 158, 11, 0.12);
+    color: var(--accent-amber);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s;
+}
+.shot-timestamp-jump:hover {
+    background: var(--accent-amber);
+    color: #000;
+}
+.shot-headline {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+}
+
+/* Keyframe Gallery Row */
+.keyframe-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.keyframe-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: #000;
+    cursor: pointer;
+    aspect-ratio: 9 / 16;
+}
+.keyframe-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+.keyframe-item:hover img {
+    transform: scale(1.04);
+}
+.kf-tag {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(4px);
+    color: #f8fafc;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+.transition-strip {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: #000;
+    cursor: pointer;
+}
+.transition-strip img {
+    width: 100%;
+    display: block;
+}
+.trans-caption {
+    padding: 8px 12px;
+    background: var(--bg-sidebar);
+    font-size: 12px;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Breakdown 3 Blocks */
+.breakdown-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.block-card {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 16px;
+}
+.block-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 13.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.block-title.action { color: var(--accent-blue); }
+.block-title.critique { color: var(--accent-rose); }
+.block-title.takeaway { color: var(--accent-emerald); }
+
+.critique-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-box {
+    background: rgba(19, 27, 42, 0.7);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.critique-box.good {
+    border-left: 3px solid var(--accent-emerald);
+}
+.critique-box.bad {
+    border-left: 3px solid var(--accent-rose);
+}
+.critique-label {
+    font-weight: 700;
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+.critique-box.good .critique-label { color: var(--accent-emerald); }
+.critique-box.bad .critique-label { color: var(--accent-rose); }
+
+.takeaway-box {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 13.5px;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* Shot Specs Table */
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--border-color);
+}
+.spec-item {
+    font-size: 12px;
+}
+.spec-name {
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 10.5px;
+    margin-bottom: 2px;
+}
+.spec-val {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Visual Grid View (Hidden by default) */
+.grid-view-container {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+}
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-blue);
+}
+.grid-card-thumb {
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    position: relative;
+    background: #000;
+}
+.grid-card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid-card-info {
+    padding: 12px;
+}
+.grid-card-title {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+/* Drawer Jump Menu */
+.jump-drawer {
+    position: fixed;
+    top: 0; right: -340px;
+    width: 320px;
+    height: 100vh;
+    background: var(--bg-sidebar);
+    border-left: 1px solid var(--border-color);
+    z-index: 200;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: right 0.3s ease;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.6);
+}
+.jump-drawer.open {
+    right: 0;
+}
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+.drawer-list {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+.drawer-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.drawer-item:hover {
+    border-color: var(--accent-blue);
+    background: var(--bg-card-hover);
+}
+
+/* Lightbox Modal Darkroom */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(5, 8, 13, 0.95);
+    backdrop-filter: blur(16px);
+    z-index: 300;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.lightbox-modal.active {
+    display: flex;
+}
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 85vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 75vh;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    object-fit: contain;
+}
+.lightbox-caption {
+    margin-top: 14px;
+    color: #e2e8f0;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.2s;
+}
+.lightbox-close:hover {
+    background: var(--accent-rose);
+}
+
+/* Responsive Mobile Rules */
+@media (max-width: 960px) {
+    .main-wrapper {
+        flex-direction: column;
+    }
+    .player-column {
+        width: 100%;
+        position: relative;
+        top: 0;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 16px;
+    }
+    .video-frame-box {
+        max-height: 380px;
+    }
+    .content-column {
+        padding: 16px;
+    }
+    .critique-grid {
+        grid-template-columns: 1fr;
+    }
+    .keyframe-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Top Navigation -->
+<nav class="top-nav">
+    <a href="../scene.html" class="nav-brand">
+        <span>◀</span>
+        <span>TRUNG TÂM PHÂN TÍCH ĐIỆN ẢNH</span>
+        <span class="nav-badge">STANDALONE PORTAL</span>
+    </a>
+    <div class="nav-actions">
+        <a href="https://www.instagram.com/reel/DakY2EST-Tm/" target="_blank" class="nav-btn primary">
+            📸 Xem Instagram Gốc ↗
+        </a>
+        <button class="nav-btn" onclick="toggleDrawer()">
+            📑 Mục Lục Shot
+        </button>
+    </div>
+</nav>
+
+<!-- Main Split Screen Wrapper -->
+<div class="main-wrapper">
+
+    <!-- Left Column: Sticky Video Player & Director Controls -->
+    <div class="player-column">
+        <div class="video-frame-box">
+            <video id="directorVideo" src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Split%20City%20Shanghai%20-%20%40kyung6film.mp4" preload="metadata" playsinline controls></video>
+        </div>
+        
+        <div class="player-controls">
+            <div class="ctrl-row">
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1 Frame</button>
+                <button class="ctrl-btn" onclick="togglePlayPause()" id="playBtn">▶ Phát / Dừng</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">⏭ +1 Frame</button>
+                <span class="time-display" id="timeDisplay">00:00.00</span>
+            </div>
+            <div class="ctrl-row">
+                <span style="font-size: 11px; color: var(--text-muted); font-weight: 600;">TỐC ĐỘ ĐẠO DIỄN:</span>
+                <div class="speed-group">
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)" id="spd025">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)" id="spd05">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)" id="spd1">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)" id="spd15">1.5x</button>
+                </div>
+            </div>
+            <div class="ctrl-row">
+                <button class="ctrl-btn" onclick="toggleMute()" id="muteBtn">🔊 Bật/Tắt Âm</button>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Đoạn</button>
+                <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Split%20City%20Shanghai%20-%20%40kyung6film.mp4" download class="ctrl-btn" style="text-decoration:none;">⬇ Tải Video Gốc</a>
+            </div>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 14px; font-size: 12.5px; color: var(--text-secondary);">
+            <div style="font-weight: 700; color: var(--accent-blue); margin-bottom: 6px;">💡 MẸO ĐẠO DIỄN:</div>
+            • Nhấn vào bất kỳ mốc thời gian <span style="color:var(--accent-amber); font-weight:600;">[Start - End]</span> hoặc ảnh Thumbnail để lập tức nhảy video đến phân cảnh đó.<br>
+            • Chọn tốc độ <span style="color:var(--accent-blue); font-weight:600;">0.25x</span> để soi khớp chuyển động Match Cut ở 12.05s!
+        </div>
+    </div>
+
+    <!-- Right Column: Director Breakdown & Technical Insights -->
+    <div class="content-column">
+
+        <!-- Report Header -->
+        <header class="report-header">
+            <div class="header-badge-row">
+                <span class="badge-tech">Kinetic Masking</span>
+                <span class="badge-tech">Triptych Split Screen</span>
+                <span class="badge-tech">Symmetrical Match Cut</span>
+                <span class="badge-status">Director Verified</span>
+            </div>
+            <h1 class="report-title">Split City: Shanghai (Bản Giao Hưởng Thượng Hải 3 Tầng Thời Không)</h1>
+            <div class="meta-tags-flex">
+                <span>Tác giả:</span>
+                <a href="https://www.instagram.com/kyung6film/" target="_blank" class="author-ig-badge">
+                    @kyung6film (Kim Kyung-sik [ 금손남친 ]) ↗
+                </a>
+                <span>• Thời lượng: 15.89s (381 Frames @ 23.976 fps)</span>
+                <span>• Định dạng: 1080x1920 (9:16 Vertical Reel)</span>
+            </div>
+            <div class="core-summary-box">
+                <strong>🎯 TỔNG QUAN CHIẾN LƯỢC ĐIỆN ẢNH:</strong> Video khai thác tuyệt đỉnh nghệ thuật điều khiển tỷ lệ khung hình động (Kinetic Aspect Ratio Masking) và kỹ thuật ghép triptych 3 tầng thời không trong cùng một tư thế đối xứng (Same-Pose Multi-Dimension Match Cut). Tác giả đã biến khoảng đen letterbox vốn bị xem là lỗi giao diện thành một công cụ dẫn dắt thị giác chủ động, trước khi tạo ra cú bùng nổ visual 3 địa danh biểu tượng của Thượng Hải (Cổ điển - Tương lai - Xa hoa) ở 12.05s.
+            </div>
+        </header>
+
+        <!-- View Switcher Toolbar -->
+        <div class="toolbar-row">
+            <div class="view-tabs">
+                <button class="view-tab active" onclick="switchView('detail')" id="tabDetail">🎬 Storyboard Chi Tiết</button>
+                <button class="view-tab" onclick="switchView('grid')" id="tabGrid">🖼 Lưới Nhịp Điệu Keyframes</button>
+            </div>
+            <button class="drawer-toggle-btn" onclick="toggleDrawer()">
+                📑 Chọn Nhanh Shot (5)
+            </button>
+        </div>
+
+        <!-- Detail View Container -->
+        <div class="shots-container" id="detailView">
+
+            <!-- Shot 01 Card -->
+            <article class="shot-card" id="shot_1">
+                <div class="shot-header">
+                    <div class="shot-num-title">
+                        <div class="shot-badge-row">
+                            <span class="shot-pill">PHÂN CẢNH 01</span>
+                            <button class="shot-timestamp-jump" onclick="jumpTo(0.0)">
+                                ⏱ [0.00s - 1.25s] (1.25s) ▶
+                            </button>
+                        </div>
+                        <h2 class="shot-headline">Aperture Pinch Hook: Khóa chú ý bằng co hẹp dải khung hình động kết hợp vươn tay tiền cảnh</h2>
+                    </div>
+                </div>
+
+                <!-- 3 Keyframes Row -->
+                <div class="keyframe-row">
+                    <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_01_start.jpg', 'Shot 01 • Start Frame (0.00s)')">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_01_start.jpg" alt="Shot 1 Start" loading="lazy">
+                        <span class="kf-tag">START 0.00s</span>
+                    </div>
+                    <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_01_mid.jpg', 'Shot 01 • Mid Frame (0.62s)')">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_01_mid.jpg" alt="Shot 1 Mid" loading="lazy">
+                        <span class="kf-tag">MID 0.62s</span>
+                    </div>
+                    <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_01_end.jpg', 'Shot 01 • End Frame (1.25s)')">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_01_end.jpg" alt="Shot 1 End" loading="lazy">
+                        <span class="kf-tag">END 1.25s</span>
+                    </div>
+                </div>
+
+                <!-- Transition Strip -->
+                <div class="transition-strip" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/trans_01_to_02.jpg', 'Chuyển Cảnh: Phân Cảnh 01 ➔ Phân Cảnh 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/trans_01_to_02.jpg" alt="Transition 1 to 2" loading="lazy">
+                    <div class="trans-caption">
+                        <span>🔄 <strong>KHỚP CHUYỂN CẢNH:</strong> Shot 01 End ➔ Shot 02 Start</span>
+                        <span style="color:var(--accent-amber); font-family:var(--font-mono);">Dynamic Matte Zoom-in sang dải Anamorphic 2.39:1</span>
+                    </div>
+                </div>
+
+                <!-- Breakdown 3 Blocks -->
+                <div class="breakdown-blocks">
+                    <!-- Block 1: Action -->
+                    <div class="block-card">
+                        <div class="block-title action">
+                            <span>🎬</span>
+                            <span>ĐỐI TƯỢNG & DIỄN BIẾN KHUNG HÌNH</span>
+                        </div>
+                        <p style="color:#cbd5e1; line-height:1.6;">Kim Kyung-sik (@kyung6film) nở nụ cười tươi, vươn hai tay về phía ống kính máy quay; camera tracking lùi nhanh trên Bến Thượng Hải. Dải khung hình anamorphic co dần lại thành một khe sáng hẹp (207px) như hiệu ứng chớp mắt.</p>
+                    </div>
+
+                    <!-- Block 2: Critique -->
+                    <div class="block-card">
+                        <div class="block-title critique">
+                            <span>⚖️</span>
+                            <span>ĐÁNH GIÁ BỐ CỤC 2 CHIỀU (KHEN / CHÊ KHÁCH QUAN)</span>
+                        </div>
+                        <div class="critique-grid">
+                            <div class="critique-box good">
+                                <div class="critique-label">✅ ĐIỂM SÁNG THỊ GIÁC:</div>
+                                Hiệu ứng Kinetic Masking đồng bộ tuyệt đối với cử chỉ vươn tay tạo cảm giác quang học tương tác chân thực; ánh sáng dịu từ đèn cao áp tạo viền sáng (rim light) mềm mại tôn rõ chủ thể.
+                            </div>
+                            <div class="critique-box bad">
+                                <div class="critique-label">⚠️ HẠN CHẾ / CẦN KHẮC PHỤC:</div>
+                                Tốc độ co dải đen diễn ra khá nhanh (<1.2s), nếu người xem lướt newfeed quá vội có thể lầm tưởng là viền đen hiển thị lỗi nếu không để ý chuyển động bàn tay.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Block 3: Takeaway -->
+                    <div class="block-card">
+                        <div class="block-title takeaway">
+                            <span>💡</span>
+                            <span>BÀI HỌC THỰC CHIẾN ÁP DỤNG NGAY</span>
+                        </div>
+                        <div class="takeaway-box">
+                            Dùng chuyển động tay làm mồi dẫn (Visual Lead) kết hợp co hẹp tỷ lệ khung hình động để biến viền đen Letterbox thành công cụ thu hút thị giác chủ động.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specs Grid -->
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <div class="spec-name">📍 Bối Cảnh</div>
+                        <div class="spec-val">Lối đi bộ Bến Thượng Hải (The Bund Promenade, Shanghai)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-name">🎥 Tiêu Cự & Chuyển Động</div>
+                        <div class="spec-val">Wide Angle 24mm f/1.8 (Backward Fast Tracking)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-name">💡 Ánh Sáng & Màu Sắc</div>
+                        <div class="spec-val">Low-light Night Ambient kết hợp Rim Light ven tóc dịu nhẹ</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-name">⚡ Chuyển Tiếp</div>
+                        <div class="spec-val">Dynamic Matte Zoom-in sang dải Anamorphic 2.39:1</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Shot 02 Card -->
+            <article class="shot-card" id="shot_2">
+                <div class="shot-header">
+                    <div class="shot-num-title">
+                        <div class="shot-badge-row">
+                            <span class="shot-pill">PHÂN CẢNH 02</span>
+                            <button class="shot-timestamp-jump" onclick="jumpTo(1.25)">
+                                ⏱ [1.25s - 8.20s] (6.95s) ▶
+                            </button>
+                        </div>
+                        <h2 class="shot-headline">Cinematic Letterbox Walk: Bung mở tỷ lệ 2.39:1 phân tầng 3 lớp không gian đại cảnh Thượng Hải đêm</h2>
+                    </div>
+                </div>
+
+                <!-- 3 Keyframes Row -->
+                <div class="keyframe-row">
+                    <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_02_start.jpg', 'Shot 02 • Start Frame (1.25s)')">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_02_start.jpg" alt="Shot 2 Start" loading="lazy">
+                        <span class="kf-tag">START 1.25s</span>
+                    </div>
+                    <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_02_mid.jpg', 'Shot 02 • Mid Frame (4.72s)')">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_02_mid.jpg" alt="Shot 2 Mid" loading="lazy">
+                        <span class="kf-tag">MID 4.72s</span>
+                    </div>
+                    <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_02_end.jpg', 'Shot 02 • End Frame (8.20s)')">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_02_end.jpg" alt="Shot 2 End" loading="lazy">
+                        <span class="kf-tag">END 8.20s</span>
+                    </div>
+                </div>
+
+                <!-- Transition Strip -->
+                <div class="transition-strip" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/trans_02_to_03.jpg', 'Chuyển Cảnh: Phân Cảnh 02 ➔ Phân Cảnh 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/trans_02_to_03.jpg" alt="Transition 2 to 3" loading="lazy">
+                    <div class="trans-caption">
+                        <span>🔄 <strong>KHỚP CHUYỂN CẢNH:</strong> Shot 02 End ➔ Shot 03 Start</span>
+                        <span style="color:var(--accent-amber); font-family:var(--font-mono);">Hạ dải biên dưới theo nấc nhịp âm nhạc (Step-down Matte Reveal)</span>
+                    </div>
+                </div>
+
+                <!-- Breakdown 3 Blocks -->
+                <div class="breakdown-blocks">
+                    <!-- Block 1: Action -->
+                    <div class="block-card">
+                        <div class="block-title action">
+                            <span>🎬</span>
+                            <span>ĐỐI TƯỢNG & DIỄN BIẾN KHUNG HÌNH</span>
+                        </div>
+                        <p style="color:#cbd5e1; line-height:1.6;">Creator bước lùi thư thái ở trung tâm khung hình giữa quảng trường Bến Thượng Hải sầm uất. Phía sau là dòng người tản bộ và toàn cảnh quần thể cao ốc Lục Gia Chủy (Tháp Minh Châu Phương Đông, Tháp Thượng Hải) tráng lệ soi bóng mặt nước.</p>
+                    </div>
+
+                    <!-- Block 2: Critique -->
+                    <div class="block-card">
+                        <div class="block-title critique">
+                            <span>⚖️</span>
+                            <span>ĐÁNH GIÁ BỐ CỤC 2 CHIỀU (KHEN / CHÊ KHÁCH QUAN)</span>
+                        </div>
+                        <div class="critique-grid">
+                            <div class="critique-box good">
+                                <div class="critique-label">✅ ĐIỂM SÁNG THỊ GIÁC:</div>
+                                Phân bổ chiều sâu 3 lớp (3-Layer Depth) hoàn hảo: Chủ thể bước lùi (Foreground) -> Du khách dạo bước (Midground) -> Đường chân trời cao ốc tương lai (Background). Dải đen trên dưới cô lập ánh nhìn, tập trung 100% vào dải trung tâm.
+                            </div>
+                            <div class="critique-box bad">
+                                <div class="critique-label">⚠️ HẠN CHẾ / CẦN KHẮC PHỤC:</div>
+                                Nửa dưới màn hình giữ viền đen thụ động tương đối lâu (~7s), trên thiết bị di động có thể tạo cảm giác trống trải nếu không có phụ đề hoặc graphic mồi nhử.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Block 3: Takeaway -->
+                    <div class="block-card">
+                        <div class="block-title takeaway">
+                            <span>💡</span>
+                            <span>BÀI HỌC THỰC CHIẾN ÁP DỤNG NGAY</span>
+                        </div>
+                        <div class="takeaway-box">
+                            Cú bước lùi (Reverse Walking) kết hợp camera kéo lùi mượt mà luôn tạo cảm giác lôi cuốn người xem bước sâu vào không gian hơn là góc máy tĩnh.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specs Grid -->
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <div class="spec-name">📍 Bối Cảnh</div>
+                        <div class="spec-val">Quảng trường Bến Thượng Hải nhìn sang bán đảo Lục Gia Chủy (Pudong Skyline)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-name">🎥 Tiêu Cự & Chuyển Động</div>
+                        <div class="spec-val">Medium Wide 28mm f/2.0 (Gimbal Smooth Tracking)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-name">💡 Ánh Sáng & Màu Sắc</div>
+                        <div class="spec-val">Ánh sáng đèn đô thị tản dịu, tông màu Cyber Teal & Ánh vàng ấm cao ốc</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-name">⚡ Chuyển Tiếp</div>
+                        <div class="spec-val">Hạ dải biên dưới theo nấc nhịp âm nhạc (Step-down Matte Reveal)</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Shot 03 Card -->
+            <article class="shot-card" id="shot_3">
+                <div class="shot-header">
+                    <div class="shot-num-title">
+                        <div class="shot-badge-row">
+                            <span class="shot-pill">PHÂN CẢNH 03</span>
+                            <button class="shot-timestamp-jump" onclick="jumpTo(8.2)">
+                                ⏱ [8.20s - 10.35s] (2.15s) ▶
+                            </button>
+                        </div>
+                        <h2 class="shot-headline">Typographic Rhythm & Log Reveal: Khai thác khoảng trống âm bản chèn tem thời gian nhật ký điện ảnh</h2>
+                    </div>
+                </div>
+
+                <!-- 3 Keyframes Row -->
+                <div class="keyframe-row">
+                    <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_03_start.jpg', 'Shot 03 • Start Frame (8.20s)')">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_03_start.jpg" alt="Shot 3 Start" loading="lazy">
+                        <span class="kf-tag">START 8.20s</span>
+                    </div>
+                    <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_03_mid.jpg', 'Shot 03 • Mid Frame (9.27s)')">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_03_mid.jpg" alt="Shot 3 Mid" loading="lazy">
+                        <span class="kf-tag">MID 9.27s</span>
+                    </div>
+                    <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_03_end.jpg', 'Shot 03 • End Frame (10.35s)')">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_03_end.jpg" alt="Shot 3 End" loading="lazy">
+                        <span class="kf-tag">END 10.35s</span>
+                    </div>
+                </div>
+
+                <!-- Transition Strip -->
+                <div class="transition-strip" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/trans_03_to_04.jpg', 'Chuyển Cảnh: Phân Cảnh 03 ➔ Phân Cảnh 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/trans_03_to_04.jpg" alt="Transition 3 to 4" loading="lazy">
+                    <div class="trans-caption">
+                        <span>🔄 <strong>KHỚP CHUYỂN CẢNH:</strong> Shot 03 End ➔ Shot 04 Start</span>
+                        <span style="color:var(--accent-amber); font-family:var(--font-mono);">Step Drop biên dưới mở rộng diện tích khung hình</span>
+                    </div>
+                </div>
+
+                <!-- Breakdown 3 Blocks -->
+                <div class="breakdown-blocks">
+                    <!-- Block 1: Action -->
+                    <div class="block-card">
+                        <div class="block-title action">
+                            <span>🎬</span>
+                            <span>ĐỐI TƯỢNG & DIỄN BIẾN KHUNG HÌNH</span>
+                        </div>
+                        <p style="color:#cbd5e1; line-height:1.6;">Nhân vật giảm tốc độ bước lùi, chuẩn bị dừng lại tại tọa độ tâm đối xứng với Tháp Minh Châu Phương Đông. Dòng chữ typography '02. JULY : 20:15' xuất hiện trang trọng ở dải đen phía trên đồng bộ nhịp bass nhạc nền.</p>
+                    </div>
+
+                    <!-- Block 2: Critique -->
+                    <div class="block-card">
+                        <div class="block-title critique">
+                            <span>⚖️</span>
+                            <span>ĐÁNH GIÁ BỐ CỤC 2 CHIỀU (KHEN / CHÊ KHÁCH QUAN)</span>
+                        </div>
+                        <div class="critique-grid">
+                            <div class="critique-box good">
+                                <div class="critique-label">✅ ĐIỂM SÁNG THỊ GIÁC:</div>
+                                Biến khuyết điểm khoảng đen viền thành lợi thế thiết kế đồ họa kiểu Title Card phim điện ảnh; font chữ sans-serif condensed tạo cảm giác nhật ký du hành hiện đại, cao cấp.
+                            </div>
+                            <div class="critique-box bad">
+                                <div class="critique-label">⚠️ HẠN CHẾ / CẦN KHẮC PHỤC:</div>
+                                Nét chữ typography màu trắng hơi mảnh, có thể bị chìm nhẹ nếu người xem mở video ở độ sáng màn hình thấp ngoài trời.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Block 3: Takeaway -->
+                    <div class="block-card">
+                        <div class="block-title takeaway">
+                            <span>💡</span>
+                            <span>BÀI HỌC THỰC CHIẾN ÁP DỤNG NGAY</span>
+                        </div>
+                        <div class="takeaway-box">
+                            Luôn tận dụng vùng âm bản (Negative Space) của video letterbox để hiển thị thông tin metadata (thời gian, địa điểm, GPS) nhằm tăng độ tín nhiệm và chất điện ảnh.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specs Grid -->
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <div class="spec-name">📍 Bối Cảnh</div>
+                        <div class="spec-val">Bến Thượng Hải (The Bund, Shanghai)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-name">🎥 Tiêu Cự & Chuyển Động</div>
+                        <div class="spec-val">Medium Shot 28mm (Deceleration Tracking)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-name">💡 Ánh Sáng & Màu Sắc</div>
+                        <div class="spec-val">Ambient City Light, Cyan-Teal Sky Contrast</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-name">⚡ Chuyển Tiếp</div>
+                        <div class="spec-val">Step Drop biên dưới mở rộng diện tích khung hình</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Shot 04 Card -->
+            <article class="shot-card" id="shot_4">
+                <div class="shot-header">
+                    <div class="shot-num-title">
+                        <div class="shot-badge-row">
+                            <span class="shot-pill">PHÂN CẢNH 04</span>
+                            <button class="shot-timestamp-jump" onclick="jumpTo(10.35)">
+                                ⏱ [10.35s - 12.05s] (1.70s) ▶
+                            </button>
+                        </div>
+                        <h2 class="shot-headline">The Anchor T-Pose: Dáng đứng dang tay đối xứng neo thị giác tạo sức căng trước cú nổ visual</h2>
+                    </div>
+                </div>
+
+                <!-- 3 Keyframes Row -->
+                <div class="keyframe-row">
+                    <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_04_start.jpg', 'Shot 04 • Start Frame (10.35s)')">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_04_start.jpg" alt="Shot 4 Start" loading="lazy">
+                        <span class="kf-tag">START 10.35s</span>
+                    </div>
+                    <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_04_mid.jpg', 'Shot 04 • Mid Frame (11.20s)')">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_04_mid.jpg" alt="Shot 4 Mid" loading="lazy">
+                        <span class="kf-tag">MID 11.20s</span>
+                    </div>
+                    <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_04_end.jpg', 'Shot 04 • End Frame (12.05s)')">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_04_end.jpg" alt="Shot 4 End" loading="lazy">
+                        <span class="kf-tag">END 12.05s</span>
+                    </div>
+                </div>
+
+                <!-- Transition Strip -->
+                <div class="transition-strip" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/trans_04_to_05.jpg', 'Chuyển Cảnh: Phân Cảnh 04 ➔ Phân Cảnh 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/trans_04_to_05.jpg" alt="Transition 4 to 5" loading="lazy">
+                    <div class="trans-caption">
+                        <span>🔄 <strong>KHỚP CHUYỂN CẢNH:</strong> Shot 04 End ➔ Shot 05 Start</span>
+                        <span style="color:var(--accent-amber); font-family:var(--font-mono);">Snap Split Triptych Cut (Match Cut trên cùng một tư thế)</span>
+                    </div>
+                </div>
+
+                <!-- Breakdown 3 Blocks -->
+                <div class="breakdown-blocks">
+                    <!-- Block 1: Action -->
+                    <div class="block-card">
+                        <div class="block-title action">
+                            <span>🎬</span>
+                            <span>ĐỐI TƯỢNG & DIỄN BIẾN KHUNG HÌNH</span>
+                        </div>
+                        <p style="color:#cbd5e1; line-height:1.6;">Kim Kyung-sik dừng hẳn chuyển động bước đi, dang rộng hai tay sang hai bên tạo dáng chữ T đối xứng hoàn hảo. Người qua lại xung quanh vẫn chuyển động lướt ngang, tạo sự tương phản đỉnh cao giữa 'Tĩnh' và 'Động'.</p>
+                    </div>
+
+                    <!-- Block 2: Critique -->
+                    <div class="block-card">
+                        <div class="block-title critique">
+                            <span>⚖️</span>
+                            <span>ĐÁNH GIÁ BỐ CỤC 2 CHIỀU (KHEN / CHÊ KHÁCH QUAN)</span>
+                        </div>
+                        <div class="critique-grid">
+                            <div class="critique-box good">
+                                <div class="critique-label">✅ ĐIỂM SÁNG THỊ GIÁC:</div>
+                                Bố cục đối xứng trục trung tâm (Center Symmetrical Framing) tuyệt đối. Hai cánh tay mở rộng định hình trục ngang vững chắc, làm tâm điểm neo mắt người xem trước khi mắt phải xử lý 3 luồng hình ảnh cùng lúc.
+                            </div>
+                            <div class="critique-box bad">
+                                <div class="critique-label">⚠️ HẠN CHẾ / CẦN KHẮC PHỤC:</div>
+                                Viền đen phía dưới hạ giật cấp thành 2 nấc trước khi nổ full màn hình, đường viền chưa thực sự chuyển động mềm mại (soft feathering).
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Block 3: Takeaway -->
+                    <div class="block-card">
+                        <div class="block-title takeaway">
+                            <span>💡</span>
+                            <span>BÀI HỌC THỰC CHIẾN ÁP DỤNG NGAY</span>
+                        </div>
+                        <div class="takeaway-box">
+                            Trước một cú chuyển cảnh phức tạp (Split Screen / Match Cut), hãy cho chủ thể thực hiện một tư thế cố định rõ ràng (Anchor Pose) để chuẩn bị điểm neo nhận thức cho não bộ người xem.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specs Grid -->
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <div class="spec-name">📍 Bối Cảnh</div>
+                        <div class="spec-val">Trung tâm quảng trường Bến Thượng Hải</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-name">🎥 Tiêu Cự & Chuyển Động</div>
+                        <div class="spec-val">Wide Shot 24mm (Static Center Lock)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-name">💡 Ánh Sáng & Màu Sắc</div>
+                        <div class="spec-val">Ánh sáng đèn công cộng rọi thẳng, bóng đổ chân thực trên mặt sàn đá</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-name">⚡ Chuyển Tiếp</div>
+                        <div class="spec-val">Snap Split Triptych Cut (Match Cut trên cùng một tư thế)</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Shot 05 Card -->
+            <article class="shot-card" id="shot_5">
+                <div class="shot-header">
+                    <div class="shot-num-title">
+                        <div class="shot-badge-row">
+                            <span class="shot-pill">PHÂN CẢNH 05</span>
+                            <button class="shot-timestamp-jump" onclick="jumpTo(12.05)">
+                                ⏱ [12.05s - 15.89s] (3.84s) ▶
+                            </button>
+                        </div>
+                        <h2 class="shot-headline">3-Tier Split Screen Symphony: Bản giao hưởng Thượng Hải 3 tầng thời không trong 1 tư thế đối xứng</h2>
+                    </div>
+                </div>
+
+                <!-- 3 Keyframes Row -->
+                <div class="keyframe-row">
+                    <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_05_start.jpg', 'Shot 05 • Start Frame (12.05s)')">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_05_start.jpg" alt="Shot 5 Start" loading="lazy">
+                        <span class="kf-tag">START 12.05s</span>
+                    </div>
+                    <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_05_mid.jpg', 'Shot 05 • Mid Frame (13.97s)')">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_05_mid.jpg" alt="Shot 5 Mid" loading="lazy">
+                        <span class="kf-tag">MID 13.97s</span>
+                    </div>
+                    <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_05_end.jpg', 'Shot 05 • End Frame (15.89s)')">
+                        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_05_end.jpg" alt="Shot 5 End" loading="lazy">
+                        <span class="kf-tag">END 15.89s</span>
+                    </div>
+                </div>
+
+                <!-- Breakdown 3 Blocks -->
+                <div class="breakdown-blocks">
+                    <!-- Block 1: Action -->
+                    <div class="block-card">
+                        <div class="block-title action">
+                            <span>🎬</span>
+                            <span>ĐỐI TƯỢNG & DIỄN BIẾN KHUNG HÌNH</span>
+                        </div>
+                        <p style="color:#cbd5e1; line-height:1.6;">Toàn bộ màn hình dọc 9:16 bùng nổ thành 3 dải triptych song song lấp đầy khung hình: Tầng trên là Bến Thượng Hải cổ kính (Customs House & Clock Tower vàng ấm), Tầng giữa là Lục Gia Chủy hiện đại (Minh Châu Phương Đông cùng chữ đỏ rực SHANG HAI), Tầng dưới là Du thuyền Louis Vuitton Voyager xa hoa rực rỡ neon đỏ và monogram. Cả 3 tầng nhân vật đều đứng dang tay ở đúng tọa độ tâm.</p>
+                    </div>
+
+                    <!-- Block 2: Critique -->
+                    <div class="block-card">
+                        <div class="block-title critique">
+                            <span>⚖️</span>
+                            <span>ĐÁNH GIÁ BỐ CỤC 2 CHIỀU (KHEN / CHÊ KHÁCH QUAN)</span>
+                        </div>
+                        <div class="critique-grid">
+                            <div class="critique-box good">
+                                <div class="critique-label">✅ ĐIỂM SÁNG THỊ GIÁC:</div>
+                                Đỉnh cao của kỹ thuật Match Cut kết hợp Multi-cam Triptych. Phân tầng 3 sắc độ tương phản kinh điển: Vàng Hoàng Gia (Top) - Xanh Cyan Tương Lai (Mid) - Đỏ Rực Xa Hoa (Bottom). Đạt tỷ lệ Replay Rate tối đa vì người xem buộc phải xem lại 2-3 lần.
+                            </div>
+                            <div class="critique-box bad">
+                                <div class="critique-label">⚠️ HẠN CHẾ / CẦN KHẮC PHỤC:</div>
+                                Mật độ thông tin và chi tiết kiến trúc quá lớn trong 3.8 giây khiến mắt người xem dễ bị ngợp nếu xem lướt; dòng chữ SHANG HAI màu đỏ ở tầng giữa hơi che một phần ngực chủ thể.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Block 3: Takeaway -->
+                    <div class="block-card">
+                        <div class="block-title takeaway">
+                            <span>💡</span>
+                            <span>BÀI HỌC THỰC CHIẾN ÁP DỤNG NGAY</span>
+                        </div>
+                        <div class="takeaway-box">
+                            Công thức '1 Tư Thế - Đa Chiều Không Gian' (Same Pose, Multi-Dimension): Quay cùng một tư thế tại 3 địa điểm biểu tượng nhất của thành phố với cùng tiêu cự và góc máy, sau đó ghép tầng dọc 9:16 để tạo ra video tổng kết du lịch (Travel Recap) viral nghìn view.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specs Grid -->
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <div class="spec-name">📍 Bối Cảnh</div>
+                        <div class="spec-val">Bund Customs House (Top) • Pudong Skyline (Mid) • Louis Vuitton Voyager (Bottom)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-name">🎥 Tiêu Cự & Chuyển Động</div>
+                        <div class="spec-val">Ultra-wide 16mm - 24mm (Perfect Center Align Triptych)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-name">💡 Ánh Sáng & Màu Sắc</div>
+                        <div class="spec-val">Phân tầng 3 tông màu: Warm Golden Amber (Top) - Cool Teal Night (Mid) - Crimson Red & Silver Metallic (Bottom)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-name">⚡ Chuyển Tiếp</div>
+                        <div class="spec-val">Hold to Freeze-Out kết thúc tác phẩm</div>
+                    </div>
+                </div>
+            </article>
+
+        </div><!-- /shots-container -->
+
+        <!-- Grid View Container -->
+        <div class="grid-view-container" id="gridView">
+
+            <div class="grid-card" onclick="jumpTo(0.0); switchView('detail'); scrollToShot(1);">
+                <div class="grid-card-thumb">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_01_mid.jpg" alt="Shot 1" loading="lazy">
+                    <span class="kf-tag">SHOT 01 • 0.00s</span>
+                </div>
+                <div class="grid-card-info">
+                    <div class="grid-card-title">Aperture Pinch Hook: Khóa chú ý bằng co hẹp dải khung hình động kết hợp vươn tay tiền cảnh</div>
+                    <div style="font-size:11px; color:var(--accent-amber); font-family:var(--font-mono);">Nhấn để phát video ▶</div>
+                </div>
+            </div>
+
+            <div class="grid-card" onclick="jumpTo(1.25); switchView('detail'); scrollToShot(2);">
+                <div class="grid-card-thumb">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_02_mid.jpg" alt="Shot 2" loading="lazy">
+                    <span class="kf-tag">SHOT 02 • 1.25s</span>
+                </div>
+                <div class="grid-card-info">
+                    <div class="grid-card-title">Cinematic Letterbox Walk: Bung mở tỷ lệ 2.39:1 phân tầng 3 lớp không gian đại cảnh Thượng Hải đêm</div>
+                    <div style="font-size:11px; color:var(--accent-amber); font-family:var(--font-mono);">Nhấn để phát video ▶</div>
+                </div>
+            </div>
+
+            <div class="grid-card" onclick="jumpTo(8.2); switchView('detail'); scrollToShot(3);">
+                <div class="grid-card-thumb">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_03_mid.jpg" alt="Shot 3" loading="lazy">
+                    <span class="kf-tag">SHOT 03 • 8.20s</span>
+                </div>
+                <div class="grid-card-info">
+                    <div class="grid-card-title">Typographic Rhythm & Log Reveal: Khai thác khoảng trống âm bản chèn tem thời gian nhật ký điện ảnh</div>
+                    <div style="font-size:11px; color:var(--accent-amber); font-family:var(--font-mono);">Nhấn để phát video ▶</div>
+                </div>
+            </div>
+
+            <div class="grid-card" onclick="jumpTo(10.35); switchView('detail'); scrollToShot(4);">
+                <div class="grid-card-thumb">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_04_mid.jpg" alt="Shot 4" loading="lazy">
+                    <span class="kf-tag">SHOT 04 • 10.35s</span>
+                </div>
+                <div class="grid-card-info">
+                    <div class="grid-card-title">The Anchor T-Pose: Dáng đứng dang tay đối xứng neo thị giác tạo sức căng trước cú nổ visual</div>
+                    <div style="font-size:11px; color:var(--accent-amber); font-family:var(--font-mono);">Nhấn để phát video ▶</div>
+                </div>
+            </div>
+
+            <div class="grid-card" onclick="jumpTo(12.05); switchView('detail'); scrollToShot(5);">
+                <div class="grid-card-thumb">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_05_mid.jpg" alt="Shot 5" loading="lazy">
+                    <span class="kf-tag">SHOT 05 • 12.05s</span>
+                </div>
+                <div class="grid-card-info">
+                    <div class="grid-card-title">3-Tier Split Screen Symphony: Bản giao hưởng Thượng Hải 3 tầng thời không trong 1 tư thế đối xứng</div>
+                    <div style="font-size:11px; color:var(--accent-amber); font-family:var(--font-mono);">Nhấn để phát video ▶</div>
+                </div>
+            </div>
+
+        </div><!-- /grid-view-container -->
+
+    </div><!-- /content-column -->
+</div><!-- /main-wrapper -->
+
+<!-- Jump Drawer -->
+<div class="jump-drawer" id="jumpDrawer">
+    <div class="drawer-header">
+        <h3 style="font-family:var(--font-heading); font-size:16px;">📑 DANH SÁCH PHÂN CẢNH</h3>
+        <button class="ctrl-btn" onclick="toggleDrawer()">✕ Đóng</button>
+    </div>
+    <div class="drawer-list">
+
+        <div class="drawer-item" onclick="jumpTo(0.0); scrollToShot(1); toggleDrawer();">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_01_mid.jpg" style="width:48px; height:64px; object-fit:cover; border-radius:4px; border:1px solid var(--border-color);" alt="Thumb">
+            <div style="flex:1;">
+                <div style="font-family:var(--font-mono); font-size:11px; color:var(--accent-amber); font-weight:700;">SHOT 01 [0.00s]</div>
+                <div style="font-size:12px; font-weight:600; color:#fff; line-height:1.3; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">Aperture Pinch Hook: Khóa chú ý bằng co hẹp dải khung hình động kết hợp vươn tay tiền cảnh</div>
+            </div>
+        </div>
+
+        <div class="drawer-item" onclick="jumpTo(1.25); scrollToShot(2); toggleDrawer();">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_02_mid.jpg" style="width:48px; height:64px; object-fit:cover; border-radius:4px; border:1px solid var(--border-color);" alt="Thumb">
+            <div style="flex:1;">
+                <div style="font-family:var(--font-mono); font-size:11px; color:var(--accent-amber); font-weight:700;">SHOT 02 [1.25s]</div>
+                <div style="font-size:12px; font-weight:600; color:#fff; line-height:1.3; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">Cinematic Letterbox Walk: Bung mở tỷ lệ 2.39:1 phân tầng 3 lớp không gian đại cảnh Thượng Hải đêm</div>
+            </div>
+        </div>
+
+        <div class="drawer-item" onclick="jumpTo(8.2); scrollToShot(3); toggleDrawer();">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_03_mid.jpg" style="width:48px; height:64px; object-fit:cover; border-radius:4px; border:1px solid var(--border-color);" alt="Thumb">
+            <div style="flex:1;">
+                <div style="font-family:var(--font-mono); font-size:11px; color:var(--accent-amber); font-weight:700;">SHOT 03 [8.20s]</div>
+                <div style="font-size:12px; font-weight:600; color:#fff; line-height:1.3; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">Typographic Rhythm & Log Reveal: Khai thác khoảng trống âm bản chèn tem thời gian nhật ký điện ảnh</div>
+            </div>
+        </div>
+
+        <div class="drawer-item" onclick="jumpTo(10.35); scrollToShot(4); toggleDrawer();">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_04_mid.jpg" style="width:48px; height:64px; object-fit:cover; border-radius:4px; border:1px solid var(--border-color);" alt="Thumb">
+            <div style="flex:1;">
+                <div style="font-family:var(--font-mono); font-size:11px; color:var(--accent-amber); font-weight:700;">SHOT 04 [10.35s]</div>
+                <div style="font-size:12px; font-weight:600; color:#fff; line-height:1.3; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">The Anchor T-Pose: Dáng đứng dang tay đối xứng neo thị giác tạo sức căng trước cú nổ visual</div>
+            </div>
+        </div>
+
+        <div class="drawer-item" onclick="jumpTo(12.05); scrollToShot(5); toggleDrawer();">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_05_mid.jpg" style="width:48px; height:64px; object-fit:cover; border-radius:4px; border:1px solid var(--border-color);" alt="Thumb">
+            <div style="flex:1;">
+                <div style="font-family:var(--font-mono); font-size:11px; color:var(--accent-amber); font-weight:700;">SHOT 05 [12.05s]</div>
+                <div style="font-size:12px; font-weight:600; color:#fff; line-height:1.3; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">3-Tier Split Screen Symphony: Bản giao hưởng Thượng Hải 3 tầng thời không trong 1 tư thế đối xứng</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Lightbox Modal Darkroom -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+    <div class="lightbox-content">
+        <img id="lightboxImg" src="" alt="Enlarged View">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+const video = document.getElementById('directorVideo');
+const timeDisplay = document.getElementById('timeDisplay');
+const playBtn = document.getElementById('playBtn');
+const muteBtn = document.getElementById('muteBtn');
+const loopBtn = document.getElementById('loopBtn');
+let isLooping = false;
+
+// Update time display
+video.addEventListener('timeupdate', () => {
+    const cur = video.currentTime;
+    const mins = Math.floor(cur / 60);
+    const secs = Math.floor(cur % 60);
+    const ms = Math.floor((cur % 1) * 100);
+    timeDisplay.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}.${String(ms).padStart(2, '0')}`;
+});
+
+function togglePlayPause() {
+    if (video.paused) {
+        video.play();
+        playBtn.textContent = '⏸ Tạm Dừng';
+    } else {
+        video.pause();
+        playBtn.textContent = '▶ Tiếp Tục';
+    }
+}
+
+function jumpTo(sec) {
+    video.currentTime = sec;
+    video.play();
+    playBtn.textContent = '⏸ Tạm Dừng';
+}
+
+function scrollToShot(sid) {
+    const el = document.getElementById('shot_' + sid);
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+function stepFrame(frames) {
+    video.pause();
+    playBtn.textContent = '▶ Tiếp Tục';
+    // 23.976 fps ~ 0.0417s per frame
+    video.currentTime = Math.max(0, Math.min(video.duration, video.currentTime + (frames * 0.0417)));
+}
+
+function setSpeed(speed) {
+    video.playbackRate = speed;
+    ['spd025', 'spd05', 'spd1', 'spd15'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) btn.classList.remove('active');
+    });
+    if (speed === 0.25) document.getElementById('spd025')?.classList.add('active');
+    if (speed === 0.5) document.getElementById('spd05')?.classList.add('active');
+    if (speed === 1.0) document.getElementById('spd1')?.classList.add('active');
+    if (speed === 1.5) document.getElementById('spd15')?.classList.add('active');
+}
+
+function toggleMute() {
+    video.muted = !video.muted;
+    muteBtn.textContent = video.muted ? '🔇 Bị Tắt Âm' : '🔊 Bật/Tắt Âm';
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    video.loop = isLooping;
+    loopBtn.style.color = isLooping ? 'var(--accent-emerald)' : 'var(--text-primary)';
+}
+
+function switchView(mode) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (mode === 'grid') {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    } else {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    }
+}
+
+function toggleDrawer() {
+    const drawer = document.getElementById('jumpDrawer');
+    drawer.classList.toggle('open');
+}
+
+// Lightbox Darkroom
+const lightboxModal = document.getElementById('lightboxModal');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCaption = document.getElementById('lightboxCaption');
+
+function openLightbox(url, caption) {
+    lightboxImg.src = url;
+    lightboxCaption.textContent = caption || '';
+    lightboxModal.classList.add('active');
+}
+
+function closeLightbox(e) {
+    if (e.target === lightboxModal || e.target.classList.contains('lightbox-close')) {
+        lightboxModal.classList.remove('active');
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
+        lightboxModal.classList.remove('active');
+    }
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

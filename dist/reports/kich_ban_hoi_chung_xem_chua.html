@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Kịch Bản 1 Dòng: Hội Chứng Khán Giả Xem Chùa • VietMac Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Be Vietnam Pro"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#fff7ed',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+            },
+            slate: {
+              850: '#0f172a',
+              900: '#0b1120',
+              950: '#070b14',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #070b14;
+      color: #f1f5f9;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .glass-nav {
+      background: rgba(11, 17, 32, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .active-line {
+      border-color: #f97316 !important;
+      background: rgba(249, 115, 22, 0.12) !important;
+      transform: scale(1.01);
+    }
+  
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body class="min-h-screen pb-24 selection:bg-orange-500 selection:text-white">
+
+  <!-- TOP STICKY BAR -->
+  <header class="sticky top-0 z-50 glass-nav">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="https://fedu.vn/scene.html" class="w-8 h-8 rounded-lg bg-orange-500/20 border border-orange-500/40 flex items-center justify-center text-orange-400 font-bold text-sm hover:bg-orange-500/30 transition">
+          ◀
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-orange-500/20 text-orange-400 border border-orange-500/30">1-Line Script</span>
+            <span class="text-xs text-slate-400 font-mono">11 Beats • ~50s</span>
+          </div>
+          <h1 class="text-sm sm:text-base font-bold text-white tracking-tight truncate max-w-[200px] sm:max-w-md">Hội Chứng Khán Giả Xem Chùa</h1>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2">
+        <button onclick="copyAllScript()" id="copyBtn" class="text-xs px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 hover:text-white hover:bg-slate-700 transition flex items-center gap-1.5 font-medium">
+          <span>📋</span> <span class="hidden sm:inline">Copy Kịch Bản</span>
+        </button>
+        <a href="https://fedu.vn/reports/IG_@Jade_Sheng_DZa9pzKRsAU_Video_by_jade.got.curious.html" target="_blank" class="text-xs px-3 py-1.5 rounded-lg bg-orange-600 hover:bg-orange-500 text-white font-semibold transition shadow-lg shadow-orange-500/20 flex items-center gap-1">
+          <span>🎬 Mẫu Gốc Jade ↗</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-4xl mx-auto px-4 pt-6 space-y-6">
+
+    <!-- HERO HEADER CARD -->
+    <div class="glass-panel p-5 sm:p-6 rounded-2xl border-orange-500/20 relative overflow-hidden">
+      <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-semibold text-orange-400 bg-orange-500/10 border border-orange-500/20">
+          <span class="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse"></span>
+          ADAPTED FROM JADE SHENG (DZa9pzKRsAU)
+        </div>
+        <div class="text-xs text-slate-400 font-mono">
+          📍 Times City / Home Studio
+        </div>
+      </div>
+
+      <h2 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight mb-2">
+        Hội Chứng Khán Giả Xem Chùa & Bức Tường Chuyên Gia
+      </h2>
+      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+        Triết lý chuyển đổi từ <strong class="text-orange-400">Creator Ego (Gồng mình làm bục giảng)</strong> sang <strong class="text-emerald-400">Host Mindset (Người chủ nhà kéo ghế mời trà)</strong>. Giúp khán giả thầm lặng vượt qua rào cản ngại ngùng để chủ động bình luận và kết nối.
+      </p>
+
+      <!-- VIEW SELECTOR TABS -->
+      <div class="flex items-center gap-2 border-t border-slate-800/80 pt-4">
+        <button onclick="switchMode('prompter')" id="btnTabPrompter" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-orange-500 text-white shadow-md shadow-orange-500/20">
+          🎙️ Máy Nhắc Chữ 1 Dòng
+        </button>
+        <button onclick="switchMode('storyboard')" id="btnTabStoryboard" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-slate-800 text-slate-300 hover:text-white">
+          🎬 Phân Cảnh Đạo Diễn
+        </button>
+        <button onclick="switchMode('insight')" id="btnTabInsight" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-slate-800 text-slate-300 hover:text-white">
+          🧠 Phân Tích Đòn Bẩy
+        </button>
+      </div>
+    </div>
+
+    <!-- TAB 1: PROMPTER 1-LINE VIEW -->
+    <div id="viewPrompter" class="space-y-3">
+      <div class="flex items-center justify-between px-1">
+        <span class="text-xs text-slate-400 font-mono">Chạm vào từng dòng để đánh dấu hoặc tập trung quay:</span>
+        <button onclick="resetLines()" class="text-[11px] text-orange-400 hover:underline">Reset đánh dấu</button>
+      </div>
+
+      <!-- LINE 01 -->
+      <div onclick="toggleLine(this)" class="glass-panel p-4 rounded-xl cursor-pointer hover:border-orange-500/40 transition group border-slate-800 line-card">
+        <div class="flex items-center justify-between text-[11px] font-mono text-orange-400 mb-1.5">
+          <span class="font-bold">DÒNG 01 • [00:00 - 00:03] • HOOK MỞ MÀN</span>
+          <span class="text-slate-400">⏱ 3.2s</span>
+        </div>
+        <div class="text-base sm:text-lg font-bold text-white tracking-tight group-hover:text-orange-300 transition voice-text">
+          "Đăng video lên nghìn view... nhưng ô bình luận lại im phăng phắc như một căn phòng trống?"
+        </div>
+        <div class="mt-2 text-xs text-slate-400 flex items-center gap-2">
+          <span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">VISUAL</span>
+          <span>Góc thấp sát sàn: Bước chân đi dép vào phòng tối, tay với bật đèn bàn.</span>
+        </div>
+      </div>
+
+      <!-- LINE 02 -->
+      <div onclick="toggleLine(this)" class="glass-panel p-4 rounded-xl cursor-pointer hover:border-orange-500/40 transition group border-slate-800 line-card">
+        <div class="flex items-center justify-between text-[11px] font-mono text-orange-400 mb-1.5">
+          <span class="font-bold">DÒNG 02 • [00:03 - 00:07] • CHẠM NỖI ĐAU</span>
+          <span class="text-slate-400">⏱ 4.0s</span>
+        </div>
+        <div class="text-base sm:text-lg font-bold text-white tracking-tight group-hover:text-orange-300 transition voice-text">
+          "Bạn tự hỏi: Chẳng lẽ video mình dở đến mức người ta không thèm nói một lời nào?"
+        </div>
+        <div class="mt-2 text-xs text-slate-400 flex items-center gap-2">
+          <span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">VISUAL</span>
+          <span>Cận cảnh Macro: Tay rót nước sôi vào cốc cafe, khói bốc lên trước vệt nắng.</span>
+        </div>
+      </div>
+
+      <!-- LINE 03 -->
+      <div onclick="toggleLine(this)" class="glass-panel p-4 rounded-xl cursor-pointer hover:border-orange-500/40 transition group border-slate-800 line-card">
+        <div class="flex items-center justify-between text-[11px] font-mono text-orange-400 mb-1.5">
+          <span class="font-bold">DÒNG 03 • [00:07 - 00:11] • BẺ GÃY ĐỊNH KIẾN (TWIST)</span>
+          <span class="text-slate-400">⏱ 4.0s</span>
+        </div>
+        <div class="text-base sm:text-lg font-bold text-white tracking-tight group-hover:text-orange-300 transition voice-text">
+          "Thực ra, người ta vẫn xem, xem hết từ đầu đến cuối, ngày nào cũng ghé lại."
+        </div>
+        <div class="mt-2 text-xs text-slate-400 flex items-center gap-2">
+          <span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">VISUAL</span>
+          <span>Góc qua vai OTS: Màn hình laptop cuộn Analytics thời lượng xem trung bình cao.</span>
+        </div>
+      </div>
+
+      <!-- LINE 04 -->
+      <div onclick="toggleLine(this)" class="glass-panel p-4 rounded-xl cursor-pointer hover:border-orange-500/40 transition group border-slate-800 line-card">
+        <div class="flex items-center justify-between text-[11px] font-mono text-orange-400 mb-1.5">
+          <span class="font-bold">DÒNG 04 • [00:11 - 00:16] • BÓC TRẦN TÂM LÝ (RAW)</span>
+          <span class="text-slate-400">⏱ 5.0s</span>
+        </div>
+        <div class="text-base sm:text-lg font-bold text-white tracking-tight group-hover:text-orange-300 transition voice-text">
+          "Họ không bình luận — không phải vì vô tâm, mà vì mở lời luôn là điều rất ngại."
+        </div>
+        <div class="mt-2 text-xs text-slate-400 flex items-center gap-2">
+          <span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">VISUAL</span>
+          <span>Góc ngang mép bàn: Đặt tách cafe xuống, tay gập một góc cuốn sổ tay.</span>
+        </div>
+      </div>
+
+      <!-- LINE 05 -->
+      <div onclick="toggleLine(this)" class="glass-panel p-4 rounded-xl cursor-pointer hover:border-orange-500/40 transition group border-slate-800 line-card">
+        <div class="flex items-center justify-between text-[11px] font-mono text-orange-400 mb-1.5">
+          <span class="font-bold">DÒNG 05 • [00:16 - 00:21] • TRẢI NGHIỆM HẬU TRƯỜNG</span>
+          <span class="text-slate-400">⏱ 5.0s</span>
+        </div>
+        <div class="text-base sm:text-lg font-bold text-white tracking-tight group-hover:text-orange-300 transition voice-text">
+          "Nhiều năm làm video, mình nhận ra một lỗi sai chí mạng của dân làm kênh..."
+        </div>
+        <div class="mt-2 text-xs text-slate-400 flex items-center gap-2">
+          <span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">VISUAL</span>
+          <span>Cận cảnh: Tay cắm giắc micro mini cài áo, xoay nhẹ vòng lấy nét ống kính máy ảnh.</span>
+        </div>
+      </div>
+
+      <!-- LINE 06 -->
+      <div onclick="toggleLine(this)" class="glass-panel p-4 rounded-xl cursor-pointer hover:border-orange-500/40 transition group border-slate-800 line-card">
+        <div class="flex items-center justify-between text-[11px] font-mono text-orange-400 mb-1.5">
+          <span class="font-bold">DÒNG 06 • [00:21 - 00:26] • CỐT LÕI VẤN ĐỀ (CORE PUNCH)</span>
+          <span class="text-slate-400">⏱ 5.0s</span>
+        </div>
+        <div class="text-base sm:text-lg font-bold text-white tracking-tight group-hover:text-orange-300 transition voice-text">
+          "Chúng ta mải gồng mình làm 'chuyên gia đạo mạo', mà quên mất việc làm một 'người chủ nhà hiếu khách'."
+        </div>
+        <div class="mt-2 text-xs text-slate-400 flex items-center gap-2">
+          <span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">VISUAL</span>
+          <span>Góc trung 45 độ: Ngồi tựa lưng ghế thư thái, hai tay đan vào nhau tự nhiên.</span>
+        </div>
+      </div>
+
+      <!-- LINE 07 -->
+      <div onclick="toggleLine(this)" class="glass-panel p-4 rounded-xl cursor-pointer hover:border-orange-500/40 transition group border-slate-800 line-card">
+        <div class="flex items-center justify-between text-[11px] font-mono text-orange-400 mb-1.5">
+          <span class="font-bold">DÒNG 07 • [00:26 - 00:31] • SO SÁNH TRỰC DIỆN</span>
+          <span class="text-slate-400">⏱ 5.0s</span>
+        </div>
+        <div class="text-base sm:text-lg font-bold text-white tracking-tight group-hover:text-orange-300 transition voice-text">
+          "Chuyên gia thì bắt người ta nghe mình giảng; còn chủ nhà tốt thì kéo ghế, rót trà, và mở lời trước."
+        </div>
+        <div class="mt-2 text-xs text-slate-400 flex items-center gap-2">
+          <span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">VISUAL</span>
+          <span>Góc toàn 9:16: Kéo nhẹ rèm cửa sổ, ánh sáng tràn ngập góc làm việc ấm cúng.</span>
+        </div>
+      </div>
+
+      <!-- LINE 08 -->
+      <div onclick="toggleLine(this)" class="glass-panel p-4 rounded-xl cursor-pointer hover:border-orange-500/40 transition group border-slate-800 line-card">
+        <div class="flex items-center justify-between text-[11px] font-mono text-orange-400 mb-1.5">
+          <span class="font-bold">DÒNG 08 • [00:31 - 00:37] • HÀNH ĐỘNG THỰC CHIẾN (ACTION)</span>
+          <span class="text-slate-400">⏱ 6.0s</span>
+        </div>
+        <div class="text-base sm:text-lg font-bold text-white tracking-tight group-hover:text-orange-300 transition voice-text">
+          "Chỉ cần bạn đổi câu hỏi cuối video: từ 'Hãy đăng ký khóa học' sang 'Hôm nay bạn quay video gặp khó ở đoạn nào?'..."
+        </div>
+        <div class="mt-2 text-xs text-slate-400 flex items-center gap-2">
+          <span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">VISUAL</span>
+          <span>Cận cảnh màn hình điện thoại: Bấm gửi tin nhắn trả lời chu đáo cho một học viên.</span>
+        </div>
+      </div>
+
+      <!-- LINE 09 -->
+      <div onclick="toggleLine(this)" class="glass-panel p-4 rounded-xl cursor-pointer hover:border-orange-500/40 transition group border-slate-800 line-card">
+        <div class="flex items-center justify-between text-[11px] font-mono text-orange-400 mb-1.5">
+          <span class="font-bold">DÒNG 09 • [00:37 - 00:42] • HIỆU QUẢ KẾT NỐI</span>
+          <span class="text-slate-400">⏱ 5.0s</span>
+        </div>
+        <div class="text-base sm:text-lg font-bold text-white tracking-tight group-hover:text-orange-300 transition voice-text">
+          "Tự nhiên những khán giả thầm lặng nhất... cũng sẽ muốn gõ cho bạn vài dòng tâm sự."
+        </div>
+        <div class="mt-2 text-xs text-slate-400 flex items-center gap-2">
+          <span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">VISUAL</span>
+          <span>Góc cận nghiêng: Cầm tách cafe ấm, nụ cười nhẹ nhàng và ánh mắt ấm áp nhìn camera.</span>
+        </div>
+      </div>
+
+      <!-- LINE 10 -->
+      <div onclick="toggleLine(this)" class="glass-panel p-4 rounded-xl cursor-pointer hover:border-orange-500/40 transition group border-slate-800 line-card">
+        <div class="flex items-center justify-between text-[11px] font-mono text-orange-400 mb-1.5">
+          <span class="font-bold">DÒNG 10 • [00:42 - 00:48] • ĐÚC KẾT ĐỈNH CAO (TAKEAWAY)</span>
+          <span class="text-slate-400">⏱ 6.0s</span>
+        </div>
+        <div class="text-base sm:text-lg font-bold text-white tracking-tight group-hover:text-orange-300 transition voice-text">
+          "Xây kênh không phải là đi gom đám đông ngoài phố — mà là thắp một ngọn đèn, để người cùng tần số biết đường bước vào."
+        </div>
+        <div class="mt-2 text-xs text-slate-400 flex items-center gap-2">
+          <span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">VISUAL</span>
+          <span>Góc toàn Pedestal Out: Máy lùi chậm, bắt trọn không gian phòng làm việc ấm cúng.</span>
+        </div>
+      </div>
+
+      <!-- LINE 11 -->
+      <div onclick="toggleLine(this)" class="glass-panel p-4 rounded-xl cursor-pointer hover:border-orange-500/40 transition group border-slate-800 line-card">
+        <div class="flex items-center justify-between text-[11px] font-mono text-orange-400 mb-1.5">
+          <span class="font-bold">DÒNG 11 • [00:48 - 00:52] • OUTRO & THÔNG ĐIỆP CHỐT</span>
+          <span class="text-slate-400">⏱ 4.0s</span>
+        </div>
+        <div class="text-base sm:text-lg font-bold text-orange-400 tracking-tight voice-text">
+          "Đừng làm chuyên gia đạo mạo. Hãy làm một người chủ nhà hiếu khách."
+        </div>
+        <div class="mt-2 text-xs text-slate-400 flex items-center gap-2">
+          <span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">VISUAL</span>
+          <span>Chữ tĩnh hiện giữa màn hình • Nhạc ASMR piano fade-out nhẹ nhàng.</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 2: STORYBOARD TABLE VIEW (HIDDEN INITIALLY) -->
+    <div id="viewStoryboard" class="hidden space-y-4">
+      <div class="glass-panel rounded-2xl overflow-hidden">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-900/90 text-slate-400 uppercase font-mono text-[11px] border-b border-slate-800">
+            <tr>
+              <th class="p-3 sm:p-4">Beat</th>
+              <th class="p-3 sm:p-4">Visual & Cỡ Cảnh</th>
+              <th class="p-3 sm:p-4">Lời Thoại (Voiceover)</th>
+              <th class="p-3 sm:p-4 hidden sm:table-cell">Ghi Chú Đạo Diễn</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 text-slate-300">
+            <tr class="hover:bg-slate-800/30">
+              <td class="p-3 sm:p-4 font-mono text-orange-400 font-bold">01</td>
+              <td class="p-3 sm:p-4"><strong class="text-white">Low Angle:</strong> Bước chân dép đi trong nhà vào phòng, bật đèn bàn.</td>
+              <td class="p-3 sm:p-4 text-white font-medium">"Đăng video lên nghìn view... nhưng ô bình luận lại im phăng phắc như một căn phòng trống?"</td>
+              <td class="p-3 sm:p-4 text-slate-400 hidden sm:table-cell text-xs">Tạo không gian tĩnh lặng, âm thanh dép lẹt xẹt ASMR.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="p-3 sm:p-4 font-mono text-orange-400 font-bold">02</td>
+              <td class="p-3 sm:p-4"><strong class="text-white">Macro Close-Up:</strong> Rót nước nóng vào cafe, khói bốc lên.</td>
+              <td class="p-3 sm:p-4 text-white font-medium">"Bạn tự hỏi: Chẳng lẽ video mình dở đến mức người ta không thèm nói một lời nào?"</td>
+              <td class="p-3 sm:p-4 text-slate-400 hidden sm:table-cell text-xs">Ánh sáng ven (Rim Light) làm nổi bật làn khói nước sôi.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="p-3 sm:p-4 font-mono text-orange-400 font-bold">03</td>
+              <td class="p-3 sm:p-4"><strong class="text-white">OTS Over-The-Shoulder:</strong> Màn hình laptop cuộn Analytics.</td>
+              <td class="p-3 sm:p-4 text-white font-medium">"Thực ra, người ta vẫn xem, xem hết từ đầu đến cuối, ngày nào cũng ghé lại."</td>
+              <td class="p-3 sm:p-4 text-slate-400 hidden sm:table-cell text-xs">Bẻ gãy suy nghĩ bi quan của người làm kênh.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="p-3 sm:p-4 font-mono text-orange-400 font-bold">04</td>
+              <td class="p-3 sm:p-4"><strong class="text-white">Table-Level Medium:</strong> Đặt ly cafe, gập mép sổ tay.</td>
+              <td class="p-3 sm:p-4 text-white font-medium">"Họ không bình luận — không phải vì vô tâm, mà vì mở lời luôn là điều rất ngại."</td>
+              <td class="p-3 sm:p-4 text-slate-400 hidden sm:table-cell text-xs">Đồng cảm với nỗi sợ mở lời của 95% người dùng internet.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="p-3 sm:p-4 font-mono text-orange-400 font-bold">05</td>
+              <td class="p-3 sm:p-4"><strong class="text-white">Close-Up Detail:</strong> Cắm micro cài áo, xoay vòng lấy nét.</td>
+              <td class="p-3 sm:p-4 text-white font-medium">"Nhiều năm làm video, mình nhận ra một lỗi sai chí mạng của dân làm kênh..."</td>
+              <td class="p-3 sm:p-4 text-slate-400 hidden sm:table-cell text-xs">Hành động chuẩn bị kỹ thuật mang tính biểu tượng.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="p-3 sm:p-4 font-mono text-orange-400 font-bold">06</td>
+              <td class="p-3 sm:p-4"><strong class="text-white">Medium 45°:</strong> Tựa lưng ghế, hai tay đan vào nhau.</td>
+              <td class="p-3 sm:p-4 text-white font-medium">"Chúng ta mải gồng mình làm 'chuyên gia đạo mạo', mà quên mất việc làm một 'người chủ nhà hiếu khách'."</td>
+              <td class="p-3 sm:p-4 text-slate-400 hidden sm:table-cell text-xs">Điểm xoay chuyển tư duy quan trọng nhất toàn bài.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="p-3 sm:p-4 font-mono text-orange-400 font-bold">07</td>
+              <td class="p-3 sm:p-4"><strong class="text-white">Wide Shot 9:16:</strong> Kéo rèm cửa sổ, ánh nắng ngập tràn.</td>
+              <td class="p-3 sm:p-4 text-white font-medium">"Chuyên gia thì bắt người ta nghe mình giảng; còn chủ nhà tốt thì kéo ghế, rót trà, và mở lời trước."</td>
+              <td class="p-3 sm:p-4 text-slate-400 hidden sm:table-cell text-xs">Không gian sáng bừng, biểu thị sự cởi mở chào đón.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="p-3 sm:p-4 font-mono text-orange-400 font-bold">08</td>
+              <td class="p-3 sm:p-4"><strong class="text-white">Mobile Screen Close:</strong> Gõ phản hồi tin nhắn cho học viên.</td>
+              <td class="p-3 sm:p-4 text-white font-medium">"Chỉ cần bạn đổi câu hỏi cuối video: từ 'Hãy đăng ký khóa học' sang 'Hôm nay bạn quay video gặp khó ở đoạn nào?'..."</td>
+              <td class="p-3 sm:p-4 text-slate-400 hidden sm:table-cell text-xs">Hướng dẫn hành động cụ thể (Ice-breaker CTA).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="p-3 sm:p-4 font-mono text-orange-400 font-bold">09</td>
+              <td class="p-3 sm:p-4"><strong class="text-white">Tight Profile Shot:</strong> Cầm tách cafe ấm, ánh mắt thân thiện.</td>
+              <td class="p-3 sm:p-4 text-white font-medium">"Tự nhiên những khán giả thầm lặng nhất... cũng sẽ muốn gõ cho bạn vài dòng tâm sự."</td>
+              <td class="p-3 sm:p-4 text-slate-400 hidden sm:table-cell text-xs">Tạo cảm giác tin cậy và an tâm tuyệt đối.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="p-3 sm:p-4 font-mono text-orange-400 font-bold">10</td>
+              <td class="p-3 sm:p-4"><strong class="text-white">Pedestal Out Wide:</strong> Máy lùi chậm, bao quát không gian ấm.</td>
+              <td class="p-3 sm:p-4 text-white font-medium">"Xây kênh không phải là đi gom đám đông ngoài phố — mà là thắp một ngọn đèn, để người cùng tần số biết đường bước vào."</td>
+              <td class="p-3 sm:p-4 text-slate-400 hidden sm:table-cell text-xs">Khung hình lắng đọng, truyền cảm hứng dài lâu.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="p-3 sm:p-4 font-mono text-orange-400 font-bold">11</td>
+              <td class="p-3 sm:p-4"><strong class="text-white">Typography Outro:</strong> Chữ nổi bật trên nền tối.</td>
+              <td class="p-3 sm:p-4 text-orange-400 font-bold">"Đừng làm chuyên gia đạo mạo. Hãy làm một người chủ nhà hiếu khách."</td>
+              <td class="p-3 sm:p-4 text-slate-400 hidden sm:table-cell text-xs">Âm nhạc tắt dần, để lại dư âm sâu sắc.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 3: INSIGHT & METHODOLOGY VIEW (HIDDEN INITIALLY) -->
+    <div id="viewInsight" class="hidden space-y-4">
+      <div class="glass-panel p-5 rounded-2xl border-orange-500/20">
+        <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+          <span>🧠</span> 3 Đòn Bẩy Tâm Lý Biến Kịch Bản Thành Cỗ Máy Giữ Chân
+        </h3>
+        <div class="space-y-3 text-xs sm:text-sm text-slate-300">
+          <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+            <strong class="text-orange-400">1. Tâm Lý Học "The Silent Lurker" (Người Xem Thầm Lặng):</strong>
+            <p class="mt-1">Trên mọi nền tảng, quy tắc 90-9-1 luôn đúng: 90% chỉ âm thầm quan sát, 9% thả tim/lướt qua, chỉ 1% bình luận. Kịch bản này không phán xét họ là "vô tâm", mà giải tỏa tâm lý bằng sự thấu hiểu ("Mở lời là việc rất ngại").</p>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+            <strong class="text-emerald-400">2. Reframing: Hạ Bệ "Bục Giảng", Trải "Manh Chiếu":</strong>
+            <p class="mt-1">Khi bạn xuất hiện như một chuyên gia thao thao bất tuyệt, người xem cảm thấy họ đang bị "dạy đời" và lập tức dựng hàng rào phòng thủ. Khi bạn đóng vai người chủ nhà hiếu khách, bạn tạo ra một không gian an toàn (Psychological Safety) để họ mở lòng.</p>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+            <strong class="text-blue-400">3. Kỹ Thuật Ice-breaker CTA (Mở Khóa Lời Thoại):</strong>
+            <p class="mt-1">Thay vì kêu gọi những hành động áp lực ("Bấm mua ngay", "Follow kênh đi"), hãy đặt những câu hỏi dễ trả lời bằng 1 từ hoặc chia sẻ cảm giác thường ngày. Đó là chiếc chìa khóa mở toang cánh cửa tương tác.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- THƠ LỤC BÁT VIETMAC -->
+      <div class="glass-panel p-5 rounded-2xl border-orange-500/30 bg-gradient-to-br from-orange-500/10 to-transparent">
+        <h4 class="text-xs uppercase font-bold text-orange-400 tracking-wider mb-2 font-mono">⚡ KHẨU QUYẾT ĐÚC KẾT • ANH VIỆT</h4>
+        <p class="text-sm sm:text-base font-semibold text-white italic leading-relaxed">
+          "Video đừng vội đao to,<br>
+          Đừng làm tượng đá đứng co trên đài.<br>
+          Trải manh chiếu nhỏ ngồi dai,<br>
+          Rót câu tâm sự, giữ người tri âm." 🚀
+        </p>
+      </div>
+    </div>
+
+    <!-- ACTION FOOTER -->
+    <div class="glass-panel p-4 rounded-xl flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400 border-slate-800">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span>Sẵn sàng quay bằng iPhone / Sony tại Times City</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://fedu.vn/scene.html" class="text-slate-300 hover:text-orange-400 transition">🌐 Cổng Scene Hub</a>
+        <span>•</span>
+        <a href="https://fedu.vn/reports/IG_@Jade_Sheng_DZa9pzKRsAU_Video_by_jade.got.curious.html" class="text-slate-300 hover:text-orange-400 transition">📑 Báo Cáo Jade Gốc</a>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function switchMode(mode) {
+      document.getElementById('viewPrompter').classList.add('hidden');
+      document.getElementById('viewStoryboard').classList.add('hidden');
+      document.getElementById('viewInsight').classList.add('hidden');
+
+      document.getElementById('btnTabPrompter').className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-slate-800 text-slate-300 hover:text-white";
+      document.getElementById('btnTabStoryboard').className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-slate-800 text-slate-300 hover:text-white";
+      document.getElementById('btnTabInsight').className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-slate-800 text-slate-300 hover:text-white";
+
+      if (mode === 'prompter') {
+        document.getElementById('viewPrompter').classList.remove('hidden');
+        document.getElementById('btnTabPrompter').className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-orange-500 text-white shadow-md shadow-orange-500/20";
+      } else if (mode === 'storyboard') {
+        document.getElementById('viewStoryboard').classList.remove('hidden');
+        document.getElementById('btnTabStoryboard').className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-orange-500 text-white shadow-md shadow-orange-500/20";
+      } else if (mode === 'insight') {
+        document.getElementById('viewInsight').classList.remove('hidden');
+        document.getElementById('btnTabInsight').className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-orange-500 text-white shadow-md shadow-orange-500/20";
+      }
+    }
+
+    function toggleLine(el) {
+      el.classList.toggle('active-line');
+    }
+
+    function resetLines() {
+      document.querySelectorAll('.line-card').forEach(el => {
+        el.classList.remove('active-line');
+      });
+    }
+
+    function copyAllScript() {
+      const texts = Array.from(document.querySelectorAll('.voice-text')).map(el => el.innerText.trim()).join('
+
+');
+      navigator.clipboard.writeText(texts).then(() => {
+        const btn = document.getElementById('copyBtn');
+        const oldHTML = btn.innerHTML;
+        btn.innerHTML = '<span>✅</span> <span>Đã Copy!</span>';
+        btn.classList.add('bg-emerald-600', 'text-white');
+        setTimeout(() => {
+          btn.innerHTML = oldHTML;
+          btn.classList.remove('bg-emerald-600', 'text-white');
+        }, 2000);
+      });
+    }
+  
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,2425 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Nghệ Thuật Xăm Mini Tô Bún Bò Huế Thực Tế - Saigon Ink Tattoo (Artist Nikko) • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / FEDU Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 4 / 5;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* DRAWER QUICK JUMP MENU */
+.drawer-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-line);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.drawer-title {
+    font-family: var(--font-heading-short);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cl-text-muted);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.drawer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.drawer-shot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: var(--cl-bg-tint);
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+    background: #eef2f6;
+    border-color: var(--cl-accent);
+}
+.d-badge {
+    background: var(--cl-accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.d-time {
+    color: var(--cl-text-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    flex-shrink: 0;
+}
+.d-title {
+    color: var(--cl-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 FEDU DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">14 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Nghệ Thuật Xăm Mini Tô Bún Bò Huế Thực Tế - Saigon Ink Tattoo (Artist Nikko)</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/p/DdNq5CxszVl/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdNq5CxszVl.mp4" type="video/mp4">
+                <source src="DdNq5CxszVl.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 28.77s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Nghệ Thuật Xăm Mini Tô Bún Bò Huế Thực Tế - Saigon Ink Tattoo (Artist Nikko)</div>
+            <div class="video-meta-author">
+                <span>Tác giả:</span>
+                <a href="https://www.instagram.com/p/DdNq5CxszVl/" target="_blank" class="author-link">Saigon Ink Tattoo (@saigonink_studio & @nikko_sgink)</a>
+            </div>
+        </div>
+
+        <!-- DRAWER QUICK JUMP MENU -->
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+        <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0, 2.3)">
+            <span class="d-badge">Shot 01</span>
+            <span class="d-time">0.00s - 2.30s (2.30s)</span>
+            <span class="d-title">Hook Hero Shot: Cận cảnh tuyệt tác mini Bún Bò Huế trên da đ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(2, 2.3, 3.93)">
+            <span class="d-badge">Shot 02</span>
+            <span class="d-time">2.30s - 3.93s (1.63s)</span>
+            <span class="d-title">Chân dung nghệ nhân Nikko: Góc nghiêng tập trung cao độ tạo ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(3, 3.93, 8.97)">
+            <span class="d-badge">Shot 03</span>
+            <span class="d-time">3.93s - 8.97s (5.04s)</span>
+            <span class="d-title">Nét kim stencil định hình: Độ vững vàng vi phẫu khi đi viền ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(4, 8.97, 10.03)">
+            <span class="d-badge">Shot 04</span>
+            <span class="d-time">8.97s - 10.03s (1.06s)</span>
+            <span class="d-title">Phối màu thịt bò tái: Sắc đỏ hồng tươi rói lập tức biến lớp ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(5, 10.03, 11.13)">
+            <span class="d-badge">Shot 05</span>
+            <span class="d-time">10.03s - 11.13s (1.10s)</span>
+            <span class="d-title">Tô điểm giò heo & hành hoa: Tầng lớp sắc tố nâu caramel và x...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(6, 11.13, 12.63)">
+            <span class="d-badge">Shot 06</span>
+            <span class="d-time">11.13s - 12.63s (1.50s)</span>
+            <span class="d-title">Micro-Splash giọt mực xanh non: Khoảnh khắc ASMR thị giác kh...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(7, 12.63, 13.8)">
+            <span class="d-badge">Shot 07</span>
+            <span class="d-time">12.63s - 13.80s (1.17s)</span>
+            <span class="d-title">Góc nhìn qua vai nghệ nhân (OTS): Mở rộng phối cảnh không gi...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(8, 13.8, 15.07)">
+            <span class="d-badge">Shot 08</span>
+            <span class="d-time">13.80s - 15.07s (1.27s)</span>
+            <span class="d-title">Cú lau giấy phép thuật (Wipe Reveal): Giải phóng lớp mực thừ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(9, 15.07, 18.03)">
+            <span class="d-badge">Shot 09</span>
+            <span class="d-time">15.07s - 18.03s (2.96s)</span>
+            <span class="d-title">Đổ bóng nước dùng bằng kim bản lớn (Magnum): Kỹ thuật dặm dả...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(10, 18.03, 19.93)">
+            <span class="d-badge">Shot 10</span>
+            <span class="d-time">18.03s - 19.93s (1.90s)</span>
+            <span class="d-title">Tự hào gốc Huế & Gimmick Nón Lá: Khoảnh khắc chia sẻ nguồn c...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(11, 19.93, 23.23)">
+            <span class="d-badge">Shot 11</span>
+            <span class="d-time">19.93s - 23.23s (3.30s)</span>
+            <span class="d-title">Tuyên ngôn 'Bún Bò Huế ngon hơn Phở': Cú chốt phỏng vấn gây ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(12, 23.23, 24.57)">
+            <span class="d-badge">Shot 12</span>
+            <span class="d-time">23.23s - 24.57s (1.34s)</span>
+            <span class="d-title">So sánh ảnh thực tế & Bản vẽ iPad: Minh chứng kỹ năng thiết ...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(13, 24.57, 25.7)">
+            <span class="d-badge">Shot 13</span>
+            <span class="d-time">24.57s - 25.70s (1.13s)</span>
+            <span class="d-title">Cú lia máy qua bóng tối (In-Camera Whip Transition): Nhịp né...</span>
+        </div>
+        
+
+        <div class="drawer-shot-row" onclick="jumpToShot(14, 25.7, 28.77)">
+            <span class="d-badge">Shot 14</span>
+            <span class="d-time">25.70s - 28.77s (3.07s)</span>
+            <span class="d-title">Tuyệt phẩm bảo tàng trên da (The Final Masterpiece): Cú máy ...</span>
+        </div>
+        
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>4:5 Dọc (Instagram Portrait 1440x1800)</strong> • 28.77s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Nghệ Thuật Xăm Mini Tô Bún Bò Huế Thực Tế - Saigon Ink Tattoo (Artist Nikko)</h1>
+            <p class="overview-hero-desc">Bóc tách 14 phân cảnh chuẩn đạo diễn video nghệ thuật xăm mini siêu thực tô Bún Bò Huế trên da tại Saigon Ink Tattoo (@saigonink_studio) thực hiện bởi Artist Nikko (@nikko_sgink): từ cú lừa thị giác Hero Shot mở màn, chân dung nghệ nhân tập trung cao độ, kỹ thuật đi nét đơn stencil tím, quy trình đổ dải màu sa tế - móng giò - hành hoa, kỹ thuật ASMR lau sạch hé lộ kiệt tác, đòn bẩy kịch bản phỏng vấn khách hàng quốc tế khẳng định bản sắc cội nguồn xứ Huế ('better than Phở'), đến cú lật chuyển cảnh Procreate trên iPad và cú máy trượt macro kết liễu tôn vinh tác phẩm vĩnh cửu.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">14 Shots • Nhịp trung bình 2.06s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1440x1800 • 30.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 2.3)">
+                    ▶ 0.00s - 2.30s (2.30s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Hook Hero Shot: Cận cảnh tuyệt tác mini Bún Bò Huế trên da đánh gục thị giác ngay giây đầu tiên</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_01_mid.jpg', 'Shot 01 • Giữa (1.15s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.15s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_01_end.jpg', 'Shot 01 • Cuối (2.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (2.30s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cận cảnh hình xăm mini siêu thực một tô Bún Bò Huế hoàn thiện trên bắp tay khách hàng. Đầy đủ chi tiết: thìa nhôm, đũa gỗ, lát thịt bò tái, khoanh giò heo, sợi bún trắng và rau thơm xanh mướt ngập trong nước dùng ánh đỏ óng ánh. Logo thương hiệu '@nikko_sgink' và biểu tượng 'Saigon Ink' lồng ghép góc trái. Ánh sáng studio phản chiếu nhẹ trên da, làm nổi bật độ bóng dầu mỡ của nước dùng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Mở màn bằng chính thành phẩm đỉnh cao nhất (Result-First Hook) thay vì quy trình nhàm chán; chi tiết siêu nhỏ nhưng cực kỳ sống động, đánh mạnh vào cảm xúc thèm ăn (Food Porn) và sự tò mò kỹ thuật xăm màu; bố cục nghiêng tự nhiên theo thớ cơ bắp tạo chiều sâu.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Text overlay '@nikko_sgink' và logo Saigon Ink đặt khá sát mép trái dưới, có thể bị che một phần bởi nút share/like trên giao diện Reels của một số dòng điện thoại.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Công thức 'Result-First' cho ngành dịch vụ nghệ thuật/thẩm mỹ: Bắn ngay kiệt tác hoàn hảo nhất vào 2 giây đầu để giữ chân người xem trước khi giải mã hành trình tạo ra nó.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Macro Prime 50mm • Studio Softbox Key Light</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Phòng xăm Saigon Ink Tattoo Studio</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Studio Softbox 5600K phản xạ dịu nhẹ trên da</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard cut to Artist profile (Cắt thẳng sang chân dung nghệ nhân)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Hard cut to Artist profile (Cắt thẳng sang chân dung nghệ nhân)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 2.3, 3.93)">
+                    ▶ 2.30s - 3.93s (1.63s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Chân dung nghệ nhân Nikko: Góc nghiêng tập trung cao độ tạo bảo chứng uy tín và không khí xưởng xăm chuyên nghiệp</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_02_start.jpg', 'Shot 02 • Đầu (2.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (2.30s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_02_mid.jpg', 'Shot 02 • Giữa (3.12s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (3.12s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_02_end.jpg', 'Shot 02 • Cuối (3.93s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (3.93s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc quay bán thân nghiêng (Medium Close-Up Profile) của nghệ nhân xăm Nikko (@nikko_sgink). Anh mặc áo polo đen có khóa kéo, tóc ngắn gọn gàng, ánh mắt sắc sảo tập trung 100% xuống cánh tay của khách hàng. Phía sau là không gian làm việc của Saigon Ink với các bức tranh phác thảo mực tàu treo trên tường và kệ mực xăm mờ ảo.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc nghiêng điện ảnh kinh điển làm nổi bật thần thái tập trung cao độ của người nghệ sĩ; độ sâu trường ảnh nông (DoF) xóa mờ phông nền studio khéo léo nhưng vẫn giữ được chất nghệ đường phố; thiết lập niềm tin tuyệt đối vào tay nghề trước khi bắt đầu hạ kim.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng 1.63s khá ngắn, nhân vật không cử động nhiều nên nếu không có âm thanh giọng nói dẫn dắt thì người xem chưa kịp cảm nhận hết không khí phòng xăm.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đừng chỉ quay sản phẩm, hãy quay đôi mắt của người thợ! Sự chăm chú của nghệ nhân là 'tem bảo hành vô hình' mạnh mẽ nhất cho giá trị thương hiệu thủ công.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 85mm f/1.8 Cine Prime • Profile Medium Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn xăm trung tâm studio Saigon Ink</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Rim Light viền tóc + Studio Diffuser dịu nhẹ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Dip to Black (Chớp đen giấu nhịp chuyển chuẩn bị hạ kim)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Dip to Black (Chớp đen giấu nhịp chuyển chuẩn bị hạ kim)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 3.93, 8.97)">
+                    ▶ 3.93s - 8.97s (5.04s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Nét kim stencil định hình: Độ vững vàng vi phẫu khi đi viền tím tô bún đánh thức sự tò mò của khách hàng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_03_start.jpg', 'Shot 03 • Đầu (3.93s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (3.93s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_03_mid.jpg', 'Shot 03 • Giữa (6.45s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.45s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_03_end.jpg', 'Shot 03 • Cuối (8.97s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (8.97s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cận cảnh cực đại (Extreme Close-Up) ngòi kim đơn (Single Needle) đang di chuyển cực kỳ êm ái trên lớp mực stencil màu tím dán trên da khách hàng. Bàn tay đeo găng đen siết nhẹ da, máy xăm đầu xanh lá rung với tần số ổn định, từng nét viền cong của miệng tô sành và đôi đũa dần hiện rõ. Subtitle: 'I found out on Instagram, I saw his profile'.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Độ sắc nét kinh ngạc ở cự ly vi mô cho thấy độ ổn định bàn tay của thợ xăm (không một vết run); lớp mực stencil tím làm nền giúp người xem mường tượng được quy mô phức tạp của tô bún; âm thanh rù rì của máy xăm kết hợp giọng phỏng vấn chân thực tạo nhịp điệu cuốn hút.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Khung hình hơi chật ở phần viền trên, mép ngón tay đeo găng tay đen che mất một phần phối cảnh đôi đũa ở góc trên.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Quay cảnh làm việc thực tế với micro-macro: Khách hàng muốn thấy sự tỉ mỉ đến từng milimet trước khi quyết định giao cơ thể mình cho một nghệ sĩ.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 100mm Macro f/2.8 • Extreme Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khu vực thao tác xăm chuyên dụng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Direct Ring Light 5600K rọi thẳng bề mặt da</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard cut to Red Pigment Shading (Cắt thẳng sang pha màu đỏ)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Hard cut to Red Pigment Shading (Cắt thẳng sang pha màu đỏ)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 8.97, 10.03)">
+                    ▶ 8.97s - 10.03s (1.06s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Phối màu thịt bò tái: Sắc đỏ hồng tươi rói lập tức biến lớp da người thành bức tranh ẩm thực sống động</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_04_start.jpg', 'Shot 04 • Đầu (8.97s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (8.97s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_04_mid.jpg', 'Shot 04 • Giữa (9.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (9.50s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_04_end.jpg', 'Shot 04 • Cuối (10.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (10.03s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc quay macro cận cảnh mũi kim dặm từng hạt mực màu đỏ thẫm và hồng tươi vào từng thớ thịt bò tái trong lòng tô bún. Mực đỏ thấm vào da hòa quyện với các nếp gấp vi mô, tái hiện hoàn hảo cảm giác mềm mại của miếng thịt tái Huế vừa chần nước sôi. Subtitle: 'and I saw that he was a great artist'.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Sự xuất hiện bất ngờ của màu đỏ ấm áp tương phản mạnh mẽ với nền da trắng và găng tay đen cao su, kích thích thị giác cực mạnh; nhịp dặm kim dứt khoát chứng minh kỹ thuật loang màu (Color Blending) bậc thầy.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng cảnh chỉ kéo dài hơn 1 giây (32 frame) là hơi quá nhanh so với độ kỳ công của việc pha sắc độ đỏ tái.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sử dụng màu sắc tương phản nóng (Warm Red) để ngắt nhịp và giật lại sự chú ý của người xem trong chuỗi phân cảnh quy trình.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Macro 100mm • Top-down Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bề mặt da bắp tay khách hàng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Overhead Soft LED Panel chống lóa</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut to Pork Knuckle Shading</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Hard Cut to Pork Knuckle Shading</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 10.03, 11.13)">
+                    ▶ 10.03s - 11.13s (1.10s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Tô điểm giò heo & hành hoa: Tầng lớp sắc tố nâu caramel và xanh lá đan xen tạo cảm giác no đủ, ấm cúng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_05_start.jpg', 'Shot 05 • Đầu (10.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (10.03s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_05_mid.jpg', 'Shot 05 • Giữa (10.58s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (10.58s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_05_end.jpg', 'Shot 05 • Cuối (11.13s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (11.13s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy nghiêng 45 độ từ phía trên xuống. Kim xăm lướt qua khoanh giò heo được đổ bóng màu nâu cánh gián caramel, móng giò có độ gồ ghề tự nhiên. Ngay cạnh đó, các chấm mực xanh lá cây bắt đầu được điểm xuyết vào khu vực hành hoa thái nhỏ. Subtitle: 'and that he can do what I was trying to get'.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Góc nghiêng 45 độ giúp người xem quan sát được đồng thời độ nổi 3D của miếng giò heo và lớp mực xanh lá tươi sáng; bố cục 1/3 đặt trọng tâm vào giò heo - linh hồn của món Bún Bò Huế.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Chuyển động lia máy nhẹ hơi giật do người quay điều chỉnh góc cầm tay khi nghệ sĩ đang di chuyển ngòi kim.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Trong video ẩm thực hoặc mô phỏng ẩm thực, chi tiết 'Signature' (khoanh giò heo) phải được làm nổi bật với màu sắc tả thực chuẩn vị giác nhất.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/1.8 Macro Mode • 45-degree Angle</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn xăm tiệt trùng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng chiếu chéo 45 độ tạo bóng khối tự nhiên</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match Cut to Extreme Macro Herb Ink</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Match Cut to Extreme Macro Herb Ink</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 11.13, 12.63)">
+                    ▶ 11.13s - 12.63s (1.50s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Micro-Splash giọt mực xanh non: Khoảnh khắc ASMR thị giác khi giọt màu loang trên bề mặt da</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_06_start.jpg', 'Shot 06 • Đầu (11.13s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (11.13s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_06_mid.jpg', 'Shot 06 • Giữa (11.88s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (11.88s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_06_end.jpg', 'Shot 06 • Cuối (12.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (12.63s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cú máy siêu cận cảnh (Super Macro). Đầu kim xăm phun ra một giọt mực xanh chuối (Lime Green) phát sáng rực rỡ, đọng lại thành một đốm màu đậm đặc ngay trên chùm rau thơm ở tâm tô bún. Đầu nhựa cartridge trong suốt để lộ dòng mực màu xanh đang chảy tuần hoàn. Subtitle: 'and that he can do'.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Hiệu ứng thị giác cực khoái (Visual ASMR) với đốm mực xanh non phát quang siêu bắt mắt; độ phân giải và chi tiết cực hạn thấy rõ từng lỗ chân lông và kết cấu mực lỏng; tạo điểm nhấn màu sắc tươi sáng nhất trong toàn bộ bảng màu ấm của video.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Đốm mực xanh quá sáng và che lấp mất phần kim xăm bên dưới khiến người xem khó theo dõi thao tác găm kim thực tế.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Chèn một khung hình 'Micro-Hero' (giọt mực tươi, bọt nước, vệt màu) với độ bão hòa cao để tạo cú huých thị giác giữa những shot quay thao tác đều đều.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 100mm Macro with Extension Tube • Super Macro</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Trung tâm tô bún trên da</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Spot Lighting hội tụ cường độ cao</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Over-the-shoulder Reverse Angle (Đảo góc qua vai)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Over-the-shoulder Reverse Angle (Đảo góc qua vai)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 12.63, 13.8)">
+                    ▶ 12.63s - 13.80s (1.17s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc nhìn qua vai nghệ nhân (OTS): Mở rộng phối cảnh không gian làm việc khẳng định sự tỉ mỉ của nghề xăm</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_07_start.jpg', 'Shot 07 • Đầu (12.63s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (12.63s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_07_mid.jpg', 'Shot 07 • Giữa (13.21s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (13.21s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_07_end.jpg', 'Shot 07 • Cuối (13.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (13.80s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc quay qua vai (Over The Shoulder) từ phía sau lưng khách hàng hướng về khuôn mặt của Nikko. Đôi mắt anh khép hờ theo dõi từng vi điểm, chiếc máy xăm được bọc băng keo đen chống trượt hoạt động êm ái trên bắp tay vạm vỡ của khách. Phía hậu cảnh là khay mực nhiều ngăn màu sắc rực rỡ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Thay đổi cỡ cảnh ngoạn mục: từ siêu cận cảnh (Shot 6) giật lùi về góc trung cận có chiều sâu, giúp người xem xả bớt áp lực thị giác; khay màu mờ ảo phía sau chứng minh đây là tác phẩm xăm màu đa sắc độ cực kỳ phức tạp.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Lưng của khách hàng chiếm 1/3 diện tích bên trái khung hình và hơi thiếu sáng so với khuôn mặt nghệ sĩ.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Quy tắc nhịp thở thị giác (Visual Pacing): Sau 3-4 cú máy cận cảnh chi tiết, BẮT BUỘC phải có 1 cú máy mở rộng không gian để người xem định vị lại bối cảnh và cảm xúc.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 50mm f/1.4 Cine • Over-The-Shoulder</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Toàn cảnh góc làm việc của nghệ nhân Nikko</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Backlight tách lớp tóc + Keylight khuôn mặt</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Match cut to Paper Towel Wipe (Cắt nối động tác lau)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 08 • Match cut to Paper Towel Wipe (Cắt nối động tác lau)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_07_to_08.jpg?v=2', 'Chuyển cảnh Shot 07 sang Shot 08')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_07_to_08.jpg?v=2" alt="Transition 7 to 8" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-8">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 08</span>
+                <button class="shot-time-btn" onclick="jumpToShot(8, 13.8, 15.07)">
+                    ▶ 13.80s - 15.07s (1.27s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú lau giấy phép thuật (Wipe Reveal): Giải phóng lớp mực thừa để hé lộ bức họa ẩm thực sắc nét không tì vết</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_08_start.jpg', 'Shot 08 • Đầu (13.80s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (13.80s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_08_mid.jpg', 'Shot 08 • Giữa (14.44s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (14.44s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_08_end.jpg', 'Shot 08 • Cuối (15.07s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (15.07s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Bàn tay đeo găng đen cầm khăn giấy trắng vuốt dứt khoát một đường từ trên xuống dưới qua bề mặt hình xăm. Lớp mực thừa nhòe nhoẹt bị kéo đi sạch sẽ, để lộ nguyên vẹn từng sợi bún trắng muốt, lát chả cua vàng ươm và cọng rau thơm xanh biếc trên nền da ửng hồng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú lau giấy (The Wipe) là 'Money Shot' bất bại của giới xăm hình và thẩm mỹ trên TikTok/Reels: mang lại sự thỏa mãn thị giác (Oddly Satisfying) tột đỉnh khi cái lộn xộn biến thành tác phẩm nghệ thuật hoàn mỹ trong 0.5 giây; đường vuốt chéo dẫn mắt quét toàn bộ chi tiết tô bún.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời gian giữ khung hình sau khi lau sạch chỉ có khoảng 0.4s trước khi chuyển cảnh, làm người xem chưa kịp 'đã mắt' ngắm nghía thành quả sơ khởi.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Luôn đưa khoảnh khắc chuyển hóa (Transformation / The Reveal) vào video dịch vụ. Hành động lau sạch hoặc bóc lớp bảo vệ luôn tạo ra lượng tương tác và xem lại (re-watch) cao nhất.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Macro 100mm • High Shutter Speed 1/120s</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bề mặt bắp tay khách hàng</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng trắng 5600K rực rỡ bắt phản quang khăn ướt</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut to Magnum Broth Shading</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 09 • Hard Cut to Magnum Broth Shading</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_08_to_09.jpg?v=2', 'Chuyển cảnh Shot 08 sang Shot 09')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_08_to_09.jpg?v=2" alt="Transition 8 to 9" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-9">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 09</span>
+                <button class="shot-time-btn" onclick="jumpToShot(9, 15.07, 18.03)">
+                    ▶ 15.07s - 18.03s (2.96s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Đổ bóng nước dùng bằng kim bản lớn (Magnum): Kỹ thuật dặm dải màu cam đỏ tạo chiều sâu sóng sánh cho bát súp</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_09_start.jpg', 'Shot 09 • Đầu (15.07s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (15.07s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_09_mid.jpg', 'Shot 09 • Giữa (16.55s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (16.55s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_09_end.jpg', 'Shot 09 • Cuối (18.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (18.03s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cận cảnh đầu kim dẹt Magnum (nhiều mũi kim xếp hàng ngang) nhúng mực cam đỏ pha sa tế, nhẹ nhàng lướt trên thành bát tô và nước dùng. Từng lớp gradient màu nước súp bò cay nồng loang dần đều đặn, phủ kín các khoảng trống xung quanh đũa và thìa. Subtitle: 'The flavor, the spice, yeah it's just the culture of...'</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khoe trọn kỹ thuật dặm hạt (Pepper Shading / Whip Shading) mượt mà không để lại vết sọc; đầu kim Magnum phô diễn kỹ năng cao cấp khác biệt hẳn với kim nét đơn ở đầu video; lời thuyết minh của khách nói về 'hương vị, vị cay' khớp hoàn hảo 100% với màu nước dùng sa tế đỏ cam đang được tô vẽ trên da.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Vệt đỏ li ti tự nhiên của da hơi lộ ra ở viền ngoài cùng của tô bún, có thể gây cảm giác hơi rát cho người xem nhạy cảm.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kỹ thuật 'Audio-Visual Rhyme' (Thơ thị giác - âm thanh): Khách nói đến chữ 'Flavor & Spice' thì hình ảnh phải ngay lập tức là ngòi kim đang chan lớp nước dùng đỏ cay màu sa tế.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Macro 100mm f/2.8 • Magnum Needle Focus</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Viền tô bún và nước dùng trên da</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Rim Light tôn bóng dầu mực xăm bóng mượt</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Hard Cut to Interview Face (Cắt sang phỏng vấn)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 10 • Hard Cut to Interview Face (Cắt sang phỏng vấn)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_09_to_10.jpg?v=2', 'Chuyển cảnh Shot 09 sang Shot 10')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_09_to_10.jpg?v=2" alt="Transition 9 to 10" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-10">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 10</span>
+                <button class="shot-time-btn" onclick="jumpToShot(10, 18.03, 19.93)">
+                    ▶ 18.03s - 19.93s (1.90s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Tự hào gốc Huế & Gimmick Nón Lá: Khoảnh khắc chia sẻ nguồn cội xúc động kèm chi tiết đồ họa bất ngờ</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_10_start.jpg', 'Shot 10 • Đầu (18.03s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (18.03s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_10_mid.jpg', 'Shot 10 • Giữa (18.98s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (18.98s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_10_end.jpg', 'Shot 10 • Cuối (19.93s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (19.93s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc quay chính diện (Medium Shot) người khách hàng gốc Việt (anh chàng Việt kiều thể thao, mặc áo ba lỗ xám, tay trái bọc màng co nilon bảo vệ hình xăm mới) tay cầm điện thoại chia sẻ: '...where I came from... from Huế'. Đúng khoảnh khắc anh nói chữ 'Huế', một chiếc nón lá hoạt hình (Nón Lá Cartoon) bất ngờ nảy lên đầu anh kèm nụ cười tự hào.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Chuyển từ hành động thủ công sang gương mặt khách hàng giúp thổi hồn nhân văn và cảm xúc vào video: hình xăm không còn là một hình vẽ mà là biểu tượng cội nguồn quê hương; meme nón lá xuất hiện bất ngờ tạo điểm nhấn hóm hỉnh, kéo dài thời gian lưu giữ (Retention rate).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Hình ảnh chiếc nón lá là đồ họa 2D vẽ tay hơi đơn giản so với chất lượng điện ảnh 4K của cảnh quay xung quanh.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sử dụng 'Visual Humor Pop-up' (meme đồ họa ngắn < 1s) tại thời điểm nhân vật nói từ khóa văn hóa để vừa tôn vinh bản sắc vừa tạo sự dí dỏm gần gũi.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm f/2.0 Eye-Level • Medium Shot</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Phòng chờ studio Saigon Ink</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Natural Ambient Studio Fill Light dịu mắt</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Jump Cut to Punchline Beat (Cắt giật sang cú chốt)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 11 • Jump Cut to Punchline Beat (Cắt giật sang cú chốt)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_10_to_11.jpg?v=2', 'Chuyển cảnh Shot 10 sang Shot 11')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_10_to_11.jpg?v=2" alt="Transition 10 to 11" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-11">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 11</span>
+                <button class="shot-time-btn" onclick="jumpToShot(11, 19.93, 23.23)">
+                    ▶ 19.93s - 23.23s (3.30s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Tuyên ngôn 'Bún Bò Huế ngon hơn Phở': Cú chốt phỏng vấn gây tranh cãi kích nổ bão bình luận tranh biện ẩm thực</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_11_start.jpg', 'Shot 11 • Đầu (19.93s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_11_start.jpg" alt="Shot 11 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (19.93s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_11_mid.jpg', 'Shot 11 • Giữa (21.58s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_11_mid.jpg" alt="Shot 11 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (21.58s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_11_end.jpg', 'Shot 11 • Cuối (23.23s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_11_end.jpg" alt="Shot 11 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (23.23s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Người khách hàng nở nụ cười tươi rói, mắt ánh lên sự hào hứng tột độ, tay giơ nhẹ điện thoại và hướng về ống kính nói dõng dạc: 'You should try it! You know it's better than Phở!'. Cánh tay trái được quấn màng bảo quản kín đáo lộ diện hình xăm nghệ thuật nhiều màu sắc.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">ĐỈNH CAO CÂU TƯƠNG TÁC (Comment Bait / Debate Hook): Đưa ra so sánh gây tranh cãi muôn thuở trong ẩm thực Việt Nam ('Bún Bò Huế ngon hơn Phở'), lập tức kích hoạt bản năng bình luận của hàng chục nghìn người xem để bảo vệ món ăn yêu thích; biểu cảm chân thành, năng lượng tích cực của khách tạo thiện cảm tối đa.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc máy hơi lệch về phía tay phải khiến cánh tay có hình xăm bị khuất một phần ở góc dưới bên phải khung hình.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Muốn video triệu view, hãy để nhân vật thả một 'Unpopular Opinion' (quan điểm gây tranh luận) ở 3/4 video. Cuộc chiến trong phần bình luận giữa fan Phở và fan Bún Bò Huế sẽ đẩy thuật toán Instagram bay xa.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm f/2.0 • Medium Close-Up</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Không gian phòng chờ phỏng vấn</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Soft Ambient Light tôn nét cười rạng rỡ</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cross Dissolve / Glitch Flash to iPad Procreate</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 12 • Cross Dissolve / Glitch Flash to iPad Procreate</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_11_to_12.jpg?v=2', 'Chuyển cảnh Shot 11 sang Shot 12')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_11_to_12.jpg?v=2" alt="Transition 11 to 12" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-12">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 12</span>
+                <button class="shot-time-btn" onclick="jumpToShot(12, 23.23, 24.57)">
+                    ▶ 23.23s - 24.57s (1.34s)
+                </button>
+            </div>
+            <h2 class="shot-headline">So sánh ảnh thực tế & Bản vẽ iPad: Minh chứng kỹ năng thiết kế số hóa trước khi chuyển thể lên da thịt</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_12_start.jpg', 'Shot 12 • Đầu (23.23s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_12_start.jpg" alt="Shot 12 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (23.23s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_12_mid.jpg', 'Shot 12 • Giữa (23.90s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_12_mid.jpg" alt="Shot 12 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (23.90s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_12_end.jpg', 'Shot 12 • Cuối (24.57s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_12_end.jpg" alt="Shot 12 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (24.57s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Màn hình iPad Pro đang mở ứng dụng Procreate. Bên trái là bức ảnh chụp thực tế một tô bún bò Huế bốc khói nghi ngút trên bàn ăn; bên phải là bản vẽ nét màu kỹ thuật số do nghệ sĩ Saigon Ink thiết kế lại để sẵn sàng in stencil. Thanh công cụ Procreate và bảng màu hiển thị rõ ràng. Ánh sáng xanh nhẹ từ màn hình iPad phản chiếu.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cung cấp bằng chứng thiết kế (Design Proof): Cho người xem thấy quy trình chuyển thể từ 'Ảnh tô bún đời thực' sang 'Bản vẽ đồ họa thích ứng da người', khẳng định tính sáng tạo độc bản và sự chuẩn bị chuyên nghiệp của studio; thỏa mãn trí tò mò 'Họ lấy mẫu từ đâu'.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Thời lượng 1.33s hơi ngắn để người xem kịp phóng to mắt so sánh chi tiết từng cọng rau giữa ảnh mẫu và bản vẽ phác thảo.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Quy trình thiết kế (Digital Mockup / Reference Side-by-Side) là bước đệm tuyệt vời để nâng tầm giá trị dịch vụ từ 'thợ xăm chép hình' lên tầm 'nghệ sĩ thiết kế độc bản'.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> 35mm Close-Up • Top-down screen angle</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn thiết kế đồ họa studio</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Screen Glow 6500K từ màn hình iPad Pro</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Fast Whip Pan to Black (Lia nhanh sang tối)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 13 • Fast Whip Pan to Black (Lia nhanh sang tối)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_12_to_13.jpg?v=2', 'Chuyển cảnh Shot 12 sang Shot 13')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_12_to_13.jpg?v=2" alt="Transition 12 to 13" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-13">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 13</span>
+                <button class="shot-time-btn" onclick="jumpToShot(13, 24.57, 25.7)">
+                    ▶ 24.57s - 25.70s (1.13s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Cú lia máy qua bóng tối (In-Camera Whip Transition): Nhịp nén lò xo tạo sự hồi hộp trước đòn kết liễu thị giác</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_13_start.jpg', 'Shot 13 • Đầu (24.57s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_13_start.jpg" alt="Shot 13 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (24.57s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_13_mid.jpg', 'Shot 13 • Giữa (25.13s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_13_mid.jpg" alt="Shot 13 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (25.13s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_13_end.jpg', 'Shot 13 • Cuối (25.70s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_13_end.jpg" alt="Shot 13 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (25.70s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Camera lia cực nhanh (Whip Pan) qua một mảng tối (lưng nhân vật / góc bàn phòng xăm) tạo dải nhòe chuyển động (Motion Blur) sâu thẳm. Khung hình chìm vào bóng tối gần như hoàn toàn trong khoảng 10-15 frame, đóng vai trò như một nhịp thở nén không gian trước cú nổ thị giác cuối cùng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Kỹ thuật chuyển cảnh tự nhiên bằng chuyển động máy (In-Camera Transition) không dùng kỹ xảo giả tạo; tạo nhịp nén tâm lý (Tension Build-up), kích thích sự đón đợi của khán giả trước khi chiêm ngưỡng hình xăm hoàn thiện ở góc nhìn tối thượng.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Có khoảng 10 frame màn hình đen hoàn toàn (0 Lux), nếu không để ý người xem có thể lầm tưởng video bị lỗi tải mạng.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Sử dụng bóng tối ngắn (Black Whip Beat < 0.5s) như một khoảng lặng của âm nhạc trước khi bung nốt cao trào (Visual Climax).</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> High-Speed Whip Pan • In-camera Body Occlusion</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Góc chuyển không gian trong phòng xăm</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Zero Lux Occlusion (Tối đen do che máy)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Smash Cut into Ultra Beauty Shot (Cắt nổ sang cảnh kết)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 14 • Smash Cut into Ultra Beauty Shot (Cắt nổ sang cảnh kết)</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_13_to_14.jpg?v=2', 'Chuyển cảnh Shot 13 sang Shot 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_13_to_14.jpg?v=2" alt="Transition 13 to 14" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-14">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 14</span>
+                <button class="shot-time-btn" onclick="jumpToShot(14, 25.7, 28.77)">
+                    ▶ 25.70s - 28.77s (3.07s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Tuyệt phẩm bảo tàng trên da (The Final Masterpiece): Cú máy trượt macro chiêm ngưỡng tô bún bò Huế vĩnh cửu</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_14_start.jpg', 'Shot 14 • Đầu (25.70s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_14_start.jpg" alt="Shot 14 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (25.70s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_14_mid.jpg', 'Shot 14 • Giữa (27.23s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_14_mid.jpg" alt="Shot 14 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (27.23s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_14_end.jpg', 'Shot 14 • Cuối (28.77s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_14_end.jpg" alt="Shot 14 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (28.77s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cú máy chuyển động trượt macro siêu mượt (Slow Macro Tilt/Pan) từ góc chéo quét qua toàn bộ tô bún bò Huế hoàn thiện 100% trên da. Lớp da đã được làm dịu, các chi tiết nổi khối 3D sống động lạ kỳ: ánh bóng của thìa nhôm, thớ gân nổi của lát thịt bò, màu đỏ sa tế quyện trong nước dùng lấp lánh, khoanh giò giòn sần sật và đôi đũa nâu gác ngang miệng bát. Một tác phẩm nghệ thuật thu nhỏ đầy cảm xúc.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Cú máy kết thúc hoàn hảo (Climax Payoff): Ánh sáng studio mềm mại đánh bật toàn bộ khối nổi và sắc độ rực rỡ của hình xăm; chuyển động máy chậm rãi, đĩnh đạc như đang quay một món trang sức xa xỉ trong bảo tàng; để lại dư âm kinh ngạc và khao khát sở hữu một hình xăm ẩm thực độc đáo cho người xem.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Kết thúc video bằng cut thẳng hơi đột ngột, nếu có thêm 0.5s fade out hoặc hiển thị thêm địa chỉ studio ở những frame cuối thì tính chuyển đổi thương hiệu sẽ trọn vẹn hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Ending Shot phải luôn là một 'Masterpiece Shot' với chuyển động máy trượt chậm và ánh sáng tôn vinh cực đỉnh. Đây là hình ảnh sẽ lưu lại cuối cùng trong tiềm thức khách hàng để họ bấm vào Profile tìm hiểu.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Cine Macro 100mm T2.9 • Slow Motion Glide</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Bàn trưng bày ánh sáng nghệ thuật</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> 3-Point Studio Luxury Lighting bóng bẩy</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> End of Reel (Kết thúc video)</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Khép Vòng Lặp Vô Tận (Infinite Loop) Sang Shot 01</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_14_to_01_loop.jpg?v=2', 'Khép Vòng Lặp Vô Tận Sang Shot 01')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/transitions/trans_14_to_01_loop.jpg?v=2" alt="Loop Transition" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 2.3)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Hook Hero Shot: Cận cảnh tuyệt tác mini Bún Bò Huế trên da đánh gục thị giác ngay giây đầu tiên</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 2.3, 3.93)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 2.30s</span>
+            </div>
+            <div class="grid-card-body">Chân dung nghệ nhân Nikko: Góc nghiêng tập trung cao độ tạo bảo chứng uy tín và không khí xưởng xăm chuyên nghiệp</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 3.93, 8.97)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 3.93s</span>
+            </div>
+            <div class="grid-card-body">Nét kim stencil định hình: Độ vững vàng vi phẫu khi đi viền tím tô bún đánh thức sự tò mò của khách hàng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 8.97, 10.03)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 8.97s</span>
+            </div>
+            <div class="grid-card-body">Phối màu thịt bò tái: Sắc đỏ hồng tươi rói lập tức biến lớp da người thành bức tranh ẩm thực sống động</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 10.03, 11.13)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 10.03s</span>
+            </div>
+            <div class="grid-card-body">Tô điểm giò heo & hành hoa: Tầng lớp sắc tố nâu caramel và xanh lá đan xen tạo cảm giác no đủ, ấm cúng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 11.13, 12.63)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 11.13s</span>
+            </div>
+            <div class="grid-card-body">Micro-Splash giọt mực xanh non: Khoảnh khắc ASMR thị giác khi giọt màu loang trên bề mặt da</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 12.63, 13.8)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 12.63s</span>
+            </div>
+            <div class="grid-card-body">Góc nhìn qua vai nghệ nhân (OTS): Mở rộng phối cảnh không gian làm việc khẳng định sự tỉ mỉ của nghề xăm</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(8, 13.8, 15.07)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+                <span class="grid-thumb-badge">Shot 08 • 13.80s</span>
+            </div>
+            <div class="grid-card-body">Cú lau giấy phép thuật (Wipe Reveal): Giải phóng lớp mực thừa để hé lộ bức họa ẩm thực sắc nét không tì vết</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(9, 15.07, 18.03)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+                <span class="grid-thumb-badge">Shot 09 • 15.07s</span>
+            </div>
+            <div class="grid-card-body">Đổ bóng nước dùng bằng kim bản lớn (Magnum): Kỹ thuật dặm dải màu cam đỏ tạo chiều sâu sóng sánh cho bát súp</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(10, 18.03, 19.93)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+                <span class="grid-thumb-badge">Shot 10 • 18.03s</span>
+            </div>
+            <div class="grid-card-body">Tự hào gốc Huế & Gimmick Nón Lá: Khoảnh khắc chia sẻ nguồn cội xúc động kèm chi tiết đồ họa bất ngờ</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(11, 19.93, 23.23)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_11_mid.jpg" alt="Shot 11" loading="lazy">
+                <span class="grid-thumb-badge">Shot 11 • 19.93s</span>
+            </div>
+            <div class="grid-card-body">Tuyên ngôn 'Bún Bò Huế ngon hơn Phở': Cú chốt phỏng vấn gây tranh cãi kích nổ bão bình luận tranh biện ẩm thực</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(12, 23.23, 24.57)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_12_mid.jpg" alt="Shot 12" loading="lazy">
+                <span class="grid-thumb-badge">Shot 12 • 23.23s</span>
+            </div>
+            <div class="grid-card-body">So sánh ảnh thực tế & Bản vẽ iPad: Minh chứng kỹ năng thiết kế số hóa trước khi chuyển thể lên da thịt</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(13, 24.57, 25.7)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_13_mid.jpg" alt="Shot 13" loading="lazy">
+                <span class="grid-thumb-badge">Shot 13 • 24.57s</span>
+            </div>
+            <div class="grid-card-body">Cú lia máy qua bóng tối (In-Camera Whip Transition): Nhịp nén lò xo tạo sự hồi hộp trước đòn kết liễu thị giác</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(14, 25.7, 28.77)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_14_mid.jpg" alt="Shot 14" loading="lazy">
+                <span class="grid-thumb-badge">Shot 14 • 25.70s</span>
+            </div>
+            <div class="grid-card-body">Tuyệt phẩm bảo tàng trên da (The Final Masterpiece): Cú máy trượt macro chiêm ngưỡng tô bún bò Huế vĩnh cửu</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1ni9bFJjwKeZu_K8kabcfeTb6_pqXalrc" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="file:///Users/vietmac/Documents/CODE/Video phan tich/output_packages/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "en_frame": 69, "st_time": 0.0, "en_time": 2.3, "duration": 2.3, "headline": "Hook Hero Shot: Cận cảnh tuyệt tác mini Bún Bò Huế trên da đánh gục thị giác ngay giây đầu tiên", "subject_action": "Cận cảnh hình xăm mini siêu thực một tô Bún Bò Huế hoàn thiện trên bắp tay khách hàng. Đầy đủ chi tiết: thìa nhôm, đũa gỗ, lát thịt bò tái, khoanh giò heo, sợi bún trắng và rau thơm xanh mướt ngập trong nước dùng ánh đỏ óng ánh. Logo thương hiệu '@nikko_sgink' và biểu tượng 'Saigon Ink' lồng ghép góc trái. Ánh sáng studio phản chiếu nhẹ trên da, làm nổi bật độ bóng dầu mỡ của nước dùng.", "pros": "Mở màn bằng chính thành phẩm đỉnh cao nhất (Result-First Hook) thay vì quy trình nhàm chán; chi tiết siêu nhỏ nhưng cực kỳ sống động, đánh mạnh vào cảm xúc thèm ăn (Food Porn) và sự tò mò kỹ thuật xăm màu; bố cục nghiêng tự nhiên theo thớ cơ bắp tạo chiều sâu.", "cons": "Text overlay '@nikko_sgink' và logo Saigon Ink đặt khá sát mép trái dưới, có thể bị che một phần bởi nút share/like trên giao diện Reels của một số dòng điện thoại.", "takeaway": "Công thức 'Result-First' cho ngành dịch vụ nghệ thuật/thẩm mỹ: Bắn ngay kiệt tác hoàn hảo nhất vào 2 giây đầu để giữ chân người xem trước khi giải mã hành trình tạo ra nó.", "lens_angle": "Macro Prime 50mm • Studio Softbox Key Light", "location": "Phòng xăm Saigon Ink Tattoo Studio", "lighting_color": "Studio Softbox 5600K phản xạ dịu nhẹ trên da", "transition": "Hard cut to Artist profile (Cắt thẳng sang chân dung nghệ nhân)", "start_img": "shot_01_start.jpg", "mid_img": "shot_01_mid.jpg", "end_img": "shot_01_end.jpg"}, {"id": 2, "st_frame": 69, "en_frame": 118, "st_time": 2.3, "en_time": 3.93, "duration": 1.63, "headline": "Chân dung nghệ nhân Nikko: Góc nghiêng tập trung cao độ tạo bảo chứng uy tín và không khí xưởng xăm chuyên nghiệp", "subject_action": "Góc quay bán thân nghiêng (Medium Close-Up Profile) của nghệ nhân xăm Nikko (@nikko_sgink). Anh mặc áo polo đen có khóa kéo, tóc ngắn gọn gàng, ánh mắt sắc sảo tập trung 100% xuống cánh tay của khách hàng. Phía sau là không gian làm việc của Saigon Ink với các bức tranh phác thảo mực tàu treo trên tường và kệ mực xăm mờ ảo.", "pros": "Góc nghiêng điện ảnh kinh điển làm nổi bật thần thái tập trung cao độ của người nghệ sĩ; độ sâu trường ảnh nông (DoF) xóa mờ phông nền studio khéo léo nhưng vẫn giữ được chất nghệ đường phố; thiết lập niềm tin tuyệt đối vào tay nghề trước khi bắt đầu hạ kim.", "cons": "Thời lượng 1.63s khá ngắn, nhân vật không cử động nhiều nên nếu không có âm thanh giọng nói dẫn dắt thì người xem chưa kịp cảm nhận hết không khí phòng xăm.", "takeaway": "Đừng chỉ quay sản phẩm, hãy quay đôi mắt của người thợ! Sự chăm chú của nghệ nhân là 'tem bảo hành vô hình' mạnh mẽ nhất cho giá trị thương hiệu thủ công.", "lens_angle": "85mm f/1.8 Cine Prime • Profile Medium Close-Up", "location": "Bàn xăm trung tâm studio Saigon Ink", "lighting_color": "Rim Light viền tóc + Studio Diffuser dịu nhẹ", "transition": "Dip to Black (Chớp đen giấu nhịp chuyển chuẩn bị hạ kim)", "start_img": "shot_02_start.jpg", "mid_img": "shot_02_mid.jpg", "end_img": "shot_02_end.jpg"}, {"id": 3, "st_frame": 118, "en_frame": 269, "st_time": 3.93, "en_time": 8.97, "duration": 5.04, "headline": "Nét kim stencil định hình: Độ vững vàng vi phẫu khi đi viền tím tô bún đánh thức sự tò mò của khách hàng", "subject_action": "Cận cảnh cực đại (Extreme Close-Up) ngòi kim đơn (Single Needle) đang di chuyển cực kỳ êm ái trên lớp mực stencil màu tím dán trên da khách hàng. Bàn tay đeo găng đen siết nhẹ da, máy xăm đầu xanh lá rung với tần số ổn định, từng nét viền cong của miệng tô sành và đôi đũa dần hiện rõ. Subtitle: 'I found out on Instagram, I saw his profile'.", "pros": "Độ sắc nét kinh ngạc ở cự ly vi mô cho thấy độ ổn định bàn tay của thợ xăm (không một vết run); lớp mực stencil tím làm nền giúp người xem mường tượng được quy mô phức tạp của tô bún; âm thanh rù rì của máy xăm kết hợp giọng phỏng vấn chân thực tạo nhịp điệu cuốn hút.", "cons": "Khung hình hơi chật ở phần viền trên, mép ngón tay đeo găng tay đen che mất một phần phối cảnh đôi đũa ở góc trên.", "takeaway": "Quay cảnh làm việc thực tế với micro-macro: Khách hàng muốn thấy sự tỉ mỉ đến từng milimet trước khi quyết định giao cơ thể mình cho một nghệ sĩ.", "lens_angle": "100mm Macro f/2.8 • Extreme Close-Up", "location": "Khu vực thao tác xăm chuyên dụng", "lighting_color": "Direct Ring Light 5600K rọi thẳng bề mặt da", "transition": "Hard cut to Red Pigment Shading (Cắt thẳng sang pha màu đỏ)", "start_img": "shot_03_start.jpg", "mid_img": "shot_03_mid.jpg", "end_img": "shot_03_end.jpg"}, {"id": 4, "st_frame": 269, "en_frame": 301, "st_time": 8.97, "en_time": 10.03, "duration": 1.06, "headline": "Phối màu thịt bò tái: Sắc đỏ hồng tươi rói lập tức biến lớp da người thành bức tranh ẩm thực sống động", "subject_action": "Góc quay macro cận cảnh mũi kim dặm từng hạt mực màu đỏ thẫm và hồng tươi vào từng thớ thịt bò tái trong lòng tô bún. Mực đỏ thấm vào da hòa quyện với các nếp gấp vi mô, tái hiện hoàn hảo cảm giác mềm mại của miếng thịt tái Huế vừa chần nước sôi. Subtitle: 'and I saw that he was a great artist'.", "pros": "Sự xuất hiện bất ngờ của màu đỏ ấm áp tương phản mạnh mẽ với nền da trắng và găng tay đen cao su, kích thích thị giác cực mạnh; nhịp dặm kim dứt khoát chứng minh kỹ thuật loang màu (Color Blending) bậc thầy.", "cons": "Thời lượng cảnh chỉ kéo dài hơn 1 giây (32 frame) là hơi quá nhanh so với độ kỳ công của việc pha sắc độ đỏ tái.", "takeaway": "Sử dụng màu sắc tương phản nóng (Warm Red) để ngắt nhịp và giật lại sự chú ý của người xem trong chuỗi phân cảnh quy trình.", "lens_angle": "Macro 100mm • Top-down Close-Up", "location": "Bề mặt da bắp tay khách hàng", "lighting_color": "Overhead Soft LED Panel chống lóa", "transition": "Hard Cut to Pork Knuckle Shading", "start_img": "shot_04_start.jpg", "mid_img": "shot_04_mid.jpg", "end_img": "shot_04_end.jpg"}, {"id": 5, "st_frame": 301, "en_frame": 334, "st_time": 10.03, "en_time": 11.13, "duration": 1.1, "headline": "Tô điểm giò heo & hành hoa: Tầng lớp sắc tố nâu caramel và xanh lá đan xen tạo cảm giác no đủ, ấm cúng", "subject_action": "Góc máy nghiêng 45 độ từ phía trên xuống. Kim xăm lướt qua khoanh giò heo được đổ bóng màu nâu cánh gián caramel, móng giò có độ gồ ghề tự nhiên. Ngay cạnh đó, các chấm mực xanh lá cây bắt đầu được điểm xuyết vào khu vực hành hoa thái nhỏ. Subtitle: 'and that he can do what I was trying to get'.", "pros": "Góc nghiêng 45 độ giúp người xem quan sát được đồng thời độ nổi 3D của miếng giò heo và lớp mực xanh lá tươi sáng; bố cục 1/3 đặt trọng tâm vào giò heo - linh hồn của món Bún Bò Huế.", "cons": "Chuyển động lia máy nhẹ hơi giật do người quay điều chỉnh góc cầm tay khi nghệ sĩ đang di chuyển ngòi kim.", "takeaway": "Trong video ẩm thực hoặc mô phỏng ẩm thực, chi tiết 'Signature' (khoanh giò heo) phải được làm nổi bật với màu sắc tả thực chuẩn vị giác nhất.", "lens_angle": "50mm f/1.8 Macro Mode • 45-degree Angle", "location": "Bàn xăm tiệt trùng", "lighting_color": "Ánh sáng chiếu chéo 45 độ tạo bóng khối tự nhiên", "transition": "Match Cut to Extreme Macro Herb Ink", "start_img": "shot_05_start.jpg", "mid_img": "shot_05_mid.jpg", "end_img": "shot_05_end.jpg"}, {"id": 6, "st_frame": 334, "en_frame": 379, "st_time": 11.13, "en_time": 12.63, "duration": 1.5, "headline": "Micro-Splash giọt mực xanh non: Khoảnh khắc ASMR thị giác khi giọt màu loang trên bề mặt da", "subject_action": "Cú máy siêu cận cảnh (Super Macro). Đầu kim xăm phun ra một giọt mực xanh chuối (Lime Green) phát sáng rực rỡ, đọng lại thành một đốm màu đậm đặc ngay trên chùm rau thơm ở tâm tô bún. Đầu nhựa cartridge trong suốt để lộ dòng mực màu xanh đang chảy tuần hoàn. Subtitle: 'and that he can do'.", "pros": "Hiệu ứng thị giác cực khoái (Visual ASMR) với đốm mực xanh non phát quang siêu bắt mắt; độ phân giải và chi tiết cực hạn thấy rõ từng lỗ chân lông và kết cấu mực lỏng; tạo điểm nhấn màu sắc tươi sáng nhất trong toàn bộ bảng màu ấm của video.", "cons": "Đốm mực xanh quá sáng và che lấp mất phần kim xăm bên dưới khiến người xem khó theo dõi thao tác găm kim thực tế.", "takeaway": "Chèn một khung hình 'Micro-Hero' (giọt mực tươi, bọt nước, vệt màu) với độ bão hòa cao để tạo cú huých thị giác giữa những shot quay thao tác đều đều.", "lens_angle": "100mm Macro with Extension Tube • Super Macro", "location": "Trung tâm tô bún trên da", "lighting_color": "Spot Lighting hội tụ cường độ cao", "transition": "Over-the-shoulder Reverse Angle (Đảo góc qua vai)", "start_img": "shot_06_start.jpg", "mid_img": "shot_06_mid.jpg", "end_img": "shot_06_end.jpg"}, {"id": 7, "st_frame": 379, "en_frame": 414, "st_time": 12.63, "en_time": 13.8, "duration": 1.17, "headline": "Góc nhìn qua vai nghệ nhân (OTS): Mở rộng phối cảnh không gian làm việc khẳng định sự tỉ mỉ của nghề xăm", "subject_action": "Góc quay qua vai (Over The Shoulder) từ phía sau lưng khách hàng hướng về khuôn mặt của Nikko. Đôi mắt anh khép hờ theo dõi từng vi điểm, chiếc máy xăm được bọc băng keo đen chống trượt hoạt động êm ái trên bắp tay vạm vỡ của khách. Phía hậu cảnh là khay mực nhiều ngăn màu sắc rực rỡ.", "pros": "Thay đổi cỡ cảnh ngoạn mục: từ siêu cận cảnh (Shot 6) giật lùi về góc trung cận có chiều sâu, giúp người xem xả bớt áp lực thị giác; khay màu mờ ảo phía sau chứng minh đây là tác phẩm xăm màu đa sắc độ cực kỳ phức tạp.", "cons": "Lưng của khách hàng chiếm 1/3 diện tích bên trái khung hình và hơi thiếu sáng so với khuôn mặt nghệ sĩ.", "takeaway": "Quy tắc nhịp thở thị giác (Visual Pacing): Sau 3-4 cú máy cận cảnh chi tiết, BẮT BUỘC phải có 1 cú máy mở rộng không gian để người xem định vị lại bối cảnh và cảm xúc.", "lens_angle": "50mm f/1.4 Cine • Over-The-Shoulder", "location": "Toàn cảnh góc làm việc của nghệ nhân Nikko", "lighting_color": "Backlight tách lớp tóc + Keylight khuôn mặt", "transition": "Match cut to Paper Towel Wipe (Cắt nối động tác lau)", "start_img": "shot_07_start.jpg", "mid_img": "shot_07_mid.jpg", "end_img": "shot_07_end.jpg"}, {"id": 8, "st_frame": 414, "en_frame": 452, "st_time": 13.8, "en_time": 15.07, "duration": 1.27, "headline": "Cú lau giấy phép thuật (Wipe Reveal): Giải phóng lớp mực thừa để hé lộ bức họa ẩm thực sắc nét không tì vết", "subject_action": "Bàn tay đeo găng đen cầm khăn giấy trắng vuốt dứt khoát một đường từ trên xuống dưới qua bề mặt hình xăm. Lớp mực thừa nhòe nhoẹt bị kéo đi sạch sẽ, để lộ nguyên vẹn từng sợi bún trắng muốt, lát chả cua vàng ươm và cọng rau thơm xanh biếc trên nền da ửng hồng.", "pros": "Cú lau giấy (The Wipe) là 'Money Shot' bất bại của giới xăm hình và thẩm mỹ trên TikTok/Reels: mang lại sự thỏa mãn thị giác (Oddly Satisfying) tột đỉnh khi cái lộn xộn biến thành tác phẩm nghệ thuật hoàn mỹ trong 0.5 giây; đường vuốt chéo dẫn mắt quét toàn bộ chi tiết tô bún.", "cons": "Thời gian giữ khung hình sau khi lau sạch chỉ có khoảng 0.4s trước khi chuyển cảnh, làm người xem chưa kịp 'đã mắt' ngắm nghía thành quả sơ khởi.", "takeaway": "Luôn đưa khoảnh khắc chuyển hóa (Transformation / The Reveal) vào video dịch vụ. Hành động lau sạch hoặc bóc lớp bảo vệ luôn tạo ra lượng tương tác và xem lại (re-watch) cao nhất.", "lens_angle": "Macro 100mm • High Shutter Speed 1/120s", "location": "Bề mặt bắp tay khách hàng", "lighting_color": "Ánh sáng trắng 5600K rực rỡ bắt phản quang khăn ướt", "transition": "Hard Cut to Magnum Broth Shading", "start_img": "shot_08_start.jpg", "mid_img": "shot_08_mid.jpg", "end_img": "shot_08_end.jpg"}, {"id": 9, "st_frame": 452, "en_frame": 541, "st_time": 15.07, "en_time": 18.03, "duration": 2.96, "headline": "Đổ bóng nước dùng bằng kim bản lớn (Magnum): Kỹ thuật dặm dải màu cam đỏ tạo chiều sâu sóng sánh cho bát súp", "subject_action": "Cận cảnh đầu kim dẹt Magnum (nhiều mũi kim xếp hàng ngang) nhúng mực cam đỏ pha sa tế, nhẹ nhàng lướt trên thành bát tô và nước dùng. Từng lớp gradient màu nước súp bò cay nồng loang dần đều đặn, phủ kín các khoảng trống xung quanh đũa và thìa. Subtitle: 'The flavor, the spice, yeah it's just the culture of...'", "pros": "Khoe trọn kỹ thuật dặm hạt (Pepper Shading / Whip Shading) mượt mà không để lại vết sọc; đầu kim Magnum phô diễn kỹ năng cao cấp khác biệt hẳn với kim nét đơn ở đầu video; lời thuyết minh của khách nói về 'hương vị, vị cay' khớp hoàn hảo 100% với màu nước dùng sa tế đỏ cam đang được tô vẽ trên da.", "cons": "Vệt đỏ li ti tự nhiên của da hơi lộ ra ở viền ngoài cùng của tô bún, có thể gây cảm giác hơi rát cho người xem nhạy cảm.", "takeaway": "Kỹ thuật 'Audio-Visual Rhyme' (Thơ thị giác - âm thanh): Khách nói đến chữ 'Flavor & Spice' thì hình ảnh phải ngay lập tức là ngòi kim đang chan lớp nước dùng đỏ cay màu sa tế.", "lens_angle": "Macro 100mm f/2.8 • Magnum Needle Focus", "location": "Viền tô bún và nước dùng trên da", "lighting_color": "Rim Light tôn bóng dầu mực xăm bóng mượt", "transition": "Hard Cut to Interview Face (Cắt sang phỏng vấn)", "start_img": "shot_09_start.jpg", "mid_img": "shot_09_mid.jpg", "end_img": "shot_09_end.jpg"}, {"id": 10, "st_frame": 541, "en_frame": 598, "st_time": 18.03, "en_time": 19.93, "duration": 1.9, "headline": "Tự hào gốc Huế & Gimmick Nón Lá: Khoảnh khắc chia sẻ nguồn cội xúc động kèm chi tiết đồ họa bất ngờ", "subject_action": "Góc quay chính diện (Medium Shot) người khách hàng gốc Việt (anh chàng Việt kiều thể thao, mặc áo ba lỗ xám, tay trái bọc màng co nilon bảo vệ hình xăm mới) tay cầm điện thoại chia sẻ: '...where I came from... from Huế'. Đúng khoảnh khắc anh nói chữ 'Huế', một chiếc nón lá hoạt hình (Nón Lá Cartoon) bất ngờ nảy lên đầu anh kèm nụ cười tự hào.", "pros": "Chuyển từ hành động thủ công sang gương mặt khách hàng giúp thổi hồn nhân văn và cảm xúc vào video: hình xăm không còn là một hình vẽ mà là biểu tượng cội nguồn quê hương; meme nón lá xuất hiện bất ngờ tạo điểm nhấn hóm hỉnh, kéo dài thời gian lưu giữ (Retention rate).", "cons": "Hình ảnh chiếc nón lá là đồ họa 2D vẽ tay hơi đơn giản so với chất lượng điện ảnh 4K của cảnh quay xung quanh.", "takeaway": "Sử dụng 'Visual Humor Pop-up' (meme đồ họa ngắn < 1s) tại thời điểm nhân vật nói từ khóa văn hóa để vừa tôn vinh bản sắc vừa tạo sự dí dỏm gần gũi.", "lens_angle": "35mm f/2.0 Eye-Level • Medium Shot", "location": "Phòng chờ studio Saigon Ink", "lighting_color": "Natural Ambient Studio Fill Light dịu mắt", "transition": "Jump Cut to Punchline Beat (Cắt giật sang cú chốt)", "start_img": "shot_10_start.jpg", "mid_img": "shot_10_mid.jpg", "end_img": "shot_10_end.jpg"}, {"id": 11, "st_frame": 598, "en_frame": 697, "st_time": 19.93, "en_time": 23.23, "duration": 3.3, "headline": "Tuyên ngôn 'Bún Bò Huế ngon hơn Phở': Cú chốt phỏng vấn gây tranh cãi kích nổ bão bình luận tranh biện ẩm thực", "subject_action": "Người khách hàng nở nụ cười tươi rói, mắt ánh lên sự hào hứng tột độ, tay giơ nhẹ điện thoại và hướng về ống kính nói dõng dạc: 'You should try it! You know it's better than Phở!'. Cánh tay trái được quấn màng bảo quản kín đáo lộ diện hình xăm nghệ thuật nhiều màu sắc.", "pros": "ĐỈNH CAO CÂU TƯƠNG TÁC (Comment Bait / Debate Hook): Đưa ra so sánh gây tranh cãi muôn thuở trong ẩm thực Việt Nam ('Bún Bò Huế ngon hơn Phở'), lập tức kích hoạt bản năng bình luận của hàng chục nghìn người xem để bảo vệ món ăn yêu thích; biểu cảm chân thành, năng lượng tích cực của khách tạo thiện cảm tối đa.", "cons": "Góc máy hơi lệch về phía tay phải khiến cánh tay có hình xăm bị khuất một phần ở góc dưới bên phải khung hình.", "takeaway": "Muốn video triệu view, hãy để nhân vật thả một 'Unpopular Opinion' (quan điểm gây tranh luận) ở 3/4 video. Cuộc chiến trong phần bình luận giữa fan Phở và fan Bún Bò Huế sẽ đẩy thuật toán Instagram bay xa.", "lens_angle": "35mm f/2.0 • Medium Close-Up", "location": "Không gian phòng chờ phỏng vấn", "lighting_color": "Soft Ambient Light tôn nét cười rạng rỡ", "transition": "Cross Dissolve / Glitch Flash to iPad Procreate", "start_img": "shot_11_start.jpg", "mid_img": "shot_11_mid.jpg", "end_img": "shot_11_end.jpg"}, {"id": 12, "st_frame": 697, "en_frame": 737, "st_time": 23.23, "en_time": 24.57, "duration": 1.34, "headline": "So sánh ảnh thực tế & Bản vẽ iPad: Minh chứng kỹ năng thiết kế số hóa trước khi chuyển thể lên da thịt", "subject_action": "Màn hình iPad Pro đang mở ứng dụng Procreate. Bên trái là bức ảnh chụp thực tế một tô bún bò Huế bốc khói nghi ngút trên bàn ăn; bên phải là bản vẽ nét màu kỹ thuật số do nghệ sĩ Saigon Ink thiết kế lại để sẵn sàng in stencil. Thanh công cụ Procreate và bảng màu hiển thị rõ ràng. Ánh sáng xanh nhẹ từ màn hình iPad phản chiếu.", "pros": "Cung cấp bằng chứng thiết kế (Design Proof): Cho người xem thấy quy trình chuyển thể từ 'Ảnh tô bún đời thực' sang 'Bản vẽ đồ họa thích ứng da người', khẳng định tính sáng tạo độc bản và sự chuẩn bị chuyên nghiệp của studio; thỏa mãn trí tò mò 'Họ lấy mẫu từ đâu'.", "cons": "Thời lượng 1.33s hơi ngắn để người xem kịp phóng to mắt so sánh chi tiết từng cọng rau giữa ảnh mẫu và bản vẽ phác thảo.", "takeaway": "Quy trình thiết kế (Digital Mockup / Reference Side-by-Side) là bước đệm tuyệt vời để nâng tầm giá trị dịch vụ từ 'thợ xăm chép hình' lên tầm 'nghệ sĩ thiết kế độc bản'.", "lens_angle": "35mm Close-Up • Top-down screen angle", "location": "Bàn thiết kế đồ họa studio", "lighting_color": "Screen Glow 6500K từ màn hình iPad Pro", "transition": "Fast Whip Pan to Black (Lia nhanh sang tối)", "start_img": "shot_12_start.jpg", "mid_img": "shot_12_mid.jpg", "end_img": "shot_12_end.jpg"}, {"id": 13, "st_frame": 737, "en_frame": 771, "st_time": 24.57, "en_time": 25.7, "duration": 1.13, "headline": "Cú lia máy qua bóng tối (In-Camera Whip Transition): Nhịp nén lò xo tạo sự hồi hộp trước đòn kết liễu thị giác", "subject_action": "Camera lia cực nhanh (Whip Pan) qua một mảng tối (lưng nhân vật / góc bàn phòng xăm) tạo dải nhòe chuyển động (Motion Blur) sâu thẳm. Khung hình chìm vào bóng tối gần như hoàn toàn trong khoảng 10-15 frame, đóng vai trò như một nhịp thở nén không gian trước cú nổ thị giác cuối cùng.", "pros": "Kỹ thuật chuyển cảnh tự nhiên bằng chuyển động máy (In-Camera Transition) không dùng kỹ xảo giả tạo; tạo nhịp nén tâm lý (Tension Build-up), kích thích sự đón đợi của khán giả trước khi chiêm ngưỡng hình xăm hoàn thiện ở góc nhìn tối thượng.", "cons": "Có khoảng 10 frame màn hình đen hoàn toàn (0 Lux), nếu không để ý người xem có thể lầm tưởng video bị lỗi tải mạng.", "takeaway": "Sử dụng bóng tối ngắn (Black Whip Beat < 0.5s) như một khoảng lặng của âm nhạc trước khi bung nốt cao trào (Visual Climax).", "lens_angle": "High-Speed Whip Pan • In-camera Body Occlusion", "location": "Góc chuyển không gian trong phòng xăm", "lighting_color": "Zero Lux Occlusion (Tối đen do che máy)", "transition": "Smash Cut into Ultra Beauty Shot (Cắt nổ sang cảnh kết)", "start_img": "shot_13_start.jpg", "mid_img": "shot_13_mid.jpg", "end_img": "shot_13_end.jpg"}, {"id": 14, "st_frame": 771, "en_frame": 863, "st_time": 25.7, "en_time": 28.77, "duration": 3.07, "headline": "Tuyệt phẩm bảo tàng trên da (The Final Masterpiece): Cú máy trượt macro chiêm ngưỡng tô bún bò Huế vĩnh cửu", "subject_action": "Cú máy chuyển động trượt macro siêu mượt (Slow Macro Tilt/Pan) từ góc chéo quét qua toàn bộ tô bún bò Huế hoàn thiện 100% trên da. Lớp da đã được làm dịu, các chi tiết nổi khối 3D sống động lạ kỳ: ánh bóng của thìa nhôm, thớ gân nổi của lát thịt bò, màu đỏ sa tế quyện trong nước dùng lấp lánh, khoanh giò giòn sần sật và đôi đũa nâu gác ngang miệng bát. Một tác phẩm nghệ thuật thu nhỏ đầy cảm xúc.", "pros": "Cú máy kết thúc hoàn hảo (Climax Payoff): Ánh sáng studio mềm mại đánh bật toàn bộ khối nổi và sắc độ rực rỡ của hình xăm; chuyển động máy chậm rãi, đĩnh đạc như đang quay một món trang sức xa xỉ trong bảo tàng; để lại dư âm kinh ngạc và khao khát sở hữu một hình xăm ẩm thực độc đáo cho người xem.", "cons": "Kết thúc video bằng cut thẳng hơi đột ngột, nếu có thêm 0.5s fade out hoặc hiển thị thêm địa chỉ studio ở những frame cuối thì tính chuyển đổi thương hiệu sẽ trọn vẹn hơn.", "takeaway": "Ending Shot phải luôn là một 'Masterpiece Shot' với chuyển động máy trượt chậm và ánh sáng tôn vinh cực đỉnh. Đây là hình ảnh sẽ lưu lại cuối cùng trong tiềm thức khách hàng để họ bấm vào Profile tìm hiểu.", "lens_angle": "Cine Macro 100mm T2.9 • Slow Motion Glide", "location": "Bàn trưng bày ánh sáng nghệ thuật", "lighting_color": "3-Point Studio Luxury Lighting bóng bẩy", "transition": "End of Reel (Kết thúc video)", "start_img": "shot_14_start.jpg", "mid_img": "shot_14_mid.jpg", "end_img": "shot_14_end.jpg"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ct.toFixed(2) + 's / ' + (player.duration ? player.duration.toFixed(2) : '28.77') + 's';
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 30.0 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById('shot-' + shotId);
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

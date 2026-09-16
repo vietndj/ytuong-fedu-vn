@@ -1,0 +1,2071 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Nghệ Thuật Biến Vali Du Lịch Thành Chuỗi Thước Phim Điện Ảnh - @yegor.sky • Director's Analysis Report</title>
+<style>
+@font-face {
+    font-family: 'SVN-Acta';
+    src: local('SVN-Acta-Bold'), local('SVN-Acta'), local('SVN Acta');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'SVN-Acta';
+    src: local('SVN-Acta-Medium'), local('SVN-Acta');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'SVN-Acta';
+    src: local('SVN-Acta-Book'), local('SVN-Acta-Regular'), local('SVN-Acta');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'GT America';
+    src: local('GT-America-LCGV-Standard-Regular'), local('GT America');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'GT America';
+    src: local('GT-America-LCGV-Standard-Medium'), local('GT America');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'GT America';
+    src: local('GT-America-LCGV-Standard-Bold'), local('GT America');
+    font-weight: 700;
+}
+
+:root {
+    --bg-main: #0b0f17;
+    --bg-card: #131b2a;
+    --bg-card-hover: #1c273c;
+    --bg-sidebar: #0f1624;
+    --border-color: #202c42;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-amber: #f59e0b;
+    --accent-blue: #38bdf8;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-purple: #c084fc;
+    --font-heading: 'SVN-Acta', Georgia, 'Times New Roman', serif;
+    --font-body: 'GT America', 'GT-America-LCGV-Standard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.65;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+.top-nav {
+    background: rgba(15, 22, 36, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+.nav-brand .brand-badge {
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    color: #0b0f17;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-btn {
+    background: #1e293b;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 7px 13px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+.nav-btn:hover {
+    background: #334155;
+    border-color: var(--accent-blue);
+}
+
+.main-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 20px 80px;
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 30px;
+}
+
+.sticky-column {
+    position: sticky;
+    top: 75px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.video-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+.video-player-box {
+    position: relative;
+    background: #000;
+    aspect-ratio: 9 / 16;
+    max-height: 520px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.video-info-box {
+    padding: 16px;
+}
+.video-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    line-height: 1.35;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+.video-meta-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+.meta-tag {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 5px;
+    background: #1e293b;
+    color: var(--text-secondary);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+.meta-tag.creator {
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+.video-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+}
+
+.drawer-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 16px;
+}
+.drawer-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+.drawer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 280px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.drawer-shot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    background: #172133;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: background 0.15s;
+    border: 1px solid transparent;
+}
+.drawer-shot-row:hover {
+    background: #22314a;
+    border-color: var(--accent-blue);
+}
+.d-badge {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    font-weight: 700;
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+.d-time {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    white-space: nowrap;
+}
+.d-title {
+    color: var(--text-secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-card);
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+.content-header h2 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: #ffffff;
+}
+.view-mode-tabs {
+    display: flex;
+    gap: 6px;
+    background: #0f1624;
+    padding: 3px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+.tab-btn.active {
+    background: #1e293b;
+    color: var(--accent-blue);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.grid-view-container {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 16px;
+}
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+.grid-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-blue);
+}
+.grid-thumb-box {
+    position: relative;
+    aspect-ratio: 9/16;
+    background: #000;
+    overflow: hidden;
+}
+.grid-thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid-time-tag {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    font-size: 0.68rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.grid-shot-tag {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: var(--accent-blue);
+    color: #000;
+    font-weight: 800;
+    font-size: 0.68rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.grid-card-desc {
+    padding: 10px;
+    font-size: 0.8rem;
+    line-height: 1.35;
+    color: var(--text-secondary);
+}
+
+.storyboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    transition: border-color 0.2s;
+}
+.shot-card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+}
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.shot-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.shot-index-badge {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: #0b0f17;
+    font-weight: 800;
+    font-size: 0.85rem;
+    padding: 3px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.3px;
+}
+.time-jump-btn {
+    background: #1e293b;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+}
+.time-jump-btn:hover {
+    background: #334155;
+    color: var(--accent-blue);
+    border-color: var(--accent-blue);
+}
+.dur-pill {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+}
+.tech-tag {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--accent-blue);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    font-weight: 600;
+}
+.shot-headline-box {
+    margin-bottom: 16px;
+}
+.shot-headline-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+.keyframes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.keyframe-item {
+    cursor: pointer;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s, border-color 0.2s;
+}
+.keyframe-item:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-blue);
+}
+.kf-img-wrap {
+    position: relative;
+    aspect-ratio: 9 / 16;
+}
+.kf-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.kf-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.kf-badge.start { border-left: 3px solid var(--accent-emerald); }
+.kf-badge.mid { border-left: 3px solid var(--accent-amber); }
+.kf-badge.end { border-left: 3px solid var(--accent-rose); }
+
+.analysis-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+.critique-block {
+    background: #0f1624;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 8px;
+    padding: 14px;
+}
+.block-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-muted);
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-content {
+    font-size: 0.88rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.two-column-critique {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-col {
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+.critique-col.pro {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #d1fae5;
+}
+.critique-col.con {
+    background: rgba(244, 63, 94, 0.08);
+    border: 1px solid rgba(244, 63, 94, 0.2);
+    color: #ffe4e6;
+}
+.col-header {
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.takeaway-block {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(217, 119, 6, 0.03));
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: 8px;
+    padding: 14px;
+}
+.takeaway-title {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--accent-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.takeaway-body {
+    font-size: 0.86rem;
+    color: #fde68a;
+    line-height: 1.55;
+}
+
+.shot-specs-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 14px;
+    background: #0d131f;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.04);
+    font-size: 0.78rem;
+}
+.spec-item {
+    color: var(--text-secondary);
+}
+.spec-label {
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.trans-section {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dashed rgba(255,255,255,0.1);
+}
+.trans-header {
+    margin-bottom: 8px;
+}
+.trans-title {
+    font-size: 0.78rem;
+    color: var(--accent-rose);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.trans-img-wrap {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    cursor: pointer;
+    border: 1px solid rgba(244, 63, 94, 0.3);
+    transition: transform 0.2s, border-color 0.2s;
+}
+.trans-img-wrap:hover {
+    transform: scale(1.01);
+    border-color: var(--accent-rose);
+}
+.trans-img-wrap img {
+    width: 100%;
+    display: block;
+}
+.zoom-indicator {
+    position: absolute;
+    bottom: 6px;
+    right: 8px;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    font-size: 0.65rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.92);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+.lightbox-caption {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+@media (max-width: 860px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+    .sticky-column {
+        position: relative;
+        top: 0;
+    }
+    .two-column-critique {
+        grid-template-columns: 1fr;
+    }
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<header class="top-nav">
+    <a href="../scene.html" class="nav-brand">
+        <span class="brand-badge">DIRECTOR CUT</span>
+        <span>@yegor.sky • Nghệ Thuật Biến Vali Du Lịch Thành Chuỗi Thước Phim Điện Ảnh - @yegor.sky</span>
+    </a>
+    <div class="nav-actions">
+        <a href="../scene.html" class="nav-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Cổng Điện Ảnh
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            💡 Kho Ý Tưởng HUB
+        </a>
+    </div>
+</header>
+
+<div class="main-container">
+    <div class="sticky-column">
+        <div class="video-card">
+            <div class="video-player-box">
+                <video id="playerVideo" class="modal-video" controls playsinline>
+                    <source src="Dc-6BFdi7bU.mp4" type="video/mp4">
+                    <source src="../videos/Dc-6BFdi7bU.mp4" type="video/mp4">
+                    <source src="./videos/Dc-6BFdi7bU.mp4" type="video/mp4">
+                    <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Dc-6BFdi7bU.mp4" type="video/mp4">
+                    Trình duyệt không hỗ trợ thẻ video.
+                </video>
+            </div>
+            <div class="video-info-box">
+                <h1 class="video-title">Nghệ Thuật Biến Vali Du Lịch Thành Chuỗi Thước Phim Điện Ảnh - @yegor.sky</h1>
+                <div class="video-meta-tags">
+                    <span class="meta-tag creator">@yegor.sky</span>
+                    <span class="meta-tag">⏱️ 15.12s</span>
+                    <span class="meta-tag">🎬 10 Shots</span>
+                    <span class="meta-tag">✈️ Du Lịch &amp; Phong Cách Sống</span>
+                </div>
+                <p class="video-desc">Bóc tách 10 phân cảnh điện ảnh sáng tạo từ chiếc vali du lịch vỏ nhôm (Rimowa style) của Yegor.Sky: Kỹ thuật chơi với góc máy (Playing with angles), Low angle, Over-the-shoulder, Top-down POV, giấu camera trong lòng vali (Trunk Shot POV phong cách Quentin Tarantino), Match Cut nắp vali và khóa zip macro, kết thúc bằng cú Worm's Eye View Parallax tracking cực đỉnh.</p>
+            </div>
+        </div>
+
+        <div class="drawer-card">
+            <div class="drawer-title">📑 Nhảy Tới Phân Cảnh (Quick Jump)</div>
+            <div class="drawer-list">
+                
+    <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0)">
+        <span class="d-badge">Shot 01</span>
+        <span class="d-time">0.00s - 1.12s (1.12s)</span>
+        <span class="d-title">Thiết Lập Bối Cảnh Chuẩn Bị Hành Lý Du Lịch (Establishing The Pac...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(2, 1.12)">
+        <span class="d-badge">Shot 02</span>
+        <span class="d-time">1.12s - 2.58s (1.46s)</span>
+        <span class="d-title">Góc Cận Tay Cầm Kéo Rút & Chiếc Smartphone Đặt Trên Vali (High-An...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(3, 2.58)">
+        <span class="d-badge">Shot 03</span>
+        <span class="d-time">2.58s - 4.25s (1.67s)</span>
+        <span class="d-title">Khai Thác Góc Cận Bên Hông & Thao Tác Bấm Chốt Vali (Side Profile...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(4, 4.25)">
+        <span class="d-badge">Shot 04</span>
+        <span class="d-time">4.25s - 5.96s (1.71s)</span>
+        <span class="d-title">Mở Nắp Toàn Diện & Đặt Thiết Bị Vào Lòng Vali (Three-Quarter Open...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(5, 5.96)">
+        <span class="d-badge">Shot 05</span>
+        <span class="d-time">5.96s - 7.33s (1.37s)</span>
+        <span class="d-title">Góc Nhìn Thẳng Đứng Từ Trên Xuống Đáy Vali (Top-Down Flat Lay POV...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(6, 7.33)">
+        <span class="d-badge">Shot 06</span>
+        <span class="d-time">7.33s - 8.88s (1.55s)</span>
+        <span class="d-title">Đảo Góc Đáy Vali Nhìn Lên Trần Nhà & Cú Ném Đồ Che Ống Kính (Insi...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(7, 9.0)">
+        <span class="d-badge">Shot 07</span>
+        <span class="d-time">9.00s - 10.38s (1.38s)</span>
+        <span class="d-title">Góc Máy Từ Trong Hòm Xe / Vali (Tarantino Trunk Shot POV & Lid Sl...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(8, 10.38)">
+        <span class="d-badge">Shot 08</span>
+        <span class="d-time">10.38s - 11.83s (1.45s)</span>
+        <span class="d-title">Siêu Cận Cảnh Đường Kéo Khóa Zip Kim Loại (Macro Zipper Glide Com...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(9, 11.83)">
+        <span class="d-badge">Shot 09</span>
+        <span class="d-time">11.83s - 13.04s (1.21s)</span>
+        <span class="d-title">Góc Nhìn Trục Dọc Theo Dấu Bánh Xe Lăn (Top-Down Handle & Rolling...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(10, 13.04)">
+        <span class="d-badge">Shot 10</span>
+        <span class="d-time">13.04s - 15.12s (2.08s)</span>
+        <span class="d-title">Góc Máy Sát Đất Worm's Eye View & Cú Lướt Kéo Vali Ra Sân Bay (Ex...</span>
+    </div>
+    
+            </div>
+        </div>
+    </div>
+
+    <div class="content-column">
+        <div class="content-header">
+            <h2>Phân Tích Chi Tiết 10 Phân Cảnh (Director's Storyboard)</h2>
+            <div class="view-mode-tabs">
+                <button class="tab-btn active" id="tabDetail" onclick="setViewMode('detail')">Chi Tiết (List)</button>
+                <button class="tab-btn" id="tabGrid" onclick="setViewMode('grid')">Lưới (Grid)</button>
+            </div>
+        </div>
+
+        <div class="grid-view-container" id="gridView">
+            
+    <div class="grid-card" onclick="jumpToShot(1, 0.0)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+            <div class="grid-time-tag">0.00s - 1.12s</div>
+            <div class="grid-shot-tag">Shot 01</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Thiết Lập Bối Cảnh Chuẩn Bị Hành Lý Du Lịch (Establishing The Packing Routine)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(2, 1.12)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+            <div class="grid-time-tag">1.12s - 2.58s</div>
+            <div class="grid-shot-tag">Shot 02</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Góc Cận Tay Cầm Kéo Rút & Chiếc Smartphone Đặt Trên Vali (High-Angle Telescopic Handle Pull)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(3, 2.58)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+            <div class="grid-time-tag">2.58s - 4.25s</div>
+            <div class="grid-shot-tag">Shot 03</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Khai Thác Góc Cận Bên Hông & Thao Tác Bấm Chốt Vali (Side Profile Latch & Grip Action)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(4, 4.25)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+            <div class="grid-time-tag">4.25s - 5.96s</div>
+            <div class="grid-shot-tag">Shot 04</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Mở Nắp Toàn Diện & Đặt Thiết Bị Vào Lòng Vali (Three-Quarter Open Case Packing)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(5, 5.96)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+            <div class="grid-time-tag">5.96s - 7.33s</div>
+            <div class="grid-shot-tag">Shot 05</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Góc Nhìn Thẳng Đứng Từ Trên Xuống Đáy Vali (Top-Down Flat Lay POV)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(6, 7.33)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+            <div class="grid-time-tag">7.33s - 8.88s</div>
+            <div class="grid-shot-tag">Shot 06</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Đảo Góc Đáy Vali Nhìn Lên Trần Nhà & Cú Ném Đồ Che Ống Kính (Inside-Suitcase Ceiling POV & Fabric Wipe)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(7, 9.0)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+            <div class="grid-time-tag">9.00s - 10.38s</div>
+            <div class="grid-shot-tag">Shot 07</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Góc Máy Từ Trong Hòm Xe / Vali (Tarantino Trunk Shot POV & Lid Slam Blackout)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(8, 10.38)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+            <div class="grid-time-tag">10.38s - 11.83s</div>
+            <div class="grid-shot-tag">Shot 08</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Siêu Cận Cảnh Đường Kéo Khóa Zip Kim Loại (Macro Zipper Glide Commercial Shot)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(9, 11.83)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+            <div class="grid-time-tag">11.83s - 13.04s</div>
+            <div class="grid-shot-tag">Shot 09</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Góc Nhìn Trục Dọc Theo Dấu Bánh Xe Lăn (Top-Down Handle & Rolling Wheel Parallax)</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(10, 13.04)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_10_mid.jpg" alt="Shot 10" loading="lazy">
+            <div class="grid-time-tag">13.04s - 15.12s</div>
+            <div class="grid-shot-tag">Shot 10</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Góc Máy Sát Đất Worm's Eye View & Cú Lướt Kéo Vali Ra Sân Bay (Extreme Low-Angle Hero Walk & Parallax Outro)</strong>
+        </div>
+    </div>
+    
+        </div>
+
+        <div class="storyboard-container" id="storyboardView">
+            
+    <div class="shot-card" id="shot-1" data-start="0.0" data-end="1.12">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 01</span>
+                <button class="time-jump-btn" onclick="jumpToShot(1, 0.0)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    0.00s - 1.12s <span class="dur-pill">(1.12s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Wide-Standard 35mm f/2.0</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Thiết Lập Bối Cảnh Chuẩn Bị Hành Lý Du Lịch (Establishing The Packing Routine)</h3>
+        </div>
+
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_01_start.jpg', 'Shot 01 • Khung hình Đầu (0.00s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (0.00s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_01_mid.jpg', 'Shot 01 • Cao trào Giữa (0.56s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (0.56s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_01_end.jpg', 'Shot 01 • Khung hình Cuối (1.12s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (1.12s)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Yegor cúi người trước chiếc vali kim loại màu bạc sang trọng đặt trên tấm thảm dệt hoa văn cổ điển (oriental rug). Anh đặt tay lên quai xách trên đỉnh vali, chuẩn bị thao tác kéo tay cầm hành lý. Ánh sáng vàng nghệ thuật (Gobo project light) hắt lên vách tủ phía sau tạo các đốm sáng tròn phong cách hoàng hôn. Dòng text hook màu vàng in hoa: 'POV: YOU'RE PACKING FOR A TRIP'.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Khung hình trung bình (Medium Shot) thiết lập ngay chủ thể và bối cảnh du lịch lifestyle cao cấp; màu kim loại xám bạc của vali tương phản đẹp mắt với áo polo họa tiết lá cọ nhiệt đới; ánh sáng Gobo tạo mood nghệ thuật ấm áp, khơi gợi cảm hứng xê dịch ngay từ giây đầu tiên.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Thời lượng hơi ngắn (1.12s); phần tay kéo vali vừa bắt đầu nhấc lên thì đã cắt cảnh, đòi hỏi người xem phải tập trung cao độ.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Cảnh mở màn đồ vật cần tạo ngay bối cảnh và câu chuyện (Contextual Anchor) bằng góc máy trung bình có chiều sâu và ánh sáng nghệ thuật trước khi đi vào các góc cận vi mô.
+                </div>
+            </div>
+        </div>
+
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide-Standard 35mm f/2.0 • Eye-Level Medium Establishing Shot
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Góc phòng ngủ / studio sang trọng với thảm Ba Tư hoa văn và tủ trượt
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Đèn chiếu hoa văn Gobo ấm 3200K lên vách tường + Keylight mềm phía trước
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Cắt dựng liên hoàn hành động (Action Match Cut) sang góc cận tay kéo
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 02 • Cắt dựng liên hoàn hành động (Action Match Cut) sang góc cận tay kéo</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_01_to_02.jpg', '⚡ Chuyển Cảnh Sang Shot 02 • Cắt dựng liên hoàn hành động (Action Match Cut) sang góc cận tay kéo')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_01_to_02.jpg" alt="Transition Shot 01" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-2" data-start="1.12" data-end="2.58">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 02</span>
+                <button class="time-jump-btn" onclick="jumpToShot(2, 1.12)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    1.12s - 2.58s <span class="dur-pill">(1.46s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Cinematic 50mm f/2.0</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Góc Cận Tay Cầm Kéo Rút & Chiếc Smartphone Đặt Trên Vali (High-Angle Telescopic Handle Pull)</h3>
+        </div>
+
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_02_start.jpg', 'Shot 02 • Khung hình Đầu (1.12s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (1.12s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_02_mid.jpg', 'Shot 02 • Cao trào Giữa (1.85s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (1.85s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_02_end.jpg', 'Shot 02 • Khung hình Cuối (2.58s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (2.58s)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Góc máy dốc từ trên cao (High Angle Close-Up) hướng vào quai kéo vali. Bàn tay săn chắc của Yegor đeo vòng đen kéo dứt khoát hai thanh ray kim loại của tay cầm vươn dài lên. Trên đỉnh nắp vali, chiếc iPhone ốp lưng MagSafe trắng nằm tựa nhẹ nhàng, phản chiếu ánh sáng đèn studio.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Góc nhìn từ trên cao cận cảnh nhấn mạnh cấu trúc cơ khí nhôm phay rãnh sắc sảo của vali; chiếc điện thoại trắng đóng vai trò mỏ neo thị giác (Visual Anchor) kết nối giữa công nghệ và đời sống du lịch; chuyển động kéo tay cầm thẳng đứng hướng lên tạo đường dẫn mắt dứt khoát.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Vết nhòe chuyển động (motion blur) nhẹ ở bàn tay khi kéo nhanh; nếu tăng tốc độ màn trập (shutter speed 1/120s) sẽ bắt dính từng hạt vi kim loại của tay cầm sắc nét hơn.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Khi quay sản phẩm cơ khí có chi tiết trượt/kéo, đặt camera ở góc dốc 60 độ để vừa bắt được chiều sâu thân máy, vừa đón được hướng chuyển động của phụ kiện.
+                </div>
+            </div>
+        </div>
+
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Cinematic 50mm f/2.0 • High-Angle Close-Up 60°
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Đỉnh thân vali nhôm rãnh khía
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng ven (Rim Light) làm nổi bật các đường gân nổi của thanh ray kéo
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Cắt góc qua vai / cận bên (OTS Match Cut) sang thao tác chốt khóa
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 03 • Cắt góc qua vai / cận bên (OTS Match Cut) sang thao tác chốt khóa</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_02_to_03.jpg', '⚡ Chuyển Cảnh Sang Shot 03 • Cắt góc qua vai / cận bên (OTS Match Cut) sang thao tác chốt khóa')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_02_to_03.jpg" alt="Transition Shot 02" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-3" data-start="2.58" data-end="4.25">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 03</span>
+                <button class="time-jump-btn" onclick="jumpToShot(3, 2.58)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    2.58s - 4.25s <span class="dur-pill">(1.67s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">50mm f/1.8</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Khai Thác Góc Cận Bên Hông & Thao Tác Bấm Chốt Vali (Side Profile Latch & Grip Action)</h3>
+        </div>
+
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_03_start.jpg', 'Shot 03 • Khung hình Đầu (2.58s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (2.58s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_03_mid.jpg', 'Shot 03 • Cao trào Giữa (3.42s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (3.42s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_03_end.jpg', 'Shot 03 • Khung hình Cuối (4.25s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (4.25s)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Góc quay cận cảnh ngang sườn (Side Close-up / Over-the-shoulder). Yegor cầm chiếc iPhone trắng bằng bàn tay trái, tay phải đeo đồng hồ Apple Watch Ultra dây vàng/đen bấm vào chốt khóa cơ khí và nhấc quai xách bên hông vali. Nhẫn cưới và vòng tay tạo điểm nhấn phong cách cá nhân tinh tế.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Bắt trọn thao tác tay cực kỳ điện ảnh; bố cục lệch bên (Rule of Thirds) với thân vali màu bạc chiếm 2/3 khung hình bên phải; hiệu ứng phản xạ ánh sáng trên các góc bo kim loại (Corner Protectors) mang lại cảm giác bền bỉ và cao cấp; ánh sáng ven bọc quanh cánh tay.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Chiếc điện thoại cầm che mất một phần thao tác ngón tay bấm nút mở chốt.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Để thước phim commercial đồ vật có hồn người (Human Element), luôn lồng ghép các thao tác tay chân thực, có phụ kiện cá nhân (nhẫn, đồng hồ, vòng tay) làm tăng tính thuyết phục và phong cách sống.
+                </div>
+            </div>
+        </div>
+
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> 50mm f/1.8 • Medium Close-Up Low Side Angle
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Cạnh hông vali và chốt khóa bấm
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Keylight hắt nghiêng 45 độ tạo khối cơ bắp và độ bóng kim loại
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Cắt mở rộng (Cut to Wide 3/4) sang cảnh mở nắp vali
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 04 • Cắt mở rộng (Cut to Wide 3/4) sang cảnh mở nắp vali</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_03_to_04.jpg', '⚡ Chuyển Cảnh Sang Shot 04 • Cắt mở rộng (Cut to Wide 3/4) sang cảnh mở nắp vali')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_03_to_04.jpg" alt="Transition Shot 03" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-4" data-start="4.25" data-end="5.96">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 04</span>
+                <button class="time-jump-btn" onclick="jumpToShot(4, 4.25)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    4.25s - 5.96s <span class="dur-pill">(1.71s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Wide 28mm f/2.8</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Mở Nắp Toàn Diện & Đặt Thiết Bị Vào Lòng Vali (Three-Quarter Open Case Packing)</h3>
+        </div>
+
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_04_start.jpg', 'Shot 04 • Khung hình Đầu (4.25s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (4.25s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_04_mid.jpg', 'Shot 04 • Cao trào Giữa (5.11s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (5.11s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_04_end.jpg', 'Shot 04 • Khung hình Cuối (5.96s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (5.96s)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Góc nhìn 3/4 toàn cảnh (Three-Quarter Medium Shot). Chiếc vali đã được mở bung 90 độ trên tấm thảm, lộ ra lớp lót vải dù đen bên trong. Yegor quỳ gối một bên, trang phục áo polo lá cọ, quần jean nhạt và giày sneaker đỏ sọc trắng, vươn tay đặt nhẹ chiếc điện thoại vào lòng đáy vali rồi chuẩn bị gập nắp.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Cung cấp góc nhìn toàn cảnh về không gian đóng gói hành lý; nhịp điệu hành động chậm rãi, chuẩn xác; sự hòa quyện giữa sắc đỏ đô của đôi giày thể thao, sắc xanh thảm hoa văn và màu bạc lạnh của vali tạo bảng màu đa tầng phong phú.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Vùng đáy vali màu đen hơi tối do thiếu nguồn sáng chiếu trực tiếp vào lòng vali.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Cần có một shot trung cảnh mở rộng sau chuỗi cận cảnh để tái định vị không gian và giúp người xem hiểu được tiến trình công việc (Orienting Shot).
+                </div>
+            </div>
+        </div>
+
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide 28mm f/2.8 • High Three-Quarter Angle
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Góc sàn trải thảm Ba Tư cạnh tủ quần áo
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng phòng tán xạ + vệt sáng Gobo hoàng hôn trên tường
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Cắt góc vuông góc (Top-Down Match Cut) vào đáy vali
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 05 • Cắt góc vuông góc (Top-Down Match Cut) vào đáy vali</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_04_to_05.jpg', '⚡ Chuyển Cảnh Sang Shot 05 • Cắt góc vuông góc (Top-Down Match Cut) vào đáy vali')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_04_to_05.jpg" alt="Transition Shot 04" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-5" data-start="5.96" data-end="7.33">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 05</span>
+                <button class="time-jump-btn" onclick="jumpToShot(5, 5.96)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    5.96s - 7.33s <span class="dur-pill">(1.37s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Wide 24mm f/2.8</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Góc Nhìn Thẳng Đứng Từ Trên Xuống Đáy Vali (Top-Down Flat Lay POV)</h3>
+        </div>
+
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_05_start.jpg', 'Shot 05 • Khung hình Đầu (5.96s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (5.96s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_05_mid.jpg', 'Shot 05 • Cao trào Giữa (6.64s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (6.64s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_05_end.jpg', 'Shot 05 • Khung hình Cuối (7.33s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (7.33s)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Camera đặt vuông góc 90 độ chiếu thẳng từ trên trần xuống (Top-Down / Flat Lay). Bàn tay Yegor tiến vào từ góc trái khung hình, đặt ngay ngắn chiếc iPhone vào giữa lòng lớp vải đen tuyền của vali, sau đó rút tay về.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Bố cục hình học đối xứng chuẩn mực (Geometric Symmetry); chiếc điện thoại trắng nổi bần bật trên nền đen tương phản 100% (High Contrast Pop); góc nhìn mô phỏng góc nhìn chủ quan (POV) của người đóng đồ, tăng tính tương tác thị giác.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Khung hình khá tĩnh, chỉ có cánh tay di chuyển; nếu máy quay chuyển động đẩy nhẹ (Slow Push-in) sẽ tăng thêm kịch tính.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Góc Top-Down 90 độ là vũ khí tối thượng để giới thiệu sản phẩm (Product Placement), tận dụng độ tương phản màu sắc giữa sản phẩm và phông nền để hút trọn ánh nhìn.
+                </div>
+            </div>
+        </div>
+
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide 24mm f/2.8 • Top-Down Overhead 90°
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Đáy lòng vali lót vải đen
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng trần đều không bóng đổ gắt
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Cắt đảo góc 180 độ (Reverse Angle Cut) giấu camera trong đáy vali
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 06 • Cắt đảo góc 180 độ (Reverse Angle Cut) giấu camera trong đáy vali</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_05_to_06.jpg', '⚡ Chuyển Cảnh Sang Shot 06 • Cắt đảo góc 180 độ (Reverse Angle Cut) giấu camera trong đáy vali')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_05_to_06.jpg" alt="Transition Shot 05" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-6" data-start="7.33" data-end="8.88">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 06</span>
+                <button class="time-jump-btn" onclick="jumpToShot(6, 7.33)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    7.33s - 8.88s <span class="dur-pill">(1.55s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Ultra-Wide 18mm f/2.8</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Đảo Góc Đáy Vali Nhìn Lên Trần Nhà & Cú Ném Đồ Che Ống Kính (Inside-Suitcase Ceiling POV & Fabric Wipe)</h3>
+        </div>
+
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_06_start.jpg', 'Shot 06 • Khung hình Đầu (7.33s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (7.33s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_06_mid.jpg', 'Shot 06 • Cao trào Giữa (8.11s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (8.11s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_06_end.jpg', 'Shot 06 • Khung hình Cuối (8.88s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (8.88s)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Camera được giấu nằm ngửa ngay trong đáy vali, hướng ống kính thẳng lên trần nhà và vách tường có tranh treo. Bất ngờ, các lớp quần áo được ném liên tiếp từ trên xuống lao thẳng vào ống kính. Đến khung hình 211-212, một chiếc áo đen rơi trùm kín toàn bộ ống kính, tạo cú lau đen tự nhiên (Fabric Occlusion Wipe to Black).
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Ý tưởng đột phá: Biến chính camera thành món đồ nằm trong vali; chuyển động rơi tự do của quần áo tạo cảm giác va chạm thị giác sống động (Kinetic Impact); cú trùm áo đen tạo ra một điểm cắt bóng tối (Natural Black Wipe) hoàn mỹ để chuyển cảnh ma thuật.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Cần căn chỉnh tốc độ rơi của vải để không làm xô lệch hoặc xước ống kính thiết bị quay.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Tận dụng vật thể thực tế (quần áo, khăn, nắp hộp) rơi che kín cảm biến máy quay để tạo chuyển cảnh lau mờ quang học (Optical Wipe), không cần bất kỳ kỹ xảo phức tạp nào trên phần mềm.
+                </div>
+            </div>
+        </div>
+
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Ultra-Wide 18mm f/2.8 • Floor-Level Straight Upward POV
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Góc nhìn từ đáy lòng vali nhìn lên trần phòng
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Đèn trần xuyên qua khoảng không giữa các lớp áo rơi
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Quần áo trùm kín ống kính tạo Black Wipe tự nhiên sang Shot 07
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 07 • Quần áo trùm kín ống kính tạo Black Wipe tự nhiên sang Shot 07</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_06_to_07.jpg', '⚡ Chuyển Cảnh Sang Shot 07 • Quần áo trùm kín ống kính tạo Black Wipe tự nhiên sang Shot 07')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_06_to_07.jpg" alt="Transition Shot 06" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-7" data-start="9.0" data-end="10.38">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 07</span>
+                <button class="time-jump-btn" onclick="jumpToShot(7, 9.0)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    9.00s - 10.38s <span class="dur-pill">(1.38s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Wide 20mm f/2.4</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Góc Máy Từ Trong Hòm Xe / Vali (Tarantino Trunk Shot POV & Lid Slam Blackout)</h3>
+        </div>
+
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_07_start.jpg', 'Shot 07 • Khung hình Đầu (9.00s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (9.00s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_07_mid.jpg', 'Shot 07 • Cao trào Giữa (9.69s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (9.69s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_07_end.jpg', 'Shot 07 • Khung hình Cuối (10.38s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (10.38s)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Kế thừa kỹ thuật điện ảnh kinh điển Trunk Shot của Quentin Tarantino: Máy quay đặt ngửa từ trong vali nhìn chéo lên khuôn mặt sắc lạnh, tập trung của Yegor. Anh vươn hai tay cầm lấy nắp vali và kéo sập dứt khoát xuống máy quay. Đến khung hình 248, nắp vali đóng sập hoàn toàn che kín khung hình về màu đen tuyệt đối.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Đậm chất điện ảnh Hollywood (Cinematic Trunk POV); góc máy thấp tôn vinh thần thái tập trung, nam tính của creator; tranh vẽ quả chanh vàng ở hậu cảnh tạo điểm nhấn màu sắc tinh tế; động tác sập nắp vali tạo xung lực mạnh mẽ và dứt khoát đóng lại chuỗi đóng đồ.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Do tốc độ đóng nắp nhanh, ánh sáng giảm đột ngột có thể gây nhiễu hạt (noise) nhẹ ở các frame cuối trước khi tối hẳn.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Khi đóng cửa xe, đóng nắp hộp, gập laptop hay đóng vali, hãy luôn thử đặt camera bên trong lòng vật thể nhìn ra. Đây là góc quay đắt giá nhất để biến hành động thường nhật thành một thước phim giật gân.
+                </div>
+            </div>
+        </div>
+
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide 20mm f/2.4 • Inside-Trunk Low Angle POV
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Bên trong lòng vali nhìn ngược lên khuôn mặt nhân vật
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Keylight hắt từ bên ngoài vào mặt nhân vật trước khi nắp sập
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Nắp vali đóng sập tạo cú cắt đen hoàn hảo (Blackout Match Cut) sang cú kéo khóa
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 08 • Nắp vali đóng sập tạo cú cắt đen hoàn hảo (Blackout Match Cut) sang cú kéo khóa</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_07_to_08.jpg', '⚡ Chuyển Cảnh Sang Shot 08 • Nắp vali đóng sập tạo cú cắt đen hoàn hảo (Blackout Match Cut) sang cú kéo khóa')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_07_to_08.jpg" alt="Transition Shot 07" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-8" data-start="10.38" data-end="11.83">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 08</span>
+                <button class="time-jump-btn" onclick="jumpToShot(8, 10.38)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    10.38s - 11.83s <span class="dur-pill">(1.45s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Macro 85mm f/2.0</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Siêu Cận Cảnh Đường Kéo Khóa Zip Kim Loại (Macro Zipper Glide Commercial Shot)</h3>
+        </div>
+
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_08_start.jpg', 'Shot 08 • Khung hình Đầu (10.38s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (10.38s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_08_mid.jpg', 'Shot 08 • Cao trào Giữa (11.11s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (11.11s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_08_end.jpg', 'Shot 08 • Khung hình Cuối (11.83s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (11.83s)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Cắt tức thì từ màn đêm sang góc máy siêu cận (Macro Extreme Close-Up). Các ngón tay của Yegor cầm lấy đầu kéo khóa zip vải dệt và kéo trượt êm ái dọc theo đường rãnh cao su chống nước của vỏ vali nhôm.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Chuẩn mực quảng cáo commercial phụ kiện cao cấp; độ sâu trường ảnh cực mỏng (Shallow DOF) làm mờ hoàn toàn hậu cảnh, tập trung 100% thị giác vào từng đường chỉ may và bánh răng khóa zip; vệt sáng vàng Gobo ở hậu cảnh tạo các đốm bokeh nghệ thuật lung linh.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Động tác kéo cần giữ tốc độ thật đều tay để chuyển động cơ học không bị giật cục.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Sau những cảnh hành động nhanh và mạnh, luôn chèn một cú máy Macro chi tiết nhỏ để hạ nhịp điệu (Pacing), đồng thời tôn vinh chất lượng gia công tinh xảo của sản phẩm.
+                </div>
+            </div>
+        </div>
+
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Macro 85mm f/2.0 • Extreme Close-Up 45°
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Viền rãnh khóa zip vali nhôm
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng xiên làm nổi khối răng khóa và chất liệu vải dệt
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Cắt thẳng (Hard Cut) sang góc nhìn từ trên cao khi kéo vali
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 09 • Cắt thẳng (Hard Cut) sang góc nhìn từ trên cao khi kéo vali</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_08_to_09.jpg', '⚡ Chuyển Cảnh Sang Shot 09 • Cắt thẳng (Hard Cut) sang góc nhìn từ trên cao khi kéo vali')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_08_to_09.jpg" alt="Transition Shot 08" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-9" data-start="11.83" data-end="13.04">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 09</span>
+                <button class="time-jump-btn" onclick="jumpToShot(9, 11.83)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    11.83s - 13.04s <span class="dur-pill">(1.21s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Wide 24mm f/2.8</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Góc Nhìn Trục Dọc Theo Dấu Bánh Xe Lăn (Top-Down Handle & Rolling Wheel Parallax)</h3>
+        </div>
+
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_09_start.jpg', 'Shot 09 • Khung hình Đầu (11.83s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (11.83s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_09_mid.jpg', 'Shot 09 • Cao trào Giữa (12.43s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (12.43s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_09_end.jpg', 'Shot 09 • Khung hình Cuối (13.04s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (13.04s)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Camera đặt trên cao nhìn dọc theo thân vali đứng thẳng. Bàn tay kéo quai xách nghiêng nhẹ, 4 bánh xe kép xoay chuyển mượt mà trượt ngang qua bề mặt tấm thảm hoa văn rực rỡ, chuẩn bị bước ra khỏi phòng.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Tạo cảm giác chuyển động đa chiều (Parallax Motion): Thân vali di chuyển tương đối so với hoa văn tĩnh của tấm thảm bên dưới; góc nhìn trực diện từ trên xuống độc đáo, khác biệt hoàn toàn với cách quay kéo vali ngang thông thường.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Góc máy lướt khá nhanh (1.21s); nếu kéo dài thêm 0.5s để thấy bánh xe lăn ra mép sàn gỗ sẽ tăng cảm giác bắt đầu cuộc hành trình.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Tận dụng họa tiết sàn nhà (gạch bông, thảm dệt, vân gỗ) làm nền tương phản chuyển động để phô diễn sự mượt mà của bánh xe và tính cơ động của sản phẩm.
+                </div>
+            </div>
+        </div>
+
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide 24mm f/2.8 • Overhead Top-Down Tracking
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Trên đỉnh vali trượt dọc tấm thảm
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng tán xạ tự nhiên
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Cắt chuyển động tiếp nối (Motion Match Cut) sang cú máy dưới mặt đất
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 10 • Cắt chuyển động tiếp nối (Motion Match Cut) sang cú máy dưới mặt đất</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_09_to_10.jpg', '⚡ Chuyển Cảnh Sang Shot 10 • Cắt chuyển động tiếp nối (Motion Match Cut) sang cú máy dưới mặt đất')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/transitions/trans_09_to_10.jpg" alt="Transition Shot 09" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-10" data-start="13.04" data-end="15.12">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 10</span>
+                <button class="time-jump-btn" onclick="jumpToShot(10, 13.04)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    13.04s - 15.12s <span class="dur-pill">(2.08s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="tech-tag">Ultra-Wide 16mm f/2.8</span>
+            </div>
+        </div>
+
+        <div class="shot-headline-box">
+            <h3 class="shot-headline-title">Góc Máy Sát Đất Worm's Eye View & Cú Lướt Kéo Vali Ra Sân Bay (Extreme Low-Angle Hero Walk & Parallax Outro)</h3>
+        </div>
+
+        <div class="keyframes-grid">
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_10_start.jpg', 'Shot 10 • Khung hình Đầu (13.04s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_10_start.jpg" alt="Shot 10 Start" loading="lazy">
+                    <span class="kf-badge start">Đầu (13.04s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_10_mid.jpg', 'Shot 10 • Cao trào Giữa (14.08s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_10_mid.jpg" alt="Shot 10 Mid" loading="lazy">
+                    <span class="kf-badge mid">Giữa (14.08s)</span>
+                </div>
+            </div>
+            <div class="keyframe-item" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_10_end.jpg', 'Shot 10 • Khung hình Cuối (15.12s)')">
+                <div class="kf-img-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_10_end.jpg" alt="Shot 10 End" loading="lazy">
+                    <span class="kf-badge end">Cuối (15.12s)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="analysis-blocks-grid">
+            <div class="critique-block action-block">
+                <div class="block-title">
+                    <span class="icon">🎬</span> Mô Tả Đối Tượng &amp; Diễn Biến
+                </div>
+                <div class="block-content">
+                    Camera đặt áp sát mặt sàn (Worm's Eye View / Ground Level) nhìn thẳng đứng lên trên qua khung quai kéo vali. Yegor sải bước dài đầy tự tin, tay nắm chắc thanh kéo, thân hình cao lớn che một phần trần nhà trong khi đèn trần và điều hòa lướt qua phía trên tạo hiệu ứng thị sai (Perspective Parallax) cực mạnh.
+                </div>
+            </div>
+
+            <div class="critique-block two-sided-critique">
+                <div class="block-title">
+                    <span class="icon">⚖️</span> Đánh Giá Bố Cục 2 Chiều (Khen / Chê Khách Quan)
+                </div>
+                <div class="two-column-critique">
+                    <div class="critique-col pro">
+                        <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <p>Cú máy kết màn (Hero Outro Shot) đỉnh cao: Biến creator thành một người du hành đầy phong cách chuẩn bị lên đường; góc nhìn cực thấp qua khung tay cầm tạo bố cục đóng khung độc lạ; chuyển động lùi của camera tạo cảm giác chiếc vali đang lướt thẳng vào phòng chờ sân bay; kết thúc mở đầy phấn khích.</p>
+                    </div>
+                    <div class="critique-col con">
+                        <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <p>Người quay cần di chuyển máy lùi thật mượt (dùng dolly sàn hoặc gắn gimbal thấp) để tránh rung lắc không chủ đích.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Đừng bao giờ kết thúc video bằng một cảnh quay ngang tầm mắt nhàm chán; hãy đặt máy sát sàn nhà nhìn ngược lên để tạo góc nhìn người hùng (Hero Angle), biến món đồ bình thường thành biểu tượng phong cách sống.
+                </div>
+            </div>
+        </div>
+
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Ultra-Wide 16mm f/2.8 • Extreme Low Angle Worm's-Eye View Tracking
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Góc sàn phòng nhìn ngược lên trần nhà và hành lang
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ambient trần + ánh sáng tự nhiên từ cửa sổ hắt vào
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Khóa đuôi video (Final Cinematic Outro / Save For Later)
+            </div>
+        </div>
+
+        
+    </div>
+    
+        </div>
+    </div>
+</div>
+
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img src="" alt="Enlarged Keyframe" class="lightbox-content" id="lightboxImg">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<script>
+function setViewMode(mode) {
+    const detailView = document.getElementById('storyboardView');
+    const gridView = document.getElementById('gridView');
+    const btnDetail = document.getElementById('tabDetail');
+    const btnGrid = document.getElementById('tabGrid');
+
+    if (mode === 'grid') {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        btnGrid.classList.add('active');
+        btnDetail.classList.remove('active');
+    } else {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        btnDetail.classList.add('active');
+        btnGrid.classList.remove('active');
+    }
+}
+
+function jumpToShot(shotId, timeSec) {
+    const video = document.getElementById('playerVideo');
+    if (video) {
+        video.currentTime = timeSec;
+        video.play().catch(() => {});
+    }
+    setViewMode('detail');
+    const el = document.getElementById('shot-' + shotId);
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        el.style.borderColor = 'var(--accent-blue)';
+        setTimeout(() => {
+            el.style.borderColor = '';
+        }, 1500);
+    }
+}
+
+function openLightbox(imgSrc, captionText) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCaption');
+    img.src = imgSrc;
+    cap.innerText = captionText;
+    modal.style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').style.display = 'none';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>6 Góc Máy Trong 60 Giây: Thao Lược B-Roll Thần Tốc Cầu Đi Bộ - @layton_video • Director's Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #0b0f17;
+    --bg-card: #131b2a;
+    --bg-card-hover: #1c273c;
+    --bg-sidebar: #0f1624;
+    --border-color: #202c42;
+    --border-active: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-amber: #f59e0b;
+    --accent-blue: #38bdf8;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-purple: #c084fc;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    font-size: 14.5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Top Navigation Header */
+.top-nav {
+    background: rgba(15, 22, 36, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+.nav-badge {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+    background: var(--bg-card-hover);
+}
+.nav-btn.primary {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    border-color: var(--accent-blue);
+}
+.nav-btn.primary:hover {
+    opacity: 0.9;
+}
+
+/* Main Layout Split Screen */
+.main-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Left Sticky Video Column */
+.player-column {
+    width: 420px;
+    flex-shrink: 0;
+    padding: 24px 16px 24px 24px;
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-right: 1px solid var(--border-color);
+}
+.video-frame-box {
+    background: #000;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    aspect-ratio: 9 / 16;
+    max-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-frame-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.player-controls {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.15s;
+}
+.ctrl-btn:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-blue);
+}
+.ctrl-btn.active {
+    background: rgba(56, 189, 248, 0.2);
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+.speed-pills {
+    display: flex;
+    gap: 4px;
+}
+.speed-pill {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+}
+.speed-pill.active {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    font-weight: 700;
+    border-color: var(--accent-blue);
+}
+
+/* Right Content Column */
+.content-column {
+    flex: 1;
+    padding: 24px 28px 40px 24px;
+    min-width: 0;
+}
+
+/* Header Banner */
+.report-header {
+    margin-bottom: 24px;
+}
+.meta-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.author-ig-badge {
+    background: rgba(244, 63, 94, 0.12);
+    color: #fb7185;
+    border: 1px solid rgba(244, 63, 94, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s;
+}
+.author-ig-badge:hover {
+    background: rgba(244, 63, 94, 0.25);
+    color: #fff;
+}
+.stat-pill {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: var(--font-mono);
+}
+.report-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.35;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+.report-summary {
+    color: var(--text-secondary);
+    font-size: 14.5px;
+    line-height: 1.7;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-amber);
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* View Mode Switcher */
+.view-switch-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 24px;
+}
+.tab-pills {
+    display: flex;
+    gap: 6px;
+}
+.tab-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+}
+.tab-btn.active {
+    background: var(--bg-sidebar);
+    border-color: var(--border-color);
+    color: var(--accent-blue);
+}
+.drawer-toggle-btn {
+    background: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.drawer-toggle-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+}
+
+/* Shot Cards (Detail View) */
+.shots-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.shot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 20px;
+    transition: all 0.2s ease;
+    scroll-margin-top: 80px;
+}
+.shot-card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+}
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.shot-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.shot-index-badge {
+    background: var(--accent-blue);
+    color: #0b0f17;
+    font-weight: 800;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+}
+.time-jump-btn {
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    color: var(--accent-blue);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.15s;
+}
+.time-jump-btn:hover {
+    background: var(--accent-blue);
+    color: #0b0f17;
+}
+.dur-pill {
+    opacity: 0.8;
+    font-weight: 400;
+}
+.tech-tag {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11.5px;
+    font-family: var(--font-mono);
+}
+.shot-headline-box {
+    margin-bottom: 16px;
+}
+.shot-headline-title {
+    font-family: var(--font-heading);
+    font-size: 16.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.45;
+}
+
+/* Keyframes Grid (3 items) */
+.keyframes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+}
+.keyframe-item {
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+    background: #000;
+    aspect-ratio: 9 / 16;
+}
+.keyframe-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.keyframe-item:hover img {
+    transform: scale(1.03);
+}
+.kf-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+}
+.kf-badge.start { border-left: 3px solid var(--accent-blue); }
+.kf-badge.mid { border-left: 3px solid var(--accent-amber); }
+.kf-badge.end { border-left: 3px solid var(--accent-emerald); }
+
+/* Analysis 3 Blocks Grid */
+.analysis-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.critique-block {
+    background: rgba(15, 22, 36, 0.7);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 14px 16px;
+}
+.block-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 13.5px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-content {
+    font-size: 13.5px;
+    color: #cbd5e1;
+    line-height: 1.65;
+}
+.two-column-critique {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-col {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.critique-col.pro {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #a7f3d0;
+}
+.critique-col.con {
+    background: rgba(244, 63, 94, 0.08);
+    border: 1px solid rgba(244, 63, 94, 0.2);
+    color: #fecdd3;
+}
+.col-header {
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 12.5px;
+}
+.critique-col.pro .col-header { color: var(--accent-emerald); }
+.critique-col.con .col-header { color: var(--accent-rose); }
+
+.takeaway-block {
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-left: 4px solid var(--accent-amber);
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+.takeaway-title {
+    font-weight: 700;
+    color: var(--accent-amber);
+    font-size: 13px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-size: 13.5px;
+    color: #fef3c7;
+    line-height: 1.6;
+}
+
+/* Tech Specs Footer */
+.shot-specs-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.spec-label {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* Transitions Section */
+.trans-section {
+    margin-top: 16px;
+    background: var(--bg-sidebar);
+    border: 1px dashed var(--border-color);
+    border-radius: 10px;
+    padding: 12px;
+}
+.trans-header {
+    font-size: 12px;
+    color: var(--accent-blue);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.trans-img-wrap {
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+.trans-img-wrap img {
+    width: 100%;
+    display: block;
+}
+.zoom-indicator {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+/* Visual Grid View */
+.grid-view-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-blue);
+}
+.grid-thumb-box {
+    aspect-ratio: 9 / 16;
+    background: #000;
+    position: relative;
+}
+.grid-thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid-time-tag {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: var(--font-mono);
+}
+.grid-shot-tag {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: var(--accent-blue);
+    color: #0b0f17;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+}
+.grid-card-desc {
+    padding: 10px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Drawer Jump Menu */
+.drawer-backdrop {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    z-index: 200;
+    display: none;
+}
+.drawer-container {
+    position: fixed;
+    top: 0; right: -360px; width: 340px; height: 100%;
+    background: var(--bg-sidebar);
+    border-left: 1px solid var(--border-color);
+    z-index: 201;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+}
+.drawer-header {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.drawer-title {
+    font-weight: 700;
+    font-size: 15px;
+}
+.drawer-close {
+    background: none; border: none; color: var(--text-muted);
+    font-size: 20px; cursor: pointer;
+}
+.drawer-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.drawer-shot-row {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: all 0.15s;
+}
+.drawer-shot-row:hover {
+    border-color: var(--accent-blue);
+    background: var(--bg-card-hover);
+}
+.d-badge {
+    color: var(--accent-blue);
+    font-weight: 700;
+    font-size: 11px;
+    font-family: var(--font-mono);
+}
+.d-time {
+    font-size: 10.5px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+.d-title {
+    font-size: 12px;
+    color: var(--text-primary);
+    line-height: 1.35;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(5, 8, 15, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 300;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+}
+.lightbox-caption {
+    margin-top: 14px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .main-wrapper {
+        flex-direction: column;
+    }
+    .player-column {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 16px;
+        z-index: 90;
+        background: var(--bg-main);
+    }
+    .video-frame-box {
+        max-height: 380px;
+    }
+    .two-column-critique {
+        grid-template-columns: 1fr;
+    }
+}
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+
+<style>
+@font-face {
+    font-family: 'SVN-Acta';
+    src: url('../fonts/SVN-Acta-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'SVN-Acta';
+    src: url('../fonts/SVN-Acta-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'GT America';
+    src: url('../fonts/GT-America-LCGV-Standard-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'GT America';
+    src: url('../fonts/GT-America-LCGV-Standard-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'GT America';
+    src: url('../fonts/GT-America-LCGV-Standard-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+:root {
+    --font-heading: 'SVN-Acta', 'Plus Jakarta Sans', Georgia, serif !important;
+    --font-body: 'GT America', 'Be Vietnam Pro', -apple-system, sans-serif !important;
+}
+h1, h2, h3, .nav-brand, .summary-title, .section-title {
+    font-family: var(--font-heading) !important;
+    letter-spacing: -0.02em;
+}
+body, p, .n-text, .critique-col p, .takeaway-body, .spec-item {
+    font-family: var(--font-body) !important;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Top Header Navigation -->
+<header class="top-nav">
+    <a href="https://vietndj.github.io/scene.html" class="nav-brand">
+        <span class="nav-badge">VIDEO Master Series</span>
+        <span>Director's Shot Analysis</span>
+    </a>
+    <div class="nav-actions">
+        <a href="https://www.instagram.com/reel/DbILcfyxZot/" target="_blank" class="nav-btn primary">
+            📸 Xem Instagram Gốc ↗
+        </a>
+        <a href="https://vietndj.github.io/scene.html" class="nav-btn">
+            🏛 Cổng Tra Cứu
+        </a>
+    </div>
+</header>
+
+<div class="main-wrapper">
+
+    <!-- Left Column: Video Sticky Player -->
+    <aside class="player-column">
+        <div class="video-frame-box">
+            <video id="mainVideo" playsinline preload="auto">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DbILcfyxZot.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video thẻ video HTML5.
+            </video>
+        </div>
+
+        <div class="player-controls">
+            <div class="ctrl-row">
+                <button class="ctrl-btn" id="playPauseBtn" onclick="togglePlay()">▶ Phát Video</button>
+                <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                <button class="ctrl-btn" id="muteBtn" onclick="toggleMute()">🔊</button>
+            </div>
+            <div class="ctrl-row">
+                <span style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Tốc Độ:</span>
+                <div class="speed-pills">
+                    <button class="speed-pill" onclick="setSpeed(0.25, this)">0.25x</button>
+                    <button class="speed-pill" onclick="setSpeed(0.5, this)">0.5x</button>
+                    <button class="speed-pill active" onclick="setSpeed(1.0, this)">1.0x</button>
+                    <button class="speed-pill" onclick="setSpeed(1.5, this)">1.5x</button>
+                    <button class="speed-pill" onclick="setSpeed(2.0, this)">2.0x</button>
+                </div>
+            </div>
+            <div class="ctrl-row" style="margin-top: 4px;">
+                <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DbILcfyxZot.mp4" download class="ctrl-btn" style="flex: 1; justify-content: center; text-decoration: none;">
+                    ⬇ Tải Video Gốc MP4
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Right Column: Detail Content -->
+    <main class="content-column">
+        <header class="report-header">
+            <div class="meta-tags-flex">
+                <a href="https://www.instagram.com/reel/DbILcfyxZot/" target="_blank" class="author-ig-badge">
+                    📸 @layton_video ↗
+                </a>
+                <span class="stat-pill">⏱ 74.44s</span>
+                <span class="stat-pill">🎞 9 Phân Cảnh</span>
+                <span class="stat-pill">📐 1080x1920 (9:16)</span>
+            </div>
+            <h1 class="report-title">6 Góc Máy Trong 60 Giây: Thao Lược B-Roll Thần Tốc Cầu Đi Bộ - @layton_video</h1>
+            <div class="report-summary">
+                Bóc tách chuyên sâu quy trình Walk and Talk kết hợp B-Roll thực chiến của nhà sáng tạo nội dung Layton (@layton_video). Giải mã công thức 'Speedrun Filmmaking' hoàn thành 6 góc máy điện ảnh chỉ trong 60 giây bấm máy: 1. Hook giới thiệu thử thách thần tốc, 2. Toàn cảnh kiến trúc mở rộng (Wide Establishing), 3. Toàn cảnh góc cao lan can (High Wide 45°), 4. Góc cao trực diện nhìn xuống lối đi (Overhead Symmetry), 5. Khung hình trong khung hình nan gỗ (Frame Within A Frame), 6. Trung cảnh góc thấp bắt nhịp bước chân (Low Medium Pace), 7. Toàn cảnh sát mặt sàn gỗ (Worm's Eye Surface), 8. Cầu nối đếm ngược kịch tính (Anticipation Gap 4-3-2-1), và 9. Bản hòa tấu thành phẩm B-roll 6 góc kết hợp foley sound design bùng nổ.
+            </div>
+        </header>
+
+        <!-- View Switcher & Drawer Toggle -->
+        <div class="view-switch-bar">
+            <div class="tab-pills">
+                <button class="tab-btn active" id="btnDetail" onclick="switchView('detail')">📋 Chế Độ Chi Tiết</button>
+                <button class="tab-btn" id="btnGrid" onclick="switchView('grid')">🖼 Lưới Khung Hình</button>
+            </div>
+            <button class="drawer-toggle-btn" onclick="toggleDrawer(true)">
+                📑 Danh Sách Shot (9)
+            </button>
+        </div>
+
+        <!-- Detail Timeline Storyboard -->
+        <section class="shots-timeline" id="detailViewSection">
+            
+    <div class="shot-card" id="shot-1" data-start="0.0" data-end="2.76">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 01</span>
+                <button class="time-jump-btn" onclick="jumpToShot(1, 0.0)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    0.00s - 2.76s <span class="dur-pill">(2.76s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="lens-pill">Wide 24mm f/2.8</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Hook Đảo Ngược Kỳ Vọng & Phát Động Thử Thách 60 Giây: Khóa chặt sự tò mò trong 3 giây vàng</h3>
+
+        <!-- Keyframes Trio -->
+        <div class="keyframes-trio">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_01_start.jpg', 'Shot 01 Start Frame (0.00s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-tag start">Start • 0.00s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_01_mid.jpg', 'Shot 01 Mid Frame (1.38s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-tag mid">Mid • 1.38s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_01_end.jpg', 'Shot 01 End Frame (2.76s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-tag end">End • 2.76s</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Narrative Analysis -->
+        <div class="narrative-box">
+            <div class="narrative-item">
+                <div class="n-label">🎬 Hành Động &amp; Bối Cảnh Thị Giác</div>
+                <div class="n-text">Layton bước đi tự tin về phía trước trong bối cảnh kiến trúc cầu đi bộ hiện đại, nhìn thẳng vào ống kính đang tracking lùi. Dòng chữ đồ họa lớn nổi bật: 'HOW I FILMED 6 SHOTS IN 60 SECS' cùng bộ đếm thời gian số (00:00:00) xuất hiện dứt khoát, thiết lập ngay động lực xem hết video.</div>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col pro">
+                    <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <p>Bố cục trung tâm (Center Framing) tạo điểm neo thị giác mạnh mẽ; chuyển động tiến về phía trước kéo người xem đồng hành vào hành trình; typography đậm, đanh thép không che khuôn mặt; tạo ngay mỏ neo tò mò (Curiosity Hook) về một kỳ tích sản xuất video siêu tốc.</p>
+                </div>
+                <div class="critique-col con">
+                    <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <p>Ánh sáng trên khuôn mặt hơi phẳng do bầu trời nhiều mây khuếch tán; việc đội mũ lưỡi trai tạo bóng đổ nhẹ ở vùng hốc mắt.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Mở đầu video giáo dục/kỹ thuật bằng một thử thách bị giới hạn thời gian (gamification/countdown) để kích thích adrenaline và đẩy tỷ lệ giữ chân (Retention Rate) lên mức tối đa.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide 24mm f/2.8 • Handheld Tracking Backward
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Lối vào cầu đi bộ kiến trúc gỗ - thép
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng tự nhiên ngày nhiều mây khuếch tán đều (Overcast Daylight)
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Cut động chuyển nhanh sang vị trí thiết lập máy đầu tiên
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 02 • Cut động chuyển nhanh sang vị trí thiết lập máy đầu tiên</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_01_to_02.jpg', '⚡ Chuyển Cảnh Sang Shot 02 • Cut động chuyển nhanh sang vị trí thiết lập máy đầu tiên')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_01_to_02.jpg" alt="Transition Shot 01" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-2" data-start="2.76" data-end="6.92">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 02</span>
+                <button class="time-jump-btn" onclick="jumpToShot(2, 2.76)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    2.76s - 6.92s <span class="dur-pill">(4.16s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="lens-pill">Wide 20mm</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Thiết Lập Shot 1 - Toàn Cảnh Kiến Trúc Mở Rộng: Định vị không gian và quy mô môi trường</h3>
+
+        <!-- Keyframes Trio -->
+        <div class="keyframes-trio">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_02_start.jpg', 'Shot 02 Start Frame (2.76s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-tag start">Start • 2.76s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_02_mid.jpg', 'Shot 02 Mid Frame (4.84s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-tag mid">Mid • 4.84s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_02_end.jpg', 'Shot 02 End Frame (6.92s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-tag end">End • 6.92s</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Narrative Analysis -->
+        <div class="narrative-box">
+            <div class="narrative-item">
+                <div class="n-label">🎬 Hành Động &amp; Bối Cảnh Thị Giác</div>
+                <div class="n-text">Đồng hồ đếm ngược kích hoạt (16:46 | 00:59 ➔ 00:56). Layton mang chân máy mini đặt góc rộng bao quát toàn bộ chiều dài chiếc cầu đi bộ kết cấu gỗ hiện đại. Badge trên màn hình hiện rõ: 'SHOT 1: WIDE'. Khán giả thấy rõ cự ly đặt máy đón hướng người đi từ xa lại gần.</div>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col pro">
+                    <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <p>Khai thác tối đa chiều sâu hút mắt của hành lang cầu; các đường dầm gỗ trần và lan can tạo điểm hội tụ (Vanishing Point) tự nhiên dẫn hướng ánh nhìn về trung tâm; minh họa chân thực công tác tiền kỳ nhanh gọn chỉ trong 3 giây.</p>
+                </div>
+                <div class="critique-col con">
+                    <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <p>Một vài người đi bộ ở hậu cảnh phía xa có thể gây xao nhãng nếu người quay không căn thời điểm luồng di chuyển vắng nhất.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Luôn bắt đầu một chuỗi B-roll bằng góc toàn cảnh (Establishing Shot) để định vị không gian và quy mô môi trường cho người xem trước khi đi vào chi tiết cận cảnh.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide 20mm • Eye-Level Stationary Setup
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Hành lang chính cầu đi bộ
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng tự nhiên tán xạ gián tiếp qua vòm mái che
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Fast Walk chuyển động chạy nhanh lên bậc thang tầng lửng
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 03 • Fast Walk chuyển động chạy nhanh lên bậc thang tầng lửng</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_02_to_03.jpg', '⚡ Chuyển Cảnh Sang Shot 03 • Fast Walk chuyển động chạy nhanh lên bậc thang tầng lửng')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_02_to_03.jpg" alt="Transition Shot 02" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-3" data-start="6.92" data-end="20.8">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 03</span>
+                <button class="time-jump-btn" onclick="jumpToShot(3, 6.92)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    6.92s - 20.80s <span class="dur-pill">(13.88s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="lens-pill">Wide 24mm f/4.0</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Thiết Lập Shot 2 - Toàn Cảnh Góc Cao Lan Can Cầu: Tận dụng cao độ kiến trúc tạo góc nhìn chim bay</h3>
+
+        <!-- Keyframes Trio -->
+        <div class="keyframes-trio">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_03_start.jpg', 'Shot 03 Start Frame (6.92s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-tag start">Start • 6.92s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_03_mid.jpg', 'Shot 03 Mid Frame (13.86s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-tag mid">Mid • 13.86s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_03_end.jpg', 'Shot 03 End Frame (20.80s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-tag end">End • 20.80s</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Narrative Analysis -->
+        <div class="narrative-box">
+            <div class="narrative-item">
+                <div class="n-label">🎬 Hành Động &amp; Bối Cảnh Thị Giác</div>
+                <div class="n-text">Đồng hồ đếm ngược từ 00:55 ➔ 00:42. Layton leo lên tầng lửng lan can, kẹp chân máy hướng chếch 45 độ xuống mặt sàn lối đi. Badge hiện: 'SHOT 2: HIGH WIDE'. Layton tinh chỉnh góc máy bao quát hành lang từ trên cao, bắt trọn bước đi của chính mình trên nền sàn gỗ.</div>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col pro">
+                    <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <p>Khai thác triệt để chiều cao kiến trúc đa tầng; góc máy từ trên cao nhìn xuống giúp nhân vật nổi bật rõ nét trên nền vân gỗ sàn, đồng thời loại bỏ hoàn toàn các yếu tố hậu cảnh lộn xộn bên dưới.</p>
+                </div>
+                <div class="critique-col con">
+                    <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <p>Cần thao tác cẩn trọng khi đặt máy trên thành lan can cao để tránh rung lắc hoặc rơi thiết bị khi gặp gió lốc trên cầu.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Tận dụng các cao độ kiến trúc sẵn có (ban công, cầu thang, gờ lan can) để tạo góc nhìn High-Angle ấn tượng mà không cần đến thiết bị cẩu gimbal cồng kềnh.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Wide 24mm f/4.0 • High Angle 45° Chúi Xuống
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Gờ lan can tầng lửng cầu đi bộ
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng trời mềm dịu (Soft Sky Ambient)
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Layton chạy dọc hành lang sang vị trí quan sát đối xứng tiếp theo
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 04 • Layton chạy dọc hành lang sang vị trí quan sát đối xứng tiếp theo</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_03_to_04.jpg', '⚡ Chuyển Cảnh Sang Shot 04 • Layton chạy dọc hành lang sang vị trí quan sát đối xứng tiếp theo')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_03_to_04.jpg" alt="Transition Shot 03" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-4" data-start="20.8" data-end="26.88">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 04</span>
+                <button class="time-jump-btn" onclick="jumpToShot(4, 20.8)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    20.80s - 26.88s <span class="dur-pill">(6.08s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="lens-pill">Ultra-Wide 18mm</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Thiết Lập Shot 3 - Góc Cao Trực Diện Nhìn Xuống Lối Đi: Tính kỷ luật hình học và trục đối xứng hoàn hảo</h3>
+
+        <!-- Keyframes Trio -->
+        <div class="keyframes-trio">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_04_start.jpg', 'Shot 04 Start Frame (20.80s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-tag start">Start • 20.80s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_04_mid.jpg', 'Shot 04 Mid Frame (23.84s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-tag mid">Mid • 23.84s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_04_end.jpg', 'Shot 04 End Frame (26.88s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-tag end">End • 26.88s</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Narrative Analysis -->
+        <div class="narrative-box">
+            <div class="narrative-item">
+                <div class="n-label">🎬 Hành Động &amp; Bối Cảnh Thị Giác</div>
+                <div class="n-text">Đồng hồ đếm ngược từ 00:41 ➔ 00:36. Layton cố định camera trên mép lan can đối xứng nhìn thẳng xuống dòng chuyển động người đi bộ. Badge hiển thị: 'SHOT 6: HIGH WIDE' (mã phân loại thực địa của tác giả). Cú máy bắt trọn nhịp di chuyển dọc theo trục đối xứng của cây cầu.</div>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col pro">
+                    <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <p>Tính hình học cực cao (Geometric Symmetry); các đường thẳng song song của lan can và mặt sàn tạo bố cục một điểm tụ kinh điển, mang lại cảm giác trật tự và quy củ như ngôn ngữ điện ảnh Wes Anderson.</p>
+                </div>
+                <div class="critique-col con">
+                    <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <p>Thời gian thiết lập gấp rút khiến việc cân chỉnh đường chân trời (Horizon Level) đòi hỏi phản xạ canh thước thủy điện tử rất nhanh.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Khi quay ở không gian kiến trúc hiện đại, hãy luôn tìm kiếm các trục đối xứng thẳng đứng từ trên cao để tạo sự thỏa mãn thị giác (Visual Satisfaction).
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Ultra-Wide 18mm • Top-Down High Angle 60°
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Trục giữa lan can cầu vượt
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Uniform Daylight đồng nhất toàn khung hình
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Layton rút máy lao nhanh xuống cầu thang bộ tiếp cận sàn gỗ
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 05 • Layton rút máy lao nhanh xuống cầu thang bộ tiếp cận sàn gỗ</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_04_to_05.jpg', '⚡ Chuyển Cảnh Sang Shot 05 • Layton rút máy lao nhanh xuống cầu thang bộ tiếp cận sàn gỗ')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_04_to_05.jpg" alt="Transition Shot 04" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-5" data-start="26.88" data-end="42.6">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 05</span>
+                <button class="time-jump-btn" onclick="jumpToShot(5, 26.88)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    26.88s - 42.60s <span class="dur-pill">(15.72s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="lens-pill">35mm-50mm Normal Lens</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Thiết Lập Shot 4 - Khung Hình Trong Khung Hình Nan Gỗ: Tận dụng cấu trúc kiến trúc làm khung nhìn trộm</h3>
+
+        <!-- Keyframes Trio -->
+        <div class="keyframes-trio">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_05_start.jpg', 'Shot 05 Start Frame (26.88s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-tag start">Start • 26.88s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_05_mid.jpg', 'Shot 05 Mid Frame (34.74s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-tag mid">Mid • 34.74s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_05_end.jpg', 'Shot 05 End Frame (42.60s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-tag end">End • 42.60s</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Narrative Analysis -->
+        <div class="narrative-box">
+            <div class="narrative-item">
+                <div class="n-label">🎬 Hành Động &amp; Bối Cảnh Thị Giác</div>
+                <div class="n-text">Đồng hồ đếm ngược từ 00:35 ➔ 00:20. Layton luồn ống kính vào giữa khe các cột lam gỗ trang trí đứng dọc hông cầu. Badge hiện: 'SHOT 3: FRAME WITHIN A FRAME'. Layton căn chỉnh ống kính để hai thanh gỗ tạo thành khung tiền cảnh (Foreground Framing), biến cảnh quay thành góc nhìn trộm đầy chiều sâu.</div>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col pro">
+                    <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <p>Tạo chiều sâu 3 lớp rõ rệt (Tiền cảnh nan gỗ ➔ Trung cảnh nhân vật bước qua ➔ Hậu cảnh cầu vòm); kích thích sự tò mò thị giác của người xem nhờ hiệu ứng lấp ló (Voyeuristic Cinematic Look).</p>
+                </div>
+                <div class="critique-col con">
+                    <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <p>Cần khép khẩu vừa phải hoặc canh nét vùng (Zone Focus) chính xác để tránh tình trạng máy ảnh lấy nét nhầm vào thanh gỗ tiền cảnh gần thấu kính.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Hãy biến bất kỳ cột trụ, kẽ lá hay cánh cửa nào của bối cảnh thành khung phụ (Sub-frame) nhằm cô đọng điểm nhìn và nhân đôi cảm giác điện ảnh.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> 35mm-50mm Normal Lens • Architectural Slit Framing
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Khe lam gỗ trang trí mặt bên cầu
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Tương phản bóng râm tiền cảnh và ánh sáng hắt trung cảnh
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Layton hạ chân máy xuống thấp sát mặt sàn ván gỗ
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 06 • Layton hạ chân máy xuống thấp sát mặt sàn ván gỗ</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_05_to_06.jpg', '⚡ Chuyển Cảnh Sang Shot 06 • Layton hạ chân máy xuống thấp sát mặt sàn ván gỗ')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_05_to_06.jpg" alt="Transition Shot 05" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-6" data-start="42.6" data-end="50.8">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 06</span>
+                <button class="time-jump-btn" onclick="jumpToShot(6, 42.6)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    42.60s - 50.80s <span class="dur-pill">(8.20s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="lens-pill">35mm f/2.8</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Thiết Lập Shot 5 - Trung Cảnh Góc Thấp Bắt Chuyển Động Chân: Tạo xung lực bước đi và nhịp điệu chuyển động</h3>
+
+        <!-- Keyframes Trio -->
+        <div class="keyframes-trio">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_06_start.jpg', 'Shot 06 Start Frame (42.60s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-tag start">Start • 42.60s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_06_mid.jpg', 'Shot 06 Mid Frame (46.70s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-tag mid">Mid • 46.70s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_06_end.jpg', 'Shot 06 End Frame (50.80s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-tag end">End • 50.80s</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Narrative Analysis -->
+        <div class="narrative-box">
+            <div class="narrative-item">
+                <div class="n-label">🎬 Hành Động &amp; Bối Cảnh Thị Giác</div>
+                <div class="n-text">Đồng hồ đếm ngược từ 00:19 ➔ 00:12. Layton đặt chân máy ngang tầm đầu gối, chĩa hơi ngửa nhẹ vào lối đi. Badge hiện: 'SHOT 4: LOW MEDIUM'. Góc máy này chuyên dụng để bắt trọn nhịp bước chân, đôi giày thể thao và chuyển động thân dưới khi di chuyển.</div>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col pro">
+                    <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <p>Góc thấp trung bình giúp cơ thể trông bề thế và năng động hơn; nhịp bước chân tạo nhịp điệu cơ học (Pacing Momentum) chuẩn bị hoàn hảo cho cú chuyển cảnh tiếp theo.</p>
+                </div>
+                <div class="critique-col con">
+                    <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <p>Vùng nền sàn gỗ chiếm 1/3 khung hình có thể bị tối nếu không có ánh sáng phản chiếu bề mặt.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Trong chuỗi B-roll du ký hoặc phong cách sống, luôn cần một cú máy Low-Medium tập trung vào chuyển động bước đi để tạo sự thay đổi tiêu cự và nhịp độ so với góc toàn.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> 35mm f/2.8 • Low Angle Knee-Level
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Sàn đi bộ trung tâm
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng tán xạ mặt sàn gỗ tự nhiên
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Layton ép chân máy sát rạt xuống mặt ván gỗ sàn
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 07 • Layton ép chân máy sát rạt xuống mặt ván gỗ sàn</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_06_to_07.jpg', '⚡ Chuyển Cảnh Sang Shot 07 • Layton ép chân máy sát rạt xuống mặt ván gỗ sàn')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_06_to_07.jpg" alt="Transition Shot 06" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-7" data-start="50.8" data-end="61.8">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 07</span>
+                <button class="time-jump-btn" onclick="jumpToShot(7, 50.8)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    50.80s - 61.80s <span class="dur-pill">(11.00s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="lens-pill">Ultra-Wide 16mm</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Thiết Lập Shot 6 - Toàn Cảnh Siêu Thấp Sát Mặt Sàn: Tận dụng Parallax vân gỗ khuếch đại góc nhìn sâu</h3>
+
+        <!-- Keyframes Trio -->
+        <div class="keyframes-trio">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_07_start.jpg', 'Shot 07 Start Frame (50.80s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-tag start">Start • 50.80s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_07_mid.jpg', 'Shot 07 Mid Frame (56.30s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-tag mid">Mid • 56.30s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_07_end.jpg', 'Shot 07 End Frame (61.80s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-tag end">End • 61.80s</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Narrative Analysis -->
+        <div class="narrative-box">
+            <div class="narrative-item">
+                <div class="n-label">🎬 Hành Động &amp; Bối Cảnh Thị Giác</div>
+                <div class="n-text">Đồng hồ bước vào 10 giây sinh tử: 00:11 ➔ 00:01! Layton đặt camera áp sát 100% xuống mặt sàn gỗ, góc chúc ngược lên vòm cầu. Badge hiện: 'SHOT 4: LOW WIDE' (phân loại BTS). Ống kính bắt trọn từng đường thớ gỗ thô ráp ngay sát thấu kính trước khi Layton bước ngang qua.</div>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col pro">
+                    <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <p>Góc nhìn mắt sâu (Worm's Eye View) tạo ấn tượng thị giác choáng ngợp; cự ly cực gần làm phóng đại vân gỗ tiền cảnh, tạo độ dịch chuyển parallax cực mạnh khi bước chân đi lướt qua.</p>
+                </div>
+                <div class="critique-col con">
+                    <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <p>Ống kính dễ bị bám bụi sàn hoặc rung giật nếu người bước đi giẫm mạnh vào phiến gỗ đặt máy.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Đặt ống kính chạm đất và để chủ thể bước ngang qua sát máy sẽ tạo ra cú quét chuyển cảnh tự nhiên (Whip/Pass-by Transition) đầy uy lực.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Ultra-Wide 16mm • Worm's Eye Ground Level
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Mặt sàn gỗ cầu đi bộ
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Ánh sáng phản chiếu mặt gỗ thô ráp
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Đồng hồ đếm ngược chạm mốc 00:00 kích hoạt màn hình đếm ngược
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 08 • Đồng hồ đếm ngược chạm mốc 00:00 kích hoạt màn hình đếm ngược</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_07_to_08.jpg', '⚡ Chuyển Cảnh Sang Shot 08 • Đồng hồ đếm ngược chạm mốc 00:00 kích hoạt màn hình đếm ngược')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_07_to_08.jpg" alt="Transition Shot 07" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-8" data-start="61.8" data-end="65.92">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 08</span>
+                <button class="time-jump-btn" onclick="jumpToShot(8, 61.8)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    61.80s - 65.92s <span class="dur-pill">(4.12s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="lens-pill">Graphic Countdown Overlay</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Cầu Nối Đếm Ngược Thần Tốc (Anticipation Countdown 4-3-2-1): Đỉnh điểm hồi hộp trước giờ G</h3>
+
+        <!-- Keyframes Trio -->
+        <div class="keyframes-trio">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_08_start.jpg', 'Shot 08 Start Frame (61.80s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_08_start.jpg" alt="Shot 08 Start" loading="lazy">
+                    <span class="kf-tag start">Start • 61.80s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_08_mid.jpg', 'Shot 08 Mid Frame (63.86s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_08_mid.jpg" alt="Shot 08 Mid" loading="lazy">
+                    <span class="kf-tag mid">Mid • 63.86s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_08_end.jpg', 'Shot 08 End Frame (65.92s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_08_end.jpg" alt="Shot 08 End" loading="lazy">
+                    <span class="kf-tag end">End • 65.92s</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Narrative Analysis -->
+        <div class="narrative-box">
+            <div class="narrative-item">
+                <div class="n-label">🎬 Hành Động &amp; Bối Cảnh Thị Giác</div>
+                <div class="n-text">Đồng hồ về đích 00:00, màn hình chuyển sang hiệu ứng đếm ngược trực quan: 'RESULT IN 4... 3... 2... 1...'. Âm thanh tiếng đồng hồ tích tắc dồn dập kết hợp hiệu ứng âm thanh tăng tần số (Riser & Heartbeat) khóa chặt toàn bộ sự chú ý của người xem trước khi giải phóng vào thành phẩm.</div>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col pro">
+                    <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <p>Điểm dừng tâm lý (Psychological Cliffhanger) hoàn hảo; tạo khoảng cách kỳ vọng khổng lồ giữa quy trình hậu trường hối hả đời thực và vẻ đẹp trau chuốt của thành phẩm B-roll sắp bùng nổ.</p>
+                </div>
+                <div class="critique-col con">
+                    <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <p>Không nên kéo dài quá 4 giây vì người dùng mạng xã hội có thể lướt qua nếu khoảng chờ bị loãng.</p>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Luôn tạo một 'khoảng lặng tích năng lượng' (Anticipation Gap) ngay trước khi tung ra kết quả tốt nhất của bạn; kỳ vọng càng cao, sự thỏa mãn khi xem kết quả càng lớn.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Graphic Countdown Overlay • Typography Trung Tâm
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Transition Screen Studio Graphics
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Độ tương phản đen trắng tối giản
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Match Beat Flash Cut sang bản dựng hoàn chỉnh 6 góc
+            </div>
+        </div>
+
+        
+        <div class="trans-section">
+            <div class="trans-header">
+                <span class="trans-title">⚡ Chuyển Cảnh Sang Shot 09 • Match Beat Flash Cut sang bản dựng hoàn chỉnh 6 góc</span>
+            </div>
+            <div class="trans-img-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_08_to_09.jpg', '⚡ Chuyển Cảnh Sang Shot 09 • Match Beat Flash Cut sang bản dựng hoàn chỉnh 6 góc')">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/transitions/trans_08_to_09.jpg" alt="Transition Shot 08" loading="lazy">
+                <span class="zoom-indicator">🔍 Phóng to so sánh chuyển cảnh</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="shot-card" id="shot-9" data-start="65.92" data-end="74.4">
+        <div class="shot-card-header">
+            <div class="shot-header-left">
+                <span class="shot-index-badge">Shot 09</span>
+                <button class="time-jump-btn" onclick="jumpToShot(9, 65.92)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    65.92s - 74.40s <span class="dur-pill">(8.48s)</span>
+                </button>
+            </div>
+            <div class="shot-header-right">
+                <span class="lens-pill">Fast-paced Multi-Angle Cut (6 micro-beats)</span>
+            </div>
+        </div>
+
+        <h3 class="shot-headline">Bản Hòa Tấu B-Roll Điện Ảnh 6 Góc Hoàn Chỉnh: Minh chứng thép cho năng lực sáng tạo 60 giây</h3>
+
+        <!-- Keyframes Trio -->
+        <div class="keyframes-trio">
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_09_start.jpg', 'Shot 09 Start Frame (65.92s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_09_start.jpg" alt="Shot 09 Start" loading="lazy">
+                    <span class="kf-tag start">Start • 65.92s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_09_mid.jpg', 'Shot 09 Mid Frame (70.16s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_09_mid.jpg" alt="Shot 09 Mid" loading="lazy">
+                    <span class="kf-tag mid">Mid • 70.16s</span>
+                </div>
+            </div>
+            <div class="keyframe-col" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_09_end.jpg', 'Shot 09 End Frame (74.40s)')">
+                <div class="kf-wrap">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_09_end.jpg" alt="Shot 09 End" loading="lazy">
+                    <span class="kf-tag end">End • 74.40s</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Narrative Analysis -->
+        <div class="narrative-box">
+            <div class="narrative-item">
+                <div class="n-label">🎬 Hành Động &amp; Bối Cảnh Thị Giác</div>
+                <div class="n-text">8.5 giây bùng nổ visual tuyệt đối! 6 góc máy được ráp nối tinh xảo theo tiết tấu âm nhạc điện tử: Cắt từ Toàn cảnh (66.08s) ➔ Góc cao lan can (66.92s) ➔ Khung trong khung nan gỗ (69.60s) ➔ Trung cảnh chân chuyển động (71.24s) ➔ Sát sàn vân gỗ (72.32s) ➔ Toàn cảnh kết thúc (72.88s - 74.44s). Tiếng foley bước chân nện trên gỗ, tiếng gió vi vu hòa cùng bassline tròn trịa tạo nên một thước phim ngắn đắt giá.</div>
+            </div>
+
+            <div class="critique-grid">
+                <div class="critique-col pro">
+                    <div class="col-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                    <p>Bằng chứng trực quan không thể chối cãi (Visual Proof of Concept) cho hiệu quả của quy trình quay 60 giây; màu sắc Teal & Wood Tone điện ảnh nâng tầm không gian cầu đi bộ thường nhật thành bối cảnh phim Hollywood.</p>
+                </div>
+                <div class="critique-col con">
+                    <div class="col-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                    <p>Thời lượng thành phẩm ngắn (8.5s) khiến người xem muốn xem lại nhiều lần (đây thực chất là ưu điểm đẩy chỉ số Replay Loop của thuật toán Instagram).</p>
+                </div>
+            </div>
+
+            <div class="takeaway-block">
+                <div class="takeaway-title">
+                    <span class="icon">💡</span> Bài Học Đúc Kết Thực Chiến
+                </div>
+                <div class="takeaway-body">
+                    Giá trị của một người làm phim không nằm ở việc sở hữu thiết bị tiền tỷ hay bối cảnh xa xỉ, mà nằm ở tư duy khai thác đa dạng góc máy (Wide, High, Low, Frame, Macro) tại một địa điểm duy nhất trong thời gian ngắn nhất.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Specs -->
+        <div class="shot-specs-bar">
+            <div class="spec-item">
+                <span class="spec-label">📐 Góc máy &amp; Tiêu cự:</span> Fast-paced Multi-Angle Cut (6 micro-beats)
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">📍 Bối cảnh:</span> Tổng thể kiến trúc cầu đi bộ hiện đại
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">💡 Ánh sáng &amp; Màu sắc:</span> Grade màu Cinematic Teal-Orange & Wood Tone
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">⚡ Chuyển cảnh:</span> Final Cut Outro khép vòng lặp hoàn hảo (Seamless Loop)
+            </div>
+        </div>
+
+        
+    </div>
+    
+        </section>
+
+        <!-- Visual Grid View Section -->
+        <section class="grid-view-container" id="gridViewSection" style="display: none;">
+            
+    <div class="grid-card" onclick="jumpToShot(1, 0.0)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+            <div class="grid-time-tag">0.00s - 2.76s</div>
+            <div class="grid-shot-tag">Shot 01</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Hook Đảo Ngược Kỳ Vọng & Phát Động Thử Thách 60 Giây: Khóa chặt sự tò mò trong 3 giây vàng</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(2, 2.76)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+            <div class="grid-time-tag">2.76s - 6.92s</div>
+            <div class="grid-shot-tag">Shot 02</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Thiết Lập Shot 1 - Toàn Cảnh Kiến Trúc Mở Rộng: Định vị không gian và quy mô môi trường</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(3, 6.92)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+            <div class="grid-time-tag">6.92s - 20.80s</div>
+            <div class="grid-shot-tag">Shot 03</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Thiết Lập Shot 2 - Toàn Cảnh Góc Cao Lan Can Cầu: Tận dụng cao độ kiến trúc tạo góc nhìn chim bay</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(4, 20.8)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+            <div class="grid-time-tag">20.80s - 26.88s</div>
+            <div class="grid-shot-tag">Shot 04</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Thiết Lập Shot 3 - Góc Cao Trực Diện Nhìn Xuống Lối Đi: Tính kỷ luật hình học và trục đối xứng hoàn hảo</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(5, 26.88)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+            <div class="grid-time-tag">26.88s - 42.60s</div>
+            <div class="grid-shot-tag">Shot 05</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Thiết Lập Shot 4 - Khung Hình Trong Khung Hình Nan Gỗ: Tận dụng cấu trúc kiến trúc làm khung nhìn trộm</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(6, 42.6)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+            <div class="grid-time-tag">42.60s - 50.80s</div>
+            <div class="grid-shot-tag">Shot 06</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Thiết Lập Shot 5 - Trung Cảnh Góc Thấp Bắt Chuyển Động Chân: Tạo xung lực bước đi và nhịp điệu chuyển động</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(7, 50.8)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+            <div class="grid-time-tag">50.80s - 61.80s</div>
+            <div class="grid-shot-tag">Shot 07</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Thiết Lập Shot 6 - Toàn Cảnh Siêu Thấp Sát Mặt Sàn: Tận dụng Parallax vân gỗ khuếch đại góc nhìn sâu</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(8, 61.8)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_08_mid.jpg" alt="Shot 08" loading="lazy">
+            <div class="grid-time-tag">61.80s - 65.92s</div>
+            <div class="grid-shot-tag">Shot 08</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Cầu Nối Đếm Ngược Thần Tốc (Anticipation Countdown 4-3-2-1): Đỉnh điểm hồi hộp trước giờ G</strong>
+        </div>
+    </div>
+    
+    <div class="grid-card" onclick="jumpToShot(9, 65.92)">
+        <div class="grid-thumb-box">
+            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_09_mid.jpg" alt="Shot 09" loading="lazy">
+            <div class="grid-time-tag">65.92s - 74.40s</div>
+            <div class="grid-shot-tag">Shot 09</div>
+        </div>
+        <div class="grid-card-desc">
+            <strong>Bản Hòa Tấu B-Roll Điện Ảnh 6 Góc Hoàn Chỉnh: Minh chứng thép cho năng lực sáng tạo 60 giây</strong>
+        </div>
+    </div>
+    
+        </section>
+    </main>
+
+</div>
+
+<!-- Drawer Quick Jump Menu -->
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)"></div>
+<div class="drawer-container" id="drawerContainer">
+    <div class="drawer-header">
+        <span class="drawer-title">📑 Mục Lục Phân Cảnh (9)</span>
+        <button class="drawer-close" onclick="toggleDrawer(false)">✕</button>
+    </div>
+    <div class="drawer-list">
+        
+    <div class="drawer-shot-row" onclick="jumpToShot(1, 0.0)">
+        <span class="d-badge">Shot 01</span>
+        <span class="d-time">0.00s - 2.76s (2.76s)</span>
+        <span class="d-title">Hook Đảo Ngược Kỳ Vọng & Phát Động Thử Thách 60 Giây: Khóa chặt s...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(2, 2.76)">
+        <span class="d-badge">Shot 02</span>
+        <span class="d-time">2.76s - 6.92s (4.16s)</span>
+        <span class="d-title">Thiết Lập Shot 1 - Toàn Cảnh Kiến Trúc Mở Rộng: Định vị không gia...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(3, 6.92)">
+        <span class="d-badge">Shot 03</span>
+        <span class="d-time">6.92s - 20.80s (13.88s)</span>
+        <span class="d-title">Thiết Lập Shot 2 - Toàn Cảnh Góc Cao Lan Can Cầu: Tận dụng cao độ...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(4, 20.8)">
+        <span class="d-badge">Shot 04</span>
+        <span class="d-time">20.80s - 26.88s (6.08s)</span>
+        <span class="d-title">Thiết Lập Shot 3 - Góc Cao Trực Diện Nhìn Xuống Lối Đi: Tính kỷ l...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(5, 26.88)">
+        <span class="d-badge">Shot 05</span>
+        <span class="d-time">26.88s - 42.60s (15.72s)</span>
+        <span class="d-title">Thiết Lập Shot 4 - Khung Hình Trong Khung Hình Nan Gỗ: Tận dụng c...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(6, 42.6)">
+        <span class="d-badge">Shot 06</span>
+        <span class="d-time">42.60s - 50.80s (8.20s)</span>
+        <span class="d-title">Thiết Lập Shot 5 - Trung Cảnh Góc Thấp Bắt Chuyển Động Chân: Tạo ...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(7, 50.8)">
+        <span class="d-badge">Shot 07</span>
+        <span class="d-time">50.80s - 61.80s (11.00s)</span>
+        <span class="d-title">Thiết Lập Shot 6 - Toàn Cảnh Siêu Thấp Sát Mặt Sàn: Tận dụng Para...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(8, 61.8)">
+        <span class="d-badge">Shot 08</span>
+        <span class="d-time">61.80s - 65.92s (4.12s)</span>
+        <span class="d-title">Cầu Nối Đếm Ngược Thần Tốc (Anticipation Countdown 4-3-2-1): Đỉnh...</span>
+    </div>
+    
+    <div class="drawer-shot-row" onclick="jumpToShot(9, 65.92)">
+        <span class="d-badge">Shot 09</span>
+        <span class="d-time">65.92s - 74.40s (8.48s)</span>
+        <span class="d-title">Bản Hòa Tấu B-Roll Điện Ảnh 6 Góc Hoàn Chỉnh: Minh chứng thép cho...</span>
+    </div>
+    
+    </div>
+</div>
+
+<!-- Lightbox Modal Darkroom -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+    <div class="lightbox-content">
+        <img id="lightboxImg" src="" alt="Zoom Image">
+    </div>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<script>
+const video = document.getElementById('mainVideo');
+const playBtn = document.getElementById('playPauseBtn');
+const muteBtn = document.getElementById('muteBtn');
+
+function togglePlay() {
+    if (video.paused) {
+        video.play();
+        playBtn.innerText = "⏸ Tạm Dừng";
+    } else {
+        video.pause();
+        playBtn.innerText = "▶ Phát Video";
+    }
+}
+
+function toggleMute() {
+    video.muted = !video.muted;
+    muteBtn.innerText = video.muted ? "🔇" : "🔊";
+}
+
+function setSpeed(rate, el) {
+    video.playbackRate = rate;
+    document.querySelectorAll('.speed-pill').forEach(b => b.classList.remove('active'));
+    if (el) el.classList.add('active');
+}
+
+function stepFrame(frames) {
+    video.pause();
+    playBtn.innerText = "▶ Phát Video";
+    video.currentTime = Math.max(0, video.currentTime + (frames * 0.0416));
+}
+
+function jumpToShot(shotId, startTime) {
+    video.currentTime = startTime;
+    video.play();
+    playBtn.innerText = "⏸ Tạm Dừng";
+    toggleDrawer(false);
+    
+    // Switch to detail view if in grid view
+    switchView('detail');
+    
+    const el = document.getElementById('shot-' + shotId);
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        el.style.borderColor = 'var(--accent-blue)';
+        setTimeout(() => {
+            el.style.borderColor = 'var(--border-color)';
+        }, 2000);
+    }
+}
+
+function switchView(mode) {
+    const detailSec = document.getElementById('detailViewSection');
+    const gridSec = document.getElementById('gridViewSection');
+    const btnDetail = document.getElementById('btnDetail');
+    const btnGrid = document.getElementById('btnGrid');
+
+    if (mode === 'grid') {
+        detailSec.style.display = 'none';
+        gridSec.style.display = 'grid';
+        btnGrid.classList.add('active');
+        btnDetail.classList.remove('active');
+    } else {
+        gridSec.style.display = 'none';
+        detailSec.style.display = 'flex';
+        btnDetail.classList.add('active');
+        btnGrid.classList.remove('active');
+    }
+}
+
+function toggleDrawer(open) {
+    const bd = document.getElementById('drawerBackdrop');
+    const dc = document.getElementById('drawerContainer');
+    if (open) {
+        bd.style.display = 'block';
+        dc.style.right = '0';
+    } else {
+        bd.style.display = 'none';
+        dc.style.right = '-360px';
+    }
+}
+
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').innerText = caption;
+    document.getElementById('lightboxModal').style.display = 'flex';
+}
+
+function closeLightbox(e) {
+    if (e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightboxModal').style.display = 'none';
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.getElementById('lightboxModal').style.display = 'none';
+        toggleDrawer(false);
+    }
+});
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>

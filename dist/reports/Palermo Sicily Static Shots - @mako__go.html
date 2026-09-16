@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Mako • Khung Hình Tĩnh Đón Dòng Người Palermo Sicily - @mako__go • Director's Report</title>
+
+<!-- Fonts: Google Fonts Fallbacks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ 1. FONT DECLARATIONS (Local & Web Fallbacks) ═══ */
+@font-face {
+    font-family: 'FD Aeonik Extended';
+    src: url('../fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+         url('../fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-Bold.otf') format('opentype'),
+         local('FD Aeonik Extended Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikRegular.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikRegular.ttf') format('truetype'),
+         local('FD Aeonik Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikExtended-SemiBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikExtended-SemiBold.otf') format('opentype'),
+         local('FD Aeonik SemiBold');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FD Aeonik';
+    src: url('../fonts/FDAeonikBold.ttf') format('truetype'),
+         url('/Users/vietmac/Library/Fonts/FDAeonikBold.ttf') format('truetype'),
+         local('FD Aeonik Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Regular.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Regular.otf') format('opentype'),
+         local('Tiempos Text Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-Medium.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-Medium.otf') format('opentype'),
+         local('Tiempos Text Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         url('/Users/vietmac/Library/Fonts/FDTiemposText-RegularItalic.otf') format('opentype'),
+         local('Tiempos Text Regular Italic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ═══ 2. DESIGN TOKENS (Light Theme - Chuẩn 30ngayviral.fedu.vn) ═══ */
+:root {
+    --cl-bg-main: #ffffff;
+    --cl-bg-tint: #f8fafc;
+    --cl-bg-card: #ffffff;
+    --cl-bg-card-muted: #f1f5f9;
+    --cl-border: rgba(0, 0, 0, 0.08);
+    --cl-border-hover: rgba(26, 115, 232, 0.35);
+    --cl-line: rgba(0, 0, 0, 0.06);
+
+    /* Ink Contrast WCAG AAA */
+    --cl-text-primary: #090d16;  /* Slate 950 (18.8:1) */
+    --cl-text-body: #0f172a;     /* Slate 900 (16.5:1 Mực in cao cấp) */
+    --cl-text-secondary: #475569;/* Slate 600 */
+    --cl-text-muted: #64748b;    /* Slate 500 */
+
+    /* Accent & Brand Colors */
+    --cl-accent: #1a73e8;        /* Google / VIDEO Royal Blue */
+    --cl-accent-tint: rgba(26, 115, 232, 0.08);
+    --cl-amber: #d97706;         /* Amber 600 */
+    --cl-amber-bg: #fffbeb;      /* Amber 50 */
+    --cl-amber-border: #fef3c7;  /* Amber 100 */
+    --cl-emerald: #059669;       /* Emerald 600 */
+    --cl-emerald-bg: #f0fdf4;    /* Emerald 50 */
+    --cl-emerald-border: #bbf7d0;/* Emerald 200 */
+    --cl-rose: #e11d48;          /* Rose 600 */
+    --cl-rose-bg: #fff1f2;       /* Rose 50 */
+    --cl-rose-border: #fecdd3;   /* Rose 200 */
+
+    /* Typography Stacks */
+    --font-heading-short: 'FD Aeonik Extended', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-heading-long: 'FD Aeonik', 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Tiempos Text', 'Newsreader', Georgia, serif;
+    --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Video Aspect Ratio */
+    --video-aspect-ratio: 16 / 9;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+body {
+    background-color: var(--cl-bg-main);
+    color: var(--cl-text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══ 3. TOP NAVIGATION HEADER ═══ */
+.top-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--cl-line);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading-short);
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--cl-text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-badge {
+    background: var(--cl-accent-tint);
+    color: var(--cl-accent);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+.nav-meta-title {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    color: var(--cl-text-secondary);
+    font-weight: 500;
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    background: var(--cl-bg-tint);
+    border-color: var(--cl-accent);
+    color: var(--cl-accent);
+}
+.nav-btn.primary {
+    background: var(--cl-accent);
+    border-color: var(--cl-accent);
+    color: #ffffff;
+}
+.nav-btn.primary:hover {
+    background: #1558b0;
+}
+
+/* ═══ 4. MAIN LAYOUT (DESKTOP SPLIT-SCREEN & MOBILE-FIRST) ═══ */
+.layout-container {
+    display: flex;
+    flex: 1;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* LEFT COLUMN: STICKY DIRECTOR PLAYER */
+.left-player-col {
+    width: 460px;
+    flex-shrink: 0;
+    padding: 24px;
+    border-right: 1px solid var(--cl-line);
+    background: var(--cl-bg-tint);
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.player-box {
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    aspect-ratio: var(--video-aspect-ratio);
+    max-height: 560px;
+    width: 100%;
+}
+.player-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DIRECTOR CONTROLS BAR */
+.director-controls {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ctrl-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ctrl-btn {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ctrl-btn:hover, .ctrl-btn.active {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.time-display {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cl-text-secondary);
+    font-weight: 600;
+}
+
+/* VIDEO INFO CARD IN SIDEBAR */
+.video-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.video-meta-title {
+    font-family: var(--font-heading-long);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+.video-meta-author {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--cl-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.author-link {
+    color: var(--cl-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.author-link:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT COLUMN: STORYBOARD CONTENT & AUDIT */
+.right-content-col {
+    flex: 1;
+    padding: 32px 40px 80px 40px;
+    min-width: 0;
+    background: #ffffff;
+}
+
+/* VIEW SWITCHER & HEADER BAR */
+.content-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cl-line);
+}
+.view-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--cl-bg-tint);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--cl-border);
+}
+.view-tab {
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cl-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.view-tab.active {
+    background: #ffffff;
+    color: var(--cl-text-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* HERO OVERVIEW CARD */
+.overview-hero-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+.overview-hero-title {
+    font-family: var(--font-heading-short);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+.overview-hero-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cl-text-body);
+    margin-bottom: 18px;
+}
+.overview-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--cl-line);
+}
+.overview-spec-item {
+    font-family: var(--font-ui);
+    font-size: 13px;
+}
+.spec-tag-label {
+    color: var(--cl-text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+.spec-tag-value {
+    color: var(--cl-text-primary);
+    font-weight: 600;
+}
+
+/* ═══ 5. STORYBOARD CARDS (ZEBRA STRIPING) ═══ */
+.shots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shot-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.shot-card:nth-child(even) {
+    background: var(--cl-bg-tint);
+}
+
+/* SHOT CARD HEADER */
+.shot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.shot-id-pill {
+    background: var(--cl-text-primary);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.shot-time-btn {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    color: var(--cl-accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.shot-time-btn:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+.shot-headline {
+    font-family: var(--font-heading-long);
+    font-size: 18.5px;
+    font-weight: 700;
+    color: var(--cl-text-primary);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 3 KEYFRAMES GALLERY */
+.keyframes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.kf-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: var(--video-aspect-ratio);
+    cursor: pointer;
+    border: 1px solid var(--cl-border);
+}
+.kf-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.kf-card:hover img {
+    transform: scale(1.03);
+}
+.kf-label-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+}
+.kf-label-tag.start { border-left: 3px solid var(--cl-accent); }
+.kf-label-tag.mid { border-left: 3px solid var(--cl-amber); }
+.kf-label-tag.end { border-left: 3px solid var(--cl-emerald); }
+
+/* 3 STRUCTURED CRITIQUE BLOCKS */
+.critique-blocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+/* BLOCK 1: SUBJECT & ACTION */
+.block-subject-action {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.block-label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cl-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.block-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cl-text-body);
+    line-height: 1.7;
+}
+
+/* BLOCK 2: TWO-SIDED COMPOSITION CRITIQUE */
+.block-two-sided {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.critique-side {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.critique-side.pro {
+    background: var(--cl-emerald-bg);
+    border: 1px solid var(--cl-emerald-border);
+}
+.critique-side.con {
+    background: var(--cl-rose-bg);
+    border: 1px solid var(--cl-rose-border);
+}
+.side-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.critique-side.pro .side-header { color: var(--cl-emerald); }
+.critique-side.con .side-header { color: var(--cl-rose); }
+.side-content {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cl-text-body);
+}
+
+/* BLOCK 3: ACTIONABLE TAKEAWAY */
+.block-takeaway {
+    background: var(--cl-amber-bg);
+    border: 1px solid var(--cl-amber-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.takeaway-header {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cl-amber);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.takeaway-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #78350f;
+    line-height: 1.7;
+}
+
+/* SPECS STRIP */
+.shot-specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    background: var(--cl-bg-tint);
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--cl-text-secondary);
+    margin-bottom: 18px;
+}
+.spec-pill strong {
+    color: var(--cl-text-primary);
+}
+
+/* TRANSITION CARD */
+.transition-card {
+    background: var(--cl-bg-tint);
+    border: 1px dashed var(--cl-border);
+    border-radius: 14px;
+    padding: 16px;
+}
+.trans-title-bar {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--cl-accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.trans-img-container {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--cl-border);
+    background: #000000;
+}
+.trans-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.trans-zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* ═══ 6. VISUAL GRID VIEW (ALTERNATE VIEW) ═══ */
+.visual-grid-view {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.grid-shot-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.grid-shot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.grid-thumb-wrap {
+    aspect-ratio: var(--video-aspect-ratio);
+    position: relative;
+    background: #000;
+}
+.grid-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.grid-thumb-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+}
+.grid-card-body {
+    padding: 10px 12px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-text-primary);
+    line-height: 1.4;
+}
+
+/* ═══ 7. LIGHTBOX MODAL ═══ */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.lightbox-modal.active { display: flex; }
+.lightbox-content {
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: #ffffff;
+    font-size: 32px;
+    background: none; border: none;
+    cursor: pointer;
+}
+
+/* ═══ 8. FOOTER LINKS BLOCK ═══ */
+.bottom-links-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.footer-link-card {
+    background: var(--cl-bg-tint);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--cl-text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+}
+.footer-link-card:hover {
+    background: var(--cl-accent);
+    color: #ffffff;
+    border-color: var(--cl-accent);
+}
+
+/* ═══ 9. RESPONSIVE MOBILE RULES (< 992px) ═══ */
+@media (max-width: 992px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .left-player-col {
+        width: 100%;
+        position: sticky;
+        top: 57px;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--cl-line);
+        z-index: 100;
+    }
+    .player-box {
+        max-height: 420px;
+    }
+    .right-content-col {
+        padding: 20px 16px 60px 16px;
+    }
+    .block-two-sided {
+        grid-template-columns: 1fr;
+    }
+    .keyframes-row {
+        gap: 8px;
+    }
+}
+
+.creator-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.creator-filter-badge:hover {
+    background: rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+.creator-filter-badge strong {
+    color: #f8fafc;
+}
+.creator-filter-badge .author-handle {
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 11px;
+}
+.creator-filter-badge .filter-action-chip {
+    font-size: 10px;
+    padding: 1.5px 6px;
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+    color: #e0f2fe;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.player-box { position: relative !important; }
+.player-box video { cursor: pointer; }
+.player-fs-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: var(--font-ui, sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+.player-fs-btn:hover {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    transform: scale(1.04);
+}
+.fs-ctrl-btn {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fef3c7 !important;
+    font-weight: 700 !important;
+}
+.fs-ctrl-btn:hover {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="https://fedu.vn/scene.html" class="nav-brand">
+            <span>🎬 VIDEO DIRECTOR REPORT</span>
+        </a>
+        <span class="nav-badge">7 PHÂN CẢNH</span>
+        <span class="nav-meta-title">Mako • Khung Hình Tĩnh Đón Dòng Người Palermo Sicily - @mako__go</span>
+    </div>
+    <div class="nav-right">
+        <a href="https://www.instagram.com/reel/DaH7X34NTNX/" target="_blank" class="nav-btn primary">
+            <span>📸 Instagram Gốc ↗</span>
+        </a>
+        <a href="https://ytuong.fedu.vn" target="_blank" class="nav-btn">
+            <span>💡 Kho Ý Tưởng ↗</span>
+        </a>
+    </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="layout-container">
+    <!-- LEFT COLUMN: STICKY PLAYER & CONTROLS -->
+    <aside class="left-player-col">
+        <div class="player-box">
+            <video id="mainPlayer" playsinline preload="metadata">
+                <source src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DaH7X34NTNX.mp4" type="video/mp4">
+                <source src="../videos/Palermo Sicily Static Shots - @mako__go.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+        <!-- DIRECTOR CONTROLS -->
+        <div class="director-controls">
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <button class="ctrl-btn" onclick="togglePlay()" id="playBtn">▶ Phát</button>
+                    <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
+                    <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
+                </div>
+                <span class="time-display" id="timeDisplay">0.00s / 14.10s</span>
+            </div>
+            <div class="ctrl-row">
+                <div class="ctrl-btn-group">
+                    <span style="font-size:11px; font-weight:600; color:var(--cl-text-muted);">Tốc độ:</span>
+                    <button class="ctrl-btn" onclick="setSpeed(0.25)">0.25x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(0.5)">0.5x</button>
+                    <button class="ctrl-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="ctrl-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+                <button class="ctrl-btn" onclick="toggleLoop()" id="loopBtn">🔁 Lặp Shot</button>
+            </div>
+        </div>
+
+        <!-- VIDEO META -->
+        <div class="video-meta-card">
+            <div class="video-meta-title">Mako • Khung Hình Tĩnh Đón Dòng Người Palermo Sicily - @mako__go</div>
+            <div class="video-meta-author">
+                <span>Tác giả: 
+                    <a href="../index.html?creator=@mako__go" onclick="handleCreatorClick(event, '@mako__go', 'Mako Gochashvili')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Mako Gochashvili trên Kho Ý Tưởng FEDU">
+                        <span>👤</span>
+                        <strong>Mako Gochashvili</strong>
+                        <span class="author-handle">(@mako__go)</span>
+                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
+                    </a>
+                </span>
+                <a href="https://www.instagram.com/reel/DaH7X34NTNX/" target="_blank" class="author-link">Mako Gochashvili | Sicily Storyteller (@mako__go)</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: ANALYSIS & CRITIQUE -->
+    <main class="right-content-col">
+        <!-- HEADER BAR WITH VIEW SWITCHER -->
+        <div class="content-header-bar">
+            <div class="view-tabs">
+                <button class="view-tab active" id="tabDetail" onclick="switchView('detail')">📋 Bảng Phân Tích Đạo Diễn</button>
+                <button class="view-tab" id="tabGrid" onclick="switchView('grid')">🔲 Lưới Ảnh Keyframes</button>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:12px; color:var(--cl-text-muted);">
+                Tỷ lệ: <strong>16:9 Ngang (Cinematic Wide)</strong> • 14.10s
+            </div>
+        </div>
+
+        <!-- HERO OVERVIEW CARD -->
+        <div class="overview-hero-card">
+            <h1 class="overview-hero-title">Mako • Khung Hình Tĩnh Đón Dòng Người Palermo Sicily - @mako__go</h1>
+            <p class="overview-hero-desc">Bóc tách 7 phân cảnh điện ảnh đường phố Palermo (Sicily): Nghệ thuật đóng khung tĩnh (Static Framing), khung lồng khung (Frame-in-Frame), nén tiêu cự kiến trúc Baroque và đón khoảnh khắc đời thường tình cờ.</p>
+            <div class="overview-specs-grid">
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Kỹ Thuật Cốt Lõi</span>
+                    <span class="spec-tag-value">Static Camera Framing • Natural Archway Framing • Z-Axis Perspective Compression • Wes Anderson Symmetry • Organic Movement</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Tổng Số Phân Cảnh</span>
+                    <span class="spec-tag-value">7 Shots • Nhịp trung bình 1.99s</span>
+                </div>
+                <div class="overview-spec-item">
+                    <span class="spec-tag-label">Độ Phân Giải</span>
+                    <span class="spec-tag-value">1916x1080 • 30.0 FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORYBOARD DETAIL VIEW -->
+        <div class="shots-container" id="detailView">
+            
+        <article class="shot-card" id="shot-1">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 01</span>
+                <button class="shot-time-btn" onclick="jumpToShot(1, 0.0, 2.5)">
+                    ▶ 0.00s - 2.50s (2.50s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Khung Lồng Khung Cổng Vòm Cổ Điển Đón Xe Ba Gác Ape Piaggio: Khóa chặt thị giác bằng vòm đá sa thạch phong hóa mở ra nhịp sống đường phố rực nắng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_01_start.jpg', 'Shot 01 • Đầu (0.00s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_01_start.jpg" alt="Shot 01 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (0.00s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_01_mid.jpg', 'Shot 01 • Giữa (1.25s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_01_mid.jpg" alt="Shot 01 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (1.25s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_01_end.jpg', 'Shot 01 • Cuối (2.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_01_end.jpg" alt="Shot 01 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (2.50s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình tĩnh đặt sâu trong bóng râm của vòm đá cổ (cổng thành tàn tích La Mã / Trung cổ tại Palermo), bao bọc bởi hai bức tường đá sa thạch rêu phong và bức tranh graffiti nghệ thuật bên trái. Giữa khung hình mở, một chiếc xe ba gác cổ điển màu xanh lam Piaggio Ape Calessino thong thả lướt từ trái sang phải qua ngã ba đường ngập tràn ánh nắng. Typography phong cách tạp chí hoài cổ hiện lên: 'Living my' (Serif trắng tinh tế), 'Palermo' (Serif Bold vàng chanh rực rỡ, khổ lớn nổi bật), 'life' (Serif trắng bên dưới).</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Hiệu ứng khung lồng khung (Natural Archway Framing) tạo cảm giác như người xem đang nhìn lén qua một ô cửa thời gian; sắc vàng của chữ 'Palermo' đồng điệu hoàn hảo với ánh nắng và những mảng tường vàng xa xa; chiếc xe Ape màu xanh lam tạo điểm nhấn màu bổ trợ (Teal & Yellow/Warm) dẫn mắt người xem theo trục ngang.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Góc tường rêu phong bên phải chiếm diện tích khá lớn (>35% diện tích khung hình) và hơi tối; nếu người xem xem trên màn hình điện thoại ở ngoài trời có thể bị mất chi tiết vùng tối (shadow crush) ở góc đá này.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay du lịch di sản, hãy lùi ống kính vào sâu trong cổng vòm, hành lang hoặc hốc tường tối để tạo 'vignette tự nhiên' (Natural Vignette), sau đó kiên nhẫn chờ một phương tiện giao thông mang tính biểu tượng văn hóa bản địa (như xe ba gác Ý, xe lam, xích lô) lướt qua khoảng sáng.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Eye-Level Static Wide Shot • 35mm Lens Equivalent</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Vòm đá cổ gần Palazzo Conte Federico, Palermo, Sicily</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Tương phản sáng - tối mạnh (High Contrast Chiaroscuro • Bóng râm tiền cảnh & Nắng gắt hậu cảnh)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) sang Shot 02</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 02 • Cắt thẳng (Hard Cut) sang Shot 02</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/transitions/trans_01_to_02.jpg?v=2', 'Chuyển cảnh Shot 01 sang Shot 02')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/transitions/trans_01_to_02.jpg?v=2" alt="Transition 1 to 2" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-2">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 02</span>
+                <button class="shot-time-btn" onclick="jumpToShot(2, 2.53, 4.5)">
+                    ▶ 2.53s - 4.50s (1.97s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Góc Ngước 45° Đón Rèm Che Nắng Sọc Kẻ & Dây Phơi Đồ Bay Trong Gió Biển: Biến kiến trúc nhà phố tĩnh thành nhịp thở hữu cơ sống động</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_02_start.jpg', 'Shot 02 • Đầu (2.53s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_02_start.jpg" alt="Shot 02 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (2.53s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_02_mid.jpg', 'Shot 02 • Giữa (3.51s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_02_mid.jpg" alt="Shot 02 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (3.51s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_02_end.jpg', 'Shot 02 • Cuối (4.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_02_end.jpg" alt="Shot 02 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (4.50s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy ngước thấp (Low-Angle Shot) hướng lên các tầng ban công hoa sắt cổ điển của một tòa nhà cư dân Palermo. Những tấm rèm bạt che nắng sọc kẻ nâu - be và xanh ngọc đung đưa liên tục theo từng cơn gió Địa Trung Hải; bên góc trái là giàn dây phơi với quần áo, khăn tắm bay phấp phới dưới nền trời xanh ngắt.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Khung hình hoàn toàn cố định nhưng chuyển động dập dềnh của vải rèm và quần áo tạo ra 'chuyển động nội tại' (Micro-movement) cực kỳ êm dịu, gợi lên cảm giác sảng khoái của mùa hè miền Nam nước Ý; đường chéo của ban công dẫn hướng mắt từ góc dưới phải lên góc trên trái (Leading Diagonal).</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Một cục nóng điều hòa hiện đại (nhãn hiệu HIROn) xuất hiện khá rõ ở góc dưới phải làm giảm bớt tính thuần khiết cổ điển của khối kiến trúc lịch sử.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Đừng chỉ quay các tượng đài đá khô cứng; hãy tìm những yếu tố vải vóc, cành lá hoặc rèm che đón gió ở các góc ngước để đưa 'hơi thở và sự rung động tự nhiên' vào video du lịch mà không cần phải di chuyển máy quay.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Low-Angle Upward Medium Shot • 50mm Lens Equivalent</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Khu dân cư cổ trung tâm Palermo, Sicily</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng ban ngày trực tiếp rực rỡ (Direct Sun & Cyan-Blue Sky)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) sang Shot 03</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 03 • Cắt thẳng (Hard Cut) sang Shot 03</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/transitions/trans_02_to_03.jpg?v=2', 'Chuyển cảnh Shot 02 sang Shot 03')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/transitions/trans_02_to_03.jpg?v=2" alt="Transition 2 to 3" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-3">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 03</span>
+                <button class="shot-time-btn" onclick="jumpToShot(3, 4.53, 6.07)">
+                    ▶ 4.53s - 6.07s (1.54s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố Cục Cung Điện Chữ V (V-Shaped Framing) Hội Tụ Về Mái Vòm Gạch Men San Giuseppe: Tôn vinh đỉnh cao nghệ thuật Baroque Sicily bằng kỹ thuật nén phối cảnh</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_03_start.jpg', 'Shot 03 • Đầu (4.53s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_03_start.jpg" alt="Shot 03 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (4.53s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_03_mid.jpg', 'Shot 03 • Giữa (5.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_03_mid.jpg" alt="Shot 03 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (5.30s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_03_end.jpg', 'Shot 03 • Cuối (6.07s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_03_end.jpg" alt="Shot 03 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (6.07s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc ngước uy nghiêm tại ngã tư huyền thoại Quattro Canti (Piazza Vigliena). Hai mặt tiền cung điện Baroque tráng lệ với các hàng cột thức La Mã, ban công uốn lượn và các pho tượng thánh tạc đá cẩm thạch kẹp hai bên tạo thành hình chữ V khổng lồ. Ở trung tâm khe hẹp bầu trời vươn lên mái vòm Nhà thờ San Giuseppe dei Teatini lợp gạch men Majolica xanh vàng hình zíc-zắc dưới nền mây trắng lững lờ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục chữ V kinh điển tạo lực hút thị giác cực mạnh về đỉnh vòm trung tâm; ánh sáng mặt trời chiếu xiên tạo sự phân tách rạch ròi: mặt cung điện bên trái rực sáng vàng óng, mặt bên phải chìm trong bóng đổ huyền bí, khắc họa khối điêu khắc 3D nổi bật.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Hai sợi dây điện/cáp chăng ngang bầu trời cắt ngang phần trên của mái vòm làm phân tán nhẹ sự liền mạch thị giác của khối kiến trúc thiêng liêng.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi đứng giữa các quảng trường kiến trúc cổ chật hẹp, hãy hạ thấp góc máy ngước lên để hai góc tòa nhà tạo thành 'hẻm thị giác' (Visual Canyon), nén tiêu cự để kéo một kỳ quan mái vòm ở xa lọt vào chính giữa khe hẹp.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Low-Angle Upward Tilt Shot • 28mm Wide Lens Equivalent</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Quảng trường Quattro Canti & Mái vòm San Giuseppe dei Teatini, Palermo</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng xiên chiều chia đôi sáng tối (Directional Golden Sun & Deep Shadows)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) sang Shot 04</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 04 • Cắt thẳng (Hard Cut) sang Shot 04</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/transitions/trans_03_to_04.jpg?v=2', 'Chuyển cảnh Shot 03 sang Shot 04')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/transitions/trans_03_to_04.jpg?v=2" alt="Transition 3 to 4" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-4">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 04</span>
+                <button class="shot-time-btn" onclick="jumpToShot(4, 6.1, 7.7)">
+                    ▶ 6.10s - 7.70s (1.60s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Mặt Đứng Đối Xứng Trực Diện (Flat Symmetry) Tiệm Bánh Cổ 1834 Đón Người Phụ Nữ Đạp Xe: Nhịp cắt ngang chuẩn phong cách Wes Anderson</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_04_start.jpg', 'Shot 04 • Đầu (6.10s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_04_start.jpg" alt="Shot 04 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (6.10s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_04_mid.jpg', 'Shot 04 • Giữa (6.90s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_04_mid.jpg" alt="Shot 04 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (6.90s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_04_end.jpg', 'Shot 04 • Cuối (7.70s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_04_end.jpg" alt="Shot 04 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (7.70s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy ngang tầm mắt (Eye-Level) chụp trực diện mặt tiền tiệm bánh lịch sử nổi tiếng Antica Focacceria San Francesco (thành lập năm 1834). Cửa gỗ lim nâu trầm mở toang, bên trên là biển hiệu khắc chữ Art Nouveau và năm 1834 cùng các ô kính màu vintage. Một người phụ nữ mặc áo trắng thong thả đạp xe đạp từ góc trái lướt ngang qua khung hình, trong khi một người phụ nữ khác đứng tựa cửa nhìn ra phố đá cổ.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục đối xứng trục thẳng đứng (Frontal Flat Symmetry) tạo cảm giác ngăn nắp, trang trọng và mang phong vị hoài niệm điện ảnh; chuyển động cắt ngang của xe đạp đóng vai trò là 'chủ thể phá vỡ tính tĩnh' (Static Breaker), tạo tương phản giữa nét cổ kính 200 năm và nhịp sống đời thường hiện tại.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Người đạp xe lướt khá sát đáy khung hình (chặt góc dưới bánh xe ở một vài frame đầu), góc máy nếu lùi thêm 0.5m sẽ có khoảng đệm mặt đường đá (lead room) hoàn hảo hơn.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Bố cục mặt phẳng trực diện (Frontal Tableau) đòi hỏi độ cân bằng bọt nước hoàn hảo (căn level 0°). Hãy đặt máy tĩnh trước một cửa hiệu có biển số năm lịch sử (est. 18xx) và kiên nhẫn chờ người địa phương đạp xe hoặc đi bộ ngang qua để tạo nhịp phim.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Eye-Level Symmetrical Medium Shot • 50mm Lens Equivalent</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Antica Focacceria San Francesco (Piazza San Francesco d'Assisi, Palermo)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tản đều trong hẻm đá (Even Ambient Fill Light)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) sang Shot 05</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 05 • Cắt thẳng (Hard Cut) sang Shot 05</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/transitions/trans_04_to_05.jpg?v=2', 'Chuyển cảnh Shot 04 sang Shot 05')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/transitions/trans_04_to_05.jpg?v=2" alt="Transition 4 to 5" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-5">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 05</span>
+                <button class="shot-time-btn" onclick="jumpToShot(5, 7.73, 9.5)">
+                    ▶ 7.73s - 9.50s (1.77s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Trục Phối Cảnh Chiều Sâu Một Điểm Tụ (One-Point Perspective) Hướng Về Cổng Thành Porta Nuova: Kỹ thuật nén tiêu cự gom trọn dòng người tản bộ dưới hàng cây rợp bóng</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_05_start.jpg', 'Shot 05 • Đầu (7.73s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_05_start.jpg" alt="Shot 05 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (7.73s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_05_mid.jpg', 'Shot 05 • Giữa (8.62s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_05_mid.jpg" alt="Shot 05 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (8.62s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_05_end.jpg', 'Shot 05 • Cuối (9.50s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_05_end.jpg" alt="Shot 05 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (9.50s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Khung hình tĩnh đặt giữa đại lộ lịch sử Corso Vittorio Emanuele nhìn thẳng về phía cổng thành tráng lệ Porta Nuova (thế kỷ 16). Hàng cây xanh cổ thụ và dãy cột đèn đường uốn lượn bên trái cùng bức tường đá sa thạch của cung điện bên phải hội tụ chính xác về vòm cổng thành mái kim tự tháp ở hậu cảnh. Hai người đàn ông ở tiền cảnh bên phải đang thong thả bước đi cùng chiều dòng người và xe đạp dạo bước về phía cổng thành xa xăm.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Chiều sâu không gian trục Z (Z-Axis Depth) vô cùng sâu sắc; kỹ thuật nén tiêu cự tele tầm trung làm cổng thành Porta Nuova ở xa trông bề thế và đồ sộ; bóng cây râm mát đổ loang lổ trên mặt đường nhựa tạo cảm giác một buổi trưa hè bình yên, thư thái.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Dáng lưng của người đàn ông mặc áo đen ở tiền cảnh bên phải chiếm phần đáng kể diện tích góc phải dưới, bước chân hơi che khuất một phần góc nhìn vỉa hè.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Khi quay các đại lộ danh lam thắng cảnh, hãy tận dụng trục đối xứng phối cảnh 1 điểm tụ (One-point perspective) và để dòng người đi cùng chiều (hoặc ngược chiều) tự nhiên bước vào khung hình để dẫn dắt mắt người xem từ tiền cảnh vào tận điểm vô cực.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Eye-Level Telephoto Compression Shot • 70mm - 85mm Lens Equivalent</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Đại lộ Corso Vittorio Emanuele hướng về Cổng thành Porta Nuova, Palermo</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Nắng trưa rọi xiên qua kẽ lá (Dappled Sunlight & Tree Shadows)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) sang Shot 06</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 06 • Cắt thẳng (Hard Cut) sang Shot 06</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/transitions/trans_05_to_06.jpg?v=2', 'Chuyển cảnh Shot 05 sang Shot 06')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/transitions/trans_05_to_06.jpg?v=2" alt="Transition 5 to 6" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-6">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 06</span>
+                <button class="shot-time-btn" onclick="jumpToShot(6, 9.53, 11.3)">
+                    ▶ 9.53s - 11.30s (1.77s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Khoảnh Khắc Bồ Câu Bay Vút Qua Mái Vòm Chiesa Del Carmine Từ Chợ Cổ Ballarò: Tương phản giữa mái bạt chợ đời thường và đỉnh vòm tôn nghiêm</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_06_start.jpg', 'Shot 06 • Đầu (9.53s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_06_start.jpg" alt="Shot 06 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (9.53s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_06_mid.jpg', 'Shot 06 • Giữa (10.41s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_06_mid.jpg" alt="Shot 06 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (10.41s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_06_end.jpg', 'Shot 06 • Cuối (11.30s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_06_end.jpg" alt="Shot 06 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (11.30s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Góc máy ngước từ lòng chợ truyền thống Mercato di Ballarò ngước lên bầu trời mây trắng trôi bồng bềnh. Phía dưới là các mái bạt che nắng sọc vàng - cam và bạt đỏ của sạp chợ; phía trên những bức tường gạch cổ là mái vòm lộng lẫy của Nhà thờ Chiesa del Carmine Maggiore lợp ngói men Majolica. Ngay giây thứ 11.0s, một chú chim bồ câu bất ngờ vỗ cánh bay vút từ bên phải ngang qua đỉnh mái vòm tạo nên khoảnh khắc đắt giá của thước phim.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Tương phản tuyệt mỹ giữa văn hóa chợ dân sinh mộc mạc bên dưới và thánh đường tôn nghiêm bên trên; màu vàng của mái bạt tiền cảnh tương hỗ hài hòa với màu gạch và sắc vàng trên mái vòm; sự xuất hiện tình cờ của chú chim bồ câu là 'quà tặng của hiện trường' (Cinematic Serendipity) kích hoạt cảm xúc người xem.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Đường dây điện mỏng cắt ngang qua thân mái vòm (đặc trưng của các khu chợ cổ Nam Âu), tuy nhiên lại góp phần tạo nên nét chân thực đời sống.</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kiên nhẫn là chìa khóa của những cú máy tĩnh (Static Framings). Hãy thiết lập góc ngước hoàn hảo tại các khu chợ truyền thống hướng về các công trình kiến trúc cao tầng, giữ máy ổn định 10-15 giây để đón những khoảnh khắc hữu cơ ngẫu nhiên (chim bay, mây cuộn, bóng người).</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Low-Angle Looking-Up Medium Shot • 35mm Lens Equivalent</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Chợ cổ Mercato di Ballarò & Mái vòm Chiesa del Carmine Maggiore, Palermo</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh sáng tự nhiên trời trong có mây trắng (Bright Daylight with Fluffy Clouds)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Cắt thẳng (Hard Cut) sang Shot 07</span>
+            </div>
+
+            
+            <div class="transition-card">
+                <div class="trans-title-bar">⚡ Chuyển Cảnh Sang Shot 07 • Cắt thẳng (Hard Cut) sang Shot 07</div>
+                <div class="trans-img-container" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/transitions/trans_06_to_07.jpg?v=2', 'Chuyển cảnh Shot 06 sang Shot 07')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/transitions/trans_06_to_07.jpg?v=2" alt="Transition 6 to 7" loading="lazy">
+                    <span class="trans-zoom-badge">🔍 Phóng to so sánh chuyển cảnh</span>
+                </div>
+            </div>
+            
+        </article>
+        
+
+        <article class="shot-card" id="shot-7">
+            <div class="shot-card-header">
+                <span class="shot-id-pill">SHOT 07</span>
+                <button class="shot-time-btn" onclick="jumpToShot(7, 11.33, 14.1)">
+                    ▶ 11.33s - 14.10s (2.77s)
+                </button>
+            </div>
+            <h2 class="shot-headline">Bố Cục Toàn Cảnh Tôn Nghiêm (Monumental Master Wide) Cattedrale Di Palermo: Khép lại hành trình bằng tỷ lệ vàng kiến trúc Arab-Norman và hàng cọ nhiệt đới</h2>
+
+            <!-- 3 Keyframes -->
+            <div class="keyframes-row">
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_07_start.jpg', 'Shot 07 • Đầu (11.33s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_07_start.jpg" alt="Shot 07 Start" loading="lazy">
+                    <span class="kf-label-tag start">Đầu (11.33s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_07_mid.jpg', 'Shot 07 • Giữa (12.71s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_07_mid.jpg" alt="Shot 07 Mid" loading="lazy">
+                    <span class="kf-label-tag mid">Giữa (12.71s)</span>
+                </div>
+                <div class="kf-card" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_07_end.jpg', 'Shot 07 • Cuối (14.10s)')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_07_end.jpg" alt="Shot 07 End" loading="lazy">
+                    <span class="kf-label-tag end">Cuối (14.10s)</span>
+                </div>
+            </div>
+
+            <!-- 3 Structured Critique Blocks -->
+            <div class="critique-blocks-grid">
+                <div class="block-subject-action">
+                    <div class="block-label">🎬 Mô Tả Đối Tượng &amp; Diễn Biến</div>
+                    <div class="block-text">Cú máy toàn cảnh tĩnh (Monumental Establishing Shot) ghi lại mặt tiền kỳ vĩ của Nhà thờ chính tòa Palermo (Cattedrale di Palermo) dưới vòm trời xanh ngọc bích. Phía trước là hàng lan can đá cẩm thạch với hai bệ tượng thánh bảo hộ uy nghi cầm kinh thánh đứng gác hai bên lối vào. Tán cọ Địa Trung Hải vươn cao xanh ngắt bên phải đung đưa theo gió; dòng du khách thong dong dạo bước qua sân thánh đường ngập tràn nắng vàng.</div>
+                </div>
+
+                <div class="block-two-sided">
+                    <div class="critique-side pro">
+                        <div class="side-header">✅ Điểm Sáng Thị Giác (Ưu điểm)</div>
+                        <div class="side-content">Bố cục phân lớp đa tầng bậc thầy (Multi-layered Depth): Bệ tượng thánh tiền cảnh -> Sân thánh đường và du khách trung cảnh -> Khối kiến trúc cổng vòm Gothic Catalan, tháp nhọn và mái vòm Tân cổ điển hậu cảnh. Cây cọ tạo nét chấm phá nhiệt đới Địa Trung Hải khó lẫn của Sicily; là cú chốt hạ (Outro Grand Finale) hoàn hảo cho toàn bộ video.</div>
+                    </div>
+                    <div class="critique-side con">
+                        <div class="side-header">⚠️ Điểm Cần Lưu Ý (Hạn chế)</div>
+                        <div class="side-content">Ánh nắng chính ngọ chiếu thẳng đứng tạo bóng đổ gắt ngay dưới hốc mắt của các bức tượng thánh đá (harsh midday shadow).</div>
+                    </div>
+                </div>
+
+                <div class="block-takeaway">
+                    <div class="takeaway-header">💡 Bài Học Đúc Kết Thực Chiến</div>
+                    <div class="takeaway-body">Kết thúc một video du ký du lịch luôn là một cú Master Wide Shot tôn vinh công trình biểu tượng vĩ đại nhất của thành phố. Sử dụng các bệ tượng hoặc cổng rào ở tiền cảnh để tạo cảm giác uy nghi, đón dòng người tản bộ để giữ nhịp sống nhân văn cho đại cảnh.</div>
+                </div>
+            </div>
+
+            <!-- Specs Strip -->
+            <div class="shot-specs-strip">
+                <span class="spec-pill">📐 <strong>Góc máy:</strong> Low-to-Eye Level Master Wide Landscape Shot • 24mm - 28mm Wide Lens Equivalent</span>
+                <span class="spec-pill">📍 <strong>Bối cảnh:</strong> Quần thể Nhà thờ chính tòa Cattedrale di Palermo (UNESCO World Heritage)</span>
+                <span class="spec-pill">💡 <strong>Ánh sáng:</strong> Ánh nắng Địa Trung Hải rực rỡ (Bright Mediterranean Sunlight)</span>
+                <span class="spec-pill">⚡ <strong>Cắt cảnh:</strong> Fade to Black / Kết thúc video</span>
+            </div>
+
+            
+        </article>
+        
+        </div>
+
+        <!-- VISUAL GRID VIEW -->
+        <div class="visual-grid-view" id="gridView">
+            
+        <div class="grid-shot-card" onclick="jumpToShot(1, 0.0, 2.5)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_01_mid.jpg" alt="Shot 01" loading="lazy">
+                <span class="grid-thumb-badge">Shot 01 • 0.00s</span>
+            </div>
+            <div class="grid-card-body">Khung Lồng Khung Cổng Vòm Cổ Điển Đón Xe Ba Gác Ape Piaggio: Khóa chặt thị giác bằng vòm đá sa thạch phong hóa mở ra nhịp sống đường phố rực nắng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(2, 2.53, 4.5)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_02_mid.jpg" alt="Shot 02" loading="lazy">
+                <span class="grid-thumb-badge">Shot 02 • 2.53s</span>
+            </div>
+            <div class="grid-card-body">Góc Ngước 45° Đón Rèm Che Nắng Sọc Kẻ & Dây Phơi Đồ Bay Trong Gió Biển: Biến kiến trúc nhà phố tĩnh thành nhịp thở hữu cơ sống động</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(3, 4.53, 6.07)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_03_mid.jpg" alt="Shot 03" loading="lazy">
+                <span class="grid-thumb-badge">Shot 03 • 4.53s</span>
+            </div>
+            <div class="grid-card-body">Bố Cục Cung Điện Chữ V (V-Shaped Framing) Hội Tụ Về Mái Vòm Gạch Men San Giuseppe: Tôn vinh đỉnh cao nghệ thuật Baroque Sicily bằng kỹ thuật nén phối cảnh</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(4, 6.1, 7.7)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_04_mid.jpg" alt="Shot 04" loading="lazy">
+                <span class="grid-thumb-badge">Shot 04 • 6.10s</span>
+            </div>
+            <div class="grid-card-body">Mặt Đứng Đối Xứng Trực Diện (Flat Symmetry) Tiệm Bánh Cổ 1834 Đón Người Phụ Nữ Đạp Xe: Nhịp cắt ngang chuẩn phong cách Wes Anderson</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(5, 7.73, 9.5)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_05_mid.jpg" alt="Shot 05" loading="lazy">
+                <span class="grid-thumb-badge">Shot 05 • 7.73s</span>
+            </div>
+            <div class="grid-card-body">Trục Phối Cảnh Chiều Sâu Một Điểm Tụ (One-Point Perspective) Hướng Về Cổng Thành Porta Nuova: Kỹ thuật nén tiêu cự gom trọn dòng người tản bộ dưới hàng cây rợp bóng</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(6, 9.53, 11.3)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_06_mid.jpg" alt="Shot 06" loading="lazy">
+                <span class="grid-thumb-badge">Shot 06 • 9.53s</span>
+            </div>
+            <div class="grid-card-body">Khoảnh Khắc Bồ Câu Bay Vút Qua Mái Vòm Chiesa Del Carmine Từ Chợ Cổ Ballarò: Tương phản giữa mái bạt chợ đời thường và đỉnh vòm tôn nghiêm</div>
+        </div>
+        
+
+        <div class="grid-shot-card" onclick="jumpToShot(7, 11.33, 14.1)">
+            <div class="grid-thumb-wrap">
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@mako__go_DaH7X34NTNX_Palermo_Sicily/extracted_shots/shot_07_mid.jpg" alt="Shot 07" loading="lazy">
+                <span class="grid-thumb-badge">Shot 07 • 11.33s</span>
+            </div>
+            <div class="grid-card-body">Bố Cục Toàn Cảnh Tôn Nghiêm (Monumental Master Wide) Cattedrale Di Palermo: Khép lại hành trình bằng tỷ lệ vàng kiến trúc Arab-Norman và hàng cọ nhiệt đới</div>
+        </div>
+        
+        </div>
+
+        <!-- FOOTER LINKS SECTION -->
+        <footer class="bottom-links-section">
+            <div style="font-family:var(--font-heading-short); font-size:14px; font-weight:700; text-transform:uppercase; color:var(--cl-text-primary);">
+                🔗 Hệ Sinh Thái &amp; Kho Tài Nguyên Liên Quan
+            </div>
+            <div class="footer-links-grid">
+                <a href="https://ytuong.fedu.vn" target="_blank" class="footer-link-card">
+                    <span>💡 Kho Ý Tưởng &amp; Mẫu Quay YTUONG HUB ↗</span>
+                </a>
+                <a href="https://fedu.vn/scene.html" target="_blank" class="footer-link-card">
+                    <span>🎬 Cổng Tra Cứu Điện Ảnh Scene.html ↗</span>
+                </a>
+                <a href="https://drive.google.com/open?id=1z1dc4ozpSK9m95GwFxr-LF0dh20R1-f8" target="_blank" class="footer-link-card">
+                    <span>📁 Mở Thư Mục Google Drive ↗</span>
+                </a>
+                <a href="#" style="display:none;" class="footer-link-card">
+                    <span>💻 Mở Thư Mục Trên Máy (Finder)</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightboxImg" src="" alt="Zoomed Keyframe">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<script>
+// Structured Shots Data
+const SHOTS_DATA = [{"id": 1, "st_frame": 0, "en_frame": 75, "st_time": 0.0, "en_time": 2.5, "duration": 2.5, "headline": "Khung Lồng Khung Cổng Vòm Cổ Điển Đón Xe Ba Gác Ape Piaggio: Khóa chặt thị giác bằng vòm đá sa thạch phong hóa mở ra nhịp sống đường phố rực nắng", "subject_action": "Khung hình tĩnh đặt sâu trong bóng râm của vòm đá cổ (cổng thành tàn tích La Mã / Trung cổ tại Palermo), bao bọc bởi hai bức tường đá sa thạch rêu phong và bức tranh graffiti nghệ thuật bên trái. Giữa khung hình mở, một chiếc xe ba gác cổ điển màu xanh lam Piaggio Ape Calessino thong thả lướt từ trái sang phải qua ngã ba đường ngập tràn ánh nắng. Typography phong cách tạp chí hoài cổ hiện lên: 'Living my' (Serif trắng tinh tế), 'Palermo' (Serif Bold vàng chanh rực rỡ, khổ lớn nổi bật), 'life' (Serif trắng bên dưới).", "pros": "Hiệu ứng khung lồng khung (Natural Archway Framing) tạo cảm giác như người xem đang nhìn lén qua một ô cửa thời gian; sắc vàng của chữ 'Palermo' đồng điệu hoàn hảo với ánh nắng và những mảng tường vàng xa xa; chiếc xe Ape màu xanh lam tạo điểm nhấn màu bổ trợ (Teal & Yellow/Warm) dẫn mắt người xem theo trục ngang.", "cons": "Góc tường rêu phong bên phải chiếm diện tích khá lớn (>35% diện tích khung hình) và hơi tối; nếu người xem xem trên màn hình điện thoại ở ngoài trời có thể bị mất chi tiết vùng tối (shadow crush) ở góc đá này.", "takeaway": "Khi quay du lịch di sản, hãy lùi ống kính vào sâu trong cổng vòm, hành lang hoặc hốc tường tối để tạo 'vignette tự nhiên' (Natural Vignette), sau đó kiên nhẫn chờ một phương tiện giao thông mang tính biểu tượng văn hóa bản địa (như xe ba gác Ý, xe lam, xích lô) lướt qua khoảng sáng.", "location": "Vòm đá cổ gần Palazzo Conte Federico, Palermo, Sicily", "lens_angle": "Eye-Level Static Wide Shot • 35mm Lens Equivalent", "lighting_color": "Tương phản sáng - tối mạnh (High Contrast Chiaroscuro • Bóng râm tiền cảnh & Nắng gắt hậu cảnh)", "transition": "Cắt thẳng (Hard Cut) sang Shot 02"}, {"id": 2, "st_frame": 76, "en_frame": 135, "st_time": 2.53, "en_time": 4.5, "duration": 1.97, "headline": "Góc Ngước 45° Đón Rèm Che Nắng Sọc Kẻ & Dây Phơi Đồ Bay Trong Gió Biển: Biến kiến trúc nhà phố tĩnh thành nhịp thở hữu cơ sống động", "subject_action": "Góc máy ngước thấp (Low-Angle Shot) hướng lên các tầng ban công hoa sắt cổ điển của một tòa nhà cư dân Palermo. Những tấm rèm bạt che nắng sọc kẻ nâu - be và xanh ngọc đung đưa liên tục theo từng cơn gió Địa Trung Hải; bên góc trái là giàn dây phơi với quần áo, khăn tắm bay phấp phới dưới nền trời xanh ngắt.", "pros": "Khung hình hoàn toàn cố định nhưng chuyển động dập dềnh của vải rèm và quần áo tạo ra 'chuyển động nội tại' (Micro-movement) cực kỳ êm dịu, gợi lên cảm giác sảng khoái của mùa hè miền Nam nước Ý; đường chéo của ban công dẫn hướng mắt từ góc dưới phải lên góc trên trái (Leading Diagonal).", "cons": "Một cục nóng điều hòa hiện đại (nhãn hiệu HIROn) xuất hiện khá rõ ở góc dưới phải làm giảm bớt tính thuần khiết cổ điển của khối kiến trúc lịch sử.", "takeaway": "Đừng chỉ quay các tượng đài đá khô cứng; hãy tìm những yếu tố vải vóc, cành lá hoặc rèm che đón gió ở các góc ngước để đưa 'hơi thở và sự rung động tự nhiên' vào video du lịch mà không cần phải di chuyển máy quay.", "location": "Khu dân cư cổ trung tâm Palermo, Sicily", "lens_angle": "Low-Angle Upward Medium Shot • 50mm Lens Equivalent", "lighting_color": "Ánh sáng ban ngày trực tiếp rực rỡ (Direct Sun & Cyan-Blue Sky)", "transition": "Cắt thẳng (Hard Cut) sang Shot 03"}, {"id": 3, "st_frame": 136, "en_frame": 182, "st_time": 4.53, "en_time": 6.07, "duration": 1.54, "headline": "Bố Cục Cung Điện Chữ V (V-Shaped Framing) Hội Tụ Về Mái Vòm Gạch Men San Giuseppe: Tôn vinh đỉnh cao nghệ thuật Baroque Sicily bằng kỹ thuật nén phối cảnh", "subject_action": "Góc ngước uy nghiêm tại ngã tư huyền thoại Quattro Canti (Piazza Vigliena). Hai mặt tiền cung điện Baroque tráng lệ với các hàng cột thức La Mã, ban công uốn lượn và các pho tượng thánh tạc đá cẩm thạch kẹp hai bên tạo thành hình chữ V khổng lồ. Ở trung tâm khe hẹp bầu trời vươn lên mái vòm Nhà thờ San Giuseppe dei Teatini lợp gạch men Majolica xanh vàng hình zíc-zắc dưới nền mây trắng lững lờ.", "pros": "Bố cục chữ V kinh điển tạo lực hút thị giác cực mạnh về đỉnh vòm trung tâm; ánh sáng mặt trời chiếu xiên tạo sự phân tách rạch ròi: mặt cung điện bên trái rực sáng vàng óng, mặt bên phải chìm trong bóng đổ huyền bí, khắc họa khối điêu khắc 3D nổi bật.", "cons": "Hai sợi dây điện/cáp chăng ngang bầu trời cắt ngang phần trên của mái vòm làm phân tán nhẹ sự liền mạch thị giác của khối kiến trúc thiêng liêng.", "takeaway": "Khi đứng giữa các quảng trường kiến trúc cổ chật hẹp, hãy hạ thấp góc máy ngước lên để hai góc tòa nhà tạo thành 'hẻm thị giác' (Visual Canyon), nén tiêu cự để kéo một kỳ quan mái vòm ở xa lọt vào chính giữa khe hẹp.", "location": "Quảng trường Quattro Canti & Mái vòm San Giuseppe dei Teatini, Palermo", "lens_angle": "Low-Angle Upward Tilt Shot • 28mm Wide Lens Equivalent", "lighting_color": "Ánh sáng xiên chiều chia đôi sáng tối (Directional Golden Sun & Deep Shadows)", "transition": "Cắt thẳng (Hard Cut) sang Shot 04"}, {"id": 4, "st_frame": 183, "en_frame": 231, "st_time": 6.1, "en_time": 7.7, "duration": 1.6, "headline": "Mặt Đứng Đối Xứng Trực Diện (Flat Symmetry) Tiệm Bánh Cổ 1834 Đón Người Phụ Nữ Đạp Xe: Nhịp cắt ngang chuẩn phong cách Wes Anderson", "subject_action": "Góc máy ngang tầm mắt (Eye-Level) chụp trực diện mặt tiền tiệm bánh lịch sử nổi tiếng Antica Focacceria San Francesco (thành lập năm 1834). Cửa gỗ lim nâu trầm mở toang, bên trên là biển hiệu khắc chữ Art Nouveau và năm 1834 cùng các ô kính màu vintage. Một người phụ nữ mặc áo trắng thong thả đạp xe đạp từ góc trái lướt ngang qua khung hình, trong khi một người phụ nữ khác đứng tựa cửa nhìn ra phố đá cổ.", "pros": "Bố cục đối xứng trục thẳng đứng (Frontal Flat Symmetry) tạo cảm giác ngăn nắp, trang trọng và mang phong vị hoài niệm điện ảnh; chuyển động cắt ngang của xe đạp đóng vai trò là 'chủ thể phá vỡ tính tĩnh' (Static Breaker), tạo tương phản giữa nét cổ kính 200 năm và nhịp sống đời thường hiện tại.", "cons": "Người đạp xe lướt khá sát đáy khung hình (chặt góc dưới bánh xe ở một vài frame đầu), góc máy nếu lùi thêm 0.5m sẽ có khoảng đệm mặt đường đá (lead room) hoàn hảo hơn.", "takeaway": "Bố cục mặt phẳng trực diện (Frontal Tableau) đòi hỏi độ cân bằng bọt nước hoàn hảo (căn level 0°). Hãy đặt máy tĩnh trước một cửa hiệu có biển số năm lịch sử (est. 18xx) và kiên nhẫn chờ người địa phương đạp xe hoặc đi bộ ngang qua để tạo nhịp phim.", "location": "Antica Focacceria San Francesco (Piazza San Francesco d'Assisi, Palermo)", "lens_angle": "Eye-Level Symmetrical Medium Shot • 50mm Lens Equivalent", "lighting_color": "Ánh sáng tản đều trong hẻm đá (Even Ambient Fill Light)", "transition": "Cắt thẳng (Hard Cut) sang Shot 05"}, {"id": 5, "st_frame": 232, "en_frame": 285, "st_time": 7.73, "en_time": 9.5, "duration": 1.77, "headline": "Trục Phối Cảnh Chiều Sâu Một Điểm Tụ (One-Point Perspective) Hướng Về Cổng Thành Porta Nuova: Kỹ thuật nén tiêu cự gom trọn dòng người tản bộ dưới hàng cây rợp bóng", "subject_action": "Khung hình tĩnh đặt giữa đại lộ lịch sử Corso Vittorio Emanuele nhìn thẳng về phía cổng thành tráng lệ Porta Nuova (thế kỷ 16). Hàng cây xanh cổ thụ và dãy cột đèn đường uốn lượn bên trái cùng bức tường đá sa thạch của cung điện bên phải hội tụ chính xác về vòm cổng thành mái kim tự tháp ở hậu cảnh. Hai người đàn ông ở tiền cảnh bên phải đang thong thả bước đi cùng chiều dòng người và xe đạp dạo bước về phía cổng thành xa xăm.", "pros": "Chiều sâu không gian trục Z (Z-Axis Depth) vô cùng sâu sắc; kỹ thuật nén tiêu cự tele tầm trung làm cổng thành Porta Nuova ở xa trông bề thế và đồ sộ; bóng cây râm mát đổ loang lổ trên mặt đường nhựa tạo cảm giác một buổi trưa hè bình yên, thư thái.", "cons": "Dáng lưng của người đàn ông mặc áo đen ở tiền cảnh bên phải chiếm phần đáng kể diện tích góc phải dưới, bước chân hơi che khuất một phần góc nhìn vỉa hè.", "takeaway": "Khi quay các đại lộ danh lam thắng cảnh, hãy tận dụng trục đối xứng phối cảnh 1 điểm tụ (One-point perspective) và để dòng người đi cùng chiều (hoặc ngược chiều) tự nhiên bước vào khung hình để dẫn dắt mắt người xem từ tiền cảnh vào tận điểm vô cực.", "location": "Đại lộ Corso Vittorio Emanuele hướng về Cổng thành Porta Nuova, Palermo", "lens_angle": "Eye-Level Telephoto Compression Shot • 70mm - 85mm Lens Equivalent", "lighting_color": "Nắng trưa rọi xiên qua kẽ lá (Dappled Sunlight & Tree Shadows)", "transition": "Cắt thẳng (Hard Cut) sang Shot 06"}, {"id": 6, "st_frame": 286, "en_frame": 339, "st_time": 9.53, "en_time": 11.3, "duration": 1.77, "headline": "Khoảnh Khắc Bồ Câu Bay Vút Qua Mái Vòm Chiesa Del Carmine Từ Chợ Cổ Ballarò: Tương phản giữa mái bạt chợ đời thường và đỉnh vòm tôn nghiêm", "subject_action": "Góc máy ngước từ lòng chợ truyền thống Mercato di Ballarò ngước lên bầu trời mây trắng trôi bồng bềnh. Phía dưới là các mái bạt che nắng sọc vàng - cam và bạt đỏ của sạp chợ; phía trên những bức tường gạch cổ là mái vòm lộng lẫy của Nhà thờ Chiesa del Carmine Maggiore lợp ngói men Majolica. Ngay giây thứ 11.0s, một chú chim bồ câu bất ngờ vỗ cánh bay vút từ bên phải ngang qua đỉnh mái vòm tạo nên khoảnh khắc đắt giá của thước phim.", "pros": "Tương phản tuyệt mỹ giữa văn hóa chợ dân sinh mộc mạc bên dưới và thánh đường tôn nghiêm bên trên; màu vàng của mái bạt tiền cảnh tương hỗ hài hòa với màu gạch và sắc vàng trên mái vòm; sự xuất hiện tình cờ của chú chim bồ câu là 'quà tặng của hiện trường' (Cinematic Serendipity) kích hoạt cảm xúc người xem.", "cons": "Đường dây điện mỏng cắt ngang qua thân mái vòm (đặc trưng của các khu chợ cổ Nam Âu), tuy nhiên lại góp phần tạo nên nét chân thực đời sống.", "takeaway": "Kiên nhẫn là chìa khóa của những cú máy tĩnh (Static Framings). Hãy thiết lập góc ngước hoàn hảo tại các khu chợ truyền thống hướng về các công trình kiến trúc cao tầng, giữ máy ổn định 10-15 giây để đón những khoảnh khắc hữu cơ ngẫu nhiên (chim bay, mây cuộn, bóng người).", "location": "Chợ cổ Mercato di Ballarò & Mái vòm Chiesa del Carmine Maggiore, Palermo", "lens_angle": "Low-Angle Looking-Up Medium Shot • 35mm Lens Equivalent", "lighting_color": "Ánh sáng tự nhiên trời trong có mây trắng (Bright Daylight with Fluffy Clouds)", "transition": "Cắt thẳng (Hard Cut) sang Shot 07"}, {"id": 7, "st_frame": 340, "en_frame": 422, "st_time": 11.33, "en_time": 14.1, "duration": 2.77, "headline": "Bố Cục Toàn Cảnh Tôn Nghiêm (Monumental Master Wide) Cattedrale Di Palermo: Khép lại hành trình bằng tỷ lệ vàng kiến trúc Arab-Norman và hàng cọ nhiệt đới", "subject_action": "Cú máy toàn cảnh tĩnh (Monumental Establishing Shot) ghi lại mặt tiền kỳ vĩ của Nhà thờ chính tòa Palermo (Cattedrale di Palermo) dưới vòm trời xanh ngọc bích. Phía trước là hàng lan can đá cẩm thạch với hai bệ tượng thánh bảo hộ uy nghi cầm kinh thánh đứng gác hai bên lối vào. Tán cọ Địa Trung Hải vươn cao xanh ngắt bên phải đung đưa theo gió; dòng du khách thong dong dạo bước qua sân thánh đường ngập tràn nắng vàng.", "pros": "Bố cục phân lớp đa tầng bậc thầy (Multi-layered Depth): Bệ tượng thánh tiền cảnh -> Sân thánh đường và du khách trung cảnh -> Khối kiến trúc cổng vòm Gothic Catalan, tháp nhọn và mái vòm Tân cổ điển hậu cảnh. Cây cọ tạo nét chấm phá nhiệt đới Địa Trung Hải khó lẫn của Sicily; là cú chốt hạ (Outro Grand Finale) hoàn hảo cho toàn bộ video.", "cons": "Ánh nắng chính ngọ chiếu thẳng đứng tạo bóng đổ gắt ngay dưới hốc mắt của các bức tượng thánh đá (harsh midday shadow).", "takeaway": "Kết thúc một video du ký du lịch luôn là một cú Master Wide Shot tôn vinh công trình biểu tượng vĩ đại nhất của thành phố. Sử dụng các bệ tượng hoặc cổng rào ở tiền cảnh để tạo cảm giác uy nghi, đón dòng người tản bộ để giữ nhịp sống nhân văn cho đại cảnh.", "location": "Quần thể Nhà thờ chính tòa Cattedrale di Palermo (UNESCO World Heritage)", "lens_angle": "Low-to-Eye Level Master Wide Landscape Shot • 24mm - 28mm Wide Lens Equivalent", "lighting_color": "Ánh nắng Địa Trung Hải rực rỡ (Bright Mediterranean Sunlight)", "transition": "Fade to Black / Kết thúc video"}];
+const player = document.getElementById('mainPlayer');
+const playBtn = document.getElementById('playBtn');
+const timeDisplay = document.getElementById('timeDisplay');
+const loopBtn = document.getElementById('loopBtn');
+
+let currentLoopShot = null;
+let isLooping = false;
+
+// Timeupdate listener
+player.addEventListener('timeupdate', () => {
+    const ct = player.currentTime;
+    timeDisplay.textContent = ;
+
+    if (isLooping && currentLoopShot) {
+        if (ct >= currentLoopShot.en_time) {
+            player.currentTime = currentLoopShot.st_time;
+        }
+    }
+});
+
+player.addEventListener('play', () => { playBtn.textContent = '⏸ Tạm dừng'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶ Phát'; });
+
+function togglePlay() {
+    if (player.paused) player.play();
+    else player.pause();
+}
+
+function setSpeed(speed) {
+    player.playbackRate = speed;
+    document.querySelectorAll('.ctrl-btn-group button').forEach(b => {
+        if (b.textContent === speed + 'x') b.classList.add('active');
+        else if (b.textContent.includes('x')) b.classList.remove('active');
+    });
+}
+
+function stepFrame(frames) {
+    const fps = 30.0 || 24;
+    player.currentTime += frames / fps;
+}
+
+function jumpToShot(shotId, stTime, enTime) {
+    player.currentTime = stTime;
+    player.play();
+    currentLoopShot = { id: shotId, st_time: stTime, en_time: enTime };
+
+    // Highlight card
+    document.querySelectorAll('.shot-card').forEach(c => c.style.borderColor = 'var(--cl-border)');
+    const targetCard = document.getElementById();
+    if (targetCard) {
+        targetCard.style.borderColor = 'var(--cl-accent)';
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function toggleLoop() {
+    isLooping = !isLooping;
+    loopBtn.classList.toggle('active', isLooping);
+}
+
+function switchView(viewName) {
+    const detailView = document.getElementById('detailView');
+    const gridView = document.getElementById('gridView');
+    const tabDetail = document.getElementById('tabDetail');
+    const tabGrid = document.getElementById('tabGrid');
+
+    if (viewName === 'detail') {
+        detailView.style.display = 'flex';
+        gridView.style.display = 'none';
+        tabDetail.classList.add('active');
+        tabGrid.classList.remove('active');
+    } else {
+        detailView.style.display = 'none';
+        gridView.style.display = 'grid';
+        tabDetail.classList.remove('active');
+        tabGrid.classList.add('active');
+    }
+}
+
+// Lightbox
+function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    document.getElementById('lightboxModal').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+function handleCreatorClick(e, handle, name) {
+    if (e) e.preventDefault();
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
+            if (typeof window.parent.filterByCreator === 'function') {
+                window.parent.closeModal('reportEmbedModal');
+                window.parent.filterByCreator(handle, name);
+                return;
+            }
+        }
+    } catch (err) {}
+    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
+}
+
+
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
+</script>
+
+</body>
+</html>
