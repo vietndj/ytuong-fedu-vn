@@ -15880,5 +15880,85 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz": {
+    "id": "IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz",
+    "creator": "@Jenny_Yoo_🇰🇷",
+    "creator_name": "Jenny_Yoo_🇰🇷",
+    "title": "@Jenny_Yoo_🇰🇷 - Video by yooinoz",
+    "shots_count": 34,
+    "duration": "68.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Instagram Liked 24h: Video, 3 of 18, by @yooinoz, shared June 23, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "3 Of 18",
+      "By @yooinoz",
+      "Shared June 23",
+      "2026",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 3 of 18, by @yooinoz, shared June 23, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Talking Head.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DZ8w6MsSMAw": {
+    "id": "IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz",
+    "creator": "@Jenny_Yoo_🇰🇷",
+    "creator_name": "Jenny_Yoo_🇰🇷",
+    "title": "@Jenny_Yoo_🇰🇷 - Video by yooinoz",
+    "shots_count": 34,
+    "duration": "68.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Instagram Liked 24h: Video, 3 of 18, by @yooinoz, shared June 23, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "3 Of 18",
+      "By @yooinoz",
+      "Shared June 23",
+      "2026",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 3 of 18, by @yooinoz, shared June 23, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Talking Head.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }

@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 201,
-  "total_unique_ideas": 190,
-  "total_active_ideas": 165,
+  "total_scene_items": 202,
+  "total_unique_ideas": 191,
+  "total_active_ideas": 166,
   "total_excluded_ideas": 25,
-  "total_creators": 120,
+  "total_creators": 121,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -62,7 +62,7 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 3,
     "voice-over": 10,
-    "talking-head": 19,
+    "talking-head": 20,
     "storytelling": 18,
     "dien-anh": 83,
     "chuyen-canh": 32
@@ -156,7 +156,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 18,
     "du-lich": 12,
     "cong-nghe": 21,
-    "kien-truc": 14,
+    "kien-truc": 15,
     "the-thao": 7,
     "ky-thuat-quay": 45,
     "ugc": 5
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 79,
+    "us_eu": 80,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -500,6 +500,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@yooinoz",
+      "name": "Jenny_Yoo_🇰🇷",
+      "profile_url": "https://www.instagram.com/yooinoz/",
+      "video_count": 1,
+      "top_industry": "Góc nhà đẹp",
+      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Jenny_Yoo_%F0%9F%87%B0%F0%9F%87%B7_DZ8w6MsSMAw_Video_by_yooinoz/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz"
       ]
     },
     {
@@ -1593,6 +1604,75 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz",
+      "shortcode": "DZ8w6MsSMAw",
+      "title_vi": "@Jenny_Yoo_🇰🇷 - Video by yooinoz",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "key_tech": "Instagram Liked 24h: Video • 3 Of 18 • By @yooinoz • Shared June 23 • 2026 • Establishing Hook Shot • Close-Up / Macro Detail Shot • Medium Tracking Shot",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Góc nhà đẹp",
+        "en_name": "Architecture & Living",
+        "icon": "🏛️",
+        "badge_color": "emerald"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 3 of 18, by @yooinoz, shared June 23, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "3 Of 18",
+        "By @yooinoz",
+        "Shared June 23",
+        "2026",
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot",
+        "Medium Tracking Shot",
+        "Low-key Lighting"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 3 of 18, by @yooinoz, shared June 23, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Talking Head.",
+      "creator": {
+        "raw": "@Jenny_Yoo_🇰🇷",
+        "name": "Jenny_Yoo_🇰🇷",
+        "handle": "@yooinoz",
+        "profile_url": "https://www.instagram.com/yooinoz/"
+      },
+      "ig_url": "https://www.instagram.com/p/DZ8w6MsSMAw",
+      "gdrive_folder": "https://drive.google.com/open?id=17B1h27000Snbr6BE0M1oZvvehy01aP3s",
+      "media": {
+        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Jenny_Yoo_%F0%9F%87%B0%F0%9F%87%B7_DZ8w6MsSMAw_Video_by_yooinoz/shot_01_mid.jpg",
+        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Jenny_Yoo_%F0%9F%87%B0%F0%9F%87%B7_DZ8w6MsSMAw_Video_by_yooinoz/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DZ8w6MsSMAw.mp4",
+        "report_url": "reports/IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz.html",
+        "shots_count": 34,
+        "duration": "68s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@drea_(이현)_DaClEhzB5WC_Video_by_dreakwon",
       "shortcode": "DaClEhzB5WC",
