@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 213,
-  "total_unique_ideas": 202,
-  "total_active_ideas": 177,
+  "total_scene_items": 214,
+  "total_unique_ideas": 203,
+  "total_active_ideas": 178,
   "total_excluded_ideas": 25,
-  "total_creators": 132,
+  "total_creators": 133,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -64,7 +64,7 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 10,
     "talking-head": 22,
     "storytelling": 18,
-    "dien-anh": 88,
+    "dien-anh": 89,
     "chuyen-canh": 36
   },
   "industries": [
@@ -155,7 +155,7 @@ var FEDU_IDEAS_DATABASE = {
     "thoi-trang": 19,
     "am-thuc": 19,
     "du-lich": 12,
-    "cong-nghe": 25,
+    "cong-nghe": 26,
     "kien-truc": 20,
     "the-thao": 7,
     "ky-thuat-quay": 45,
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 91,
+    "us_eu": 92,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -500,6 +500,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@xiudian",
+      "name": "Xíu_Đi_Ăn",
+      "profile_url": "https://www.instagram.com/xiudian/",
+      "video_count": 1,
+      "top_industry": "Đồ công nghệ",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40X%C3%8DU_%C4%90I_%C4%82N_DazzVqPBfje_Video_by_xiudian/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@XÍU_ĐI_ĂN_DazzVqPBfje_Video_by_xiudian"
       ]
     },
     {
@@ -1725,6 +1736,74 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@XÍU_ĐI_ĂN_DazzVqPBfje_Video_by_xiudian",
+      "shortcode": "DazzVqPBfje",
+      "title_vi": "@XÍU_ĐI_ĂN - Video by xiudian",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+      "key_tech": "Instagram Liked 24h: Video • 17 Of 18 • By @xiudian_ • Shared July 15 • 2026 • Establishing Hook Shot • Medium Tracking Shot • Close-Up / Macro Detail Shot",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industry": {
+        "id": "cong-nghe",
+        "name": "Đồ công nghệ",
+        "en_name": "Tech & Gear",
+        "icon": "📱",
+        "badge_color": "purple"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 17 of 18, by @xiudian_, shared July 15, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "17 Of 18",
+        "By @xiudian_",
+        "Shared July 15",
+        "2026",
+        "Establishing Hook Shot",
+        "Medium Tracking Shot",
+        "Close-Up / Macro Detail Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 17 of 18, by @xiudian_, shared July 15, 2026. Phân loại vào Công Nghệ & Thiết Bị • Điện Ảnh (Cinematic).",
+      "creator": {
+        "raw": "@XÍU_ĐI_ĂN",
+        "name": "Xíu_Đi_Ăn",
+        "handle": "@xiudian",
+        "profile_url": "https://www.instagram.com/xiudian/"
+      },
+      "ig_url": "https://www.instagram.com/p/DazzVqPBfje",
+      "gdrive_folder": "https://drive.google.com/open?id=1fj0vsLa2k5zyPZ3e13O9J24_zvkqdACC",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40X%C3%8DU_%C4%90I_%C4%82N_DazzVqPBfje_Video_by_xiudian/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40X%C3%8DU_%C4%90I_%C4%82N_DazzVqPBfje_Video_by_xiudian/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DazzVqPBfje.mp4",
+        "report_url": "reports/IG_@XÍU_ĐI_ĂN_DazzVqPBfje_Video_by_xiudian.html",
+        "shots_count": 7,
+        "duration": "14s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@misa｜築40年マンション暮らし_Db-xDk4vWNQ_Video_by_mi_no_ie_39",
       "shortcode": "Db-xDk4vWNQ",
