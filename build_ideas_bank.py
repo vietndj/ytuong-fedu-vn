@@ -796,6 +796,13 @@ def build_database():
         index_path = os.path.join(BASE_DIR, "index.html")
         if os.path.exists(index_path):
             shutil.copy2(index_path, os.path.join(dist_dir, "index.html"))
+            
+        # Copy reports folder
+        reports_src = os.path.join(BASE_DIR, "reports")
+        reports_dist = os.path.join(dist_dir, "reports")
+        if os.path.exists(reports_src):
+            shutil.copytree(reports_src, reports_dist, dirs_exist_ok=True)
+            
         print("Synchronized all build files to dist/ directory.")
 
     print(f"Successfully generated {OUTPUT_JS_PATH}")
