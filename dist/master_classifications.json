@@ -16578,5 +16578,83 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@Rika_ビオトープめだか植物のある暮らし_Da5KgjAxfOG_Video_by_r_6cafe": {
+    "id": "IG_@Rika_ビオトープめだか植物のある暮らし_Da5KgjAxfOG_Video_by_r_6cafe",
+    "creator": "@Rika_ビオトープめだか植物のある暮らし",
+    "creator_name": "Rika_ビオトープめだか植物のある暮らし",
+    "title": "@Rika_ビオトープめだか植物のある暮らし - Video by r 6cafe",
+    "shots_count": 11,
+    "duration": "22.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "am-thuc",
+      "name": "Ẩm Thực & F&B",
+      "icon": "🍜"
+    },
+    "purpose": "Instagram Liked 24h: Video, 11 of 18, by @r_6cafe, shared July 17, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "11 Of 18",
+      "By @r_6cafe",
+      "Shared July 17",
+      "2026",
+      "Establishing Hook Shot",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 11 of 18, by @r_6cafe, shared July 17, 2026. Phân loại vào Ẩm Thực & F&B • Chuyển Cảnh (Transition).",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "Da5KgjAxfOG": {
+    "id": "IG_@Rika_ビオトープめだか植物のある暮らし_Da5KgjAxfOG_Video_by_r_6cafe",
+    "creator": "@Rika_ビオトープめだか植物のある暮らし",
+    "creator_name": "Rika_ビオトープめだか植物のある暮らし",
+    "title": "@Rika_ビオトープめだか植物のある暮らし - Video by r 6cafe",
+    "shots_count": 11,
+    "duration": "22.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "am-thuc",
+      "name": "Ẩm Thực & F&B",
+      "icon": "🍜"
+    },
+    "purpose": "Instagram Liked 24h: Video, 11 of 18, by @r_6cafe, shared July 17, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "11 Of 18",
+      "By @r_6cafe",
+      "Shared July 17",
+      "2026",
+      "Establishing Hook Shot",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 11 of 18, by @r_6cafe, shared July 17, 2026. Phân loại vào Ẩm Thực & F&B • Chuyển Cảnh (Transition).",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }

@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 210,
-  "total_unique_ideas": 199,
-  "total_active_ideas": 174,
+  "total_scene_items": 211,
+  "total_unique_ideas": 200,
+  "total_active_ideas": 175,
   "total_excluded_ideas": 25,
-  "total_creators": 129,
+  "total_creators": 130,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -65,7 +65,7 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 22,
     "storytelling": 18,
     "dien-anh": 87,
-    "chuyen-canh": 34
+    "chuyen-canh": 35
   },
   "industries": [
     {
@@ -153,7 +153,7 @@ var FEDU_IDEAS_DATABASE = {
     "spa-lam-dep": 5,
     "thuong-hieu": 19,
     "thoi-trang": 19,
-    "am-thuc": 18,
+    "am-thuc": 19,
     "du-lich": 12,
     "cong-nghe": 23,
     "kien-truc": 20,
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 88,
+    "us_eu": 89,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -500,6 +500,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@r_6cafe",
+      "name": "Rika_ビオトープめだか植物のある暮らし",
+      "profile_url": "https://www.instagram.com/r_6cafe/",
+      "video_count": 1,
+      "top_industry": "F&B",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Rika_%E3%83%93%E3%82%AA%E3%83%88%E3%83%BC%E3%83%97%E3%82%81%E3%81%A0%E3%81%8B%E6%A4%8D%E7%89%A9%E3%81%AE%E3%81%82%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97_Da5KgjAxfOG_Video_by_r_6cafe/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@Rika_ビオトープめだか植物のある暮らし_Da5KgjAxfOG_Video_by_r_6cafe"
       ]
     },
     {
@@ -1692,6 +1703,74 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@Rika_ビオトープめだか植物のある暮らし_Da5KgjAxfOG_Video_by_r_6cafe",
+      "shortcode": "Da5KgjAxfOG",
+      "title_vi": "@Rika_ビオトープめだか植物のある暮らし - Video by r 6cafe",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+      "key_tech": "Instagram Liked 24h: Video • 11 Of 18 • By @r_6cafe • Shared July 17 • 2026 • Establishing Hook Shot • Medium Tracking Shot • Close-Up / Macro Detail Shot",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
+      },
+      "industry": {
+        "id": "am-thuc",
+        "name": "F&B",
+        "en_name": "Food & Beverage",
+        "icon": "🍜",
+        "badge_color": "amber"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 11 of 18, by @r_6cafe, shared July 17, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "11 Of 18",
+        "By @r_6cafe",
+        "Shared July 17",
+        "2026",
+        "Establishing Hook Shot",
+        "Medium Tracking Shot",
+        "Close-Up / Macro Detail Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 11 of 18, by @r_6cafe, shared July 17, 2026. Phân loại vào Ẩm Thực & F&B • Chuyển Cảnh (Transition).",
+      "creator": {
+        "raw": "@Rika_ビオトープめだか植物のある暮らし",
+        "name": "Rika_ビオトープめだか植物のある暮らし",
+        "handle": "@r_6cafe",
+        "profile_url": "https://www.instagram.com/r_6cafe/"
+      },
+      "ig_url": "https://www.instagram.com/p/Da5KgjAxfOG",
+      "gdrive_folder": "https://drive.google.com/open?id=14SXW0ICuWhGrWTU2lfrmcRsljApor3bk",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Rika_%E3%83%93%E3%82%AA%E3%83%88%E3%83%BC%E3%83%97%E3%82%81%E3%81%A0%E3%81%8B%E6%A4%8D%E7%89%A9%E3%81%AE%E3%81%82%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97_Da5KgjAxfOG_Video_by_r_6cafe/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Rika_%E3%83%93%E3%82%AA%E3%83%88%E3%83%BC%E3%83%97%E3%82%81%E3%81%A0%E3%81%8B%E6%A4%8D%E7%89%A9%E3%81%AE%E3%81%82%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97_Da5KgjAxfOG_Video_by_r_6cafe/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/Da5KgjAxfOG.mp4",
+        "report_url": "reports/IG_@Rika_ビオトープめだか植物のある暮らし_Da5KgjAxfOG_Video_by_r_6cafe.html",
+        "shots_count": 11,
+        "duration": "22s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "trung-binh",
+        "label": "🟡 Trung bình (9-18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc",
       "shortcode": "DdA1ErpRMg2",
