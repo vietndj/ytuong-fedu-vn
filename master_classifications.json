@@ -16188,5 +16188,83 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@UME_📍минск-мир_DcVnyJyNWGY_Video_by_ume.izakaya": {
+    "id": "IG_@UME_📍минск-мир_DcVnyJyNWGY_Video_by_ume.izakaya",
+    "creator": "@UME_📍минск-мир",
+    "creator_name": "Ume_📍Минск-Мир",
+    "title": "@UME_📍минск-мир - Video by ume.izakaya",
+    "shots_count": 9,
+    "duration": "18.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Instagram Liked 24h: Video, 3 of 18, by @ume.izakaya, shared August 22, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "3 Of 18",
+      "By @ume.izakaya",
+      "Shared August 22",
+      "2026",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 3 of 18, by @ume.izakaya, shared August 22, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Chuyển Cảnh (Transition).",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DcVnyJyNWGY": {
+    "id": "IG_@UME_📍минск-мир_DcVnyJyNWGY_Video_by_ume.izakaya",
+    "creator": "@UME_📍минск-мир",
+    "creator_name": "Ume_📍Минск-Мир",
+    "title": "@UME_📍минск-мир - Video by ume.izakaya",
+    "shots_count": 9,
+    "duration": "18.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Instagram Liked 24h: Video, 3 of 18, by @ume.izakaya, shared August 22, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "3 Of 18",
+      "By @ume.izakaya",
+      "Shared August 22",
+      "2026",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 3 of 18, by @ume.izakaya, shared August 22, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Chuyển Cảnh (Transition).",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }

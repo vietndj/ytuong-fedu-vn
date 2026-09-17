@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 205,
-  "total_unique_ideas": 194,
-  "total_active_ideas": 169,
+  "total_scene_items": 206,
+  "total_unique_ideas": 195,
+  "total_active_ideas": 170,
   "total_excluded_ideas": 25,
-  "total_creators": 124,
+  "total_creators": 125,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -65,7 +65,7 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 22,
     "storytelling": 18,
     "dien-anh": 84,
-    "chuyen-canh": 32
+    "chuyen-canh": 33
   },
   "industries": [
     {
@@ -156,7 +156,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 18,
     "du-lich": 12,
     "cong-nghe": 22,
-    "kien-truc": 17,
+    "kien-truc": 18,
     "the-thao": 7,
     "ky-thuat-quay": 45,
     "ugc": 5
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 83,
+    "us_eu": 84,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -500,6 +500,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@ume.izakaya",
+      "name": "Ume_📍Минск-Мир",
+      "profile_url": "https://www.instagram.com/ume.izakaya/",
+      "video_count": 1,
+      "top_industry": "Góc nhà đẹp",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40UME_%F0%9F%93%8D%D0%BC%D0%B8%D0%BD%D1%81%D0%BA-%D0%BC%D0%B8%D1%80_DcVnyJyNWGY_Video_by_ume.izakaya/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@UME_📍минск-мир_DcVnyJyNWGY_Video_by_ume.izakaya"
       ]
     },
     {
@@ -1637,6 +1648,74 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@UME_📍минск-мир_DcVnyJyNWGY_Video_by_ume.izakaya",
+      "shortcode": "DcVnyJyNWGY",
+      "title_vi": "@UME_📍минск-мир - Video by ume.izakaya",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "key_tech": "Instagram Liked 24h: Video • 3 Of 18 • By @ume.izakaya • Shared August 22 • 2026 • Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Góc nhà đẹp",
+        "en_name": "Architecture & Living",
+        "icon": "🏛️",
+        "badge_color": "emerald"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 3 of 18, by @ume.izakaya, shared August 22, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "3 Of 18",
+        "By @ume.izakaya",
+        "Shared August 22",
+        "2026",
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot",
+        "Low-key Lighting"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 3 of 18, by @ume.izakaya, shared August 22, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Chuyển Cảnh (Transition).",
+      "creator": {
+        "raw": "@UME_📍минск-мир",
+        "name": "Ume_📍Минск-Мир",
+        "handle": "@ume.izakaya",
+        "profile_url": "https://www.instagram.com/ume.izakaya/"
+      },
+      "ig_url": "https://www.instagram.com/p/DcVnyJyNWGY",
+      "gdrive_folder": "https://drive.google.com/open?id=1aw5kKg-NdXs45CjNVF_-VA5p7Z7fx2kW",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40UME_%F0%9F%93%8D%D0%BC%D0%B8%D0%BD%D1%81%D0%BA-%D0%BC%D0%B8%D1%80_DcVnyJyNWGY_Video_by_ume.izakaya/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40UME_%F0%9F%93%8D%D0%BC%D0%B8%D0%BD%D1%81%D0%BA-%D0%BC%D0%B8%D1%80_DcVnyJyNWGY_Video_by_ume.izakaya/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DcVnyJyNWGY.mp4",
+        "report_url": "reports/IG_@UME_📍минск-мир_DcVnyJyNWGY_Video_by_ume.izakaya.html",
+        "shots_count": 9,
+        "duration": "18s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "trung-binh",
+        "label": "🟡 Trung bình (9-18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg",
       "shortcode": "DcxcVGtxjNl",
