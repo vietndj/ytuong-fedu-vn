@@ -16500,5 +16500,83 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc": {
+    "id": "IG_@Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc",
+    "creator": "@Eugenia_Syd_UGC_creator",
+    "creator_name": "Eugenia_Syd_Ugc_Creator",
+    "title": "@Eugenia_Syd_UGC_creator - Video by eugcreates.ugc",
+    "shots_count": 9,
+    "duration": "18.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "ugc",
+      "name": "UGC",
+      "icon": "📱"
+    },
+    "purpose": "Instagram Liked 24h: Video, 9 of 18, by @eugcreates.ugc, shared September 7, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "9 Of 18",
+      "By @eugcreates.ugc",
+      "Shared September 7",
+      "2026",
+      "Establishing Hook Shot",
+      "High-key Lighting",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 9 of 18, by @eugcreates.ugc, shared September 7, 2026. Phân loại vào UGC • Chuyển Cảnh (Transition).",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DdA1ErpRMg2": {
+    "id": "IG_@Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc",
+    "creator": "@Eugenia_Syd_UGC_creator",
+    "creator_name": "Eugenia_Syd_Ugc_Creator",
+    "title": "@Eugenia_Syd_UGC_creator - Video by eugcreates.ugc",
+    "shots_count": 9,
+    "duration": "18.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "ugc",
+      "name": "UGC",
+      "icon": "📱"
+    },
+    "purpose": "Instagram Liked 24h: Video, 9 of 18, by @eugcreates.ugc, shared September 7, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "9 Of 18",
+      "By @eugcreates.ugc",
+      "Shared September 7",
+      "2026",
+      "Establishing Hook Shot",
+      "High-key Lighting",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 9 of 18, by @eugcreates.ugc, shared September 7, 2026. Phân loại vào UGC • Chuyển Cảnh (Transition).",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }

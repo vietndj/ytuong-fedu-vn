@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 209,
-  "total_unique_ideas": 198,
-  "total_active_ideas": 173,
+  "total_scene_items": 210,
+  "total_unique_ideas": 199,
+  "total_active_ideas": 174,
   "total_excluded_ideas": 25,
-  "total_creators": 128,
+  "total_creators": 129,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -65,7 +65,7 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 22,
     "storytelling": 18,
     "dien-anh": 87,
-    "chuyen-canh": 33
+    "chuyen-canh": 34
   },
   "industries": [
     {
@@ -159,7 +159,7 @@ var FEDU_IDEAS_DATABASE = {
     "kien-truc": 20,
     "the-thao": 7,
     "ky-thuat-quay": 45,
-    "ugc": 5
+    "ugc": 6
   },
   "countries": [
     {
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 87,
+    "us_eu": 88,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -222,7 +222,7 @@ var FEDU_IDEAS_DATABASE = {
   "transition_stats": {
     "level_1_count": 5,
     "level_2_count": 14,
-    "ad_bot_count": 5
+    "ad_bot_count": 6
   },
   "deleted_ids": [],
   "creators_hub": [
@@ -500,6 +500,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@eugcreates.ugc",
+      "name": "Eugenia_Syd_Ugc_Creator",
+      "profile_url": "https://www.instagram.com/eugcreates.ugc/",
+      "video_count": 1,
+      "top_industry": "UGC",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc"
       ]
     },
     {
@@ -1681,6 +1692,74 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc",
+      "shortcode": "DdA1ErpRMg2",
+      "title_vi": "Video by eugcreates.ugc",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "key_tech": "Instagram Liked 24h: Video • 9 Of 18 • By @eugcreates.ugc • Shared September 7 • 2026 • Establishing Hook Shot • High-key Lighting • Close-Up / Macro Detail Shot",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
+      },
+      "industry": {
+        "id": "ugc",
+        "name": "UGC",
+        "en_name": "UGC & Ads",
+        "icon": "📱",
+        "badge_color": "amber"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 9 of 18, by @eugcreates.ugc, shared September 7, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "9 Of 18",
+        "By @eugcreates.ugc",
+        "Shared September 7",
+        "2026",
+        "Establishing Hook Shot",
+        "High-key Lighting",
+        "Close-Up / Macro Detail Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": true,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 9 of 18, by @eugcreates.ugc, shared September 7, 2026. Phân loại vào UGC • Chuyển Cảnh (Transition).",
+      "creator": {
+        "raw": "@Eugenia_Syd_UGC_creator",
+        "name": "Eugenia_Syd_Ugc_Creator",
+        "handle": "@eugcreates.ugc",
+        "profile_url": "https://www.instagram.com/eugcreates.ugc/"
+      },
+      "ig_url": "https://www.instagram.com/p/DdA1ErpRMg2",
+      "gdrive_folder": "https://drive.google.com/open?id=1QApLtcKzu2GSywp5wWHdtfNnBnmEHk77",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DdA1ErpRMg2.mp4",
+        "report_url": "reports/IG_@Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc.html",
+        "shots_count": 9,
+        "duration": "18s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "trung-binh",
+        "label": "🟡 Trung bình (9-18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@Hayden_Slow_Korean_&_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean",
       "shortcode": "Daz3Po8zHIE",
