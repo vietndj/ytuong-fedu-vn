@@ -16344,5 +16344,81 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs": {
+    "id": "IG_@JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs",
+    "creator": "@JAEHYUNG",
+    "creator_name": "Jaehyung",
+    "title": "@JAEHYUNG - Video by  hyungs",
+    "shots_count": 1,
+    "duration": "2.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Instagram Liked 24h: Video, 5 of 18, by @_hyungs, shared September 16, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "5 Of 18",
+      "By @_hyungs",
+      "Shared September 16",
+      "2026",
+      "Establishing Hook Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 5 of 18, by @_hyungs, shared September 16, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Điện Ảnh (Cinematic).",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DdWa3o2zc0w": {
+    "id": "IG_@JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs",
+    "creator": "@JAEHYUNG",
+    "creator_name": "Jaehyung",
+    "title": "@JAEHYUNG - Video by  hyungs",
+    "shots_count": 1,
+    "duration": "2.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Instagram Liked 24h: Video, 5 of 18, by @_hyungs, shared September 16, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "5 Of 18",
+      "By @_hyungs",
+      "Shared September 16",
+      "2026",
+      "Establishing Hook Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 5 of 18, by @_hyungs, shared September 16, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Điện Ảnh (Cinematic).",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }

@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 207,
-  "total_unique_ideas": 196,
-  "total_active_ideas": 171,
+  "total_scene_items": 208,
+  "total_unique_ideas": 197,
+  "total_active_ideas": 172,
   "total_excluded_ideas": 25,
-  "total_creators": 126,
+  "total_creators": 127,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -64,7 +64,7 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 10,
     "talking-head": 22,
     "storytelling": 18,
-    "dien-anh": 85,
+    "dien-anh": 86,
     "chuyen-canh": 33
   },
   "industries": [
@@ -156,7 +156,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 18,
     "du-lich": 12,
     "cong-nghe": 22,
-    "kien-truc": 19,
+    "kien-truc": 20,
     "the-thao": 7,
     "ky-thuat-quay": 45,
     "ugc": 5
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 85,
+    "us_eu": 86,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -500,6 +500,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@_hyungs",
+      "name": "Jaehyung",
+      "profile_url": "https://www.instagram.com/_hyungs/",
+      "video_count": 1,
+      "top_industry": "Góc nhà đẹp",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs"
       ]
     },
     {
@@ -1659,6 +1670,73 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs",
+      "shortcode": "DdWa3o2zc0w",
+      "title_vi": "Video by  hyungs",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+      "key_tech": "Instagram Liked 24h: Video • 5 Of 18 • By @_hyungs • Shared September 16 • 2026 • Establishing Hook Shot • Low-key Lighting",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Góc nhà đẹp",
+        "en_name": "Architecture & Living",
+        "icon": "🏛️",
+        "badge_color": "emerald"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 5 of 18, by @_hyungs, shared September 16, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "5 Of 18",
+        "By @_hyungs",
+        "Shared September 16",
+        "2026",
+        "Establishing Hook Shot",
+        "Low-key Lighting"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 5 of 18, by @_hyungs, shared September 16, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Điện Ảnh (Cinematic).",
+      "creator": {
+        "raw": "@JAEHYUNG",
+        "name": "Jaehyung",
+        "handle": "@_hyungs",
+        "profile_url": "https://www.instagram.com/_hyungs/"
+      },
+      "ig_url": "https://www.instagram.com/p/DdWa3o2zc0w",
+      "gdrive_folder": "https://drive.google.com/open?id=1brLILpFYjHRn6bKUZbfgAS3fxVbdER6D",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DdWa3o2zc0w.mp4",
+        "report_url": "reports/IG_@JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs.html",
+        "shots_count": 1,
+        "duration": "2s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@Indang_Ayu_DccpHbETFSr_Video_by_indanayuu",
       "shortcode": "DccpHbETFSr",
