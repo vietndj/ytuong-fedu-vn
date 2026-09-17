@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 206,
-  "total_unique_ideas": 195,
-  "total_active_ideas": 170,
+  "total_scene_items": 207,
+  "total_unique_ideas": 196,
+  "total_active_ideas": 171,
   "total_excluded_ideas": 25,
-  "total_creators": 125,
+  "total_creators": 126,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -64,7 +64,7 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 10,
     "talking-head": 22,
     "storytelling": 18,
-    "dien-anh": 84,
+    "dien-anh": 85,
     "chuyen-canh": 33
   },
   "industries": [
@@ -156,7 +156,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 18,
     "du-lich": 12,
     "cong-nghe": 22,
-    "kien-truc": 18,
+    "kien-truc": 19,
     "the-thao": 7,
     "ky-thuat-quay": 45,
     "ugc": 5
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 84,
+    "us_eu": 85,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -500,6 +500,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@indanayuu",
+      "name": "Indang_Ayu",
+      "profile_url": "https://www.instagram.com/indanayuu/",
+      "video_count": 1,
+      "top_industry": "Góc nhà đẹp",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Indang_Ayu_DccpHbETFSr_Video_by_indanayuu/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@Indang_Ayu_DccpHbETFSr_Video_by_indanayuu"
       ]
     },
     {
@@ -1648,6 +1659,74 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@Indang_Ayu_DccpHbETFSr_Video_by_indanayuu",
+      "shortcode": "DccpHbETFSr",
+      "title_vi": "Video by indanayuu",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "key_tech": "Instagram Liked 24h: Video • 4 Of 18 • By @indanayuu • Shared August 24 • 2026 • Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Góc nhà đẹp",
+        "en_name": "Architecture & Living",
+        "icon": "🏛️",
+        "badge_color": "emerald"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 4 of 18, by @indanayuu, shared August 24, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "4 Of 18",
+        "By @indanayuu",
+        "Shared August 24",
+        "2026",
+        "Establishing Hook Shot",
+        "Low-key Lighting",
+        "Close-Up / Macro Detail Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 4 of 18, by @indanayuu, shared August 24, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Điện Ảnh (Cinematic).",
+      "creator": {
+        "raw": "@Indang_Ayu",
+        "name": "Indang_Ayu",
+        "handle": "@indanayuu",
+        "profile_url": "https://www.instagram.com/indanayuu/"
+      },
+      "ig_url": "https://www.instagram.com/p/DccpHbETFSr",
+      "gdrive_folder": "https://drive.google.com/open?id=1YbVTddldNL3jxkHRfrm6qgFsO2ehx5US",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Indang_Ayu_DccpHbETFSr_Video_by_indanayuu/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Indang_Ayu_DccpHbETFSr_Video_by_indanayuu/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DccpHbETFSr.mp4",
+        "report_url": "reports/IG_@Indang_Ayu_DccpHbETFSr_Video_by_indanayuu.html",
+        "shots_count": 8,
+        "duration": "16s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@UME_📍минск-мир_DcVnyJyNWGY_Video_by_ume.izakaya",
       "shortcode": "DcVnyJyNWGY",
