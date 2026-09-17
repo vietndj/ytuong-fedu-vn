@@ -16734,5 +16734,81 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@misa｜築40年マンション暮らし_Db-xDk4vWNQ_Video_by_mi_no_ie_39": {
+    "id": "IG_@misa｜築40年マンション暮らし_Db-xDk4vWNQ_Video_by_mi_no_ie_39",
+    "creator": "@misa｜築40年マンション暮らし",
+    "creator_name": "Misa｜築40年マンション暮らし",
+    "title": "@misa｜築40年マンション暮らし - Video by mi no ie 39",
+    "shots_count": 7,
+    "duration": "14.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Instagram Liked 24h: Video, 15 of 18, by @mi_no_ie_39, shared August 13, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "15 Of 18",
+      "By @mi_no_ie_39",
+      "Shared August 13",
+      "2026",
+      "Establishing Hook Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 15 of 18, by @mi_no_ie_39, shared August 13, 2026. Phân loại vào Công Nghệ & Thiết Bị • Điện Ảnh (Cinematic).",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "Db-xDk4vWNQ": {
+    "id": "IG_@misa｜築40年マンション暮らし_Db-xDk4vWNQ_Video_by_mi_no_ie_39",
+    "creator": "@misa｜築40年マンション暮らし",
+    "creator_name": "Misa｜築40年マンション暮らし",
+    "title": "@misa｜築40年マンション暮らし - Video by mi no ie 39",
+    "shots_count": 7,
+    "duration": "14.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Instagram Liked 24h: Video, 15 of 18, by @mi_no_ie_39, shared August 13, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "15 Of 18",
+      "By @mi_no_ie_39",
+      "Shared August 13",
+      "2026",
+      "Establishing Hook Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 15 of 18, by @mi_no_ie_39, shared August 13, 2026. Phân loại vào Công Nghệ & Thiết Bị • Điện Ảnh (Cinematic).",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }
