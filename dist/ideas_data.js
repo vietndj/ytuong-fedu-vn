@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 204,
-  "total_unique_ideas": 193,
-  "total_active_ideas": 168,
+  "total_scene_items": 205,
+  "total_unique_ideas": 194,
+  "total_active_ideas": 169,
   "total_excluded_ideas": 25,
-  "total_creators": 123,
+  "total_creators": 124,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -64,7 +64,7 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 10,
     "talking-head": 22,
     "storytelling": 18,
-    "dien-anh": 83,
+    "dien-anh": 84,
     "chuyen-canh": 32
   },
   "industries": [
@@ -156,7 +156,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 18,
     "du-lich": 12,
     "cong-nghe": 22,
-    "kien-truc": 16,
+    "kien-truc": 17,
     "the-thao": 7,
     "ky-thuat-quay": 45,
     "ugc": 5
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 82,
+    "us_eu": 83,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -500,6 +500,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@focr.sg",
+      "name": "Five_Oars_Coffee_Roasters",
+      "profile_url": "https://www.instagram.com/focr.sg/",
+      "video_count": 1,
+      "top_industry": "Góc nhà đẹp",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg"
       ]
     },
     {
@@ -1626,6 +1637,73 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg",
+      "shortcode": "DcxcVGtxjNl",
+      "title_vi": "Video by focr.sg",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "key_tech": "Instagram Liked 24h: Video • 1 Of 18 • By @focr.sg • Shared September 2 • 2026 • Establishing Hook Shot • Close-Up / Macro Detail Shot",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Góc nhà đẹp",
+        "en_name": "Architecture & Living",
+        "icon": "🏛️",
+        "badge_color": "emerald"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 1 of 18, by @focr.sg, shared September 2, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "1 Of 18",
+        "By @focr.sg",
+        "Shared September 2",
+        "2026",
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 1 of 18, by @focr.sg, shared September 2, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Điện Ảnh (Cinematic).",
+      "creator": {
+        "raw": "@Five_Oars_Coffee_Roasters",
+        "name": "Five_Oars_Coffee_Roasters",
+        "handle": "@focr.sg",
+        "profile_url": "https://www.instagram.com/focr.sg/"
+      },
+      "ig_url": "https://www.instagram.com/p/DcxcVGtxjNl",
+      "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DcxcVGtxjNl.mp4",
+        "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",
+        "shots_count": 2,
+        "duration": "4s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@거북이_소영_Db0tHr8Bs7x_Video_by_slowkoreanvlog",
       "shortcode": "Db0tHr8Bs7x",
