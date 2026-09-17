@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 211,
-  "total_unique_ideas": 200,
-  "total_active_ideas": 175,
+  "total_scene_items": 212,
+  "total_unique_ideas": 201,
+  "total_active_ideas": 176,
   "total_excluded_ideas": 25,
-  "total_creators": 130,
+  "total_creators": 131,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -65,7 +65,7 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 22,
     "storytelling": 18,
     "dien-anh": 87,
-    "chuyen-canh": 35
+    "chuyen-canh": 36
   },
   "industries": [
     {
@@ -155,7 +155,7 @@ var FEDU_IDEAS_DATABASE = {
     "thoi-trang": 19,
     "am-thuc": 19,
     "du-lich": 12,
-    "cong-nghe": 23,
+    "cong-nghe": 24,
     "kien-truc": 20,
     "the-thao": 7,
     "ky-thuat-quay": 45,
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 89,
+    "us_eu": 90,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -500,6 +500,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@studioberdua",
+      "name": "Studio_Berdua",
+      "profile_url": "https://www.instagram.com/studioberdua/",
+      "video_count": 1,
+      "top_industry": "Đồ công nghệ",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua"
       ]
     },
     {
@@ -1703,6 +1714,74 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua",
+      "shortcode": "DdOu2yRsmDy",
+      "title_vi": "Video by studioberdua",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+      "key_tech": "Instagram Liked 24h: Video • 13 Of 18 • By @studioberdua • Shared September 13 • 2026 • Establishing Hook Shot • Medium Tracking Shot • Close-Up / Macro Detail Shot",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
+      },
+      "industry": {
+        "id": "cong-nghe",
+        "name": "Đồ công nghệ",
+        "en_name": "Tech & Gear",
+        "icon": "📱",
+        "badge_color": "purple"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 13 of 18, by @studioberdua, shared September 13, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "13 Of 18",
+        "By @studioberdua",
+        "Shared September 13",
+        "2026",
+        "Establishing Hook Shot",
+        "Medium Tracking Shot",
+        "Close-Up / Macro Detail Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 13 of 18, by @studioberdua, shared September 13, 2026. Phân loại vào Công Nghệ & Thiết Bị • Chuyển Cảnh (Transition).",
+      "creator": {
+        "raw": "@Studio_Berdua",
+        "name": "Studio_Berdua",
+        "handle": "@studioberdua",
+        "profile_url": "https://www.instagram.com/studioberdua/"
+      },
+      "ig_url": "https://www.instagram.com/p/DdOu2yRsmDy",
+      "gdrive_folder": "https://drive.google.com/open?id=1f9Ieq-YU2Pgxq6hgIKkMgpwfZMLnyliE",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DdOu2yRsmDy.mp4",
+        "report_url": "reports/IG_@Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua.html",
+        "shots_count": 14,
+        "duration": "28s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "trung-binh",
+        "label": "🟡 Trung bình (9-18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@Rika_ビオトープめだか植物のある暮らし_Da5KgjAxfOG_Video_by_r_6cafe",
       "shortcode": "Da5KgjAxfOG",
