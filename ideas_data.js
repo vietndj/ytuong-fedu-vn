@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 208,
-  "total_unique_ideas": 197,
-  "total_active_ideas": 172,
+  "total_scene_items": 209,
+  "total_unique_ideas": 198,
+  "total_active_ideas": 173,
   "total_excluded_ideas": 25,
-  "total_creators": 127,
+  "total_creators": 128,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -64,7 +64,7 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 10,
     "talking-head": 22,
     "storytelling": 18,
-    "dien-anh": 86,
+    "dien-anh": 87,
     "chuyen-canh": 33
   },
   "industries": [
@@ -155,7 +155,7 @@ var FEDU_IDEAS_DATABASE = {
     "thoi-trang": 19,
     "am-thuc": 18,
     "du-lich": 12,
-    "cong-nghe": 22,
+    "cong-nghe": 23,
     "kien-truc": 20,
     "the-thao": 7,
     "ky-thuat-quay": 45,
@@ -212,7 +212,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 86,
+    "us_eu": 87,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -500,6 +500,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@haydenkorean",
+      "name": "Hayden_Slow_Korean_&_Daily_Life",
+      "profile_url": "https://www.instagram.com/haydenkorean/",
+      "video_count": 1,
+      "top_industry": "Đồ công nghệ",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Hayden_Slow_Korean_%26_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@Hayden_Slow_Korean_&_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean"
       ]
     },
     {
@@ -1670,6 +1681,75 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@Hayden_Slow_Korean_&_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean",
+      "shortcode": "Daz3Po8zHIE",
+      "title_vi": "@Hayden_Slow_Korean_&_Daily_Life - Video by haydenkorean",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+      "key_tech": "Instagram Liked 24h: Video • 7 Of 18 • By @haydenkorean • Shared July 15 • 2026 • Establishing Hook Shot • Medium Tracking Shot • Low-key Lighting",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industry": {
+        "id": "cong-nghe",
+        "name": "Đồ công nghệ",
+        "en_name": "Tech & Gear",
+        "icon": "📱",
+        "badge_color": "purple"
+      },
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 7 of 18, by @haydenkorean, shared July 15, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "7 Of 18",
+        "By @haydenkorean",
+        "Shared July 15",
+        "2026",
+        "Establishing Hook Shot",
+        "Medium Tracking Shot",
+        "Low-key Lighting",
+        "Close-Up / Macro Detail Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 7 of 18, by @haydenkorean, shared July 15, 2026. Phân loại vào Công Nghệ & Thiết Bị • Điện Ảnh (Cinematic).",
+      "creator": {
+        "raw": "@Hayden_Slow_Korean_&_Daily_Life",
+        "name": "Hayden_Slow_Korean_&_Daily_Life",
+        "handle": "@haydenkorean",
+        "profile_url": "https://www.instagram.com/haydenkorean/"
+      },
+      "ig_url": "https://www.instagram.com/p/Daz3Po8zHIE",
+      "gdrive_folder": "https://drive.google.com/open?id=1_zRjagGz50fh6zPiJWuE7lJZbTdPE-LT",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Hayden_Slow_Korean_%26_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Hayden_Slow_Korean_%26_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/Daz3Po8zHIE.mp4",
+        "report_url": "reports/IG_@Hayden_Slow_Korean_&_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean.html",
+        "shots_count": 7,
+        "duration": "14s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs",
       "shortcode": "DdWa3o2zc0w",
