@@ -5,7 +5,7 @@
   "learner_agent": "Antigravity Active Learner",
   "last_updated": "2026-09-15T10:20:00+07:00",
   "learning_stats": {
-    "total_corrections": 20,
+    "total_corrections": 26,
     "current_alignment_score": 96.1,
     "target_alignment_score": 98.0,
     "confidence_auto_accept_threshold": 85,
@@ -471,6 +471,143 @@
       },
       "reason_distilled": "Hiệu chỉnh trực tiếp từ Super Mentor anh Việt",
       "learned_at": "2026-09-18T15:43:31.302565"
+    },
+    {
+      "video_id": "IG_@drea_(이현)_DaClEhzB5WC_Video_by_dreakwon",
+      "video_title": "@drea_(이현) - Video by dreakwon",
+      "ai_predicted": {
+        "industries": [],
+        "shooting_style": "talking-head",
+        "x_factors": []
+      },
+      "mentor_corrected": {
+        "industries": [
+          "du-lich"
+        ],
+        "shooting_style": "dien-anh",
+        "x_factors": [
+          "Biểu cảm Bầu không khí chữa lành"
+        ]
+      },
+      "reason_distilled": "Hiệu chỉnh trực tiếp từ Super Mentor anh Việt",
+      "learned_at": "2026-09-18T16:25:06.895633"
+    },
+    {
+      "video_id": "IG_@Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views",
+      "video_title": "@Korea_Street_Views - Video by korea street views",
+      "ai_predicted": {
+        "industries": [],
+        "shooting_style": "dien-anh",
+        "x_factors": []
+      },
+      "mentor_corrected": {
+        "industries": [
+          "du-lich",
+          "ky-thuat-quay"
+        ],
+        "shooting_style": "dien-anh",
+        "x_factors": [
+          "Biểu cảm Bố cục khung trong khung"
+        ]
+      },
+      "reason_distilled": "Hiệu chỉnh trực tiếp từ Super Mentor anh Việt",
+      "learned_at": "2026-09-18T16:25:08.294288"
+    },
+    {
+      "video_id": "IG_@Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis",
+      "video_title": "@Banh_shimano - Video by diego51",
+      "ai_predicted": {
+        "industries": [],
+        "shooting_style": "dien-anh",
+        "x_factors": []
+      },
+      "mentor_corrected": {
+        "industries": [
+          "ugc"
+        ],
+        "shooting_style": "talking-head",
+        "x_factors": [
+          "Biểu cảm lo lắng / kịch tính",
+          "Biểu cảm Body language"
+        ]
+      },
+      "reason_distilled": "Hiệu chỉnh trực tiếp từ Super Mentor anh Việt",
+      "learned_at": "2026-09-18T16:25:08.630180"
+    },
+    {
+      "video_id": "IG_@Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views",
+      "video_title": "@Korea_Street_Views - Video by korea street views",
+      "ai_predicted": {
+        "industries": [
+          "du-lich",
+          "ky-thuat-quay"
+        ],
+        "shooting_style": "dien-anh",
+        "x_factors": [
+          "Biểu cảm Bố cục khung trong khung"
+        ]
+      },
+      "mentor_corrected": {
+        "industries": [
+          "du-lich"
+        ],
+        "shooting_style": "dien-anh",
+        "x_factors": [
+          "Biểu cảm Bầu không khí chữa lành",
+          "Biểu cảm Bố cục khung trong khung"
+        ]
+      },
+      "reason_distilled": "Hiệu chỉnh trực tiếp từ Super Mentor anh Việt",
+      "learned_at": "2026-09-18T16:25:26.237963"
+    },
+    {
+      "video_id": "IG_@Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis",
+      "video_title": "@Banh_shimano - Video by diego51",
+      "ai_predicted": {
+        "industries": [
+          "ugc"
+        ],
+        "shooting_style": "talking-head",
+        "x_factors": [
+          "Biểu cảm lo lắng / kịch tính",
+          "Biểu cảm Body language"
+        ]
+      },
+      "mentor_corrected": {
+        "industries": [
+          "ky-thuat-quay",
+          "du-lich"
+        ],
+        "shooting_style": "dien-anh",
+        "x_factors": [
+          "Biểu cảm Body language",
+          "Biểu cảm Bố cục khung trong khung",
+          "Biểu cảm lo lắng / kịch tính"
+        ]
+      },
+      "reason_distilled": "Hiệu chỉnh trực tiếp từ Super Mentor anh Việt",
+      "learned_at": "2026-09-18T16:25:26.613417"
+    },
+    {
+      "video_id": "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5",
+      "video_title": "Hayan Cook • ASMR Nấu Ăn Bếp Nhà Hàn Quốc & Nghệ Thuật Ánh Sáng Tự Nhiên Cạnh Cửa Sổ",
+      "ai_predicted": {
+        "industries": [],
+        "shooting_style": "dien-anh",
+        "x_factors": []
+      },
+      "mentor_corrected": {
+        "industries": [
+          "ugc"
+        ],
+        "shooting_style": "talking-head",
+        "x_factors": [
+          "Biểu cảm Body language",
+          "Biểu cảm lo lắng / kịch tính"
+        ]
+      },
+      "reason_distilled": "Hiệu chỉnh trực tiếp từ Super Mentor anh Việt",
+      "learned_at": "2026-09-18T16:25:26.973385"
     }
   ]
 }
