@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>@jade.got.curious - Film Your "Boring" Life (Bedtime UGC Edition)</title>
+<title>@Jade_Sheng - Video by jade.got.curious</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -823,129 +823,382 @@ video#mainPlayer {
     cursor: pointer;
 }
 
-/* Author Instagram Direct Link Button */
-.author-ig-badge {
-    display: inline-flex;
+/* Styling for 2-Column Dialogue Script & Remake Prompt Box */
+.dialogue-container-2col {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+    .dialogue-container-2col {
+        flex-direction: column;
+    }
+}
+
+/* CỘT CHÍNH (TRÁI): TIẾNG VIỆT ĐỌC LIỀN MẠCH */
+.col-vietnamese-flow {
+    flex: 1;
+    min-width: 0;
+    background: #0d1422;
+    border: 1px solid #1e2b40;
+    border-radius: 12px;
+    padding: 18px 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.col-flow-header {
+    display: flex;
     align-items: center;
-    gap: 6px;
-    background: rgba(192, 132, 252, 0.12);
-    border: 1px solid rgba(192, 132, 252, 0.35);
-    color: #e879f9;
-    padding: 2px 8px 2px 6px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 12px;
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    vertical-align: middle;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #1a2538;
+    flex-wrap: wrap;
+    gap: 8px;
 }
-.author-ig-badge:hover {
-    background: linear-gradient(135deg, rgba(192, 132, 252, 0.3), rgba(244, 63, 94, 0.3));
-    border-color: #f43f5e;
-    color: #fff;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
-}
-.author-ig-badge strong {
-    color: #fff;
-}
-.author-ig-badge .ig-ext-btn {
-    background: linear-gradient(135deg, #c084fc, #f43f5e);
-    color: #0b0f17;
-    font-size: 10px;
+
+.col-flow-badge {
+    font-family: var(--font-heading);
+    font-size: 14.5px;
     font-weight: 800;
-    padding: 2px 6px;
-    border-radius: 4px;
-    margin-left: 2px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    transition: all 0.15s;
-    letter-spacing: 0.2px;
-}
-.author-ig-badge:hover .ig-ext-btn {
-    background: #ffffff;
-    color: #0b0f17;
-}
-
-
-.creator-filter-badge {
-    display: inline-flex;
+    color: #fff;
+    display: flex;
     align-items: center;
     gap: 6px;
-    padding: 3px 10px;
-    background: rgba(56, 189, 248, 0.12);
-    border: 1px solid rgba(56, 189, 248, 0.35);
-    border-radius: 8px;
-    color: #38bdf8;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-size: 12px;
-    vertical-align: middle;
-}
-.creator-filter-badge:hover {
-    background: rgba(56, 189, 248, 0.25);
-    border-color: #38bdf8;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
-}
-.creator-filter-badge strong {
-    color: #f8fafc;
-}
-.creator-filter-badge .author-handle {
-    color: #94a3b8;
-    font-family: monospace;
-    font-size: 11px;
-}
-.creator-filter-badge .filter-action-chip {
-    font-size: 10px;
-    padding: 1.5px 6px;
-    background: rgba(56, 189, 248, 0.25);
-    border-radius: 4px;
-    color: #e0f2fe;
-    font-weight: 700;
-    margin-left: 2px;
+    letter-spacing: 0.3px;
 }
 
-
-.player-box { position: relative !important; }
-.player-box video { cursor: pointer; }
-.player-fs-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 20;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 12px;
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.75);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    font-family: var(--font-ui, sans-serif);
+.col-flow-subtag {
     font-size: 11.5px;
-    font-weight: 600;
-    cursor: pointer;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    transition: all 0.2s ease;
-}
-.player-fs-btn:hover {
-    background: #1a73e8;
-    border-color: #1a73e8;
-    transform: scale(1.04);
-}
-.fs-ctrl-btn {
-    background: #fffbeb !important;
-    color: #b45309 !important;
-    border-color: #fef3c7 !important;
-    font-weight: 700 !important;
-}
-.fs-ctrl-btn:hover {
-    background: #fef3c7 !important;
-    color: #92400e !important;
-    border-color: #fcd34d !important;
+    color: var(--accent-emerald);
+    font-weight: 700;
+    background: rgba(16, 185, 129, 0.12);
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(16, 185, 129, 0.25);
 }
 
+.vn-script-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.vn-script-para {
+    background: #111a2c;
+    border: 1px solid #1e2c44;
+    border-left: 3px solid var(--accent-amber);
+    border-radius: 8px;
+    padding: 11px 14px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.vn-script-para:hover {
+    background: #162238;
+    border-color: #2b3d5c;
+    transform: translateX(2px);
+}
+
+.para-meta-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.para-timestamp-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-blue);
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    padding: 1px 6px;
+    border-radius: 3px;
+}
+
+.para-beat-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-amber);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.para-text {
+    font-size: 14.5px;
+    color: #f8fafc;
+    line-height: 1.6;
+    font-weight: 500;
+    display: block;
+}
+
+/* CỘT PHỤ (PHẢI): KHỐI NHỎ CHỮ BÉ XÍU TIẾNG ANH ĐỐI CHIẾU */
+.col-english-aside {
+    width: 270px;
+    min-width: 250px;
+    background: #090e18;
+    border: 1px solid #162030;
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 900px) {
+    .col-english-aside {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+.col-aside-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #141c2b;
+}
+
+.aside-title {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.aside-note {
+    font-size: 10px;
+    color: #475569;
+    font-style: italic;
+}
+
+.en-lines-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.en-line-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #141d2c;
+    border-radius: 6px;
+    padding: 7px 10px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.en-line-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: #1e2c40;
+}
+
+.en-time {
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    color: #475569;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.en-text {
+    font-size: 11px;
+    color: #64748b;
+    font-style: italic;
+    line-height: 1.45;
+}
+
+/* Remake Mega Prompt Box (Accordion Closed Default) */
+.remake-prompt-card {
+    background: linear-gradient(135deg, #0e1726 0%, #16243b 100%);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.prompt-accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    cursor: pointer;
+    user-select: none;
+    background: rgba(15, 23, 42, 0.6);
+    gap: 10px;
+    transition: background 0.15s ease;
+}
+
+.prompt-accordion-header:hover {
+    background: rgba(30, 41, 59, 0.85);
+}
+
+.prompt-header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    flex: 1;
+}
+
+.remake-header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    font-size: 10.5px;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.remake-accordion-title {
+    font-family: var(--font-heading);
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #f8fafc;
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.prompt-header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.copy-prompt-btn-compact {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--accent-blue);
+    color: #041324;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.copy-prompt-btn-compact:hover {
+    filter: brightness(1.15);
+    transform: translateY(-1px);
+}
+
+.prompt-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.toggle-icon {
+    font-size: 9px;
+    transition: transform 0.2s ease;
+}
+
+.prompt-accordion-body {
+    padding: 14px 16px 16px 16px;
+    border-top: 1px solid rgba(56, 189, 248, 0.2);
+    background: rgba(8, 13, 22, 0.5);
+}
+
+.remake-subtext {
+    font-size: 12.5px;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.prompt-code-wrapper {
+    position: relative;
+    background: #080d16;
+    border: 1px solid #1e2d45;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.prompt-code-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0f172a;
+    padding: 8px 14px;
+    border-bottom: 1px solid #1e2d45;
+}
+
+.prompt-code-filename {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.copy-prompt-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-blue);
+    color: #041324;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.copy-prompt-btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.prompt-code-content {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: #cbd5e1;
+    line-height: 1.6;
+    padding: 14px;
+    max-height: 280px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+@media (max-width: 640px) {
+    .remake-accordion-title {
+        font-size: 12px;
+    }
+    .prompt-accordion-header {
+        padding: 8px 10px;
+    }
+}
 </style>
 </head>
 <body>
@@ -958,7 +1211,7 @@ video#mainPlayer {
         <div class="video-controls-panel">
             <div class="current-status-bar">
                 <span class="status-tag" id="shotStatusTag">🎬 Phân cảnh: Toàn bộ video</span>
-                <a id="directVidLink" href="https://media.fedu.vn/videos/DZwO5X6N_MS.mp4" target="_blank" style="color:var(--accent-blue); font-size:11.5px; text-decoration:none;">Tệp gốc ↗</a>
+                <a id="directVidLink" href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DZwO5X6N_MS.mp4" target="_blank" style="color:var(--accent-blue); font-size:11.5px; text-decoration:none;">Tệp gốc ↗</a>
             </div>
             <div class="speed-buttons-row">
                 <span style="font-size:11.5px; color:#94a3b8; font-weight:700; margin-right:4px;">Tốc độ:</span>
@@ -969,6 +1222,7 @@ video#mainPlayer {
                 <button class="ctrl-btn" onclick="stepFrame(-1)">⏮ -1F</button>
                 <button class="ctrl-btn" onclick="stepFrame(1)">+1F ⏭</button>
                 <button class="ctrl-btn" onclick="toggleMute(this)">🔊 Tiếng</button>
+                <button class="ctrl-btn" onclick="togglePlayerFullscreen()" title="Toàn màn hình (Phím F hoặc nhấp đúp)" style="background:#fffbeb; color:#b45309; border-color:#fef3c7; font-weight:700;">⛶ Toàn màn hình</button>
             </div>
         </div>
     </div>
@@ -977,18 +1231,12 @@ video#mainPlayer {
         <div class="report-header-banner">
             <div class="header-top-row">
                 <span class="genre-badge">DIRECTOR STORYBOARD BREAKDOWN</span>
-                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">14 SHOTS &bull; 17.53s</span>
+                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">14 SHOTS &bull; 17.50s</span>
+                <a href="https://ytuong.fedu.vn" target="_blank" style="color:var(--accent-blue); text-decoration:none; font-size:12px; font-weight:700; display:inline-flex; align-items:center; gap:4px; margin-left:auto;">💡 Kho Ý Tưởng YTUONG HUB ↗</a>
             </div>
-            <h1 class="report-title">@jade.got.curious - Film Your "Boring" Life (Bedtime UGC Edition)</h1>
+            <h1 class="report-title">@Jade_Sheng - Video by jade.got.curious</h1>
             <div class="meta-tags-flex">
-                <span>Tác giả: 
-                    <a href="../index.html?creator=@jade.got.curious" onclick="handleCreatorClick(event, '@jade.got.curious', 'Jade.Got.Curious')" class="creator-filter-badge" title="Bấm để lọc toàn bộ video của Jade.Got.Curious trên Kho Ý Tưởng FEDU">
-                        <span>👤</span>
-                        <strong>Jade.Got.Curious</strong>
-                        <span class="author-handle">(@jade.got.curious)</span>
-                        <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
-                    </a>
-                </span></a></span>
+                <span>Tác giả: <strong>@Jade_Sheng</strong></span>
                 <span>Tệp: <strong>IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious.html</strong></span>
                 <span>Trực quan: <strong>9:16 Vertical HD</strong></span>
             </div>
@@ -996,8 +1244,10 @@ video#mainPlayer {
 
         <div class="overview-card">
             <h3 style="color:#fff; font-size:14px; margin-bottom:6px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:</h3>
-            <div>Tác phẩm ngắn 17.5s của creator Jade Sheng (@jade.got.curious) là bản hướng dẫn bậc thầy (Masterclass) về cách biến những khoảnh khắc đời thường tưởng như nhàm chán thành một danh mục tác phẩm UGC (User-Generated Content) triệu view mà không cần phải quay mặt nói chuyện sáo rỗng. Bằng cách kết hợp linh hoạt 5 nguyên tắc đạo diễn cốt lõi: (1) Đa dạng hóa cỡ cảnh Wide-Medium-Close, (2) Khai thác B-roll giấu mặt chân thực, (3) Cắt gọt khớp chuyển động (Cut in Motion), (4) Tích lũy portfolio tự nhiên, và (5) Cú máy giấu camera trong tủ gương (Inside Cabinet Shot), video đạt độ mượt mà tuyệt đối và mở ra vòng lặp vô tận (Seamless Loop) giữ chân người xem trọn vẹn.</div>
+            <div>Tác phẩm điện ảnh ngắn gồm 14 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.</div>
         </div>
+
+        
 
         <div class="action-toolbar">
             <div class="view-tabs-group">
@@ -1012,11 +1262,11 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-1">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(0.0, 2.2, 'SHOT 01')">
-                    <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_01_mid.jpg" alt="SHOT 01" class="shot-img" loading="lazy" />
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_01_mid.jpg" alt="SHOT 01" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_01_mid.jpg', 'SHOT 01 [0.0s - 2.2s] • Hook thị giác "Boring Life - Bedtime Edition": Khóa tò mò bằng góc máy sát sàn (Low-Angle) bắt bước chân dép tai thỏ trên thảm lông')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_01_mid.jpg', 'SHOT 01 [0.0s - 2.2s] • Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh')">🔍</button>
                     <span class="thumb-time-badge">0.00s - 2.20s</span>
                 </div>
             </div>
@@ -1024,45 +1274,45 @@ video#mainPlayer {
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 01</span>
-                        <h4 class="shot-heading">Hook thị giác "Boring Life - Bedtime Edition": Khóa tò mò bằng góc máy sát sàn (Low-Angle) bắt bước chân dép tai thỏ trên thảm lông</h4>
+                        <h4 class="shot-heading">Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(0.0, 2.2, 'SHOT 01')">
-                        ▶ 0.00s ➔ 2.20s (2.20s)
+                        ▶ 0.00s ➔ 2.20s (2.23s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Bàn chân mang dép nhung hình tai thỏ xanh ngọc bước vào góc phòng tắm, giẫm lên thảm lông màu rêu mềm mại, mở màn tiêu đề phong cách hoài niệm: "Film Your Boring Life - Bedtime Edition".</span>
+                    <span class="narrative-text">Mở màn định vị không gian và nhịp thở của toàn bộ video, thu hút sự chú ý tức thì.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Góc quay thấp sát sàn (Worm's Eye View) tạo điểm nhìn khác biệt lạ mắt so với góc nhìn thông thường. Tông màu Kodak 500T cổ điển kết hợp chất liệu thảm lông tạo cảm giác ấm cúng, chữa lành (Cozy & Healing).</div>
+                        <div class="critique-content">Tạo điểm nhấn thị giác ngay trung tâm; ánh sáng Balanced Diffused Lighting  dẫn hướng mắt người xem hoàn hảo. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Chữ tiêu đề đặt ở trung tâm hơi che mất một phần chuyển động nhấc chân của dép thỏ, có thể đẩy text lên 10% để phô diễn trọn vẹn chất liệu lông mịn.</div>
+                        <div class="critique-content">Thời lượng shot ngắn nên người xem dễ bị trôi qua nếu chi tiết chữ/đối tượng phân bổ quá sát góc viền. Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Mở màn video kể chuyện đời thường (Daily Vlog/UGC) bằng góc máy thấp cận cảnh chi tiết (bước chân, dép nhà) thay vì mặt nói chuyện giúp tăng 300% tính điện ảnh và kích thích tò mò.</div>
+                    <div class="takeaway-content">Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Phòng tắm gia đình (Góc sàn thảm lông)</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Low-Angle Macro Tracking • 1x (24mm)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Ánh sáng vàng ấm phòng tắm khuếch tán dịu</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Establishing Hook Shot (Góc toàn định vị bối cảnh)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 01</span>
-                    <span class="tag-pill">⏱ 2.20s</span>
+                    <span class="tag-pill">⏱ 2.23s</span>
                 </div>
             </div>
         </div>
@@ -1071,11 +1321,11 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-2">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(2.23, 3.0, 'SHOT 02')">
-                    <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_02_mid.jpg" alt="SHOT 02" class="shot-img" loading="lazy" />
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_02_mid.jpg" alt="SHOT 02" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_02_mid.jpg', 'SHOT 02 [2.23s - 3.0s] • Quy tắc 1 - Khung toàn (Wide Shot): Thiết lập không gian phòng tắm và tư thế chuẩn bị chu trình ban đêm')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_02_mid.jpg', 'SHOT 02 [2.23s - 3.0s] • Nhịp Dẫn Theo Dõi (Medium Tracking): Duy trì sự liên tục và kết nối cảm xúc nhân vật')">🔍</button>
                     <span class="thumb-time-badge">2.23s - 3.00s</span>
                 </div>
             </div>
@@ -1083,45 +1333,45 @@ video#mainPlayer {
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 02</span>
-                        <h4 class="shot-heading">Quy tắc 1 - Khung toàn (Wide Shot): Thiết lập không gian phòng tắm và tư thế chuẩn bị chu trình ban đêm</h4>
+                        <h4 class="shot-heading">Nhịp Dẫn Theo Dõi (Medium Tracking): Duy trì sự liên tục và kết nối cảm xúc nhân vật</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(2.23, 3.0, 'SHOT 02')">
-                        ▶ 2.23s ➔ 3.00s (0.77s)
+                        ▶ 2.23s ➔ 3.00s (0.80s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Jade mặc áo choàng tắm lông báo và quấn khăn đầu tai thỏ đứng nghiêng người trước bồn rửa mặt, rèm tắm dệt waffle và đèn gương tạo khung nền ngăn nắp.</span>
+                    <span class="narrative-text">Nhân vật / đối tượng thực hiện hành động chính trong bối cảnh sinh hoạt chân thực.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Bố cục 1/3 dọc chuẩn xác, các đường gióng song song từ rèm tắm và tủ gương dẫn mắt trực diện vào nhân vật. Nhãn chữ "Wide" định hình bài học rõ ràng.</div>
+                        <div class="critique-content">Tỷ lệ cơ thể và môi trường đạt độ cân đối vàng, truyền tải cảm xúc tự nhiên và gần gũi. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Đèn gương trên đầu có độ sáng hơi cao dễ làm vùng đỉnh đầu bị lóa nhẹ (Halo Effect), cần giảm nhẹ vùng Highlight khi chỉnh màu.</div>
+                        <div class="critique-content">Góc quay quen thuộc, dễ bị đều đều nếu không kết hợp chuyển động máy tinh tế (Tilt/Pan/Dolly). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Khi hướng dẫn kỹ thuật quay, hãy luôn mở đầu bằng một cú Wide Shot 0.8s để người xem định vị được toàn bộ không gian vật lý trước khi đi vào chi tiết.</div>
+                    <div class="takeaway-content">Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Khu vực bồn rửa mặt phòng tắm</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Wide Establishing Shot • 1x (24mm)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Đèn gương Vanity Light hắt sáng từ trên xuống</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Medium Tracking Shot (Góc trung linh hoạt)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 02</span>
-                    <span class="tag-pill">⏱ 0.77s</span>
+                    <span class="tag-pill">⏱ 0.80s</span>
                 </div>
             </div>
         </div>
@@ -1130,11 +1380,11 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-3">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(3.03, 3.8, 'SHOT 03')">
-                    <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_03_mid.jpg" alt="SHOT 03" class="shot-img" loading="lazy" />
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_03_mid.jpg" alt="SHOT 03" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_03_mid.jpg', 'SHOT 03 [3.03s - 3.8s] • Quy tắc 1 - Góc trung qua vai (Medium OTS): Khai thác chiều sâu gương phản chiếu và hành động vươn tay lấy bàn chải')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_03_mid.jpg', 'SHOT 03 [3.03s - 3.8s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                     <span class="thumb-time-badge">3.03s - 3.80s</span>
                 </div>
             </div>
@@ -1142,45 +1392,45 @@ video#mainPlayer {
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 03</span>
-                        <h4 class="shot-heading">Quy tắc 1 - Góc trung qua vai (Medium OTS): Khai thác chiều sâu gương phản chiếu và hành động vươn tay lấy bàn chải</h4>
+                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(3.03, 3.8, 'SHOT 03')">
-                        ▶ 3.03s ➔ 3.80s (0.77s)
+                        ▶ 3.03s ➔ 3.80s (0.80s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Máy quay đặt sau lưng qua bờ vai áo choàng tắm, bắt trọn biểu cảm khuôn mặt của Jade trong gương khi cô vươn tay với lấy bàn chải điện Quip dán trên gương.</span>
+                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Kỹ thuật Over-The-Shoulder (OTS) kết hợp phản chiếu gương tạo chiều sâu 2 lớp (Layered Depth), giúp người xem cảm nhận như đang đứng ngay sau lưng nhân vật.</div>
+                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Áo choàng tắm chiếm diện tích tiền cảnh khá lớn bên trái khung hình, nếu hạ góc máy xuống một chút sẽ thấy rõ hơn thao tác tay.</div>
+                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Sử dụng gương phản chiếu là cách thông minh nhất để vừa quay được biểu cảm khuôn mặt vừa quay được bối cảnh xung quanh mà không cần người cầm máy phụ.</div>
+                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Gương phòng tắm</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Medium Over-the-Shoulder Shot • 1x (24mm)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Ánh sáng phản chiếu từ mặt gương</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 03</span>
-                    <span class="tag-pill">⏱ 0.77s</span>
+                    <span class="tag-pill">⏱ 0.80s</span>
                 </div>
             </div>
         </div>
@@ -1189,11 +1439,11 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-4">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(3.83, 4.8, 'SHOT 04')">
-                    <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_04_mid.jpg" alt="SHOT 04" class="shot-img" loading="lazy" />
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_04_mid.jpg" alt="SHOT 04" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_04_mid.jpg', 'SHOT 04 [3.83s - 4.8s] • Quy tắc 1 - Cận cảnh đặc tả (Macro Insert): Tôn vinh chi tiết thiết kế ngàm gắn bàn chải trên mặt gương')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_04_mid.jpg', 'SHOT 04 [3.83s - 4.8s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                     <span class="thumb-time-badge">3.83s - 4.80s</span>
                 </div>
             </div>
@@ -1201,45 +1451,45 @@ video#mainPlayer {
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 04</span>
-                        <h4 class="shot-heading">Quy tắc 1 - Cận cảnh đặc tả (Macro Insert): Tôn vinh chi tiết thiết kế ngàm gắn bàn chải trên mặt gương</h4>
+                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(3.83, 4.8, 'SHOT 04')">
-                        ▶ 3.83s ➔ 4.80s (0.97s)
+                        ▶ 3.83s ➔ 4.80s (1.00s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Khung hình zoom sát vào chiếc ngàm giữ bàn chải màu xanh dương nhạt dán trên cánh tủ gương phản chiếu rèm tắm, tạo điểm nhấn sản phẩm (Product Placement) cực kỳ tự nhiên.</span>
+                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Độ sâu trường ảnh mỏng (Shallow DOF) làm mờ nhẹ hậu cảnh rèm tắm, làm nổi bật đường nét tối giản và logo quip của phụ kiện.</div>
+                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Cánh tủ gương hơi có vết mờ bám nhẹ ở rìa, cần lau sạch mặt gương trước khi quay macro để khung hình đạt độ trong trẻo tuyệt đối.</div>
+                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Chuỗi phối hợp 3 cỡ cảnh (Wide -> Medium OTS -> Macro Insert) trong 2.5s là "combo vàng" của video UGC/Commercial quảng cáo đồ gia dụng cao cấp.</div>
+                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Cánh tủ gương phòng tắm</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Insert Shot • 3x Telephoto (77mm)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Ánh sáng khuếch tán dịu từ rèm tắm</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 04</span>
-                    <span class="tag-pill">⏱ 0.97s</span>
+                    <span class="tag-pill">⏱ 1.00s</span>
                 </div>
             </div>
         </div>
@@ -1248,11 +1498,11 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-5">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(4.83, 5.87, 'SHOT 05')">
-                    <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_05_mid.jpg" alt="SHOT 05" class="shot-img" loading="lazy" />
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_05_mid.jpg" alt="SHOT 05" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_05_mid.jpg', 'SHOT 05 [4.83s - 5.87s] • Quy tắc 2 - Faceless B-roll: Góc nhìn thứ ba giấu mặt tập trung 100% vào thao tác với tuýp kem Sensodyne')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_05_mid.jpg', 'SHOT 05 [4.83s - 5.87s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                     <span class="thumb-time-badge">4.83s - 5.87s</span>
                 </div>
             </div>
@@ -1260,45 +1510,45 @@ video#mainPlayer {
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 05</span>
-                        <h4 class="shot-heading">Quy tắc 2 - Faceless B-roll: Góc nhìn thứ ba giấu mặt tập trung 100% vào thao tác với tuýp kem Sensodyne</h4>
+                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(4.83, 5.87, 'SHOT 05')">
-                        ▶ 4.83s ➔ 5.87s (1.04s)
+                        ▶ 4.83s ➔ 5.87s (1.07s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Bàn tay mang nhẫn vàng vươn vào khung hình cầm lấy tuýp kem đánh răng Sensodyne Repair & Protect đặt cạnh chai nước súc miệng Walgreens và vòi nước inox sáng loáng.</span>
+                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Khung hình Faceless (không có mặt) giúp người xem dễ dàng đồng nhất bản thân vào nhân vật (Self-Projection), đồng thời tôn vinh thương hiệu một cách hữu cơ không gượng gạo.</div>
+                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Chai nước súc miệng Walgreens phía sau hơi to chiếm diện tích nền, có thể xoay nhãn hoặc lùi nhẹ để tuýp Sensodyne nổi bật hơn nữa.</div>
+                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Video UGC đắt giá không cần nói nhiều về sản phẩm, chỉ cần quay cận cảnh bàn tay chăm chút sử dụng sản phẩm trong routine hàng ngày.</div>
+                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Mặt bàn lavabo phòng tắm</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up Faceless B-Roll • 1x (24mm)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Ánh sáng tự nhiên pha đèn phòng tắm</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 05</span>
-                    <span class="tag-pill">⏱ 1.04s</span>
+                    <span class="tag-pill">⏱ 1.07s</span>
                 </div>
             </div>
         </div>
@@ -1307,11 +1557,11 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-6">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(5.9, 6.3, 'SHOT 06')">
-                    <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_06_mid.jpg" alt="SHOT 06" class="shot-img" loading="lazy" />
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_06_mid.jpg" alt="SHOT 06" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_06_mid.jpg', 'SHOT 06 [5.9s - 6.3s] • Quy tắc 2 - Top-Down POV: Góc nhìn từ trên xuống đặc tả dòng kem đánh răng chảy lên đầu bàn chải')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_06_mid.jpg', 'SHOT 06 [5.9s - 6.3s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                     <span class="thumb-time-badge">5.90s - 6.30s</span>
                 </div>
             </div>
@@ -1319,45 +1569,45 @@ video#mainPlayer {
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 06</span>
-                        <h4 class="shot-heading">Quy tắc 2 - Top-Down POV: Góc nhìn từ trên xuống đặc tả dòng kem đánh răng chảy lên đầu bàn chải</h4>
+                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(5.9, 6.3, 'SHOT 06')">
-                        ▶ 5.90s ➔ 6.30s (0.40s)
+                        ▶ 5.90s ➔ 6.30s (0.43s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Bàn tay bóp tuýp kem nặn một lượng kem trắng mềm mại lên đầu bàn chải điện màu xanh dương ngay phía trên lỗ thoát nước bồn rửa mặt sáng bóng.</span>
+                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Góc nhìn từ trên xuống (Bird's Eye POV) mô phỏng chính xác điểm nhìn của người thực hiện, tạo cảm giác thỏa mãn thị giác (Oddly Satisfying) và kích thích xúc giác.</div>
+                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Thời lượng shot chỉ 0.4s khá nhanh, nếu kéo dài thêm 0.3s nữa để thấy trọn vẹn giọt kem ngắt đuôi sẽ tăng thêm độ đã mắt.</div>
+                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Khi quay B-roll sản phẩm dạng lỏng / kem / bọt, luôn dùng góc POV từ trên xuống để người xem nhìn rõ chất liệu (Texture) của sản phẩm.</div>
+                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Lòng bồn rửa lavabo</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Top-Down POV Macro • 1x (24mm)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Ánh sáng hắt thẳng từ trên trần</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 06</span>
-                    <span class="tag-pill">⏱ 0.40s</span>
+                    <span class="tag-pill">⏱ 0.43s</span>
                 </div>
             </div>
         </div>
@@ -1366,11 +1616,11 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-7">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(6.33, 8.47, 'SHOT 07')">
-                    <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_07_mid.jpg" alt="SHOT 07" class="shot-img" loading="lazy" />
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_07_mid.jpg" alt="SHOT 07" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_07_mid.jpg', 'SHOT 07 [6.33s - 8.47s] • Quy tắc 3 - Cắt khớp chuyển động (Cut in Motion): Cận cảnh trực diện động tác đánh răng với biểu cảm tự nhiên')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_07_mid.jpg', 'SHOT 07 [6.33s - 8.47s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                     <span class="thumb-time-badge">6.33s - 8.47s</span>
                 </div>
             </div>
@@ -1378,45 +1628,45 @@ video#mainPlayer {
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 07</span>
-                        <h4 class="shot-heading">Quy tắc 3 - Cắt khớp chuyển động (Cut in Motion): Cận cảnh trực diện động tác đánh răng với biểu cảm tự nhiên</h4>
+                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(6.33, 8.47, 'SHOT 07')">
-                        ▶ 6.33s ➔ 8.47s (2.14s)
+                        ▶ 6.33s ➔ 8.47s (2.17s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Jade đeo băng đô tai thỏ xanh nhìn thẳng vào gương/camera, thao tác đưa bàn chải điện di chuyển nhịp nhàng trên hàm răng với biểu cảm chân thật, không diễn sâu.</span>
+                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Bố cục chân dung trung tâm (Center Framing) cực kỳ cuốn hút, tông màu da ấm áp hài hòa với áo choàng lông xám và băng đô pastel.</div>
+                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Khung hình hơi tĩnh ở thân người, có thể kết hợp cử động lắc đầu nhẹ hoặc micro-zoom để tăng tính động cho cảnh quay 2s.</div>
+                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Cắt trong chuyển động (Cut on Action) yêu cầu giữ nguyên tốc độ di chuyển của cánh tay giữa các góc máy khác nhau để người xem không nhận ra vết cắt.</div>
+                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Chính diện gương phòng tắm</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Frontal Close-Up Portrait • 1x (24mm)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Ánh sáng trực diện đều từ đèn gương</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 07</span>
-                    <span class="tag-pill">⏱ 2.14s</span>
+                    <span class="tag-pill">⏱ 2.17s</span>
                 </div>
             </div>
         </div>
@@ -1425,11 +1675,11 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-8">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(8.5, 9.83, 'SHOT 08')">
-                    <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_08_mid.jpg" alt="SHOT 08" class="shot-img" loading="lazy" />
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_08_mid.jpg" alt="SHOT 08" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_08_mid.jpg', 'SHOT 08 [8.5s - 9.83s] • Quy tắc 3 - Góc toàn nghiêng trên cao (High Angle Side): Bắt trọn khoảnh khắc cúi người súc miệng mượt mà')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_08_mid.jpg', 'SHOT 08 [8.5s - 9.83s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                     <span class="thumb-time-badge">8.50s - 9.83s</span>
                 </div>
             </div>
@@ -1437,45 +1687,45 @@ video#mainPlayer {
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 08</span>
-                        <h4 class="shot-heading">Quy tắc 3 - Góc toàn nghiêng trên cao (High Angle Side): Bắt trọn khoảnh khắc cúi người súc miệng mượt mà</h4>
+                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(8.5, 9.83, 'SHOT 08')">
-                        ▶ 8.50s ➔ 9.83s (1.33s)
+                        ▶ 8.50s ➔ 9.83s (1.37s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Đổi góc 90 độ sang góc nghiêng nhìn từ trên cao xuống, Jade đang cúi gập người sát bồn rửa mặt để nhổ bọt và xả nước, tiếp nối hoàn hảo động tác từ shot trước.</span>
+                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Đổi góc máy triệt để từ chính diện (Shot 7) sang góc nghiêng 3/4 trên cao (Shot 8) tạo cảm giác như có cả một ekip máy quay chuyên nghiệp đang ghi hình.</div>
+                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Mặt sau của cánh tủ gương bên phải hơi chiếm diện tích viền trên, nếu dịch góc máy sang trái 10cm sẽ thoáng không gian hơn.</div>
+                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Kỹ thuật quay đơn (Solo Creator): Đặt máy góc 1 quay trọn vẹn cả hành động, sau đó đặt máy góc 2 làm lại đúng hành động đó rồi dựng cắt ở điểm bắt đầu cúi người.</div>
+                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Góc cao bên hông lavabo</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">High-Angle 3/4 Side Shot • 0.8x / 1x</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Ánh sáng trần phòng tắm</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 08</span>
-                    <span class="tag-pill">⏱ 1.33s</span>
+                    <span class="tag-pill">⏱ 1.37s</span>
                 </div>
             </div>
         </div>
@@ -1484,11 +1734,11 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-9">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(9.87, 10.53, 'SHOT 09')">
-                    <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_09_mid.jpg" alt="SHOT 09" class="shot-img" loading="lazy" />
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_09_mid.jpg" alt="SHOT 09" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_09_mid.jpg', 'SHOT 09 [9.87s - 10.53s] • Quy tắc 3 - Cận cảnh kết thúc động tác: Ngẩng mặt nhìn thẳng vào gương sau khi súc miệng')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_09_mid.jpg', 'SHOT 09 [9.87s - 10.53s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                     <span class="thumb-time-badge">9.87s - 10.53s</span>
                 </div>
             </div>
@@ -1496,45 +1746,45 @@ video#mainPlayer {
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 09</span>
-                        <h4 class="shot-heading">Quy tắc 3 - Cận cảnh kết thúc động tác: Ngẩng mặt nhìn thẳng vào gương sau khi súc miệng</h4>
+                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(9.87, 10.53, 'SHOT 09')">
-                        ▶ 9.87s ➔ 10.53s (0.66s)
+                        ▶ 9.87s ➔ 10.53s (0.70s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Jade ngẩng đầu lên sau khi súc miệng, ánh mắt nhìn thẳng vào camera/gương với đôi môi hồng tự nhiên, khép lại chuỗi 3 cú máy "Cut in Motion" hoàn hảo.</span>
+                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Nhịp cắt nhanh (0.66s) tạo sự dứt khoát, hoàn tất chuỗi hành động đánh răng một cách gọn gàng mà không gây nhàm chán.</div>
+                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Điểm lấy nét hơi mềm (Soft Focus) trong tích tắc do chuyển động ngẩng đầu nhanh, cần khóa nét vào mắt trước khi thực hiện hành động.</div>
+                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Kết thúc một chuỗi hành động bằng một cú nhìn trực diện vào gương/ống kính giúp "khóa" lại sự chú ý của người xem trước khi chuyển sang phân đoạn mới.</div>
+                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Chính diện gương phòng tắm</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up Eye-Level • 1x (24mm)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Ánh sáng trước mặt</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 09</span>
-                    <span class="tag-pill">⏱ 0.66s</span>
+                    <span class="tag-pill">⏱ 0.70s</span>
                 </div>
             </div>
         </div>
@@ -1543,11 +1793,11 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-10">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(10.57, 12.93, 'SHOT 10')">
-                    <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_10_mid.jpg" alt="SHOT 10" class="shot-img" loading="lazy" />
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_10_mid.jpg" alt="SHOT 10" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_10_mid.jpg', 'SHOT 10 [10.57s - 12.93s] • Quy tắc 4 - Tích lũy Portfolio UGC: Góc nhìn phản chiếu gương kiểm tra làn da sau khi rửa mặt')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_10_mid.jpg', 'SHOT 10 [10.57s - 12.93s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                     <span class="thumb-time-badge">10.57s - 12.93s</span>
                 </div>
             </div>
@@ -1555,45 +1805,45 @@ video#mainPlayer {
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 10</span>
-                        <h4 class="shot-heading">Quy tắc 4 - Tích lũy Portfolio UGC: Góc nhìn phản chiếu gương kiểm tra làn da sau khi rửa mặt</h4>
+                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(10.57, 12.93, 'SHOT 10')">
-                        ▶ 10.57s ➔ 12.93s (2.36s)
+                        ▶ 10.57s ➔ 12.93s (2.40s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Jade đứng nghiêng trước gương, dùng ngón tay vỗ nhẹ và kiểm tra độ đàn hồi của da má, gương mặt thể hiện sự chăm chút tỉ mỉ cho chu trình dưỡng da ban đêm.</span>
+                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Khung hình chéo góc (Diagonal Composition) tận dụng mép gương và khung cửa tạo chiều sâu thị giác mạnh mẽ, màu da tự nhiên chân thực.</div>
+                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Bàn chải đánh răng đặt ở góc dưới cùng bên phải hơi lọt vào viền gương, có thể dọn bớt đồ đạc trên bồn để khung hình tinh gọn hơn.</div>
+                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">UGC không phải là video quảng cáo bóng bẩy, mà là những thước phim ghi lại khoảnh khắc đời thường mộc mạc (Authentic Routine) mà ai cũng thấy mình trong đó.</div>
+                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Góc nghiêng gương phòng tắm</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Over-the-Shoulder Mirror View • 1x (24mm)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Ánh sáng gương ấm</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 10</span>
-                    <span class="tag-pill">⏱ 2.36s</span>
+                    <span class="tag-pill">⏱ 2.40s</span>
                 </div>
             </div>
         </div>
@@ -1602,11 +1852,11 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-11">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(12.97, 15.9, 'SHOT 11')">
-                    <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_11_mid.jpg" alt="SHOT 11" class="shot-img" loading="lazy" />
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_11_mid.jpg" alt="SHOT 11" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_11_mid.jpg', 'SHOT 11 [12.97s - 15.9s] • Quy tắc 5 - Góc máy trong tủ gương (Inside Cabinet POV): Góc nhìn "Thị giác độc lạ" nhìn xuyên từ kệ tủ ra ngoài')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_11_mid.jpg', 'SHOT 11 [12.97s - 15.9s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                     <span class="thumb-time-badge">12.97s - 15.90s</span>
                 </div>
             </div>
@@ -1614,45 +1864,45 @@ video#mainPlayer {
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 11</span>
-                        <h4 class="shot-heading">Quy tắc 5 - Góc máy trong tủ gương (Inside Cabinet POV): Góc nhìn "Thị giác độc lạ" nhìn xuyên từ kệ tủ ra ngoài</h4>
+                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(12.97, 15.9, 'SHOT 11')">
-                        ▶ 12.97s ➔ 15.90s (2.93s)
+                        ▶ 12.97s ➔ 15.90s (2.97s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Chiếc iPhone được giấu bên trong tủ thuốc/tủ gương, nhìn qua bờ vai và chai lọ mỹ phẩm ra ngoài thấy Jade đang đứng chải răng / chuẩn bị lấy đồ.</span>
+                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Sử dụng kỹ thuật đóng khung trong khung (Frame within a Frame), biến các chai serum và thành tủ thành tiền cảnh (Foreground), tạo cảm giác bí mật, điện ảnh và cực kỳ lôi cuốn.</div>
+                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Tiền cảnh bóng chai lọ bên phải chiếm khoảng 30% khung hình có thể hơi tối, nhưng lại tạo hiệu ứng điện ảnh thú vị.</div>
+                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">"The Cabinet Shot never gets old" - Đặt điện thoại vào trong tủ lạnh, lò vi sóng, tủ quần áo hoặc tủ gương là mẹo quay UGC số 1 để tạo góc nhìn mới lạ từ những đồ vật quen thuộc.</div>
+                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bên trong tủ thuốc phòng tắm</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Internal Cabinet POV (Frame-in-Frame) • 1x (24mm)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Ánh sáng ngoài hắt vào bóng tối trong tủ</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 11</span>
-                    <span class="tag-pill">⏱ 2.93s</span>
+                    <span class="tag-pill">⏱ 2.97s</span>
                 </div>
             </div>
         </div>
@@ -1661,11 +1911,11 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-12">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(15.93, 16.5, 'SHOT 12')">
-                    <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_12_mid.jpg" alt="SHOT 12" class="shot-img" loading="lazy" />
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_12_mid.jpg" alt="SHOT 12" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_12_mid.jpg', 'SHOT 12 [15.93s - 16.5s] • Quy tắc 5 - Góc toàn mở tủ (Full Cabinet View): Phô diễn bộ sưu tập mỹ phẩm và bàn tay với tới cánh cửa')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_12_mid.jpg', 'SHOT 12 [15.93s - 16.5s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                     <span class="thumb-time-badge">15.93s - 16.50s</span>
                 </div>
             </div>
@@ -1673,45 +1923,45 @@ video#mainPlayer {
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 12</span>
-                        <h4 class="shot-heading">Quy tắc 5 - Góc toàn mở tủ (Full Cabinet View): Phô diễn bộ sưu tập mỹ phẩm và bàn tay với tới cánh cửa</h4>
+                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(15.93, 16.5, 'SHOT 12')">
-                        ▶ 15.93s ➔ 16.50s (0.57s)
+                        ▶ 15.93s ➔ 16.50s (0.60s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Góc quay nhìn từ bên ngoài bao quát toàn bộ 3 tầng kệ tủ gương chứa đầy các lọ serum The Ordinary, kem dưỡng, dầu thơm và túi đựng mỹ phẩm sang trọng.</span>
+                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Sự sắp xếp ngăn nắp của các lọ mỹ phẩm tạo tính thẩm mỹ cao (Aesthetic Organization), ánh đèn trùm phía trên chiếu sáng rực rỡ các chất liệu thủy tinh.</div>
+                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Chai nước súc miệng lớn ở góc dưới hơi phá vỡ bảng màu cao cấp của các lọ serum phía trên.</div>
+                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Góc quay khoe tủ đồ / kệ mỹ phẩm là cơ hội vàng để gắn thẻ (Tag) hoặc nhận tài trợ tự nhiên từ các nhãn hàng skincare.</div>
+                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Toàn cảnh kệ tủ thuốc</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">High 3/4 Medium Angle • 1x (24mm)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Ánh sáng đèn chùm phía trên</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 12</span>
-                    <span class="tag-pill">⏱ 0.57s</span>
+                    <span class="tag-pill">⏱ 0.60s</span>
                 </div>
             </div>
         </div>
@@ -1720,11 +1970,11 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-13">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(16.53, 17.4, 'SHOT 13')">
-                    <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_13_mid.jpg" alt="SHOT 13" class="shot-img" loading="lazy" />
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_13_mid.jpg" alt="SHOT 13" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_13_mid.jpg', 'SHOT 13 [16.53s - 17.4s] • Quy tắc 5 - Đóng cánh cửa tủ (Whip Pan / Door Wipe): Cánh tủ gương quét qua khung hình che khuất ống kính')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_13_mid.jpg', 'SHOT 13 [16.53s - 17.4s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                     <span class="thumb-time-badge">16.53s - 17.40s</span>
                 </div>
             </div>
@@ -1732,45 +1982,45 @@ video#mainPlayer {
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 13</span>
-                        <h4 class="shot-heading">Quy tắc 5 - Đóng cánh cửa tủ (Whip Pan / Door Wipe): Cánh tủ gương quét qua khung hình che khuất ống kính</h4>
+                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(16.53, 17.4, 'SHOT 13')">
-                        ▶ 16.53s ➔ 17.40s (0.87s)
+                        ▶ 16.53s ➔ 17.40s (0.90s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Bàn tay đeo nhẫn đen kéo cánh cửa tủ gương màu trắng đóng sập lại về phía camera, tạo hiệu ứng chuyển cảnh che phủ (Wipe Transition) tự nhiên bằng vật thể.</span>
+                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Cánh cửa tủ màu trắng đóng vai trò như một tấm rèm chuyển cảnh cơ học (In-Camera Transition), tạo nhịp kết thúc dứt khoát và ấn tượng.</div>
+                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Cần giữ tốc độ đóng cửa đều tay để khung hình không bị mờ nhòe quá mức (Motion Blur).</div>
+                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Tận dụng cánh cửa tủ, nắp laptop hoặc bàn tay che ống kính để làm chuyển cảnh kết thúc video thay vì dùng hiệu ứng kỹ xảo Fade to Black thông thường.</div>
+                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Cửa tủ thuốc phòng tắm</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Dynamic Wipe / Pan Action • 1x (24mm)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Ánh sáng chuyển đổi nhanh khi cửa đóng</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 13</span>
-                    <span class="tag-pill">⏱ 0.87s</span>
+                    <span class="tag-pill">⏱ 0.90s</span>
                 </div>
             </div>
         </div>
@@ -1778,52 +2028,52 @@ video#mainPlayer {
 
         <div class="shot-card" id="shot-card-14">
             <div class="shot-media-col">
-                <div class="shot-thumb-wrap" onclick="playShot(17.43, 17.53, 'SHOT 14')">
-                    <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_14_mid.jpg" alt="SHOT 14" class="shot-img" loading="lazy" />
+                <div class="shot-thumb-wrap" onclick="playShot(17.43, 17.5, 'SHOT 14')">
+                    <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_14_mid.jpg" alt="SHOT 14" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_14_mid.jpg', 'SHOT 14 [17.43s - 17.53s] • Khóa màn hình đen (Blackout Closure): Cánh tủ đóng kín tạo điểm ngắt hoàn hảo cho vòng lặp vô tận (Seamless Loop)')">🔍</button>
-                    <span class="thumb-time-badge">17.43s - 17.53s</span>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_14_mid.jpg', 'SHOT 14 [17.43s - 17.5s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                    <span class="thumb-time-badge">17.43s - 17.50s</span>
                 </div>
             </div>
             <div class="shot-info-col">
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 14</span>
-                        <h4 class="shot-heading">Khóa màn hình đen (Blackout Closure): Cánh tủ đóng kín tạo điểm ngắt hoàn hảo cho vòng lặp vô tận (Seamless Loop)</h4>
+                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
                     </div>
-                    <button class="time-jump-btn" onclick="playShot(17.43, 17.53, 'SHOT 14')">
-                        ▶ 17.43s ➔ 17.53s (0.10s)
+                    <button class="time-jump-btn" onclick="playShot(17.43, 17.5, 'SHOT 14')">
+                        ▶ 17.43s ➔ 17.50s (0.10s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Khung hình tối đen hoàn toàn khi cánh tủ gương đóng khít, sẵn sàng lặp lại ngay cú chạm chân đầu tiên của Shot 01.</span>
+                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Tạo điểm dừng thị giác tự nhiên, nếu xem lặp lại trên Reels/TikTok sẽ tạo cảm giác như một vòng tuần hoàn không có điểm đầu điểm cuối (Seamless Loop).</div>
+                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Khung hình tối hoàn toàn chỉ kéo dài 0.1s, đúng chuẩn điểm nối loop.</div>
+                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Thiết kế cú đóng tủ đen ở cuối để nối thẳng vào cảnh mở đầu của video giúp giữ chân người xem xem lại lần 2, tăng mạnh chỉ số Retention Rate trên thuật toán Instagram.</div>
+                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bên trong tủ thuốc khi đóng kín</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Blackout Loop Anchor • 1x</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Bóng tối hoàn toàn</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Chuyển tiếp theo nhịp cắt</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                 </div>
 
                 <div class="tags-row">
@@ -1840,169 +2090,169 @@ video#mainPlayer {
             
         <div class="grid-card" onclick="playShot(0.0, 2.2, 'SHOT 01')">
             <div class="grid-img-wrap">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_01_mid.jpg', 'SHOT 01 [0.0s - 2.2s] • Hook thị giác "Boring Life - Bedtime Edition": Khóa tò mò bằng góc máy sát sàn (Low-Angle) bắt bước chân dép tai thỏ trên thảm lông')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_01_mid.jpg', 'SHOT 01 [0.0s - 2.2s] • Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh')">🔍</button>
                 <div class="grid-badge-top">SHOT 01</div>
                 <div class="grid-badge-bottom">0.0s - 2.2s</div>
             </div>
-            <div class="grid-title-snippet">Hook thị giác "Boring Life - Bedtime Edition": Khóa tò mò bằng góc máy sát sàn (Low-Angle) bắt bước chân dép tai thỏ trên thảm lông</div>
+            <div class="grid-title-snippet">Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh</div>
         </div>
         
 
         <div class="grid-card" onclick="playShot(2.23, 3.0, 'SHOT 02')">
             <div class="grid-img-wrap">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_02_mid.jpg', 'SHOT 02 [2.23s - 3.0s] • Quy tắc 1 - Khung toàn (Wide Shot): Thiết lập không gian phòng tắm và tư thế chuẩn bị chu trình ban đêm')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_02_mid.jpg', 'SHOT 02 [2.23s - 3.0s] • Nhịp Dẫn Theo Dõi (Medium Tracking): Duy trì sự liên tục và kết nối cảm xúc nhân vật')">🔍</button>
                 <div class="grid-badge-top">SHOT 02</div>
                 <div class="grid-badge-bottom">2.2s - 3.0s</div>
             </div>
-            <div class="grid-title-snippet">Quy tắc 1 - Khung toàn (Wide Shot): Thiết lập không gian phòng tắm và tư thế chuẩn bị chu trình ban đêm</div>
+            <div class="grid-title-snippet">Nhịp Dẫn Theo Dõi (Medium Tracking): Duy trì sự liên tục và kết nối cảm xúc nhân vật</div>
         </div>
         
 
         <div class="grid-card" onclick="playShot(3.03, 3.8, 'SHOT 03')">
             <div class="grid-img-wrap">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_03_mid.jpg', 'SHOT 03 [3.03s - 3.8s] • Quy tắc 1 - Góc trung qua vai (Medium OTS): Khai thác chiều sâu gương phản chiếu và hành động vươn tay lấy bàn chải')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_03_mid.jpg', 'SHOT 03 [3.03s - 3.8s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                 <div class="grid-badge-top">SHOT 03</div>
                 <div class="grid-badge-bottom">3.0s - 3.8s</div>
             </div>
-            <div class="grid-title-snippet">Quy tắc 1 - Góc trung qua vai (Medium OTS): Khai thác chiều sâu gương phản chiếu và hành động vươn tay lấy bàn chải</div>
+            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
         </div>
         
 
         <div class="grid-card" onclick="playShot(3.83, 4.8, 'SHOT 04')">
             <div class="grid-img-wrap">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_04_mid.jpg', 'SHOT 04 [3.83s - 4.8s] • Quy tắc 1 - Cận cảnh đặc tả (Macro Insert): Tôn vinh chi tiết thiết kế ngàm gắn bàn chải trên mặt gương')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_04_mid.jpg', 'SHOT 04 [3.83s - 4.8s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                 <div class="grid-badge-top">SHOT 04</div>
                 <div class="grid-badge-bottom">3.8s - 4.8s</div>
             </div>
-            <div class="grid-title-snippet">Quy tắc 1 - Cận cảnh đặc tả (Macro Insert): Tôn vinh chi tiết thiết kế ngàm gắn bàn chải trên mặt gương</div>
+            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
         </div>
         
 
         <div class="grid-card" onclick="playShot(4.83, 5.87, 'SHOT 05')">
             <div class="grid-img-wrap">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_05_mid.jpg', 'SHOT 05 [4.83s - 5.87s] • Quy tắc 2 - Faceless B-roll: Góc nhìn thứ ba giấu mặt tập trung 100% vào thao tác với tuýp kem Sensodyne')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_05_mid.jpg', 'SHOT 05 [4.83s - 5.87s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                 <div class="grid-badge-top">SHOT 05</div>
                 <div class="grid-badge-bottom">4.8s - 5.9s</div>
             </div>
-            <div class="grid-title-snippet">Quy tắc 2 - Faceless B-roll: Góc nhìn thứ ba giấu mặt tập trung 100% vào thao tác với tuýp kem Sensodyne</div>
+            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
         </div>
         
 
         <div class="grid-card" onclick="playShot(5.9, 6.3, 'SHOT 06')">
             <div class="grid-img-wrap">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_06_mid.jpg', 'SHOT 06 [5.9s - 6.3s] • Quy tắc 2 - Top-Down POV: Góc nhìn từ trên xuống đặc tả dòng kem đánh răng chảy lên đầu bàn chải')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_06_mid.jpg', 'SHOT 06 [5.9s - 6.3s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                 <div class="grid-badge-top">SHOT 06</div>
                 <div class="grid-badge-bottom">5.9s - 6.3s</div>
             </div>
-            <div class="grid-title-snippet">Quy tắc 2 - Top-Down POV: Góc nhìn từ trên xuống đặc tả dòng kem đánh răng chảy lên đầu bàn chải</div>
+            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
         </div>
         
 
         <div class="grid-card" onclick="playShot(6.33, 8.47, 'SHOT 07')">
             <div class="grid-img-wrap">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_07_mid.jpg', 'SHOT 07 [6.33s - 8.47s] • Quy tắc 3 - Cắt khớp chuyển động (Cut in Motion): Cận cảnh trực diện động tác đánh răng với biểu cảm tự nhiên')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_07_mid.jpg', 'SHOT 07 [6.33s - 8.47s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                 <div class="grid-badge-top">SHOT 07</div>
                 <div class="grid-badge-bottom">6.3s - 8.5s</div>
             </div>
-            <div class="grid-title-snippet">Quy tắc 3 - Cắt khớp chuyển động (Cut in Motion): Cận cảnh trực diện động tác đánh răng với biểu cảm tự nhiên</div>
+            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
         </div>
         
 
         <div class="grid-card" onclick="playShot(8.5, 9.83, 'SHOT 08')">
             <div class="grid-img-wrap">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_08_mid.jpg', 'SHOT 08 [8.5s - 9.83s] • Quy tắc 3 - Góc toàn nghiêng trên cao (High Angle Side): Bắt trọn khoảnh khắc cúi người súc miệng mượt mà')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_08_mid.jpg', 'SHOT 08 [8.5s - 9.83s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                 <div class="grid-badge-top">SHOT 08</div>
                 <div class="grid-badge-bottom">8.5s - 9.8s</div>
             </div>
-            <div class="grid-title-snippet">Quy tắc 3 - Góc toàn nghiêng trên cao (High Angle Side): Bắt trọn khoảnh khắc cúi người súc miệng mượt mà</div>
+            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
         </div>
         
 
         <div class="grid-card" onclick="playShot(9.87, 10.53, 'SHOT 09')">
             <div class="grid-img-wrap">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_09_mid.jpg', 'SHOT 09 [9.87s - 10.53s] • Quy tắc 3 - Cận cảnh kết thúc động tác: Ngẩng mặt nhìn thẳng vào gương sau khi súc miệng')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_09_mid.jpg', 'SHOT 09 [9.87s - 10.53s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                 <div class="grid-badge-top">SHOT 09</div>
                 <div class="grid-badge-bottom">9.9s - 10.5s</div>
             </div>
-            <div class="grid-title-snippet">Quy tắc 3 - Cận cảnh kết thúc động tác: Ngẩng mặt nhìn thẳng vào gương sau khi súc miệng</div>
+            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
         </div>
         
 
         <div class="grid-card" onclick="playShot(10.57, 12.93, 'SHOT 10')">
             <div class="grid-img-wrap">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_10_mid.jpg" alt="SHOT 10" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_10_mid.jpg" alt="SHOT 10" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_10_mid.jpg', 'SHOT 10 [10.57s - 12.93s] • Quy tắc 4 - Tích lũy Portfolio UGC: Góc nhìn phản chiếu gương kiểm tra làn da sau khi rửa mặt')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_10_mid.jpg', 'SHOT 10 [10.57s - 12.93s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                 <div class="grid-badge-top">SHOT 10</div>
                 <div class="grid-badge-bottom">10.6s - 12.9s</div>
             </div>
-            <div class="grid-title-snippet">Quy tắc 4 - Tích lũy Portfolio UGC: Góc nhìn phản chiếu gương kiểm tra làn da sau khi rửa mặt</div>
+            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
         </div>
         
 
         <div class="grid-card" onclick="playShot(12.97, 15.9, 'SHOT 11')">
             <div class="grid-img-wrap">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_11_mid.jpg" alt="SHOT 11" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_11_mid.jpg" alt="SHOT 11" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_11_mid.jpg', 'SHOT 11 [12.97s - 15.9s] • Quy tắc 5 - Góc máy trong tủ gương (Inside Cabinet POV): Góc nhìn "Thị giác độc lạ" nhìn xuyên từ kệ tủ ra ngoài')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_11_mid.jpg', 'SHOT 11 [12.97s - 15.9s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                 <div class="grid-badge-top">SHOT 11</div>
                 <div class="grid-badge-bottom">13.0s - 15.9s</div>
             </div>
-            <div class="grid-title-snippet">Quy tắc 5 - Góc máy trong tủ gương (Inside Cabinet POV): Góc nhìn "Thị giác độc lạ" nhìn xuyên từ kệ tủ ra ngoài</div>
+            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
         </div>
         
 
         <div class="grid-card" onclick="playShot(15.93, 16.5, 'SHOT 12')">
             <div class="grid-img-wrap">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_12_mid.jpg" alt="SHOT 12" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_12_mid.jpg" alt="SHOT 12" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_12_mid.jpg', 'SHOT 12 [15.93s - 16.5s] • Quy tắc 5 - Góc toàn mở tủ (Full Cabinet View): Phô diễn bộ sưu tập mỹ phẩm và bàn tay với tới cánh cửa')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_12_mid.jpg', 'SHOT 12 [15.93s - 16.5s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                 <div class="grid-badge-top">SHOT 12</div>
                 <div class="grid-badge-bottom">15.9s - 16.5s</div>
             </div>
-            <div class="grid-title-snippet">Quy tắc 5 - Góc toàn mở tủ (Full Cabinet View): Phô diễn bộ sưu tập mỹ phẩm và bàn tay với tới cánh cửa</div>
+            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
         </div>
         
 
         <div class="grid-card" onclick="playShot(16.53, 17.4, 'SHOT 13')">
             <div class="grid-img-wrap">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_13_mid.jpg" alt="SHOT 13" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_13_mid.jpg" alt="SHOT 13" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_13_mid.jpg', 'SHOT 13 [16.53s - 17.4s] • Quy tắc 5 - Đóng cánh cửa tủ (Whip Pan / Door Wipe): Cánh tủ gương quét qua khung hình che khuất ống kính')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_13_mid.jpg', 'SHOT 13 [16.53s - 17.4s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                 <div class="grid-badge-top">SHOT 13</div>
                 <div class="grid-badge-bottom">16.5s - 17.4s</div>
             </div>
-            <div class="grid-title-snippet">Quy tắc 5 - Đóng cánh cửa tủ (Whip Pan / Door Wipe): Cánh tủ gương quét qua khung hình che khuất ống kính</div>
+            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
         </div>
         
 
-        <div class="grid-card" onclick="playShot(17.43, 17.53, 'SHOT 14')">
+        <div class="grid-card" onclick="playShot(17.43, 17.5, 'SHOT 14')">
             <div class="grid-img-wrap">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_14_mid.jpg" alt="SHOT 14" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_14_mid.jpg" alt="SHOT 14" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_14_mid.jpg', 'SHOT 14 [17.43s - 17.53s] • Khóa màn hình đen (Blackout Closure): Cánh tủ đóng kín tạo điểm ngắt hoàn hảo cho vòng lặp vô tận (Seamless Loop)')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_14_mid.jpg', 'SHOT 14 [17.43s - 17.5s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
                 <div class="grid-badge-top">SHOT 14</div>
                 <div class="grid-badge-bottom">17.4s - 17.5s</div>
             </div>
-            <div class="grid-title-snippet">Khóa màn hình đen (Blackout Closure): Cánh tủ đóng kín tạo điểm ngắt hoàn hảo cho vòng lặp vô tận (Seamless Loop)</div>
+            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
         </div>
         
         </div>
@@ -2019,11 +2269,11 @@ video#mainPlayer {
             
         <div class="drawer-item" onclick="jumpToShot(1, 0.0, 2.2, 'SHOT 01')">
             <div class="drawer-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 01</div>
-                <div class="drawer-shot-headline">Hook thị giác "Boring Life - Bedtime Editi...</div>
+                <div class="drawer-shot-headline">Visual Hook Mở Màn: Giữ chân người xem nga...</div>
                 <div class="drawer-shot-time">⏱ 0.00s - 2.20s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2032,11 +2282,11 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(2, 2.23, 3.0, 'SHOT 02')">
             <div class="drawer-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 02</div>
-                <div class="drawer-shot-headline">Quy tắc 1 - Khung toàn (Wide Shot): Thiết ...</div>
+                <div class="drawer-shot-headline">Nhịp Dẫn Theo Dõi (Medium Tracking): Duy t...</div>
                 <div class="drawer-shot-time">⏱ 2.23s - 3.00s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2045,11 +2295,11 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(3, 3.03, 3.8, 'SHOT 03')">
             <div class="drawer-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 03</div>
-                <div class="drawer-shot-headline">Quy tắc 1 - Góc trung qua vai (Medium OTS)...</div>
+                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
                 <div class="drawer-shot-time">⏱ 3.03s - 3.80s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2058,11 +2308,11 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(4, 3.83, 4.8, 'SHOT 04')">
             <div class="drawer-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 04</div>
-                <div class="drawer-shot-headline">Quy tắc 1 - Cận cảnh đặc tả (Macro Insert)...</div>
+                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
                 <div class="drawer-shot-time">⏱ 3.83s - 4.80s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2071,11 +2321,11 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(5, 4.83, 5.87, 'SHOT 05')">
             <div class="drawer-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 05</div>
-                <div class="drawer-shot-headline">Quy tắc 2 - Faceless B-roll: Góc nhìn thứ ...</div>
+                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
                 <div class="drawer-shot-time">⏱ 4.83s - 5.87s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2084,11 +2334,11 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(6, 5.9, 6.3, 'SHOT 06')">
             <div class="drawer-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 06</div>
-                <div class="drawer-shot-headline">Quy tắc 2 - Top-Down POV: Góc nhìn từ trên...</div>
+                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
                 <div class="drawer-shot-time">⏱ 5.90s - 6.30s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2097,11 +2347,11 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(7, 6.33, 8.47, 'SHOT 07')">
             <div class="drawer-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 07</div>
-                <div class="drawer-shot-headline">Quy tắc 3 - Cắt khớp chuyển động (Cut in M...</div>
+                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
                 <div class="drawer-shot-time">⏱ 6.33s - 8.47s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2110,11 +2360,11 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(8, 8.5, 9.83, 'SHOT 08')">
             <div class="drawer-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 08</div>
-                <div class="drawer-shot-headline">Quy tắc 3 - Góc toàn nghiêng trên cao (Hig...</div>
+                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
                 <div class="drawer-shot-time">⏱ 8.50s - 9.83s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2123,11 +2373,11 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(9, 9.87, 10.53, 'SHOT 09')">
             <div class="drawer-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 09</div>
-                <div class="drawer-shot-headline">Quy tắc 3 - Cận cảnh kết thúc động tác: Ng...</div>
+                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
                 <div class="drawer-shot-time">⏱ 9.87s - 10.53s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2136,11 +2386,11 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(10, 10.57, 12.93, 'SHOT 10')">
             <div class="drawer-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_10_mid.jpg" alt="SHOT 10" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_10_mid.jpg" alt="SHOT 10" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 10</div>
-                <div class="drawer-shot-headline">Quy tắc 4 - Tích lũy Portfolio UGC: Góc nh...</div>
+                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
                 <div class="drawer-shot-time">⏱ 10.57s - 12.93s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2149,11 +2399,11 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(11, 12.97, 15.9, 'SHOT 11')">
             <div class="drawer-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_11_mid.jpg" alt="SHOT 11" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_11_mid.jpg" alt="SHOT 11" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 11</div>
-                <div class="drawer-shot-headline">Quy tắc 5 - Góc máy trong tủ gương (Inside...</div>
+                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
                 <div class="drawer-shot-time">⏱ 12.97s - 15.90s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2162,11 +2412,11 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(12, 15.93, 16.5, 'SHOT 12')">
             <div class="drawer-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_12_mid.jpg" alt="SHOT 12" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_12_mid.jpg" alt="SHOT 12" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 12</div>
-                <div class="drawer-shot-headline">Quy tắc 5 - Góc toàn mở tủ (Full Cabinet V...</div>
+                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
                 <div class="drawer-shot-time">⏱ 15.93s - 16.50s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2175,25 +2425,25 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(13, 16.53, 17.4, 'SHOT 13')">
             <div class="drawer-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_13_mid.jpg" alt="SHOT 13" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_13_mid.jpg" alt="SHOT 13" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 13</div>
-                <div class="drawer-shot-headline">Quy tắc 5 - Đóng cánh cửa tủ (Whip Pan / D...</div>
+                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
                 <div class="drawer-shot-time">⏱ 16.53s - 17.40s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
         </div>
         
 
-        <div class="drawer-item" onclick="jumpToShot(14, 17.43, 17.53, 'SHOT 14')">
+        <div class="drawer-item" onclick="jumpToShot(14, 17.43, 17.5, 'SHOT 14')">
             <div class="drawer-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_14_mid.jpg" alt="SHOT 14" loading="lazy" />
+                <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_14_mid.jpg" alt="SHOT 14" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 14</div>
-                <div class="drawer-shot-headline">Khóa màn hình đen (Blackout Closure): Cánh...</div>
-                <div class="drawer-shot-time">⏱ 17.43s - 17.53s</div>
+                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
+                <div class="drawer-shot-time">⏱ 17.43s - 17.50s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
         </div>
@@ -2209,7 +2459,7 @@ video#mainPlayer {
 </div>
 
 <script>
-const rawVideoSrc = "https://media.fedu.vn/videos/DZwO5X6N_MS.mp4";
+const rawVideoSrc = "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DZwO5X6N_MS.mp4";
 let currentEndTime = null;
 
 function getCandidateUrls(src) {
@@ -2217,7 +2467,7 @@ function getCandidateUrls(src) {
     if (src.startsWith('http://') || src.startsWith('https://')) return [src];
     let clean = src.replace(/^(\.\/|\.\.\/)+/, '').replace(/^(videos\/|reports\/)/, '');
     return [
-        'https://media.fedu.vn/videos/' + encodeURI(clean),
+        'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/' + encodeURI(clean),
         '../videos/' + clean,
         './videos/' + clean,
         './' + clean
@@ -2285,6 +2535,33 @@ function toggleMute(btn) {
     if (btn) btn.innerText = player.muted ? '🔇 Tắt Tiếng' : '🔊 Tiếng';
 }
 
+function togglePlayerFullscreen() {
+    const v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) {
+            v.requestFullscreen().catch(() => {});
+        } else if (v.webkitRequestFullscreen) {
+            v.webkitRequestFullscreen();
+        } else if (v.webkitEnterFullscreen) {
+            v.webkitEnterFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+});
+
 function switchView(view) {
     const sb = document.getElementById('storyboardView');
     const grid = document.getElementById('gridView');
@@ -2344,48 +2621,47 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-function handleCreatorClick(e, handle, name) {
-    if (e) e.preventDefault();
-    try {
-        if (window.parent && window.parent !== window) {
-            window.parent.postMessage({ type: 'FILTER_CREATOR', handle: handle, name: name }, '*');
-            if (typeof window.parent.filterByCreator === 'function') {
-                window.parent.closeModal('reportEmbedModal');
-                window.parent.filterByCreator(handle, name);
-                return;
-            }
-        }
-    } catch (err) {}
-    window.location.href = '../index.html?creator=' + encodeURIComponent(handle);
-}
-
-
-function togglePlayerFullscreen() {
-    const v = document.getElementById('mainPlayer');
-    if (!v) return;
-    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-        if (v.requestFullscreen) {
-            v.requestFullscreen().catch(() => {});
-        } else if (v.webkitRequestFullscreen) {
-            v.webkitRequestFullscreen();
-        } else if (v.webkitEnterFullscreen) {
-            v.webkitEnterFullscreen();
-        }
+function togglePromptAccordion(headerEl) {
+    const card = headerEl.closest('.remake-prompt-card');
+    if (!card) return;
+    const body = card.querySelector('.prompt-accordion-body');
+    const icon = card.querySelector('.toggle-icon');
+    const label = card.querySelector('.toggle-label');
+    if (!body) return;
+    const isCollapsed = (body.style.display === 'none' || getComputedStyle(body).display === 'none');
+    if (isCollapsed) {
+        body.style.display = 'block';
+        if (icon) icon.textContent = '▲';
+        if (label) label.textContent = 'Thu gọn';
     } else {
-        if (document.exitFullscreen) {
-            document.exitFullscreen().catch(() => {});
-        } else if (document.webkitExitFullscreen) {
-            document.webkitExitFullscreen();
-        }
+        body.style.display = 'none';
+        if (icon) icon.textContent = '▼';
+        if (label) label.textContent = 'Mở xem';
     }
 }
 
-document.addEventListener('keydown', (e) => {
-    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
-        e.preventDefault();
-        togglePlayerFullscreen();
-    }
-});
+function copyMegaPrompt(e, btn) {
+    if (e && e.stopPropagation) e.stopPropagation();
+    const card = btn.closest('.remake-prompt-card');
+    const codeEl = card ? card.querySelector('.prompt-code-content') : document.getElementById('megaPromptText');
+    if (!codeEl) return;
+    const text = codeEl.innerText || codeEl.textContent;
+    navigator.clipboard.writeText(text).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '✅ Đã chép!';
+        const oldBg = btn.style.background;
+        const oldColor = btn.style.color;
+        btn.style.background = '#10b981';
+        btn.style.color = '#fff';
+        setTimeout(() => {
+            btn.innerHTML = orig;
+            btn.style.background = oldBg;
+            btn.style.color = oldColor;
+        }, 2000);
+    }).catch(err => {
+        alert('Lỗi sao chép, bạn vui lòng bôi đen văn bản để copy nhé!');
+    });
+}
 
 </script>
 </body>

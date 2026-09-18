@@ -4612,44 +4612,38 @@
   },
   "DZwO5X6N_MS": {
     "id": "IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious",
-    "index": 60,
-    "creator": "@jade.got.curious",
-    "creator_name": "Jade.Got.Curious",
-    "title": "Film Your \"Boring\" Life (Bedtime UGC Edition)",
+    "creator": "@Jade_Sheng",
+    "creator_name": "Jade_Sheng",
+    "title": "@Jade_Sheng - Video by jade.got.curious",
     "shots_count": 14,
-    "duration": "0.15s",
+    "duration": "28.0s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
-      "icon": "🎬"
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
     },
-    "purpose": "Tôn vinh vẻ đẹp đường nét kiến trúc & Không gian sống",
+    "purpose": "thêm mục chuyển cảnh",
     "tech_tags": [
-      "Cut in Motion, Inside Cabinet POV, Faceless B-Roll, Focal Length Triad (Wide-Med-Macro), Seamless Loop"
+      "Thêm",
+      "Establishing Hook Shot",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
     ],
-    "logic_explanation": "Khai thác đường nét hình học, bố cục không gian và cấu trúc công trình kiến trúc.",
+    "logic_explanation": "Ghi chú người dùng: thêm mục chuyển cảnh. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
     "is_excluded": false,
-    "quick_takeaway": "Tác phẩm ngắn 17.5s của creator Jade Sheng (@jade.got.curious) là bản hướng dẫn bậc thầy (Masterclass) về cách biến những khoảnh khắc đời thường tưởng như nhàm chán thành một danh mục tác phẩm UGC (User-Generated Content) triệu view mà k...",
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 14 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    },
-    "transition_level": null,
-    "is_ad_bot": false,
-    "fedu_optimization": {
-      "key_optimization_point": "Tối ưu cho Kiến Trúc, Nội Thất, Bất Động Sản & Không Gian Sống Slow Living: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Cut in Motion, Inside Cabinet POV, Faceless B-Roll, Focal Length Triad (Wide-Med-Macro), Seamless Loop",
-      "practice_focus": "Bài tập khung hình tĩnh (Static Shot): Để máy yên trên chân máy, đón ánh nắng lọt qua rèm cửa và người lướt qua để tôn vinh đường nét không gian.",
-      "ig_seeding_hook": "Follow @jade.got.curious để huấn luyện thuật toán Instagram đề xuất các không gian kiến trúc tối giản wabi-sabi và nhịp sống thanh bình.",
-      "course_industry_mapping": "Kiến Trúc, Nội Thất, Bất Động Sản & Không Gian Sống Slow Living",
-      "transition_level": null
     }
   },
   "DZa9pzKRsAU": {
@@ -14698,10 +14692,6 @@
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    },
-    "fedu_optimization": {
-      "key_optimization_point": "⚡ Đặt Establishing Hook trong không gian tối, đập đèn ven (Rim Light) mạnh để tách hẳn chủ thể khỏi nền.",
-      "practice_focus": "⚡ Thực chiến: Dí sát ống kính (Macro Detail) bắt vân bề mặt, xoay tay máy chậm kết hợp ánh sáng chéo để nổi khối 3D."
     }
   },
   "DdJYSokAkAj": {
@@ -14808,10 +14798,6 @@
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    },
-    "fedu_optimization": {
-      "key_optimization_point": "⚡ Mở bát bằng Establishing Hook góc siêu rộng, ngay lập tức ép sáng Low-key dìm tối phông nền để dồn mắt vào chủ thể.",
-      "practice_focus": "⚡ Thực chiến: Băm nhịp luân phiên giữa toàn cảnh sáng rực (High-key) và dí sát chi tiết (Macro) trong bóng tối tạo độ gắt."
     }
   },
   "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle": {
@@ -14847,10 +14833,6 @@
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    },
-    "fedu_optimization": {
-      "key_optimization_point": "⚡ Mở bát bằng Establishing Hook góc siêu rộng, ngay lập tức ép sáng Low-key dìm tối phông nền để dồn mắt vào chủ thể.",
-      "practice_focus": "⚡ Thực chiến: Băm nhịp luân phiên giữa toàn cảnh sáng rực (High-key) và dí sát chi tiết (Macro) trong bóng tối tạo độ gắt."
     }
   },
   "IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale": {
@@ -14885,10 +14867,6 @@
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    },
-    "fedu_optimization": {
-      "key_optimization_point": "⚡ Đặt Establishing Hook trong không gian tối, đập đèn ven (Rim Light) mạnh để tách hẳn chủ thể khỏi nền.",
-      "practice_focus": "⚡ Thực chiến: Dí sát ống kính (Macro Detail) bắt vân bề mặt, xoay tay máy chậm kết hợp ánh sáng chéo để nổi khối 3D."
     }
   },
   "IG_@Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen": {
@@ -14929,10 +14907,6 @@
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    },
-    "fedu_optimization": {
-      "key_optimization_point": "⚡ Mở đầu Establishing Hook rồi lập tức đẩy Medium Tracking đi ngang song song với người dưới ánh sáng Low-key.",
-      "practice_focus": "⚡ Thực chiến: Vừa đẩy máy theo bước chân vừa khóa nét mặt, cắt rụp sang góc cận (tay, biểu cảm) để tạo cảm giác có người đi cùng."
     }
   },
   "DOd8XMMjxcH": {
@@ -14973,10 +14947,6 @@
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    },
-    "fedu_optimization": {
-      "key_optimization_point": "⚡ Mở đầu Establishing Hook rồi lập tức đẩy Medium Tracking đi ngang song song với người dưới ánh sáng Low-key.",
-      "practice_focus": "⚡ Thực chiến: Vừa đẩy máy theo bước chân vừa khóa nét mặt, cắt rụp sang góc cận (tay, biểu cảm) để tạo cảm giác có người đi cùng."
     }
   },
   "IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann": {
@@ -15014,10 +14984,6 @@
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    },
-    "fedu_optimization": {
-      "key_optimization_point": "⚡ Đóng chết 1 góc Establishing Hook tĩnh, ke bố cục chuẩn xác và để chủ thể tự bước vào vùng bắt nét.",
-      "practice_focus": "⚡ Thực chiến: Fix cứng máy, để hở khoảng trống và đợi người đi vào khung (frame-in-frame) tạo điểm nhấn dứt khoát."
     }
   },
   "Dcx7pQpS6zs": {
@@ -15055,10 +15021,6 @@
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    },
-    "fedu_optimization": {
-      "key_optimization_point": "⚡ Đóng chết 1 góc Establishing Hook tĩnh, ke bố cục chuẩn xác và để chủ thể tự bước vào vùng bắt nét.",
-      "practice_focus": "⚡ Thực chiến: Fix cứng máy, để hở khoảng trống và đợi người đi vào khung (frame-in-frame) tạo điểm nhấn dứt khoát."
     }
   },
   "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun": {
@@ -15354,10 +15316,6 @@
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    },
-    "fedu_optimization": {
-      "key_optimization_point": "⚡ Dựng luồng ảnh (Visual Rhythm) bằng Cinematic Lighting và Composition Mastery để tạo chiều sâu như cắt ra từ phim.",
-      "practice_focus": "⚡ Thực chiến: Xếp ảnh theo thứ tự toàn-trung-cận để khách vuốt ngang Carousel vẫn đọc được câu chuyện liền mạch."
     }
   },
   "DdSs5rahILb": {
@@ -15397,10 +15355,48 @@
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
+    }
+  },
+  "IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword": {
+    "id": "IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword",
+    "creator": "@byjacksonsword",
+    "creator_name": "Jackson Sword",
+    "title": "Jackson Sword • Kỹ Thuật Đặt Máy Chân Dung Mộc & Nghệ Thuật Kể Chuyện Bằng Âm Thanh Giọng Nói",
+    "shots_count": 8,
+    "duration": "16.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Nói Trực Diện",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "thuong-hieu",
+      "name": "Xây kênh",
+      "icon": "💼"
+    },
+    "purpose": "Tâm lý sáng tạo nội dung & Kỹ thuật nói chuyện chân dung mộc mạc",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "1 Of 18",
+      "By @byjacksonsword",
+      "Shared September 15",
+      "2026",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 1 of 18, by @byjacksonsword, shared September 15, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Cú máy góc rộng tĩnh đặt bàn xóa tan khoảng cách: Dùng ánh mắt trực diện kết hợp âm thanh thu mộc cự ly gần để tạo cảm giác thân mật như hai người bạn ngồi đối thoại.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
     },
     "fedu_optimization": {
-      "key_optimization_point": "⚡ Dựng luồng ảnh (Visual Rhythm) bằng Cinematic Lighting và Composition Mastery để tạo chiều sâu như cắt ra từ phim.",
-      "practice_focus": "⚡ Thực chiến: Xếp ảnh theo thứ tự toàn-trung-cận để khách vuốt ngang Carousel vẫn đọc được câu chuyện liền mạch."
+      "key_optimization_point": "⚡ Cú máy góc rộng tĩnh đặt bàn xóa tan khoảng cách: Dùng ánh mắt trực diện kết hợp âm thanh thu mộc cự ly gần để tạo cảm giác thân mật như hai người bạn ngồi đối thoại.",
+      "practice_focus": "Tâm lý sáng tạo nội dung & Kỹ thuật nói chuyện chân dung mộc mạc"
     }
   },
   "DdU4rBeMXZt": {
@@ -16923,133 +16919,6 @@
       "badge_color": "green"
     }
   },
-  "IG_@sir.ralph_e_DavWS9Islv1_Chuyen_Canh": {
-    "id": "IG_@sir.ralph_e_DavWS9Islv1_Chuyen_Canh",
-    "shortcode": "DavWS9Islv1",
-    "creator": "@sir.ralph_e",
-    "creator_name": "Sir Ralph",
-    "title": "Kỹ Thuật Chuyển Cảnh Sáng Tạo - @sir.ralph_e",
-    "shots_count": 8,
-    "duration": "15s",
-    "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh",
-      "icon": "⚡"
-    },
-    "industry": {
-      "id": "ky-thuat-quay",
-      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
-      "icon": "🎯"
-    },
-    "country": {
-      "id": "us_eu",
-      "name": "Âu Mỹ",
-      "en_name": "US & Europe",
-      "flag": "🇺🇸/🇪🇺",
-      "badge_color": "purple"
-    },
-    "purpose": "Hướng dẫn kỹ thuật chuyển cảnh mượt mà",
-    "tech_tags": [
-      "Chuyển cảnh Level 2",
-      "Match Cut",
-      "Transition"
-    ],
-    "transition_level": "Chuyển cảnh Level 2",
-    "is_ad_bot": false,
-    "logic_explanation": "Thực hiện hành động che ống kính hoặc lặp lại chuyển động để tạo cú nối cảnh.",
-    "quick_takeaway": "Bài tập chuyển cảnh: Tận dụng đồ vật hoặc động tác cơ thể để che camera và nối nhịp nhàng sang bối cảnh khác.",
-    "video_url": "https://media.fedu.vn/videos/DavWS9Islv1.mp4",
-    "report_url": "reports/IG_@sir.ralph_e_DavWS9Islv1_Chuyen_Canh.html",
-    "fedu_optimization": {
-      "key_optimization_point": "⚡ Chuyển cảnh Level 2: Đặt máy lên chân máy (tripod), chuyển cảnh bằng hành động cơ thể rõ ràng lặp lại 2 lần",
-      "practice_focus": "Bài tập Chuyển cảnh Level 2: Đặt máy chân máy cố định, thực hiện động tác vung tay ở hai bối cảnh để tạo match cut.",
-      "ig_seeding_hook": "Follow @sir.ralph_e để học thêm các tip chuyển cảnh sáng tạo.",
-      "course_industry_mapping": "Kỹ Thuật Chuyển Cảnh (Khóa học video.fedu.vn)"
-    }
-  },
-  "DavWS9Islv1": {
-    "id": "IG_@sir.ralph_e_DavWS9Islv1_Chuyen_Canh",
-    "shortcode": "DavWS9Islv1",
-    "creator": "@sir.ralph_e",
-    "creator_name": "Sir Ralph",
-    "title": "Kỹ Thuật Chuyển Cảnh Sáng Tạo - @sir.ralph_e",
-    "shots_count": 8,
-    "duration": "15s",
-    "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh",
-      "icon": "⚡"
-    },
-    "industry": {
-      "id": "ky-thuat-quay",
-      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
-      "icon": "🎯"
-    },
-    "country": {
-      "id": "us_eu",
-      "name": "Âu Mỹ",
-      "en_name": "US & Europe",
-      "flag": "🇺🇸/🇪🇺",
-      "badge_color": "purple"
-    },
-    "purpose": "Hướng dẫn kỹ thuật chuyển cảnh mượt mà",
-    "tech_tags": [
-      "Chuyển cảnh Level 2",
-      "Match Cut",
-      "Transition"
-    ],
-    "transition_level": "Chuyển cảnh Level 2",
-    "is_ad_bot": false,
-    "logic_explanation": "Thực hiện hành động che ống kính hoặc lặp lại chuyển động để tạo cú nối cảnh.",
-    "quick_takeaway": "Bài tập chuyển cảnh: Tận dụng đồ vật hoặc động tác cơ thể để che camera và nối nhịp nhàng sang bối cảnh khác.",
-    "video_url": "https://media.fedu.vn/videos/DavWS9Islv1.mp4",
-    "report_url": "reports/IG_@sir.ralph_e_DavWS9Islv1_Chuyen_Canh.html",
-    "fedu_optimization": {
-      "key_optimization_point": "⚡ Chuyển cảnh Level 2: Đặt máy lên chân máy (tripod), chuyển cảnh bằng hành động cơ thể rõ ràng lặp lại 2 lần",
-      "practice_focus": "Bài tập Chuyển cảnh Level 2: Đặt máy chân máy cố định, thực hiện động tác vung tay ở hai bối cảnh để tạo match cut.",
-      "ig_seeding_hook": "Follow @sir.ralph_e để học thêm các tip chuyển cảnh sáng tạo.",
-      "course_industry_mapping": "Kỹ Thuật Chuyển Cảnh (Khóa học video.fedu.vn)"
-    }
-  },
-  "IG_@marcoandredasilva_DZp2Sres0SD_Chuyen_Canh_Cap_2": {
-    "id": "IG_@marcoandredasilva_DZp2Sres0SD_Chuyen_Canh_Cap_2",
-    "index": 297,
-    "creator": "@marcoandredasilva",
-    "creator_name": "Marco Andre Da Silva",
-    "title": "Chuyển Cảnh Cấp 2 - @marcoandredasilva",
-    "shots_count": 5,
-    "duration": "15s",
-    "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh",
-      "icon": "⚡"
-    },
-    "industry": {
-      "id": "ky-thuat-quay",
-      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
-      "icon": "🎬"
-    },
-    "purpose": "Trình diễn chuyển cảnh mượt mà",
-    "tech_tags": [
-      "Chuyển cảnh cấp 2"
-    ],
-    "logic_explanation": "Kỹ thuật chuyển cảnh cấp 2 tinh tế và mượt mà.",
-    "is_excluded": false,
-    "quick_takeaway": "Điểm nhấn: chuyển cảnh cấp 2",
-    "country": {
-      "id": "us_eu",
-      "name": "Âu Mỹ",
-      "en_name": "US & Europe",
-      "flag": "🇺🇸/🇪🇺",
-      "badge_color": "purple"
-    },
-    "transition_level": "Chuyển Cảnh Cấp 2",
-    "is_ad_bot": false,
-    "fedu_optimization": {
-      "key_optimization_point": "Điểm nhấn: chuyển cảnh cấp 2"
-    },
-    "url": "https://www.instagram.com/marcoandredasilva/reel/DZp2Sres0SD/"
-  },
   "IG_@Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs": {
     "id": "IG_@Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs",
     "creator": "@Leticia_Quadros",
@@ -17120,46 +16989,108 @@
       "badge_color": "purple"
     }
   },
-  "IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword": {
-    "id": "IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword",
-    "creator": "@byjacksonsword",
-    "creator_name": "Jackson Sword",
-    "title": "Jackson Sword • Kỹ Thuật Đặt Máy Chân Dung Mộc & Nghệ Thuật Kể Chuyện Bằng Âm Thanh Giọng Nói",
-    "shots_count": 8,
-    "duration": "16.0s",
+  "IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious": {
+    "id": "IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious",
+    "creator": "@Jade_Sheng",
+    "creator_name": "Jade_Sheng",
+    "title": "@Jade_Sheng - Video by jade.got.curious",
+    "shots_count": 14,
+    "duration": "28.0s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Nói Trực Diện",
-      "icon": "🗣️"
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
     },
     "industry": {
-      "id": "thuong-hieu",
-      "name": "Xây kênh",
-      "icon": "💼"
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
     },
-    "purpose": "Tâm lý sáng tạo nội dung & Kỹ thuật nói chuyện chân dung mộc mạc",
+    "purpose": "thêm mục chuyển cảnh",
     "tech_tags": [
-      "Instagram Liked 24h: Video",
-      "1 Of 18",
-      "By @byjacksonsword",
-      "Shared September 15",
-      "2026",
+      "Thêm",
       "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot"
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
     ],
-    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 1 of 18, by @byjacksonsword, shared September 15, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+    "logic_explanation": "Ghi chú người dùng: thêm mục chuyển cảnh. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Cú máy góc rộng tĩnh đặt bàn xóa tan khoảng cách: Dùng ánh mắt trực diện kết hợp âm thanh thu mộc cự ly gần để tạo cảm giác thân mật như hai người bạn ngồi đối thoại.",
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 14 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
+    }
+  },
+  "IG_@Saro_Deele_DXjRnwCISNU_Video_by_sarodeele": {
+    "id": "IG_@Saro_Deele_DXjRnwCISNU_Video_by_sarodeele",
+    "creator": "@Saro_Deele",
+    "creator_name": "Saro_Deele",
+    "title": "@Saro_Deele - Video by sarodeele",
+    "shots_count": 23,
+    "duration": "46.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
     },
-    "fedu_optimization": {
-      "key_optimization_point": "⚡ Cú máy góc rộng tĩnh đặt bàn xóa tan khoảng cách: Dùng ánh mắt trực diện kết hợp âm thanh thu mộc cự ly gần để tạo cảm giác thân mật như hai người bạn ngồi đối thoại.",
-      "practice_focus": "Tâm lý sáng tạo nội dung & Kỹ thuật nói chuyện chân dung mộc mạc"
+    "industry": {
+      "id": "thoi-trang",
+      "name": "Thời Trang & Phụ Kiện",
+      "icon": "👔"
+    },
+    "purpose": "thời trang, chuyển cảnh",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: thời trang, chuyển cảnh. Phân loại vào Thời Trang & Phụ Kiện • Chuyển Cảnh (Transition).",
+    "is_excluded": false,
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 23 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DXjRnwCISNU": {
+    "id": "IG_@Saro_Deele_DXjRnwCISNU_Video_by_sarodeele",
+    "creator": "@Saro_Deele",
+    "creator_name": "Saro_Deele",
+    "title": "@Saro_Deele - Video by sarodeele",
+    "shots_count": 23,
+    "duration": "46.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "thoi-trang",
+      "name": "Thời Trang & Phụ Kiện",
+      "icon": "👔"
+    },
+    "purpose": "thời trang, chuyển cảnh",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: thời trang, chuyển cảnh. Phân loại vào Thời Trang & Phụ Kiện • Chuyển Cảnh (Transition).",
+    "is_excluded": false,
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 23 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
     }
   }
 }
