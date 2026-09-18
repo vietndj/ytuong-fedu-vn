@@ -60,11 +60,11 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "shooting_style_stats": {
-    "walk-and-talk": 3,
-    "voice-over": 11,
-    "talking-head": 20,
-    "storytelling": 18,
-    "dien-anh": 91,
+    "walk-and-talk": 4,
+    "voice-over": 10,
+    "talking-head": 18,
+    "storytelling": 19,
+    "dien-anh": 92,
     "chuyen-canh": 36
   },
   "industries": [
@@ -151,15 +151,15 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "industry_stats": {
     "spa-lam-dep": 0,
-    "thuong-hieu": 0,
-    "thoi-trang": 1,
-    "am-thuc": 1,
+    "thuong-hieu": 2,
+    "thoi-trang": 2,
+    "am-thuc": 3,
     "du-lich": 5,
     "cong-nghe": 1,
-    "kien-truc": 1,
+    "kien-truc": 2,
     "the-thao": 0,
     "ky-thuat-quay": 3,
-    "ugc": 2
+    "ugc": 3
   },
   "countries": [
     {
@@ -222,7 +222,7 @@ var FEDU_IDEAS_DATABASE = {
   "transition_stats": {
     "level_1_count": 5,
     "level_2_count": 14,
-    "ad_bot_count": 6
+    "ad_bot_count": 7
   },
   "deleted_ids": [],
   "creators_hub": [
@@ -282,7 +282,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Al,_The_Creator_Videography_Reels",
       "profile_url": "https://www.instagram.com/shogentle/",
       "video_count": 4,
-      "top_industry": "Unknown",
+      "top_industry": "Xây kênh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40AL%2C_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle/shot_01_mid.jpg",
       "video_ids": [
         "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
@@ -738,7 +738,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "3413882081",
       "profile_url": "https://www.instagram.com/syooaann/",
       "video_count": 1,
-      "top_industry": "Unknown",
+      "top_industry": "Thời trang",
       "sample_thumb": "https://media.fedu.vn/images/IG_%403413882081_Dcx7pQpS6zs_Video_by_syooaann/shot_01_mid.jpg",
       "video_ids": [
         "IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann"
@@ -749,7 +749,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Iman Lizi",
       "profile_url": "https://www.instagram.com/iman.lizi/",
       "video_count": 1,
-      "top_industry": "Unknown",
+      "top_industry": "Góc nhà đẹp",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40iman.lizi_Dc6qXoKoYKh/shot_01_mid.jpg",
       "video_ids": [
         "IG_@iman.lizi_Dc6qXoKoYKh"
@@ -760,7 +760,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hayan Cook (정하얀",
       "profile_url": "https://www.instagram.com/hayancook/",
       "video_count": 1,
-      "top_industry": "Unknown",
+      "top_industry": "F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40hayancook_DdSUI9BvhqR/shot_01_mid.jpg",
       "video_ids": [
         "IG_@hayancook_DdSUI9BvhqR"
@@ -3376,8 +3376,16 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
-      "x_factors": [],
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời trang",
+          "icon": "👔"
+        }
+      ],
+      "x_factors": [
+        "Thần thái"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3385,7 +3393,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇺🇸/🇪🇺",
         "badge_color": "purple"
       },
-      "purpose": "Instagram Liked 24h: Video, 3 of 18, by @syooaann, shared September 2, 2026",
+      "purpose": "VLog",
       "tech_tags": [
         "Instagram Liked 24h: Video",
         "3 Of 18",
@@ -3434,14 +3442,23 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 4 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Instagram Liked 24h: Video • 1 Of 18 • By @megantanhweewen • Shared September 11 • 2025 • Establishing Hook Shot • Low-key Lighting • Medium Tracking Shot",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Nói Trực Diện",
-        "en_name": "Talking Head",
-        "icon": "🗣️",
-        "badge_color": "blue"
+        "id": "storytelling",
+        "name": "Kể Chuyện",
+        "en_name": "Storytelling",
+        "icon": "📖",
+        "badge_color": "amber"
       },
-      "industries": [],
-      "x_factors": [],
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Xây kênh",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [
+        "Thông điệp cảm xúc",
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3449,7 +3466,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇺🇸/🇪🇺",
         "badge_color": "purple"
       },
-      "purpose": "Instagram Liked 24h: Video, 1 of 18, by @megantanhweewen, shared September 11, 2025",
+      "purpose": "VLog",
       "tech_tags": [
         "Instagram Liked 24h: Video",
         "1 Of 18",
@@ -3501,14 +3518,29 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 8 phân cảnh.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Nói Trực Diện",
-        "en_name": "Talking Head",
-        "icon": "🗣️",
-        "badge_color": "blue"
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
       },
-      "industries": [],
-      "x_factors": [],
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Bố cục",
+          "icon": "🎯"
+        },
+        {
+          "id": "du-lich",
+          "name": "Du lịch",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [
+        "Kỹ xảo VFX",
+        "Setup thông minh",
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3516,7 +3548,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇺🇸/🇪🇺",
         "badge_color": "purple"
       },
-      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Caleb_Natale",
+      "purpose": "Mẹo",
       "tech_tags": [
         "Establishing Hook Shot",
         "Close-Up / Macro Detail Shot",
@@ -3562,14 +3594,23 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 24 phân cảnh.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • High-key Lighting",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Nói Trực Diện",
-        "en_name": "Talking Head",
-        "icon": "🗣️",
-        "badge_color": "blue"
+        "id": "walk-and-talk",
+        "name": "Walk & Talk",
+        "en_name": "Walk and Talk",
+        "icon": "🚶",
+        "badge_color": "emerald"
       },
-      "industries": [],
-      "x_factors": [],
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Xây kênh",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [
+        "Ánh sáng màu kịch tính",
+        "Typography mạnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3577,7 +3618,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇺🇸/🇪🇺",
         "badge_color": "purple"
       },
-      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @AL,_The_Creator_Videography_Reels",
+      "purpose": "Mẹo",
       "tech_tags": [
         "Establishing Hook Shot",
         "Low-key Lighting",
@@ -3630,8 +3671,22 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
-      "x_factors": [],
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Góc nhà đẹp",
+          "icon": "🏛️"
+        },
+        {
+          "id": "am-thuc",
+          "name": "F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [
+        "Bầu không khí chữa lành",
+        "Ánh sáng ấm áp"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -3639,7 +3694,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Aesthetic ASMR B-roll đời sống chậm tại gia, khơi gợi cảm giác thư giãn và tinh tế",
+      "purpose": "Thưởng thức",
       "tech_tags": [
         "ASMR Sound Design",
         "Natural Light Window",
@@ -3689,14 +3744,28 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Với video ẩm thực hướng dẫn, công thức phải hiện to rõ ở 3s đầu, kèm tiếng chiên xào xèo xèo thật to để kích thích vị giác người xem ngay lập tức.",
       "key_tech": "Ẩm Thực & F&B • Top-Down Cooking • Fast-Cut Prep Shots • Voice-Over Recipe • Subtitle Ingredients",
       "shooting_style": {
-        "id": "voice-over",
-        "name": "Lồng Tiếng",
-        "en_name": "Voice Over",
-        "icon": "🎙️",
-        "badge_color": "purple"
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
       },
-      "industries": [],
-      "x_factors": [],
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "F&B",
+          "icon": "🍜"
+        },
+        {
+          "id": "ugc",
+          "name": "UGC",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [
+        "Nhịp cắt nhanh",
+        "Bếp nhà Á Đông"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -3704,7 +3773,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Hướng dẫn công thức nấu ăn dặm cho mẹ bỉm sữa, kết hợp lồng tiếng mộc mạc và phụ đề định lượng rõ ràng",
+      "purpose": "Mẹo",
       "tech_tags": [
         "Top-Down Cooking",
         "Fast-Cut Prep Shots",
@@ -3713,7 +3782,7 @@ var FEDU_IDEAS_DATABASE = {
         "Warm Kitchen Tone"
       ],
       "transition_level": null,
-      "is_ad_bot": false,
+      "is_ad_bot": true,
       "fedu_optimization": {
         "key_optimization_point": "⚡ Với video ẩm thực hướng dẫn, công thức phải hiện to rõ ở 3s đầu, kèm tiếng chiên xào xèo xèo thật to để kích thích vị giác người xem ngay lập tức.",
         "practice_focus": "Thực hành: Góc quay thẳng từ trên xuống (Top-down 90 độ) kết hợp góc ngang 45 độ chảo rán xèo xèo. Cắt cảnh nhịp 1.2s mỗi thao tác cắt gọt giúp video không có giây chết.",
