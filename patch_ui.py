@@ -78,7 +78,7 @@ def patch_file(path):
     # '${item.industry?.icon || '🎬'}'
     content = re.sub(
         r'\'\$\{item\.industry\?\.icon\s*\|\|\s*\'🎬\'\}\'',
-        r"'${item.industries?.[0]?.icon || \"🎬\"}'",
+        r"'${item.industries?.[0]?.icon || `🎬`}'",
         content
     )
 

@@ -15101,7 +15101,23 @@
     "fedu_optimization": {
       "key_optimization_point": "⚡ Cú máy tracking đi lùi Lookbook 1 shot: Tận dụng chiều sâu tiệm tạp hóa retro làm nền, khóa chặt ánh mắt giao tiếp và cử chỉ vuốt tóc tự nhiên để giữ chân người xem.",
       "practice_focus": "Mẫu quay Lookbook thời trang dạo phố & Kỹ thuật tracking camera đi lùi"
-    }
+    },
+    "industries": [
+      {
+        "id": "thoi-trang",
+        "name": "Thời trang",
+        "icon": "👔"
+      },
+      {
+        "id": "du-lich",
+        "name": "Du lịch",
+        "icon": "✈️"
+      }
+    ],
+    "x_factors": [
+      "Nhan sắc",
+      "Thần thái tự nhiên"
+    ]
   },
   "DdQwL3Ahci1": {
     "id": "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun",
@@ -15186,7 +15202,23 @@
     "fedu_optimization": {
       "key_optimization_point": "⚡ Bán phong cách sống thay vì bán sản phẩm: Khóa góc máy nhìn qua khe cửa dẫn vào cảnh gõ laptop ngay trên thuyền kayak giữa hồ để quảng cáo công nghệ tự nhiên 100%.",
       "practice_focus": "Video tài trợ thương hiệu công nghệ & Nghệ thuật lồng ghép sản phẩm tự nhiên"
-    }
+    },
+    "industries": [
+      {
+        "id": "cong-nghe",
+        "name": "Công nghệ",
+        "icon": "📱"
+      },
+      {
+        "id": "ugc",
+        "name": "UGC",
+        "icon": "📱"
+      }
+    ],
+    "x_factors": [
+      "Góc máy trên cao",
+      "Không khí Sit-com"
+    ]
   },
   "DdT4EOzveQL": {
     "id": "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen",
@@ -15272,7 +15304,18 @@
     "fedu_optimization": {
       "key_optimization_point": "⚡ Biến iPhone thành máy quay điện ảnh: Dùng hook treo lơ lửng máy trong studio để chặn feed ➔ Cắt sang cảnh lộn ngược bóng nước bắt trọn vệt flare anamorphic ngoài trời.",
       "practice_focus": "Kỹ thuật quay iPhone điện ảnh ngoài trời & Thiết lập lens Anamorphic"
-    }
+    },
+    "industries": [
+      {
+        "id": "ky-thuat-quay",
+        "name": "Bố cục",
+        "icon": "🎯"
+      }
+    ],
+    "x_factors": [
+      "Thủ thuật sáng tạo",
+      "Setup Studio"
+    ]
   },
   "DdT9CF7tGzn": {
     "id": "IG_@Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock",
@@ -15403,48 +15446,6 @@
       "practice_focus": "⚡ Thực chiến: Xếp ảnh theo thứ tự toàn-trung-cận để khách vuốt ngang Carousel vẫn đọc được câu chuyện liền mạch."
     }
   },
-  "IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword": {
-    "id": "IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword",
-    "creator": "@byjacksonsword",
-    "creator_name": "Jackson Sword",
-    "title": "Jackson Sword • Kỹ Thuật Đặt Máy Chân Dung Mộc & Nghệ Thuật Kể Chuyện Bằng Âm Thanh Giọng Nói",
-    "shots_count": 8,
-    "duration": "16.0s",
-    "shooting_style": {
-      "id": "talking-head",
-      "name": "Nói Trực Diện",
-      "icon": "🗣️"
-    },
-    "industry": {
-      "id": "thuong-hieu",
-      "name": "Xây kênh",
-      "icon": "💼"
-    },
-    "purpose": "Tâm lý sáng tạo nội dung & Kỹ thuật nói chuyện chân dung mộc mạc",
-    "tech_tags": [
-      "Instagram Liked 24h: Video",
-      "1 Of 18",
-      "By @byjacksonsword",
-      "Shared September 15",
-      "2026",
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot"
-    ],
-    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 1 of 18, by @byjacksonsword, shared September 15, 2026. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
-    "is_excluded": false,
-    "quick_takeaway": "⚡ Cú máy góc rộng tĩnh đặt bàn xóa tan khoảng cách: Dùng ánh mắt trực diện kết hợp âm thanh thu mộc cự ly gần để tạo cảm giác thân mật như hai người bạn ngồi đối thoại.",
-    "country": {
-      "id": "us_eu",
-      "name": "Âu Mỹ",
-      "en_name": "US & Europe",
-      "flag": "🇺🇸/🇪🇺",
-      "badge_color": "purple"
-    },
-    "fedu_optimization": {
-      "key_optimization_point": "⚡ Cú máy góc rộng tĩnh đặt bàn xóa tan khoảng cách: Dùng ánh mắt trực diện kết hợp âm thanh thu mộc cự ly gần để tạo cảm giác thân mật như hai người bạn ngồi đối thoại.",
-      "practice_focus": "Tâm lý sáng tạo nội dung & Kỹ thuật nói chuyện chân dung mộc mạc"
-    }
-  },
   "DdU4rBeMXZt": {
     "id": "IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword",
     "creator": "@byjacksonsword",
@@ -15495,9 +15496,9 @@
     "shots_count": 10,
     "duration": "20.0s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "Chỉn Chu",
-      "icon": "🎬"
+      "id": "walk-and-talk",
+      "name": "Walk and Talk",
+      "icon": "🚶"
     },
     "industry": {
       "id": "thoi-trang",
@@ -15528,7 +15529,20 @@
     "fedu_optimization": {
       "key_optimization_point": "⚡ Khai thác giờ vàng (Golden Hour) bắt vệt sáng ngược: Kết hợp bước đi tự do với cú xoay máy 45 độ quanh chủ thể để biến trang phục đời thường thành thước phim điện ảnh.",
       "practice_focus": "Lookbook dạo phố thơ mộng & Bắt trọn vệt sáng hoàng hôn"
-    }
+    },
+    "industries": [
+      {
+        "id": "du-lich",
+        "name": "Du lịch",
+        "icon": "✈️"
+      },
+      {
+        "id": "ky-thuat-quay",
+        "name": "Bố cục",
+        "icon": "🎯"
+      }
+    ],
+    "x_factors": []
   },
   "DcgQDZ_JNIr": {
     "id": "IG_@𝐂𝐢𝐧𝐝𝐲🌼_DcgQDZ_JNIr_Video_by_clarissaacindy",
