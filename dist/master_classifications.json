@@ -16913,9 +16913,9 @@
     "shots_count": 38,
     "duration": "76.0s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "voice-over",
+      "name": "Voice Over",
+      "icon": "🎙️"
     },
     "purpose": "Instagram Liked 24h: Video, 2 of 18, by @dreakwon, shared June 26, 2026",
     "tech_tags": [
@@ -16941,9 +16941,14 @@
     },
     "industries": [
       {
-        "id": "kien-truc",
-        "name": "Kiến Trúc & Không Gian Sống",
-        "icon": "🏛️"
+        "id": "ugc",
+        "name": "UGC",
+        "icon": "📱"
+      },
+      {
+        "id": "thuong-hieu",
+        "name": "Xây kênh",
+        "icon": "💼"
       }
     ],
     "x_factors": []
@@ -17032,7 +17037,9 @@
         "icon": "🏛️"
       }
     ],
-    "x_factors": []
+    "x_factors": [
+      "Biểu cảm ngạc nhiên"
+    ]
   },
   "DZ8w6MsSMAw": {
     "id": "IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz",
@@ -17112,12 +17119,22 @@
     },
     "industries": [
       {
-        "id": "cong-nghe",
-        "name": "Công Nghệ & Thiết Bị",
-        "icon": "📱"
+        "id": "ky-thuat-quay",
+        "name": "Bố cục",
+        "icon": "🎯"
+      },
+      {
+        "id": "du-lich",
+        "name": "Du lịch",
+        "icon": "✈️"
       }
     ],
-    "x_factors": []
+    "x_factors": [],
+    "industry": {
+      "id": "du-lich",
+      "name": "Du lịch",
+      "icon": "✈️"
+    }
   },
   "DdTZsoxTVFz": {
     "id": "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k",

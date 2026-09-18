@@ -61,8 +61,8 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "shooting_style_stats": {
     "walk-and-talk": 3,
-    "voice-over": 10,
-    "talking-head": 21,
+    "voice-over": 11,
+    "talking-head": 20,
     "storytelling": 18,
     "dien-anh": 90,
     "chuyen-canh": 36
@@ -151,15 +151,15 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "industry_stats": {
     "spa-lam-dep": 3,
-    "thuong-hieu": 19,
+    "thuong-hieu": 20,
     "thoi-trang": 16,
     "am-thuc": 18,
-    "du-lich": 12,
-    "cong-nghe": 26,
-    "kien-truc": 20,
+    "du-lich": 13,
+    "cong-nghe": 25,
+    "kien-truc": 19,
     "the-thao": 5,
-    "ky-thuat-quay": 32,
-    "ugc": 4
+    "ky-thuat-quay": 33,
+    "ugc": 5
   },
   "countries": [
     {
@@ -222,7 +222,7 @@ var FEDU_IDEAS_DATABASE = {
   "transition_stats": {
     "level_1_count": 5,
     "level_2_count": 15,
-    "ad_bot_count": 6
+    "ad_bot_count": 7
   },
   "deleted_ids": [],
   "creators_hub": [
@@ -628,7 +628,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "규리🍊ㅣCorporate_Girlie🇰🇷",
       "profile_url": "https://www.instagram.com/gyuree_k/",
       "video_count": 1,
-      "top_industry": "Công Nghệ & Thiết Bị",
+      "top_industry": "Bố cục",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7_DdTZsoxTVFz_Video_by_gyuree_k/shot_01_mid.jpg",
       "video_ids": [
         "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k"
@@ -650,7 +650,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "이현",
       "profile_url": "https://www.instagram.com/dreakwon/",
       "video_count": 1,
-      "top_industry": "Kiến Trúc & Không Gian Sống",
+      "top_industry": "UGC",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40drea_%28%EC%9D%B4%ED%98%84%29_DaClEhzB5WC_Video_by_dreakwon/shot_01_mid.jpg",
       "video_ids": [
         "IG_@drea_(이현)_DaClEhzB5WC_Video_by_dreakwon"
@@ -2506,9 +2506,14 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [
         {
-          "id": "cong-nghe",
-          "name": "Công Nghệ & Thiết Bị",
-          "icon": "📱"
+          "id": "ky-thuat-quay",
+          "name": "Bố cục",
+          "icon": "🎯"
+        },
+        {
+          "id": "du-lich",
+          "name": "Du lịch",
+          "icon": "✈️"
         }
       ],
       "x_factors": [],
@@ -2580,7 +2585,9 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "🏛️"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Biểu cảm ngạc nhiên"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2637,17 +2644,22 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
       "key_tech": "Instagram Liked 24h: Video • 2 Of 18 • By @dreakwon • Shared June 26 • 2026 • Establishing Hook Shot • Close-Up / Macro Detail Shot • Wide Establishing Shot",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Nói Trực Diện",
-        "en_name": "Talking Head",
-        "icon": "🗣️",
-        "badge_color": "blue"
+        "id": "voice-over",
+        "name": "Lồng Tiếng",
+        "en_name": "Voice Over",
+        "icon": "🎙️",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "Kiến Trúc & Không Gian Sống",
-          "icon": "🏛️"
+          "id": "ugc",
+          "name": "UGC",
+          "icon": "📱"
+        },
+        {
+          "id": "thuong-hieu",
+          "name": "Xây kênh",
+          "icon": "💼"
         }
       ],
       "x_factors": [],
@@ -2671,7 +2683,7 @@ var FEDU_IDEAS_DATABASE = {
         "Medium Tracking Shot"
       ],
       "transition_level": null,
-      "is_ad_bot": false,
+      "is_ad_bot": true,
       "fedu_optimization": {},
       "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 2 of 18, by @dreakwon, shared June 26, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Talking Head.",
       "creator": {

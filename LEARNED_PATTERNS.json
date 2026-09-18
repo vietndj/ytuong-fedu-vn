@@ -5,8 +5,8 @@
   "learner_agent": "Antigravity Active Learner",
   "last_updated": "2026-09-15T10:20:00+07:00",
   "learning_stats": {
-    "total_corrections": 15,
-    "current_alignment_score": 95.5,
+    "total_corrections": 20,
+    "current_alignment_score": 96.1,
     "target_alignment_score": 98.0,
     "confidence_auto_accept_threshold": 85,
     "ambiguity_ask_mentor_threshold": 65
@@ -371,6 +371,106 @@
       },
       "reason_distilled": "Kích hoạt mỏ neo Chuyển Cảnh Level 2: Đặt máy cố định, hành động cơ thể lặp lại rõ ràng.",
       "rule_applied": "Mỏ neo Chuyển Cảnh Level 2 (Chuẩn anh Việt)"
+    },
+    {
+      "log_id": "LEARN_20260918_154214",
+      "video_id": "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k",
+      "title": "@규리🍊ㅣCorporate_Girlie🇰🇷 - Video by gyuree k",
+      "creator": "@규리🍊ㅣCorporate_Girlie🇰🇷",
+      "ai_predicted": {
+        "industry": "chua-ro",
+        "shooting_style": "talking-head"
+      },
+      "mentor_corrected": {
+        "industry": "du-lich",
+        "shooting_style": "talking-head"
+      },
+      "reason_distilled": "Hiệu chỉnh trực tiếp từ Super Mentor anh Việt",
+      "learned_at": "2026-09-18T15:42:14.035331"
+    },
+    {
+      "video_id": "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k",
+      "video_title": "@규리🍊ㅣCorporate_Girlie🇰🇷 - Video by gyuree k",
+      "ai_predicted": {
+        "industries": [
+          "cong-nghe"
+        ],
+        "shooting_style": "talking-head",
+        "x_factors": []
+      },
+      "mentor_corrected": {
+        "industries": [
+          "du-lich"
+        ],
+        "shooting_style": "talking-head",
+        "x_factors": []
+      },
+      "reason_distilled": "Hiệu chỉnh trực tiếp từ Super Mentor anh Việt",
+      "learned_at": "2026-09-18T15:42:51.095546"
+    },
+    {
+      "video_id": "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k",
+      "video_title": "@규리🍊ㅣCorporate_Girlie🇰🇷 - Video by gyuree k",
+      "ai_predicted": {
+        "industries": [
+          "du-lich"
+        ],
+        "shooting_style": "talking-head",
+        "x_factors": []
+      },
+      "mentor_corrected": {
+        "industries": [
+          "ky-thuat-quay",
+          "du-lich"
+        ],
+        "shooting_style": "talking-head",
+        "x_factors": []
+      },
+      "reason_distilled": "Hiệu chỉnh trực tiếp từ Super Mentor anh Việt",
+      "learned_at": "2026-09-18T15:43:18.991062"
+    },
+    {
+      "video_id": "IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz",
+      "video_title": "@Jenny_Yoo_🇰🇷 - Video by yooinoz",
+      "ai_predicted": {
+        "industries": [
+          "kien-truc"
+        ],
+        "shooting_style": "talking-head",
+        "x_factors": []
+      },
+      "mentor_corrected": {
+        "industries": [
+          "kien-truc"
+        ],
+        "shooting_style": "talking-head",
+        "x_factors": [
+          "Biểu cảm ngạc nhiên"
+        ]
+      },
+      "reason_distilled": "Hiệu chỉnh trực tiếp từ Super Mentor anh Việt",
+      "learned_at": "2026-09-18T15:43:26.266087"
+    },
+    {
+      "video_id": "IG_@drea_(이현)_DaClEhzB5WC_Video_by_dreakwon",
+      "video_title": "@drea_(이현) - Video by dreakwon",
+      "ai_predicted": {
+        "industries": [
+          "kien-truc"
+        ],
+        "shooting_style": "talking-head",
+        "x_factors": []
+      },
+      "mentor_corrected": {
+        "industries": [
+          "ugc",
+          "thuong-hieu"
+        ],
+        "shooting_style": "voice-over",
+        "x_factors": []
+      },
+      "reason_distilled": "Hiệu chỉnh trực tiếp từ Super Mentor anh Việt",
+      "learned_at": "2026-09-18T15:43:31.302565"
     }
   ]
 }

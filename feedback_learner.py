@@ -58,7 +58,11 @@ INDUSTRY_ALIASES = {
     "thể thao": "the-thao",
     "ky thuat": "ky-thuat-quay",
     "kỹ thuật": "ky-thuat-quay",
-    "ugc": "ugc"
+    "ugc": "ugc",
+    "bố cục": "ky-thuat-quay",
+    "bo cuc": "ky-thuat-quay",
+    "xây kênh": "thuong-hieu",
+    "xay kenh": "thuong-hieu"
 }
 
 STYLE_ALIASES = {
@@ -167,10 +171,6 @@ def find_target_video(query_key, master_db):
     return None, None
 
 def parse_feedback_command(command_str):
-    """
-    Phân tích câu lệnh của anh Việt:
-    Ví dụ: 'SUA: #4 -> Đời thường, Kỷ luật, Lý do: chia sẻ thói quen buổi sáng'
-    """
     cmd = command_str.strip()
     if cmd.upper().startswith("SUA:"):
         cmd = cmd[4:].strip()
@@ -179,12 +179,11 @@ def parse_feedback_command(command_str):
 
     parts = cmd.split("->")
     if len(parts) != 2:
-        return None, None, None, None
+        return None, None, [], [], []
 
     target_ref = parts[0].strip()
     correction_part = parts[1].strip()
 
-    # Tách lý do nếu có
     reason = ""
     if "lý do:" in correction_part.lower():
         sub_parts = re.split(r'lý do:|ly do:', correction_part, flags=re.IGNORECASE)
@@ -194,31 +193,38 @@ def parse_feedback_command(command_str):
     elements = [e.strip() for e in re.split(r'[,;]+', correction_part) if e.strip()]
 
     target_style = None
-    target_industry = None
+    target_industries = []
+    x_factors = []
     tags = []
 
     for el in elements:
         low = el.lower()
+        if low.startswith("biểu cảm") or low.startswith("điểm nhấn"):
+            x_factors.append(el)
+            continue
+
         matched_ind = INDUSTRY_ALIASES.get(low)
         matched_sty = STYLE_ALIASES.get(low)
 
-        if matched_ind and not target_industry:
-            target_industry = matched_ind
+        if matched_ind:
+            target_industries.append(matched_ind)
         elif matched_sty and not target_style:
             target_style = matched_sty
+        elif low in ["giọng nói", "body language", "hook", "giọng nói điệu đà", "kịch tính"]:
+            x_factors.append(el)
         else:
             tags.append(el)
 
-    return target_ref, target_style, target_industry, reason
+    return target_ref, target_style, list(set(target_industries)), x_factors, reason
 
 def apply_feedback(command_str):
     print("=" * 70)
     print("🧠 ANTIGRAVITY ACTIVE LEARNING ENGINE - TIẾP NHẬN PHẢN HỒI ANH VIỆT")
     print("=" * 70)
 
-    target_ref, new_style, new_ind, reason = parse_feedback_command(command_str)
+    target_ref, new_style, new_inds, new_xfactors, reason = parse_feedback_command(command_str)
     if not target_ref:
-        print("❌ Cú pháp chưa đúng. Vui lòng dùng: SUA: #id -> [Kiểu quay], [Ngành], Lý do: [Giải thích]")
+        print("❌ Cú pháp chưa đúng. Vui lòng dùng: SUA: #id -> [Kiểu quay], [Ngành 1], [Ngành 2], [Biểu cảm...], Lý do: [Giải thích]")
         return False
 
     master_db = load_json(MASTER_PATH, {})
@@ -229,39 +235,28 @@ def apply_feedback(command_str):
         return False
 
     old_style = item.get("shooting_style", {}).get("id", "chua-ro")
-    old_ind = item.get("industry", {}).get("id", "chua-ro")
+    old_inds = [i.get("id") for i in item.get("industries", [])]
+    old_x = item.get("x_factors", [])
     title = item.get("title", "Video không tiêu đề")
     creator = item.get("creator", "Creator")
 
     print(f"\n🎯 [Xác nhận đối tượng]: #{item.get('index')} - {title} ({creator})")
     print(f"   ID: {vid_id}")
-    print(f"   • Trạng thái cũ AI đoán: Kiểu quay: {old_style} | Ngành: {old_ind}")
-    print(f"   • Anh Việt hiệu chỉnh:   Kiểu quay: {new_style or '(giữ nguyên)'} | Ngành: {new_ind or '(giữ nguyên)'}")
+    print(f"   • Trạng thái cũ AI đoán: Kiểu quay: {old_style} | Ngành: {old_inds} | X-Factor: {old_x}")
+    print(f"   • Anh Việt hiệu chỉnh:   Kiểu quay: {new_style or '(giữ nguyên)'} | Ngành: {new_inds or '(giữ nguyên)'} | X-Factor: {new_xfactors or '(giữ nguyên)'}")
     if reason:
         print(f"   • Lý do anh Việt ghi chú: \"{reason}\"")
 
-    # 1. Cập nhật curation_config.json
-    curation = load_json(CURATION_CONFIG_PATH, {
-        "custom_industry_overrides": {},
-        "custom_shooting_style_overrides": {}
-    })
-
-    if new_ind:
-        curation.setdefault("custom_industry_overrides", {})[vid_id] = new_ind
-    if new_style:
-        curation.setdefault("custom_shooting_style_overrides", {})[vid_id] = new_style
-
-    save_json(CURATION_CONFIG_PATH, curation)
-    print("\n✅ [1/4] Đã ghi nhận ghi đè vào curation_config.json")
-
-    # 2. Cập nhật master_classifications.json
-    if new_ind:
-        ind_obj = INDUSTRY_MAP.get(new_ind, {"id": new_ind, "name": new_ind.replace("-", " ").title(), "icon": "✨"})
-        item["industry"] = {
-            "id": ind_obj["id"],
-            "name": ind_obj["name"],
-            "icon": ind_obj.get("icon", "✨")
-        }
+    # Cập nhật master_classifications.json
+    if new_inds:
+        item["industries"] = []
+        for ind in new_inds:
+            ind_obj = INDUSTRY_MAP.get(ind, {"id": ind, "name": ind.replace("-", " ").title(), "icon": "✨"})
+            item["industries"].append({
+                "id": ind_obj["id"],
+                "name": ind_obj["name"],
+                "icon": ind_obj.get("icon", "✨")
+            })
     if new_style:
         sty_obj = STYLE_MAP.get(new_style, {"id": new_style, "name": new_style.replace("-", " ").title(), "icon": "🎬"})
         item["shooting_style"] = {
@@ -269,29 +264,31 @@ def apply_feedback(command_str):
             "name": sty_obj["name"],
             "icon": sty_obj.get("icon", "🎬")
         }
+    if new_xfactors:
+        item["x_factors"] = list(set(item.get("x_factors", []) + new_xfactors))
+        
     master_db[vid_id] = item
     save_json(MASTER_PATH, master_db)
-    print("✅ [2/4] Đã đồng bộ mỏ neo chuẩn (Anchor) vào master_classifications.json")
+    print("✅ [1/3] Đã đồng bộ mỏ neo chuẩn (Anchor) vào master_classifications.json")
 
-    # 3. Ghi nhật ký học tập vào LEARNED_PATTERNS.json
+    # Ghi nhật ký học tập vào LEARNED_PATTERNS.json
     patterns = load_json(PATTERNS_PATH, {
         "learning_stats": {"total_corrections": 0, "current_alignment_score": 85.0},
-        "learning_history_logs": [],
-        "distilled_rules": []
+        "learning_history_logs": []
     })
-
+    
     log_entry = {
-        "log_id": f"LEARN_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
         "video_id": vid_id,
-        "title": title,
-        "creator": creator,
+        "video_title": title,
         "ai_predicted": {
-            "industry": old_ind,
-            "shooting_style": old_style
+            "industries": old_inds,
+            "shooting_style": old_style,
+            "x_factors": old_x
         },
         "mentor_corrected": {
-            "industry": new_ind or old_ind,
-            "shooting_style": new_style or old_style
+            "industries": new_inds or old_inds,
+            "shooting_style": new_style or old_style,
+            "x_factors": item.get("x_factors", [])
         },
         "reason_distilled": reason or "Hiệu chỉnh trực tiếp từ Super Mentor anh Việt",
         "learned_at": datetime.now().isoformat()
@@ -300,27 +297,16 @@ def apply_feedback(command_str):
     patterns.setdefault("learning_history_logs", []).append(log_entry)
     patterns.setdefault("learning_stats", {})["total_corrections"] = len(patterns["learning_history_logs"])
     
-    # Tính lại Alignment score
-    total = len(master_db)
-    overrides_cnt = len(curation.get("custom_industry_overrides", {})) + len(curation.get("custom_shooting_style_overrides", {}))
-    # Ước lượng tỷ lệ đồng thuận
-    alignment = max(75.0, min(99.0, 100.0 - (overrides_cnt / (total * 2 or 1)) * 30.0))
-    patterns["learning_stats"]["current_alignment_score"] = round(alignment, 1)
-
     save_json(PATTERNS_PATH, patterns)
-    print("✅ [3/4] Đã đúc kết bài học & ghi nhật ký vĩnh viễn vào LEARNED_PATTERNS.json")
+    print("✅ [2/3] Đã đúc kết bài học & ghi nhật ký vĩnh viễn vào LEARNED_PATTERNS.json")
 
-    # 4. Tự động trigger build_ideas_bank.py
-    print("⚙️  [4/4] Đang biên dịch lại toàn bộ website ytuong.fedu.vn...")
-    res = os.system(f"python3 {BUILD_SCRIPT_PATH} > /dev/null 2>&1")
+    print("⏳ [3/3] Đang dịch biên dịch lại hệ thống (build_ideas_bank)...")
+    res = os.system(f"python3 {BUILD_SCRIPT_PATH}")
     if res == 0:
         print("🚀 [Hoàn tất 100%] Website và CSDL đã cập nhật theo đúng chuẩn anh Việt!")
     else:
         print("⚠️ Cần kiểm tra lại build_ideas_bank.py")
 
-    print("\n" + "=" * 70)
-    print(f"📊 CHỈ SỐ ĐỒNG THUẬN TƯ DUY (ALIGNMENT SCORE): {patterns['learning_stats']['current_alignment_score']}%")
-    print("=" * 70)
     return True
 
 if __name__ == "__main__":

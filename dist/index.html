@@ -1389,7 +1389,7 @@
             });
 
             const standardCount = activeIdeas.filter(x => !x.is_ad_bot && x.industry?.id !== 'ugc').length;
-            const ugcCount = activeIdeas.filter(x => x.is_ad_bot || x.industry?.id === 'ugc').length;
+            const ugcCount = activeIdeas.filter(x => x.is_ad_bot || x.industries?.some(i => i.id === "ugc")).length;
             const l1Count = activeIdeas.filter(x => x.transition_level === 'Chuyển cảnh Level 1').length;
             const l2Count = activeIdeas.filter(x => x.transition_level === 'Chuyển cảnh Level 2').length;
 
@@ -1577,7 +1577,7 @@
             const db = window.FEDU_IDEAS_DATABASE;
             // Số lượng mẫu ý tưởng chuẩn (không tính video bot quảng cáo UGC mặc định ẩn)
             const standardIdeasCount = db.ideas.filter(x => !x.is_excluded && !x.is_ad_bot && x.industry?.id !== 'ugc' && !appState.localDeletedIds?.has(x.id)).length;
-            const ugcCount = db.ideas.filter(x => !x.is_excluded && (x.is_ad_bot || x.industry?.id === 'ugc') && !appState.localDeletedIds?.has(x.id)).length;
+            const ugcCount = db.ideas.filter(x => !x.is_excluded && (x.is_ad_bot || x.industries?.some(i => i.id === "ugc")) && !appState.localDeletedIds?.has(x.id)).length;
 
             const allBtn = `
                 <button 
@@ -1680,7 +1680,7 @@
 
             // Số lượng Toàn Cầu
             const allCount = nonDeletedIdeas.filter(x => {
-                const isUgc = x.is_ad_bot || x.industry?.id === 'ugc';
+                const isUgc = x.is_ad_bot || x.industries?.some(i => i.id === "ugc");
                 if (!appState.curationMode && x.is_excluded) return false;
                 if (isViewingUgc) return isUgc;
                 return !isUgc;
@@ -1705,7 +1705,7 @@
                 const totalInCountry = nonDeletedIdeas.filter(x => {
                     if (!x.country || x.country.id !== c.id) return false;
                     if (!appState.curationMode && x.is_excluded) return false;
-                    const isUgc = x.is_ad_bot || x.industry?.id === 'ugc';
+                    const isUgc = x.is_ad_bot || x.industries?.some(i => i.id === "ugc");
                     if (isViewingUgc) return isUgc;
                     return !isUgc;
                 }).length;
@@ -1853,7 +1853,7 @@
                 // 1.5. Video Bot Quảng Cáo & UGC Filter:
                 // Mặc định: TỰ ĐỘNG ẨN các video từ bot tải video quảng cáo (Shopee, Lazada, v.v.) hoặc thuộc ngành UGC.
                 // CHỈ KHI ấn vào mục UGC (appState.currentIndustry === 'ugc' hoặc appState.showUgc === true) thì các video này mới hiện ra!
-                const isUgcItem = Boolean(item.is_ad_bot === true || (item.industry && item.industry.id === 'ugc'));
+                const isUgcItem = Boolean(item.is_ad_bot === true || (item.industries && item.industries.some(i => i.id === "ugc")));
                 const isViewingUgc = Boolean(appState.currentIndustry === 'ugc' || appState.showUgc);
 
                 if (!isViewingUgc) {
@@ -1897,7 +1897,7 @@
                     if (appState.currentIndustry === 'ugc') {
                         if (!isUgcItem) return false;
                     } else {
-                        if (!item.industry || item.industry.id !== appState.currentIndustry) return false;
+                        if (!item.industries || !item.industries.some(i => i.id === appState.currentIndustry)) return false;
                     }
                 }
 
@@ -1955,8 +1955,8 @@
                         (item.fedu_optimization?.course_industry_mapping || '') + ' ' +
                         (item.shooting_style?.name || '') + ' ' +
                         (item.shooting_style?.en_name || '') + ' ' +
-                        (item.industry?.name || '') + ' ' +
-                        (item.industry?.en_name || '') + ' ' +
+                        (item.industries?.map(i => i.name).join(" ") || "") + ' ' +
+                        (item.industries?.map(i => i.en_name || "").join(" ") || "") + ' ' +
                         (item.country?.name || '') + ' ' +
                         (item.country?.en_name || '') + ' ' +
                         (item.country?.flag || '') + ' ' +
@@ -2113,10 +2113,8 @@
                 const igPostUrl = item.ig_url || igProfileUrl;
                 
                 // Color badges
-                const badgeColorClass = getBadgeColorClasses(item.industry.badge_color);
                 const compId = item.complexity?.id || (item.media.shots_count <= 8 ? 'de' : item.media.shots_count <= 18 ? 'trung-binh' : 'nang-cao');
                 const isStyleActive = item.shooting_style && appState.currentStyle === item.shooting_style.id;
-                const isIndActive = appState.currentIndustry === item.industry.id;
                 const isCountryActive = item.country && appState.currentCountry === item.country.id;
                 const isCompActive = appState.complexity === compId;
                 const isDurationActive = !!appState.duration;
@@ -2234,7 +2232,7 @@
                                     alt="Hook Shot" 
                                     loading="lazy" 
                                     class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                                    onerror="handleCardThumbError(this, '${item.id}', 1, '${item.industry?.icon || '🎬'}', '${escapeHtml(titleDisplayName)}')"
+                                    onerror="handleCardThumbError(this, '${item.id}', 1, '${item.industries?.[0]?.icon || \"🎬\"}', '${escapeHtml(titleDisplayName)}')"
                                 >
                                 <span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-black/75 text-amber-300 backdrop-blur-sm border border-amber-500/30">
                                     HOOK • 0.0s
@@ -2253,7 +2251,7 @@
                                     alt="Key Shot" 
                                     loading="lazy" 
                                     class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                                    onerror="handleCardThumbError(this, '${item.id}', 2, '${item.industry?.icon || '🎬'}', '${escapeHtml(titleDisplayName)}')"
+                                    onerror="handleCardThumbError(this, '${item.id}', 2, '${item.industries?.[0]?.icon || \"🎬\"}', '${escapeHtml(titleDisplayName)}')"
                                 >
                                 <span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-black/75 text-sky-300 backdrop-blur-sm border border-sky-500/30">
                                     KEY SHOT
@@ -2301,15 +2299,16 @@
                                 <!-- Tags: Ngành nghề, Kiểu quay, Số shots -->
                                 <div class="flex items-center gap-1.5 flex-wrap ${(cleanPurpose || cleanKeyTech) ? 'pt-1.5 border-t border-slate-800/60' : ''}">
                                     <!-- Ngành nghề Badge -->
-                                    <button 
-                                        type="button"
-                                        onclick="event.stopPropagation(); selectIndustry('${item.industry.id}')"
-                                        class="px-1.5 py-0.5 rounded text-[9px] uppercase tracking-wide font-bold border transition cursor-pointer hover:scale-105 active:scale-95 flex items-center gap-1 ${isIndActive ? 'bg-sky-500 text-white border-sky-400 shadow-md shadow-sky-500/30 ring-1 ring-sky-300/60' : `${badgeColorClass} opacity-80 hover:opacity-100`}"
-                                        title="Lọc theo ngành: ${escapeHtml(item.industry.name)}"
-                                    >
-                                        <span>${item.industry.icon}</span>
-                                        <span>${escapeHtml(item.industry.name)}</span>
-                                    </button>
+                                    ${(item.industries || []).map(ind => {
+                                    const c = getBadgeColorClasses(ind.badge_color || 'sky');
+                                    const isIndActive = appState.currentIndustry === ind.id;
+                                    return `<button type="button" onclick="event.stopPropagation(); selectIndustry('${ind.id}')"
+                                        class="px-1.5 py-0.5 rounded text-[9px] uppercase tracking-wide font-bold border transition cursor-pointer hover:scale-105 active:scale-95 flex items-center gap-1 ${isIndActive ? 'bg-sky-500 text-white border-sky-400 shadow-md shadow-sky-500/30 ring-1 ring-sky-300/60' : `${c} opacity-80 hover:opacity-100`}"
+                                        title="Lọc theo ngành: ${escapeHtml(ind.name)}">
+                                        <span>${ind.icon}</span>
+                                        <span>${escapeHtml(ind.name)}</span>
+                                    </button>`;
+                                }).join('')}
 
                                     <!-- Kiểu quay Badge -->
                                     ${item.shooting_style ? `
@@ -2656,7 +2655,7 @@
             const indSelect = document.getElementById('editIdeaIndustry');
             if (indSelect) {
                 indSelect.innerHTML = (window.FEDU_IDEAS_DATABASE.industries || []).map(ind => 
-                    `<option value="${ind.id}" ${item.industry?.id === ind.id ? 'selected' : ''}>${ind.icon} ${ind.name}</option>`
+                    `<option value="${ind.id}" ${(item.industries || []).some(i => i.id === ind.id) ? "selected" : ""}>${ind.icon} ${ind.name}</option>`
                 ).join('');
             }
 
@@ -2706,7 +2705,7 @@
             const isExcludedStr = document.getElementById('editIdeaExcluded').value;
             const shouldExclude = isExcludedStr === 'true';
 
-            const indObj = window.FEDU_IDEAS_DATABASE.industries.find(i => i.id === newIndustryId) || item.industry;
+            const indObj = window.FEDU_IDEAS_DATABASE.industries.find(i => i.id === newIndustryId) || (item.industries ? item.industries[0] : null);
             const styleObj = (window.FEDU_IDEAS_DATABASE.shooting_styles || []).find(s => s.id === newStyleId) || item.shooting_style;
             const countryObj = (window.FEDU_IDEAS_DATABASE.countries || []).find(c => c.id === newCountryId) || item.country;
 
@@ -2722,7 +2721,7 @@
             item.media.video_url = newVideoUrl;
             item.media.report_url = newReportUrl;
             item.ig_url = newIgUrl;
-            item.industry = indObj;
+            item.industries = [indObj];
             item.shooting_style = styleObj;
             item.country = countryObj;
             item.is_excluded = shouldExclude;
