@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 215,
-  "total_unique_ideas": 204,
-  "total_active_ideas": 179,
+  "total_scene_items": 216,
+  "total_unique_ideas": 205,
+  "total_active_ideas": 180,
   "total_excluded_ideas": 25,
-  "total_creators": 134,
+  "total_creators": 135,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -73,7 +73,7 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 18,
     "storytelling": 19,
     "dien-anh": 87,
-    "chuyen-canh": 35,
+    "chuyen-canh": 36,
     "theo-nhip-nhac": 6
   },
   "industries": [
@@ -203,7 +203,7 @@ var FEDU_IDEAS_DATABASE = {
     "Bầu không khí chữa lành": 4,
     "Bếp nhà Á Đông": 1,
     "Bố cục khung trong khung": 1,
-    "Chuyển cảnh cấp 2": 15,
+    "Chuyển cảnh cấp 2": 16,
     "Góc máy trên cao": 1,
     "Góc nhìn chân thật": 1,
     "Không khí Sit-com": 1,
@@ -275,7 +275,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 92,
+    "us_eu": 93,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -284,7 +284,7 @@ var FEDU_IDEAS_DATABASE = {
   },
   "transition_stats": {
     "level_1_count": 5,
-    "level_2_count": 14,
+    "level_2_count": 15,
     "ad_bot_count": 7
   },
   "deleted_ids": [],
@@ -563,6 +563,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
+      "handle": "@sir.ralph_e",
+      "name": "Sir Ralph",
+      "profile_url": "https://www.instagram.com/sir.ralph_e/",
+      "video_count": 1,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40sir.ralph_e_DavWS9Islv1_Chuyen_Canh/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@sir.ralph_e_DavWS9Islv1_Chuyen_Canh"
       ]
     },
     {
@@ -1810,6 +1821,71 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@sir.ralph_e_DavWS9Islv1_Chuyen_Canh",
+      "shortcode": "DavWS9Islv1",
+      "title_vi": "Kỹ Thuật Chuyển Cảnh Sáng Tạo - @sir.ralph_e",
+      "quick_takeaway": "Bài tập chuyển cảnh: Tận dụng đồ vật hoặc động tác cơ thể để che camera và nối nhịp nhàng sang bối cảnh khác.",
+      "key_tech": "Match Cut • Chuyển Cảnh (Transition)",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
+      },
+      "industries": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Hướng dẫn kỹ thuật chuyển cảnh mượt mà",
+      "tech_tags": [
+        "Chuyển cảnh Level 2",
+        "Match Cut",
+        "Transition"
+      ],
+      "transition_level": "Chuyển cảnh Level 2",
+      "is_ad_bot": false,
+      "fedu_optimization": {
+        "key_optimization_point": "⚡ Chuyển cảnh Level 2: Đặt máy lên chân máy (tripod), chuyển cảnh bằng hành động cơ thể rõ ràng lặp lại 2 lần",
+        "practice_focus": "Bài tập Chuyển cảnh Level 2: Đặt máy chân máy cố định, thực hiện động tác vung tay ở hai bối cảnh để tạo match cut.",
+        "ig_seeding_hook": "Follow @sir.ralph_e để học thêm các tip chuyển cảnh sáng tạo.",
+        "course_industry_mapping": "Kỹ Thuật Chuyển Cảnh (Khóa học video.fedu.vn)"
+      },
+      "logic_explanation": "Thực hiện hành động che ống kính hoặc lặp lại chuyển động để tạo cú nối cảnh.",
+      "creator": {
+        "raw": "@sir.ralph_e",
+        "name": "Sir Ralph",
+        "handle": "@sir.ralph_e",
+        "profile_url": "https://www.instagram.com/sir.ralph_e/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DavWS9Islv1/",
+      "gdrive_folder": "",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40sir.ralph_e_DavWS9Islv1_Chuyen_Canh/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40sir.ralph_e_DavWS9Islv1_Chuyen_Canh/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DavWS9Islv1.mp4",
+        "report_url": "reports/IG_@sir.ralph_e_DavWS9Islv1_Chuyen_Canh.html",
+        "shots_count": 8,
+        "duration": "16s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video_by_nemo_ooo",
       "shortcode": "DclWb98PiK",
