@@ -61,10 +61,10 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "shooting_style_stats": {
     "walk-and-talk": 4,
-    "voice-over": 10,
+    "voice-over": 9,
     "talking-head": 18,
-    "storytelling": 19,
-    "dien-anh": 92,
+    "storytelling": 18,
+    "dien-anh": 94,
     "chuyen-canh": 36
   },
   "industries": [
@@ -151,14 +151,14 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "industry_stats": {
     "spa-lam-dep": 0,
-    "thuong-hieu": 2,
+    "thuong-hieu": 4,
     "thoi-trang": 2,
     "am-thuc": 3,
-    "du-lich": 5,
+    "du-lich": 7,
     "cong-nghe": 1,
-    "kien-truc": 2,
+    "kien-truc": 4,
     "the-thao": 0,
-    "ky-thuat-quay": 3,
+    "ky-thuat-quay": 5,
     "ugc": 3
   },
   "countries": [
@@ -387,7 +387,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Beixin (Travel & Nature",
       "profile_url": "https://www.instagram.com/beixin/",
       "video_count": 2,
-      "top_industry": "Unknown",
+      "top_industry": "Du lịch",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40beixin_DdRGd8evPK-/shot_01_mid.jpg",
       "video_ids": [
         "IG_@beixin_DdRGd8evPK-",
@@ -399,7 +399,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Layton Video",
       "profile_url": "https://www.instagram.com/layton_video/",
       "video_count": 2,
-      "top_industry": "Unknown",
+      "top_industry": "Xây kênh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40layton_video_DdKGq2TMhf4/shot_01_mid.jpg",
       "video_ids": [
         "IG_@layton_video_DdKGq2TMhf4",
@@ -771,7 +771,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Cushy Garden",
       "profile_url": "https://www.instagram.com/cushygarden/",
       "video_count": 1,
-      "top_industry": "Unknown",
+      "top_industry": "Góc nhà đẹp",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40cushygarden_DdL6pHDSKRc/shot_01_mid.jpg",
       "video_ids": [
         "IG_@cushygarden_DdL6pHDSKRc"
@@ -782,7 +782,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Zero (주니어 개발자",
       "profile_url": "https://www.instagram.com/dev_zero/",
       "video_count": 1,
-      "top_industry": "Unknown",
+      "top_industry": "Xây kênh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40dev_zero_Db-S8i1hXwF/shot_01_mid.jpg",
       "video_ids": [
         "IG_@dev_zero_Db-S8i1hXwF"
@@ -793,7 +793,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Nagisa Decor",
       "profile_url": "https://www.instagram.com/nagisa.decor/",
       "video_count": 1,
-      "top_industry": "Unknown",
+      "top_industry": "Góc nhà đẹp",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40nagisa.decor_Dco_DevvUla/shot_01_mid.jpg",
       "video_ids": [
         "IG_@nagisa.decor_Dco_DevvUla"
@@ -804,7 +804,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Yuto (地方創生クリエイター",
       "profile_url": "https://www.instagram.com/yuto_creator/",
       "video_count": 1,
-      "top_industry": "Unknown",
+      "top_industry": "Du lịch",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40yuto_creator_DdBlAWRO1Hl/shot_01_mid.jpg",
       "video_ids": [
         "IG_@yuto_creator_DdBlAWRO1Hl"
@@ -3823,14 +3823,23 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Nội dung chữa lành (healing) phải mộc mạc, không dùng nhạc giật gân, nhịp nói chậm rãi và màu sắc cây cỏ phải được giữ độ tươi tự nhiên.",
       "key_tech": "Đời Thường & Chữa Lành • Macro Plant Textures • Gentle Voiceover • Morning Sunlight • Greenery Color Grade",
       "shooting_style": {
-        "id": "voice-over",
-        "name": "Lồng Tiếng",
-        "en_name": "Voice Over",
-        "icon": "🎙️",
-        "badge_color": "purple"
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
       },
-      "industries": [],
-      "x_factors": [],
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Góc nhà đẹp",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [
+        "Bầu không khí chữa lành",
+        "Đặc tả Macro"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -3838,7 +3847,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Nhật ký chăm sóc vườn cây tại nhà, tạo sự kết nối cảm xúc bình yên và truyền cảm hứng sống chậm",
+      "purpose": "Thưởng thức",
       "tech_tags": [
         "Macro Plant Textures",
         "Gentle Voiceover",
@@ -3888,13 +3897,19 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Xây dựng thương hiệu chuyên gia không nhất thiết phải thuyết giảng. Đôi khi chỉ cần quay một chuỗi hành động kỷ luật trong không gian làm việc sạch sẽ là đủ tạo niềm tin.",
       "key_tech": "Công Nghệ & Lập Trình • Desk Setup B-Roll • Time-lapse Study • Guitar Foley Cut • Subtle Screen Glow",
       "shooting_style": {
-        "id": "storytelling",
-        "name": "Kể Chuyện",
-        "en_name": "Storytelling",
-        "icon": "📖",
-        "badge_color": "amber"
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Xây kênh",
+          "icon": "💼"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "global",
@@ -3903,7 +3918,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Xây dựng thương hiệu cá nhân kỷ luật cho lập trình viên trẻ thông qua chuỗi routine buổi tối hiệu quả",
+      "purpose": "VLog",
       "tech_tags": [
         "Desk Setup B-Roll",
         "Time-lapse Study",
@@ -3959,7 +3974,13 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Góc nhà đẹp",
+          "icon": "🏛️"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "global",
@@ -3968,7 +3989,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Showcase không gian nội thất căn hộ Japandi tối giản, thu hút khách hàng thiết kế và thi công",
+      "purpose": "VLog",
       "tech_tags": [
         "Wide Establishing Shot",
         "Slow Panning Movement",
@@ -4024,8 +4045,22 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
-      "x_factors": [],
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du lịch",
+          "icon": "✈️"
+        },
+        {
+          "id": "ky-thuat-quay",
+          "name": "Bố cục",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [
+        "Màu sắc điện ảnh",
+        "Moody vibe"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4033,7 +4068,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Quảng bá du lịch địa phương Nhật Bản với bảng màu điện ảnh đậm chất hoài niệm dù thời tiết âm u",
+      "purpose": "Thưởng thức",
       "tech_tags": [
         "Cinematic Mood Weather",
         "Foreground Plant Layering",
@@ -4089,8 +4124,22 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industries": [],
-      "x_factors": [],
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du lịch",
+          "icon": "✈️"
+        },
+        {
+          "id": "ky-thuat-quay",
+          "name": "Bố cục",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [
+        "Minh họa trực quan",
+        "Setup điện thoại"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4098,7 +4147,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Video hướng dẫn thực chiến (Educational Tutorial) về mẹo bố cục khung hình điện ảnh dễ áp dụng",
+      "purpose": "Mẹo",
       "tech_tags": [
         "Composition Rule of Thirds",
         "Leading Lines",
@@ -4154,8 +4203,17 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industries": [],
-      "x_factors": [],
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Xây kênh",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [
+        "Góc nhìn chân thật",
+        "Kịch tính"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4163,7 +4221,7 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Kịch bản cảnh tỉnh cho các nhà sáng tạo nội dung mới: Không cần cố gắng hoàn hảo hay dạy người khác cách làm, chỉ cần bắt tay vào thực hiện trong một khoảng thời gian nhất định.",
+      "purpose": "Tạo động lực",
       "tech_tags": [
         "Contrarian Hook",
         "Talking Head Confidence",

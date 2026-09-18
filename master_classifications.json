@@ -13863,9 +13863,9 @@
     "shots_count": 8,
     "duration": "25.0s",
     "shooting_style": {
-      "id": "voice-over",
-      "name": "Lồng Tiếng (Voice Over)",
-      "icon": "🎙️"
+      "id": "dien-anh",
+      "name": "Chỉn Chu",
+      "icon": "🎬"
     },
     "industry": {
       "id": "doi-thuong",
@@ -13879,7 +13879,7 @@
       "flag": "🌐",
       "badge_color": "sky"
     },
-    "purpose": "Nhật ký chăm sóc vườn cây tại nhà, tạo sự kết nối cảm xúc bình yên và truyền cảm hứng sống chậm",
+    "purpose": "Thưởng thức",
     "tech_tags": [
       "Macro Plant Textures",
       "Gentle Voiceover",
@@ -13897,7 +13897,18 @@
       "practice_focus": "Thực hành: Tận dụng sương sớm và giọt nước trên lá cây, chuyển động tay nhẹ nhàng tưới nước kết hợp giọng thủ thỉ mộc mạc như đang tâm sự cùng người bạn thân.",
       "ig_seeding_hook": "Follow @cushygarden để cập nhật mẫu video Đời Thường & Chữa Lành",
       "course_industry_mapping": "Đời Thường & Chữa Lành"
-    }
+    },
+    "industries": [
+      {
+        "id": "kien-truc",
+        "name": "Góc nhà đẹp",
+        "icon": "🏛️"
+      }
+    ],
+    "x_factors": [
+      "Bầu không khí chữa lành",
+      "Đặc tả Macro"
+    ]
   },
   "IG_@dev_zero_Db-S8i1hXwF": {
     "id": "IG_@dev_zero_Db-S8i1hXwF",
@@ -13908,9 +13919,9 @@
     "shots_count": 8,
     "duration": "25.0s",
     "shooting_style": {
-      "id": "storytelling",
-      "name": "Kể Chuyện (Storytelling)",
-      "icon": "📖"
+      "id": "theo-nhip-nhac",
+      "name": "Theo nhịp nhạc",
+      "icon": "🎵"
     },
     "industry": {
       "id": "cong-nghe",
@@ -13924,7 +13935,7 @@
       "flag": "🌐",
       "badge_color": "sky"
     },
-    "purpose": "Xây dựng thương hiệu cá nhân kỷ luật cho lập trình viên trẻ thông qua chuỗi routine buổi tối hiệu quả",
+    "purpose": "VLog",
     "tech_tags": [
       "Desk Setup B-Roll",
       "Time-lapse Study",
@@ -13942,7 +13953,15 @@
       "practice_focus": "Thực hành: Kể chuyện một buổi tối không dùng lời: Từ bàn phím cơ gõ code, chuyển sang ngón tay gảy đàn guitar, rồi xỏ giày chạy bộ. Mỗi hành động đại diện cho 1 mảnh ghép phát triển bản thân.",
       "ig_seeding_hook": "Follow @dev_zero để cập nhật mẫu video Công Nghệ & Lập Trình",
       "course_industry_mapping": "Công Nghệ & Lập Trình"
-    }
+    },
+    "industries": [
+      {
+        "id": "thuong-hieu",
+        "name": "Xây kênh",
+        "icon": "💼"
+      }
+    ],
+    "x_factors": []
   },
   "IG_@nagisa.decor_Dco_DevvUla": {
     "id": "IG_@nagisa.decor_Dco_DevvUla",
@@ -13953,9 +13972,9 @@
     "shots_count": 8,
     "duration": "25.0s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
-      "icon": "🎬"
+      "id": "theo-nhip-nhac",
+      "name": "Theo nhịp nhạc",
+      "icon": "🎵"
     },
     "industry": {
       "id": "kien-truc",
@@ -13969,7 +13988,7 @@
       "flag": "🌐",
       "badge_color": "sky"
     },
-    "purpose": "Showcase không gian nội thất căn hộ Japandi tối giản, thu hút khách hàng thiết kế và thi công",
+    "purpose": "VLog",
     "tech_tags": [
       "Wide Establishing Shot",
       "Slow Panning Movement",
@@ -13987,7 +14006,15 @@
       "practice_focus": "Thực hành: Sử dụng các đường thẳng kiến trúc làm khung định hình (framing), camera lia chậm theo phương ngang (slow dolly-pan) giúp người xem cảm nhận trọn vẹn độ sâu và sự thoáng đãng của căn phòng.",
       "ig_seeding_hook": "Follow @nagisa.decor để cập nhật mẫu video Kiến Trúc & Không Gian / Nội Thất",
       "course_industry_mapping": "Kiến Trúc & Không Gian / Nội Thất"
-    }
+    },
+    "industries": [
+      {
+        "id": "kien-truc",
+        "name": "Góc nhà đẹp",
+        "icon": "🏛️"
+      }
+    ],
+    "x_factors": []
   },
   "IG_@yuto_creator_DdBlAWRO1Hl": {
     "id": "IG_@yuto_creator_DdBlAWRO1Hl",
@@ -13999,7 +14026,7 @@
     "duration": "25.0s",
     "shooting_style": {
       "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
+      "name": "Chỉn Chu",
       "icon": "🎬"
     },
     "industry": {
@@ -14014,7 +14041,7 @@
       "flag": "🌐",
       "badge_color": "sky"
     },
-    "purpose": "Quảng bá du lịch địa phương Nhật Bản với bảng màu điện ảnh đậm chất hoài niệm dù thời tiết âm u",
+    "purpose": "Thưởng thức",
     "tech_tags": [
       "Cinematic Mood Weather",
       "Foreground Plant Layering",
@@ -14032,7 +14059,23 @@
       "practice_focus": "Thực hành: Biến nhược điểm ngày mưa âm u thành lợi thế cảm xúc: Tận dụng mây sương bay qua đỉnh núi, giọt nước đọng trên mái ngói đền cổ và màu xanh thẫm của rừng thông.",
       "ig_seeding_hook": "Follow @yuto_creator để cập nhật mẫu video Du Lịch & Văn Hóa",
       "course_industry_mapping": "Du Lịch & Văn Hóa"
-    }
+    },
+    "industries": [
+      {
+        "id": "du-lich",
+        "name": "Du lịch",
+        "icon": "✈️"
+      },
+      {
+        "id": "ky-thuat-quay",
+        "name": "Bố cục",
+        "icon": "🎯"
+      }
+    ],
+    "x_factors": [
+      "Màu sắc điện ảnh",
+      "Moody vibe"
+    ]
   },
   "IG_@beixin_DdRGd8evPK-": {
     "id": "IG_@beixin_DdRGd8evPK-",
@@ -14043,9 +14086,9 @@
     "shots_count": 8,
     "duration": "25.0s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Nói Trực Diện (Talking Head)",
-      "icon": "🗣️"
+      "id": "theo-nhip-nhac",
+      "name": "Theo nhịp nhạc",
+      "icon": "🎵"
     },
     "industry": {
       "id": "ky-thuat-quay",
@@ -14059,7 +14102,7 @@
       "flag": "🌐",
       "badge_color": "sky"
     },
-    "purpose": "Video hướng dẫn thực chiến (Educational Tutorial) về mẹo bố cục khung hình điện ảnh dễ áp dụng",
+    "purpose": "Mẹo",
     "tech_tags": [
       "Composition Rule of Thirds",
       "Leading Lines",
@@ -14077,7 +14120,23 @@
       "practice_focus": "Thực hành: Trực quan hóa sự khác biệt giữa 'Sai' và 'Đúng': Đặt tiền cảnh che một phần ba khung hình, sử dụng đường dẫn mắt tự nhiên (con đường, hàng rào) hút mắt vào chủ thể.",
       "ig_seeding_hook": "Follow @beixin để cập nhật mẫu video Kỹ Thuật Quay Dựng",
       "course_industry_mapping": "Kỹ Thuật Quay Dựng"
-    }
+    },
+    "industries": [
+      {
+        "id": "du-lich",
+        "name": "Du lịch",
+        "icon": "✈️"
+      },
+      {
+        "id": "ky-thuat-quay",
+        "name": "Bố cục",
+        "icon": "🎯"
+      }
+    ],
+    "x_factors": [
+      "Minh họa trực quan",
+      "Setup điện thoại"
+    ]
   },
   "IG_@layton_video_DdKGq2TMhf4": {
     "id": "IG_@layton_video_DdKGq2TMhf4",
@@ -14089,7 +14148,7 @@
     "duration": "15.0s",
     "shooting_style": {
       "id": "talking-head",
-      "name": "Nói Trực Diện (Talking Head)",
+      "name": "Nói Trực Diện",
       "icon": "🗣️"
     },
     "industry": {
@@ -14104,7 +14163,7 @@
       "flag": "🌐",
       "badge_color": "sky"
     },
-    "purpose": "Kịch bản cảnh tỉnh cho các nhà sáng tạo nội dung mới: Không cần cố gắng hoàn hảo hay dạy người khác cách làm, chỉ cần bắt tay vào thực hiện trong một khoảng thời gian nhất định.",
+    "purpose": "Tạo động lực",
     "tech_tags": [
       "Contrarian Hook",
       "Talking Head Confidence",
@@ -14122,7 +14181,18 @@
       "practice_focus": "Thực hành: Hook trực diện 'Sự thật khắc nghiệt khi làm creator'. Sự luân phiên giữa cảnh ngồi nói chuyện tại bàn và cảnh B-roll tạo nhịp điệu.",
       "ig_seeding_hook": "Follow @layton_video để cập nhật mẫu video Thương Hiệu Cá Nhân & Dịch Vụ",
       "course_industry_mapping": "Thương Hiệu Cá Nhân & Dịch Vụ"
-    }
+    },
+    "industries": [
+      {
+        "id": "thuong-hieu",
+        "name": "Xây kênh",
+        "icon": "💼"
+      }
+    ],
+    "x_factors": [
+      "Góc nhìn chân thật",
+      "Kịch tính"
+    ]
   },
   "IG_@kienobifilms_DdPLvUpBwCl": {
     "id": "IG_@kienobifilms_DdPLvUpBwCl",
