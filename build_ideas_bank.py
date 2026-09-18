@@ -72,6 +72,14 @@ SHOOTING_STYLES = [
         "icon": "⚡",
         "badge_color": "rose",
         "desc": "Kỹ thuật cắt cảnh nhịp điệu, match cut, whip pan, zoom transition, kinetic visual loop."
+    },
+    {
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple",
+        "desc": "Cắt cảnh đồng bộ nhịp điệu âm nhạc, vũ đạo, hành động khớp beat dồn dập."
     }
 ]
 
@@ -424,9 +432,29 @@ def get_item_classification(vid_id, code, clean_title, takeaway, key_tech, creat
 
     master = master_dict.get(vid_id) or master_dict.get(code)
     if master:
-        s_id = style_overrides.get(vid_id, master["shooting_style"]["id"])
+        m_style = master.get("shooting_style", {})
+        if isinstance(m_style, dict):
+            s_id = style_overrides.get(vid_id, m_style.get("id"))
+            s_name = m_style.get("name")
+            s_icon = m_style.get("icon", "🎥")
+        else:
+            s_id = style_overrides.get(vid_id, str(m_style))
+            s_name = str(m_style)
+            s_icon = "🎥"
+
         i_id = ind_overrides.get(vid_id, master.get("industries", [{}])[0].get("id", "ugc"))
-        style_obj = next((s for s in SHOOTING_STYLES if s["id"] == s_id), SHOOTING_STYLES[4])
+        style_obj = next((s for s in SHOOTING_STYLES if s["id"] == s_id), None)
+        if not style_obj:
+            style_obj = {
+                "id": s_id,
+                "name": s_name or s_id.replace("-", " ").title(),
+                "en_name": s_id.replace("-", " ").title(),
+                "icon": s_icon,
+                "badge_color": "purple",
+                "desc": f"Kiểu quay {s_name or s_id}."
+            }
+            SHOOTING_STYLES.append(style_obj)
+
         ind_obj = next((i for i in INDUSTRIES if i["id"] == i_id), INDUSTRIES[8])
         purpose = master.get("purpose", "Showcase thị giác & Thẩm mỹ")
         tech_tags = master.get("tech_tags", [key_tech] if key_tech else ["Cinematic Framing"])
@@ -446,6 +474,8 @@ def get_item_classification(vid_id, code, clean_title, takeaway, key_tech, creat
         target_style = "talking-head"
     elif any(w in corpus for w in ["thuyết minh", "voiceover", "voice over"]):
         target_style = "voice-over"
+    elif any(w in corpus for w in ["nhịp nhạc", "beat", "nhạc nền", "music beat"]):
+        target_style = "theo-nhip-nhac"
     elif any(w in corpus for w in ["match cut", "whip pan", "transition", "chuyển cảnh"]):
         target_style = "chuyen-canh"
     elif any(w in corpus for w in ["kể chuyện", "storytelling", "hành trình"]):
@@ -677,7 +707,7 @@ def build_database():
                 "badge_color": style_obj["badge_color"]
             },
             "industries": master.get("industries", []) if master else [],
-            "x_factors": master.get("x_factors", []) if master else [],
+            "x_factors": (list(master.get("x_factors", [])) + (["Chuyển cảnh cấp 2"] if transition_level == "Chuyển cảnh Level 2" and "Chuyển cảnh cấp 2" not in (master.get("x_factors", []) if master else []) else [])) if master else ([] if transition_level != "Chuyển cảnh Level 2" else ["Chuyển cảnh cấp 2"]),
             "country": {
                 "id": country_obj["id"],
                 "name": country_obj["name"],
@@ -755,6 +785,9 @@ def build_database():
         "ad_bot_count": sum(1 for x in active_ideas if x.get("is_ad_bot") is True)
     }
 
+    all_x_factors = sorted(list(set(xf for x in active_ideas for xf in x.get("x_factors", []) if xf)))
+    x_factor_stats = {xf: sum(1 for x in active_ideas if xf in x.get("x_factors", [])) for xf in all_x_factors}
+
     database_payload = {
         "generated_at": "2026-09-13T18:00:00+07:00",
         "total_scene_items": len(portal_data),
@@ -766,6 +799,8 @@ def build_database():
         "shooting_style_stats": shooting_style_stats,
         "industries": INDUSTRIES,
         "industry_stats": industry_stats,
+        "x_factors": all_x_factors,
+        "x_factor_stats": x_factor_stats,
         "countries": COUNTRIES,
         "country_stats": country_stats,
         "transition_stats": transition_stats,

@@ -57,6 +57,38 @@ var FEDU_IDEAS_DATABASE = {
       "icon": "⚡",
       "badge_color": "rose",
       "desc": "Kỹ thuật cắt cảnh nhịp điệu, match cut, whip pan, zoom transition, kinetic visual loop."
+    },
+    {
+      "id": "theo-nhip-nhac",
+      "name": "Theo nhịp nhạc",
+      "en_name": "Music Beat & Rhythm",
+      "icon": "🎵",
+      "badge_color": "purple",
+      "desc": "Cắt cảnh đồng bộ nhịp điệu âm nhạc, vũ đạo, hành động khớp beat dồn dập."
+    },
+    {
+      "id": "doi-thuong",
+      "name": "Đời Thường & Chữa Lành",
+      "en_name": "Doi Thuong",
+      "icon": "🌿",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Đời Thường & Chữa Lành."
+    },
+    {
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay & Setup Solo",
+      "en_name": "Ky Thuat Quay",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Kỹ Thuật Quay & Setup Solo."
+    },
+    {
+      "id": "ugc",
+      "name": "UGC & Trình Diễn Sản Phẩm",
+      "en_name": "Ugc",
+      "icon": "📱",
+      "badge_color": "purple",
+      "desc": "Kiểu quay UGC & Trình Diễn Sản Phẩm."
     }
   ],
   "shooting_style_stats": {
@@ -64,8 +96,12 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 9,
     "talking-head": 18,
     "storytelling": 18,
-    "dien-anh": 94,
-    "chuyen-canh": 36
+    "dien-anh": 85,
+    "chuyen-canh": 35,
+    "theo-nhip-nhac": 6,
+    "doi-thuong": 1,
+    "ky-thuat-quay": 2,
+    "ugc": 1
   },
   "industries": [
     {
@@ -160,6 +196,64 @@ var FEDU_IDEAS_DATABASE = {
     "the-thao": 0,
     "ky-thuat-quay": 5,
     "ugc": 3
+  },
+  "x_factors": [
+    "Biểu cảm Bầu không khí chữa lành",
+    "Biểu cảm lo lắng",
+    "Body language",
+    "Bầu không khí chữa lành",
+    "Bếp nhà Á Đông",
+    "Bố cục khung trong khung",
+    "Chuyển cảnh cấp 2",
+    "Góc máy trên cao",
+    "Góc nhìn chân thật",
+    "Không khí Sit-com",
+    "Kịch tính",
+    "Minh họa trực quan",
+    "Moody vibe",
+    "Màu sắc điện ảnh",
+    "Nhan sắc",
+    "Nhịp cắt nhanh",
+    "Setup Studio",
+    "Setup điện thoại",
+    "Thông điệp cảm xúc",
+    "Thần thái",
+    "Thần thái tự nhiên",
+    "Thủ thuật sáng tạo",
+    "Typography mạnh",
+    "Ánh sáng màu kịch tính",
+    "Ánh sáng tương phản",
+    "Ánh sáng ấm áp",
+    "Đặc tả Macro"
+  ],
+  "x_factor_stats": {
+    "Biểu cảm Bầu không khí chữa lành": 1,
+    "Biểu cảm lo lắng": 1,
+    "Body language": 1,
+    "Bầu không khí chữa lành": 3,
+    "Bếp nhà Á Đông": 1,
+    "Bố cục khung trong khung": 1,
+    "Chuyển cảnh cấp 2": 15,
+    "Góc máy trên cao": 1,
+    "Góc nhìn chân thật": 1,
+    "Không khí Sit-com": 1,
+    "Kịch tính": 1,
+    "Minh họa trực quan": 1,
+    "Moody vibe": 1,
+    "Màu sắc điện ảnh": 1,
+    "Nhan sắc": 1,
+    "Nhịp cắt nhanh": 1,
+    "Setup Studio": 1,
+    "Setup điện thoại": 1,
+    "Thông điệp cảm xúc": 1,
+    "Thần thái": 1,
+    "Thần thái tự nhiên": 1,
+    "Thủ thuật sáng tạo": 1,
+    "Typography mạnh": 1,
+    "Ánh sáng màu kịch tính": 1,
+    "Ánh sáng tương phản": 1,
+    "Ánh sáng ấm áp": 1,
+    "Đặc tả Macro": 1
   },
   "countries": [
     {
@@ -3897,11 +3991,11 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Xây dựng thương hiệu chuyên gia không nhất thiết phải thuyết giảng. Đôi khi chỉ cần quay một chuỗi hành động kỷ luật trong không gian làm việc sạch sẽ là đủ tạo niềm tin.",
       "key_tech": "Công Nghệ & Lập Trình • Desk Setup B-Roll • Time-lapse Study • Guitar Foley Cut • Subtle Screen Glow",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
       "industries": [
         {
@@ -3968,11 +4062,11 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Quay nội thất phải tôn trọng tỷ lệ không gian: Tránh dùng góc siêu rộng 0.5x làm méo tường, hãy dùng tiêu cự 24mm - 35mm và lia máy thật đằm tay.",
       "key_tech": "Kiến Trúc & Không Gian / Nội Thất • Wide Establishing Shot • Slow Panning Movement • Warm Neutral Tones • Architectural Lines",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
       "industries": [
         {
@@ -5167,11 +5261,11 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Nghệ thuật giảm tốc nhịp điệu (Deceleration): Bắt đầu bằng hành vi vội vã để chặn feed, dùng ánh mắt chính diện và hơi thở xả van áp lực, kết thúc bằng một thẻ khẳng định tâm lý trên con đường vắng.",
       "key_tech": "Somatic Pattern Interrupt • Pacing Whiplash • Deceleration Arc • Direct-to-Lens Gaze • Ambient Sound Chant • Micro Jump-Cut • Affirmation Reveal Anchor",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "doi-thuong",
+        "name": "Đời Thường & Chữa Lành",
+        "en_name": "Doi Thuong",
+        "icon": "🌿",
+        "badge_color": "purple"
       },
       "industries": [],
       "x_factors": [],
@@ -5231,11 +5325,11 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Không cần gimbal hay ekip đắt tiền: Tận dụng camera góc rộng úp ngược, kẹp mép laptop và ánh sáng cửa sổ tạt ngang để biến mọi bàn làm việc thành studio điện ảnh.",
       "key_tech": "",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "ky-thuat-quay",
+        "name": "Kỹ Thuật Quay & Setup Solo",
+        "en_name": "Ky Thuat Quay",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [],
       "x_factors": [],
@@ -5300,11 +5394,11 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Quy tắc vàng của video UGC bán phụ kiện/công nghệ: Đừng nói về thông số, hãy cho người xem thấy quy trình 'Gắn 1 chạm -> Kết quả góc quay xịn như có cameraman đi cùng' và kết thúc bằng việc cất vào túi xách để kích hoạt mong muốn sở hữu ngay lập tức.",
       "key_tech": "",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "ugc",
+        "name": "UGC & Trình Diễn Sản Phẩm",
+        "en_name": "Ugc",
+        "icon": "📱",
+        "badge_color": "purple"
       },
       "industries": [],
       "x_factors": [],
@@ -5996,11 +6090,11 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Tận dụng xe đẩy làm dolly và vách kim loại tủ đông làm chân máy nam châm để quay vlog đời thường chuẩn điện ảnh mà không cần ai cầm máy giúp.",
       "key_tech": "Pattern Interrupt Question Hook • Gear Demonstration Macro • 0.5x Ultra-Wide High-Angle • Cart Handle Dolly POV • Tactile Produce Pick-Up • Magnetic Surface Snap • Hands-Free Dual Hand Interaction • Mini Tripod Floor Grounding • Low-Angle Hero Pass-By • Personal Brand CTA",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "ky-thuat-quay",
+        "name": "Kỹ Thuật Quay & Setup Solo",
+        "en_name": "Ky Thuat Quay",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [],
       "x_factors": [],
@@ -6185,11 +6279,11 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách ngôn ngữ điện ảnh và nghệ thuật thị giác: .",
       "key_tech": "",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
       "industries": [],
       "x_factors": [],
@@ -6241,11 +6335,11 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách 21 phân cảnh bậc thầy về nghệ thuật sáng tạo nội dung phong cách sống 'A Day In The Life' của Business & Marketing Coach Lizzy Palios. Video thị phạm chi tiết 6 bước kỹ thuật: Lia máy Phải sang Trái, Tăng tốc đoạn lia 2-3x (Whip...",
       "key_tech": "Day In The Life Formula, Pan Right-to-Left Continuity, Speed Ramping 2-3x Whip-Pan, Centered Timestamp Anchors, Spin-on-Beat Audio-Visual Sync, Work & Downtime Balance",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
       "industries": [],
       "x_factors": [],
@@ -6689,11 +6783,11 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách 3 phân cảnh chuẩn đạo diễn trong kiệt tác hài short-form của Steven Vuu (@steven.vuu): Nghệ thuật đánh lừa kỳ vọng người xem (False Expectations Hook) bằng thói quen buổi sáng mẫu mực, cú ngắt nhịp kịch tính (The Comic Beat Paus...",
       "key_tech": "False Expectations Hook, The Comic Beat Pause, Match-Location Punchline, Hard Cut Reality Check, Lock-Off Camera Contrast, Micro-Expression Freeze, Tactile ASMR Sound",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
       "industries": [],
       "x_factors": [],
@@ -6913,11 +7007,11 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách trọn vẹn 6 phân cảnh mẫu mực trong video Reel của @bysuncan: Nghệ thuật In-Camera Action Match Cut dùng cú đấm trực diện che ống kính (Physical Occlusion Transition) để chuyển cảnh từ phòng làm việc ra đỉnh núi lửa hoang sơ theo...",
       "key_tech": "In-Camera Fist Wipe Match Cut, Momentum Kinetic Transition, Beat-Synced Action, Domestic-to-Epic Contrast, Symmetrical Hero Pose",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
       "industries": [],
       "x_factors": [],
@@ -7295,7 +7389,9 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "rose"
       },
       "industries": [],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -7361,7 +7457,9 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "rose"
       },
       "industries": [],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7426,7 +7524,9 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "rose"
       },
       "industries": [],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8497,7 +8597,9 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "rose"
       },
       "industries": [],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -8564,7 +8666,9 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "rose"
       },
       "industries": [],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ (Tây Ban Nha)",
@@ -8633,7 +8737,9 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "rose"
       },
       "industries": [],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9346,7 +9452,9 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "rose"
       },
       "industries": [],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9802,7 +9910,9 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "rose"
       },
       "industries": [],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -10506,7 +10616,9 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "sky"
       },
       "industries": [],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -11016,7 +11128,9 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "rose"
       },
       "industries": [],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11779,7 +11893,9 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "sky"
       },
       "industries": [],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13303,7 +13419,9 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "amber"
       },
       "industries": [],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13429,7 +13547,9 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "rose"
       },
       "industries": [],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -13873,7 +13993,9 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "amber"
       },
       "industries": [],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14577,7 +14699,9 @@ var FEDU_IDEAS_DATABASE = {
         "badge_color": "rose"
       },
       "industries": [],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
