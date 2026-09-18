@@ -152,14 +152,14 @@ var FEDU_IDEAS_DATABASE = {
   "industry_stats": {
     "spa-lam-dep": 0,
     "thuong-hieu": 0,
-    "thoi-trang": 0,
+    "thoi-trang": 1,
     "am-thuc": 1,
-    "du-lich": 3,
-    "cong-nghe": 0,
+    "du-lich": 5,
+    "cong-nghe": 1,
     "kien-truc": 1,
     "the-thao": 0,
-    "ky-thuat-quay": 1,
-    "ugc": 1
+    "ky-thuat-quay": 3,
+    "ugc": 2
   },
   "countries": [
     {
@@ -222,7 +222,7 @@ var FEDU_IDEAS_DATABASE = {
   "transition_stats": {
     "level_1_count": 5,
     "level_2_count": 14,
-    "ad_bot_count": 5
+    "ad_bot_count": 6
   },
   "deleted_ids": [],
   "creators_hub": [
@@ -363,7 +363,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Pascal Blaurock",
       "profile_url": "https://www.instagram.com/pascal_blaurock/",
       "video_count": 2,
-      "top_industry": "Unknown",
+      "top_industry": "Bố cục",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock",
@@ -375,7 +375,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Megan Tan",
       "profile_url": "https://www.instagram.com/megantanhweewen/",
       "video_count": 2,
-      "top_industry": "Unknown",
+      "top_industry": "Công nghệ",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen",
@@ -705,7 +705,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Clarissa Cindy",
       "profile_url": "https://www.instagram.com/clarissaacindy/",
       "video_count": 1,
-      "top_industry": "Unknown",
+      "top_industry": "Du lịch",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40%F0%9D%90%82%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%B2%F0%9F%8C%BC_DcgQDZ_JNIr_Video_by_clarissaacindy/shot_01_mid.jpg",
       "video_ids": [
         "IG_@𝐂𝐢𝐧𝐝𝐲🌼_DcgQDZ_JNIr_Video_by_clarissaacindy"
@@ -727,7 +727,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Shin Yueun",
       "profile_url": "https://www.instagram.com/yuuxeun/",
       "video_count": 1,
-      "top_industry": "Unknown",
+      "top_industry": "Thời trang",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40%EC%8B%A0_%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%B3%E1%86%AB_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun/shot_01_mid.jpg",
       "video_ids": [
         "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun"
@@ -2934,7 +2934,18 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du lịch",
+          "icon": "✈️"
+        },
+        {
+          "id": "ky-thuat-quay",
+          "name": "Bố cục",
+          "icon": "🎯"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "us_eu",
@@ -3131,8 +3142,17 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
-      "x_factors": [],
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Bố cục",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [
+        "Thủ thuật sáng tạo",
+        "Setup Studio"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3197,8 +3217,22 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industries": [],
-      "x_factors": [],
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công nghệ",
+          "icon": "📱"
+        },
+        {
+          "id": "ugc",
+          "name": "UGC",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [
+        "Góc máy trên cao",
+        "Không khí Sit-com"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3218,7 +3252,7 @@ var FEDU_IDEAS_DATABASE = {
         "Close-Up / Macro Detail Shot"
       ],
       "transition_level": null,
-      "is_ad_bot": false,
+      "is_ad_bot": true,
       "fedu_optimization": {
         "key_optimization_point": "⚡ Bán phong cách sống thay vì bán sản phẩm: Khóa góc máy nhìn qua khe cửa dẫn vào cảnh gõ laptop ngay trên thuyền kayak giữa hồ để quảng cáo công nghệ tự nhiên 100%.",
         "practice_focus": "Video tài trợ thương hiệu công nghệ & Nghệ thuật lồng ghép sản phẩm tự nhiên"
@@ -3263,8 +3297,22 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
-      "x_factors": [],
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời trang",
+          "icon": "👔"
+        },
+        {
+          "id": "du-lich",
+          "name": "Du lịch",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [
+        "Nhan sắc",
+        "Thần thái tự nhiên"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
