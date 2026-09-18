@@ -443,6 +443,18 @@ def get_item_classification(vid_id, code, clean_title, takeaway, key_tech, creat
             s_icon = "🎥"
 
         i_id = ind_overrides.get(vid_id, master.get("industries", [{}])[0].get("id", "ugc"))
+        
+        # Merge trùng lặp Style và Industry
+        invalid_style_map = {
+            "ky-thuat-quay": "dien-anh",
+            "ugc": "walk-and-talk",
+            "doi-thuong": "storytelling"
+        }
+        if s_id in invalid_style_map:
+            if i_id == "ugc":  # Nếu chưa có industry cụ thể, gán industry bằng cái vừa gỡ
+                i_id = s_id
+            s_id = invalid_style_map[s_id]
+
         style_obj = next((s for s in SHOOTING_STYLES if s["id"] == s_id), None)
         if not style_obj:
             style_obj = {
@@ -693,6 +705,25 @@ def build_database():
 
         fedu_opt = master.get("fedu_optimization", {}) if master else {}
 
+        # Xử lý và chuẩn hóa X-Factors
+        raw_x_factors = master.get("x_factors", []) if master else []
+        normalized_x_factors = set()
+        for xf in raw_x_factors:
+            xf_clean = xf.strip()
+            # Tự động gộp các tag trùng nghĩa
+            if "Bầu không khí chữa lành" in xf_clean:
+                normalized_x_factors.add("Bầu không khí chữa lành")
+            elif "Thần thái" in xf_clean:
+                normalized_x_factors.add("Thần thái tự nhiên")
+            else:
+                normalized_x_factors.add(xf_clean)
+                
+        if transition_level == "Chuyển cảnh Level 2":
+            normalized_x_factors.add("Chuyển cảnh cấp 2")
+        
+        # Nếu video thuộc style Theo nhịp nhạc thì cũng đưa vào X-Factor nếu muốn lọc sâu
+        # Nhưng thôi, tránh lặp lại X-Factor với Style.
+
         idea_obj = {
             "id": vid_id,
             "shortcode": code,
@@ -707,7 +738,7 @@ def build_database():
                 "badge_color": style_obj["badge_color"]
             },
             "industries": master.get("industries", []) if master else [],
-            "x_factors": (list(master.get("x_factors", [])) + (["Chuyển cảnh cấp 2"] if transition_level == "Chuyển cảnh Level 2" and "Chuyển cảnh cấp 2" not in (master.get("x_factors", []) if master else []) else [])) if master else ([] if transition_level != "Chuyển cảnh Level 2" else ["Chuyển cảnh cấp 2"]),
+            "x_factors": sorted(list(normalized_x_factors)),
             "country": {
                 "id": country_obj["id"],
                 "name": country_obj["name"],

@@ -65,43 +65,16 @@ var FEDU_IDEAS_DATABASE = {
       "icon": "🎵",
       "badge_color": "purple",
       "desc": "Cắt cảnh đồng bộ nhịp điệu âm nhạc, vũ đạo, hành động khớp beat dồn dập."
-    },
-    {
-      "id": "doi-thuong",
-      "name": "Đời Thường & Chữa Lành",
-      "en_name": "Doi Thuong",
-      "icon": "🌿",
-      "badge_color": "purple",
-      "desc": "Kiểu quay Đời Thường & Chữa Lành."
-    },
-    {
-      "id": "ky-thuat-quay",
-      "name": "Kỹ Thuật Quay & Setup Solo",
-      "en_name": "Ky Thuat Quay",
-      "icon": "🎬",
-      "badge_color": "purple",
-      "desc": "Kiểu quay Kỹ Thuật Quay & Setup Solo."
-    },
-    {
-      "id": "ugc",
-      "name": "UGC & Trình Diễn Sản Phẩm",
-      "en_name": "Ugc",
-      "icon": "📱",
-      "badge_color": "purple",
-      "desc": "Kiểu quay UGC & Trình Diễn Sản Phẩm."
     }
   ],
   "shooting_style_stats": {
-    "walk-and-talk": 4,
+    "walk-and-talk": 5,
     "voice-over": 9,
     "talking-head": 18,
-    "storytelling": 18,
-    "dien-anh": 85,
+    "storytelling": 19,
+    "dien-anh": 87,
     "chuyen-canh": 35,
-    "theo-nhip-nhac": 6,
-    "doi-thuong": 1,
-    "ky-thuat-quay": 2,
-    "ugc": 1
+    "theo-nhip-nhac": 6
   },
   "industries": [
     {
@@ -198,7 +171,6 @@ var FEDU_IDEAS_DATABASE = {
     "ugc": 3
   },
   "x_factors": [
-    "Biểu cảm Bầu không khí chữa lành",
     "Biểu cảm lo lắng",
     "Body language",
     "Bầu không khí chữa lành",
@@ -217,7 +189,6 @@ var FEDU_IDEAS_DATABASE = {
     "Setup Studio",
     "Setup điện thoại",
     "Thông điệp cảm xúc",
-    "Thần thái",
     "Thần thái tự nhiên",
     "Thủ thuật sáng tạo",
     "Typography mạnh",
@@ -227,10 +198,9 @@ var FEDU_IDEAS_DATABASE = {
     "Đặc tả Macro"
   ],
   "x_factor_stats": {
-    "Biểu cảm Bầu không khí chữa lành": 1,
     "Biểu cảm lo lắng": 1,
     "Body language": 1,
-    "Bầu không khí chữa lành": 3,
+    "Bầu không khí chữa lành": 4,
     "Bếp nhà Á Đông": 1,
     "Bố cục khung trong khung": 1,
     "Chuyển cảnh cấp 2": 15,
@@ -246,8 +216,7 @@ var FEDU_IDEAS_DATABASE = {
     "Setup Studio": 1,
     "Setup điện thoại": 1,
     "Thông điệp cảm xúc": 1,
-    "Thần thái": 1,
-    "Thần thái tự nhiên": 1,
+    "Thần thái tự nhiên": 2,
     "Thủ thuật sáng tạo": 1,
     "Typography mạnh": 1,
     "Ánh sáng màu kịch tính": 1,
@@ -2738,7 +2707,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [
-        "Biểu cảm Bầu không khí chữa lành"
+        "Bầu không khí chữa lành"
       ],
       "country": {
         "id": "us_eu",
@@ -3244,8 +3213,8 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [
-        "Thủ thuật sáng tạo",
-        "Setup Studio"
+        "Setup Studio",
+        "Thủ thuật sáng tạo"
       ],
       "country": {
         "id": "us_eu",
@@ -3478,7 +3447,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [
-        "Thần thái"
+        "Thần thái tự nhiên"
       ],
       "country": {
         "id": "us_eu",
@@ -3550,8 +3519,8 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [
-        "Thông điệp cảm xúc",
-        "Chuyển cảnh cấp 2"
+        "Chuyển cảnh cấp 2",
+        "Thông điệp cảm xúc"
       ],
       "country": {
         "id": "us_eu",
@@ -3631,9 +3600,9 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [
+        "Chuyển cảnh cấp 2",
         "Kỹ xảo VFX",
-        "Setup thông minh",
-        "Chuyển cảnh cấp 2"
+        "Setup thông minh"
       ],
       "country": {
         "id": "us_eu",
@@ -3702,8 +3671,8 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [
-        "Ánh sáng màu kịch tính",
-        "Typography mạnh"
+        "Typography mạnh",
+        "Ánh sáng màu kịch tính"
       ],
       "country": {
         "id": "us_eu",
@@ -3857,8 +3826,8 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [
-        "Nhịp cắt nhanh",
-        "Bếp nhà Á Đông"
+        "Bếp nhà Á Đông",
+        "Nhịp cắt nhanh"
       ],
       "country": {
         "id": "global",
@@ -4152,8 +4121,8 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [
-        "Màu sắc điện ảnh",
-        "Moody vibe"
+        "Moody vibe",
+        "Màu sắc điện ảnh"
       ],
       "country": {
         "id": "global",
@@ -5261,11 +5230,11 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Nghệ thuật giảm tốc nhịp điệu (Deceleration): Bắt đầu bằng hành vi vội vã để chặn feed, dùng ánh mắt chính diện và hơi thở xả van áp lực, kết thúc bằng một thẻ khẳng định tâm lý trên con đường vắng.",
       "key_tech": "Somatic Pattern Interrupt • Pacing Whiplash • Deceleration Arc • Direct-to-Lens Gaze • Ambient Sound Chant • Micro Jump-Cut • Affirmation Reveal Anchor",
       "shooting_style": {
-        "id": "doi-thuong",
-        "name": "Đời Thường & Chữa Lành",
-        "en_name": "Doi Thuong",
-        "icon": "🌿",
-        "badge_color": "purple"
+        "id": "storytelling",
+        "name": "Kể Chuyện",
+        "en_name": "Storytelling",
+        "icon": "📖",
+        "badge_color": "amber"
       },
       "industries": [],
       "x_factors": [],
@@ -5325,11 +5294,11 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Không cần gimbal hay ekip đắt tiền: Tận dụng camera góc rộng úp ngược, kẹp mép laptop và ánh sáng cửa sổ tạt ngang để biến mọi bàn làm việc thành studio điện ảnh.",
       "key_tech": "",
       "shooting_style": {
-        "id": "ky-thuat-quay",
-        "name": "Kỹ Thuật Quay & Setup Solo",
-        "en_name": "Ky Thuat Quay",
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
         "icon": "🎬",
-        "badge_color": "purple"
+        "badge_color": "sky"
       },
       "industries": [],
       "x_factors": [],
@@ -5394,11 +5363,11 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Quy tắc vàng của video UGC bán phụ kiện/công nghệ: Đừng nói về thông số, hãy cho người xem thấy quy trình 'Gắn 1 chạm -> Kết quả góc quay xịn như có cameraman đi cùng' và kết thúc bằng việc cất vào túi xách để kích hoạt mong muốn sở hữu ngay lập tức.",
       "key_tech": "",
       "shooting_style": {
-        "id": "ugc",
-        "name": "UGC & Trình Diễn Sản Phẩm",
-        "en_name": "Ugc",
-        "icon": "📱",
-        "badge_color": "purple"
+        "id": "walk-and-talk",
+        "name": "Walk & Talk",
+        "en_name": "Walk and Talk",
+        "icon": "🚶",
+        "badge_color": "emerald"
       },
       "industries": [],
       "x_factors": [],
@@ -6090,11 +6059,11 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Tận dụng xe đẩy làm dolly và vách kim loại tủ đông làm chân máy nam châm để quay vlog đời thường chuẩn điện ảnh mà không cần ai cầm máy giúp.",
       "key_tech": "Pattern Interrupt Question Hook • Gear Demonstration Macro • 0.5x Ultra-Wide High-Angle • Cart Handle Dolly POV • Tactile Produce Pick-Up • Magnetic Surface Snap • Hands-Free Dual Hand Interaction • Mini Tripod Floor Grounding • Low-Angle Hero Pass-By • Personal Brand CTA",
       "shooting_style": {
-        "id": "ky-thuat-quay",
-        "name": "Kỹ Thuật Quay & Setup Solo",
-        "en_name": "Ky Thuat Quay",
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
         "icon": "🎬",
-        "badge_color": "purple"
+        "badge_color": "sky"
       },
       "industries": [],
       "x_factors": [],
