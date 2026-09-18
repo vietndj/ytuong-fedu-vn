@@ -62,9 +62,9 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 3,
     "voice-over": 10,
-    "talking-head": 22,
+    "talking-head": 21,
     "storytelling": 18,
-    "dien-anh": 89,
+    "dien-anh": 90,
     "chuyen-canh": 36
   },
   "industries": [
@@ -150,16 +150,16 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "industry_stats": {
-    "spa-lam-dep": 5,
+    "spa-lam-dep": 3,
     "thuong-hieu": 19,
-    "thoi-trang": 19,
-    "am-thuc": 19,
+    "thoi-trang": 16,
+    "am-thuc": 18,
     "du-lich": 12,
     "cong-nghe": 26,
     "kien-truc": 20,
-    "the-thao": 7,
-    "ky-thuat-quay": 45,
-    "ugc": 6
+    "the-thao": 5,
+    "ky-thuat-quay": 32,
+    "ugc": 4
   },
   "countries": [
     {
@@ -221,7 +221,7 @@ var FEDU_IDEAS_DATABASE = {
   },
   "transition_stats": {
     "level_1_count": 5,
-    "level_2_count": 14,
+    "level_2_count": 15,
     "ad_bot_count": 6
   },
   "deleted_ids": [],
@@ -231,7 +231,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Withyuee",
       "profile_url": "https://www.instagram.com/withyuee/",
       "video_count": 8,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/Visual_Storytelling_Carousel_-_%40withyuee/img_001_f678a262.jpg",
       "video_ids": [
         "Visual_Storytelling_Carousel_@withyuee",
@@ -249,7 +249,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jazzie Sillona",
       "profile_url": "https://www.instagram.com/jazziesillona/",
       "video_count": 7,
-      "top_industry": "Thời trang",
+      "top_industry": "Thời Trang & Phụ Kiện",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40jazziesillona_Dc6Cxf-QRWh/shot_01_mid.jpg",
       "video_ids": [
         "IG_@jazziesillona_Dc6Cxf-QRWh",
@@ -266,7 +266,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Josh Diaz",
       "profile_url": "https://www.instagram.com/joshdiazfilms/",
       "video_count": 6,
-      "top_industry": "Xây kênh",
+      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_01_mid.jpg",
       "video_ids": [
         "IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine",
@@ -282,7 +282,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Al,_The_Creator_Videography_Reels",
       "profile_url": "https://www.instagram.com/shogentle/",
       "video_count": 4,
-      "top_industry": "Xây kênh",
+      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40AL%2C_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle/shot_01_mid.jpg",
       "video_ids": [
         "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
@@ -296,7 +296,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ulanzi Vietnam Official",
       "profile_url": "https://www.instagram.com/ulanzi.vietnam/",
       "video_count": 4,
-      "top_industry": "UGC",
+      "top_industry": "Công Nghệ & Thiết Bị",
       "sample_thumb": "https://img.youtube.com/vi/L4YUJh9ltF0/hqdefault.jpg",
       "video_ids": [
         "LAZADA_Ulanzi_Đèn_LED_Thanh_Bơm_Hơi_UA20,_",
@@ -310,7 +310,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jerome Teo",
       "profile_url": "https://www.instagram.com/jeromememe/",
       "video_count": 4,
-      "top_industry": "Du lịch",
+      "top_industry": "Du Lịch & Văn Hóa",
       "sample_thumb": "https://media.fedu.vn/images/People_of_Bhutan_-_%40jeromememe/img_002_c7376907.jpg",
       "video_ids": [
         "IG_@jeromememe_Db-zVchOXV7_People_of_Bhutan",
@@ -324,7 +324,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "핸아 | 집에서 팔리는 영상 만드는 법",
       "profile_url": "https://www.instagram.com/hena_film_vlog/",
       "video_count": 3,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng & Phụ Kiện Solo Filmmaking",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/shot_01_mid.jpg",
       "video_ids": [
         "IG_@hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85",
@@ -337,7 +337,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Yegor.Sky",
       "profile_url": "https://www.instagram.com/yegor.sky/",
       "video_count": 3,
-      "top_industry": "Bố cục",
+      "top_industry": "Du Lịch & Văn Hóa",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_01_mid.jpg",
       "video_ids": [
         "IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City",
@@ -350,7 +350,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ioana_Iftode",
       "profile_url": "https://www.instagram.com/ioana_iftode/",
       "video_count": 3,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments/shot_01_mid.jpg",
       "video_ids": [
         "IG_@ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments",
@@ -411,7 +411,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "CJ Visuals",
       "profile_url": "https://www.instagram.com/c.j.visuals/",
       "video_count": 2,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40c.j.visuals_DdMrb4ARxHv/shot_01_mid.jpg",
       "video_ids": [
         "IG_@c.j.visuals_DdMrb4ARxHv",
@@ -423,7 +423,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Genya",
       "profile_url": "https://www.instagram.com/genya_jp/",
       "video_count": 2,
-      "top_industry": "F&B",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40genya_jp_Dc3PgRbBp-m/shot_01_mid.jpg",
       "video_ids": [
         "IG_@genya_jp_Dc3PgRbBp-m",
@@ -435,7 +435,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "ArturBr",
       "profile_url": "https://www.instagram.com/arturbr/",
       "video_count": 2,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40arturbr_DdO2XLIKiXo/shot_01_mid.jpg",
       "video_ids": [
         "IG_@arturbr_DdO2XLIKiXo",
@@ -447,7 +447,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Steven.Vuu",
       "profile_url": "https://www.instagram.com/steven.vuu/",
       "video_count": 2,
-      "top_industry": "Bố cục",
+      "top_industry": "Unknown",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit/shot_01_mid.jpg",
       "video_ids": [
         "IG_@steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit",
@@ -459,7 +459,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Neolumo Luxury Club (Uralsk, Kazakhstan)",
       "profile_url": "https://www.instagram.com/neolumo.uralsk/",
       "video_count": 2,
-      "top_industry": "Làm đẹp",
+      "top_industry": "Làm Đẹp & Spa / Y Tế",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_01_mid.jpg",
       "video_ids": [
         "IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa",
@@ -471,7 +471,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "By.Bennnj",
       "profile_url": "https://www.instagram.com/by.bennnj/",
       "video_count": 2,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_01_mid.jpg",
       "video_ids": [
         "IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp",
@@ -483,7 +483,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jacoub Anwar - Jakarta Cinematographer",
       "profile_url": "https://www.instagram.com/mcjacoub/",
       "video_count": 2,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/Quy_Tac_Quay_Phim_Carousel_-_%40Jacoub_Anwar/img_001_35384a7a.jpg",
       "video_ids": [
         "IG_@Jakarta_Videographer_Jacoub_Anwar_DbnwnkrAVQ9_Carousel_Analysis",
@@ -495,7 +495,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Quyen Van / Q",
       "profile_url": "https://www.instagram.com/qfroost/",
       "video_count": 2,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Công Nghệ & Thiết Bị",
       "sample_thumb": "https://media.fedu.vn/images/Ray-Ban_Meta_System_-_%40qfroost/img_002_7fa52771.jpg",
       "video_ids": [
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
@@ -507,7 +507,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Xíu_Đi_Ăn",
       "profile_url": "https://www.instagram.com/xiudian/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Công Nghệ & Thiết Bị",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40X%C3%8DU_%C4%90I_%C4%82N_DazzVqPBfje_Video_by_xiudian/shot_01_mid.jpg",
       "video_ids": [
         "IG_@XÍU_ĐI_ĂN_DazzVqPBfje_Video_by_xiudian"
@@ -518,7 +518,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Misa｜築40年マンション暮らし",
       "profile_url": "https://www.instagram.com/mi_no_ie_39/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Công Nghệ & Thiết Bị",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40misa%EF%BD%9C%E7%AF%8940%E5%B9%B4%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E6%9A%AE%E3%82%89%E3%81%97_Db-xDk4vWNQ_Video_by_mi_no_ie_39/shot_01_mid.jpg",
       "video_ids": [
         "IG_@misa｜築40年マンション暮らし_Db-xDk4vWNQ_Video_by_mi_no_ie_39"
@@ -529,7 +529,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Studio_Berdua",
       "profile_url": "https://www.instagram.com/studioberdua/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Công Nghệ & Thiết Bị",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua"
@@ -540,7 +540,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Rika_ビオトープめだか植物のある暮らし",
       "profile_url": "https://www.instagram.com/r_6cafe/",
       "video_count": 1,
-      "top_industry": "F&B",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40Rika_%E3%83%93%E3%82%AA%E3%83%88%E3%83%BC%E3%83%97%E3%82%81%E3%81%A0%E3%81%8B%E6%A4%8D%E7%89%A9%E3%81%AE%E3%81%82%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97_Da5KgjAxfOG_Video_by_r_6cafe/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Rika_ビオトープめだか植物のある暮らし_Da5KgjAxfOG_Video_by_r_6cafe"
@@ -562,7 +562,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hayden_Slow_Korean_&_Daily_Life",
       "profile_url": "https://www.instagram.com/haydenkorean/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Công Nghệ & Thiết Bị",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40Hayden_Slow_Korean_%26_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Hayden_Slow_Korean_&_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean"
@@ -573,7 +573,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jaehyung",
       "profile_url": "https://www.instagram.com/_hyungs/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs/shot_01_mid.jpg",
       "video_ids": [
         "IG_@JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs"
@@ -584,7 +584,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Indang_Ayu",
       "profile_url": "https://www.instagram.com/indanayuu/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40Indang_Ayu_DccpHbETFSr_Video_by_indanayuu/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Indang_Ayu_DccpHbETFSr_Video_by_indanayuu"
@@ -595,7 +595,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ume_📍Минск-Мир",
       "profile_url": "https://www.instagram.com/ume.izakaya/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40UME_%F0%9F%93%8D%D0%BC%D0%B8%D0%BD%D1%81%D0%BA-%D0%BC%D0%B8%D1%80_DcVnyJyNWGY_Video_by_ume.izakaya/shot_01_mid.jpg",
       "video_ids": [
         "IG_@UME_📍минск-мир_DcVnyJyNWGY_Video_by_ume.izakaya"
@@ -606,7 +606,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Five_Oars_Coffee_Roasters",
       "profile_url": "https://www.instagram.com/focr.sg/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg"
@@ -617,7 +617,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "거북이_소영",
       "profile_url": "https://www.instagram.com/slowkoreanvlog/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40%EA%B1%B0%EB%B6%81%EC%9D%B4_%EC%86%8C%EC%98%81_Db0tHr8Bs7x_Video_by_slowkoreanvlog/shot_01_mid.jpg",
       "video_ids": [
         "IG_@거북이_소영_Db0tHr8Bs7x_Video_by_slowkoreanvlog"
@@ -628,7 +628,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "규리🍊ㅣCorporate_Girlie🇰🇷",
       "profile_url": "https://www.instagram.com/gyuree_k/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Công Nghệ & Thiết Bị",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7_DdTZsoxTVFz_Video_by_gyuree_k/shot_01_mid.jpg",
       "video_ids": [
         "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k"
@@ -639,7 +639,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jenny_Yoo_🇰🇷",
       "profile_url": "https://www.instagram.com/yooinoz/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40Jenny_Yoo_%F0%9F%87%B0%F0%9F%87%B7_DZ8w6MsSMAw_Video_by_yooinoz/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz"
@@ -650,7 +650,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "이현",
       "profile_url": "https://www.instagram.com/dreakwon/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40drea_%28%EC%9D%B4%ED%98%84%29_DaClEhzB5WC_Video_by_dreakwon/shot_01_mid.jpg",
       "video_ids": [
         "IG_@drea_(이현)_DaClEhzB5WC_Video_by_dreakwon"
@@ -661,7 +661,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Korea_Street_Views",
       "profile_url": "https://www.instagram.com/korea_street_views/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views"
@@ -672,7 +672,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Banh_Shimano",
       "profile_url": "https://www.instagram.com/Banh_shimano/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis/slide_01_mid.jpg",
       "video_ids": [
         "IG_@Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis"
@@ -727,7 +727,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "3413882081",
       "profile_url": "https://www.instagram.com/syooaann/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%403413882081_Dcx7pQpS6zs_Video_by_syooaann/shot_01_mid.jpg",
       "video_ids": [
         "IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann"
@@ -738,7 +738,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Iman Lizi",
       "profile_url": "https://www.instagram.com/iman.lizi/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian / Nội Thất",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40iman.lizi_Dc6qXoKoYKh/shot_01_mid.jpg",
       "video_ids": [
         "IG_@iman.lizi_Dc6qXoKoYKh"
@@ -749,7 +749,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hayan Cook (정하얀",
       "profile_url": "https://www.instagram.com/hayancook/",
       "video_count": 1,
-      "top_industry": "F&B",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40hayancook_DdSUI9BvhqR/shot_01_mid.jpg",
       "video_ids": [
         "IG_@hayancook_DdSUI9BvhqR"
@@ -760,7 +760,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Cushy Garden",
       "profile_url": "https://www.instagram.com/cushygarden/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Đời Thường & Chữa Lành",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40cushygarden_DdL6pHDSKRc/shot_01_mid.jpg",
       "video_ids": [
         "IG_@cushygarden_DdL6pHDSKRc"
@@ -771,7 +771,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Zero (주니어 개발자",
       "profile_url": "https://www.instagram.com/dev_zero/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Công Nghệ & Lập Trình",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40dev_zero_Db-S8i1hXwF/shot_01_mid.jpg",
       "video_ids": [
         "IG_@dev_zero_Db-S8i1hXwF"
@@ -782,7 +782,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Nagisa Decor",
       "profile_url": "https://www.instagram.com/nagisa.decor/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian / Nội Thất",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40nagisa.decor_Dco_DevvUla/shot_01_mid.jpg",
       "video_ids": [
         "IG_@nagisa.decor_Dco_DevvUla"
@@ -815,7 +815,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Aki",
       "profile_url": "https://www.instagram.com/aki_japan/",
       "video_count": 1,
-      "top_industry": "Thời trang",
+      "top_industry": "F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40aki_japan_DaDFH_TSii8/shot_01_mid.jpg",
       "video_ids": [
         "IG_@aki_japan_DaDFH_TSii8"
@@ -837,7 +837,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Charlotte Arsenault",
       "profile_url": "https://www.instagram.com/charlotte.arsenault/",
       "video_count": 1,
-      "top_industry": "UGC",
+      "top_industry": "UGC & Quảng Cáo",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40charlotte.arsenault_DdHGBpZOzIm/shot_01_mid.jpg",
       "video_ids": [
         "IG_@charlotte.arsenault_DdHGBpZOzIm"
@@ -848,7 +848,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jusorok (주소록",
       "profile_url": "https://www.instagram.com/jusorok_korea/",
       "video_count": 1,
-      "top_industry": "F&B",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40jusorok_korea_DdBr6LZqkFd/shot_01_mid.jpg",
       "video_ids": [
         "IG_@jusorok_korea_DdBr6LZqkFd"
@@ -859,7 +859,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Arian Ballate",
       "profile_url": "https://www.instagram.com/arianballate/",
       "video_count": 1,
-      "top_industry": "Thời trang",
+      "top_industry": "Thời Trang & Phụ Kiện",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40arianballate_DdRe4-xpHs2/shot_01_mid.jpg",
       "video_ids": [
         "IG_@arianballate_DdRe4-xpHs2"
@@ -870,7 +870,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Karen Lee",
       "profile_url": "https://www.instagram.com/kawoon.lee/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Tâm Lý & Phát Triển Bản Thân",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/shot_01_mid.jpg",
       "video_ids": [
         "IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency"
@@ -881,7 +881,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Giovanna Mercante",
       "profile_url": "https://www.instagram.com/mercantegi/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Sáng Tạo Nội Dung & Thương Hiệu Cá Nhân",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho/shot_01_mid.jpg",
       "video_ids": [
         "IG_@mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho"
@@ -892,7 +892,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Анастасия Турапина (Anastasiia Turapina)",
       "profile_url": "https://www.instagram.com/turapinaanastasiia/",
       "video_count": 1,
-      "top_industry": "Thời trang",
+      "top_industry": "Thời Trang & Phong Cách Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_mid.jpg",
       "video_ids": [
         "IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount"
@@ -903,7 +903,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Vic Gaibar",
       "profile_url": "https://www.instagram.com/vicgaibar/",
       "video_count": 1,
-      "top_industry": "Thời trang",
+      "top_industry": "Thời Trang & Phụ Kiện",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40vicgaibar_DaGGMTdtawm_Cannes_Street_Fit_Check_Tripod_OOTD/shot_01_mid.jpg",
       "video_ids": [
         "IG_@vicgaibar_DaGGMTdtawm_Cannes_Street_Fit_Check_Tripod_OOTD"
@@ -914,7 +914,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hannya Tattoos",
       "profile_url": "https://www.instagram.com/hannya.tattoos/",
       "video_count": 1,
-      "top_industry": "Làm đẹp",
+      "top_industry": "Làm Đẹp & Spa / Y Tế",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_01_mid.jpg",
       "video_ids": [
         "IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey"
@@ -925,7 +925,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Celina (celfstudies)",
       "profile_url": "https://www.instagram.com/celfstudies/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Thương Hiệu Cá Nhân & Đời Sống / Sáng Tạo",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40celfstudies_DdN_aljAIY0_Day_In_My_Life_SF_Speed_Transitions/shot_01_mid.jpg",
       "video_ids": [
         "IG_@celfstudies_DdN_aljAIY0_Day_In_My_Life_SF_Speed_Transitions"
@@ -936,7 +936,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hanoi Liebe | Wo Hanoi auf Deutsch trifft",
       "profile_url": "https://www.instagram.com/hanoi.liebe/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Làm Đẹp & Spa / Y Tế",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha/shot_01_mid.jpg",
       "video_ids": [
         "IG_@hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha"
@@ -947,7 +947,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Vietnam Express Tour Hanoi",
       "profile_url": "https://www.instagram.com/vnexpress_hanoi/",
       "video_count": 1,
-      "top_industry": "Du lịch",
+      "top_industry": "Du Lịch, Khách Sạn & Khám Phá Địa Phương",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi/shot_01_mid.jpg",
       "video_ids": [
         "IG_@vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi"
@@ -958,7 +958,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "UTS International Students",
       "profile_url": "https://www.instagram.com/utsint/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Giáo Dục & Tuyển Sinh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour/shot_01_mid.jpg",
       "video_ids": [
         "IG_@utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour"
@@ -969,7 +969,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Isaac | UGC Creator",
       "profile_url": "https://www.instagram.com/the.isaacelguera/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay & Dựng Video",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40the.isaacelguera_DdNKlIqPagO_Kien_Truc_Chuoi_Canh_Sequence/shot_01_mid.jpg",
       "video_ids": [
         "IG_@the.isaacelguera_DdNKlIqPagO_Kien_Truc_Chuoi_Canh_Sequence"
@@ -980,7 +980,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hair Positive (House of Hair)",
       "profile_url": "https://www.instagram.com/hairpositiveofficial/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Làm Đẹp & Spa / Y Tế (Salon Tóc)",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_01_mid.jpg",
       "video_ids": [
         "IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway"
@@ -991,7 +991,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "MoodMe Saigon",
       "profile_url": "https://www.instagram.com/moodme.sg/",
       "video_count": 1,
-      "top_industry": "Thời trang",
+      "top_industry": "Thời Trang & Phụ Kiện / Quà Tặng",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40moodme.sg_DdL904CMnq3_Slow_Living_Scent_Giftspace/shot_01_mid.jpg",
       "video_ids": [
         "IG_@moodme.sg_DdL904CMnq3_Slow_Living_Scent_Giftspace"
@@ -1002,7 +1002,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "jassminechi",
       "profile_url": "https://www.instagram.com/jassminechi/",
       "video_count": 1,
-      "top_industry": "F&B",
+      "top_industry": "Ẩm Thực & F&B / Đồ Uống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_01_mid.jpg",
       "video_ids": [
         "IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide"
@@ -1013,7 +1013,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "보라 (Bora)",
       "profile_url": "https://www.instagram.com/lee.rabo/",
       "video_count": 1,
-      "top_industry": "Xây kênh",
+      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40lee.rabo_Dc3ifsHTIhL_Introverted_Homebody_Freelancer_Daily_Vlog/shot_01_mid.jpg",
       "video_ids": [
         "IG_@lee.rabo_Dc3ifsHTIhL_Introverted_Homebody_Freelancer_Daily_Vlog"
@@ -1024,7 +1024,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "NAOHASA (@naohasa)",
       "profile_url": "https://www.instagram.com/naohasa/",
       "video_count": 1,
-      "top_industry": "Thời trang",
+      "top_industry": "Thời Trang & Phụ Kiện",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40naohasa_DdGp4XftvIn_5_Outfits_Match_Cut_Walk/shot_01_mid.jpg",
       "video_ids": [
         "IG_@naohasa_DdGp4XftvIn_5_Outfits_Match_Cut_Walk"
@@ -1035,7 +1035,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Sanjogchopra",
       "profile_url": "https://www.instagram.com/sanjogchopra/",
       "video_count": 1,
-      "top_industry": "Thể thao",
+      "top_industry": "Unknown",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_01_mid.jpg",
       "video_ids": [
         "IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation"
@@ -1046,7 +1046,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Lizzypalios",
       "profile_url": "https://www.instagram.com/lizzypalios/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Unknown",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40lizzypalios_DdHMOB0xfd1_Content_Creation_Process/shot_01_mid.jpg",
       "video_ids": [
         "IG_@lizzypalios_DdHMOB0xfd1_Content_Creation_Process"
@@ -1057,7 +1057,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Treechurchlogan",
       "profile_url": "https://www.instagram.com/treechurchlogan/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Unknown",
       "sample_thumb": "https://media.fedu.vn/images//shot_01_mid.jpg",
       "video_ids": [
         ""
@@ -1068,7 +1068,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Tattebakery",
       "profile_url": "https://www.instagram.com/tattebakery/",
       "video_count": 1,
-      "top_industry": "F&B",
+      "top_industry": "Unknown",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC/shot_01_mid.jpg",
       "video_ids": [
         "IG_@tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC"
@@ -1079,7 +1079,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "오새봄 / Oh Sae Bom",
       "profile_url": "https://www.instagram.com/saebomoh/",
       "video_count": 1,
-      "top_industry": "Thời trang",
+      "top_industry": "Unknown",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/shot_01_mid.jpg",
       "video_ids": [
         "IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog"
@@ -1090,7 +1090,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Kisho_Men",
       "profile_url": "https://www.instagram.com/kisho_men/",
       "video_count": 1,
-      "top_industry": "Thời trang",
+      "top_industry": "Unknown",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion/shot_01_mid.jpg",
       "video_ids": [
         "IG_@kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion"
@@ -1101,7 +1101,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Korea_Bigmama",
       "profile_url": "https://www.instagram.com/korea_bigmama/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Unknown",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist/shot_01_mid.jpg",
       "video_ids": [
         "IG_@korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist"
@@ -1112,7 +1112,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Quinn Welychka",
       "profile_url": "https://www.instagram.com/quinematic/",
       "video_count": 1,
-      "top_industry": "Thể thao",
+      "top_industry": "Unknown",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40quinematic_DdH6HGNxEYT_Time_To_Go_For_A_Run/shot_01_mid.jpg",
       "video_ids": [
         "IG_@quinematic_DdH6HGNxEYT_Time_To_Go_For_A_Run"
@@ -1123,7 +1123,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Dimas Yudhystira",
       "profile_url": "https://www.instagram.com/dimasyudhystira/",
       "video_count": 1,
-      "top_industry": "Làm đẹp",
+      "top_industry": "Unknown",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/shot_01_mid.jpg",
       "video_ids": [
         "IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut"
@@ -1134,7 +1134,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Kulniyasally",
       "profile_url": "https://www.instagram.com/kulniyasally/",
       "video_count": 1,
-      "top_industry": "F&B",
+      "top_industry": "Unknown",
       "sample_thumb": "https://media.fedu.vn/images//shot_01_mid.jpg",
       "video_ids": [
         ""
@@ -1145,7 +1145,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hsuan_Yunn",
       "profile_url": "https://www.instagram.com/hsuan_yunn/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Unknown",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40hsuan_yunn_DdLsL-cSekL_Outdoor_Fashion_Match_Cut_Gear_Showcase/shot_01_mid.jpg",
       "video_ids": [
         "IG_@hsuan_yunn_DdLsL-cSekL_Outdoor_Fashion_Match_Cut_Gear_Showcase"
@@ -1156,7 +1156,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Bysuncan",
       "profile_url": "https://www.instagram.com/bysuncan/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Unknown",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_01_mid.jpg",
       "video_ids": [
         "IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel"
@@ -1167,7 +1167,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jenny Tsang",
       "profile_url": "https://www.instagram.com/tsangtastic/",
       "video_count": 1,
-      "top_industry": "Thời trang",
+      "top_industry": "Thời Trang & Phụ Kiện",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_01_mid.jpg",
       "video_ids": [
         "IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing"
@@ -1178,7 +1178,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Aidana Adilkassym",
       "profile_url": "https://www.instagram.com/aidana_adilkassym/",
       "video_count": 1,
-      "top_industry": "Thể thao",
+      "top_industry": "Thể Thao & Năng Động",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_01_mid.jpg",
       "video_ids": [
         "IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook"
@@ -1189,7 +1189,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Critos Pro",
       "profile_url": "https://www.instagram.com/critos_pro/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Công Nghệ & Thiết Bị",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/shot_01_mid.jpg",
       "video_ids": [
         "IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency"
@@ -1200,7 +1200,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jamison Lange",
       "profile_url": "https://www.instagram.com/jamison.lange/",
       "video_count": 1,
-      "top_industry": "Thời trang",
+      "top_industry": "Thời Trang & Phụ Kiện",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion/shot_01_mid.jpg",
       "video_ids": [
         "IG_@jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion"
@@ -1211,7 +1211,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Mako Gochashvili",
       "profile_url": "https://www.instagram.com/mako__go/",
       "video_count": 1,
-      "top_industry": "Du lịch",
+      "top_industry": "Du Lịch & Văn Hóa",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40mako__go_DaH7X34NTNX_Palermo_Sicily/shot_01_mid.jpg",
       "video_ids": [
         "IG_@mako__go_DaH7X34NTNX_Palermo_Sicily"
@@ -1222,7 +1222,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Gabe Harris",
       "profile_url": "https://www.instagram.com/watch.gabe/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year/shot_01_mid.jpg",
       "video_ids": [
         "IG_@watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year"
@@ -1233,7 +1233,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Li! Video creator",
       "profile_url": "https://www.instagram.com/hey.lirules/",
       "video_count": 1,
-      "top_industry": "Du lịch",
+      "top_industry": "Du Lịch & Văn Hóa",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/shot_01_mid.jpg",
       "video_ids": [
         "IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions"
@@ -1244,7 +1244,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Alena | Food Filming Tips",
       "profile_url": "https://www.instagram.com/alena.feda/",
       "video_count": 1,
-      "top_industry": "F&B",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch/shot_01_mid.jpg",
       "video_ids": [
         "IG_@alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch"
@@ -1255,7 +1255,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ulanzi Global",
       "profile_url": "https://www.instagram.com/ulanzi.global/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Công Nghệ & Thiết Bị",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light/shot_01_mid.jpg",
       "video_ids": [
         "IG_@ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light"
@@ -1266,7 +1266,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "INBEX Official (Indonesia)",
       "profile_url": "https://www.instagram.com/inbex.id/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Công Nghệ & Thiết Bị",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide/shot_01_mid.jpg",
       "video_ids": [
         "IG_@inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide"
@@ -1277,7 +1277,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "M U B E E N",
       "profile_url": "https://www.instagram.com/_mubeenart/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Công Nghệ & Phụ Kiện Máy Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_01_mid.jpg",
       "video_ids": [
         "IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01"
@@ -1288,7 +1288,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "ALEX BOISSET",
       "profile_url": "https://www.instagram.com/alexboissetgrowth/",
       "video_count": 1,
-      "top_industry": "Xây kênh",
+      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes/shot_01_mid.jpg",
       "video_ids": [
         "IG_@alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes"
@@ -1299,7 +1299,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "카페순례자, 승현 (Cafe Pilgrim)",
       "profile_url": "https://www.instagram.com/cafe.pilgrim/",
       "video_count": 1,
-      "top_industry": "F&B",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro/shot_01_mid.jpg",
       "video_ids": [
         "IG_@cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro"
@@ -1310,7 +1310,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Nico Rauchenwald (smokey®)",
       "profile_url": "https://www.instagram.com/nicorauchenwald/",
       "video_count": 1,
-      "top_industry": "Thể thao",
+      "top_industry": "Thể Thao & Năng Động",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_01_mid.jpg",
       "video_ids": [
         "IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life"
@@ -1321,7 +1321,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "이태민 (Lee Tae-min)",
       "profile_url": "https://www.instagram.com/etaemin/",
       "video_count": 1,
-      "top_industry": "Thể thao",
+      "top_industry": "Thể Thao & Năng Động",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40etaemin_DcgN1bsKUmi_Transition_Into_Running_Mode/shot_01_mid.jpg",
       "video_ids": [
         "IG_@etaemin_DcgN1bsKUmi_Transition_Into_Running_Mode"
@@ -1332,7 +1332,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jesús Ropero",
       "profile_url": "https://www.instagram.com/jesussropero/",
       "video_count": 1,
-      "top_industry": "Thời trang",
+      "top_industry": "Thời Trang & Phụ Kiện",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever/shot_01_mid.jpg",
       "video_ids": [
         "IG_@jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever"
@@ -1343,7 +1343,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Wowshoebwow",
       "profile_url": "https://www.instagram.com/wowshoebwow/",
       "video_count": 1,
-      "top_industry": "Du lịch",
+      "top_industry": "Du Lịch & Văn Hóa",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar/shot_01_mid.jpg",
       "video_ids": [
         "IG_@wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar"
@@ -1354,7 +1354,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Gogosapu",
       "profile_url": "https://www.instagram.com/gogosapu/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story/shot_01_mid.jpg",
       "video_ids": [
         "IG_@gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story"
@@ -1365,7 +1365,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jackwebstter",
       "profile_url": "https://www.instagram.com/jackwebstter/",
       "video_count": 1,
-      "top_industry": "Xây kênh",
+      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro/shot_01_mid.jpg",
       "video_ids": [
         "IG_@jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro"
@@ -1376,7 +1376,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Srdtrv",
       "profile_url": "https://www.instagram.com/srdtrv/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery/shot_01_mid.jpg",
       "video_ids": [
         "IG_@srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery"
@@ -1387,7 +1387,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Withgeorgy",
       "profile_url": "https://www.instagram.com/withgeorgy/",
       "video_count": 1,
-      "top_industry": "Du lịch",
+      "top_industry": "Du Lịch & Văn Hóa",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery/shot_01_mid.jpg",
       "video_ids": [
         "IG_@withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery"
@@ -1398,7 +1398,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Bewoom_",
       "profile_url": "https://www.instagram.com/bewoom_/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity/shot_01_mid.jpg",
       "video_ids": [
         "IG_@bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity"
@@ -1409,7 +1409,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Onethebaha",
       "profile_url": "https://www.instagram.com/onethebaha/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial/shot_01_mid.jpg",
       "video_ids": [
         "IG_@onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial"
@@ -1420,7 +1420,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Brandon.Dtd",
       "profile_url": "https://www.instagram.com/brandon.dtd/",
       "video_count": 1,
-      "top_industry": "Thể thao",
+      "top_industry": "Thể Thao & Năng Động",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession/shot_01_mid.jpg",
       "video_ids": [
         "IG_@brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession"
@@ -1431,7 +1431,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Photoknack.In",
       "profile_url": "https://www.instagram.com/photoknack.in/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective/shot_01_mid.jpg",
       "video_ids": [
         "IG_@photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective"
@@ -1442,7 +1442,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Nana_Icroom",
       "profile_url": "https://www.instagram.com/nana_icroom/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40nana_icroom_Db-jmp6TXNT_5_Japanese_Vlog_Compositions/shot_01_mid.jpg",
       "video_ids": [
         "IG_@nana_icroom_Db-jmp6TXNT_5_Japanese_Vlog_Compositions"
@@ -1453,7 +1453,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Lacapturevisuals",
       "profile_url": "https://www.instagram.com/lacapturevisuals/",
       "video_count": 1,
-      "top_industry": "F&B",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery/shot_01_mid.jpg",
       "video_ids": [
         "IG_@lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery"
@@ -1464,7 +1464,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Kortafilms",
       "profile_url": "https://www.instagram.com/kortafilms/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40kortafilms_DcdthwaTM3J_Camera_Angles_Mastery/shot_01_mid.jpg",
       "video_ids": [
         "IG_@kortafilms_DcdthwaTM3J_Camera_Angles_Mastery"
@@ -1475,7 +1475,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Firewood_Klcc",
       "profile_url": "https://www.instagram.com/firewood_klcc/",
       "video_count": 1,
-      "top_industry": "F&B",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining/shot_01_mid.jpg",
       "video_ids": [
         "IG_@firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining"
@@ -1486,7 +1486,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "The.Vantage.Point",
       "profile_url": "https://www.instagram.com/the.vantage.point/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light/shot_01_mid.jpg",
       "video_ids": [
         "IG_@the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light"
@@ -1497,7 +1497,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jsnhow",
       "profile_url": "https://www.instagram.com/jsnhow/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Công Nghệ & Thiết Bị",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40jsnhow_Dcz7nniBEFe_Unwinding/shot_01_mid.jpg",
       "video_ids": [
         "IG_@jsnhow_Dcz7nniBEFe_Unwinding"
@@ -1508,7 +1508,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Sajad_Machu",
       "profile_url": "https://www.instagram.com/sajad_machu/",
       "video_count": 1,
-      "top_industry": "Xây kênh",
+      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40sajad_machu_DcBjIwPMMfa_Creative_Block_Loop/shot_01_mid.jpg",
       "video_ids": [
         "IG_@sajad_machu_DcBjIwPMMfa_Creative_Block_Loop"
@@ -1519,7 +1519,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Slaohuairen",
       "profile_url": "https://www.instagram.com/slaohuairen/",
       "video_count": 1,
-      "top_industry": "Thời trang",
+      "top_industry": "Thời Trang & Phụ Kiện",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40slaohuairen_DcLblxOy3tN_A_young_girl_in_linen/shot_01_mid.jpg",
       "video_ids": [
         "IG_@slaohuairen_DcLblxOy3tN_A_young_girl_in_linen"
@@ -1530,7 +1530,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "岳 🍜 GAKU",
       "profile_url": "https://www.instagram.com/gakuyen/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40gakuyen_Dc0MQfeEwp4_Carousel_Analysis/slide_01_mid.jpg",
       "video_ids": [
         "IG_@gakuyen_Dc0MQfeEwp4_Carousel_Analysis"
@@ -1541,7 +1541,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Kim Kyung-sik",
       "profile_url": "https://www.instagram.com/kyung6film/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_01_mid.jpg",
       "video_ids": [
         "IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai"
@@ -1552,7 +1552,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Omgadrian",
       "profile_url": "https://www.instagram.com/omgadrian/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_01_mid.jpg",
       "video_ids": [
         "IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula"
@@ -1563,7 +1563,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Andrei_Kostromskikh",
       "profile_url": "https://www.instagram.com/Andrei_Kostromskikh/",
       "video_count": 1,
-      "top_industry": "Bố cục",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis/slide_01_mid.jpg",
       "video_ids": [
         "IG_@Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis"
@@ -1574,7 +1574,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Thomasmathewt2",
       "profile_url": "https://www.instagram.com/thomasmathewt2/",
       "video_count": 1,
-      "top_industry": "F&B",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots/shot_01_mid.jpg",
       "video_ids": [
         "IG_@thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots"
@@ -1585,7 +1585,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Little Ruby's Cafe",
       "profile_url": "https://www.instagram.com/rubyscafe/",
       "video_count": 1,
-      "top_industry": "F&B",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40rubyscafe_Db-ylimPqMu_Summer_in_the_Village/shot_01_mid.jpg",
       "video_ids": [
         "IG_@rubyscafe_Db-ylimPqMu_Summer_in_the_Village"
@@ -1596,7 +1596,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ethan Barber",
       "profile_url": "https://www.instagram.com/ethanbarber.co/",
       "video_count": 1,
-      "top_industry": "F&B",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC/shot_01_mid.jpg",
       "video_ids": [
         "IG_@ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC"
@@ -1607,7 +1607,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ethan",
       "profile_url": "https://www.instagram.com/chowyhh/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_01_mid.jpg",
       "video_ids": [
         "IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London"
@@ -1618,7 +1618,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Valenti | content creator",
       "profile_url": "https://www.instagram.com/valenti_k41/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Công Nghệ & Thiết Bị",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40valenti_k41_DcL1W34I6lz_DJI_Mic_3_ASMR/shot_01_mid.jpg",
       "video_ids": [
         "IG_@valenti_k41_DcL1W34I6lz_DJI_Mic_3_ASMR"
@@ -1629,7 +1629,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Colecoppolino",
       "profile_url": "https://www.instagram.com/colecoppolino/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
+      "top_industry": "Công Nghệ & Thiết Bị",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40colecoppolino_DcJiRCrTlG1/shot_01_mid.jpg",
       "video_ids": [
         "IG_@colecoppolino_DcJiRCrTlG1"
@@ -1640,7 +1640,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Willwfit",
       "profile_url": "https://www.instagram.com/willwfit/",
       "video_count": 1,
-      "top_industry": "Thể thao",
+      "top_industry": "Thể Thao & Năng Động",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40willwfit_DbRak0lsesY_The_Goal_Is_Simple/shot_01_mid.jpg",
       "video_ids": [
         "IG_@willwfit_DbRak0lsesY_The_Goal_Is_Simple"
@@ -1651,7 +1651,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Iamlukeluquire",
       "profile_url": "https://www.instagram.com/iamlukeluquire/",
       "video_count": 1,
-      "top_industry": "Thời trang",
+      "top_industry": "Thời Trang & Phụ Kiện",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine/shot_01_mid.jpg",
       "video_ids": [
         "IG_@iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine"
@@ -1662,7 +1662,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Lifeofriza",
       "profile_url": "https://www.instagram.com/lifeofriza/",
       "video_count": 1,
-      "top_industry": "Xây kênh",
+      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva/shot_01_mid.jpg",
       "video_ids": [
         "IG_@lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva"
@@ -1673,7 +1673,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Samuel Aitken",
       "profile_url": "https://www.instagram.com/samuelaitken_/",
       "video_count": 1,
-      "top_industry": "Xây kênh",
+      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
       "sample_thumb": "https://media.fedu.vn/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_001_b0c92ce2.jpg",
       "video_ids": [
         "IG_@samuelaitken__Da0eP_msVrm_Aesthetic_Routine"
@@ -1684,7 +1684,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jason Vargas",
       "profile_url": "https://www.instagram.com/byjxson/",
       "video_count": 1,
-      "top_industry": "Xây kênh",
+      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
       "sample_thumb": "https://media.fedu.vn/images/Project_100_Day_01_-_%40byjxson/img_002_311c68c6.jpg",
       "video_ids": [
         "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01"
@@ -1695,7 +1695,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Intothethailand",
       "profile_url": "https://www.instagram.com/intothethailand/",
       "video_count": 1,
-      "top_industry": "Du lịch",
+      "top_industry": "Du Lịch & Văn Hóa",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life/shot_01_mid.jpg",
       "video_ids": [
         "IG_@intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life"
@@ -1706,7 +1706,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Andrei Kostromskikh",
       "profile_url": "https://www.instagram.com/kosnio/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis/slide_01_mid.jpg",
       "video_ids": [
         "IG_@Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis"
@@ -1717,7 +1717,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Bryan Hynes",
       "profile_url": "https://www.instagram.com/bryanhynes/",
       "video_count": 1,
-      "top_industry": "Xây kênh",
+      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
       "sample_thumb": "https://media.fedu.vn/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_080_ae283717.jpg",
       "video_ids": [
         "IG_@bryanhynes_DacaMHwzEm3_Visual_Sequence"
@@ -1728,7 +1728,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ken Shoji - Tokyo Videographer",
       "profile_url": "https://www.instagram.com/kenshoji.visuals/",
       "video_count": 1,
-      "top_industry": "F&B",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/The_Art_of_Static_Shot_-_%40kenshoji.visuals/img_002_66f52422.jpg",
       "video_ids": [
         "IG_@kenshoji.visuals_DZOzwweTc5a_The_Art_of_Static_Shot"
@@ -1749,13 +1749,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -1817,13 +1818,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -1884,13 +1886,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -1952,13 +1955,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2020,13 +2024,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ugc",
-        "name": "UGC",
-        "en_name": "UGC & Ads",
-        "icon": "📱",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "ugc",
+          "name": "UGC",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2088,13 +2093,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2157,13 +2163,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2224,13 +2231,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2292,13 +2300,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2360,13 +2369,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2427,13 +2437,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2493,13 +2504,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2561,13 +2573,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2630,13 +2643,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2699,13 +2713,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2766,13 +2781,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2830,13 +2846,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2899,13 +2916,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời trang",
+          "icon": "👔"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2970,13 +2988,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Xây kênh",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3040,13 +3059,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3111,13 +3131,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Bố cục",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3182,13 +3203,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Xây kênh",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3253,13 +3275,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời trang",
+          "icon": "👔"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3323,13 +3346,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3392,13 +3416,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3464,13 +3489,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3530,13 +3556,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3597,13 +3624,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian / Nội Thất",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -3667,13 +3695,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -3737,13 +3766,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "doi-thuong",
+          "name": "Đời Thường & Chữa Lành",
+          "icon": "🌿"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -3807,13 +3837,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Lập Trình",
+          "icon": "💻"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -3877,13 +3908,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian / Nội Thất",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -3947,13 +3979,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du lịch",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -3961,8 +3994,13 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Quảng bá du lịch địa phương Nhật Bản với bảng màu điện ảnh đậm chất hoài niệm dù thời tiết âm u",
+      "purpose": "VLog du lịch trải nghiệm mùa hè Nagano & Gifu trong ngày mưa tĩnh mịch",
       "tech_tags": [
+        "VLog",
+        "Thiên Nhiên",
+        "Chỉn Chu",
+        "Du lịch",
+        "Thưởng thức",
         "Cinematic Mood Weather",
         "Foreground Plant Layering",
         "Slow Push-In",
@@ -4017,13 +4055,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Bố cục",
+          "icon": "📐"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4031,8 +4070,11 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Video hướng dẫn thực chiến (Educational Tutorial) về mẹo bố cục khung hình điện ảnh dễ áp dụng",
+      "purpose": "Mẹo hướng dẫn 4 quy tắc bố cục khung hình du lịch trực quan",
       "tech_tags": [
+        "Nói Trực Diện",
+        "Bố cục",
+        "Mẹo",
         "Composition Rule of Thirds",
         "Leading Lines",
         "Foreground Depth Hack",
@@ -4087,13 +4129,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Xây kênh",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4101,8 +4144,11 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Kịch bản cảnh tỉnh cho các nhà sáng tạo nội dung mới: Không cần cố gắng hoàn hảo hay dạy người khác cách làm, chỉ cần bắt tay vào thực hiện trong một khoảng thời gian nhất định.",
+      "purpose": "Tạo động lực cho creator mới: Cứ làm đi, sai và sửa liên tục thay vì dạy đời",
       "tech_tags": [
+        "Nói Trực Diện",
+        "Xây kênh",
+        "Tạo động lực",
         "Contrarian Hook",
         "Talking Head Confidence",
         "Kinetic Subtitles",
@@ -4151,19 +4197,20 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Mọi cú máy chuyển động đều phải có lý do cảm xúc: Muốn khán giả chú ý vào bí mật hay nội tâm của nhân vật, hãy đẩy camera chậm dần về phía họ.",
       "key_tech": "Kỹ Thuật Quay Dựng • Dolly-In Push Movement • Emotional Camera Language • Studio Key Lighting • Visual Proof Demonstration",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Nói Trực Diện",
-        "en_name": "Talking Head",
-        "icon": "🗣️",
-        "badge_color": "blue"
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Bố cục",
+          "icon": "📐"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4171,8 +4218,12 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Giải thích tâm lý học thị giác đằng sau cú máy Dolly-in đẩy sâu vào nội tâm nhân vật",
+      "purpose": "Mẹo minh họa trực quan kỹ thuật đẩy camera Dolly-in không thoại",
       "tech_tags": [
+        "Minh Họa Mẹo",
+        "Chỉn Chu",
+        "Bố cục",
+        "Mẹo",
         "Dolly-In Push Movement",
         "Emotional Camera Language",
         "Studio Key Lighting",
@@ -4227,13 +4278,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "F&B",
+          "icon": "☕"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4241,8 +4293,12 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Thể hiện phong cách thời trang đa dạng kết hợp nhịp điệu pha cà phê (Coffee Brewing) mượt mà qua kỹ thuật Match Cut.",
+      "purpose": "VLog đời sống Barista pha cà phê kết hợp chuyển cảnh đổi outfit dạo phố",
       "tech_tags": [
+        "Match Cut Barista",
+        "Chuyển Cảnh",
+        "F&B",
+        "VLog",
         "Match Cut Transition",
         "Outfit Change",
         "Coffee Brewing",
@@ -4297,13 +4353,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời trang",
+          "icon": "👔"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4311,15 +4368,19 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌐",
         "badge_color": "sky"
       },
-      "purpose": "Mẫu video UGC thương mại thời trang kết hợp định dạng Challenge (Thử thách ngân sách) kích thích mua sắm",
+      "purpose": "Chốt đơn quần áo thu đông qua định dạng thử thách ngân sách dưới €150",
       "tech_tags": [
+        "Chuyển cảnh Level 2",
+        "Chuyển Cảnh",
+        "Thời trang",
+        "Chốt đơn",
         "Budget Challenge Hook",
         "Snap Outfit Match Cut",
         "Upbeat Pacing",
         "Zalando Commercial Collaboration",
         "Lookbook Showcase"
       ],
-      "transition_level": null,
+      "transition_level": "Chuyển cảnh Level 2",
       "is_ad_bot": false,
       "fedu_optimization": {
         "key_optimization_point": "⚡ Bán hàng thời trang hiệu quả nhất là bọc trong một thử thách có giới hạn (tiền bạc hoặc thời gian): Vừa tạo tính giải trí, vừa xóa tan rào cản giá đắt trong đầu khách.",
@@ -4367,13 +4428,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng",
+          "icon": "🎥"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4437,13 +4499,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4507,13 +4570,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "ugc",
-        "name": "UGC",
-        "en_name": "UGC & Ads",
-        "icon": "📱",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "ugc",
+          "name": "UGC & Quảng Cáo",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4577,13 +4641,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng",
+          "icon": "🎥"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4647,13 +4712,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng",
+          "icon": "🎥"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4717,13 +4783,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng",
+          "icon": "🎥"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4787,13 +4854,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4857,13 +4925,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời Trang & Phụ Kiện",
+          "icon": "👔"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4927,13 +4996,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời Trang & Phụ Kiện",
+          "icon": "👔"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4997,13 +5067,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ugc",
-        "name": "UGC",
-        "en_name": "UGC & Ads",
-        "icon": "📱",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -5060,13 +5131,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ugc",
-        "name": "UGC",
-        "en_name": "UGC & Ads",
-        "icon": "📱",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -5123,13 +5195,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "phat-trien-ban-than",
+          "name": "Tâm Lý & Phát Triển Bản Thân",
+          "icon": "🧘"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5192,13 +5265,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "sang-tao-noi-dung",
+          "name": "Sáng Tạo Nội Dung & Thương Hiệu Cá Nhân",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "latin_brazil",
         "name": "Brazil",
@@ -5266,13 +5340,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời Trang & Phong Cách Sống",
+          "icon": "✨"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "russia",
         "name": "Nga",
@@ -5338,13 +5413,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời Trang & Phụ Kiện",
+          "icon": "👗"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5410,13 +5486,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [
+        {
+          "id": "spa-lam-dep",
+          "name": "Làm Đẹp & Spa / Y Tế",
+          "icon": "💆"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -5477,13 +5554,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu-ca-nhan",
+          "name": "Thương Hiệu Cá Nhân & Đời Sống / Sáng Tạo",
+          "icon": "💡"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us",
         "name": "Hoa Kỳ",
@@ -5543,13 +5621,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "lam-dep",
+          "name": "Làm Đẹp & Spa / Y Tế",
+          "icon": "💆"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vn",
         "name": "Việt Nam",
@@ -5611,13 +5690,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du Lịch, Khách Sạn & Khám Phá Địa Phương",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vn",
         "name": "Việt Nam (Hà Nội)",
@@ -5680,13 +5760,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🚶",
         "badge_color": "emerald"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "giao-duc",
+          "name": "Giáo Dục & Tuyển Sinh",
+          "icon": "🎓"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "au",
         "name": "Úc",
@@ -5749,13 +5830,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay & Dựng Video",
+          "icon": "🎥"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us",
         "name": "Hoa Kỳ",
@@ -5814,13 +5896,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🚶",
         "badge_color": "emerald"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "lam-dep",
+          "name": "Làm Đẹp & Spa / Y Tế (Salon Tóc)",
+          "icon": "💆"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5882,13 +5965,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời Trang & Phụ Kiện / Quà Tặng",
+          "icon": "👔"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vn",
         "name": "Việt Nam",
@@ -5947,13 +6031,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B / Đồ Uống",
+          "icon": "☕"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia",
         "name": "Đông Á (Thượng Hải, Trung Quốc)",
@@ -6017,13 +6102,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay-dung",
+          "name": "Kỹ Thuật Quay Dựng & Phụ Kiện Solo Filmmaking",
+          "icon": "🎬"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "kr",
         "name": "Hàn Quốc",
@@ -6082,13 +6168,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "✨"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -6154,13 +6241,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời Trang & Phụ Kiện",
+          "icon": "👔"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "russia",
         "name": "Nga / Đông Âu",
@@ -6221,13 +6309,8 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6282,13 +6365,8 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6343,13 +6421,8 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6404,13 +6477,8 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6465,13 +6533,8 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -6526,13 +6589,8 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6587,13 +6645,8 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -6648,13 +6701,8 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6709,13 +6757,8 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6770,13 +6813,8 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6831,13 +6869,8 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6892,13 +6925,8 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6953,13 +6981,8 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7014,13 +7037,8 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7075,13 +7093,8 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7136,13 +7149,16 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ugc",
-        "name": "UGC",
-        "en_name": "UGC & Ads",
-        "icon": "📱",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "ugc",
+          "name": "UGC",
+          "en_name": "UGC & Ads",
+          "icon": "📱",
+          "badge_color": "amber"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -7207,13 +7223,16 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ugc",
-        "name": "UGC",
-        "en_name": "UGC & Ads",
-        "icon": "📱",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "ugc",
+          "name": "UGC",
+          "en_name": "UGC & Ads",
+          "icon": "📱",
+          "badge_color": "amber"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -7278,13 +7297,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời Trang & Phụ Kiện",
+          "icon": "👔"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -7349,13 +7369,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -7419,13 +7440,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [
+        {
+          "id": "the-thao",
+          "name": "Thể Thao & Năng Động",
+          "icon": "🏃"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -7490,13 +7512,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7560,13 +7583,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời Trang & Phụ Kiện",
+          "icon": "👔"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7630,13 +7654,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du Lịch & Văn Hóa",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7701,13 +7726,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "☕"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -7773,13 +7799,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7845,13 +7872,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [
+        {
+          "id": "spa-lam-dep",
+          "name": "Làm Đẹp & Spa / Y Tế",
+          "icon": "💆"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Quốc Tế (Kazakhstan)",
@@ -7918,13 +7946,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7989,13 +8018,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du Lịch & Văn Hóa",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8061,13 +8091,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8133,13 +8164,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "global",
         "name": "Toàn Cầu",
@@ -8204,13 +8236,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "💡"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á (Indonesia)",
@@ -8276,13 +8309,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8348,13 +8382,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Phụ Kiện Máy Ảnh",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "middle_east",
         "name": "Trung Đông / Nam Á",
@@ -8420,13 +8455,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "spain",
         "name": "Tây Ban Nha",
@@ -8493,13 +8529,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -8566,13 +8603,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [
+        {
+          "id": "the-thao",
+          "name": "Thể Thao & Năng Động",
+          "icon": "🏃"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ (Áo)",
@@ -8639,13 +8677,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du Lịch & Văn Hóa",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8711,13 +8750,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [
+        {
+          "id": "the-thao",
+          "name": "Thể Thao & Năng Động",
+          "icon": "🏃"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -8783,13 +8823,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời Trang & Phụ Kiện",
+          "icon": "👔"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ (Tây Ban Nha)",
@@ -8857,13 +8898,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8927,13 +8969,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du Lịch & Văn Hóa",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8997,13 +9040,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9067,13 +9111,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🚶",
         "badge_color": "emerald"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [
+        {
+          "id": "spa-lam-dep",
+          "name": "Làm Đẹp & Spa / Y Tế",
+          "icon": "💆"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9137,13 +9182,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9207,13 +9253,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -9274,13 +9321,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9344,13 +9392,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9414,13 +9463,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du Lịch & Văn Hóa",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9484,13 +9534,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -9554,13 +9605,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9625,13 +9677,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [
+        {
+          "id": "the-thao",
+          "name": "Thể Thao & Năng Động",
+          "icon": "🏃"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9696,13 +9749,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -9766,13 +9820,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -9836,13 +9891,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9906,13 +9962,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9976,13 +10033,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10046,13 +10104,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -10116,13 +10175,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -10187,13 +10247,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -10257,13 +10318,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10324,13 +10386,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -10391,13 +10454,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -10458,13 +10522,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -10528,13 +10593,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -10595,13 +10661,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -10665,13 +10732,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -10735,13 +10803,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời Trang & Phụ Kiện",
+          "icon": "👔"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -10805,13 +10874,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -10875,13 +10945,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -10941,13 +11012,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11008,13 +11080,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -11075,13 +11148,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11145,13 +11219,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11215,13 +11290,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11285,13 +11361,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11355,13 +11432,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11425,13 +11503,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11496,13 +11575,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -11566,13 +11646,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11633,13 +11714,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -11700,13 +11782,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -11770,13 +11853,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11840,13 +11924,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11910,13 +11995,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -11980,13 +12066,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12047,13 +12134,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -12114,13 +12202,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -12181,13 +12270,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -12248,13 +12338,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12319,13 +12410,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -12386,13 +12478,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -12453,13 +12546,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12523,13 +12617,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12593,13 +12688,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -12660,13 +12756,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -12727,13 +12824,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -12798,13 +12896,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -12865,13 +12964,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -12935,13 +13035,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13005,13 +13106,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🚶",
         "badge_color": "emerald"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [
+        {
+          "id": "spa-lam-dep",
+          "name": "Làm Đẹp & Spa / Y Tế",
+          "icon": "💆"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13077,13 +13179,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13147,13 +13250,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -13214,13 +13318,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -13281,13 +13386,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [
+        {
+          "id": "the-thao",
+          "name": "Thể Thao & Năng Động",
+          "icon": "🏃"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13351,13 +13457,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -13418,13 +13525,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời Trang & Phụ Kiện",
+          "icon": "👔"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13488,13 +13596,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13558,13 +13667,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13624,13 +13734,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13691,13 +13802,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -13758,13 +13870,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -13825,13 +13938,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -13892,13 +14006,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13960,13 +14075,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14028,13 +14144,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời Trang & Phụ Kiện",
+          "icon": "👔"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14099,13 +14216,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14166,13 +14284,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14233,13 +14352,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [
+        {
+          "id": "thoi-trang",
+          "name": "Thời Trang & Phụ Kiện",
+          "icon": "👔"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14300,13 +14420,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14370,13 +14491,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14440,13 +14562,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14507,13 +14630,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14578,13 +14702,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du Lịch & Văn Hóa",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14648,13 +14773,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14715,13 +14841,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14782,13 +14909,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14849,13 +14977,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -14916,13 +15045,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14986,13 +15116,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -15056,13 +15187,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -15126,13 +15258,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15196,13 +15329,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du Lịch & Văn Hóa",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -15266,13 +15400,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15337,13 +15472,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15407,13 +15543,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du Lịch & Văn Hóa",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15477,13 +15614,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du Lịch & Văn Hóa",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15547,13 +15685,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du Lịch & Văn Hóa",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15617,13 +15756,14 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du Lịch & Văn Hóa",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",

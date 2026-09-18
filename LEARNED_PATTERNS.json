@@ -5,8 +5,8 @@
   "learner_agent": "Antigravity Active Learner",
   "last_updated": "2026-09-15T10:20:00+07:00",
   "learning_stats": {
-    "total_corrections": 8,
-    "current_alignment_score": 92.0,
+    "total_corrections": 15,
+    "current_alignment_score": 95.5,
     "target_alignment_score": 98.0,
     "confidence_auto_accept_threshold": 85,
     "ambiguity_ask_mentor_threshold": 65
@@ -252,6 +252,125 @@
       "reason_distilled": "Chốt nhãn Chỉn Chu cho kiểu quay thẩm mỹ không gian, mục đích Thị Giác & Thẩm Mỹ thay vì gò ép vào phễu bán hàng lộ liễu.",
       "rule_applied": "RULE_010 (Điện Ảnh -> Chỉn Chu) & Đồng bộ Mục đích Thị Giác & Thẩm Mỹ",
       "learned_at": "2026-09-15T12:08:00+07:00"
+    },
+    {
+      "log_id": "LEARN_20260918_VIDEO_06",
+      "video_id": "IG_@yuto_creator_DdBlAWRO1Hl",
+      "title": "Yuto • Cảnh Sắc Mùa Hè Nagano & Gifu: Nghệ Thuật Quay Phong Cảnh Ngày Mưa",
+      "creator": "@yuto_creator",
+      "ai_predicted": {
+        "industry": "du-lich",
+        "shooting_style": "dien-anh (Chỉn Chu)",
+        "purpose": "Quảng bá du lịch..."
+      },
+      "mentor_corrected": {
+        "industry": "du-lich (Du lịch)",
+        "shooting_style": "dien-anh (Chỉn Chu)",
+        "purpose": "Thưởng thức"
+      },
+      "reason_distilled": "Thống nhất chuẩn từ vựng mới: Kiểu Chỉn Chu, Ngành Du lịch, Mục đích Thưởng thức.",
+      "rule_applied": "RULE_011: Bộ Từ Vựng Thực Chiến Chuẩn Anh Việt 2026",
+      "learned_at": "2026-09-18T11:10:00+07:00"
+    },
+    {
+      "log_id": "LEARN_20260918_VIDEO_06",
+      "video_id": "IG_@yuto_creator_DdBlAWRO1Hl",
+      "title": "Yuto • Cảnh Sắc Mùa Hè Nagano & Gifu Ngày Mưa",
+      "creator": "@yuto_creator",
+      "ai_predicted": {
+        "industry": "du-lich",
+        "shooting_style": "dien-anh",
+        "purpose": "Thưởng thức phong cảnh"
+      },
+      "mentor_corrected": {
+        "industry": "du-lich (Du lịch)",
+        "shooting_style": "dien-anh (Chỉn Chu)",
+        "purpose": "VLog"
+      },
+      "reason_distilled": "Định vị video phong cảnh trải nghiệm cá nhân vào mục đích VLog, giúp học viên hiểu đây là thước phim nhật ký hành trình chỉn chu.",
+      "rule_applied": "Đồng bộ Mục đích VLog cho Du lịch",
+      "learned_at": "2026-09-18T14:58:30+07:00"
+    },
+    {
+      "log_id": "LEARN_20260918_VIDEO_07",
+      "video_id": "IG_@beixin_DdRGd8evPK-",
+      "title": "Beixin • 4 Mẹo Bố Cục Nâng Tầm Video Du Lịch",
+      "creator": "@beixin",
+      "ai_predicted": {
+        "industry": "ky-thuat-quay",
+        "shooting_style": "talking-head",
+        "purpose": "Hướng dẫn thực chiến"
+      },
+      "mentor_corrected": {
+        "industry": "ky-thuat-quay (Bố cục)",
+        "shooting_style": "talking-head (Nói Trực Diện)",
+        "purpose": "Mẹo"
+      },
+      "reason_distilled": "Khẳng định video chia sẻ kỹ thuật canh góc Before/After thuộc ngành Bố cục và mục đích Mẹo.",
+      "rule_applied": "Đồng bộ Ngành Bố Cục & Mục Đích Mẹo",
+      "learned_at": "2026-09-18T15:04:30+07:00"
+    },
+    {
+      "log_id": "LEARN_20260918_VIDEO_08",
+      "video_id": "IG_@layton_video_DdKGq2TMhf4",
+      "title": "Layton • Sự Thật Khắc Nghiệt Khi Làm Creator",
+      "creator": "@layton_video",
+      "ai_predicted": {
+        "industry": "thuong-hieu",
+        "shooting_style": "talking-head",
+        "purpose": "Cảnh tỉnh creator"
+      },
+      "mentor_corrected": {
+        "industry": "thuong-hieu (Xây kênh)",
+        "shooting_style": "talking-head (Nói Trực Diện)",
+        "purpose": "Tạo động lực"
+      },
+      "reason_distilled": "Định vị video cảnh tỉnh, thúc đẩy hành động làm kênh vào mục đích Tạo Động Lực.",
+      "rule_applied": "Đồng bộ Ngành Xây Kênh & Mục Đích Tạo Động Lực",
+      "learned_at": "2026-09-18T15:12:15+07:00"
+    },
+    {
+      "log_id": "LEARN_20260918_VIDEO_09",
+      "video_id": "IG_@kienobifilms_DdPLvUpBwCl",
+      "title": "Kien Nguyen • Cú Máy Dolly-In",
+      "creator": "@kienobifilms",
+      "ai_predicted": {
+        "shooting_style": "Nói Trực Diện"
+      },
+      "mentor_corrected": {
+        "shooting_style": "Chỉn Chu",
+        "industry": "Bố cục",
+        "purpose": "Mẹo"
+      },
+      "reason_distilled": "Video không có người nói trực tiếp hay voice-over, chỉ dùng hình ảnh minh họa mẹo đặt máy -> Xếp vào Chỉn Chu (Minh họa mẹo).",
+      "rule_applied": "Phân biệt Demo Minh Họa Không Thoại vs Nói Trực Diện"
+    },
+    {
+      "log_id": "LEARN_20260918_VIDEO_10",
+      "video_id": "IG_@aki_japan_DaDFH_TSii8",
+      "title": "Aki • Match Cut Barista Cà Phê",
+      "creator": "@aki_japan",
+      "mentor_corrected": {
+        "shooting_style": "Chuyển Cảnh",
+        "industry": "F&B",
+        "purpose": "VLog"
+      },
+      "reason_distilled": "Chuyển cảnh pha chế barista đường phố thuộc ngành F&B và mục đích VLog đời sống.",
+      "rule_applied": "Match Cut Barista = F&B + VLog"
+    },
+    {
+      "log_id": "LEARN_20260918_VIDEO_11",
+      "video_id": "IG_@nathanael.lct_DdRg_ybtlKI",
+      "title": "Nathanael • Thử Thách Phối Đồ Thu Dưới €150",
+      "creator": "@nathanael.lct",
+      "mentor_corrected": {
+        "shooting_style": "Chuyển Cảnh",
+        "industry": "Thời trang",
+        "purpose": "Chốt đơn",
+        "transition_level": "Chuyển cảnh Level 2"
+      },
+      "reason_distilled": "Kích hoạt mỏ neo Chuyển Cảnh Level 2: Đặt máy cố định, hành động cơ thể lặp lại rõ ràng.",
+      "rule_applied": "Mỏ neo Chuyển Cảnh Level 2 (Chuẩn anh Việt)"
     }
   ]
 }

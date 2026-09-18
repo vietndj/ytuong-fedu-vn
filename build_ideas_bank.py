@@ -425,7 +425,7 @@ def get_item_classification(vid_id, code, clean_title, takeaway, key_tech, creat
     master = master_dict.get(vid_id) or master_dict.get(code)
     if master:
         s_id = style_overrides.get(vid_id, master["shooting_style"]["id"])
-        i_id = ind_overrides.get(vid_id, master["industry"]["id"])
+        i_id = ind_overrides.get(vid_id, master.get("industries", [{}])[0].get("id", "ugc"))
         style_obj = next((s for s in SHOOTING_STYLES if s["id"] == s_id), SHOOTING_STYLES[4])
         ind_obj = next((i for i in INDUSTRIES if i["id"] == i_id), INDUSTRIES[8])
         purpose = master.get("purpose", "Showcase thị giác & Thẩm mỹ")
@@ -657,7 +657,7 @@ def build_database():
             is_ad_bot = True
 
         # Video upload từ bot telegram tải quảng cáo (Shopee, Lazada...) -> Xếp vào mục ngành nghề UGC
-        if is_ad_bot or "LAZADA_" in vid_id or "SHOPEE_" in vid_id or (master and master.get("industry", {}).get("id") == "ugc"):
+        if is_ad_bot or "LAZADA_" in vid_id or "SHOPEE_" in vid_id or (master and any(i.get("id") == "ugc" for i in master.get("industries", []))):
             is_ad_bot = True
             ind_obj = next(i for i in INDUSTRIES if i["id"] == "ugc")
 
@@ -676,13 +676,8 @@ def build_database():
                 "icon": style_obj["icon"],
                 "badge_color": style_obj["badge_color"]
             },
-            "industry": {
-                "id": ind_obj["id"],
-                "name": ind_obj["name"],
-                "en_name": ind_obj["en_name"],
-                "icon": ind_obj["icon"],
-                "badge_color": ind_obj["badge_color"]
-            },
+            "industries": master.get("industries", []) if master else [],
+            "x_factors": master.get("x_factors", []) if master else [],
             "country": {
                 "id": country_obj["id"],
                 "name": country_obj["name"],
@@ -724,8 +719,8 @@ def build_database():
     for handle, vids in sorted(creators_dict.items(), key=lambda x: len(x[1]), reverse=True):
         first_vid = vids[0]
         c_meta = first_vid["creator"]
-        ind_counts = Counter(v["industry"]["name"] for v in vids)
-        top_ind = ind_counts.most_common(1)[0][0]
+        ind_counts = Counter(ind["name"] for v in vids for ind in v.get("industries", []))
+        top_ind = ind_counts.most_common(1)[0][0] if ind_counts else "Unknown"
         
         creators_hub.append({
             "handle": handle,
@@ -741,7 +736,7 @@ def build_database():
     
     industry_stats = {}
     for ind in INDUSTRIES:
-        c = sum(1 for x in active_ideas if x["industry"]["id"] == ind["id"])
+        c = sum(1 for x in active_ideas if any(i.get("id") == ind["id"] for i in x.get("industries", [])))
         industry_stats[ind["id"]] = c
 
     shooting_style_stats = {}
