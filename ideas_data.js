@@ -5,8 +5,8 @@
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
   "total_scene_items": 306,
-  "total_unique_ideas": 288,
-  "total_active_ideas": 266,
+  "total_unique_ideas": 290,
+  "total_active_ideas": 268,
   "total_excluded_ideas": 22,
   "total_creators": 191,
   "shooting_styles": [
@@ -80,7 +80,7 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 14,
     "talking-head": 27,
     "storytelling": 23,
-    "dien-anh": 149,
+    "dien-anh": 151,
     "chuyen-canh": 45,
     "theo-nhip-nhac": 0,
     "beat-match-cut-dance": 1
@@ -176,15 +176,15 @@ var FEDU_IDEAS_DATABASE = {
     "cong-nghe": 27,
     "kien-truc": 29,
     "the-thao": 6,
-    "ky-thuat-quay": 55,
-    "ugc": 43
+    "ky-thuat-quay": 56,
+    "ugc": 45
   },
   "x_factors": [
     "Basic classification",
     "Chuyển cảnh cấp 2"
   ],
   "x_factor_stats": {
-    "Basic classification": 39,
+    "Basic classification": 41,
     "Chuyển cảnh cấp 2": 18
   },
   "countries": [
@@ -238,17 +238,17 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 144,
+    "us_eu": 145,
     "korea": 10,
     "india": 6,
     "japan": 10,
-    "vietnam": 14,
+    "vietnam": 15,
     "asia_other": 45
   },
   "transition_stats": {
     "level_1_count": 14,
     "level_2_count": 18,
-    "ad_bot_count": 45
+    "ad_bot_count": 47
   },
   "deleted_ids": [],
   "creators_hub": [
@@ -352,6 +352,22 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@creator",
+      "name": "Hayan Cook",
+      "profile_url": "https://www.instagram.com/creator/",
+      "video_count": 6,
+      "top_industry": "UGC & Ads",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40creator_DdVBqUzj3o5_Video_DdVBqUzj3o5/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5",
+        "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb",
+        "IG_@岳_🍜_GAKU_Dc0MHhTE9z0_Carousel_Analysis",
+        "IG_@𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄_DcgSonjgnkV_Carousel_Analysis",
+        "Bao_Cao_Boi_Canh_Thuc_Chien_R2",
+        "IG_@by.bennnj_DbKauxkoJU_"
+      ]
+    },
+    {
       "handle": "@yegor.sky",
       "name": "Yegor.Sky",
       "profile_url": "https://www.instagram.com/yegor.sky/",
@@ -364,20 +380,6 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City",
         "IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence",
         "IG_@yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing"
-      ]
-    },
-    {
-      "handle": "@creator",
-      "name": "Hayan Cook",
-      "profile_url": "https://www.instagram.com/creator/",
-      "video_count": 4,
-      "top_industry": "F&B",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40creator_DdVBqUzj3o5_Video_DdVBqUzj3o5/shot_01_mid.jpg",
-      "video_ids": [
-        "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5",
-        "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb",
-        "IG_@𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄_DcgSonjgnkV_Carousel_Analysis",
-        "Bao_Cao_Boi_Canh_Thuc_Chien_R2"
       ]
     },
     {
@@ -526,18 +528,6 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
-      "handle": "@treechurchlogan",
-      "name": "@The_Tree_Church_Logan_DcoGfdghNwd_Video_by",
-      "profile_url": "https://www.instagram.com/treechurchlogan/",
-      "video_count": 2,
-      "top_industry": "UGC & Ads",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40The_Tree_Church_Logan_DcoGfdghNwd_Video_by_treechurchlogan/shot_01_mid.jpg",
-      "video_ids": [
-        "IG_@The_Tree_Church_Logan_DcoGfdghNwd_Video_by_treechurchlogan",
-        ""
-      ]
-    },
-    {
       "handle": "@photoknack.in",
       "name": "Neeraj Khurana",
       "profile_url": "https://www.instagram.com/photoknack.in/",
@@ -682,6 +672,18 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@byjxson",
+      "name": "Anh Việt x @byjxson Remake Engine",
+      "profile_url": "https://www.instagram.com/byjxson/",
+      "video_count": 2,
+      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_start.jpg",
+      "video_ids": [
+        "REMAKE_Byjxson_Quang_Cao_Dong_Ho_Bam_Gio",
+        "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01"
+      ]
+    },
+    {
       "handle": "@ju_seobang",
       "name": "Ju Seobang",
       "profile_url": "https://www.instagram.com/ju_seobang/",
@@ -770,6 +772,17 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@treechurchlogan",
+      "name": "@The_Tree_Church_Logan_DcoGfdghNwd_Video_by",
+      "profile_url": "https://www.instagram.com/treechurchlogan/",
+      "video_count": 1,
+      "top_industry": "UGC & Ads",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40The_Tree_Church_Logan_DcoGfdghNwd_Video_by_treechurchlogan/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@The_Tree_Church_Logan_DcoGfdghNwd_Video_by_treechurchlogan"
+      ]
+    },
+    {
       "handle": "@tinanguyen2004_7673468312290037012_Double_Day",
       "name": "@tinanguyen2004_7673468312290037012_Double_Day",
       "profile_url": "https://www.instagram.com/tinanguyen2004_7673468312290037012_Double_Day/",
@@ -793,13 +806,13 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "handle": "@kulniyasally",
-      "name": "Kulniyasally",
+      "name": "@kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food",
       "profile_url": "https://www.instagram.com/kulniyasally/",
       "video_count": 1,
-      "top_industry": "Unknown",
-      "sample_thumb": "https://media.fedu.vn/images//shot_01_mid.jpg",
+      "top_industry": "UGC & Ads",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV/shot_01_mid.jpg",
       "video_ids": [
-        ""
+        "IG_@kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV"
       ]
     },
     {
@@ -2398,17 +2411,6 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
-      "handle": "@byjxson",
-      "name": "Jason Vargas",
-      "profile_url": "https://www.instagram.com/byjxson/",
-      "video_count": 1,
-      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
-      "sample_thumb": "https://media.fedu.vn/images/Project_100_Day_01_-_%40byjxson/img_002_311c68c6.jpg",
-      "video_ids": [
-        "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01"
-      ]
-    },
-    {
       "handle": "@intothethailand",
       "name": "Intothethailand",
       "profile_url": "https://www.instagram.com/intothethailand/",
@@ -3518,20 +3520,27 @@ var FEDU_IDEAS_DATABASE = {
       "is_excluded": false
     },
     {
-      "id": "",
+      "id": "IG_@kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV",
       "shortcode": "DdGRCKwsaaI",
-      "title_vi": "Kamera 0.5x Ultra-Wide Food POV: Phối Hợp Hậu Trường & Thành Phẩm Điện Ảnh",
+      "title_vi": "IG @kulniyasally DdGRCKwsaaI Kamera 05x Behind The Scene Food POV",
       "quick_takeaway": "Báo cáo phân tích đạo diễn chuyên sâu về kỹ thuật quay POV ẩm thực bằng ống kính góc siêu rộng 0.5x của smartphone kết hợp mồi nhử hậu trường Behind-the-scenes (BTS) và cú bùng nổ chuyển cảnh thành phẩm (Result).",
       "key_tech": "Ultra-Wide 0.5x Smartphone POV, Behind-The-Scenes Hook, Rhythm Match Cut, Whip Zoom Transition, Sensory Food Visuals",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
       },
-      "industries": [],
-      "x_factors": [],
+      "industries": [
+        {
+          "id": "ugc",
+          "name": "UGC & Ads"
+        }
+      ],
+      "x_factors": [
+        "Basic classification"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3541,30 +3550,30 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Showcase thị giác & Thẩm mỹ",
       "tech_tags": [
-        "Ultra-Wide 0.5x Smartphone POV, Behind-The-Scenes Hook, Rhythm Match Cut, Whip Zoom Transition, Sensory Food Visuals"
+        "Cinematic"
       ],
       "transition_level": null,
-      "is_ad_bot": false,
+      "is_ad_bot": true,
       "fedu_optimization": {},
       "logic_explanation": "",
       "creator": {
         "raw": "@kulniyasally",
-        "name": "Kulniyasally",
+        "name": "@kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food",
         "handle": "@kulniyasally",
         "profile_url": "https://www.instagram.com/kulniyasally/"
       },
       "ig_url": "https://www.instagram.com/reel/DdGRCKwsaaI/",
       "gdrive_folder": "https://drive.google.com/open?id=1Z2Uovd7AL7uKMnhRpBsTfc6mJ7U9RwSY",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images//shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images//shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV/shot_03_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/DdGRCKwsaaI.mp4",
         "report_url": "reports/IG_@kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV.html",
         "shots_count": 7,
         "duration": "15.33s",
-        "youtube_id": "",
-        "youtube_embed": "",
-        "youtube_url": ""
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
       },
       "complexity": {
         "id": "de",
@@ -4797,7 +4806,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer",
-      "shortcode": "Derossi_DdJs",
+      "shortcode": "DdJsv1AsGwt",
       "title_vi": "IG @Laurent Derossi DdJsv1AsGwt Video by parisexplorer",
       "quick_takeaway": "Bóc tách ngôn ngữ điện ảnh và nghệ thuật thị giác: Cinematic.",
       "key_tech": "Cinematic",
@@ -5199,7 +5208,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@Josh_Diaz_DdJ7S5BJ6H0_Video_by_joshdiazfilms",
-      "shortcode": "Diaz_DdJ7S5B",
+      "shortcode": "DdJ7S5BJ6H0",
       "title_vi": "IG @Josh Diaz DdJ7S5BJ6H0 Video by joshdiazfilms",
       "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 12 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Cinematic",
@@ -8064,7 +8073,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video_by_nemo_ooo",
-      "shortcode": "DclWb98PiK",
+      "shortcode": "DclWb98PiK_V",
       "title_vi": "Trải Nghiệm Triển Lãm Nghệ Thuật Số Arte Museum Busan.",
       "quick_takeaway": "Kết hợp nhịp dồn dập của sóng 3D với nhịp tĩnh gương đối xứng và voice over mộc mạc chia sẻ kinh nghiệm thẻ Busan Pass.",
       "key_tech": "Voice Over • Anamorphic Wave • Góc Nhìn POV • Phản Chiếu Gương Đối Xứng • B-Roll Không Gian Số",
@@ -9162,7 +9171,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis",
-      "shortcode": "Dc0-HLUE60-_Carousel_Analysis",
+      "shortcode": "Dc0-FXlE4kV_Carousel_Analysis",
       "title_vi": "Video by diego51",
       "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 6 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Medium Tracking Shot • Close-Up / Macro Detail Shot",
@@ -12780,62 +12789,6 @@ var FEDU_IDEAS_DATABASE = {
       "is_excluded": false
     },
     {
-      "id": "",
-      "shortcode": "",
-      "title_vi": "Bring A Friend To Church Skit • Đỉnh Cao Hài Hước Nghĩa Đen (Literal Comedy) & Hook 2 Nhịp Kêu Gọi Tham Dự Sự Kiện",
-      "quick_takeaway": "Bóc tách ngôn ngữ điện ảnh và nghệ thuật thị giác: .",
-      "key_tech": "",
-      "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
-      },
-      "industries": [],
-      "x_factors": [],
-      "country": {
-        "id": "us_eu",
-        "name": "Âu Mỹ",
-        "en_name": "US & Europe",
-        "flag": "🇺🇸/🇪🇺",
-        "badge_color": "purple"
-      },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
-      "tech_tags": [
-        "Cinematic"
-      ],
-      "transition_level": null,
-      "is_ad_bot": false,
-      "fedu_optimization": {},
-      "logic_explanation": "",
-      "creator": {
-        "raw": "@treechurchlogan",
-        "name": "Treechurchlogan",
-        "handle": "@treechurchlogan",
-        "profile_url": "https://www.instagram.com/treechurchlogan/"
-      },
-      "ig_url": "https://www.instagram.com/treechurchlogan/",
-      "gdrive_folder": "",
-      "media": {
-        "thumb_hook": "https://media.fedu.vn/images//shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images//shot_03_mid.jpg",
-        "video_url": "",
-        "report_url": "",
-        "shots_count": 0,
-        "duration": "10.0s",
-        "youtube_id": "",
-        "youtube_embed": "",
-        "youtube_url": ""
-      },
-      "complexity": {
-        "id": "de",
-        "label": "🟢 Dễ làm theo (3-8 shots)"
-      },
-      "is_personal": false,
-      "is_excluded": false
-    },
-    {
       "id": "IG_@tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC",
       "shortcode": "DcJM7AWOa",
       "title_vi": "IG @tattebakery DcJM7AWOa   Soundtrack Of Newest Cafe NYC",
@@ -14405,7 +14358,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@Gabe_Harris_Dc3ih_5jlqz_Carousel_Analysis",
-      "shortcode": "Dc3immEILSE_Carousel_Analysis",
+      "shortcode": "Dc3ih_5jlqz_Carousel_Analysis",
       "title_vi": "IG @Gabe Harris Dc3ih 5jlqz Carousel Analysis",
       "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 7 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide",
@@ -17541,6 +17494,69 @@ var FEDU_IDEAS_DATABASE = {
       "is_excluded": false
     },
     {
+      "id": "IG_@岳_🍜_GAKU_Dc0MHhTE9z0_Carousel_Analysis",
+      "shortcode": "Dc0MHhTE9z0_Carousel_Analysis",
+      "title_vi": "IG @岳 🍜 GAKU Dc0MHhTE9z0 Carousel Analysis",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 10 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "key_tech": "Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industries": [
+        {
+          "id": "ugc",
+          "name": "UGC & Ads"
+        }
+      ],
+      "x_factors": [
+        "Basic classification"
+      ],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "tech_tags": [
+        "Cinematic"
+      ],
+      "transition_level": null,
+      "is_ad_bot": true,
+      "fedu_optimization": {},
+      "logic_explanation": "",
+      "creator": {
+        "raw": "@岳_🍜_GAKU",
+        "name": "@GAKU_Dc0MHhTE9z0_Carousel",
+        "handle": "@creator",
+        "profile_url": "https://www.instagram.com/p/Dc0MQfeEwp4/?utm_source=ig_web_copy_link&igsi=NTc4MTIwNjQ2YQ=="
+      },
+      "ig_url": "https://www.instagram.com/p/Dc0MQfeEwp4/?utm_source=ig_web_copy_link&igsi=NTc4MTIwNjQ2YQ==",
+      "gdrive_folder": "https://drive.google.com/open?id=1RQpnn8NAHw1h7Ny-pi4w6wTrJbTvJsmH",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40%E5%B2%B3_%F0%9F%8D%9C_GAKU_Dc0MHhTE9z0_Carousel_Analysis/slide_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40%E5%B2%B3_%F0%9F%8D%9C_GAKU_Dc0MHhTE9z0_Carousel_Analysis/slide_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40%E5%B2%B3_%F0%9F%8D%9C_GAKU_Dc0MHhTE9z0_Carousel_Analysis/slide_01.mp4",
+        "report_url": "reports/IG_@岳_🍜_GAKU_Dc0MHhTE9z0_Carousel_Analysis.html",
+        "shots_count": 10,
+        "duration": "20s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "trung-binh",
+        "label": "🟡 Trung bình (9-18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
       "id": "Practice_Cinematic_Chay_0903_@vietmac",
       "shortcode": "Practice_Cinematic_Chay_0903_@vietmac",
       "title_vi": "Phân Tích Chạy Bộ Thể Thao Đời Thường & Đỉnh Cao Ánh Sáng Ngược (Practice Cinematic Chạy 0903)",
@@ -18110,7 +18126,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis",
-      "shortcode": "DctRykCjcp2_Carousel_Analysis",
+      "shortcode": "DctRlh0jZlj_Carousel_Analysis",
       "title_vi": "Andrei Kostromskikh • Phân Tích Phân Cảnh Carousel Đa Video & Ngôn Ngữ Điện Ảnh",
       "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 8 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Cinematic Lighting, Composition Mastery, Color Grading, Storyboard Rhythm, Carousel Flow",
@@ -18388,7 +18404,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄_DcgSonjgnkV_Carousel_Analysis",
-      "shortcode": "DcgTj56Atlc_Carousel_Analysis",
+      "shortcode": "DcgSonjgnkV_Carousel_Analysis",
       "title_vi": "IG @𝗧𝗵𝗼𝗺𝗮𝘀 𝗠𝗮𝘁𝗵𝗲𝘄 DcgSonjgnkV Carousel Analysis",
       "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide",
@@ -20605,8 +20621,76 @@ var FEDU_IDEAS_DATABASE = {
       "is_excluded": false
     },
     {
-      "id": "IG_@by.bennnj_DbKauxkoJU_Making_beginner_cameras_look_cinematic",
+      "id": "IG_@by.bennnj_DbKauxkoJU_",
       "shortcode": "DbKauxkoJU",
+      "title_vi": "Phân Tích Chi Tiết Video IG_@by.bennnj_DbKauxkoJU_",
+      "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\nHướng dẫn làm chủ quy tắc góc màn trập 180° (1/50s), khóa Manual Kelvin cân bằng trắng, sử dụng kính lọc Black Pro-Mist và bố trí ánh sáng tương phản.",
+      "key_tech": "Cỡ cảnh, động tác máy, nhịp điệu thị giác",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Bóc tách ngôn ngữ thị giác & Bố cục điện ảnh",
+      "tech_tags": [
+        "Cỡ cảnh, động tác máy, nhịp điệu thị giác"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Cỡ cảnh, động tác máy, nhịp điệu thị giác",
+        "practice_focus": "Bài tập bóc tách ngôn ngữ điện ảnh: Phân tích tỷ lệ khung hình, hướng sáng chính (Key Light), chiều sâu trường ảnh và tiết tấu nhịp cắt.",
+        "ig_seeding_hook": "Follow @creator để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
+        "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
+        "transition_level": null
+      },
+      "logic_explanation": "Bóc tách kỹ thuật quay phim, góc máy, ánh sáng và nhịp dựng mẫu mực phục vụ học viên rèn luyện tay nghề.",
+      "creator": {
+        "raw": "@creator",
+        "name": "Creator",
+        "handle": "@creator",
+        "profile_url": "https://www.instagram.com/creator/"
+      },
+      "ig_url": "https://www.instagram.com/creator/",
+      "gdrive_folder": null,
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/Making_Beginner_Cameras_Look_Cinematic_-_%40by.bennnj/img_001_7dd798e3.jpg",
+        "thumb_key": "https://media.fedu.vn/images/Making_Beginner_Cameras_Look_Cinematic_-_%40by.bennnj/img_003_0f92bae8.jpg",
+        "video_url": "",
+        "report_url": "reports/Making_Beginner_Cameras_Look_Cinematic - @by.bennnj.html",
+        "shots_count": 0,
+        "duration": "50s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
+      "id": "IG_@by.bennnj_DbKauxkoJU_Making_beginner_cameras_look_cinematic",
+      "shortcode": "DbKauxkoJU_M",
       "title_vi": "Bí Quyết Biến Máy Ảnh Nhập Môn Trông Như Phim Điện Ảnh (Sony ZV-E10)",
       "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\nHướng dẫn làm chủ quy tắc góc màn trập 180° (1/50s), khóa Manual Kelvin cân bằng trắng, sử dụng kính lọc Black Pro-Mist và bố trí ánh sáng tương phản.",
       "key_tech": "180° Shutter Rule, Manual White Balance, Black Diffusion Mist Filter, Dynamic Range",
@@ -21162,71 +21246,53 @@ var FEDU_IDEAS_DATABASE = {
       "is_excluded": false
     },
     {
-      "id": "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01",
-      "shortcode": "Dal3RFpA5nI",
-      "title_vi": "Project 100 Day 01 • Nghệ Thuật Kể Chuyện Đa Góc Máy Một Ngày Sáng Tạo",
-      "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\n\n\n⚡ 01. Nhịp Dựng Match-Cut &amp; Quán Tính\nSử dụng kỹ thuật cắt nối chuyển động (Momentum Match Cut) và gạt khung bằng vật thể tiền cảnh (Wipe Cut) để nối liền các địa điểm khác n...",
-      "key_tech": "Car Wipe Transition, Momentum Match Cut, POV Immersion, Through-Glass Observer, Target Cart Wheel Cam, In-Cart Reverse Cam, Shoot-Through Shelf, Symmetrical Aisle Leading Lines, 3-Stage Jump Cut, Satisfying Key Foley Hook",
+      "id": "REMAKE_Byjxson_Quang_Cao_Dong_Ho_Bam_Gio",
+      "shortcode": "Dong_Ho_Bam",
+      "title_vi": "Quảng Cáo Đồng Hồ Bấm Giờ: 'Làm Chủ 86.400 Giây' (Ánh Xạ @byjxson)",
+      "quick_takeaway": "Bản đồ ánh xạ bối cảnh thực chiến 15 phân cảnh: Chuyển thể vlog điện ảnh 13.8s của @byjxson sang 6 bối cảnh thực tế tại Times City & Home Studio để quay TVC/Reel quảng cáo đồng hồ bấm giờ Focus Timer Pro.",
+      "key_tech": "Context Mapping 1-to-1, Batch Shooting Checklist, Foreground Object Wipe, Momentum Match Cut, Shoot-Through Foliage, Multi-Tier Pacing",
       "shooting_style": {
-        "id": "storytelling",
-        "name": "Kể Chuyện",
-        "en_name": "Storytelling",
-        "icon": "📖",
-        "badge_color": "amber"
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
       },
-      "industries": [
-        {
-          "id": "thuong-hieu",
-          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
-          "icon": "💼"
-        }
-      ],
-      "x_factors": [
-        "Chuyển cảnh cấp 2"
-      ],
+      "industries": [],
+      "x_factors": [],
       "country": {
-        "id": "us_eu",
-        "name": "Âu Mỹ",
-        "en_name": "US & Europe",
-        "flag": "🇺🇸/🇪🇺",
-        "badge_color": "purple"
+        "id": "vietnam",
+        "name": "Việt Nam",
+        "en_name": "Vietnam",
+        "flag": "🇻🇳",
+        "badge_color": "emerald"
       },
-      "purpose": "Thử thách 100 ngày sáng tạo nội dung kỷ luật",
+      "purpose": "Showcase thị giác & Thẩm mỹ",
       "tech_tags": [
-        "Chuyển cảnh Level 2",
-        "Day 01 Commitment",
-        "Momentum Match Cut",
-        "Multi-angle Creator Day",
-        "Voiceover & A-Roll"
+        "Context Mapping 1-to-1, Batch Shooting Checklist, Foreground Object Wipe, Momentum Match Cut, Shoot-Through Foliage, Multi-Tier Pacing"
       ],
-      "transition_level": "Chuyển cảnh Level 2",
+      "transition_level": null,
       "is_ad_bot": false,
-      "fedu_optimization": {
-        "key_optimization_point": "⚡ Chuyển cảnh Level 2: Đặt máy lên chân máy (tripod), chuyển cảnh bằng hành động cơ thể rõ ràng lặp lại 2 lần",
-        "practice_focus": "Bài tập thực hành trong phòng / bối cảnh tĩnh: Cố định điện thoại trên tripod, thực hiện 1 hành động cơ thể rõ nét (vung tay, ném đồ, dậm chân, đổi áo) lặp lại 2 lần để cắt match cut ở đỉnh quán tính.",
-        "ig_seeding_hook": "Follow @byjxson (Jason Vargas) để thuật toán Instagram liên tục cập nhật các reel biến hình triệu view, match action chuẩn xác và cách kiểm soát nhịp dựng.",
-        "course_industry_mapping": "Thương Hiệu Cá Nhân & Dịch Vụ • Mẫu Biến Hình & Match Action Khóa Học video.fedu.vn",
-        "transition_level": "Chuyển cảnh Level 2"
-      },
-      "logic_explanation": "Byjxson tuyên bố khởi động thử thách Project 100 ngày làm video liên tục, dẫn dắt người xem qua quy trình làm việc trong một ngày của Solo Creator.",
+      "fedu_optimization": {},
+      "logic_explanation": "",
       "creator": {
-        "raw": "@byjxson (Jason Vargas)",
-        "name": "Jason Vargas",
+        "raw": "Anh Việt x @byjxson Remake Engine",
+        "name": "Anh Việt x @byjxson Remake Engine",
         "handle": "@byjxson",
         "profile_url": "https://www.instagram.com/byjxson/"
       },
       "ig_url": "https://www.instagram.com/reel/Dal3RFpA5nI/",
-      "gdrive_folder": "https://drive.google.com/open?id=1PnG2yVaM0eXeHBPw0p1xk-mAPXRKlLC3",
+      "gdrive_folder": "https://drive.google.com/drive/folders/1e6_uF7W2m4R8Z8e8_remake_watch",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Project_100_Day_01_-_%40byjxson/img_002_311c68c6.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Project_100_Day_01_-_%40byjxson/img_006_b30f0d67.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_start.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_end.jpg",
         "video_url": "https://media.fedu.vn/videos/Project%20100%20Day%2001%20-%20%40byjxson.mp4",
-        "report_url": "reports/Project 100 Day 01 - @byjxson.html",
+        "report_url": "reports/Quang_Cao_Dong_Ho_Bam_Gio_Byjxson.html",
         "shots_count": 15,
         "duration": "30s",
-        "youtube_id": null,
-        "youtube_embed": null,
-        "youtube_url": null
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
       },
       "complexity": {
         "id": "trung-binh",
@@ -21567,6 +21633,80 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/Kyoto Slow Life Visual Diaries - @ioana_iftode.html",
         "shots_count": 10,
         "duration": "20s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "trung-binh",
+        "label": "🟡 Trung bình (9-18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
+      "id": "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01",
+      "shortcode": "Dal3RFpA5nI",
+      "title_vi": "Project 100 Day 01 • Nghệ Thuật Kể Chuyện Đa Góc Máy Một Ngày Sáng Tạo",
+      "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\n\n\n⚡ 01. Nhịp Dựng Match-Cut &amp; Quán Tính\nSử dụng kỹ thuật cắt nối chuyển động (Momentum Match Cut) và gạt khung bằng vật thể tiền cảnh (Wipe Cut) để nối liền các địa điểm khác n...",
+      "key_tech": "Car Wipe Transition, Momentum Match Cut, POV Immersion, Through-Glass Observer, Target Cart Wheel Cam, In-Cart Reverse Cam, Shoot-Through Shelf, Symmetrical Aisle Leading Lines, 3-Stage Jump Cut, Satisfying Key Foley Hook",
+      "shooting_style": {
+        "id": "storytelling",
+        "name": "Kể Chuyện",
+        "en_name": "Storytelling",
+        "icon": "📖",
+        "badge_color": "amber"
+      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Thử thách 100 ngày sáng tạo nội dung kỷ luật",
+      "tech_tags": [
+        "Chuyển cảnh Level 2",
+        "Day 01 Commitment",
+        "Momentum Match Cut",
+        "Multi-angle Creator Day",
+        "Voiceover & A-Roll"
+      ],
+      "transition_level": "Chuyển cảnh Level 2",
+      "is_ad_bot": false,
+      "fedu_optimization": {
+        "key_optimization_point": "⚡ Chuyển cảnh Level 2: Đặt máy lên chân máy (tripod), chuyển cảnh bằng hành động cơ thể rõ ràng lặp lại 2 lần",
+        "practice_focus": "Bài tập thực hành trong phòng / bối cảnh tĩnh: Cố định điện thoại trên tripod, thực hiện 1 hành động cơ thể rõ nét (vung tay, ném đồ, dậm chân, đổi áo) lặp lại 2 lần để cắt match cut ở đỉnh quán tính.",
+        "ig_seeding_hook": "Follow @byjxson (Jason Vargas) để thuật toán Instagram liên tục cập nhật các reel biến hình triệu view, match action chuẩn xác và cách kiểm soát nhịp dựng.",
+        "course_industry_mapping": "Thương Hiệu Cá Nhân & Dịch Vụ • Mẫu Biến Hình & Match Action Khóa Học video.fedu.vn",
+        "transition_level": "Chuyển cảnh Level 2"
+      },
+      "logic_explanation": "Byjxson tuyên bố khởi động thử thách Project 100 ngày làm video liên tục, dẫn dắt người xem qua quy trình làm việc trong một ngày của Solo Creator.",
+      "creator": {
+        "raw": "@byjxson (Jason Vargas)",
+        "name": "Jason Vargas",
+        "handle": "@byjxson",
+        "profile_url": "https://www.instagram.com/byjxson/"
+      },
+      "ig_url": "https://www.instagram.com/reel/Dal3RFpA5nI/",
+      "gdrive_folder": "https://drive.google.com/open?id=1PnG2yVaM0eXeHBPw0p1xk-mAPXRKlLC3",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/Project_100_Day_01_-_%40byjxson/img_002_311c68c6.jpg",
+        "thumb_key": "https://media.fedu.vn/images/Project_100_Day_01_-_%40byjxson/img_006_b30f0d67.jpg",
+        "video_url": "https://media.fedu.vn/videos/Project%20100%20Day%2001%20-%20%40byjxson.mp4",
+        "report_url": "reports/Project 100 Day 01 - @byjxson.html",
+        "shots_count": 15,
+        "duration": "30s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null

@@ -276,31 +276,34 @@ def load_curation_config():
 def extract_shortcode(item):
     vid_id = item.get("id", "")
     code = ""
-    ig = item.get("ig_url", "")
-    m = re.search(r"/(?:p|reel|tv)/([A-Za-z0-9_-]+)", ig)
-    if m:
-        code = m.group(1).strip().rstrip("_")
     
+    # Ưu tiên mã Instagram chuẩn 11 ký tự dạng D... TỪ vid_id trước
+    m_code = re.search(r"_(D[A-Za-z0-9_-]{10})(?:_|$)", vid_id)
+    if m_code:
+        code = m_code.group(1).strip().rstrip("_")
+    else:
+        m_code2 = re.search(r"_(D[A-Za-z0-9_-]{9,11})", vid_id)
+        if m_code2:
+            code = m_code2.group(1).strip().rstrip("_")
+            
     if not code:
-        # Ưu tiên mã Instagram chuẩn 11 ký tự dạng D...
-        m_code = re.search(r"_(D[A-Za-z0-9_-]{10})(?:_|$)", vid_id)
-        if m_code:
-            code = m_code.group(1).strip().rstrip("_")
+        ig = item.get("ig_url", "")
+        m = re.search(r"/(?:p|reel|tv)/([A-Za-z0-9_-]+)", ig)
+        if m:
+            code = m.group(1).strip().rstrip("_")
+            
+    if not code:
+        # Thử bóc tách từ tên file video
+        vurl = item.get("main_vid_rel", "") or item.get("root_vid_rel", "")
+        m_v = re.search(r"/([A-Za-z0-9_-]{11})\.mp4", vurl)
+        if m_v:
+            code = m_v.group(1).strip().rstrip("_")
         else:
-            m_code2 = re.search(r"_(D[A-Za-z0-9_-]{9,11})", vid_id)
-            if m_code2:
-                code = m_code2.group(1).strip().rstrip("_")
-            else:
-                # Thử bóc tách từ tên file video nếu có mã D...
-                vurl = item.get("main_vid_rel", "") or item.get("root_vid_rel", "")
-                m_v = re.search(r"/([A-Za-z0-9_-]{11})\.mp4", vurl)
-                if m_v:
-                    code = m_v.group(1).strip().rstrip("_")
-                else:
-                    code = vid_id.strip()
+            code = vid_id.strip()
 
     if "Carousel_Analysis" in vid_id:
-        code += "_Carousel_Analysis"
+        if not code.endswith("_Carousel_Analysis"):
+            code += "_Carousel_Analysis"
         
     return code
 
