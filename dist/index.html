@@ -200,7 +200,12 @@
             z-index: 100;
             align-items: center;
             justify-content: center;
-            padding: 16px;
+            padding: 0;
+        }
+        @media (min-width: 640px) {
+            .app-modal-backdrop {
+                padding: 16px;
+            }
         }
         .app-modal-backdrop.open {
             display: flex;
@@ -767,12 +772,12 @@
                         <span id="videoModalCreatorName" class="truncate max-w-[120px] sm:max-w-[180px]">Creator</span>
                         <span class="text-[10px] bg-sky-500/20 px-1.5 py-0.5 rounded text-sky-200">🔍 Lọc kênh</span>
                     </button>
-                    <button onclick="closeModal('videoPlayerModal')" class="text-slate-400 hover:text-white text-2xl p-2 sm:p-1 sm:text-lg rounded-lg hover:bg-slate-800 transition cursor-pointer">✕</button>
+                    <button onclick="closeModal('videoPlayerModal')" class="text-slate-400 hover:text-white text-3xl p-3 sm:p-2 sm:text-xl rounded-lg hover:bg-slate-800 transition cursor-pointer" aria-label="Đóng">✕</button>
                 </div>
             </div>
             
             <!-- Video Body -->
-            <div class="relative bg-black flex items-center justify-center min-h-[360px] max-h-[85vh] sm:max-h-[62vh] overflow-hidden w-full group">
+            <div class="relative bg-black flex items-center justify-center min-h-[360px] max-h-[85vh] sm:max-h-[62vh] overflow-hidden w-full group flex-1">
                 <video id="modalActiveVideo" controls playsinline loop class="w-full max-h-[85vh] sm:max-h-[62vh] object-contain bg-black"></video>
                 <iframe id="modalActiveYoutube" class="hidden w-full h-[85vh] sm:h-[62vh] min-h-[360px] border-0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
                 
@@ -843,7 +848,7 @@
                         <span class="hidden sm:inline">Toàn Màn Hình</span>
                     </button>
                     <a id="reportModalExternalLink" href="#" target="_blank" class="px-3 py-1 rounded-lg bg-sky-500/15 text-sky-400 hover:bg-sky-500/25 border border-sky-500/30 text-xs font-bold transition">Mở Tab Mới ↗</a>
-                    <button onclick="closeModal('reportEmbedModal')" class="text-slate-400 hover:text-white text-2xl p-2 sm:p-1 sm:text-lg rounded-lg hover:bg-slate-800 transition cursor-pointer">✕</button>
+                    <button onclick="closeModal('reportEmbedModal')" class="text-slate-400 hover:text-white text-3xl p-3 sm:p-2 sm:text-xl rounded-lg hover:bg-slate-800 transition cursor-pointer" aria-label="Đóng">✕</button>
                 </div>
             </div>
             <div class="flex-1 bg-slate-950 relative">
@@ -1030,7 +1035,7 @@
     </div>
 
     <!-- LOAD DATABASE SCRIPT -->
-    <script src="ideas_data.js?v=1789855515"></script>
+    <script src="ideas_data.js?v=1789855732"></script>
 
     <!-- SPA LOGIC -->
     <script>

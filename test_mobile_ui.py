@@ -25,10 +25,28 @@ async def main():
         
         await page.wait_for_timeout(1000)
         
-        # Take screenshot of the modal
-        screenshot_path = os.path.abspath("screenshot_mobile_modal.png")
+        # Take screenshot of the video modal
+        screenshot_path = os.path.abspath("screenshot_mobile_video_modal.png")
         await page.screenshot(path=screenshot_path)
         print("Saved screenshot to:", screenshot_path)
+        
+        print("Closing video modal...")
+        await page.evaluate("closeModal('videoPlayerModal');")
+        await page.wait_for_timeout(1000)
+        
+        print("Opening report modal...")
+        await page.evaluate("""
+            if (typeof FEDU_IDEAS_DATABASE !== 'undefined' && FEDU_IDEAS_DATABASE.ideas.length > 0) {
+                openReportModal(FEDU_IDEAS_DATABASE.ideas[0].id);
+            }
+        """)
+        
+        await page.wait_for_timeout(2000)
+        
+        # Take screenshot of the report modal
+        screenshot_path_report = os.path.abspath("screenshot_mobile_report_modal.png")
+        await page.screenshot(path=screenshot_path_report)
+        print("Saved screenshot to:", screenshot_path_report)
         
         await browser.close()
 
