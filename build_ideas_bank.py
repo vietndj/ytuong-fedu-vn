@@ -442,7 +442,7 @@ def get_item_classification(vid_id, code, clean_title, takeaway, key_tech, creat
             s_name = str(m_style)
             s_icon = "🎥"
 
-        i_id = ind_overrides.get(vid_id, master.get("industries", [{}])[0].get("id", "ugc"))
+        i_id = ind_overrides.get(vid_id, master.get("industry", {}).get("id", "ugc"))
         
         # Merge trùng lặp Style và Industry
         invalid_style_map = {
@@ -699,7 +699,7 @@ def build_database():
             is_ad_bot = True
 
         # Video upload từ bot telegram tải quảng cáo (Shopee, Lazada...) -> Xếp vào mục ngành nghề UGC
-        if is_ad_bot or "LAZADA_" in vid_id or "SHOPEE_" in vid_id or (master and any(i.get("id") == "ugc" for i in master.get("industries", []))):
+        if is_ad_bot or "LAZADA_" in vid_id or "SHOPEE_" in vid_id or (master and master.get("industry", {}).get("id") == "ugc"):
             is_ad_bot = True
             ind_obj = next(i for i in INDUSTRIES if i["id"] == "ugc")
 
@@ -737,7 +737,7 @@ def build_database():
                 "icon": style_obj["icon"],
                 "badge_color": style_obj["badge_color"]
             },
-            "industries": master.get("industries", []) if master else [],
+            "industries": [master.get("industry")] if master and master.get("industry") else [],
             "x_factors": sorted(list(normalized_x_factors)),
             "country": {
                 "id": country_obj["id"],
