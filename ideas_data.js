@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 222,
-  "total_unique_ideas": 211,
-  "total_active_ideas": 202,
-  "total_excluded_ideas": 9,
-  "total_creators": 147,
+  "total_scene_items": 226,
+  "total_unique_ideas": 215,
+  "total_active_ideas": 193,
+  "total_excluded_ideas": 22,
+  "total_creators": 145,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -70,10 +70,10 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 5,
     "voice-over": 13,
-    "talking-head": 25,
-    "storytelling": 22,
-    "dien-anh": 94,
-    "chuyen-canh": 39,
+    "talking-head": 23,
+    "storytelling": 19,
+    "dien-anh": 92,
+    "chuyen-canh": 37,
     "theo-nhip-nhac": 4
   },
   "industries": [
@@ -160,21 +160,21 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "industry_stats": {
     "spa-lam-dep": 4,
-    "thuong-hieu": 24,
+    "thuong-hieu": 21,
     "thoi-trang": 18,
     "am-thuc": 20,
     "du-lich": 14,
-    "cong-nghe": 27,
+    "cong-nghe": 26,
     "kien-truc": 20,
     "the-thao": 5,
-    "ky-thuat-quay": 43,
+    "ky-thuat-quay": 38,
     "ugc": 4
   },
   "x_factors": [
     "Chuyển cảnh cấp 2"
   ],
   "x_factor_stats": {
-    "Chuyển cảnh cấp 2": 15
+    "Chuyển cảnh cấp 2": 14
   },
   "countries": [
     {
@@ -227,16 +227,16 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 103,
+    "us_eu": 97,
     "korea": 9,
-    "india": 6,
+    "india": 3,
     "japan": 6,
     "vietnam": 14,
     "asia_other": 29
   },
   "transition_stats": {
     "level_1_count": 7,
-    "level_2_count": 15,
+    "level_2_count": 14,
     "ad_bot_count": 6
   },
   "deleted_ids": [],
@@ -274,22 +274,6 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@jazziesillona_DWrDUymD4_a_Carousel_Analysis",
         "IG_@Jazzie_DU2CTKzEqvl_Carousel_Analysis",
         "IG_@jazziesillona_DbIA2jwPHCV"
-      ]
-    },
-    {
-      "handle": "@jade.got.curious",
-      "name": "Jade.Got.Curious",
-      "profile_url": "https://www.instagram.com/jade.got.curious/",
-      "video_count": 6,
-      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DcbAqchxJ2t_Video_by_jade.got.curious/shot_01_mid.jpg",
-      "video_ids": [
-        "IG_@Jade_Sheng_DcbAqchxJ2t_Video_by_jade.got.curious",
-        "IG_@Jade_Sheng_DZa9pzKRsAU_Video_by_jade.got.curious",
-        "IG_@Jade_Sheng_DZB9Ls3No6p_Video_by_jade.got.curious",
-        "IG_@Jade_Sheng_DYXiic5xMeC_Video_by_jade.got.curious",
-        "IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious",
-        "IG_@jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling"
       ]
     },
     {
@@ -387,19 +371,6 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City",
         "IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence",
         "IG_@yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing"
-      ]
-    },
-    {
-      "handle": "@mridupawasharma",
-      "name": "Mridupawasharma",
-      "profile_url": "https://www.instagram.com/mridupawasharma/",
-      "video_count": 3,
-      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery/shot_01_mid.jpg",
-      "video_ids": [
-        "IG_@mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery",
-        "IG_@mridupawasharma_DF2sOsNyNlY_3_Hooks_Mastery",
-        "IG_@mridupawasharma_DWD7Lv4E8N8_SanDisk_Creator_SSD"
       ]
     },
     {
@@ -1916,6 +1887,290 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "ideas": [
     {
+      "id": "IG_@Mridupawan_Sharma_DcGbEVFznin_Video_by_mridupawasharma",
+      "shortcode": "DcGbEVFznin",
+      "title_vi": "Himalayan Serenity - Khắc Họa Sự Tĩnh Lặng Dãy Himalaya & Chiều Sâu Mây Núi",
+      "quick_takeaway": "20 phân cảnh hùng vĩ khắc họa sự tĩnh lặng của dãy Himalaya trong sương sớm. Tác giả kết hợp góc toàn bao la với cận cảnh lá cờ cầu nguyện bay phấp phới trong gió lạnh, sử dụng dải tương phản cao (High Dynamic Range) để giữ trọn chi tiết...",
+      "key_tech": "Grand Vista Scale • Prayer Flag Flutter • Misty Cloud Layers • Static Telephoto",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industries": [
+        {
+          "id": "du-lich",
+          "name": "Du Lịch & Văn Hóa",
+          "icon": "✈️"
+        }
+      ],
+      "x_factors": [],
+      "country": {
+        "id": "india",
+        "name": "Ấn Độ",
+        "en_name": "India",
+        "flag": "🇮🇳",
+        "badge_color": "amber"
+      },
+      "purpose": "Khắc họa sự tĩnh lặng kỳ vĩ của dãy núi Himalaya",
+      "tech_tags": [
+        "Grand Vista Scale",
+        "Prayer Flag Flutter",
+        "Misty Cloud Layers",
+        "Static Telephoto"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Du Lịch & Văn Hóa • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Grand Vista Scale, Prayer Flag Flutter, Misty Cloud Layers, Static Telephoto",
+        "practice_focus": "Bài tập bóc tách ngôn ngữ điện ảnh: Phân tích tỷ lệ khung hình, hướng sáng chính (Key Light), chiều sâu trường ảnh và tiết tấu nhịp cắt.",
+        "ig_seeding_hook": "Follow @mridupawasharma để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
+        "course_industry_mapping": "Du Lịch & Văn Hóa • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
+        "transition_level": null
+      },
+      "logic_explanation": "Thước phim hùng vĩ về mây ngàn và lá cờ cầu nguyện phấp phới trên dãy Himalaya, đối lập giữa góc cực rộng và chi tiết nhỏ tĩnh lặng.",
+      "creator": {
+        "raw": "@mridupawasharma",
+        "name": "Mridupawan Sharma",
+        "handle": "@mridupawasharma",
+        "profile_url": "https://www.instagram.com/mridupawasharma/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DcGbEVFznin/",
+      "gdrive_folder": "",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DcGbEVFznin_Video_by_mridupawasharma/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DcGbEVFznin_Video_by_mridupawasharma/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DcGbEVFznin.mp4",
+        "report_url": "reports/IG_@Mridupawan_Sharma_DcGbEVFznin_Video_by_mridupawasharma.html",
+        "shots_count": 20,
+        "duration": "40s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": true
+    },
+    {
+      "id": "IG_@Mridupawan_Sharma_DbnlAB5Twrw_Video_by_mridupawasharma",
+      "shortcode": "DbnlAB5Twrw",
+      "title_vi": "3 Habits That Are Ruining Your Video - Mridupawan Sharma Bóc Tách 3 Sai Lầm Phổ Biến Khi Làm Phim",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu 23 phân cảnh từ bài giảng ngắn thực chiến của đạo diễn hình ảnh Mridupawan Sharma về '3 thói quen đang phá hỏng video của bạn': Lạm dụng Slow-motion không mục đích, Bố cục thiếu chủ thể rõ ràng, và Video khôn...",
+      "key_tech": "Mistake Breakdown • Camera Shake Fix • Lighting Pitfalls • Director Direct Advice",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
+      "country": {
+        "id": "india",
+        "name": "Ấn Độ",
+        "en_name": "India",
+        "flag": "🇮🇳",
+        "badge_color": "amber"
+      },
+      "purpose": "Chỉ ra 3 thói quen xấu phá hỏng chất lượng video",
+      "tech_tags": [
+        "Mistake Breakdown",
+        "Camera Shake Fix",
+        "Lighting Pitfalls",
+        "Director Direct Advice"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass: Phân loại theo cấu trúc Talking Head kết hợp kỹ thuật Mistake Breakdown, Camera Shake Fix, Lighting Pitfalls, Director Direct Advice",
+        "practice_focus": "Bài tập bóc tách ngôn ngữ điện ảnh: Phân tích tỷ lệ khung hình, hướng sáng chính (Key Light), chiều sâu trường ảnh và tiết tấu nhịp cắt.",
+        "ig_seeding_hook": "Follow @mridupawasharma để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
+        "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
+        "transition_level": null
+      },
+      "logic_explanation": "Đạo diễn Mridupawan Sharma nói chuyện trực diện cảnh báo 3 sai lầm phổ biến người mới hay mắc phải: rung máy, ánh sáng phẳng và cắt cảnh thiếu mục đích.",
+      "creator": {
+        "raw": "@mridupawasharma",
+        "name": "Mridupawan Sharma",
+        "handle": "@mridupawasharma",
+        "profile_url": "https://www.instagram.com/mridupawasharma/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DbnlAB5Twrw/",
+      "gdrive_folder": "",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DbnlAB5Twrw_Video_by_mridupawasharma/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DbnlAB5Twrw_Video_by_mridupawasharma/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DbnlAB5Twrw.mp4",
+        "report_url": "reports/IG_@Mridupawan_Sharma_DbnlAB5Twrw_Video_by_mridupawasharma.html",
+        "shots_count": 23,
+        "duration": "46s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": true
+    },
+    {
+      "id": "IG_@Mridupawan_Sharma_DaXdrAVzGcc_Video_by_mridupawasharma",
+      "shortcode": "DaXdrAVzGcc",
+      "title_vi": "JBL Noise Cancelling Earbuds - 'Less Distractions, More Ideas' & Nghệ Thuật Kể Chuyện Quảng Cáo Âm Thanh",
+      "quick_takeaway": "Phân tích 37 phân cảnh video thương mại điện ảnh xuất sắc quảng bá dòng tai nghe chống ồn JBL Noise Cancelling Earbuds. Tác phẩm kể câu chuyện về sự tập trung của nhà sáng tạo nội dung qua thông điệp 'Less Distractions, More Ideas', khai...",
+      "key_tech": "Distraction Isolation Hook • Sound Mute Effect • Commercial Pacing • Urban Focus",
+      "shooting_style": {
+        "id": "storytelling",
+        "name": "Kể Chuyện",
+        "en_name": "Storytelling",
+        "icon": "📖",
+        "badge_color": "amber"
+      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
+      "country": {
+        "id": "india",
+        "name": "Ấn Độ",
+        "en_name": "India",
+        "flag": "🇮🇳",
+        "badge_color": "amber"
+      },
+      "purpose": "Quảng cáo tai nghe chống ồn JBL Noise Cancelling",
+      "tech_tags": [
+        "Distraction Isolation Hook",
+        "Sound Mute Effect",
+        "Commercial Pacing",
+        "Urban Focus"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Review Thiết Bị, Mở Hộp Unboxing Đồ Công Nghệ & Gear: Phân loại theo cấu trúc Storytelling kết hợp kỹ thuật Distraction Isolation Hook, Sound Mute Effect, Commercial Pacing, Urban Focus",
+        "practice_focus": "Bài tập unboxing 5 nhịp: Cắt xé hộp dứt khoát, quay trượt mượt mà trên bề mặt kim loại, zoom macro chi tiết nút bấm và thử nghiệm tính năng tức thì.",
+        "ig_seeding_hook": "Follow @mridupawasharma để học cách trình bày thông số công nghệ hấp dẫn, bố cục bàn làm việc hiện đại và phong cách unboxing cuốn hút.",
+        "course_industry_mapping": "Review Thiết Bị, Mở Hộp Unboxing Đồ Công Nghệ & Gear",
+        "transition_level": null
+      },
+      "logic_explanation": "Kể câu chuyện về người làm sáng tạo cần sự yên tĩnh giữa phố thị ồn ào, dùng hiệu ứng triệt tiêu âm thanh khi đeo tai nghe JBL để làm nổi bật sản phẩm.",
+      "creator": {
+        "raw": "@mridupawasharma",
+        "name": "Mridupawan Sharma",
+        "handle": "@mridupawasharma",
+        "profile_url": "https://www.instagram.com/mridupawasharma/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DaXdrAVzGcc/",
+      "gdrive_folder": "",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DaXdrAVzGcc_Video_by_mridupawasharma/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DaXdrAVzGcc_Video_by_mridupawasharma/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DaXdrAVzGcc.mp4",
+        "report_url": "reports/IG_@Mridupawan_Sharma_DaXdrAVzGcc_Video_by_mridupawasharma.html",
+        "shots_count": 37,
+        "duration": "74s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": true
+    },
+    {
+      "id": "IG_@Mridupawan_Sharma_DaH_rTUTe14_Video_by_mridupawasharma",
+      "shortcode": "DaH_rTUTe14",
+      "title_vi": "OPPO Find X9s - 3 Picture Collage & Nghệ Thuật Kể Chuyện Đa Góc Nhìn",
+      "quick_takeaway": "Phân tích video thương mại điện ảnh xuất sắc quảng bá dòng máy OPPO Find X9s. Mở đầu bằng tâm sự tự trào 'Creators are annoying', video phô diễn năng lực của cụm 3 camera 50MP: 0.6x lấy bối cảnh (Scene), 1x bắt không khí (Vibe), 3x thu c...",
+      "key_tech": "3-Picture Collage • Self-Deprecation Hook • Multi-lens Comparison • Street Testing",
+      "shooting_style": {
+        "id": "storytelling",
+        "name": "Kể Chuyện",
+        "en_name": "Storytelling",
+        "icon": "📖",
+        "badge_color": "amber"
+      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
+      "country": {
+        "id": "india",
+        "name": "Ấn Độ",
+        "en_name": "India",
+        "flag": "🇮🇳",
+        "badge_color": "amber"
+      },
+      "purpose": "Đánh giá camera điện thoại OPPO Find X9s đa góc",
+      "tech_tags": [
+        "3-Picture Collage",
+        "Self-Deprecation Hook",
+        "Multi-lens Comparison",
+        "Street Testing"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Review Thiết Bị, Mở Hộp Unboxing Đồ Công Nghệ & Gear: Phân loại theo cấu trúc Storytelling kết hợp kỹ thuật 3-Picture Collage, Self-Deprecation Hook, Multi-lens Comparison, Street Testing",
+        "practice_focus": "Bài tập unboxing 5 nhịp: Cắt xé hộp dứt khoát, quay trượt mượt mà trên bề mặt kim loại, zoom macro chi tiết nút bấm và thử nghiệm tính năng tức thì.",
+        "ig_seeding_hook": "Follow @mridupawasharma để học cách trình bày thông số công nghệ hấp dẫn, bố cục bàn làm việc hiện đại và phong cách unboxing cuốn hút.",
+        "course_industry_mapping": "Review Thiết Bị, Mở Hộp Unboxing Đồ Công Nghệ & Gear",
+        "transition_level": null
+      },
+      "logic_explanation": "Đánh giá camera điện thoại OPPO bằng cách chia màn hình 3 ô ảnh tương phản giữa đời thực và ảnh chụp, kèm lời dẫn hài hước về thói quen của creator.",
+      "creator": {
+        "raw": "@mridupawasharma",
+        "name": "Mridupawan Sharma",
+        "handle": "@mridupawasharma",
+        "profile_url": "https://www.instagram.com/mridupawasharma/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DaH_rTUTe14/",
+      "gdrive_folder": "",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DaH_rTUTe14_Video_by_mridupawasharma/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DaH_rTUTe14_Video_by_mridupawasharma/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DaH_rTUTe14.mp4",
+        "report_url": "reports/IG_@Mridupawan_Sharma_DaH_rTUTe14_Video_by_mridupawasharma.html",
+        "shots_count": 37,
+        "duration": "74s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": true
+    },
+    {
       "id": "IG_@Jade_Sheng_DcbAqchxJ2t_Video_by_jade.got.curious",
       "shortcode": "DcbAqchxJ2t",
       "title_vi": "Start Stupid - @Jade Sheng (Nghịch Lý Quá Thông Minh Để Bắt Đầu)",
@@ -1984,7 +2239,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": true
     },
     {
       "id": "IG_@Jade_Sheng_DZa9pzKRsAU_Video_by_jade.got.curious",
@@ -2052,7 +2307,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": true
     },
     {
       "id": "IG_@Jade_Sheng_DZB9Ls3No6p_Video_by_jade.got.curious",
@@ -2120,7 +2375,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": true
     },
     {
       "id": "IG_@Jade_Sheng_DYXiic5xMeC_Video_by_jade.got.curious",
@@ -2191,7 +2446,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": true
     },
     {
       "id": "IG_@Saro_Deele_DXjRnwCISNU_Video_by_sarodeele",
@@ -2321,7 +2576,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": true
     },
     {
       "id": "IG_@Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs",
@@ -9933,7 +10188,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": true
     },
     {
       "id": "IG_@hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog",
@@ -10931,7 +11186,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": true
     },
     {
       "id": "IG_@firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining",
@@ -12334,7 +12589,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": true
     },
     {
       "id": "IG_@Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis",
@@ -12754,7 +13009,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": true
     },
     {
       "id": "IG_@ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC",
