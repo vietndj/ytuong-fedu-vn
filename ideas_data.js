@@ -8,7 +8,7 @@ var FEDU_IDEAS_DATABASE = {
   "total_unique_ideas": 215,
   "total_active_ideas": 193,
   "total_excluded_ideas": 22,
-  "total_creators": 145,
+  "total_creators": 147,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -260,6 +260,23 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@mridupawasharma",
+      "name": "Mridupawan Sharma",
+      "profile_url": "https://www.instagram.com/mridupawasharma/",
+      "video_count": 7,
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DcGbEVFznin_Video_by_mridupawasharma/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@Mridupawan_Sharma_DcGbEVFznin_Video_by_mridupawasharma",
+        "IG_@Mridupawan_Sharma_DbnlAB5Twrw_Video_by_mridupawasharma",
+        "IG_@Mridupawan_Sharma_DaXdrAVzGcc_Video_by_mridupawasharma",
+        "IG_@Mridupawan_Sharma_DaH_rTUTe14_Video_by_mridupawasharma",
+        "IG_@mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery",
+        "IG_@mridupawasharma_DF2sOsNyNlY_3_Hooks_Mastery",
+        "IG_@mridupawasharma_DWD7Lv4E8N8_SanDisk_Creator_SSD"
+      ]
+    },
+    {
       "handle": "@jazziesillona",
       "name": "Jazzie Sillona",
       "profile_url": "https://www.instagram.com/jazziesillona/",
@@ -274,6 +291,22 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@jazziesillona_DWrDUymD4_a_Carousel_Analysis",
         "IG_@Jazzie_DU2CTKzEqvl_Carousel_Analysis",
         "IG_@jazziesillona_DbIA2jwPHCV"
+      ]
+    },
+    {
+      "handle": "@jade.got.curious",
+      "name": "Jade.Got.Curious",
+      "profile_url": "https://www.instagram.com/jade.got.curious/",
+      "video_count": 6,
+      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DcbAqchxJ2t_Video_by_jade.got.curious/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@Jade_Sheng_DcbAqchxJ2t_Video_by_jade.got.curious",
+        "IG_@Jade_Sheng_DZa9pzKRsAU_Video_by_jade.got.curious",
+        "IG_@Jade_Sheng_DZB9Ls3No6p_Video_by_jade.got.curious",
+        "IG_@Jade_Sheng_DYXiic5xMeC_Video_by_jade.got.curious",
+        "IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious",
+        "IG_@jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling"
       ]
     },
     {

@@ -773,7 +773,7 @@ def build_database():
 
         processed_ideas.append(idea_obj)
 
-        if not is_personal and not is_excluded:
+        if not is_personal:
             creators_dict[c_info["handle"]].append(idea_obj)
 
     creators_hub = []
