@@ -880,6 +880,13 @@ def build_database():
             shutil.copy2(EXCLUDED_CONFIG_PATH, os.path.join(dist_dir, "curation_config.json"))
         index_path = os.path.join(BASE_DIR, "index.html")
         if os.path.exists(index_path):
+            import time
+            with open(index_path, "r", encoding="utf-8") as idxf:
+                idx_content = idxf.read()
+            ts = int(time.time())
+            idx_content = re.sub(r'ideas_data\.js\?v=\d+', f'ideas_data.js?v={ts}', idx_content)
+            with open(index_path, "w", encoding="utf-8") as idxf:
+                idxf.write(idx_content)
             shutil.copy2(index_path, os.path.join(dist_dir, "index.html"))
             
         # Copy reports folder
