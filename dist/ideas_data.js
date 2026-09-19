@@ -180,12 +180,62 @@ var FEDU_IDEAS_DATABASE = {
     "ugc": 45
   },
   "x_factors": [
-    "Basic classification",
-    "Chuyển cảnh cấp 2"
+    "Biểu cảm lo lắng",
+    "Body language",
+    "Bầu không khí chữa lành",
+    "Bếp nhà Á Đông",
+    "Bố cục khung trong khung",
+    "Chuyển cảnh cấp 2",
+    "Góc máy trên cao",
+    "Góc nhìn chân thật",
+    "Không khí Sit-com",
+    "Kịch tính",
+    "Kỹ xảo VFX",
+    "Minh họa trực quan",
+    "Moody vibe",
+    "Màu sắc điện ảnh",
+    "Nhan sắc",
+    "Nhịp cắt nhanh",
+    "Setup Studio",
+    "Setup thông minh",
+    "Setup điện thoại",
+    "Thông điệp cảm xúc",
+    "Thần thái tự nhiên",
+    "Thủ thuật sáng tạo",
+    "Typography mạnh",
+    "Ánh sáng màu kịch tính",
+    "Ánh sáng tương phản",
+    "Ánh sáng ấm áp",
+    "Đặc tả Macro"
   ],
   "x_factor_stats": {
-    "Basic classification": 41,
-    "Chuyển cảnh cấp 2": 18
+    "Biểu cảm lo lắng": 1,
+    "Body language": 1,
+    "Bầu không khí chữa lành": 4,
+    "Bếp nhà Á Đông": 1,
+    "Bố cục khung trong khung": 1,
+    "Chuyển cảnh cấp 2": 20,
+    "Góc máy trên cao": 1,
+    "Góc nhìn chân thật": 1,
+    "Không khí Sit-com": 1,
+    "Kịch tính": 1,
+    "Kỹ xảo VFX": 1,
+    "Minh họa trực quan": 1,
+    "Moody vibe": 1,
+    "Màu sắc điện ảnh": 1,
+    "Nhan sắc": 1,
+    "Nhịp cắt nhanh": 1,
+    "Setup Studio": 1,
+    "Setup thông minh": 1,
+    "Setup điện thoại": 1,
+    "Thông điệp cảm xúc": 1,
+    "Thần thái tự nhiên": 2,
+    "Thủ thuật sáng tạo": 1,
+    "Typography mạnh": 1,
+    "Ánh sáng màu kịch tính": 1,
+    "Ánh sáng tương phản": 1,
+    "Ánh sáng ấm áp": 1,
+    "Đặc tả Macro": 1
   },
   "countries": [
     {
@@ -2599,9 +2649,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2736,9 +2784,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2941,9 +2987,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3010,9 +3054,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3079,9 +3121,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3303,9 +3343,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3372,9 +3410,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3441,9 +3477,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3586,9 +3620,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3655,9 +3687,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3866,9 +3896,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3935,9 +3963,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4004,9 +4030,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4937,9 +4961,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5081,9 +5103,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5357,9 +5377,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6414,9 +6432,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6483,9 +6499,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6766,9 +6780,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6835,9 +6847,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7046,9 +7056,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7115,9 +7123,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7323,9 +7329,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7392,9 +7396,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7461,9 +7463,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9350,7 +9350,9 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "🏛️"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Bầu không khí chữa lành"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9426,7 +9428,9 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "🏛️"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Bầu không khí chữa lành"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9500,7 +9504,10 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "🎯"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Bố cục khung trong khung",
+        "Ánh sáng tương phản"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9571,7 +9578,10 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "🍜"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Biểu cảm lo lắng",
+        "Body language"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9868,7 +9878,10 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "🎯"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Setup Studio",
+        "Thủ thuật sáng tạo"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9943,7 +9956,10 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "💼"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Góc máy trên cao",
+        "Không khí Sit-com"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10018,7 +10034,10 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "👔"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Nhan sắc",
+        "Thần thái tự nhiên"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10092,7 +10111,9 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "🎯"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Thần thái tự nhiên"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10165,7 +10186,10 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "🎯"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2",
+        "Thông điệp cảm xúc"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10241,7 +10265,11 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "🎯"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Chuyển cảnh cấp 2",
+        "Kỹ xảo VFX",
+        "Setup thông minh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10311,7 +10339,10 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "💼"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Typography mạnh",
+        "Ánh sáng màu kịch tính"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10382,7 +10413,10 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "🏛️"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Bầu không khí chữa lành",
+        "Ánh sáng ấm áp"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10454,7 +10488,10 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "🍜"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Bếp nhà Á Đông",
+        "Nhịp cắt nhanh"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10526,7 +10563,10 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "🌿"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Bầu không khí chữa lành",
+        "Đặc tả Macro"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10742,7 +10782,10 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "✈️"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Moody vibe",
+        "Màu sắc điện ảnh"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10814,7 +10857,10 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "🎥"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Minh họa trực quan",
+        "Setup điện thoại"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10886,7 +10932,10 @@ var FEDU_IDEAS_DATABASE = {
           "icon": "💼"
         }
       ],
-      "x_factors": [],
+      "x_factors": [
+        "Góc nhìn chân thật",
+        "Kịch tính"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -13146,9 +13195,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13215,9 +13262,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13284,9 +13329,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13353,9 +13396,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13422,9 +13463,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13491,9 +13530,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13560,9 +13597,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13629,9 +13664,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13698,9 +13731,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13767,9 +13798,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13836,9 +13865,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13905,9 +13932,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13974,9 +13999,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14923,9 +14946,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -18066,9 +18087,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -18981,9 +19000,7 @@ var FEDU_IDEAS_DATABASE = {
           "name": "UGC & Ads"
         }
       ],
-      "x_factors": [
-        "Basic classification"
-      ],
+      "x_factors": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
