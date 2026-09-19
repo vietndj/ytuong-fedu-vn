@@ -607,8 +607,16 @@ def build_database():
             vid_id, code, clean_title, short_takeaway, item.get("key_tech", ""), c_info["handle"], curation_cfg, master_dict
         )
         
-        folder = item.get("folder_name") or vid_id
+        folder = (master.get("id") if master and master.get("id") else item.get("folder_name")) or vid_id
         thumbs = item.get("thumbnails") or item.get("thumbs") or []
+        
+        # Remap broken hardcoded thumbnails in scene.html that use the short code instead of full folder
+        if thumbs and thumbs[0] and f"images/{vid_id}/" in thumbs[0] and folder != vid_id:
+            thumbs = [t.replace(f"images/{vid_id}/", f"images/{folder}/") for t in thumbs]
+            
+        if "daiki" in vid_id.lower() or "Dbk4X4tjJ8A" in vid_id:
+            print(f"DEBUG DAIKI: vid_id={vid_id}, folder={folder}, thumbs={thumbs}")
+            
         if not thumbs or len(thumbs) < 2:
             if "Carousel" in folder or "Carousel" in vid_id:
                 thumb_hook = f"https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/{folder}/slide_01_mid.jpg"
@@ -642,6 +650,9 @@ def build_database():
 
         thumb_hook = normalize_thumb_url(thumb_hook, folder, "shot_01_mid.jpg")
         thumb_key = normalize_thumb_url(thumb_key, folder, "shot_03_mid.jpg")
+        
+        if "daiki" in vid_id.lower() or "Dbk4X4tjJ8A" in vid_id:
+            print(f"DEBUG DAIKI END: thumb_hook={thumb_hook}")
 
         vid_url = item.get("root_vid_rel") or item.get("main_vid_rel") or ""
         if not vid_url and item.get("all_vids"):
@@ -804,6 +815,9 @@ def build_database():
         })
 
     active_ideas = [x for x in processed_ideas if not x["is_excluded"]]
+    for i in processed_ideas:
+        if "daiki" in i["id"].lower():
+            print(f"DEBUG processed_idea id={i['id']}, is_excluded={i['is_excluded']}")
     
     industry_stats = {}
     for ind in INDUSTRIES:
