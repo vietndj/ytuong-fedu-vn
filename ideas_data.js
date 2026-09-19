@@ -2148,7 +2148,7 @@ var FEDU_IDEAS_DATABASE = {
       "logic_explanation": "Ghi chú người dùng: thêm mục chuyển cảnh. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
       "creator": {
         "raw": "@jade.got.curious",
-        "name": "Jade_Sheng",
+        "name": "Jade.Got.Curious",
         "handle": "@jade.got.curious",
         "profile_url": "https://www.instagram.com/jade.got.curious/"
       },
