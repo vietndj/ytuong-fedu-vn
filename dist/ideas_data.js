@@ -4,7 +4,7 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 221,
+  "total_scene_items": 222,
   "total_unique_ideas": 211,
   "total_active_ideas": 202,
   "total_excluded_ideas": 9,
@@ -162,13 +162,13 @@ var FEDU_IDEAS_DATABASE = {
     "spa-lam-dep": 4,
     "thuong-hieu": 24,
     "thoi-trang": 18,
-    "am-thuc": 19,
+    "am-thuc": 20,
     "du-lich": 14,
-    "cong-nghe": 25,
-    "kien-truc": 19,
+    "cong-nghe": 27,
+    "kien-truc": 20,
     "the-thao": 5,
-    "ky-thuat-quay": 40,
-    "ugc": 2
+    "ky-thuat-quay": 43,
+    "ugc": 4
   },
   "x_factors": [
     "Chuyển cảnh cấp 2"
@@ -235,7 +235,7 @@ var FEDU_IDEAS_DATABASE = {
     "asia_other": 29
   },
   "transition_stats": {
-    "level_1_count": 6,
+    "level_1_count": 7,
     "level_2_count": 15,
     "ad_bot_count": 6
   },
@@ -324,10 +324,10 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "handle": "@ulanzi.vietnam",
-      "name": "Ulanzi.Vietnam",
+      "name": "Ulanzi Vietnam Official",
       "profile_url": "https://www.instagram.com/ulanzi.vietnam/",
       "video_count": 4,
-      "top_industry": "Unknown",
+      "top_industry": "Công Nghệ & Thiết Bị",
       "sample_thumb": "https://img.youtube.com/vi/L4YUJh9ltF0/hqdefault.jpg",
       "video_ids": [
         "LAZADA_Ulanzi_Đèn_LED_Thanh_Bơm_Hơi_UA20,_",
@@ -1753,7 +1753,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Thodiahaiduongne",
       "profile_url": "https://www.instagram.com/thodiahaiduongne/",
       "video_count": 1,
-      "top_industry": "Unknown",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/TikTok_%40thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_start.jpg",
       "video_ids": [
         "TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong"
@@ -5737,8 +5737,8 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "LAZADA_Ulanzi_Đèn_LED_Thanh_Bơm_Hơi_UA20,_",
       "shortcode": "LAZADA_Ulanzi_Đèn_LED_Thanh_Bơm_Hơi_UA20,_",
-      "title_vi": "Ulanzi UA12 & UA20 | Đèn LED Thanh Bơm Hơi Từ Tính 12W & 20W",
-      "quick_takeaway": "Báo cáo bóc tách chuyên sâu 18 phân cảnh video quảng cáo thương mại đèn bóng khí từ tính Ulanzi UA12 & UA20: công nghệ bơm hơi, nam châm N52, dải sáng CRI 95+ và kỹ thuật chiếu sáng chân dung phố đêm.",
+      "title_vi": "Ulanzi | Đèn LED Thanh Bơm Hơi UA20, 20W Bi-Color, Tích Hợp Pin",
+      "quick_takeaway": "Mẫu video quảng cáo UGC chuẩn AIDA từ Lazada: Trực quan, tập trung vào trải nghiệm công năng thực tế và kích thích tỷ lệ chuyển đổi.",
       "key_tech": "Inflatable Tube Light, Magnetic Mounting N52, Full Spectrum CRI 95+, Bi-Color 2700K-5600K, Commercial B-Roll Rhythm, Night Street Portrait",
       "shooting_style": {
         "id": "dien-anh",
@@ -5747,7 +5747,13 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "vietnam",
@@ -5756,17 +5762,19 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇻🇳",
         "badge_color": "emerald"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "Quảng cáo thương mại điện tử Lazada UGC chuẩn công thức AIDA",
       "tech_tags": [
-        "Inflatable Tube Light, Magnetic Mounting N52, Full Spectrum CRI 95+, Bi-Color 2700K-5600K, Commercial B-Roll Rhythm, Night Street Portrait"
+        "UGC",
+        "Quảng cáo",
+        "AIDA"
       ],
       "transition_level": null,
       "is_ad_bot": true,
       "fedu_optimization": {},
-      "logic_explanation": "",
+      "logic_explanation": "Video UGC bán hàng thực chiến tối ưu cho sàn Lazada bám sát công thức AIDA: Mở đầu trực quan, giải quyết nỗi đau khách hàng và kích thích chuyển đổi.",
       "creator": {
         "raw": "@ulanzi.vietnam",
-        "name": "Ulanzi.Vietnam",
+        "name": "Ulanzi Vietnam Official",
         "handle": "@ulanzi.vietnam",
         "profile_url": "https://www.instagram.com/ulanzi.vietnam/"
       },
@@ -5794,7 +5802,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "LAZADA_Ulanzi_Chân_Đế_Tự_Sướng_Có_Từ_Tính_",
       "shortcode": "LAZADA_Ulanzi_Chân_Đế_Tự_Sướng_Có_Từ_Tính_",
       "title_vi": "Ulanzi | Chân Đế Tự Sướng Có Từ Tính với Hỗ Trợ Camera Điện Thoại, Đa Năng và Di Động",
-      "quick_takeaway": "Mẫu video quảng cáo UGC sản phẩm Lazada áp dụng công thức AIDA: Thu hút chú ý, khơi gợi nhu cầu, kích thích mong muốn và kêu gọi hành động mua hàng.",
+      "quick_takeaway": "Mẫu video quảng cáo UGC chuẩn AIDA từ Lazada: Trực quan, tập trung vào trải nghiệm công năng thực tế và kích thích tỷ lệ chuyển đổi.",
       "key_tech": "UGC, Quảng cáo, AIDA",
       "shooting_style": {
         "id": "dien-anh",
@@ -5803,7 +5811,13 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "vietnam",
@@ -5812,17 +5826,19 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇻🇳",
         "badge_color": "emerald"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "Quảng cáo thương mại điện tử Lazada UGC chuẩn công thức AIDA",
       "tech_tags": [
-        "UGC, Quảng cáo, AIDA"
+        "UGC",
+        "Quảng cáo",
+        "AIDA"
       ],
       "transition_level": null,
       "is_ad_bot": true,
       "fedu_optimization": {},
-      "logic_explanation": "",
+      "logic_explanation": "Video UGC bán hàng thực chiến tối ưu cho sàn Lazada bám sát công thức AIDA: Mở đầu trực quan, giải quyết nỗi đau khách hàng và kích thích chuyển đổi.",
       "creator": {
         "raw": "@ulanzi.vietnam",
-        "name": "Ulanzi.Vietnam",
+        "name": "Ulanzi Vietnam Official",
         "handle": "@ulanzi.vietnam",
         "profile_url": "https://www.instagram.com/ulanzi.vietnam/"
       },
@@ -5882,7 +5898,10 @@ var FEDU_IDEAS_DATABASE = {
         "Direct-to-Lens Gaze",
         "Ambient Sound Chant",
         "Micro Jump-Cut",
-        "Affirmation Reveal Anchor"
+        "Affirmation Reveal Anchor",
+        "Establishing Hook Shot",
+        "Wide Establishing Shot",
+        "Close-Up / Macro Detail Shot"
       ],
       "transition_level": "Hard Cut & Jump Cut",
       "is_ad_bot": false,
@@ -7804,7 +7823,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "LAZADA_Ulanzi_UA20_Đèn_LED_Thanh_Bơm_Hơi_20W_Bi",
       "shortcode": "LAZADA_Ulanzi_UA20_Đèn_LED_Thanh_Bơm_Hơi_20W_Bi",
       "title_vi": "Ulanzi UA20 Đèn LED Thanh Bơm Hơi 20W Bi-Color Tích Hợp Pin",
-      "quick_takeaway": "Mẫu video quảng cáo UGC sản phẩm Ulanzi UA20 chuẩn công thức AIDA: Gây chú ý (Attention) với thiết kế bơm hơi độc lạ, khơi gợi nhu cầu (Interest) với công suất 20W Bi-color, thúc đẩy mong muốn (Desire) bằng ứng dụng dã ngoại đa năng và k...",
+      "quick_takeaway": "Mẫu video quảng cáo UGC chuẩn AIDA: Trực quan, tập trung vào điểm khác biệt độc lạ và ứng dụng thực tế để chuyển đổi đơn hàng.",
       "key_tech": "UGC, Quảng cáo, AIDA",
       "shooting_style": {
         "id": "dien-anh",
@@ -7813,7 +7832,15 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "ugc",
+          "name": "UGC",
+          "en_name": "UGC & Ads",
+          "icon": "📱",
+          "badge_color": "amber"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "vietnam",
@@ -7822,17 +7849,27 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇻🇳",
         "badge_color": "emerald"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "Quảng cáo thương mại điện tử UGC chuẩn công thức AIDA",
       "tech_tags": [
-        "UGC, Quảng cáo, AIDA"
+        "UGC",
+        "Quảng cáo",
+        "AIDA",
+        "E-commerce Video",
+        "Product Showcase"
       ],
       "transition_level": null,
       "is_ad_bot": true,
-      "fedu_optimization": {},
-      "logic_explanation": "",
+      "fedu_optimization": {
+        "key_optimization_point": "Mẫu Video Quảng Cáo TMĐT chuẩn công thức AIDA & Trình diễn tính năng thực tế",
+        "practice_focus": "Thực hành dựng video bán hàng sàn TMĐT: 3s đầu đập hộp gây tò mò, 5s tiếp theo test tải trọng thực tế, chốt đơn CTA rõ ràng.",
+        "ig_seeding_hook": "Theo dõi kênh phân phối sản phẩm chính hãng để cập nhật các góc máy review thiết bị quay phim mới nhất.",
+        "course_industry_mapping": "Thương Mại Điện Tử, Phụ Kiện Quay Chụp & Đồ Công Nghệ",
+        "transition_level": null
+      },
+      "logic_explanation": "Mẫu video UGC bán hàng trực quan theo cấu trúc AIDA: 3s đầu gây tò mò với thiết kế bơm hơi độc lạ, trình diễn tính năng giải quyết vấn đề và kích hoạt quyết định mua sắm.",
       "creator": {
         "raw": "@ulanzi.vietnam",
-        "name": "Ulanzi.Vietnam",
+        "name": "Ulanzi Vietnam Official",
         "handle": "@ulanzi.vietnam",
         "profile_url": "https://www.instagram.com/ulanzi.vietnam/"
       },
@@ -7860,7 +7897,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "SHOPEE_ULANZI_MT80_Chân_Máy_Tripod_Cao_213cm_Tả",
       "shortcode": "SHOPEE_ULANZI_MT80_Chân_Máy_Tripod_Cao_213cm_Tả",
       "title_vi": "ULANZI MT80 Chân Máy Tripod Cao 213cm Tải Trọng 5kg",
-      "quick_takeaway": "Mẫu video quảng cáo UGC chân máy tripod Ulanzi MT-80 chuẩn công thức AIDA: Trực quan hóa chiều cao 213cm, khả năng chịu tải 5kg máy cơ, thao tác bung gập nhanh 1 chạm, kích thích chuyển đổi trên sàn TMĐT.",
+      "quick_takeaway": "Mẫu video UGC Shopee chuẩn AIDA: Khẳng định uy tín sản phẩm qua bài test chịu tải thực tế 5kg và chiều cao 213cm.",
       "key_tech": "UGC, Quảng cáo, AIDA",
       "shooting_style": {
         "id": "dien-anh",
@@ -7869,7 +7906,15 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "ugc",
+          "name": "UGC",
+          "en_name": "UGC & Ads",
+          "icon": "📱",
+          "badge_color": "amber"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "vietnam",
@@ -7878,17 +7923,27 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇻🇳",
         "badge_color": "emerald"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "Quảng cáo thương mại điện tử UGC chuẩn công thức AIDA",
       "tech_tags": [
-        "UGC, Quảng cáo, AIDA"
+        "UGC",
+        "Quảng cáo",
+        "AIDA",
+        "E-commerce Video",
+        "Product Showcase"
       ],
       "transition_level": null,
       "is_ad_bot": true,
-      "fedu_optimization": {},
-      "logic_explanation": "",
+      "fedu_optimization": {
+        "key_optimization_point": "Mẫu Video Quảng Cáo TMĐT chuẩn công thức AIDA & Trình diễn tính năng thực tế",
+        "practice_focus": "Thực hành dựng video bán hàng sàn TMĐT: 3s đầu đập hộp gây tò mò, 5s tiếp theo test tải trọng thực tế, chốt đơn CTA rõ ràng.",
+        "ig_seeding_hook": "Theo dõi kênh phân phối sản phẩm chính hãng để cập nhật các góc máy review thiết bị quay phim mới nhất.",
+        "course_industry_mapping": "Thương Mại Điện Tử, Phụ Kiện Quay Chụp & Đồ Công Nghệ",
+        "transition_level": null
+      },
+      "logic_explanation": "Mẫu video quảng cáo UGC bán phụ kiện máy ảnh: Thao tác thực tế với thiết bị nặng, đo chiều cao trực quan, giải quyết triệt để nỗi sợ rung lắc của khách hàng.",
       "creator": {
         "raw": "@ulanzi.vietnam",
-        "name": "Ulanzi.Vietnam",
+        "name": "Ulanzi Vietnam Official",
         "handle": "@ulanzi.vietnam",
         "profile_url": "https://www.instagram.com/ulanzi.vietnam/"
       },
@@ -11030,7 +11085,13 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "vietnam",
@@ -11039,14 +11100,20 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇻🇳",
         "badge_color": "emerald"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "Bóc tách ngôn ngữ thị giác & Bố cục điện ảnh",
       "tech_tags": [
         "Macro Low-Angle Lavender Bokeh, Frontal Hero Portrait, Shoelace Routine Hook, Granite Bench Rest, 3-Act Narrative Arc"
       ],
       "transition_level": null,
       "is_ad_bot": false,
-      "fedu_optimization": {},
-      "logic_explanation": "",
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Macro Low-Angle Lavender Bokeh, Frontal Hero Portrait, Shoelace Routine Hook, Granite Bench Rest, 3-Act Narrative Arc",
+        "practice_focus": "Bài tập bóc tách ngôn ngữ điện ảnh: Phân tích tỷ lệ khung hình, hướng sáng chính (Key Light), chiều sâu trường ảnh và tiết tấu nhịp cắt.",
+        "ig_seeding_hook": "Follow @vietmac để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
+        "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
+        "transition_level": null
+      },
+      "logic_explanation": "Bóc tách kỹ thuật quay phim, góc máy, ánh sáng và nhịp dựng mẫu mực phục vụ học viên rèn luyện tay nghề.",
       "creator": {
         "raw": "@vietmac",
         "name": "Vietmac",
@@ -11062,9 +11129,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/Practice_Cinematic_Chay_0904 - @vietmac.html",
         "shots_count": 27,
         "duration": "54s",
-        "youtube_id": "",
-        "youtube_embed": "",
-        "youtube_url": ""
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
       },
       "complexity": {
         "id": "nang-cao",
@@ -11086,7 +11153,13 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "vietnam",
@@ -11095,14 +11168,20 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇻🇳",
         "badge_color": "emerald"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "Bóc tách ngôn ngữ thị giác & Bố cục điện ảnh",
       "tech_tags": [
         "Kinetic Running Sequence, Specular Golden Road, Dirty Foliage Foreground, Backlit Silhouette, Eye Contact CTA"
       ],
       "transition_level": null,
       "is_ad_bot": false,
-      "fedu_optimization": {},
-      "logic_explanation": "",
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Kinetic Running Sequence, Specular Golden Road, Dirty Foliage Foreground, Backlit Silhouette, Eye Contact CTA",
+        "practice_focus": "Bài tập bóc tách ngôn ngữ điện ảnh: Phân tích tỷ lệ khung hình, hướng sáng chính (Key Light), chiều sâu trường ảnh và tiết tấu nhịp cắt.",
+        "ig_seeding_hook": "Follow @vietmac để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
+        "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
+        "transition_level": null
+      },
+      "logic_explanation": "Bóc tách kỹ thuật quay phim, góc máy, ánh sáng và nhịp dựng mẫu mực phục vụ học viên rèn luyện tay nghề.",
       "creator": {
         "raw": "@vietmac",
         "name": "Vietmac",
@@ -11118,9 +11197,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/Practice_Cinematic_Chay_0903_2 - @vietmac.html",
         "shots_count": 14,
         "duration": "28s",
-        "youtube_id": "",
-        "youtube_embed": "",
-        "youtube_url": ""
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
       },
       "complexity": {
         "id": "trung-binh",
@@ -11702,7 +11781,13 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "vietnam",
@@ -11711,14 +11796,20 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇻🇳",
         "badge_color": "emerald"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "Bóc tách ngôn ngữ thị giác & Bố cục điện ảnh",
       "tech_tags": [
         "Kinetic Running Sequence, High-Contrast Backlit, Specular Road Reflection, Golden Rim Light, Eye Contact CTA"
       ],
       "transition_level": null,
       "is_ad_bot": false,
-      "fedu_optimization": {},
-      "logic_explanation": "",
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Kinetic Running Sequence, High-Contrast Backlit, Specular Road Reflection, Golden Rim Light, Eye Contact CTA",
+        "practice_focus": "Bài tập bóc tách ngôn ngữ điện ảnh: Phân tích tỷ lệ khung hình, hướng sáng chính (Key Light), chiều sâu trường ảnh và tiết tấu nhịp cắt.",
+        "ig_seeding_hook": "Follow @vietmac để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
+        "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
+        "transition_level": null
+      },
+      "logic_explanation": "Bóc tách kỹ thuật quay phim, góc máy, ánh sáng và nhịp dựng mẫu mực phục vụ học viên rèn luyện tay nghề.",
       "creator": {
         "raw": "@vietmac",
         "name": "Vietmac",
@@ -11734,9 +11825,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/Practice_Cinematic_Chay_0903 - @vietmac.html",
         "shots_count": 8,
         "duration": "16s",
-        "youtube_id": "",
-        "youtube_embed": "",
-        "youtube_url": ""
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
       },
       "complexity": {
         "id": "de",
@@ -12746,7 +12837,13 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "vietnam",
@@ -12755,14 +12852,20 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇻🇳",
         "badge_color": "emerald"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "Bóc tách ngôn ngữ thị giác & Bố cục điện ảnh",
       "tech_tags": [
         "B-Roll Plan, Cutaway, Sequence, POV, In-Situ, Metaphor"
       ],
       "transition_level": null,
       "is_ad_bot": false,
-      "fedu_optimization": {},
-      "logic_explanation": "",
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật B-Roll Plan, Cutaway, Sequence, POV, In-Situ, Metaphor",
+        "practice_focus": "Bài tập bóc tách ngôn ngữ điện ảnh: Phân tích tỷ lệ khung hình, hướng sáng chính (Key Light), chiều sâu trường ảnh và tiết tấu nhịp cắt.",
+        "ig_seeding_hook": "Follow @creator để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
+        "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
+        "transition_level": null
+      },
+      "logic_explanation": "Bóc tách kỹ thuật quay phim, góc máy, ánh sáng và nhịp dựng mẫu mực phục vụ học viên rèn luyện tay nghề.",
       "creator": {
         "raw": "B-Roll Scout",
         "name": "B-Roll Scout",
@@ -12778,9 +12881,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/broll_plans/BROLL_PLAN_20260827_TimesCity_Basketball/BROLL_PLAN_20260827_TimesCity_Basketball.html",
         "shots_count": 6,
         "duration": "12s",
-        "youtube_id": "",
-        "youtube_embed": "",
-        "youtube_url": ""
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
       },
       "complexity": {
         "id": "de",
@@ -13012,7 +13115,13 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "vietnam",
@@ -13021,14 +13130,20 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇻🇳",
         "badge_color": "emerald"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "Bóc tách ngôn ngữ thị giác & Bố cục điện ảnh",
       "tech_tags": [
         "Golden Hour Extreme Backlit, Silhouette Shadow Leading, Human Interest Documentary, 24fps Cinematic Motion Blur"
       ],
       "transition_level": null,
       "is_ad_bot": false,
-      "fedu_optimization": {},
-      "logic_explanation": "",
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Golden Hour Extreme Backlit, Silhouette Shadow Leading, Human Interest Documentary, 24fps Cinematic Motion Blur",
+        "practice_focus": "Bài tập bóc tách ngôn ngữ điện ảnh: Phân tích tỷ lệ khung hình, hướng sáng chính (Key Light), chiều sâu trường ảnh và tiết tấu nhịp cắt.",
+        "ig_seeding_hook": "Follow @vietmac để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
+        "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
+        "transition_level": null
+      },
+      "logic_explanation": "Bóc tách kỹ thuật quay phim, góc máy, ánh sáng và nhịp dựng mẫu mực phục vụ học viên rèn luyện tay nghề.",
       "creator": {
         "raw": "@vietmac",
         "name": "Vietmac",
@@ -13044,9 +13159,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/Practice_Cinematic_2508 - @vietmac.html",
         "shots_count": 19,
         "duration": "38s",
-        "youtube_id": "",
-        "youtube_embed": "",
-        "youtube_url": ""
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
       },
       "complexity": {
         "id": "nang-cao",
@@ -13068,7 +13183,13 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "vietnam",
@@ -13077,14 +13198,20 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇻🇳",
         "badge_color": "emerald"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "Bóc tách ngôn ngữ thị giác & Bố cục điện ảnh",
       "tech_tags": [
         "Low-Angle Worm's Eye, S-Curve Leading, Framing Depth, In-camera Body Wipe, Cinematic Remake Blueprint"
       ],
       "transition_level": null,
       "is_ad_bot": false,
-      "fedu_optimization": {},
-      "logic_explanation": "",
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Low-Angle Worm's Eye, S-Curve Leading, Framing Depth, In-camera Body Wipe, Cinematic Remake Blueprint",
+        "practice_focus": "Bài tập bóc tách ngôn ngữ điện ảnh: Phân tích tỷ lệ khung hình, hướng sáng chính (Key Light), chiều sâu trường ảnh và tiết tấu nhịp cắt.",
+        "ig_seeding_hook": "Follow @vietmac để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
+        "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
+        "transition_level": null
+      },
+      "logic_explanation": "Bóc tách kỹ thuật quay phim, góc máy, ánh sáng và nhịp dựng mẫu mực phục vụ học viên rèn luyện tay nghề.",
       "creator": {
         "raw": "@vietmac",
         "name": "Vietmac",
@@ -13100,9 +13227,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/Practice_Cinematic_01 - @vietmac.html",
         "shots_count": 25,
         "duration": "50s",
-        "youtube_id": "",
-        "youtube_embed": "",
-        "youtube_url": ""
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
       },
       "complexity": {
         "id": "nang-cao",
@@ -13195,7 +13322,13 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "us_eu",
@@ -13204,14 +13337,23 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇺🇸/🇪🇺",
         "badge_color": "purple"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "7 góc máy điện ảnh quay B-roll bàn làm việc",
       "tech_tags": [
-        "124 Locations CDN, Category Filtering, Visual Script Mapping, Lighting Specs"
+        "Low-Angle Laptop Tilt",
+        "Overhead Desk POV",
+        "Macro Keyboard Sound",
+        "Warm Light Accent"
       ],
       "transition_level": null,
       "is_ad_bot": false,
-      "fedu_optimization": {},
-      "logic_explanation": "",
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Low-Angle Laptop Tilt, Overhead Desk POV, Macro Keyboard Sound, Warm Light Accent",
+        "practice_focus": "Bài tập bóc tách ngôn ngữ điện ảnh: Phân tích tỷ lệ khung hình, hướng sáng chính (Key Light), chiều sâu trường ảnh và tiết tấu nhịp cắt.",
+        "ig_seeding_hook": "Follow @creator để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
+        "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
+        "transition_level": null
+      },
+      "logic_explanation": "Korta Films hướng dẫn 7 góc quay sáng tạo quanh góc bàn làm việc quen thuộc: góc thấp hất lên khi mở laptop, góc cận ngón tay gõ phím.",
       "creator": {
         "raw": "Hệ Thống B-Roll Times City & Studio",
         "name": "Hệ Thống B-Roll Times City & Studio",
@@ -13227,9 +13369,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/Bao_Cao_Boi_Canh_Thuc_Chien_R2.html",
         "shots_count": 144,
         "duration": "288s",
-        "youtube_id": "",
-        "youtube_embed": "",
-        "youtube_url": ""
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
       },
       "complexity": {
         "id": "nang-cao",
@@ -13251,7 +13393,13 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "vietnam",
@@ -13260,14 +13408,20 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇻🇳",
         "badge_color": "emerald"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "Bóc tách ngôn ngữ thị giác & Bố cục điện ảnh",
       "tech_tags": [
         "Practical Location Mapping, Home Ground Angles, Gimbal Tracking, Dawn Golden Hour"
       ],
       "transition_level": null,
       "is_ad_bot": false,
-      "fedu_optimization": {},
-      "logic_explanation": "",
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Practical Location Mapping, Home Ground Angles, Gimbal Tracking, Dawn Golden Hour",
+        "practice_focus": "Bài tập bóc tách ngôn ngữ điện ảnh: Phân tích tỷ lệ khung hình, hướng sáng chính (Key Light), chiều sâu trường ảnh và tiết tấu nhịp cắt.",
+        "ig_seeding_hook": "Follow @Self_Practice để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
+        "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
+        "transition_level": null
+      },
+      "logic_explanation": "Bóc tách kỹ thuật quay phim, góc máy, ánh sáng và nhịp dựng mẫu mực phục vụ học viên rèn luyện tay nghề.",
       "creator": {
         "raw": "@Self_Practice (VietND)",
         "name": "VietND",
@@ -13283,9 +13437,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/Chay_Bo_Times_City - @Self_Practice.html",
         "shots_count": 20,
         "duration": "40s",
-        "youtube_id": "",
-        "youtube_embed": "",
-        "youtube_url": ""
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
       },
       "complexity": {
         "id": "nang-cao",
@@ -13375,7 +13529,13 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "asia_other",
@@ -13384,14 +13544,24 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌏",
         "badge_color": "sky"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "Hướng dẫn kỹ thuật lia máy xoay tròn Whip Pan",
       "tech_tags": [
-        "In-Camera Match Cut, Whip Pan Transition, Foreground Obstacle Wipe, Optical Flow"
+        "Chuyển cảnh Level 1",
+        "Seamless Spin Pan",
+        "In-Camera Whip Blur",
+        "Motion Matching Speed",
+        "Rotational Continuity"
       ],
-      "transition_level": null,
+      "transition_level": "Chuyển cảnh Level 1",
       "is_ad_bot": false,
-      "fedu_optimization": {},
-      "logic_explanation": "",
+      "fedu_optimization": {
+        "key_optimization_point": "⚡ Chuyển cảnh Level 1: Cầm tay selfie chỗ đông người, chuyển cảnh bằng cử động đầu (gật đầu / lắc đầu x2)",
+        "practice_focus": "Bài tập thực hành tại phố đi bộ / TTTM: Tay cầm điện thoại selfie, kết thúc shot 1 bằng cú gật đầu dứt khoát; bắt đầu shot 2 tại góc phố khác với cú gật đầu tương tự để nối cảnh liền mạch.",
+        "ig_seeding_hook": "Follow @withyuee (Withyuee) để feed Instagram tự động đẩy các gợi ý video dạo phố, phong cách street vlog tự nhiên và bắt nhịp chuyển động đời thực.",
+        "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Dạo Phố & Xây Kênh Cá Nhân Ngoài Trời",
+        "transition_level": "Chuyển cảnh Level 1"
+      },
+      "logic_explanation": "Onethebaha thị phạm chi tiết cách vung tay xoay camera tạo vệt mờ chuyển cảnh liền mạch giữa 2 không gian mà không cần plugin hậu kỳ phức tạp.",
       "creator": {
         "raw": "@withyuee",
         "name": "Withyuee",
@@ -13407,9 +13577,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/Hong_Kong_Urban_Transitions - @withyuee.html",
         "shots_count": 21,
         "duration": "42s",
-        "youtube_id": "",
-        "youtube_embed": "",
-        "youtube_url": ""
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
       },
       "complexity": {
         "id": "nang-cao",
@@ -13431,7 +13601,13 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "asia_other",
@@ -13440,14 +13616,20 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌏",
         "badge_color": "sky"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "Bóc tách ngôn ngữ thị giác & Bố cục điện ảnh",
       "tech_tags": [
         "Teal & Orange Grade, Natural Alley Chiaroscuro, Parallax Motion, Frame Within Frame"
       ],
       "transition_level": null,
       "is_ad_bot": false,
-      "fedu_optimization": {},
-      "logic_explanation": "",
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Teal & Orange Grade, Natural Alley Chiaroscuro, Parallax Motion, Frame Within Frame",
+        "practice_focus": "Bài tập bóc tách ngôn ngữ điện ảnh: Phân tích tỷ lệ khung hình, hướng sáng chính (Key Light), chiều sâu trường ảnh và tiết tấu nhịp cắt.",
+        "ig_seeding_hook": "Follow @withyuee để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
+        "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
+        "transition_level": null
+      },
+      "logic_explanation": "Bóc tách kỹ thuật quay phim, góc máy, ánh sáng và nhịp dựng mẫu mực phục vụ học viên rèn luyện tay nghề.",
       "creator": {
         "raw": "@withyuee",
         "name": "Withyuee",
@@ -13463,9 +13645,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/Hong_Kong_Cinematography_Guide - @withyuee.html",
         "shots_count": 28,
         "duration": "56s",
-        "youtube_id": "",
-        "youtube_embed": "",
-        "youtube_url": ""
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
       },
       "complexity": {
         "id": "nang-cao",
@@ -13487,7 +13669,13 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "asia_other",
@@ -13496,14 +13684,23 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🌏",
         "badge_color": "sky"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "Tôn vinh nghệ thuật giàn giáo tre Hong Kong",
       "tech_tags": [
-        "Geometric Symmetry, Urban Architectural Framing, Heritage Contrast, Vertical Pan"
+        "Geometric Bamboo Grid",
+        "High-rise Facade Framing",
+        "Urban Craftsmanship",
+        "Telephoto Compression"
       ],
       "transition_level": null,
       "is_ad_bot": false,
-      "fedu_optimization": {},
-      "logic_explanation": "",
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Kiến Trúc, Nội Thất, Bất Động Sản & Không Gian Sống Slow Living: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Geometric Bamboo Grid, High-rise Facade Framing, Urban Craftsmanship, Telephoto Compression",
+        "practice_focus": "Bài tập khung hình tĩnh (Static Shot): Để máy yên trên chân máy, đón ánh nắng lọt qua rèm cửa và người lướt qua để tôn vinh đường nét không gian.",
+        "ig_seeding_hook": "Follow @withyuee để huấn luyện thuật toán Instagram đề xuất các không gian kiến trúc tối giản wabi-sabi và nhịp sống thanh bình.",
+        "course_industry_mapping": "Kiến Trúc, Nội Thất, Bất Động Sản & Không Gian Sống Slow Living",
+        "transition_level": null
+      },
+      "logic_explanation": "Withyuee khai thác cấu trúc hình học đan xen của những giàn giáo tre dựng bao quanh các tòa nhà chọc trời, tôn vinh nét độc đáo kiến trúc đô thị Hong Kong.",
       "creator": {
         "raw": "@withyuee",
         "name": "Withyuee",
@@ -13519,9 +13716,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/Hong_Kong_Bamboo_Scaffolding - @withyuee.html",
         "shots_count": 16,
         "duration": "32s",
-        "youtube_id": "",
-        "youtube_embed": "",
-        "youtube_url": ""
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
       },
       "complexity": {
         "id": "trung-binh",
@@ -13543,7 +13740,13 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industries": [],
+      "industries": [
+        {
+          "id": "am-thuc",
+          "name": "Ẩm Thực & F&B",
+          "icon": "🍜"
+        }
+      ],
       "x_factors": [],
       "country": {
         "id": "vietnam",
@@ -13552,14 +13755,23 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇻🇳",
         "badge_color": "emerald"
       },
-      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "purpose": "Phóng sự ẩm thực đường phố đặc sản mùa sứa đỏ",
       "tech_tags": [
-        "Food Macro Close-Up, Tactile ASMR Sound, Vibrant Red Ruby Grading, Fast Food Cut"
+        "Street Vendor Macro",
+        "Crispy Sound Foley",
+        "Authentic Local Voice",
+        "Dynamic Handheld"
       ],
       "transition_level": null,
       "is_ad_bot": false,
-      "fedu_optimization": {},
-      "logic_explanation": "",
+      "fedu_optimization": {
+        "key_optimization_point": "Tối ưu cho Ẩm Thực & Nhà Hàng F&B, Quán Cafe, ASMR Nấu Nướng: Phân loại theo cấu trúc Voice Over kết hợp kỹ thuật Street Vendor Macro, Crispy Sound Foley, Authentic Local Voice, Dynamic Handheld",
+        "practice_focus": "Bài tập quay món ăn: Bắt trọn khói nghi ngút, cận cảnh giọt nước bắn trên chảo, kết hợp âm thanh ASMR chân thực khơi gợi vị giác.",
+        "ig_seeding_hook": "Follow @thodiahaiduongne để feed Instagram liên tục cập nhật nghệ thuật quay B-roll ẩm thực, ánh sáng ấm cúng và cách setup bàn ăn hút mắt.",
+        "course_industry_mapping": "Ẩm Thực & Nhà Hàng F&B, Quán Cafe, ASMR Nấu Nướng",
+        "transition_level": null
+      },
+      "logic_explanation": "Phóng sự ẩm thực đường phố dùng giọng đọc thuyết minh dẫn dắt người xem thưởng thức món sứa đỏ Hải Dương với hình ảnh chân thật, sống động.",
       "creator": {
         "raw": "@thodiahaiduongne",
         "name": "Thodiahaiduongne",
@@ -13575,9 +13787,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/Mua Sua Do Hai Duong - @thodiahaiduongne.html",
         "shots_count": 15,
         "duration": "30s",
-        "youtube_id": "",
-        "youtube_embed": "",
-        "youtube_url": ""
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
       },
       "complexity": {
         "id": "trung-binh",
