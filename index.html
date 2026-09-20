@@ -388,8 +388,16 @@
             </div>
         </div>
 
+        <!-- NÚT BỘ LỌC MOBILE -->
+        <div class="md:hidden border-t border-slate-800/80 bg-slate-950 px-4 py-2">
+            <button onclick="toggleMobileFilters()" class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800 text-sm font-bold text-slate-300 transition flex items-center">
+                <span id="mobileFilterBtnText">⚙️ Mở Bộ Lọc</span>
+                <span id="mobileFilterChevron" class="text-[10px] transition-transform duration-300">▼</span>
+            </button>
+        </div>
+
         <!-- WRAPPER CHO CÁC THANH BỘ LỌC TINH GỌN & ACCORDION (ẨN/HIỆN THEO FOCUS MODE) -->
-        <div id="allFilterBarsContainer" class="transition-all duration-300">
+        <div id="allFilterBarsContainer" class="transition-all duration-500 max-h-0 opacity-0 overflow-hidden md:max-h-[2000px] md:opacity-100 md:overflow-visible">
 
             <!-- 1. KIỂU QUAY (GIỮ GỌN GÀNG 1 HÀNG TRÊN CÙNG) -->
             <div class="border-t border-slate-800/80 bg-slate-950/80 px-4 sm:px-6 lg:px-8 py-1.5">
@@ -772,7 +780,13 @@
                         <span id="videoModalCreatorName" class="truncate max-w-[120px] sm:max-w-[180px]">Creator</span>
                         <span class="text-[10px] bg-sky-500/20 px-1.5 py-0.5 rounded text-sky-200">🔍 Lọc kênh</span>
                     </button>
-                    <button onclick="closeModal('videoPlayerModal')" class="text-slate-400 hover:text-white text-3xl p-3 sm:p-2 sm:text-xl rounded-lg hover:bg-slate-800 transition cursor-pointer" aria-label="Đóng">✕</button>
+                    <!-- Download Button -->
+                    <button onclick="downloadCurrentIdea()" class="px-2.5 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500 hover:text-white border border-emerald-500/30 text-xs font-bold transition flex items-center gap-1.5 shrink-0 cursor-pointer" title="Tải Video / Tài Liệu">
+                        <span class="text-sm">⬇️</span>
+                        <span class="hidden sm:inline">Tải Về</span>
+                    </button>
+                    <!-- Prominent Close Button -->
+                    <button onclick="closeModal('videoPlayerModal')" class="w-10 h-10 flex items-center justify-center bg-rose-500/20 text-rose-400 hover:bg-rose-500 hover:text-white text-2xl font-bold rounded-xl transition shadow-sm cursor-pointer ml-1" aria-label="Đóng">✕</button>
                 </div>
             </div>
             
@@ -848,7 +862,13 @@
                         <span class="hidden sm:inline">Toàn Màn Hình</span>
                     </button>
                     <a id="reportModalExternalLink" href="#" target="_blank" class="px-3 py-1 rounded-lg bg-sky-500/15 text-sky-400 hover:bg-sky-500/25 border border-sky-500/30 text-xs font-bold transition">Mở Tab Mới ↗</a>
-                    <button onclick="closeModal('reportEmbedModal')" class="text-slate-400 hover:text-white text-3xl p-3 sm:p-2 sm:text-xl rounded-lg hover:bg-slate-800 transition cursor-pointer" aria-label="Đóng">✕</button>
+                    <!-- Download Button -->
+                    <button onclick="downloadCurrentIdea()" class="px-2.5 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500 hover:text-white border border-emerald-500/30 text-xs font-bold transition flex items-center gap-1.5 shrink-0 cursor-pointer" title="Tải Báo Cáo / Tài Liệu">
+                        <span class="text-sm">⬇️</span>
+                        <span class="hidden sm:inline">Tải Về</span>
+                    </button>
+                    <!-- Prominent Close Button -->
+                    <button onclick="closeModal('reportEmbedModal')" class="w-10 h-10 flex items-center justify-center bg-rose-500/20 text-rose-400 hover:bg-rose-500 hover:text-white text-2xl font-bold rounded-xl transition shadow-sm cursor-pointer ml-1" aria-label="Đóng">✕</button>
                 </div>
             </div>
             <div class="flex-1 bg-slate-950 relative">
@@ -4511,6 +4531,26 @@
             if (countEl) {
                 const matchCount = document.getElementById('matchCounterText')?.innerText || '';
                 countEl.innerText = matchCount ? `${matchCount} video mẫu` : 'Chuyên đề';
+            }
+        }
+
+        let isMobileFilterOpen = false;
+        function toggleMobileFilters() {
+            isMobileFilterOpen = !isMobileFilterOpen;
+            const container = document.getElementById('allFilterBarsContainer');
+            const chevron = document.getElementById('mobileFilterChevron');
+            const btnText = document.getElementById('mobileFilterBtnText');
+            
+            if (isMobileFilterOpen) {
+                container.classList.remove('max-h-0', 'opacity-0');
+                container.classList.add('max-h-[2000px]', 'opacity-100');
+                if (chevron) chevron.style.transform = 'rotate(180deg)';
+                if (btnText) btnText.innerText = 'Đóng Bộ Lọc';
+            } else {
+                container.classList.add('max-h-0', 'opacity-0');
+                container.classList.remove('max-h-[2000px]', 'opacity-100');
+                if (chevron) chevron.style.transform = 'rotate(0deg)';
+                if (btnText) btnText.innerText = '⚙️ Mở Bộ Lọc';
             }
         }
 
