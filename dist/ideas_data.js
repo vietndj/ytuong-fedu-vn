@@ -2557,7 +2557,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@주서방_DcvmVl2hbuY_Video_by_ju_seobang",
@@ -2628,7 +2630,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks",
@@ -2695,7 +2699,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@비움_-_양희종_DZVHH27S7Lf_Video_by_bewoom",
@@ -2763,7 +2769,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@김민수_(티곰)_DbbBaIpyKCI_Video_by_king_min_su2",
@@ -2830,7 +2838,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DYKO1v3g3U2",
@@ -2898,7 +2908,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DXbzOkygG0v",
@@ -2966,7 +2978,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withyuee_DWY_2SvgE_a_Video_by_withyuee",
@@ -3033,7 +3047,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withyuee_DSKodjDkQYz",
@@ -3100,7 +3116,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withyuee_DRmeH20EVGA_Hong_Kong_Scaffolding_Cinematic",
@@ -3167,7 +3185,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DdB_21Yo0Qc",
@@ -3245,7 +3265,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DctVSroI3UB",
@@ -3322,7 +3344,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ulanzi_c4708b13_Ulanzi_UA12_UA20_Inflatable_Magnetic_Tube_Light",
@@ -3389,7 +3413,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@The_Tree_Church_Logan_DcoGfdghNwd_Video_by_treechurchlogan",
@@ -3456,7 +3482,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@tinanguyen2004_7673468312290037012_Double_Day_luôn_là_dịp_để_khách_hàng_lựa_được",
@@ -3523,7 +3551,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@SAIGON_INK_TATTOO_DdNq5CxszVl_Video_by_saigonink_studio",
@@ -3599,7 +3629,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV",
@@ -3666,7 +3698,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Kristina_G_Dcmav1VBv4H_Video_by_kristinagoose",
@@ -3733,7 +3767,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Dc4u6aOhR9r",
@@ -3807,7 +3843,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Dbk4X4tjJ8A",
@@ -3875,7 +3913,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@creator_video_Video_video",
@@ -3942,7 +3982,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market",
@@ -4009,7 +4051,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ALLURE_cafe_bar_DdF81brAiIj_Video_by_allure.cafebar",
@@ -4076,7 +4120,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Yegor.Sky_DbBQzyqimbi_Video_by_yegor.sky",
@@ -4147,7 +4193,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Yegor.Sky_DaFDqk4CGB1_Video_by_yegor.sky",
@@ -4222,7 +4270,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Victoria_Morse_DbESOapo-p3_Video_by_victoriamorse",
@@ -4295,7 +4345,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Turkish_Airlines_DdJYSokAkAj_Video_by_turkishairlines",
@@ -4367,7 +4419,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Turkish_Airlines_DchBUgVMvrp_Video_by_turkishairlines",
@@ -4438,7 +4492,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Turkish_Airlines_DaxjeQ4A9dP_Video_by_turkishairlines",
@@ -4508,7 +4564,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Steven_🇻🇳_Vu_DchxEAkJ9Hw_Video_by_steven.vuu",
@@ -4582,7 +4640,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Simeon_Kraeft_DY2XJzdioZg_Video_by_simeonkraeft",
@@ -4653,7 +4713,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Rilo_Dau0C9AzXc8_Video_by_17th.visuals",
@@ -4725,7 +4787,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Quinn_Social_Media_for_Realtors_DcTcw8lhku5_Video_by_sellingsocial.co",
@@ -4798,7 +4862,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Nicole_💖_DaAm8suhCau_Video_by_nicoolalah",
@@ -4869,7 +4935,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Neeraj_Khurana_Video,_Lighting_&_Photography_DcJBTCoT6UT_Video_by_photoknack.in",
@@ -4940,7 +5008,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer",
@@ -5007,7 +5077,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@LAYTON_Dc9TAgjTmeR_Video_by_layton_video",
@@ -5082,7 +5154,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@L7_WEST_LAKE_HANOI_by_LOTTE_HOTELS_DZuT3fSgOeg_Video_by_l7westlakehanoi_bylottehotels",
@@ -5149,7 +5223,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Keren_Ilan_DY5aQaoABsy_Video_by_kerennilan",
@@ -5217,7 +5293,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DaP3EE-qgAQ",
@@ -5285,7 +5363,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Junko_Da46F-lxueg_Video_by_junko_livlog",
@@ -5356,7 +5436,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Josh_Diaz_DdJ7S5BJ6H0_Video_by_joshdiazfilms",
@@ -5423,7 +5505,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DbLToEpPPzm",
@@ -5497,7 +5581,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DZzwqWBvfwT",
@@ -5569,7 +5655,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DZchNiZvH6m",
@@ -5637,7 +5725,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jazzie_DZVAYFwvo4y_Video_by_jazziesillona",
@@ -5705,7 +5795,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DYcM_9FPr7I",
@@ -5776,7 +5868,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DXoss18j011",
@@ -5844,7 +5938,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DWERTvEjy7k",
@@ -5913,7 +6009,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DUS5DYCEgyg",
@@ -5981,7 +6079,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DUPo66yklxb",
@@ -6053,7 +6153,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@JENNY_TSANG_DXf1LldT5co_Video_by_tsangtastic",
@@ -6125,7 +6227,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Hana_Konichiwa_DbS3HNNIKR7_Video_by_hana.konichiwa",
@@ -6196,7 +6300,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Genya_Dc5uepPBXKq_Video_by_sg.genchan",
@@ -6269,7 +6375,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Erin_&_Jackson_Travel_Filmmakers_&_Photograph_DbomJ6-Tpry_Video_by_thewaytowherever",
@@ -6340,7 +6448,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Elsa_Qin_C_DcILfhlgsmu_Video_by_elsaqinn",
@@ -6411,7 +6521,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@E_jo_이원민_DbKxhucTAh4_Video_by__e.jo",
@@ -6478,7 +6590,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@DbYF6qxvnI2_5_Simple_Shots",
@@ -6545,7 +6659,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Bryan_Hynes_Dcxsw50zIR8_Video_by_bryanhynes",
@@ -6616,7 +6732,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Brian_Tooker_DZN-FfdyPgH_Video_by_briantooker",
@@ -6687,7 +6805,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Db6a3tHoWTS",
@@ -6759,7 +6879,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Beixin_Travel_&_Nature_Dc0zRNwDz11_Carousel_Analysis",
@@ -6826,7 +6948,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@BILLY_ZHANG_Dbvzrg2i0WN_Video_by_bzhvng",
@@ -6893,7 +7017,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Austin_Rutland_DYwzs3zRRkv_Video_by_austinrutland",
@@ -6964,7 +7090,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Arif_Hakim_Db7P1GeOxvq_Video_by_ariffathulhakim",
@@ -7035,7 +7163,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Andrew_Yue_DaSkD6CAHP2_Carousel_Analysis",
@@ -7102,7 +7232,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Andrew_Yue_DXwc_9QAKjZ_Video_by_withyuee",
@@ -7169,7 +7301,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Andrei_Kostromskikh_DaC90d3tWuV_Video_by_kosnio",
@@ -7237,7 +7371,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy",
@@ -7308,7 +7444,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@53051938741_DadG15TAM5n_Video_by_zamba_garden",
@@ -7375,7 +7513,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@3075240316_DZrt1FbJTdy_Video_by_dal_officialeather",
@@ -7442,7 +7582,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "HocVien_Phuong_Ban_Linh_Hay_Vo_Duyen",
@@ -7509,7 +7651,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Mridupawan_Sharma_DcGbEVFznin_Video_by_mridupawasharma",
@@ -7580,7 +7724,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": true
+      "is_excluded": true,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Mridupawan_Sharma_DbnlAB5Twrw_Video_by_mridupawasharma",
@@ -7651,7 +7797,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": true
+      "is_excluded": true,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Mridupawan_Sharma_DaXdrAVzGcc_Video_by_mridupawasharma",
@@ -7722,7 +7870,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": true
+      "is_excluded": true,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Mridupawan_Sharma_DaH_rTUTe14_Video_by_mridupawasharma",
@@ -7793,7 +7943,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": true
+      "is_excluded": true,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jade_Sheng_DcbAqchxJ2t_Video_by_jade.got.curious",
@@ -7864,7 +8016,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jade_Sheng_DZa9pzKRsAU_Video_by_jade.got.curious",
@@ -7932,7 +8086,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jade_Sheng_DZB9Ls3No6p_Video_by_jade.got.curious",
@@ -8000,7 +8156,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jade_Sheng_DYXiic5xMeC_Video_by_jade.got.curious",
@@ -8071,7 +8229,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Saro_Deele_DXjRnwCISNU_Video_by_sarodeele",
@@ -8141,7 +8301,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious",
@@ -8213,7 +8375,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs",
@@ -8284,7 +8448,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video_by_nemo_ooo",
@@ -8356,7 +8522,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@XÍU_ĐI_ĂN_DazzVqPBfje_Video_by_xiudian",
@@ -8431,7 +8599,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@misa｜築40年マンション暮らし_Db-xDk4vWNQ_Video_by_mi_no_ie_39",
@@ -8505,7 +8675,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua",
@@ -8580,7 +8752,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Rika_ビオトープめだか植物のある暮らし_Da5KgjAxfOG_Video_by_r_6cafe",
@@ -8655,7 +8829,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc",
@@ -8730,7 +8906,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Hayden_Slow_Korean_&_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean",
@@ -8806,7 +8984,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs",
@@ -8880,7 +9060,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Indang_Ayu_DccpHbETFSr_Video_by_indanayuu",
@@ -8955,7 +9137,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@UME_📍минск-мир_DcVnyJyNWGY_Video_by_ume.izakaya",
@@ -9030,7 +9214,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg",
@@ -9104,7 +9290,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@거북이_소영_Db0tHr8Bs7x_Video_by_slowkoreanvlog",
@@ -9177,7 +9365,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k",
@@ -9252,7 +9442,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz",
@@ -9328,7 +9520,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@drea_(이현)_DaClEhzB5WC_Video_by_dreakwon",
@@ -9406,7 +9600,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views",
@@ -9482,7 +9678,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis",
@@ -9556,7 +9754,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5",
@@ -9632,7 +9832,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DcgQDZ_JNIr",
@@ -9707,7 +9909,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword",
@@ -9781,7 +9985,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb",
@@ -9856,7 +10062,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock",
@@ -9934,7 +10142,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen",
@@ -10012,7 +10222,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun",
@@ -10089,7 +10301,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann",
@@ -10164,7 +10378,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen",
@@ -10243,7 +10459,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale",
@@ -10317,7 +10535,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
@@ -10391,7 +10611,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@iman.lizi_Dc6qXoKoYKh",
@@ -10466,7 +10688,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hayancook_DdSUI9BvhqR",
@@ -10541,7 +10765,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@cushygarden_DdL6pHDSKRc",
@@ -10616,7 +10842,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@dev_zero_Db-S8i1hXwF",
@@ -10688,7 +10916,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@nagisa.decor_Dco_DevvUla",
@@ -10760,7 +10990,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@yuto_creator_DdBlAWRO1Hl",
@@ -10835,7 +11067,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@beixin_DdRGd8evPK-",
@@ -10910,7 +11144,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@layton_video_DdKGq2TMhf4",
@@ -10985,7 +11221,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@kienobifilms_DdPLvUpBwCl",
@@ -11057,7 +11295,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@aki_japan_DaDFH_TSii8",
@@ -11129,7 +11369,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@nathanael.lct_DdRg_ybtlKI",
@@ -11201,7 +11443,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@c.j.visuals_DdMrb4ARxHv",
@@ -11273,7 +11517,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@genya_jp_Dc3PgRbBp-m",
@@ -11345,7 +11591,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@charlotte.arsenault_DdHGBpZOzIm",
@@ -11417,7 +11665,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@arturbr_DdO2XLIKiXo",
@@ -11489,7 +11739,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jazziesillona_Dc6Cxf-QRWh",
@@ -11561,7 +11813,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@c.j.visuals_DdR7dEIxzT9",
@@ -11633,7 +11887,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jusorok_korea_DdBr6LZqkFd",
@@ -11705,7 +11961,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@arianballate_DdRe4-xpHs2",
@@ -11777,7 +12035,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@genya_jp_DdD_QqPB7aW",
@@ -11849,7 +12109,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "LAZADA_Ulanzi_Đèn_LED_Thanh_Bơm_Hơi_UA20,_",
@@ -11919,7 +12181,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "LAZADA_Ulanzi_Chân_Đế_Tự_Sướng_Có_Từ_Tính_",
@@ -11989,7 +12253,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency",
@@ -12066,7 +12332,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho",
@@ -12141,7 +12409,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount",
@@ -12214,7 +12484,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@vicgaibar_DaGGMTdtawm_Cannes_Street_Fit_Check_Tripod_OOTD",
@@ -12287,7 +12559,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey",
@@ -12361,7 +12635,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@celfstudies_DdN_aljAIY0_Day_In_My_Life_SF_Speed_Transitions",
@@ -12434,7 +12710,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha",
@@ -12507,7 +12785,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi",
@@ -12583,7 +12863,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour",
@@ -12659,7 +12941,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@the.isaacelguera_DdNKlIqPagO_Kien_Truc_Chuoi_Canh_Sequence",
@@ -12731,7 +13015,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway",
@@ -12806,7 +13092,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@moodme.sg_DdL904CMnq3_Slow_Living_Scent_Giftspace",
@@ -12878,7 +13166,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide",
@@ -12955,7 +13245,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85",
@@ -13027,7 +13319,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@lee.rabo_Dc3ifsHTIhL_Introverted_Homebody_Freelancer_Daily_Vlog",
@@ -13100,7 +13394,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@naohasa_DdGp4XftvIn_5_Outfits_Match_Cut_Walk",
@@ -13174,7 +13470,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation",
@@ -13241,7 +13539,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@lizzypalios_DdHMOB0xfd1_Content_Creation_Process",
@@ -13308,7 +13608,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC",
@@ -13375,7 +13677,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog",
@@ -13442,7 +13746,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion",
@@ -13509,7 +13815,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist",
@@ -13576,7 +13884,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@quinematic_DdH6HGNxEYT_Time_To_Go_For_A_Run",
@@ -13643,7 +13953,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut",
@@ -13710,7 +14022,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit",
@@ -13777,7 +14091,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hsuan_yunn_DdLsL-cSekL_Outdoor_Fashion_Match_Cut_Gear_Showcase",
@@ -13844,7 +14160,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@steven.vuu_DdM7gO4yD-c_Meta_RayBan_Hero_Cosmetics_Skit",
@@ -13911,7 +14229,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel",
@@ -13978,7 +14298,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City",
@@ -14045,7 +14367,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "LAZADA_Ulanzi_UA20_Đèn_LED_Thanh_Bơm_Hơi_20W_Bi",
@@ -14119,7 +14443,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "SHOPEE_ULANZI_MT80_Chân_Máy_Tripod_Cao_213cm_Tả",
@@ -14193,7 +14519,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing",
@@ -14266,7 +14594,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant",
@@ -14338,7 +14668,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook",
@@ -14413,7 +14745,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency",
@@ -14487,7 +14821,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion",
@@ -14561,7 +14897,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@mako__go_DaH7X34NTNX_Palermo_Sicily",
@@ -14633,7 +14971,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon",
@@ -14706,7 +15046,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine",
@@ -14779,7 +15121,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa",
@@ -14853,7 +15197,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year",
@@ -14925,7 +15271,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Gabe_Harris_Dc3ih_5jlqz_Carousel_Analysis",
@@ -14992,7 +15340,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions",
@@ -15065,7 +15415,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch",
@@ -15138,7 +15490,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light",
@@ -15210,7 +15564,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide",
@@ -15283,7 +15639,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five",
@@ -15356,7 +15714,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01",
@@ -15429,7 +15789,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes",
@@ -15503,7 +15865,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro",
@@ -15577,7 +15941,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life",
@@ -15651,7 +16017,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence",
@@ -15724,7 +16092,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@etaemin_DcgN1bsKUmi_Transition_Into_Running_Mode",
@@ -15799,7 +16169,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever",
@@ -15876,7 +16248,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds",
@@ -15950,7 +16324,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar",
@@ -16021,7 +16397,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story",
@@ -16092,7 +16470,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@neolumo.uralsk_DcOUP2PsMsP_Medical_Commercial_Authority",
@@ -16163,7 +16543,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling",
@@ -16234,7 +16616,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog",
@@ -16302,7 +16686,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro",
@@ -16373,7 +16759,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery",
@@ -16444,7 +16832,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery",
@@ -16515,7 +16905,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity",
@@ -16586,7 +16978,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial",
@@ -16658,7 +17052,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession",
@@ -16732,7 +17128,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective",
@@ -16803,7 +17201,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@nana_icroom_Db-jmp6TXNT_5_Japanese_Vlog_Compositions",
@@ -16874,7 +17274,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery",
@@ -16945,7 +17347,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@pascal_blaurock_Dcd2VeyNJQx_iPhone_Cinema_Settings_Mastery",
@@ -17016,7 +17420,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@kortafilms_DcdthwaTM3J_Camera_Angles_Mastery",
@@ -17087,7 +17493,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow",
@@ -17158,7 +17566,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery",
@@ -17232,7 +17642,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining",
@@ -17303,7 +17715,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light",
@@ -17371,7 +17785,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Practice_Cinematic_Chay_0904_@vietmac",
@@ -17439,7 +17855,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": true,
-      "is_excluded": true
+      "is_excluded": true,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Practice_Cinematic_Chay_0903_2_@vietmac",
@@ -17507,7 +17925,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": true,
-      "is_excluded": true
+      "is_excluded": true,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear",
@@ -17578,7 +17998,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jsnhow_Dcz7nniBEFe_Unwinding",
@@ -17646,7 +18068,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "FB_@AnhSacAnh_1964049564715249_Thuong_Hieu_Ca_Nhan_Sinh_Loi",
@@ -17717,7 +18141,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@sajad_machu_DcBjIwPMMfa_Creative_Block_Loop",
@@ -17788,7 +18214,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@slaohuairen_DcLblxOy3tN_A_young_girl_in_linen",
@@ -17859,7 +18287,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@gakuyen_Dc0MQfeEwp4_Carousel_Analysis",
@@ -17930,7 +18360,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai",
@@ -17998,7 +18430,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp",
@@ -18066,7 +18500,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@岳_🍜_GAKU_Dc0MHhTE9z0_Carousel_Analysis",
@@ -18133,7 +18569,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Practice_Cinematic_Chay_0903_@vietmac",
@@ -18201,7 +18639,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": true,
-      "is_excluded": true
+      "is_excluded": true,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together",
@@ -18272,7 +18712,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@joshdiazfilms_DceDPc2yVm0_Worst_Person_To_Text",
@@ -18343,7 +18785,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@joshdiazfilms_DcJjGy1tG7d_DJI_Drone_Unboxing",
@@ -18414,7 +18858,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@joshdiazfilms_Db1hf_vO67m_Simple_Life_Routine",
@@ -18485,7 +18931,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@joshdiazfilms_Dbow9xKOCje_Falling_Behind_Mindset",
@@ -18556,7 +19004,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula",
@@ -18630,7 +19080,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@mridupawasharma_DF2sOsNyNlY_3_Hooks_Mastery",
@@ -18701,7 +19153,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis",
@@ -18769,7 +19223,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video",
@@ -18837,7 +19293,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots",
@@ -18908,7 +19366,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing",
@@ -18979,7 +19439,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄_DcgSonjgnkV_Carousel_Analysis",
@@ -19046,7 +19508,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@rubyscafe_Db-ylimPqMu_Summer_in_the_Village",
@@ -19117,7 +19581,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@mridupawasharma_DWD7Lv4E8N8_SanDisk_Creator_SSD",
@@ -19188,7 +19654,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC",
@@ -19256,7 +19724,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "BROLL_PLAN_20260827_TimesCity_Basketball",
@@ -19324,7 +19794,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": true,
-      "is_excluded": true
+      "is_excluded": true,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast",
@@ -19392,7 +19864,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London",
@@ -19460,7 +19934,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@valenti_k41_DcL1W34I6lz_DJI_Mic_3_ASMR",
@@ -19534,7 +20010,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Practice_Cinematic_2508_@vietmac",
@@ -19602,7 +20080,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": true,
-      "is_excluded": true
+      "is_excluded": true,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Practice_Cinematic_01_@vietmac",
@@ -19670,7 +20150,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": true,
-      "is_excluded": true
+      "is_excluded": true,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture",
@@ -19741,7 +20223,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Bao_Cao_Boi_Canh_Thuc_Chien_R2",
@@ -19812,7 +20296,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Chay_Bo_Times_City_Self_Practice",
@@ -19880,7 +20366,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": true,
-      "is_excluded": true
+      "is_excluded": true,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Visual_Storytelling_Carousel_@withyuee",
@@ -19948,7 +20436,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Hong_Kong_Urban_Transitions_@withyuee",
@@ -20020,7 +20510,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Hong_Kong_Cinematography_Guide_@withyuee",
@@ -20088,7 +20580,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Hong_Kong_Bamboo_Scaffolding_@withyuee",
@@ -20159,7 +20653,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong",
@@ -20230,7 +20726,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@tinanguyen2004_7673468312290037012_Double_Day_luon_la_dip_de_khach_hang_lua_duoc",
@@ -20303,7 +20801,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@colecoppolino_DcJiRCrTlG1",
@@ -20374,7 +20874,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withyuee_DcTk0RGgtBO_Hong_Kong_Cinematic_Cityscape",
@@ -20442,7 +20944,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments",
@@ -20510,7 +21014,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@willwfit_DbRak0lsesY_The_Goal_Is_Simple",
@@ -20581,7 +21087,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ioana_iftode_DcYQVYJjHa-_Tokyo_Slow_Life_Visual_Diaries",
@@ -20649,7 +21157,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine",
@@ -20720,7 +21230,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva",
@@ -20791,7 +21303,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@madisonkjan_Da7V4egSQxv_Vietnam_Travel_Cinematic",
@@ -20859,7 +21373,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "FB_@KopDinh_1398467868829887_Lat_Cat_Cam_Xuc_Kop_Dinh",
@@ -20927,7 +21443,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withyuee_DUqQaPbkfcQ_Chinese_New_Year_Hong_Kong",
@@ -20995,7 +21513,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withyuee_DO8arRxEZvh_Hong_Kong_Visual_Rhythm_Carousel",
@@ -21063,7 +21583,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withyuee_DVQ3Gh6Efk1_Spring_in_Hong_Kong",
@@ -21131,7 +21653,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@samuelaitken__Da0eP_msVrm_Aesthetic_Routine",
@@ -21202,7 +21726,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@by.bennnj_DbKauxkoJU_",
@@ -21270,7 +21796,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@by.bennnj_DbKauxkoJU_Making_beginner_cameras_look_cinematic",
@@ -21339,7 +21867,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jazziesillona_DXUG_1TjwJu_Carousel_Analysis",
@@ -21413,7 +21943,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jazziesillona_DW8lBR9Dzop_Carousel_Analysis",
@@ -21481,7 +22013,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jazzie_DWnsVqWj2XN_Carousel_Analysis",
@@ -21549,7 +22083,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jazziesillona_DWrDUymD4_a_Carousel_Analysis",
@@ -21617,7 +22153,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jakarta_Videographer_Jacoub_Anwar_DbnwnkrAVQ9_Carousel_Analysis",
@@ -21688,7 +22226,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jazzie_DU2CTKzEqvl_Carousel_Analysis",
@@ -21759,7 +22299,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jazziesillona_DbIA2jwPHCV",
@@ -21827,7 +22369,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "REMAKE_Byjxson_Quang_Cao_Dong_Ho_Bam_Gio",
@@ -21883,7 +22427,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life",
@@ -21954,7 +22500,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis",
@@ -22022,7 +22570,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@local_creator_video_video",
@@ -22090,7 +22640,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": true,
-      "is_excluded": true
+      "is_excluded": true,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@local_creator_video_ig_video_ig",
@@ -22158,7 +22710,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": true,
-      "is_excluded": true
+      "is_excluded": true,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ioana_iftode_DbqCYu4DAz2_Kyoto_Slow_Life_Visual_Diaries",
@@ -22226,7 +22780,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01",
@@ -22300,7 +22856,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@bryanhynes_DacaMHwzEm3_Visual_Sequence",
@@ -22371,7 +22929,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@kenshoji.visuals_DZOzwweTc5a_The_Art_of_Static_Shot",
@@ -22442,7 +23002,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@minhmigoi_Db0Sn3zvuHP_The_Power_of_Composition",
@@ -22513,7 +23075,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@mcjacoub_Db22SIxAVtJ_Camera_Angles_Mastery",
@@ -22584,7 +23148,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@qfroost_DXWKIztktTN_Saigon_Vietnam",
@@ -22655,7 +23221,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
@@ -22729,7 +23297,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow",
@@ -22800,7 +23370,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jeromememe_Db-zVchOXV7_People_of_Bhutan",
@@ -22871,7 +23443,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jeromememe_DQuEXMbj8fT_People_of_Porto",
@@ -22942,7 +23516,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jeromememe_DQmKgPDEWgJ_Artisans_of_Venice",
@@ -23013,7 +23589,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jeromememe_DbGMt3oIaZm_People_of_Copenhagen",
@@ -23084,7 +23662,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DXUG_1TjwJu",
@@ -23158,7 +23738,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DWrDUymD4_a",
@@ -23226,7 +23808,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Dc3ih_5jlqz",
@@ -23298,7 +23882,9 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "thumbnail": "",
+      "cover_image": ""
     }
   ]
 };

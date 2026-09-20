@@ -2430,10 +2430,13 @@
                                         ▶
                                     </button>
                                 ` : ''}
+                                ${(item.media.video_url || item.media.download_url) ? `
+                                    <button onclick="forceDownloadVideo('${item.media.download_url || item.media.video_url}', '${item.id}.mp4'); event.stopPropagation();" class="w-7 h-7 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-400 border border-emerald-500/30 flex items-center justify-center transition tooltip shrink-0" title="Tải Về">⬇</button>
+                                ` : ''}
                                 <button onclick="openReportModal('${item.id}')" class="w-7 h-7 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 flex items-center justify-center transition tooltip shrink-0" title="Báo Cáo">📄</button>
                                 
                                 <!-- Follow Instagram Button -->
-                                ${item.ig_url ? `
+                                ${(item.ig_url && item.ig_url !== '#' && item.ig_url.trim() !== '') ? `
                                     <a href="${item.ig_url}" target="_blank" class="h-7 px-2.5 rounded-lg bg-gradient-to-tr from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white border border-pink-500/50 flex items-center justify-center gap-1.5 transition shadow-sm shrink-0 tooltip" title="Theo dõi trên Instagram">
                                         <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
@@ -2455,7 +2458,7 @@
                         <!-- DUO-POSTER 9:16 (HOOK SHOT & KEY SHOT) - ĐƯA LÊN TRÊN CÙNG -->
                         <div class="grid grid-cols-2 gap-2 mb-3 mt-1">
                             <!-- Hook Shot (0.0s) -->
-                            <div class="relative rounded-xl overflow-hidden aspect-poster bg-slate-900 group cursor-pointer border border-slate-800" onclick="openReportModal('${item.id}')" title="Bấm để xem báo cáo">
+                            <div class="relative rounded-xl overflow-hidden aspect-poster bg-slate-900 group cursor-pointer border border-slate-800" onclick="openVideoModal('${item.id}')" title="Bấm để xem video">
                                 <img 
                                     src="${item.media.thumb_hook}" 
                                     alt="Hook Shot" 
@@ -2474,7 +2477,7 @@
                             </div>
 
                             <!-- Key Shot -->
-                            <div class="relative rounded-xl overflow-hidden aspect-poster bg-slate-900 group cursor-pointer border border-slate-800" onclick="openReportModal('${item.id}')" title="Bấm để xem báo cáo">
+                            <div class="relative rounded-xl overflow-hidden aspect-poster bg-slate-900 group cursor-pointer border border-slate-800" onclick="openVideoModal('${item.id}')" title="Bấm để xem video">
                                 <img 
                                     src="${item.media.thumb_key}" 
                                     alt="Key Shot" 
@@ -3541,25 +3544,48 @@
             }
         }
 
+        
+        function forceDownloadVideo(url, filename) {
+            showToast("Đang chuẩn bị tải về...", "⬇️");
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) throw new Error("Network response was not ok");
+                    return response.blob();
+                })
+                .then(blob => {
+                    const blobUrl = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = blobUrl;
+                    a.download = filename || 'video.mp4';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(blobUrl);
+                    document.body.removeChild(a);
+                    showToast("Tải về thành công!", "✅");
+                })
+                .catch(err => {
+                    console.error("Lỗi tải video:", err);
+                    window.open(url, '_blank');
+                    showToast("Mở link do lỗi tải xuống.", "⚠️");
+                });
+        }
+
         function downloadCurrentIdea() {
             if (!appState.targetIdeaId) {
                 showToast("Không tìm thấy dữ liệu ý tưởng!", "⚠️");
                 return;
             }
-            const idea = window.FEDU_IDEAS_DATABASE.find(i => i.id === appState.targetIdeaId);
+            const idea = window.FEDU_IDEAS_DATABASE.ideas ? window.FEDU_IDEAS_DATABASE.ideas.find(i => i.id === appState.targetIdeaId) : window.FEDU_IDEAS_DATABASE.find(i => i.id === appState.targetIdeaId);
             if (!idea) return;
-            
-            // Tìm URL tốt nhất để tải về
-            let url = idea.video_url || idea.report_url || idea.thumbnail_url;
+            let url = idea.media?.video_url || idea.media?.download_url || idea.video_url || idea.report_url || idea.thumbnail_url;
             if (!url) {
                 showToast("Không có tài nguyên để tải về!", "⚠️");
                 return;
             }
-            
-            // Mở tab mới để tải về
-            window.open(url, '_blank');
-            showToast("Đang mở link tải về...", "⬇️");
+            forceDownloadVideo(url, idea.id + '.mp4');
         }
+
 
         function setupSwipeToCloseModals() {
             // Setup Swipe to Close cho Mobile

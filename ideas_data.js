@@ -2558,8 +2558,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Modern%2BMetro%2BRhythms",
-      "cover_image": "https://placehold.co/600x800?text=Modern%2BMetro%2BRhythms"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@주서방_DcvmVl2hbuY_Video_by_ju_seobang",
@@ -2631,8 +2631,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ju%2BSeobang%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Ju%2BSeobang%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks",
@@ -2700,8 +2700,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40ju%2Bseobang",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40ju%2Bseobang"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@비움_-_양희종_DZVHH27S7Lf_Video_by_bewoom",
@@ -2770,8 +2770,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Zen%2BMind%2B%26",
-      "cover_image": "https://placehold.co/600x800?text=Zen%2BMind%2B%26"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@김민수_(티곰)_DbbBaIpyKCI_Video_by_king_min_su2",
@@ -2839,8 +2839,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40%EA%B9%80%EB%AF%BC%EC%88%98%2B%28%ED%8B%B0%EA%B3%B0%29",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40%EA%B9%80%EB%AF%BC%EC%88%98%2B%28%ED%8B%B0%EA%B3%B0%29"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DYKO1v3g3U2",
@@ -2909,8 +2909,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BQuan",
-      "cover_image": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BQuan"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DXbzOkygG0v",
@@ -2979,8 +2979,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BB%C3%B3c",
-      "cover_image": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BB%C3%B3c"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withyuee_DWY_2SvgE_a_Video_by_withyuee",
@@ -3048,8 +3048,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40withyuee%2BDWY",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40withyuee%2BDWY"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withyuee_DSKodjDkQYz",
@@ -3117,8 +3117,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40withyuee%2BDSKodjDkQYz",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40withyuee%2BDSKodjDkQYz"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withyuee_DRmeH20EVGA_Hong_Kong_Scaffolding_Cinematic",
@@ -3186,8 +3186,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40withyuee%2BDRmeH20EVGA",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40withyuee%2BDRmeH20EVGA"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DdB_21Yo0Qc",
@@ -3266,8 +3266,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Creative%2BPhone%2BVideo",
-      "cover_image": "https://placehold.co/600x800?text=Creative%2BPhone%2BVideo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DctVSroI3UB",
@@ -3345,8 +3345,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Creative%2BPhone%2BVideo",
-      "cover_image": "https://placehold.co/600x800?text=Creative%2BPhone%2BVideo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ulanzi_c4708b13_Ulanzi_UA12_UA20_Inflatable_Magnetic_Tube_Light",
@@ -3414,8 +3414,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40ulanzi%2Bc4708b13",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40ulanzi%2Bc4708b13"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@The_Tree_Church_Logan_DcoGfdghNwd_Video_by_treechurchlogan",
@@ -3483,8 +3483,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40The%2BTree",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40The%2BTree"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@tinanguyen2004_7673468312290037012_Double_Day_luôn_là_dịp_để_khách_hàng_lựa_được",
@@ -3552,8 +3552,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40tinanguyen2004%2B7673468312290037012",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40tinanguyen2004%2B7673468312290037012"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@SAIGON_INK_TATTOO_DdNq5CxszVl_Video_by_saigonink_studio",
@@ -3630,8 +3630,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BX%C4%83m",
-      "cover_image": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BX%C4%83m"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV",
@@ -3699,8 +3699,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40kulniyasally%2BDdGRCKwsaaI",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40kulniyasally%2BDdGRCKwsaaI"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Kristina_G_Dcmav1VBv4H_Video_by_kristinagoose",
@@ -3768,8 +3768,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40Kristina%2BG",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40Kristina%2BG"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Dc4u6aOhR9r",
@@ -3844,8 +3844,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=V%C5%A9%2B%C4%90i%E1%BB%87u%2BNh%E1%BB%8Bp",
-      "cover_image": "https://placehold.co/600x800?text=V%C5%A9%2B%C4%90i%E1%BB%87u%2BNh%E1%BB%8Bp"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Dbk4X4tjJ8A",
@@ -3914,8 +3914,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=B%C6%B0u%2BThi%E1%BA%BFp%2BVideo",
-      "cover_image": "https://placehold.co/600x800?text=B%C6%B0u%2BThi%E1%BA%BFp%2BVideo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@creator_video_Video_video",
@@ -3983,8 +3983,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40creator%2Bvideo",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40creator%2Bvideo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market",
@@ -4052,8 +4052,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40breth.co%2BDdK6GtHJPrH",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40breth.co%2BDdK6GtHJPrH"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ALLURE_cafe_bar_DdF81brAiIj_Video_by_allure.cafebar",
@@ -4121,8 +4121,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40ALLURE%2Bcafe",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40ALLURE%2Bcafe"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Yegor.Sky_DbBQzyqimbi_Video_by_yegor.sky",
@@ -4194,8 +4194,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Boring%2Bvs%2BCreative",
-      "cover_image": "https://placehold.co/600x800?text=Boring%2Bvs%2BCreative"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Yegor.Sky_DaFDqk4CGB1_Video_by_yegor.sky",
@@ -4271,8 +4271,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Byegor.sky",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Byegor.sky"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Victoria_Morse_DbESOapo-p3_Video_by_victoriamorse",
@@ -4346,8 +4346,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=The%2BArt%2Bof",
-      "cover_image": "https://placehold.co/600x800?text=The%2BArt%2Bof"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Turkish_Airlines_DdJYSokAkAj_Video_by_turkishairlines",
@@ -4420,8 +4420,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bturkishairlines",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bturkishairlines"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Turkish_Airlines_DchBUgVMvrp_Video_by_turkishairlines",
@@ -4493,8 +4493,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bturkishairlines",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bturkishairlines"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Turkish_Airlines_DaxjeQ4A9dP_Video_by_turkishairlines",
@@ -4565,8 +4565,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Aviation%2BShowcase%2BIstanbul",
-      "cover_image": "https://placehold.co/600x800?text=Aviation%2BShowcase%2BIstanbul"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Steven_🇻🇳_Vu_DchxEAkJ9Hw_Video_by_steven.vuu",
@@ -4641,8 +4641,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BK%E1%BB%83",
-      "cover_image": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BK%E1%BB%83"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Simeon_Kraeft_DY2XJzdioZg_Video_by_simeonkraeft",
@@ -4714,8 +4714,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Urban%2BSymmetry%2B%26",
-      "cover_image": "https://placehold.co/600x800?text=Urban%2BSymmetry%2B%26"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Rilo_Dau0C9AzXc8_Video_by_17th.visuals",
@@ -4788,8 +4788,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Night%2BWalk%2BTokyo",
-      "cover_image": "https://placehold.co/600x800?text=Night%2BWalk%2BTokyo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Quinn_Social_Media_for_Realtors_DcTcw8lhku5_Video_by_sellingsocial.co",
@@ -4863,8 +4863,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bsellingsocial.co",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bsellingsocial.co"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Nicole_💖_DaAm8suhCau_Video_by_nicoolalah",
@@ -4936,8 +4936,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=A%2BLong%2BWay",
-      "cover_image": "https://placehold.co/600x800?text=A%2BLong%2BWay"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Neeraj_Khurana_Video,_Lighting_&_Photography_DcJBTCoT6UT_Video_by_photoknack.in",
@@ -5009,8 +5009,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Master%2BStudio%2BLighting",
-      "cover_image": "https://placehold.co/600x800?text=Master%2BStudio%2BLighting"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer",
@@ -5078,8 +5078,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40Laurent%2BDerossi",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40Laurent%2BDerossi"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@LAYTON_Dc9TAgjTmeR_Video_by_layton_video",
@@ -5155,8 +5155,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Blayton",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Blayton"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@L7_WEST_LAKE_HANOI_by_LOTTE_HOTELS_DZuT3fSgOeg_Video_by_l7westlakehanoi_bylottehotels",
@@ -5224,8 +5224,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40L7%2BWEST",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40L7%2BWEST"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Keren_Ilan_DY5aQaoABsy_Video_by_kerennilan",
@@ -5294,8 +5294,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Creative%2BVisual%2BPerformance",
-      "cover_image": "https://placehold.co/600x800?text=Creative%2BVisual%2BPerformance"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DaP3EE-qgAQ",
@@ -5364,8 +5364,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=K%E1%BB%B9%2BThu%E1%BA%ADt%2BQuay",
-      "cover_image": "https://placehold.co/600x800?text=K%E1%BB%B9%2BThu%E1%BA%ADt%2BQuay"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Junko_Da46F-lxueg_Video_by_junko_livlog",
@@ -5437,8 +5437,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Kyoto%2BAutumn%2BSlow",
-      "cover_image": "https://placehold.co/600x800?text=Kyoto%2BAutumn%2BSlow"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Josh_Diaz_DdJ7S5BJ6H0_Video_by_joshdiazfilms",
@@ -5506,8 +5506,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40Josh%2BDiaz",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40Josh%2BDiaz"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DbLToEpPPzm",
@@ -5582,8 +5582,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BChuy%E1%BB%83n",
-      "cover_image": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BChuy%E1%BB%83n"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DZzwqWBvfwT",
@@ -5656,8 +5656,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=K%E1%BB%B9%2BThu%E1%BA%ADt%2BLia",
-      "cover_image": "https://placehold.co/600x800?text=K%E1%BB%B9%2BThu%E1%BA%ADt%2BLia"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DZchNiZvH6m",
@@ -5726,8 +5726,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BC%E1%BA%A5u",
-      "cover_image": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BC%E1%BA%A5u"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jazzie_DZVAYFwvo4y_Video_by_jazziesillona",
@@ -5796,8 +5796,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Sunset%2BCoastlines%2B%26",
-      "cover_image": "https://placehold.co/600x800?text=Sunset%2BCoastlines%2B%26"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DYcM_9FPr7I",
@@ -5869,8 +5869,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=T%C6%B0%C6%A1ng%2BQuan%2BGi%E1%BB%AFa",
-      "cover_image": "https://placehold.co/600x800?text=T%C6%B0%C6%A1ng%2BQuan%2BGi%E1%BB%AFa"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DXoss18j011",
@@ -5939,8 +5939,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=K%E1%BB%8Bch%2BB%E1%BA%A3n%2B14",
-      "cover_image": "https://placehold.co/600x800?text=K%E1%BB%8Bch%2BB%E1%BA%A3n%2B14"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DWERTvEjy7k",
@@ -6010,8 +6010,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2B21",
-      "cover_image": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2B21"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DUS5DYCEgyg",
@@ -6080,8 +6080,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BMatch",
-      "cover_image": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BMatch"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DUPo66yklxb",
@@ -6154,8 +6154,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Jazzie%2BSillona%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Jazzie%2BSillona%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@JENNY_TSANG_DXf1LldT5co_Video_by_tsangtastic",
@@ -6228,8 +6228,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Jenny%2BTsang%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Jenny%2BTsang%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Hana_Konichiwa_DbS3HNNIKR7_Video_by_hana.konichiwa",
@@ -6301,8 +6301,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Tokyo%2BRetro%2BAlleyways",
-      "cover_image": "https://placehold.co/600x800?text=Tokyo%2BRetro%2BAlleyways"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Genya_Dc5uepPBXKq_Video_by_sg.genchan",
@@ -6376,8 +6376,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Outfit%2BCheck%2BBlack",
-      "cover_image": "https://placehold.co/600x800?text=Outfit%2BCheck%2BBlack"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Erin_&_Jackson_Travel_Filmmakers_&_Photograph_DbomJ6-Tpry_Video_by_thewaytowherever",
@@ -6449,8 +6449,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Nomadic%2BWilderness%2BJourney",
-      "cover_image": "https://placehold.co/600x800?text=Nomadic%2BWilderness%2BJourney"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Elsa_Qin_C_DcILfhlgsmu_Video_by_elsaqinn",
@@ -6522,8 +6522,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Elsa%2BQin%3A%2BChoices",
-      "cover_image": "https://placehold.co/600x800?text=Elsa%2BQin%3A%2BChoices"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@E_jo_이원민_DbKxhucTAh4_Video_by__e.jo",
@@ -6591,8 +6591,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40E%2Bjo",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40E%2Bjo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@DbYF6qxvnI2_5_Simple_Shots",
@@ -6660,8 +6660,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40DbYF6qxvnI2%2B5",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40DbYF6qxvnI2%2B5"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Bryan_Hynes_Dcxsw50zIR8_Video_by_bryanhynes",
@@ -6733,8 +6733,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=How%2Bto%2BFilm",
-      "cover_image": "https://placehold.co/600x800?text=How%2Bto%2BFilm"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Brian_Tooker_DZN-FfdyPgH_Video_by_briantooker",
@@ -6806,8 +6806,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Alpine%2BFPV%2BCinema",
-      "cover_image": "https://placehold.co/600x800?text=Alpine%2BFPV%2BCinema"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Db6a3tHoWTS",
@@ -6880,8 +6880,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Commercial%2BCreative%2BReel%3A",
-      "cover_image": "https://placehold.co/600x800?text=Commercial%2BCreative%2BReel%3A"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Beixin_Travel_&_Nature_Dc0zRNwDz11_Carousel_Analysis",
@@ -6949,8 +6949,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40Beixin%2BTravel",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40Beixin%2BTravel"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@BILLY_ZHANG_Dbvzrg2i0WN_Video_by_bzhvng",
@@ -7018,8 +7018,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40BILLY%2BZHANG",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40BILLY%2BZHANG"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Austin_Rutland_DYwzs3zRRkv_Video_by_austinrutland",
@@ -7091,8 +7091,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Rugged%2BPacific%2BNorthwest",
-      "cover_image": "https://placehold.co/600x800?text=Rugged%2BPacific%2BNorthwest"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Arif_Hakim_Db7P1GeOxvq_Video_by_ariffathulhakim",
@@ -7164,8 +7164,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=B%E1%BB%91%2BC%E1%BB%A5c%2BT%C6%B0%C6%A1ng",
-      "cover_image": "https://placehold.co/600x800?text=B%E1%BB%91%2BC%E1%BB%A5c%2BT%C6%B0%C6%A1ng"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Andrew_Yue_DaSkD6CAHP2_Carousel_Analysis",
@@ -7233,8 +7233,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40Andrew%2BYue",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40Andrew%2BYue"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Andrew_Yue_DXwc_9QAKjZ_Video_by_withyuee",
@@ -7302,8 +7302,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40Andrew%2BYue",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40Andrew%2BYue"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Andrei_Kostromskikh_DaC90d3tWuV_Video_by_kosnio",
@@ -7372,8 +7372,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Cinematic%2BUrban%2BColor",
-      "cover_image": "https://placehold.co/600x800?text=Cinematic%2BUrban%2BColor"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy",
@@ -7445,8 +7445,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=The%2BYap%2BTriangle%3A",
-      "cover_image": "https://placehold.co/600x800?text=The%2BYap%2BTriangle%3A"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@53051938741_DadG15TAM5n_Video_by_zamba_garden",
@@ -7514,8 +7514,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%4053051938741%2BDadG15TAM5n",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%4053051938741%2BDadG15TAM5n"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@3075240316_DZrt1FbJTdy_Video_by_dal_officialeather",
@@ -7583,8 +7583,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%403075240316%2BDZrt1FbJTdy",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%403075240316%2BDZrt1FbJTdy"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "HocVien_Phuong_Ban_Linh_Hay_Vo_Duyen",
@@ -7652,8 +7652,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=HocVien%2BPhuong%2BBan",
-      "cover_image": "https://placehold.co/600x800?text=HocVien%2BPhuong%2BBan"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Mridupawan_Sharma_DcGbEVFznin_Video_by_mridupawasharma",
@@ -7725,8 +7725,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": true,
-      "thumbnail": "https://placehold.co/600x800?text=Himalayan%2BSerenity%2B-",
-      "cover_image": "https://placehold.co/600x800?text=Himalayan%2BSerenity%2B-"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Mridupawan_Sharma_DbnlAB5Twrw_Video_by_mridupawasharma",
@@ -7798,8 +7798,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": true,
-      "thumbnail": "https://placehold.co/600x800?text=3%2BHabits%2BThat",
-      "cover_image": "https://placehold.co/600x800?text=3%2BHabits%2BThat"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Mridupawan_Sharma_DaXdrAVzGcc_Video_by_mridupawasharma",
@@ -7871,8 +7871,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": true,
-      "thumbnail": "https://placehold.co/600x800?text=JBL%2BNoise%2BCancelling",
-      "cover_image": "https://placehold.co/600x800?text=JBL%2BNoise%2BCancelling"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Mridupawan_Sharma_DaH_rTUTe14_Video_by_mridupawasharma",
@@ -7944,8 +7944,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": true,
-      "thumbnail": "https://placehold.co/600x800?text=OPPO%2BFind%2BX9s",
-      "cover_image": "https://placehold.co/600x800?text=OPPO%2BFind%2BX9s"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jade_Sheng_DcbAqchxJ2t_Video_by_jade.got.curious",
@@ -8017,8 +8017,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Start%2BStupid%2B-",
-      "cover_image": "https://placehold.co/600x800?text=Start%2BStupid%2B-"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jade_Sheng_DZa9pzKRsAU_Video_by_jade.got.curious",
@@ -8087,8 +8087,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bjade.got.curious",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bjade.got.curious"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jade_Sheng_DZB9Ls3No6p_Video_by_jade.got.curious",
@@ -8157,8 +8157,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bjade.got.curious",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bjade.got.curious"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jade_Sheng_DYXiic5xMeC_Video_by_jade.got.curious",
@@ -8230,8 +8230,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Chi%E1%BA%BFn%2BL%C6%B0%E1%BB%A3c%2BX%C3%A2y",
-      "cover_image": "https://placehold.co/600x800?text=Chi%E1%BA%BFn%2BL%C6%B0%E1%BB%A3c%2BX%C3%A2y"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Saro_Deele_DXjRnwCISNU_Video_by_sarodeele",
@@ -8302,8 +8302,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bsarodeele",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bsarodeele"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious",
@@ -8376,8 +8376,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bjade.got.curious",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bjade.got.curious"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs",
@@ -8449,8 +8449,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bleticiaqdrs",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bleticiaqdrs"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video_by_nemo_ooo",
@@ -8523,8 +8523,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Tr%E1%BA%A3i%2BNghi%E1%BB%87m%2BTri%E1%BB%83n",
-      "cover_image": "https://placehold.co/600x800?text=Tr%E1%BA%A3i%2BNghi%E1%BB%87m%2BTri%E1%BB%83n"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@XÍU_ĐI_ĂN_DazzVqPBfje_Video_by_xiudian",
@@ -8600,8 +8600,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=%40X%C3%8DU_%C4%90I_%C4%82N%2B-%2BVideo",
-      "cover_image": "https://placehold.co/600x800?text=%40X%C3%8DU_%C4%90I_%C4%82N%2B-%2BVideo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@misa｜築40年マンション暮らし_Db-xDk4vWNQ_Video_by_mi_no_ie_39",
@@ -8676,8 +8676,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=%40misa%EF%BD%9C%E7%AF%8940%E5%B9%B4%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E6%9A%AE%E3%82%89%E3%81%97%2B-%2BVideo",
-      "cover_image": "https://placehold.co/600x800?text=%40misa%EF%BD%9C%E7%AF%8940%E5%B9%B4%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E6%9A%AE%E3%82%89%E3%81%97%2B-%2BVideo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua",
@@ -8753,8 +8753,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bstudioberdua",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bstudioberdua"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Rika_ビオトープめだか植物のある暮らし_Da5KgjAxfOG_Video_by_r_6cafe",
@@ -8830,8 +8830,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=%40Rika_%E3%83%93%E3%82%AA%E3%83%88%E3%83%BC%E3%83%97%E3%82%81%E3%81%A0%E3%81%8B%E6%A4%8D%E7%89%A9%E3%81%AE%E3%81%82%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97%2B-%2BVideo",
-      "cover_image": "https://placehold.co/600x800?text=%40Rika_%E3%83%93%E3%82%AA%E3%83%88%E3%83%BC%E3%83%97%E3%82%81%E3%81%A0%E3%81%8B%E6%A4%8D%E7%89%A9%E3%81%AE%E3%81%82%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97%2B-%2BVideo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc",
@@ -8907,8 +8907,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Beugcreates.ugc",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Beugcreates.ugc"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Hayden_Slow_Korean_&_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean",
@@ -8985,8 +8985,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=%40Hayden_Slow_Korean_%26_Daily_Life%2B-%2BVideo",
-      "cover_image": "https://placehold.co/600x800?text=%40Hayden_Slow_Korean_%26_Daily_Life%2B-%2BVideo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs",
@@ -9061,8 +9061,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bhyungs",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bhyungs"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Indang_Ayu_DccpHbETFSr_Video_by_indanayuu",
@@ -9138,8 +9138,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bindanayuu",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bindanayuu"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@UME_📍минск-мир_DcVnyJyNWGY_Video_by_ume.izakaya",
@@ -9215,8 +9215,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=%40UME_%F0%9F%93%8D%D0%BC%D0%B8%D0%BD%D1%81%D0%BA-%D0%BC%D0%B8%D1%80%2B-%2BVideo",
-      "cover_image": "https://placehold.co/600x800?text=%40UME_%F0%9F%93%8D%D0%BC%D0%B8%D0%BD%D1%81%D0%BA-%D0%BC%D0%B8%D1%80%2B-%2BVideo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg",
@@ -9291,8 +9291,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bfocr.sg",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bfocr.sg"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@거북이_소영_Db0tHr8Bs7x_Video_by_slowkoreanvlog",
@@ -9366,8 +9366,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=%40%EA%B1%B0%EB%B6%81%EC%9D%B4_%EC%86%8C%EC%98%81%2B-%2BVideo",
-      "cover_image": "https://placehold.co/600x800?text=%40%EA%B1%B0%EB%B6%81%EC%9D%B4_%EC%86%8C%EC%98%81%2B-%2BVideo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k",
@@ -9443,8 +9443,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7%2B-%2BVideo",
-      "cover_image": "https://placehold.co/600x800?text=%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7%2B-%2BVideo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz",
@@ -9521,8 +9521,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=%40Jenny_Yoo_%F0%9F%87%B0%F0%9F%87%B7%2B-%2BVideo",
-      "cover_image": "https://placehold.co/600x800?text=%40Jenny_Yoo_%F0%9F%87%B0%F0%9F%87%B7%2B-%2BVideo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@drea_(이현)_DaClEhzB5WC_Video_by_dreakwon",
@@ -9601,8 +9601,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=%40drea_%28%EC%9D%B4%ED%98%84%29%2B-%2BVideo",
-      "cover_image": "https://placehold.co/600x800?text=%40drea_%28%EC%9D%B4%ED%98%84%29%2B-%2BVideo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views",
@@ -9679,8 +9679,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bkorea",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bkorea"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis",
@@ -9755,8 +9755,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bdiego51",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bdiego51"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5",
@@ -9833,8 +9833,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Hayan%2BCook%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Hayan%2BCook%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DcgQDZ_JNIr",
@@ -9910,8 +9910,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Clarissa%2BCindy%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Clarissa%2BCindy%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword",
@@ -9986,8 +9986,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Jackson%2BSword%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Jackson%2BSword%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb",
@@ -10063,8 +10063,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=%40creator%2BDdSs5rahILb%2BVideo",
-      "cover_image": "https://placehold.co/600x800?text=%40creator%2BDdSs5rahILb%2BVideo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock",
@@ -10143,8 +10143,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Pascal%2BBlaurock%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Pascal%2BBlaurock%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen",
@@ -10223,8 +10223,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Megan%2BTan%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Megan%2BTan%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun",
@@ -10302,8 +10302,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Shin%2BYueun%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Shin%2BYueun%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann",
@@ -10379,8 +10379,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bsyooaann",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bsyooaann"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen",
@@ -10460,8 +10460,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Video%2Bby%2Bmegantanhweewen",
-      "cover_image": "https://placehold.co/600x800?text=Video%2Bby%2Bmegantanhweewen"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale",
@@ -10536,8 +10536,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=X-%2BVideo%2Bby",
-      "cover_image": "https://placehold.co/600x800?text=X-%2BVideo%2Bby"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
@@ -10612,8 +10612,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Director%27s%2BReport%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Director%27s%2BReport%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@iman.lizi_Dc6qXoKoYKh",
@@ -10689,8 +10689,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Iman%2BLizi%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Iman%2BLizi%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hayancook_DdSUI9BvhqR",
@@ -10766,8 +10766,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Hayan%2BCook%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Hayan%2BCook%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@cushygarden_DdL6pHDSKRc",
@@ -10843,8 +10843,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Cushy%2BGarden%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Cushy%2BGarden%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@dev_zero_Db-S8i1hXwF",
@@ -10917,8 +10917,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Zero%2BDev%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Zero%2BDev%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@nagisa.decor_Dco_DevvUla",
@@ -10991,8 +10991,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Nagisa%2B%E2%80%A2%2BNgh%E1%BB%87",
-      "cover_image": "https://placehold.co/600x800?text=Nagisa%2B%E2%80%A2%2BNgh%E1%BB%87"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@yuto_creator_DdBlAWRO1Hl",
@@ -11068,8 +11068,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Yuto%2B%E2%80%A2%2BC%E1%BA%A3nh",
-      "cover_image": "https://placehold.co/600x800?text=Yuto%2B%E2%80%A2%2BC%E1%BA%A3nh"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@beixin_DdRGd8evPK-",
@@ -11145,8 +11145,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Beixin%2B%E2%80%A2%2B4",
-      "cover_image": "https://placehold.co/600x800?text=Beixin%2B%E2%80%A2%2B4"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@layton_video_DdKGq2TMhf4",
@@ -11222,8 +11222,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Layton%2B%E2%80%A2%2BS%E1%BB%B1",
-      "cover_image": "https://placehold.co/600x800?text=Layton%2B%E2%80%A2%2BS%E1%BB%B1"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@kienobifilms_DdPLvUpBwCl",
@@ -11296,8 +11296,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Kien%2BNguyen%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Kien%2BNguyen%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@aki_japan_DaDFH_TSii8",
@@ -11370,8 +11370,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Aki%2B%E2%80%A2%2BK%E1%BB%B9",
-      "cover_image": "https://placehold.co/600x800?text=Aki%2B%E2%80%A2%2BK%E1%BB%B9"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@nathanael.lct_DdRg_ybtlKI",
@@ -11444,8 +11444,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Nathanael%2B%E2%80%A2%2BTh%E1%BB%AD",
-      "cover_image": "https://placehold.co/600x800?text=Nathanael%2B%E2%80%A2%2BTh%E1%BB%AD"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@c.j.visuals_DdMrb4ARxHv",
@@ -11518,8 +11518,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=CJ%2B%E2%80%A2%2B5",
-      "cover_image": "https://placehold.co/600x800?text=CJ%2B%E2%80%A2%2B5"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@genya_jp_Dc3PgRbBp-m",
@@ -11592,8 +11592,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Genya%2B%E2%80%A2%2BKh%C3%A1m",
-      "cover_image": "https://placehold.co/600x800?text=Genya%2B%E2%80%A2%2BKh%C3%A1m"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@charlotte.arsenault_DdHGBpZOzIm",
@@ -11666,8 +11666,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Charlotte%2B%E2%80%A2%2BChi%E1%BA%BFn",
-      "cover_image": "https://placehold.co/600x800?text=Charlotte%2B%E2%80%A2%2BChi%E1%BA%BFn"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@arturbr_DdO2XLIKiXo",
@@ -11740,8 +11740,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=ArturBr%2B%E2%80%A2%2BVisual",
-      "cover_image": "https://placehold.co/600x800?text=ArturBr%2B%E2%80%A2%2BVisual"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jazziesillona_Dc6Cxf-QRWh",
@@ -11814,8 +11814,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Jazzie%2B%E2%80%A2%2BC%E1%BA%A9m",
-      "cover_image": "https://placehold.co/600x800?text=Jazzie%2B%E2%80%A2%2BC%E1%BA%A9m"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@c.j.visuals_DdR7dEIxzT9",
@@ -11888,8 +11888,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=CJ%2B%E2%80%A2%2BTh%E1%BB%AD",
-      "cover_image": "https://placehold.co/600x800?text=CJ%2B%E2%80%A2%2BTh%E1%BB%AD"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jusorok_korea_DdBr6LZqkFd",
@@ -11962,8 +11962,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Jusorok%2B%E2%80%A2%2BReview",
-      "cover_image": "https://placehold.co/600x800?text=Jusorok%2B%E2%80%A2%2BReview"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@arianballate_DdRe4-xpHs2",
@@ -12036,8 +12036,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Arian%2B%E2%80%A2%2BQu%E1%BA%A3ng",
-      "cover_image": "https://placehold.co/600x800?text=Arian%2B%E2%80%A2%2BQu%E1%BA%A3ng"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@genya_jp_DdD_QqPB7aW",
@@ -12110,8 +12110,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Genya%2B%E2%80%A2%2BChu%E1%BA%A9n",
-      "cover_image": "https://placehold.co/600x800?text=Genya%2B%E2%80%A2%2BChu%E1%BA%A9n"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "LAZADA_Ulanzi_Đèn_LED_Thanh_Bơm_Hơi_UA20,_",
@@ -12182,8 +12182,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ulanzi%2B%7C%2B%C4%90%C3%A8n",
-      "cover_image": "https://placehold.co/600x800?text=Ulanzi%2B%7C%2B%C4%90%C3%A8n"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "LAZADA_Ulanzi_Chân_Đế_Tự_Sướng_Có_Từ_Tính_",
@@ -12254,8 +12254,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ulanzi%2B%7C%2BCh%C3%A2n",
-      "cover_image": "https://placehold.co/600x800?text=Ulanzi%2B%7C%2BCh%C3%A2n"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency",
@@ -12333,8 +12333,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2B%C4%90i%E1%BB%81u",
-      "cover_image": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2B%C4%90i%E1%BB%81u"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho",
@@ -12410,8 +12410,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=5%2BCenas%2BCriativas",
-      "cover_image": "https://placehold.co/600x800?text=5%2BCenas%2BCriativas"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount",
@@ -12485,8 +12485,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=How%2BI%2BFilm",
-      "cover_image": "https://placehold.co/600x800?text=How%2BI%2BFilm"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@vicgaibar_DaGGMTdtawm_Cannes_Street_Fit_Check_Tripod_OOTD",
@@ -12560,8 +12560,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Cannes%2BStreet%2BFit",
-      "cover_image": "https://placehold.co/600x800?text=Cannes%2BStreet%2BFit"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey",
@@ -12636,8 +12636,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Asian%2BDragon%2BTattoo",
-      "cover_image": "https://placehold.co/600x800?text=Asian%2BDragon%2BTattoo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@celfstudies_DdN_aljAIY0_Day_In_My_Life_SF_Speed_Transitions",
@@ -12711,8 +12711,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=25%2BPh%C3%A2n%2BC%E1%BA%A3nh",
-      "cover_image": "https://placehold.co/600x800?text=25%2BPh%C3%A2n%2BC%E1%BA%A3nh"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha",
@@ -12786,8 +12786,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Combo%2BTh%C6%B0%2BTh%C3%A1i",
-      "cover_image": "https://placehold.co/600x800?text=Combo%2BTh%C6%B0%2BTh%C3%A1i"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi",
@@ -12864,8 +12864,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=8%2BC%C3%BA%2BM%C3%A1y",
-      "cover_image": "https://placehold.co/600x800?text=8%2BC%C3%BA%2BM%C3%A1y"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour",
@@ -12942,8 +12942,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=UTS%2BVietnam%2BOpen",
-      "cover_image": "https://placehold.co/600x800?text=UTS%2BVietnam%2BOpen"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@the.isaacelguera_DdNKlIqPagO_Kien_Truc_Chuoi_Canh_Sequence",
@@ -13016,8 +13016,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ki%E1%BA%BFn%2BTr%C3%BAc%2BChu%E1%BB%97i",
-      "cover_image": "https://placehold.co/600x800?text=Ki%E1%BA%BFn%2BTr%C3%BAc%2BChu%E1%BB%97i"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway",
@@ -13093,8 +13093,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=House%2Bof%2BHair",
-      "cover_image": "https://placehold.co/600x800?text=House%2Bof%2BHair"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@moodme.sg_DdL904CMnq3_Slow_Living_Scent_Giftspace",
@@ -13167,8 +13167,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=12%2BC%C3%BA%2BM%C3%A1y",
-      "cover_image": "https://placehold.co/600x800?text=12%2BC%C3%BA%2BM%C3%A1y"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide",
@@ -13246,8 +13246,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=C%E1%BA%A9m%2BNang%2B15",
-      "cover_image": "https://placehold.co/600x800?text=C%E1%BA%A9m%2BNang%2B15"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85",
@@ -13320,8 +13320,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=4%2BC%C3%BA%2BM%C3%A1y",
-      "cover_image": "https://placehold.co/600x800?text=4%2BC%C3%BA%2BM%C3%A1y"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@lee.rabo_Dc3ifsHTIhL_Introverted_Homebody_Freelancer_Daily_Vlog",
@@ -13395,8 +13395,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=A%2BDay%2Bin",
-      "cover_image": "https://placehold.co/600x800?text=A%2BDay%2Bin"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@naohasa_DdGp4XftvIn_5_Outfits_Match_Cut_Walk",
@@ -13471,8 +13471,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=5%2BB%E1%BB%99%2BPh%E1%BB%A5c",
-      "cover_image": "https://placehold.co/600x800?text=5%2BB%E1%BB%99%2BPh%E1%BB%A5c"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation",
@@ -13540,8 +13540,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40sanjogchopra%2BDcxi128sxO9",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40sanjogchopra%2BDcxi128sxO9"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@lizzypalios_DdHMOB0xfd1_Content_Creation_Process",
@@ -13609,8 +13609,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40lizzypalios%2BDdHMOB0xfd1",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40lizzypalios%2BDdHMOB0xfd1"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC",
@@ -13678,8 +13678,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40tattebakery%2BDcJM7AWOa",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40tattebakery%2BDcJM7AWOa"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog",
@@ -13747,8 +13747,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40saebomoh%2BDbH76S5yg5W",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40saebomoh%2BDbH76S5yg5W"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion",
@@ -13816,8 +13816,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40kisho%2Bmen",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40kisho%2Bmen"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist",
@@ -13885,8 +13885,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40korea%2Bbigmama",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40korea%2Bbigmama"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@quinematic_DdH6HGNxEYT_Time_To_Go_For_A_Run",
@@ -13954,8 +13954,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40quinematic%2BDdH6HGNxEYT",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40quinematic%2BDdH6HGNxEYT"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut",
@@ -14023,8 +14023,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40dimasyudhystira%2BDc3DUsvpkrP",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40dimasyudhystira%2BDc3DUsvpkrP"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit",
@@ -14092,8 +14092,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40steven.vuu%2BDaBLA-QJcrk",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40steven.vuu%2BDaBLA-QJcrk"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hsuan_yunn_DdLsL-cSekL_Outdoor_Fashion_Match_Cut_Gear_Showcase",
@@ -14161,8 +14161,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40hsuan%2Byunn",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40hsuan%2Byunn"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@steven.vuu_DdM7gO4yD-c_Meta_RayBan_Hero_Cosmetics_Skit",
@@ -14230,8 +14230,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40steven.vuu%2BDdM7gO4yD-c",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40steven.vuu%2BDdM7gO4yD-c"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel",
@@ -14299,8 +14299,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40bysuncan%2BDcvZ-FowD",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40bysuncan%2BDcvZ-FowD"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City",
@@ -14368,8 +14368,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40yegor.sky%2BDdJaKjQCMTm",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40yegor.sky%2BDdJaKjQCMTm"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "LAZADA_Ulanzi_UA20_Đèn_LED_Thanh_Bơm_Hơi_20W_Bi",
@@ -14444,8 +14444,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ulanzi%2BUA20%2B%C4%90%C3%A8n",
-      "cover_image": "https://placehold.co/600x800?text=Ulanzi%2BUA20%2B%C4%90%C3%A8n"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "SHOPEE_ULANZI_MT80_Chân_Máy_Tripod_Cao_213cm_Tả",
@@ -14520,8 +14520,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=ULANZI%2BMT80%2BCh%C3%A2n",
-      "cover_image": "https://placehold.co/600x800?text=ULANZI%2BMT80%2BCh%C3%A2n"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing",
@@ -14595,8 +14595,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Jenny%2BTsang%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Jenny%2BTsang%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant",
@@ -14669,8 +14669,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Tri%E1%BA%BFt%2BL%C3%BD%2BFast",
-      "cover_image": "https://placehold.co/600x800?text=Tri%E1%BA%BFt%2BL%C3%BD%2BFast"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook",
@@ -14746,8 +14746,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Aidana%2B%E2%80%A2%2BTornado",
-      "cover_image": "https://placehold.co/600x800?text=Aidana%2B%E2%80%A2%2BTornado"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency",
@@ -14822,8 +14822,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Critos%2BPro%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Critos%2BPro%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion",
@@ -14898,8 +14898,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Jamison%2BLange%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Jamison%2BLange%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@mako__go_DaH7X34NTNX_Palermo_Sicily",
@@ -14972,8 +14972,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Mako%2B%E2%80%A2%2BKhung",
-      "cover_image": "https://placehold.co/600x800?text=Mako%2B%E2%80%A2%2BKhung"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon",
@@ -15047,8 +15047,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=allinB%2BCoffee%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=allinB%2BCoffee%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine",
@@ -15122,8 +15122,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Josh%2BDiaz%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Josh%2BDiaz%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa",
@@ -15198,8 +15198,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Neolumo%2B%E2%80%A2%2BPh%C3%B3ng",
-      "cover_image": "https://placehold.co/600x800?text=Neolumo%2B%E2%80%A2%2BPh%C3%B3ng"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year",
@@ -15272,8 +15272,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Quy%2BTr%C3%ACnh%2BX%C3%A2y",
-      "cover_image": "https://placehold.co/600x800?text=Quy%2BTr%C3%ACnh%2BX%C3%A2y"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Gabe_Harris_Dc3ih_5jlqz_Carousel_Analysis",
@@ -15341,8 +15341,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40Gabe%2BHarris",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40Gabe%2BHarris"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions",
@@ -15416,8 +15416,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Hoi%2BAn%2BNatural",
-      "cover_image": "https://placehold.co/600x800?text=Hoi%2BAn%2BNatural"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch",
@@ -15491,8 +15491,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BQuay",
-      "cover_image": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BQuay"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light",
@@ -15565,8 +15565,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ulanzi%2BLA30%2B30W",
-      "cover_image": "https://placehold.co/600x800?text=Ulanzi%2BLA30%2B30W"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide",
@@ -15640,8 +15640,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Quy%2BTr%C3%ACnh%2BSetup",
-      "cover_image": "https://placehold.co/600x800?text=Quy%2BTr%C3%ACnh%2BSetup"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five",
@@ -15715,8 +15715,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Tri%E1%BA%BFt%2BL%C3%BD%2B1",
-      "cover_image": "https://placehold.co/600x800?text=Tri%E1%BA%BFt%2BL%C3%BD%2B1"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01",
@@ -15790,8 +15790,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Unboxing%2B-%2BUlanzi",
-      "cover_image": "https://placehold.co/600x800?text=Unboxing%2B-%2BUlanzi"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes",
@@ -15866,8 +15866,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Gi%E1%BA%A3i%2BM%C3%A3%2B5",
-      "cover_image": "https://placehold.co/600x800?text=Gi%E1%BA%A3i%2BM%C3%A3%2B5"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro",
@@ -15942,8 +15942,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Qu%C3%A1n%2BC%C3%A0%2BPh%C3%AA",
-      "cover_image": "https://placehold.co/600x800?text=Qu%C3%A1n%2BC%C3%A0%2BPh%C3%AA"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life",
@@ -16018,8 +16018,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Quy%2BTr%C3%ACnh%2BChu%E1%BA%A9n",
-      "cover_image": "https://placehold.co/600x800?text=Quy%2BTr%C3%ACnh%2BChu%E1%BA%A9n"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence",
@@ -16093,8 +16093,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BBi%E1%BA%BFn",
-      "cover_image": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BBi%E1%BA%BFn"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@etaemin_DcgN1bsKUmi_Transition_Into_Running_Mode",
@@ -16170,8 +16170,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=K%E1%BB%B9%2BThu%E1%BA%ADt%2BMotion",
-      "cover_image": "https://placehold.co/600x800?text=K%E1%BB%B9%2BThu%E1%BA%ADt%2BMotion"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever",
@@ -16249,8 +16249,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Getting%2BReady%2BFaster",
-      "cover_image": "https://placehold.co/600x800?text=Getting%2BReady%2BFaster"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds",
@@ -16325,8 +16325,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Layton%2B%E2%80%A2%2B6",
-      "cover_image": "https://placehold.co/600x800?text=Layton%2B%E2%80%A2%2B6"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar",
@@ -16398,8 +16398,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Moving%2BPostcards%2BFrom",
-      "cover_image": "https://placehold.co/600x800?text=Moving%2BPostcards%2BFrom"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story",
@@ -16471,8 +16471,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Khung%2BH%C3%ACnh%2BT%C4%A9nh",
-      "cover_image": "https://placehold.co/600x800?text=Khung%2BH%C3%ACnh%2BT%C4%A9nh"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@neolumo.uralsk_DcOUP2PsMsP_Medical_Commercial_Authority",
@@ -16544,8 +16544,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=C%E1%BA%A5u%2BTr%C3%BAc%2BVideo",
-      "cover_image": "https://placehold.co/600x800?text=C%E1%BA%A5u%2BTr%C3%BAc%2BVideo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling",
@@ -16617,8 +16617,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BK%E1%BB%83",
-      "cover_image": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BK%E1%BB%83"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog",
@@ -16687,8 +16687,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BK%E1%BB%83",
-      "cover_image": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BK%E1%BB%83"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro",
@@ -16760,8 +16760,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Khung%2BH%C3%ACnh%2B%C4%90i%E1%BB%87n",
-      "cover_image": "https://placehold.co/600x800?text=Khung%2BH%C3%ACnh%2B%C4%90i%E1%BB%87n"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery",
@@ -16833,8 +16833,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=B%C3%B3c%2BT%C3%A1ch%2BH%E1%BA%ADu",
-      "cover_image": "https://placehold.co/600x800?text=B%C3%B3c%2BT%C3%A1ch%2BH%E1%BA%ADu"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery",
@@ -16906,8 +16906,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=K%E1%BB%B9%2BThu%E1%BA%ADt%2BQuay",
-      "cover_image": "https://placehold.co/600x800?text=K%E1%BB%B9%2BThu%E1%BA%ADt%2BQuay"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity",
@@ -16979,8 +16979,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Sasohan%2BDaejeon%3A%2BNgh%E1%BB%87",
-      "cover_image": "https://placehold.co/600x800?text=Sasohan%2BDaejeon%3A%2BNgh%E1%BB%87"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial",
@@ -17053,8 +17053,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=K%E1%BB%B9%2BThu%E1%BA%ADt%2BChuy%E1%BB%83n",
-      "cover_image": "https://placehold.co/600x800?text=K%E1%BB%B9%2BThu%E1%BA%ADt%2BChuy%E1%BB%83n"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession",
@@ -17129,8 +17129,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Nh%E1%BB%8Bp%2BD%E1%BB%B1ng%2B%C4%90i%E1%BB%87n",
-      "cover_image": "https://placehold.co/600x800?text=Nh%E1%BB%8Bp%2BD%E1%BB%B1ng%2B%C4%90i%E1%BB%87n"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective",
@@ -17202,8 +17202,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Bi%E1%BA%BFn%2BBan%2BC%C3%B4ng",
-      "cover_image": "https://placehold.co/600x800?text=Bi%E1%BA%BFn%2BBan%2BC%C3%B4ng"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@nana_icroom_Db-jmp6TXNT_5_Japanese_Vlog_Compositions",
@@ -17275,8 +17275,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=5%2BB%E1%BB%91%2BC%E1%BB%A5c",
-      "cover_image": "https://placehold.co/600x800?text=5%2BB%E1%BB%91%2BC%E1%BB%A5c"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery",
@@ -17348,8 +17348,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=6%2BG%C3%B3c%2BQuay",
-      "cover_image": "https://placehold.co/600x800?text=6%2BG%C3%B3c%2BQuay"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@pascal_blaurock_Dcd2VeyNJQx_iPhone_Cinema_Settings_Mastery",
@@ -17421,8 +17421,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=T%E1%BB%91i%2B%C6%AFu%2BC%C3%A0i",
-      "cover_image": "https://placehold.co/600x800?text=T%E1%BB%91i%2B%C6%AFu%2BC%C3%A0i"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@kortafilms_DcdthwaTM3J_Camera_Angles_Mastery",
@@ -17494,8 +17494,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=7%2BG%C3%B3c%2BM%C3%A1y",
-      "cover_image": "https://placehold.co/600x800?text=7%2BG%C3%B3c%2BM%C3%A1y"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow",
@@ -17567,8 +17567,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Hena%2BFilm%2BVlog",
-      "cover_image": "https://placehold.co/600x800?text=Hena%2BFilm%2BVlog"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery",
@@ -17643,8 +17643,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Mridupawan%2BSharma%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Mridupawan%2BSharma%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining",
@@ -17716,8 +17716,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Firewood%2BKLCC%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Firewood%2BKLCC%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light",
@@ -17786,8 +17786,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=The%2BBeauty%2Bof",
-      "cover_image": "https://placehold.co/600x800?text=The%2BBeauty%2Bof"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Practice_Cinematic_Chay_0904_@vietmac",
@@ -17856,8 +17856,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": true,
       "is_excluded": true,
-      "thumbnail": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BB-Roll",
-      "cover_image": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BB-Roll"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Practice_Cinematic_Chay_0903_2_@vietmac",
@@ -17926,8 +17926,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": true,
       "is_excluded": true,
-      "thumbnail": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BCh%E1%BA%A1y",
-      "cover_image": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BCh%E1%BA%A1y"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear",
@@ -17999,8 +17999,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Beixin%2B%E2%80%A2%2BSony",
-      "cover_image": "https://placehold.co/600x800?text=Beixin%2B%E2%80%A2%2BSony"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jsnhow_Dcz7nniBEFe_Unwinding",
@@ -18069,8 +18069,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Unwinding%2B%E2%80%A2%2BNh%E1%BB%8Bp",
-      "cover_image": "https://placehold.co/600x800?text=Unwinding%2B%E2%80%A2%2BNh%E1%BB%8Bp"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "FB_@AnhSacAnh_1964049564715249_Thuong_Hieu_Ca_Nhan_Sinh_Loi",
@@ -18142,8 +18142,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Kh%C3%B3a%2BH%E1%BB%8Dc%2BTh%C6%B0%C6%A1ng",
-      "cover_image": "https://placehold.co/600x800?text=Kh%C3%B3a%2BH%E1%BB%8Dc%2BTh%C6%B0%C6%A1ng"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@sajad_machu_DcBjIwPMMfa_Creative_Block_Loop",
@@ -18215,8 +18215,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=V%C3%B2ng%2BL%E1%BA%B7p%2BB%E1%BA%BF",
-      "cover_image": "https://placehold.co/600x800?text=V%C3%B2ng%2BL%E1%BA%B7p%2BB%E1%BA%BF"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@slaohuairen_DcLblxOy3tN_A_young_girl_in_linen",
@@ -18288,8 +18288,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=SlaoHuA%2B%E2%80%A2%2BA",
-      "cover_image": "https://placehold.co/600x800?text=SlaoHuA%2B%E2%80%A2%2BA"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@gakuyen_Dc0MQfeEwp4_Carousel_Analysis",
@@ -18361,8 +18361,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=How%2Bto%2BSound",
-      "cover_image": "https://placehold.co/600x800?text=How%2Bto%2BSound"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai",
@@ -18431,8 +18431,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Split%2BCity%3A%2BShanghai",
-      "cover_image": "https://placehold.co/600x800?text=Split%2BCity%3A%2BShanghai"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp",
@@ -18501,8 +18501,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=%C4%90%C3%A8n%2BB%C3%A0n%2BDi",
-      "cover_image": "https://placehold.co/600x800?text=%C4%90%C3%A8n%2BB%C3%A0n%2BDi"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@岳_🍜_GAKU_Dc0MHhTE9z0_Carousel_Analysis",
@@ -18570,8 +18570,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40%E5%B2%B3%2B%F0%9F%8D%9C",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40%E5%B2%B3%2B%F0%9F%8D%9C"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Practice_Cinematic_Chay_0903_@vietmac",
@@ -18640,8 +18640,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": true,
       "is_excluded": true,
-      "thumbnail": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BCh%E1%BA%A1y",
-      "cover_image": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BCh%E1%BA%A1y"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together",
@@ -18713,8 +18713,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=3%2BTh%C3%B3i%2BQuen",
-      "cover_image": "https://placehold.co/600x800?text=3%2BTh%C3%B3i%2BQuen"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@joshdiazfilms_DceDPc2yVm0_Worst_Person_To_Text",
@@ -18786,8 +18786,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BK%E1%BB%83",
-      "cover_image": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BK%E1%BB%83"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@joshdiazfilms_DcJjGy1tG7d_DJI_Drone_Unboxing",
@@ -18859,8 +18859,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Unboxing%2BDJI%2BDrone",
-      "cover_image": "https://placehold.co/600x800?text=Unboxing%2BDJI%2BDrone"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@joshdiazfilms_Db1hf_vO67m_Simple_Life_Routine",
@@ -18932,8 +18932,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=V%E1%BA%BB%2B%C4%90%E1%BA%B9p%2BB%C3%ACnh",
-      "cover_image": "https://placehold.co/600x800?text=V%E1%BA%BB%2B%C4%90%E1%BA%B9p%2BB%C3%ACnh"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@joshdiazfilms_Dbow9xKOCje_Falling_Behind_Mindset",
@@ -19005,8 +19005,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ch%E1%BB%AFa%2BL%C3%A0nh%2B%C3%81p",
-      "cover_image": "https://placehold.co/600x800?text=Ch%E1%BB%AFa%2BL%C3%A0nh%2B%C3%81p"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula",
@@ -19081,8 +19081,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=C%C3%B4ng%2BTh%E1%BB%A9c%2BD%E1%BB%B1ng",
-      "cover_image": "https://placehold.co/600x800?text=C%C3%B4ng%2BTh%E1%BB%A9c%2BD%E1%BB%B1ng"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@mridupawasharma_DF2sOsNyNlY_3_Hooks_Mastery",
@@ -19154,8 +19154,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=3%2BChi%C3%AAu%2BM%E1%BB%93i",
-      "cover_image": "https://placehold.co/600x800?text=3%2BChi%C3%AAu%2BM%E1%BB%93i"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis",
@@ -19224,8 +19224,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Andrei%2BKostromskikh%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Andrei%2BKostromskikh%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video",
@@ -19294,8 +19294,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=How%2Bto%2BCook",
-      "cover_image": "https://placehold.co/600x800?text=How%2Bto%2BCook"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots",
@@ -19367,8 +19367,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=7%2BShots%2BFor",
-      "cover_image": "https://placehold.co/600x800?text=7%2BShots%2BFor"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing",
@@ -19440,8 +19440,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Cinematic%2BUnboxing%2BMastery",
-      "cover_image": "https://placehold.co/600x800?text=Cinematic%2BUnboxing%2BMastery"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄_DcgSonjgnkV_Carousel_Analysis",
@@ -19509,8 +19509,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=IG%2B%40%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%AE%F0%9D%98%80%2B%F0%9D%97%A0%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%84",
-      "cover_image": "https://placehold.co/600x800?text=IG%2B%40%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%AE%F0%9D%98%80%2B%F0%9D%97%A0%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%84"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@rubyscafe_Db-ylimPqMu_Summer_in_the_Village",
@@ -19582,8 +19582,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Little%2BRuby%27s%2BCafe",
-      "cover_image": "https://placehold.co/600x800?text=Little%2BRuby%27s%2BCafe"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@mridupawasharma_DWD7Lv4E8N8_SanDisk_Creator_SSD",
@@ -19655,8 +19655,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=SanDisk%2BCreator%2BPhone",
-      "cover_image": "https://placehold.co/600x800?text=SanDisk%2BCreator%2BPhone"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC",
@@ -19725,8 +19725,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Summer%2Bin%2BNew",
-      "cover_image": "https://placehold.co/600x800?text=Summer%2Bin%2BNew"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "BROLL_PLAN_20260827_TimesCity_Basketball",
@@ -19795,8 +19795,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": true,
       "is_excluded": true,
-      "thumbnail": "https://placehold.co/600x800?text=K%E1%BA%BF%2BHo%E1%BA%A1ch%2BQuay",
-      "cover_image": "https://placehold.co/600x800?text=K%E1%BA%BF%2BHo%E1%BA%A1ch%2BQuay"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast",
@@ -19865,8 +19865,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2B%C4%90%E1%BA%A1o",
-      "cover_image": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2B%C4%90%E1%BA%A1o"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London",
@@ -19935,8 +19935,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=The%2BArt%2Bof",
-      "cover_image": "https://placehold.co/600x800?text=The%2BArt%2Bof"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@valenti_k41_DcL1W34I6lz_DJI_Mic_3_ASMR",
@@ -20011,8 +20011,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=DJI%2BMic%2B3",
-      "cover_image": "https://placehold.co/600x800?text=DJI%2BMic%2B3"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Practice_Cinematic_2508_@vietmac",
@@ -20081,8 +20081,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": true,
       "is_excluded": true,
-      "thumbnail": "https://placehold.co/600x800?text=Practice%2BCinematic%2B2508",
-      "cover_image": "https://placehold.co/600x800?text=Practice%2BCinematic%2B2508"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Practice_Cinematic_01_@vietmac",
@@ -20151,8 +20151,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": true,
       "is_excluded": true,
-      "thumbnail": "https://placehold.co/600x800?text=Practice%2BCinematic%2B01",
-      "cover_image": "https://placehold.co/600x800?text=Practice%2BCinematic%2B01"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture",
@@ -20224,8 +20224,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Personal%2BCinema%2BWherever",
-      "cover_image": "https://placehold.co/600x800?text=Personal%2BCinema%2BWherever"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Bao_Cao_Boi_Canh_Thuc_Chien_R2",
@@ -20297,8 +20297,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=B%E1%BA%A3n%2B%C4%90%E1%BB%93%2BB%E1%BB%91i",
-      "cover_image": "https://placehold.co/600x800?text=B%E1%BA%A3n%2B%C4%90%E1%BB%93%2BB%E1%BB%91i"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Chay_Bo_Times_City_Self_Practice",
@@ -20367,8 +20367,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": true,
       "is_excluded": true,
-      "thumbnail": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BC%E1%BA%A3nh",
-      "cover_image": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BC%E1%BA%A3nh"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Visual_Storytelling_Carousel_@withyuee",
@@ -20437,8 +20437,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Visual%2BStorytelling%2BCarousel",
-      "cover_image": "https://placehold.co/600x800?text=Visual%2BStorytelling%2BCarousel"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Hong_Kong_Urban_Transitions_@withyuee",
@@ -20511,8 +20511,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Hong%2BKong%2BUrban",
-      "cover_image": "https://placehold.co/600x800?text=Hong%2BKong%2BUrban"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Hong_Kong_Cinematography_Guide_@withyuee",
@@ -20581,8 +20581,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Hong%2BKong%2BCinematography",
-      "cover_image": "https://placehold.co/600x800?text=Hong%2BKong%2BCinematography"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Hong_Kong_Bamboo_Scaffolding_@withyuee",
@@ -20654,8 +20654,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Hong%2BKong%2BBamboo",
-      "cover_image": "https://placehold.co/600x800?text=Hong%2BKong%2BBamboo"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong",
@@ -20727,8 +20727,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=M%C3%B9a%2BS%E1%BB%A9a%2B%C4%90%E1%BB%8F",
-      "cover_image": "https://placehold.co/600x800?text=M%C3%B9a%2BS%E1%BB%A9a%2B%C4%90%E1%BB%8F"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@tinanguyen2004_7673468312290037012_Double_Day_luon_la_dip_de_khach_hang_lua_duoc",
@@ -20802,8 +20802,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BK%E1%BB%8Bch",
-      "cover_image": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BK%E1%BB%8Bch"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@colecoppolino_DcJiRCrTlG1",
@@ -20875,8 +20875,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=K%E1%BB%B7%2BLu%E1%BA%ADt%2BTh%C3%A9p",
-      "cover_image": "https://placehold.co/600x800?text=K%E1%BB%B7%2BLu%E1%BA%ADt%2BTh%C3%A9p"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withyuee_DcTk0RGgtBO_Hong_Kong_Cinematic_Cityscape",
@@ -20945,8 +20945,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=August%2Bin%2BHong",
-      "cover_image": "https://placehold.co/600x800?text=August%2Bin%2BHong"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments",
@@ -21015,8 +21015,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Tokyo%2BSlow%2BLife%3A",
-      "cover_image": "https://placehold.co/600x800?text=Tokyo%2BSlow%2BLife%3A"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@willwfit_DbRak0lsesY_The_Goal_Is_Simple",
@@ -21088,8 +21088,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=The%2BGoal%2BIs",
-      "cover_image": "https://placehold.co/600x800?text=The%2BGoal%2BIs"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ioana_iftode_DcYQVYJjHa-_Tokyo_Slow_Life_Visual_Diaries",
@@ -21158,8 +21158,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Tokyo%2BSlow%2BLife",
-      "cover_image": "https://placehold.co/600x800?text=Tokyo%2BSlow%2BLife"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine",
@@ -21231,8 +21231,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Luke%2BLuquire%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Luke%2BLuquire%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva",
@@ -21304,8 +21304,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Bi%E1%BA%BFn%2B%C3%9D%2BT%C6%B0%E1%BB%9Fng",
-      "cover_image": "https://placehold.co/600x800?text=Bi%E1%BA%BFn%2B%C3%9D%2BT%C6%B0%E1%BB%9Fng"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@madisonkjan_Da7V4egSQxv_Vietnam_Travel_Cinematic",
@@ -21374,8 +21374,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=The%2BNext%2BStation",
-      "cover_image": "https://placehold.co/600x800?text=The%2BNext%2BStation"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "FB_@KopDinh_1398467868829887_Lat_Cat_Cam_Xuc_Kop_Dinh",
@@ -21444,8 +21444,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=L%C3%A1t%2BC%E1%BA%AFt%2BC%E1%BA%A3m",
-      "cover_image": "https://placehold.co/600x800?text=L%C3%A1t%2BC%E1%BA%AFt%2BC%E1%BA%A3m"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withyuee_DUqQaPbkfcQ_Chinese_New_Year_Hong_Kong",
@@ -21514,8 +21514,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BQuay",
-      "cover_image": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BQuay"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withyuee_DO8arRxEZvh_Hong_Kong_Visual_Rhythm_Carousel",
@@ -21584,8 +21584,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Chu%E1%BB%97i%2BTh%E1%BB%8B%2BGi%C3%A1c",
-      "cover_image": "https://placehold.co/600x800?text=Chu%E1%BB%97i%2BTh%E1%BB%8B%2BGi%C3%A1c"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@withyuee_DVQ3Gh6Efk1_Spring_in_Hong_Kong",
@@ -21654,8 +21654,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=M%C3%B9a%2BXu%C3%A2n%2BHong",
-      "cover_image": "https://placehold.co/600x800?text=M%C3%B9a%2BXu%C3%A2n%2BHong"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@samuelaitken__Da0eP_msVrm_Aesthetic_Routine",
@@ -21727,8 +21727,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Setup%2BG%C3%B3c%2BQuay",
-      "cover_image": "https://placehold.co/600x800?text=Setup%2BG%C3%B3c%2BQuay"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@by.bennnj_DbKauxkoJU_",
@@ -21797,8 +21797,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BChi",
-      "cover_image": "https://placehold.co/600x800?text=Ph%C3%A2n%2BT%C3%ADch%2BChi"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@by.bennnj_DbKauxkoJU_Making_beginner_cameras_look_cinematic",
@@ -21868,8 +21868,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=B%C3%AD%2BQuy%E1%BA%BFt%2BBi%E1%BA%BFn",
-      "cover_image": "https://placehold.co/600x800?text=B%C3%AD%2BQuy%E1%BA%BFt%2BBi%E1%BA%BFn"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jazziesillona_DXUG_1TjwJu_Carousel_Analysis",
@@ -21944,8 +21944,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Chu%E1%BB%97i%2BCarousel%2B6",
-      "cover_image": "https://placehold.co/600x800?text=Chu%E1%BB%97i%2BCarousel%2B6"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jazziesillona_DW8lBR9Dzop_Carousel_Analysis",
@@ -22014,8 +22014,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BX%C3%A2y",
-      "cover_image": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BX%C3%A2y"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jazzie_DWnsVqWj2XN_Carousel_Analysis",
@@ -22084,8 +22084,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Album%2B7%2BSlide",
-      "cover_image": "https://placehold.co/600x800?text=Album%2B7%2BSlide"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jazziesillona_DWrDUymD4_a_Carousel_Analysis",
@@ -22154,8 +22154,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=B%E1%BB%99%2B4%2BSlide",
-      "cover_image": "https://placehold.co/600x800?text=B%E1%BB%99%2B4%2BSlide"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jakarta_Videographer_Jacoub_Anwar_DbnwnkrAVQ9_Carousel_Analysis",
@@ -22227,8 +22227,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=7%2BQuy%2BT%E1%BA%AFc",
-      "cover_image": "https://placehold.co/600x800?text=7%2BQuy%2BT%E1%BA%AFc"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Jazzie_DU2CTKzEqvl_Carousel_Analysis",
@@ -22300,8 +22300,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Chu%E1%BB%97i%2B8%2BSlide",
-      "cover_image": "https://placehold.co/600x800?text=Chu%E1%BB%97i%2B8%2BSlide"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jazziesillona_DbIA2jwPHCV",
@@ -22370,8 +22370,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BChuy%E1%BB%83n",
-      "cover_image": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BChuy%E1%BB%83n"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "REMAKE_Byjxson_Quang_Cao_Dong_Ho_Bam_Gio",
@@ -22428,8 +22428,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Qu%E1%BA%A3ng%2BC%C3%A1o%2B%C4%90%E1%BB%93ng",
-      "cover_image": "https://placehold.co/600x800?text=Qu%E1%BA%A3ng%2BC%C3%A1o%2B%C4%90%E1%BB%93ng"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life",
@@ -22501,8 +22501,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=The%2BBeauty%2Bof",
-      "cover_image": "https://placehold.co/600x800?text=The%2BBeauty%2Bof"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis",
@@ -22571,8 +22571,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Carousel%2BMulti-Slide%2BRetention",
-      "cover_image": "https://placehold.co/600x800?text=Carousel%2BMulti-Slide%2BRetention"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@local_creator_video_video",
@@ -22641,8 +22641,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": true,
       "is_excluded": true,
-      "thumbnail": "https://placehold.co/600x800?text=B%C3%A1o%2BC%C3%A1o%2BPh%C3%A2n",
-      "cover_image": "https://placehold.co/600x800?text=B%C3%A1o%2BC%C3%A1o%2BPh%C3%A2n"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@local_creator_video_ig_video_ig",
@@ -22711,8 +22711,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": true,
       "is_excluded": true,
-      "thumbnail": "https://placehold.co/600x800?text=B%C3%A1o%2BC%C3%A1o%2BPh%C3%A2n",
-      "cover_image": "https://placehold.co/600x800?text=B%C3%A1o%2BC%C3%A1o%2BPh%C3%A2n"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@ioana_iftode_DbqCYu4DAz2_Kyoto_Slow_Life_Visual_Diaries",
@@ -22781,8 +22781,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Kyoto%2BSlow%2BLife",
-      "cover_image": "https://placehold.co/600x800?text=Kyoto%2BSlow%2BLife"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01",
@@ -22857,8 +22857,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Project%2B100%2BDay",
-      "cover_image": "https://placehold.co/600x800?text=Project%2B100%2BDay"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@bryanhynes_DacaMHwzEm3_Visual_Sequence",
@@ -22930,8 +22930,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=The%2BArt%2Bof",
-      "cover_image": "https://placehold.co/600x800?text=The%2BArt%2Bof"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@kenshoji.visuals_DZOzwweTc5a_The_Art_of_Static_Shot",
@@ -23003,8 +23003,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ken%2BShoji%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Ken%2BShoji%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@minhmigoi_Db0Sn3zvuHP_The_Power_of_Composition",
@@ -23076,8 +23076,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=The%2BPower%2Bof",
-      "cover_image": "https://placehold.co/600x800?text=The%2BPower%2Bof"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@mcjacoub_Db22SIxAVtJ_Camera_Angles_Mastery",
@@ -23149,8 +23149,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Camera%2BAngles%2BMastery",
-      "cover_image": "https://placehold.co/600x800?text=Camera%2BAngles%2BMastery"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@qfroost_DXWKIztktTN_Saigon_Vietnam",
@@ -23222,8 +23222,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Saigon%2C%2BVietnam%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Saigon%2C%2BVietnam%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
@@ -23298,8 +23298,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ray-Ban%2BMeta%2BSystem",
-      "cover_image": "https://placehold.co/600x800?text=Ray-Ban%2BMeta%2BSystem"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow",
@@ -23371,8 +23371,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Quy%2BTr%C3%ACnh%2BS%C3%A1ng",
-      "cover_image": "https://placehold.co/600x800?text=Quy%2BTr%C3%ACnh%2BS%C3%A1ng"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jeromememe_Db-zVchOXV7_People_of_Bhutan",
@@ -23444,8 +23444,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Jerome%2BTeo%2B%E2%80%A2",
-      "cover_image": "https://placehold.co/600x800?text=Jerome%2BTeo%2B%E2%80%A2"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jeromememe_DQuEXMbj8fT_People_of_Porto",
@@ -23517,8 +23517,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=People%2Bof%2BPorto",
-      "cover_image": "https://placehold.co/600x800?text=People%2Bof%2BPorto"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jeromememe_DQmKgPDEWgJ_Artisans_of_Venice",
@@ -23590,8 +23590,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Artisans%2Bof%2BVenice",
-      "cover_image": "https://placehold.co/600x800?text=Artisans%2Bof%2BVenice"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "IG_@jeromememe_DbGMt3oIaZm_People_of_Copenhagen",
@@ -23663,8 +23663,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BQuan",
-      "cover_image": "https://placehold.co/600x800?text=Ngh%E1%BB%87%2BThu%E1%BA%ADt%2BQuan"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DXUG_1TjwJu",
@@ -23739,8 +23739,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Chu%E1%BB%97i%2BCarousel%2B6",
-      "cover_image": "https://placehold.co/600x800?text=Chu%E1%BB%97i%2BCarousel%2B6"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "DWrDUymD4_a",
@@ -23809,8 +23809,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=B%E1%BB%99%2B4%2BSlide",
-      "cover_image": "https://placehold.co/600x800?text=B%E1%BB%99%2B4%2BSlide"
+      "thumbnail": "",
+      "cover_image": ""
     },
     {
       "id": "Dc3ih_5jlqz",
@@ -23883,8 +23883,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false,
-      "thumbnail": "https://placehold.co/600x800?text=Quy%2BTr%C3%ACnh%2BX%C3%A2y",
-      "cover_image": "https://placehold.co/600x800?text=Quy%2BTr%C3%ACnh%2BX%C3%A2y"
+      "thumbnail": "",
+      "cover_image": ""
     }
   ]
 };
