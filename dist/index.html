@@ -388,8 +388,16 @@
             </div>
         </div>
 
+        <!-- NÚT BỘ LỌC MOBILE -->
+        <div class="md:hidden border-t border-slate-800/80 bg-slate-950 px-4 py-2">
+            <button onclick="toggleMobileFilters()" class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800 text-sm font-bold text-slate-300 transition flex items-center">
+                <span id="mobileFilterBtnText">⚙️ Mở Bộ Lọc</span>
+                <span id="mobileFilterChevron" class="text-[10px] transition-transform duration-300">▼</span>
+            </button>
+        </div>
+
         <!-- WRAPPER CHO CÁC THANH BỘ LỌC TINH GỌN & ACCORDION (ẨN/HIỆN THEO FOCUS MODE) -->
-        <div id="allFilterBarsContainer" class="transition-all duration-300">
+        <div id="allFilterBarsContainer" class="transition-all duration-500 max-h-0 opacity-0 overflow-hidden md:max-h-[2000px] md:opacity-100 md:overflow-visible">
 
             <!-- 1. KIỂU QUAY (GIỮ GỌN GÀNG 1 HÀNG TRÊN CÙNG) -->
             <div class="border-t border-slate-800/80 bg-slate-950/80 px-4 sm:px-6 lg:px-8 py-1.5">
@@ -772,7 +780,13 @@
                         <span id="videoModalCreatorName" class="truncate max-w-[120px] sm:max-w-[180px]">Creator</span>
                         <span class="text-[10px] bg-sky-500/20 px-1.5 py-0.5 rounded text-sky-200">🔍 Lọc kênh</span>
                     </button>
-                    <button onclick="closeModal('videoPlayerModal')" class="text-slate-400 hover:text-white text-3xl p-3 sm:p-2 sm:text-xl rounded-lg hover:bg-slate-800 transition cursor-pointer" aria-label="Đóng">✕</button>
+                    <!-- Download Button -->
+                    <button onclick="downloadCurrentIdea()" class="px-2.5 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500 hover:text-white border border-emerald-500/30 text-xs font-bold transition flex items-center gap-1.5 shrink-0 cursor-pointer" title="Tải Video / Tài Liệu">
+                        <span class="text-sm">⬇️</span>
+                        <span class="hidden sm:inline">Tải Về</span>
+                    </button>
+                    <!-- Prominent Close Button -->
+                    <button onclick="closeModal('videoPlayerModal')" class="w-10 h-10 flex items-center justify-center bg-rose-500/20 text-rose-400 hover:bg-rose-500 hover:text-white text-2xl font-bold rounded-xl transition shadow-sm cursor-pointer ml-1" aria-label="Đóng">✕</button>
                 </div>
             </div>
             
@@ -848,7 +862,13 @@
                         <span class="hidden sm:inline">Toàn Màn Hình</span>
                     </button>
                     <a id="reportModalExternalLink" href="#" target="_blank" class="px-3 py-1 rounded-lg bg-sky-500/15 text-sky-400 hover:bg-sky-500/25 border border-sky-500/30 text-xs font-bold transition">Mở Tab Mới ↗</a>
-                    <button onclick="closeModal('reportEmbedModal')" class="text-slate-400 hover:text-white text-3xl p-3 sm:p-2 sm:text-xl rounded-lg hover:bg-slate-800 transition cursor-pointer" aria-label="Đóng">✕</button>
+                    <!-- Download Button -->
+                    <button onclick="downloadCurrentIdea()" class="px-2.5 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500 hover:text-white border border-emerald-500/30 text-xs font-bold transition flex items-center gap-1.5 shrink-0 cursor-pointer" title="Tải Báo Cáo / Tài Liệu">
+                        <span class="text-sm">⬇️</span>
+                        <span class="hidden sm:inline">Tải Về</span>
+                    </button>
+                    <!-- Prominent Close Button -->
+                    <button onclick="closeModal('reportEmbedModal')" class="w-10 h-10 flex items-center justify-center bg-rose-500/20 text-rose-400 hover:bg-rose-500 hover:text-white text-2xl font-bold rounded-xl transition shadow-sm cursor-pointer ml-1" aria-label="Đóng">✕</button>
                 </div>
             </div>
             <div class="flex-1 bg-slate-950 relative">
@@ -864,8 +884,8 @@
 
     <!-- MODAL 3: DARKROOM IMAGE LIGHTBOX -->
     <div id="imgLightboxModal" class="app-modal-backdrop" onclick="handleModalBackdropClick(event, 'imgLightboxModal')">
-        <div class="relative max-w-2xl max-h-[92vh] flex flex-col items-center">
-            <button onclick="closeModal('imgLightboxModal')" class="absolute top-2 right-2 z-10 text-white bg-black/60 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black transition">✕</button>
+        <button onclick="closeModal('imgLightboxModal')" class="fixed top-4 right-4 z-50 text-rose-200 bg-rose-500/20 hover:bg-rose-500 hover:text-white rounded-xl w-12 h-12 flex items-center justify-center transition shadow-lg text-2xl font-bold backdrop-blur-md border border-rose-500/30">✕</button>
+        <div class="relative max-w-2xl max-h-[92vh] flex flex-col items-center mt-12">
             <img id="lightboxLargeImg" src="" alt="Zoom Frame" class="max-h-[82vh] rounded-xl object-contain border border-slate-700 shadow-2xl">
             <div id="lightboxCaption" class="mt-2.5 text-center text-xs text-slate-300 max-w-md px-4 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800"></div>
         </div>
@@ -882,7 +902,7 @@
                         <p class="text-xs text-slate-400">Yêu cầu quyền truy cập quản trị viên</p>
                     </div>
                 </div>
-                <button onclick="closeModal('adminAuthModal')" class="text-slate-400 hover:text-white text-lg p-1 rounded-lg hover:bg-slate-800 transition">✕</button>
+                <button onclick="closeModal('adminAuthModal')" class="w-10 h-10 flex items-center justify-center bg-rose-500/10 text-rose-400 hover:bg-rose-500 hover:text-white text-xl font-bold rounded-xl transition cursor-pointer">✕</button>
             </div>
 
             <p class="text-xs text-slate-300 mb-4 leading-relaxed">
@@ -923,7 +943,7 @@
                     <span class="text-lg">✏️</span>
                     <h3 class="font-heading font-bold text-sm text-white">Chỉnh Sửa Ý Tưởng Video</h3>
                 </div>
-                <button onclick="closeModal('editIdeaModal')" class="text-slate-400 hover:text-white text-lg p-1 rounded-lg hover:bg-slate-800 transition">✕</button>
+                <button onclick="closeModal('editIdeaModal')" class="w-10 h-10 flex items-center justify-center bg-rose-500/10 text-rose-400 hover:bg-rose-500 hover:text-white text-xl font-bold rounded-xl transition cursor-pointer">✕</button>
             </div>
 
             <form id="editIdeaForm" onsubmit="saveEditedIdea(event)" class="p-5 overflow-y-auto space-y-4 text-xs">
@@ -3507,6 +3527,93 @@
             }
         }
 
+        function downloadCurrentIdea() {
+            if (!appState.targetIdeaId) {
+                showToast("Không tìm thấy dữ liệu ý tưởng!", "⚠️");
+                return;
+            }
+            const idea = window.FEDU_IDEAS_DATABASE.find(i => i.id === appState.targetIdeaId);
+            if (!idea) return;
+            
+            // Tìm URL tốt nhất để tải về
+            let url = idea.video_url || idea.report_url || idea.thumbnail_url;
+            if (!url) {
+                showToast("Không có tài nguyên để tải về!", "⚠️");
+                return;
+            }
+            
+            // Mở tab mới để tải về
+            window.open(url, '_blank');
+            showToast("Đang mở link tải về...", "⬇️");
+        }
+
+        function setupSwipeToCloseModals() {
+            // Setup Swipe to Close cho Mobile
+            document.querySelectorAll('.app-modal-backdrop > div').forEach(modalContent => {
+                let startY = 0;
+                let currentY = 0;
+                let isDragging = false;
+                let isScrollable = false;
+
+                modalContent.addEventListener('touchstart', (e) => {
+                    // Nếu đang cuộn trong div con (như form, báo cáo), không vuốt đóng
+                    const scrollable = e.target.closest('.overflow-y-auto, iframe, video');
+                    if (scrollable) {
+                        isScrollable = true;
+                        return;
+                    }
+                    isScrollable = false;
+                    if (e.touches.length > 0) {
+                        startY = e.touches[0].clientY;
+                        isDragging = true;
+                        modalContent.style.transition = 'none';
+                    }
+                }, { passive: true });
+
+                modalContent.addEventListener('touchmove', (e) => {
+                    if (!isDragging || isScrollable || e.touches.length === 0) return;
+                    currentY = e.touches[0].clientY;
+                    const deltaY = currentY - startY;
+                    if (deltaY > 0) { // Chỉ vuốt xuống
+                        // prevent default to avoid scrolling background
+                        if(e.cancelable) e.preventDefault(); 
+                        modalContent.style.transform = `translateY(${deltaY}px)`;
+                        if(modalContent.parentElement) {
+                            modalContent.parentElement.style.backgroundColor = `rgba(3, 7, 18, ${Math.max(0, 0.88 - deltaY/500)})`;
+                        }
+                    }
+                }, { passive: false });
+
+                modalContent.addEventListener('touchend', (e) => {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    modalContent.style.transition = 'transform 0.3s ease-out';
+                    const deltaY = currentY - startY;
+                    if (deltaY > 150) {
+                        if(modalContent.parentElement && modalContent.parentElement.id) {
+                            closeModal(modalContent.parentElement.id);
+                        }
+                        // Reset style sau khi đóng
+                        setTimeout(() => {
+                            modalContent.style.transform = '';
+                            if(modalContent.parentElement) {
+                                modalContent.parentElement.style.backgroundColor = '';
+                            }
+                        }, 300);
+                    } else {
+                        // Hồi lại vị trí cũ
+                        modalContent.style.transform = 'translateY(0)';
+                        if(modalContent.parentElement) {
+                            modalContent.parentElement.style.backgroundColor = '';
+                        }
+                        setTimeout(() => {
+                            modalContent.style.transform = '';
+                        }, 300);
+                    }
+                });
+            });
+        }
+
         // Search & Filter Events (Synchronized Dual-Search)
         function syncHeroSearch(val) {
             const trimmed = (val || '').trim();
@@ -4514,6 +4621,26 @@
             }
         }
 
+        let isMobileFilterOpen = false;
+        function toggleMobileFilters() {
+            isMobileFilterOpen = !isMobileFilterOpen;
+            const container = document.getElementById('allFilterBarsContainer');
+            const chevron = document.getElementById('mobileFilterChevron');
+            const btnText = document.getElementById('mobileFilterBtnText');
+            
+            if (isMobileFilterOpen) {
+                container.classList.remove('max-h-0', 'opacity-0');
+                container.classList.add('max-h-[2000px]', 'opacity-100');
+                if (chevron) chevron.style.transform = 'rotate(180deg)';
+                if (btnText) btnText.innerText = 'Đóng Bộ Lọc';
+            } else {
+                container.classList.add('max-h-0', 'opacity-0');
+                container.classList.remove('max-h-[2000px]', 'opacity-100');
+                if (chevron) chevron.style.transform = 'rotate(0deg)';
+                if (btnText) btnText.innerText = '⚙️ Mở Bộ Lọc';
+            }
+        }
+
         function toggleFilterBars() {
             appState.showFilterBarsInFocus = !appState.showFilterBarsInFocus;
             const allFilterBars = document.getElementById('allFilterBarsContainer');
@@ -4629,6 +4756,7 @@
         // App Initialization
         document.addEventListener('DOMContentLoaded', () => {
             initStorage();
+            setupSwipeToCloseModals();
             updateAdminBarUI();
             syncUrlToState();
             renderShootingStyleTabs();

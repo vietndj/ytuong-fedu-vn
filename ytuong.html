@@ -200,7 +200,12 @@
             z-index: 100;
             align-items: center;
             justify-content: center;
-            padding: 16px;
+            padding: 0;
+        }
+        @media (min-width: 640px) {
+            .app-modal-backdrop {
+                padding: 16px;
+            }
         }
         .app-modal-backdrop.open {
             display: flex;
@@ -383,16 +388,24 @@
             </div>
         </div>
 
+        <!-- NÚT BỘ LỌC MOBILE -->
+        <div class="md:hidden border-t border-slate-800/80 bg-slate-950 px-4 py-2">
+            <button onclick="toggleMobileFilters()" class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800 text-sm font-bold text-slate-300 transition flex items-center">
+                <span id="mobileFilterBtnText">⚙️ Mở Bộ Lọc</span>
+                <span id="mobileFilterChevron" class="text-[10px] transition-transform duration-300">▼</span>
+            </button>
+        </div>
+
         <!-- WRAPPER CHO CÁC THANH BỘ LỌC TINH GỌN & ACCORDION (ẨN/HIỆN THEO FOCUS MODE) -->
-        <div id="allFilterBarsContainer" class="transition-all duration-300">
+        <div id="allFilterBarsContainer" class="transition-all duration-500 max-h-0 opacity-0 overflow-hidden md:max-h-[2000px] md:opacity-100 md:overflow-visible">
 
             <!-- 1. KIỂU QUAY (GIỮ GỌN GÀNG 1 HÀNG TRÊN CÙNG) -->
-            <div class="border-t border-slate-800/80 bg-slate-950/80 px-4 sm:px-6 lg:px-8 py-1.5 overflow-x-auto">
-                <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+            <div class="border-t border-slate-800/80 bg-slate-950/80 px-4 sm:px-6 lg:px-8 py-1.5">
+                <div class="max-w-7xl mx-auto flex items-center gap-3 flex-wrap">
                     <div class="flex items-center gap-1.5 shrink-0 text-xs font-bold text-slate-400">
                         <span class="text-purple-400">🎥 KIỂU QUAY:</span>
                     </div>
-                    <div class="flex items-center gap-2 no-scrollbar overflow-x-auto" id="shootingStyleTabsContainer">
+                    <div class="flex items-center gap-2 flex-wrap" id="shootingStyleTabsContainer">
                         <!-- Injected dynamically via JS -->
                     </div>
                 </div>
@@ -432,12 +445,25 @@
                             <span id="accordionCountryArrow" class="text-[10px] text-slate-400 group-hover:text-white transition-transform duration-200">▼</span>
                         </button>
 
+                        <!-- Accordion Button: ĐIỂM NHẤN (X-FACTOR) -->
+                        <button 
+                            id="btnAccordionXFactor"
+                            onclick="toggleFilterAccordion('xfactor')" 
+                            class="px-3 py-1.5 rounded-xl border border-slate-700/80 bg-slate-900/90 hover:bg-slate-800 hover:border-amber-500/50 text-xs font-semibold text-slate-200 transition flex items-center gap-2 cursor-pointer shadow-sm group"
+                            title="Bấm để mở danh sách Điểm nhấn / Vũ khí ăn điểm (X-Factor)"
+                        >
+                            <span class="text-amber-400 text-sm">✨</span>
+                            <span class="font-bold">Điểm nhấn:</span>
+                            <span id="accordionXFactorLabel" class="text-amber-300 font-medium max-w-[140px] truncate">Tất Cả</span>
+                            <span id="accordionXFactorArrow" class="text-[10px] text-slate-400 group-hover:text-white transition-transform duration-200">▼</span>
+                        </button>
+
                         <!-- Reset Active Filters Shortcut if selected -->
                         <button 
                             id="btnResetAccordionFilters" 
                             onclick="resetAccordionFilters()" 
                             class="hidden px-2.5 py-1 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30 text-rose-300 text-[11px] font-medium transition items-center gap-1 cursor-pointer"
-                            title="Đặt lại Ngành và Quốc gia về mặc định"
+                            title="Đặt lại Ngành, Quốc gia và Điểm nhấn về mặc định"
                         >
                             <span>✕ Bỏ chọn</span>
                         </button>
@@ -461,7 +487,7 @@
                             ✕ Đóng
                         </button>
                     </div>
-                    <div class="flex items-center gap-2 no-scrollbar overflow-x-auto py-1" id="industryPillsContainer">
+                    <div class="flex flex-wrap items-center gap-2 py-1" id="industryPillsContainer">
                         <!-- Injected dynamically via JS -->
                     </div>
                 </div>
@@ -478,7 +504,24 @@
                             ✕ Đóng
                         </button>
                     </div>
-                    <div class="flex items-center gap-2 no-scrollbar overflow-x-auto py-1" id="countryTabsContainer">
+                    <div class="flex flex-wrap items-center gap-2 py-1" id="countryTabsContainer">
+                        <!-- Injected dynamically via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. ACCORDION CONTENT PANEL: ĐIỂM NHẤN (X-FACTOR) -->
+            <div id="accordionPanelXFactor" class="filter-accordion-panel border-t border-slate-800/80 bg-slate-900/90 px-4 sm:px-6 lg:px-8 shadow-inner">
+                <div class="max-w-7xl mx-auto py-3">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+                            <span>✨ Chọn Điểm Nhấn / Vũ Khí Ăn Điểm (X-Factor)</span>
+                        </span>
+                        <button onclick="toggleFilterAccordion('xfactor')" class="text-xs text-slate-400 hover:text-white px-2 py-0.5 rounded bg-slate-800">
+                            ✕ Đóng
+                        </button>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-2 py-1" id="xFactorPillsContainer">
                         <!-- Injected dynamically via JS -->
                     </div>
                 </div>
@@ -600,6 +643,11 @@
                     <option value="asia_other">🌏 Châu Á Khác</option>
                 </select>
 
+                <!-- Filter by X-Factor -->
+                <select id="xFactorFilter" onchange="handleFilterChange()" class="bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1.5 text-amber-300 focus:outline-none focus:border-amber-400">
+                    <option value="">✨ Điểm nhấn: Tất Cả</option>
+                </select>
+
                 <!-- Filter by Purpose -->
                 <select id="purposeFilter" onchange="handleFilterChange()" class="bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1.5 text-slate-300 focus:outline-none focus:border-sky-400">
                     <option value="">🎯 Mục đích: Tất Cả</option>
@@ -703,9 +751,9 @@
 
     <!-- MODAL 1: VIDEO PLAYER MODAL WITH DIRECTOR CONTROLS -->
     <div id="videoPlayerModal" class="app-modal-backdrop" onclick="handleModalBackdropClick(event, 'videoPlayerModal')">
-        <div class="relative w-full max-w-4xl bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+        <div class="relative w-full max-w-4xl bg-slate-900 border border-slate-700 rounded-none sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col h-[100dvh] sm:h-auto sm:max-h-[92vh]">
             <!-- Header -->
-            <div class="px-5 py-3.5 border-b border-slate-800 flex items-center justify-between bg-slate-950/60 gap-3">
+            <div class="px-3 sm:px-5 py-3 sm:py-3.5 border-b border-slate-800 flex flex-wrap items-center justify-between bg-slate-950/60 gap-2 sm:gap-3">
                 <div class="flex items-center gap-2 overflow-hidden min-w-0">
                     <span class="text-lg shrink-0">🎬</span>
                     <h3 id="videoModalTitle" class="font-heading font-bold text-sm text-white truncate">Xem Video Mẫu</h3>
@@ -732,14 +780,20 @@
                         <span id="videoModalCreatorName" class="truncate max-w-[120px] sm:max-w-[180px]">Creator</span>
                         <span class="text-[10px] bg-sky-500/20 px-1.5 py-0.5 rounded text-sky-200">🔍 Lọc kênh</span>
                     </button>
-                    <button onclick="closeModal('videoPlayerModal')" class="text-slate-400 hover:text-white text-lg p-1 rounded-lg hover:bg-slate-800 transition cursor-pointer">✕</button>
+                    <!-- Download Button -->
+                    <button onclick="downloadCurrentIdea()" class="px-2.5 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500 hover:text-white border border-emerald-500/30 text-xs font-bold transition flex items-center gap-1.5 shrink-0 cursor-pointer" title="Tải Video / Tài Liệu">
+                        <span class="text-sm">⬇️</span>
+                        <span class="hidden sm:inline">Tải Về</span>
+                    </button>
+                    <!-- Prominent Close Button -->
+                    <button onclick="closeModal('videoPlayerModal')" class="w-10 h-10 flex items-center justify-center bg-rose-500/20 text-rose-400 hover:bg-rose-500 hover:text-white text-2xl font-bold rounded-xl transition shadow-sm cursor-pointer ml-1" aria-label="Đóng">✕</button>
                 </div>
             </div>
             
             <!-- Video Body -->
-            <div class="relative bg-black flex items-center justify-center min-h-[360px] max-h-[62vh] overflow-hidden w-full group">
-                <video id="modalActiveVideo" controls playsinline loop class="w-full max-h-[62vh] object-contain bg-black"></video>
-                <iframe id="modalActiveYoutube" class="hidden w-full h-[62vh] min-h-[360px] border-0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
+            <div class="relative bg-black flex items-center justify-center min-h-[360px] max-h-[85vh] sm:max-h-[62vh] overflow-hidden w-full group flex-1">
+                <video id="modalActiveVideo" controls playsinline loop class="w-full max-h-[85vh] sm:max-h-[62vh] object-contain bg-black"></video>
+                <iframe id="modalActiveYoutube" class="hidden w-full h-[85vh] sm:h-[62vh] min-h-[360px] border-0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
                 
                 <!-- Floating Fullscreen Quick Button (1-chạm) -->
                 <button 
@@ -781,8 +835,8 @@
 
     <!-- MODAL 2: REPORT EMBED MODAL -->
     <div id="reportEmbedModal" class="app-modal-backdrop" onclick="handleModalBackdropClick(event, 'reportEmbedModal')">
-        <div class="relative w-full max-w-6xl h-[92vh] bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
-            <div class="px-5 py-3 border-b border-slate-800 flex items-center justify-between bg-slate-950 gap-3">
+        <div class="relative w-full max-w-6xl h-[100dvh] sm:h-[92vh] bg-slate-900 border border-slate-700 rounded-none sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+            <div class="px-3 sm:px-5 py-3 border-b border-slate-800 flex flex-wrap items-center justify-between bg-slate-950 gap-2 sm:gap-3">
                 <div class="flex items-center gap-2 overflow-hidden min-w-0">
                     <span class="text-lg shrink-0">📄</span>
                     <h3 id="reportModalTitle" class="font-heading font-bold text-sm text-white truncate">Báo Cáo Phân Tích Chi Tiết</h3>
@@ -808,7 +862,13 @@
                         <span class="hidden sm:inline">Toàn Màn Hình</span>
                     </button>
                     <a id="reportModalExternalLink" href="#" target="_blank" class="px-3 py-1 rounded-lg bg-sky-500/15 text-sky-400 hover:bg-sky-500/25 border border-sky-500/30 text-xs font-bold transition">Mở Tab Mới ↗</a>
-                    <button onclick="closeModal('reportEmbedModal')" class="text-slate-400 hover:text-white text-lg p-1 rounded-lg hover:bg-slate-800 transition cursor-pointer">✕</button>
+                    <!-- Download Button -->
+                    <button onclick="downloadCurrentIdea()" class="px-2.5 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500 hover:text-white border border-emerald-500/30 text-xs font-bold transition flex items-center gap-1.5 shrink-0 cursor-pointer" title="Tải Báo Cáo / Tài Liệu">
+                        <span class="text-sm">⬇️</span>
+                        <span class="hidden sm:inline">Tải Về</span>
+                    </button>
+                    <!-- Prominent Close Button -->
+                    <button onclick="closeModal('reportEmbedModal')" class="w-10 h-10 flex items-center justify-center bg-rose-500/20 text-rose-400 hover:bg-rose-500 hover:text-white text-2xl font-bold rounded-xl transition shadow-sm cursor-pointer ml-1" aria-label="Đóng">✕</button>
                 </div>
             </div>
             <div class="flex-1 bg-slate-950 relative">
@@ -824,8 +884,8 @@
 
     <!-- MODAL 3: DARKROOM IMAGE LIGHTBOX -->
     <div id="imgLightboxModal" class="app-modal-backdrop" onclick="handleModalBackdropClick(event, 'imgLightboxModal')">
-        <div class="relative max-w-2xl max-h-[92vh] flex flex-col items-center">
-            <button onclick="closeModal('imgLightboxModal')" class="absolute top-2 right-2 z-10 text-white bg-black/60 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black transition">✕</button>
+        <button onclick="closeModal('imgLightboxModal')" class="fixed top-4 right-4 z-50 text-rose-200 bg-rose-500/20 hover:bg-rose-500 hover:text-white rounded-xl w-12 h-12 flex items-center justify-center transition shadow-lg text-2xl font-bold backdrop-blur-md border border-rose-500/30">✕</button>
+        <div class="relative max-w-2xl max-h-[92vh] flex flex-col items-center mt-12">
             <img id="lightboxLargeImg" src="" alt="Zoom Frame" class="max-h-[82vh] rounded-xl object-contain border border-slate-700 shadow-2xl">
             <div id="lightboxCaption" class="mt-2.5 text-center text-xs text-slate-300 max-w-md px-4 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800"></div>
         </div>
@@ -842,7 +902,7 @@
                         <p class="text-xs text-slate-400">Yêu cầu quyền truy cập quản trị viên</p>
                     </div>
                 </div>
-                <button onclick="closeModal('adminAuthModal')" class="text-slate-400 hover:text-white text-lg p-1 rounded-lg hover:bg-slate-800 transition">✕</button>
+                <button onclick="closeModal('adminAuthModal')" class="w-10 h-10 flex items-center justify-center bg-rose-500/10 text-rose-400 hover:bg-rose-500 hover:text-white text-xl font-bold rounded-xl transition cursor-pointer">✕</button>
             </div>
 
             <p class="text-xs text-slate-300 mb-4 leading-relaxed">
@@ -883,7 +943,7 @@
                     <span class="text-lg">✏️</span>
                     <h3 class="font-heading font-bold text-sm text-white">Chỉnh Sửa Ý Tưởng Video</h3>
                 </div>
-                <button onclick="closeModal('editIdeaModal')" class="text-slate-400 hover:text-white text-lg p-1 rounded-lg hover:bg-slate-800 transition">✕</button>
+                <button onclick="closeModal('editIdeaModal')" class="w-10 h-10 flex items-center justify-center bg-rose-500/10 text-rose-400 hover:bg-rose-500 hover:text-white text-xl font-bold rounded-xl transition cursor-pointer">✕</button>
             </div>
 
             <form id="editIdeaForm" onsubmit="saveEditedIdea(event)" class="p-5 overflow-y-auto space-y-4 text-xs">
@@ -995,7 +1055,7 @@
     </div>
 
     <!-- LOAD DATABASE SCRIPT -->
-    <script src="ideas_data.js?v=3.0"></script>
+    <script src="ideas_data.js?v=1789855732"></script>
 
     <!-- SPA LOGIC -->
     <script>
@@ -1005,12 +1065,13 @@
             currentStyle: 'all',
             currentIndustry: 'all',
             currentCountry: 'all',
+            currentXFactor: 'all',
             currentCreator: '',
             currentCreatorName: '',
             currentTransitionLevel: 'all', // 'all', 'Chuyển cảnh Level 1', 'Chuyển cảnh Level 2'
             showUgc: false, // Default false: auto-hide ad bot videos until clicked
             showFilterBarsInFocus: true, // Default true: keep all filter bars visible when opening shared filter links
-            openFilterAccordion: null, // 'industry' | 'country' | null (Ẩn bớt bộ lọc theo accordion)
+            openFilterAccordion: null, // 'industry' | 'country' | 'xfactor' | null (Ẩn bớt bộ lọc theo accordion)
             currentTech: '',
             currentPurpose: '',
             searchQuery: '',
@@ -1446,10 +1507,13 @@
         function toggleFilterAccordion(panelType) {
             const industryPanel = document.getElementById('accordionPanelIndustry');
             const countryPanel = document.getElementById('accordionPanelCountry');
+            const xfactorPanel = document.getElementById('accordionPanelXFactor');
             const btnIndustry = document.getElementById('btnAccordionIndustry');
             const btnCountry = document.getElementById('btnAccordionCountry');
+            const btnXfactor = document.getElementById('btnAccordionXFactor');
             const arrowIndustry = document.getElementById('accordionIndustryArrow');
             const arrowCountry = document.getElementById('accordionCountryArrow');
+            const arrowXfactor = document.getElementById('accordionXFactorArrow');
 
             if (appState.openFilterAccordion === panelType) {
                 // Đang mở panel này thì đóng lại
@@ -1460,14 +1524,12 @@
 
             const isIndOpen = (appState.openFilterAccordion === 'industry');
             const isCountryOpen = (appState.openFilterAccordion === 'country');
+            const isXfOpen = (appState.openFilterAccordion === 'xfactor');
 
             // Cập nhật class panel
-            if (industryPanel) {
-                industryPanel.classList.toggle('open', isIndOpen);
-            }
-            if (countryPanel) {
-                countryPanel.classList.toggle('open', isCountryOpen);
-            }
+            if (industryPanel) industryPanel.classList.toggle('open', isIndOpen);
+            if (countryPanel) countryPanel.classList.toggle('open', isCountryOpen);
+            if (xfactorPanel) xfactorPanel.classList.toggle('open', isXfOpen);
 
             // Cập nhật style nút & mũi tên
             if (btnIndustry) {
@@ -1490,6 +1552,17 @@
             }
             if (arrowCountry) {
                 arrowCountry.textContent = isCountryOpen ? '▲' : '▼';
+            }
+
+            if (btnXfactor) {
+                if (isXfOpen) {
+                    btnXfactor.classList.add('border-amber-400', 'bg-amber-500/20', 'text-white', 'shadow-md', 'shadow-amber-500/20');
+                } else {
+                    btnXfactor.classList.remove('border-amber-400', 'bg-amber-500/20', 'text-white', 'shadow-md', 'shadow-amber-500/20');
+                }
+            }
+            if (arrowXfactor) {
+                arrowXfactor.textContent = isXfOpen ? '▲' : '▼';
             }
         }
 
@@ -1537,12 +1610,28 @@
                 }
             }
 
-            // 3. Nút Reset Accordion Filters (Nếu đang chọn ngành hoặc quốc gia)
+            // 3. Cập nhật label X-Factor
+            const labelXf = document.getElementById('accordionXFactorLabel');
+            const btnXf = document.getElementById('btnAccordionXFactor');
+            if (labelXf) {
+                if (appState.currentXFactor === 'all') {
+                    labelXf.textContent = 'Tất Cả';
+                    labelXf.className = "text-slate-300 font-medium max-w-[140px] truncate";
+                    if (btnXf) btnXf.classList.remove('ring-1', 'ring-amber-400/60');
+                } else {
+                    labelXf.textContent = `✨ ${appState.currentXFactor}`;
+                    labelXf.className = "text-amber-300 font-bold max-w-[140px] truncate";
+                    if (btnXf) btnXf.classList.add('ring-1', 'ring-amber-400/60');
+                }
+            }
+
+            // 4. Nút Reset Accordion Filters (Nếu đang chọn ngành, quốc gia hoặc xfactor)
             const btnReset = document.getElementById('btnResetAccordionFilters');
             if (btnReset) {
                 const hasCustomInd = (appState.currentIndustry !== 'all' || appState.showUgc);
                 const hasCustomCountry = (appState.currentCountry !== 'all');
-                if (hasCustomInd || hasCustomCountry) {
+                const hasCustomXFactor = (appState.currentXFactor !== 'all');
+                if (hasCustomInd || hasCustomCountry || hasCustomXFactor) {
                     btnReset.classList.remove('hidden');
                     btnReset.classList.add('inline-flex');
                 } else {
@@ -1556,17 +1645,21 @@
             appState.currentIndustry = 'all';
             appState.showUgc = false;
             appState.currentCountry = 'all';
+            appState.currentXFactor = 'all';
             appState.currentPage = 1;
             const countrySelect = document.getElementById('countryFilter');
             if (countrySelect) countrySelect.value = '';
+            const xfSelect = document.getElementById('xFactorFilter');
+            if (xfSelect) xfSelect.value = '';
 
             renderIndustryPills();
             renderCountryTabs();
+            renderXFactorPills();
             updateUgcButtonState();
             renderFocusBanner();
             updateTeacherShareLink();
             applyFilters();
-            showToast("Đã đặt lại Ngành và Quốc gia về mặc định");
+            showToast("Đã đặt lại Ngành, Quốc gia và Điểm nhấn về mặc định");
         }
 
         // Render Industry Pills (Single Row Horizontal Scroll Filter)
@@ -1788,6 +1881,114 @@
             }
         }
 
+        // Render X-Factor Pills (Điểm Nhấn / Vũ Khí Ăn Điểm)
+        function renderXFactorPills() {
+            const container = document.getElementById('xFactorPillsContainer');
+            const selectEl = document.getElementById('xFactorFilter');
+            if (!window.FEDU_IDEAS_DATABASE) return;
+
+            const db = window.FEDU_IDEAS_DATABASE;
+            const nonDeletedIdeas = db.ideas.filter(x => !appState.localDeletedIds.has(x.id));
+            const isViewingUgc = (appState.currentIndustry === 'ugc' || appState.showUgc);
+
+            // Thu thập toàn bộ X-Factors và đếm số lượng
+            let xfCounts = {};
+            nonDeletedIdeas.forEach(x => {
+                if (!appState.curationMode && x.is_excluded) return;
+                const isUgc = x.is_ad_bot || x.industries?.some(i => i.id === "ugc");
+                if (isViewingUgc !== isUgc) return;
+
+                const factors = new Set(x.x_factors || []);
+                if (x.transition_level === 'Chuyển cảnh Level 2') {
+                    factors.add('Chuyển cảnh cấp 2');
+                }
+                factors.forEach(f => {
+                    if (f) xfCounts[f] = (xfCounts[f] || 0) + 1;
+                });
+            });
+
+            // Sắp xếp: Ưu tiên 'Chuyển cảnh cấp 2' lên đầu, sau đó theo số lượng giảm dần
+            const sortedFactors = Object.keys(xfCounts).sort((a, b) => {
+                if (a === 'Chuyển cảnh cấp 2') return -1;
+                if (b === 'Chuyển cảnh cấp 2') return 1;
+                return xfCounts[b] - xfCounts[a];
+            });
+
+            const allCount = nonDeletedIdeas.filter(x => {
+                if (!appState.curationMode && x.is_excluded) return false;
+                const isUgc = x.is_ad_bot || x.industries?.some(i => i.id === "ugc");
+                return isViewingUgc ? isUgc : !isUgc;
+            }).length;
+
+            // Render Container Pills
+            if (container) {
+                let html = `
+                    <button 
+                        onclick="selectXFactor('all')" 
+                        class="xf-pill ${appState.currentXFactor === 'all' ? 'active' : ''} whitespace-nowrap px-3 py-1.5 rounded-xl border border-slate-800 bg-slate-900/90 text-xs font-semibold text-slate-300 hover:border-slate-700 hover:text-white transition flex items-center gap-1.5 shrink-0 cursor-pointer"
+                    >
+                        <span>🌟 Tất Cả</span>
+                        <span class="px-1.5 py-0.2 rounded-full text-[10px] bg-slate-800/80 text-slate-400">${allCount}</span>
+                    </button>
+                `;
+
+                sortedFactors.forEach(xf => {
+                    const count = xfCounts[xf] || 0;
+                    const isActive = appState.currentXFactor === xf;
+                    const isTransitionL2 = (xf === 'Chuyển cảnh cấp 2');
+                    const highlightClass = isTransitionL2
+                        ? (isActive 
+                            ? 'active border-amber-400 bg-amber-500/25 text-amber-300 shadow-md shadow-amber-500/30 ring-1 ring-amber-300/60' 
+                            : 'border-amber-500/40 text-amber-300 bg-amber-500/10 hover:border-amber-400 hover:bg-amber-500/20')
+                        : (isActive 
+                            ? 'active border-amber-400 bg-amber-500/20 text-white shadow-md shadow-amber-500/20' 
+                            : 'border-slate-800 bg-slate-900/90 text-slate-300 hover:border-amber-500/40 hover:text-amber-200');
+
+                    html += `
+                        <button 
+                            onclick="selectXFactor('${escapeJs(xf)}')" 
+                            class="xf-pill ${highlightClass} whitespace-nowrap px-3 py-1.5 rounded-xl border text-xs font-semibold transition flex items-center gap-1.5 shrink-0 cursor-pointer"
+                            title="Lọc theo điểm nhấn: ${escapeHtml(xf)}"
+                        >
+                            <span>${isTransitionL2 ? '⚡' : '✨'} ${escapeHtml(xf)}</span>
+                            <span class="px-1.5 py-0.2 rounded-full text-[10px] bg-slate-800/80 text-amber-300">${count}</span>
+                        </button>
+                    `;
+                });
+
+                container.innerHTML = html;
+            }
+
+            // Đồng bộ select dropdown
+            if (selectEl) {
+                const curVal = appState.currentXFactor === 'all' ? '' : appState.currentXFactor;
+                let optHtml = `<option value="">✨ Điểm nhấn: Tất Cả</option>`;
+                sortedFactors.forEach(xf => {
+                    const cnt = xfCounts[xf] || 0;
+                    const isSel = (curVal === xf) ? 'selected' : '';
+                    optHtml += `<option value="${escapeHtml(xf)}" ${isSel}>${xf === 'Chuyển cảnh cấp 2' ? '⚡' : '✨'} ${escapeHtml(xf)} (${cnt})</option>`;
+                });
+                selectEl.innerHTML = optHtml;
+                selectEl.value = curVal;
+            }
+        }
+
+        // Select X-Factor
+        function selectXFactor(xfactor) {
+            appState.currentXFactor = (appState.currentXFactor === xfactor) ? 'all' : xfactor;
+            appState.currentPage = 1;
+
+            renderXFactorPills();
+            updateFilterAccordionUI();
+            renderFocusBanner();
+            updateTeacherShareLink();
+            applyFilters(true);
+
+            if (appState.currentView !== 'grid') {
+                switchMainView('grid');
+            }
+        }
+
         // Switch View (Grid vs Creators)
         function switchMainView(view) {
             appState.currentView = view;
@@ -1907,6 +2108,14 @@
                     if (itemCountryId !== appState.currentCountry) return false;
                 }
 
+                // 3.8. X-Factor (Điểm nhấn / Vũ khí ăn điểm)
+                if (appState.currentXFactor && appState.currentXFactor !== 'all') {
+                    const xfVal = appState.currentXFactor;
+                    const hasXFactor = (item.x_factors && item.x_factors.includes(xfVal)) || 
+                                       (xfVal === 'Chuyển cảnh cấp 2' && item.transition_level === 'Chuyển cảnh Level 2');
+                    if (!hasXFactor) return false;
+                }
+
                 // 4. Technique filter (Trục 3: Kỹ thuật)
                 if (appState.currentTech) {
                     const tVal = appState.currentTech.toLowerCase();
@@ -1949,6 +2158,7 @@
                         (item.quick_takeaway || '') + ' ' + 
                         (item.key_tech || '') + ' ' + 
                         (item.transition_level || '') + ' ' +
+                        (item.x_factors ? item.x_factors.join(' ') : '') + ' ' +
                         (item.fedu_optimization?.key_optimization_point || '') + ' ' +
                         (item.fedu_optimization?.practice_focus || '') + ' ' +
                         (item.fedu_optimization?.ig_seeding_hook || '') + ' ' +
@@ -2032,6 +2242,11 @@
                         'nang-cao': '🔴 Cao (>18 shots)'
                     };
                     parts.push(compDisplayMap[appState.complexity] || appState.complexity);
+                }
+
+                // Điểm nhấn (X-Factor)
+                if (appState.currentXFactor && appState.currentXFactor !== 'all') {
+                    parts.push(`✨ ${appState.currentXFactor}`);
                 }
 
                 // Thời lượng (Duration)
@@ -2119,6 +2334,32 @@
                 const isCompActive = appState.complexity === compId;
                 const isDurationActive = !!appState.duration;
 
+                // Làm sạch Điểm Hay Nhất 💡 (loại bỏ triệt để văn mẫu máy móc)
+                let rawKeyOpt = (item.fedu_optimization && item.fedu_optimization.key_optimization_point) || item.quick_takeaway || '';
+                rawKeyOpt = rawKeyOpt.replace(/^Tác phẩm điện ảnh ngắn gồm \d+ phân cảnh được tính toán tỉ mỉ\.\s*/i, '').trim();
+                if (!rawKeyOpt) {
+                    rawKeyOpt = item.title_vi || 'Ý tưởng quay dựng thực chiến';
+                }
+
+                // Làm sạch Mục Đích 🎯 (loại bỏ text debug cào scraper)
+                let cleanPurpose = (item.purpose || '').trim();
+                if (cleanPurpose.includes('Instagram Liked') || cleanPurpose.includes('of 18') || cleanPurpose.includes('shared September')) {
+                    cleanPurpose = '';
+                }
+
+                // Làm sạch Kỹ Thuật Quay 🧠 (chỉ giữ lại các kỹ thuật quay điện ảnh thực tế)
+                let cleanKeyTech = (item.key_tech || '').trim();
+                if (cleanKeyTech.includes('Instagram Liked') || cleanKeyTech.includes('Shared September') || cleanKeyTech.includes('Of 18')) {
+                    const techParts = cleanKeyTech.split(/[•,]/).map(s => s.trim()).filter(s => 
+                        s && !s.toLowerCase().includes('instagram') && !s.toLowerCase().includes('liked') && !s.toLowerCase().includes('shared') && !s.toLowerCase().includes('of 18') && !s.startsWith('@')
+                    );
+                    cleanKeyTech = techParts.slice(0, 3).join(' • ');
+                }
+
+                // Tinh chỉnh tên tác giả & tiêu đề bài
+                const authorDisplayName = (item.creator.name || item.creator.handle || '').replace(/_/g, ' ');
+                let titleDisplayName = (item.title_vi || '').replace(/^@[a-zA-Z0-9._\s]+[\-–—•]\s*/, '').replace(/^Video by\s+[a-zA-Z0-9._\s]+/i, '').trim() || item.title_vi;
+
                 return `
                     <div id="idea-card-${item.id}" class="glass-card rounded-2xl p-4 flex flex-col justify-between relative overflow-hidden ${cardAdminClass}">
                         
@@ -2144,7 +2385,7 @@
                                     type="button"
                                     onclick="event.stopPropagation(); filterByCreator('${escapeJs(item.creator.handle)}', '${escapeJs(item.creator.name)}')"
                                     class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-800 border border-slate-700 text-sm hover:border-sky-400 hover:bg-sky-500/10 hover:scale-105 transition cursor-pointer group"
-                                    title="Lọc video của: ${escapeHtml(item.creator.name)}"
+                                    title="Lọc video của: ${escapeHtml(authorDisplayName)}"
                                 >
                                     <span class="group-hover:hidden">👤</span>
                                     <span class="hidden group-hover:block text-sky-400">🔍</span>
@@ -2157,14 +2398,14 @@
                                             type="button"
                                             onclick="event.stopPropagation(); filterByCreator('${escapeJs(item.creator.handle)}', '${escapeJs(item.creator.name)}')"
                                             class="font-bold text-sm text-white truncate hover:text-sky-400 transition" 
-                                            title="Lọc tác giả: ${escapeHtml(item.creator.name)}"
+                                            title="Lọc tác giả: ${escapeHtml(authorDisplayName)}"
                                         >
-                                            ${escapeHtml(item.creator.name)}
+                                            ${escapeHtml(authorDisplayName)}
                                         </button>
                                         <span class="text-[10px] font-mono text-slate-500 font-bold shrink-0">#${String(idx + 1).padStart(2, '0')}</span>
                                         ${appState.curationMode ? (isExcluded ? `<span class="px-1.5 py-0.5 rounded text-[8px] font-black bg-amber-400 text-slate-950 shrink-0">🔒 ẨN</span>` : `<span class="px-1.5 py-0.5 rounded text-[8px] font-bold bg-emerald-500/20 text-emerald-300 shrink-0">🌐 HIỆN</span>`) : ''}
                                     </div>
-                                    <span class="text-[11px] text-slate-400 truncate w-full mt-0.5" title="${escapeHtml(item.title_vi)}">${highlightText(item.title_vi, appState.searchQuery)}</span>
+                                    <span class="text-[11px] text-slate-400 truncate w-full mt-0.5" title="${escapeHtml(titleDisplayName)}">${highlightText(titleDisplayName, appState.searchQuery)}</span>
                                 </div>
                             </div>
                             
@@ -2206,13 +2447,13 @@
                                     alt="Hook Shot" 
                                     loading="lazy" 
                                     class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                                    onerror="handleCardThumbError(this, '${item.id}', 1, '${item.industries?.[0]?.icon || `🎬`}', '${escapeHtml(item.title_vi)}')"
+                                    onerror="handleCardThumbError(this, '${item.id}', 1, '${item.industries?.[0]?.icon || `🎬`}', '${escapeHtml(titleDisplayName)}')"
                                 >
                                 <span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-black/75 text-amber-300 backdrop-blur-sm border border-amber-500/30">
                                     HOOK • 0.0s
                                 </span>
                                 <button 
-                                    onclick="event.stopPropagation(); openImgLightbox('${item.media.thumb_hook}', '${escapeHtml(item.title_vi)} - Khung hình Hook 0.0s')" 
+                                    onclick="event.stopPropagation(); openImgLightbox('${item.media.thumb_hook}', '${escapeHtml(titleDisplayName)} - Khung hình Hook 0.0s')" 
                                     class="absolute bottom-1.5 right-1.5 w-6 h-6 rounded-md bg-black/70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-[11px]"
                                     title="Phóng to"
                                 >🔍</button>
@@ -2225,50 +2466,55 @@
                                     alt="Key Shot" 
                                     loading="lazy" 
                                     class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                                    onerror="handleCardThumbError(this, '${item.id}', 2, '${item.industries?.[0]?.icon || `🎬`}', '${escapeHtml(item.title_vi)}')"
+                                    onerror="handleCardThumbError(this, '${item.id}', 2, '${item.industries?.[0]?.icon || `🎬`}', '${escapeHtml(titleDisplayName)}')"
                                 >
                                 <span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-black/75 text-sky-300 backdrop-blur-sm border border-sky-500/30">
                                     KEY SHOT
                                 </span>
                                 <button 
-                                    onclick="event.stopPropagation(); openImgLightbox('${item.media.thumb_key}', '${escapeHtml(item.title_vi)} - Khung hình Key Shot')" 
+                                    onclick="event.stopPropagation(); openImgLightbox('${item.media.thumb_key}', '${escapeHtml(titleDisplayName)} - Khung hình Key Shot')" 
                                     class="absolute bottom-1.5 right-1.5 w-6 h-6 rounded-md bg-black/70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-[11px]"
                                     title="Phóng to"
                                 >🔍</button>
                             </div>
                         </div>
 
-                        <!-- CỐT LÕI THỰC CHIẾN (ĐÃ ÉP PHẲNG) -->
-                        <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800/80 text-[11px] flex flex-col gap-2 mt-auto">
-                            <!-- Dòng 1: Tóm tắt ép 1 dòng -->
-                            <div class="flex items-start gap-1.5">
-                                <span class="shrink-0 text-xs">💡</span>
-                                <span class="text-amber-300 font-semibold line-clamp-1" title="${escapeHtml(item.fedu_optimization?.key_optimization_point || item.quick_takeaway)}">${escapeHtml(item.fedu_optimization?.key_optimization_point || item.quick_takeaway)}</span>
+                        <!-- CỐT LÕI THỰC CHIẾN (BOX ĐIỂM HAY NHẤT MỚI) -->
+                        <div class="mt-auto flex flex-col gap-2">
+                            <!-- Box Điểm Hay Nhất (2 Dòng, Nền Hổ Phách Rực Rỡ, Đọc Trọn Vẹn) -->
+                            <div class="p-2.5 rounded-xl bg-gradient-to-r from-amber-500/15 via-amber-500/10 to-transparent border border-amber-500/30 flex items-start gap-2 shadow-sm">
+                                <span class="shrink-0 text-sm mt-0.5 select-none">💡</span>
+                                <div class="flex-1 min-w-0">
+                                    <span class="text-amber-200 font-semibold text-[11.5px] leading-snug line-clamp-2" title="${escapeHtml(rawKeyOpt)}">
+                                        ${escapeHtml(rawKeyOpt)}
+                                    </span>
+                                </div>
                             </div>
                             
-                            <!-- Dòng 2: Gộp Mục đích & Điểm ăn tiền -->
-                            ${(item.purpose || item.key_tech) ? `
-                                <div class="flex items-center gap-1.5 text-slate-400 truncate border-t border-slate-800/60 pt-1.5">
-                                    ${item.purpose ? `
-                                        <div class="flex items-center gap-1 shrink-0 ${appState.currentPurpose ? 'text-sky-300 font-bold' : ''}">
-                                            <span>🎯</span> <span class="truncate max-w-[80px] sm:max-w-none" title="${escapeHtml(item.purpose)}">${escapeHtml(item.purpose)}</span>
-                                        </div>
-                                    ` : ''}
-                                    
-                                    ${(item.purpose && item.key_tech) ? `<span class="text-slate-600 font-bold shrink-0">•</span>` : ''}
-                                    
-                                    ${item.key_tech ? `
-                                        <div class="flex items-center gap-1 truncate ${appState.currentTech ? 'text-sky-300 font-bold' : ''}">
-                                            <span class="shrink-0">🧠</span> <span class="truncate font-mono text-sky-300/90" title="${escapeHtml(item.key_tech)}">${escapeHtml(item.key_tech)}</span>
-                                        </div>
-                                    ` : ''}
-                                </div>
-                            ` : ''}
-                            
-                            <!-- Dòng 3: BỘ LỌC TƯƠNG TỰ (Tags) -->
-                            <div class="flex items-center gap-1.5 flex-wrap pt-1.5 border-t border-slate-800/60">
-                                <!-- Ngành nghề Badge -->
-                                ${(item.industries || []).map(ind => {
+                            <!-- Hộp thông tin phụ: Mục đích & Kỹ thuật & Tags -->
+                            <div class="p-2 rounded-xl bg-slate-900/80 border border-slate-800/80 text-[11px] flex flex-col gap-2">
+                                ${(cleanPurpose || cleanKeyTech) ? `
+                                    <div class="flex items-center gap-1.5 text-slate-400 truncate text-[10.5px]">
+                                        ${cleanPurpose ? `
+                                            <div class="flex items-center gap-1 shrink-0 ${appState.currentPurpose ? 'text-sky-300 font-bold' : ''}">
+                                                <span>🎯</span> <span class="truncate max-w-[120px] sm:max-w-none font-medium" title="${escapeHtml(cleanPurpose)}">${escapeHtml(cleanPurpose)}</span>
+                                            </div>
+                                        ` : ''}
+                                        
+                                        ${(cleanPurpose && cleanKeyTech) ? `<span class="text-slate-600 font-bold shrink-0">•</span>` : ''}
+                                        
+                                        ${cleanKeyTech ? `
+                                            <div class="flex items-center gap-1 truncate ${appState.currentTech ? 'text-sky-300 font-bold' : ''}">
+                                                <span class="shrink-0">🧠</span> <span class="truncate font-mono text-sky-300/90" title="${escapeHtml(cleanKeyTech)}">${escapeHtml(cleanKeyTech)}</span>
+                                            </div>
+                                        ` : ''}
+                                    </div>
+                                ` : ''}
+                                
+                                <!-- Tags: Ngành nghề, Kiểu quay, Số shots -->
+                                <div class="flex items-center gap-1.5 flex-wrap ${(cleanPurpose || cleanKeyTech) ? 'pt-1.5 border-t border-slate-800/60' : ''}">
+                                    <!-- Ngành nghề Badge -->
+                                    ${(item.industries || []).map(ind => {
                                     const c = getBadgeColorClasses(ind.badge_color || 'sky');
                                     const isIndActive = appState.currentIndustry === ind.id;
                                     return `<button type="button" onclick="event.stopPropagation(); selectIndustry('${ind.id}')"
@@ -2279,34 +2525,49 @@
                                     </button>`;
                                 }).join('')}
 
-                                <!-- Kiểu quay Badge -->
-                                ${item.shooting_style ? `
+                                    <!-- Kiểu quay Badge -->
+                                    ${item.shooting_style ? `
+                                        <button 
+                                            type="button"
+                                            onclick="event.stopPropagation(); selectShootingStyle('${item.shooting_style.id}')"
+                                            class="px-1.5 py-0.5 rounded text-[9px] uppercase tracking-wide font-semibold border transition cursor-pointer hover:scale-105 active:scale-95 flex items-center gap-1 ${isStyleActive ? 'bg-purple-500 text-white border-purple-400 shadow-md shadow-purple-500/30 ring-1 ring-purple-300/60' : 'bg-purple-500/15 text-purple-300 border-purple-500/30 hover:bg-purple-500/25'}"
+                                            title="Lọc theo kiểu quay: ${escapeHtml(item.shooting_style.name)}"
+                                        >
+                                            <span>${item.shooting_style.icon}</span>
+                                            <span>${escapeHtml(item.shooting_style.name)}</span>
+                                        </button>
+                                    ` : ''}
+
+                                    <!-- Số cảnh Badge -->
                                     <button 
                                         type="button"
-                                        onclick="event.stopPropagation(); selectShootingStyle('${item.shooting_style.id}')"
-                                        class="px-1.5 py-0.5 rounded text-[9px] uppercase tracking-wide font-semibold border transition cursor-pointer hover:scale-105 active:scale-95 flex items-center gap-1 ${isStyleActive ? 'bg-purple-500 text-white border-purple-400 shadow-md shadow-purple-500/30 ring-1 ring-purple-300/60' : 'bg-purple-500/15 text-purple-300 border-purple-500/30 hover:bg-purple-500/25'}"
-                                        title="Lọc theo kiểu quay: ${escapeHtml(item.shooting_style.name)}"
+                                        onclick="event.stopPropagation(); selectComplexityPill('${compId}')"
+                                        class="text-[9px] font-mono px-1.5 py-0.5 rounded transition cursor-pointer hover:scale-105 active:scale-95 border ${isCompActive ? 'bg-emerald-500 text-slate-950 font-bold border-emerald-400 shadow-sm ring-1 ring-emerald-300/60' : 'text-slate-400 bg-slate-800/60 border-slate-700/60 hover:bg-slate-700/80'}"
+                                        title="Lọc theo độ khó: ${item.media.shots_count} phân cảnh"
                                     >
-                                        <span>${item.shooting_style.icon}</span>
-                                        <span>${escapeHtml(item.shooting_style.name)}</span>
+                                        🎬 ${item.media.shots_count} shots
                                     </button>
-                                ` : ''}
 
-                                <!-- Số cảnh Badge -->
-                                <button 
-                                    type="button"
-                                    onclick="event.stopPropagation(); selectComplexityPill('${compId}')"
-                                    class="text-[9px] font-mono px-1.5 py-0.5 rounded transition cursor-pointer hover:scale-105 active:scale-95 border ${isCompActive ? 'bg-emerald-500 text-slate-950 font-bold border-emerald-400 shadow-sm ring-1 ring-emerald-300/60' : 'text-slate-400 bg-slate-800/60 border-slate-700/60 hover:bg-slate-700/80'}"
-                                    title="Lọc theo độ khó: ${item.media.shots_count} phân cảnh"
-                                >
-                                    🎬 ${item.media.shots_count} shots
-                                </button>
-                                
-                                ${item.is_ad_bot ? `
-                                    <span class="px-1.5 py-0.5 rounded text-[8px] font-bold border bg-purple-950/60 text-purple-300 border-purple-500/50">
-                                        🤖 Bot QC
-                                    </span>
-                                ` : ''}
+                                    <!-- Điểm nhấn X-Factor Badge(s) -->
+                                    ${(item.x_factors || []).map(xf => {
+                                        const isXfActive = appState.currentXFactor === xf;
+                                        const isTransitionL2 = (xf === 'Chuyển cảnh cấp 2');
+                                        return `<button 
+                                            type="button" 
+                                            onclick="event.stopPropagation(); selectXFactor('${escapeJs(xf)}')"
+                                            class="px-1.5 py-0.5 rounded text-[9px] font-semibold border transition cursor-pointer hover:scale-105 active:scale-95 flex items-center gap-1 ${isXfActive ? 'bg-amber-500 text-slate-950 font-bold border-amber-400 shadow-md shadow-amber-500/30 ring-1 ring-amber-300/60' : 'bg-amber-500/10 text-amber-300 border-amber-500/30 hover:bg-amber-500/20'}"
+                                            title="Lọc theo điểm nhấn: ${escapeHtml(xf)}">
+                                            <span>${isTransitionL2 ? '⚡' : '✨'}</span>
+                                            <span>${escapeHtml(xf)}</span>
+                                        </button>`;
+                                    }).join('')}
+                                    
+                                    ${item.is_ad_bot ? `
+                                        <span class="px-1.5 py-0.5 rounded text-[8px] font-bold border bg-purple-950/60 text-purple-300 border-purple-500/50">
+                                            🤖 Bot QC
+                                        </span>
+                                    ` : ''}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2997,6 +3258,7 @@
         function copyVideoModalShareLink() {
             if (!window._lastActiveCardId) return;
             const url = new URL(window.location.href);
+            // Remove other heavy params to keep link clean
             url.searchParams.delete('nganh'); url.searchParams.delete('industry');
             url.searchParams.delete('kieu'); url.searchParams.delete('style');
             url.searchParams.delete('qg'); url.searchParams.delete('country');
@@ -3265,6 +3527,93 @@
             }
         }
 
+        function downloadCurrentIdea() {
+            if (!appState.targetIdeaId) {
+                showToast("Không tìm thấy dữ liệu ý tưởng!", "⚠️");
+                return;
+            }
+            const idea = window.FEDU_IDEAS_DATABASE.find(i => i.id === appState.targetIdeaId);
+            if (!idea) return;
+            
+            // Tìm URL tốt nhất để tải về
+            let url = idea.video_url || idea.report_url || idea.thumbnail_url;
+            if (!url) {
+                showToast("Không có tài nguyên để tải về!", "⚠️");
+                return;
+            }
+            
+            // Mở tab mới để tải về
+            window.open(url, '_blank');
+            showToast("Đang mở link tải về...", "⬇️");
+        }
+
+        function setupSwipeToCloseModals() {
+            // Setup Swipe to Close cho Mobile
+            document.querySelectorAll('.app-modal-backdrop > div').forEach(modalContent => {
+                let startY = 0;
+                let currentY = 0;
+                let isDragging = false;
+                let isScrollable = false;
+
+                modalContent.addEventListener('touchstart', (e) => {
+                    // Nếu đang cuộn trong div con (như form, báo cáo), không vuốt đóng
+                    const scrollable = e.target.closest('.overflow-y-auto, iframe, video');
+                    if (scrollable) {
+                        isScrollable = true;
+                        return;
+                    }
+                    isScrollable = false;
+                    if (e.touches.length > 0) {
+                        startY = e.touches[0].clientY;
+                        isDragging = true;
+                        modalContent.style.transition = 'none';
+                    }
+                }, { passive: true });
+
+                modalContent.addEventListener('touchmove', (e) => {
+                    if (!isDragging || isScrollable || e.touches.length === 0) return;
+                    currentY = e.touches[0].clientY;
+                    const deltaY = currentY - startY;
+                    if (deltaY > 0) { // Chỉ vuốt xuống
+                        // prevent default to avoid scrolling background
+                        if(e.cancelable) e.preventDefault(); 
+                        modalContent.style.transform = `translateY(${deltaY}px)`;
+                        if(modalContent.parentElement) {
+                            modalContent.parentElement.style.backgroundColor = `rgba(3, 7, 18, ${Math.max(0, 0.88 - deltaY/500)})`;
+                        }
+                    }
+                }, { passive: false });
+
+                modalContent.addEventListener('touchend', (e) => {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    modalContent.style.transition = 'transform 0.3s ease-out';
+                    const deltaY = currentY - startY;
+                    if (deltaY > 150) {
+                        if(modalContent.parentElement && modalContent.parentElement.id) {
+                            closeModal(modalContent.parentElement.id);
+                        }
+                        // Reset style sau khi đóng
+                        setTimeout(() => {
+                            modalContent.style.transform = '';
+                            if(modalContent.parentElement) {
+                                modalContent.parentElement.style.backgroundColor = '';
+                            }
+                        }, 300);
+                    } else {
+                        // Hồi lại vị trí cũ
+                        modalContent.style.transform = 'translateY(0)';
+                        if(modalContent.parentElement) {
+                            modalContent.parentElement.style.backgroundColor = '';
+                        }
+                        setTimeout(() => {
+                            modalContent.style.transform = '';
+                        }, 300);
+                    }
+                });
+            });
+        }
+
         // Search & Filter Events (Synchronized Dual-Search)
         function syncHeroSearch(val) {
             const trimmed = (val || '').trim();
@@ -3395,6 +3744,7 @@
                 { id: 'purposeFilter', active: Boolean(appState.currentPurpose) },
                 { id: 'techFilter', active: Boolean(appState.currentTech) },
                 { id: 'countryFilter', active: Boolean(appState.currentCountry && appState.currentCountry !== 'all') },
+                { id: 'xFactorFilter', active: Boolean(appState.currentXFactor && appState.currentXFactor !== 'all') },
                 { id: 'complexityFilter', active: Boolean(appState.complexity) },
                 { id: 'durationFilter', active: Boolean(appState.duration) },
                 { id: 'sortFilter', active: Boolean(appState.sortBy && appState.sortBy !== 'default') }
@@ -3404,10 +3754,10 @@
                 const el = document.getElementById(id);
                 if (!el) return;
                 if (active) {
-                    el.classList.add('border-sky-400', 'bg-sky-950/60', 'text-sky-200', 'ring-1', 'ring-sky-400/50', 'font-bold');
+                    el.classList.add('border-amber-400', 'bg-amber-950/60', 'text-amber-200', 'ring-1', 'ring-amber-400/50', 'font-bold');
                     el.classList.remove('border-slate-800', 'bg-slate-900', 'text-slate-300', 'font-normal');
                 } else {
-                    el.classList.remove('border-sky-400', 'bg-sky-950/60', 'text-sky-200', 'ring-1', 'ring-sky-400/50', 'font-bold');
+                    el.classList.remove('border-amber-400', 'bg-amber-950/60', 'text-amber-200', 'ring-1', 'ring-amber-400/50', 'font-bold');
                     el.classList.add('border-slate-800', 'bg-slate-900', 'text-slate-300', 'font-normal');
                 }
             });
@@ -3420,6 +3770,7 @@
             const tSelect = document.getElementById('techFilter');
             const pSelect = document.getElementById('purposeFilter');
             const countrySelect = document.getElementById('countryFilter');
+            const xfSelect = document.getElementById('xFactorFilter');
 
             appState.complexity = cSelect?.value || '';
             appState.duration = dSelect?.value || '';
@@ -3431,6 +3782,12 @@
                 appState.currentCountry = countrySelect.value || 'all';
                 renderCountryTabs();
             }
+
+            if (xfSelect) {
+                appState.currentXFactor = xfSelect.value || 'all';
+                renderXFactorPills();
+            }
+
             appState.currentPage = 1;
 
             updateComplexityPillsUI();
@@ -3441,6 +3798,7 @@
             appState.currentStyle = 'all';
             appState.currentIndustry = 'all';
             appState.currentCountry = 'all';
+            appState.currentXFactor = 'all';
             appState.currentCreator = '';
             appState.currentCreatorName = '';
             appState.currentTech = '';
@@ -3477,21 +3835,28 @@
             appState.currentCountry = 'all';
             const countrySelect = document.getElementById('countryFilter');
             if (countrySelect) countrySelect.value = '';
+            const xfSelect = document.getElementById('xFactorFilter');
+            if (xfSelect) xfSelect.value = '';
             
             // Đóng panel accordion
             appState.openFilterAccordion = null;
             const industryPanel = document.getElementById('accordionPanelIndustry');
             const countryPanel = document.getElementById('accordionPanelCountry');
+            const xfactorPanel = document.getElementById('accordionPanelXFactor');
             if (industryPanel) industryPanel.classList.remove('open');
             if (countryPanel) countryPanel.classList.remove('open');
+            if (xfactorPanel) xfactorPanel.classList.remove('open');
             const arrowIndustry = document.getElementById('accordionIndustryArrow');
             const arrowCountry = document.getElementById('accordionCountryArrow');
+            const arrowXfactor = document.getElementById('accordionXFactorArrow');
             if (arrowIndustry) arrowIndustry.textContent = '▼';
             if (arrowCountry) arrowCountry.textContent = '▼';
+            if (arrowXfactor) arrowXfactor.textContent = '▼';
 
             renderShootingStyleTabs();
             renderIndustryPills();
             renderCountryTabs();
+            renderXFactorPills();
             renderFocusBanner();
             updateComplexityPillsUI();
             updateTransitionFilterUI();
@@ -3569,10 +3934,20 @@
             'ke-chuyen': 'storytelling',
             'dien-anh': 'dien-anh',
             'cinematic': 'dien-anh',
-            'cinema': 'dien-anh',
             'chuyen-canh': 'chuyen-canh',
             'transition': 'chuyen-canh',
-            'transitions': 'chuyen-canh'
+            'transitions': 'chuyen-canh',
+            'theo-nhip-nhac': 'theo-nhip-nhac',
+            'nhip-nhac': 'theo-nhip-nhac',
+            'nhipnhac': 'theo-nhip-nhac',
+            'theo-nhip': 'theo-nhip-nhac',
+            'music': 'theo-nhip-nhac',
+            'music-beat': 'theo-nhip-nhac',
+            'beat': 'theo-nhip-nhac',
+            'beat-sync': 'theo-nhip-nhac',
+            'doi-thuong': 'doi-thuong',
+            'ky-thuat-quay': 'ky-thuat-quay',
+            'ugc': 'ugc'
         };
 
         const COUNTRY_ALIASES = {
@@ -3728,6 +4103,9 @@
             if (appState.currentTech) {
                 parts.push(`⚙️ ${appState.currentTech}`);
             }
+            if (appState.currentXFactor && appState.currentXFactor !== 'all') {
+                parts.push(`✨ ${appState.currentXFactor}`);
+            }
             if (appState.complexity) {
                 const labels = { 'de': '🟢 Dễ (3-8)', 'trung-binh': '🟡 Vừa (9-18)', 'nang-cao': '🔴 Cao (>18)' };
                 parts.push(labels[appState.complexity] || appState.complexity);
@@ -3746,6 +4124,7 @@
             let indParam = params.get('nganh') || params.get('industry') || params.get('n') || (hash.startsWith('nganh-') ? hash.replace('nganh-', '') : '');
             let styleParam = params.get('kieu') || params.get('style') || params.get('k') || (hash.startsWith('kieu-') ? hash.replace('kieu-', '') : '');
             let countryParam = params.get('quoc-gia') || params.get('qg') || params.get('country') || (hash.startsWith('qg-') ? hash.replace('qg-', '') : '');
+            let xfParam = params.get('xfactor') || params.get('xf') || params.get('diem-nhan') || '';
             let creatorParam = params.get('creator') || params.get('c') || params.get('tac-gia') || '';
             let techParam = params.get('ky-thuat') || params.get('kt') || params.get('tech') || '';
             let purposeParam = params.get('muc-dich') || params.get('md') || params.get('purpose') || '';
@@ -3762,6 +4141,7 @@
             appState.currentStyle = 'all';
             appState.currentIndustry = 'all';
             appState.currentCountry = 'all';
+            appState.currentXFactor = 'all';
             appState.currentCreator = '';
             appState.currentCreatorName = '';
             appState.currentTech = '';
@@ -3865,6 +4245,10 @@
                 appState.focusMode = true;
             }
 
+            if (xfParam) {
+                appState.currentXFactor = decodeURIComponent(xfParam.trim());
+            }
+
             // Đồng bộ UI Select Controls
             const tSelect = document.getElementById('techFilter');
             if (tSelect) {
@@ -3894,6 +4278,9 @@
 
             const cSelect = document.getElementById('countryFilter');
             if (cSelect) cSelect.value = (appState.currentCountry === 'all' ? '' : appState.currentCountry);
+
+            const xfSelect = document.getElementById('xFactorFilter');
+            if (xfSelect) xfSelect.value = (appState.currentXFactor === 'all' ? '' : appState.currentXFactor);
 
             const compSelect = document.getElementById('complexityFilter');
             if (compSelect) compSelect.value = appState.complexity;
@@ -3933,6 +4320,9 @@
             }
             if (appState.currentCountry && appState.currentCountry !== 'all') {
                 params.set('qg', appState.currentCountry);
+            }
+            if (appState.currentXFactor && appState.currentXFactor !== 'all') {
+                params.set('xfactor', appState.currentXFactor);
             }
             if (appState.currentCreator) {
                 params.set('creator', appState.currentCreator.replace(/^@/, ''));
@@ -3986,6 +4376,7 @@
             if (appState.currentStyle && appState.currentStyle !== 'all') activeCount++;
             if (appState.currentIndustry && appState.currentIndustry !== 'all') activeCount++;
             if (appState.currentCountry && appState.currentCountry !== 'all') activeCount++;
+            if (appState.currentXFactor && appState.currentXFactor !== 'all') activeCount++;
             if (appState.currentCreator) activeCount++;
             if (appState.currentTech) activeCount++;
             if (appState.currentPurpose) activeCount++;
@@ -4230,6 +4621,26 @@
             }
         }
 
+        let isMobileFilterOpen = false;
+        function toggleMobileFilters() {
+            isMobileFilterOpen = !isMobileFilterOpen;
+            const container = document.getElementById('allFilterBarsContainer');
+            const chevron = document.getElementById('mobileFilterChevron');
+            const btnText = document.getElementById('mobileFilterBtnText');
+            
+            if (isMobileFilterOpen) {
+                container.classList.remove('max-h-0', 'opacity-0');
+                container.classList.add('max-h-[2000px]', 'opacity-100');
+                if (chevron) chevron.style.transform = 'rotate(180deg)';
+                if (btnText) btnText.innerText = 'Đóng Bộ Lọc';
+            } else {
+                container.classList.add('max-h-0', 'opacity-0');
+                container.classList.remove('max-h-[2000px]', 'opacity-100');
+                if (chevron) chevron.style.transform = 'rotate(0deg)';
+                if (btnText) btnText.innerText = '⚙️ Mở Bộ Lọc';
+            }
+        }
+
         function toggleFilterBars() {
             appState.showFilterBarsInFocus = !appState.showFilterBarsInFocus;
             const allFilterBars = document.getElementById('allFilterBarsContainer');
@@ -4345,13 +4756,16 @@
         // App Initialization
         document.addEventListener('DOMContentLoaded', () => {
             initStorage();
+            setupSwipeToCloseModals();
             updateAdminBarUI();
             syncUrlToState();
             renderShootingStyleTabs();
             renderIndustryPills();
             renderCountryTabs();
+            renderXFactorPills();
             updateComplexityPillsUI();
             updateTransitionFilterUI();
+            updateFilterAccordionUI();
             renderFocusBanner();
             updateHeaderBadges();
             applyFilters();
@@ -4384,8 +4798,10 @@
             renderShootingStyleTabs();
             renderIndustryPills();
             renderCountryTabs();
+            renderXFactorPills();
             updateComplexityPillsUI();
             updateTransitionFilterUI();
+            updateFilterAccordionUI();
             renderFocusBanner();
             updateHeaderBadges();
             applyFilters();
