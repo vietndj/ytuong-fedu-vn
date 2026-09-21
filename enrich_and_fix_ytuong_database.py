@@ -20,14 +20,14 @@ R2_VID_MAPPINGS = {
     "IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Tornado%20Kick%20Martial%20Arts%20Kinetic%20Hook%20-%20%40aidana_adilkassym.mp4",
     "IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcxwKHYoBFv.mp4",
     "IG_@jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DawDiT2M1p8.mp4",
-    "IG_@mako__go_DaH7X34NTNX_Palermo_Sicily": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DaH7X34NTNX.mp4",
-    "IG_@valenti_k41_DdB_21Yo0Qc_Creative_Phone_Video_Ideas": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Creative%20Phone%20Video%20Ideas%20-%20Routine%20Creator%20-%20%40valenti_k41.mp4",
+    "IG_@mako__go_DaH7X34NTNX_Palermo_Sicily": "https://media.fedu.vn/v/BAACAgUAAxkDAAMCar...",
+    "IG_@valenti_k41_DdB_21Yo0Qc_Creative_Phone_Video_Ideas": "https://media.fedu.vn/v/BAACAgUAAxkDAAMCar...",
     "IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdBDvZph1od.mp4",
     "IG_@alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Food%20Filming%20%26%20Styling%20Mastery%20-%20%40alena.feda.mp4",
     "IG_@ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcyS2KEm7-v.mp4",
     "IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcyDbGmItDV.mp4",
     "FB_@AnhSacAnh_1964049564715249_Thuong_Hieu_Ca_Nhan_Sinh_Loi": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Thuong_Hieu_Ca_Nhan_Sinh_Loi_Anh_Sac_Anh.mp4",
-    "IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DaB-gO6hvPX.mp4"
+    "IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing": "https://media.fedu.vn/v/BAACAgUAAxkDAAMCar..."
 }
 
 # 2. Level 1 vs Level 2 Hand-Curated Ground Truth
