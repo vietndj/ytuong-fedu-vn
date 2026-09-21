@@ -4,9 +4,9 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 220,
-  "total_unique_ideas": 214,
-  "total_active_ideas": 187,
+  "total_scene_items": 221,
+  "total_unique_ideas": 215,
+  "total_active_ideas": 188,
   "total_excluded_ideas": 27,
   "total_creators": 150,
   "shooting_styles": [
@@ -70,7 +70,7 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 4,
     "voice-over": 11,
-    "talking-head": 23,
+    "talking-head": 24,
     "storytelling": 22,
     "dien-anh": 85,
     "chuyen-canh": 38,
@@ -165,7 +165,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 17,
     "du-lich": 13,
     "cong-nghe": 26,
-    "kien-truc": 21,
+    "kien-truc": 22,
     "the-thao": 5,
     "ky-thuat-quay": 34,
     "ugc": 4
@@ -227,7 +227,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 99,
+    "us_eu": 100,
     "korea": 9,
     "india": 3,
     "japan": 6,
@@ -309,6 +309,20 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@hena_film_vlog",
+      "name": "Hena_Film_Vlog",
+      "profile_url": "https://www.instagram.com/hena_film_vlog/",
+      "video_count": 4,
+      "top_industry": "Kiến Trúc & Không Gian Sống",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdbCdHFKZsP_%ED%96%87%EB%B9%9B_%EC%97%86%EB%8A%94_%EC%A7%91%2C_%EC%9D%8C%EC%8B%9D_%EC%B4%AC%EC%98%81_%EA%B0%80%EB%8A%A5%ED%95%A8%F0%9F%A4%94_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공",
+        "IG_@hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85",
+        "IG_@hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog",
+        "IG_@hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow"
+      ]
+    },
+    {
       "handle": "@shogentle",
       "name": "Al,_The_Creator_Videography_Reels",
       "profile_url": "https://www.instagram.com/shogentle/",
@@ -348,19 +362,6 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@jeromememe_DQuEXMbj8fT_People_of_Porto",
         "IG_@jeromememe_DQmKgPDEWgJ_Artisans_of_Venice",
         "IG_@jeromememe_DbGMt3oIaZm_People_of_Copenhagen"
-      ]
-    },
-    {
-      "handle": "@hena_film_vlog",
-      "name": "핸아 | 집에서 팔리는 영상 만드는 법",
-      "profile_url": "https://www.instagram.com/hena_film_vlog/",
-      "video_count": 3,
-      "top_industry": "Kỹ Thuật Quay Dựng & Phụ Kiện Solo Filmmaking",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/shot_01_mid.jpg",
-      "video_ids": [
-        "IG_@hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85",
-        "IG_@hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog",
-        "IG_@hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow"
       ]
     },
     {
@@ -1948,6 +1949,71 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공",
+      "shortcode": "DdbCdHFKZsP",
+      "title_vi": "햇빛 없는 집, 음식 촬영 가능함🤔 제품제공",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @hena_film_vlog",
+      "tech_tags": [
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot",
+        "Low-key Lighting"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "creator": {
+        "raw": "@hena_film_vlog",
+        "name": "Hena_Film_Vlog",
+        "handle": "@hena_film_vlog",
+        "profile_url": "https://www.instagram.com/hena_film_vlog/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
+      "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdbCdHFKZsP_%ED%96%87%EB%B9%9B_%EC%97%86%EB%8A%94_%EC%A7%91%2C_%EC%9D%8C%EC%8B%9D_%EC%B4%AC%EC%98%81_%EA%B0%80%EB%8A%A5%ED%95%A8%F0%9F%A4%94_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdbCdHFKZsP_%ED%96%87%EB%B9%9B_%EC%97%86%EB%8A%94_%EC%A7%91%2C_%EC%9D%8C%EC%8B%9D_%EC%B4%AC%EC%98%81_%EA%B0%80%EB%8A%A5%ED%95%A8%F0%9F%A4%94_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
+        "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
+        "shots_count": 22,
+        "duration": "44s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul",
       "shortcode": "DdiSb5Rp2LB",

@@ -17312,5 +17312,73 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공": {
+    "id": "IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공",
+    "creator": "@hena_film_vlog",
+    "creator_name": "Hena_Film_Vlog",
+    "title": "@hena_film_vlog - 햇빛 없는 집, 음식 촬영 가능함🤔 제품제공",
+    "shots_count": 22,
+    "duration": "44.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @hena_film_vlog",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DdbCdHFKZsP": {
+    "id": "IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공",
+    "creator": "@hena_film_vlog",
+    "creator_name": "Hena_Film_Vlog",
+    "title": "@hena_film_vlog - 햇빛 없는 집, 음식 촬영 가능함🤔 제품제공",
+    "shots_count": 22,
+    "duration": "44.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @hena_film_vlog",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }
