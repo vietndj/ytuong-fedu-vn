@@ -17251,32 +17251,37 @@
     "creator_name": "German991020",
     "title": "@german991020 - Lost in Seoul",
     "shots_count": 11,
-    "duration": "22.0s",
+    "duration": "18.9s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "du-lich",
+      "name": "Du Lịch & Trải Nghiệm",
+      "icon": "✈️"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @german991020",
+    "purpose": "B-roll điện ảnh đường phố Seoul: cú máy tĩnh đóng khung nhân vật, typography tối giản và bảng màu phim hoài niệm.",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting"
+      "Visual Hook",
+      "Foreground Motion Wipe",
+      "Telephoto Compression",
+      "Low-Angle Canyon Framing",
+      "Dirty Foreground",
+      "Teal & Amber Film Grade"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "key_optimization_point": "⚡ Đóng khung nhân vật tĩnh giữa dòng người chuyển động (Motion Foreground Wipe) ➔ Tạo cảm giác lạc lõng (Lost) đúng tên series.",
+    "practice_focus": "⚡ Thực chiến: Khóa máy cố định tiêu cự 50-85mm, canh người lạ đi ngang cắt tiền cảnh để giấu vết cắt cảnh tự nhiên.",
+    "logic_explanation": "Series b-roll du lịch điện ảnh Hàn Quốc kết hợp góc quay đường phố, tàu điện ngầm và ẩm thực đời thường.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "⚡ Tận dụng người qua lại làm lớp tiền cảnh chuyển động (Wipe transition) tự nhiên, dùng góc cận xen kẽ góc toàn để tạo nhịp thở thị giác.",
     "country": {
-      "id": "us_eu",
-      "name": "Âu Mỹ",
-      "en_name": "US & Europe",
-      "flag": "🇺🇸/🇪🇺",
-      "badge_color": "purple"
+      "id": "asia",
+      "name": "Châu Á",
+      "en_name": "Asia",
+      "flag": "🌏",
+      "badge_color": "blue"
     }
   },
   "DdiSb5Rp2LB": {
@@ -17285,100 +17290,113 @@
     "creator_name": "German991020",
     "title": "@german991020 - Lost in Seoul",
     "shots_count": 11,
-    "duration": "22.0s",
+    "duration": "18.9s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "du-lich",
+      "name": "Du Lịch & Trải Nghiệm",
+      "icon": "✈️"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @german991020",
+    "purpose": "B-roll điện ảnh đường phố Seoul: cú máy tĩnh đóng khung nhân vật, typography tối giản và bảng màu phim hoài niệm.",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting"
+      "Visual Hook",
+      "Foreground Motion Wipe",
+      "Telephoto Compression",
+      "Low-Angle Canyon Framing",
+      "Dirty Foreground",
+      "Teal & Amber Film Grade"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "key_optimization_point": "⚡ Đóng khung nhân vật tĩnh giữa dòng người chuyển động (Motion Foreground Wipe) ➔ Tạo cảm giác lạc lõng (Lost) đúng tên series.",
+    "practice_focus": "⚡ Thực chiến: Khóa máy cố định tiêu cự 50-85mm, canh người lạ đi ngang cắt tiền cảnh để giấu vết cắt cảnh tự nhiên.",
+    "logic_explanation": "Series b-roll du lịch điện ảnh Hàn Quốc kết hợp góc quay đường phố, tàu điện ngầm và ẩm thực đời thường.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "⚡ Tận dụng người qua lại làm lớp tiền cảnh chuyển động (Wipe transition) tự nhiên, dùng góc cận xen kẽ góc toàn để tạo nhịp thở thị giác.",
     "country": {
-      "id": "us_eu",
-      "name": "Âu Mỹ",
-      "en_name": "US & Europe",
-      "flag": "🇺🇸/🇪🇺",
-      "badge_color": "purple"
+      "id": "asia",
+      "name": "Châu Á",
+      "en_name": "Asia",
+      "flag": "🌏",
+      "badge_color": "blue"
     }
   },
   "IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공": {
     "id": "IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공",
     "creator": "@hena_film_vlog",
     "creator_name": "Hena_Film_Vlog",
-    "title": "@hena_film_vlog - 햇빛 없는 집, 음식 촬영 가능함🤔 제품제공",
+    "title": "@hena_film_vlog • Setup Đèn Quay Cận Cảnh Ẩm Thực Nhà Thiếu Sáng",
     "shots_count": 22,
-    "duration": "44.0s",
+    "duration": "19.8s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "voice-over",
+      "name": "Voice Over",
+      "icon": "🎙️"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "am-thuc",
+      "name": "F&B",
+      "icon": "🍜"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @hena_film_vlog",
+    "purpose": "Hướng dẫn dùng 1 đèn LED spot quay cận cảnh món ăn nổi khối khi nhà thiếu sáng",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting"
+      "Macro Detail Shot",
+      "Tabletop Lighting",
+      "Food Cinematography",
+      "Side Lighting 45°",
+      "Behind The Scenes"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "key_optimization_point": "⚡ Đặt đèn LED spot góc chéo 45 độ kết hợp tản sáng bù sáng tự nhiên ➔ Làm nổi khối vân bánh waffle và độ mọng nước của sốt kem.",
+    "practice_focus": "⚡ Thực chiến: Khóa máy cận cảnh (Macro 50-85mm), lia máy chậm bắt giọt siro và độ bóng bề mặt, dùng ánh sáng ven tách đĩa ăn khỏi phông nền.",
+    "quick_takeaway": "Nhà không có ánh sáng tự nhiên vẫn quay đồ ăn ngon mắt bằng cách dùng 1 đèn LED spot đánh chéo tạo khối và tương phản.",
+    "logic_explanation": "Video hướng dẫn setup đèn quay ẩm thực trong nhà thiếu sáng, kết hợp Voice Over và B-Roll cận cảnh đồ ăn.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
     "country": {
-      "id": "us_eu",
-      "name": "Âu Mỹ",
-      "en_name": "US & Europe",
-      "flag": "🇺🇸/🇪🇺",
-      "badge_color": "purple"
+      "id": "korea",
+      "name": "Hàn Quốc",
+      "en_name": "Korea",
+      "flag": "🇰🇷",
+      "badge_color": "blue"
     }
   },
   "DdbCdHFKZsP": {
     "id": "IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공",
     "creator": "@hena_film_vlog",
     "creator_name": "Hena_Film_Vlog",
-    "title": "@hena_film_vlog - 햇빛 없는 집, 음식 촬영 가능함🤔 제품제공",
+    "title": "@hena_film_vlog • Setup Đèn Quay Cận Cảnh Ẩm Thực Nhà Thiếu Sáng",
     "shots_count": 22,
-    "duration": "44.0s",
+    "duration": "19.8s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "voice-over",
+      "name": "Voice Over",
+      "icon": "🎙️"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "am-thuc",
+      "name": "F&B",
+      "icon": "🍜"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @hena_film_vlog",
+    "purpose": "Hướng dẫn dùng 1 đèn LED spot quay cận cảnh món ăn nổi khối khi nhà thiếu sáng",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting"
+      "Macro Detail Shot",
+      "Tabletop Lighting",
+      "Food Cinematography",
+      "Side Lighting 45°",
+      "Behind The Scenes"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "key_optimization_point": "⚡ Đặt đèn LED spot góc chéo 45 độ kết hợp tản sáng bù sáng tự nhiên ➔ Làm nổi khối vân bánh waffle và độ mọng nước của sốt kem.",
+    "practice_focus": "⚡ Thực chiến: Khóa máy cận cảnh (Macro 50-85mm), lia máy chậm bắt giọt siro và độ bóng bề mặt, dùng ánh sáng ven tách đĩa ăn khỏi phông nền.",
+    "quick_takeaway": "Nhà không có ánh sáng tự nhiên vẫn quay đồ ăn ngon mắt bằng cách dùng 1 đèn LED spot đánh chéo tạo khối và tương phản.",
+    "logic_explanation": "Video hướng dẫn setup đèn quay ẩm thực trong nhà thiếu sáng, kết hợp Voice Over và B-Roll cận cảnh đồ ăn.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
     "country": {
-      "id": "us_eu",
-      "name": "Âu Mỹ",
-      "en_name": "US & Europe",
-      "flag": "🇺🇸/🇪🇺",
-      "badge_color": "purple"
+      "id": "korea",
+      "name": "Hàn Quốc",
+      "en_name": "Korea",
+      "flag": "🇰🇷",
+      "badge_color": "blue"
     }
   }
 }

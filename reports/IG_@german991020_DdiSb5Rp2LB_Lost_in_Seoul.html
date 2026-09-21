@@ -1231,10 +1231,10 @@ video#mainPlayer {
         <div class="report-header-banner">
             <div class="header-top-row">
                 <span class="genre-badge">DIRECTOR STORYBOARD BREAKDOWN</span>
-                <span style="font-size:0.75rem; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">11 SHOTS &bull; 18.89s</span>
+                <span style="font-size:0.75rem; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">11 SHOTS &bull; 18.93s</span>
                 <a href="https://ytuong.fedu.vn" target="_blank" style="color:var(--accent-blue); text-decoration:none; font-size:0.75rem; font-weight:700; display:inline-flex; align-items:center; gap:4px; margin-left:auto;">💡 Kho Ý Tưởng YTUONG HUB ↗</a>
             </div>
-            <h1 class="report-title">@german991020 - Lost in Seoul</h1>
+            <h1 class="report-title">@german991020 - Lost in&nbsp;Seoul</h1>
             <div class="meta-tags-flex">
                 <span>Tác giả: <strong>@german991020</strong></span>
                 <span>Tệp: <strong>IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul.html</strong></span>
@@ -1244,101 +1244,9 @@ video#mainPlayer {
 
         <div class="overview-card">
             <h3 style="color:#fff; font-size:1rem; margin-bottom:6px; font-weight:700;">🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH.</h3>
-            <div>⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
+            <div>⚡ Đóng khung nhân vật tĩnh giữa dòng người chuyển động (Motion Foreground Wipe) ➔ Tạo cảm giác lạc lõng (Lost) đúng tên series.</div>
         </div>
 
-        
-        <!-- BẢNG KỊCH BẢN THOẠI 2 CỘT (TIẾNG VIỆT ĐỌC LIỀN MẠCH + TIẾNG ANH KHỐI NHỎ BÊN CẠNH) -->
-        <div class="dialogue-container-2col">
-            <!-- CỘT CHÍNH (TRÁI): TIẾNG VIỆT ĐỌC LIỀN MẠCH KHÔNG NGẮT QUÃNG -->
-            <div class="col-vietnamese-flow">
-                <div class="col-flow-header">
-                    <div class="col-flow-badge">🎙️ KỊCH BẢN LỜI THOẠI (BẢN DỊCH THỰC CHIẾN)</div>
-                    <span class="col-flow-subtag">Đọc liền một mạch • Chuẩn 4 nhịp giữ chân</span>
-                </div>
-                <div class="vn-script-body">
-                    
-                    <div class="vn-script-para" onclick="playShot(0.0, 18.88, 'Phân đoạn #01')">
-                        <div class="para-meta-line">
-                            <span class="para-timestamp-tag">0.00s</span>
-                            <span class="para-beat-label">Phân đoạn #01</span>
-                        </div>
-                        <span class="para-text">"구독과 좋아요 부탁드려요!"</span>
-                    </div>
-            
-                </div>
-            </div>
-
-            <!-- CỘT PHỤ (PHẢI): KHỐI NHỎ CHỮ BÉ XÍU ĐỐI SOÁT TIẾNG ANH -->
-            <div class="col-english-aside">
-                <div class="col-aside-header">
-                    <span class="aside-title">ORIGINAL TRANSCRIPT</span>
-                    <span class="aside-note">Phụ / Đối chiếu</span>
-                </div>
-                <div class="en-lines-list">
-                    
-                    <div class="en-line-item" onclick="playShot(0.0, 18.88, 'ORIGINAL')">
-                        <span class="en-time">0.00s</span>
-                        <div class="en-text">"구독과 좋아요 부탁드려요!"</div>
-                    </div>
-            
-                </div>
-            </div>
-        </div>
-
-        <!-- KHỐI PROMPT ÁNH XẠ SANG NGÀNH NGHỀ (GEMINI MEGA PROMPT ACCORDION ĐÓNG MẶC ĐỊNH) -->
-        <div class="remake-prompt-card" id="remakePromptCard">
-            <div class="prompt-accordion-header" onclick="togglePromptAccordion(this)">
-                <div class="prompt-header-left">
-                    <span class="remake-header-badge">✨ KỊCH BẢN STU</span>
-                    <span class="remake-accordion-title">Ánh xạ kịch bản này sang ngành nghề của bạn (Gemini Prompt)</span>
-                </div>
-                <div class="prompt-header-right">
-                    <button class="copy-prompt-btn-compact" onclick="copyMegaPrompt(event, this)">📋 Sao chép</button>
-                    <div class="prompt-toggle-btn">
-                        <span class="toggle-icon">▼</span>
-                        <span class="toggle-label">Mở xem</span>
-                    </div>
-                </div>
-            </div>
-            <div class="prompt-accordion-body" style="display: none;">
-                <p class="remake-subtext">Sao chép Mega Prompt này dán vào Gemini. Hệ thống tự động gợi ý đúng các ngành nghề học viên thực tế trong STU để xuất bản ngay 3 phương án kịch bản tương ứng theo chuẩn văn phong mộc mạc anh Việt (đã lọc sạch 100% văn mẫu).</p>
-
-                <div class="prompt-code-wrapper">
-                    <div class="prompt-code-toolbar">
-                        <span class="prompt-code-filename">📄 MEGA_PROMPT_REMAKE_GEMINI.md</span>
-                        <button class="copy-prompt-btn" onclick="copyMegaPrompt(event, this)">📋 Sao chép Prompt</button>
-                    </div>
-                    <div class="prompt-code-content" id="megaPromptText">Bạn là Đạo diễn Video Ngắn &amp; Chuyên gia Tinh chỉnh Lời thoại Thực Chiến theo trường phái mộc mạc của anh Việt (nguyen-viet-voice).
-
-Tôi có cấu trúc logic giữ chân 26 giây đắt giá từ video mẫu với 4 nhịp:
-1. Hook 3s: Nêu sự thật trần trụi về một việc ai cũng nghĩ là đơn giản.
-2. Xung đột 2 vế: Cái cớ chủ quan giữ thể diện ("Tưởng 2 phút là xong") đối đầu với Thực tế khách quan ("Vào cuộc mới biết mất cả buổi / ở lại mấy ngày").
-3. Tactile B-roll: Bàn tay liên tục đặt từng món đồ nghề/chi tiết thật xuống bàn làm việc theo nhịp nói (âm thanh thực tế, mắt thấy tai nghe).
-4. Kết bài tự trào &amp; Mở lời tự nhiên: Thừa nhận cái khó của người làm nghề, nhờ người xem chỉ giùm kinh nghiệm hoặc đặt câu hỏi mở chân thành.
-
-=== QUY TẮC BẮT BUỘC VỀ VĂN PHONG ANH VIỆT (TUÂN THỦ 100%) ===
-- CẤM TUYỆT ĐỐI VĂN MẪU AI &amp; TỪ NGỮ SÁO RỖNG: Không dùng 'bứt phá', 'chuyển hóa', 'vũ khí', 'thần thái', 'ma trận', 'nâng tầm', 'chạm cảm xúc', 'khơi gợi nhu cầu', 'giải pháp toàn diện', 'tối ưu hóa', 'đỉnh cao', 'bí quyết', 'bật mí', 'ngộ nhận', 'rào cản', 'tử huyệt'...
-- CẤM TUYỆT ĐỐI TỪ 'ÔNG GIÁO' hoặc xưng hô thầy bà dạy đời. Đại từ xưng hô chuẩn mực: 'mình - bạn' hoặc 'tôi - bạn'.
-- CẤM TUYỆT ĐỐI MƯỢN CỚ SỐ ĐÔNG: Không dùng 'anh em mình', 'nhiều người ngoài kia', 'chúng ta thường hay'. Đi thẳng một đường thẳng vào bản chất sự việc.
-- GIỮ TRỌN VĂN PHONG MỘC MẠC: Giọng người làm nghề khiêm tốn, biết đến đâu chia sẻ đến đấy, có nụ cười tự trào duyên dáng, tôn trọng thời gian người xem.
-
-=== HƯỚNG DẪN TƯƠNG TÁC (QUÉT TỪ CÁC NGÀNH NGHỀ HỌC VIÊN TRONG STU) ===
-Nếu trong tin nhắn này tôi ĐÃ GHI SẴN thông tin ngành nghề ở cuối, hãy BỎ QUA bước hỏi và XUẤT BẢN NGAY 3 kịch bản.
-
-Nếu tôi CHƯA GHI ngành nghề, hãy DỪNG LẠI và chỉ gửi duy nhất menu 1 câu ngắn gọn sau:
-
-"Chào bạn, để viết đúng đồ nghề và cảnh quay thực tế tại chỗ làm việc của bạn (theo nhóm ngành học viên trong STU), bạn chọn ngành nào dưới đây (chỉ cần gõ số 1, 2, 3, 4, 5 hoặc gõ 1 dòng ngắn):
-1. Làm đẹp & Spa / Da liễu Clinic / Phun xăm / Salon tóc (Bàn soi da, khay dụng cụ, kem dưỡng, kéo lược)
-2. Nội thất / Decor / Kiến trúc / Vật liệu xây dựng (Bàn làm việc, thước đo, mẫu gỗ, bảng màu sơn, bản vẽ)
-3. Ẩm thực & F&B / Tiệm bánh / Trà đồ uống (Mặt bàn pha chế, thớt dao, cân tiểu ly, ly cốc)
-4. Nông nghiệp / Phân bón / Chăm sóc sức khỏe / Dược liệu (Bao bì mẫu, cây giống, khay dinh dưỡng, bình xịt)
-5. Ngành khác của bạn trong STU: Bạn nhắn giúp mình: [Tên nghề] + [Khách hay tưởng lầm điều gì] + [3 món đồ trên bàn làm việc]"
-
-Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG ÁN KỊCH BẢN CHI TIẾT TỪNG GIÂY (Gồm 4 cột: Thời lượng | Hình ảnh B-roll xúc giác | Lời thoại A-roll mộc mạc | Âm thanh Foley thực tế) được lọc sạch 100% văn mẫu!</div>
-                </div>
-            </div>
-        </div>
         
 
         <div class="action-toolbar">
@@ -1353,52 +1261,52 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
             
         <div class="shot-card" id="shot-card-1">
             <div class="shot-media-col">
-                <div class="shot-thumb-wrap" onclick="playShot(0.0, 0.04, 'SHOT 01')">
+                <div class="shot-thumb-wrap" onclick="playShot(0.0, 0.08, 'SHOT 01')">
                     <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_01_mid.jpg" alt="SHOT 01" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_01_mid.jpg', 'SHOT 01 [0.0s - 0.04s] • Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh')">🔍</button>
-                    <span class="thumb-time-badge">0.00s - 0.04s</span>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_01_mid.jpg', 'SHOT 01 [0.0s - 0.08s] • ⚡ Visual Hook: Mở màn đời thường không qua chỉnh màu tạo độ mộc trước khi chuyển đổi phong cách')">🔍</button>
+                    <span class="thumb-time-badge">0.00s - 0.08s</span>
                 </div>
             </div>
             <div class="shot-info-col">
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 01</span>
-                        <h4 class="shot-heading">Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh</h4>
+                        <h4 class="shot-heading">⚡ Visual Hook: Mở màn đời thường không qua chỉnh màu tạo độ mộc trước khi chuyển đổi phong cách</h4>
                     </div>
-                    <button class="time-jump-btn" onclick="playShot(0.0, 0.04, 'SHOT 01')">
-                        ▶ 0.00s ➔ 0.04s (0.08s)
+                    <button class="time-jump-btn" onclick="playShot(0.0, 0.08, 'SHOT 01')">
+                        ▶ 0.00s ➔ 0.08s (0.08s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Mở màn định vị không gian và nhịp thở của toàn bộ video, thu hút sự chú ý tức thì.</span>
+                    <span class="narrative-text">Chàng trai cầm ly cà phê take-away bước ra khỏi quán cà phê nhỏ "커피Ya" trên con phố Seoul trong ánh sáng tự nhiên ban ngày.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Tạo điểm nhấn thị giác ngay trung tâm; ánh sáng Balanced Diffused Lighting  dẫn hướng mắt người xem hoàn hảo. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
+                        <div class="critique-content">Đóng khung tự nhiên (Natural Framing) bằng vòm bạt và cửa kính quán cà phê; tạo độ chân thực đời thường tối đa trước khi đưa người xem vào thế giới điện ảnh.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Thời lượng shot ngắn nên người xem dễ bị trôi qua nếu chi tiết chữ/đối tượng phân bổ quá sát góc viền. Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
+                        <div class="critique-content">Ánh sáng gắt từ đỉnh đầu làm cháy sáng phần mái che bạt trắng và sàn nhà, độ tương phản chưa qua color grade trông thô ráp.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.</div>
+                    <div class="takeaway-content">Dùng cú máy đời thường chưa grade màu làm mồi nhử (Raw Hook) để cú chuyển màu ở shot tiếp theo tạo cú sốc thị giác mạnh hơn.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Establishing Hook Shot (Góc toàn định vị bối cảnh)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Quán cà phê "커피Ya", đường phố Seoul</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Establishing Raw Hook Shot (~35mm)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Ambient Harsh Daylight (Ánh sáng ban ngày tự nhiên chưa qua chỉnh màu)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut chuyển đổi hệ màu tức thì (Color Shift)</span></div>
                 </div>
 
                 <div class="tags-row">
@@ -1417,7 +1325,7 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_02_mid.jpg', 'SHOT 02 [0.08s - 1.96s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_02_mid.jpg', 'SHOT 02 [0.08s - 1.96s] • ⚡ Biến chuyển sắc thái màu (Color Grade Shift) + Typography tối giản: Đóng đinh nhận diện series')">🔍</button>
                     <span class="thumb-time-badge">0.08s - 1.96s</span>
                 </div>
             </div>
@@ -1425,45 +1333,45 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 02</span>
-                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
+                        <h4 class="shot-heading">⚡ Biến chuyển sắc thái màu (Color Grade Shift) + Typography tối giản: Đóng đinh nhận diện series</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(0.08, 1.96, 'SHOT 02')">
-                        ▶ 0.08s ➔ 1.96s (1.92s)
+                        ▶ 0.08s ➔ 1.96s (1.88s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
+                    <span class="narrative-text">Cùng khoảnh khắc bước chân nhưng toàn bộ dải màu chuyển sang tông Teal & Amber điện ảnh hoài niệm, chữ "LOST IN... SEOUL" hiện góc trái kèm mẩu vuông cam thương hiệu.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
+                        <div class="critique-content">Chữ trắng không chân (Bold Sans-serif) tương phản gắt trên nền tối của cửa quán; mảng vuông màu cam tạo mỏ neo nhận diện thị giác đắt giá.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
+                        <div class="critique-content">Chữ xuất hiện hơi sát cạnh trái khung hình, nếu xem trên các nền tảng có icon tương tác (như Reels/TikTok) cần chừa safe zone an toàn hơn.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
+                    <div class="takeaway-content">Đặt Title Card ngay nhịp thứ 2 sau khi đã hook được sự tò mò của người xem, dùng 1 màu accent duy nhất (như cam) để tạo dấu ấn thương hiệu.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Cửa quán cà phê Seoul</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Medium Shot (~35mm)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Stylized Warm/Teal Grade (Tông màu điện ảnh hoài niệm)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Direct Cut theo bước chân</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 02</span>
-                    <span class="tag-pill">⏱ 1.92s</span>
+                    <span class="tag-pill">⏱ 1.88s</span>
                 </div>
             </div>
         </div>
@@ -1476,7 +1384,7 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_03_mid.jpg', 'SHOT 03 [2.0s - 3.63s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_03_mid.jpg', 'SHOT 03 [2.0s - 3.63s] • ⚡ Tiền cảnh lướt nhanh (Foreground Motion Wipe): Tạo chiều sâu lớp lang và nhịp sống đô thị Seoul')">🔍</button>
                     <span class="thumb-time-badge">2.00s - 3.63s</span>
                 </div>
             </div>
@@ -1484,45 +1392,45 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 03</span>
-                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
+                        <h4 class="shot-heading">⚡ Tiền cảnh lướt nhanh (Foreground Motion Wipe): Tạo chiều sâu lớp lang và nhịp sống đô thị Seoul</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(2.0, 3.63, 'SHOT 03')">
-                        ▶ 2.00s ➔ 3.63s (1.67s)
+                        ▶ 2.00s ➔ 3.63s (1.63s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
+                    <span class="narrative-text">Hai người thanh niên đứng mua/nạp thẻ tàu tại máy tự động ga tàu điện ngầm Seoul, một người đàn ông áo caro vội vã bước qua tiền cảnh làm mờ nhoè chuyển động.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
+                        <div class="critique-content">Lớp lang 3 tầng (Tiền cảnh người lướt qua -> Trung cảnh máy bán vé -> Hậu cảnh tường gạch men và biển báo); đường dẫn mắt và chữ đặt cân đối bên trái.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
+                        <div class="critique-content">Tốc độ màn trập (shutter speed) cần giữ đúng quy tắc 180 độ để motion blur mượt mà, người đi cắt qua hơi che khuất một phần chữ "SEOUL".</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
+                    <div class="takeaway-content">Tận dụng người qua lại nơi công cộng làm lớp tiền cảnh chuyển động (Wipe transition) tự nhiên, không tốn một đồng chi phí dàn dựng.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Ga tàu điện ngầm Seoul (Subway Station)</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Wide Interior Shot (~35-50mm)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Subway Ambient Fluorescent (Ánh sáng đèn tuýp nhà ga ngầm)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut theo hướng chuyển động tiền cảnh</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 03</span>
-                    <span class="tag-pill">⏱ 1.67s</span>
+                    <span class="tag-pill">⏱ 1.63s</span>
                 </div>
             </div>
         </div>
@@ -1535,7 +1443,7 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_04_mid.jpg', 'SHOT 04 [3.67s - 5.3s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_04_mid.jpg', 'SHOT 04 [3.67s - 5.3s] • ⚡ Nén hậu cảnh bằng Telephoto 85mm: Tách biệt nhân vật trầm ngâm giữa biển cao ốc Seoul')">🔍</button>
                     <span class="thumb-time-badge">3.67s - 5.30s</span>
                 </div>
             </div>
@@ -1543,45 +1451,45 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 04</span>
-                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
+                        <h4 class="shot-heading">⚡ Nén hậu cảnh bằng Telephoto 85mm: Tách biệt nhân vật trầm ngâm giữa biển cao ốc Seoul</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(3.67, 5.3, 'SHOT 04')">
-                        ▶ 3.67s ➔ 5.30s (1.67s)
+                        ▶ 3.67s ➔ 5.30s (1.63s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
+                    <span class="narrative-text">Chàng trai đứng tựa hai tay vào lan can đá trên tầng thượng, phóng tầm mắt nhìn các tòa nhà chọc trời phía xa trong ánh hoàng hôn dịu mát.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
+                        <div class="critique-content">Quy tắc 1/3 hoàn hảo (nhân vật đặt ở 1/3 bên phải), lan can đá tạo đường dẫn thị giác chéo vào trung tâm, bầu trời ngả sắc ngọc lam tương phản nắng vàng nhẹ.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
+                        <div class="critique-content">Khối tường trắng đối diện hơi chiếm diện tích ở góc trung tâm, giảm bớt độ hoành tráng của đường chân trời cao ốc phía sau.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
+                    <div class="takeaway-content">Khi muốn diễn tả tâm trạng lạc lõng/suy tư của nhân vật, hãy dùng góc nghiêng 3/4 tựa lan can kết hợp ống kính tiêu cự dài để nén không gian đô thị.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Sân thượng tòa nhà Seoul (Rooftop Overlook)</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Medium-Long Telephoto (~85mm)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Golden Hour Soft Light (Ánh sáng hoàng hôn dịu ấm)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Direct Cut theo nhịp thở</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 04</span>
-                    <span class="tag-pill">⏱ 1.67s</span>
+                    <span class="tag-pill">⏱ 1.63s</span>
                 </div>
             </div>
         </div>
@@ -1594,7 +1502,7 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_05_mid.jpg', 'SHOT 05 [5.34s - 6.97s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_05_mid.jpg', 'SHOT 05 [5.34s - 6.97s] • ⚡ Góc ngang tầm mắt tại bàn ăn (Eye-Level Counter Shot): Đưa người xem vào trải nghiệm ẩm thực cô đơn chân thực')">🔍</button>
                     <span class="thumb-time-badge">5.34s - 6.97s</span>
                 </div>
             </div>
@@ -1602,45 +1510,45 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 05</span>
-                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
+                        <h4 class="shot-heading">⚡ Góc ngang tầm mắt tại bàn ăn (Eye-Level Counter Shot): Đưa người xem vào trải nghiệm ẩm thực cô đơn chân thực</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(5.34, 6.97, 'SHOT 05')">
-                        ▶ 5.34s ➔ 6.97s (1.67s)
+                        ▶ 5.34s ➔ 6.97s (1.63s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
+                    <span class="narrative-text">Nhân vật ngồi ăn một mình tại quán ăn truyền thống Hàn Quốc, tay gắp thức ăn từ niêu đất nóng hổi giữa khay cơm kèm các đĩa banchan nhỏ.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
+                        <div class="critique-content">Khung hình ấm áp tông gỗ và ánh đèn vàng gia đình; balo đặt ngay bên cạnh tạo cảm giác hành trình du lịch bụi tự thân mộc mạc.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
+                        <div class="critique-content">Góc máy hơi hẹp khiến phần khay đồ ăn phía trước bị che một phần bởi cánh tay cầm đũa; hậu cảnh phía sau có một số chi tiết thừa của quán.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
+                    <div class="takeaway-content">B-roll du lịch không chỉ quay cảnh đẹp mà phải có khoảnh khắc "ăn uống đời thường", góc máy đặt ngang mặt bàn tạo cảm giác như ngồi đối diện người xem.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Quán ăn bình dân Hàn Quốc (K-Food Diner)</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Medium Close-Up (~50mm f/1.8)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Warm Tungsten Interior (Đèn vàng nội thất quán ăn)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Direct Cut theo nhịp gắp thức ăn</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 05</span>
-                    <span class="tag-pill">⏱ 1.67s</span>
+                    <span class="tag-pill">⏱ 1.63s</span>
                 </div>
             </div>
         </div>
@@ -1653,7 +1561,7 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_06_mid.jpg', 'SHOT 06 [7.01s - 8.68s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_06_mid.jpg', 'SHOT 06 [7.01s - 8.68s] • ⚡ Cột tròn đóng khung + Chiều sâu hành lang vô tận: Nhấn mạnh chủ đề "lạc lối" giữa hệ thống tàu ngầm đồ sộ')">🔍</button>
                     <span class="thumb-time-badge">7.01s - 8.68s</span>
                 </div>
             </div>
@@ -1661,45 +1569,45 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 06</span>
-                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
+                        <h4 class="shot-heading">⚡ Cột tròn đóng khung + Chiều sâu hành lang vô tận: Nhấn mạnh chủ đề "lạc lối" giữa hệ thống tàu ngầm đồ sộ</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(7.01, 8.68, 'SHOT 06')">
-                        ▶ 7.01s ➔ 8.68s (1.71s)
+                        ▶ 7.01s ➔ 8.68s (1.67s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
+                    <span class="narrative-text">Chàng trai bước đi dọc hành lang ga tàu điện ngầm Seoul, ngoái nhìn các biển chỉ dẫn, phía xa có hành khách bước đi ngược hướng.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
+                        <div class="critique-content">Cột ốp gạch tròn bên phải đóng vai trò mảng chặn khung hình (Frame within Frame) đắt giá; trần đèn neon tạo các vệt dẫn thị giác hút về chiều sâu vô tận.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
+                        <div class="critique-content">Tường màu trắng ngà và ánh đèn tuýp hơi đều sáng, nếu hạ thấp góc máy thêm 20cm sẽ làm trần nhà và cột trông bề thế hơn nữa.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
+                    <div class="takeaway-content">Khai thác kiến trúc hành lang đối xứng hoặc cột tròn công cộng để tạo khung hình dẫn mắt có chiều sâu hút thị giác.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Hành lang ga tàu điện ngầm Seoul</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Medium Tracking Shot (~35mm)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Subway Fluorescent Symmetrical Light</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Direct Cut chuyển tiếp không gian</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 06</span>
-                    <span class="tag-pill">⏱ 1.71s</span>
+                    <span class="tag-pill">⏱ 1.67s</span>
                 </div>
             </div>
         </div>
@@ -1712,7 +1620,7 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_07_mid.jpg', 'SHOT 07 [8.72s - 10.43s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_07_mid.jpg', 'SHOT 07 [8.72s - 10.43s] • ⚡ Góc toàn phòng ngủ bắt trọn độ kiệt sức: Giải tỏa nhịp thở cảm xúc bằng một hành động đời thường đắt giá')">🔍</button>
                     <span class="thumb-time-badge">8.72s - 10.43s</span>
                 </div>
             </div>
@@ -1720,45 +1628,45 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 07</span>
-                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
+                        <h4 class="shot-heading">⚡ Góc toàn phòng ngủ bắt trọn độ kiệt sức: Giải tỏa nhịp thở cảm xúc bằng một hành động đời thường đắt giá</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(8.72, 10.43, 'SHOT 07')">
-                        ▶ 8.72s ➔ 10.43s (1.75s)
+                        ▶ 8.72s ➔ 10.43s (1.71s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
+                    <span class="narrative-text">Bước vào phòng khách sạn, chàng trai buông thả cơ thể ngã ngửa ra giường đệm trắng, hai tay dang rộng kiệt sức sau một ngày lang thang.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
+                        <div class="critique-content">Bắt trọn khoảnh khắc rơi tự do của cơ thể (Action Timing); ánh sáng hắt từ cửa sổ bên trái rọi viền mép nệm tạo sự thư giãn tĩnh lặng.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
+                        <div class="critique-content">Vali đỏ ở góc dưới bên phải hơi nổi bật và hút mắt ra khỏi nhân vật; mảng tường đầu giường hơi tối bệt chi tiết.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
+                    <div class="takeaway-content">Một video du lịch hay luôn cần nhịp "xả hơi" (Resting Beat) - một hành động ngã người xuống giường vừa hài hước vừa kết nối đồng cảm cực mạnh với bất kỳ ai từng đi du lịch.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Phòng khách sạn Seoul (Hotel Room)</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Wide Static Interior (~24-28mm)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Soft Side Window Light (Ánh sáng cửa sổ bên hông)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Direct Cut theo va chạm cơ thể</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 07</span>
-                    <span class="tag-pill">⏱ 1.75s</span>
+                    <span class="tag-pill">⏱ 1.71s</span>
                 </div>
             </div>
         </div>
@@ -1771,7 +1679,7 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_08_mid.jpg', 'SHOT 08 [10.47s - 12.18s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_08_mid.jpg', 'SHOT 08 [10.47s - 12.18s] • ⚡ Góc thấp ngước nhìn hẻm hẹp (Low-Angle Canyon Look): Đánh trúng nỗi đau thực tế của du khách tại Hàn Quốc')">🔍</button>
                     <span class="thumb-time-badge">10.47s - 12.18s</span>
                 </div>
             </div>
@@ -1779,45 +1687,45 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 08</span>
-                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
+                        <h4 class="shot-heading">⚡ Góc thấp ngước nhìn hẻm hẹp (Low-Angle Canyon Look): Đánh trúng nỗi đau thực tế của du khách tại Hàn Quốc</h4>
                     </div>
                     <button class="time-jump-btn" onclick="playShot(10.47, 12.18, 'SHOT 08')">
-                        ▶ 10.47s ➔ 12.18s (1.75s)
+                        ▶ 10.47s ➔ 12.18s (1.71s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
+                    <span class="narrative-text">Đứng giữa ngõ nhỏ lát gạch đỏ cao vút, chàng trai cầm điện thoại định vị nhưng ngẩng đầu nhìn quanh ngơ ngác vì Google Maps không thể dẫn đường đi bộ tại Seoul.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
+                        <div class="critique-content">Bố cục hình chữ V (V-Shaped Framing) tạo bởi hai dãy nhà gạch đỏ ép hẹp không gian; màu gạch đỏ tương phản với màu trời xanh nhạt phía trên; nội dung text đánh trúng tâm lý du khách.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
+                        <div class="critique-content">Đầu xe máy ở tiền cảnh dưới hơi che mất phần thân dưới của nhân vật, nếu lùi lại nửa bước để lấy thêm góc chân sẽ cân đối hơn.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
+                    <div class="takeaway-content">Đưa insight / nỗi đau có thật của địa phương (như Google Maps bị hạn chế tại Hàn) vào video để kích thích người xem bình luận, chia sẻ và tương tác.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Ngõ nhỏ nhà gạch đỏ Seoul (Red Brick Alley)</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Low-Angle Medium Shot (~35mm)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Diffused Outdoor Alley Sunlight</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut hướng nhìn</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 08</span>
-                    <span class="tag-pill">⏱ 1.75s</span>
+                    <span class="tag-pill">⏱ 1.71s</span>
                 </div>
             </div>
         </div>
@@ -1825,58 +1733,58 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
 
         <div class="shot-card" id="shot-card-9">
             <div class="shot-media-col">
-                <div class="shot-thumb-wrap" onclick="playShot(12.22, 13.81, 'SHOT 09')">
+                <div class="shot-thumb-wrap" onclick="playShot(12.22, 13.93, 'SHOT 09')">
                     <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_09_mid.jpg" alt="SHOT 09" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_09_mid.jpg', 'SHOT 09 [12.22s - 13.81s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
-                    <span class="thumb-time-badge">12.22s - 13.81s</span>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_09_mid.jpg', 'SHOT 09 [12.22s - 13.93s] • ⚡ Tiền cảnh nhánh lá thông (Foliage Dirty Foreground): Tạo chiều sâu rình rập và cảm giác hành trình tiếp diễn')">🔍</button>
+                    <span class="thumb-time-badge">12.22s - 13.93s</span>
                 </div>
             </div>
             <div class="shot-info-col">
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 09</span>
-                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
+                        <h4 class="shot-heading">⚡ Tiền cảnh nhánh lá thông (Foliage Dirty Foreground): Tạo chiều sâu rình rập và cảm giác hành trình tiếp diễn</h4>
                     </div>
-                    <button class="time-jump-btn" onclick="playShot(12.22, 13.81, 'SHOT 09')">
-                        ▶ 12.22s ➔ 13.81s (1.63s)
+                    <button class="time-jump-btn" onclick="playShot(12.22, 13.93, 'SHOT 09')">
+                        ▶ 12.22s ➔ 13.93s (1.71s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
+                    <span class="narrative-text">Nhân vật đeo balo bước đi một mình về phía trước con ngõ dốc rực nắng, ống kính núp sau bụi cây ven đường ghi lại bước chân không dừng lại.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
+                        <div class="critique-content">Bụi lá thông xanh ở tiền cảnh phải xóa mờ tạo cảm giác ống kính điện ảnh theo chân nhân vật (Voyeuristic Framing); vạch kẻ đường dẫn mắt thẳng theo hướng di chuyển.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
+                        <div class="critique-content">Khu vực xe hơi đỗ bên phải hơi lộn xộn các chi tiết cơ khí và thùng rác, nếu crop chặt hơn 1 chút sẽ làm khung hình sạch hơn.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
+                    <div class="takeaway-content">Đặt ống kính qua cành cây/kẽ lá (Dirtying the frame) để biến một cảnh đi bộ thông thường thành một thước phim điện ảnh có chiều sâu và cảm xúc theo dõi.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Đường dốc khu phố dân cư Seoul</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Over-the-shoulder / Back Tracking (~50mm f/2.0)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Backlit Direct Sun (Ngược sáng nắng gắt có viền sáng tóc)</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Direct Cut theo hướng bước chân</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 09</span>
-                    <span class="tag-pill">⏱ 1.63s</span>
+                    <span class="tag-pill">⏱ 1.71s</span>
                 </div>
             </div>
         </div>
@@ -1884,58 +1792,58 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
 
         <div class="shot-card" id="shot-card-10">
             <div class="shot-media-col">
-                <div class="shot-thumb-wrap" onclick="playShot(13.85, 17.14, 'SHOT 10')">
+                <div class="shot-thumb-wrap" onclick="playShot(13.97, 17.5, 'SHOT 10')">
                     <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_10_mid.jpg" alt="SHOT 10" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_10_mid.jpg', 'SHOT 10 [13.85s - 17.14s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
-                    <span class="thumb-time-badge">13.85s - 17.14s</span>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_10_mid.jpg', 'SHOT 10 [13.97s - 17.5s] • ⚡ Cú máy tĩnh lia nhân vật qua thảm hoa dại: Đoạn kết thơ mộng giữa thiên nhiên và kiến trúc cổ truyền')">🔍</button>
+                    <span class="thumb-time-badge">13.97s - 17.50s</span>
                 </div>
             </div>
             <div class="shot-info-col">
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 10</span>
-                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
+                        <h4 class="shot-heading">⚡ Cú máy tĩnh lia nhân vật qua thảm hoa dại: Đoạn kết thơ mộng giữa thiên nhiên và kiến trúc cổ truyền</h4>
                     </div>
-                    <button class="time-jump-btn" onclick="playShot(13.85, 17.14, 'SHOT 10')">
-                        ▶ 13.85s ➔ 17.14s (3.34s)
+                    <button class="time-jump-btn" onclick="playShot(13.97, 17.5, 'SHOT 10')">
+                        ▶ 13.97s ➔ 17.50s (3.53s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
+                    <span class="narrative-text">Chàng trai bước đi thư thái giữa cánh đồng hoa cúc trắng đỏ và cỏ lau rực rỡ, phía sau là ngôi nhà kiểu hiện đại kết hợp núi đồi Seoul xanh ngắt.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
+                        <div class="critique-content">Màu sắc phong phú bậc nhất video (xanh lá, cúc đỏ, cúc trắng, núi xanh); nhân vật di chuyển ngang màn hình giữ nhịp ngắm cảnh êm dịu; tiêu đề "LOST IN SEOUL" kết thúc hành trình.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
+                        <div class="critique-content">Nhân vật bước đi hơi nhanh khiến thời gian ngắm bối cảnh hoa dại chưa đủ sâu; góc máy có thể hạ thấp hơn một chút để đưa thảm hoa lên 1/2 khung hình.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
+                    <div class="takeaway-content">Kết thúc một video hành trình "Lạc lối" (Lost) bằng một cảnh sắc thiên nhiên bình yên, mang lại cảm giác "dù lạc đường nhưng lại tìm thấy vẻ đẹp bất ngờ".</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Công viên hoa sườn đồi Seoul (Hillside Park)</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Wide Landscape Static Shot (~50mm)</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Soft Overcast Mountain Afternoon</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Fade to Black</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 10</span>
-                    <span class="tag-pill">⏱ 3.34s</span>
+                    <span class="tag-pill">⏱ 3.53s</span>
                 </div>
             </div>
         </div>
@@ -1943,58 +1851,58 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
 
         <div class="shot-card" id="shot-card-11">
             <div class="shot-media-col">
-                <div class="shot-thumb-wrap" onclick="playShot(17.18, 18.89, 'SHOT 11')">
+                <div class="shot-thumb-wrap" onclick="playShot(17.54, 18.93, 'SHOT 11')">
                     <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_11_mid.jpg" alt="SHOT 11" class="shot-img" loading="lazy" />
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_11_mid.jpg', 'SHOT 11 [17.18s - 18.89s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
-                    <span class="thumb-time-badge">17.18s - 18.89s</span>
+                    <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_11_mid.jpg', 'SHOT 11 [17.54s - 18.93s] • ⚡ Logo Outro tối giản (Minimal Brand Stamp): Đóng dấu nhận diện thương hiệu độc bản')">🔍</button>
+                    <span class="thumb-time-badge">17.54s - 18.93s</span>
                 </div>
             </div>
             <div class="shot-info-col">
                 <div class="shot-card-header">
                     <div class="shot-title-wrap">
                         <span class="shot-badge-num">SHOT 11</span>
-                        <h4 class="shot-heading">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
+                        <h4 class="shot-heading">⚡ Logo Outro tối giản (Minimal Brand Stamp): Đóng dấu nhận diện thương hiệu độc bản</h4>
                     </div>
-                    <button class="time-jump-btn" onclick="playShot(17.18, 18.89, 'SHOT 11')">
-                        ▶ 17.18s ➔ 18.89s (1.75s)
+                    <button class="time-jump-btn" onclick="playShot(17.54, 18.93, 'SHOT 11')">
+                        ▶ 17.54s ➔ 18.93s (1.39s)
                     </button>
                 </div>
 
                 <div class="shot-narrative-box">
                     <span class="narrative-tag">📝 Mô tả đối tượng &amp; Diễn biến:</span>
-                    <span class="narrative-text">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</span>
+                    <span class="narrative-text">Chấm vuông màu cam đặc trưng của nhà sáng tạo xuất hiện giữa nền đen tĩnh mịch, kết thúc video một cách súc tích.</span>
                 </div>
 
                 <div class="critique-container">
                     <div class="critique-box critique-good">
                         <div class="critique-title">✅ Điểm Sáng Thị Giác (Hiệu quả):</div>
-                        <div class="critique-content">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
+                        <div class="critique-content">Tối giản tuyệt đối (Negative Space 99%), định vị dấu ấn thị giác độc quyền của tác giả.</div>
                     </div>
                     <div class="critique-box critique-bad">
                         <div class="critique-title">⚠️ Hạn Chế / Cần Lưu Ý:</div>
-                        <div class="critique-content">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
+                        <div class="critique-content">Không có text hướng dẫn (Call to Action) hoặc tên kênh mạng xã hội để người xem mới dễ dàng tìm kiếm theo dõi.</div>
                     </div>
                 </div>
 
                 <div class="takeaway-box">
                     <div class="takeaway-title">💡 Bài Học Đúc Kết Thực Chiến:</div>
-                    <div class="takeaway-content">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</div>
+                    <div class="takeaway-content">Xây dựng một biểu tượng hình học tối giản (Minimal Mark) xuyên suốt từ đầu đến cuối video để người xem nhìn là nhớ ngay tác giả mà không cần chèn logo cồng kềnh.</div>
                 </div>
 
                 <div class="props-list">
-                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Bối cảnh thực tế</span></div>
-                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                    <div class="prop-item"><span class="prop-label">📍 Bối cảnh:</span> <span class="prop-val">Outro Card Graphic</span></div>
+                    <div class="prop-item"><span class="prop-label">🎥 Góc &amp; Tiêu cự:</span> <span class="prop-val">Minimal Brand Stamp Graphic</span></div>
+                    <div class="prop-item"><span class="prop-label">💡 Ánh sáng &amp; Màu:</span> <span class="prop-val">Pure Negative Space Blackout</span></div>
+                    <div class="prop-item"><span class="prop-label">🔄 Chuyển cảnh:</span> <span class="prop-val">End of Video</span></div>
                 </div>
 
                 <div class="tags-row">
                     <span class="tag-pill">9:16 Vertical</span>
                     <span class="tag-pill">Shot 11</span>
-                    <span class="tag-pill">⏱ 1.75s</span>
+                    <span class="tag-pill">⏱ 1.39s</span>
                 </div>
             </div>
         </div>
@@ -2003,15 +1911,15 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
 
         <div class="grid-container" id="gridView" style="display:none;">
             
-        <div class="grid-card" onclick="playShot(0.0, 0.04, 'SHOT 01')">
+        <div class="grid-card" onclick="playShot(0.0, 0.08, 'SHOT 01')">
             <div class="grid-img-wrap">
                 <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_01_mid.jpg', 'SHOT 01 [0.0s - 0.04s] • Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_01_mid.jpg', 'SHOT 01 [0.0s - 0.08s] • ⚡ Visual Hook: Mở màn đời thường không qua chỉnh màu tạo độ mộc trước khi chuyển đổi phong cách')">🔍</button>
                 <div class="grid-badge-top">SHOT 01</div>
-                <div class="grid-badge-bottom">0.0s - 0.0s</div>
+                <div class="grid-badge-bottom">0.0s - 0.1s</div>
             </div>
-            <div class="grid-title-snippet">Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh</div>
+            <div class="grid-title-snippet">⚡ Visual Hook: Mở màn đời thường không qua chỉnh màu tạo độ mộc trước khi chuyển đổi phong cách</div>
         </div>
         
 
@@ -2019,11 +1927,11 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
             <div class="grid-img-wrap">
                 <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_02_mid.jpg', 'SHOT 02 [0.08s - 1.96s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_02_mid.jpg', 'SHOT 02 [0.08s - 1.96s] • ⚡ Biến chuyển sắc thái màu (Color Grade Shift) + Typography tối giản: Đóng đinh nhận diện series')">🔍</button>
                 <div class="grid-badge-top">SHOT 02</div>
                 <div class="grid-badge-bottom">0.1s - 2.0s</div>
             </div>
-            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
+            <div class="grid-title-snippet">⚡ Biến chuyển sắc thái màu (Color Grade Shift) + Typography tối giản: Đóng đinh nhận diện series</div>
         </div>
         
 
@@ -2031,11 +1939,11 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
             <div class="grid-img-wrap">
                 <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_03_mid.jpg', 'SHOT 03 [2.0s - 3.63s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_03_mid.jpg', 'SHOT 03 [2.0s - 3.63s] • ⚡ Tiền cảnh lướt nhanh (Foreground Motion Wipe): Tạo chiều sâu lớp lang và nhịp sống đô thị Seoul')">🔍</button>
                 <div class="grid-badge-top">SHOT 03</div>
                 <div class="grid-badge-bottom">2.0s - 3.6s</div>
             </div>
-            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
+            <div class="grid-title-snippet">⚡ Tiền cảnh lướt nhanh (Foreground Motion Wipe): Tạo chiều sâu lớp lang và nhịp sống đô thị Seoul</div>
         </div>
         
 
@@ -2043,11 +1951,11 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
             <div class="grid-img-wrap">
                 <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_04_mid.jpg', 'SHOT 04 [3.67s - 5.3s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_04_mid.jpg', 'SHOT 04 [3.67s - 5.3s] • ⚡ Nén hậu cảnh bằng Telephoto 85mm: Tách biệt nhân vật trầm ngâm giữa biển cao ốc Seoul')">🔍</button>
                 <div class="grid-badge-top">SHOT 04</div>
                 <div class="grid-badge-bottom">3.7s - 5.3s</div>
             </div>
-            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
+            <div class="grid-title-snippet">⚡ Nén hậu cảnh bằng Telephoto 85mm: Tách biệt nhân vật trầm ngâm giữa biển cao ốc Seoul</div>
         </div>
         
 
@@ -2055,11 +1963,11 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
             <div class="grid-img-wrap">
                 <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_05_mid.jpg', 'SHOT 05 [5.34s - 6.97s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_05_mid.jpg', 'SHOT 05 [5.34s - 6.97s] • ⚡ Góc ngang tầm mắt tại bàn ăn (Eye-Level Counter Shot): Đưa người xem vào trải nghiệm ẩm thực cô đơn chân thực')">🔍</button>
                 <div class="grid-badge-top">SHOT 05</div>
                 <div class="grid-badge-bottom">5.3s - 7.0s</div>
             </div>
-            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
+            <div class="grid-title-snippet">⚡ Góc ngang tầm mắt tại bàn ăn (Eye-Level Counter Shot): Đưa người xem vào trải nghiệm ẩm thực cô đơn chân thực</div>
         </div>
         
 
@@ -2067,11 +1975,11 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
             <div class="grid-img-wrap">
                 <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_06_mid.jpg', 'SHOT 06 [7.01s - 8.68s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_06_mid.jpg', 'SHOT 06 [7.01s - 8.68s] • ⚡ Cột tròn đóng khung + Chiều sâu hành lang vô tận: Nhấn mạnh chủ đề "lạc lối" giữa hệ thống tàu ngầm đồ sộ')">🔍</button>
                 <div class="grid-badge-top">SHOT 06</div>
                 <div class="grid-badge-bottom">7.0s - 8.7s</div>
             </div>
-            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
+            <div class="grid-title-snippet">⚡ Cột tròn đóng khung + Chiều sâu hành lang vô tận: Nhấn mạnh chủ đề "lạc lối" giữa hệ thống tàu ngầm đồ sộ</div>
         </div>
         
 
@@ -2079,11 +1987,11 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
             <div class="grid-img-wrap">
                 <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_07_mid.jpg', 'SHOT 07 [8.72s - 10.43s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_07_mid.jpg', 'SHOT 07 [8.72s - 10.43s] • ⚡ Góc toàn phòng ngủ bắt trọn độ kiệt sức: Giải tỏa nhịp thở cảm xúc bằng một hành động đời thường đắt giá')">🔍</button>
                 <div class="grid-badge-top">SHOT 07</div>
                 <div class="grid-badge-bottom">8.7s - 10.4s</div>
             </div>
-            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
+            <div class="grid-title-snippet">⚡ Góc toàn phòng ngủ bắt trọn độ kiệt sức: Giải tỏa nhịp thở cảm xúc bằng một hành động đời thường đắt giá</div>
         </div>
         
 
@@ -2091,47 +1999,47 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
             <div class="grid-img-wrap">
                 <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_08_mid.jpg', 'SHOT 08 [10.47s - 12.18s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_08_mid.jpg', 'SHOT 08 [10.47s - 12.18s] • ⚡ Góc thấp ngước nhìn hẻm hẹp (Low-Angle Canyon Look): Đánh trúng nỗi đau thực tế của du khách tại Hàn Quốc')">🔍</button>
                 <div class="grid-badge-top">SHOT 08</div>
                 <div class="grid-badge-bottom">10.5s - 12.2s</div>
             </div>
-            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
+            <div class="grid-title-snippet">⚡ Góc thấp ngước nhìn hẻm hẹp (Low-Angle Canyon Look): Đánh trúng nỗi đau thực tế của du khách tại Hàn Quốc</div>
         </div>
         
 
-        <div class="grid-card" onclick="playShot(12.22, 13.81, 'SHOT 09')">
+        <div class="grid-card" onclick="playShot(12.22, 13.93, 'SHOT 09')">
             <div class="grid-img-wrap">
                 <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_09_mid.jpg', 'SHOT 09 [12.22s - 13.81s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_09_mid.jpg', 'SHOT 09 [12.22s - 13.93s] • ⚡ Tiền cảnh nhánh lá thông (Foliage Dirty Foreground): Tạo chiều sâu rình rập và cảm giác hành trình tiếp diễn')">🔍</button>
                 <div class="grid-badge-top">SHOT 09</div>
-                <div class="grid-badge-bottom">12.2s - 13.8s</div>
+                <div class="grid-badge-bottom">12.2s - 13.9s</div>
             </div>
-            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
+            <div class="grid-title-snippet">⚡ Tiền cảnh nhánh lá thông (Foliage Dirty Foreground): Tạo chiều sâu rình rập và cảm giác hành trình tiếp diễn</div>
         </div>
         
 
-        <div class="grid-card" onclick="playShot(13.85, 17.14, 'SHOT 10')">
+        <div class="grid-card" onclick="playShot(13.97, 17.5, 'SHOT 10')">
             <div class="grid-img-wrap">
                 <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_10_mid.jpg" alt="SHOT 10" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_10_mid.jpg', 'SHOT 10 [13.85s - 17.14s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_10_mid.jpg', 'SHOT 10 [13.97s - 17.5s] • ⚡ Cú máy tĩnh lia nhân vật qua thảm hoa dại: Đoạn kết thơ mộng giữa thiên nhiên và kiến trúc cổ truyền')">🔍</button>
                 <div class="grid-badge-top">SHOT 10</div>
-                <div class="grid-badge-bottom">13.8s - 17.1s</div>
+                <div class="grid-badge-bottom">14.0s - 17.5s</div>
             </div>
-            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
+            <div class="grid-title-snippet">⚡ Cú máy tĩnh lia nhân vật qua thảm hoa dại: Đoạn kết thơ mộng giữa thiên nhiên và kiến trúc cổ truyền</div>
         </div>
         
 
-        <div class="grid-card" onclick="playShot(17.18, 18.89, 'SHOT 11')">
+        <div class="grid-card" onclick="playShot(17.54, 18.93, 'SHOT 11')">
             <div class="grid-img-wrap">
                 <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_11_mid.jpg" alt="SHOT 11" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
-                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_11_mid.jpg', 'SHOT 11 [17.18s - 18.89s] • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">🔍</button>
+                <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_11_mid.jpg', 'SHOT 11 [17.54s - 18.93s] • ⚡ Logo Outro tối giản (Minimal Brand Stamp): Đóng dấu nhận diện thương hiệu độc bản')">🔍</button>
                 <div class="grid-badge-top">SHOT 11</div>
-                <div class="grid-badge-bottom">17.2s - 18.9s</div>
+                <div class="grid-badge-bottom">17.5s - 18.9s</div>
             </div>
-            <div class="grid-title-snippet">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</div>
+            <div class="grid-title-snippet">⚡ Logo Outro tối giản (Minimal Brand Stamp): Đóng dấu nhận diện thương hiệu độc bản</div>
         </div>
         
         </div>
@@ -2146,14 +2054,14 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
         </div>
         <div class="drawer-list">
             
-        <div class="drawer-item" onclick="jumpToShot(1, 0.0, 0.04, 'SHOT 01')">
+        <div class="drawer-item" onclick="jumpToShot(1, 0.0, 0.08, 'SHOT 01')">
             <div class="drawer-thumb">
                 <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 01</div>
-                <div class="drawer-shot-headline">Visual Hook Mở Màn: Giữ chân người xem nga...</div>
-                <div class="drawer-shot-time">⏱ 0.00s - 0.04s</div>
+                <div class="drawer-shot-headline">⚡ Visual Hook: Mở màn đời thường không qua...</div>
+                <div class="drawer-shot-time">⏱ 0.00s - 0.08s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
         </div>
@@ -2165,7 +2073,7 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 02</div>
-                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
+                <div class="drawer-shot-headline">⚡ Biến chuyển sắc thái màu (Color Grade Sh...</div>
                 <div class="drawer-shot-time">⏱ 0.08s - 1.96s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2178,7 +2086,7 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 03</div>
-                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
+                <div class="drawer-shot-headline">⚡ Tiền cảnh lướt nhanh (Foreground Motion ...</div>
                 <div class="drawer-shot-time">⏱ 2.00s - 3.63s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2191,7 +2099,7 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 04</div>
-                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
+                <div class="drawer-shot-headline">⚡ Nén hậu cảnh bằng Telephoto 85mm: Tách b...</div>
                 <div class="drawer-shot-time">⏱ 3.67s - 5.30s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2204,7 +2112,7 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 05</div>
-                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
+                <div class="drawer-shot-headline">⚡ Góc ngang tầm mắt tại bàn ăn (Eye-Level ...</div>
                 <div class="drawer-shot-time">⏱ 5.34s - 6.97s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2217,7 +2125,7 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 06</div>
-                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
+                <div class="drawer-shot-headline">⚡ Cột tròn đóng khung + Chiều sâu hành lan...</div>
                 <div class="drawer-shot-time">⏱ 7.01s - 8.68s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2230,7 +2138,7 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 07</div>
-                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
+                <div class="drawer-shot-headline">⚡ Góc toàn phòng ngủ bắt trọn độ kiệt sức:...</div>
                 <div class="drawer-shot-time">⏱ 8.72s - 10.43s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
@@ -2243,47 +2151,47 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 08</div>
-                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
+                <div class="drawer-shot-headline">⚡ Góc thấp ngước nhìn hẻm hẹp (Low-Angle C...</div>
                 <div class="drawer-shot-time">⏱ 10.47s - 12.18s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
         </div>
         
 
-        <div class="drawer-item" onclick="jumpToShot(9, 12.22, 13.81, 'SHOT 09')">
+        <div class="drawer-item" onclick="jumpToShot(9, 12.22, 13.93, 'SHOT 09')">
             <div class="drawer-thumb">
                 <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 09</div>
-                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
-                <div class="drawer-shot-time">⏱ 12.22s - 13.81s</div>
+                <div class="drawer-shot-headline">⚡ Tiền cảnh nhánh lá thông (Foliage Dirty ...</div>
+                <div class="drawer-shot-time">⏱ 12.22s - 13.93s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
         </div>
         
 
-        <div class="drawer-item" onclick="jumpToShot(10, 13.85, 17.14, 'SHOT 10')">
+        <div class="drawer-item" onclick="jumpToShot(10, 13.97, 17.5, 'SHOT 10')">
             <div class="drawer-thumb">
                 <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_10_mid.jpg" alt="SHOT 10" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 10</div>
-                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
-                <div class="drawer-shot-time">⏱ 13.85s - 17.14s</div>
+                <div class="drawer-shot-headline">⚡ Cú máy tĩnh lia nhân vật qua thảm hoa dạ...</div>
+                <div class="drawer-shot-time">⏱ 13.97s - 17.50s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
         </div>
         
 
-        <div class="drawer-item" onclick="jumpToShot(11, 17.18, 18.89, 'SHOT 11')">
+        <div class="drawer-item" onclick="jumpToShot(11, 17.54, 18.93, 'SHOT 11')">
             <div class="drawer-thumb">
                 <img src="https://media.fedu.vn/images/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_11_mid.jpg" alt="SHOT 11" loading="lazy" />
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 11</div>
-                <div class="drawer-shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail...</div>
-                <div class="drawer-shot-time">⏱ 17.18s - 18.89s</div>
+                <div class="drawer-shot-headline">⚡ Logo Outro tối giản (Minimal Brand Stamp...</div>
+                <div class="drawer-shot-time">⏱ 17.54s - 18.93s</div>
             </div>
             <div class="drawer-play-arrow">▶</div>
         </div>
