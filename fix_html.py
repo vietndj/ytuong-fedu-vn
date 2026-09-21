@@ -1,34 +1,39 @@
-import json
+import os
 import re
 
-html_file = "/Users/vietmac/Documents/CODE/ytuong-fedu-vn/reports/IG_@nathanael.lct_DdRg_ybtlKI.html"
-with open(html_file, "r") as f:
-    html = f.read()
+def fix_file(path):
+    with open(path, 'r') as f:
+        html = f.read()
 
-# Replace main title
-html = html.replace("Nathanael • Thử Thách Phối Đồ Thu Dưới €150 &amp; Kỹ Thuật Hook 3s Đổi Outfit Siêu Tốc", "Nathanael • Kỹ Thuật Kể Chuyện 'How I Shop vs How I Style' Thu Hút Khách Hàng Zalando")
-html = html.replace("Nathanael • Thử Thách Phối Đồ Thu Dưới €150 & Kỹ Thuật Hook 3s Đổi Outfit Siêu Tốc", "Nathanael • Kỹ Thuật Kể Chuyện 'How I Shop vs How I Style' Thu Hút Khách Hàng Zalando")
-
-# Replace repeating title in grid and timeline
-html = re.sub(r'Phân Cảnh (\d+) • Thử Thách Phối Đồ Thu Dưới €150.*?Siêu Tốc', r'Phân Cảnh \1 • Hành Trình Từ Giỏ Hàng Đến Phong Cách', html)
-
-# Fix SHOTS_DATA array
-import ast
-
-match = re.search(r'const SHOTS_DATA = (\[.*?\]);', html)
-if match:
-    shots_str = match.group(1)
-    shots = json.loads(shots_str)
-    for i, shot in enumerate(shots):
-        shot["headline"] = f"Phân Cảnh 0{i+1} • Hành Trình Từ Giỏ Hàng Đến Phong Cách"
-        shot["subject_action"] = "Thể hiện quá trình mua sắm từ lúc mở ví, lướt laptop đến khi diện trang phục ra phố tự tin với dòng chữ 'HOW I SHOP' và 'HOW I STYLE'."
-        shot["pros"] = "Điểm sáng: Phân tách rõ 2 giai đoạn tạo sự mạch lạc, sử dụng góc máy POV khi mua sắm tạo sự gần gũi."
-        shot["cons"] = "Lưu ý: Không có điểm trừ đáng kể."
-        shot["takeaway"] = "Hãy kể câu chuyện mua sắm thay vì chỉ trưng bày quần áo. Thêm quá trình 'Thêm vào giỏ hàng' giúp định hướng hành vi."
+    btn_html = '''
+                    <a id="videoModalDownloadOriginalBtn" href="#" target="_blank" class="hidden px-2.5 py-1.5 rounded-lg bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500 hover:text-white transition items-center gap-1.5 font-bold text-xs cursor-pointer" title="Tải bản gốc từ Google Drive">
+                        <span>📥</span>
+                        <span class="hidden sm:inline">Bản Gốc</span>
+                    </a>
+'''
+    if 'videoModalDownloadOriginalBtn' not in html:
+        # insert before the share btn
+        html = html.replace('<!-- Copy Share Link Button -->', '<!-- Copy Share Link Button -->' + btn_html)
         
-    new_shots_str = json.dumps(shots, ensure_ascii=False)
-    html = html[:match.start(1)] + new_shots_str + html[match.end(1):]
-
-with open(html_file, "w") as f:
-    f.write(html)
-print("Fixed HTML report.")
+    js_code = '''
+            const downloadBtn = document.getElementById('videoModalDownloadOriginalBtn');
+            if (downloadBtn) {
+                if (item.video_url_original) {
+                    downloadBtn.href = item.video_url_original;
+                    downloadBtn.classList.remove('hidden');
+                    downloadBtn.classList.add('flex');
+                } else {
+                    downloadBtn.href = "#";
+                    downloadBtn.classList.add('hidden');
+                    downloadBtn.classList.remove('flex');
+                }
+            }
+'''
+    if "const downloadBtn = document.getElementById('videoModalDownloadOriginalBtn');" not in html:
+        html = html.replace("const title = document.getElementById('videoModalTitle');", "const title = document.getElementById('videoModalTitle');" + js_code)
+        
+    with open(path, 'w') as f:
+        f.write(html)
+        
+fix_file("index.html")
+fix_file("ytuong.html")

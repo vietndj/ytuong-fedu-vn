@@ -5,8 +5,8 @@
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
   "total_scene_items": 398,
-  "total_unique_ideas": 293,
-  "total_active_ideas": 280,
+  "total_unique_ideas": 294,
+  "total_active_ideas": 281,
   "total_excluded_ideas": 13,
   "total_creators": 190,
   "shooting_styles": [
@@ -81,7 +81,7 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 29,
     "storytelling": 28,
     "dien-anh": 154,
-    "chuyen-canh": 47,
+    "chuyen-canh": 48,
     "theo-nhip-nhac": 0,
     "beat-match-cut-dance": 1
   },
@@ -175,7 +175,7 @@ var FEDU_IDEAS_DATABASE = {
     "du-lich": 23,
     "cong-nghe": 28,
     "kien-truc": 29,
-    "the-thao": 6,
+    "the-thao": 7,
     "ky-thuat-quay": 62,
     "ugc": 45
   },
@@ -214,7 +214,7 @@ var FEDU_IDEAS_DATABASE = {
     "Bầu không khí chữa lành": 4,
     "Bếp nhà Á Đông": 1,
     "Bố cục khung trong khung": 1,
-    "Chuyển cảnh cấp 2": 20,
+    "Chuyển cảnh cấp 2": 21,
     "Góc máy trên cao": 1,
     "Góc nhìn chân thật": 1,
     "Không khí Sit-com": 1,
@@ -288,7 +288,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 152,
+    "us_eu": 153,
     "korea": 10,
     "india": 9,
     "japan": 10,
@@ -297,7 +297,7 @@ var FEDU_IDEAS_DATABASE = {
   },
   "transition_stats": {
     "level_1_count": 12,
-    "level_2_count": 18,
+    "level_2_count": 19,
     "ad_bot_count": 47
   },
   "deleted_ids": [],
@@ -733,6 +733,18 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year",
         "Dc3ih_5jlqz"
+      ]
+    },
+    {
+      "handle": "@brandon.dtd",
+      "name": "Brandon.Dtd",
+      "profile_url": "https://www.instagram.com/brandon.dtd/",
+      "video_count": 2,
+      "top_industry": "Thể Thao & Năng Động",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession",
+        "DcTbD0MR-V_"
       ]
     },
     {
@@ -2157,17 +2169,6 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
-      "handle": "@brandon.dtd",
-      "name": "Brandon.Dtd",
-      "profile_url": "https://www.instagram.com/brandon.dtd/",
-      "video_count": 1,
-      "top_industry": "Thể Thao & Năng Động",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession/shot_01_mid.jpg",
-      "video_ids": [
-        "IG_@brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession"
-      ]
-    },
-    {
       "handle": "@nana_icroom",
       "name": "Nana_Icroom",
       "profile_url": "https://www.instagram.com/nana_icroom/",
@@ -2544,7 +2545,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%AE%F0%9D%98%80_%F0%9D%97%A0%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%84_DcLwG_mKyKM_Video_by_thomasmathewt2/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%AE%F0%9D%98%80_%F0%9D%97%A0%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%84_DcLwG_mKyKM_Video_by_thomasmathewt2/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcLwG_mKyKM_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcLwG_mKyKM_preview.mp4",
         "report_url": "reports/IG_@𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄_DcLwG_mKyKM_Video_by_thomasmathewt2.html",
         "shots_count": 0,
         "duration": "15s",
@@ -2557,9 +2558,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@주서방_DcvmVl2hbuY_Video_by_ju_seobang",
@@ -2617,7 +2616,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%EC%A3%BC%EC%84%9C%EB%B0%A9_DcvmVl2hbuY_Video_by_ju_seobang/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40%EC%A3%BC%EC%84%9C%EB%B0%A9_DcvmVl2hbuY_Video_by_ju_seobang/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcvmVl2hbuY_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcvmVl2hbuY_preview.mp4",
         "report_url": "reports/IG_@주서방_DcvmVl2hbuY_Video_by_ju_seobang.html",
         "shots_count": 0,
         "duration": "15s",
@@ -2630,9 +2629,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks",
@@ -2686,7 +2683,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbA22ywhMSI_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DbA22ywhMSI_preview.mp4",
         "report_url": "reports/IG_@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks.html",
         "shots_count": 0,
         "duration": "11.95s",
@@ -2699,9 +2696,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@비움_-_양희종_DZVHH27S7Lf_Video_by_bewoom",
@@ -2756,7 +2751,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%EB%B9%84%EC%9B%80_-_%EC%96%91%ED%9D%AC%EC%A2%85_DZVHH27S7Lf_Video_by_bewoom/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40%EB%B9%84%EC%9B%80_-_%EC%96%91%ED%9D%AC%EC%A2%85_DZVHH27S7Lf_Video_by_bewoom/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZVHH27S7Lf_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DZVHH27S7Lf_preview.mp4",
         "report_url": "reports/IG_@비움_-_양희종_DZVHH27S7Lf_Video_by_bewoom.html",
         "shots_count": 0,
         "duration": "15s",
@@ -2769,9 +2764,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@김민수_(티곰)_DbbBaIpyKCI_Video_by_king_min_su2",
@@ -2825,7 +2818,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%EA%B9%80%EB%AF%BC%EC%88%98_%28%ED%8B%B0%EA%B3%B0%29_DbbBaIpyKCI_Video_by_king_min_su2/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40%EA%B9%80%EB%AF%BC%EC%88%98_%28%ED%8B%B0%EA%B3%B0%29_DbbBaIpyKCI_Video_by_king_min_su2/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbbBaIpyKCI_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DbbBaIpyKCI_preview.mp4",
         "report_url": "reports/IG_@김민수_(티곰)_DbbBaIpyKCI_Video_by_king_min_su2.html",
         "shots_count": 0,
         "duration": "15s",
@@ -2838,9 +2831,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "DYKO1v3g3U2",
@@ -2895,7 +2886,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40withyuee_DYKO1v3g3U2_Video_by_withyuee/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40withyuee_DYKO1v3g3U2_Video_by_withyuee/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DYKO1v3g3U2.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DYKO1v3g3U2_preview.mp4",
         "report_url": "",
         "shots_count": 1,
         "duration": "2s",
@@ -2908,9 +2899,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "DXbzOkygG0v",
@@ -2965,7 +2954,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40withyuee_DXbzOkygG0v_Video_by_withyuee/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40withyuee_DXbzOkygG0v_Video_by_withyuee/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DXbzOkygG0v.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DXbzOkygG0v_preview.mp4",
         "report_url": "",
         "shots_count": 1,
         "duration": "2s",
@@ -2978,9 +2967,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@withyuee_DWY_2SvgE_a_Video_by_withyuee",
@@ -3034,7 +3021,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40withyuee_DWY_2SvgE_a_Video_by_withyuee/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40withyuee_DWY_2SvgE_a_Video_by_withyuee/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DWY_2SvgE_a_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DWY_2SvgE_a_preview.mp4",
         "report_url": "",
         "shots_count": 0,
         "duration": "15s",
@@ -3047,9 +3034,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@withyuee_DSKodjDkQYz",
@@ -3103,7 +3088,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40withyuee_DSKodjDkQYz/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40withyuee_DSKodjDkQYz/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DSKodjDkQYz.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DSKodjDkQYz_preview.mp4",
         "report_url": "",
         "shots_count": 0,
         "duration": "15s",
@@ -3116,9 +3101,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@withyuee_DRmeH20EVGA_Hong_Kong_Scaffolding_Cinematic",
@@ -3172,7 +3155,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40withyuee_DRmeH20EVGA_Hong_Kong_Scaffolding_Cinematic/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40withyuee_DRmeH20EVGA_Hong_Kong_Scaffolding_Cinematic/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DRmeH20EVGA_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DRmeH20EVGA_preview.mp4",
         "report_url": "",
         "shots_count": 0,
         "duration": "15s",
@@ -3185,9 +3168,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "DdB_21Yo0Qc",
@@ -3252,7 +3233,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40valenti_k41_DdB_21Yo0Qc_Creative_Phone_Video_Ideas/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40valenti_k41_DdB_21Yo0Qc_Creative_Phone_Video_Ideas/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdB_21Yo0Qc.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdB_21Yo0Qc_preview.mp4",
         "report_url": "",
         "shots_count": 15,
         "duration": "30s",
@@ -3265,9 +3246,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "DctVSroI3UB",
@@ -3331,7 +3310,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40valenti_k41_DctVSroI3UB_Creative_Phone_Video_Ideas/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40valenti_k41_DctVSroI3UB_Creative_Phone_Video_Ideas/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DctVSroI3UB.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DctVSroI3UB_preview.mp4",
         "report_url": "",
         "shots_count": 6,
         "duration": "12s",
@@ -3344,9 +3323,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@ulanzi_c4708b13_Ulanzi_UA12_UA20_Inflatable_Magnetic_Tube_Light",
@@ -3400,7 +3377,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ulanzi_c4708b13_Ulanzi_UA12_UA20_Inflatable_Magnetic_Tube_Light/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40ulanzi_c4708b13_Ulanzi_UA12_UA20_Inflatable_Magnetic_Tube_Light/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/IG_@ulanzi_c4708b13_Ulanzi_UA12_UA20_Inflatable_Magnetic_Tube_Light.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/IG_@ulanzi_c4708b13_Ulanzi_UA12_UA20_Inflatable_Magnetic_Tube_Light_preview.mp4",
         "report_url": "",
         "shots_count": 0,
         "duration": "15s",
@@ -3413,9 +3390,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@The_Tree_Church_Logan_DcoGfdghNwd_Video_by_treechurchlogan",
@@ -3469,7 +3444,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40The_Tree_Church_Logan_DcoGfdghNwd_Video_by_treechurchlogan/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40The_Tree_Church_Logan_DcoGfdghNwd_Video_by_treechurchlogan/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcoGfdghNwd_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcoGfdghNwd_preview.mp4",
         "report_url": "reports/IG_@The_Tree_Church_Logan_DcoGfdghNwd_Video_by_treechurchlogan.html",
         "shots_count": 0,
         "duration": "15s",
@@ -3482,9 +3457,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@tinanguyen2004_7673468312290037012_Double_Day_luôn_là_dịp_để_khách_hàng_lựa_được",
@@ -3538,7 +3511,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40tinanguyen2004_7673468312290037012_Double_Day_lu%C3%B4n_l%C3%A0_d%E1%BB%8Bp_%C4%91%E1%BB%83_kh%C3%A1ch_h%C3%A0ng_l%E1%BB%B1a_%C4%91%C6%B0%E1%BB%A3c/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40tinanguyen2004_7673468312290037012_Double_Day_lu%C3%B4n_l%C3%A0_d%E1%BB%8Bp_%C4%91%E1%BB%83_kh%C3%A1ch_h%C3%A0ng_l%E1%BB%B1a_%C4%91%C6%B0%E1%BB%A3c/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Double_Day_l.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Double_Day_l_preview.mp4",
         "report_url": "reports/IG_@tinanguyen2004_7673468312290037012_Double_Day_luôn_là_dịp_để_khách_hàng_lựa_được.html",
         "shots_count": 0,
         "duration": "15s",
@@ -3551,9 +3524,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@SAIGON_INK_TATTOO_DdNq5CxszVl_Video_by_saigonink_studio",
@@ -3616,7 +3587,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdNq5CxszVl_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdNq5CxszVl_preview.mp4",
         "report_url": "reports/IG_@SAIGON_INK_TATTOO_DdNq5CxszVl_Video_by_saigonink_studio.html",
         "shots_count": 0,
         "duration": "28.77s",
@@ -3629,9 +3600,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV",
@@ -3685,7 +3654,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdGRCKwsaaI.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdGRCKwsaaI_preview.mp4",
         "report_url": "reports/IG_@kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV.html",
         "shots_count": 7,
         "duration": "15.33s",
@@ -3698,9 +3667,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Kristina_G_Dcmav1VBv4H_Video_by_kristinagoose",
@@ -3754,7 +3721,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Kristina_G_Dcmav1VBv4H_Video_by_kristinagoose/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Kristina_G_Dcmav1VBv4H_Video_by_kristinagoose/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dcmav1VBv4H_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dcmav1VBv4H_preview.mp4",
         "report_url": "reports/IG_@Kristina_G_Dcmav1VBv4H_Video_by_kristinagoose.html",
         "shots_count": 0,
         "duration": "15s",
@@ -3767,9 +3734,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "Dc4u6aOhR9r",
@@ -3830,7 +3795,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40fabianamsolano_Dc4u6aOhR9r_Yosemite_National_Park_Music_Video_Beat_Match_Cut/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40fabianamsolano_Dc4u6aOhR9r_Yosemite_National_Park_Music_Video_Beat_Match_Cut/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc4u6aOhR9r.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dc4u6aOhR9r_preview.mp4",
         "report_url": "",
         "shots_count": 30,
         "duration": "60s",
@@ -3843,9 +3808,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "Dbk4X4tjJ8A",
@@ -3900,7 +3863,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40daiki.shino_Dbk4X4tjJ8A_London_Cinematic_Video_Postcards_Carousel/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40daiki.shino_Dbk4X4tjJ8A_London_Cinematic_Video_Postcards_Carousel/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dbk4X4tjJ8A.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dbk4X4tjJ8A_preview.mp4",
         "report_url": "",
         "shots_count": 10,
         "duration": "20s",
@@ -3913,9 +3876,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@creator_video_Video_video",
@@ -3969,7 +3930,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40creator_video_Video_video/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40creator_video_Video_video/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/IG_@creator_video_Video_video.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/IG_@creator_video_Video_video_preview.mp4",
         "report_url": "reports/IG_@creator_video_Video_video.html",
         "shots_count": 0,
         "duration": "15s",
@@ -3982,9 +3943,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market",
@@ -4038,7 +3997,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdK6GtHJPrH_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdK6GtHJPrH_preview.mp4",
         "report_url": "reports/IG_@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market.html",
         "shots_count": 0,
         "duration": "17.93s",
@@ -4051,9 +4010,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@ALLURE_cafe_bar_DdF81brAiIj_Video_by_allure.cafebar",
@@ -4107,7 +4064,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ALLURE_cafe_bar_DdF81brAiIj_Video_by_allure.cafebar/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40ALLURE_cafe_bar_DdF81brAiIj_Video_by_allure.cafebar/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdF81brAiIj_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdF81brAiIj_preview.mp4",
         "report_url": "reports/IG_@ALLURE_cafe_bar_DdF81brAiIj_Video_by_allure.cafebar.html",
         "shots_count": 0,
         "duration": "15s",
@@ -4120,9 +4077,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Yegor.Sky_DbBQzyqimbi_Video_by_yegor.sky",
@@ -4180,7 +4135,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Yegor.Sky_DbBQzyqimbi_Video_by_yegor.sky/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Yegor.Sky_DbBQzyqimbi_Video_by_yegor.sky/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbBQzyqimbi_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DbBQzyqimbi_preview.mp4",
         "report_url": "reports/IG_@Yegor.Sky_DbBQzyqimbi_Video_by_yegor.sky.html",
         "shots_count": 0,
         "duration": "15s",
@@ -4193,9 +4148,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Yegor.Sky_DaFDqk4CGB1_Video_by_yegor.sky",
@@ -4257,7 +4210,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Yegor.Sky_DaFDqk4CGB1_Video_by_yegor.sky/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Yegor.Sky_DaFDqk4CGB1_Video_by_yegor.sky/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DaFDqk4CGB1_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DaFDqk4CGB1_preview.mp4",
         "report_url": "reports/IG_@Yegor.Sky_DaFDqk4CGB1_Video_by_yegor.sky.html",
         "shots_count": 0,
         "duration": "15s",
@@ -4270,9 +4223,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Victoria_Morse_DbESOapo-p3_Video_by_victoriamorse",
@@ -4332,7 +4283,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Victoria_Morse_DbESOapo-p3_Video_by_victoriamorse/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Victoria_Morse_DbESOapo-p3_Video_by_victoriamorse/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbESOapo-p3_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DbESOapo-p3_preview.mp4",
         "report_url": "reports/IG_@Victoria_Morse_DbESOapo-p3_Video_by_victoriamorse.html",
         "shots_count": 0,
         "duration": "61.53s",
@@ -4345,9 +4296,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Turkish_Airlines_DdJYSokAkAj_Video_by_turkishairlines",
@@ -4406,7 +4355,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Turkish_Airlines_DdJYSokAkAj_Video_by_turkishairlines/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Turkish_Airlines_DdJYSokAkAj_Video_by_turkishairlines/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdJYSokAkAj_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdJYSokAkAj_preview.mp4",
         "report_url": "reports/IG_@Turkish_Airlines_DdJYSokAkAj_Video_by_turkishairlines.html",
         "shots_count": 0,
         "duration": "15s",
@@ -4419,9 +4368,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Turkish_Airlines_DchBUgVMvrp_Video_by_turkishairlines",
@@ -4479,7 +4426,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Turkish_Airlines_DchBUgVMvrp_Video_by_turkishairlines/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Turkish_Airlines_DchBUgVMvrp_Video_by_turkishairlines/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DchBUgVMvrp_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DchBUgVMvrp_preview.mp4",
         "report_url": "reports/IG_@Turkish_Airlines_DchBUgVMvrp_Video_by_turkishairlines.html",
         "shots_count": 0,
         "duration": "15s",
@@ -4492,9 +4439,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Turkish_Airlines_DaxjeQ4A9dP_Video_by_turkishairlines",
@@ -4551,7 +4496,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Turkish_Airlines_DaxjeQ4A9dP_Video_by_turkishairlines/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Turkish_Airlines_DaxjeQ4A9dP_Video_by_turkishairlines/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DaxjeQ4A9dP_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DaxjeQ4A9dP_preview.mp4",
         "report_url": "reports/IG_@Turkish_Airlines_DaxjeQ4A9dP_Video_by_turkishairlines.html",
         "shots_count": 0,
         "duration": "15s",
@@ -4564,9 +4509,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Steven_🇻🇳_Vu_DchxEAkJ9Hw_Video_by_steven.vuu",
@@ -4627,7 +4570,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Steven_%F0%9F%87%BB%F0%9F%87%B3_Vu_DchxEAkJ9Hw_Video_by_steven.vuu/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Steven_%F0%9F%87%BB%F0%9F%87%B3_Vu_DchxEAkJ9Hw_Video_by_steven.vuu/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DchxEAkJ9Hw_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DchxEAkJ9Hw_preview.mp4",
         "report_url": "reports/IG_@Steven_🇻🇳_Vu_DchxEAkJ9Hw_Video_by_steven.vuu.html",
         "shots_count": 0,
         "duration": "21.87s",
@@ -4640,9 +4583,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Simeon_Kraeft_DY2XJzdioZg_Video_by_simeonkraeft",
@@ -4700,7 +4641,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Simeon_Kraeft_DY2XJzdioZg_Video_by_simeonkraeft/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Simeon_Kraeft_DY2XJzdioZg_Video_by_simeonkraeft/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DY2XJzdioZg_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DY2XJzdioZg_preview.mp4",
         "report_url": "reports/IG_@Simeon_Kraeft_DY2XJzdioZg_Video_by_simeonkraeft.html",
         "shots_count": 0,
         "duration": "15s",
@@ -4713,9 +4654,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Rilo_Dau0C9AzXc8_Video_by_17th.visuals",
@@ -4774,7 +4713,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Rilo_Dau0C9AzXc8_Video_by_17th.visuals/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Rilo_Dau0C9AzXc8_Video_by_17th.visuals/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dau0C9AzXc8_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dau0C9AzXc8_preview.mp4",
         "report_url": "reports/IG_@Rilo_Dau0C9AzXc8_Video_by_17th.visuals.html",
         "shots_count": 0,
         "duration": "15s",
@@ -4787,9 +4726,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Quinn_Social_Media_for_Realtors_DcTcw8lhku5_Video_by_sellingsocial.co",
@@ -4849,7 +4786,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Quinn_Social_Media_for_Realtors_DcTcw8lhku5_Video_by_sellingsocial.co/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Quinn_Social_Media_for_Realtors_DcTcw8lhku5_Video_by_sellingsocial.co/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcTcw8lhku5_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcTcw8lhku5_preview.mp4",
         "report_url": "reports/IG_@Quinn_Social_Media_for_Realtors_DcTcw8lhku5_Video_by_sellingsocial.co.html",
         "shots_count": 0,
         "duration": "15s",
@@ -4862,9 +4799,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Nicole_💖_DaAm8suhCau_Video_by_nicoolalah",
@@ -4922,7 +4857,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Nicole_%F0%9F%92%96_DaAm8suhCau_Video_by_nicoolalah/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Nicole_%F0%9F%92%96_DaAm8suhCau_Video_by_nicoolalah/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DaAm8suhCau_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DaAm8suhCau_preview.mp4",
         "report_url": "reports/IG_@Nicole_💖_DaAm8suhCau_Video_by_nicoolalah.html",
         "shots_count": 0,
         "duration": "15s",
@@ -4935,9 +4870,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Neeraj_Khurana_Video,_Lighting_&_Photography_DcJBTCoT6UT_Video_by_photoknack.in",
@@ -4995,7 +4928,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Neeraj_Khurana_Video%2C_Lighting_%26_Photography_DcJBTCoT6UT_Video_by_photoknack.in/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Neeraj_Khurana_Video%2C_Lighting_%26_Photography_DcJBTCoT6UT_Video_by_photoknack.in/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcJBTCoT6UT_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcJBTCoT6UT_preview.mp4",
         "report_url": "reports/IG_@Neeraj_Khurana_Video,_Lighting_&_Photography_DcJBTCoT6UT_Video_by_photoknack.in.html",
         "shots_count": 0,
         "duration": "15s",
@@ -5008,9 +4941,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer",
@@ -5064,7 +4995,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Derossi_DdJs.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Derossi_DdJs_preview.mp4",
         "report_url": "reports/IG_@Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer.html",
         "shots_count": 0,
         "duration": "15s",
@@ -5077,9 +5008,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@LAYTON_Dc9TAgjTmeR_Video_by_layton_video",
@@ -5141,7 +5070,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40LAYTON_Dc9TAgjTmeR_Video_by_layton_video/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40LAYTON_Dc9TAgjTmeR_Video_by_layton_video/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc9TAgjTmeR_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dc9TAgjTmeR_preview.mp4",
         "report_url": "reports/IG_@LAYTON_Dc9TAgjTmeR_Video_by_layton_video.html",
         "shots_count": 0,
         "duration": "15s",
@@ -5154,9 +5083,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@L7_WEST_LAKE_HANOI_by_LOTTE_HOTELS_DZuT3fSgOeg_Video_by_l7westlakehanoi_bylottehotels",
@@ -5210,7 +5137,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40L7_WEST_LAKE_HANOI_by_LOTTE_HOTELS_DZuT3fSgOeg_Video_by_l7westlakehanoi_bylottehotels/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40L7_WEST_LAKE_HANOI_by_LOTTE_HOTELS_DZuT3fSgOeg_Video_by_l7westlakehanoi_bylottehotels/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZuT3fSgOeg_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DZuT3fSgOeg_preview.mp4",
         "report_url": "reports/IG_@L7_WEST_LAKE_HANOI_by_LOTTE_HOTELS_DZuT3fSgOeg_Video_by_l7westlakehanoi_bylottehotels.html",
         "shots_count": 0,
         "duration": "15s",
@@ -5223,9 +5150,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Keren_Ilan_DY5aQaoABsy_Video_by_kerennilan",
@@ -5280,7 +5205,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Keren_Ilan_DY5aQaoABsy_Video_by_kerennilan/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Keren_Ilan_DY5aQaoABsy_Video_by_kerennilan/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DY5aQaoABsy_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DY5aQaoABsy_preview.mp4",
         "report_url": "reports/IG_@Keren_Ilan_DY5aQaoABsy_Video_by_kerennilan.html",
         "shots_count": 0,
         "duration": "15s",
@@ -5293,9 +5218,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "DaP3EE-qgAQ",
@@ -5350,7 +5273,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Katsuki_DaP3EE-qgAQ_Video_by_mkxpresar/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Katsuki_DaP3EE-qgAQ_Video_by_mkxpresar/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DaP3EE-qgAQ.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DaP3EE-qgAQ_preview.mp4",
         "report_url": "",
         "shots_count": 3,
         "duration": "6s",
@@ -5363,9 +5286,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Junko_Da46F-lxueg_Video_by_junko_livlog",
@@ -5423,7 +5344,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Junko_Da46F-lxueg_Video_by_junko_livlog/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Junko_Da46F-lxueg_Video_by_junko_livlog/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Da46F-lxueg_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Da46F-lxueg_preview.mp4",
         "report_url": "reports/IG_@Junko_Da46F-lxueg_Video_by_junko_livlog.html",
         "shots_count": 0,
         "duration": "15s",
@@ -5436,9 +5357,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Josh_Diaz_DdJ7S5BJ6H0_Video_by_joshdiazfilms",
@@ -5492,7 +5411,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Josh_Diaz_DdJ7S5BJ6H0_Video_by_joshdiazfilms/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Josh_Diaz_DdJ7S5BJ6H0_Video_by_joshdiazfilms/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Diaz_DdJ7S5B.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Diaz_DdJ7S5B_preview.mp4",
         "report_url": "reports/IG_@Josh_Diaz_DdJ7S5BJ6H0_Video_by_joshdiazfilms.html",
         "shots_count": 0,
         "duration": "15s",
@@ -5505,9 +5424,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "DbLToEpPPzm",
@@ -5568,7 +5485,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DbLToEpPPzm_Video_by_jazziesillona/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jazzie_DbLToEpPPzm_Video_by_jazziesillona/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbLToEpPPzm.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DbLToEpPPzm_preview.mp4",
         "report_url": "",
         "shots_count": 8,
         "duration": "16s",
@@ -5581,9 +5498,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "DZzwqWBvfwT",
@@ -5642,7 +5557,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DZzwqWBvfwT_Video_by_jazziesillona/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jazzie_DZzwqWBvfwT_Video_by_jazziesillona/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZzwqWBvfwT.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DZzwqWBvfwT_preview.mp4",
         "report_url": "",
         "shots_count": 8,
         "duration": "16s",
@@ -5655,9 +5570,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "DZchNiZvH6m",
@@ -5712,7 +5625,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DZchNiZvH6m_Video_by_jazziesillona/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jazzie_DZchNiZvH6m_Video_by_jazziesillona/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZchNiZvH6m.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DZchNiZvH6m_preview.mp4",
         "report_url": "",
         "shots_count": 14,
         "duration": "28s",
@@ -5725,9 +5638,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Jazzie_DZVAYFwvo4y_Video_by_jazziesillona",
@@ -5782,7 +5693,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DZVAYFwvo4y_Video_by_jazziesillona/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jazzie_DZVAYFwvo4y_Video_by_jazziesillona/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZVAYFwvo4y_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DZVAYFwvo4y_preview.mp4",
         "report_url": "reports/IG_@Jazzie_DZVAYFwvo4y_Video_by_jazziesillona.html",
         "shots_count": 0,
         "duration": "15s",
@@ -5795,9 +5706,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "DYcM_9FPr7I",
@@ -5855,7 +5764,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DYcM_9FPr7I_Video_by_jazziesillona/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jazzie_DYcM_9FPr7I_Video_by_jazziesillona/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DYcM_9FPr7I.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DYcM_9FPr7I_preview.mp4",
         "report_url": "",
         "shots_count": 14,
         "duration": "28s",
@@ -5868,9 +5777,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "DXoss18j011",
@@ -5925,7 +5832,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DXoss18j011_Video_by_jazziesillona/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jazzie_DXoss18j011_Video_by_jazziesillona/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DXoss18j011.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DXoss18j011_preview.mp4",
         "report_url": "",
         "shots_count": 14,
         "duration": "28s",
@@ -5938,9 +5845,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "DWERTvEjy7k",
@@ -5996,7 +5901,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DWERTvEjy7k_Video_by_jazziesillona/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jazzie_DWERTvEjy7k_Video_by_jazziesillona/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DWERTvEjy7k.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DWERTvEjy7k_preview.mp4",
         "report_url": "",
         "shots_count": 7,
         "duration": "14s",
@@ -6009,9 +5914,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "DUS5DYCEgyg",
@@ -6066,7 +5969,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DUS5DYCEgyg_Video_by_jazziesillona/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jazzie_DUS5DYCEgyg_Video_by_jazziesillona/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DUS5DYCEgyg.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DUS5DYCEgyg_preview.mp4",
         "report_url": "",
         "shots_count": 41,
         "duration": "82s",
@@ -6079,9 +5982,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "DUPo66yklxb",
@@ -6140,7 +6041,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DUPo66yklxb_Video_by_jazziesillona/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jazzie_DUPo66yklxb_Video_by_jazziesillona/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DUPo66yklxb.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DUPo66yklxb_preview.mp4",
         "report_url": "",
         "shots_count": 8,
         "duration": "16s",
@@ -6153,9 +6054,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@JENNY_TSANG_DXf1LldT5co_Video_by_tsangtastic",
@@ -6214,7 +6113,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40JENNY_TSANG_DXf1LldT5co_Video_by_tsangtastic/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40JENNY_TSANG_DXf1LldT5co_Video_by_tsangtastic/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DXf1LldT5co_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DXf1LldT5co_preview.mp4",
         "report_url": "reports/IG_@JENNY_TSANG_DXf1LldT5co_Video_by_tsangtastic.html",
         "shots_count": 0,
         "duration": "15s",
@@ -6227,9 +6126,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Hana_Konichiwa_DbS3HNNIKR7_Video_by_hana.konichiwa",
@@ -6287,7 +6184,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Hana_Konichiwa_DbS3HNNIKR7_Video_by_hana.konichiwa/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Hana_Konichiwa_DbS3HNNIKR7_Video_by_hana.konichiwa/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbS3HNNIKR7_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DbS3HNNIKR7_preview.mp4",
         "report_url": "reports/IG_@Hana_Konichiwa_DbS3HNNIKR7_Video_by_hana.konichiwa.html",
         "shots_count": 0,
         "duration": "15s",
@@ -6300,9 +6197,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Genya_Dc5uepPBXKq_Video_by_sg.genchan",
@@ -6362,7 +6257,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Genya_Dc5uepPBXKq_Video_by_sg.genchan/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Genya_Dc5uepPBXKq_Video_by_sg.genchan/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc5uepPBXKq_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dc5uepPBXKq_preview.mp4",
         "report_url": "reports/IG_@Genya_Dc5uepPBXKq_Video_by_sg.genchan.html",
         "shots_count": 0,
         "duration": "15s",
@@ -6375,9 +6270,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Erin_&_Jackson_Travel_Filmmakers_&_Photograph_DbomJ6-Tpry_Video_by_thewaytowherever",
@@ -6435,7 +6328,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Erin_%26_Jackson_Travel_Filmmakers_%26_Photograph_DbomJ6-Tpry_Video_by_thewaytowherever/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Erin_%26_Jackson_Travel_Filmmakers_%26_Photograph_DbomJ6-Tpry_Video_by_thewaytowherever/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbomJ6-Tpry_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DbomJ6-Tpry_preview.mp4",
         "report_url": "reports/IG_@Erin_&_Jackson_Travel_Filmmakers_&_Photograph_DbomJ6-Tpry_Video_by_thewaytowherever.html",
         "shots_count": 0,
         "duration": "15s",
@@ -6448,9 +6341,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Elsa_Qin_C_DcILfhlgsmu_Video_by_elsaqinn",
@@ -6508,7 +6399,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Elsa_Qin_C_DcILfhlgsmu_Video_by_elsaqinn/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Elsa_Qin_C_DcILfhlgsmu_Video_by_elsaqinn/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcILfhlgsmu_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcILfhlgsmu_preview.mp4",
         "report_url": "reports/IG_@Elsa_Qin_C_DcILfhlgsmu_Video_by_elsaqinn.html",
         "shots_count": 0,
         "duration": "42.07s",
@@ -6521,9 +6412,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@E_jo_이원민_DbKxhucTAh4_Video_by__e.jo",
@@ -6577,7 +6466,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40E_jo_%EC%9D%B4%EC%9B%90%EB%AF%BC_DbKxhucTAh4_Video_by__e.jo/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40E_jo_%EC%9D%B4%EC%9B%90%EB%AF%BC_DbKxhucTAh4_Video_by__e.jo/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbKxhucTAh4_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DbKxhucTAh4_preview.mp4",
         "report_url": "reports/IG_@E_jo_이원민_DbKxhucTAh4_Video_by__e.jo.html",
         "shots_count": 0,
         "duration": "34.07s",
@@ -6590,9 +6479,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@DbYF6qxvnI2_5_Simple_Shots",
@@ -6646,7 +6533,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40DbYF6qxvnI2_5_Simple_Shots/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40DbYF6qxvnI2_5_Simple_Shots/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/IG_@DbYF6qxvnI2_5_Simple_Shots.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/IG_@DbYF6qxvnI2_5_Simple_Shots_preview.mp4",
         "report_url": "",
         "shots_count": 0,
         "duration": "15s",
@@ -6659,9 +6546,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Bryan_Hynes_Dcxsw50zIR8_Video_by_bryanhynes",
@@ -6719,7 +6604,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Bryan_Hynes_Dcxsw50zIR8_Video_by_bryanhynes/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Bryan_Hynes_Dcxsw50zIR8_Video_by_bryanhynes/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dcxsw50zIR8_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dcxsw50zIR8_preview.mp4",
         "report_url": "reports/IG_@Bryan_Hynes_Dcxsw50zIR8_Video_by_bryanhynes.html",
         "shots_count": 0,
         "duration": "18.75s",
@@ -6732,9 +6617,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Brian_Tooker_DZN-FfdyPgH_Video_by_briantooker",
@@ -6792,7 +6675,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Brian_Tooker_DZN-FfdyPgH_Video_by_briantooker/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Brian_Tooker_DZN-FfdyPgH_Video_by_briantooker/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZN-FfdyPgH_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DZN-FfdyPgH_preview.mp4",
         "report_url": "reports/IG_@Brian_Tooker_DZN-FfdyPgH_Video_by_briantooker.html",
         "shots_count": 0,
         "duration": "15s",
@@ -6805,9 +6688,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "Db6a3tHoWTS",
@@ -6866,7 +6747,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Ben_Db6a3tHoWTS_Video_by_by.bennnj/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Ben_Db6a3tHoWTS_Video_by_by.bennnj/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db6a3tHoWTS.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Db6a3tHoWTS_preview.mp4",
         "report_url": "",
         "shots_count": 2,
         "duration": "4s",
@@ -6879,9 +6760,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Beixin_Travel_&_Nature_Dc0zRNwDz11_Carousel_Analysis",
@@ -6935,7 +6814,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Beixin_Travel_%26_Nature_Dc0zRNwDz11_Carousel_Analysis/slide_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Beixin_Travel_%26_Nature_Dc0zRNwDz11_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc0zRNwDz11_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dc0zRNwDz11_preview.mp4",
         "report_url": "reports/IG_@Beixin_Travel_&_Nature_Dc0zRNwDz11_Carousel_Analysis.html",
         "shots_count": 0,
         "duration": "15s",
@@ -6948,9 +6827,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@BILLY_ZHANG_Dbvzrg2i0WN_Video_by_bzhvng",
@@ -7004,7 +6881,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40BILLY_ZHANG_Dbvzrg2i0WN_Video_by_bzhvng/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40BILLY_ZHANG_Dbvzrg2i0WN_Video_by_bzhvng/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dbvzrg2i0WN_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dbvzrg2i0WN_preview.mp4",
         "report_url": "reports/IG_@BILLY_ZHANG_Dbvzrg2i0WN_Video_by_bzhvng.html",
         "shots_count": 0,
         "duration": "15s",
@@ -7017,9 +6894,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Austin_Rutland_DYwzs3zRRkv_Video_by_austinrutland",
@@ -7077,7 +6952,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Austin_Rutland_DYwzs3zRRkv_Video_by_austinrutland/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Austin_Rutland_DYwzs3zRRkv_Video_by_austinrutland/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DYwzs3zRRkv_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DYwzs3zRRkv_preview.mp4",
         "report_url": "reports/IG_@Austin_Rutland_DYwzs3zRRkv_Video_by_austinrutland.html",
         "shots_count": 0,
         "duration": "15s",
@@ -7090,9 +6965,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Arif_Hakim_Db7P1GeOxvq_Video_by_ariffathulhakim",
@@ -7150,7 +7023,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Arif_Hakim_Db7P1GeOxvq_Video_by_ariffathulhakim/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Arif_Hakim_Db7P1GeOxvq_Video_by_ariffathulhakim/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db7P1GeOxvq_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Db7P1GeOxvq_preview.mp4",
         "report_url": "reports/IG_@Arif_Hakim_Db7P1GeOxvq_Video_by_ariffathulhakim.html",
         "shots_count": 0,
         "duration": "15s",
@@ -7163,9 +7036,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Andrew_Yue_DaSkD6CAHP2_Carousel_Analysis",
@@ -7219,7 +7090,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Andrew_Yue_DaSkD6CAHP2_Carousel_Analysis/slide_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Andrew_Yue_DaSkD6CAHP2_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DaSkD6CAHP2_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DaSkD6CAHP2_preview.mp4",
         "report_url": "",
         "shots_count": 0,
         "duration": "15s",
@@ -7232,9 +7103,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Andrew_Yue_DXwc_9QAKjZ_Video_by_withyuee",
@@ -7288,7 +7157,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Andrew_Yue_DXwc_9QAKjZ_Video_by_withyuee/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Andrew_Yue_DXwc_9QAKjZ_Video_by_withyuee/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DXwc_9QAKjZ_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DXwc_9QAKjZ_preview.mp4",
         "report_url": "",
         "shots_count": 0,
         "duration": "15s",
@@ -7301,9 +7170,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Andrei_Kostromskikh_DaC90d3tWuV_Video_by_kosnio",
@@ -7358,7 +7225,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DaC90d3tWuV_Video_by_kosnio/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DaC90d3tWuV_Video_by_kosnio/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DaC90d3tWuV_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DaC90d3tWuV_preview.mp4",
         "report_url": "reports/IG_@Andrei_Kostromskikh_DaC90d3tWuV_Video_by_kosnio.html",
         "shots_count": 0,
         "duration": "15s",
@@ -7371,9 +7238,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy",
@@ -7431,7 +7296,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcwPu99sDKI_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcwPu99sDKI_preview.mp4",
         "report_url": "reports/IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy.html",
         "shots_count": 0,
         "duration": "15s",
@@ -7444,9 +7309,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@53051938741_DadG15TAM5n_Video_by_zamba_garden",
@@ -7500,7 +7363,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%4053051938741_DadG15TAM5n_Video_by_zamba_garden/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%4053051938741_DadG15TAM5n_Video_by_zamba_garden/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DadG15TAM5n_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DadG15TAM5n_preview.mp4",
         "report_url": "reports/IG_@53051938741_DadG15TAM5n_Video_by_zamba_garden.html",
         "shots_count": 0,
         "duration": "15s",
@@ -7513,9 +7376,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@3075240316_DZrt1FbJTdy_Video_by_dal_officialeather",
@@ -7569,7 +7430,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%403075240316_DZrt1FbJTdy_Video_by_dal_officialeather/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%403075240316_DZrt1FbJTdy_Video_by_dal_officialeather/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZrt1FbJTdy_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DZrt1FbJTdy_preview.mp4",
         "report_url": "reports/IG_@3075240316_DZrt1FbJTdy_Video_by_dal_officialeather.html",
         "shots_count": 0,
         "duration": "15s",
@@ -7582,9 +7443,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "HocVien_Phuong_Ban_Linh_Hay_Vo_Duyen",
@@ -7638,7 +7497,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/HocVien_Phuong_Ban_Linh_Hay_Vo_Duyen/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/HocVien_Phuong_Ban_Linh_Hay_Vo_Duyen/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/HocVien_Phuong_Ban_Linh_Hay_Vo_Duyen.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/HocVien_Phuong_Ban_Linh_Hay_Vo_Duyen_preview.mp4",
         "report_url": "",
         "shots_count": 0,
         "duration": "15s",
@@ -7651,9 +7510,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Mridupawan_Sharma_DcGbEVFznin_Video_by_mridupawasharma",
@@ -7711,7 +7568,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DcGbEVFznin_Video_by_mridupawasharma/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DcGbEVFznin_Video_by_mridupawasharma/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcGbEVFznin.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcGbEVFznin_preview.mp4",
         "report_url": "reports/IG_@Mridupawan_Sharma_DcGbEVFznin_Video_by_mridupawasharma.html",
         "shots_count": 20,
         "duration": "40s",
@@ -7724,9 +7581,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": true,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": true
     },
     {
       "id": "IG_@Mridupawan_Sharma_DbnlAB5Twrw_Video_by_mridupawasharma",
@@ -7784,7 +7639,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DbnlAB5Twrw_Video_by_mridupawasharma/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DbnlAB5Twrw_Video_by_mridupawasharma/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbnlAB5Twrw.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DbnlAB5Twrw_preview.mp4",
         "report_url": "reports/IG_@Mridupawan_Sharma_DbnlAB5Twrw_Video_by_mridupawasharma.html",
         "shots_count": 23,
         "duration": "46s",
@@ -7797,9 +7652,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": true,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": true
     },
     {
       "id": "IG_@Mridupawan_Sharma_DaXdrAVzGcc_Video_by_mridupawasharma",
@@ -7857,7 +7710,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DaXdrAVzGcc_Video_by_mridupawasharma/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DaXdrAVzGcc_Video_by_mridupawasharma/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DaXdrAVzGcc.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DaXdrAVzGcc_preview.mp4",
         "report_url": "reports/IG_@Mridupawan_Sharma_DaXdrAVzGcc_Video_by_mridupawasharma.html",
         "shots_count": 37,
         "duration": "74s",
@@ -7870,9 +7723,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": true,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": true
     },
     {
       "id": "IG_@Mridupawan_Sharma_DaH_rTUTe14_Video_by_mridupawasharma",
@@ -7930,7 +7781,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DaH_rTUTe14_Video_by_mridupawasharma/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Mridupawan_Sharma_DaH_rTUTe14_Video_by_mridupawasharma/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DaH_rTUTe14.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DaH_rTUTe14_preview.mp4",
         "report_url": "reports/IG_@Mridupawan_Sharma_DaH_rTUTe14_Video_by_mridupawasharma.html",
         "shots_count": 37,
         "duration": "74s",
@@ -7943,9 +7794,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": true,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": true
     },
     {
       "id": "IG_@Jade_Sheng_DcbAqchxJ2t_Video_by_jade.got.curious",
@@ -8003,7 +7852,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DcbAqchxJ2t_Video_by_jade.got.curious/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DcbAqchxJ2t_Video_by_jade.got.curious/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcbAqchxJ2t.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcbAqchxJ2t_preview.mp4",
         "report_url": "reports/IG_@Jade_Sheng_DcbAqchxJ2t_Video_by_jade.got.curious.html",
         "shots_count": 54,
         "duration": "108s",
@@ -8016,9 +7865,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Jade_Sheng_DZa9pzKRsAU_Video_by_jade.got.curious",
@@ -8073,7 +7920,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DZa9pzKRsAU_Video_by_jade.got.curious/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DZa9pzKRsAU_Video_by_jade.got.curious/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZa9pzKRsAU.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DZa9pzKRsAU_preview.mp4",
         "report_url": "reports/IG_@Jade_Sheng_DZa9pzKRsAU_Video_by_jade.got.curious.html",
         "shots_count": 30,
         "duration": "60s",
@@ -8086,9 +7933,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Jade_Sheng_DZB9Ls3No6p_Video_by_jade.got.curious",
@@ -8143,7 +7988,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DZB9Ls3No6p_Video_by_jade.got.curious/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DZB9Ls3No6p_Video_by_jade.got.curious/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZB9Ls3No6p.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DZB9Ls3No6p_preview.mp4",
         "report_url": "reports/IG_@Jade_Sheng_DZB9Ls3No6p_Video_by_jade.got.curious.html",
         "shots_count": 65,
         "duration": "130s",
@@ -8156,9 +8001,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Jade_Sheng_DYXiic5xMeC_Video_by_jade.got.curious",
@@ -8216,7 +8059,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DYXiic5xMeC_Video_by_jade.got.curious/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DYXiic5xMeC_Video_by_jade.got.curious/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DYXiic5xMeC.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DYXiic5xMeC_preview.mp4",
         "report_url": "reports/IG_@Jade_Sheng_DYXiic5xMeC_Video_by_jade.got.curious.html",
         "shots_count": 20,
         "duration": "40s",
@@ -8229,9 +8072,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Saro_Deele_DXjRnwCISNU_Video_by_sarodeele",
@@ -8288,7 +8129,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Saro_Deele_DXjRnwCISNU_Video_by_sarodeele/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Saro_Deele_DXjRnwCISNU_Video_by_sarodeele/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DXjRnwCISNU.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DXjRnwCISNU_preview.mp4",
         "report_url": "reports/IG_@Saro_Deele_DXjRnwCISNU_Video_by_sarodeele.html",
         "shots_count": 23,
         "duration": "46s",
@@ -8301,9 +8142,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious",
@@ -8362,7 +8201,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZwO5X6N_MS.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DZwO5X6N_MS_preview.mp4",
         "report_url": "reports/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious.html",
         "shots_count": 14,
         "duration": "28s",
@@ -8375,9 +8214,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs",
@@ -8435,7 +8272,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DYXXgkbxPj7.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DYXXgkbxPj7_preview.mp4",
         "report_url": "reports/IG_@Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs.html",
         "shots_count": 7,
         "duration": "14s",
@@ -8448,9 +8285,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video_by_nemo_ooo",
@@ -8509,7 +8344,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DclWb98PiK_Video_by_nemo_ooo/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DclWb98PiK_Video_by_nemo_ooo/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DclWb98PiK.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DclWb98PiK_preview.mp4",
         "report_url": "reports/IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video_by_nemo_ooo.html",
         "shots_count": 13,
         "duration": "26s",
@@ -8522,9 +8357,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@XÍU_ĐI_ĂN_DazzVqPBfje_Video_by_xiudian",
@@ -8586,7 +8419,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40X%C3%8DU_%C4%90I_%C4%82N_DazzVqPBfje_Video_by_xiudian/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40X%C3%8DU_%C4%90I_%C4%82N_DazzVqPBfje_Video_by_xiudian/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DazzVqPBfje.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DazzVqPBfje_preview.mp4",
         "report_url": "reports/IG_@XÍU_ĐI_ĂN_DazzVqPBfje_Video_by_xiudian.html",
         "shots_count": 7,
         "duration": "14s",
@@ -8599,9 +8432,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@misa｜築40年マンション暮らし_Db-xDk4vWNQ_Video_by_mi_no_ie_39",
@@ -8662,7 +8493,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40misa%EF%BD%9C%E7%AF%8940%E5%B9%B4%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E6%9A%AE%E3%82%89%E3%81%97_Db-xDk4vWNQ_Video_by_mi_no_ie_39/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40misa%EF%BD%9C%E7%AF%8940%E5%B9%B4%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E6%9A%AE%E3%82%89%E3%81%97_Db-xDk4vWNQ_Video_by_mi_no_ie_39/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db-xDk4vWNQ.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Db-xDk4vWNQ_preview.mp4",
         "report_url": "reports/IG_@misa｜築40年マンション暮らし_Db-xDk4vWNQ_Video_by_mi_no_ie_39.html",
         "shots_count": 7,
         "duration": "14s",
@@ -8675,9 +8506,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua",
@@ -8739,7 +8568,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdOu2yRsmDy.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdOu2yRsmDy_preview.mp4",
         "report_url": "reports/IG_@Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua.html",
         "shots_count": 14,
         "duration": "28s",
@@ -8752,9 +8581,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Rika_ビオトープめだか植物のある暮らし_Da5KgjAxfOG_Video_by_r_6cafe",
@@ -8816,7 +8643,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Rika_%E3%83%93%E3%82%AA%E3%83%88%E3%83%BC%E3%83%97%E3%82%81%E3%81%A0%E3%81%8B%E6%A4%8D%E7%89%A9%E3%81%AE%E3%81%82%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97_Da5KgjAxfOG_Video_by_r_6cafe/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Rika_%E3%83%93%E3%82%AA%E3%83%88%E3%83%BC%E3%83%97%E3%82%81%E3%81%A0%E3%81%8B%E6%A4%8D%E7%89%A9%E3%81%AE%E3%81%82%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97_Da5KgjAxfOG_Video_by_r_6cafe/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Da5KgjAxfOG.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Da5KgjAxfOG_preview.mp4",
         "report_url": "reports/IG_@Rika_ビオトープめだか植物のある暮らし_Da5KgjAxfOG_Video_by_r_6cafe.html",
         "shots_count": 11,
         "duration": "22s",
@@ -8829,9 +8656,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc",
@@ -8893,7 +8718,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdA1ErpRMg2.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdA1ErpRMg2_preview.mp4",
         "report_url": "reports/IG_@Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc.html",
         "shots_count": 9,
         "duration": "18s",
@@ -8906,9 +8731,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Hayden_Slow_Korean_&_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean",
@@ -8971,7 +8794,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Hayden_Slow_Korean_%26_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Hayden_Slow_Korean_%26_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Daz3Po8zHIE.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Daz3Po8zHIE_preview.mp4",
         "report_url": "reports/IG_@Hayden_Slow_Korean_&_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean.html",
         "shots_count": 7,
         "duration": "14s",
@@ -8984,9 +8807,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs",
@@ -9047,7 +8868,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdWa3o2zc0w.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdWa3o2zc0w_preview.mp4",
         "report_url": "reports/IG_@JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs.html",
         "shots_count": 1,
         "duration": "2s",
@@ -9060,9 +8881,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Indang_Ayu_DccpHbETFSr_Video_by_indanayuu",
@@ -9124,7 +8943,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Indang_Ayu_DccpHbETFSr_Video_by_indanayuu/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Indang_Ayu_DccpHbETFSr_Video_by_indanayuu/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DccpHbETFSr.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DccpHbETFSr_preview.mp4",
         "report_url": "reports/IG_@Indang_Ayu_DccpHbETFSr_Video_by_indanayuu.html",
         "shots_count": 8,
         "duration": "16s",
@@ -9137,9 +8956,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@UME_📍минск-мир_DcVnyJyNWGY_Video_by_ume.izakaya",
@@ -9201,7 +9018,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40UME_%F0%9F%93%8D%D0%BC%D0%B8%D0%BD%D1%81%D0%BA-%D0%BC%D0%B8%D1%80_DcVnyJyNWGY_Video_by_ume.izakaya/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40UME_%F0%9F%93%8D%D0%BC%D0%B8%D0%BD%D1%81%D0%BA-%D0%BC%D0%B8%D1%80_DcVnyJyNWGY_Video_by_ume.izakaya/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcVnyJyNWGY.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcVnyJyNWGY_preview.mp4",
         "report_url": "reports/IG_@UME_📍минск-мир_DcVnyJyNWGY_Video_by_ume.izakaya.html",
         "shots_count": 9,
         "duration": "18s",
@@ -9214,9 +9031,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg",
@@ -9277,7 +9092,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcxcVGtxjNl.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcxcVGtxjNl_preview.mp4",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",
         "shots_count": 2,
         "duration": "4s",
@@ -9290,9 +9105,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@거북이_소영_Db0tHr8Bs7x_Video_by_slowkoreanvlog",
@@ -9352,7 +9165,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%EA%B1%B0%EB%B6%81%EC%9D%B4_%EC%86%8C%EC%98%81_Db0tHr8Bs7x_Video_by_slowkoreanvlog/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40%EA%B1%B0%EB%B6%81%EC%9D%B4_%EC%86%8C%EC%98%81_Db0tHr8Bs7x_Video_by_slowkoreanvlog/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db0tHr8Bs7x.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Db0tHr8Bs7x_preview.mp4",
         "report_url": "reports/IG_@거북이_소영_Db0tHr8Bs7x_Video_by_slowkoreanvlog.html",
         "shots_count": 1,
         "duration": "2s",
@@ -9365,9 +9178,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k",
@@ -9429,7 +9240,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7_DdTZsoxTVFz_Video_by_gyuree_k/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7_DdTZsoxTVFz_Video_by_gyuree_k/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdTZsoxTVFz.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdTZsoxTVFz_preview.mp4",
         "report_url": "reports/IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k.html",
         "shots_count": 23,
         "duration": "46s",
@@ -9442,9 +9253,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz",
@@ -9507,7 +9316,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jenny_Yoo_%F0%9F%87%B0%F0%9F%87%B7_DZ8w6MsSMAw_Video_by_yooinoz/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jenny_Yoo_%F0%9F%87%B0%F0%9F%87%B7_DZ8w6MsSMAw_Video_by_yooinoz/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZ8w6MsSMAw.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DZ8w6MsSMAw_preview.mp4",
         "report_url": "reports/IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz.html",
         "shots_count": 34,
         "duration": "68s",
@@ -9520,9 +9329,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@drea_(이현)_DaClEhzB5WC_Video_by_dreakwon",
@@ -9587,7 +9394,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40drea_%28%EC%9D%B4%ED%98%84%29_DaClEhzB5WC_Video_by_dreakwon/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40drea_%28%EC%9D%B4%ED%98%84%29_DaClEhzB5WC_Video_by_dreakwon/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DaClEhzB5WC.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DaClEhzB5WC_preview.mp4",
         "report_url": "reports/IG_@drea_(이현)_DaClEhzB5WC_Video_by_dreakwon.html",
         "shots_count": 38,
         "duration": "76s",
@@ -9600,9 +9407,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views",
@@ -9665,7 +9470,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcBXsaezmjo.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcBXsaezmjo_preview.mp4",
         "report_url": "reports/IG_@Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views.html",
         "shots_count": 3,
         "duration": "6s",
@@ -9678,9 +9483,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis",
@@ -9741,7 +9544,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis/slide_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis/slide_01.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/slide_01_preview.mp4",
         "report_url": "reports/IG_@Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis.html",
         "shots_count": 6,
         "duration": "12s",
@@ -9754,9 +9557,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5",
@@ -9819,7 +9620,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40creator_DdVBqUzj3o5_Video_DdVBqUzj3o5/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40creator_DdVBqUzj3o5_Video_DdVBqUzj3o5/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdVBqUzj3o5.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdVBqUzj3o5_preview.mp4",
         "report_url": "reports/IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5.html",
         "shots_count": 3,
         "duration": "6s",
@@ -9832,9 +9633,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "DcgQDZ_JNIr",
@@ -9896,7 +9695,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%F0%9D%90%82%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%B2%F0%9F%8C%BC_DcgQDZ_JNIr_Video_by_clarissaacindy/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40%F0%9D%90%82%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%B2%F0%9F%8C%BC_DcgQDZ_JNIr_Video_by_clarissaacindy/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcgQDZ_JNIr.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcgQDZ_JNIr_preview.mp4",
         "report_url": "",
         "shots_count": 10,
         "duration": "20s",
@@ -9909,9 +9708,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword",
@@ -9972,7 +9769,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdU4rBeMXZt.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdU4rBeMXZt_preview.mp4",
         "report_url": "reports/IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword.html",
         "shots_count": 8,
         "duration": "16s",
@@ -9985,9 +9782,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb",
@@ -10049,7 +9844,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40creator_DdSs5rahILb_Video_DdSs5rahILb/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40creator_DdSs5rahILb_Video_DdSs5rahILb/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdSs5rahILb.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdSs5rahILb_preview.mp4",
         "report_url": "reports/IG_@creator_DdSs5rahILb_Video_DdSs5rahILb.html",
         "shots_count": 0,
         "duration": "15s",
@@ -10062,9 +9857,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock",
@@ -10129,7 +9922,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdT9CF7tGzn.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdT9CF7tGzn_preview.mp4",
         "report_url": "reports/IG_@Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock.html",
         "shots_count": 14,
         "duration": "28s",
@@ -10142,9 +9935,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen",
@@ -10209,7 +10000,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdT4EOzveQL.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdT4EOzveQL_preview.mp4",
         "report_url": "reports/IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen.html",
         "shots_count": 46,
         "duration": "92s",
@@ -10222,9 +10013,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun",
@@ -10288,7 +10077,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%EC%8B%A0_%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%B3%E1%86%AB_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40%EC%8B%A0_%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%B3%E1%86%AB_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdQwL3Ahci1.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdQwL3Ahci1_preview.mp4",
         "report_url": "reports/IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun.html",
         "shots_count": 4,
         "duration": "8s",
@@ -10301,9 +10090,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann",
@@ -10365,7 +10152,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%403413882081_Dcx7pQpS6zs_Video_by_syooaann/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%403413882081_Dcx7pQpS6zs_Video_by_syooaann/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dcx7pQpS6zs.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dcx7pQpS6zs_preview.mp4",
         "report_url": "reports/IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann.html",
         "shots_count": 1,
         "duration": "2s",
@@ -10378,9 +10165,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen",
@@ -10446,7 +10231,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DOd8XMMjxcH.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DOd8XMMjxcH_preview.mp4",
         "report_url": "reports/IG_@Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen.html",
         "shots_count": 4,
         "duration": "8s",
@@ -10459,9 +10244,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale",
@@ -10522,7 +10305,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dcbn7Bix-X-.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dcbn7Bix-X-_preview.mp4",
         "report_url": "reports/IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale.html",
         "shots_count": 8,
         "duration": "16.00s",
@@ -10535,9 +10318,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
@@ -10598,7 +10379,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40AL%2C_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40AL%2C_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdTeHleIqkg.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdTeHleIqkg_preview.mp4",
         "report_url": "reports/IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle.html",
         "shots_count": 24,
         "duration": "48.00s",
@@ -10611,9 +10392,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@iman.lizi_Dc6qXoKoYKh",
@@ -10675,7 +10454,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40iman.lizi_Dc6qXoKoYKh/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40iman.lizi_Dc6qXoKoYKh/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc6qXoKoYKh.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dc6qXoKoYKh_preview.mp4",
         "report_url": "reports/IG_@iman.lizi_Dc6qXoKoYKh.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -10688,9 +10467,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@hayancook_DdSUI9BvhqR",
@@ -10752,7 +10529,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hayancook_DdSUI9BvhqR/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40hayancook_DdSUI9BvhqR/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdSUI9BvhqR.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdSUI9BvhqR_preview.mp4",
         "report_url": "reports/IG_@hayancook_DdSUI9BvhqR.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -10765,9 +10542,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@cushygarden_DdL6pHDSKRc",
@@ -10829,7 +10604,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40cushygarden_DdL6pHDSKRc/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40cushygarden_DdL6pHDSKRc/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdL6pHDSKRc.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdL6pHDSKRc_preview.mp4",
         "report_url": "reports/IG_@cushygarden_DdL6pHDSKRc.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -10842,9 +10617,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@dev_zero_Db-S8i1hXwF",
@@ -10903,7 +10676,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40dev_zero_Db-S8i1hXwF/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40dev_zero_Db-S8i1hXwF/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db-S8i1hXwF.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Db-S8i1hXwF_preview.mp4",
         "report_url": "reports/IG_@dev_zero_Db-S8i1hXwF.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -10916,9 +10689,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@nagisa.decor_Dco_DevvUla",
@@ -10977,7 +10748,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40nagisa.decor_Dco_DevvUla/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40nagisa.decor_Dco_DevvUla/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dco_DevvUla.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dco_DevvUla_preview.mp4",
         "report_url": "reports/IG_@nagisa.decor_Dco_DevvUla.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -10990,9 +10761,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@yuto_creator_DdBlAWRO1Hl",
@@ -11054,7 +10823,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40yuto_creator_DdBlAWRO1Hl/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40yuto_creator_DdBlAWRO1Hl/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdBlAWRO1Hl.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdBlAWRO1Hl_preview.mp4",
         "report_url": "reports/IG_@yuto_creator_DdBlAWRO1Hl.html",
         "shots_count": 6,
         "duration": "25.0s",
@@ -11067,9 +10836,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@beixin_DdRGd8evPK-",
@@ -11131,7 +10898,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40beixin_DdRGd8evPK-/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40beixin_DdRGd8evPK-/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdRGd8evPK-.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdRGd8evPK-_preview.mp4",
         "report_url": "reports/IG_@beixin_DdRGd8evPK-.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -11144,9 +10911,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@layton_video_DdKGq2TMhf4",
@@ -11208,7 +10973,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40layton_video_DdKGq2TMhf4/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40layton_video_DdKGq2TMhf4/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdKGq2TMhf4.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdKGq2TMhf4_preview.mp4",
         "report_url": "reports/IG_@layton_video_DdKGq2TMhf4.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -11221,9 +10986,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@kienobifilms_DdPLvUpBwCl",
@@ -11282,7 +11045,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40kienobifilms_DdPLvUpBwCl/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40kienobifilms_DdPLvUpBwCl/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdPLvUpBwCl.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdPLvUpBwCl_preview.mp4",
         "report_url": "reports/IG_@kienobifilms_DdPLvUpBwCl.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -11295,9 +11058,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@aki_japan_DaDFH_TSii8",
@@ -11356,7 +11117,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40aki_japan_DaDFH_TSii8/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40aki_japan_DaDFH_TSii8/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DaDFH_TSii8.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DaDFH_TSii8_preview.mp4",
         "report_url": "reports/IG_@aki_japan_DaDFH_TSii8.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -11369,9 +11130,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@nathanael.lct_DdRg_ybtlKI",
@@ -11430,7 +11189,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40nathanael.lct_DdRg_ybtlKI/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40nathanael.lct_DdRg_ybtlKI/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdRg_ybtlKI.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdRg_ybtlKI_preview.mp4",
         "report_url": "reports/IG_@nathanael.lct_DdRg_ybtlKI.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -11443,9 +11202,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@c.j.visuals_DdMrb4ARxHv",
@@ -11504,7 +11261,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40c.j.visuals_DdMrb4ARxHv/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40c.j.visuals_DdMrb4ARxHv/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdMrb4ARxHv.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdMrb4ARxHv_preview.mp4",
         "report_url": "reports/IG_@c.j.visuals_DdMrb4ARxHv.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -11517,9 +11274,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@genya_jp_Dc3PgRbBp-m",
@@ -11578,7 +11333,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40genya_jp_Dc3PgRbBp-m/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40genya_jp_Dc3PgRbBp-m/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc3PgRbBp-m.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dc3PgRbBp-m_preview.mp4",
         "report_url": "reports/IG_@genya_jp_Dc3PgRbBp-m.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -11591,9 +11346,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@charlotte.arsenault_DdHGBpZOzIm",
@@ -11652,7 +11405,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40charlotte.arsenault_DdHGBpZOzIm/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40charlotte.arsenault_DdHGBpZOzIm/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdHGBpZOzIm.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdHGBpZOzIm_preview.mp4",
         "report_url": "reports/IG_@charlotte.arsenault_DdHGBpZOzIm.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -11665,9 +11418,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@arturbr_DdO2XLIKiXo",
@@ -11726,7 +11477,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40arturbr_DdO2XLIKiXo/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40arturbr_DdO2XLIKiXo/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdO2XLIKiXo.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdO2XLIKiXo_preview.mp4",
         "report_url": "reports/IG_@arturbr_DdO2XLIKiXo.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -11739,9 +11490,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jazziesillona_Dc6Cxf-QRWh",
@@ -11800,7 +11549,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40jazziesillona_Dc6Cxf-QRWh/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40jazziesillona_Dc6Cxf-QRWh/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc6Cxf-QRWh.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dc6Cxf-QRWh_preview.mp4",
         "report_url": "reports/IG_@jazziesillona_Dc6Cxf-QRWh.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -11813,9 +11562,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@c.j.visuals_DdR7dEIxzT9",
@@ -11874,7 +11621,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40c.j.visuals_DdR7dEIxzT9/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40c.j.visuals_DdR7dEIxzT9/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdR7dEIxzT9.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdR7dEIxzT9_preview.mp4",
         "report_url": "reports/IG_@c.j.visuals_DdR7dEIxzT9.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -11887,9 +11634,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jusorok_korea_DdBr6LZqkFd",
@@ -11948,7 +11693,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40jusorok_korea_DdBr6LZqkFd/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40jusorok_korea_DdBr6LZqkFd/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdBr6LZqkFd.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdBr6LZqkFd_preview.mp4",
         "report_url": "reports/IG_@jusorok_korea_DdBr6LZqkFd.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -11961,9 +11706,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@arianballate_DdRe4-xpHs2",
@@ -12022,7 +11765,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40arianballate_DdRe4-xpHs2/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40arianballate_DdRe4-xpHs2/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdRe4-xpHs2.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdRe4-xpHs2_preview.mp4",
         "report_url": "reports/IG_@arianballate_DdRe4-xpHs2.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -12035,9 +11778,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@genya_jp_DdD_QqPB7aW",
@@ -12096,7 +11837,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40genya_jp_DdD_QqPB7aW/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40genya_jp_DdD_QqPB7aW/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdD_QqPB7aW.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdD_QqPB7aW_preview.mp4",
         "report_url": "reports/IG_@genya_jp_DdD_QqPB7aW.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -12109,9 +11850,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "LAZADA_Ulanzi_Đèn_LED_Thanh_Bơm_Hơi_UA20,_",
@@ -12168,7 +11907,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://img.youtube.com/vi/L4YUJh9ltF0/hqdefault.jpg",
         "thumb_key": "https://media.fedu.vn/images/LAZADA_Ulanzi_%C4%90%C3%A8n_LED_Thanh_B%C6%A1m_H%C6%A1i_UA20%2C__thumb.jpg",
-        "video_url": "https://media.fedu.vn/videos/Ulanzi%20UA12%20UA20%20Inflatable%20Magnetic%20Tube%20Light%20-%20%40ulanzi.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Ulanzi%20UA12%20UA20%20Inflatable%20Magnetic%20Tube%20Light%20-%20%40ulanzi_preview.mp4",
         "report_url": "",
         "shots_count": 18,
         "duration": "42.7s",
@@ -12181,9 +11920,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "LAZADA_Ulanzi_Chân_Đế_Tự_Sướng_Có_Từ_Tính_",
@@ -12253,9 +11990,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency",
@@ -12332,9 +12067,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho",
@@ -12396,7 +12129,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbQtoVPRMWk.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DbQtoVPRMWk_preview.mp4",
         "report_url": "reports/5 Cenas Criativas Trabalho - @mercantegi.html",
         "shots_count": 11,
         "duration": "19.17s",
@@ -12409,9 +12142,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount",
@@ -12471,7 +12202,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdBorQ2KEli.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdBorQ2KEli_preview.mp4",
         "report_url": "reports/How I Film Alone in a Cafe - UGC Suction Mount - @turapinaanastasiia.html",
         "shots_count": 13,
         "duration": "11.37s",
@@ -12484,9 +12215,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@vicgaibar_DaGGMTdtawm_Cannes_Street_Fit_Check_Tripod_OOTD",
@@ -12546,7 +12275,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40vicgaibar_DaGGMTdtawm_Cannes_Street_Fit_Check_Tripod_OOTD/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40vicgaibar_DaGGMTdtawm_Cannes_Street_Fit_Check_Tripod_OOTD/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DaGGMTdtawm.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DaGGMTdtawm_preview.mp4",
         "report_url": "reports/Cannes Street Fit Check - @vicgaibar.html",
         "shots_count": 18,
         "duration": "27.20s",
@@ -12559,9 +12288,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey",
@@ -12622,7 +12349,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Asian%20Dragon%20Tattoo%20Journey%20-%20%40hannya.tattoos.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Asian%20Dragon%20Tattoo%20Journey%20-%20%40hannya.tattoos_preview.mp4",
         "report_url": "reports/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey.html",
         "shots_count": 18,
         "duration": "63.03s",
@@ -12635,9 +12362,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@celfstudies_DdN_aljAIY0_Day_In_My_Life_SF_Speed_Transitions",
@@ -12697,7 +12422,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40celfstudies_DdN_aljAIY0_Day_In_My_Life_SF_Speed_Transitions/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40celfstudies_DdN_aljAIY0_Day_In_My_Life_SF_Speed_Transitions/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdN_aljAIY0.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdN_aljAIY0_preview.mp4",
         "report_url": "reports/Day In My Life SF Speed Transitions - @celfstudies.html",
         "shots_count": 25,
         "duration": "15.87s",
@@ -12710,9 +12435,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha",
@@ -12772,7 +12495,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdHf_1yA4WQ.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdHf_1yA4WQ_preview.mp4",
         "report_url": "reports/IG_@hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha.html",
         "shots_count": 30,
         "duration": "34.80s",
@@ -12785,9 +12508,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi",
@@ -12850,7 +12571,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdAyywnSxU8.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdAyywnSxU8_preview.mp4",
         "report_url": "reports/Autumn in Hanoi - @vnexpress_hanoi.html",
         "shots_count": 8,
         "duration": "14.43s",
@@ -12863,9 +12584,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour",
@@ -12928,7 +12647,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdAYPcwgfv1.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdAYPcwgfv1_preview.mp4",
         "report_url": "reports/UTS Vietnam Open Day Campus Tour - @utsint.html",
         "shots_count": 9,
         "duration": "34.00s",
@@ -12941,9 +12660,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@the.isaacelguera_DdNKlIqPagO_Kien_Truc_Chuoi_Canh_Sequence",
@@ -13002,7 +12719,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40the.isaacelguera_DdNKlIqPagO_Kien_Truc_Chuoi_Canh_Sequence/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40the.isaacelguera_DdNKlIqPagO_Kien_Truc_Chuoi_Canh_Sequence/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdNKlIqPagO.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdNKlIqPagO_preview.mp4",
         "report_url": "reports/Kien Truc Chuoi Canh Sequence - @the.isaacelguera.html",
         "shots_count": 21,
         "duration": "74.13s",
@@ -13015,9 +12732,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway",
@@ -13079,7 +12794,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbOMM0Pu1HA.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DbOMM0Pu1HA_preview.mp4",
         "report_url": "reports/House of Hair One-Take Curly Runway - @hairpositiveofficial.html",
         "shots_count": 8,
         "duration": "13.08s",
@@ -13092,9 +12807,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@moodme.sg_DdL904CMnq3_Slow_Living_Scent_Giftspace",
@@ -13153,7 +12866,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40moodme.sg_DdL904CMnq3_Slow_Living_Scent_Giftspace/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40moodme.sg_DdL904CMnq3_Slow_Living_Scent_Giftspace/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdL904CMnq3.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdL904CMnq3_preview.mp4",
         "report_url": "reports/Slow Living Scent & Giftspace - @moodme.sg.html",
         "shots_count": 14,
         "duration": "14.67s",
@@ -13166,9 +12879,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide",
@@ -13232,7 +12943,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdFBLQMOTwM.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdFBLQMOTwM_preview.mp4",
         "report_url": "reports/The Ultimate Shanghai Coffee Guide - @jassminechi.html",
         "shots_count": 15,
         "duration": "12.57s",
@@ -13245,9 +12956,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85",
@@ -13319,9 +13028,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@lee.rabo_Dc3ifsHTIhL_Introverted_Homebody_Freelancer_Daily_Vlog",
@@ -13381,7 +13088,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40lee.rabo_Dc3ifsHTIhL_Introverted_Homebody_Freelancer_Daily_Vlog/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40lee.rabo_Dc3ifsHTIhL_Introverted_Homebody_Freelancer_Daily_Vlog/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc3ifsHTIhL.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dc3ifsHTIhL_preview.mp4",
         "report_url": "reports/A Day in the Life of an Introverted Freelancer - @lee.rabo.html",
         "shots_count": 16,
         "duration": "15.83s",
@@ -13394,9 +13101,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@naohasa_DdGp4XftvIn_5_Outfits_Match_Cut_Walk",
@@ -13470,9 +13175,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation",
@@ -13526,7 +13229,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dcxi128sxO9.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dcxi128sxO9_preview.mp4",
         "report_url": "reports/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation.html",
         "shots_count": 17,
         "duration": "9.84s",
@@ -13539,9 +13242,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@lizzypalios_DdHMOB0xfd1_Content_Creation_Process",
@@ -13595,7 +13296,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40lizzypalios_DdHMOB0xfd1_Content_Creation_Process/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40lizzypalios_DdHMOB0xfd1_Content_Creation_Process/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdHMOB0xfd1.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdHMOB0xfd1_preview.mp4",
         "report_url": "reports/IG_@lizzypalios_DdHMOB0xfd1_Content_Creation_Process.html",
         "shots_count": 21,
         "duration": "27.9s",
@@ -13608,9 +13309,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC",
@@ -13664,7 +13363,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcJM7AWOa__.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcJM7AWOa__preview.mp4",
         "report_url": "reports/Soundtrack%20of%20Newest%20Cafe%20NYC%20-%20%40tattebakery.html",
         "shots_count": 14,
         "duration": "28s",
@@ -13677,9 +13376,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog",
@@ -13733,7 +13430,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/A%20Little%20Hong%20Kong%20A%20Lot%20Of%20Happiness%20-%20@saebomoh.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/A%20Little%20Hong%20Kong%20A%20Lot%20Of%20Happiness%20-%20@saebomoh_preview.mp4",
         "report_url": "reports/A Little Hong Kong A Lot Of Happiness - @saebomoh.html",
         "shots_count": 6,
         "duration": "16.33s",
@@ -13746,9 +13443,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion",
@@ -13802,7 +13497,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcxgmP1zZPk.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcxgmP1zZPk_preview.mp4",
         "report_url": "reports/IG_@kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion.html",
         "shots_count": 5,
         "duration": "11.9s",
@@ -13815,9 +13510,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist",
@@ -13871,7 +13564,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdBnto_O0He.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdBnto_O0He_preview.mp4",
         "report_url": "reports/IG_@korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist.html",
         "shots_count": 6,
         "duration": "20.33s",
@@ -13884,9 +13577,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@quinematic_DdH6HGNxEYT_Time_To_Go_For_A_Run",
@@ -13940,7 +13631,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40quinematic_DdH6HGNxEYT_Time_To_Go_For_A_Run/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40quinematic_DdH6HGNxEYT_Time_To_Go_For_A_Run/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Time%20To%20Go%20For%20A%20Run%20-%20@quinematic.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Time%20To%20Go%20For%20A%20Run%20-%20@quinematic_preview.mp4",
         "report_url": "reports/Time To Go For A Run - @quinematic.html",
         "shots_count": 16,
         "duration": "12.26s",
@@ -13953,9 +13644,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut",
@@ -14022,9 +13711,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit",
@@ -14078,7 +13765,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/How%20I%20Wake%20Up%20Skit%20-%20%40steven.vuu.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/How%20I%20Wake%20Up%20Skit%20-%20%40steven.vuu_preview.mp4",
         "report_url": "reports/IG_@steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit.html",
         "shots_count": 3,
         "duration": "20.03s",
@@ -14091,9 +13778,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@hsuan_yunn_DdLsL-cSekL_Outdoor_Fashion_Match_Cut_Gear_Showcase",
@@ -14147,7 +13832,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hsuan_yunn_DdLsL-cSekL_Outdoor_Fashion_Match_Cut_Gear_Showcase/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40hsuan_yunn_DdLsL-cSekL_Outdoor_Fashion_Match_Cut_Gear_Showcase/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdLsL-cSekL.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdLsL-cSekL_preview.mp4",
         "report_url": "reports/Outdoor Fashion Match Cut Gear Showcase - @hsuan_yunn.html",
         "shots_count": 7,
         "duration": "9.27s",
@@ -14160,9 +13845,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@steven.vuu_DdM7gO4yD-c_Meta_RayBan_Hero_Cosmetics_Skit",
@@ -14216,7 +13899,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40steven.vuu_DdM7gO4yD-c_Meta_RayBan_Hero_Cosmetics_Skit/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40steven.vuu_DdM7gO4yD-c_Meta_RayBan_Hero_Cosmetics_Skit/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdM7gO4yD-c.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdM7gO4yD-c_preview.mp4",
         "report_url": "reports/Meta Ray-Ban AI vs Tri Mun Hero Cosmetics Skit - @steven.vuu.html",
         "shots_count": 10,
         "duration": "24.20s",
@@ -14229,9 +13912,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel",
@@ -14285,7 +13966,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcvZ-FowD_A.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcvZ-FowD_A_preview.mp4",
         "report_url": "reports/Smooth Criminal Punch Transition Travel - @bysuncan.html",
         "shots_count": 6,
         "duration": "17.00s",
@@ -14298,9 +13979,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City",
@@ -14354,7 +14033,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdJaKjQCMTm.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdJaKjQCMTm_preview.mp4",
         "report_url": "reports/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City.html",
         "shots_count": 10,
         "duration": "16.21s",
@@ -14367,9 +14046,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "LAZADA_Ulanzi_UA20_Đèn_LED_Thanh_Bơm_Hơi_20W_Bi",
@@ -14443,9 +14120,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "SHOPEE_ULANZI_MT80_Chân_Máy_Tripod_Cao_213cm_Tả",
@@ -14519,9 +14194,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing",
@@ -14594,9 +14267,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant",
@@ -14668,9 +14339,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook",
@@ -14745,9 +14414,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency",
@@ -14821,9 +14488,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion",
@@ -14897,9 +14562,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@mako__go_DaH7X34NTNX_Palermo_Sicily",
@@ -14971,9 +14634,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon",
@@ -15033,7 +14694,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc-LDGRsCDN.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dc-LDGRsCDN_preview.mp4",
         "report_url": "reports/allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon_-_@allinbcoffee.html",
         "shots_count": 14,
         "duration": "14.43s",
@@ -15046,9 +14707,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine",
@@ -15108,7 +14767,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdEshZtz9Rb.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdEshZtz9Rb_preview.mp4",
         "report_url": "reports/Lifestyle Habit & Cinematic Routine - @joshdiazfilms.html",
         "shots_count": 9,
         "duration": "18.39s",
@@ -15121,9 +14780,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa",
@@ -15184,7 +14841,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdF-qr0s4Kk.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DdF-qr0s4Kk_preview.mp4",
         "report_url": "reports/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa.html",
         "shots_count": 20,
         "duration": "44.67s",
@@ -15197,9 +14854,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year",
@@ -15258,7 +14913,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Xay_Dung_Kho_B_Roll_Dung_1_Nam_-_@watch.gabe.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Xay_Dung_Kho_B_Roll_Dung_1_Nam_-_@watch.gabe_preview.mp4",
         "report_url": "reports/Xay_Dung_Kho_B_Roll_Dung_1_Nam_-_@watch.gabe.html",
         "shots_count": 7,
         "duration": "47.80s",
@@ -15271,9 +14926,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Gabe_Harris_Dc3ih_5jlqz_Carousel_Analysis",
@@ -15327,7 +14980,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Gabe_Harris_Dc3ih_5jlqz_Carousel_Analysis/slide_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Gabe_Harris_Dc3ih_5jlqz_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40Gabe_Harris_Dc3ih_5jlqz_Carousel_Analysis/slide_01.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/slide_01_preview.mp4",
         "report_url": "reports/IG_@Gabe_Harris_Dc3ih_5jlqz_Carousel_Analysis.html",
         "shots_count": 7,
         "duration": "14s",
@@ -15340,9 +14993,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions",
@@ -15415,9 +15066,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch",
@@ -15490,9 +15139,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light",
@@ -15564,9 +15211,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide",
@@ -15626,7 +15271,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcoPBXdDPro.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcoPBXdDPro_preview.mp4",
         "report_url": "reports/IG_@inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide.html",
         "shots_count": 7,
         "duration": "9.3s",
@@ -15639,9 +15284,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five",
@@ -15714,9 +15357,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01",
@@ -15776,7 +15417,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dca9-aWotLM.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dca9-aWotLM_preview.mp4",
         "report_url": "reports/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01.html",
         "shots_count": 17,
         "duration": "23.56s",
@@ -15789,9 +15430,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes",
@@ -15852,7 +15491,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZXpNj_IveV.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DZXpNj_IveV_preview.mp4",
         "report_url": "reports/IG_@alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes.html",
         "shots_count": 7,
         "duration": "28.32s",
@@ -15865,9 +15504,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro",
@@ -15928,7 +15565,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbVhTUiznEp.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DbVhTUiznEp_preview.mp4",
         "report_url": "reports/IG_@cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro.html",
         "shots_count": 10,
         "duration": "10.13s",
@@ -15941,9 +15578,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life",
@@ -16004,7 +15639,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbJcoLdssK6.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DbJcoLdssK6_preview.mp4",
         "report_url": "reports/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life.html",
         "shots_count": 18,
         "duration": "11.8s",
@@ -16017,9 +15652,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence",
@@ -16079,7 +15712,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc-6BFdi7bU.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dc-6BFdi7bU_preview.mp4",
         "report_url": "reports/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence.html",
         "shots_count": 10,
         "duration": "15.12s",
@@ -16092,9 +15725,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@etaemin_DcgN1bsKUmi_Transition_Into_Running_Mode",
@@ -16156,7 +15787,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DcgN1bsKUmi_Transition_Into_Running_Mode/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DcgN1bsKUmi_Transition_Into_Running_Mode/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcgN1bsKUmi.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcgN1bsKUmi_preview.mp4",
         "report_url": "reports/IG_@etaemin_DcgN1bsKUmi_Transition_Into_Running_Mode.html",
         "shots_count": 9,
         "duration": "12.28s",
@@ -16169,9 +15800,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever",
@@ -16248,9 +15877,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds",
@@ -16311,7 +15938,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbILcfyxZot.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DbILcfyxZot_preview.mp4",
         "report_url": "reports/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds.html",
         "shots_count": 9,
         "duration": "18s",
@@ -16324,9 +15951,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar",
@@ -16384,7 +16009,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db_EEZtjJBI.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Db_EEZtjJBI_preview.mp4",
         "report_url": "reports/IG_@wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar.html",
         "shots_count": 3,
         "duration": "6s",
@@ -16397,9 +16022,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story",
@@ -16457,7 +16080,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db5TrGYlKbD.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Db5TrGYlKbD_preview.mp4",
         "report_url": "reports/IG_@gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story.html",
         "shots_count": 3,
         "duration": "6s",
@@ -16470,9 +16093,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@neolumo.uralsk_DcOUP2PsMsP_Medical_Commercial_Authority",
@@ -16530,7 +16151,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40neolumo.uralsk_DcOUP2PsMsP_Medical_Commercial_Authority/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40neolumo.uralsk_DcOUP2PsMsP_Medical_Commercial_Authority/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcOUP2PsMsP.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcOUP2PsMsP_preview.mp4",
         "report_url": "reports/IG_@neolumo.uralsk_DcOUP2PsMsP_Medical_Commercial_Authority.html",
         "shots_count": 16,
         "duration": "32s",
@@ -16543,9 +16164,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling",
@@ -16603,7 +16222,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbgtGKjNcH9.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DbgtGKjNcH9_preview.mp4",
         "report_url": "reports/IG_@jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling.html",
         "shots_count": 28,
         "duration": "56s",
@@ -16616,9 +16235,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog",
@@ -16673,7 +16290,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcVzQCSP1MR.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcVzQCSP1MR_preview.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog.html",
         "shots_count": 14,
         "duration": "28s",
@@ -16686,9 +16303,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro",
@@ -16746,7 +16361,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcJIT4DzPhj.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcJIT4DzPhj_preview.mp4",
         "report_url": "reports/IG_@jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro.html",
         "shots_count": 4,
         "duration": "8s",
@@ -16759,9 +16374,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery",
@@ -16819,7 +16432,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcbJDDNi7h8.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcbJDDNi7h8_preview.mp4",
         "report_url": "reports/IG_@srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery.html",
         "shots_count": 14,
         "duration": "28s",
@@ -16832,9 +16445,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery",
@@ -16892,7 +16503,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db7_3rpgK5c.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Db7_3rpgK5c_preview.mp4",
         "report_url": "reports/IG_@withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery.html",
         "shots_count": 8,
         "duration": "16s",
@@ -16905,9 +16516,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity",
@@ -16965,7 +16574,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcYxC8wvt1z.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcYxC8wvt1z_preview.mp4",
         "report_url": "reports/IG_@bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity.html",
         "shots_count": 11,
         "duration": "22s",
@@ -16978,9 +16587,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial",
@@ -17039,7 +16646,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcWEp8-swbB.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcWEp8-swbB_preview.mp4",
         "report_url": "reports/IG_@onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial.html",
         "shots_count": 3,
         "duration": "6s",
@@ -17052,9 +16659,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession",
@@ -17115,7 +16720,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcTbD0MR-V_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcTbD0MR-V_preview.mp4",
         "report_url": "reports/IG_@brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession.html",
         "shots_count": 18,
         "duration": "36s",
@@ -17128,9 +16733,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective",
@@ -17188,7 +16791,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcD30ThT7Zm.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcD30ThT7Zm_preview.mp4",
         "report_url": "reports/IG_@photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective.html",
         "shots_count": 4,
         "duration": "8s",
@@ -17201,9 +16804,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@nana_icroom_Db-jmp6TXNT_5_Japanese_Vlog_Compositions",
@@ -17261,7 +16862,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40nana_icroom_Db-jmp6TXNT_5_Japanese_Vlog_Compositions/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40nana_icroom_Db-jmp6TXNT_5_Japanese_Vlog_Compositions/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db-jmp6TXNT.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Db-jmp6TXNT_preview.mp4",
         "report_url": "reports/IG_@nana_icroom_Db-jmp6TXNT_5_Japanese_Vlog_Compositions.html",
         "shots_count": 20,
         "duration": "40s",
@@ -17274,9 +16875,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery",
@@ -17334,7 +16933,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZWRDtqMNWq.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DZWRDtqMNWq_preview.mp4",
         "report_url": "reports/IG_@lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery.html",
         "shots_count": 14,
         "duration": "28s",
@@ -17347,9 +16946,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@pascal_blaurock_Dcd2VeyNJQx_iPhone_Cinema_Settings_Mastery",
@@ -17407,7 +17004,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40pascal_blaurock_Dcd2VeyNJQx_iPhone_Cinema_Settings_Mastery/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40pascal_blaurock_Dcd2VeyNJQx_iPhone_Cinema_Settings_Mastery/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dcd2VeyNJQx.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dcd2VeyNJQx_preview.mp4",
         "report_url": "reports/IG_@pascal_blaurock_Dcd2VeyNJQx_iPhone_Cinema_Settings_Mastery.html",
         "shots_count": 24,
         "duration": "48s",
@@ -17420,9 +17017,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@kortafilms_DcdthwaTM3J_Camera_Angles_Mastery",
@@ -17480,7 +17075,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40kortafilms_DcdthwaTM3J_Camera_Angles_Mastery/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40kortafilms_DcdthwaTM3J_Camera_Angles_Mastery/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcdthwaTM3J.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcdthwaTM3J_preview.mp4",
         "report_url": "reports/IG_@kortafilms_DcdthwaTM3J_Camera_Angles_Mastery.html",
         "shots_count": 8,
         "duration": "16s",
@@ -17493,9 +17088,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow",
@@ -17553,7 +17146,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DY_0KNxvNJa.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DY_0KNxvNJa_preview.mp4",
         "report_url": "reports/5 Góc Quay Mở Hộp Unboxing Điện Ảnh - @hena_film_vlog.html",
         "shots_count": 26,
         "duration": "52s",
@@ -17566,9 +17159,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery",
@@ -17629,7 +17220,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc0tEcOIdwy.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dc0tEcOIdwy_preview.mp4",
         "report_url": "reports/4 Cuts Mastery - @mridupawasharma.html",
         "shots_count": 24,
         "duration": "48s",
@@ -17642,9 +17233,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining",
@@ -17702,7 +17291,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Artisanal%20Woodfire%20Dining%20-%20@firewood_klcc.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Artisanal%20Woodfire%20Dining%20-%20@firewood_klcc_preview.mp4",
         "report_url": "reports/Artisanal Woodfire Dining - @firewood_klcc.html",
         "shots_count": 23,
         "duration": "46s",
@@ -17715,9 +17304,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light",
@@ -17772,7 +17359,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/NYC_Morning_Light%20-%20%40the.vantage.point.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/NYC_Morning_Light%20-%20%40the.vantage.point_preview.mp4",
         "report_url": "reports/IG_@the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light.html",
         "shots_count": 9,
         "duration": "18s",
@@ -17785,9 +17372,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "Practice_Cinematic_Chay_0904_@vietmac",
@@ -17842,7 +17427,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_Chay_0904_%40vietmac/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/Practice_Cinematic_Chay_0904_%40vietmac/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Practice_Cinematic_Chay_0904_@vietmac.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Practice_Cinematic_Chay_0904_@vietmac_preview.mp4",
         "report_url": "reports/Practice_Cinematic_Chay_0904 - @vietmac.html",
         "shots_count": 27,
         "duration": "54s",
@@ -17855,9 +17440,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": true,
-      "is_excluded": true,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": true
     },
     {
       "id": "Practice_Cinematic_Chay_0903_2_@vietmac",
@@ -17912,7 +17495,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_Chay_0903_2_%40vietmac/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/Practice_Cinematic_Chay_0903_2_%40vietmac/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Practice_Cinematic_Chay_0903_2_@vietmac.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Practice_Cinematic_Chay_0903_2_@vietmac_preview.mp4",
         "report_url": "reports/Practice_Cinematic_Chay_0903_2 - @vietmac.html",
         "shots_count": 14,
         "duration": "28s",
@@ -17925,9 +17508,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": true,
-      "is_excluded": true,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": true
     },
     {
       "id": "IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear",
@@ -17985,7 +17566,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc0zzrWj8Vu.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dc0zzrWj8Vu_preview.mp4",
         "report_url": "reports/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear.html",
         "shots_count": 7,
         "duration": "14s",
@@ -17998,9 +17579,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jsnhow_Dcz7nniBEFe_Unwinding",
@@ -18055,7 +17634,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40jsnhow_Dcz7nniBEFe_Unwinding/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40jsnhow_Dcz7nniBEFe_Unwinding/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dcz7nniBEFe.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dcz7nniBEFe_preview.mp4",
         "report_url": "reports/Unwinding - @jsnhow.html",
         "shots_count": 14,
         "duration": "28s",
@@ -18068,9 +17647,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "FB_@AnhSacAnh_1964049564715249_Thuong_Hieu_Ca_Nhan_Sinh_Loi",
@@ -18141,9 +17718,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@sajad_machu_DcBjIwPMMfa_Creative_Block_Loop",
@@ -18201,7 +17776,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40sajad_machu_DcBjIwPMMfa_Creative_Block_Loop/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40sajad_machu_DcBjIwPMMfa_Creative_Block_Loop/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcBjIwPMMfa.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcBjIwPMMfa_preview.mp4",
         "report_url": "reports/Creative Block Loop - @sajad_machu.html",
         "shots_count": 14,
         "duration": "28s",
@@ -18214,9 +17789,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@slaohuairen_DcLblxOy3tN_A_young_girl_in_linen",
@@ -18274,7 +17847,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40slaohuairen_DcLblxOy3tN_A_young_girl_in_linen/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40slaohuairen_DcLblxOy3tN_A_young_girl_in_linen/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcLblxOy3tN.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcLblxOy3tN_preview.mp4",
         "report_url": "reports/IG_@slaohuairen_DcLblxOy3tN_A_young_girl_in_linen.html",
         "shots_count": 13,
         "duration": "26s",
@@ -18287,9 +17860,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@gakuyen_Dc0MQfeEwp4_Carousel_Analysis",
@@ -18347,7 +17918,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40gakuyen_Dc0MQfeEwp4_Carousel_Analysis/slide_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40gakuyen_Dc0MQfeEwp4_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/How_to_Sound_Design_SFX_-_@gakuyen.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/How_to_Sound_Design_SFX_-_@gakuyen_preview.mp4",
         "report_url": "reports/IG_@gakuyen_Dc0MQfeEwp4_Carousel_Analysis.html",
         "shots_count": 10,
         "duration": "20s",
@@ -18360,9 +17931,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai",
@@ -18417,7 +17986,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Split%20City%20Shanghai%20-%20%40kyung6film.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Split%20City%20Shanghai%20-%20%40kyung6film_preview.mp4",
         "report_url": "reports/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai.html",
         "shots_count": 5,
         "duration": "10s",
@@ -18430,9 +17999,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp",
@@ -18487,7 +18054,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dcvxba1OvrD.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dcvxba1OvrD_preview.mp4",
         "report_url": "reports/Koti Sunset Ambient Lamp - @by.bennnj.html",
         "shots_count": 10,
         "duration": "20s",
@@ -18500,9 +18067,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@岳_🍜_GAKU_Dc0MHhTE9z0_Carousel_Analysis",
@@ -18556,7 +18121,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%E5%B2%B3_%F0%9F%8D%9C_GAKU_Dc0MHhTE9z0_Carousel_Analysis/slide_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40%E5%B2%B3_%F0%9F%8D%9C_GAKU_Dc0MHhTE9z0_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40%E5%B2%B3_%F0%9F%8D%9C_GAKU_Dc0MHhTE9z0_Carousel_Analysis/slide_01.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/slide_01_preview.mp4",
         "report_url": "reports/IG_@岳_🍜_GAKU_Dc0MHhTE9z0_Carousel_Analysis.html",
         "shots_count": 10,
         "duration": "20s",
@@ -18569,9 +18134,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "Practice_Cinematic_Chay_0903_@vietmac",
@@ -18626,7 +18189,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_Chay_0903_%40vietmac/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/Practice_Cinematic_Chay_0903_%40vietmac/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/practice_cinematic_chay_0903.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/practice_cinematic_chay_0903_preview.mp4",
         "report_url": "reports/Practice_Cinematic_Chay_0903 - @vietmac.html",
         "shots_count": 8,
         "duration": "16s",
@@ -18639,9 +18202,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": true,
-      "is_excluded": true,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": true
     },
     {
       "id": "IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together",
@@ -18699,7 +18260,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dctj7NfNimM.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dctj7NfNimM_preview.mp4",
         "report_url": "reports/Life Feel Put Together - @joshdiazfilms.html",
         "shots_count": 18,
         "duration": "36s",
@@ -18712,9 +18273,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@joshdiazfilms_DceDPc2yVm0_Worst_Person_To_Text",
@@ -18772,7 +18331,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40joshdiazfilms_DceDPc2yVm0_Worst_Person_To_Text/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40joshdiazfilms_DceDPc2yVm0_Worst_Person_To_Text/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DceDPc2yVm0.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DceDPc2yVm0_preview.mp4",
         "report_url": "reports/Worst Person to Text - @joshdiazfilms.html",
         "shots_count": 11,
         "duration": "22s",
@@ -18785,9 +18344,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@joshdiazfilms_DcJjGy1tG7d_DJI_Drone_Unboxing",
@@ -18845,7 +18402,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40joshdiazfilms_DcJjGy1tG7d_DJI_Drone_Unboxing/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40joshdiazfilms_DcJjGy1tG7d_DJI_Drone_Unboxing/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcJjGy1tG7d.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcJjGy1tG7d_preview.mp4",
         "report_url": "reports/DJI Drone Unboxing - @joshdiazfilms.html",
         "shots_count": 7,
         "duration": "14s",
@@ -18858,9 +18415,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@joshdiazfilms_Db1hf_vO67m_Simple_Life_Routine",
@@ -18918,7 +18473,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40joshdiazfilms_Db1hf_vO67m_Simple_Life_Routine/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40joshdiazfilms_Db1hf_vO67m_Simple_Life_Routine/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db1hf_vO67m.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Db1hf_vO67m_preview.mp4",
         "report_url": "reports/Simple Life Dinner Routine - @joshdiazfilms.html",
         "shots_count": 14,
         "duration": "28s",
@@ -18931,9 +18486,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@joshdiazfilms_Dbow9xKOCje_Falling_Behind_Mindset",
@@ -18991,7 +18544,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40joshdiazfilms_Dbow9xKOCje_Falling_Behind_Mindset/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40joshdiazfilms_Dbow9xKOCje_Falling_Behind_Mindset/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dbow9xKOCje.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dbow9xKOCje_preview.mp4",
         "report_url": "reports/Falling Behind Mindset - @joshdiazfilms.html",
         "shots_count": 14,
         "duration": "28s",
@@ -19004,9 +18557,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula",
@@ -19067,7 +18618,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcqzVfno5Al.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcqzVfno5Al_preview.mp4",
         "report_url": "reports/Travel Sequence Formula - @omgadrian.html",
         "shots_count": 11,
         "duration": "22s",
@@ -19080,9 +18631,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@mridupawasharma_DF2sOsNyNlY_3_Hooks_Mastery",
@@ -19140,7 +18689,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DF2sOsNyNlY_3_Hooks_Mastery/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DF2sOsNyNlY_3_Hooks_Mastery/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DF2sOsNyNlY.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DF2sOsNyNlY_preview.mp4",
         "report_url": "reports/3 Hooks Mastery - @mridupawasharma.html",
         "shots_count": 8,
         "duration": "16s",
@@ -19153,9 +18702,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis",
@@ -19223,9 +18770,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video",
@@ -19280,7 +18825,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcJDJjVJGy6.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcJDJjVJGy6_preview.mp4",
         "report_url": "reports/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video.html",
         "shots_count": 14,
         "duration": "30s",
@@ -19293,9 +18838,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots",
@@ -19353,7 +18896,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/7%20Shots%20For%20Your%20Next%20Kitchen%20Film%20-%20%40thomasmathewt2.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/7%20Shots%20For%20Your%20Next%20Kitchen%20Film%20-%20%40thomasmathewt2_preview.mp4",
         "report_url": "reports/7%20Shots%20For%20Your%20Next%20Kitchen%20Film%20-%20%40thomasmathewt2.html",
         "shots_count": 8,
         "duration": "16s",
@@ -19366,9 +18909,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing",
@@ -19426,7 +18967,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Cinematic%20Unboxing%20Mastery%20-%20%40yegor.sky.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Cinematic%20Unboxing%20Mastery%20-%20%40yegor.sky_preview.mp4",
         "report_url": "reports/Cinematic Unboxing Mastery - @yegor.sky.html",
         "shots_count": 10,
         "duration": "15.00s",
@@ -19439,9 +18980,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄_DcgSonjgnkV_Carousel_Analysis",
@@ -19508,9 +19047,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@rubyscafe_Db-ylimPqMu_Summer_in_the_Village",
@@ -19568,7 +19105,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40rubyscafe_Db-ylimPqMu_Summer_in_the_Village/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40rubyscafe_Db-ylimPqMu_Summer_in_the_Village/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Summer%20in%20the%20Village%20-%20%40rubyscafe.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Summer%20in%20the%20Village%20-%20%40rubyscafe_preview.mp4",
         "report_url": "reports/Summer in the Village - @rubyscafe.html",
         "shots_count": 14,
         "duration": "16.32s",
@@ -19581,9 +19118,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@mridupawasharma_DWD7Lv4E8N8_SanDisk_Creator_SSD",
@@ -19641,7 +19176,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DWD7Lv4E8N8_SanDisk_Creator_SSD/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DWD7Lv4E8N8_SanDisk_Creator_SSD/shot_17_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/SanDisk%20Creator%20Phone%20SSD%20-%20%40mridupawasharma.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/SanDisk%20Creator%20Phone%20SSD%20-%20%40mridupawasharma_preview.mp4",
         "report_url": "reports/SanDisk Creator Phone SSD - @mridupawasharma.html",
         "shots_count": 34,
         "duration": "68s",
@@ -19654,9 +19189,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC",
@@ -19711,7 +19244,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Summer%20in%20New%20York%20City%20-%20@ethanbarber.co.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Summer%20in%20New%20York%20City%20-%20@ethanbarber.co_preview.mp4",
         "report_url": "reports/Summer in New York City - @ethanbarber.co.html",
         "shots_count": 26,
         "duration": "52s",
@@ -19724,9 +19257,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "BROLL_PLAN_20260827_TimesCity_Basketball",
@@ -19794,13 +19325,11 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": true,
-      "is_excluded": true,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": true
     },
     {
       "id": "IG_@Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast",
-      "shortcode": "xnAU8Pazc6A",
+      "shortcode": "IG_@Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast",
       "title_vi": "Phân Tích Đạo Diễn: Joe Rogan & Elon Musk Podcast | Master Breakdown",
       "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 0 phân cảnh.",
       "key_tech": "Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide",
@@ -19851,7 +19380,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/xnAU8Pazc6A.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/xnAU8Pazc6A_preview.mp4",
         "report_url": "reports/IG_@Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast.html",
         "shots_count": 0,
         "duration": "15s",
@@ -19864,9 +19393,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London",
@@ -19921,7 +19448,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_02_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/The%20Art%20of%20Composition%20in%20London%20-%20@chowyhh.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/The%20Art%20of%20Composition%20in%20London%20-%20@chowyhh_preview.mp4",
         "report_url": "reports/The Art of Composition in London - @chowyhh.html",
         "shots_count": 5,
         "duration": "16.42s",
@@ -19934,9 +19461,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@valenti_k41_DcL1W34I6lz_DJI_Mic_3_ASMR",
@@ -19997,7 +19522,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40valenti_k41_DcL1W34I6lz_DJI_Mic_3_ASMR/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40valenti_k41_DcL1W34I6lz_DJI_Mic_3_ASMR/shot_06_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DJI%20Mic%203%20ASMR%20Cinematic%20-%20@valenti_k41.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DJI%20Mic%203%20ASMR%20Cinematic%20-%20@valenti_k41_preview.mp4",
         "report_url": "reports/DJI Mic 3 ASMR Cinematic - @valenti_k41.html",
         "shots_count": 14,
         "duration": "28s",
@@ -20010,9 +19535,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "Practice_Cinematic_2508_@vietmac",
@@ -20067,7 +19590,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_2508_%40vietmac/shot_04_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/Practice_Cinematic_2508_%40vietmac/shot_01_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/practice_cinematic_2508.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/practice_cinematic_2508_preview.mp4",
         "report_url": "reports/Practice_Cinematic_2508 - @vietmac.html",
         "shots_count": 19,
         "duration": "38s",
@@ -20080,9 +19603,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": true,
-      "is_excluded": true,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": true
     },
     {
       "id": "Practice_Cinematic_01_@vietmac",
@@ -20137,7 +19658,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_01_%40vietmac/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/Practice_Cinematic_01_%40vietmac/shot_12_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/practice_cinematic_01.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/practice_cinematic_01_preview.mp4",
         "report_url": "reports/Practice_Cinematic_01 - @vietmac.html",
         "shots_count": 25,
         "duration": "50s",
@@ -20150,9 +19671,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": true,
-      "is_excluded": true,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": true
     },
     {
       "id": "IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture",
@@ -20210,7 +19729,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcOQSCMqho0.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DcOQSCMqho0_preview.mp4",
         "report_url": "reports/Personal Cinema - @arturbr.html",
         "shots_count": 18,
         "duration": "20.00s",
@@ -20223,9 +19742,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "Bao_Cao_Boi_Canh_Thuc_Chien_R2",
@@ -20296,9 +19813,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "Chay_Bo_Times_City_Self_Practice",
@@ -20366,9 +19881,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": true,
-      "is_excluded": true,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": true
     },
     {
       "id": "Visual_Storytelling_Carousel_@withyuee",
@@ -20436,9 +19949,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "Hong_Kong_Urban_Transitions_@withyuee",
@@ -20497,7 +20008,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Hong_Kong_Urban_Transitions_-_%40withyuee/img_001_f338d92e.jpg",
         "thumb_key": "https://media.fedu.vn/images/Hong_Kong_Urban_Transitions_-_%40withyuee/img_003_5bd4e9f3.jpg",
-        "video_url": "https://media.fedu.vn/videos/Hong_Kong_Urban_Transitions%20-%20%40withyuee.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Hong_Kong_Urban_Transitions%20-%20%40withyuee_preview.mp4",
         "report_url": "reports/Hong_Kong_Urban_Transitions - @withyuee.html",
         "shots_count": 21,
         "duration": "42s",
@@ -20510,9 +20021,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "Hong_Kong_Cinematography_Guide_@withyuee",
@@ -20567,7 +20076,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Hong_Kong_Cinematography_Guide_-_%40withyuee/img_001_4c61efb5.jpg",
         "thumb_key": "https://media.fedu.vn/images/Hong_Kong_Cinematography_Guide_-_%40withyuee/img_003_469ee782.jpg",
-        "video_url": "https://media.fedu.vn/videos/Hong_Kong_Cinematography_Guide%20-%20%40withyuee.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Hong_Kong_Cinematography_Guide%20-%20%40withyuee_preview.mp4",
         "report_url": "reports/Hong_Kong_Cinematography_Guide - @withyuee.html",
         "shots_count": 28,
         "duration": "56s",
@@ -20580,9 +20089,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "Hong_Kong_Bamboo_Scaffolding_@withyuee",
@@ -20640,7 +20147,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_001_84d02fa0.jpg",
         "thumb_key": "https://media.fedu.vn/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_003_02cc6fea.jpg",
-        "video_url": "https://media.fedu.vn/videos/Hong_Kong_Bamboo_Scaffolding%20-%20%40withyuee.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Hong_Kong_Bamboo_Scaffolding%20-%20%40withyuee_preview.mp4",
         "report_url": "reports/Hong_Kong_Bamboo_Scaffolding - @withyuee.html",
         "shots_count": 16,
         "duration": "32s",
@@ -20653,9 +20160,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong",
@@ -20713,7 +20218,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/TikTok_%40thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_start.jpg",
         "thumb_key": "https://media.fedu.vn/images/TikTok_%40thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_end.jpg",
-        "video_url": "https://media.fedu.vn/videos/Mua%20Sua%20Do%20Hai%20Duong%20-%20%40thodiahaiduongne.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Mua%20Sua%20Do%20Hai%20Duong%20-%20%40thodiahaiduongne_preview.mp4",
         "report_url": "reports/Mua Sua Do Hai Duong - @thodiahaiduongne.html",
         "shots_count": 15,
         "duration": "30s",
@@ -20726,9 +20231,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@tinanguyen2004_7673468312290037012_Double_Day_luon_la_dip_de_khach_hang_lua_duoc",
@@ -20788,7 +20291,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40tinanguyen2004_7673468312290037012_Double_Day_lu%C3%B4n_l%C3%A0_d%E1%BB%8Bp_%C4%91%E1%BB%83_kh%C3%A1ch_h%C3%A0ng_l%E1%BB%B1a_%C4%91%C6%B0%E1%BB%A3c/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40tinanguyen2004_7673468312290037012_Double_Day_lu%C3%B4n_l%C3%A0_d%E1%BB%8Bp_%C4%91%E1%BB%83_kh%C3%A1ch_h%C3%A0ng_l%E1%BB%B1a_%C4%91%C6%B0%E1%BB%A3c/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/7673468312290037012.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/7673468312290037012_preview.mp4",
         "report_url": "reports/IG_@tinanguyen2004_7673468312290037012_Double_Day_luôn_là_dịp_để_khách_hàng_lựa_được.html",
         "shots_count": 14,
         "duration": "28s",
@@ -20801,9 +20304,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@colecoppolino_DcJiRCrTlG1",
@@ -20874,9 +20375,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@withyuee_DcTk0RGgtBO_Hong_Kong_Cinematic_Cityscape",
@@ -20944,9 +20443,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments",
@@ -21014,9 +20511,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@willwfit_DbRak0lsesY_The_Goal_Is_Simple",
@@ -21087,9 +20582,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@ioana_iftode_DcYQVYJjHa-_Tokyo_Slow_Life_Visual_Diaries",
@@ -21157,9 +20650,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine",
@@ -21230,9 +20721,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva",
@@ -21303,9 +20792,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@madisonkjan_Da7V4egSQxv_Vietnam_Travel_Cinematic",
@@ -21360,7 +20847,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40madisonkjan_Da7V4egSQxv_Vietnam_Travel_Cinematic/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40madisonkjan_Da7V4egSQxv_Vietnam_Travel_Cinematic/shot_02_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/The_Next_Station_Is_Vietnam%20-%20%40madisonkjan.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/The_Next_Station_Is_Vietnam - @madisonkjan_preview.mp4",
         "report_url": "reports/The_Next_Station_Is_Vietnam - @madisonkjan.html",
         "shots_count": 1,
         "duration": "2s",
@@ -21373,9 +20860,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "FB_@KopDinh_1398467868829887_Lat_Cat_Cam_Xuc_Kop_Dinh",
@@ -21430,7 +20915,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Lat_Cat_Cam_Xuc_-_%40KopDinh/img_001_63c5522e.jpg",
         "thumb_key": "https://media.fedu.vn/images/Lat_Cat_Cam_Xuc_-_%40KopDinh/img_003_b0b34390.jpg",
-        "video_url": "https://media.fedu.vn/videos/Lat_Cat_Cam_Xuc%20-%20%40KopDinh.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Lat_Cat_Cam_Xuc%20-%20%40KopDinh_preview.mp4",
         "report_url": "reports/Lat_Cat_Cam_Xuc - @KopDinh.html",
         "shots_count": 3,
         "duration": "6s",
@@ -21443,9 +20928,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@withyuee_DUqQaPbkfcQ_Chinese_New_Year_Hong_Kong",
@@ -21500,7 +20983,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_001_cbc24138.jpg",
         "thumb_key": "https://media.fedu.vn/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_003_bafbc8e0.jpg",
-        "video_url": "https://media.fedu.vn/videos/Chinese_New_Year_Hong_Kong%20-%20%40withyuee.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Chinese_New_Year_Hong_Kong%20-%20%40withyuee_preview.mp4",
         "report_url": "reports/Chinese_New_Year_Hong_Kong - @withyuee.html",
         "shots_count": 1,
         "duration": "2s",
@@ -21513,9 +20996,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@withyuee_DO8arRxEZvh_Hong_Kong_Visual_Rhythm_Carousel",
@@ -21570,7 +21051,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/extracted_shots/slide_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/extracted_shots/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/slide_01_DO8aI3uker6.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/slide_01_DO8aI3uker6_preview.mp4",
         "report_url": "reports/Hong_Kong_Visual_Rhythm_Carousel - @withyuee.html",
         "shots_count": 8,
         "duration": "16s",
@@ -21583,9 +21064,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@withyuee_DVQ3Gh6Efk1_Spring_in_Hong_Kong",
@@ -21640,7 +21119,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Spring_in_Hong_Kong_-_%40withyuee/img_001_bac7352a.jpg",
         "thumb_key": "https://media.fedu.vn/images/Spring_in_Hong_Kong_-_%40withyuee/img_003_1d27bf11.jpg",
-        "video_url": "https://media.fedu.vn/videos/Spring_in_Hong_Kong%20-%20%40withyuee.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Spring_in_Hong_Kong%20-%20%40withyuee_preview.mp4",
         "report_url": "reports/Spring_in_Hong_Kong - @withyuee.html",
         "shots_count": 1,
         "duration": "2s",
@@ -21653,9 +21132,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@samuelaitken__Da0eP_msVrm_Aesthetic_Routine",
@@ -21713,7 +21190,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_001_b0c92ce2.jpg",
         "thumb_key": "https://media.fedu.vn/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_003_450cd1cb.jpg",
-        "video_url": "https://media.fedu.vn/videos/Aesthetic_Routine_Fitness%20-%20%40samuelaitken_.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Aesthetic_Routine_Fitness%20-%20%40samuelaitken_preview.mp4",
         "report_url": "reports/Aesthetic_Routine_Fitness - @samuelaitken_.html",
         "shots_count": 19,
         "duration": "38s",
@@ -21726,9 +21203,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@by.bennnj_DbKauxkoJU_",
@@ -21796,9 +21271,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@by.bennnj_DbKauxkoJU_Making_beginner_cameras_look_cinematic",
@@ -21854,7 +21327,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Making_Beginner_Cameras_Look_Cinematic_-_%40by.bennnj/img_001_7dd798e3.jpg",
         "thumb_key": "https://media.fedu.vn/images/Making_Beginner_Cameras_Look_Cinematic_-_%40by.bennnj/img_003_0f92bae8.jpg",
-        "video_url": "https://media.fedu.vn/videos/Making_Beginner_Cameras_Look_Cinematic%20-%20%40by.bennnj.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Making_Beginner_Cameras_Look_Cinematic%20-%20%40by.bennnj_preview.mp4",
         "report_url": "reports/Making_Beginner_Cameras_Look_Cinematic - @by.bennnj.html",
         "shots_count": 36,
         "duration": "50s",
@@ -21867,9 +21340,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jazziesillona_DXUG_1TjwJu_Carousel_Analysis",
@@ -21930,7 +21401,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Visual_Stopping_Power_Carousel_-_%40jazziesillona/img_001_3ed9942d.jpg",
         "thumb_key": "https://media.fedu.vn/images/Visual_Stopping_Power_Carousel_-_%40jazziesillona/img_003_8c9d0578.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/slide_01.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/slide_01_preview.mp4",
         "report_url": "reports/Visual_Stopping_Power_Carousel - @jazziesillona.html",
         "shots_count": 6,
         "duration": "12s",
@@ -21943,9 +21414,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jazziesillona_DW8lBR9Dzop_Carousel_Analysis",
@@ -22000,7 +21469,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg",
         "thumb_key": "https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/slide_01.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/slide_01_preview.mp4",
         "report_url": "reports/Street_Photography_Carousel - @jazziesillona.html",
         "shots_count": 8,
         "duration": "16s",
@@ -22013,9 +21482,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Jazzie_DWnsVqWj2XN_Carousel_Analysis",
@@ -22070,7 +21537,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/carousel_slides/slide_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/carousel_slides/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/slide_01.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/slide_01_preview.mp4",
         "report_url": "reports/Everyday_Filming_Logic_Carousel - @jazziesillona.html",
         "shots_count": 7,
         "duration": "48s",
@@ -22083,9 +21550,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jazziesillona_DWrDUymD4_a_Carousel_Analysis",
@@ -22140,7 +21605,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.jpg",
         "thumb_key": "https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_011_b22e8cde.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/slide_01_DWrDQgoj7Uw.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/slide_01_DWrDQgoj7Uw_preview.mp4",
         "report_url": "reports/Mood_and_Tone_Carousel - @jazziesillona.html",
         "shots_count": 8,
         "duration": "16s",
@@ -22153,9 +21618,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Jakarta_Videographer_Jacoub_Anwar_DbnwnkrAVQ9_Carousel_Analysis",
@@ -22213,7 +21676,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Quy_Tac_Quay_Phim_Carousel_-_%40Jacoub_Anwar/img_001_35384a7a.jpg",
         "thumb_key": "https://media.fedu.vn/images/Quy_Tac_Quay_Phim_Carousel_-_%40Jacoub_Anwar/img_003_db4b14ed.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/slide_01.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/slide_01_preview.mp4",
         "report_url": "reports/Quy_Tac_Quay_Phim_Carousel - @Jacoub_Anwar.html",
         "shots_count": 7,
         "duration": "14s",
@@ -22226,9 +21689,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Jazzie_DU2CTKzEqvl_Carousel_Analysis",
@@ -22286,7 +21747,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Urban_Texture_Carousel_-_%40jazziesillona/img_001_e012a6d8.jpg",
         "thumb_key": "https://media.fedu.vn/images/Urban_Texture_Carousel_-_%40jazziesillona/img_003_25d59c75.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/slide_01.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/slide_01_preview.mp4",
         "report_url": "reports/Urban_Texture_Carousel - @jazziesillona.html",
         "shots_count": 8,
         "duration": "16s",
@@ -22299,9 +21760,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jazziesillona_DbIA2jwPHCV",
@@ -22356,7 +21815,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Hong_Kong_Alleyways_Cinematic_-_%40jazziesillona/img_001_00ff8166.jpg",
         "thumb_key": "https://media.fedu.vn/images/Hong_Kong_Alleyways_Cinematic_-_%40jazziesillona/img_003_ef0401c7.jpg",
-        "video_url": "https://media.fedu.vn/videos/Hong_Kong_Alleyways_Cinematic%20-%20%40jazziesillona.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Hong_Kong_Alleyways_Cinematic%20-%20%40jazziesillona_preview.mp4",
         "report_url": "reports/Hong_Kong_Alleyways_Cinematic - @jazziesillona.html",
         "shots_count": 4,
         "duration": "8s",
@@ -22369,9 +21828,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "REMAKE_Byjxson_Quang_Cao_Dong_Ho_Bam_Gio",
@@ -22414,7 +21871,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_start.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_end.jpg",
-        "video_url": "https://media.fedu.vn/videos/Project%20100%20Day%2001%20-%20%40byjxson.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Project%20100%20Day%2001%20-%20%40byjxson_preview.mp4",
         "report_url": "reports/Quang_Cao_Dong_Ho_Bam_Gio_Byjxson.html",
         "shots_count": 15,
         "duration": "30s",
@@ -22427,9 +21884,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life",
@@ -22487,7 +21942,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/IG_@intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/IG_@intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life_preview.mp4",
         "report_url": "reports/IG_@intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life.html",
         "shots_count": 7,
         "duration": "14s",
@@ -22500,9 +21955,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis",
@@ -22557,7 +22010,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis/slide_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis/slide_01.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/slide_01_preview.mp4",
         "report_url": "reports/IG_@Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis.html",
         "shots_count": 0,
         "duration": "15s",
@@ -22570,9 +22023,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@local_creator_video_video",
@@ -22627,7 +22078,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40local_creator_video_video/img_001_64380ecb.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40local_creator_video_video/img_003_0fe2b694.jpg",
-        "video_url": "https://media.fedu.vn/videos/video.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/video_preview.mp4",
         "report_url": "reports/IG_@local_creator_video_video.html",
         "shots_count": 5,
         "duration": "10s",
@@ -22640,9 +22091,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": true,
-      "is_excluded": true,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": true
     },
     {
       "id": "IG_@local_creator_video_ig_video_ig",
@@ -22697,7 +22146,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40local_creator_video_ig_video_ig/img_001_3c289bad.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40local_creator_video_ig_video_ig/img_003_7c3a7180.jpg",
-        "video_url": "https://media.fedu.vn/videos/video_ig.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/video_ig_preview.mp4",
         "report_url": "reports/IG_@local_creator_video_ig_video_ig.html",
         "shots_count": 14,
         "duration": "28s",
@@ -22710,9 +22159,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": true,
-      "is_excluded": true,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": true
     },
     {
       "id": "IG_@ioana_iftode_DbqCYu4DAz2_Kyoto_Slow_Life_Visual_Diaries",
@@ -22767,7 +22214,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Kyoto_Slow_Life_Visual_Diaries_-_%40ioana_iftode/img_056_2c7f6609.jpg",
         "thumb_key": "https://media.fedu.vn/images/Kyoto_Slow_Life_Visual_Diaries_-_%40ioana_iftode/img_006_b84c134c.jpg",
-        "video_url": "https://media.fedu.vn/videos/Kyoto%20Slow%20Life%20Visual%20Diaries%20-%20%40ioana_iftode.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Kyoto%20Slow%20Life%20Visual%20Diaries%20-%20%40ioana_iftode_preview.mp4",
         "report_url": "reports/Kyoto Slow Life Visual Diaries - @ioana_iftode.html",
         "shots_count": 10,
         "duration": "20s",
@@ -22780,9 +22227,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01",
@@ -22843,7 +22288,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Project_100_Day_01_-_%40byjxson/img_002_311c68c6.jpg",
         "thumb_key": "https://media.fedu.vn/images/Project_100_Day_01_-_%40byjxson/img_006_b30f0d67.jpg",
-        "video_url": "https://media.fedu.vn/videos/Project%20100%20Day%2001%20-%20%40byjxson.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Project%20100%20Day%2001%20-%20%40byjxson_preview.mp4",
         "report_url": "reports/Project 100 Day 01 - @byjxson.html",
         "shots_count": 15,
         "duration": "30s",
@@ -22856,9 +22301,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@bryanhynes_DacaMHwzEm3_Visual_Sequence",
@@ -22916,7 +22359,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_080_ae283717.jpg",
         "thumb_key": "https://media.fedu.vn/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_082_406f7de9.jpg",
-        "video_url": "https://media.fedu.vn/videos/The%20Art%20of%20Visual%20Sequence%20-%20%40bryanhynes.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/The%20Art%20of%20Visual%20Sequence%20-%20%40bryanhynes_preview.mp4",
         "report_url": "reports/The Art of Visual Sequence - @bryanhynes.html",
         "shots_count": 20,
         "duration": "50s",
@@ -22929,9 +22372,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@kenshoji.visuals_DZOzwweTc5a_The_Art_of_Static_Shot",
@@ -22989,7 +22430,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/The_Art_of_Static_Shot_-_%40kenshoji.visuals/img_002_66f52422.jpg",
         "thumb_key": "https://media.fedu.vn/images/The_Art_of_Static_Shot_-_%40kenshoji.visuals/img_006_6e867305.jpg",
-        "video_url": "https://media.fedu.vn/videos/The%20Art%20of%20Static%20Shot%20-%20%40kenshoji.visuals.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/The%20Art%20of%20Static%20Shot%20-%20%40kenshoji.visuals_preview.mp4",
         "report_url": "reports/The Art of Static Shot - @kenshoji.visuals.html",
         "shots_count": 11,
         "duration": "50s",
@@ -23002,9 +22443,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@minhmigoi_Db0Sn3zvuHP_The_Power_of_Composition",
@@ -23062,7 +22501,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/The_Power_of_Composition_-_%40minhmigoi/img_002_4ee0b6c4.jpg",
         "thumb_key": "https://media.fedu.vn/images/The_Power_of_Composition_-_%40minhmigoi/img_006_df195b94.jpg",
-        "video_url": "https://media.fedu.vn/videos/The%20Power%20of%20Composition%20-%20%40minhmigoi.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/The%20Power%20of%20Composition%20-%20%40minhmigoi_preview.mp4",
         "report_url": "reports/The Power of Composition - @minhmigoi.html",
         "shots_count": 15,
         "duration": "30s",
@@ -23075,9 +22514,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@mcjacoub_Db22SIxAVtJ_Camera_Angles_Mastery",
@@ -23135,7 +22572,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Camera_Angles_Mastery_-_%40mcjacoub/img_028_b372b147.jpg",
         "thumb_key": "https://media.fedu.vn/images/Camera_Angles_Mastery_-_%40mcjacoub/img_030_d98291c4.jpg",
-        "video_url": "https://media.fedu.vn/videos/Camera%20Angles%20Mastery%20-%20%40mcjacoub.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Camera%20Angles%20Mastery%20-%20%40mcjacoub_preview.mp4",
         "report_url": "reports/Camera Angles Mastery - @mcjacoub.html",
         "shots_count": 7,
         "duration": "50s",
@@ -23148,9 +22585,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@qfroost_DXWKIztktTN_Saigon_Vietnam",
@@ -23208,7 +22643,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Saigon%2C_Vietnam_-_%40qfroost/img_002_d655a123.jpg",
         "thumb_key": "https://media.fedu.vn/images/Saigon%2C_Vietnam_-_%40qfroost/img_006_43d6f3a5.jpg",
-        "video_url": "https://media.fedu.vn/videos/Saigon%2C%20Vietnam%20-%20%40qfroost.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Saigon%2C%20Vietnam%20-%20%40qfroost_preview.mp4",
         "report_url": "reports/Saigon, Vietnam - @qfroost.html",
         "shots_count": 21,
         "duration": "42s",
@@ -23221,9 +22656,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
@@ -23284,7 +22717,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Ray-Ban_Meta_System_-_%40qfroost/img_002_7fa52771.jpg",
         "thumb_key": "https://media.fedu.vn/images/Ray-Ban_Meta_System_-_%40qfroost/img_006_c802aff9.jpg",
-        "video_url": "https://media.fedu.vn/videos/Ray-Ban%20Meta%20System%20-%20%40qfroost.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Ray-Ban%20Meta%20System%20-%20%40qfroost_preview.mp4",
         "report_url": "reports/Ray-Ban Meta System - @qfroost.html",
         "shots_count": 23,
         "duration": "46s",
@@ -23297,9 +22730,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow",
@@ -23357,7 +22788,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Quy_Trinh_Sang_Tao_Adobe_Firefly_-_%40qfroost/img_002_8f1351ef.jpg",
         "thumb_key": "https://media.fedu.vn/images/Quy_Trinh_Sang_Tao_Adobe_Firefly_-_%40qfroost/img_006_6e9310da.jpg",
-        "video_url": "https://media.fedu.vn/videos/Quy_Trinh_Sang_Tao_Adobe_Firefly%20-%20%40qfroost.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Quy_Trinh_Sang_Tao_Adobe_Firefly%20-%20%40qfroost_preview.mp4",
         "report_url": "reports/Quy_Trinh_Sang_Tao_Adobe_Firefly - @qfroost.html",
         "shots_count": 25,
         "duration": "50s",
@@ -23370,9 +22801,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jeromememe_Db-zVchOXV7_People_of_Bhutan",
@@ -23430,7 +22859,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/People_of_Bhutan_-_%40jeromememe/img_002_c7376907.jpg",
         "thumb_key": "https://media.fedu.vn/images/People_of_Bhutan_-_%40jeromememe/img_006_f8001919.jpg",
-        "video_url": "https://media.fedu.vn/videos/People%20of%20Bhutan%20-%20%40jeromememe.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/People%20of%20Bhutan%20-%20%40jeromememe_preview.mp4",
         "report_url": "reports/People of Bhutan - @jeromememe.html",
         "shots_count": 17,
         "duration": "50s",
@@ -23443,9 +22872,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jeromememe_DQuEXMbj8fT_People_of_Porto",
@@ -23503,7 +22930,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/People_of_Porto_-_%40jeromememe/img_002_c7376907.jpg",
         "thumb_key": "https://media.fedu.vn/images/People_of_Porto_-_%40jeromememe/img_006_f8001919.jpg",
-        "video_url": "https://media.fedu.vn/videos/People_of_Porto%20-%20%40jeromememe.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/People_of_Porto%20-%20%40jeromememe_preview.mp4",
         "report_url": "reports/People_of_Porto - @jeromememe.html",
         "shots_count": 11,
         "duration": "50s",
@@ -23516,9 +22943,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jeromememe_DQmKgPDEWgJ_Artisans_of_Venice",
@@ -23576,7 +23001,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Artisans_of_Venice_-_%40jeromememe/img_002_a927da23.jpg",
         "thumb_key": "https://media.fedu.vn/images/Artisans_of_Venice_-_%40jeromememe/img_006_50edaa56.jpg",
-        "video_url": "https://media.fedu.vn/videos/Artisans%20of%20Venice%20-%20%40jeromememe.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Artisans%20of%20Venice%20-%20%40jeromememe_preview.mp4",
         "report_url": "reports/Artisans of Venice - @jeromememe.html",
         "shots_count": 26,
         "duration": "50s",
@@ -23589,9 +23014,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "IG_@jeromememe_DbGMt3oIaZm_People_of_Copenhagen",
@@ -23649,7 +23072,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/People_of_Copenhagen_-_%40jeromememe/img_002_c4d4b5a4.jpg",
         "thumb_key": "https://media.fedu.vn/images/People_of_Copenhagen_-_%40jeromememe/img_006_b1f70076.jpg",
-        "video_url": "https://media.fedu.vn/videos/People%20of%20Copenhagen%20-%20%40jeromememe.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/People%20of%20Copenhagen%20-%20%40jeromememe_preview.mp4",
         "report_url": "reports/People of Copenhagen - @jeromememe.html",
         "shots_count": 15,
         "duration": "500s",
@@ -23662,9 +23085,81 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟡 Trung bình (9-18 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
+    },
+    {
+      "id": "DcTbD0MR-V_",
+      "shortcode": "DcTbD0MR-V_",
+      "title_vi": "Nhịp Dựng Điện Ảnh Về Kỷ Luật & Ám Ảnh Thành Công - @brandon.dtd",
+      "quick_takeaway": "Bóc tách video thể thao & rèn luyện thể lực: Nhịp dựng dồn dập (Fast-paced Montage) kết hợp âm bass trầm hùng, ánh sáng Low-key tương phản cao làm nổi khối cơ bắp và mồ hôi, truyền tải động lực mạnh mẽ về tính kỷ luật và sự kiên trì.",
+      "key_tech": "Chuyển cảnh Level 2, Rapid Motion Montage, Punchy Beat Sync, Weightlifting Anchor, Sweat Texture",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
+      },
+      "industries": [
+        {
+          "id": "the-thao",
+          "name": "Thể Thao & Năng Động",
+          "icon": "🏃"
+        }
+      ],
+      "x_factors": [
+        "Chuyển cảnh cấp 2"
+      ],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Dựng phim nhịp độ cao về kỷ luật thể lực & Ý chí",
+      "tech_tags": [
+        "Chuyển cảnh Level 2",
+        "Rapid Motion Montage",
+        "Punchy Beat Sync",
+        "Weightlifting Anchor",
+        "Sweat Texture"
+      ],
+      "transition_level": "Chuyển cảnh Level 2",
+      "is_ad_bot": false,
+      "fedu_optimization": {
+        "key_optimization_point": "⚡ Chuyển cảnh Level 2: Đặt máy lên chân máy (tripod), chuyển cảnh bằng hành động cơ thể rõ ràng lặp lại 2 lần",
+        "practice_focus": "Bài tập thực hành trong phòng / bối cảnh tĩnh: Cố định điện thoại trên tripod, thực hiện 1 hành động cơ thể rõ nét (vung tay, ném đồ, dậm chân, đổi áo) lặp lại 2 lần để cắt match cut ở đỉnh quán tính.",
+        "ig_seeding_hook": "Follow @brandon.dtd (Brandon.Dtd) để thuật toán Instagram liên tục cập nhật các reel biến hình triệu view, match action chuẩn xác và cách kiểm soát nhịp dựng.",
+        "course_industry_mapping": "Thể Thao & Năng Động • Mẫu Biến Hình & Match Action Khóa Học video.fedu.vn",
+        "transition_level": "Chuyển cảnh Level 2"
+      },
+      "logic_explanation": "Dựng phim nhịp độ cực nhanh cắt gọt theo tiếng beat nhạc dồn dập, thể hiện cường độ tập luyện và ý chí không bỏ cuộc trong thể thao.",
+      "creator": {
+        "raw": "@brandon.dtd",
+        "name": "Brandon.Dtd",
+        "handle": "@brandon.dtd",
+        "profile_url": "https://www.instagram.com/brandon.dtd/"
+      },
+      "ig_url": "https://www.instagram.com/brandon.dtd/",
+      "gdrive_folder": "",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos_preview/DcTbD0MR-V_preview.mp4",
+        "report_url": "",
+        "shots_count": 18,
+        "duration": "36s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "trung-binh",
+        "label": "🟡 Trung bình (9-18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
     },
     {
       "id": "DXUG_1TjwJu",
@@ -23725,7 +23220,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40jazziesillona_DXUG_1TjwJu_Carousel_Analysis/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40jazziesillona_DXUG_1TjwJu_Carousel_Analysis/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DXUG_1TjwJu.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DXUG_1TjwJu_preview.mp4",
         "report_url": "",
         "shots_count": 6,
         "duration": "12s",
@@ -23738,9 +23233,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "DWrDUymD4_a",
@@ -23795,7 +23288,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40jazziesillona_DWrDUymD4_a_Carousel_Analysis/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40jazziesillona_DWrDUymD4_a_Carousel_Analysis/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DWrDUymD4_a.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/DWrDUymD4_a_preview.mp4",
         "report_url": "",
         "shots_count": 8,
         "duration": "16s",
@@ -23808,9 +23301,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     },
     {
       "id": "Dc3ih_5jlqz",
@@ -23869,7 +23360,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year/shot_01_mid.jpg",
         "thumb_key": "https://media.fedu.vn/images/IG_%40watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc3ih_5jlqz.mp4",
+        "video_url": "https://media.fedu.vn/videos_preview/Dc3ih_5jlqz_preview.mp4",
         "report_url": "",
         "shots_count": 7,
         "duration": "14s",
@@ -23882,9 +23373,7 @@ var FEDU_IDEAS_DATABASE = {
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
       "is_personal": false,
-      "is_excluded": false,
-      "thumbnail": "",
-      "cover_image": ""
+      "is_excluded": false
     }
   ]
 };

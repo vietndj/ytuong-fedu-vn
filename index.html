@@ -774,6 +774,11 @@
                 </div>
                 <div class="flex items-center gap-2 shrink-0">
                     <!-- Copy Share Link Button -->
+                    <a id="videoModalDownloadOriginalBtn" href="#" target="_blank" class="hidden px-2.5 py-1.5 rounded-lg bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500 hover:text-white transition items-center gap-1.5 font-bold text-xs cursor-pointer" title="Tải bản gốc từ Google Drive">
+                        <span>📥</span>
+                        <span class="hidden sm:inline">Bản Gốc</span>
+                    </a>
+
                     <button 
                         id="videoModalShareBtn"
                         onclick="copyVideoModalShareLink()"
@@ -1069,7 +1074,7 @@
     </div>
 
     <!-- LOAD DATABASE SCRIPT -->
-    <script src="ideas_data.js?v=1789855732"></script>
+    <script src="ideas_data.js?v=1789949829"></script>
 
     <!-- SPA LOGIC -->
     <script>
@@ -3304,6 +3309,19 @@
             const video = document.getElementById('modalActiveVideo');
             const ytFrame = document.getElementById('modalActiveYoutube');
             const title = document.getElementById('videoModalTitle');
+            const downloadBtn = document.getElementById('videoModalDownloadOriginalBtn');
+            if (downloadBtn) {
+                if (item.video_url_original) {
+                    downloadBtn.href = item.video_url_original;
+                    downloadBtn.classList.remove('hidden');
+                    downloadBtn.classList.add('flex');
+                } else {
+                    downloadBtn.href = "#";
+                    downloadBtn.classList.add('hidden');
+                    downloadBtn.classList.remove('flex');
+                }
+            }
+
             const directLink = document.getElementById('videoModalDirectLink');
             const isExcluded = item.is_excluded || (appState.localExcludedIds && appState.localExcludedIds.has(item.id));
             if (title) {
