@@ -2423,31 +2423,25 @@
                                 </div>
                             </div>
                             
-                            <!-- Right: Hành động -->
+                                                        <!-- Right: Hành động (Chỉ giữ Nút Tải + Nút Video Instagram gốc) -->
                             <div class="flex items-center gap-1.5 shrink-0">
-                                ${(item.media.video_url || item.media.youtube_id || item.media.youtube_embed) ? `
-                                    
-                                ` : ''}
                                 ${(item.media.video_url || item.media.download_url) ? `
-                                    <button onclick="forceDownloadVideo('${item.media.download_url || item.media.video_url}', '${item.id}.mp4'); event.stopPropagation();" class="w-7 h-7 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-400 border border-emerald-500/30 flex items-center justify-center transition tooltip shrink-0" title="Tải Về">⬇</button>
+                                    <button onclick="forceDownloadVideo('${item.media.download_url || item.media.video_url}', '${item.id}.mp4'); event.stopPropagation();" class="w-8 h-8 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-400 border border-emerald-500/30 flex items-center justify-center transition tooltip shrink-0" title="Tải Video Về Máy">⬇</button>
                                 ` : ''}
-                                
-                                
-                                <!-- Follow Instagram Button -->
+
                                 ${(item.ig_url && item.ig_url !== '#' && item.ig_url.trim() !== '') ? `
-                                    <a href="${item.ig_url}" target="_blank" class="h-7 px-2.5 rounded-lg bg-gradient-to-tr from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white border border-pink-500/50 flex items-center justify-center gap-1.5 transition shadow-sm shrink-0 tooltip" title="Theo dõi trên Instagram">
-                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                                    <a href="${item.ig_url}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="w-8 h-8 rounded-lg bg-gradient-to-tr from-pink-600/25 to-purple-600/25 hover:from-pink-600 hover:to-purple-600 text-pink-300 hover:text-white border border-pink-500/40 flex items-center justify-center transition shadow-sm shrink-0 tooltip" title="Xem video gốc trên Instagram">
+                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
                                         </svg>
-                                        <span class="text-[10px] font-bold">Theo dõi</span>
                                     </a>
                                 ` : ''}
-                                
+
                                 ${appState.curationMode ? `
                                     <div class="flex items-center gap-1 ml-1 pl-1 border-l border-slate-700/50">
-                                        <button onclick="toggleIdeaCuration('${item.id}')" class="w-7 h-7 rounded-lg flex items-center justify-center transition text-xs ${isExcluded ? 'bg-amber-400 text-slate-950' : 'bg-slate-800 text-slate-400'}" title="${isExcluded ? 'Khôi phục' : 'Ẩn'}">${isExcluded ? '🔓' : '🔒'}</button>
-                                        <button onclick="openEditIdeaModal('${item.id}')" class="w-7 h-7 rounded-lg bg-sky-500/20 text-sky-300 text-xs flex items-center justify-center transition" title="Sửa">✏️</button>
-                                        <button onclick="openDeleteIdeaModal('${item.id}')" class="w-7 h-7 rounded-lg bg-rose-500/20 text-rose-300 text-xs flex items-center justify-center transition" title="Xóa">🗑️</button>
+                                        <button onclick="toggleIdeaCuration('${item.id}')" class="w-8 h-8 rounded-lg flex items-center justify-center transition text-xs ${isExcluded ? 'bg-amber-400 text-slate-950' : 'bg-slate-800 text-slate-400'}" title="${isExcluded ? 'Khôi phục' : 'Ẩn'}">${isExcluded ? '🔓' : '🔒'}</button>
+                                        <button onclick="openEditIdeaModal('${item.id}')" class="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-300 text-xs flex items-center justify-center transition" title="Sửa">✏️</button>
+                                        <button onclick="openDeleteIdeaModal('${item.id}')" class="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-300 text-xs flex items-center justify-center transition" title="Xóa">🗑️</button>
                                     </div>
                                 ` : ''}
                             </div>
