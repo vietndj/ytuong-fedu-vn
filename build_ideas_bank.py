@@ -780,7 +780,7 @@ def build_database():
             "fedu_optimization": fedu_opt,
             "logic_explanation": logic_exp,
             "creator": c_info,
-            "ig_url": item.get("ig_url", "") or c_info["profile_url"],
+            "ig_url": f"https://www.instagram.com/reel/{code}/" if code and len(code) == 11 else (c_info["profile_url"] if c_info.get("profile_url") else ""),
             "gdrive_folder": item.get("gdrive_folder", ""),
             "media": {
                 "thumb_hook": thumb_hook,

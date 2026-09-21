@@ -2540,7 +2540,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@thomasmathewt2",
         "profile_url": "https://www.instagram.com/thomasmathewt2/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcLwG_mKyKM_/",
+      "ig_url": "https://www.instagram.com/reel/DcLwG_mKyKM/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%AE%F0%9D%98%80_%F0%9D%97%A0%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%84_DcLwG_mKyKM_Video_by_thomasmathewt2/shot_01_mid.jpg",
@@ -2612,7 +2612,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ju_seobang",
         "profile_url": "https://www.instagram.com/ju_seobang/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcvmVl2hbuY_/",
+      "ig_url": "https://www.instagram.com/reel/DcvmVl2hbuY/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%EC%A3%BC%EC%84%9C%EB%B0%A9_DcvmVl2hbuY_Video_by_ju_seobang/shot_01_mid.jpg",
@@ -2680,7 +2680,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ju_seobang_DbA22ywhMSI_Steal_Father_In_Law",
         "profile_url": "https://www.instagram.com/ju_seobang_DbA22ywhMSI_Steal_Father_In_Law/"
       },
-      "ig_url": "https://www.instagram.com/reel/DbA22ywhMSI_/",
+      "ig_url": "https://www.instagram.com/reel/DbA22ywhMSI/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ju_seobang_DbA22ywhMSI_Steal_Father_In_Law_Snacks/shot_01_mid.jpg",
@@ -2749,7 +2749,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@bewoom",
         "profile_url": "https://www.instagram.com/bewoom/"
       },
-      "ig_url": "https://www.instagram.com/reel/DZVHH27S7Lf_/",
+      "ig_url": "https://www.instagram.com/reel/DZVHH27S7Lf/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%EB%B9%84%EC%9B%80_-_%EC%96%91%ED%9D%AC%EC%A2%85_DZVHH27S7Lf_Video_by_bewoom/shot_01_mid.jpg",
@@ -2817,7 +2817,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@king_min_su2",
         "profile_url": "https://www.instagram.com/king_min_su2/"
       },
-      "ig_url": "https://www.instagram.com/reel/DbbBaIpyKCI_/",
+      "ig_url": "https://www.instagram.com/reel/DbbBaIpyKCI/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%EA%B9%80%EB%AF%BC%EC%88%98_%28%ED%8B%B0%EA%B3%B0%29_DbbBaIpyKCI_Video_by_king_min_su2/shot_01_mid.jpg",
@@ -2886,7 +2886,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@withyuee",
         "profile_url": "https://www.instagram.com/withyuee/"
       },
-      "ig_url": "https://www.instagram.com/withyuee/",
+      "ig_url": "https://www.instagram.com/reel/DYKO1v3g3U2/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40withyuee_DYKO1v3g3U2_Video_by_withyuee/shot_01_mid.jpg",
@@ -2955,7 +2955,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@withyuee",
         "profile_url": "https://www.instagram.com/withyuee/"
       },
-      "ig_url": "https://www.instagram.com/withyuee/",
+      "ig_url": "https://www.instagram.com/reel/DXbzOkygG0v/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40withyuee_DXbzOkygG0v_Video_by_withyuee/shot_01_mid.jpg",
@@ -3023,7 +3023,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@withyuee",
         "profile_url": "https://www.instagram.com/withyuee/"
       },
-      "ig_url": "https://www.instagram.com/reel/DWY_2SvgE_a_/",
+      "ig_url": "https://www.instagram.com/reel/DWY_2SvgE_a/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40withyuee_DWY_2SvgE_a_Video_by_withyuee/shot_01_mid.jpg",
@@ -3159,7 +3159,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@withyuee_DRmeH20EVGA_Hong_Kong_Scaffolding",
         "profile_url": "https://www.instagram.com/withyuee_DRmeH20EVGA_Hong_Kong_Scaffolding/"
       },
-      "ig_url": "https://www.instagram.com/reel/DRmeH20EVGA_/",
+      "ig_url": "https://www.instagram.com/reel/DRmeH20EVGA/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40withyuee_DRmeH20EVGA_Hong_Kong_Scaffolding_Cinematic/shot_01_mid.jpg",
@@ -3238,7 +3238,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@valenti_k41",
         "profile_url": "https://www.instagram.com/valenti_k41/"
       },
-      "ig_url": "https://www.instagram.com/valenti_k41/",
+      "ig_url": "https://www.instagram.com/reel/DdB_21Yo0Qc/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40valenti_k41_DdB_21Yo0Qc_Creative_Phone_Video_Ideas/shot_01_mid.jpg",
@@ -3316,7 +3316,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@valenti_k41",
         "profile_url": "https://www.instagram.com/valenti_k41/"
       },
-      "ig_url": "https://www.instagram.com/valenti_k41/",
+      "ig_url": "https://www.instagram.com/reel/DctVSroI3UB/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40valenti_k41_DctVSroI3UB_Creative_Phone_Video_Ideas/shot_01_mid.jpg",
@@ -3452,7 +3452,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@treechurchlogan",
         "profile_url": "https://www.instagram.com/treechurchlogan/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcoGfdghNwd_/",
+      "ig_url": "https://www.instagram.com/reel/DcoGfdghNwd/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40The_Tree_Church_Logan_DcoGfdghNwd_Video_by_treechurchlogan/shot_01_mid.jpg",
@@ -3520,7 +3520,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@tinanguyen2004_7673468312290037012_Double_Day",
         "profile_url": "https://www.instagram.com/tinanguyen2004_7673468312290037012_Double_Day/"
       },
-      "ig_url": "https://www.instagram.com/reel/Double_Day_l/",
+      "ig_url": "https://www.instagram.com/tinanguyen2004_7673468312290037012_Double_Day/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40tinanguyen2004_7673468312290037012_Double_Day_lu%C3%B4n_l%C3%A0_d%E1%BB%8Bp_%C4%91%E1%BB%83_kh%C3%A1ch_h%C3%A0ng_l%E1%BB%B1a_%C4%91%C6%B0%E1%BB%A3c/shot_01_mid.jpg",
@@ -3597,7 +3597,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@saigonink_studio",
         "profile_url": "https://www.instagram.com/saigonink_studio/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdNq5CxszVl_/",
+      "ig_url": "https://www.instagram.com/reel/DdNq5CxszVl/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_01_mid.jpg",
@@ -3733,7 +3733,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kristinagoose",
         "profile_url": "https://www.instagram.com/kristinagoose/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dcmav1VBv4H_/",
+      "ig_url": "https://www.instagram.com/reel/Dcmav1VBv4H/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Kristina_G_Dcmav1VBv4H_Video_by_kristinagoose/shot_01_mid.jpg",
@@ -3808,7 +3808,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@fabianamsolano",
         "profile_url": "https://www.instagram.com/fabianamsolano/"
       },
-      "ig_url": "https://www.instagram.com/fabianamsolano/",
+      "ig_url": "https://www.instagram.com/reel/Dc4u6aOhR9r/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40fabianamsolano_Dc4u6aOhR9r_Yosemite_National_Park_Music_Video_Beat_Match_Cut/shot_01_mid.jpg",
@@ -3877,7 +3877,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@daiki.shino",
         "profile_url": "https://www.instagram.com/daiki.shino/"
       },
-      "ig_url": "https://www.instagram.com/daiki.shino/",
+      "ig_url": "https://www.instagram.com/reel/Dbk4X4tjJ8A/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40daiki.shino_Dbk4X4tjJ8A_London_Cinematic_Video_Postcards_Carousel/shot_01_mid.jpg",
@@ -4013,7 +4013,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central",
         "profile_url": "https://www.instagram.com/breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdK6GtHJPrH_/",
+      "ig_url": "https://www.instagram.com/reel/DdK6GtHJPrH/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40breth.co_DdK6GtHJPrH_Viral_Skateboard_Booth_Tour_Central_Market/shot_01_mid.jpg",
@@ -4081,7 +4081,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@allure.cafebar",
         "profile_url": "https://www.instagram.com/allure.cafebar/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdF81brAiIj_/",
+      "ig_url": "https://www.instagram.com/reel/DdF81brAiIj/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ALLURE_cafe_bar_DdF81brAiIj_Video_by_allure.cafebar/shot_01_mid.jpg",
@@ -4153,7 +4153,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@yegor.sky",
         "profile_url": "https://www.instagram.com/yegor.sky/"
       },
-      "ig_url": "https://www.instagram.com/reel/DbBQzyqimbi_/",
+      "ig_url": "https://www.instagram.com/reel/DbBQzyqimbi/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Yegor.Sky_DbBQzyqimbi_Video_by_yegor.sky/shot_01_mid.jpg",
@@ -4229,7 +4229,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@yegor.sky",
         "profile_url": "https://www.instagram.com/yegor.sky/"
       },
-      "ig_url": "https://www.instagram.com/reel/DaFDqk4CGB1_/",
+      "ig_url": "https://www.instagram.com/reel/DaFDqk4CGB1/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Yegor.Sky_DaFDqk4CGB1_Video_by_yegor.sky/shot_01_mid.jpg",
@@ -4303,7 +4303,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@victoriamorse",
         "profile_url": "https://www.instagram.com/victoriamorse/"
       },
-      "ig_url": "https://www.instagram.com/reel/DbESOapo-p3_/",
+      "ig_url": "https://www.instagram.com/reel/DbESOapo-p3/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Victoria_Morse_DbESOapo-p3_Video_by_victoriamorse/shot_01_mid.jpg",
@@ -4376,7 +4376,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@turkishairlines",
         "profile_url": "https://www.instagram.com/turkishairlines/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdJYSokAkAj_/",
+      "ig_url": "https://www.instagram.com/reel/DdJYSokAkAj/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Turkish_Airlines_DdJYSokAkAj_Video_by_turkishairlines/shot_01_mid.jpg",
@@ -4448,7 +4448,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@turkishairlines",
         "profile_url": "https://www.instagram.com/turkishairlines/"
       },
-      "ig_url": "https://www.instagram.com/reel/DchBUgVMvrp_/",
+      "ig_url": "https://www.instagram.com/reel/DchBUgVMvrp/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Turkish_Airlines_DchBUgVMvrp_Video_by_turkishairlines/shot_01_mid.jpg",
@@ -4519,7 +4519,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@turkishairlines",
         "profile_url": "https://www.instagram.com/turkishairlines/"
       },
-      "ig_url": "https://www.instagram.com/reel/DaxjeQ4A9dP_/",
+      "ig_url": "https://www.instagram.com/reel/DaxjeQ4A9dP/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Turkish_Airlines_DaxjeQ4A9dP_Video_by_turkishairlines/shot_01_mid.jpg",
@@ -4594,7 +4594,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@steven.vuu",
         "profile_url": "https://www.instagram.com/steven.vuu/"
       },
-      "ig_url": "https://www.instagram.com/reel/DchxEAkJ9Hw_/",
+      "ig_url": "https://www.instagram.com/reel/DchxEAkJ9Hw/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Steven_%F0%9F%87%BB%F0%9F%87%B3_Vu_DchxEAkJ9Hw_Video_by_steven.vuu/shot_01_mid.jpg",
@@ -4666,7 +4666,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@simeonkraeft",
         "profile_url": "https://www.instagram.com/simeonkraeft/"
       },
-      "ig_url": "https://www.instagram.com/reel/DY2XJzdioZg_/",
+      "ig_url": "https://www.instagram.com/reel/DY2XJzdioZg/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Simeon_Kraeft_DY2XJzdioZg_Video_by_simeonkraeft/shot_01_mid.jpg",
@@ -4739,7 +4739,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@17th.visuals",
         "profile_url": "https://www.instagram.com/17th.visuals/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dau0C9AzXc8_/",
+      "ig_url": "https://www.instagram.com/reel/Dau0C9AzXc8/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Rilo_Dau0C9AzXc8_Video_by_17th.visuals/shot_01_mid.jpg",
@@ -4813,7 +4813,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@sellingsocial.co",
         "profile_url": "https://www.instagram.com/sellingsocial.co/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcTcw8lhku5_/",
+      "ig_url": "https://www.instagram.com/reel/DcTcw8lhku5/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Quinn_Social_Media_for_Realtors_DcTcw8lhku5_Video_by_sellingsocial.co/shot_01_mid.jpg",
@@ -4885,7 +4885,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@nicoolalah",
         "profile_url": "https://www.instagram.com/nicoolalah/"
       },
-      "ig_url": "https://www.instagram.com/reel/DaAm8suhCau_/",
+      "ig_url": "https://www.instagram.com/reel/DaAm8suhCau/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Nicole_%F0%9F%92%96_DaAm8suhCau_Video_by_nicoolalah/shot_01_mid.jpg",
@@ -4957,7 +4957,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@photoknack.in",
         "profile_url": "https://www.instagram.com/photoknack.in/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcJBTCoT6UT_/",
+      "ig_url": "https://www.instagram.com/reel/DcJBTCoT6UT/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Neeraj_Khurana_Video%2C_Lighting_%26_Photography_DcJBTCoT6UT_Video_by_photoknack.in/shot_01_mid.jpg",
@@ -5025,7 +5025,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@parisexplorer",
         "profile_url": "https://www.instagram.com/parisexplorer/"
       },
-      "ig_url": "https://www.instagram.com/reel/Derossi_DdJs/",
+      "ig_url": "https://www.instagram.com/reel/DdJsv1AsGwt/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Laurent_Derossi_DdJsv1AsGwt_Video_by_parisexplorer/shot_01_mid.jpg",
@@ -5101,7 +5101,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@layton_video",
         "profile_url": "https://www.instagram.com/layton_video/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dc9TAgjTmeR_/",
+      "ig_url": "https://www.instagram.com/reel/Dc9TAgjTmeR/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40LAYTON_Dc9TAgjTmeR_Video_by_layton_video/shot_01_mid.jpg",
@@ -5169,7 +5169,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@l7westlakehanoi_bylottehotels",
         "profile_url": "https://www.instagram.com/l7westlakehanoi_bylottehotels/"
       },
-      "ig_url": "https://www.instagram.com/reel/DZuT3fSgOeg_/",
+      "ig_url": "https://www.instagram.com/reel/DZuT3fSgOeg/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40L7_WEST_LAKE_HANOI_by_LOTTE_HOTELS_DZuT3fSgOeg_Video_by_l7westlakehanoi_bylottehotels/shot_01_mid.jpg",
@@ -5238,7 +5238,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kerennilan",
         "profile_url": "https://www.instagram.com/kerennilan/"
       },
-      "ig_url": "https://www.instagram.com/reel/DY5aQaoABsy_/",
+      "ig_url": "https://www.instagram.com/reel/DY5aQaoABsy/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Keren_Ilan_DY5aQaoABsy_Video_by_kerennilan/shot_01_mid.jpg",
@@ -5307,7 +5307,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mkxpresar",
         "profile_url": "https://www.instagram.com/mkxpresar/"
       },
-      "ig_url": "https://www.instagram.com/mkxpresar/",
+      "ig_url": "https://www.instagram.com/reel/DaP3EE-qgAQ/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Katsuki_DaP3EE-qgAQ_Video_by_mkxpresar/shot_01_mid.jpg",
@@ -5379,7 +5379,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@junko_livlog",
         "profile_url": "https://www.instagram.com/junko_livlog/"
       },
-      "ig_url": "https://www.instagram.com/reel/Da46F-lxueg_/",
+      "ig_url": "https://www.instagram.com/reel/Da46F-lxueg/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Junko_Da46F-lxueg_Video_by_junko_livlog/shot_01_mid.jpg",
@@ -5447,7 +5447,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@joshdiazfilms",
         "profile_url": "https://www.instagram.com/joshdiazfilms/"
       },
-      "ig_url": "https://www.instagram.com/reel/Diaz_DdJ7S5B/",
+      "ig_url": "https://www.instagram.com/reel/DdJ7S5BJ6H0/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Josh_Diaz_DdJ7S5BJ6H0_Video_by_joshdiazfilms/shot_01_mid.jpg",
@@ -5522,7 +5522,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/jazziesillona/",
+      "ig_url": "https://www.instagram.com/reel/DbLToEpPPzm/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DbLToEpPPzm_Video_by_jazziesillona/shot_01_mid.jpg",
@@ -5595,7 +5595,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/jazziesillona/",
+      "ig_url": "https://www.instagram.com/reel/DZzwqWBvfwT/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DZzwqWBvfwT_Video_by_jazziesillona/shot_01_mid.jpg",
@@ -5664,7 +5664,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/jazziesillona/",
+      "ig_url": "https://www.instagram.com/reel/DZchNiZvH6m/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DZchNiZvH6m_Video_by_jazziesillona/shot_01_mid.jpg",
@@ -5733,7 +5733,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/reel/DZVAYFwvo4y_/",
+      "ig_url": "https://www.instagram.com/reel/DZVAYFwvo4y/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DZVAYFwvo4y_Video_by_jazziesillona/shot_01_mid.jpg",
@@ -5805,7 +5805,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/jazziesillona/",
+      "ig_url": "https://www.instagram.com/reel/DYcM_9FPr7I/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DYcM_9FPr7I_Video_by_jazziesillona/shot_01_mid.jpg",
@@ -5874,7 +5874,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/jazziesillona/",
+      "ig_url": "https://www.instagram.com/reel/DXoss18j011/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DXoss18j011_Video_by_jazziesillona/shot_01_mid.jpg",
@@ -5944,7 +5944,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/jazziesillona/",
+      "ig_url": "https://www.instagram.com/reel/DWERTvEjy7k/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DWERTvEjy7k_Video_by_jazziesillona/shot_01_mid.jpg",
@@ -6013,7 +6013,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/jazziesillona/",
+      "ig_url": "https://www.instagram.com/reel/DUS5DYCEgyg/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DUS5DYCEgyg_Video_by_jazziesillona/shot_01_mid.jpg",
@@ -6086,7 +6086,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/jazziesillona/",
+      "ig_url": "https://www.instagram.com/reel/DUPo66yklxb/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jazzie_DUPo66yklxb_Video_by_jazziesillona/shot_01_mid.jpg",
@@ -6159,7 +6159,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@tsangtastic",
         "profile_url": "https://www.instagram.com/tsangtastic/"
       },
-      "ig_url": "https://www.instagram.com/reel/DXf1LldT5co_/",
+      "ig_url": "https://www.instagram.com/reel/DXf1LldT5co/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40JENNY_TSANG_DXf1LldT5co_Video_by_tsangtastic/shot_01_mid.jpg",
@@ -6231,7 +6231,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hana.konichiwa",
         "profile_url": "https://www.instagram.com/hana.konichiwa/"
       },
-      "ig_url": "https://www.instagram.com/reel/DbS3HNNIKR7_/",
+      "ig_url": "https://www.instagram.com/reel/DbS3HNNIKR7/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Hana_Konichiwa_DbS3HNNIKR7_Video_by_hana.konichiwa/shot_01_mid.jpg",
@@ -6305,7 +6305,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@sg.genchan",
         "profile_url": "https://www.instagram.com/sg.genchan/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dc5uepPBXKq_/",
+      "ig_url": "https://www.instagram.com/reel/Dc5uepPBXKq/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Genya_Dc5uepPBXKq_Video_by_sg.genchan/shot_01_mid.jpg",
@@ -6377,7 +6377,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@thewaytowherever",
         "profile_url": "https://www.instagram.com/thewaytowherever/"
       },
-      "ig_url": "https://www.instagram.com/reel/DbomJ6-Tpry_/",
+      "ig_url": "https://www.instagram.com/reel/DbomJ6-Tpry/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Erin_%26_Jackson_Travel_Filmmakers_%26_Photograph_DbomJ6-Tpry_Video_by_thewaytowherever/shot_01_mid.jpg",
@@ -6449,7 +6449,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@elsaqinn",
         "profile_url": "https://www.instagram.com/elsaqinn/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcILfhlgsmu_/",
+      "ig_url": "https://www.instagram.com/reel/DcILfhlgsmu/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Elsa_Qin_C_DcILfhlgsmu_Video_by_elsaqinn/shot_01_mid.jpg",
@@ -6517,7 +6517,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@_e.jo",
         "profile_url": "https://www.instagram.com/_e.jo/"
       },
-      "ig_url": "https://www.instagram.com/reel/DbKxhucTAh4_/",
+      "ig_url": "https://www.instagram.com/reel/DbKxhucTAh4/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40E_jo_%EC%9D%B4%EC%9B%90%EB%AF%BC_DbKxhucTAh4_Video_by__e.jo/shot_01_mid.jpg",
@@ -6657,7 +6657,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@bryanhynes",
         "profile_url": "https://www.instagram.com/bryanhynes/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dcxsw50zIR8_/",
+      "ig_url": "https://www.instagram.com/reel/Dcxsw50zIR8/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Bryan_Hynes_Dcxsw50zIR8_Video_by_bryanhynes/shot_01_mid.jpg",
@@ -6729,7 +6729,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@briantooker",
         "profile_url": "https://www.instagram.com/briantooker/"
       },
-      "ig_url": "https://www.instagram.com/reel/DZN-FfdyPgH_/",
+      "ig_url": "https://www.instagram.com/reel/DZN-FfdyPgH/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Brian_Tooker_DZN-FfdyPgH_Video_by_briantooker/shot_01_mid.jpg",
@@ -6802,7 +6802,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@by.bennnj",
         "profile_url": "https://www.instagram.com/by.bennnj/"
       },
-      "ig_url": "https://www.instagram.com/by.bennnj/",
+      "ig_url": "https://www.instagram.com/reel/Db6a3tHoWTS/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Ben_Db6a3tHoWTS_Video_by_by.bennnj/shot_01_mid.jpg",
@@ -6870,7 +6870,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@Beixin_Travel",
         "profile_url": "https://www.instagram.com/Beixin_Travel/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dc0zRNwDz11_/",
+      "ig_url": "https://www.instagram.com/Beixin_Travel/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Beixin_Travel_%26_Nature_Dc0zRNwDz11_Carousel_Analysis/slide_01_mid.jpg",
@@ -6938,7 +6938,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@bzhvng",
         "profile_url": "https://www.instagram.com/bzhvng/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dbvzrg2i0WN_/",
+      "ig_url": "https://www.instagram.com/reel/Dbvzrg2i0WN/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40BILLY_ZHANG_Dbvzrg2i0WN_Video_by_bzhvng/shot_01_mid.jpg",
@@ -7010,7 +7010,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@austinrutland",
         "profile_url": "https://www.instagram.com/austinrutland/"
       },
-      "ig_url": "https://www.instagram.com/reel/DYwzs3zRRkv_/",
+      "ig_url": "https://www.instagram.com/reel/DYwzs3zRRkv/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Austin_Rutland_DYwzs3zRRkv_Video_by_austinrutland/shot_01_mid.jpg",
@@ -7082,7 +7082,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ariffathulhakim",
         "profile_url": "https://www.instagram.com/ariffathulhakim/"
       },
-      "ig_url": "https://www.instagram.com/reel/Db7P1GeOxvq_/",
+      "ig_url": "https://www.instagram.com/reel/Db7P1GeOxvq/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Arif_Hakim_Db7P1GeOxvq_Video_by_ariffathulhakim/shot_01_mid.jpg",
@@ -7150,7 +7150,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@Andrew_Yue_DaSkD6CAHP2_Carousel",
         "profile_url": "https://www.instagram.com/Andrew_Yue_DaSkD6CAHP2_Carousel/"
       },
-      "ig_url": "https://www.instagram.com/reel/DaSkD6CAHP2_/",
+      "ig_url": "https://www.instagram.com/Andrew_Yue_DaSkD6CAHP2_Carousel/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Andrew_Yue_DaSkD6CAHP2_Carousel_Analysis/slide_01_mid.jpg",
@@ -7218,7 +7218,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@withyuee",
         "profile_url": "https://www.instagram.com/withyuee/"
       },
-      "ig_url": "https://www.instagram.com/reel/DXwc_9QAKjZ_/",
+      "ig_url": "https://www.instagram.com/reel/DXwc_9QAKjZ/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Andrew_Yue_DXwc_9QAKjZ_Video_by_withyuee/shot_01_mid.jpg",
@@ -7287,7 +7287,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kosnio",
         "profile_url": "https://www.instagram.com/kosnio/"
       },
-      "ig_url": "https://www.instagram.com/reel/DaC90d3tWuV_/",
+      "ig_url": "https://www.instagram.com/reel/DaC90d3tWuV/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DaC90d3tWuV_Video_by_kosnio/shot_01_mid.jpg",
@@ -7359,7 +7359,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@iamaayushswamy",
         "profile_url": "https://www.instagram.com/iamaayushswamy/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcwPu99sDKI_/",
+      "ig_url": "https://www.instagram.com/reel/DcwPu99sDKI/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy/shot_01_mid.jpg",
@@ -7427,7 +7427,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@zamba_garden",
         "profile_url": "https://www.instagram.com/zamba_garden/"
       },
-      "ig_url": "https://www.instagram.com/reel/DadG15TAM5n_/",
+      "ig_url": "https://www.instagram.com/reel/DadG15TAM5n/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%4053051938741_DadG15TAM5n_Video_by_zamba_garden/shot_01_mid.jpg",
@@ -7495,7 +7495,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@dal_officialeather",
         "profile_url": "https://www.instagram.com/dal_officialeather/"
       },
-      "ig_url": "https://www.instagram.com/reel/DZrt1FbJTdy_/",
+      "ig_url": "https://www.instagram.com/reel/DZrt1FbJTdy/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%403075240316_DZrt1FbJTdy_Video_by_dal_officialeather/shot_01_mid.jpg",
@@ -8204,7 +8204,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@sarodeele",
         "profile_url": "https://www.instagram.com/sarodeele/"
       },
-      "ig_url": "https://www.instagram.com/sarodeele/reel/DXjRnwCISNU/",
+      "ig_url": "https://www.instagram.com/reel/DXjRnwCISNU/",
       "gdrive_folder": "https://drive.google.com/open?id=1SxMHEKzO1xMFvhCrIfqgVjE5Hdj_ujen",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Saro_Deele_DXjRnwCISNU_Video_by_sarodeele/shot_01_mid.jpg",
@@ -8277,7 +8277,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jade.got.curious",
         "profile_url": "https://www.instagram.com/jade.got.curious/"
       },
-      "ig_url": "https://www.instagram.com/jade.got.curious/reel/DZwO5X6N_MS/",
+      "ig_url": "https://www.instagram.com/reel/DZwO5X6N_MS/",
       "gdrive_folder": "https://drive.google.com/open?id=1LYPp5c8V2Fiz8JEoPaLi9OvAvDSfr8sd",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_01_mid.jpg",
@@ -8349,7 +8349,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@leticiaqdrs",
         "profile_url": "https://www.instagram.com/leticiaqdrs/"
       },
-      "ig_url": "https://www.instagram.com/p/DYXXgkbxPj7/",
+      "ig_url": "https://www.instagram.com/reel/DYXXgkbxPj7/",
       "gdrive_folder": "https://drive.google.com/open?id=1xc0-Qd09yhuC6vFhe7J-Uu9YMGaskfoz",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs/shot_01_mid.jpg",
@@ -8422,7 +8422,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@nemo_ooo",
         "profile_url": "https://www.instagram.com/nemo_ooo/"
       },
-      "ig_url": "https://www.instagram.com/reel/DclWb98PiK_/?stkn=aHVweW5yaHMwbWdn",
+      "ig_url": "https://www.instagram.com/nemo_ooo/",
       "gdrive_folder": "https://drive.google.com/open?id=1GXwo7n7ny0wuu737MIdNOO19b5itzwyH",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DclWb98PiK_Video_by_nemo_ooo/shot_01_mid.jpg",
@@ -8498,7 +8498,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@xiudian",
         "profile_url": "https://www.instagram.com/xiudian/"
       },
-      "ig_url": "https://www.instagram.com/p/DazzVqPBfje",
+      "ig_url": "https://www.instagram.com/reel/DazzVqPBfje/",
       "gdrive_folder": "https://drive.google.com/open?id=1fj0vsLa2k5zyPZ3e13O9J24_zvkqdACC",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40X%C3%8DU_%C4%90I_%C4%82N_DazzVqPBfje_Video_by_xiudian/shot_01_mid.jpg",
@@ -8573,7 +8573,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mi_no_ie_39",
         "profile_url": "https://www.instagram.com/mi_no_ie_39/"
       },
-      "ig_url": "https://www.instagram.com/p/Db-xDk4vWNQ",
+      "ig_url": "https://www.instagram.com/reel/Db-xDk4vWNQ/",
       "gdrive_folder": "https://drive.google.com/open?id=1Q4JBlIJP8mpHQJef-evSCurRypAkTiuG",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40misa%EF%BD%9C%E7%AF%8940%E5%B9%B4%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E6%9A%AE%E3%82%89%E3%81%97_Db-xDk4vWNQ_Video_by_mi_no_ie_39/shot_01_mid.jpg",
@@ -8649,7 +8649,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@studioberdua",
         "profile_url": "https://www.instagram.com/studioberdua/"
       },
-      "ig_url": "https://www.instagram.com/p/DdOu2yRsmDy",
+      "ig_url": "https://www.instagram.com/reel/DdOu2yRsmDy/",
       "gdrive_folder": "https://drive.google.com/open?id=1f9Ieq-YU2Pgxq6hgIKkMgpwfZMLnyliE",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua/shot_01_mid.jpg",
@@ -8725,7 +8725,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@r_6cafe",
         "profile_url": "https://www.instagram.com/r_6cafe/"
       },
-      "ig_url": "https://www.instagram.com/p/Da5KgjAxfOG",
+      "ig_url": "https://www.instagram.com/reel/Da5KgjAxfOG/",
       "gdrive_folder": "https://drive.google.com/open?id=14SXW0ICuWhGrWTU2lfrmcRsljApor3bk",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Rika_%E3%83%93%E3%82%AA%E3%83%88%E3%83%BC%E3%83%97%E3%82%81%E3%81%A0%E3%81%8B%E6%A4%8D%E7%89%A9%E3%81%AE%E3%81%82%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97_Da5KgjAxfOG_Video_by_r_6cafe/shot_01_mid.jpg",
@@ -8801,7 +8801,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@eugcreates.ugc",
         "profile_url": "https://www.instagram.com/eugcreates.ugc/"
       },
-      "ig_url": "https://www.instagram.com/p/DdA1ErpRMg2",
+      "ig_url": "https://www.instagram.com/reel/DdA1ErpRMg2/",
       "gdrive_folder": "https://drive.google.com/open?id=1QApLtcKzu2GSywp5wWHdtfNnBnmEHk77",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc/shot_01_mid.jpg",
@@ -8878,7 +8878,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@haydenkorean",
         "profile_url": "https://www.instagram.com/haydenkorean/"
       },
-      "ig_url": "https://www.instagram.com/p/Daz3Po8zHIE",
+      "ig_url": "https://www.instagram.com/reel/Daz3Po8zHIE/",
       "gdrive_folder": "https://drive.google.com/open?id=1_zRjagGz50fh6zPiJWuE7lJZbTdPE-LT",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Hayden_Slow_Korean_%26_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean/shot_01_mid.jpg",
@@ -8953,7 +8953,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@_hyungs",
         "profile_url": "https://www.instagram.com/_hyungs/"
       },
-      "ig_url": "https://www.instagram.com/p/DdWa3o2zc0w",
+      "ig_url": "https://www.instagram.com/reel/DdWa3o2zc0w/",
       "gdrive_folder": "https://drive.google.com/open?id=1brLILpFYjHRn6bKUZbfgAS3fxVbdER6D",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs/shot_01_mid.jpg",
@@ -9029,7 +9029,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@indanayuu",
         "profile_url": "https://www.instagram.com/indanayuu/"
       },
-      "ig_url": "https://www.instagram.com/p/DccpHbETFSr",
+      "ig_url": "https://www.instagram.com/reel/DccpHbETFSr/",
       "gdrive_folder": "https://drive.google.com/open?id=1YbVTddldNL3jxkHRfrm6qgFsO2ehx5US",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Indang_Ayu_DccpHbETFSr_Video_by_indanayuu/shot_01_mid.jpg",
@@ -9105,7 +9105,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ume.izakaya",
         "profile_url": "https://www.instagram.com/ume.izakaya/"
       },
-      "ig_url": "https://www.instagram.com/p/DcVnyJyNWGY",
+      "ig_url": "https://www.instagram.com/reel/DcVnyJyNWGY/",
       "gdrive_folder": "https://drive.google.com/open?id=1aw5kKg-NdXs45CjNVF_-VA5p7Z7fx2kW",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40UME_%F0%9F%93%8D%D0%BC%D0%B8%D0%BD%D1%81%D0%BA-%D0%BC%D0%B8%D1%80_DcVnyJyNWGY_Video_by_ume.izakaya/shot_01_mid.jpg",
@@ -9180,7 +9180,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@focr.sg",
         "profile_url": "https://www.instagram.com/focr.sg/"
       },
-      "ig_url": "https://www.instagram.com/p/DcxcVGtxjNl",
+      "ig_url": "https://www.instagram.com/reel/DcxcVGtxjNl/",
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.jpg",
@@ -9254,7 +9254,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@slowkoreanvlog",
         "profile_url": "https://www.instagram.com/slowkoreanvlog/"
       },
-      "ig_url": "https://www.instagram.com/p/Db0tHr8Bs7x",
+      "ig_url": "https://www.instagram.com/reel/Db0tHr8Bs7x/",
       "gdrive_folder": "https://drive.google.com/open?id=11ygVMIp2N-AbkDYAQ-nfVkRVAqmtcXq0",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%EA%B1%B0%EB%B6%81%EC%9D%B4_%EC%86%8C%EC%98%81_Db0tHr8Bs7x_Video_by_slowkoreanvlog/shot_01_mid.jpg",
@@ -9330,7 +9330,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@gyuree_k",
         "profile_url": "https://www.instagram.com/gyuree_k/"
       },
-      "ig_url": "https://www.instagram.com/p/DdTZsoxTVFz",
+      "ig_url": "https://www.instagram.com/reel/DdTZsoxTVFz/",
       "gdrive_folder": "https://drive.google.com/open?id=1HdVCAZjV9j82oIE9Z_Bu-_ixwVcH0fyK",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7_DdTZsoxTVFz_Video_by_gyuree_k/shot_01_mid.jpg",
@@ -9407,7 +9407,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@yooinoz",
         "profile_url": "https://www.instagram.com/yooinoz/"
       },
-      "ig_url": "https://www.instagram.com/p/DZ8w6MsSMAw",
+      "ig_url": "https://www.instagram.com/reel/DZ8w6MsSMAw/",
       "gdrive_folder": "https://drive.google.com/open?id=17B1h27000Snbr6BE0M1oZvvehy01aP3s",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jenny_Yoo_%F0%9F%87%B0%F0%9F%87%B7_DZ8w6MsSMAw_Video_by_yooinoz/shot_01_mid.jpg",
@@ -9486,7 +9486,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@dreakwon",
         "profile_url": "https://www.instagram.com/dreakwon/"
       },
-      "ig_url": "https://www.instagram.com/p/DaClEhzB5WC",
+      "ig_url": "https://www.instagram.com/reel/DaClEhzB5WC/",
       "gdrive_folder": "https://drive.google.com/open?id=1S4sCJFZBrL_26Y6vyEOY3I8xll4SKUQm",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40drea_%28%EC%9D%B4%ED%98%84%29_DaClEhzB5WC_Video_by_dreakwon/shot_01_mid.jpg",
@@ -9563,7 +9563,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@korea_street_views",
         "profile_url": "https://www.instagram.com/korea_street_views/"
       },
-      "ig_url": "https://www.instagram.com/p/DcBXsaezmjo",
+      "ig_url": "https://www.instagram.com/reel/DcBXsaezmjo/",
       "gdrive_folder": "https://drive.google.com/open?id=1FZUyp_litWf6aWgrlRI25B7tzh7naodt",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views/shot_01_mid.jpg",
@@ -9638,7 +9638,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@Banh_shimano",
         "profile_url": "https://www.instagram.com/Banh_shimano/"
       },
-      "ig_url": "https://www.instagram.com/p/Dc0-HLUE60-/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/Banh_shimano/",
       "gdrive_folder": "https://drive.google.com/open?id=1xfnYgWstdUwWu9AXqBr0fkWq2sB9gr9C",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis/slide_01_mid.jpg",
@@ -9715,7 +9715,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hayan_cook",
         "profile_url": "https://www.instagram.com/hayan_cook/"
       },
-      "ig_url": "https://www.instagram.com/p/DdVBqUzj3o5",
+      "ig_url": "https://www.instagram.com/reel/DdVBqUzj3o5/",
       "gdrive_folder": "https://drive.google.com/open?id=1Hs-u5AoGHrd-mg49jmBM8I-O2NutDbwQ",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40creator_DdVBqUzj3o5_Video_DdVBqUzj3o5/shot_01_mid.jpg",
@@ -9791,7 +9791,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@clarissaacindy",
         "profile_url": "https://www.instagram.com/clarissaacindy/"
       },
-      "ig_url": "https://www.instagram.com/clarissaacindy/",
+      "ig_url": "https://www.instagram.com/reel/DcgQDZ_JNIr/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%F0%9D%90%82%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%B2%F0%9F%8C%BC_DcgQDZ_JNIr_Video_by_clarissaacindy/shot_01_mid.jpg",
@@ -9866,7 +9866,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@byjacksonsword",
         "profile_url": "https://www.instagram.com/byjacksonsword/"
       },
-      "ig_url": "https://www.instagram.com/p/DdU4rBeMXZt",
+      "ig_url": "https://www.instagram.com/reel/DdU4rBeMXZt/",
       "gdrive_folder": "https://drive.google.com/open?id=1H366mWBzK1FYscO4jgpr3RJa4KGpj3-P",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword/shot_01_mid.jpg",
@@ -9942,7 +9942,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@creator",
         "profile_url": "https://www.instagram.com/creator/"
       },
-      "ig_url": "https://www.instagram.com/p/DdSs5rahILb",
+      "ig_url": "https://www.instagram.com/reel/DdSs5rahILb/",
       "gdrive_folder": "https://drive.google.com/open?id=1gN1yfvp56MNHGZxPKUnYMBIopV3ak6th",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40creator_DdSs5rahILb_Video_DdSs5rahILb/shot_01_mid.jpg",
@@ -10021,7 +10021,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@pascal_blaurock",
         "profile_url": "https://www.instagram.com/pascal_blaurock/"
       },
-      "ig_url": "https://www.instagram.com/p/DdT9CF7tGzn",
+      "ig_url": "https://www.instagram.com/reel/DdT9CF7tGzn/",
       "gdrive_folder": "https://drive.google.com/open?id=1CC0q-MyoLsowvikuTodmmaAYaeO-wG88",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock/shot_01_mid.jpg",
@@ -10100,7 +10100,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@megantanhweewen",
         "profile_url": "https://www.instagram.com/megantanhweewen/"
       },
-      "ig_url": "https://www.instagram.com/p/DdT4EOzveQL",
+      "ig_url": "https://www.instagram.com/reel/DdT4EOzveQL/",
       "gdrive_folder": "https://drive.google.com/open?id=143z0kwx9S-8onoXKta0EWaRfahIBIwH6",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen/shot_01_mid.jpg",
@@ -10178,7 +10178,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@yuuxeun",
         "profile_url": "https://www.instagram.com/yuuxeun/"
       },
-      "ig_url": "https://www.instagram.com/p/DdQwL3Ahci1",
+      "ig_url": "https://www.instagram.com/reel/DdQwL3Ahci1/",
       "gdrive_folder": "https://drive.google.com/open?id=1gkuAgqETeupD5LAnmo3D_fF1Vrs6OuVi",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40%EC%8B%A0_%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%B3%E1%86%AB_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun/shot_01_mid.jpg",
@@ -10254,7 +10254,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@syooaann",
         "profile_url": "https://www.instagram.com/syooaann/"
       },
-      "ig_url": "https://www.instagram.com/p/Dcx7pQpS6zs",
+      "ig_url": "https://www.instagram.com/reel/Dcx7pQpS6zs/",
       "gdrive_folder": "https://drive.google.com/open?id=1EK51Jedrou_VlxABkztbqV8V68B_HxKI",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%403413882081_Dcx7pQpS6zs_Video_by_syooaann/shot_01_mid.jpg",
@@ -10334,7 +10334,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@megantanhweewen",
         "profile_url": "https://www.instagram.com/megantanhweewen/"
       },
-      "ig_url": "https://www.instagram.com/p/DOd8XMMjxcH",
+      "ig_url": "https://www.instagram.com/reel/DOd8XMMjxcH/",
       "gdrive_folder": "https://drive.google.com/open?id=1M46LI4n-xF4i6uQL_fG0-D_3dwAp5-TD",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen/shot_01_mid.jpg",
@@ -12033,7 +12033,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi.vietnam",
         "profile_url": "https://www.instagram.com/ulanzi.vietnam/"
       },
-      "ig_url": "https://www.lazada.vn/products/pdp-i13344148344-s116633631361.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253Aulanzi%252Bua20%253Bnid%253A13344148344%253Bsrc%253ALazadaMainSrp%253Brn%253A3805aba107017d1fa391a06bedb3781a%253Bregion%253Avn%253Bsku%253A13344148344_VNAMZ%253Bprice%253A1242000%253Bclient%253Adesktop%253Bsupplier_id%253A201110528696%253Bsession_id%253A%253Bbiz_source%253Ah5_internal%253Bslot%253A1%253Butlog_bucket_id%253A470687%253Basc_category_id%253A11068%253Bitem_id%253A13344148344%253Bsku_id%253A116633631361%253Bshop_id%253A5088557%253BtemplateInfo%253A107883_E%2523-1_A3_C%2523164594_J%2523&freeshipping=1&fs_ab=2&fuse_fs=&lang=vi&location=China&price=1.242E%206&priceCompare=skuId%3A116633631361%3Bsource%3Alazada-search-voucher%3Bsn%3A3805aba107017d1fa391a06bedb3781a%3BoriginPrice%3A1242000%3BdisplayPrice%3A1242000%3BisGray%3Afalse%3BsinglePromotionId%3A460000000000000%3BsingleToolCode%3ApromPrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1789368392145&ratingscore=4.875&request_id=3805aba107017d1fa391a06bedb3781a&review=16&sale=32&search=1&source=search&spm=a2o4n.searchlist.list.1&stock=1",
+      "ig_url": "https://www.instagram.com/ulanzi.vietnam/",
       "gdrive_folder": "https://drive.google.com/open?id=19t43n4ACnEONaOpKK1ceJLg3Lel0AkLG",
       "media": {
         "thumb_hook": "https://img.youtube.com/vi/L4YUJh9ltF0/hqdefault.jpg",
@@ -12104,7 +12104,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi.vietnam",
         "profile_url": "https://www.instagram.com/ulanzi.vietnam/"
       },
-      "ig_url": "https://s.lazada.vn/s.obGd6?c=s",
+      "ig_url": "https://www.instagram.com/ulanzi.vietnam/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://img.youtube.com/vi/ZUWZ5Uhbz28/hqdefault.jpg",
@@ -12182,7 +12182,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kawoon.lee",
         "profile_url": "https://www.instagram.com/kawoon.lee/"
       },
-      "ig_url": "https://www.instagram.com/reel/DatbbgJviTV/?stkn=MW41cXVxOGNwMjUwZw==",
+      "ig_url": "https://www.instagram.com/reel/DatbbgJviTV/",
       "gdrive_folder": "https://drive.google.com/open?id=1BZI-pZznTc7KAL7lbt-Iyj48UoJmujVC",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/shot_01_mid.jpg",
@@ -12258,7 +12258,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mercantegi",
         "profile_url": "https://www.instagram.com/mercantegi/"
       },
-      "ig_url": "https://www.instagram.com/mercantegi/",
+      "ig_url": "https://www.instagram.com/reel/DbQtoVPRMWk/",
       "gdrive_folder": "https://drive.google.com/open?id=19USS6XpFGWQSJzEzK6ZsT-g4aoCa7QSJ",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho/shot_01_mid.jpg",
@@ -12332,7 +12332,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@turapinaanastasiia",
         "profile_url": "https://www.instagram.com/turapinaanastasiia/"
       },
-      "ig_url": "https://www.instagram.com/turapinaanastasiia/",
+      "ig_url": "https://www.instagram.com/reel/DdBorQ2KEli/",
       "gdrive_folder": "https://drive.google.com/open?id=1_edbje9S5JP2TMQ-TXsl0h1UUA3Nz5_s",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_mid.jpg",
@@ -12406,7 +12406,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@vicgaibar",
         "profile_url": "https://www.instagram.com/vicgaibar/"
       },
-      "ig_url": "https://www.instagram.com/reel/DaGGMTdtawm/?stkn=Mm9kMzh4MG1ybzNx",
+      "ig_url": "https://www.instagram.com/reel/DaGGMTdtawm/",
       "gdrive_folder": "https://drive.google.com/open?id=145DqOK7p01WVztGU3ZUhvoxc_JivIain",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40vicgaibar_DaGGMTdtawm_Cannes_Street_Fit_Check_Tripod_OOTD/shot_01_mid.jpg",
@@ -12481,7 +12481,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hannya.tattoos",
         "profile_url": "https://www.instagram.com/hannya.tattoos/"
       },
-      "ig_url": "https://www.instagram.com/p/DdLedJjsbNW/",
+      "ig_url": "https://www.instagram.com/reel/DdLedJjsbNW/",
       "gdrive_folder": "https://drive.google.com/open?id=1RIepbYRGh8Y4hiyQeXd8L4YOGxn0N9JR",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_01_mid.jpg",
@@ -12629,7 +12629,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hanoi.liebe",
         "profile_url": "https://www.instagram.com/hanoi.liebe/"
       },
-      "ig_url": "https://www.instagram.com/p/DdHf_1yA4WQ/",
+      "ig_url": "https://www.instagram.com/reel/DdHf_1yA4WQ/",
       "gdrive_folder": "https://drive.google.com/open?id=1CGWSETD2YW3yOMbz5cls1Bvq52URsK5y",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha/shot_01_mid.jpg",
@@ -12706,7 +12706,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@vnexpress_hanoi",
         "profile_url": "https://www.instagram.com/vnexpress_hanoi/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdAyywnSxU8/?stkn=MTU1MXg3YXk4OW8xMQ==",
+      "ig_url": "https://www.instagram.com/reel/DdAyywnSxU8/",
       "gdrive_folder": "https://drive.google.com/open?id=1GXrw8FtkoFNuUrKGp36tTGduZf1gs5hL",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi/shot_01_mid.jpg",
@@ -12783,7 +12783,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@utsint",
         "profile_url": "https://www.instagram.com/utsint/"
       },
-      "ig_url": "https://www.instagram.com/p/DdAYPcwgfv1/",
+      "ig_url": "https://www.instagram.com/reel/DdAYPcwgfv1/",
       "gdrive_folder": "https://drive.google.com/open?id=1C_utEcBCcYsdTEz5UtXrdf9z5feCCOF-",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour/shot_01_mid.jpg",
@@ -12932,7 +12932,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hairpositiveofficial",
         "profile_url": "https://www.instagram.com/hairpositiveofficial/"
       },
-      "ig_url": "https://www.instagram.com/reel/DbOMM0Pu1HA/?stkn=bDQ5NGxlcDBtNGhz",
+      "ig_url": "https://www.instagram.com/reel/DbOMM0Pu1HA/",
       "gdrive_folder": "https://drive.google.com/open?id=1Jxwli-mCsHgBFhUoZhWFH5t9X9W7joNZ",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_01_mid.jpg",
@@ -13005,7 +13005,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@moodme.sg",
         "profile_url": "https://www.instagram.com/moodme.sg/"
       },
-      "ig_url": "https://www.instagram.com/p/DdL904CMnq3/",
+      "ig_url": "https://www.instagram.com/reel/DdL904CMnq3/",
       "gdrive_folder": "https://drive.google.com/open?id=1KphWjU1Qq6UKnDnKwc6hBPlEov2exaB6",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40moodme.sg_DdL904CMnq3_Slow_Living_Scent_Giftspace/shot_01_mid.jpg",
@@ -13083,7 +13083,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jassminechi",
         "profile_url": "https://www.instagram.com/jassminechi/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdFBLQMOTwM/?stkn=MXNweGVwdDRyYzA5YQ==",
+      "ig_url": "https://www.instagram.com/reel/DdFBLQMOTwM/",
       "gdrive_folder": "https://drive.google.com/open?id=1AbENDdElh2uh30BzczOghjm--9xxeP7f",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_01_mid.jpg",
@@ -13156,7 +13156,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hena_film_vlog",
         "profile_url": "https://www.instagram.com/hena_film_vlog/"
       },
-      "ig_url": "https://www.instagram.com/reel/Db-mZWEKECo/?stkn=bHhhcnlqeDJnNDZh",
+      "ig_url": "https://www.instagram.com/reel/Db-mZWEKECo/",
       "gdrive_folder": "https://drive.google.com/open?id=1Vs39vW4CcrmGQYDf6GGW3NnfMCyYmo12",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/shot_01_mid.jpg",
@@ -13230,7 +13230,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@lee.rabo",
         "profile_url": "https://www.instagram.com/lee.rabo/"
       },
-      "ig_url": "https://www.instagram.com/lee.rabo/",
+      "ig_url": "https://www.instagram.com/reel/Dc3ifsHTIhL/",
       "gdrive_folder": "https://drive.google.com/open?id=1TE1CCndPyCYYuVtA6nJMTOE8WhCrpg_C",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40lee.rabo_Dc3ifsHTIhL_Introverted_Homebody_Freelancer_Daily_Vlog/shot_01_mid.jpg",
@@ -13373,7 +13373,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@sanjogchopra",
         "profile_url": "https://www.instagram.com/sanjogchopra/"
       },
-      "ig_url": "https://www.instagram.com/sanjogchopra/",
+      "ig_url": "https://www.instagram.com/reel/Dcxi128sxO9/",
       "gdrive_folder": "https://drive.google.com/open?id=1-7BlIChO1_mFvDRdYTDQAFApRQmeNOrI",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_01_mid.jpg",
@@ -13441,7 +13441,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@lizzypalios",
         "profile_url": "https://www.instagram.com/lizzypalios/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdHMOB0xfd1/?stkn=MTU3djY2eTdqMjQxbw==",
+      "ig_url": "https://www.instagram.com/reel/DdHMOB0xfd1/",
       "gdrive_folder": "https://drive.google.com/open?id=1JYbmscjwapUSFA9qM4zxdjxotMVSNkfc",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40lizzypalios_DdHMOB0xfd1_Content_Creation_Process/shot_01_mid.jpg",
@@ -13509,7 +13509,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@tattebakery",
         "profile_url": "https://www.instagram.com/tattebakery/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcJM7AWOa__/?stkn=MWE1N3JzbWlwZGVhOQ==",
+      "ig_url": "https://www.instagram.com/tattebakery/",
       "gdrive_folder": "https://drive.google.com/open?id=11KrjCL35NeaATtV2AePDjVWj0j90ywPY",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC/shot_01_mid.jpg",
@@ -13577,7 +13577,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@saebomoh",
         "profile_url": "https://www.instagram.com/saebomoh/"
       },
-      "ig_url": "https://www.instagram.com/reel/DbH76S5yg5W/?stkn=dmVsa2twaGoyNGI2",
+      "ig_url": "https://www.instagram.com/reel/DbH76S5yg5W/",
       "gdrive_folder": "https://drive.google.com/open?id=1-O9WxOLsK1gVAsxJh9ZZT7Ni4HxjImrz",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/shot_01_mid.jpg",
@@ -13645,7 +13645,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kisho_men",
         "profile_url": "https://www.instagram.com/kisho_men/"
       },
-      "ig_url": "https://www.instagram.com/kisho_men/",
+      "ig_url": "https://www.instagram.com/reel/DcxgmP1zZPk/",
       "gdrive_folder": "https://drive.google.com/open?id=1daXkschS5VsG6IsiZ6RIgWNe8_TSYn12",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion/shot_01_mid.jpg",
@@ -13713,7 +13713,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@korea_bigmama",
         "profile_url": "https://www.instagram.com/korea_bigmama/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdBnto_O0He/?stkn=bjRkbW5jYmduOTR3",
+      "ig_url": "https://www.instagram.com/reel/DdBnto_O0He/",
       "gdrive_folder": "https://drive.google.com/open?id=1EowHEhv1gKD7xejitZkm5hc8OK1D_eq0",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist/shot_01_mid.jpg",
@@ -13781,7 +13781,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@quinematic",
         "profile_url": "https://www.instagram.com/quinematic/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdH6HGNxEYT/?stkn=cDN1MnVpZTM0YjQ0",
+      "ig_url": "https://www.instagram.com/reel/DdH6HGNxEYT/",
       "gdrive_folder": "https://drive.google.com/open?id=11KKOJuXLuykv1ZlksHdjqcnk1S-9ek02",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40quinematic_DdH6HGNxEYT_Time_To_Go_For_A_Run/shot_01_mid.jpg",
@@ -13849,7 +13849,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@dimasyudhystira",
         "profile_url": "https://www.instagram.com/dimasyudhystira/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dc3DUsvpkrP/?stkn=eDBybW93OWo3bWlz",
+      "ig_url": "https://www.instagram.com/reel/Dc3DUsvpkrP/",
       "gdrive_folder": "https://drive.google.com/open?id=1gZ8vi0mkdIejL6YPvrSIGtAYT02YQ5Cz",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/shot_01_mid.jpg",
@@ -13917,7 +13917,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@steven.vuu",
         "profile_url": "https://www.instagram.com/steven.vuu/"
       },
-      "ig_url": "https://www.instagram.com/reel/DaBLA-QJcrk/?stkn=MXh2c2c3eWVjdTRtbA==",
+      "ig_url": "https://www.instagram.com/reel/DaBLA-QJcrk/",
       "gdrive_folder": "https://drive.google.com/open?id=1gWe4uEuHlmLN6ImVnvT98cDYsB0tz_Dl",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit/shot_01_mid.jpg",
@@ -13985,7 +13985,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hsuan_yunn",
         "profile_url": "https://www.instagram.com/hsuan_yunn/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdLsL-cSekL/?stkn=MWFyazduMXNnMmk0bg==",
+      "ig_url": "https://www.instagram.com/reel/DdLsL-cSekL/",
       "gdrive_folder": "https://drive.google.com/open?id=1rjW471Zu_gi1z0G-rV7sOnuhGM1aX1jq",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hsuan_yunn_DdLsL-cSekL_Outdoor_Fashion_Match_Cut_Gear_Showcase/shot_01_mid.jpg",
@@ -14053,7 +14053,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@steven.vuu",
         "profile_url": "https://www.instagram.com/steven.vuu/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdM7gO4yD-c/?stkn=NnJjcHlkcTBheDBj",
+      "ig_url": "https://www.instagram.com/reel/DdM7gO4yD-c/",
       "gdrive_folder": "https://drive.google.com/open?id=1T7j9z63Hh4qD1c86e01Yd-H_2pB1oQeW",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40steven.vuu_DdM7gO4yD-c_Meta_RayBan_Hero_Cosmetics_Skit/shot_01_mid.jpg",
@@ -14121,7 +14121,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@bysuncan",
         "profile_url": "https://www.instagram.com/bysuncan/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcvZ-FowD_A/?stkn=Ynd6aGE0bzBtZTF3",
+      "ig_url": "https://www.instagram.com/reel/DcvZ-FowD_A/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_01_mid.jpg",
@@ -14264,7 +14264,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi.vietnam",
         "profile_url": "https://www.instagram.com/ulanzi.vietnam/"
       },
-      "ig_url": "https://www.lazada.vn/products/pdp-i13344148344-s116633631361.html",
+      "ig_url": "https://www.instagram.com/ulanzi.vietnam/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
         "thumb_hook": "https://img.youtube.com/vi/adOF33KL6qk/hqdefault.jpg",
@@ -14339,7 +14339,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi.vietnam",
         "profile_url": "https://www.instagram.com/ulanzi.vietnam/"
       },
-      "ig_url": "https://shopee.vn/ULANZI-MT80-Ch%C3%A2n-M%C3%A1y-Tripod-ULANZI-MT-80-Chi%E1%BB%81u-Cao-213cm-T%E1%BA%A3i-Tr%E1%BB%8Dng-5kg-H%C3%A0ng-Ch%C3%ADnh-H%C3%A3ng-i.1146051656.42829427636",
+      "ig_url": "https://www.instagram.com/ulanzi.vietnam/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
         "thumb_hook": "https://img.youtube.com/vi/InZ6HgASLnE/hqdefault.jpg",
@@ -15081,7 +15081,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@watch.gabe",
         "profile_url": "https://www.instagram.com/watch.gabe/"
       },
-      "ig_url": "https://www.instagram.com/p/Dc3immEILSE/",
+      "ig_url": "https://www.instagram.com/reel/Dc3immEILSE/",
       "gdrive_folder": "https://drive.google.com/open?id=1MsLWqdOZVm6QKJHV7b8b5QYtsEFsMgEC",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year/shot_01_mid.jpg",
@@ -15149,7 +15149,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@Gabe_Harris",
         "profile_url": "https://www.instagram.com/Gabe_Harris/"
       },
-      "ig_url": "https://www.instagram.com/p/Dc3immEILSE/?img_index=2&stkn=MXZ2N2E0anYwMnBzeQ==",
+      "ig_url": "https://www.instagram.com/Gabe_Harris/",
       "gdrive_folder": "https://drive.google.com/open?id=1a0IDCkNY-ldnUxxfaTH5tn-q-M_U4E1v",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Gabe_Harris_Dc3ih_5jlqz_Carousel_Analysis/slide_01_mid.jpg",
@@ -16192,7 +16192,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@wowshoebwow",
         "profile_url": "https://www.instagram.com/wowshoebwow/"
       },
-      "ig_url": "https://www.instagram.com/p/Db_EEZtjJBI/",
+      "ig_url": "https://www.instagram.com/reel/Db_EEZtjJBI/",
       "gdrive_folder": "https://drive.google.com/open?id=1glu30c5zhOll3t45nH-G9RhILc02a7rE",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar/shot_01_mid.jpg",
@@ -16264,7 +16264,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@gogosapu",
         "profile_url": "https://www.instagram.com/gogosapu/"
       },
-      "ig_url": "https://www.instagram.com/p/Db5TrGYlKbD/",
+      "ig_url": "https://www.instagram.com/reel/Db5TrGYlKbD/",
       "gdrive_folder": "https://drive.google.com/open?id=1sjXi_rTTKJ4pXMdDy720bLTzbCl_WyXw",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story/shot_01_mid.jpg",
@@ -16336,7 +16336,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@neolumo.uralsk",
         "profile_url": "https://www.instagram.com/neolumo.uralsk/"
       },
-      "ig_url": "https://www.instagram.com/p/DcOUP2PsMsP/",
+      "ig_url": "https://www.instagram.com/reel/DcOUP2PsMsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1SYMRNlx7b3TN8fQiWumiqkpePaJ3k__s",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40neolumo.uralsk_DcOUP2PsMsP_Medical_Commercial_Authority/shot_01_mid.jpg",
@@ -16408,7 +16408,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jade.got.curious",
         "profile_url": "https://www.instagram.com/jade.got.curious/"
       },
-      "ig_url": "https://www.instagram.com/p/DbgtGKjNcH9/",
+      "ig_url": "https://www.instagram.com/reel/DbgtGKjNcH9/",
       "gdrive_folder": "https://drive.google.com/open?id=1BsfPgoxHhoAQaYe5XCzdciwuCYvJmUSL",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling/shot_01_mid.jpg",
@@ -16477,7 +16477,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hena_film_vlog",
         "profile_url": "https://www.instagram.com/hena_film_vlog/"
       },
-      "ig_url": "https://www.instagram.com/p/DcVzQCSP1MR/",
+      "ig_url": "https://www.instagram.com/reel/DcVzQCSP1MR/",
       "gdrive_folder": "https://drive.google.com/open?id=1DYkTfMHquImgLh_7TkxVt44o8KPoxvVz",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.jpg",
@@ -16549,7 +16549,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jackwebstter",
         "profile_url": "https://www.instagram.com/jackwebstter/"
       },
-      "ig_url": "https://www.instagram.com/p/DcJIT4DzPhj/",
+      "ig_url": "https://www.instagram.com/reel/DcJIT4DzPhj/",
       "gdrive_folder": "https://drive.google.com/open?id=1UBG-KF3IOIDrj6Y-CfbV3pU2B-Iint5h",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro/shot_01_mid.jpg",
@@ -16621,7 +16621,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@srdtrv",
         "profile_url": "https://www.instagram.com/srdtrv/"
       },
-      "ig_url": "https://www.instagram.com/p/DcbJDDNi7h8/",
+      "ig_url": "https://www.instagram.com/reel/DcbJDDNi7h8/",
       "gdrive_folder": "https://drive.google.com/open?id=10qCN6xKJwbCxrgeEuLg37lvPMlZAWiI2",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery/shot_01_mid.jpg",
@@ -16693,7 +16693,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@withgeorgy",
         "profile_url": "https://www.instagram.com/withgeorgy/"
       },
-      "ig_url": "https://www.instagram.com/p/Db7_3rpgK5c/",
+      "ig_url": "https://www.instagram.com/reel/Db7_3rpgK5c/",
       "gdrive_folder": "https://drive.google.com/open?id=1rodEc-uWIFfruN6EVV7pqn6_l08dOmD-",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery/shot_01_mid.jpg",
@@ -16765,7 +16765,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@bewoom_",
         "profile_url": "https://www.instagram.com/bewoom_/"
       },
-      "ig_url": "https://www.instagram.com/p/DcYxC8wvt1z/",
+      "ig_url": "https://www.instagram.com/reel/DcYxC8wvt1z/",
       "gdrive_folder": "https://drive.google.com/open?id=1vsHh7QP4U8emuEuKuBUcUi4ELjlWQL4j",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity/shot_01_mid.jpg",
@@ -16838,7 +16838,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@onethebaha",
         "profile_url": "https://www.instagram.com/onethebaha/"
       },
-      "ig_url": "https://www.instagram.com/p/DcWEp8-swbB/",
+      "ig_url": "https://www.instagram.com/reel/DcWEp8-swbB/",
       "gdrive_folder": "https://drive.google.com/open?id=1G2xabre631yRXxAs8hkEykoVvzCKauJg",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial/shot_01_mid.jpg",
@@ -16913,7 +16913,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@brandon.dtd",
         "profile_url": "https://www.instagram.com/brandon.dtd/"
       },
-      "ig_url": "https://www.instagram.com/p/DcTbD0MR-V_/",
+      "ig_url": "https://www.instagram.com/brandon.dtd/",
       "gdrive_folder": "https://drive.google.com/open?id=1TKQpa0f7lLSvOjz8zDax64P6tGjIF19q",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession/shot_01_mid.jpg",
@@ -16985,7 +16985,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@photoknack.in",
         "profile_url": "https://www.instagram.com/photoknack.in/"
       },
-      "ig_url": "https://www.instagram.com/p/DcD30ThT7Zm/",
+      "ig_url": "https://www.instagram.com/reel/DcD30ThT7Zm/",
       "gdrive_folder": "https://drive.google.com/open?id=1cmZxru_yRZ0Apotda1GqOm_1l4NCv5Dx",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective/shot_01_mid.jpg",
@@ -17057,7 +17057,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@nana_icroom",
         "profile_url": "https://www.instagram.com/nana_icroom/"
       },
-      "ig_url": "https://www.instagram.com/p/Db-jmp6TXNT/",
+      "ig_url": "https://www.instagram.com/reel/Db-jmp6TXNT/",
       "gdrive_folder": "https://drive.google.com/open?id=1AoQxfZ4SEOphLjmPFEt7Tz8BBtUl3kg_",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40nana_icroom_Db-jmp6TXNT_5_Japanese_Vlog_Compositions/shot_01_mid.jpg",
@@ -17129,7 +17129,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@lacapturevisuals",
         "profile_url": "https://www.instagram.com/lacapturevisuals/"
       },
-      "ig_url": "https://www.instagram.com/p/DZWRDtqMNWq/",
+      "ig_url": "https://www.instagram.com/reel/DZWRDtqMNWq/",
       "gdrive_folder": "https://drive.google.com/open?id=15GH43kt8MEwQBvvnUslOWcO9uvsHf9Jj",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery/shot_01_mid.jpg",
@@ -17201,7 +17201,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@pascal_blaurock",
         "profile_url": "https://www.instagram.com/pascal_blaurock/"
       },
-      "ig_url": "https://www.instagram.com/p/Dcd2VeyNJQx/",
+      "ig_url": "https://www.instagram.com/reel/Dcd2VeyNJQx/",
       "gdrive_folder": "https://drive.google.com/open?id=1pRYt2nK3WtrkJwoCeaVY6qYhnDJBp6xW",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40pascal_blaurock_Dcd2VeyNJQx_iPhone_Cinema_Settings_Mastery/shot_01_mid.jpg",
@@ -17273,7 +17273,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kortafilms",
         "profile_url": "https://www.instagram.com/kortafilms/"
       },
-      "ig_url": "https://www.instagram.com/p/DcdthwaTM3J/",
+      "ig_url": "https://www.instagram.com/reel/DcdthwaTM3J/",
       "gdrive_folder": "https://drive.google.com/open?id=1Oz7Q6yL1ql5Pv__UfAi_uEG_NaGwHkos",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40kortafilms_DcdthwaTM3J_Camera_Angles_Mastery/shot_01_mid.jpg",
@@ -17492,7 +17492,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@firewood_klcc",
         "profile_url": "https://www.instagram.com/firewood_klcc/"
       },
-      "ig_url": "https://www.instagram.com/p/DZFzj9YAAmG/",
+      "ig_url": "https://www.instagram.com/reel/DZFzj9YAAmG/",
       "gdrive_folder": "https://drive.google.com/open?id=1qxMig74H8BZUoaLp1yytes3bAcWeM4yg",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining/shot_01_mid.jpg",
@@ -17630,7 +17630,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@vietmac",
         "profile_url": "https://www.instagram.com/vietmac/"
       },
-      "ig_url": "https://instagram.com/vietmac",
+      "ig_url": "https://www.instagram.com/vietmac/",
       "gdrive_folder": "https://drive.google.com/open?id=1LMBSOrcjvikn7AnULasSatqjHtxvgdOJ",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_Chay_0904_%40vietmac/shot_01_mid.jpg",
@@ -17699,7 +17699,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@vietmac",
         "profile_url": "https://www.instagram.com/vietmac/"
       },
-      "ig_url": "https://instagram.com/vietmac",
+      "ig_url": "https://www.instagram.com/vietmac/",
       "gdrive_folder": "https://drive.google.com/open?id=128pX0sxQ_M9JihcI-tS6cK9FVccUPfW-",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_Chay_0903_2_%40vietmac/shot_01_mid.jpg",
@@ -17771,7 +17771,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@beixin",
         "profile_url": "https://www.instagram.com/beixin/"
       },
-      "ig_url": "https://www.instagram.com/p/Dc0zzrWj8Vu/",
+      "ig_url": "https://www.instagram.com/reel/Dc0zzrWj8Vu/",
       "gdrive_folder": "https://drive.google.com/open?id=17CID39yrjDvmbpaiV1G3NLg6YcMOXwhU",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_01_mid.jpg",
@@ -17912,7 +17912,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@AnhSacAnh",
         "profile_url": "https://www.instagram.com/AnhSacAnh/"
       },
-      "ig_url": "https://www.facebook.com/share/v/18TWbzspFY/",
+      "ig_url": "https://www.instagram.com/AnhSacAnh/",
       "gdrive_folder": "https://drive.google.com/open?id=1_ioDKkqC_oJ1-jjBLa8xDZM3e7TDcUky",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/FB_%40AnhSacAnh_1964049564715249_Thuong_Hieu_Ca_Nhan_Sinh_Loi/shot_01_mid.jpg",
@@ -18056,7 +18056,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@slaohuairen",
         "profile_url": "https://www.instagram.com/slaohuairen/"
       },
-      "ig_url": "https://www.instagram.com/reels/DcLblxOy3tN/",
+      "ig_url": "https://www.instagram.com/reel/DcLblxOy3tN/",
       "gdrive_folder": "https://drive.google.com/open?id=1Ji5ous5WM4UrP8V5025RO1OtT7kGAzhJ",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40slaohuairen_DcLblxOy3tN_A_young_girl_in_linen/shot_01_mid.jpg",
@@ -18128,7 +18128,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@gakuyen",
         "profile_url": "https://www.instagram.com/gakuyen/"
       },
-      "ig_url": "https://www.instagram.com/p/Dc0MQfeEwp4/?utm_source=ig_web_copy_link&igsi=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/gakuyen/",
       "gdrive_folder": "https://drive.google.com/open?id=1AA_oaJSpEyMktoRp2t6pvSwWkk3CbDKb",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40gakuyen_Dc0MQfeEwp4_Carousel_Analysis/slide_01_mid.jpg",
@@ -18197,7 +18197,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kyung6film",
         "profile_url": "https://www.instagram.com/kyung6film/"
       },
-      "ig_url": "https://www.instagram.com/reel/DakY2EST-Tm/?utm_source=ig_web_copy_link&igsi=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/DakY2EST-Tm/",
       "gdrive_folder": "https://drive.google.com/open?id=1f2HQgSjHIRxz4OpjfSqGVj9jwNifLMqh",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_01_mid.jpg",
@@ -18266,7 +18266,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@by.bennnj",
         "profile_url": "https://www.instagram.com/by.bennnj/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dcvxba1OvrD/?utm_source=ig_web_copy_link&igsi=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/Dcvxba1OvrD/",
       "gdrive_folder": "https://drive.google.com/open?id=1sMxOJ4AhsaO6-qe-MJjtiH70J_Ov7z3e",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_01_mid.jpg",
@@ -18403,7 +18403,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@vietmac",
         "profile_url": "https://www.instagram.com/vietmac/"
       },
-      "ig_url": "https://instagram.com/vietmac",
+      "ig_url": "https://www.instagram.com/vietmac/",
       "gdrive_folder": "https://drive.google.com/open?id=128pX0sxQ_M9JihcI-tS6cK9FVccUPfW-",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_Chay_0903_%40vietmac/shot_01_mid.jpg",
@@ -18979,7 +18979,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@Andrei_Kostromskikh",
         "profile_url": "https://www.instagram.com/Andrei_Kostromskikh/"
       },
-      "ig_url": "https://www.instagram.com/p/DctRykCjcp2/",
+      "ig_url": "https://www.instagram.com/Andrei_Kostromskikh/",
       "gdrive_folder": "https://drive.google.com/open?id=1c6b1gEwVqVbKkLqNnF9c4b7m",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis/slide_01_mid.jpg",
@@ -19120,7 +19120,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@thomasmathewt2",
         "profile_url": "https://www.instagram.com/thomasmathewt2/"
       },
-      "ig_url": "https://www.instagram.com/p/DcgTj56Atlc/?img_index=6",
+      "ig_url": "https://www.instagram.com/reel/DcgTj56Atlc/",
       "gdrive_folder": "https://drive.google.com/open?id=1G7QjrcYgvD0iPrXGjANIkj1QREdxb7_R",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots/shot_01_mid.jpg",
@@ -19611,7 +19611,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@Startup_TM",
         "profile_url": "https://www.instagram.com/Startup_TM/"
       },
-      "ig_url": "https://youtu.be/xnAU8Pazc6A?si=OKvMADW-1A37qidv",
+      "ig_url": "https://www.instagram.com/Startup_TM/",
       "gdrive_folder": "https://drive.google.com/open?id=1N0GdLmp9DsYoM70nStwHtkxxs3eopLmc",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast/shot_01_mid.jpg",
@@ -19824,7 +19824,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@vietmac",
         "profile_url": "https://www.instagram.com/vietmac/"
       },
-      "ig_url": "https://vietndj.github.io/reports/Practice_Cinematic_2508%20-%20@vietmac.html",
+      "ig_url": "https://www.instagram.com/vietmac/",
       "gdrive_folder": "https://drive.google.com/open?id=1rOCjNE-NO57Ohp6MwZKOA51lZZAUbtXM",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_2508_%40vietmac/shot_04_mid.jpg",
@@ -19893,7 +19893,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@vietmac",
         "profile_url": "https://www.instagram.com/vietmac/"
       },
-      "ig_url": "https://vietndj.github.io/reports/Practice_Cinematic_01%20-%20@vietmac.html",
+      "ig_url": "https://www.instagram.com/vietmac/",
       "gdrive_folder": "https://drive.google.com/open?id=17NkfVMp0UTPw2wHC26Bo3Bu9g3LPIyI_",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_01_%40vietmac/shot_01_mid.jpg",
@@ -19965,7 +19965,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@arturbr",
         "profile_url": "https://www.instagram.com/arturbr/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcOQSCMqho0/?utm_source=ig_web_copy_link&igsi=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/DcOQSCMqho0/",
       "gdrive_folder": "https://drive.google.com/open?id=1aauVQ80nFyj9KAl2e0OkOfk4DL7vq81f",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_01_mid.jpg",
@@ -20461,7 +20461,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@thodiahaiduongne",
         "profile_url": "https://www.instagram.com/thodiahaiduongne/"
       },
-      "ig_url": "https://www.tiktok.com/@thodiahaiduongne/video/7350657143906913544",
+      "ig_url": "https://www.instagram.com/thodiahaiduongne/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/TikTok_%40thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_start.jpg",
@@ -20535,7 +20535,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@tinanguyen2004",
         "profile_url": "https://www.instagram.com/tinanguyen2004/"
       },
-      "ig_url": "https://www.tiktok.com/@tinanguyen2004/video/7673468312290037012",
+      "ig_url": "https://www.instagram.com/reel/Day_luon_la/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40tinanguyen2004_7673468312290037012_Double_Day_lu%C3%B4n_l%C3%A0_d%E1%BB%8Bp_%C4%91%E1%BB%83_kh%C3%A1ch_h%C3%A0ng_l%E1%BB%B1a_%C4%91%C6%B0%E1%BB%A3c/shot_01_mid.jpg",
@@ -20745,7 +20745,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ioana_iftode",
         "profile_url": "https://www.instagram.com/ioana_iftode/"
       },
-      "ig_url": "https://www.instagram.com/p/Db7zNC0jPwV/",
+      "ig_url": "https://www.instagram.com/reel/Db7zNC0jPwV/",
       "gdrive_folder": "https://drive.google.com/open?id=1BpA3qkvy1766YGz9rZ07X5HdRzl8vUsL",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments/shot_01_mid.jpg",
@@ -20886,7 +20886,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ioana_iftode",
         "profile_url": "https://www.instagram.com/ioana_iftode/"
       },
-      "ig_url": "https://www.instagram.com/p/DcYQVYJjHa-/",
+      "ig_url": "https://www.instagram.com/reel/DcYQVYJjHa-/",
       "gdrive_folder": "https://drive.google.com/open?id=1X5yR8iSuizx8DgNkzz0NaWH0boKZWx09",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ioana_iftode_DcYQVYJjHa-_Tokyo_Slow_Life_Visual_Diaries/shot_01_mid.jpg",
@@ -21168,7 +21168,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kopdinh",
         "profile_url": "https://www.instagram.com/kopdinh/"
       },
-      "ig_url": "https://web.facebook.com/reel/1398467868829887/?s=single_unit",
+      "ig_url": "https://www.instagram.com/kopdinh/",
       "gdrive_folder": "https://drive.google.com/open?id=1G1Lt_WAF1GSuXD4ccXprArfdeovz3Poa",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Lat_Cat_Cam_Xuc_-_%40KopDinh/img_001_63c5522e.jpg",
@@ -21237,7 +21237,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@withyuee",
         "profile_url": "https://www.instagram.com/withyuee/"
       },
-      "ig_url": "https://www.instagram.com/p/DUqQaPbkfcQ/",
+      "ig_url": "https://www.instagram.com/reel/DUqQaPbkfcQ/",
       "gdrive_folder": "https://drive.google.com/open?id=10UqUp7x20sUi9nRGP8qYNNB9omq5FMIa",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_001_cbc24138.jpg",
@@ -21306,7 +21306,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@withyuee",
         "profile_url": "https://www.instagram.com/withyuee/"
       },
-      "ig_url": "https://www.instagram.com/withyuee/p/DO8arRxEZvh/",
+      "ig_url": "https://www.instagram.com/reel/DO8arRxEZvh/",
       "gdrive_folder": "https://drive.google.com/open?id=1jm5KkWr9XH6aWRvB4S8yZt-04fehPSCV",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/extracted_shots/slide_01_mid.jpg",
@@ -21375,7 +21375,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@withyuee",
         "profile_url": "https://www.instagram.com/withyuee/"
       },
-      "ig_url": "https://www.instagram.com/p/DVQ3Gh6Efk1/",
+      "ig_url": "https://www.instagram.com/reel/DVQ3Gh6Efk1/",
       "gdrive_folder": "https://drive.google.com/open?id=1IvbwMbmFTwe3iEOtyu8kE560RPj_0uaf",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Spring_in_Hong_Kong_-_%40withyuee/img_001_bac7352a.jpg",
@@ -21447,7 +21447,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@samuelaitken_",
         "profile_url": "https://www.instagram.com/samuelaitken_/"
       },
-      "ig_url": "https://www.instagram.com/p/Da0eP_msVrm/",
+      "ig_url": "https://www.instagram.com/reel/Da0eP_msVrm/",
       "gdrive_folder": null,
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_001_b0c92ce2.jpg",
@@ -21586,7 +21586,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@by.bennnj",
         "profile_url": "https://www.instagram.com/by.bennnj/"
       },
-      "ig_url": "https://www.instagram.com/p/DbKauxkoJU_/",
+      "ig_url": "https://www.instagram.com/by.bennnj/",
       "gdrive_folder": null,
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Making_Beginner_Cameras_Look_Cinematic_-_%40by.bennnj/img_001_7dd798e3.jpg",
@@ -21661,7 +21661,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/p/DXUG_1TjwJu/",
+      "ig_url": "https://www.instagram.com/jazziesillona/",
       "gdrive_folder": null,
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Visual_Stopping_Power_Carousel_-_%40jazziesillona/img_001_3ed9942d.jpg",
@@ -21730,7 +21730,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/p/DW8lBR9Dzop/",
+      "ig_url": "https://www.instagram.com/jazziesillona/",
       "gdrive_folder": "https://drive.google.com/open?id=11L_hnSSKkQ0hSWHuQx74vzsQDnhVS5hN",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg",
@@ -21799,7 +21799,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/p/DWnsVqWj2XN/",
+      "ig_url": "https://www.instagram.com/jazziesillona/",
       "gdrive_folder": null,
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/carousel_slides/slide_01_mid.jpg",
@@ -21868,7 +21868,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/p/DWrDUymD4_a/",
+      "ig_url": "https://www.instagram.com/jazziesillona/",
       "gdrive_folder": null,
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.jpg",
@@ -21940,7 +21940,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mcjacoub",
         "profile_url": "https://www.instagram.com/mcjacoub/"
       },
-      "ig_url": "https://www.instagram.com/p/DbnwnkrAVQ9/",
+      "ig_url": "https://www.instagram.com/mcjacoub/",
       "gdrive_folder": null,
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Quy_Tac_Quay_Phim_Carousel_-_%40Jacoub_Anwar/img_001_35384a7a.jpg",
@@ -22012,7 +22012,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/p/DU2CTKzEqvl/",
+      "ig_url": "https://www.instagram.com/jazziesillona/",
       "gdrive_folder": null,
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Urban_Texture_Carousel_-_%40jazziesillona/img_001_e012a6d8.jpg",
@@ -22081,7 +22081,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/p/DbIA2jwPHCV/",
+      "ig_url": "https://www.instagram.com/reel/DbIA2jwPHCV/",
       "gdrive_folder": null,
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Hong_Kong_Alleyways_Cinematic_-_%40jazziesillona/img_001_00ff8166.jpg",
@@ -22138,7 +22138,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@byjxson",
         "profile_url": "https://www.instagram.com/byjxson/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dal3RFpA5nI/",
+      "ig_url": "https://www.instagram.com/reel/Dong_Ho_Bam/",
       "gdrive_folder": "https://drive.google.com/drive/folders/1e6_uF7W2m4R8Z8e8_remake_watch",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_start.jpg",
@@ -22210,7 +22210,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@intothethailand",
         "profile_url": "https://www.instagram.com/intothethailand/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dad0d3xtv9E/?igsi=MWtlNjNsdzU1aW8zOQ==",
+      "ig_url": "https://www.instagram.com/reel/Dad0d3xtv9E/",
       "gdrive_folder": "https://drive.google.com/open?id=1JCmITyV4dgyNDNvRuNbhVF9M5U0ZVM7O",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life/shot_01_mid.jpg",
@@ -22279,7 +22279,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kosnio",
         "profile_url": "https://www.instagram.com/kosnio/"
       },
-      "ig_url": "https://www.instagram.com/p/DcI-darjckz/",
+      "ig_url": "https://www.instagram.com/kosnio/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis/slide_01_mid.jpg",
@@ -22486,7 +22486,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ioana_iftode",
         "profile_url": "https://www.instagram.com/ioana_iftode/"
       },
-      "ig_url": "https://www.instagram.com/p/DbqCYu4DAz2/",
+      "ig_url": "https://www.instagram.com/reel/DbqCYu4DAz2/",
       "gdrive_folder": "https://drive.google.com/open?id=1UqfFMAycOSALgcDuUjy-FdbQASyNrAux",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Kyoto_Slow_Life_Visual_Diaries_-_%40ioana_iftode/img_056_2c7f6609.jpg",
@@ -22849,7 +22849,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mcjacoub",
         "profile_url": "https://www.instagram.com/mcjacoub/"
       },
-      "ig_url": "https://www.instagram.com/p/Db22SIxAVtJ/",
+      "ig_url": "https://www.instagram.com/reel/Db22SIxAVtJ/",
       "gdrive_folder": "https://drive.google.com/open?id=17aNB4M2W3umg0zVdbHjWDg36X6lopAMl",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Camera_Angles_Mastery_-_%40mcjacoub/img_028_b372b147.jpg",
@@ -22921,7 +22921,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@qfroost",
         "profile_url": "https://www.instagram.com/qfroost/"
       },
-      "ig_url": "https://www.instagram.com/p/DXWKIztktTN/",
+      "ig_url": "https://www.instagram.com/reel/DXWKIztktTN/",
       "gdrive_folder": "https://drive.google.com/open?id=1SA3Wev1zigwae5uDoF_a6nzqXa0WpLOj",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Saigon%2C_Vietnam_-_%40qfroost/img_002_d655a123.jpg",
@@ -22996,7 +22996,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@qfroost",
         "profile_url": "https://www.instagram.com/qfroost/"
       },
-      "ig_url": "https://www.instagram.com/p/Dah8zTnNgq5/",
+      "ig_url": "https://www.instagram.com/reel/Dah8zTnNgq5/",
       "gdrive_folder": "https://drive.google.com/open?id=1tnEjlaUS9cmIeWtV4KWumG20Hw8LGMHc",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Ray-Ban_Meta_System_-_%40qfroost/img_002_7fa52771.jpg",
@@ -23068,7 +23068,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@qfroost",
         "profile_url": "https://www.instagram.com/qfroost/"
       },
-      "ig_url": "https://www.instagram.com/p/DbdG7v1tjrz/",
+      "ig_url": "https://www.instagram.com/reel/DbdG7v1tjrz/",
       "gdrive_folder": "https://drive.google.com/open?id=1ebKxcOP6OaPdlgaA3kXIOzAP3j4WKI_R",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Quy_Trinh_Sang_Tao_Adobe_Firefly_-_%40qfroost/img_002_8f1351ef.jpg",
@@ -23140,7 +23140,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jeromememe",
         "profile_url": "https://www.instagram.com/jeromememe/"
       },
-      "ig_url": "https://www.instagram.com/p/Db-zVchOXV7/",
+      "ig_url": "https://www.instagram.com/reel/Db-zVchOXV7/",
       "gdrive_folder": "https://drive.google.com/open?id=1-IEEAxSYsWxoGWDbYlJYWE2JHDt1rGfU",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/People_of_Bhutan_-_%40jeromememe/img_002_c7376907.jpg",
@@ -23212,7 +23212,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jeromememe",
         "profile_url": "https://www.instagram.com/jeromememe/"
       },
-      "ig_url": "https://www.instagram.com/p/DQuEXMbj8fT/",
+      "ig_url": "https://www.instagram.com/reel/DQuEXMbj8fT/",
       "gdrive_folder": "https://drive.google.com/open?id=1Uooaf1OhLuXKTuY7sWBNkkicMWj6oRGE",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/People_of_Porto_-_%40jeromememe/img_002_c7376907.jpg",
@@ -23284,7 +23284,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jeromememe",
         "profile_url": "https://www.instagram.com/jeromememe/"
       },
-      "ig_url": "https://www.instagram.com/p/DQmKgPDEWgJ/",
+      "ig_url": "https://www.instagram.com/reel/DQmKgPDEWgJ/",
       "gdrive_folder": "https://drive.google.com/open?id=1NxAGAkjmvehCqXj5Hizp1Dax0xl0xwzR",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/Artisans_of_Venice_-_%40jeromememe/img_002_a927da23.jpg",
@@ -23431,7 +23431,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@brandon.dtd",
         "profile_url": "https://www.instagram.com/brandon.dtd/"
       },
-      "ig_url": "https://www.instagram.com/brandon.dtd/",
+      "ig_url": "https://www.instagram.com/reel/DcTbD0MR-V_/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession/shot_01_mid.jpg",
@@ -23506,7 +23506,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/jazziesillona/",
+      "ig_url": "https://www.instagram.com/reel/DXUG_1TjwJu/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40jazziesillona_DXUG_1TjwJu_Carousel_Analysis/shot_01_mid.jpg",
@@ -23575,7 +23575,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/jazziesillona/",
+      "ig_url": "https://www.instagram.com/reel/DWrDUymD4_a/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40jazziesillona_DWrDUymD4_a_Carousel_Analysis/shot_01_mid.jpg",
@@ -23648,7 +23648,7 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@watch.gabe",
         "profile_url": "https://www.instagram.com/watch.gabe/"
       },
-      "ig_url": "https://www.instagram.com/watch.gabe/",
+      "ig_url": "https://www.instagram.com/reel/Dc3ih_5jlqz/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year/shot_01_mid.jpg",

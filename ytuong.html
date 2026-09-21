@@ -760,9 +760,13 @@
                 </div>
                 <div class="flex items-center gap-2 shrink-0">
                     <!-- Copy Share Link Button -->
-                    <a id="videoModalDownloadOriginalBtn" href="#" target="_blank" class="hidden px-2.5 py-1.5 rounded-lg bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500 hover:text-white transition items-center gap-1.5 font-bold text-xs cursor-pointer" title="Tải bản gốc từ Google Drive">
+                    <a id="videoModalDownloadOriginalBtn" href="#" target="_blank" class="hidden px-2.5 py-1.5 rounded-lg bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500 hover:text-white transition items-center gap-1.5 font-bold text-xs cursor-pointer relative group" title="Tải bản gốc từ Google Drive">
                         <span>📥</span>
                         <span class="hidden sm:inline">Bản Gốc</span>
+                        <!-- Tooltip cho iPad -->
+                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 p-2 bg-slate-800 text-slate-300 text-[10px] rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 pointer-events-none text-center border border-slate-700">
+                            Trên iPad/iPhone: Bấm để xem. Hoặc <strong>Nhấn giữ nút này</strong> và chọn "Tải về liên kết" để lưu video.
+                        </div>
                     </a>
 
                     <button 
@@ -3298,13 +3302,6 @@
                     downloadBtn.href = item.video_url_original || (item.media && item.media.video_url_original);
                     downloadBtn.classList.remove('hidden');
                     downloadBtn.classList.add('flex');
-                    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-                    if (isIOS) {
-                        downloadBtn.removeAttribute('target');
-                    } else {
-                        downloadBtn.setAttribute('target', '_blank');
-                    }
-    
                 } else {
                     downloadBtn.href = "#";
                     downloadBtn.classList.add('hidden');
