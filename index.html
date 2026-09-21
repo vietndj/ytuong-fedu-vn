@@ -1074,7 +1074,7 @@
     </div>
 
     <!-- LOAD DATABASE SCRIPT -->
-    <script src="ideas_data.js?v=1789950400"></script>
+    <script src="ideas_data.js?v=1789951162"></script>
 
     <!-- SPA LOGIC -->
     <script>
@@ -3315,6 +3315,13 @@
                     downloadBtn.href = item.video_url_original || (item.media && item.media.video_url_original);
                     downloadBtn.classList.remove('hidden');
                     downloadBtn.classList.add('flex');
+                    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+                    if (isIOS) {
+                        downloadBtn.removeAttribute('target');
+                    } else {
+                        downloadBtn.setAttribute('target', '_blank');
+                    }
+    
                 } else {
                     downloadBtn.href = "#";
                     downloadBtn.classList.add('hidden');
