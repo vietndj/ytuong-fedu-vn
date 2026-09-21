@@ -2331,6 +2331,8 @@
                     : (isExcluded ? 'opacity-70 ring-1 ring-rose-500/40 bg-rose-950/10' : '');
                 const igProfileUrl = item.creator.profile_url || `https://www.instagram.com/${item.creator.handle.replace('@','')}/`;
                 const igPostUrl = item.ig_url || igProfileUrl;
+                const igCreatorHandle = (item.creator.handle || '').replace(/^@/, '').trim();
+                const igReelsUrl = igCreatorHandle ? `https://www.instagram.com/${igCreatorHandle}/reels/` : (item.creator.profile_url ? `${item.creator.profile_url.replace(/\/$/, '')}/reels/` : (item.ig_url || '#'));
                 
                 // Color badges
                 const compId = item.complexity?.id || (item.media.shots_count <= 8 ? 'de' : item.media.shots_count <= 18 ? 'trung-binh' : 'nang-cao');
@@ -2386,27 +2388,16 @@
                             <!-- Left: Nhận diện -->
                             <div class="flex items-start gap-2 overflow-hidden flex-1">
                                 <!-- Avatar / Filter Trigger -->
-                                <button 
-                                    type="button"
-                                    onclick="event.stopPropagation(); filterByCreator('${escapeJs(item.creator.handle)}', '${escapeJs(item.creator.name)}')"
-                                    class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-800 border border-slate-700 text-sm hover:border-sky-400 hover:bg-sky-500/10 hover:scale-105 transition cursor-pointer group"
-                                    title="Lọc video của: ${escapeHtml(authorDisplayName)}"
-                                >
-                                    <span class="group-hover:hidden">👤</span>
-                                    <span class="hidden group-hover:block text-sky-400">🔍</span>
-                                </button>
+                                <a href="${igReelsUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-800 border border-slate-700 text-sm hover:border-pink-500 hover:bg-pink-500/10 hover:scale-105 transition" title="Xem Instagram Reels của ${escapeHtml(authorDisplayName)}">
+                                    <span>👤</span>
+                                </a>
                                 
-                                <div class="flex flex-col min-w-0 flex-1 cursor-pointer" onclick="openReportModal('${item.id}')">
+                                <div class="flex flex-col min-w-0 flex-1">
                                     <div class="flex items-center gap-1.5 flex-wrap">
                                         <!-- Tên Tác Giả -->
-                                        <button 
-                                            type="button"
-                                            onclick="event.stopPropagation(); filterByCreator('${escapeJs(item.creator.handle)}', '${escapeJs(item.creator.name)}')"
-                                            class="font-bold text-sm text-white truncate hover:text-sky-400 transition" 
-                                            title="Lọc tác giả: ${escapeHtml(authorDisplayName)}"
-                                        >
+                                        <a href="${igReelsUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="font-bold text-sm text-white truncate hover:text-pink-400 hover:underline transition">
                                             ${escapeHtml(authorDisplayName)}
-                                        </button>
+                                        </a>
                                         <span class="text-[10px] font-mono text-slate-500 font-bold shrink-0">#${String(idx + 1).padStart(2, '0')}</span>
                                         ${appState.curationMode ? (isExcluded ? `<span class="px-1.5 py-0.5 rounded text-[8px] font-black bg-amber-400 text-slate-950 shrink-0">🔒 ẨN</span>` : `<span class="px-1.5 py-0.5 rounded text-[8px] font-bold bg-emerald-500/20 text-emerald-300 shrink-0">🌐 HIỆN</span>`) : ''}
                                     </div>
@@ -2417,11 +2408,9 @@
                             <!-- Right: Hành động -->
                             <div class="flex items-center gap-1.5 shrink-0">
                                 ${(item.media.video_url || item.media.youtube_id || item.media.youtube_embed) ? `
-                                    <button onclick="openVideoModal('${item.id}')" class="w-7 h-7 rounded-lg bg-sky-500/15 hover:bg-sky-500/25 text-sky-400 border border-sky-500/30 flex items-center justify-center transition tooltip shrink-0" title="Xem Video">
-                                        ▶
-                                    </button>
+                                    
                                 ` : ''}
-                                <button onclick="openReportModal('${item.id}')" class="w-7 h-7 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 flex items-center justify-center transition tooltip shrink-0" title="Báo Cáo">📄</button>
+                                
                                 
                                 <!-- Follow Instagram Button -->
                                 ${item.ig_url ? `
@@ -2446,7 +2435,7 @@
                         <!-- DUO-POSTER 9:16 (HOOK SHOT & KEY SHOT) - ĐƯA LÊN TRÊN CÙNG -->
                         <div class="grid grid-cols-2 gap-2 mb-3 mt-1">
                             <!-- Hook Shot (0.0s) -->
-                            <div class="relative rounded-xl overflow-hidden aspect-poster bg-slate-900 group cursor-pointer border border-slate-800" onclick="openReportModal('${item.id}')" title="Bấm để xem báo cáo">
+                            <div class="relative rounded-xl overflow-hidden aspect-poster bg-slate-900 group cursor-pointer border border-slate-800 hover:border-sky-500/50 transition duration-300" onclick="openReportModal('${item.id}')" title="Bấm để xem báo cáo">
                                 <img 
                                     src="${item.media.thumb_hook}" 
                                     alt="Hook Shot" 
@@ -2457,15 +2446,11 @@
                                 <span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-black/75 text-amber-300 backdrop-blur-sm border border-amber-500/30">
                                     HOOK • 0.0s
                                 </span>
-                                <button 
-                                    onclick="event.stopPropagation(); openImgLightbox('${item.media.thumb_hook}', '${escapeHtml(titleDisplayName)} - Khung hình Hook 0.0s')" 
-                                    class="absolute bottom-1.5 right-1.5 w-6 h-6 rounded-md bg-black/70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-[11px]"
-                                    title="Phóng to"
-                                >🔍</button>
+                                
                             </div>
 
                             <!-- Key Shot -->
-                            <div class="relative rounded-xl overflow-hidden aspect-poster bg-slate-900 group cursor-pointer border border-slate-800" onclick="openReportModal('${item.id}')" title="Bấm để xem báo cáo">
+                            <div class="relative rounded-xl overflow-hidden aspect-poster bg-slate-900 group cursor-pointer border border-slate-800 hover:border-sky-500/50 transition duration-300" onclick="openReportModal('${item.id}')" title="Bấm để xem báo cáo">
                                 <img 
                                     src="${item.media.thumb_key}" 
                                     alt="Key Shot" 
@@ -2476,11 +2461,7 @@
                                 <span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-black/75 text-sky-300 backdrop-blur-sm border border-sky-500/30">
                                     KEY SHOT
                                 </span>
-                                <button 
-                                    onclick="event.stopPropagation(); openImgLightbox('${item.media.thumb_key}', '${escapeHtml(titleDisplayName)} - Khung hình Key Shot')" 
-                                    class="absolute bottom-1.5 right-1.5 w-6 h-6 rounded-md bg-black/70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-[11px]"
-                                    title="Phóng to"
-                                >🔍</button>
+                                
                             </div>
                         </div>
 
