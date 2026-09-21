@@ -526,8 +526,56 @@ def get_item_classification(vid_id, code, clean_title, takeaway, key_tech, creat
     country_obj = detect_country(creator_handle, clean_title, takeaway)
     return style_obj, ind_obj, country_obj, "Showcase thị giác & Thẩm mỹ", [key_tech] if key_tech else ["Cinematic"], ""
 
+def _resolve_original_video_url(preview_url, r2_map, drive_fallback):
+    """Resolve video_url_original: R2 primary, Drive fallback"""
+    import urllib.parse
+    if not preview_url:
+        return ""
+    # Extract original filename from preview URL
+    fname_preview = urllib.parse.unquote(preview_url.split('/')[-1])
+    fname_original = fname_preview.replace('_preview', '')
+    # Priority 1: Check R2 video map
+    if fname_original in r2_map:
+        return r2_map[fname_original]
+    # Priority 2: Fuzzy match R2 (case-insensitive, partial)
+    fname_lower = fname_original.lower()
+    for k, v in r2_map.items():
+        if k.lower() == fname_lower:
+            return v
+    # Priority 3: Drive fallback
+    if drive_fallback:
+        drive_url = drive_fallback.get(fname_original, "")
+        if drive_url:
+            return drive_url
+    # Priority 4: Construct R2 URL optimistically
+    return f"https://media.fedu.vn/videos/{urllib.parse.quote(fname_original, safe='/@')}"
+
 def build_database():
     import json
+    import urllib.parse
+    # Build R2 video map: scan actual R2 bucket for original videos
+    def build_r2_video_map():
+        """Scan R2 videos/ bucket and build filename→URL map"""
+        import subprocess
+        r2_map = {}
+        try:
+            result = subprocess.run(
+                ['rclone', 'ls', 'r2:vietndjmedia/videos/'],
+                capture_output=True, text=True, timeout=30
+            )
+            for line in result.stdout.strip().split('\n'):
+                if not line.strip():
+                    continue
+                parts = line.strip().split(None, 1)
+                if len(parts) == 2:
+                    fname = parts[1].strip()
+                    r2_map[fname] = f"https://media.fedu.vn/videos/{urllib.parse.quote(fname, safe='/@')}"
+        except Exception as e:
+            print(f"WARNING: Could not scan R2 videos: {e}")
+        return r2_map
+
+    r2_video_map = build_r2_video_map()
+    # Legacy fallback
     try:
         with open("/Users/vietmac/drive_links.json", "r") as f:
             drive_links = json.load(f)
@@ -664,40 +712,7 @@ def build_database():
         if not vid_url and item.get("all_vids"):
             vid_url = item["all_vids"][0].get("rel_url", "")
 
-        # R2 Video URL Mapping Override for guaranteed 200 OK CDN streaming
-        R2_OVERRIDE_MAP = {
-            "IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant": "https://media.fedu.vn/videos/DdCRQnBI4ny.mp4",
-            "IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook": "https://media.fedu.vn/videos/Tornado%20Kick%20Martial%20Arts%20Kinetic%20Hook%20-%20%40aidana_adilkassym.mp4",
-            "IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency": "https://media.fedu.vn/videos/DcxwKHYoBFv.mp4",
-            "IG_@jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion": "https://media.fedu.vn/videos/DawDiT2M1p8.mp4",
-            "IG_@mako__go_DaH7X34NTNX_Palermo_Sicily": "https://media.fedu.vn/videos/DaH7X34NTNX.mp4",
-            "IG_@valenti_k41_DdB_21Yo0Qc_Creative_Phone_Video_Ideas": "https://media.fedu.vn/videos/Creative%20Phone%20Video%20Ideas%20-%20Routine%20Creator%20-%20%40valenti_k41.mp4",
-            "IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions": "https://media.fedu.vn/videos/DdBDvZph1od.mp4",
-            "IG_@alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch": "https://media.fedu.vn/videos/Food%20Filming%20%26%20Styling%20Mastery%20-%20%40alena.feda.mp4",
-            "IG_@ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light": "https://media.fedu.vn/videos/DcyS2KEm7-v.mp4",
-            "IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five": "https://media.fedu.vn/videos/DcyDbGmItDV.mp4",
-            "FB_@AnhSacAnh_1964049564715249_Thuong_Hieu_Ca_Nhan_Sinh_Loi": "https://media.fedu.vn/videos/Thuong_Hieu_Ca_Nhan_Sinh_Loi_Anh_Sac_Anh.mp4",
-            "IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing": "https://media.fedu.vn/videos/DaB-gO6hvPX.mp4",
-            "IG_@valenti_k41_DctVSroI3UB_Creative_Phone_Video_Ideas": "https://media.fedu.vn/videos/Creative%20phone%20video%20ideas%20-%20%40valenti_k41.mp4",
-            "IG_@jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever": "https://media.fedu.vn/videos/Getting%20Ready%20Faster%20Than%20Ever%20-%20%40jesussropero.mp4",
-            "IG_@colecoppolino_DcJiRCrTlG1": "https://media.fedu.vn/videos/DcJiRCrTlG1.mp4",
-            "IG_@withyuee_DcTk0RGgtBO_Hong_Kong_Cinematic_Cityscape": "https://media.fedu.vn/videos/DcTk0RGgtBO.mp4",
-            "IG_@willwfit_DbRak0lsesY_The_Goal_Is_Simple": "https://media.fedu.vn/videos/DbRak0lsesY.mp4",
-            "IG_@iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine": "https://media.fedu.vn/videos/DbjCyKgxp8S.mp4",
-            "IG_@lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva": "https://media.fedu.vn/videos/DcTqPjitJl1.mp4",
-            "IG_@fabianamsolano_Dc4u6aOhR9r_Yosemite_National_Park_Music_Video_Beat_Match_Cut": "https://media.fedu.vn/videos/Yosemite%20National%20Park%20Music%20Video%20-%20%40fabianamsolano.mp4",
-            "IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency": "https://media.fedu.vn/videos/Teaching_Nervous_System_Not_Emergency_-_%40kawoon.lee.mp4",
-            "IG_@hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85": "https://media.fedu.vn/videos/4%20Cu%20May%20Sieu%20Thi%20Bang%20Gia%20Do%20Ulanzi%20MA38%20MT85%20-%20%40hena_film_vlog.mp4",
-            "IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut": "https://media.fedu.vn/videos/Gunung%20Sumbing%20Trekking%20Match%20Cut%20-%20%40dimasyudhystira.mp4",
-            "IG_@naohasa_DdGp4XftvIn_5_Outfits_Match_Cut_Walk": "https://media.fedu.vn/videos/DdGp4XftvIn.mp4",
-            "IG_@Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis": "https://media.fedu.vn/videos/carousel_slides/IG_%40Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis/slide_01.mp4",
-            "Visual_Storytelling_Carousel_@withyuee": "https://media.fedu.vn/videos/carousel_slides/slide_01.mp4",
-            "IG_@treechurchlogan_DcoGfdghNwd_Bring_A_Friend_To_Church_Skit": "https://media.fedu.vn/videos/DcoGfdghNwd.mp4"
-        }
-        id_key = vid_id
-        if id_key in R2_OVERRIDE_MAP:
-            vid_url = R2_OVERRIDE_MAP[id_key]
-        elif vid_url and not vid_url.startswith("http"):
+        if vid_url and not vid_url.startswith("http"):
             # Ensure correct fallback to root videos folder on R2
             clean_rel = vid_url.lstrip("./")
             if clean_rel.startswith("videos/"):
@@ -786,7 +801,7 @@ def build_database():
                 "thumb_hook": thumb_hook,
                 "thumb_key": thumb_key,
                 "video_url": vid_url,
-                "video_url_original": drive_links.get(vid_url.split("/")[-1].replace("_preview", "")) if "drive_links" in locals() else "",
+                "video_url_original": _resolve_original_video_url(vid_url, r2_video_map, drive_links),
                 "report_url": html_url,
                 "shots_count": shots_count,
                 "duration": duration_str,

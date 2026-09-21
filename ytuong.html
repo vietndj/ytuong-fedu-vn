@@ -760,13 +760,9 @@
                 </div>
                 <div class="flex items-center gap-2 shrink-0">
                     <!-- Copy Share Link Button -->
-                    <a id="videoModalDownloadOriginalBtn" href="#" target="_blank" class="hidden px-2.5 py-1.5 rounded-lg bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500 hover:text-white transition items-center gap-1.5 font-bold text-xs cursor-pointer relative group" title="Tải bản gốc từ Google Drive">
+                    <a id="videoModalDownloadOriginalBtn" href="#" target="_blank" class="hidden px-2.5 py-1.5 rounded-lg bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500 hover:text-white transition items-center gap-1.5 font-bold text-xs cursor-pointer relative group" title="Tải bản gốc">
                         <span>📥</span>
                         <span class="hidden sm:inline">Bản Gốc</span>
-                        <!-- Tooltip cho iPad -->
-                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 p-2 bg-slate-800 text-slate-300 text-[10px] rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 pointer-events-none text-center border border-slate-700">
-                            Trên iPad/iPhone: Bấm để xem. Hoặc <strong>Nhấn giữ nút này</strong> và chọn "Tải về liên kết" để lưu video.
-                        </div>
                     </a>
 
                     <button 
@@ -3298,10 +3294,16 @@
             const title = document.getElementById('videoModalTitle');
             const downloadBtn = document.getElementById('videoModalDownloadOriginalBtn');
             if (downloadBtn) {
-                if (item.video_url_original || (item.media && item.media.video_url_original)) {
-                    downloadBtn.href = item.video_url_original || (item.media && item.media.video_url_original);
+                let vidUrl = item.video_url || (item.media && item.media.video_url);
+                if (vidUrl) {
+                    downloadBtn.href = vidUrl.replace('/videos_preview/', '/videos/').replace('_preview', '');
                     downloadBtn.classList.remove('hidden');
                     downloadBtn.classList.add('flex');
+                    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+                        downloadBtn.removeAttribute('target');
+                    } else {
+                        downloadBtn.setAttribute('target', '_blank');
+                    }
                 } else {
                     downloadBtn.href = "#";
                     downloadBtn.classList.add('hidden');
@@ -3554,11 +3556,24 @@
                 showToast("Không tìm thấy dữ liệu ý tưởng!", "⚠️");
                 return;
             }
-            const idea = window.FEDU_IDEAS_DATABASE.find(i => i.id === appState.targetIdeaId);
+            // Fix search context as well if there's issue, assume window.FEDU_IDEAS_DATABASE.ideas is the array, but user code was window.FEDU_IDEAS_DATABASE.find
+            let idea = null;
+            if (Array.isArray(window.FEDU_IDEAS_DATABASE)) {
+                idea = window.FEDU_IDEAS_DATABASE.find(i => i.id === appState.targetIdeaId);
+            } else if (window.FEDU_IDEAS_DATABASE && window.FEDU_IDEAS_DATABASE.ideas) {
+                idea = window.FEDU_IDEAS_DATABASE.ideas.find(i => i.id === appState.targetIdeaId);
+            }
             if (!idea) return;
             
             // Tìm URL tốt nhất để tải về
-            let url = idea.video_url || idea.report_url || idea.thumbnail_url;
+            let url = "";
+            let vidUrl = idea.video_url || (idea.media && idea.media.video_url);
+            if (vidUrl) {
+                url = vidUrl.replace('/videos_preview/', '/videos/').replace('_preview', '');
+            } else {
+                url = idea.video_url || idea.report_url || idea.thumbnail_url;
+            }
+            
             if (!url) {
                 showToast("Không có tài nguyên để tải về!", "⚠️");
                 return;
