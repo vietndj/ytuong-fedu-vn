@@ -46,7 +46,7 @@ missing_data = [
         "is_ad_bot": False,
         "logic_explanation": "Jenny Tsang kết hợp mở hộp rương quà tặng thủ công với các nhịp dạo phố, cầm máy selfie chuyển động xoay người và gật đầu đổi góc nhìn thời trang thanh lịch.",
         "quick_takeaway": "Nghệ thuật đập hộp thời trang cao cấp kết hợp dạo phố Lookbook: Sự hòa quyện giữa macro chi tiết da thuộc, chuyển động cơ thể nhẹ nhàng và tone màu điện ảnh ấm áp.",
-        "video_url": "https://media.fedu.vn/v/BAACAgUAAxkDAAMCar...",
+        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DaB-gO6hvPX.mp4",
         "report_url": "reports/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing.html",
         "fedu_optimization": {
             "key_optimization_point": "⚡ Chuyển cảnh Level 1: Cầm tay selfie Lookbook thời trang, chuyển cảnh bằng cử động đầu và xoay máy nhẹ nhàng",
