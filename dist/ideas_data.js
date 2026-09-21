@@ -2017,7 +2017,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind",
       "shortcode": "DdeCKRRRGvd",
       "title_vi": "Video by mylenesmind",
-      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 21 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "quick_takeaway": "⚡ Dùng talking head kết hợp B-roll cận cảnh bàn làm việc ➔ Chặn feed người xem bằng nhịp chuyển đổi khung hình liên tục. ➔ ⚡ Thực chiến: Xen kẽ góc máy chính diện và góc cận bàn làm việc/màn hình edit, đổi khung hình mỗi 2-3 giây để chống nhàm chán khi chia sẻ câu chuyện dài.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot • High-key Lighting",
       "shooting_style": {
         "id": "talking-head",

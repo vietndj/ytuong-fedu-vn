@@ -1,0 +1,562 @@
+=== START DEEP VERIFICATION (INSTAGRAM LINKS) ===
+[1/293] Checking: https://www.instagram.com/reel/DcLwG_mKyKM_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[2/293] Checking: https://www.instagram.com/reel/DcvmVl2hbuY_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[3/293] Checking: https://www.instagram.com/reel/DbA22ywhMSI_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[4/293] Checking: https://www.instagram.com/reel/DZVHH27S7Lf_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[5/293] Checking: https://www.instagram.com/reel/DbbBaIpyKCI_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[6/293] Checking: https://www.instagram.com/withyuee/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[7/293] Checking: https://www.instagram.com/withyuee/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[8/293] Checking: https://www.instagram.com/reel/DWY_2SvgE_a_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[9/293] Checking: https://www.instagram.com/reel/DSKodjDkQYz/
+ -> OK: Link còn sống (Có dữ liệu).
+[10/293] Checking: https://www.instagram.com/reel/DRmeH20EVGA_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[11/293] Checking: https://www.instagram.com/valenti_k41/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[12/293] Checking: https://www.instagram.com/valenti_k41/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[13/293] Checking: https://www.instagram.com/ulanzi_c4708b13_Ulanzi_UA12_UA20_Inflatable_Magnetic_Tube/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[14/293] Checking: https://www.instagram.com/reel/DcoGfdghNwd_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[15/293] Checking: https://www.instagram.com/reel/Double_Day_l/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[16/293] Checking: https://www.instagram.com/reel/DdNq5CxszVl_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[17/293] Checking: https://www.instagram.com/reel/DdGRCKwsaaI/
+ -> OK: Link còn sống (Có dữ liệu).
+[18/293] Checking: https://www.instagram.com/reel/Dcmav1VBv4H_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[19/293] Checking: https://www.instagram.com/fabianamsolano/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[20/293] Checking: https://www.instagram.com/daiki.shino/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[21/293] Checking: https://www.instagram.com/creator_video_Video/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[22/293] Checking: https://www.instagram.com/reel/DdK6GtHJPrH_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[23/293] Checking: https://www.instagram.com/reel/DdF81brAiIj_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[24/293] Checking: https://www.instagram.com/reel/DbBQzyqimbi_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[25/293] Checking: https://www.instagram.com/reel/DaFDqk4CGB1_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[26/293] Checking: https://www.instagram.com/reel/DbESOapo-p3_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[27/293] Checking: https://www.instagram.com/reel/DdJYSokAkAj_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[28/293] Checking: https://www.instagram.com/reel/DchBUgVMvrp_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[29/293] Checking: https://www.instagram.com/reel/DaxjeQ4A9dP_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[30/293] Checking: https://www.instagram.com/reel/DchxEAkJ9Hw_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[31/293] Checking: https://www.instagram.com/reel/DY2XJzdioZg_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[32/293] Checking: https://www.instagram.com/reel/Dau0C9AzXc8_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[33/293] Checking: https://www.instagram.com/reel/DcTcw8lhku5_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[34/293] Checking: https://www.instagram.com/reel/DaAm8suhCau_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[35/293] Checking: https://www.instagram.com/reel/DcJBTCoT6UT_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[36/293] Checking: https://www.instagram.com/reel/Derossi_DdJs/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[37/293] Checking: https://www.instagram.com/reel/Dc9TAgjTmeR_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[38/293] Checking: https://www.instagram.com/reel/DZuT3fSgOeg_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[39/293] Checking: https://www.instagram.com/reel/DY5aQaoABsy_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[40/293] Checking: https://www.instagram.com/mkxpresar/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[41/293] Checking: https://www.instagram.com/reel/Da46F-lxueg_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[42/293] Checking: https://www.instagram.com/reel/Diaz_DdJ7S5B/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[43/293] Checking: https://www.instagram.com/jazziesillona/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[44/293] Checking: https://www.instagram.com/jazziesillona/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[45/293] Checking: https://www.instagram.com/jazziesillona/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[46/293] Checking: https://www.instagram.com/reel/DZVAYFwvo4y_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[47/293] Checking: https://www.instagram.com/jazziesillona/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[48/293] Checking: https://www.instagram.com/jazziesillona/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[49/293] Checking: https://www.instagram.com/jazziesillona/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[50/293] Checking: https://www.instagram.com/jazziesillona/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[51/293] Checking: https://www.instagram.com/jazziesillona/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[52/293] Checking: https://www.instagram.com/reel/DXf1LldT5co_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[53/293] Checking: https://www.instagram.com/reel/DbS3HNNIKR7_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[54/293] Checking: https://www.instagram.com/reel/Dc5uepPBXKq_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[55/293] Checking: https://www.instagram.com/reel/DbomJ6-Tpry_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[56/293] Checking: https://www.instagram.com/reel/DcILfhlgsmu_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[57/293] Checking: https://www.instagram.com/reel/DbKxhucTAh4_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[58/293] Checking: https://www.instagram.com/DbYF6qxvnI2_5_Simple/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[59/293] Checking: https://www.instagram.com/reel/Dcxsw50zIR8_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[60/293] Checking: https://www.instagram.com/reel/DZN-FfdyPgH_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[61/293] Checking: https://www.instagram.com/by.bennnj/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[62/293] Checking: https://www.instagram.com/reel/Dc0zRNwDz11_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[63/293] Checking: https://www.instagram.com/reel/Dbvzrg2i0WN_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[64/293] Checking: https://www.instagram.com/reel/DYwzs3zRRkv_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[65/293] Checking: https://www.instagram.com/reel/Db7P1GeOxvq_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[66/293] Checking: https://www.instagram.com/reel/DaSkD6CAHP2_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[67/293] Checking: https://www.instagram.com/reel/DXwc_9QAKjZ_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[68/293] Checking: https://www.instagram.com/reel/DaC90d3tWuV_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[69/293] Checking: https://www.instagram.com/reel/DcwPu99sDKI_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[70/293] Checking: https://www.instagram.com/reel/DadG15TAM5n_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[71/293] Checking: https://www.instagram.com/reel/DZrt1FbJTdy_/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[72/293] Checking: https://www.instagram.com/Phuong_Ban_Linh_Hay_Vo/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[77/293] Checking: https://www.instagram.com/reel/DcbAqchxJ2t/
+ -> OK: Link còn sống (Có dữ liệu).
+[78/293] Checking: https://www.instagram.com/reel/DZa9pzKRsAU/
+ -> OK: Link còn sống (Có dữ liệu).
+[79/293] Checking: https://www.instagram.com/reel/DZB9Ls3No6p/
+ -> OK: Link còn sống (Có dữ liệu).
+[80/293] Checking: https://www.instagram.com/reel/DYXiic5xMeC/
+ -> OK: Link còn sống (Có dữ liệu).
+[81/293] Checking: https://www.instagram.com/reel/DXjRnwCISNU/
+ -> OK: Link còn sống (Có dữ liệu).
+[82/293] Checking: https://www.instagram.com/reel/DZwO5X6N_MS/
+ -> OK: Link còn sống (Có dữ liệu).
+[83/293] Checking: https://www.instagram.com/p/DYXXgkbxPj7/
+ -> OK: Link còn sống (Có dữ liệu).
+[84/293] Checking: https://www.instagram.com/reel/DclWb98PiK_/
+ -> OK: Link còn sống (Có dữ liệu).
+[85/293] Checking: https://www.instagram.com/p/DazzVqPBfje/
+ -> OK: Link còn sống (Có dữ liệu).
+[86/293] Checking: https://www.instagram.com/p/Db-xDk4vWNQ/
+ -> OK: Link còn sống (Có dữ liệu).
+[87/293] Checking: https://www.instagram.com/p/DdOu2yRsmDy/
+ -> OK: Link còn sống (Có dữ liệu).
+[88/293] Checking: https://www.instagram.com/p/Da5KgjAxfOG/
+ -> OK: Link còn sống (Có dữ liệu).
+[89/293] Checking: https://www.instagram.com/p/DdA1ErpRMg2/
+ -> OK: Link còn sống (Có dữ liệu).
+[90/293] Checking: https://www.instagram.com/p/Daz3Po8zHIE/
+ -> OK: Link còn sống (Có dữ liệu).
+[91/293] Checking: https://www.instagram.com/p/DdWa3o2zc0w/
+ -> OK: Link còn sống (Có dữ liệu).
+[92/293] Checking: https://www.instagram.com/p/DccpHbETFSr/
+ -> OK: Link còn sống (Có dữ liệu).
+[93/293] Checking: https://www.instagram.com/p/DcVnyJyNWGY/
+ -> OK: Link còn sống (Có dữ liệu).
+[94/293] Checking: https://www.instagram.com/p/DcxcVGtxjNl/
+ -> OK: Link còn sống (Có dữ liệu).
+[95/293] Checking: https://www.instagram.com/p/Db0tHr8Bs7x/
+ -> OK: Link còn sống (Có dữ liệu).
+[96/293] Checking: https://www.instagram.com/p/DdTZsoxTVFz/
+ -> OK: Link còn sống (Có dữ liệu).
+[97/293] Checking: https://www.instagram.com/p/DZ8w6MsSMAw/
+ -> OK: Link còn sống (Có dữ liệu).
+[98/293] Checking: https://www.instagram.com/p/DaClEhzB5WC/
+ -> OK: Link còn sống (Có dữ liệu).
+[99/293] Checking: https://www.instagram.com/p/DcBXsaezmjo/
+ -> OK: Link còn sống (Có dữ liệu).
+[100/293] Checking: https://www.instagram.com/p/Dc0-HLUE60-/
+ -> OK: Link còn sống (Có dữ liệu).
+[101/293] Checking: https://www.instagram.com/p/DdVBqUzj3o5/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[102/293] Checking: https://www.instagram.com/clarissaacindy/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[103/293] Checking: https://www.instagram.com/p/DdU4rBeMXZt/
+ -> OK: Link còn sống (Có dữ liệu).
+[104/293] Checking: https://www.instagram.com/p/DdSs5rahILb/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[105/293] Checking: https://www.instagram.com/p/DdT9CF7tGzn/
+ -> OK: Link còn sống (Có dữ liệu).
+[106/293] Checking: https://www.instagram.com/p/DdT4EOzveQL/
+ -> OK: Link còn sống (Có dữ liệu).
+[107/293] Checking: https://www.instagram.com/p/DdQwL3Ahci1/
+ -> OK: Link còn sống (Có dữ liệu).
+[108/293] Checking: https://www.instagram.com/p/Dcx7pQpS6zs/
+ -> OK: Link còn sống (Có dữ liệu).
+[109/293] Checking: https://www.instagram.com/p/DOd8XMMjxcH/
+ -> OK: Link còn sống (Có dữ liệu).
+[110/293] Checking: https://www.instagram.com/reel/Dcbn7Bix-X-/
+ -> OK: Link còn sống (Có dữ liệu).
+[111/293] Checking: https://www.instagram.com/reel/DdTeHleIqkg/
+ -> OK: Link còn sống (Có dữ liệu).
+[112/293] Checking: https://www.instagram.com/reel/Dc6qXoKoYKh/
+ -> OK: Link còn sống (Có dữ liệu).
+[113/293] Checking: https://www.instagram.com/reel/DdSUI9BvhqR/
+ -> OK: Link còn sống (Có dữ liệu).
+[114/293] Checking: https://www.instagram.com/reel/DdL6pHDSKRc/
+ -> OK: Link còn sống (Có dữ liệu).
+[115/293] Checking: https://www.instagram.com/reel/Db-S8i1hXwF/
+ -> OK: Link còn sống (Có dữ liệu).
+[116/293] Checking: https://www.instagram.com/reel/Dco_DevvUla/
+ -> OK: Link còn sống (Có dữ liệu).
+[117/293] Checking: https://www.instagram.com/reel/DdBlAWRO1Hl/
+ -> OK: Link còn sống (Có dữ liệu).
+[118/293] Checking: https://www.instagram.com/reel/DdRGd8evPK-/
+ -> OK: Link còn sống (Có dữ liệu).
+[119/293] Checking: https://www.instagram.com/reel/DdKGq2TMhf4/
+ -> OK: Link còn sống (Có dữ liệu).
+[120/293] Checking: https://www.instagram.com/reel/DdPLvUpBwCl/
+ -> OK: Link còn sống (Có dữ liệu).
+[121/293] Checking: https://www.instagram.com/reel/DaDFH_TSii8/
+ -> OK: Link còn sống (Có dữ liệu).
+[122/293] Checking: https://www.instagram.com/reel/DdRg_ybtlKI/
+ -> OK: Link còn sống (Có dữ liệu).
+[123/293] Checking: https://www.instagram.com/reel/DdMrb4ARxHv/
+ -> OK: Link còn sống (Có dữ liệu).
+[124/293] Checking: https://www.instagram.com/reel/Dc3PgRbBp-m/
+ -> OK: Link còn sống (Có dữ liệu).
+[125/293] Checking: https://www.instagram.com/reel/DdHGBpZOzIm/
+ -> OK: Link còn sống (Có dữ liệu).
+[126/293] Checking: https://www.instagram.com/reel/DdO2XLIKiXo/
+ -> OK: Link còn sống (Có dữ liệu).
+[127/293] Checking: https://www.instagram.com/reel/Dc6Cxf-QRWh/
+ -> OK: Link còn sống (Có dữ liệu).
+[128/293] Checking: https://www.instagram.com/reel/DdR7dEIxzT9/
+ -> OK: Link còn sống (Có dữ liệu).
+[129/293] Checking: https://www.instagram.com/reel/DdBr6LZqkFd/
+ -> OK: Link còn sống (Có dữ liệu).
+[130/293] Checking: https://www.instagram.com/reel/DdRe4-xpHs2/
+ -> OK: Link còn sống (Có dữ liệu).
+[131/293] Checking: https://www.instagram.com/reel/DdD_QqPB7aW/
+ -> OK: Link còn sống (Có dữ liệu).
+[132/293] Checking: https://www.lazada.vn/products/pdp-i13344148344-s116633631361.html
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[133/293] Checking: https://s.lazada.vn/s.obGd6
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[134/293] Checking: https://www.instagram.com/reel/DatbbgJviTV/
+ -> OK: Link còn sống (Có dữ liệu).
+[135/293] Checking: https://www.instagram.com/mercantegi/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[136/293] Checking: https://www.instagram.com/turapinaanastasiia/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[137/293] Checking: https://www.instagram.com/reel/DaGGMTdtawm/
+ -> OK: Link còn sống (Có dữ liệu).
+[138/293] Checking: https://www.instagram.com/p/DdLedJjsbNW/
+ -> OK: Link còn sống (Có dữ liệu).
+[139/293] Checking: https://www.instagram.com/reel/DdN_aljAIY0/
+ -> OK: Link còn sống (Có dữ liệu).
+[140/293] Checking: https://www.instagram.com/p/DdHf_1yA4WQ/
+ -> OK: Link còn sống (Có dữ liệu).
+[141/293] Checking: https://www.instagram.com/reel/DdAyywnSxU8/
+ -> OK: Link còn sống (Có dữ liệu).
+[142/293] Checking: https://www.instagram.com/p/DdAYPcwgfv1/
+ -> OK: Link còn sống (Có dữ liệu).
+[143/293] Checking: https://www.instagram.com/reel/DdNKlIqPagO/
+ -> OK: Link còn sống (Có dữ liệu).
+[144/293] Checking: https://www.instagram.com/reel/DbOMM0Pu1HA/
+ -> OK: Link còn sống (Có dữ liệu).
+[145/293] Checking: https://www.instagram.com/p/DdL904CMnq3/
+ -> OK: Link còn sống (Có dữ liệu).
+[146/293] Checking: https://www.instagram.com/reel/DdFBLQMOTwM/
+ -> OK: Link còn sống (Có dữ liệu).
+[147/293] Checking: https://www.instagram.com/reel/Db-mZWEKECo/
+ -> OK: Link còn sống (Có dữ liệu).
+[148/293] Checking: https://www.instagram.com/lee.rabo/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[149/293] Checking: https://www.instagram.com/reel/DdGp4XftvIn/
+ -> OK: Link còn sống (Có dữ liệu).
+[150/293] Checking: https://www.instagram.com/sanjogchopra/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[151/293] Checking: https://www.instagram.com/reel/DdHMOB0xfd1/
+ -> OK: Link còn sống (Có dữ liệu).
+[152/293] Checking: https://www.instagram.com/reel/DcJM7AWOa__/
+ -> OK: Link còn sống (Có dữ liệu).
+[153/293] Checking: https://www.instagram.com/reel/DbH76S5yg5W/
+ -> OK: Link còn sống (Có dữ liệu).
+[154/293] Checking: https://www.instagram.com/kisho_men/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[155/293] Checking: https://www.instagram.com/reel/DdBnto_O0He/
+ -> OK: Link còn sống (Có dữ liệu).
+[156/293] Checking: https://www.instagram.com/reel/DdH6HGNxEYT/
+ -> OK: Link còn sống (Có dữ liệu).
+[157/293] Checking: https://www.instagram.com/reel/Dc3DUsvpkrP/
+ -> OK: Link còn sống (Có dữ liệu).
+[158/293] Checking: https://www.instagram.com/reel/DaBLA-QJcrk/
+ -> OK: Link còn sống (Có dữ liệu).
+[159/293] Checking: https://www.instagram.com/reel/DdLsL-cSekL/
+ -> OK: Link còn sống (Có dữ liệu).
+[160/293] Checking: https://www.instagram.com/reel/DdM7gO4yD-c/
+ -> OK: Link còn sống (Có dữ liệu).
+[161/293] Checking: https://www.instagram.com/reel/DcvZ-FowD_A/
+ -> OK: Link còn sống (Có dữ liệu).
+[162/293] Checking: https://www.instagram.com/reel/DdJaKjQCMTm/
+ -> OK: Link còn sống (Có dữ liệu).
+[163/293] Checking: https://www.lazada.vn/products/pdp-i13344148344-s116633631361.html
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[164/293] Checking: https://shopee.vn/ULANZI-MT80-Ch%C3%A2n-M%C3%A1y-Tripod-ULANZI-MT-80-Chi%E1%BB%81u-Cao-213cm-T%E1%BA%A3i-Tr%E1%BB%8Dng-5kg-H%C3%A0ng-Ch%C3%ADnh-H%C3%A3ng-i.1146051656.42829427636
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[165/293] Checking: https://www.instagram.com/reel/DaB-gO6hvPX/
+ -> OK: Link còn sống (Có dữ liệu).
+[166/293] Checking: https://www.instagram.com/reel/DdCRQnBI4ny/
+ -> OK: Link còn sống (Có dữ liệu).
+[167/293] Checking: https://www.instagram.com/reel/DcQy-eEOIHc/
+ -> OK: Link còn sống (Có dữ liệu).
+[168/293] Checking: https://www.instagram.com/reel/DcxwKHYoBFv/
+ -> OK: Link còn sống (Có dữ liệu).
+[169/293] Checking: https://www.instagram.com/reel/DawDiT2M1p8/
+ -> OK: Link còn sống (Có dữ liệu).
+[170/293] Checking: https://www.instagram.com/reel/DaH7X34NTNX/
+ -> OK: Link còn sống (Có dữ liệu).
+[171/293] Checking: https://www.instagram.com/reel/Dc-LDGRsCDN/
+ -> OK: Link còn sống (Có dữ liệu).
+[172/293] Checking: https://www.instagram.com/reel/DdEshZtz9Rb/
+ -> OK: Link còn sống (Có dữ liệu).
+[173/293] Checking: https://www.instagram.com/reel/DdF-qr0s4Kk/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[174/293] Checking: https://www.instagram.com/p/Dc3immEILSE/
+ -> OK: Link còn sống (Có dữ liệu).
+[175/293] Checking: https://www.instagram.com/p/Dc3immEILSE/
+ -> OK: Link còn sống (Có dữ liệu).
+[176/293] Checking: https://www.instagram.com/reel/DdBDvZph1od/
+ -> OK: Link còn sống (Có dữ liệu).
+[177/293] Checking: https://www.instagram.com/reel/Dc1w07upyNF/
+ -> OK: Link còn sống (Có dữ liệu).
+[178/293] Checking: https://www.instagram.com/reel/DcyS2KEm7-v/
+ -> OK: Link còn sống (Có dữ liệu).
+[179/293] Checking: https://www.instagram.com/reel/DcoPBXdDPro/
+ -> OK: Link còn sống (Có dữ liệu).
+[180/293] Checking: https://www.instagram.com/reel/DcyDbGmItDV/
+ -> OK: Link còn sống (Có dữ liệu).
+[181/293] Checking: https://www.instagram.com/reel/Dca9-aWotLM/
+ -> OK: Link còn sống (Có dữ liệu).
+[182/293] Checking: https://www.instagram.com/reel/DZXpNj_IveV/
+ -> OK: Link còn sống (Có dữ liệu).
+[183/293] Checking: https://www.instagram.com/reel/DbVhTUiznEp/
+ -> OK: Link còn sống (Có dữ liệu).
+[184/293] Checking: https://www.instagram.com/reel/DbJcoLdssK6/
+ -> OK: Link còn sống (Có dữ liệu).
+[185/293] Checking: https://www.instagram.com/reel/Dc-6BFdi7bU/
+ -> OK: Link còn sống (Có dữ liệu).
+[186/293] Checking: https://www.instagram.com/reel/DcgN1bsKUmi/
+ -> OK: Link còn sống (Có dữ liệu).
+[187/293] Checking: https://www.instagram.com/reel/Dc9LUXLAHkc/
+ -> OK: Link còn sống (Có dữ liệu).
+[188/293] Checking: https://www.instagram.com/reel/DbILcfyxZot/
+ -> OK: Link còn sống (Có dữ liệu).
+[189/293] Checking: https://www.instagram.com/p/Db_EEZtjJBI/
+ -> OK: Link còn sống (Có dữ liệu).
+[190/293] Checking: https://www.instagram.com/p/Db5TrGYlKbD/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[191/293] Checking: https://www.instagram.com/p/DcOUP2PsMsP/
+ -> OK: Link còn sống (Có dữ liệu).
+[192/293] Checking: https://www.instagram.com/p/DbgtGKjNcH9/
+ -> OK: Link còn sống (Có dữ liệu).
+[193/293] Checking: https://www.instagram.com/p/DcVzQCSP1MR/
+ -> OK: Link còn sống (Có dữ liệu).
+[194/293] Checking: https://www.instagram.com/p/DcJIT4DzPhj/
+ -> OK: Link còn sống (Có dữ liệu).
+[195/293] Checking: https://www.instagram.com/p/DcbJDDNi7h8/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[196/293] Checking: https://www.instagram.com/p/Db7_3rpgK5c/
+ -> OK: Link còn sống (Có dữ liệu).
+[197/293] Checking: https://www.instagram.com/p/DcYxC8wvt1z/
+ -> OK: Link còn sống (Có dữ liệu).
+[198/293] Checking: https://www.instagram.com/p/DcWEp8-swbB/
+ -> OK: Link còn sống (Có dữ liệu).
+[199/293] Checking: https://www.instagram.com/p/DcTbD0MR-V_/
+ -> OK: Link còn sống (Có dữ liệu).
+[200/293] Checking: https://www.instagram.com/p/DcD30ThT7Zm/
+ -> OK: Link còn sống (Có dữ liệu).
+[201/293] Checking: https://www.instagram.com/p/Db-jmp6TXNT/
+ -> OK: Link còn sống (Có dữ liệu).
+[202/293] Checking: https://www.instagram.com/p/DZWRDtqMNWq/
+ -> OK: Link còn sống (Có dữ liệu).
+[203/293] Checking: https://www.instagram.com/p/Dcd2VeyNJQx/
+ -> OK: Link còn sống (Có dữ liệu).
+[204/293] Checking: https://www.instagram.com/p/DcdthwaTM3J/
+ -> OK: Link còn sống (Có dữ liệu).
+[205/293] Checking: https://www.instagram.com/reel/DY_0KNxvNJa/
+ -> OK: Link còn sống (Có dữ liệu).
+[206/293] Checking: https://www.instagram.com/reel/Dc0tEcOIdwy/
+ -> OK: Link còn sống (Có dữ liệu).
+[207/293] Checking: https://www.instagram.com/p/DZFzj9YAAmG/
+ -> OK: Link còn sống (Có dữ liệu).
+[208/293] Checking: https://www.instagram.com/reel/Dct9JzWKVFo/
+ -> OK: Link còn sống (Có dữ liệu).
+[211/293] Checking: https://www.instagram.com/p/Dc0zzrWj8Vu/
+ -> OK: Link còn sống (Có dữ liệu).
+[212/293] Checking: https://www.instagram.com/reel/Dcz7nniBEFe/
+ -> OK: Link còn sống (Có dữ liệu).
+[213/293] Checking: https://www.facebook.com/share/v/18TWbzspFY/
+ -> OK: Link còn sống (Có dữ liệu).
+[214/293] Checking: https://www.instagram.com/reel/DcBjIwPMMfa/
+ -> OK: Link còn sống (Có dữ liệu).
+[215/293] Checking: https://www.instagram.com/reels/DcLblxOy3tN/
+ -> OK: Link còn sống (Có dữ liệu).
+[216/293] Checking: https://www.instagram.com/p/Dc0MQfeEwp4/
+ -> OK: Link còn sống (Có dữ liệu).
+[217/293] Checking: https://www.instagram.com/reel/DakY2EST-Tm/
+ -> OK: Link còn sống (Có dữ liệu).
+[218/293] Checking: https://www.instagram.com/reel/Dcvxba1OvrD/
+ -> OK: Link còn sống (Có dữ liệu).
+[219/293] Checking: https://www.instagram.com/p/Dc0MQfeEwp4/
+ -> OK: Link còn sống (Có dữ liệu).
+[221/293] Checking: https://www.instagram.com/reel/Dctj7NfNimM/
+ -> OK: Link còn sống (Có dữ liệu).
+[222/293] Checking: https://www.instagram.com/reel/DceDPc2yVm0/
+ -> OK: Link còn sống (Có dữ liệu).
+[223/293] Checking: https://www.instagram.com/reel/DcJjGy1tG7d/
+ -> OK: Link còn sống (Có dữ liệu).
+[224/293] Checking: https://www.instagram.com/reel/Db1hf_vO67m/
+ -> OK: Link còn sống (Có dữ liệu).
+[225/293] Checking: https://www.instagram.com/reel/Dbow9xKOCje/
+ -> OK: Link còn sống (Có dữ liệu).
+[226/293] Checking: https://www.instagram.com/reel/DcqzVfno5Al/
+ -> OK: Link còn sống (Có dữ liệu).
+[227/293] Checking: https://www.instagram.com/reel/DF2sOsNyNlY/
+ -> OK: Link còn sống (Có dữ liệu).
+[228/293] Checking: https://www.instagram.com/p/DctRykCjcp2/
+ -> OK: Link còn sống (Có dữ liệu).
+[229/293] Checking: https://www.instagram.com/reel/DcJDJjVJGy6/
+ -> OK: Link còn sống (Có dữ liệu).
+[230/293] Checking: https://www.instagram.com/p/DcgTj56Atlc/
+ -> OK: Link còn sống (Có dữ liệu).
+[231/293] Checking: https://www.instagram.com/reel/Dcil1WWiXOC/
+ -> OK: Link còn sống (Có dữ liệu).
+[232/293] Checking: https://www.instagram.com/p/DcgTj56Atlc/
+ -> OK: Link còn sống (Có dữ liệu).
+[233/293] Checking: https://www.instagram.com/reel/Db-ylimPqMu/
+ -> OK: Link còn sống (Có dữ liệu).
+[234/293] Checking: https://www.instagram.com/reel/DWD7Lv4E8N8/
+ -> OK: Link còn sống (Có dữ liệu).
+[235/293] Checking: https://www.instagram.com/reel/DW_iQNYDjX7/
+ -> OK: Link còn sống (Có dữ liệu).
+[237/293] Checking: https://youtu.be/xnAU8Pazc6A
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[238/293] Checking: https://www.instagram.com/reel/DcTjYUftCcv/
+ -> OK: Link còn sống (Có dữ liệu).
+[239/293] Checking: https://www.instagram.com/reel/DcL1W34I6lz/
+ -> OK: Link còn sống (Có dữ liệu).
+[242/293] Checking: https://www.instagram.com/reel/DcOQSCMqho0/
+ -> OK: Link còn sống (Có dữ liệu).
+[243/293] Checking: https://www.instagram.com/creator/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[245/293] Checking: https://www.instagram.com/withyuee/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[246/293] Checking: https://www.instagram.com/withyuee/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[247/293] Checking: https://www.instagram.com/withyuee/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[248/293] Checking: https://www.instagram.com/withyuee/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[249/293] Checking: https://www.tiktok.com/@thodiahaiduongne/video/7350657143906913544
+ -> OK: Link còn sống (Có dữ liệu).
+[250/293] Checking: https://www.tiktok.com/@tinanguyen2004/video/7673468312290037012
+ -> OK: Link còn sống (Có dữ liệu).
+[251/293] Checking: https://www.instagram.com/reel/DcJiRCrTlG1/
+ -> OK: Link còn sống (Có dữ liệu).
+[252/293] Checking: https://www.instagram.com/reel/DcTk0RGgtBO/
+ -> OK: Link còn sống (Có dữ liệu).
+[253/293] Checking: https://www.instagram.com/p/Db7zNC0jPwV/
+ -> OK: Link còn sống (Có dữ liệu).
+[254/293] Checking: https://www.instagram.com/reel/DbRak0lsesY/
+ -> OK: Link còn sống (Có dữ liệu).
+[255/293] Checking: https://www.instagram.com/p/DcYQVYJjHa-/
+ -> OK: Link còn sống (Có dữ liệu).
+[256/293] Checking: https://www.instagram.com/reel/DbjCyKgxp8S/
+ -> OK: Link còn sống (Có dữ liệu).
+[257/293] Checking: https://www.instagram.com/reel/DcTqPjitJl1/
+ -> OK: Link còn sống (Có dữ liệu).
+[258/293] Checking: https://www.instagram.com/reel/Da7V4egSQxv/
+ -> OK: Link còn sống (Có dữ liệu).
+[259/293] Checking: https://web.facebook.com/reel/1398467868829887/
+ -> OK: Link còn sống (Có dữ liệu).
+[260/293] Checking: https://www.instagram.com/p/DUqQaPbkfcQ/
+ -> OK: Link còn sống (Có dữ liệu).
+[261/293] Checking: https://www.instagram.com/p/DO8arRxEZvh/
+ -> OK: Link còn sống (Có dữ liệu).
+[262/293] Checking: https://www.instagram.com/p/DVQ3Gh6Efk1/
+ -> OK: Link còn sống (Có dữ liệu).
+[263/293] Checking: https://www.instagram.com/p/Da0eP_msVrm/
+ -> OK: Link còn sống (Có dữ liệu).
+[264/293] Checking: https://www.instagram.com/creator/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[265/293] Checking: https://www.instagram.com/p/DbKauxkoJU_/
+ -> OK: Link còn sống (Có dữ liệu).
+[266/293] Checking: https://www.instagram.com/p/DXUG_1TjwJu/
+ -> OK: Link còn sống (Có dữ liệu).
+[267/293] Checking: https://www.instagram.com/p/DW8lBR9Dzop/
+ -> OK: Link còn sống (Có dữ liệu).
+[268/293] Checking: https://www.instagram.com/p/DWnsVqWj2XN/
+ -> OK: Link còn sống (Có dữ liệu).
+[269/293] Checking: https://www.instagram.com/p/DWrDUymD4_a/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[270/293] Checking: https://www.instagram.com/p/DbnwnkrAVQ9/
+ -> OK: Link còn sống (Có dữ liệu).
+[271/293] Checking: https://www.instagram.com/p/DU2CTKzEqvl/
+ -> OK: Link còn sống (Có dữ liệu).
+[272/293] Checking: https://www.instagram.com/p/DbIA2jwPHCV/
+ -> OK: Link còn sống (Có dữ liệu).
+[273/293] Checking: https://www.instagram.com/reel/Dal3RFpA5nI/
+ -> OK: Link còn sống (Có dữ liệu).
+[274/293] Checking: https://www.instagram.com/reel/Dad0d3xtv9E/
+ -> OK: Link còn sống (Có dữ liệu).
+[275/293] Checking: https://www.instagram.com/p/DcI-darjckz/
+ -> OK: Link còn sống (Có dữ liệu).
+[278/293] Checking: https://www.instagram.com/p/DbqCYu4DAz2/
+ -> OK: Link còn sống (Có dữ liệu).
+[279/293] Checking: https://www.instagram.com/reel/Dal3RFpA5nI/
+ -> OK: Link còn sống (Có dữ liệu).
+[280/293] Checking: https://www.instagram.com/reel/DacaMHwzEm3/
+ -> OK: Link còn sống (Có dữ liệu).
+[281/293] Checking: https://www.instagram.com/reel/DZOzwweTc5a/
+ -> OK: Link còn sống (Có dữ liệu).
+[282/293] Checking: https://www.instagram.com/reel/Db0Sn3zvuHP/
+ -> OK: Link còn sống (Có dữ liệu).
+[283/293] Checking: https://www.instagram.com/p/Db22SIxAVtJ/
+ -> OK: Link còn sống (Có dữ liệu).
+[284/293] Checking: https://www.instagram.com/p/DXWKIztktTN/
+ -> OK: Link còn sống (Có dữ liệu).
+[285/293] Checking: https://www.instagram.com/p/Dah8zTnNgq5/
+ -> OK: Link còn sống (Có dữ liệu).
+[286/293] Checking: https://www.instagram.com/p/DbdG7v1tjrz/
+ -> OK: Link còn sống (Có dữ liệu).
+[287/293] Checking: https://www.instagram.com/p/Db-zVchOXV7/
+ -> OK: Link còn sống (Có dữ liệu).
+[288/293] Checking: https://www.instagram.com/p/DQuEXMbj8fT/
+ -> OK: Link còn sống (Có dữ liệu).
+[289/293] Checking: https://www.instagram.com/p/DQmKgPDEWgJ/
+ -> OK: Link còn sống (Có dữ liệu).
+[290/293] Checking: https://www.instagram.com/reel/DbGMt3oIaZm/
+ -> OK: Link còn sống (Có dữ liệu).
+[291/293] Checking: https://www.instagram.com/jazziesillona/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[292/293] Checking: https://www.instagram.com/jazziesillona/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+[293/293] Checking: https://www.instagram.com/watch.gabe/
+ -> LỖI: Trang không khả dụng hoặc bị ẩn. Đánh dấu EXCLUDED.
+=== KẾT THÚC. Đã ẩn 96 bài viết hỏng. ===
