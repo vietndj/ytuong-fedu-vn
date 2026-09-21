@@ -527,6 +527,12 @@ def get_item_classification(vid_id, code, clean_title, takeaway, key_tech, creat
     return style_obj, ind_obj, country_obj, "Showcase thị giác & Thẩm mỹ", [key_tech] if key_tech else ["Cinematic"], ""
 
 def build_database():
+    import json
+    try:
+        with open("/Users/vietmac/drive_links.json", "r") as f:
+            drive_links = json.load(f)
+    except:
+        drive_links = {}
     portal_data = load_portal_data()
     curation_cfg = load_curation_config()
     master_dict = load_master_classifications()
@@ -780,6 +786,7 @@ def build_database():
                 "thumb_hook": thumb_hook,
                 "thumb_key": thumb_key,
                 "video_url": vid_url,
+                "video_url_original": drive_links.get(vid_url.split("/")[-1].replace("_preview", "")) if "drive_links" in locals() else "",
                 "report_url": html_url,
                 "shots_count": shots_count,
                 "duration": duration_str,

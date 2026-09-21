@@ -1074,7 +1074,7 @@
     </div>
 
     <!-- LOAD DATABASE SCRIPT -->
-    <script src="ideas_data.js?v=1789949829"></script>
+    <script src="ideas_data.js?v=1789950400"></script>
 
     <!-- SPA LOGIC -->
     <script>
@@ -3311,8 +3311,8 @@
             const title = document.getElementById('videoModalTitle');
             const downloadBtn = document.getElementById('videoModalDownloadOriginalBtn');
             if (downloadBtn) {
-                if (item.video_url_original) {
-                    downloadBtn.href = item.video_url_original;
+                if (item.video_url_original || (item.media && item.media.video_url_original)) {
+                    downloadBtn.href = item.video_url_original || (item.media && item.media.video_url_original);
                     downloadBtn.classList.remove('hidden');
                     downloadBtn.classList.add('flex');
                 } else {
