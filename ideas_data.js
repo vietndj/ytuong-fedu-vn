@@ -8,7 +8,7 @@ var FEDU_IDEAS_DATABASE = {
   "total_unique_ideas": 213,
   "total_active_ideas": 186,
   "total_excluded_ideas": 27,
-  "total_creators": 148,
+  "total_creators": 149,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -70,9 +70,9 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 4,
     "voice-over": 11,
-    "talking-head": 21,
+    "talking-head": 22,
     "storytelling": 22,
-    "dien-anh": 86,
+    "dien-anh": 85,
     "chuyen-canh": 38,
     "theo-nhip-nhac": 4
   },
@@ -160,14 +160,14 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "industry_stats": {
     "spa-lam-dep": 3,
-    "thuong-hieu": 20,
+    "thuong-hieu": 19,
     "thoi-trang": 18,
     "am-thuc": 17,
     "du-lich": 13,
     "cong-nghe": 26,
     "kien-truc": 20,
     "the-thao": 5,
-    "ky-thuat-quay": 33,
+    "ky-thuat-quay": 34,
     "ugc": 4
   },
   "x_factors": [
@@ -260,23 +260,6 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
-      "handle": "@creator",
-      "name": "Creator",
-      "profile_url": "https://www.instagram.com/creator/",
-      "video_count": 7,
-      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40creator_DdiSb5Rp2LB_Video_DdiSb5Rp2LB/shot_01_mid.jpg",
-      "video_ids": [
-        "IG_@creator_DdiSb5Rp2LB_Video_DdiSb5Rp2LB",
-        "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5",
-        "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb",
-        "IG_@岳_🍜_GAKU_Dc0MHhTE9z0_Carousel_Analysis",
-        "IG_@𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄_DcgSonjgnkV_Carousel_Analysis",
-        "Bao_Cao_Boi_Canh_Thuc_Chien_R2",
-        "IG_@by.bennnj_DbKauxkoJU_"
-      ]
-    },
-    {
       "handle": "@jazziesillona",
       "name": "Jazzie Sillona",
       "profile_url": "https://www.instagram.com/jazziesillona/",
@@ -291,6 +274,22 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@jazziesillona_DWrDUymD4_a_Carousel_Analysis",
         "IG_@Jazzie_DU2CTKzEqvl_Carousel_Analysis",
         "IG_@jazziesillona_DbIA2jwPHCV"
+      ]
+    },
+    {
+      "handle": "@creator",
+      "name": "Hayan Cook",
+      "profile_url": "https://www.instagram.com/creator/",
+      "video_count": 6,
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40creator_DdVBqUzj3o5_Video_DdVBqUzj3o5/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5",
+        "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb",
+        "IG_@岳_🍜_GAKU_Dc0MHhTE9z0_Carousel_Analysis",
+        "IG_@𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄_DcgSonjgnkV_Carousel_Analysis",
+        "Bao_Cao_Boi_Canh_Thuc_Chien_R2",
+        "IG_@by.bennnj_DbKauxkoJU_"
       ]
     },
     {
@@ -570,6 +569,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "REMAKE_Byjxson_Quang_Cao_Dong_Ho_Bam_Gio",
         "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01"
+      ]
+    },
+    {
+      "handle": "@mylenesmind",
+      "name": "Mylene_Mae",
+      "profile_url": "https://www.instagram.com/mylenesmind/",
+      "video_count": 1,
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind"
       ]
     },
     {
@@ -1928,23 +1938,23 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "ideas": [
     {
-      "id": "IG_@creator_DdiSb5Rp2LB_Video_DdiSb5Rp2LB",
-      "shortcode": "DdiSb5Rp2LB",
-      "title_vi": "@creator DdiSb5Rp2LB Video DdiSb5Rp2LB",
-      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
-      "key_tech": "Cinematic Lighting • Composition Mastery • Visual Rhythm",
+      "id": "IG_@mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind",
+      "shortcode": "DdeCKRRRGvd",
+      "title_vi": "Video by mylenesmind",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 21 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot • High-key Lighting",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
       },
       "industries": [
         {
-          "id": "thuong-hieu",
-          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
-          "icon": "💼"
+          "id": "ky-thuat-quay",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
         }
       ],
       "x_factors": [],
@@ -1955,39 +1965,41 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇺🇸/🇪🇺",
         "badge_color": "purple"
       },
-      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mylene_mae",
       "tech_tags": [
-        "Cinematic Lighting",
-        "Composition Mastery",
-        "Visual Rhythm"
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot",
+        "Low-key Lighting",
+        "Medium Tracking Shot",
+        "High-key Lighting"
       ],
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {},
-      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kỹ Thuật Quay Dựng & Điện Ảnh.",
       "creator": {
-        "raw": "@creator",
-        "name": "Creator",
-        "handle": "@creator",
-        "profile_url": "https://www.instagram.com/creator/"
+        "raw": "@mylene_mae",
+        "name": "Mylene_Mae",
+        "handle": "@mylenesmind",
+        "profile_url": "https://www.instagram.com/mylenesmind/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdiSb5Rp2LB/",
-      "gdrive_folder": "https://drive.google.com/open?id=15bc8MfxxUk4Xk1JdO0hLx80SHVNpYnif",
+      "ig_url": "https://www.instagram.com/reel/DdeCKRRRGvd/",
+      "gdrive_folder": "https://drive.google.com/open?id=1CR7hseDvzdQYlIY2V8apXle_98MVzGFz",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40creator_DdiSb5Rp2LB_Video_DdiSb5Rp2LB/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40creator_DdiSb5Rp2LB_Video_DdiSb5Rp2LB/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdiSb5Rp2LB.mp4",
-        "video_url_original": "https://media.fedu.vn/videos/DdiSb5Rp2LB.mp4",
-        "report_url": "reports/IG_@creator_DdiSb5Rp2LB_Video_DdiSb5Rp2LB.html",
-        "shots_count": 0,
-        "duration": "15s",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DdeCKRRRGvd.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdeCKRRRGvd.mp4",
+        "report_url": "reports/IG_@mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind.html",
+        "shots_count": 21,
+        "duration": "42s",
         "youtube_id": null,
         "youtube_embed": null,
         "youtube_url": null
       },
       "complexity": {
-        "id": "de",
-        "label": "🟢 Dễ làm theo (3-8 shots)"
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
       },
       "is_personal": false,
       "is_excluded": false

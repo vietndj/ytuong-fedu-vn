@@ -17169,32 +17169,34 @@
       "badge_color": "purple"
     }
   },
-  "IG_@creator_DdiSb5Rp2LB_Video_DdiSb5Rp2LB": {
-    "id": "IG_@creator_DdiSb5Rp2LB_Video_DdiSb5Rp2LB",
-    "creator": "@creator",
-    "creator_name": "Creator",
-    "title": "@creator - Video DdiSb5Rp2LB",
-    "shots_count": 0,
-    "duration": "0.0s",
+  "IG_@mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind": {
+    "id": "IG_@mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind",
+    "creator": "@mylene_mae",
+    "creator_name": "Mylene_Mae",
+    "title": "@mylene_mae - Video by mylenesmind",
+    "shots_count": 21,
+    "duration": "42.0s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
-      "icon": "🎬"
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
     },
     "industry": {
-      "id": "thuong-hieu",
-      "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
-      "icon": "💼"
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mylene_mae",
     "tech_tags": [
-      "Cinematic Lighting",
-      "Composition Mastery",
-      "Visual Rhythm"
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting",
+      "Medium Tracking Shot",
+      "High-key Lighting"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kỹ Thuật Quay Dựng & Điện Ảnh.",
     "is_excluded": false,
-    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 21 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -17203,32 +17205,34 @@
       "badge_color": "purple"
     }
   },
-  "DdiSb5Rp2LB": {
-    "id": "IG_@creator_DdiSb5Rp2LB_Video_DdiSb5Rp2LB",
-    "creator": "@creator",
-    "creator_name": "Creator",
-    "title": "@creator - Video DdiSb5Rp2LB",
-    "shots_count": 0,
-    "duration": "0.0s",
+  "DdeCKRRRGvd": {
+    "id": "IG_@mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind",
+    "creator": "@mylene_mae",
+    "creator_name": "Mylene_Mae",
+    "title": "@mylene_mae - Video by mylenesmind",
+    "shots_count": 21,
+    "duration": "42.0s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
-      "icon": "🎬"
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
     },
     "industry": {
-      "id": "thuong-hieu",
-      "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
-      "icon": "💼"
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mylene_mae",
     "tech_tags": [
-      "Cinematic Lighting",
-      "Composition Mastery",
-      "Visual Rhythm"
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting",
+      "Medium Tracking Shot",
+      "High-key Lighting"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kỹ Thuật Quay Dựng & Điện Ảnh.",
     "is_excluded": false,
-    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+    "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 21 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
