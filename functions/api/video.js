@@ -10,12 +10,12 @@ export async function onRequest(context) {
   if (range) {
       headers.set('Range', range);
   }
-  headers.set('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)');
+  headers.set('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36');
 
   let response = await fetch(driveUrl, {
     method: context.request.method,
     headers: headers,
-    redirect: 'manual' // handle redirect manually to get the final download URL
+    redirect: 'manual'
   });
   
   if (response.status >= 300 && response.status < 400) {
@@ -29,9 +29,21 @@ export async function onRequest(context) {
   }
 
   const newHeaders = new Headers(response.headers);
+  // Strip restrictive headers from Google Drive
   newHeaders.delete('content-disposition');
+  newHeaders.delete('cross-origin-embedder-policy');
+  newHeaders.delete('cross-origin-opener-policy');
+  newHeaders.delete('cross-origin-resource-policy');
+  newHeaders.delete('content-security-policy');
+  newHeaders.delete('x-content-security-policy');
+  newHeaders.delete('x-frame-options');
+
+  // Set permissive CORS
   newHeaders.set('access-control-allow-origin', '*');
   newHeaders.set('cross-origin-resource-policy', 'cross-origin');
+  
+  // Set aggressive edge caching for images/videos (Cloudflare will cache it for 1 year)
+  newHeaders.set('cache-control', 'public, max-age=31536000, immutable');
   
   return new Response(response.body, {
     status: response.status,
