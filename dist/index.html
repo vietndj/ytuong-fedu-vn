@@ -1452,7 +1452,12 @@
                         (item.fedu_optimization?.practice_focus || '') + ' ' +
                         (item.fedu_optimization?.ig_seeding_hook || '') + ' ' +
                         (item.fedu_optimization?.course_industry_mapping || '') + ' ' +
-                        (item.shooting_style?.name || '') + ' ' +
+                        
+                        (item.shooting_style?.id || '') + ' ' +
+                        (item.industries?.map(i => i.id).join(" ") || "") + ' ' +
+                        (item.country?.id || '') + ' ' +
+                        (item.tags ? item.tags.join(' ') : '') + ' ' +
+(item.shooting_style?.name || '') + ' ' +
                         (item.shooting_style?.en_name || '') + ' ' +
                         (item.industries?.map(i => i.name).join(" ") || "") + ' ' +
                         (item.industries?.map(i => i.en_name || "").join(" ") || "") + ' ' +
@@ -1467,7 +1472,7 @@
                         (item.creator?.handle || '')
                     ).toLowerCase();
                     const haystack = removeAccents(haystackRaw);
-                    if (!haystack.includes(searchVal) && !haystackRaw.includes(searchVal)) return false;
+                    if (!haystack.includes(searchVal) && !haystackRaw.includes(searchVal) && !haystack.includes(searchVal.replace(/-/g, ' '))) return false;
 
                 }
 
