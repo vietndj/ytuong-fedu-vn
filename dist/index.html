@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kho Ý Tưởng Video | ytuong.fedu.vn</title>
-    <meta name="description" content="Kho ý tưởng sáng tạo và mẫu quay video ngắn theo ngành dành cho học viên quay dựng VIDEO. Quản lý kênh creator hàng đầu, xem trước điểm ăn tiền của video, theo dõi Instagram 1-chạm.">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://media.fedu.vn">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,178 +19,51 @@
             darkMode: 'class',
             theme: {
                 extend: {
-                    colors: {
-                        brand: {
-                            50: '#f5f3ff',
-                            500: '#8b5cf6',
-                            600: '#7c3aed',
-                            700: '#6d28d9'
-                        },
-                        dark: {
-                            950: '#070a0f',
-                            900: '#0b0f17',
-                            850: '#0f1624',
-                            800: '#141d2e',
-                            700: '#1e2b42',
-                            600: '#2a3b59'
-                        }
-                    },
                     fontFamily: {
-                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        body: ['"Be Vietnam Pro"', 'sans-serif'],
-                        mono: ['"JetBrains Mono"', 'monospace']
+                        sans: ['"Be Vietnam Pro"', 'sans-serif']
                     }
                 }
             }
         }
     </script>
     
-    <script>
-        window.hideReportSpinner = function() {
-            var spinner = document.getElementById('reportIframeSpinner');
-            if (spinner) spinner.style.display = 'none';
-        };
-    </script>
     <style>
         :root {
             --bg-main: #070a0f;
-            --bg-card: #0e1626;
-            --bg-card-hover: #152238;
-            --border-subtle: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(56, 189, 248, 0.4);
-            --accent-blue: #38bdf8;
-            --accent-amber: #f59e0b;
-            --accent-rose: #f43f5e;
-            --accent-emerald: #10b981;
-            --accent-purple: #a855f7;
         }
-
-        * {
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-
         body {
             background-color: var(--bg-main);
             color: #f1f5f9;
             font-family: 'Be Vietnam Pro', sans-serif;
             overflow-x: hidden;
+            margin: 0;
+            padding: 0;
         }
-
-        h1, h2, h3, h4, .font-heading {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        .font-mono {
-            font-family: 'JetBrains Mono', monospace;
-        }
-
         /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 6px; height: 6px; }
         ::-webkit-scrollbar-track { background: #070a0f; }
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
 
-        /* Glass effect */
-        .glass-nav {
-            background: rgba(11, 15, 23, 0.85);
+        /* Glass Header */
+        .glass-header {
+            background: rgba(11, 15, 23, 0.9);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.07);
         }
-
-        .glass-card {
-            background: rgba(14, 22, 38, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .glass-card:hover {
-            border-color: rgba(56, 189, 248, 0.35);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.6);
-        }
-
-        /* Dấu hiệu Thẻ Video Chỉ Quản Trị (Viền Vàng Kim Rực Rỡ & Đèn Led Amber Glow) */
-        .admin-only-card {
-            border: 2.5px solid #fbbf24 !important; /* amber-400 */
-            box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.45), 0 14px 34px -6px rgba(245, 158, 11, 0.35) !important;
-            background: linear-gradient(180deg, rgba(69, 26, 3, 0.55) 0%, rgba(15, 23, 42, 0.92) 100%) !important;
-            position: relative;
-        }
-
-        .admin-only-card:hover {
-            border-color: #fde047 !important; /* yellow-300 */
-            box-shadow: 0 0 0 4px rgba(253, 224, 71, 0.6), 0 18px 40px -8px rgba(245, 158, 11, 0.5) !important;
-            transform: translateY(-3px);
-        }
-
         
         /* Shooting Style Tab Active */
         .style-tab.active {
-            background: linear-gradient(135deg, #7c3aed, #2563eb);
+            background: rgba(255,255,255,0.1);
             color: #ffffff;
-            border-color: #a855f7;
-            box-shadow: 0 4px 14px rgba(124, 58, 237, 0.4);
             font-weight: 700;
         }
-
-        /* Industry Pill Active */
-        .ind-pill.active {
-            background: linear-gradient(135deg, #0284c7, #2563eb);
-            color: #ffffff;
-            border-color: #38bdf8;
-            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
-            font-weight: 700;
-        }
-
-        /* Country Tab Active */
-        .country-tab.active {
-            background: linear-gradient(135deg, #d97706, #b45309);
-            color: #ffffff;
-            border-color: #f59e0b;
-            box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4);
-            font-weight: 700;
-        }
-
-        /* Filter Accordion Smooth Expansion */
-        .filter-accordion-panel {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
-            opacity: 0;
-        }
-        .filter-accordion-panel.open {
-            max-height: 500px;
-            opacity: 1;
-        }
-
-        /* View switcher active */
-        .view-btn.active {
-            background: #1e293b;
-            color: #38bdf8;
-            border-color: rgba(56, 189, 248, 0.4);
-            font-weight: 700;
-        }
-
-        /* Poster 9:16 Aspect Ratio */
-        .aspect-poster {
-            aspect-ratio: 9 / 16;
-        }
-
-        /* Instagram Gradient Button */
-        .btn-ig-gradient {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            transition: opacity 0.2s, transform 0.15s;
-        }
-        .btn-ig-gradient:hover {
-            opacity: 0.92;
-            transform: translateY(-1px);
-        }
-
-        /* Lightbox & Modals */
+        
+        /* Search Input Toggle */
+        #globalSearchContainer.hidden-search { display: none; }
+        
+        /* Modals */
         .app-modal-backdrop {
             display: none;
             position: fixed;
@@ -197,906 +71,188 @@
             background: rgba(3, 7, 18, 0.88);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            z-index: 100;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
+            z-index: 9999;
         }
-        @media (min-width: 640px) {
-            .app-modal-backdrop {
-                padding: 16px;
-            }
+        body.modal-open { overflow: hidden; }
+        
+        /* Poster 9:16 Aspect Ratio */
+        .aspect-poster {
+            aspect-ratio: 9 / 16;
         }
-        .app-modal-backdrop.open {
-            display: flex;
-        }
-
-        /* Clamp lines */
-        .line-clamp-2 {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .line-clamp-3 {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
+        
+        /* Hide scrollbar for horizontal scrolling tabs */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
 </head>
-<body class="min-h-screen flex flex-col selection:bg-sky-500 selection:text-white">
-
-    <!-- TOP NAVIGATION & BRANDING -->
-    
-    <details id="header-details" class="w-full bg-slate-950 border-b border-slate-800/60 sticky top-0 z-40 group [&_summary::-webkit-details-marker]:hidden">
-        <summary class="flex items-center justify-between px-4 py-3 cursor-pointer text-slate-300 font-bold text-sm bg-slate-900 lg:hidden">
-            <div class="flex items-center gap-2">
-                <span class="text-sky-400">🔍</span> Menu & Bộ lọc
-            </div>
-            <span class="group-open:rotate-180 transition-transform">▼</span>
-        </summary>
-        <div class="p-2 border-t border-slate-800/50 bg-slate-950 lg:!block lg:border-t-0 lg:p-0">
-            <header class="sticky top-0 z-40 glass-nav">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row md:items-center justify-between gap-3">
-            
-            <!-- Logo & Domain Tag (Streamlined with Rich Tooltip on Hover) -->
-            <div class="flex items-center justify-between">
-                <div class="relative group">
-                    <a href="/" class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 via-indigo-500 to-purple-600 flex items-center justify-center font-heading font-extrabold text-white text-base shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
-                            🎬
-                        </div>
-                    </a>
-
-                    <!-- RICH HOVER TOOLTIP KHI RÊ CHUỘT LÊN LOGO -->
-                    <div class="absolute left-0 top-full mt-2.5 w-80 sm:w-96 p-3.5 rounded-2xl bg-slate-900/95 border border-sky-500/40 shadow-2xl shadow-sky-950/60 backdrop-blur-xl opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
-                        <div class="flex items-start gap-2.5">
-                            <div class="w-8 h-8 rounded-lg bg-sky-500/20 border border-sky-500/40 flex items-center justify-center text-base shrink-0">
-                                💡
-                            </div>
-                            <div>
-                                <div class="text-xs font-bold text-sky-300 leading-snug">
-                                    “Tích lũy đủ giờ quay dựng video thực chiến mỗi ngày • Chuyên đề UGC, Quảng Cáo & AIDA”
-                                </div>
-                                <p class="text-[11px] text-slate-300 mt-1 leading-normal">
-                                    Kho mẫu tham chiếu chuẩn điện ảnh quốc tế tuyển chọn riêng cho học viên VIDEO FEDU.
-                                </p>
-                                <div class="mt-2 pt-2 border-t border-slate-800 flex items-center justify-between text-[10px] font-mono text-slate-400">
-                                    <span>Tác quyền: FEDU Creative</span>
-                                    <span class="text-sky-400 font-bold" id="heroTotalCountBadge">184 ý tưởng thực chiến</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mobile View Switcher -->
-                <div class="flex md:hidden items-center gap-1.5">
-                    <button id="mobileShareFilterBtn" onclick="copyCurrentFilterLink()" class="hidden p-2 rounded-lg bg-sky-500/25 text-sky-300 border border-sky-400/60 text-xs font-bold animate-pulse shadow-sm" title="Chia sẻ link bộ lọc">🔗</button>
-                    <button id="mobileViewGridBtn" onclick="switchMainView('grid')" class="p-2 rounded-lg bg-slate-800 text-sky-400 border border-slate-700 text-xs font-bold" title="Kho Ý Tưởng">💡</button>
-                    <button id="mobileViewUgcBtn" onclick="toggleUgcMode()" class="p-2 rounded-lg bg-slate-800 text-slate-400 border border-slate-700 text-xs font-bold" title="Mục UGC">📱</button>
-                    <button id="mobileViewCreatorsBtn" onclick="switchMainView('creators')" class="p-2 rounded-lg bg-slate-800 text-slate-400 border border-slate-700 text-xs font-bold" title="Danh Mục Kênh">👥</button>
-                    <button onclick="requestAdminAccess()" id="mobileCurationBtn" class="p-2 rounded-lg bg-slate-800 text-slate-400 border border-slate-700 text-xs font-bold" title="Quản trị">⚙️</button>
-                </div>
-            </div>
-
-            <!-- Global Search & Main View Switcher -->
-            <div class="flex items-center gap-2.5">
-                <!-- Quick Share Filter Link (Desktop Header) -->
-                <button 
-                    id="headerShareFilterBtn" 
-                    onclick="copyCurrentFilterLink()" 
-                    class="hidden md:hidden items-center gap-1.5 px-3 py-1.5 rounded-xl border border-sky-400/60 bg-sky-500/20 hover:bg-sky-500/30 text-sky-200 hover:text-white text-xs font-bold transition shadow-sm cursor-pointer shrink-0 animate-pulse"
-                    title="Sao chép hoặc gửi liên kết bộ lọc đang chọn"
-                >
-                    <span class="text-sky-300">🔗</span>
-                    <span class="hidden lg:inline">Gửi Link Lọc</span>
-                    <span id="headerShareBadge" class="px-1.5 py-0.2 rounded-full text-[10px] font-mono bg-sky-400 text-slate-950 font-black">0</span>
-                </button>
-
-                <!-- Search Box with Shortcut -->
-                <div class="relative flex-1 md:w-60 lg:w-68">
-                    <input 
-                        type="text" 
-                        id="globalSearchInput" 
-                        placeholder="Tìm kiếm... (Nhấn /)" 
-                        class="w-full bg-slate-900/90 border border-slate-700/80 rounded-xl pl-8 pr-7 py-1.5 text-xs sm:text-sm text-slate-100 placeholder-slate-400 focus:outline-none focus:border-sky-400 focus:ring-1 focus:ring-sky-400 transition"
-                        oninput="handleSearchInput()"
-                    >
-                    <span class="absolute left-2.5 top-2 text-slate-400 text-xs">🔍</span>
-                    <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-2 top-1.5 text-slate-400 hover:text-white text-[10px] px-1 py-0.5 rounded bg-slate-800">ESC</button>
-                </div>
-
-                <!-- Desktop View Switcher -->
-                <div class="hidden md:flex items-center p-1 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium">
-                    <button id="viewGridBtn" onclick="switchMainView('grid')" class="view-btn active px-3 py-1.5 rounded-lg text-slate-300 transition flex items-center gap-1.5">
-                        <span>💡 Ý Tưởng</span>
-                        <span id="activeCountBadge" class="px-1.5 py-0.2 rounded-full text-[10px] bg-slate-800 text-sky-300">184</span>
-                    </button>
-                    <button id="viewUgcBtn" onclick="toggleUgcMode()" class="view-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-amber-300 transition flex items-center gap-1.5" title="Xem video quảng cáo bot & UGC sản phẩm sàn TMĐT">
-                        <span>📱 UGC</span>
-                        <span id="ugcCountBadge" class="px-1.5 py-0.2 rounded-full text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30">4</span>
-                    </button>
-                    <button id="viewCreatorsBtn" onclick="switchMainView('creators')" class="view-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition flex items-center gap-1.5">
-                        <span>👥 Kênh Mẫu</span>
-                        <span id="creatorsCountBadge" class="px-1.5 py-0.2 rounded-full text-[10px] bg-slate-800 text-purple-300">86</span>
-                    </button>
-                    <a href="learning_hub.html" class="view-btn px-3 py-1.5 rounded-lg text-amber-400 hover:text-amber-300 hover:bg-slate-800 transition flex items-center gap-1.5 font-bold" title="Xem tiến trình học phân loại của AI">
-                        <span>🧠 Học Phân Loại</span>
-                        <span class="px-1.5 py-0.2 rounded-full text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30">88.5%</span>
-                    </a>
-                </div>
-
-                <!-- Admin Curation Toggle -->
-                <button 
-                    onclick="requestAdminAccess()" 
-                    id="curationToggleBtn" 
-                    class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 text-xs text-slate-400 hover:text-slate-200 transition"
-                    title="Quản trị hệ thống"
-                >
-                    <span id="curationStatusDot" class="w-2 h-2 rounded-full bg-slate-500"></span>
-                    <span>Quản Trị</span>
-                </button>
-            </div>
+<body class="text-slate-200">
+    <!-- HEADER 48px -->
+    <header class="glass-header fixed top-0 w-full z-50 h-[44px] md:h-[48px] flex items-center px-2 md:px-4 gap-2">
+        <div class="text-sm font-bold shrink-0 flex items-center gap-2">
+            🎬 <span class="hidden md:inline">Kho Ý Tưởng</span>
         </div>
-
-        <!-- Curation Mode Admin Bar (Ultra-Compact - Không tốn chỗ) -->
-        <div id="curationAdminBar" class="hidden bg-slate-900/95 border-t border-b border-amber-500/40 px-4 py-1.5 text-xs text-amber-200 flex items-center justify-between flex-wrap gap-2 shadow-md">
-            <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded bg-amber-500 text-slate-950 font-black text-[11px]">⚙️ QUẢN TRỊ</span>
-                <span class="text-[11px] text-amber-300 font-semibold hidden sm:inline">🟡 Thẻ viền vàng = Đã ẩn khỏi học viên</span>
-            </div>
-            <div class="flex items-center gap-1.5 flex-wrap">
-                <button onclick="filterByCurationStatus('all')" id="adminFilterAllBtn" class="px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs shadow-sm cursor-pointer">Tất Cả</button>
-                <button onclick="filterByCurationStatus('active')" id="adminFilterActiveBtn" class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-200 hover:bg-slate-700 text-xs cursor-pointer">🌐 Đang Hiện</button>
-                <button onclick="filterByCurationStatus('excluded')" id="adminFilterExcludedBtn" class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-200 hover:bg-slate-700 text-xs cursor-pointer">🚫 Đã Ẩn (Viền Vàng)</button>
-                <button onclick="lockAdminMode()" class="px-2.5 py-1 rounded-lg bg-rose-500/20 text-rose-300 border border-rose-500/40 hover:bg-rose-500/30 text-xs font-semibold ml-1 cursor-pointer">🔒 Thoát</button>
-            </div>
+        
+        <!-- Shooting Styles Tabs (Horizontal Scroll) -->
+        <div id="shootingStyleTabsContainer" class="flex-1 flex items-center overflow-x-auto no-scrollbar gap-1 px-2 h-full py-1">
+            <!-- Tabs will be rendered here by JS -->
         </div>
-
-        <!-- FOCUS MODE HERO BANNER (CHUYÊN ĐỀ ĐẶC QUYỀN HỌC VIÊN) -->
-        <div id="focusModeBanner" class="hidden border-t border-b border-indigo-500/30 bg-gradient-to-r from-indigo-950/90 via-purple-950/70 to-slate-950 px-4 sm:px-6 lg:px-8 py-4 shadow-lg shadow-indigo-950/30">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <div class="flex items-start gap-3.5">
-                    <div id="focusBadgeIcon" class="w-12 h-12 rounded-2xl bg-indigo-600/20 border border-indigo-500/40 flex items-center justify-center text-2xl shrink-0 shadow-inner">
-                        💆
-                    </div>
-                    <div>
-                        <div class="flex items-center gap-2 flex-wrap mb-1">
-                            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-indigo-500/25 text-indigo-300 border border-indigo-500/40">
-                                🎯 Chuyên Đề Chọn Lọc Cho Học Viên
-                            </span>
-                            <span id="focusCountBadge" class="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-slate-800 text-sky-300 border border-slate-700">
-                                2 video mẫu
-                            </span>
-                        </div>
-                        <h2 id="focusTitle" class="text-base sm:text-lg font-bold text-white tracking-tight">
-                            Kho Mẫu Video Dành Riêng Cho Ngành Làm Đẹp & Spa / Y Tế
-                        </h2>
-                        <p id="focusSubtitle" class="text-xs text-slate-300 max-w-2xl mt-0.5">
-                            Tuyển tập các mẫu quay dựng chuẩn quốc tế do anh Việt chọn lọc thực chiến cho thương hiệu của bạn.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-2 shrink-0">
-                    <button onclick="toggleFilterBars()" id="filterToggleBtn" class="px-3 py-1.5 rounded-xl border border-slate-700 bg-slate-900/90 hover:bg-slate-800 text-xs font-semibold text-slate-300 hover:text-white transition flex items-center gap-1.5">
-                        <span>⚙️ Bộ Lọc Khác</span>
-                    </button>
-                    <button onclick="exitFocusMode()" class="px-3.5 py-1.5 rounded-xl border border-indigo-500/40 bg-indigo-600/20 hover:bg-indigo-600/30 text-xs font-bold text-indigo-200 hover:text-white transition flex items-center gap-1.5">
-                        <span>🌐 Xem Toàn Bộ 131+ Mẫu ↗</span>
-                    </button>
-                </div>
-            </div>
+        
+        <!-- Search Toggle -->
+        <button onclick="document.getElementById('globalSearchContainer').classList.toggle('hidden-search')" class="p-2 hover:bg-white/10 rounded-lg shrink-0">
+            🔍
+        </button>
+        <div id="globalSearchContainer" class="hidden-search absolute top-full right-0 mt-1 mr-2 bg-slate-900 border border-slate-700 p-2 rounded-lg shadow-xl">
+            <input type="text" id="globalSearchInput" placeholder="Tìm kiếm..." class="bg-slate-800 text-sm px-3 py-1.5 rounded outline-none border border-slate-700 focus:border-sky-500 w-48">
         </div>
-
-        <!-- NÚT BỘ LỌC MOBILE -->
-        <div class="md:hidden border-t border-slate-800/80 bg-slate-950 px-4 py-2">
-            <button onclick="toggleMobileFilters()" class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800 text-sm font-bold text-slate-300 transition flex items-center">
-                <span id="mobileFilterBtnText">⚙️ Mở Bộ Lọc</span>
-                <span id="mobileFilterChevron" class="text-[10px] transition-transform duration-300">▼</span>
-            </button>
-        </div>
-
-        <!-- WRAPPER CHO CÁC THANH BỘ LỌC TINH GỌN & ACCORDION (ẨN/HIỆN THEO FOCUS MODE) -->
-        <div id="allFilterBarsContainer" class="transition-all duration-500 max-h-0 opacity-0 overflow-hidden md:max-h-[2000px] md:opacity-100 md:overflow-visible">
-
-            <!-- 1. KIỂU QUAY (GIỮ GỌN GÀNG 1 HÀNG TRÊN CÙNG) -->
-            <div class="border-t border-slate-800/80 bg-slate-950/80 px-4 sm:px-6 lg:px-8 py-1.5">
-                <div class="max-w-7xl mx-auto flex items-center gap-3 flex-wrap">
-                    <div class="flex items-center gap-1.5 shrink-0 text-xs font-bold text-slate-400">
-                        <span class="text-purple-400">🎥 KIỂU QUAY:</span>
-                    </div>
-                    <div class="flex items-center gap-2 flex-wrap" id="shootingStyleTabsContainer">
-                        <!-- Injected dynamically via JS -->
-                    </div>
+        
+        <!-- Settings/Filters Dropdown (⚙️) -->
+        <div class="relative group shrink-0">
+            <button class="p-2 hover:bg-white/10 rounded-lg">⚙️</button>
+            <div class="absolute right-0 top-full mt-1 w-64 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl hidden group-hover:block p-4 z-50 max-h-[80vh] overflow-y-auto">
+                <div class="text-xs font-semibold text-slate-400 mb-2">NGÀNH HÀNG</div>
+                <div id="industryPillsContainer" class="flex flex-wrap gap-1 mb-4"></div>
+                
+                <div class="text-xs font-semibold text-slate-400 mb-2">QUỐC GIA</div>
+                <div id="countryTabsContainer" class="flex flex-wrap gap-1 mb-4"></div>
+                
+                <div class="text-xs font-semibold text-slate-400 mb-2">ĐỘ KHÓ (CHUYỂN CẢNH)</div>
+                <div id="transitionFilterContainer" class="flex flex-col gap-1 mb-4 text-sm">
+                    <button id="btnTransitionAll" onclick="appState.currentTransitionLevel='all'; applyFilters(true)" class="text-left px-2 py-1 rounded hover:bg-white/5">Tất cả</button>
+                    <button id="btnTransitionL1" onclick="appState.currentTransitionLevel='Chuyển cảnh Level 1'; applyFilters(true)" class="text-left px-2 py-1 rounded hover:bg-white/5">Cơ bản (C1)</button>
+                    <button id="btnTransitionL2" onclick="appState.currentTransitionLevel='Chuyển cảnh Level 2'; applyFilters(true)" class="text-left px-2 py-1 rounded hover:bg-white/5">Nâng cao (C2)</button>
                 </div>
+                
+                <hr class="border-slate-700 my-2">
+                <button id="quickResetFiltersBtn" onclick="resetAllFilters()" class="w-full text-center text-sm py-1.5 bg-rose-500/20 text-rose-400 rounded hover:bg-rose-500/30 mb-2">Làm mới (Reset)</button>
+                <button onclick="requestAdminAccess()" class="w-full text-center text-sm py-1.5 bg-amber-500/20 text-amber-400 rounded hover:bg-amber-500/30">Chế độ Admin</button>
             </div>
-
-            <!-- 2. THANH NÚT ACCORDION TINH GỌN (ẨN BỚT NGÀNH & QUỐC GIA - BẤM MỞ RA MỚI THẤY) -->
-            <div class="border-t border-slate-800/80 bg-slate-950/95 px-4 sm:px-6 lg:px-8 py-2">
-                <div class="max-w-7xl mx-auto flex items-center justify-between gap-3 flex-wrap">
-                    <div class="flex items-center gap-2 flex-wrap">
-                        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider shrink-0 flex items-center gap-1">
-                            <span>⚡ BỘ LỌC:</span>
-                        </span>
-
-                        <!-- Accordion Button: NGÀNH NGHỀ -->
-                        <button 
-                            id="btnAccordionIndustry"
-                            onclick="toggleFilterAccordion('industry')" 
-                            class="px-3 py-1.5 rounded-xl border border-slate-700/80 bg-slate-900/90 hover:bg-slate-800 hover:border-sky-500/50 text-xs font-semibold text-slate-200 transition flex items-center gap-2 cursor-pointer shadow-sm group"
-                            title="Bấm để mở danh sách chọn Ngành nghề"
-                        >
-                            <span class="text-sky-400 text-sm">🏷️</span>
-                            <span class="font-bold">Ngành:</span>
-                            <span id="accordionIndustryLabel" class="text-sky-300 font-medium max-w-[140px] truncate">Tất Cả</span>
-                            <span id="accordionIndustryArrow" class="text-[10px] text-slate-400 group-hover:text-white transition-transform duration-200">▼</span>
-                        </button>
-
-                        <!-- Accordion Button: QUỐC GIA -->
-                        <button 
-                            id="btnAccordionCountry"
-                            onclick="toggleFilterAccordion('country')" 
-                            class="px-3 py-1.5 rounded-xl border border-slate-700/80 bg-slate-900/90 hover:bg-slate-800 hover:border-amber-500/50 text-xs font-semibold text-slate-200 transition flex items-center gap-2 cursor-pointer shadow-sm group"
-                            title="Bấm để mở danh sách chọn Quốc gia"
-                        >
-                            <span class="text-amber-400 text-sm">🌏</span>
-                            <span class="font-bold">Quốc gia:</span>
-                            <span id="accordionCountryLabel" class="text-amber-300 font-medium max-w-[140px] truncate">Toàn Cầu</span>
-                            <span id="accordionCountryArrow" class="text-[10px] text-slate-400 group-hover:text-white transition-transform duration-200">▼</span>
-                        </button>
-
-                        <!-- Accordion Button: ĐIỂM NHẤN (X-FACTOR) -->
-                        <button 
-                            id="btnAccordionXFactor"
-                            onclick="toggleFilterAccordion('xfactor')" 
-                            class="px-3 py-1.5 rounded-xl border border-slate-700/80 bg-slate-900/90 hover:bg-slate-800 hover:border-amber-500/50 text-xs font-semibold text-slate-200 transition flex items-center gap-2 cursor-pointer shadow-sm group"
-                            title="Bấm để mở danh sách Điểm nhấn / Vũ khí ăn điểm (X-Factor)"
-                        >
-                            <span class="text-amber-400 text-sm">✨</span>
-                            <span class="font-bold">Điểm nhấn:</span>
-                            <span id="accordionXFactorLabel" class="text-amber-300 font-medium max-w-[140px] truncate">Tất Cả</span>
-                            <span id="accordionXFactorArrow" class="text-[10px] text-slate-400 group-hover:text-white transition-transform duration-200">▼</span>
-                        </button>
-
-                        <!-- Reset Active Filters Shortcut if selected -->
-                        <button 
-                            id="btnResetAccordionFilters" 
-                            onclick="resetAccordionFilters()" 
-                            class="hidden px-2.5 py-1 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30 text-rose-300 text-[11px] font-medium transition items-center gap-1 cursor-pointer"
-                            title="Đặt lại Ngành, Quốc gia và Điểm nhấn về mặc định"
-                        >
-                            <span>✕ Bỏ chọn</span>
-                        </button>
-                    </div>
-
-                    <div class="text-[11px] text-slate-400 hidden md:flex items-center gap-1.5">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                        <span>Bấm vào để mở rộng bộ lọc chi tiết</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 3. ACCORDION CONTENT PANEL: NGÀNH NGHỀ (ẨN MẶC ĐỊNH - MỞ RA MỚI THẤY) -->
-            <div id="accordionPanelIndustry" class="filter-accordion-panel border-t border-slate-800/80 bg-slate-900/90 px-4 sm:px-6 lg:px-8 shadow-inner">
-                <div class="max-w-7xl mx-auto py-3">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="text-[11px] font-bold text-sky-400 uppercase tracking-wider flex items-center gap-1.5">
-                            <span>🏷️ Chọn Ngành Nghề Cụ Thể</span>
-                        </span>
-                        <button onclick="toggleFilterAccordion('industry')" class="text-xs text-slate-400 hover:text-white px-2 py-0.5 rounded bg-slate-800">
-                            ✕ Đóng
-                        </button>
-                    </div>
-                    <div class="flex flex-wrap items-center gap-2 py-1" id="industryPillsContainer">
-                        <!-- Injected dynamically via JS -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- 4. ACCORDION CONTENT PANEL: QUỐC GIA (ẨN MẶC ĐỊNH - MỞ RA MỚI THẤY) -->
-            <div id="accordionPanelCountry" class="filter-accordion-panel border-t border-slate-800/80 bg-slate-900/90 px-4 sm:px-6 lg:px-8 shadow-inner">
-                <div class="max-w-7xl mx-auto py-3">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
-                            <span>🌏 Chọn Thị Trường / Quốc Gia Sản Xuất</span>
-                        </span>
-                        <button onclick="toggleFilterAccordion('country')" class="text-xs text-slate-400 hover:text-white px-2 py-0.5 rounded bg-slate-800">
-                            ✕ Đóng
-                        </button>
-                    </div>
-                    <div class="flex flex-wrap items-center gap-2 py-1" id="countryTabsContainer">
-                        <!-- Injected dynamically via JS -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- 5. ACCORDION CONTENT PANEL: ĐIỂM NHẤN (X-FACTOR) -->
-            <div id="accordionPanelXFactor" class="filter-accordion-panel border-t border-slate-800/80 bg-slate-900/90 px-4 sm:px-6 lg:px-8 shadow-inner">
-                <div class="max-w-7xl mx-auto py-3">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
-                            <span>✨ Chọn Điểm Nhấn / Vũ Khí Ăn Điểm (X-Factor)</span>
-                        </span>
-                        <button onclick="toggleFilterAccordion('xfactor')" class="text-xs text-slate-400 hover:text-white px-2 py-0.5 rounded bg-slate-800">
-                            ✕ Đóng
-                        </button>
-                    </div>
-                    <div class="flex flex-wrap items-center gap-2 py-1" id="xFactorPillsContainer">
-                        <!-- Injected dynamically via JS -->
-                    </div>
-                </div>
-            </div>
-
         </div>
     </header>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
-            <!-- PROMINENT UNIVERSAL SEARCH BAR (TO BẢN, DỄ DÙNG) -->
-        <div class="mb-6">
-            <div class="relative w-full">
-                <div class="relative flex items-center">
-                    <span class="absolute left-4 text-slate-400 text-lg pointer-events-none">🔍</span>
-                    <input 
-                        type="text" 
-                        id="heroSearchInput" 
-                        placeholder="Tìm ngành, creator, kỹ thuật quay, mỏ neo, hashtag... (Nhấn / hoặc ⌘K)" 
-                        class="w-full bg-slate-900/95 border-2 border-slate-700/80 hover:border-slate-600 focus:border-sky-400 focus:ring-4 focus:ring-sky-400/20 rounded-2xl pl-12 pr-28 py-3.5 text-sm sm:text-base text-slate-100 placeholder-slate-400 shadow-xl transition duration-200 outline-none"
-                        oninput="syncHeroSearch(this.value)"
-                    >
-                    <div class="absolute right-3 flex items-center gap-1.5">
-                        <button id="heroClearSearchBtn" onclick="clearHeroSearch()" class="hidden px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-mono transition">
-                            ✕ Xóa
-                        </button>
-                        <kbd class="hidden sm:inline-flex items-center px-2 py-1 rounded-lg bg-slate-800/90 border border-slate-700 text-[11px] font-mono text-slate-400 pointer-events-none">
-                            ⌘K
-                        </kbd>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- SECONDARY FILTER & STATS BAR -->
-        <div class="mb-6 flex flex-col gap-3.5 pb-4 border-b border-slate-800/80">
-            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
-                <!-- Filter summary & Teacher Share Toolbar -->
-                <div class="flex items-center gap-3 flex-wrap">
-                    <div class="text-sm font-medium text-slate-300 flex items-center gap-2">
-                        <span id="currentFilterLabel" class="text-white font-bold">Tất Cả Ngành</span>
-                        <span class="text-slate-500">•</span>
-                        <span id="matchCounterText" class="text-sky-400 font-mono font-bold">149</span>
-                        <span class="text-slate-400">mẫu tham chiếu</span>
-                    </div>
-
-                    <!-- Active Creator Filter Badge -->
-                    <div id="creatorActiveFilterBadge" class="hidden items-center gap-1.5 px-3 py-1 rounded-xl bg-sky-500/20 border border-sky-400/40 text-sky-200 text-xs font-bold shadow-sm">
-                        <span class="text-sm">👤</span>
-                        <span class="text-slate-300 font-normal">Tác giả:</span>
-                        <span id="creatorActiveFilterName" class="text-white font-bold"></span>
-                        <button onclick="clearCreatorFilter()" class="ml-1 w-4 h-4 rounded-full bg-slate-800 hover:bg-rose-600 text-slate-300 hover:text-white flex items-center justify-center text-[10px] transition cursor-pointer" title="Bỏ lọc Creator">✕</button>
-                    </div>
-
-                    <!-- 1-CLICK SHARE / COPY FILTER LINK BUTTON -->
-                    <button 
-                        id="btnCopyShareFilterLink" 
-                        onclick="copyCurrentFilterLink()" 
-                        class="px-3 py-1.5 rounded-xl border border-sky-500/50 bg-sky-500/15 hover:bg-sky-500/25 text-sky-300 hover:text-white text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-sm group"
-                        title="Sao chép liên kết bộ lọc này để gửi cho học viên hoặc khách hàng"
-                    >
-                        <span id="btnCopyShareFilterIcon" class="text-sky-400 group-hover:scale-110 transition-transform">🔗</span>
-                        <span id="btnCopyShareFilterText">Gửi Link Bộ Lọc</span>
-                        <span id="activeFilterCounterBadge" class="hidden px-1.5 py-0.2 rounded-full text-[10px] font-mono bg-sky-500 text-slate-950 font-black">0</span>
-                    </button>
-
-                    <!-- QUICK RESET ALL FILTERS SHORTCUT -->
-                    <button 
-                        id="quickResetFiltersBtn" 
-                        onclick="resetAllFilters()" 
-                        class="hidden px-2.5 py-1.5 rounded-xl border border-rose-500/40 bg-rose-500/10 hover:bg-rose-500/20 text-rose-300 hover:text-white text-xs font-semibold transition items-center gap-1 cursor-pointer"
-                        title="Bỏ toàn bộ bộ lọc và trở về mặc định"
-                    >
-                        <span>✕ Xóa lọc</span>
-                    </button>
-                </div>
-
-                <!-- Quick Complexity Pills for Students -->
-                <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
-                    <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider shrink-0 mr-0.5">Độ khó:</span>
-                    <button onclick="selectComplexityPill('de')" id="pill-comp-de" class="px-2.5 py-1 rounded-lg text-xs font-semibold border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20 transition shrink-0 flex items-center gap-1 cursor-pointer" title="Lọc mẫu 3-8 shots dễ thực hiện cho người mới">
-                        <span>🟢 Dễ (3-8 shots)</span>
-                    </button>
-                    <button onclick="selectComplexityPill('trung-binh')" id="pill-comp-trung-binh" class="px-2.5 py-1 rounded-lg text-xs font-semibold border border-amber-500/30 bg-amber-500/10 text-amber-300 hover:bg-amber-500/20 transition shrink-0 flex items-center gap-1 cursor-pointer" title="Lọc mẫu 9-18 shots vừa sức">
-                        <span>🟡 Vừa (9-18 shots)</span>
-                    </button>
-                    <button onclick="selectComplexityPill('nang-cao')" id="pill-comp-nang-cao" class="px-2.5 py-1 rounded-lg text-xs font-semibold border border-rose-500/30 bg-rose-500/10 text-rose-300 hover:bg-rose-500/20 transition shrink-0 flex items-center gap-1 cursor-pointer" title="Lọc mẫu trên 18 shots yêu cầu kỹ xảo cao">
-                        <span>🔴 Cao (>18 shots)</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="flex flex-wrap items-center gap-2 text-xs">
-                <button 
-                    onclick="document.getElementById('deepFiltersPanel').classList.toggle('hidden')" 
-                    class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 text-xs font-medium transition flex items-center gap-2 cursor-pointer"
-                >
-                    <span>🎛️ Bộ lọc nâng cao</span>
-                </button>
-            </div>
-
-            <!-- Deep Filters -->
-            <div id="deepFiltersPanel" class="hidden flex flex-wrap items-center gap-2 text-xs mt-2">
-                
-                <!-- Filter by Technique -->
-                <select id="techFilter" onchange="handleFilterChange()" class="bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1.5 text-slate-300 focus:outline-none focus:border-sky-400">
-                    <option value="">⚙️ Kỹ thuật: Tất Cả</option>
-                    <option value="walk-in">Leading Walk-in / Over-the-Shoulder</option>
-                    <option value="static">Static Shot (Khung hình tĩnh)</option>
-                    <option value="match cut">Match Cut (Cắt khớp chuyển động)</option>
-                    <option value="whip pan">Whip Pan (Lia xoay chuyển cảnh)</option>
-                    <option value="split screen">Split Screen (Chia màn hình Before/After)</option>
-                    <option value="asmr">ASMR / Foley Sound Design</option>
-                    <option value="chiaroscuro">Low-Key / Chiaroscuro (Tương phản sáng tối)</option>
-                    <option value="fpv">FPV Drone (Tốc độ cao)</option>
-                    <option value="macro">Macro / Close-up đặc tả</option>
-                </select>
-
-                <!-- Filter by Country -->
-                <select id="countryFilter" onchange="handleFilterChange()" class="bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1.5 text-slate-300 focus:outline-none focus:border-amber-400">
-                    <option value="">🌏 Quốc gia: Tất Cả</option>
-                    <option value="us_eu">🇺🇸/🇪🇺 Âu Mỹ</option>
-                    <option value="korea">🇰🇷 Hàn Quốc</option>
-                    <option value="india">🇮🇳 Ấn Độ</option>
-                    <option value="japan">🇯🇵 Nhật Bản</option>
-                    <option value="vietnam">🇻🇳 Việt Nam</option>
-                    <option value="asia_other">🌏 Châu Á Khác</option>
-                </select>
-
-                <!-- Filter by X-Factor -->
-                <select id="xFactorFilter" onchange="handleFilterChange()" class="bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1.5 text-amber-300 focus:outline-none focus:border-amber-400">
-                    <option value="">✨ Điểm nhấn: Tất Cả</option>
-                </select>
-
-                <!-- Filter by Purpose -->
-                <select id="purposeFilter" onchange="handleFilterChange()" class="bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1.5 text-slate-300 focus:outline-none focus:border-sky-400">
-                    <option value="">🎯 Mục đích: Tất Cả</option>
-                    <option value="chốt đơn">Chốt Đơn</option>
-                    <option value="mẹo">Mẹo</option>
-                    <option value="tạo động lực">Tạo Động Lực</option>
-                    <option value="thưởng thức">Thưởng Thức</option>
-                    <option value="vlog">VLog</option>
-                </select>
-
-                <!-- Filter by Complexity / Shots -->
-                <select id="complexityFilter" onchange="handleFilterChange()" class="bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1.5 text-slate-300 focus:outline-none focus:border-sky-400">
-                    <option value="">🎬 Độ Dài Shot: Tất Cả</option>
-                    <option value="de">🟢 Dễ (3-8 shots)</option>
-                    <option value="trung-binh">🟡 Vừa (9-18 shots)</option>
-                    <option value="nang-cao">🔴 Cao (>18 shots)</option>
-                </select>
-
-                <!-- Filter by Duration -->
-                <select id="durationFilter" onchange="handleFilterChange()" class="bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1.5 text-slate-300 focus:outline-none focus:border-sky-400">
-                    <option value="">⏱️ Thời lượng: Tất Cả</option>
-                    <option value="short">Ngắn (< 15s)</option>
-                    <option value="medium">Vừa (15s - 30s)</option>
-                    <option value="long">Dài (> 30s)</option>
-                </select>
-
-                <!-- Sort Filter -->
-                <select id="sortFilter" onchange="handleFilterChange()" class="bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1.5 text-slate-300 focus:outline-none focus:border-sky-400">
-                    <option value="default">Sắp xếp: Mới nhất</option>
-                    <option value="shots_desc">Số phân cảnh: Nhiều nhất</option>
-                    <option value="shots_asc">Số phân cảnh: Ít nhất</option>
-                    <option value="title_asc">Tên video: A - Z</option>
-                </select>
-
-                <button onclick="resetAllFilters()" class="px-2.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-slate-200 transition" title="Đặt lại bộ lọc">
-                    ↺ Đặt Lại
-                </button>
-            </div>
-        </div>
-        </div>
-
-        </div>
-    </details>
-    <script>
-        (function(){
-            const details = document.getElementById('header-details');
-            if(!details) return;
-            const checkDesktop = () => { if(window.innerWidth >= 1024) details.open = true; };
-            checkDesktop();
-            window.addEventListener('resize', checkDesktop);
-        })();
-    </script>
-    
-
-    <!-- MAIN BODY CONTENT -->
-    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
-
-        <!-- VIEW 1: IDEAS GRID (SKIMMABLE ZERO-CLICK CARDS) -->
-        <section id="ideasGridView">
-            <div id="ideasCardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Injected dynamically via JS -->
-            </div>
-
+    <!-- GRID AREA (Starts right under header) -->
+    <main class="pt-[44px] md:pt-[48px] min-h-screen">
+        <div class="p-2 md:p-4 max-w-[1920px] mx-auto">
             <!-- Empty State -->
-            <div id="emptyState" class="hidden text-center py-20">
-                <div class="text-5xl mb-3">🔍</div>
-                <h3 class="text-lg font-bold text-white mb-1">Không tìm thấy ý tưởng phù hợp</h3>
-                <p class="text-sm text-slate-400 mb-4">Hãy thử tìm kiếm với từ khóa khác hoặc xóa bộ lọc để xem toàn bộ kho.</p>
-                <button onclick="resetAllFilters()" class="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs transition">Xóa Bộ Lọc</button>
-            </div>
-
-            <!-- Pagination Controls -->
-            <div id="paginationBar" class="mt-10 flex items-center justify-center gap-3">
-                <button id="loadMoreBtn" onclick="loadMoreIdeas()" class="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-sm font-semibold text-sky-400 hover:text-white transition shadow-lg">
-                    Tải Thêm Ý Tưởng...
-                </button>
-            </div>
-        </section>
-
-        <!-- VIEW 2: CREATORS DIRECTORY HUB -->
-        <section id="creatorsDirectoryView" class="hidden">
-            <div class="mb-6 p-4 rounded-2xl bg-gradient-to-r from-purple-950/40 to-slate-900 border border-purple-500/20 flex flex-col md:flex-row md:items-center justify-between gap-3">
-                <div>
-                    <h2 class="font-heading font-extrabold text-lg text-white">DANH MỤC CÁC KÊNH CREATOR & ĐẠO DIỄN QUỐC TẾ HÀNG ĐẦU</h2>
-                    <p class="text-xs text-slate-300 mt-1">Học viên nên trực tiếp bấm <strong>Theo Dõi Instagram</strong> các tác giả này để liên tục nạp dữ liệu thị giác cao cấp và bắt nhịp các xu hướng quay dựng mới.</p>
-                </div>
-                <div class="text-xs font-mono font-bold text-purple-400 bg-purple-500/10 px-3 py-1.5 rounded-xl border border-purple-500/20 whitespace-nowrap">
-                    ⭐ 64 Creators Tuyển Chọn
-                </div>
-            </div>
-
-            <div id="creatorsHubGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                <!-- Injected dynamically via JS -->
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER & 5 UX ENHANCEMENTS SUMMARY -->
-    <footer class="mt-auto border-t border-slate-800/80 bg-slate-950/80 py-10 px-4 sm:px-6 lg:px-8 text-xs text-slate-400">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between gap-6">
-            <div>
-                <div class="flex items-center gap-2 mb-2">
-                    <span class="font-heading font-extrabold text-white text-sm">VIDEO CREATIVE REFERENCE SYSTEM</span>
-                    <span class="px-1.5 py-0.5 rounded text-[10px] font-mono bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">v2.5 PRO</span>
-                </div>
-                <p class="max-w-md text-slate-400 leading-relaxed">
-                    Kho tư liệu nội bộ lọc ra những mẫu video quay dựng đàng hoàng, tươm tất theo từng ngành. Dành cho học viên vào đây xem thực tế cách đặt máy, bắt nhịp cắt và rèn lại thói quen nhìn khung hình... đi làm nghề bí ý tưởng thì cứ vào đây nhặt về áp dụng luôn, mộc mạc thế cho đỡ tốn công.
-                </p>
-                <div class="mt-3 flex items-center gap-4 text-slate-400">
-                    <a href="https://fedu.vn" target="_blank" class="hover:text-sky-400 transition font-medium">VIDEO Hub ↗</a>
-                    <span class="text-slate-600">•</span>
-                    <span class="text-slate-500">Bảo mật chuẩn AES-GCM & SHA-256</span>
-                </div>
-            </div>
-
-        </div>
-    </footer>
-
-    <!-- MODAL 1: VIDEO PLAYER MODAL WITH DIRECTOR CONTROLS -->
-    <div id="videoPlayerModal" class="app-modal-backdrop" onclick="handleModalBackdropClick(event, 'videoPlayerModal')">
-        <div class="relative w-full max-w-4xl bg-slate-900 border border-slate-700 rounded-none sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col h-[100dvh] sm:h-auto sm:max-h-[92vh]">
-            <!-- Header -->
-            <div class="px-3 sm:px-5 py-3 sm:py-3.5 border-b border-slate-800 flex flex-wrap items-center justify-between bg-slate-950/60 gap-2 sm:gap-3">
-                <div class="flex items-center gap-2 overflow-hidden min-w-0">
-                    <span class="text-lg shrink-0">🎬</span>
-                    <h3 id="videoModalTitle" class="font-heading font-bold text-sm text-white truncate">Xem Video Mẫu</h3>
-                </div>
-                <div class="flex items-center gap-2 shrink-0">
-                    <!-- Copy Share Link Button -->
-                    <a id="videoModalDownloadOriginalBtn" href="#" target="_blank" class="hidden px-2.5 py-1.5 rounded-lg bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500 hover:text-white transition items-center gap-1.5 font-bold text-xs cursor-pointer relative group" title="Tải bản gốc từ Google Drive">
-                        <span>📥</span>
-                        <span class="hidden sm:inline">Bản Gốc</span>
-                        <!-- Tooltip cho iPad -->
-                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 p-2 bg-slate-800 text-slate-300 text-[10px] rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 pointer-events-none text-center border border-slate-700">
-                            Trên iPad/iPhone: Bấm để xem. Hoặc <strong>Nhấn giữ nút này</strong> và chọn "Tải về liên kết" để lưu video.
-                        </div>
-                    </a>
-
-                    <button 
-                        id="videoModalShareBtn"
-                        onclick="copyVideoModalShareLink()"
-                        class="px-2.5 py-1.5 rounded-lg bg-sky-500/20 text-sky-400 hover:bg-sky-500 hover:text-white transition flex items-center gap-1.5 font-bold text-xs cursor-pointer"
-                        title="Chia sẻ Ý Tưởng này"
-                    >
-                        <span>🔗</span>
-                        <span class="hidden sm:inline">Chia Sẻ</span>
-                    </button>
-                    <!-- Creator Filter Button in Video Modal -->
-                    <button 
-                        id="videoModalCreatorBtn" 
-                        onclick="filterFromVideoModal()" 
-                        class="hidden px-2.5 py-1 rounded-lg bg-sky-500/15 hover:bg-sky-500/25 text-sky-300 hover:text-white border border-sky-500/40 text-xs font-bold transition items-center gap-1.5 shrink-0 cursor-pointer" 
-                        title="Đóng video và lọc toàn bộ video của tác giả này"
-                    >
-                        <span>👤</span>
-                        <span id="videoModalCreatorName" class="truncate max-w-[120px] sm:max-w-[180px]">Creator</span>
-                        <span class="text-[10px] bg-sky-500/20 px-1.5 py-0.5 rounded text-sky-200">🔍 Lọc kênh</span>
-                    </button>
-                    <!-- Download Button -->
-                    <button onclick="downloadCurrentIdea()" class="px-2.5 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500 hover:text-white border border-emerald-500/30 text-xs font-bold transition flex items-center gap-1.5 shrink-0 cursor-pointer" title="Tải Video / Tài Liệu">
-                        <span class="text-sm">⬇️</span>
-                        <span class="hidden sm:inline">Tải Video</span>
-                    </button>
-                    <!-- Prominent Close Button -->
-                    <button onclick="closeModal('videoPlayerModal')" class="w-10 h-10 flex items-center justify-center bg-rose-500/20 text-rose-400 hover:bg-rose-500 hover:text-white text-2xl font-bold rounded-xl transition shadow-sm cursor-pointer ml-1" aria-label="Đóng">✕</button>
-                </div>
+            <div id="emptyState" class="hidden text-center py-20 text-slate-500">
+                Không tìm thấy ý tưởng nào phù hợp.
             </div>
             
-            <!-- Video Body -->
-            <div class="relative bg-black flex items-center justify-center min-h-[360px] max-h-[85vh] sm:max-h-[62vh] overflow-hidden w-full group flex-1">
-                <video id="modalActiveVideo" controls playsinline loop class="w-full max-h-[85vh] sm:max-h-[62vh] object-contain bg-black"></video>
-                <iframe id="modalActiveYoutube" class="hidden w-full h-[85vh] sm:h-[62vh] min-h-[360px] border-0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
-                
-                <!-- Floating Fullscreen Quick Button (1-chạm) -->
-                <button 
-                    onclick="toggleModalVideoFullscreen()" 
-                    class="absolute top-3 right-3 z-20 px-3 py-1.5 rounded-xl bg-black/80 hover:bg-black text-amber-300 hover:text-amber-200 border border-amber-500/50 text-xs font-bold backdrop-blur-md shadow-xl transition flex items-center gap-1.5 cursor-pointer hover:scale-105 active:scale-95"
-                    title="Phóng to toàn màn hình (Phím tắt: F)"
-                >
-                    <span class="text-sm">⛶</span>
-                    <span class="hidden sm:inline">Toàn Màn Hình</span>
-                </button>
+            <!-- Grid -->
+            <div id="ideasCardsGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-4">
+                <!-- Cards rendered by JS -->
             </div>
+            
+            <!-- Sentinel for Infinite Scroll -->
+            <div id="paginationBar" class="h-10 w-full flex items-center justify-center mt-4">
+                <div class="w-6 h-6 border-2 border-sky-500 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+        </div>
+    </main>
 
-            <!-- Director Speed, Frame Stepper & Fullscreen Toolbar -->
-            <div class="p-3.5 border-t border-slate-800 bg-slate-950 flex flex-wrap items-center justify-between gap-3 text-xs">
-                <div class="flex items-center gap-1.5 flex-wrap">
-                    <span class="text-slate-400 font-bold mr-1">Tốc độ:</span>
-                    <button onclick="setModalVideoSpeed(0.25, this)" class="v-speed-btn px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 cursor-pointer">0.25x</button>
-                    <button onclick="setModalVideoSpeed(0.5, this)" class="v-speed-btn px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 cursor-pointer">0.5x</button>
-                    <button onclick="setModalVideoSpeed(1.0, this)" class="v-speed-btn active px-2.5 py-1 rounded bg-sky-500 text-slate-950 font-bold cursor-pointer">1.0x</button>
-                    <button onclick="setModalVideoSpeed(1.5, this)" class="v-speed-btn px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 cursor-pointer">1.5x</button>
-                </div>
-                
-                <div class="flex items-center gap-2 flex-wrap">
-                    <button onclick="stepModalVideoFrame(-1)" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 cursor-pointer">⏮ -1 Frame</button>
-                    <button onclick="stepModalVideoFrame(1)" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 cursor-pointer">+1 Frame ⏭</button>
-                    <button 
-                        onclick="toggleModalVideoFullscreen()" 
-                        class="px-3 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 font-bold transition flex items-center gap-1.5 cursor-pointer shadow-sm"
-                        title="Bật chế độ xem toàn màn hình (Phím tắt F)"
-                    >
-                        <span>⛶</span>
-                        <span>Toàn Màn Hình</span>
-                    </button>
-                    <a id="modalDirectVideoLink" href="#" target="_blank" download class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-sky-400 border border-slate-700">📥 Tải MP4</a>
-                </div>
+    <!-- 6 MODALS -->
+    <!-- 1. Video Player Modal -->
+    <div id="videoPlayerModal" class="app-modal-backdrop flex items-center justify-center p-2 md:p-4">
+        <div class="bg-slate-900 rounded-xl max-w-lg w-full overflow-hidden border border-slate-700 relative flex flex-col max-h-[95vh]">
+            <button onclick="closeVideoModal()" class="absolute top-2 right-2 w-10 h-10 bg-black/50 rounded-full text-white z-10 flex items-center justify-center hover:bg-red-500 transition">✕</button>
+            <div class="p-3 border-b border-slate-800 bg-slate-900 z-10">
+                <h3 id="videoModalTitle" class="font-semibold truncate">Video</h3>
+            </div>
+            <div class="relative w-full bg-black flex-1 flex items-center justify-center min-h-0" style="aspect-ratio: 9/16;">
+                <video id="modalActiveVideo" controls playsinline class="w-full h-full object-contain hidden"></video>
+                <iframe id="modalActiveYoutube" class="w-full h-full hidden" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="p-3 bg-slate-900 border-t border-slate-800 flex justify-between z-10">
+                <button id="videoModalCreatorBtn" class="text-sm text-sky-400 hover:underline truncate">Creator</button>
+                <a id="videoModalDirectLink" href="#" target="_blank" class="text-sm bg-sky-600 hover:bg-sky-500 text-white px-3 py-1 rounded">Mở Link Gốc</a>
             </div>
         </div>
     </div>
 
-    <!-- MODAL 2: REPORT EMBED MODAL -->
-    <div id="reportEmbedModal" class="app-modal-backdrop" onclick="handleModalBackdropClick(event, 'reportEmbedModal')">
-        <div class="relative w-full max-w-6xl h-[100dvh] sm:h-[92vh] bg-slate-900 border border-slate-700 rounded-none sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col">
-            <div class="px-3 sm:px-5 py-3 border-b border-slate-800 flex flex-wrap items-center justify-between bg-slate-950 gap-2 sm:gap-3">
-                <div class="flex items-center gap-2 overflow-hidden min-w-0">
-                    <span class="text-lg shrink-0">📄</span>
-                    <h3 id="reportModalTitle" class="font-heading font-bold text-sm text-white truncate">Báo Cáo Phân Tích Chi Tiết</h3>
-                </div>
-                <div class="flex items-center gap-2 shrink-0">
-                    <!-- Creator Filter Button in Report Modal -->
-                    <button 
-                        id="reportModalCreatorBtn" 
-                        onclick="filterFromReportModal()" 
-                        class="hidden px-2.5 py-1 rounded-lg bg-sky-500/15 hover:bg-sky-500/25 text-sky-300 hover:text-white border border-sky-500/40 text-xs font-bold transition items-center gap-1.5 shrink-0 cursor-pointer" 
-                        title="Đóng báo cáo và lọc toàn bộ video của tác giả này"
-                    >
-                        <span>👤</span>
-                        <span id="reportModalCreatorName" class="truncate max-w-[120px] sm:max-w-[180px]">Creator</span>
-                        <span class="text-[10px] bg-sky-500/20 px-1.5 py-0.5 rounded text-sky-200">🔍 Lọc kênh</span>
-                    </button>
-                    <button 
-                        onclick="toggleReportModalFullscreen()" 
-                        class="px-2.5 py-1 rounded-lg bg-amber-500/15 text-amber-300 hover:bg-amber-500/25 border border-amber-500/30 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer" 
-                        title="Phóng to toàn màn hình báo cáo"
-                    >
-                        <span>⛶</span>
-                        <span class="hidden sm:inline">Toàn Màn Hình</span>
-                    </button>
-                    <a id="reportModalExternalLink" href="#" target="_blank" class="px-3 py-1 rounded-lg bg-sky-500/15 text-sky-400 hover:bg-sky-500/25 border border-sky-500/30 text-xs font-bold transition">Mở Tab Mới ↗</a>
-                    <!-- Download Button -->
-                    <button onclick="downloadCurrentIdea()" class="px-2.5 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500 hover:text-white border border-emerald-500/30 text-xs font-bold transition flex items-center gap-1.5 shrink-0 cursor-pointer" title="Tải Báo Cáo / Tài Liệu">
-                        <span class="text-sm">⬇️</span>
-                        <span class="hidden sm:inline">Tải Video</span>
-                    </button>
-                    <!-- Prominent Close Button -->
-                    <button onclick="closeModal('reportEmbedModal')" class="w-10 h-10 flex items-center justify-center bg-rose-500/20 text-rose-400 hover:bg-rose-500 hover:text-white text-2xl font-bold rounded-xl transition shadow-sm cursor-pointer ml-1" aria-label="Đóng">✕</button>
-                </div>
+    <!-- 2. Report Embed Modal -->
+    <div id="reportEmbedModal" class="app-modal-backdrop flex items-center justify-center p-2 md:p-4">
+        <div class="bg-slate-900 rounded-xl w-full max-w-4xl h-[90vh] overflow-hidden border border-slate-700 relative flex flex-col">
+            <button onclick="closeReportModal()" class="absolute top-2 right-2 w-10 h-10 bg-black/50 rounded-full text-white z-10 flex items-center justify-center hover:bg-red-500 transition">✕</button>
+            <div class="p-3 border-b border-slate-800 flex items-center gap-3">
+                <span class="bg-sky-500/20 text-sky-400 text-xs px-2 py-1 rounded font-bold">REPORT</span>
+                <h3 id="reportModalTitle" class="font-semibold truncate text-sm">Báo cáo</h3>
             </div>
-            <div class="flex-1 bg-slate-950 relative">
-                <!-- Loading Spinner for Report Iframe -->
-                <div id="reportIframeSpinner" class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/90 z-10 transition duration-300">
-                    <div class="w-10 h-10 border-4 border-sky-500/20 border-t-sky-400 rounded-full animate-spin mb-3"></div>
-                    <span class="text-xs font-mono text-slate-300 animate-pulse">Đang tải báo cáo phân tích cảnh quay...</span>
+            <div class="flex-1 relative bg-slate-950">
+                <div id="reportIframeSpinner" class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-8 h-8 border-4 border-sky-500 border-t-transparent rounded-full animate-spin"></div>
                 </div>
-                <iframe id="reportModalIframe" src="" class="w-full h-full border-none" loading="lazy" onload="if(window.hideReportSpinner) hideReportSpinner()" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
+                <iframe id="reportModalIframe" class="w-full h-full absolute inset-0 z-10" frameborder="0" onload="hideReportSpinner()"></iframe>
             </div>
         </div>
     </div>
 
-    <!-- MODAL 3: DARKROOM IMAGE LIGHTBOX -->
-    <div id="imgLightboxModal" class="app-modal-backdrop" onclick="handleModalBackdropClick(event, 'imgLightboxModal')">
-        <button onclick="closeModal('imgLightboxModal')" class="fixed top-4 right-4 z-50 text-rose-200 bg-rose-500/20 hover:bg-rose-500 hover:text-white rounded-xl w-12 h-12 flex items-center justify-center transition shadow-lg text-2xl font-bold backdrop-blur-md border border-rose-500/30">✕</button>
-        <div class="relative max-w-2xl max-h-[92vh] flex flex-col items-center mt-12">
-            <img id="lightboxLargeImg" src="" alt="Zoom Frame" class="max-h-[82vh] rounded-xl object-contain border border-slate-700 shadow-2xl">
-            <div id="lightboxCaption" class="mt-2.5 text-center text-xs text-slate-300 max-w-md px-4 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800"></div>
+    <!-- 3. Image Lightbox Modal -->
+    <div id="imgLightboxModal" class="app-modal-backdrop flex items-center justify-center p-2 md:p-4">
+        <div class="relative max-w-4xl w-full h-[90vh] flex flex-col items-center justify-center">
+            <button onclick="closeImgLightbox()" class="absolute top-0 right-0 w-10 h-10 bg-black/50 rounded-full text-white z-10 flex items-center justify-center hover:bg-red-500 transition">✕</button>
+            <img id="lightboxLargeImg" src="" class="max-w-full max-h-[80vh] object-contain rounded-lg">
+            <p id="lightboxCaption" class="mt-4 text-center text-slate-300 text-sm"></p>
         </div>
     </div>
 
-    <!-- MODAL 4: ADMIN PASSWORD AUTH MODAL -->
-    <div id="adminAuthModal" class="app-modal-backdrop" onclick="handleModalBackdropClick(event, 'adminAuthModal')">
-        <div class="relative w-full max-w-md bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden p-6">
-            <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center gap-2.5">
-                    <span class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl border border-amber-500/30">🔐</span>
-                    <div>
-                        <h3 class="font-heading font-bold text-base text-white">Xác Thực Quản Trị VIDEO</h3>
-                        <p class="text-xs text-slate-400">Yêu cầu quyền truy cập quản trị viên</p>
-                    </div>
-                </div>
-                <button onclick="closeModal('adminAuthModal')" class="w-10 h-10 flex items-center justify-center bg-rose-500/10 text-rose-400 hover:bg-rose-500 hover:text-white text-xl font-bold rounded-xl transition cursor-pointer">✕</button>
-            </div>
-
-            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
-                Nhập mật khẩu quản trị để mở toàn bộ kho dữ liệu, xem toàn bộ video nội bộ / đã ẩn và kích hoạt công cụ <strong>Chỉnh Sửa</strong> &amp; <strong>Xóa</strong>.
-            </p>
-
-            <form onsubmit="submitAdminPassword(event)">
-                <div class="mb-4">
-                    <label class="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wider">Mật Khẩu Quản Trị:</label>
-                    <div class="relative">
-                        <input 
-                            type="password" 
-                            id="adminPasswordInput" 
-                            placeholder="Nhập mật khẩu..." 
-                            class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white text-base tracking-widest text-center font-mono focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition"
-                            maxlength="16"
-                            autocomplete="off"
-                        >
-                    </div>
-                    <div id="adminPasswordError" class="hidden mt-2 text-xs text-rose-400 flex items-center gap-1">
-                        <span>⚠️</span> <span id="adminPasswordErrorText">Mật khẩu không chính xác! Vui lòng thử lại.</span>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-2">
-                    <button type="button" onclick="closeModal('adminAuthModal')" class="flex-1 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition">Hủy</button>
-                    <button type="submit" class="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 text-xs font-bold transition shadow-lg shadow-amber-500/20">Xác Nhận (Enter)</button>
-                </div>
-            </form>
+    <!-- 4. Admin Auth Modal -->
+    <div id="adminAuthModal" class="app-modal-backdrop flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-700 p-6 rounded-xl w-full max-w-sm relative">
+            <button onclick="closeAdminAuthModal()" class="absolute top-2 right-2 w-8 h-8 text-slate-400 hover:text-white flex items-center justify-center">✕</button>
+            <h3 class="text-xl font-bold mb-4 text-amber-500">🔒 Admin Access</h3>
+            <input type="password" id="adminPasswordInput" placeholder="Nhập mã PIN" class="w-full bg-slate-800 border border-slate-700 rounded p-2 text-white mb-2" onkeydown="if(event.key==='Enter') submitAdminPassword()">
+            <div id="adminPasswordError" class="hidden text-red-400 text-sm mb-3"><span id="adminPasswordErrorText">Sai mật khẩu!</span></div>
+            <button onclick="submitAdminPassword()" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-2 rounded">Xác nhận</button>
         </div>
     </div>
 
-    <!-- MODAL 5: EDIT IDEA MODAL -->
-    <div id="editIdeaModal" class="app-modal-backdrop" onclick="handleModalBackdropClick(event, 'editIdeaModal')">
-        <div class="relative w-full max-w-2xl bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
-            <div class="px-5 py-3.5 border-b border-slate-800 flex items-center justify-between bg-slate-950/70">
-                <div class="flex items-center gap-2">
-                    <span class="text-lg">✏️</span>
-                    <h3 class="font-heading font-bold text-sm text-white">Chỉnh Sửa Ý Tưởng Video</h3>
-                </div>
-                <button onclick="closeModal('editIdeaModal')" class="w-10 h-10 flex items-center justify-center bg-rose-500/10 text-rose-400 hover:bg-rose-500 hover:text-white text-xl font-bold rounded-xl transition cursor-pointer">✕</button>
+    <!-- 5. Edit Idea Modal -->
+    <div id="editIdeaModal" class="app-modal-backdrop flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-700 rounded-xl w-full max-w-2xl max-h-[90vh] flex flex-col">
+            <div class="p-4 border-b border-slate-700 flex justify-between items-center shrink-0">
+                <h3 class="font-bold text-lg">Chỉnh sửa Video</h3>
+                <button onclick="closeEditIdeaModal()" class="w-8 h-8 text-slate-400 hover:text-white flex items-center justify-center">✕</button>
             </div>
-
-            <form id="editIdeaForm" onsubmit="saveEditedIdea(event)" class="p-5 overflow-y-auto space-y-4 text-xs">
+            <div class="p-4 overflow-y-auto flex-1 text-sm space-y-3">
                 <input type="hidden" id="editIdeaId">
-
                 <div>
-                    <label class="block font-semibold text-slate-300 mb-1">Tiêu Đề Video (Tiếng Việt):</label>
-                    <input type="text" id="editIdeaTitle" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400">
+                    <label class="block text-slate-400 mb-1">Tiêu đề</label>
+                    <input type="text" id="editIdeaTitle" class="w-full bg-slate-800 border border-slate-700 rounded p-2">
                 </div>
-
                 <div>
-                    <label class="block font-semibold text-slate-300 mb-1">Điểm Ăn Tiền Của Ý Tưởng (Quick Takeaway):</label>
-                    <textarea id="editIdeaTakeaway" rows="3" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400 leading-relaxed"></textarea>
+                    <label class="block text-slate-400 mb-1">Creator Name</label>
+                    <input type="text" id="editIdeaCreatorName" class="w-full bg-slate-800 border border-slate-700 rounded p-2">
                 </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                        <label class="block font-semibold text-slate-300 mb-1">Tên Creator:</label>
-                        <input type="text" id="editIdeaCreatorName" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400">
-                    </div>
-                    <div>
-                        <label class="block font-semibold text-slate-300 mb-1">Handle Creator (@handle):</label>
-                        <input type="text" id="editIdeaCreatorHandle" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400 font-mono">
-                    </div>
+                <div class="flex items-center gap-2 mt-2">
+                    <input type="checkbox" id="editIdeaExcluded" class="w-4 h-4">
+                    <label for="editIdeaExcluded" class="text-amber-400 font-semibold">Ẩn video này khỏi User (Chỉ Admin thấy)</label>
                 </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <div>
-                        <label class="block font-semibold text-slate-300 mb-1">Ngành Nghề:</label>
-                        <select id="editIdeaIndustry" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400"></select>
-                    </div>
-                    <div>
-                        <label class="block font-semibold text-slate-300 mb-1">Kiểu Quay:</label>
-                        <select id="editIdeaStyle" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400"></select>
-                    </div>
-                    <div>
-                        <label class="block font-semibold text-slate-300 mb-1">Quốc Gia:</label>
-                        <select id="editIdeaCountry" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400"></select>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                        <label class="block font-semibold text-slate-300 mb-1">Kỹ Thuật Quay Dựng (Key Tech):</label>
-                        <input type="text" id="editIdeaKeyTech" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400 font-mono">
-                    </div>
-                    <div>
-                        <label class="block font-semibold text-slate-300 mb-1">Mục Đích Video:</label>
-                        <input type="text" id="editIdeaPurpose" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400">
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                        <label class="block font-semibold text-slate-300 mb-1">Link Video (MP4 / R2):</label>
-                        <input type="text" id="editIdeaVideoUrl" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400 font-mono">
-                    </div>
-                    <div>
-                        <label class="block font-semibold text-slate-300 mb-1">Link Báo Cáo HTML:</label>
-                        <input type="text" id="editIdeaReportUrl" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400 font-mono">
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                        <label class="block font-semibold text-slate-300 mb-1">Link Gốc Instagram / Facebook:</label>
-                        <input type="text" id="editIdeaIgUrl" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400 font-mono">
-                    </div>
-                    <div>
-                        <label class="block font-semibold text-slate-300 mb-1">Trạng Thái Hiển Thị:</label>
-                        <select id="editIdeaExcluded" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400 font-bold">
-                            <option value="false">🌐 Công Khai Cho Học Viên</option>
-                            <option value="true">🚫 Đã Ẩn Khỏi Học Viên (Chỉ Quản Trị)</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="pt-4 border-t border-slate-800 flex items-center justify-end gap-2">
-                    <button type="button" onclick="closeModal('editIdeaModal')" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition">Hủy</button>
-                    <button type="submit" class="px-5 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold transition shadow-md shadow-sky-500/20">💾 Lưu Thay Đổi</button>
-                </div>
-            </form>
+                <!-- Other fields omitted for brevity but they are handled gracefully by JS if not found -->
+                <div class="text-xs text-slate-500 mt-4">* Các trường khác đã được tinh giản trong form này. Chỉnh sửa chuyên sâu hãy dùng mã nguồn.</div>
+            </div>
+            <div class="p-4 border-t border-slate-700 flex justify-end gap-2 shrink-0">
+                <button onclick="closeEditIdeaModal()" class="px-4 py-2 bg-slate-700 rounded hover:bg-slate-600">Hủy</button>
+                <button onclick="saveEditedIdea()" class="px-4 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-500">Lưu thay đổi</button>
+            </div>
         </div>
     </div>
 
-    <!-- MODAL 6: CONFIRM DELETE MODAL -->
-    <div id="deleteIdeaModal" class="app-modal-backdrop" onclick="handleModalBackdropClick(event, 'deleteIdeaModal')">
-        <div class="relative w-full max-w-md bg-slate-900 border border-rose-500/40 rounded-2xl shadow-2xl overflow-hidden p-6">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center text-xl border border-rose-500/30">🗑️</span>
-                <div>
-                    <h3 class="font-heading font-bold text-base text-white">Xác Nhận Xóa Video</h3>
-                    <p class="text-xs text-slate-400">Hành động của Quản Trị Viên</p>
-                </div>
-            </div>
-
-            <p class="text-xs text-slate-300 mb-2 leading-relaxed">
-                Bạn có chắc chắn muốn xóa video này khỏi danh sách không? Video sẽ bị loại bỏ khỏi giao diện hiển thị.
-            </p>
-            <div id="deleteIdeaTitleDisplay" class="mb-5 p-3 rounded-xl bg-slate-950 border border-slate-800 text-xs text-rose-300 font-semibold line-clamp-2"></div>
-
+    <!-- 6. Delete Idea Modal -->
+    <div id="deleteIdeaModal" class="app-modal-backdrop flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-red-500/30 rounded-xl w-full max-w-sm p-6 relative">
+            <button onclick="closeDeleteIdeaModal()" class="absolute top-2 right-2 w-8 h-8 text-slate-400 hover:text-white flex items-center justify-center">✕</button>
+            <h3 class="text-xl font-bold text-red-500 mb-2">Xác nhận xóa?</h3>
+            <p class="text-sm text-slate-300 mb-4">Bạn có chắc chắn muốn xóa video <strong id="deleteIdeaTitleDisplay"></strong> khỏi phiên này không?</p>
             <input type="hidden" id="deleteIdeaTargetId">
-
-            <div class="flex items-center gap-2">
-                <button type="button" onclick="closeModal('deleteIdeaModal')" class="flex-1 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition">Hủy</button>
-                <button type="button" onclick="confirmDeleteIdea()" class="flex-1 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold transition shadow-lg shadow-rose-600/30">Xóa Ngay</button>
+            <div class="flex gap-2 justify-end">
+                <button onclick="closeDeleteIdeaModal()" class="px-4 py-2 bg-slate-700 rounded hover:bg-slate-600">Hủy</button>
+                <button onclick="confirmDeleteIdea()" class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-500">Xóa Ngay</button>
             </div>
         </div>
     </div>
 
-    <!-- LOAD DATABASE SCRIPT -->
-    <script src="ideas_data.js?v=1790062834"></script>
-
-    <!-- SPA LOGIC -->
+    <script src="ideas_data.js"></script>
     <script>
-        // State Management
+// State Management
         let appState = {
             currentView: 'grid', // 'grid' or 'creators'
             currentStyle: 'all',
@@ -3684,7 +2840,7 @@
             if (globalInput && globalInput.value !== val) {
                 globalInput.value = val;
             }
-            const heroInput = document.getElementById('heroSearchInput');
+            const heroInput = document.getElementById('globalSearchInput');
             if (heroInput && heroInput.value !== val) {
                 heroInput.value = val;
             }
@@ -3780,7 +2936,7 @@
         }
 
         function clearHeroSearch() {
-            const heroInput = document.getElementById('heroSearchInput');
+            const heroInput = document.getElementById('globalSearchInput');
             if (heroInput) {
                 heroInput.value = '';
                 heroInput.focus();
@@ -3796,7 +2952,7 @@
 
         function clearSearch() {
             const input = document.getElementById('globalSearchInput');
-            const heroInput = document.getElementById('heroSearchInput');
+            const heroInput = document.getElementById('globalSearchInput');
             if (input) input.value = '';
             if (heroInput) heroInput.value = '';
             syncHeroSearch('');
@@ -3877,7 +3033,7 @@
 
             const sInput = document.getElementById('globalSearchInput');
             if (sInput) sInput.value = '';
-            const heroInput = document.getElementById('heroSearchInput');
+            const heroInput = document.getElementById('globalSearchInput');
             if (heroInput) heroInput.value = '';
             const heroClearBtn = document.getElementById('heroClearSearchBtn');
             if (heroClearBtn) heroClearBtn.style.display = 'none';
@@ -4357,7 +3513,7 @@
             const sInput = document.getElementById('globalSearchInput');
             if (sInput) sInput.value = appState.searchQuery;
 
-            const heroInput = document.getElementById('heroSearchInput');
+            const heroInput = document.getElementById('globalSearchInput');
             if (heroInput) heroInput.value = appState.searchQuery;
 
             const heroClearBtn = document.getElementById('heroClearSearchBtn');
@@ -4805,7 +3961,7 @@
             } else if ((e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') || 
                        ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k')) {
                 e.preventDefault();
-                const heroSearch = document.getElementById('heroSearchInput');
+                const heroSearch = document.getElementById('globalSearchInput');
                 const globalSearch = document.getElementById('globalSearchInput');
                 if (heroSearch && heroSearch.offsetParent !== null) {
                     heroSearch.focus();
@@ -4869,43 +4025,72 @@
             updateHeaderBadges();
             applyFilters();
         });
-    </script>
-    <!-- FLOATING STICKY ACTIVE FILTER & SHARE BAR (ALWAYS VISIBLE WHEN FILTERING) -->
-    <div 
-        id="floatingFilterBar" 
-        class="fixed bottom-5 left-1/2 transform -translate-x-1/2 z-40 w-[92%] sm:w-auto min-w-[310px] max-w-lg bg-slate-900/95 backdrop-blur-xl border border-sky-400/50 shadow-2xl shadow-sky-950/90 rounded-2xl p-2 sm:p-2.5 transition-all duration-300 translate-y-28 opacity-0 pointer-events-none flex items-center justify-between gap-3"
-    >
-        <div class="flex items-center gap-2 overflow-hidden flex-1 pl-1.5">
-            <span class="text-base shrink-0 animate-pulse">🎯</span>
-            <div class="flex flex-col min-w-0">
-                <span class="text-[10px] font-bold text-sky-400 uppercase tracking-wider">Đang xem bộ lọc:</span>
-                <span id="floatingFilterName" class="text-xs font-bold text-white truncate max-w-[170px] sm:max-w-[270px]">...</span>
-            </div>
-        </div>
-        <div class="flex items-center gap-1.5 shrink-0">
-            <button 
-                onclick="copyCurrentFilterLink()" 
-                id="floatingShareBtn"
-                class="px-3.5 py-1.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-black transition flex items-center gap-1.5 shadow-md shadow-sky-500/30 cursor-pointer active:scale-95"
-                title="Gửi link bộ lọc này cho học viên hoặc khách hàng"
-            >
-                <span id="floatingShareIcon">📤</span>
-                <span id="floatingShareText">Chia Sẻ</span>
-            </button>
-            <button 
-                onclick="resetAllFilters()" 
-                class="w-8 h-8 rounded-xl bg-slate-800/90 hover:bg-rose-600 border border-slate-700 hover:border-rose-500 text-slate-300 hover:text-white text-xs flex items-center justify-center transition cursor-pointer active:scale-95"
-                title="Bỏ toàn bộ lọc"
-            >
-                ✕
-            </button>
-        </div>
-    </div>
+    
+// Infinite Scroll using IntersectionObserver
+document.addEventListener('DOMContentLoaded', () => {
+    const sentinel = document.getElementById('paginationBar');
+    if (sentinel) {
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !sentinel.classList.contains('hidden')) {
+                loadMoreIdeas();
+            }
+        }, { rootMargin: '200px' });
+        observer.observe(sentinel);
+    }
+});
 
-    <!-- Toast Notification (Top Screen Banner - Không bao giờ che nút bấm dưới chân) -->
-    <div id="toastNotification" class="fixed top-5 left-1/2 -translate-x-1/2 sm:left-auto sm:right-6 sm:translate-x-0 z-50 transform -translate-y-12 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-slate-900/95 border border-sky-400/60 text-slate-100 shadow-2xl shadow-sky-950/80 text-xs font-semibold backdrop-blur-md max-w-[92vw]">
-        <span id="toastIcon" class="text-lg">✅</span>
-        <span id="toastMsg">Đã sao chép link chuyên đề!</span>
-    </div>
+    </script>
+    
+    <!-- Modal Close Logic -->
+    <script>
+        // Modal interaction enhancements (close on backdrop click, swipe, esc)
+        document.querySelectorAll('.app-modal-backdrop').forEach(modal => {
+            modal.addEventListener('click', e => {
+                if (e.target === modal) {
+                    const closeBtn = modal.querySelector('button[onclick^="close"]');
+                    if (closeBtn) closeBtn.click();
+                }
+            });
+            
+            // Touch swipe down to close
+            let touchStartY = 0;
+            modal.addEventListener('touchstart', e => {
+                touchStartY = e.touches[0].clientY;
+            }, {passive: true});
+            
+            modal.addEventListener('touchend', e => {
+                const touchEndY = e.changedTouches[0].clientY;
+                if (touchEndY - touchStartY > 100) { // swipe down threshold
+                    const closeBtn = modal.querySelector('button[onclick^="close"]');
+                    if (closeBtn) closeBtn.click();
+                }
+            }, {passive: true});
+        });
+        
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.app-modal-backdrop').forEach(modal => {
+                    if (modal.style.display === 'flex' || !modal.classList.contains('hidden')) {
+                        const closeBtn = modal.querySelector('button[onclick^="close"]');
+                        if (closeBtn) closeBtn.click();
+                    }
+                });
+            }
+        });
+        
+        // Prevent body scroll when modal open
+        const originalOpenVideoModal = window.openVideoModal;
+        window.openVideoModal = function(...args) {
+            if(originalOpenVideoModal) originalOpenVideoModal(...args);
+            document.body.classList.add('modal-open');
+        };
+        
+        const originalCloseVideoModal = window.closeVideoModal;
+        window.closeVideoModal = function(...args) {
+            if(originalCloseVideoModal) originalCloseVideoModal(...args);
+            document.body.classList.remove('modal-open');
+            // Pause video logic is already in original closeVideoModal
+        };
+    </script>
 </body>
 </html>

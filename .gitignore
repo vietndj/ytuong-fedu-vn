@@ -5,3 +5,15 @@
 .env*
 !.env.example
 .vercel
+
+# Temp files & artifacts
+screenshot_*.png
+nghiemthu_*.png
+*.pyc
+__pycache__/
+scratch/
+scratch_images/
+*.log
+test_*.py
+fix_*.py
+patch_*.py

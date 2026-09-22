@@ -3340,38 +3340,20 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
 const rawVideoSrc = "https://media.fedu.vn/videos/DdgwV6dsxcS.mp4";
 let currentEndTime = null;
 
-function getCandidateUrls(src) {
-    if (!src) return [];
-    if (src.startsWith('http://') || src.startsWith('https://')) return [src];
-    let clean = src.replace(/^(\.\/|\.\.\/)+/, '').replace(/^(videos\/|reports\/)/, '');
-    return [
-        'https://media.fedu.vn/videos/' + encodeURI(clean),
-        '../videos/' + clean,
-        './videos/' + clean,
-        './' + clean
-    ];
-}
 
-const candidateUrls = getCandidateUrls(rawVideoSrc);
-let candidateIdx = 0;
 const player = document.getElementById('mainPlayer');
-
-function loadVideoCandidate() {
-    if (candidateIdx >= candidateUrls.length) return;
-    const url = candidateUrls[candidateIdx];
-    player.src = url;
-    document.getElementById('directVidLink').href = url;
+if(player) {
+    player.src = rawVideoSrc;
+    const directLnk = document.getElementById('directVidLink');
+    if (directLnk) {
+        if (rawVideoSrc.includes('/api/video?id=')) {
+            directLnk.href = rawVideoSrc.replace('https://ytuong.fedu.vn/api/video?id=', 'https://drive.google.com/file/d/') + '/view';
+        } else {
+            directLnk.href = rawVideoSrc;
+        }
+    }
     player.load();
 }
-
-player.onerror = () => {
-    candidateIdx++;
-    if (candidateIdx < candidateUrls.length) {
-        loadVideoCandidate();
-    }
-};
-
-loadVideoCandidate();
 
 function playShot(startTime, endTime, label) {
     currentEndTime = (typeof endTime === 'number') ? endTime : null;
