@@ -1460,6 +1460,7 @@
                         (item.tech_tags ? item.tech_tags.join(' ') : '') + ' ' +
                         (item.logic_explanation || '') + ' ' +
                         (item.creator?.name || '') + ' ' + 
+                        (item.id || '') + ' ' + 
                         (item.creator?.handle || '')
                     ).toLowerCase();
                     if (!haystack.includes(searchVal)) return false;
