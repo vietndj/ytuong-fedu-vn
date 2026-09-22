@@ -918,7 +918,7 @@ video#mainPlayer {
         <div class="video-controls-panel">
             <div class="current-status-bar">
                 <span class="status-tag" id="shotStatusTag">🎬 Phân cảnh: Toàn bộ video</span>
-                <a id="directVidLink" href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/IG_@creator_Db7P1GeOxvq_Video_Db7P1GeOxvq.mp4" target="_blank" style="color:var(--accent-blue); font-size:11.5px; text-decoration:none;">Tệp gốc ↗</a>
+                <a id="directVidLink" href="https://media.fedu.vn/videos/IG_@creator_Db7P1GeOxvq_Video_Db7P1GeOxvq.mp4" target="_blank" style="color:var(--accent-blue); font-size:11.5px; text-decoration:none;">Tệp gốc ↗</a>
             </div>
             <div class="speed-buttons-row">
                 <span style="font-size:11.5px; color:#94a3b8; font-weight:700; margin-right:4px;">Tốc độ:</span>
@@ -989,7 +989,7 @@ video#mainPlayer {
 </div>
 
 <script>
-const rawVideoSrc = "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/IG_@creator_Db7P1GeOxvq_Video_Db7P1GeOxvq.mp4";
+const rawVideoSrc = "https://media.fedu.vn/videos/IG_@creator_Db7P1GeOxvq_Video_Db7P1GeOxvq.mp4";
 let currentEndTime = null;
 
 function getCandidateUrls(src) {
@@ -997,7 +997,7 @@ function getCandidateUrls(src) {
     if (src.startsWith('http://') || src.startsWith('https://')) return [src];
     let clean = src.replace(/^(\.\/|\.\.\/)+/, '').replace(/^(videos\/|reports\/)/, '');
     return [
-        'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/' + encodeURI(clean),
+        'https://media.fedu.vn/videos/' + encodeURI(clean),
         '../videos/' + clean,
         './videos/' + clean,
         './' + clean
