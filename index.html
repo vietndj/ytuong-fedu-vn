@@ -114,6 +114,13 @@
             <input type="text" id="globalSearchInput" placeholder="Tìm kiếm..." class="bg-slate-800 text-sm px-3 py-1.5 rounded outline-none border border-slate-700 focus:border-sky-500 w-48">
         </div>
         
+        
+        <!-- Share Filter Link -->
+        <button id="headerShareFilterBtn" onclick="copyCurrentFilterLink()" class="p-2 hover:bg-sky-500/20 text-sky-400 rounded-lg shrink-0  items-center gap-1 transition" title="Chia sẻ Bộ lọc này">
+            <span id="headerShareBadge" class="hidden px-1.5 py-0.5 rounded-full text-[10px] font-mono bg-sky-500 text-slate-950 font-black">0</span>
+            🔗
+        </button>
+
         <!-- Settings/Filters Dropdown (⚙️) -->
         <div class="relative group shrink-0">
             <button class="p-2 hover:bg-white/10 rounded-lg">⚙️</button>
@@ -197,6 +204,7 @@
             <div class="p-3 border-b border-slate-800 flex items-center gap-3">
                 <span class="bg-sky-500/20 text-sky-400 text-xs px-2 py-1 rounded font-bold">REPORT</span>
                 <h3 id="reportModalTitle" class="font-semibold truncate text-sm">Báo cáo</h3>
+                <button onclick="copyVideoModalShareLink()" class="px-2 py-1 rounded bg-sky-500/20 text-sky-400 hover:bg-sky-500 hover:text-white transition flex items-center gap-1 font-bold text-xs cursor-pointer ml-auto" title="Chia sẻ Ý Tưởng này">🔗 Chia Sẻ</button>
             </div>
             <div class="flex-1 relative bg-slate-950">
                 <div id="reportIframeSpinner" class="absolute inset-0 flex items-center justify-center">
@@ -229,32 +237,95 @@
 
     <!-- 5. Edit Idea Modal -->
     <div id="editIdeaModal" class="app-modal-backdrop flex items-center justify-center p-4">
-        <div class="bg-slate-900 border border-slate-700 rounded-xl w-full max-w-2xl max-h-[90vh] flex flex-col">
-            <div class="p-4 border-b border-slate-700 flex justify-between items-center shrink-0">
-                <h3 class="font-bold text-lg">Chỉnh sửa Video</h3>
-                <button onclick="closeModal('editIdeaModal')" class="w-8 h-8 text-slate-400 hover:text-white flex items-center justify-center">✕</button>
+        <div class="relative w-full max-w-3xl bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+            <div class="px-5 py-3.5 border-b border-slate-800 flex items-center justify-between bg-slate-950/70">
+                <div class="flex items-center gap-2">
+                    <span class="text-lg">✏️</span>
+                    <h3 class="font-bold text-sm text-white">Chỉnh Sửa Ý Tưởng Video</h3>
+                </div>
+                <button onclick="closeModal('editIdeaModal')" class="w-10 h-10 flex items-center justify-center bg-rose-500/10 text-rose-400 hover:bg-rose-500 hover:text-white text-xl font-bold rounded-xl transition cursor-pointer">✕</button>
             </div>
-            <div class="p-4 overflow-y-auto flex-1 text-sm space-y-3">
+
+            <form id="editIdeaForm" onsubmit="saveEditedIdea(event)" class="p-5 overflow-y-auto space-y-4 text-xs">
                 <input type="hidden" id="editIdeaId">
+
                 <div>
-                    <label class="block text-slate-400 mb-1">Tiêu đề</label>
-                    <input type="text" id="editIdeaTitle" class="w-full bg-slate-800 border border-slate-700 rounded p-2">
+                    <label class="block font-semibold text-slate-300 mb-1">Tiêu Đề Video (Tiếng Việt):</label>
+                    <input type="text" id="editIdeaTitle" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400">
                 </div>
+
                 <div>
-                    <label class="block text-slate-400 mb-1">Creator Name</label>
-                    <input type="text" id="editIdeaCreatorName" class="w-full bg-slate-800 border border-slate-700 rounded p-2">
+                    <label class="block font-semibold text-slate-300 mb-1">Điểm Ăn Tiền Của Ý Tưởng (Quick Takeaway):</label>
+                    <textarea id="editIdeaTakeaway" rows="3" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400 leading-relaxed"></textarea>
                 </div>
-                <div class="flex items-center gap-2 mt-2">
-                    <input type="checkbox" id="editIdeaExcluded" class="w-4 h-4">
-                    <label for="editIdeaExcluded" class="text-amber-400 font-semibold">Ẩn video này khỏi User (Chỉ Admin thấy)</label>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Tên Creator:</label>
+                        <input type="text" id="editIdeaCreatorName" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400">
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Handle Creator (@handle):</label>
+                        <input type="text" id="editIdeaCreatorHandle" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400 font-mono">
+                    </div>
                 </div>
-                <!-- Other fields omitted for brevity but they are handled gracefully by JS if not found -->
-                <div class="text-xs text-slate-500 mt-4">* Các trường khác đã được tinh giản trong form này. Chỉnh sửa chuyên sâu hãy dùng mã nguồn.</div>
-            </div>
-            <div class="p-4 border-t border-slate-700 flex justify-end gap-2 shrink-0">
-                <button onclick="closeModal('editIdeaModal')" class="px-4 py-2 bg-slate-700 rounded hover:bg-slate-600">Hủy</button>
-                <button onclick="saveEditedIdea()" class="px-4 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-500">Lưu thay đổi</button>
-            </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Ngành Nghề:</label>
+                        <select id="editIdeaIndustry" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400"></select>
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Kiểu Quay:</label>
+                        <select id="editIdeaStyle" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400"></select>
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Quốc Gia:</label>
+                        <select id="editIdeaCountry" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400"></select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Kỹ Thuật Quay Dựng (Key Tech):</label>
+                        <input type="text" id="editIdeaKeyTech" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400 font-mono">
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Mục Đích Video:</label>
+                        <input type="text" id="editIdeaPurpose" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Link Video (MP4 / R2):</label>
+                        <input type="text" id="editIdeaVideoUrl" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400 font-mono">
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Link Báo Cáo HTML:</label>
+                        <input type="text" id="editIdeaReportUrl" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400 font-mono">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Link Gốc Instagram / Facebook:</label>
+                        <input type="text" id="editIdeaIgUrl" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400 font-mono">
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Trạng Thái Hiển Thị:</label>
+                        <div class="flex items-center gap-2 h-[34px] px-3 bg-slate-950 border border-slate-700 rounded-xl">
+                            <input type="checkbox" id="editIdeaExcluded" class="w-4 h-4 rounded text-amber-500 focus:ring-amber-500 bg-slate-800 border-slate-600">
+                            <label for="editIdeaExcluded" class="text-amber-400 font-semibold cursor-pointer">Ẩn khỏi Học Viên</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-slate-700 flex justify-end gap-3 shrink-0">
+                    <button type="button" onclick="closeModal('editIdeaModal')" class="px-5 py-2.5 bg-slate-800 rounded-xl hover:bg-slate-700 font-bold">Hủy</button>
+                    <button type="submit" class="px-5 py-2.5 bg-emerald-600 text-white rounded-xl hover:bg-emerald-500 font-bold shadow-lg shadow-emerald-900/50">Lưu thay đổi</button>
+                </div>
+            </form>
         </div>
     </div>
 
