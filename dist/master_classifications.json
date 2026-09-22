@@ -17556,18 +17556,20 @@
       "icon": "⚡"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @หยก.ละกัน_ꔛ",
+    "purpose": "Hook, diễn",
     "tech_tags": [
+      "Hook",
+      "Diễn",
       "Establishing Hook Shot",
       "Close-Up / Macro Detail Shot"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+    "logic_explanation": "Ghi chú người dùng: Hook, diễn. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Hook, diễn",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -17589,18 +17591,20 @@
       "icon": "⚡"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @หยก.ละกัน_ꔛ",
+    "purpose": "Hook, diễn",
     "tech_tags": [
+      "Hook",
+      "Diễn",
       "Establishing Hook Shot",
       "Close-Up / Macro Detail Shot"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+    "logic_explanation": "Ghi chú người dùng: Hook, diễn. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Hook, diễn",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
