@@ -17475,32 +17475,35 @@
   },
   "IG_@Жамьяна_Осознанный_стилист_UGC_DdeWMWLsaHA_Video_by_zhamyana": {
     "id": "IG_@Жамьяна_Осознанный_стилист_UGC_DdeWMWLsaHA_Video_by_zhamyana",
-    "creator": "@Жамьяна_Осознанный_стилист_UGC",
-    "creator_name": "Жамьяна_Осознанный_Стилист_Ugc",
-    "title": "@Жамьяна_Осознанный_стилист_UGC - Video by zhamyana",
+    "creator": "@zhamyana",
+    "creator_name": "Zhamyana (Stylist UGC)",
+    "title": "@zhamyana - Biến hình thời trang đường phố Worm's-Eye",
     "shots_count": 3,
-    "duration": "6.0s",
+    "duration": "6.1s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh / Biến Hình",
+      "icon": "⚡"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "thoi-trang",
+      "name": "Thời Trang & Phong Cách",
+      "icon": "👗"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Жамьяна_Осознанный_стилист_UGC",
+    "purpose": "Hook tung đồ bẻ cong trục mắt kết hợp diễn xuất nhún vai và hất tóc biến hình ngoại cảnh 180 độ.",
     "tech_tags": [
-      "Diễn",
       "Hook",
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot"
+      "Diễn",
+      "Worm's-Eye",
+      "Match-Action",
+      "Hair Flip",
+      "Biến hình",
+      "UGC",
+      "Kinetic Typography"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "logic_explanation": "Ghi chú người dùng: Hook, diễn. Phân loại chuẩn xác vào Thời Trang & Phong Cách • Chuyển Cảnh / Biến Hình.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Đặt camera sát sàn ngửa lên 85-90 độ mở màn bằng cú tung đồ mồi tò mò. Dùng động tác hất tóc lấy đà để che vết cắt chuyển cảnh sang ngoại cảnh đối lập 180 độ.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -17511,30 +17514,35 @@
   },
   "DdeWMWLsaHA": {
     "id": "IG_@Жамьяна_Осознанный_стилист_UGC_DdeWMWLsaHA_Video_by_zhamyana",
-    "creator": "@Жамьяна_Осознанный_стилист_UGC",
-    "creator_name": "Жамьяна_Осознанный_Стилист_Ugc",
-    "title": "@Жамьяна_Осознанный_стилист_UGC - Video by zhamyana",
+    "creator": "@zhamyana",
+    "creator_name": "Zhamyana (Stylist UGC)",
+    "title": "@zhamyana - Biến hình thời trang đường phố Worm's-Eye",
     "shots_count": 3,
-    "duration": "6.0s",
+    "duration": "6.1s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh / Biến Hình",
+      "icon": "⚡"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "thoi-trang",
+      "name": "Thời Trang & Phong Cách",
+      "icon": "👗"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Жамьяна_Осознанный_стилист_UGC",
+    "purpose": "Hook tung đồ bẻ cong trục mắt kết hợp diễn xuất nhún vai và hất tóc biến hình ngoại cảnh 180 độ.",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot"
+      "Hook",
+      "Diễn",
+      "Worm's-Eye",
+      "Match-Action",
+      "Hair Flip",
+      "Biến hình",
+      "UGC",
+      "Kinetic Typography"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "logic_explanation": "Ghi chú người dùng: Hook, diễn. Phân loại chuẩn xác vào Thời Trang & Phong Cách • Chuyển Cảnh / Biến Hình.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Đặt camera sát sàn ngửa lên 85-90 độ mở màn bằng cú tung đồ mồi tò mò. Dùng động tác hất tóc lấy đà để che vết cắt chuyển cảnh sang ngoại cảnh đối lập 180 độ.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",

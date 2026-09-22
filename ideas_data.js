@@ -62,10 +62,10 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 3,
     "voice-over": 12,
-    "talking-head": 23,
+    "talking-head": 22,
     "storytelling": 18,
     "dien-anh": 91,
-    "chuyen-canh": 40
+    "chuyen-canh": 41
   },
   "industries": [
     {
@@ -152,11 +152,11 @@ var FEDU_IDEAS_DATABASE = {
   "industry_stats": {
     "spa-lam-dep": 5,
     "thuong-hieu": 19,
-    "thoi-trang": 19,
+    "thoi-trang": 20,
     "am-thuc": 21,
     "du-lich": 15,
     "cong-nghe": 26,
-    "kien-truc": 21,
+    "kien-truc": 20,
     "the-thao": 7,
     "ky-thuat-quay": 48,
     "ugc": 6
@@ -517,10 +517,10 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "handle": "@zhamyana",
-      "name": "Жамьяна_Осознанный_Стилист_Ugc",
+      "name": "Zhamyana (Stylist UGC)",
       "profile_url": "https://www.instagram.com/zhamyana/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
+      "top_industry": "Thời trang",
       "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%D0%96%D0%B0%D0%BC%D1%8C%D1%8F%D0%BD%D0%B0_%D0%9E%D1%81%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D1%81%D1%82%D0%B8%D0%BB%D0%B8%D1%81%D1%82_UGC_DdeWMWLsaHA_Video_by_zhamyana/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Жамьяна_Осознанный_стилист_UGC_DdeWMWLsaHA_Video_by_zhamyana"
@@ -1889,22 +1889,22 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@Жамьяна_Осознанный_стилист_UGC_DdeWMWLsaHA_Video_by_zhamyana",
       "shortcode": "DdeWMWLsaHA",
-      "title_vi": "@Жамьяна_Осознанный_стилист_UGC - Video by zhamyana",
-      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
-      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Medium Tracking Shot",
+      "title_vi": "Biến hình thời trang đường phố Worm's-Eye",
+      "quick_takeaway": "Đặt camera sát sàn ngửa lên 85-90 độ mở màn bằng cú tung đồ mồi tò mò. Dùng động tác hất tóc lấy đà để che vết cắt chuyển cảnh sang ngoại cảnh đối lập 180 độ.",
+      "key_tech": "Hook • Diễn • Worm's-Eye • Match-Action • Hair Flip • Biến hình • UGC",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Nói Trực Diện",
-        "en_name": "Talking Head",
-        "icon": "🗣️",
-        "badge_color": "blue"
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
       },
       "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
+        "id": "thoi-trang",
+        "name": "Thời trang",
+        "en_name": "Fashion & Style",
+        "icon": "👔",
+        "badge_color": "pink"
       },
       "country": {
         "id": "us_eu",
@@ -1913,21 +1913,24 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇺🇸/🇪🇺",
         "badge_color": "purple"
       },
-      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Жамьяна_Осознанный_стилист_UGC",
+      "purpose": "Hook tung đồ bẻ cong trục mắt kết hợp diễn xuất nhún vai và hất tóc biến hình ngoại cảnh 180 độ.",
       "tech_tags": [
-        "Diễn",
         "Hook",
-        "Establishing Hook Shot",
-        "Close-Up / Macro Detail Shot",
-        "Medium Tracking Shot"
+        "Diễn",
+        "Worm's-Eye",
+        "Match-Action",
+        "Hair Flip",
+        "Biến hình",
+        "UGC",
+        "Kinetic Typography"
       ],
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {},
-      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "logic_explanation": "Ghi chú người dùng: Hook, diễn. Phân loại chuẩn xác vào Thời Trang & Phong Cách • Chuyển Cảnh / Biến Hình.",
       "creator": {
         "raw": "@Жамьяна_Осознанный_стилист_UGC",
-        "name": "Жамьяна_Осознанный_Стилист_Ugc",
+        "name": "Zhamyana (Stylist UGC)",
         "handle": "@zhamyana",
         "profile_url": "https://www.instagram.com/zhamyana/"
       },
