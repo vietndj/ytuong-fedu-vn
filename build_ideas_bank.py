@@ -800,7 +800,7 @@ def build_database():
             "media": {
                 "thumb_hook": thumb_hook,
                 "thumb_key": thumb_key,
-                "video_url": vid_url,
+                "video_url": _resolve_original_video_url(vid_url, r2_video_map, drive_links),
                 "video_url_original": _resolve_original_video_url(vid_url, r2_video_map, drive_links),
                 "report_url": html_url,
                 "shots_count": shots_count,
