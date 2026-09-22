@@ -729,7 +729,7 @@ def build_database():
 
         # Normalize existing thumb URLs to media.fedu.vn with proper encoding
         def normalize_thumb_url(u, fld, default_shot_type):
-            if not u:
+            if not u or "api/video" in u or "drive.google.com" in u or "driveusercontent" in u:
                 return _resolve_thumb_url(fld, default_shot_type, r2_image_set)
             if not u.startswith("http"):
                 # Relative path - resolve via R2
