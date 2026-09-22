@@ -2077,16 +2077,17 @@
             const item = window.FEDU_IDEAS_DATABASE.ideas.find(x => x.id === id);
             if (!item) return;
 
-            document.getElementById('editIdeaId').value = item.id;
-            document.getElementById('editIdeaTitle').value = item.title_vi || '';
-            document.getElementById('editIdeaTakeaway').value = item.quick_takeaway || '';
-            document.getElementById('editIdeaCreatorName').value = item.creator?.name || '';
-            document.getElementById('editIdeaCreatorHandle').value = item.creator?.handle || '';
-            document.getElementById('editIdeaKeyTech').value = item.key_tech || '';
-            document.getElementById('editIdeaPurpose').value = item.purpose || '';
-            document.getElementById('editIdeaVideoUrl').value = item.media?.video_url || '';
-            document.getElementById('editIdeaReportUrl').value = item.media?.report_url || '';
-            document.getElementById('editIdeaIgUrl').value = item.ig_url || '';
+            const setVal = (id, val) => { const el = document.getElementById(id); if (el) el.value = val; };
+            setVal('editIdeaId', item.id);
+            setVal('editIdeaTitle', item.title_vi || '');
+            setVal('editIdeaTakeaway', item.quick_takeaway || '');
+            setVal('editIdeaCreatorName', item.creator?.name || '');
+            setVal('editIdeaCreatorHandle', item.creator?.handle || '');
+            setVal('editIdeaKeyTech', item.key_tech || '');
+            setVal('editIdeaPurpose', item.purpose || '');
+            setVal('editIdeaVideoUrl', item.media?.video_url || '');
+            setVal('editIdeaReportUrl', item.media?.report_url || '');
+            setVal('editIdeaIgUrl', item.ig_url || '');
 
             // Danh mục ngành nghề
             const indSelect = document.getElementById('editIdeaIndustry');
@@ -2114,7 +2115,7 @@
 
             // Trạng thái ẩn/hiện
             const isExcluded = item.is_excluded || appState.localExcludedIds.has(item.id);
-            document.getElementById('editIdeaExcluded').value = isExcluded ? 'true' : 'false';
+            const exclCb = document.getElementById('editIdeaExcluded'); if (exclCb) exclCb.checked = isExcluded;
 
             document.getElementById('editIdeaModal')?.classList.add('open');
         }
@@ -2127,20 +2128,23 @@
             const item = window.FEDU_IDEAS_DATABASE.ideas.find(x => x.id === id);
             if (!item) return;
 
-            const newTitle = document.getElementById('editIdeaTitle').value.trim();
-            const newTakeaway = document.getElementById('editIdeaTakeaway').value.trim();
-            const newCreatorName = document.getElementById('editIdeaCreatorName').value.trim();
-            const newCreatorHandle = document.getElementById('editIdeaCreatorHandle').value.trim();
-            const newKeyTech = document.getElementById('editIdeaKeyTech').value.trim();
-            const newPurpose = document.getElementById('editIdeaPurpose').value.trim();
-            const newVideoUrl = document.getElementById('editIdeaVideoUrl').value.trim();
-            const newReportUrl = document.getElementById('editIdeaReportUrl').value.trim();
-            const newIgUrl = document.getElementById('editIdeaIgUrl').value.trim();
-            const newIndustryId = document.getElementById('editIdeaIndustry').value;
-            const newStyleId = document.getElementById('editIdeaStyle').value;
-            const newCountryId = document.getElementById('editIdeaCountry').value;
-            const isExcludedStr = document.getElementById('editIdeaExcluded').value;
-            const shouldExclude = isExcludedStr === 'true';
+            const getVal = (id) => { const el = document.getElementById(id); return el ? el.value.trim() : ''; };
+            const getValRaw = (id) => { const el = document.getElementById(id); return el ? el.value : ''; };
+            
+            const newTitle = getVal('editIdeaTitle');
+            const newTakeaway = getVal('editIdeaTakeaway') || item.quick_takeaway;
+            const newCreatorName = getVal('editIdeaCreatorName');
+            const newCreatorHandle = getVal('editIdeaCreatorHandle') || item.creator?.handle;
+            const newKeyTech = getVal('editIdeaKeyTech') || item.key_tech;
+            const newPurpose = getVal('editIdeaPurpose') || item.purpose;
+            const newVideoUrl = getVal('editIdeaVideoUrl') || item.media?.video_url;
+            const newReportUrl = getVal('editIdeaReportUrl') || item.media?.report_url;
+            const newIgUrl = getVal('editIdeaIgUrl') || item.ig_url;
+            const newIndustryId = getValRaw('editIdeaIndustry');
+            const newStyleId = getValRaw('editIdeaStyle');
+            const newCountryId = getValRaw('editIdeaCountry');
+            const exclEl = document.getElementById('editIdeaExcluded');
+            const shouldExclude = exclEl ? (exclEl.value === 'true' || exclEl.checked) : item.is_excluded;
 
             const indObj = window.FEDU_IDEAS_DATABASE.industries.find(i => i.id === newIndustryId) || (item.industries ? item.industries[0] : null);
             const styleObj = (window.FEDU_IDEAS_DATABASE.shooting_styles || []).find(s => s.id === newStyleId) || item.shooting_style;
