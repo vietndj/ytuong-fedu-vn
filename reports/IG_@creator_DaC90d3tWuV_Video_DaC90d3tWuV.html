@@ -953,12 +953,12 @@ video#mainPlayer {
 <div class="app-container">
     <div class="video-sidebar-col">
         <div class="video-player-container">
-            <video id="mainPlayer" controls autoplay muted playsinline preload="auto" loop></video>
+            <video crossorigin="anonymous" crossorigin="anonymous" id="mainPlayer" controls autoplay muted playsinline preload="auto" loop></video>
         </div>
         <div class="video-controls-panel">
             <div class="current-status-bar">
                 <span class="status-tag" id="shotStatusTag">🎬 Phân cảnh: Toàn bộ video</span>
-                <a id="directVidLink" href="https://media.fedu.vn/videos/IG_@creator_DaC90d3tWuV_Video_DaC90d3tWuV.mp4" target="_blank" style="color:var(--accent-blue); font-size:11.5px; text-decoration:none;">Tệp gốc ↗</a>
+                <a id="directVidLink" href="https://drive.google.com/file/d/IG_@creator_DaC90d3tWuV_Video_DaC90d3tWuV/view" target="_blank" style="color:var(--accent-blue); font-size:11.5px; text-decoration:none;">Tệp gốc ↗</a>
             </div>
             <div class="speed-buttons-row">
                 <span style="font-size:11.5px; color:#94a3b8; font-weight:700; margin-right:4px;">Tốc độ:</span>
@@ -1031,12 +1031,12 @@ video#mainPlayer {
 
 <div id="lightboxModal" onclick="closeLightbox()">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <img id="lightboxImg" src="" onclick="event.stopPropagation()" />
+    <img crossorigin="anonymous" id="lightboxImg" src="" onclick="event.stopPropagation()" />
     <div id="lightboxCaption"></div>
 </div>
 
 <script>
-const rawVideoSrc = "https://media.fedu.vn/videos/IG_@creator_DaC90d3tWuV_Video_DaC90d3tWuV.mp4";
+const rawVideoSrc = "https://ytuong.fedu.vn/api/video?id=IG_@creator_DaC90d3tWuV_Video_DaC90d3tWuV";
 let currentEndTime = null;
 
 function getCandidateUrls(src) {
@@ -1044,22 +1044,7 @@ function getCandidateUrls(src) {
     if (src.startsWith('http://') || src.startsWith('https://')) return [src];
     let clean = src.replace(/^(\.\/|\.\.\/)+/, '').replace(/^(videos\/|reports\/)/, '');
     return [
-        'https://media.fedu.vn/videos/' + encodeURI(clean),
-        '../videos/' + clean,
-        './videos/' + clean,
-        './' + clean
-    ];
-}
-
-const candidateUrls = getCandidateUrls(rawVideoSrc);
-let candidateIdx = 0;
-const player = document.getElementById('mainPlayer');
-
-function loadVideoCandidate() {
-    if (candidateIdx >= candidateUrls.length) return;
-    const url = candidateUrls[candidateIdx];
-    player.src = url;
-    document.getElementById('directVidLink').href = url;
+        'https://ytuong.fedu.vn/api/video?id=1Ygj0ukLgqFBEQwgMXDXa5BkoEKm0XWqX"directVidLink").href = url;
     player.load();
 }
 

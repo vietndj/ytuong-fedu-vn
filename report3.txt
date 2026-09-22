@@ -1,0 +1,5 @@
+| Trang chủ | >0 ảnh đen | OK | PASS |
+| Báo cáo: People_of_... | OK | OK | PASS |
+| Báo cáo: IG_@XÍU_ĐI... | OK | OK | PASS |
+| Báo cáo: Bao_Cao_Bo... | OK | OK | PASS |
+PASSED

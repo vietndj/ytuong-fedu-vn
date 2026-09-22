@@ -1,0 +1,2 @@
+| ./live_ideas.js | Changed | PASS |
+| ./dist/live_ideas.js | Changed | PASS |
