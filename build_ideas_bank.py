@@ -826,6 +826,16 @@ def build_database():
         # Nếu video thuộc style Theo nhịp nhạc thì cũng đưa vào X-Factor nếu muốn lọc sâu
         # Nhưng thôi, tránh lặp lại X-Factor với Style.
 
+        
+        idea_tags = master.get("tags", []) if master else []
+        if master and master.get("industry"):
+            idea_tags.append(master["industry"].get("name"))
+        if style_obj:
+            idea_tags.append(style_obj.get("name"))
+        
+        # Clean tags (remove None, empty, and deduplicate)
+        idea_tags = list(set([t.strip() for t in idea_tags if t and t.strip()]))
+
         idea_obj = {
             "id": vid_id,
             "shortcode": code,
@@ -841,7 +851,7 @@ def build_database():
             },
             "industries": [master.get("industry")] if master and master.get("industry") else [],
             "x_factors": sorted(list(normalized_x_factors)),
-            "tags": master.get("tags", []) if master else [],
+            "tags": idea_tags,
             "country": {
                 "id": country_obj["id"],
                 "name": country_obj["name"],

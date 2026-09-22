@@ -102,7 +102,7 @@
         </div>
         
         <!-- Shooting Styles Tabs (Horizontal Scroll) -->
-        <div id="shootingStyleTabsContainer" class="hidden flex-1 flex items-center overflow-x-auto no-scrollbar gap-1 px-2 h-full py-1">
+        <div id="shootingStyleTabsContainer" flex-1 flex items-center overflow-x-auto no-scrollbar gap-1 px-2 h-full py-1">
             <!-- Tabs will be rendered here by JS -->
         </div>
         
@@ -339,7 +339,7 @@
         </div>
     </div>
 
-    <script src="ideas_data.js?v=1790087818"></script>
+    <script src="ideas_data.js?v=1790088325"></script>
     <script>
 // State Management
         let appState = {
@@ -1316,7 +1316,9 @@
         function applyFilters(pushToHistory = false) {
             if (!window.FEDU_IDEAS_DATABASE) return;
             const db = window.FEDU_IDEAS_DATABASE;
-            const searchVal = appState.searchQuery.trim().toLowerCase();
+            
+            const searchVal = removeAccents(appState.searchQuery.trim().toLowerCase());
+
 
             // Match items
             const matched = db.ideas.filter(item => {
@@ -1439,7 +1441,8 @@
 
                 // 8. Omni-Search filter
                 if (searchVal) {
-                    const haystack = (
+                    
+                    const haystackRaw = (
                         (item.title_vi || '') + ' ' + 
                         (item.quick_takeaway || '') + ' ' + 
                         (item.key_tech || '') + ' ' + 
@@ -1463,7 +1466,9 @@
                         (item.id || '') + ' ' + 
                         (item.creator?.handle || '')
                     ).toLowerCase();
-                    if (!haystack.includes(searchVal)) return false;
+                    const haystack = removeAccents(haystackRaw);
+                    if (!haystack.includes(searchVal) && !haystackRaw.includes(searchVal)) return false;
+
                 }
 
                 return true;
@@ -3974,6 +3979,11 @@
         }
 
         // Helpers
+        
+        function removeAccents(str) {
+            return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D');
+        }
+
         function escapeHtml(str) {
             if (!str) return '';
             return str

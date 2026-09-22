@@ -1993,7 +1993,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "asia",
         "name": "Thái Lan",
@@ -2067,7 +2070,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phong Cách",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2138,7 +2144,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chuyển Cảnh",
+        "Công Nghệ & AI / Năng Suất"
+      ],
       "country": {
         "id": "asia",
         "name": "Châu Á",
@@ -2206,7 +2215,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "F&B",
+        "Lồng Tiếng"
+      ],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -2274,7 +2286,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Du Lịch & Trải Nghiệm",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia",
         "name": "Châu Á",
@@ -2343,7 +2358,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Nói Trực Diện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2411,7 +2429,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phụ Kiện",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2477,7 +2498,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2545,7 +2569,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2612,7 +2639,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Du Lịch & Trải Nghiệm",
+        "Lồng Tiếng"
+      ],
       "country": {
         "id": "asia",
         "name": "Châu Á",
@@ -2680,7 +2710,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2751,7 +2784,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2821,7 +2857,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chuyển Cảnh",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2892,7 +2931,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chuyển Cảnh",
+        "Ẩm Thực & F&B"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2963,7 +3005,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chuyển Cảnh",
+        "UGC"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3034,7 +3079,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3106,7 +3154,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian Sống",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3176,7 +3227,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian Sống",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3247,7 +3301,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chuyển Cảnh",
+        "Kiến Trúc & Không Gian Sống"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3318,7 +3375,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian Sống",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3388,7 +3448,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Kiến Trúc & Không Gian Sống"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3457,7 +3520,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3528,7 +3594,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Kiến Trúc & Không Gian Sống"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3600,7 +3669,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Kiến Trúc & Không Gian Sống"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3672,7 +3744,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian Sống",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3742,7 +3817,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3809,7 +3887,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "F&B",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3881,7 +3962,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Thời trang"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3955,7 +4039,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Xây kênh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4028,7 +4115,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4099,7 +4189,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Bố cục"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4173,7 +4266,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Xây kênh",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4247,7 +4343,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Thời trang"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4320,7 +4419,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4389,7 +4491,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Nói Trực Diện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4461,7 +4566,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Nói Trực Diện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4527,7 +4635,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Thương Hiệu Cá Nhân & Dịch Vụ"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4594,7 +4705,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian / Nội Thất",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4667,7 +4781,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Lồng Tiếng"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4740,7 +4857,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Đời Thường & Chữa Lành",
+        "Lồng Tiếng"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4813,7 +4933,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Công Nghệ & Lập Trình",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4886,7 +5009,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian / Nội Thất",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4959,7 +5085,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Du Lịch & Văn Hóa",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5032,7 +5161,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Kỹ Thuật Quay Dựng"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5105,7 +5237,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Thương Hiệu Cá Nhân & Dịch Vụ"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5178,7 +5313,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5251,7 +5389,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phụ Kiện",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5324,7 +5465,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phụ Kiện",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5397,7 +5541,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5470,7 +5617,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5543,7 +5693,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "UGC & Quảng Cáo"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5616,7 +5769,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5689,7 +5845,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Kỹ Thuật Quay Dựng"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5762,7 +5921,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5835,7 +5997,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5908,7 +6073,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phụ Kiện",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5981,7 +6149,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phụ Kiện",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -6054,7 +6225,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -6120,7 +6294,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -6186,7 +6363,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kể Chuyện",
+        "Tâm Lý & Phát Triển Bản Thân"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6258,7 +6438,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Sáng Tạo Nội Dung & Thương Hiệu Cá Nhân",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "latin_brazil",
         "name": "Brazil",
@@ -6335,7 +6518,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phong Cách Sống",
+        "Walk & Talk"
+      ],
       "country": {
         "id": "russia",
         "name": "Nga",
@@ -6410,7 +6596,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phụ Kiện",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6485,7 +6674,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Làm Đẹp & Spa / Y Tế",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -6555,7 +6747,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chuyển Cảnh",
+        "Thương Hiệu Cá Nhân & Đời Sống / Sáng Tạo"
+      ],
       "country": {
         "id": "us",
         "name": "Hoa Kỳ",
@@ -6624,7 +6819,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Làm Đẹp & Spa / Y Tế",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "vn",
         "name": "Việt Nam",
@@ -6695,7 +6893,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Du Lịch, Khách Sạn & Khám Phá Địa Phương",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "vn",
         "name": "Việt Nam (Hà Nội)",
@@ -6767,7 +6968,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Walk & Talk",
+        "Giáo Dục & Tuyển Sinh"
+      ],
       "country": {
         "id": "au",
         "name": "Úc",
@@ -6839,7 +7043,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Kỹ Thuật Quay & Dựng Video"
+      ],
       "country": {
         "id": "us",
         "name": "Hoa Kỳ",
@@ -6907,7 +7114,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Walk & Talk",
+        "Làm Đẹp & Spa / Y Tế (Salon Tóc)"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6978,7 +7188,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phụ Kiện / Quà Tặng",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "vn",
         "name": "Việt Nam",
@@ -7046,7 +7259,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chuyển Cảnh",
+        "Ẩm Thực & F&B / Đồ Uống"
+      ],
       "country": {
         "id": "asia",
         "name": "Đông Á (Thượng Hải, Trung Quốc)",
@@ -7119,7 +7335,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Phụ Kiện Solo Filmmaking",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "kr",
         "name": "Hàn Quốc",
@@ -7187,7 +7406,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -7262,7 +7484,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phụ Kiện",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "russia",
         "name": "Nga / Đông Âu",
@@ -7326,7 +7551,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Theo nhịp nhạc"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7384,7 +7611,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Theo nhịp nhạc"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7442,7 +7671,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7500,7 +7731,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7558,7 +7791,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -7616,7 +7851,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7674,7 +7911,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -7732,7 +7971,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7790,7 +8031,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7848,7 +8091,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Theo nhịp nhạc"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7906,7 +8151,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7964,7 +8211,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8022,7 +8271,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8080,7 +8331,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Theo nhịp nhạc"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8138,7 +8391,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8204,7 +8459,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "UGC"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -8280,7 +8538,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "UGC"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -8354,7 +8615,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phụ Kiện",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -8428,7 +8692,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -8503,7 +8770,10 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [],
+      "tags": [
+        "Thể Thao & Năng Động",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -8579,7 +8849,10 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [],
+      "tags": [
+        "Chuyển Cảnh",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8654,7 +8927,10 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phụ Kiện",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8727,7 +9003,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Du Lịch & Văn Hóa",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8801,7 +9080,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -8876,7 +9158,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8951,7 +9236,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Làm Đẹp & Spa / Y Tế"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Quốc Tế (Kazakhstan)",
@@ -9027,7 +9315,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9095,7 +9386,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9159,7 +9452,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Du Lịch & Văn Hóa",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9234,7 +9530,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9309,7 +9608,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "global",
         "name": "Toàn Cầu",
@@ -9383,7 +9685,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á (Indonesia)",
@@ -9458,7 +9763,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Nói Trực Diện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9533,7 +9841,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Công Nghệ & Phụ Kiện Máy Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "middle_east",
         "name": "Trung Đông / Nam Á",
@@ -9608,7 +9919,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Thương Hiệu Cá Nhân & Dịch Vụ"
+      ],
       "country": {
         "id": "spain",
         "name": "Tây Ban Nha",
@@ -9684,7 +9998,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Lồng Tiếng"
+      ],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -9760,7 +10077,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thể Thao & Năng Động",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ (Áo)",
@@ -9836,7 +10156,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Du Lịch & Văn Hóa",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9913,7 +10236,10 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [],
+      "tags": [
+        "Thể Thao & Năng Động",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -9990,7 +10316,10 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phụ Kiện",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ (Tây Ban Nha)",
@@ -10069,7 +10398,10 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10142,7 +10474,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Du Lịch & Văn Hóa",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10215,7 +10550,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10288,7 +10626,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Walk & Talk",
+        "Làm Đẹp & Spa / Y Tế"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10361,7 +10702,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10434,7 +10778,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -10504,7 +10851,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Lồng Tiếng"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10577,7 +10927,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10650,7 +11003,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Du Lịch & Văn Hóa",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10723,7 +11079,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian Sống",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -10796,7 +11155,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10872,7 +11234,10 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [],
+      "tags": [
+        "Thể Thao & Năng Động",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10946,7 +11311,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Nói Trực Diện"
+      ],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -11019,7 +11387,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian Sống",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -11092,7 +11463,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11165,7 +11539,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11238,7 +11615,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11311,7 +11691,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -11386,7 +11769,10 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -11460,7 +11846,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -11533,7 +11922,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian Sống",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11603,7 +11995,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -11673,7 +12068,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -11743,7 +12141,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -11816,7 +12217,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -11886,7 +12290,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Thương Hiệu Cá Nhân & Dịch Vụ"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -11959,7 +12366,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -12032,7 +12442,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phụ Kiện",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -12105,7 +12518,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -12180,7 +12596,10 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian Sống",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -12249,7 +12668,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12313,7 +12735,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12377,7 +12801,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -12447,7 +12874,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Lồng Tiếng"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12520,7 +12950,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Lồng Tiếng"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12593,7 +13026,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12666,7 +13102,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Lồng Tiếng"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12739,7 +13178,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Lồng Tiếng"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12814,7 +13256,10 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12888,7 +13333,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Nói Trực Diện"
+      ],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -12961,7 +13409,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13031,7 +13482,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -13101,7 +13555,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -13174,7 +13631,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13241,7 +13701,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13305,7 +13767,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13378,7 +13843,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kể Chuyện",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -13451,7 +13919,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13521,7 +13992,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13591,7 +14065,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13661,7 +14138,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian Sống",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -13733,7 +14213,10 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13807,7 +14290,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13877,7 +14363,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13947,7 +14436,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14020,7 +14512,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14093,7 +14588,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -14163,7 +14661,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14233,7 +14734,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14307,7 +14811,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14377,7 +14884,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian Sống",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14450,7 +14960,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Lồng Tiếng"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -14523,7 +15036,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Walk & Talk",
+        "Làm Đẹp & Spa / Y Tế"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -14598,7 +15114,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kể Chuyện",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14671,7 +15190,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14741,7 +15263,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -14811,7 +15336,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thể Thao & Năng Động",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14884,7 +15412,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -14954,7 +15485,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phụ Kiện",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15027,7 +15561,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Lồng Tiếng"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15100,7 +15637,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -15169,7 +15709,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -15239,7 +15782,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15309,7 +15855,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian Sống",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15379,7 +15928,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15451,7 +16003,10 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15522,7 +16077,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15592,7 +16150,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15665,7 +16226,10 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phụ Kiện",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15739,7 +16303,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15809,7 +16376,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chỉn Chu",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15879,7 +16449,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thời Trang & Phụ Kiện",
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15949,7 +16522,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Nói Trực Diện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16022,7 +16598,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian Sống",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -16095,7 +16674,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian Sống",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -16159,7 +16741,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Chuyển Cảnh"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -16223,7 +16807,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Du Lịch & Văn Hóa",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -16296,7 +16883,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kiến Trúc & Không Gian Sống",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16366,7 +16956,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16436,7 +17029,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16506,7 +17102,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -16578,7 +17177,10 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16652,7 +17254,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "Lồng Tiếng"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16725,7 +17330,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Ẩm Thực & F&B",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -16798,7 +17406,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -16871,7 +17482,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "Nói Trực Diện"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16944,7 +17558,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Du Lịch & Văn Hóa",
+        "Lồng Tiếng"
+      ],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -17019,7 +17636,10 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [],
+      "tags": [
+        "Chuyển Cảnh",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17093,7 +17713,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Nói Trực Diện",
+        "Công Nghệ & Thiết Bị"
+      ],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17166,7 +17789,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Du Lịch & Văn Hóa",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -17239,7 +17865,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Du Lịch & Văn Hóa",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -17312,7 +17941,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Du Lịch & Văn Hóa",
+        "Kể Chuyện"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -17385,7 +18017,10 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [],
+      "tags": [
+        "Du Lịch & Văn Hóa",
+        "Chỉn Chu"
+      ],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
