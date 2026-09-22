@@ -1,0 +1,16 @@
+
+ ⛅️ wrangler 4.134.0 (update available 4.136.1)
+───────────────────────────────────────────────
+✨ Compiled Worker successfully
+Using secrets defined in .env.local
+Your Worker has access to the following bindings:
+Binding                                                                   Resource                  Mode
+env.CF_PAGES ("1")                                                        Environment Variable      local
+env.CF_PAGES_BRANCH ("main")                                              Environment Variable      local
+env.CF_PAGES_COMMIT_SHA ("2ce3813d3ed59248a7839ca5dad48043190fb...")      Environment Variable      local
+env.CF_PAGES_URL ("https://2ce3813.ytuong-fedu-vn.pages....")             Environment Variable      local
+env.VERCEL_OIDC_TOKEN ("(hidden)")                                        Environment Variable      local
+
+⎔ Starting local server...
+[wrangler:info] Ready on http://localhost:8788
+[wrangler:info] HEAD /api/video 206 Partial Content (1989ms)
