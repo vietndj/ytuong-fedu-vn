@@ -204,7 +204,12 @@
             <div class="p-3 pr-14 border-b border-slate-800 flex items-center gap-3">
                 <span class="bg-sky-500/20 text-sky-400 text-xs px-2 py-1 rounded font-bold">REPORT</span>
                 <h3 id="reportModalTitle" class="font-semibold truncate text-sm">Báo cáo</h3>
-                <button onclick="copyVideoModalShareLink()" class="px-2 py-1 rounded bg-sky-500/20 text-sky-400 hover:bg-sky-500 hover:text-white transition flex items-center gap-1 font-bold text-xs cursor-pointer ml-auto" title="Chia sẻ Ý Tưởng này">🔗 Chia Sẻ</button>
+                
+                <div class="ml-auto flex items-center gap-2">
+                    <a id="reportModalExternalLink" href="#" target="_blank" class="px-2 py-1 rounded bg-slate-700/50 text-slate-300 hover:bg-slate-600 hover:text-white transition flex items-center gap-1 font-bold text-xs" title="Mở trang báo cáo ở tab mới">↗️ Mở Tab Mới</a>
+                    <button onclick="copyVideoModalShareLink()" class="px-2 py-1 rounded bg-sky-500/20 text-sky-400 hover:bg-sky-500 hover:text-white transition flex items-center gap-1 font-bold text-xs cursor-pointer" title="Chia sẻ Ý Tưởng này">🔗 Chia Sẻ</button>
+                </div>
+
             </div>
             <div class="flex-1 relative bg-slate-950">
                 <div id="reportIframeSpinner" class="absolute inset-0 flex items-center justify-center">
@@ -2717,6 +2722,8 @@
                 }
             }
             if (iframe) iframe.src = item.media.report_url;
+            if (extLink) extLink.href = item.media.report_url;
+
             if (extLink) extLink.href = item.media.report_url;
 
             if (rCreatorBtn && rCreatorText && item.creator) {
