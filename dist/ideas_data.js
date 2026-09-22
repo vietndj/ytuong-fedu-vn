@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 222,
-  "total_unique_ideas": 216,
-  "total_active_ideas": 188,
+  "total_scene_items": 223,
+  "total_unique_ideas": 217,
+  "total_active_ideas": 189,
   "total_excluded_ideas": 28,
-  "total_creators": 150,
+  "total_creators": 151,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -73,7 +73,7 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 23,
     "storytelling": 21,
     "dien-anh": 86,
-    "chuyen-canh": 38,
+    "chuyen-canh": 39,
     "theo-nhip-nhac": 4
   },
   "industries": [
@@ -165,7 +165,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 18,
     "du-lich": 14,
     "cong-nghe": 26,
-    "kien-truc": 21,
+    "kien-truc": 22,
     "the-thao": 5,
     "ky-thuat-quay": 34,
     "ugc": 4
@@ -227,7 +227,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 98,
+    "us_eu": 99,
     "korea": 10,
     "india": 3,
     "japan": 6,
@@ -571,6 +571,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "REMAKE_Byjxson_Quang_Cao_Dong_Ho_Bam_Gio",
         "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01"
+      ]
+    },
+    {
+      "handle": "@zhamyana",
+      "name": "Жамьяна_Осознанный_Стилист_Ugc",
+      "profile_url": "https://www.instagram.com/zhamyana/",
+      "video_count": 1,
+      "top_industry": "Kiến Trúc & Không Gian Sống",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40%D0%96%D0%B0%D0%BC%D1%8C%D1%8F%D0%BD%D0%B0_%D0%9E%D1%81%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D1%81%D1%82%D0%B8%D0%BB%D0%B8%D1%81%D1%82_UGC_DdeWMWLsaHA_Video_by_zhamyana/shot_01_mid.jpg",
+      "video_ids": [
+        "IG_@Жамьяна_Осознанный_стилист_UGC_DdeWMWLsaHA_Video_by_zhamyana"
       ]
     },
     {
@@ -1951,17 +1962,82 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "ideas": [
     {
-      "id": "IG_@Megan_Tan_DdgwV6dsxcS_Video_by_megantanhweewen",
-      "shortcode": "DdgwV6dsxcS",
-      "title_vi": "Video by megantanhweewen",
+      "id": "IG_@Жамьяна_Осознанный_стилист_UGC_DdeWMWLsaHA_Video_by_zhamyana",
+      "shortcode": "DdeWMWLsaHA",
+      "title_vi": "@Жамьяна_Осознанный_стилист_UGC - Video by zhamyana",
       "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
-      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
+      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Medium Tracking Shot",
       "shooting_style": {
         "id": "talking-head",
         "name": "Nói Trực Diện",
         "en_name": "Talking Head",
         "icon": "🗣️",
         "badge_color": "blue"
+      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Жамьяна_Осознанный_стилист_UGC",
+      "tech_tags": [
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot",
+        "Medium Tracking Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "creator": {
+        "raw": "@Жамьяна_Осознанный_стилист_UGC",
+        "name": "Жамьяна_Осознанный_Стилист_Ugc",
+        "handle": "@zhamyana",
+        "profile_url": "https://www.instagram.com/zhamyana/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DdeWMWLsaHA/",
+      "gdrive_folder": "https://drive.google.com/open?id=1p7Bq3B1-kQMM-vxmp4Iw83Kr7EUDp5Xy",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40%D0%96%D0%B0%D0%BC%D1%8C%D1%8F%D0%BD%D0%B0_%D0%9E%D1%81%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D1%81%D1%82%D0%B8%D0%BB%D0%B8%D1%81%D1%82_UGC_DdeWMWLsaHA_Video_by_zhamyana/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40%D0%96%D0%B0%D0%BC%D1%8C%D1%8F%D0%BD%D0%B0_%D0%9E%D1%81%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D1%81%D1%82%D0%B8%D0%BB%D0%B8%D1%81%D1%82_UGC_DdeWMWLsaHA_Video_by_zhamyana/shot_03_mid.jpg",
+        "video_url": "https://media.fedu.vn/videos/DdeWMWLsaHA.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdeWMWLsaHA.mp4",
+        "report_url": "reports/IG_@Жамьяна_Осознанный_стилист_UGC_DdeWMWLsaHA_Video_by_zhamyana.html",
+        "shots_count": 3,
+        "duration": "6s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
+      "id": "IG_@Megan_Tan_DdgwV6dsxcS_Video_by_megantanhweewen",
+      "shortcode": "DdgwV6dsxcS",
+      "title_vi": "Video by megantanhweewen",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
       },
       "industries": [
         {
