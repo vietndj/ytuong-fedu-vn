@@ -574,7 +574,51 @@ def build_database():
             print(f"WARNING: Could not scan R2 videos: {e}")
         return r2_map
 
+    def build_r2_image_set():
+        """Scan R2 images/ bucket and build set of relative paths"""
+        import subprocess
+        r2_set = set()
+        try:
+            result = subprocess.run(
+                ['rclone', 'lsf', 'r2:vietndjmedia/images/', '-R', '--files-only'],
+                capture_output=True, text=True, timeout=60
+            )
+            for line in result.stdout.strip().split('\n'):
+                line = line.strip()
+                if line:
+                    r2_set.add(line)
+        except Exception as e:
+            print(f"WARNING: Could not scan R2 images: {e}")
+        print(f"R2 image index: {len(r2_set)} files")
+        return r2_set
+
+    def _resolve_thumb_url(folder, shot_type, r2_image_set):
+        """Resolve thumbnail URL by checking R2 existence with .webp/.jpg fallback"""
+        # Candidate paths in priority order
+        candidates = [
+            f"{folder}/{shot_type}.webp",
+            f"{folder}/{shot_type}.jpg",
+            f"{folder}/extracted_shots/{shot_type}.webp",
+            f"{folder}/extracted_shots/{shot_type}.jpg",
+        ]
+        if "slide" in shot_type:
+            candidates.extend([
+                f"{folder}/carousel_slides/{shot_type}.webp",
+                f"{folder}/carousel_slides/{shot_type}.jpg",
+            ])
+        
+        for cand in candidates:
+            if cand in r2_image_set:
+                parts = cand.split('/')
+                encoded = '/'.join(urllib.parse.quote(p, safe='') for p in parts)
+                return f"https://media.fedu.vn/images/{encoded}"
+        
+        # Default: assume .webp at root of folder
+        enc_folder = urllib.parse.quote(folder, safe='')
+        return f"https://media.fedu.vn/images/{enc_folder}/{shot_type}.webp"
+
     r2_video_map = build_r2_video_map()
+    r2_image_set = build_r2_image_set()
     # Legacy fallback
     try:
         with open("/Users/vietmac/drive_links.json", "r") as f:
@@ -672,49 +716,57 @@ def build_database():
             print(f"DEBUG DAIKI: vid_id={vid_id}, folder={folder}, thumbs={thumbs}")
             
         if not thumbs or len(thumbs) < 2:
+            # Use R2-aware resolver instead of hardcoded .jpg URLs
             if "Carousel" in folder or "Carousel" in vid_id:
-                thumb_hook = f"https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/{folder}/slide_01_mid.jpg"
-                thumb_key = f"https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/{folder}/slide_03_mid.jpg"
+                thumb_hook = _resolve_thumb_url(folder, "slide_01_mid", r2_image_set)
+                thumb_key = _resolve_thumb_url(folder, "slide_03_mid", r2_image_set)
             else:
-                thumb_hook = f"https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/{folder}/shot_01_mid.jpg"
-                thumb_key = f"https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/{folder}/shot_03_mid.jpg"
+                thumb_hook = _resolve_thumb_url(folder, "shot_01_mid", r2_image_set)
+                thumb_key = _resolve_thumb_url(folder, "shot_03_mid", r2_image_set)
         else:
             thumb_hook = thumbs[0]
             thumb_key = thumbs[1] if len(thumbs) > 1 else thumbs[0]
 
-        # Chuẩn hóa thumbnail URL thành R2 CDN tuyệt đối và an toàn URL encoding
-        import urllib.parse
-        def normalize_thumb_url(u, fld, default_name):
+        # Normalize existing thumb URLs to media.fedu.vn with proper encoding
+        def normalize_thumb_url(u, fld, default_shot_type):
             if not u:
-                enc_fld = urllib.parse.quote(fld, safe='')
-                return f"https://media.fedu.vn/images/{enc_fld}/{default_name}"
+                return _resolve_thumb_url(fld, default_shot_type, r2_image_set)
+            if not u.startswith("http"):
+                # Relative path - resolve via R2
+                clean = u.lstrip("./")
+                if clean.startswith("images/"):
+                    clean = clean[7:]
+                parts = clean.split("/", 1)
+                if len(parts) == 2:
+                    fld_name = parts[0]
+                    fname = parts[1].rsplit(".", 1)[0]  # remove extension
+                    return _resolve_thumb_url(fld_name, fname, r2_image_set)
+                return _resolve_thumb_url(fld, default_shot_type, r2_image_set)
             
             p = urllib.parse.urlsplit(u)
-            # unquote and re-quote properly with safe='' for the folder part
             path_parts = urllib.parse.unquote(p.path).strip('/').split('/')
             
             if 'images' in path_parts:
                 img_idx = path_parts.index('images')
-                folder_part = ""
-                file_part = ""
-                if len(path_parts) > img_idx + 1:
-                    folder_part = urllib.parse.quote(path_parts[img_idx+1], safe='')
-                if len(path_parts) > img_idx + 2:
-                    file_part = urllib.parse.quote(path_parts[img_idx+2], safe='')
-                
-                safe_path = f"/images/{folder_part}"
-                if file_part:
-                    safe_path += f"/{file_part}"
-            else:
-                safe_path = urllib.parse.quote(urllib.parse.unquote(p.path), safe="/")
+                sub_parts = path_parts[img_idx+1:]
+                if len(sub_parts) >= 2:
+                    r2_folder = sub_parts[0]
+                    # Get the file stem (without extension) for R2 lookup
+                    file_name = sub_parts[-1]
+                    file_stem = file_name.rsplit(".", 1)[0]
+                    # Try to resolve with R2 (checks .webp/.jpg/subfolders)
+                    r2_path = "/".join(sub_parts[:-1]) if len(sub_parts) > 2 else r2_folder
+                    resolved = _resolve_thumb_url(r2_folder, file_stem, r2_image_set)
+                    return resolved
+                elif len(sub_parts) == 1:
+                    return _resolve_thumb_url(sub_parts[0], default_shot_type, r2_image_set)
+            
+            # Fallback: encode all segments
+            encoded = '/'.join(urllib.parse.quote(p, safe='') for p in path_parts)
+            return f"https://media.fedu.vn/{encoded}"
 
-            return f"https://media.fedu.vn{safe_path}"
-
-        thumb_hook = normalize_thumb_url(thumb_hook, folder, "shot_01_mid.jpg")
-        thumb_key = normalize_thumb_url(thumb_key, folder, "shot_03_mid.jpg")
-        
-        if "daiki" in vid_id.lower() or "Dbk4X4tjJ8A" in vid_id:
-            print(f"DEBUG DAIKI END: thumb_hook={thumb_hook}")
+        thumb_hook = normalize_thumb_url(thumb_hook, folder, "shot_01_mid")
+        thumb_key = normalize_thumb_url(thumb_key, folder, "shot_03_mid")
 
         vid_url = item.get("root_vid_rel") or item.get("main_vid_rel") or ""
         if not vid_url and item.get("all_vids"):
