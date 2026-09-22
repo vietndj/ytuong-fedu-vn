@@ -5527,23 +5527,20 @@ Sau khi tôi chọn hoặc điền 1 dòng, hãy xuất bản ngay 3 PHƯƠNG Á
 const rawVideoSrc = "https://ytuong.fedu.vn/api/video?id=13XSyxdBYMmtBAO6Wy2MqkDh4vAvp9bcH";
 let currentEndTime = null;
 
-function getCandidateUrls(src) {
-    if (!src) return [];
-    if (src.startsWith('http://') || src.startsWith('https://')) return [src];
-    let clean = src.replace(/^(\.\/|\.\.\/)+/, '').replace(/^(videos\/|reports\/)/, '');
-    return [
-        'https://ytuong.fedu.vn/api/video?id=1Ygj0ukLgqFBEQwgMXDXa5BkoEKm0XWqX"directVidLink").href = url;
+
+const player = document.getElementById('mainPlayer');
+if(player) {
+    player.src = rawVideoSrc;
+    const directLnk = document.getElementById('directVidLink');
+    if (directLnk) {
+        if (rawVideoSrc.includes('/api/video?id=')) {
+            directLnk.href = rawVideoSrc.replace('https://ytuong.fedu.vn/api/video?id=', 'https://drive.google.com/file/d/') + '/view';
+        } else {
+            directLnk.href = rawVideoSrc;
+        }
+    }
     player.load();
 }
-
-player.onerror = () => {
-    candidateIdx++;
-    if (candidateIdx < candidateUrls.length) {
-        loadVideoCandidate();
-    }
-};
-
-loadVideoCandidate();
 
 function playShot(startTime, endTime, label) {
     currentEndTime = (typeof endTime === 'number') ? endTime : null;
