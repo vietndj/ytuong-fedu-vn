@@ -40,6 +40,7 @@ export async function onRequest(context) {
 
   // Set permissive CORS
   newHeaders.set('access-control-allow-origin', '*');
+  newHeaders.set('X-Fedu-Proxy', 'v3');
   newHeaders.set('cross-origin-resource-policy', 'cross-origin');
   
   // Set aggressive edge caching for images/videos (Cloudflare will cache it for 1 year)
