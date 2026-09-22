@@ -87,6 +87,12 @@
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
+    <script>
+        window.hideReportSpinner = function() {
+            var spinner = document.getElementById('reportIframeSpinner');
+            if (spinner) spinner.style.display = 'none';
+        }
+    </script>
 </head>
 <body class="text-slate-200">
     <!-- HEADER 48px -->
