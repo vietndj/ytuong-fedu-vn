@@ -686,21 +686,29 @@ def build_database():
         import urllib.parse
         def normalize_thumb_url(u, fld, default_name):
             if not u:
-                return f"https://media.fedu.vn/images/{urllib.parse.quote(fld)}/{default_name}"
-            if not u.startswith("http"):
-                clean = u.lstrip("./")
-                if clean.startswith("images/"):
-                    clean = clean[7:]
-                return f"https://media.fedu.vn/images/{urllib.parse.quote(clean, safe='/')}"
-            # Encode non-ascii path characters in R2 URLs
+                enc_fld = urllib.parse.quote(fld, safe='')
+                return f"https://media.fedu.vn/images/{enc_fld}/{default_name}"
+            
             p = urllib.parse.urlsplit(u)
-            # Fix double encoding by unquoting first
-            safe_path = urllib.parse.quote(urllib.parse.unquote(p.path), safe="/")
-            # Replace old r2 dev url with media.fedu.vn
-            netloc = p.netloc
-            if netloc == "pub-447bd44dfdac4938912655c855b8631c.r2.dev":
-                netloc = "media.fedu.vn"
-            return urllib.parse.urlunsplit((p.scheme, netloc, safe_path, p.query, p.fragment))
+            # unquote and re-quote properly with safe='' for the folder part
+            path_parts = urllib.parse.unquote(p.path).strip('/').split('/')
+            
+            if 'images' in path_parts:
+                img_idx = path_parts.index('images')
+                folder_part = ""
+                file_part = ""
+                if len(path_parts) > img_idx + 1:
+                    folder_part = urllib.parse.quote(path_parts[img_idx+1], safe='')
+                if len(path_parts) > img_idx + 2:
+                    file_part = urllib.parse.quote(path_parts[img_idx+2], safe='')
+                
+                safe_path = f"/images/{folder_part}"
+                if file_part:
+                    safe_path += f"/{file_part}"
+            else:
+                safe_path = urllib.parse.quote(urllib.parse.unquote(p.path), safe="/")
+
+            return f"https://media.fedu.vn{safe_path}"
 
         thumb_hook = normalize_thumb_url(thumb_hook, folder, "shot_01_mid.jpg")
         thumb_key = normalize_thumb_url(thumb_key, folder, "shot_03_mid.jpg")
