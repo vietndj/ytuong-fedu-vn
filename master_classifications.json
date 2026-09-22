@@ -17545,14 +17545,14 @@
   },
   "IG_@หยก.ละกัน_ꔛ_DcA80Aez6Aw_Video_by_yok.lagun": {
     "id": "IG_@หยก.ละกัน_ꔛ_DcA80Aez6Aw_Video_by_yok.lagun",
-    "creator": "@หยก.ละกัน_ꔛ",
-    "creator_name": "หยก ละกัน_ꔛ",
-    "title": "@หยก.ละกัน_ꔛ - Video by yok.lagun",
+    "creator": "@yok.lagun",
+    "creator_name": "Yok Lagun",
+    "title": "5 Visual Hooks - 5 Kiểu Diễn Mở Màn Tự Nhiên Chặn Feed (@yok.lagun)",
     "shots_count": 10,
-    "duration": "20.0s",
+    "duration": "17.6s",
     "shooting_style": {
       "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
+      "name": "Chuyển Cảnh & Diễn Xuất",
       "icon": "⚡"
     },
     "industry": {
@@ -17560,34 +17560,44 @@
       "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "icon": "🎯"
     },
-    "purpose": "Hook, diễn",
+    "purpose": "5 Visual Hooks mở màn tự nhiên: POV đáy túi, kéo tay, vừa nói vừa ngồi xuống, hất vạt áo, nằm ngửa và góc nhìn chéo từ trên cao",
     "tech_tags": [
       "Hook",
       "Diễn",
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot"
+      "Tote Bag POV",
+      "Hand Reveal",
+      "Sitting Down Motion",
+      "Jacket Wipe Transition",
+      "Top-Down Intimate Angle",
+      "High-Angle 45°"
     ],
-    "logic_explanation": "Ghi chú người dùng: Hook, diễn. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
+    "logic_explanation": "Phân tích 5 kiểu diễn Hook thị giác từ creator @yok.lagun. Kỹ thuật tận dụng chuyển động tự nhiên của cơ thể và đồ vật đời thường để chặn feed mà không cần kỹ xảo phức tạp.",
     "is_excluded": false,
-    "quick_takeaway": "Hook, diễn",
+    "quick_takeaway": "5 chiêu diễn Hook động thái tự nhiên: Biến camera thành đồ vật trong túi xách, vừa nói vừa thả người ngồi xuống ghế lười, hoặc hất vạt áo khoác tạo swipe che khung hình thay vì kỹ xảo giả tạo.",
     "country": {
-      "id": "us_eu",
-      "name": "Âu Mỹ",
-      "en_name": "US & Europe",
-      "flag": "🇺🇸/🇪🇺",
-      "badge_color": "purple"
+      "id": "asia",
+      "name": "Thái Lan",
+      "en_name": "Thailand",
+      "flag": "🇹🇭",
+      "badge_color": "blue"
+    },
+    "transition_level": "Action Match Cut & Organic Wipe",
+    "is_ad_bot": false,
+    "fedu_optimization": {
+      "key_optimization_point": "⚡ Kết hợp 5 chiêu diễn Hook chuyển động tự nhiên (đáy túi vải POV, kéo tay che thấu kính, ngồi xuống ghế, hất áo khoác, góc cao nhìn xuống) ➔ Xóa tan cảm giác đơ cứng khi mở đầu video.",
+      "practice_focus": "⚡ Thực chiến: Thay vì đứng im trước máy rồi mới nói, hãy bấm máy trước và bắt đầu nói ngay khi đang thực hiện một hành động cơ thể (thả người ngồi xuống ghế, kéo tay hoặc hất áo) để giữ mắt người xem 2 giây đầu."
     }
   },
   "DcA80Aez6Aw": {
     "id": "IG_@หยก.ละกัน_ꔛ_DcA80Aez6Aw_Video_by_yok.lagun",
-    "creator": "@หยก.ละกัน_ꔛ",
-    "creator_name": "หยก ละกัน_ꔛ",
-    "title": "@หยก.ละกัน_ꔛ - Video by yok.lagun",
+    "creator": "@yok.lagun",
+    "creator_name": "Yok Lagun",
+    "title": "5 Visual Hooks - 5 Kiểu Diễn Mở Màn Tự Nhiên Chặn Feed (@yok.lagun)",
     "shots_count": 10,
-    "duration": "20.0s",
+    "duration": "17.6s",
     "shooting_style": {
       "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
+      "name": "Chuyển Cảnh & Diễn Xuất",
       "icon": "⚡"
     },
     "industry": {
@@ -17595,22 +17605,32 @@
       "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "icon": "🎯"
     },
-    "purpose": "Hook, diễn",
+    "purpose": "5 Visual Hooks mở màn tự nhiên: POV đáy túi, kéo tay, vừa nói vừa ngồi xuống, hất vạt áo, nằm ngửa và góc nhìn chéo từ trên cao",
     "tech_tags": [
       "Hook",
       "Diễn",
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot"
+      "Tote Bag POV",
+      "Hand Reveal",
+      "Sitting Down Motion",
+      "Jacket Wipe Transition",
+      "Top-Down Intimate Angle",
+      "High-Angle 45°"
     ],
-    "logic_explanation": "Ghi chú người dùng: Hook, diễn. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
+    "logic_explanation": "Phân tích 5 kiểu diễn Hook thị giác từ creator @yok.lagun. Kỹ thuật tận dụng chuyển động tự nhiên của cơ thể và đồ vật đời thường để chặn feed mà không cần kỹ xảo phức tạp.",
     "is_excluded": false,
-    "quick_takeaway": "Hook, diễn",
+    "quick_takeaway": "5 chiêu diễn Hook động thái tự nhiên: Biến camera thành đồ vật trong túi xách, vừa nói vừa thả người ngồi xuống ghế lười, hoặc hất vạt áo khoác tạo swipe che khung hình thay vì kỹ xảo giả tạo.",
     "country": {
-      "id": "us_eu",
-      "name": "Âu Mỹ",
-      "en_name": "US & Europe",
-      "flag": "🇺🇸/🇪🇺",
-      "badge_color": "purple"
+      "id": "asia",
+      "name": "Thái Lan",
+      "en_name": "Thailand",
+      "flag": "🇹🇭",
+      "badge_color": "blue"
+    },
+    "transition_level": "Action Match Cut & Organic Wipe",
+    "is_ad_bot": false,
+    "fedu_optimization": {
+      "key_optimization_point": "⚡ Kết hợp 5 chiêu diễn Hook chuyển động tự nhiên (đáy túi vải POV, kéo tay che thấu kính, ngồi xuống ghế, hất áo khoác, góc cao nhìn xuống) ➔ Xóa tan cảm giác đơ cứng khi mở đầu video.",
+      "practice_focus": "⚡ Thực chiến: Thay vì đứng im trước máy rồi mới nói, hãy bấm máy trước và bắt đầu nói ngay khi đang thực hiện một hành động cơ thể (thả người ngồi xuống ghế, kéo tay hoặc hất áo) để giữ mắt người xem 2 giây đầu."
     }
   }
 }
