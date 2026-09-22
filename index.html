@@ -237,15 +237,18 @@
     </div>
 
     <!-- 6. Delete Idea Modal -->
-    <div id="deleteIdeaModal" class="app-modal-backdrop flex items-center justify-center p-4">
-        <div class="bg-slate-900 border border-red-500/30 rounded-xl w-full max-w-sm p-6 relative">
-            <button onclick="closeDeleteIdeaModal()" class="absolute top-2 right-2 w-8 h-8 text-slate-400 hover:text-white flex items-center justify-center">✕</button>
-            <h3 class="text-xl font-bold text-red-500 mb-2">Xác nhận xóa?</h3>
-            <p class="text-sm text-slate-300 mb-4">Bạn có chắc chắn muốn xóa video <strong id="deleteIdeaTitleDisplay"></strong> khỏi phiên này không?</p>
+    <div id="deleteIdeaModal" class="app-modal-backdrop flex items-center justify-center p-4 z-[9999]">
+        <div class="bg-[#0f141e] border border-white/10 rounded-2xl w-full max-w-sm p-6 relative shadow-2xl">
+            <button onclick="closeDeleteIdeaModal()" class="absolute top-4 right-4 w-8 h-8 bg-white/5 hover:bg-white/10 rounded-full text-slate-400 hover:text-white flex items-center justify-center transition-colors">✕</button>
+            <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Xác nhận xóa?</h3>
+            <p class="text-sm text-slate-400 mb-6 leading-relaxed">Bạn có chắc chắn muốn xóa <strong class="text-white font-semibold" id="deleteIdeaTitleDisplay">video này</strong> khỏi phiên làm việc không? Hành động này không thể hoàn tác.</p>
             <input type="hidden" id="deleteIdeaTargetId">
-            <div class="flex gap-2 justify-end">
-                <button onclick="closeDeleteIdeaModal()" class="px-4 py-2 bg-slate-700 rounded hover:bg-slate-600">Hủy</button>
-                <button onclick="confirmDeleteIdea()" class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-500">Xóa Ngay</button>
+            <div class="grid grid-cols-2 gap-3">
+                <button onclick="closeDeleteIdeaModal()" class="w-full py-2.5 bg-white/5 hover:bg-white/10 text-white font-medium rounded-lg transition-colors">Hủy</button>
+                <button onclick="confirmDeleteIdea()" class="w-full py-2.5 bg-red-600 hover:bg-red-500 text-white font-medium rounded-lg transition-colors">Xóa Ngay</button>
             </div>
         </div>
     </div>
