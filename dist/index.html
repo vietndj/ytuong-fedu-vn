@@ -577,20 +577,7 @@
             }
         }
 
-        function showToast(msg) {
-            let toast = document.getElementById('feduGlobalToast');
-            if (!toast) {
-                toast = document.createElement('div');
-                toast.id = 'feduGlobalToast';
-                toast.className = 'fixed bottom-6 right-6 z-50 px-4 py-3 rounded-2xl bg-slate-900/95 text-slate-100 text-xs font-semibold border border-slate-700 shadow-2xl backdrop-blur-md flex items-center gap-2 transform translate-y-2 opacity-0 transition duration-300 pointer-events-none';
-                document.body.appendChild(toast);
-            }
-            toast.innerHTML = `<span>${msg}</span>`;
-            toast.classList.remove('translate-y-2', 'opacity-0');
-            clearTimeout(toast._timeout);
-            toast._timeout = setTimeout(() => {
-                toast.classList.add('translate-y-2', 'opacity-0');
-            }, 3200);
+        , 3200);
         }
 
         // Render Shooting Style Tabs (Horizontal Filter)
@@ -4184,5 +4171,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Pause video logic is already in original closeVideoModal
         };
     </script>
+
+    <!-- Global Toast Notification -->
+    <div id="toastNotification" class="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-2xl bg-slate-900/95 text-slate-100 text-sm font-semibold border border-slate-700 shadow-2xl backdrop-blur-md flex items-center gap-2 transform translate-y-12 opacity-0 pointer-events-none transition-all duration-300">
+        <span id="toastIcon">✅</span>
+        <span id="toastMsg">Thành công!</span>
+    </div>
+
 </body>
 </html>
