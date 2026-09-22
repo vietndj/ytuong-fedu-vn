@@ -611,8 +611,17 @@
                 </div>
             </div>
 
+            <div class="flex flex-wrap items-center gap-2 text-xs mt-2">
+                <button 
+                    onclick="document.getElementById('deepFiltersPanel').classList.toggle('hidden')" 
+                    class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 text-xs font-medium transition flex items-center gap-2 cursor-pointer"
+                >
+                    <span>🎛️ Bộ lọc nâng cao</span>
+                </button>
+            </div>
+
             <!-- Deep Filters -->
-            <div class="flex flex-wrap items-center gap-2 text-xs">
+            <div id="deepFiltersPanel" class="hidden flex flex-wrap items-center gap-2 text-xs mt-2">
                 
                 <!-- Filter by Technique -->
                 <select id="techFilter" onchange="handleFilterChange()" class="bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1.5 text-slate-300 focus:outline-none focus:border-sky-400">
