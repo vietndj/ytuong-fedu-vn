@@ -1993,6 +1993,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia",
         "name": "Thái Lan",
@@ -2066,6 +2067,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2136,6 +2138,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia",
         "name": "Châu Á",
@@ -2203,6 +2206,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -2270,6 +2274,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia",
         "name": "Châu Á",
@@ -2338,6 +2343,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2405,6 +2411,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2470,6 +2477,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2537,6 +2545,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2603,6 +2612,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia",
         "name": "Châu Á",
@@ -2670,6 +2680,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2740,6 +2751,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2809,6 +2821,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2879,6 +2892,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2949,6 +2963,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3019,6 +3034,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3090,6 +3106,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3159,6 +3176,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3229,6 +3247,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3299,6 +3318,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3368,6 +3388,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3436,6 +3457,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3506,6 +3528,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3577,6 +3600,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3648,6 +3672,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3717,6 +3742,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3783,6 +3809,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3854,6 +3881,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3927,6 +3955,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3999,6 +4028,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4069,6 +4099,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4142,6 +4173,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4215,6 +4247,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4287,6 +4320,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4355,6 +4389,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4426,6 +4461,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4491,6 +4527,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4557,6 +4594,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4629,6 +4667,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4701,6 +4740,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4773,6 +4813,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4845,6 +4886,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4917,6 +4959,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -4989,6 +5032,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5061,6 +5105,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5133,6 +5178,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5205,6 +5251,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5277,6 +5324,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5349,6 +5397,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5421,6 +5470,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5493,6 +5543,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5565,6 +5616,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5637,6 +5689,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5709,6 +5762,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5781,6 +5835,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5853,6 +5908,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5925,6 +5981,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -5997,6 +6054,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -6062,6 +6120,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -6127,6 +6186,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6198,6 +6258,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "latin_brazil",
         "name": "Brazil",
@@ -6274,6 +6335,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "russia",
         "name": "Nga",
@@ -6348,6 +6410,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6422,6 +6485,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -6491,6 +6555,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us",
         "name": "Hoa Kỳ",
@@ -6559,6 +6624,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vn",
         "name": "Việt Nam",
@@ -6629,6 +6695,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vn",
         "name": "Việt Nam (Hà Nội)",
@@ -6700,6 +6767,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "au",
         "name": "Úc",
@@ -6771,6 +6839,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us",
         "name": "Hoa Kỳ",
@@ -6838,6 +6907,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6908,6 +6978,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vn",
         "name": "Việt Nam",
@@ -6975,6 +7046,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia",
         "name": "Đông Á (Thượng Hải, Trung Quốc)",
@@ -7047,6 +7119,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "kr",
         "name": "Hàn Quốc",
@@ -7114,6 +7187,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -7188,6 +7262,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "russia",
         "name": "Nga / Đông Âu",
@@ -7251,6 +7326,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7308,6 +7384,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7365,6 +7442,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7422,6 +7500,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7479,6 +7558,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -7536,6 +7616,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7593,6 +7674,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -7650,6 +7732,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7707,6 +7790,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7764,6 +7848,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7821,6 +7906,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7878,6 +7964,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7935,6 +8022,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7992,6 +8080,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8049,6 +8138,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8114,6 +8204,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -8189,6 +8280,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -8262,6 +8354,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -8335,6 +8428,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -8409,6 +8503,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -8484,6 +8579,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8558,6 +8654,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8630,6 +8727,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8703,6 +8801,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -8777,6 +8876,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8851,6 +8951,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Quốc Tế (Kazakhstan)",
@@ -8926,6 +9027,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8993,6 +9095,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9056,6 +9159,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9130,6 +9234,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9204,6 +9309,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Toàn Cầu",
@@ -9277,6 +9383,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á (Indonesia)",
@@ -9351,6 +9458,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9425,6 +9533,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "middle_east",
         "name": "Trung Đông / Nam Á",
@@ -9499,6 +9608,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "spain",
         "name": "Tây Ban Nha",
@@ -9574,6 +9684,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -9649,6 +9760,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ (Áo)",
@@ -9724,6 +9836,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9800,6 +9913,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -9876,6 +9990,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ (Tây Ban Nha)",
@@ -9954,6 +10069,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10026,6 +10142,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10098,6 +10215,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10170,6 +10288,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10242,6 +10361,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10314,6 +10434,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -10383,6 +10504,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10455,6 +10577,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10527,6 +10650,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10599,6 +10723,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -10671,6 +10796,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10746,6 +10872,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10819,6 +10946,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -10891,6 +11019,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -10963,6 +11092,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11035,6 +11165,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11107,6 +11238,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11179,6 +11311,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -11253,6 +11386,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -11326,6 +11460,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -11398,6 +11533,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11467,6 +11603,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -11536,6 +11673,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -11605,6 +11743,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -11677,6 +11816,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -11746,6 +11886,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -11818,6 +11959,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -11890,6 +12032,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -11962,6 +12105,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -12036,6 +12180,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -12104,6 +12249,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12167,6 +12313,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12230,6 +12377,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -12299,6 +12447,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12371,6 +12520,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12443,6 +12593,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12515,6 +12666,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12587,6 +12739,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12661,6 +12814,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12734,6 +12888,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -12806,6 +12961,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12875,6 +13031,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -12944,6 +13101,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -13016,6 +13174,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13082,6 +13241,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13145,6 +13305,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13217,6 +13378,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -13289,6 +13451,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13358,6 +13521,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13427,6 +13591,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13496,6 +13661,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -13567,6 +13733,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13640,6 +13807,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13709,6 +13877,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13778,6 +13947,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13850,6 +14020,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13922,6 +14093,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13991,6 +14163,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14060,6 +14233,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14133,6 +14307,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14202,6 +14377,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14274,6 +14450,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -14346,6 +14523,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -14420,6 +14598,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14492,6 +14671,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14561,6 +14741,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -14630,6 +14811,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14702,6 +14884,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -14771,6 +14954,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14843,6 +15027,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14915,6 +15100,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -14983,6 +15169,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -15052,6 +15239,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15121,6 +15309,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15190,6 +15379,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15261,6 +15451,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15331,6 +15522,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15400,6 +15592,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15472,6 +15665,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15545,6 +15739,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15614,6 +15809,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15683,6 +15879,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15752,6 +15949,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15824,6 +16022,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15896,6 +16095,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15959,6 +16159,7 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -16022,6 +16223,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -16094,6 +16296,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16163,6 +16366,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16232,6 +16436,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16301,6 +16506,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -16372,6 +16578,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16445,6 +16652,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16517,6 +16725,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -16589,6 +16798,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -16661,6 +16871,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16733,6 +16944,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -16807,6 +17019,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16880,6 +17093,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16952,6 +17166,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -17024,6 +17239,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -17096,6 +17312,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -17168,6 +17385,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",

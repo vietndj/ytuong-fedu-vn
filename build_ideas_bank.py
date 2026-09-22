@@ -841,6 +841,7 @@ def build_database():
             },
             "industries": [master.get("industry")] if master and master.get("industry") else [],
             "x_factors": sorted(list(normalized_x_factors)),
+            "tags": master.get("tags", []) if master else [],
             "country": {
                 "id": country_obj["id"],
                 "name": country_obj["name"],

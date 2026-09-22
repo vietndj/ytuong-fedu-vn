@@ -102,7 +102,7 @@
         </div>
         
         <!-- Shooting Styles Tabs (Horizontal Scroll) -->
-        <div id="shootingStyleTabsContainer" class="flex-1 flex items-center overflow-x-auto no-scrollbar gap-1 px-2 h-full py-1">
+        <div id="shootingStyleTabsContainer" class="hidden flex-1 flex items-center overflow-x-auto no-scrollbar gap-1 px-2 h-full py-1">
             <!-- Tabs will be rendered here by JS -->
         </div>
         
@@ -270,22 +270,15 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <div>
-                        <label class="block font-semibold text-slate-300 mb-1">Ngành Nghề:</label>
-                        <select id="editIdeaIndustry" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400"></select>
-                    </div>
-                    <div>
-                        <label class="block font-semibold text-slate-300 mb-1">Kiểu Quay:</label>
-                        <select id="editIdeaStyle" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400"></select>
-                    </div>
-                    <div>
-                        <label class="block font-semibold text-slate-300 mb-1">Quốc Gia:</label>
-                        <select id="editIdeaCountry" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400"></select>
-                    </div>
+                
+                <div>
+                    <label class="block font-semibold text-slate-300 mb-1">Tags Phân Loại (Ngăn cách bởi dấu phẩy):</label>
+                    <input type="text" id="editIdeaTags" placeholder="VD: F&B, Review, Cinematic, Việt Nam" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400 font-mono">
+                    <p class="text-[10px] text-slate-500 mt-1">Hệ thống chuyển sang dùng thẻ Tag mở hoàn toàn thay vì các danh mục cố định.</p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+
                     <div>
                         <label class="block font-semibold text-slate-300 mb-1">Kỹ Thuật Quay Dựng (Key Tech):</label>
                         <input type="text" id="editIdeaKeyTech" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-sky-400 font-mono">
@@ -346,7 +339,7 @@
         </div>
     </div>
 
-    <script src="ideas_data.js?v=1790086209"></script>
+    <script src="ideas_data.js?v=1790087818"></script>
     <script>
 // State Management
         let appState = {
@@ -355,6 +348,7 @@
             currentIndustry: 'all',
             currentCountry: 'all',
             currentXFactor: 'all',
+            currentTag: 'all',
             currentCreator: '',
             currentCreatorName: '',
             currentTransitionLevel: 'all', // 'all', 'Chuyển cảnh Level 1', 'Chuyển cảnh Level 2'
@@ -935,11 +929,14 @@
             appState.showUgc = false;
             appState.currentCountry = 'all';
             appState.currentXFactor = 'all';
+            appState.currentTag = 'all';
             appState.currentPage = 1;
             const countrySelect = document.getElementById('countryFilter');
             if (countrySelect) countrySelect.value = '';
             const xfSelect = document.getElementById('xFactorFilter');
             if (xfSelect) xfSelect.value = '';
+            const tagSelect = document.getElementById('tagSelect');
+            if (tagSelect) tagSelect.value = 'all';
 
             renderIndustryPills();
             renderCountryTabs();
@@ -2157,33 +2154,13 @@
             setVal('editIdeaKeyTech', item.key_tech || '');
             setVal('editIdeaPurpose', item.purpose || '');
             setVal('editIdeaVideoUrl', item.media?.video_url || '');
+            
             setVal('editIdeaReportUrl', item.media?.report_url || '');
             setVal('editIdeaIgUrl', item.ig_url || '');
+            setVal('editIdeaTags', (item.tags || []).join(', '));
 
-            // Danh mục ngành nghề
-            const indSelect = document.getElementById('editIdeaIndustry');
-            if (indSelect) {
-                indSelect.innerHTML = (window.FEDU_IDEAS_DATABASE.industries || []).map(ind => 
-                    `<option value="${ind.id}" ${(item.industries || []).some(i => i.id === ind.id) ? "selected" : ""}>${ind.icon} ${ind.name}</option>`
-                ).join('');
-            }
 
-            // Kiểu quay
-            const styleSelect = document.getElementById('editIdeaStyle');
-            if (styleSelect) {
-                styleSelect.innerHTML = (window.FEDU_IDEAS_DATABASE.shooting_styles || []).map(s => 
-                    `<option value="${s.id}" ${item.shooting_style?.id === s.id ? 'selected' : ''}>${s.icon} ${s.name}</option>`
-                ).join('');
-            }
-
-            // Quốc gia
-            const countrySelect = document.getElementById('editIdeaCountry');
-            if (countrySelect) {
-                countrySelect.innerHTML = (window.FEDU_IDEAS_DATABASE.countries || []).map(c => 
-                    `<option value="${c.id}" ${item.country?.id === c.id ? 'selected' : ''}>${c.flag} ${c.name}</option>`
-                ).join('');
-            }
-
+            
             // Trạng thái ẩn/hiện
             const isExcluded = item.is_excluded || appState.localExcludedIds.has(item.id);
             const exclCb = document.getElementById('editIdeaExcluded'); if (exclCb) exclCb.checked = isExcluded;
@@ -2210,16 +2187,12 @@
             const newPurpose = getVal('editIdeaPurpose') || item.purpose;
             const newVideoUrl = getVal('editIdeaVideoUrl') || item.media?.video_url;
             const newReportUrl = getVal('editIdeaReportUrl') || item.media?.report_url;
+            
             const newIgUrl = getVal('editIdeaIgUrl') || item.ig_url;
-            const newIndustryId = getValRaw('editIdeaIndustry');
-            const newStyleId = getValRaw('editIdeaStyle');
-            const newCountryId = getValRaw('editIdeaCountry');
+            const newTags = getVal('editIdeaTags').split(',').map(t => t.trim()).filter(Boolean);
+            
             const exclEl = document.getElementById('editIdeaExcluded');
             const shouldExclude = exclEl ? (exclEl.value === 'true' || exclEl.checked) : item.is_excluded;
-
-            const indObj = window.FEDU_IDEAS_DATABASE.industries.find(i => i.id === newIndustryId) || (item.industries ? item.industries[0] : null);
-            const styleObj = (window.FEDU_IDEAS_DATABASE.shooting_styles || []).find(s => s.id === newStyleId) || item.shooting_style;
-            const countryObj = (window.FEDU_IDEAS_DATABASE.countries || []).find(c => c.id === newCountryId) || item.country;
 
             // Cập nhật bộ nhớ
             item.title_vi = newTitle;
@@ -2233,10 +2206,9 @@
             item.media.video_url = newVideoUrl;
             item.media.report_url = newReportUrl;
             item.ig_url = newIgUrl;
-            item.industries = [indObj];
-            item.shooting_style = styleObj;
-            item.country = countryObj;
+            item.tags = newTags;
             item.is_excluded = shouldExclude;
+
 
             if (shouldExclude) {
                 appState.localExcludedIds.add(id);
@@ -3118,6 +3090,7 @@
             appState.currentIndustry = 'all';
             appState.currentCountry = 'all';
             appState.currentXFactor = 'all';
+            appState.currentTag = 'all';
             appState.currentCreator = '';
             appState.currentCreatorName = '';
             appState.currentTech = '';
@@ -3156,6 +3129,8 @@
             if (countrySelect) countrySelect.value = '';
             const xfSelect = document.getElementById('xFactorFilter');
             if (xfSelect) xfSelect.value = '';
+            const tagSelect = document.getElementById('tagSelect');
+            if (tagSelect) tagSelect.value = 'all';
             
             // Đóng panel accordion
             appState.openFilterAccordion = null;
@@ -3461,6 +3436,7 @@
             appState.currentIndustry = 'all';
             appState.currentCountry = 'all';
             appState.currentXFactor = 'all';
+            appState.currentTag = 'all';
             appState.currentCreator = '';
             appState.currentCreatorName = '';
             appState.currentTech = '';
