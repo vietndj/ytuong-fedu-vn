@@ -82,7 +82,8 @@ function loadVideoUrl(url, statusText) {
         player.src = url;
         player.load();
     }
-    document.getElementById("directVidLink").href = url;
+    const directLink = document.getElementById("directVidLink");
+    if (directLink) directLink.href = url;
     if (statusText) {
         document.getElementById("shotStatusTag").innerText = statusText;
     }
