@@ -17644,71 +17644,87 @@
   "IG_@pauline_폴린_ᥫ᭡。༘⋆✿_DdlWfRSMioH_Video_by_pau.liine": {
     "id": "IG_@pauline_폴린_ᥫ᭡。༘⋆✿_DdlWfRSMioH_Video_by_pau.liine",
     "creator": "@pauline_폴린_ᥫ᭡。༘⋆✿",
-    "creator_name": "Pauline_폴린_ᥫ᭡。༘⋆✿",
-    "title": "@pauline_폴린_ᥫ᭡。༘⋆✿ - Video by pau.liine",
-    "shots_count": 2,
-    "duration": "4.0s",
+    "creator_name": "Pauline",
+    "title": "Tạo Dáng Thần Thái & Chuyển Cảnh Lookbook Sân Ga (17 Phân Cảnh)",
+    "shots_count": 17,
+    "duration": "20.2s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
     },
     "industry": {
-      "id": "ky-thuat-quay",
-      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
-      "icon": "🎯"
+      "id": "thoi-trang",
+      "name": "Thời Trang & Phụ Kiện",
+      "icon": "👔"
     },
-    "purpose": "Thần thái",
+    "purpose": "Hướng dẫn người mới (tân thủ) tạo dáng liên hoàn, làm chủ thần thái và kỹ thuật chuyển cảnh nhịp thở trên bối cảnh sân ga.",
     "tech_tags": [
-      "Tân Thủ",
-      "Thần Thái Chuỷen Cảnh",
       "Thần Thái",
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot"
+      "Chuyển Cảnh",
+      "Tân Thủ",
+      "Tạo Dáng Mẫu",
+      "Lookbook Sân Ga",
+      "Kính Râm Phụ Kiện",
+      "Breathe In Breathe Out",
+      "Pose by Pose",
+      "Match Cut Jump Cut",
+      "Lighting Sân Ga"
     ],
-    "logic_explanation": "Ghi chú người dùng: Thần thái. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+    "key_optimization_point": "⚡ Dùng cử chỉ vi mô (vén tóc, chỉnh ve áo, kéo kính) làm nhịp đệm ➔ Phối hợp co giãn góc Cận - Toàn (Breathe in - Breathe out) loại bỏ 100% cảm giác gượng gạo trước ống kính.",
+    "practice_focus": "⚡ Thực chiến: Tạo dáng liên hoàn 17 mốc cho người mới (Tân thủ), tận dụng nguồn sáng xiên tự nhiên tại sân ga và chiếc kính râm để biến hóa thần thái từ nhẹ nhàng sang cool ngầu.",
+    "logic_explanation": "Video mẫu thời trang bối cảnh sân ga tàu điện, tập trung vào thần thái, cử chỉ cơ thể và kỹ thuật chuyển cảnh co giãn góc máy cho tân thủ.",
     "is_excluded": false,
-    "quick_takeaway": "Thần thái",
+    "quick_takeaway": "⚡ Cử chỉ vi mô vén tóc & chỉnh ve áo làm mồi chuyển nhịp ➔ Co giãn góc Cận - Toàn (Breathe in - Breathe out) định hình thần thái tự nhiên cho tân thủ.",
     "country": {
-      "id": "us_eu",
-      "name": "Âu Mỹ",
-      "en_name": "US & Europe",
-      "flag": "🇺🇸/🇪🇺",
-      "badge_color": "purple"
+      "id": "kr",
+      "name": "Hàn Quốc",
+      "en_name": "Korea",
+      "flag": "🇰🇷",
+      "badge_color": "blue"
     }
   },
   "DdlWfRSMioH": {
     "id": "IG_@pauline_폴린_ᥫ᭡。༘⋆✿_DdlWfRSMioH_Video_by_pau.liine",
     "creator": "@pauline_폴린_ᥫ᭡。༘⋆✿",
-    "creator_name": "Pauline_폴린_ᥫ᭡。༘⋆✿",
-    "title": "@pauline_폴린_ᥫ᭡。༘⋆✿ - Video by pau.liine",
-    "shots_count": 2,
-    "duration": "4.0s",
+    "creator_name": "Pauline",
+    "title": "Tạo Dáng Thần Thái & Chuyển Cảnh Lookbook Sân Ga (17 Phân Cảnh)",
+    "shots_count": 17,
+    "duration": "20.2s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
     },
     "industry": {
-      "id": "ky-thuat-quay",
-      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
-      "icon": "🎯"
+      "id": "thoi-trang",
+      "name": "Thời Trang & Phụ Kiện",
+      "icon": "👔"
     },
-    "purpose": "Thần thái",
+    "purpose": "Hướng dẫn người mới (tân thủ) tạo dáng liên hoàn, làm chủ thần thái và kỹ thuật chuyển cảnh nhịp thở trên bối cảnh sân ga.",
     "tech_tags": [
       "Thần Thái",
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot"
+      "Chuyển Cảnh",
+      "Tân Thủ",
+      "Tạo Dáng Mẫu",
+      "Lookbook Sân Ga",
+      "Kính Râm Phụ Kiện",
+      "Breathe In Breathe Out",
+      "Pose by Pose",
+      "Match Cut Jump Cut",
+      "Lighting Sân Ga"
     ],
-    "logic_explanation": "Ghi chú người dùng: Thần thái. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+    "key_optimization_point": "⚡ Dùng cử chỉ vi mô (vén tóc, chỉnh ve áo, kéo kính) làm nhịp đệm ➔ Phối hợp co giãn góc Cận - Toàn (Breathe in - Breathe out) loại bỏ 100% cảm giác gượng gạo trước ống kính.",
+    "practice_focus": "⚡ Thực chiến: Tạo dáng liên hoàn 17 mốc cho người mới (Tân thủ), tận dụng nguồn sáng xiên tự nhiên tại sân ga và chiếc kính râm để biến hóa thần thái từ nhẹ nhàng sang cool ngầu.",
+    "logic_explanation": "Video mẫu thời trang bối cảnh sân ga tàu điện, tập trung vào thần thái, cử chỉ cơ thể và kỹ thuật chuyển cảnh co giãn góc máy cho tân thủ.",
     "is_excluded": false,
-    "quick_takeaway": "Thần thái",
+    "quick_takeaway": "⚡ Cử chỉ vi mô vén tóc & chỉnh ve áo làm mồi chuyển nhịp ➔ Co giãn góc Cận - Toàn (Breathe in - Breathe out) định hình thần thái tự nhiên cho tân thủ.",
     "country": {
-      "id": "us_eu",
-      "name": "Âu Mỹ",
-      "en_name": "US & Europe",
-      "flag": "🇺🇸/🇪🇺",
-      "badge_color": "purple"
+      "id": "kr",
+      "name": "Hàn Quốc",
+      "en_name": "Korea",
+      "flag": "🇰🇷",
+      "badge_color": "blue"
     }
   },
   "IG_@Mario_Prawira_Schönmann_DdXdf-aBCMu_Video_by_mario.prawira": {
