@@ -16,7 +16,13 @@ def get_drive_folders():
     return folders
 
 def is_valid_folder(folder_name):
-    return not folder_name.startswith("NotebookLM") and not folder_name.startswith("Practice_") and not folder_name.startswith("PRACTICE_")
+    invalid_prefixes = ("NotebookLM", "Practice_", "PRACTICE_", "LAZADA_", "SHOPEE_")
+    invalid_substrings = ("_video_Video_video", "_video_video", "_video_ig")
+    if any(folder_name.startswith(p) for p in invalid_prefixes):
+        return False
+    if any(s in folder_name for s in invalid_substrings):
+        return False
+    return True
 
 def extract_id_from_folder(folder_name):
     # Dựa vào folder_name để lấy ra video id hợp lệ

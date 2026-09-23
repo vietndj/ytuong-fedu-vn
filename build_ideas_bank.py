@@ -330,7 +330,7 @@ def clean_creator_info(creator_raw, ig_url="", vid_id="", item=None):
         if m:
             handle = "@" + m.group(1)
         else:
-            m_id = re.search(r"IG_@([a-zA-Z0-9._]+)_", vid_id)
+            m_id = re.search(r"IG_@([^\s_][^_]*)_", vid_id)
             if m_id:
                 handle = "@" + m_id.group(1)
     
@@ -643,8 +643,7 @@ def build_database():
                         return f"https://media.fedu.vn/images/{encoded}"
 
         # Default: assume .webp at root of folder
-        enc_folder = urllib.parse.quote(folder or '', safe='')
-        return f"https://media.fedu.vn/images/{enc_folder}/{shot_type}.webp"
+        return ""
     # Legacy fallback
     try:
         with open("/Users/vietmac/drive_links.json", "r") as f:
