@@ -18565,5 +18565,75 @@
     "youtube_id": "ujmNYgqWNAI",
     "youtube_url": "https://youtu.be/ujmNYgqWNAI",
     "youtube_embed": "https://www.youtube.com/embed/ujmNYgqWNAI"
+  },
+  "IG_@ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand": {
+    "id": "IG_@ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand",
+    "creator": "@ulanzi",
+    "creator_name": "Ulanzi",
+    "title": "@ulanzi - Magnetic Phone Tripod Desktop Stand",
+    "shots_count": 1,
+    "duration": "2.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ulanzi",
+    "tech_tags": [
+      "Establishing Hook Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "VFbhow8GDWQ",
+    "youtube_url": "https://youtu.be/VFbhow8GDWQ",
+    "youtube_embed": "https://www.youtube.com/embed/VFbhow8GDWQ"
+  },
+  "oUVbZ": {
+    "id": "IG_@ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand",
+    "creator": "@ulanzi",
+    "creator_name": "Ulanzi",
+    "title": "@ulanzi - Magnetic Phone Tripod Desktop Stand",
+    "shots_count": 1,
+    "duration": "2.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ulanzi",
+    "tech_tags": [
+      "Establishing Hook Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "VFbhow8GDWQ",
+    "youtube_url": "https://youtu.be/VFbhow8GDWQ",
+    "youtube_embed": "https://www.youtube.com/embed/VFbhow8GDWQ"
   }
 }
