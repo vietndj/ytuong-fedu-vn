@@ -17912,27 +17912,27 @@
     "creator_name": "Mario Prawira",
     "title": "Mario Prawira • Kỹ Thuật Match-Cut Before/After Bằng Đạo Cụ Cành Hoa",
     "shots_count": 18,
-    "duration": "21.7s",
+    "duration": "36.0s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transitions)",
-      "icon": "🎬"
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
     },
     "industry": {
-      "id": "am-thuc",
-      "name": "F&B / Nhà Hàng & Cafe",
-      "icon": "☕"
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
     },
-    "purpose": "Hướng dẫn kỹ thuật chuyển cảnh Before/After bằng đạo cụ cành hoa cho F&B, nội thất và dịch vụ.",
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mario.prawira",
     "tech_tags": [
-      "Match-Cut Wipe",
-      "Visual Anchor",
-      "Prop Transition",
-      "In-Camera Reveal"
+      "Establishing Hook Shot",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
     ],
-    "logic_explanation": "Kỹ thuật Match-Cut Before/After bằng đạo cụ dành cho ngành F&B, Decor và Thiết Kế Không Gian.",
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Cầm cành hoa hất che kín ống kính ở công trường Before ➔ Rút hoa ra ở không gian After hoàn thiện để tạo cú lột xác thị giác ngoạn mục.",
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -17947,27 +17947,27 @@
     "creator_name": "Mario Prawira",
     "title": "Mario Prawira • Kỹ Thuật Match-Cut Before/After Bằng Đạo Cụ Cành Hoa",
     "shots_count": 18,
-    "duration": "21.7s",
+    "duration": "36.0s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transitions)",
-      "icon": "🎬"
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
     },
     "industry": {
-      "id": "am-thuc",
-      "name": "F&B / Nhà Hàng & Cafe",
-      "icon": "☕"
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
     },
-    "purpose": "Hướng dẫn kỹ thuật chuyển cảnh Before/After bằng đạo cụ cành hoa cho F&B, nội thất và dịch vụ.",
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mario.prawira",
     "tech_tags": [
-      "Match-Cut Wipe",
-      "Visual Anchor",
-      "Prop Transition",
-      "In-Camera Reveal"
+      "Establishing Hook Shot",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
     ],
-    "logic_explanation": "Kỹ thuật Match-Cut Before/After bằng đạo cụ dành cho ngành F&B, Decor và Thiết Kế Không Gian.",
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Cầm cành hoa hất che kín ống kính ở công trường Before ➔ Rút hoa ra ở không gian After hoàn thiện để tạo cú lột xác thị giác ngoạn mục.",
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -18427,5 +18427,73 @@
     "youtube_id": "GV5S7So_VTc",
     "youtube_url": "https://youtu.be/GV5S7So_VTc",
     "youtube_embed": "https://www.youtube.com/embed/GV5S7So_VTc"
+  },
+  "IG_@creator_video_Video_video": {
+    "id": "IG_@creator_video_Video_video",
+    "creator": "@creator",
+    "creator_name": "Creator",
+    "title": "@creator - Video video",
+    "shots_count": 0,
+    "duration": "0.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "thuong-hieu",
+      "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+      "icon": "💼"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
+    "tech_tags": [
+      "Cinematic Lighting",
+      "Composition Mastery",
+      "Visual Rhythm"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+    "is_excluded": false,
+    "quick_takeaway": "Ý tưởng quay dựng 0 phân cảnh chuẩn điện ảnh 9:16.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "video": {
+    "id": "IG_@creator_video_Video_video",
+    "creator": "@creator",
+    "creator_name": "Creator",
+    "title": "@creator - Video video",
+    "shots_count": 0,
+    "duration": "0.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "thuong-hieu",
+      "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+      "icon": "💼"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
+    "tech_tags": [
+      "Cinematic Lighting",
+      "Composition Mastery",
+      "Visual Rhythm"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+    "is_excluded": false,
+    "quick_takeaway": "Ý tưởng quay dựng 0 phân cảnh chuẩn điện ảnh 9:16.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }
