@@ -1,9 +1,6 @@
 {
   "name": "ytuong-fedu-vn-pages",
   "compatibility_date": "2026-09-15",
-  "pages_build_output_dir": "dist",
-  "assets": {
-    "directory": "dist"
-  }
+  "pages_build_output_dir": "dist"
 }
 
