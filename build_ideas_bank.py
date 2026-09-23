@@ -592,6 +592,19 @@ def build_database():
         print(f"R2 image index: {len(r2_set)} files")
         return r2_set
 
+    r2_video_map = build_r2_video_map()
+    r2_image_set = build_r2_image_set()
+
+    # Index R2 images by shortcode for robust fallback when folder names differ slightly
+    r2_code_map = {}
+    for img_path in r2_image_set:
+        m = re.search(r'([A-Za-z0-9_-]{11})', img_path)
+        if m:
+            code = m.group(1)
+            if code not in r2_code_map:
+                r2_code_map[code] = []
+            r2_code_map[code].append(img_path)
+
     def _resolve_thumb_url(folder, shot_type, r2_image_set):
         """Resolve thumbnail URL by checking R2 existence with .webp/.jpg fallback"""
         # Candidate paths in priority order
@@ -613,12 +626,25 @@ def build_database():
                 encoded = '/'.join(urllib.parse.quote(p, safe='') for p in parts)
                 return f"https://media.fedu.vn/images/{encoded}"
         
-        # Default: assume .webp at root of folder
-        enc_folder = urllib.parse.quote(folder, safe='')
-        return f"https://media.fedu.vn/images/{enc_folder}/{shot_type}.webp"
+        # Fallback via shortcode lookup if folder name in database didn't match R2 folder name exactly
+        if folder:
+            code_match = re.search(r'([A-Za-z0-9_-]{11})', folder)
+            if code_match:
+                sc = code_match.group(1)
+                if sc in r2_code_map:
+                    for path in r2_code_map[sc]:
+                        if shot_type in path:
+                            parts = path.split('/')
+                            encoded = '/'.join(urllib.parse.quote(p, safe='') for p in parts)
+                            return f"https://media.fedu.vn/images/{encoded}"
+                    if r2_code_map[sc]:
+                        parts = r2_code_map[sc][0].split('/')
+                        encoded = '/'.join(urllib.parse.quote(p, safe='') for p in parts)
+                        return f"https://media.fedu.vn/images/{encoded}"
 
-    r2_video_map = build_r2_video_map()
-    r2_image_set = build_r2_image_set()
+        # Default: assume .webp at root of folder
+        enc_folder = urllib.parse.quote(folder or '', safe='')
+        return f"https://media.fedu.vn/images/{enc_folder}/{shot_type}.webp"
     # Legacy fallback
     try:
         with open("/Users/vietmac/drive_links.json", "r") as f:
@@ -731,6 +757,12 @@ def build_database():
         def normalize_thumb_url(u, fld, default_shot_type):
             if not u or "api/video" in u or "drive.google.com" in u or "driveusercontent" in u:
                 return _resolve_thumb_url(fld, default_shot_type, r2_image_set)
+            if "/vi/" in u:
+                yt_parts = u.split("/vi/")
+                if len(yt_parts) >= 2:
+                    yt_id = yt_parts[1].split("/")[0]
+                    if yt_id:
+                        return f"https://img.youtube.com/vi/{yt_id}/hqdefault.jpg"
             if not u.startswith("http"):
                 # Relative path - resolve via R2
                 clean = u.lstrip("./")

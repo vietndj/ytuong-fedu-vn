@@ -344,7 +344,7 @@
         </div>
     </div>
 
-    <script src="ideas_data.js?v=1790134195"></script>
+    <script src="ideas_data.js?v=1790135242"></script>
     <script>
 // State Management
         let appState = {
@@ -453,7 +453,20 @@
             if (!img) return;
             const currentSrc = img.src || "";
 
-            // Bước 1: URL Encode nếu đường dẫn chứa ký tự đặc biệt / tiếng Hàn / Unicode / emoji
+            // Bước 0: Khôi phục ảnh YouTube nếu dính đường dẫn /vi/
+            if (currentSrc.includes("/vi/")) {
+                const parts = currentSrc.split("/vi/");
+                if (parts.length >= 2) {
+                    const ytId = parts[1].split("/")[0];
+                    if (ytId) {
+                        img.onerror = null;
+                        img.src = `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`;
+                        return;
+                    }
+                }
+            }
+
+            // Bước 1: Retry URL Encoding nếu dính ký tự đặc biệt
             if (!img.dataset.retryStep) {
                 img.dataset.retryStep = "1";
                 try {
@@ -467,9 +480,21 @@
                 } catch (e) {}
             }
 
-            // Bước 2: Thử chèn extracted_shots/ nếu ảnh nằm ở cấu trúc thư mục con
+            // Bước 2: Thử đổi đuôi .webp <-> .jpg
             if (img.dataset.retryStep === "1") {
                 img.dataset.retryStep = "2";
+                if (currentSrc.endsWith(".webp")) {
+                    img.src = currentSrc.replace(/\.webp$/, ".jpg");
+                    return;
+                } else if (currentSrc.endsWith(".jpg")) {
+                    img.src = currentSrc.replace(/\.jpg$/, ".webp");
+                    return;
+                }
+            }
+
+            // Bước 3: Thử chèn extracted_shots/
+            if (img.dataset.retryStep === "2") {
+                img.dataset.retryStep = "3";
                 if (currentSrc.includes("/images/") && !currentSrc.includes("/extracted_shots/")) {
                     const parts = currentSrc.split("/images/");
                     if (parts.length === 2) {
@@ -484,19 +509,25 @@
                 }
             }
 
-            // Bước 3: Thử tráo giữa shot_XX và slide_XX đối với dạng bài Carousel
-            if (img.dataset.retryStep === "2") {
-                img.dataset.retryStep = "3";
-                if (currentSrc.includes("shot_01_mid.jpg")) {
-                    img.src = currentSrc.replace("shot_01_mid.jpg", "slide_01_mid.jpg");
+            // Bước 4: Thử tráo giữa shot_XX và slide_XX cho Carousel bài đăng
+            if (img.dataset.retryStep === "3") {
+                img.dataset.retryStep = "4";
+                if (currentSrc.includes("shot_01_mid")) {
+                    img.src = currentSrc.replace("shot_01_mid", "slide_01_mid");
                     return;
-                } else if (currentSrc.includes("shot_03_mid.jpg")) {
-                    img.src = currentSrc.replace("shot_03_mid.jpg", "slide_03_mid.jpg");
+                } else if (currentSrc.includes("shot_03_mid")) {
+                    img.src = currentSrc.replace("shot_03_mid", "slide_03_mid");
+                    return;
+                } else if (currentSrc.includes("slide_01_mid")) {
+                    img.src = currentSrc.replace("slide_01_mid", "shot_01_mid");
+                    return;
+                } else if (currentSrc.includes("slide_03_mid")) {
+                    img.src = currentSrc.replace("slide_03_mid", "shot_03_mid");
                     return;
                 }
             }
 
-            // Bước 4: Fallback hiển thị Poster Điện Ảnh chuẩn mực, bảo đảm UI luôn sang trọng, sạch bóng không bao giờ hiện icon vỡ ảnh
+            // Bước 5: Fallback Poster Điện Ảnh
             img.onerror = null;
             const safeIcon = categoryIcon || "🎬";
             const shotLabel = shotIndex === 1 ? "HOOK • 0.0s" : "KEY SHOT";
