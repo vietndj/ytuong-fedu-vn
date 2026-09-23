@@ -18232,26 +18232,24 @@
     "duration": "34.0s",
     "shooting_style": {
       "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
       "id": "ky-thuat-quay",
-      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Bóc tách công thức Day In The Life 17 shots Micro-Montage kết hợp Split-Kinetic Typography",
     "tech_tags": [
       "Split-Kinetic Typography",
-      "Micro-Montage (0.7s/shot)",
-      "Establishing Hook",
-      "Low-key Moody",
-      "POV Driver Shot",
-      "Symmetrical Deep Work"
+      "Micro-Montage",
+      "Establishing Hook Shot",
+      "Low-key Lighting"
     ],
     "logic_explanation": "Chuỗi 17 shots nhịp nhanh (0.7s) kết hợp chữ động hai biên: Hoạt động in hoa bên trái và mốc thời gian bên phải.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Mở màn bằng sinh hoạt đời thường ➔ Chuyển tiếp cơ học & POV ➔ Bố cục đối xứng Deep Work tĩnh lặng.",
+    "quick_takeaway": "⚡ Visual Hook 7:00am: Mở màn nhịp sinh hoạt ➔ Bố cục đối xứng Deep Work & Split-Kinetic Typography",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
