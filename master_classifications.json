@@ -18571,25 +18571,30 @@
     "creator": "@ulanzi",
     "creator_name": "Ulanzi",
     "title": "@ulanzi - Magnetic Phone Tripod Desktop Stand",
-    "shots_count": 1,
-    "duration": "2.0s",
+    "shots_count": 19,
+    "duration": "53.5s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "san-pham",
+      "name": "san-pham",
+      "icon": "🎬"
     },
     "industry": {
       "id": "cong-nghe",
-      "name": "Công Nghệ & Thiết Bị",
-      "icon": "📱"
+      "name": "cong-nghe",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ulanzi",
     "tech_tags": [
-      "Establishing Hook Shot"
+      "Ulanzi",
+      "MagSafe Tripod",
+      "Lifestyle B-Roll",
+      "Product Demo",
+      "Kích Hoạt Nhu Cầu",
+      "Overhead Shot"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+    "quick_takeaway": "Video quảng bá phụ kiện Ulanzi MA60 là bài học mẫu mực về kịch bản bán hàng thị giác: mở màn bằng dải màu kích thích thị giác, tiếp nối bằng đòn bẩy so sánh độ mỏng 1:1 với iPhone, và dẫn dắt người xem qua 5 kịch bản sử dụng thực tế (quay đập hộp, làm việc văn phòng, họp online, dạo phố vlogging và nhảy đường phố góc ngước cực thấp).",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -18606,25 +18611,30 @@
     "creator": "@ulanzi",
     "creator_name": "Ulanzi",
     "title": "@ulanzi - Magnetic Phone Tripod Desktop Stand",
-    "shots_count": 1,
-    "duration": "2.0s",
+    "shots_count": 19,
+    "duration": "53.5s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "san-pham",
+      "name": "san-pham",
+      "icon": "🎬"
     },
     "industry": {
       "id": "cong-nghe",
-      "name": "Công Nghệ & Thiết Bị",
-      "icon": "📱"
+      "name": "cong-nghe",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ulanzi",
     "tech_tags": [
-      "Establishing Hook Shot"
+      "Ulanzi",
+      "MagSafe Tripod",
+      "Lifestyle B-Roll",
+      "Product Demo",
+      "Kích Hoạt Nhu Cầu",
+      "Overhead Shot"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+    "quick_takeaway": "Video quảng bá phụ kiện Ulanzi MA60 là bài học mẫu mực về kịch bản bán hàng thị giác: mở màn bằng dải màu kích thích thị giác, tiếp nối bằng đòn bẩy so sánh độ mỏng 1:1 với iPhone, và dẫn dắt người xem qua 5 kịch bản sử dụng thực tế (quay đập hộp, làm việc văn phòng, họp online, dạo phố vlogging và nhảy đường phố góc ngước cực thấp).",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
