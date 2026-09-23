@@ -345,7 +345,7 @@
         </div>
     </div>
 
-    <script src="ideas_data.js?v=1790189804"></script>
+    <script src="ideas_data.js?v=1790206097"></script>
     <script>
 // State Management
         let appState = {
@@ -453,6 +453,21 @@
         function handleCardThumbError(img, itemId, shotIndex, categoryIcon, titleText) {
             if (!img) return;
             const currentSrc = img.src || "";
+            if (!currentSrc || currentSrc.startsWith("data:image/svg+xml")) return;
+
+            // Chống loop vô tận: Tối đa 5 lần thử
+            const errorCount = parseInt(img.dataset.errorCount || "0", 10);
+            if (errorCount > 4) {
+                renderCardThumbFallback(img, shotIndex, categoryIcon, titleText);
+                return;
+            }
+            img.dataset.errorCount = (errorCount + 1).toString();
+
+            // Nếu URL rỗng hoặc link placeholder -> Lập tức fallback
+            if (currentSrc.includes("placeholder") || currentSrc.includes("about:blank")) {
+                renderCardThumbFallback(img, shotIndex, categoryIcon, titleText);
+                return;
+            }
 
             // Bước 0: Khôi phục ảnh YouTube nếu dính đường dẫn /vi/
             if (currentSrc.includes("/vi/")) {
@@ -467,8 +482,10 @@
                 }
             }
 
+            const step = parseInt(img.dataset.retryStep || "0", 10);
+
             // Bước 1: Retry URL Encoding nếu dính ký tự đặc biệt
-            if (!img.dataset.retryStep) {
+            if (step === 0) {
                 img.dataset.retryStep = "1";
                 try {
                     const parsed = new URL(currentSrc, window.location.href);
@@ -482,7 +499,7 @@
             }
 
             // Bước 2: Thử đổi đuôi .webp <-> .jpg
-            if (img.dataset.retryStep === "1") {
+            if (step === 1) {
                 img.dataset.retryStep = "2";
                 if (currentSrc.endsWith(".webp")) {
                     img.src = currentSrc.replace(/\.webp$/, ".jpg");
@@ -493,26 +510,9 @@
                 }
             }
 
-            // Bước 3: Thử chèn extracted_shots/
-            if (img.dataset.retryStep === "2") {
+            // Bước 3: Thử tráo giữa shot_XX và slide_XX cho Carousel bài đăng
+            if (step === 2) {
                 img.dataset.retryStep = "3";
-                if (currentSrc.includes("/images/") && !currentSrc.includes("/extracted_shots/")) {
-                    const parts = currentSrc.split("/images/");
-                    if (parts.length === 2) {
-                        const subParts = parts[1].split("/");
-                        if (subParts.length >= 2) {
-                            const folder = subParts[0];
-                            const filename = subParts.slice(1).join("/");
-                            img.src = `${parts[0]}/images/${folder}/extracted_shots/${filename}`;
-                            return;
-                        }
-                    }
-                }
-            }
-
-            // Bước 4: Thử tráo giữa shot_XX và slide_XX cho Carousel bài đăng
-            if (img.dataset.retryStep === "3") {
-                img.dataset.retryStep = "4";
                 if (currentSrc.includes("shot_01_mid")) {
                     img.src = currentSrc.replace("shot_01_mid", "slide_01_mid");
                     return;
@@ -528,7 +528,28 @@
                 }
             }
 
+            // Bước 4: Thử chèn extracted_shots/
+            if (step === 3) {
+                img.dataset.retryStep = "4";
+                if (currentSrc.includes("/images/") && !currentSrc.includes("/extracted_shots/")) {
+                    const parts = currentSrc.split("/images/");
+                    if (parts.length === 2) {
+                        const subParts = parts[1].split("/");
+                        if (subParts.length >= 2) {
+                            const folder = subParts[0];
+                            const filename = subParts.slice(1).join("/");
+                            img.src = `${parts[0]}/images/${folder}/extracted_shots/${filename}`;
+                            return;
+                        }
+                    }
+                }
+            }
+
             // Bước 5: Fallback Poster Điện Ảnh
+            renderCardThumbFallback(img, shotIndex, categoryIcon, titleText);
+        }
+
+        function renderCardThumbFallback(img, shotIndex, categoryIcon, titleText) {
             img.onerror = null;
             const safeIcon = categoryIcon || "🎬";
             const shotLabel = shotIndex === 1 ? "HOOK • 0.0s" : "KEY SHOT";

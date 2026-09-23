@@ -76,7 +76,9 @@
     "IG_@kienobifilms_DdPLvUpBwCl": "ky-thuat-quay",
     "IG_@aki_japan_DaDFH_TSii8": "am-thuc",
     "IG_@nathanael.lct_DdRg_ybtlKI": "thoi-trang",
-    "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k": "du-lich"
+    "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k": "du-lich",
+    "IG_@mario.prawira_DcgEuvwx47P_How_to_do_a_before_after_with_a_prop_and_your": "am-thuc",
+    "DcgEuvwx47P": "am-thuc"
   },
   "custom_shooting_style_overrides": {
     "IG_@tinanguyen2004_7673468312290037012_Double_Day_luon_la_dip_de_khach_hang_lua_duoc": "walk-and-talk",
@@ -141,7 +143,9 @@
     "IG_@layton_video_DdKGq2TMhf4": "talking-head",
     "IG_@kienobifilms_DdPLvUpBwCl": "dien-anh",
     "IG_@aki_japan_DaDFH_TSii8": "chuyen-canh",
-    "IG_@nathanael.lct_DdRg_ybtlKI": "chuyen-canh"
+    "IG_@nathanael.lct_DdRg_ybtlKI": "chuyen-canh",
+    "IG_@mario.prawira_DcgEuvwx47P_How_to_do_a_before_after_with_a_prop_and_your": "chuyen-canh",
+    "DcgEuvwx47P": "chuyen-canh"
   },
   "custom_title_overrides": {
     "IG_@tinanguyen2004_7673468312290037012_Double_Day_luon_la_dip_de_khach_hang_lua_duoc": "Tina Nguyễn • Phóng Sự Y Khoa Da Liễu & Flash Sale Double Day 8.8",
@@ -169,6 +173,12 @@
     "DdT4EOzveQL": "Megan Tan • Nghệ Thuật Lồng Ghép Tài Trợ Công Nghệ Vào Phong Cách Sống Tự Do",
     "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen": "Megan Tan • Nghệ Thuật Lồng Ghép Tài Trợ Công Nghệ Vào Phong Cách Sống Tự Do",
     "DdQwL3Ahci1": "Shin Yueun • Cú Máy Tracking Đi Lùi Lookbook Dạo Phố Cổ Điển Hàn Quốc",
-    "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun": "Shin Yueun • Cú Máy Tracking Đi Lùi Lookbook Dạo Phố Cổ Điển Hàn Quốc"
-  }
+    "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun": "Shin Yueun • Cú Máy Tracking Đi Lùi Lookbook Dạo Phố Cổ Điển Hàn Quốc",
+    "IG_@mario.prawira_DcgEuvwx47P_How_to_do_a_before_after_with_a_prop_and_your": "Mario Prawira • Kỹ Thuật Match-Cut Before/After Bằng Đạo Cụ Cành Hoa",
+    "DcgEuvwx47P": "Mario Prawira • Kỹ Thuật Match-Cut Before/After Bằng Đạo Cụ Cành Hoa"
+  },
+  "deleted_ids": [
+    "IG_@creator_video_Video_video",
+    "video"
+  ]
 }
