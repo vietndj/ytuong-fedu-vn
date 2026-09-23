@@ -18343,25 +18343,30 @@
     "creator": "@ulanzi",
     "creator_name": "Ulanzi",
     "title": "@ulanzi - Quick Release Folding L Bracket and Plate Cam",
-    "shots_count": 1,
-    "duration": "2.0s",
+    "shots_count": 17,
+    "duration": "51.3s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
+      "icon": "🎬"
     },
     "industry": {
       "id": "cong-nghe",
-      "name": "Công Nghệ & Thiết Bị",
-      "icon": "📱"
+      "name": "cong-nghe",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ulanzi",
+    "purpose": "Quảng cáo công năng thiết bị quay phim thực chiến: Giải quyết triệt để nỗi đau quay dọc bị lệch trọng tâm và cấn màn hình lật",
     "tech_tags": [
-      "Establishing Hook Shot"
+      "Quảng Cáo Sản Phẩm",
+      "Folding L-Bracket",
+      "Arca-Swiss",
+      "F38 Quick Release",
+      "Match Cut",
+      "B-roll Gear"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+    "quick_takeaway": "⚡ Hook thị giác: Lật máy quay dọc ngay trên trục trung tâm tripod ➔ Tháo lắp siêu tốc Arca-Swiss/F38, xếp phẳng bỏ túi mini cơ động",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -18378,25 +18383,30 @@
     "creator": "@ulanzi",
     "creator_name": "Ulanzi",
     "title": "@ulanzi - Quick Release Folding L Bracket and Plate Cam",
-    "shots_count": 1,
-    "duration": "2.0s",
+    "shots_count": 17,
+    "duration": "51.3s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
+      "icon": "🎬"
     },
     "industry": {
       "id": "cong-nghe",
-      "name": "Công Nghệ & Thiết Bị",
-      "icon": "📱"
+      "name": "cong-nghe",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ulanzi",
+    "purpose": "Quảng cáo công năng thiết bị quay phim thực chiến: Giải quyết triệt để nỗi đau quay dọc bị lệch trọng tâm và cấn màn hình lật",
     "tech_tags": [
-      "Establishing Hook Shot"
+      "Quảng Cáo Sản Phẩm",
+      "Folding L-Bracket",
+      "Arca-Swiss",
+      "F38 Quick Release",
+      "Match Cut",
+      "B-roll Gear"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+    "quick_takeaway": "⚡ Hook thị giác: Lật máy quay dọc ngay trên trục trung tâm tripod ➔ Tháo lắp siêu tốc Arca-Swiss/F38, xếp phẳng bỏ túi mini cơ động",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
