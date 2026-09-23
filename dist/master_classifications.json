@@ -17975,5 +17975,73 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@creator_video_Video_video": {
+    "id": "IG_@creator_video_Video_video",
+    "creator": "@creator",
+    "creator_name": "Creator",
+    "title": "@creator - Video video",
+    "shots_count": 0,
+    "duration": "0.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "thuong-hieu",
+      "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+      "icon": "💼"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
+    "tech_tags": [
+      "Cinematic Lighting",
+      "Composition Mastery",
+      "Visual Rhythm"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+    "is_excluded": false,
+    "quick_takeaway": "Ý tưởng quay dựng 0 phân cảnh chuẩn điện ảnh 9:16.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "video": {
+    "id": "IG_@creator_video_Video_video",
+    "creator": "@creator",
+    "creator_name": "Creator",
+    "title": "@creator - Video video",
+    "shots_count": 0,
+    "duration": "0.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "thuong-hieu",
+      "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+      "icon": "💼"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
+    "tech_tags": [
+      "Cinematic Lighting",
+      "Composition Mastery",
+      "Visual Rhythm"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+    "is_excluded": false,
+    "quick_takeaway": "Ý tưởng quay dựng 0 phân cảnh chuẩn điện ảnh 9:16.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }
