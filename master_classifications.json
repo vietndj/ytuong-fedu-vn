@@ -18407,5 +18407,81 @@
     "youtube_id": "C3ZQYhluv4o",
     "youtube_url": "https://youtu.be/C3ZQYhluv4o",
     "youtube_embed": "https://www.youtube.com/embed/C3ZQYhluv4o"
+  },
+  "IG_@ulanzi_lazada_Easy_Open_Portable_Aluminum_Trigopod": {
+    "id": "IG_@ulanzi_lazada_Easy_Open_Portable_Aluminum_Trigopod",
+    "creator": "@ulanzi",
+    "creator_name": "Ulanzi",
+    "title": "@ulanzi - Easy Open Portable Aluminum Trigopod",
+    "shots_count": 15,
+    "duration": "30.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ulanzi",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "High-key Lighting",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Công Nghệ & Thiết Bị.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "GV5S7So_VTc",
+    "youtube_url": "https://youtu.be/GV5S7So_VTc",
+    "youtube_embed": "https://www.youtube.com/embed/GV5S7So_VTc"
+  },
+  "lazada": {
+    "id": "IG_@ulanzi_lazada_Easy_Open_Portable_Aluminum_Trigopod",
+    "creator": "@ulanzi",
+    "creator_name": "Ulanzi",
+    "title": "@ulanzi - Easy Open Portable Aluminum Trigopod",
+    "shots_count": 15,
+    "duration": "30.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ulanzi",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "High-key Lighting",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Công Nghệ & Thiết Bị.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "GV5S7So_VTc",
+    "youtube_url": "https://youtu.be/GV5S7So_VTc",
+    "youtube_embed": "https://www.youtube.com/embed/GV5S7So_VTc"
   }
 }
