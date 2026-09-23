@@ -18231,13 +18231,13 @@
     "shots_count": 17,
     "duration": "34.0s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "dien-anh",
+      "id": "Talking Head",
+      "name": "Talking Head",
       "icon": "🎬"
     },
     "industry": {
-      "id": "ky-thuat-quay",
-      "name": "ky-thuat-quay",
+      "id": "Kiến Trúc & Không Gian Sống",
+      "name": "Kiến Trúc & Không Gian Sống",
       "icon": "🎯"
     },
     "purpose": "Bóc tách công thức Day In The Life 17 shots Micro-Montage kết hợp Split-Kinetic Typography",
@@ -18249,7 +18249,7 @@
     ],
     "logic_explanation": "Chuỗi 17 shots nhịp nhanh (0.7s) kết hợp chữ động hai biên: Hoạt động in hoa bên trái và mốc thời gian bên phải.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Visual Hook 7:00am: Mở màn nhịp sinh hoạt ➔ Bố cục đối xứng Deep Work & Split-Kinetic Typography",
+    "quick_takeaway": "⚡ Visual Hook 7:00am: Mở màn bằng nhịp sinh hoạt chuẩn bị bữa trưa ➔ Vẫy tay chào ra về (Home Time): Đóng gói trọn vẹn vòng lặp một ngày",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
