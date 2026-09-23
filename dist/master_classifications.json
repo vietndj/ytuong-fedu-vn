@@ -17640,5 +17640,73 @@
       "key_optimization_point": "⚡ Kết hợp 5 chiêu diễn Hook chuyển động tự nhiên (đáy túi vải POV, kéo tay che thấu kính, ngồi xuống ghế, hất áo khoác, góc cao nhìn xuống) ➔ Xóa tan cảm giác đơ cứng khi mở đầu video.",
       "practice_focus": "⚡ Thực chiến: Thay vì đứng im trước máy rồi mới nói, hãy bấm máy trước và bắt đầu nói ngay khi đang thực hiện một hành động cơ thể (thả người ngồi xuống ghế, kéo tay hoặc hất áo) để giữ mắt người xem 2 giây đầu."
     }
+  },
+  "IG_@pauline_폴린_ᥫ᭡。༘⋆✿_DdlWfRSMioH_Video_by_pau.liine": {
+    "id": "IG_@pauline_폴린_ᥫ᭡。༘⋆✿_DdlWfRSMioH_Video_by_pau.liine",
+    "creator": "@pauline_폴린_ᥫ᭡。༘⋆✿",
+    "creator_name": "Pauline_폴린_ᥫ᭡。༘⋆✿",
+    "title": "@pauline_폴린_ᥫ᭡。༘⋆✿ - Video by pau.liine",
+    "shots_count": 2,
+    "duration": "4.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
+    },
+    "purpose": "Thần thái",
+    "tech_tags": [
+      "Thần Thái",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Thần thái. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+    "is_excluded": false,
+    "quick_takeaway": "Thần thái",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DdlWfRSMioH": {
+    "id": "IG_@pauline_폴린_ᥫ᭡。༘⋆✿_DdlWfRSMioH_Video_by_pau.liine",
+    "creator": "@pauline_폴린_ᥫ᭡。༘⋆✿",
+    "creator_name": "Pauline_폴린_ᥫ᭡。༘⋆✿",
+    "title": "@pauline_폴린_ᥫ᭡。༘⋆✿ - Video by pau.liine",
+    "shots_count": 2,
+    "duration": "4.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
+    },
+    "purpose": "Thần thái",
+    "tech_tags": [
+      "Thần Thái",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Thần thái. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+    "is_excluded": false,
+    "quick_takeaway": "Thần thái",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }
