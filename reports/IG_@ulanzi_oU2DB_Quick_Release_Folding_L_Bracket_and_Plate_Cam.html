@@ -718,7 +718,7 @@
 <div class="app-container">
     <div class="video-sidebar">
         <div class="video-wrap">
-            <iframe id="mainPlayer" src="https://www.youtube.com/embed/C3ZQYhluv4o?rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;aspect-ratio:9/16;border-radius:12px;"></iframe>
+            <video id="mainPlayer" src="https://media.fedu.vn/videos/oU2DB.mp4" controls autoplay muted playsinline preload="auto" loop></video>
         </div>
         <div class="video-controls">
             <div class="speed-row">
@@ -733,7 +733,10 @@
                 <button class="ctrl-btn" onclick="toggleMute(this)">Âm thanh</button>
                 <button class="ctrl-btn" onclick="togglePlayerFullscreen()">Toàn màn hình</button>
             </div>
-            <div id="shotStatusTag">Sẵn sàng</div>
+            <div style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
+                <div id="shotStatusTag">Sẵn sàng</div>
+                <a href="https://youtu.be/C3ZQYhluv4o" target="_blank" rel="noopener" class="ctrl-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:4px; font-weight:700; color:#f43f5e; font-size:11px;">▶ YouTube ↗</a>
+            </div>
         </div>
     </div>
 
