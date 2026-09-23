@@ -111,7 +111,7 @@
             🔍
         </button>
         <div id="globalSearchContainer" class="hidden-search absolute top-full right-0 mt-1 mr-2 bg-slate-900 border border-slate-700 p-2 rounded-lg shadow-xl">
-            <input type="text" id="globalSearchInput" placeholder="Tìm kiếm..." class="bg-slate-800 text-sm px-3 py-1.5 rounded outline-none border border-slate-700 focus:border-sky-500 w-48">
+            <input type="text" id="globalSearchInput" placeholder="Tìm kiếm..." class="bg-slate-800 text-sm px-3 py-1.5 rounded outline-none border border-slate-700 focus:border-sky-500 w-48" onkeydown="if(event.key === 'Enter') handleSearchInput()">
         </div>
         
         
@@ -344,7 +344,7 @@
         </div>
     </div>
 
-    <script src="ideas_data.js?v=1790143555"></script>
+    <script src="ideas_data.js?v=1790147486"></script>
     <script>
 // State Management
         let appState = {
