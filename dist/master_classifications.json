@@ -18198,32 +18198,37 @@
     "shots_count": 29,
     "duration": "58.0s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "id": "Phim Điện Ảnh (Cinematic Stills)",
+      "name": "Phim Điện Ảnh (Cinematic Stills)",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Nhiếp Ảnh & Điện Ảnh",
+      "name": "Nhiếp Ảnh & Điện Ảnh",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @german991020",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting",
-      "Medium Tracking Shot"
+      "A24 Aesthetic",
+      "Telephoto Compression",
+      "Central Typography",
+      "Urban Street Life",
+      "Film Color Grading",
+      "Beat Cut Montage"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Nghệ thuật khung hình A24: Ghim chữ định tâm (Central Typography) kết hợp ống kính tele nén sâu lát cắt đời sống đô thị Seoul đầy chất thơ.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    }
+    },
+    "youtube_id": "k9-hxSQmHC4",
+    "youtube_url": "https://youtu.be/k9-hxSQmHC4",
+    "youtube_embed": "https://www.youtube.com/embed/k9-hxSQmHC4"
   },
   "DdnXgxUyok1": {
     "id": "IG_@german991020_DdnXgxUyok1_South_Korea_stills_-_Final_Series",
