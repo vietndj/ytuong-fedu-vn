@@ -21492,29 +21492,30 @@
     "id": "IG_@qaqu_uu_Dblr-88PjlJ_yelena_belova_would_call_this_small_baby_pota",
     "creator": "@qaqu_uu",
     "creator_name": "Qaqu_Uu",
-    "title": "@qaqu_uu - yelena belova would call this small baby pota",
+    "title": "Đòn Bẩy Kể Chuyện HUD Timeline & Cú Cắt Nhảy Rotoscope Biến Căn Phòng Thành Tác Phẩm Điện Ảnh",
     "shots_count": 25,
-    "duration": "50.0s",
+    "duration": "28.9s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "POV & Fast-Paced Montage",
+      "name": "POV & Fast-Paced Montage",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Vlog & Phong Cách Sống",
+      "name": "Vlog & Phong Cách Sống",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @qaqu_uu",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Low-key Lighting",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot"
+      "Vlog Day In My Life",
+      "GRWM Routine",
+      "Rotoscope Transition",
+      "HUD Typography Overlay",
+      "Match Cut Before After"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "⚡ Biến lịch trình 1 ngày thành cuộc phiêu lưu điện ảnh bằng hệ thống HUD Timeline ghim 2 cánh, đòn bẩy Rotoscope biến hình và cú cắt nhảy đĩa sạch trơn đầy dí dỏm.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
