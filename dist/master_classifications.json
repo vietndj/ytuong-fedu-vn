@@ -18818,27 +18818,30 @@
     "creator_name": "Joshdiazfilms",
     "title": "@joshdiazfilms - Video by joshdiazfilms",
     "shots_count": 15,
-    "duration": "30.0s",
+    "duration": "33.8s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "storytelling",
+      "name": "storytelling",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "ugc",
+      "name": "ugc",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @joshdiazfilms",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Low-key Lighting",
-      "Close-Up / Macro Detail Shot",
-      "High-key Lighting"
+      "Ford Bronco",
+      "UGC Commercial",
+      "Solo Filmmaker",
+      "Car Review",
+      "B-Roll",
+      "Ford Credit",
+      "Storytelling"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Chiến lược UGC Commercial mẫu mực kết hợp Storytelling chân thực: Khởi đầu bằng trải nghiệm cá nhân hóa của một solo-filmmaker bên chiếc SUV việt dã 2026 Ford Bronco, giải quyết công năng cốp chứa đồ nghề và cảm giác lái, rồi chốt hạ bằng cách tháo gỡ rào cản chi phí trả góp qua công cụ Ford Credit.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -18856,27 +18859,30 @@
     "creator_name": "Joshdiazfilms",
     "title": "@joshdiazfilms - Video by joshdiazfilms",
     "shots_count": 15,
-    "duration": "30.0s",
+    "duration": "33.8s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "storytelling",
+      "name": "storytelling",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "ugc",
+      "name": "ugc",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @joshdiazfilms",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Low-key Lighting",
-      "Close-Up / Macro Detail Shot",
-      "High-key Lighting"
+      "Ford Bronco",
+      "UGC Commercial",
+      "Solo Filmmaker",
+      "Car Review",
+      "B-Roll",
+      "Ford Credit",
+      "Storytelling"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Chiến lược UGC Commercial mẫu mực kết hợp Storytelling chân thực: Khởi đầu bằng trải nghiệm cá nhân hóa của một solo-filmmaker bên chiếc SUV việt dã 2026 Ford Bronco, giải quyết công năng cốp chứa đồ nghề và cảm giác lái, rồi chốt hạ bằng cách tháo gỡ rào cản chi phí trả góp qua công cụ Ford Credit.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",

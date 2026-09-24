@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BỐ CỤC ĐIỆN ẢNH NGHỈ DƯỠNG: CÔNG THỨC 10 PHÂN CẢNH CAROUSEL DU LỊCH ĐA TẦNG CỦA YONG &amp; MIKE (CHIANG RAI)</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B0F19'/%3E%3Crect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%23FFFFFF' stroke-opacity='0.12' stroke-width='1.5'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='system-ui, sans-serif' font-weight='900' font-size='23' fill='%23FFFFFF'%3EYT%3C/text%3E%3Ccircle cx='48' cy='18' r='4' fill='%23eab308'/%3E%3C/svg%3E">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        @font-face {
+            font-family: 'FD Aeonik Extended';
+            src: url('https://font.fedu.vn/FDAeonikExtended-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'FD Aeonik';
+            src: url('https://font.fedu.vn/FDAeonik-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'FD Aeonik';
+            src: url('https://font.fedu.vn/FDAeonik-SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Tiempos Text';
+            src: url('https://font.fedu.vn/TiemposText-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'JetBrains Mono';
+            src: url('https://font.fedu.vn/JetBrainsMono-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'JetBrains Mono';
+            src: url('https://font.fedu.vn/JetBrainsMono-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            --cl-bg: #ffffff;
+            --cl-tint: #f8fafc;
+            --cl-card: #ffffff;
+            --cl-accent: #1a73e8;
+            --cl-accent-tint: rgba(26, 115, 232, 0.08);
+            --cl-text-base: #090d16;
+            --cl-text-body: #0f172a;
+            --cl-text-muted: #475569;
+            --cl-line: rgba(0, 0, 0, 0.06);
+            --cl-line-strong: rgba(0, 0, 0, 0.12);
+            --cl-danger: #dc2626;
+            --cl-success: #16a34a;
+            --cl-radius-lg: 24px;
+            --cl-radius-md: 16px;
+            --cl-radius-sm: 10px;
+            --cl-radius-full: 9999px;
+            --font-display: 'FD Aeonik Extended', 'Inter', -apple-system, sans-serif;
+            --font-body: 'Tiempos Text', 'FD Aeonik', 'Inter', Georgia, serif;
+            --font-ui: 'FD Aeonik', 'Inter', -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --apple-spring: cubic-bezier(0.25, 1, 0.35, 1.05);
+            --apple-ease: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* General Body */
+        body {
+            background: var(--cl-bg);
+            color: var(--cl-text-body);
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        .app-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Video Sidebar */
+        .video-sidebar {
+            width: 420px;
+            max-width: 420px;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            background: var(--cl-tint);
+            border-right: 1px solid var(--cl-line);
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            gap: 16px;
+        }
+
+        .video-wrap {
+            width: 100%;
+            aspect-ratio: 9/16;
+            max-height: 70vh;
+            border-radius: var(--cl-radius-md);
+            overflow: hidden;
+            background: #000;
+            position: relative;
+        }
+
+        .video-wrap video, .video-wrap iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border: none;
+        }
+
+        .video-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .speed-row, .action-row {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .ctrl-btn {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            font-weight: 500;
+            padding: 6px 12px;
+            border: 1px solid var(--cl-line-strong);
+            background: var(--cl-card);
+            color: var(--cl-text-muted);
+            border-radius: var(--cl-radius-full);
+            cursor: pointer;
+            transition: all 0.2s var(--apple-ease);
+        }
+
+        .ctrl-btn:hover {
+            border-color: var(--cl-accent);
+            color: var(--cl-accent);
+        }
+
+        .ctrl-btn.active {
+            background: var(--cl-accent);
+            color: white;
+            border-color: var(--cl-accent);
+        }
+
+        #shotStatusTag {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            text-align: center;
+            color: var(--cl-accent);
+            background: var(--cl-accent-tint);
+            padding: 6px 12px;
+            border-radius: var(--cl-radius-full);
+            margin-top: 8px;
+            word-break: break-all;
+        }
+
+        /* Content Column */
+        .content-column {
+            flex: 1;
+            padding: 32px 40px;
+            overflow-y: auto;
+            max-width: 1000px;
+        }
+
+        /* Report Header */
+        .report-header {
+            margin-bottom: 32px;
+        }
+
+        .header-badges {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .header-badges span {
+            background: var(--cl-accent-tint);
+            color: var(--cl-accent);
+            font-family: var(--font-ui);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: var(--cl-radius-full);
+        }
+
+        .report-title {
+            font-family: var(--font-display);
+            font-size: clamp(22px, 3vw, 32px);
+            font-weight: 700;
+            color: var(--cl-text-base);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .report-title a {
+            color: inherit;
+        }
+        .report-title a:hover {
+            text-decoration: underline;
+        }
+
+        .header-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-ui);
+            font-size: 14px;
+            color: var(--cl-text-muted);
+            flex-wrap: wrap;
+        }
+
+        .creator-link {
+            color: var(--cl-accent);
+            font-weight: 600;
+        }
+
+        .hub-link {
+            margin-left: auto;
+            color: var(--cl-text-muted);
+            font-weight: 500;
+            text-decoration: underline;
+        }
+
+        .hub-link:hover {
+            color: var(--cl-accent);
+        }
+
+        .meta-dot {
+            opacity: 0.5;
+        }
+
+        /* Script Axis */
+        .script-axis-card {
+            background: var(--cl-tint);
+            border: 1px solid var(--cl-line);
+            border-radius: var(--cl-radius-md);
+            padding: 16px 20px;
+            margin-bottom: 24px;
+        }
+        .script-axis-title {
+            text-transform: uppercase;
+            font-family: var(--font-display);
+            font-size: 13px;
+            color: var(--cl-accent);
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        .script-axis-content {
+            font-family: var(--font-ui);
+            font-size: 15px;
+            color: var(--cl-text-body);
+        }
+
+        /* Overview */
+        .overview-card {
+            background: var(--cl-tint);
+            border-radius: var(--cl-radius-md);
+            padding: 20px 24px;
+            border: 1px solid var(--cl-line);
+            margin-bottom: 24px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Toolbar */
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 24px 0 16px;
+        }
+
+        .tab-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .tab-btn {
+            font-family: var(--font-ui);
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border: none;
+            background: transparent;
+            color: var(--cl-text-muted);
+            border-radius: var(--cl-radius-full);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            background: var(--cl-line);
+        }
+
+        .tab-btn.active {
+            background: var(--cl-accent);
+            color: white;
+        }
+
+        .drawer-btn {
+            font-family: var(--font-ui);
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border: 1px solid var(--cl-line-strong);
+            background: var(--cl-card);
+            border-radius: var(--cl-radius-full);
+            cursor: pointer;
+        }
+
+        /* Shot Cards */
+        #storyboardView {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .shot-card {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background: var(--cl-card);
+            border: 1px solid var(--cl-line);
+            border-radius: var(--cl-radius-md);
+            transition: border-color 0.2s var(--apple-ease);
+        }
+
+        .shot-card:hover {
+            border-color: var(--cl-accent);
+        }
+
+        .shot-card.active-playing {
+            border-color: var(--cl-accent);
+            box-shadow: 0 0 0 2px var(--cl-accent-tint);
+        }
+
+        .shot-thumb {
+            width: 130px;
+            flex-shrink: 0;
+            border-radius: var(--cl-radius-sm);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            aspect-ratio: 9/16;
+            background: #000;
+        }
+
+        .shot-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+            transition: transform 0.3s var(--apple-ease), opacity 0.3s;
+        }
+        
+        .shot-thumb:hover img {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+
+        .shot-play-icon {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background: rgba(0,0,0,0.2);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        
+        .shot-thumb:hover .shot-play-icon {
+            opacity: 1;
+        }
+        
+        .shot-play-icon svg {
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+        }
+
+        .shot-time-badge {
+            position: absolute;
+            bottom: 6px;
+            right: 6px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 4px;
+            backdrop-filter: blur(4px);
+        }
+
+        .shot-body {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .shot-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .shot-num {
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            font-weight: 700;
+            color: var(--cl-accent);
+            background: var(--cl-accent-tint);
+            padding: 4px 10px;
+            border-radius: var(--cl-radius-full);
+            letter-spacing: 0.05em;
+        }
+        
+        .shot-dur {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            color: var(--cl-text-muted);
+            font-weight: 500;
+        }
+
+        .shot-headline {
+            font-family: var(--font-ui);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--cl-text-base);
+            margin: 0 0 10px 0;
+            line-height: 1.35;
+        }
+
+        .shot-insight {
+            font-family: var(--font-body);
+            font-size: 16px;
+            color: var(--cl-text-body);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .shot-details {
+            margin-top: 16px;
+            background: var(--cl-tint);
+            border-radius: var(--cl-radius-sm);
+            border: 1px solid var(--cl-line);
+        }
+
+        .shot-details summary {
+            font-family: var(--font-ui);
+            font-size: 13.5px;
+            color: var(--cl-text-muted);
+            font-weight: 500;
+            cursor: pointer;
+            padding: 10px 14px;
+            user-select: none;
+            transition: color 0.2s;
+        }
+        
+        .shot-details summary:hover {
+            color: var(--cl-accent);
+        }
+        
+        .shot-details[open] summary {
+            border-bottom: 1px solid var(--cl-line);
+            color: var(--cl-accent);
+            margin-bottom: 12px;
+        }
+
+        .shot-meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 20px;
+            padding: 0 14px 12px;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .meta-label {
+            font-family: var(--font-ui);
+            font-size: 11.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--cl-text-muted);
+            font-weight: 600;
+        }
+        
+        .meta-val {
+            font-family: var(--font-ui);
+            font-size: 14px;
+            color: var(--cl-text-base);
+            line-height: 1.4;
+        }
+
+        .critique-good, .critique-warn, .shot-narrative {
+            margin: 0 14px 12px;
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-family: var(--font-ui);
+            font-size: 13.5px;
+            line-height: 1.5;
+        }
+
+        .critique-good {
+            background: #f0fdf4;
+            border-left: 3px solid var(--cl-success);
+            color: #166534;
+        }
+
+        .critique-warn {
+            background: #fffbeb;
+            border-left: 3px solid #f59e0b;
+            color: #b45309;
+        }
+        
+        .shot-narrative {
+            background: var(--cl-card);
+            border: 1px solid var(--cl-line);
+            color: var(--cl-text-muted);
+            font-style: italic;
+        }
+
+
+        /* Grid View */
+        #gridView {
+            display: none;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+        }
+        
+        .grid-item {
+            cursor: pointer;
+        }
+
+        .grid-thumb {
+            width: 100%;
+            aspect-ratio: 9/16;
+            border-radius: var(--cl-radius-sm);
+            overflow: hidden;
+            position: relative;
+            background: #000;
+            margin-bottom: 4px;
+        }
+
+        .grid-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .grid-title {
+            font-family: var(--font-ui);
+            font-size: 12px;
+            color: var(--cl-text-body);
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Drawer */
+        .drawer-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(4px);
+            z-index: 100;
+            display: none;
+        }
+
+        .drawer-backdrop.open {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .drawer-panel {
+            width: 340px;
+            max-width: 90vw;
+            height: 100vh;
+            background: var(--cl-card);
+            border-left: 1px solid var(--cl-line);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .drawer-head {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--cl-line);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--cl-text-base);
+        }
+
+        .drawer-head button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--cl-text-muted);
+        }
+
+        .drawer-list {
+            padding: 16px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Lightbox */
+        #lightboxModal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 200;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox-x {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #lightboxImg {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: var(--cl-radius-md);
+        }
+
+        #lightboxCaption {
+            margin-top: 16px;
+            color: white;
+            font-family: var(--font-ui);
+            font-size: 16px;
+            text-align: center;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .app-container {
+                flex-direction: column;
+            }
+            .video-sidebar {
+                width: 100%;
+                max-width: 100%;
+                position: relative;
+                height: auto;
+                padding: 16px;
+                border-right: none;
+                border-bottom: 1px solid var(--cl-line);
+            }
+            .content-column {
+                padding: 20px 16px;
+            }
+            .shot-card {
+                flex-direction: column;
+            }
+            .shot-thumb {
+                width: 100%;
+                aspect-ratio: 16/9;
+            }
+            #gridView {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hub-link {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="video-sidebar">
+        <div class="video-wrap">
+            <video id="mainPlayer" src="https://media.fedu.vn/videos/DdolqWHEsws.mp4" controls autoplay muted playsinline preload="auto" loop style="width:100%;aspect-ratio:9/16;border-radius:12px;background:#000;"></video>
+        </div>
+        <div class="video-controls">
+            <div class="speed-row">
+                <button class="ctrl-btn" onclick="setSpeed(0.25, this)">0.25x</button>
+                <button class="ctrl-btn" onclick="setSpeed(0.5, this)">0.5x</button>
+                <button class="ctrl-btn active" onclick="setSpeed(1, this)">1.0x</button>
+                <button class="ctrl-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+            </div>
+            <div class="action-row">
+                <button class="ctrl-btn" onclick="stepFrame(-1)">-1F</button>
+                <button class="ctrl-btn" onclick="stepFrame(1)">+1F</button>
+                <button class="ctrl-btn" onclick="toggleMute(this)">Âm thanh</button>
+                <button class="ctrl-btn" onclick="togglePlayerFullscreen()">Toàn màn hình</button>
+            </div>
+            <div id="shotStatusTag">Sẵn sàng</div>
+        </div>
+    </div>
+
+    <div class="content-column">
+        <header class="report-header">
+            <div class="header-badges"><span class="badge">du-lich-khach-san</span> <span class="badge badge-alt">lifestyle-cinematic</span></div>
+            <h1 class="report-title">
+                <a href="https://www.instagram.com/reel/DdolqWHEsws/" target="_blank" rel="noopener">BỐ CỤC ĐIỆN ẢNH NGHỈ DƯỠNG: CÔNG THỨC 10 PHÂN CẢNH CAROUSEL DU LỊCH ĐA TẦNG CỦA YONG &amp; MIKE (CHIANG RAI)</a>
+            </h1>
+            <div class="header-meta">
+                <span>Nguồn: <a href="https://www.instagram.com/yongandmike/" target="_blank" class="creator-link">@yongandmike ↗</a></span>
+                <span class="meta-dot">•</span>
+                <span class="meta-stat">10 cảnh</span>
+                <span class="meta-dot">•</span>
+                <span class="meta-stat">31.08s</span>
+                <a href="https://ytuong.fedu.vn" target="_blank" class="hub-link">Kho Ý Tưởng ↗</a>
+            </div>
+        </header>
+
+        
+        <section class="axis-card">
+            <h3 class="axis-title">TRỤC KỊCH BẢN 3 NHỊP</h3>
+            <div class="axis-content">[Nhịp 1: Mồi mắt bối cảnh rộng &amp; Định danh không gian (Slide 1–2)] ➔ [Nhịp 2: Thân bài - Bóc tách trải nghiệm đa giác quan &amp; Chi tiết văn hóa (Slide 3–9)] ➔ [Nhịp 3: Chốt hạ nhịp thở bằng bố cục kiến trúc đóng khung (Slide 10)]</div>
+        </section>
+
+        <div class="overview-card">
+            Chuỗi 10 phân cảnh carousel kết hợp video tĩnh và chuyển động vi mô tại Chiang Rai, làm chủ kỹ thuật phân tầng tiền - trung - hậu cảnh, bố cục một điểm tụ và ánh sáng chiaroscuro ẩm thực.
+        </div>
+
+        
+
+        <div class="toolbar">
+            <div class="tab-group">
+                <button class="tab-btn active" id="tabDetailBtn" onclick="switchView('detail')">Bóc tách chi tiết</button>
+                <button class="tab-btn" id="tabGridBtn" onclick="switchView('grid')">Lưới ảnh (10)</button>
+            </div>
+            <button class="drawer-btn" onclick="toggleDrawer(true)">Mục lục</button>
+        </div>
+
+        <div id="storyboardView">
+            
+        <div class="shot-card" id="shot-card-1">
+            <div class="shot-thumb" onclick="playShot(0.0, 10.12, 'SHOT 01')">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_01_mid.jpg" alt="SHOT 01" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+                <span class="shot-time-badge">0.0s – 10.1s</span>
+            </div>
+            <div class="shot-body">
+                <div class="shot-head">
+                    <span class="shot-num">SHOT 01</span>
+                    <span class="shot-dur">10.12s</span>
+                </div>
+                <h4 class="shot-headline">Bố Cục 1/3 Lệch Tâm &amp; Tiêu Đề Môi Trường: Dẫn dắt ánh nhìn qua bãi cỏ sau mưa</h4>
+                <p class="shot-insight">Khi đặt chữ tiêu đề lên cảnh quay ngoại cảnh, hãy tìm mảng nền tự nhiên đồng nhất (lá cây, thảm cỏ) để chữ nổi bật mà không cần đổ bóng nặng.</p>
+                <details class="shot-details">
+                    <summary>Chi tiết kỹ thuật ▸</summary>
+                    <div class="shot-meta-grid">
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Establishing Wide Shot (Góc toàn định vị bối cảnh)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Overcast Diffused Light (Ánh sáng trời mây khuếch tán dịu sau mưa)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Mở màn trực tiếp</span></div>
+                    </div>
+                    <div class="critique-good">Khai thác mảng âm (Negative Space) tự nhiên của tán cây và bãi cỏ để đặt cụm chữ vàng nhạt; tỷ lệ 1/3 chia tách rõ ràng giữa tượng tĩnh bên phải và người động bên trái.</div>
+                    <div class="critique-warn">Chân nhân vật đi hơi sát viền mép dưới khung hình, có nguy cơ bị thanh điều hướng hoặc icon giao diện Reels/Carousel che lấp.</div>
+                    <div class="shot-narrative">Hai nhân vật thong thả bước từ trái sang giữa bãi cỏ xanh ngát, bên phải là cụm tượng đồng vũ nữ và rừng cây rậm rạp làm phông nền tự nhiên cho tiêu đề.</div>
+                </details>
+            </div>
+        </div>
+
+        <div class="shot-card" id="shot-card-2">
+            <div class="shot-thumb" onclick="playShot(0.0, 26.44, 'SHOT 02')">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_02_mid.jpg" alt="SHOT 02" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+                <span class="shot-time-badge">0.0s – 26.4s</span>
+            </div>
+            <div class="shot-body">
+                <div class="shot-head">
+                    <span class="shot-num">SHOT 02</span>
+                    <span class="shot-dur">26.44s</span>
+                </div>
+                <h4 class="shot-headline">Bố Cục Đối Xứng Một Điểm Tụ: Phân tầng Tiền - Trung - Hậu cảnh tạo độ sâu choáng ngợp</h4>
+                <p class="shot-insight">Với không gian kiến trúc trần cao hoành tráng, bắt buộc phải đặt chủ thể người vào trung cảnh làm thước đo tỷ lệ (Human Scale) để bộc lộ độ kỳ vĩ.</p>
+                <details class="shot-details">
+                    <summary>Chi tiết kỹ thuật ▸</summary>
+                    <div class="shot-meta-grid">
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Architectural Wide Shot (Góc toàn kiến trúc đối xứng)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Warm Ambient &amp; Directional Uplight (Ánh sáng nội thất ấm kết hợp đèn hắt vòm)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Trượt ngang Carousel</span></div>
+                    </div>
+                    <div class="critique-good">Cấu trúc một điểm tụ (One-Point Perspective) hoàn hảo; tiền cảnh có bàn console với bình gốm mộc tạo độ sâu 3 lớp, khóa chặt nhân vật ở trung cảnh làm thước đo tỷ lệ.</div>
+                    <div class="critique-warn">Hai nhân vật đứng khá gần cụm sofa giữa sảnh nên nhịp chuyển động bị hòa lẫn nhẹ vào đồ nội thất nếu nhìn lướt trên màn hình điện thoại.</div>
+                    <div class="shot-narrative">Toàn cảnh sảnh đón tiếp resort siêu sang với các hàng vòm trắng đối xứng, hai nhân vật đứng thong thả trò chuyện ở giữa sàn đá.</div>
+                </details>
+            </div>
+        </div>
+
+        <div class="shot-card" id="shot-card-3">
+            <div class="shot-thumb" onclick="playShot(0.0, 37.52, 'SHOT 03')">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_03_mid.jpg" alt="SHOT 03" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+                <span class="shot-time-badge">0.0s – 37.5s</span>
+            </div>
+            <div class="shot-body">
+                <div class="shot-head">
+                    <span class="shot-num">SHOT 03</span>
+                    <span class="shot-dur">37.52s</span>
+                </div>
+                <h4 class="shot-headline">Bố Cục Qua Vai 3/4 &amp; Chiều Sâu Lớp Cắt: Kéo người xem vào trải nghiệm xưởng vẽ</h4>
+                <p class="shot-insight">Quay hoạt động trải nghiệm thủ công (vẽ tranh, nặn gốm) nên dùng góc qua vai để kéo khán giả vào góc nhìn của người trong cuộc (first-person involvement).</p>
+                <details class="shot-details">
+                    <summary>Chi tiết kỹ thuật ▸</summary>
+                    <div class="shot-meta-grid">
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Over-the-Shoulder (Góc trung qua vai)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Natural Canopy Daylight (Ánh sáng tự nhiên lọc qua tán lá rừng)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Trượt ngang Carousel</span></div>
+                    </div>
+                    <div class="critique-good">Góc máy đặt từ phía sau vai chếch 45 độ, mượn cột gỗ và lan can làm khung phụ dẫn hướng; hậu cảnh mở ra tán lá xanh mờ nhòe tạo cảm giác thư thái, mộc mạc.</div>
+                    <div class="critique-warn">Lưng nhân vật nam chiếm diện tích khá lớn ở trung tâm khung hình, che khuất một phần thao tác vung cọ chi tiết.</div>
+                    <div class="shot-narrative">Hai bạn trẻ ngồi cạnh nhau tại bàn gỗ trải khăn caro, say sưa vẽ tranh sơn dầu mini tại xưởng nghệ thuật giữa tán cây xanh.</div>
+                </details>
+            </div>
+        </div>
+
+        <div class="shot-card" id="shot-card-4">
+            <div class="shot-thumb" onclick="playShot(0.0, 20.64, 'SHOT 04')">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_04_mid.jpg" alt="SHOT 04" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+                <span class="shot-time-badge">0.0s – 20.6s</span>
+            </div>
+            <div class="shot-body">
+                <div class="shot-head">
+                    <span class="shot-num">SHOT 04</span>
+                    <span class="shot-dur">20.64s</span>
+                </div>
+                <h4 class="shot-headline">Bố Cục Ẩm Thực 1/3 Bất Đối Xứng: Đặc tả mâm cỗ truyền thống Khantoke miền Bắc Thái</h4>
+                <p class="shot-insight">Quay mâm ẩm thực có nhiều bát đĩa tầng bậc, hãy hạ máy góc nghiêng 45 độ thay vì cắm máy thẳng từ trên xuống để phô diễn độ cao và kết cấu khay đan.</p>
+                <details class="shot-details">
+                    <summary>Chi tiết kỹ thuật ▸</summary>
+                    <div class="shot-meta-grid">
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up Food Angle (Cận cảnh ẩm thực nghiêng 45 độ)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Natural Sidelight (Ánh sáng tự nhiên ven hiên rọi nghiêng nổi khối)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Trượt ngang Carousel</span></div>
+                    </div>
+                    <div class="critique-good">Mâm thức ăn đặt ở 2/3 góc dưới bên phải, để 1/3 góc trên bên trái làm mặt bàn gỗ thở; độ sâu trường ảnh nông làm mờ nắp gốm phía sau, nổi bật các món súp và đồ cuốn phía trước.</div>
+                    <div class="critique-warn">Góc máy hơi chếch chéo bàn nên phần rìa trái hơi trống trải, cần thêm chi tiết nhỏ như ly nước hoặc khăn ăn làm điểm tựa.</div>
+                    <div class="shot-narrative">Mâm đồ ăn truyền thống miền Bắc Thái (Khantoke) bằng mây tre đan với các thố gốm xanh celadon được bày biện công phu trên bàn gỗ ngoài trời.</div>
+                </details>
+            </div>
+        </div>
+
+        <div class="shot-card" id="shot-card-5">
+            <div class="shot-thumb" onclick="playShot(0.0, 46.64, 'SHOT 05')">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_05_mid.jpg" alt="SHOT 05" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+                <span class="shot-time-badge">0.0s – 46.6s</span>
+            </div>
+            <div class="shot-body">
+                <div class="shot-head">
+                    <span class="shot-num">SHOT 05</span>
+                    <span class="shot-dur">46.64s</span>
+                </div>
+                <h4 class="shot-headline">Bố Cục Tương Phản Sáng Tối Chiaroscuro: Gom toàn bộ sự chú ý vào đĩa tiệc tối Fine Dining</h4>
+                <p class="shot-insight">Trong không gian ẩm thực sang trọng, dũng cảm tắt bớt ánh sáng môi trường; chỉ cần một nguồn sáng điểm chiếu vào đĩa là video tự động toát lên vẻ đắt tiền.</p>
+                <details class="shot-details">
+                    <summary>Chi tiết kỹ thuật ▸</summary>
+                    <div class="shot-meta-grid">
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Tabletop Close-Up (Cận cảnh bàn tiệc tối)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-Key Top Spotlight (Ánh sáng điểm từ trên trần)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Trượt ngang Carousel</span></div>
+                    </div>
+                    <div class="critique-good">Ánh sáng điểm rọi thẳng từ trên trần xuống đĩa ăn (Top Spotlight), triệt tiêu toàn bộ hậu cảnh rườm rà; đôi bàn tay và động tác thìa dĩa nổi bật như một tác phẩm thị giác.</div>
+                    <div class="critique-warn">Đèn rọi điểm tạo bóng đổ đen tròn của thìa đè lên thức ăn trong chốc lát làm mất chi tiết bề mặt sốt.</div>
+                    <div class="shot-narrative">Bữa tối cao cấp trong không gian tối, nhân vật dùng thìa vét miếng sốt và thức ăn tinh tế trên chiếc đĩa gốm mộc tráng men xám.</div>
+                </details>
+            </div>
+        </div>
+
+        <div class="shot-card" id="shot-card-6">
+            <div class="shot-thumb" onclick="playShot(0.0, 34.04, 'SHOT 06')">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_06_mid.jpg" alt="SHOT 06" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+                <span class="shot-time-badge">0.0s – 34.0s</span>
+            </div>
+            <div class="shot-body">
+                <div class="shot-head">
+                    <span class="shot-num">SHOT 06</span>
+                    <span class="shot-dur">34.04s</span>
+                </div>
+                <h4 class="shot-headline">Bố Cục Tiền Cảnh Mờ Nhòe &amp; Đường Chéo Thị Giác: Đặc tả kỹ nghệ pha chế tại quầy Bar</h4>
+                <p class="shot-insight">Bố cục quầy bar luôn cần vật phẩm làm tiền cảnh mờ (ly, chai rượu, bình shaker) để tạo chiều sâu 3 chiều và giấu đi những chi tiết lộn xộn phía sau quầy.</p>
+                <details class="shot-details">
+                    <summary>Chi tiết kỹ thuật ▸</summary>
+                    <div class="shot-meta-grid">
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Profile Shot (Góc trung cận quầy bar)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Warm Ambient &amp; Bar Spotlights (Ánh sáng vàng ấm điểm xuyết bóng kim loại)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Trượt ngang Carousel</span></div>
+                    </div>
+                    <div class="critique-good">Sử dụng hàng bình lắc kim loại đồng làm tiền cảnh mờ (Foreground Bokeh) bên phải, tạo đường chéo thị giác dẫn thẳng vào bàn tay điêu luyện và nét mặt chăm chú của bartender.</div>
+                    <div class="critique-warn">Đỉnh đầu của bartender bị cắt sát mép trên khung hình do giới hạn tỉ lệ dọc 9:16.</div>
+                    <div class="shot-narrative">Bartender tại quầy bar đang tỉ mỉ gài cành lá bạc hà trang trí lên ly cocktail đá bào trên mặt bàn quầy bar bóng loáng.</div>
+                </details>
+            </div>
+        </div>
+
+        <div class="shot-card" id="shot-card-7">
+            <div class="shot-thumb" onclick="playShot(0.0, 34.88, 'SHOT 07')">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_07_mid.jpg" alt="SHOT 07" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+                <span class="shot-time-badge">0.0s – 34.9s</span>
+            </div>
+            <div class="shot-body">
+                <div class="shot-head">
+                    <span class="shot-num">SHOT 07</span>
+                    <span class="shot-dur">34.88s</span>
+                </div>
+                <h4 class="shot-headline">Bố Cục Xếp Lớp Dọc &amp; Ánh Sáng Xiên: Đánh thức vân thời gian trên tượng cổ Lanna</h4>
+                <p class="shot-insight">Quay hiện vật văn hóa cổ, phù điêu hay điêu khắc, bắt buộc phải dùng ánh sáng xiên tạo bóng đổ vi mô, tuyệt đối không dùng đèn rọi phẳng mặt.</p>
+                <details class="shot-details">
+                    <summary>Chi tiết kỹ thuật ▸</summary>
+                    <div class="shot-meta-grid">
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up Profile (Góc cận nghiêng đặc tả chi tiết)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-Key Raking Sidelight (Ánh sáng xiên cục bộ tương phản mạnh)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Trượt ngang Carousel</span></div>
+                    </div>
+                    <div class="critique-good">Khai thác triệt để ánh sáng xiên góc 90 độ (Raking Sidelight) chiếu sượt bề mặt tượng, làm bật lên các vết nứt sơn, mảng vàng mòn và hoa văn chạm khắc tinh xảo.</div>
+                    <div class="critique-warn">Pho tượng đầu tiên bị cắt mất nửa khuôn mặt bên phải, khiến mắt người xem phải đảo nhẹ sang pho thứ hai mới định hình trọn vẹn diện tướng.</div>
+                    <div class="shot-narrative">Dàn tượng Phật và linh thú gỗ sơn son thếp vàng cổ kính của văn hóa Lanna xếp hàng từ trước ra sau trong không gian mộc bản địa.</div>
+                </details>
+            </div>
+        </div>
+
+        <div class="shot-card" id="shot-card-8">
+            <div class="shot-thumb" onclick="playShot(0.0, 17.2, 'SHOT 08')">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_08_mid.jpg" alt="SHOT 08" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+                <span class="shot-time-badge">0.0s – 17.2s</span>
+            </div>
+            <div class="shot-body">
+                <div class="shot-head">
+                    <span class="shot-num">SHOT 08</span>
+                    <span class="shot-dur">17.20s</span>
+                </div>
+                <h4 class="shot-headline">Bố Cục Hướng Tâm Từ Góc Cao: Gắn kết không gian trải nghiệm thủ công gia đình</h4>
+                <p class="shot-insight">Khi quay hoạt động nhóm hoặc trẻ nhỏ, góc máy từ trên cao nhìn xuống giúp bố cục sạch sẽ, tránh việc các nhân vật ngồi đối diện che mặt nhau.</p>
+                <details class="shot-details">
+                    <summary>Chi tiết kỹ thuật ▸</summary>
+                    <div class="shot-meta-grid">
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">High-Angle Medium Shot (Góc cao toàn trung)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Ambient Daylight (Ánh sáng tự nhiên chan hòa)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Trượt ngang Carousel</span></div>
+                    </div>
+                    <div class="critique-good">Góc máy cao chúc xuống (High Angle) gom toàn bộ cánh tay, ánh mắt của các nhân vật hướng về tâm bàn trắng; tạo cảm xúc cộng đồng ấm áp và trật tự thị giác.</div>
+                    <div class="critique-warn">Người lớn đứng phía sau góc phải bị cắt cụt người khi bước qua khung hình, làm xao nhãng nhịp chú ý của cụm nhân vật chính.</div>
+                    <div class="shot-narrative">Workshop thủ công giữa sảnh lớn: cô giáo và các em nhỏ quây quần quanh bàn tròn nhỏ, cùng nhau cắt dán và tô màu tranh giấy.</div>
+                </details>
+            </div>
+        </div>
+
+        <div class="shot-card" id="shot-card-9">
+            <div class="shot-thumb" onclick="playShot(0.0, 20.44, 'SHOT 09')">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_09_mid.jpg" alt="SHOT 09" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+                <span class="shot-time-badge">0.0s – 20.4s</span>
+            </div>
+            <div class="shot-body">
+                <div class="shot-head">
+                    <span class="shot-num">SHOT 09</span>
+                    <span class="shot-dur">20.44s</span>
+                </div>
+                <h4 class="shot-headline">Bố Cục Nhịp Điệu Hình Học Tròn: Sắp đặt mẹt gia vị mây tre tự nhiên</h4>
+                <p class="shot-insight">Khi quay sản phẩm nhỏ hoặc nguyên liệu nấu ăn, sắp xếp theo các khối hình học đồng dạng (tròn, vuông) sẽ mang lại cảm giác ngăn nắp, cao cấp tức thì.</p>
+                <details class="shot-details">
+                    <summary>Chi tiết kỹ thuật ▸</summary>
+                    <div class="shot-meta-grid">
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Semi Flat-Lay Close-Up (Góc cận nghiêng 30 độ)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Soft Diffused Daylight (Ánh sáng tự nhiên dịu nhẹ)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Trượt ngang Carousel</span></div>
+                    </div>
+                    <div class="critique-good">Sự lặp lại có chủ đích của các hình tròn mẹt mây tre đan tạo nhịp điệu hình học (Geometric Pattern); tiêu điểm rơi chuẩn vào mẹt tiêu đen ở trung tâm, các rổ xung quanh mờ nhẹ tạo tầng bậc.</div>
+                    <div class="critique-warn">Tờ giấy hướng dẫn phía sau bị cắt góc và hơi cháy sáng nhẹ, làm phân tán bớt sự chú ý vào các mẹt thảo mộc.</div>
+                    <div class="shot-narrative">Các mẹt tre tròn đựng hạt tiêu đen rừng, hoa hồi, hạt thảo mộc địa phương được xếp so le bên cạnh bảng hướng dẫn ẩm thực.</div>
+                </details>
+            </div>
+        </div>
+
+        <div class="shot-card" id="shot-card-10">
+            <div class="shot-thumb" onclick="playShot(0.0, 31.08, 'SHOT 10')">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_10_mid.jpg" alt="SHOT 10" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+                <span class="shot-time-badge">0.0s – 31.1s</span>
+            </div>
+            <div class="shot-body">
+                <div class="shot-head">
+                    <span class="shot-num">SHOT 10</span>
+                    <span class="shot-dur">31.08s</span>
+                </div>
+                <h4 class="shot-headline">Bố Cục Khung Trong Khung Kiến Trúc: Đóng khung nhân vật tĩnh tại trước sảnh Ballroom</h4>
+                <p class="shot-insight">Khung hình kết thúc của một chuỗi hành trình nên dùng bố cục kiến trúc tĩnh, đóng khung chủ thể để tạo cảm giác trọn vẹn, lắng đọng cho người xem.</p>
+                <details class="shot-details">
+                    <summary>Chi tiết kỹ thuật ▸</summary>
+                    <div class="shot-meta-grid">
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Wide Architectural Shot (Góc toàn trung kiến trúc)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Architectural Accent Lighting (Đèn hắt kiến trúc đối xứng)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Dừng kết thúc chuỗi Carousel</span></div>
+                    </div>
+                    <div class="critique-good">Khung vòm và dầm trần tạo thành chiếc khung tự nhiên (Frame within Frame) đóng chặt hai nhân vật vào trung tâm; hai đường đèn hắt dọc hai bên cột tạo thành 2 đường dẫn song song hoàn hảo kết bài.</div>
+                    <div class="critique-warn">Nhân vật đứng hơi xa và cùng tông màu tối với vách gỗ Ballroom nên độ tách bạch giữa người và phông nền chưa đạt độ tương phản tối đa.</div>
+                    <div class="shot-narrative">Hai nhân vật đứng tựa lan can trắng tầng lửng trước sảnh Ballroom ốp gỗ, thư thả trò chuyện trong bộ trang phục tối giản.</div>
+                </details>
+            </div>
+        </div>
+        </div>
+
+        <div id="gridView">
+            
+        <div class="grid-item" onclick="playShot(0.0, 10.12, 'SHOT 01')">
+            <div class="grid-img-wrap">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_01_mid.jpg" alt="SHOT 01" loading="lazy" />
+                <span class="grid-num">SHOT 01</span>
+                <span class="grid-time">0.0s – 10.1s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_01_mid.jpg', 'SHOT 01 • Bố Cục 1/3 Lệch Tâm &amp; Tiêu Đề Môi Trường: Dẫn dắt ánh nhìn qua bãi cỏ sau mưa')">⊕</button>
+            </div>
+            <div class="grid-title">Bố Cục 1/3 Lệch Tâm &amp; Tiêu Đề Môi Trường</div>
+        </div>
+
+        <div class="grid-item" onclick="playShot(0.0, 26.44, 'SHOT 02')">
+            <div class="grid-img-wrap">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_02_mid.jpg" alt="SHOT 02" loading="lazy" />
+                <span class="grid-num">SHOT 02</span>
+                <span class="grid-time">0.0s – 26.4s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_02_mid.jpg', 'SHOT 02 • Bố Cục Đối Xứng Một Điểm Tụ: Phân tầng Tiền - Trung - Hậu cảnh tạo độ sâu choáng ngợp')">⊕</button>
+            </div>
+            <div class="grid-title">Bố Cục Đối Xứng Một Điểm Tụ: Phân tầng T</div>
+        </div>
+
+        <div class="grid-item" onclick="playShot(0.0, 37.52, 'SHOT 03')">
+            <div class="grid-img-wrap">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_03_mid.jpg" alt="SHOT 03" loading="lazy" />
+                <span class="grid-num">SHOT 03</span>
+                <span class="grid-time">0.0s – 37.5s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_03_mid.jpg', 'SHOT 03 • Bố Cục Qua Vai 3/4 &amp; Chiều Sâu Lớp Cắt: Kéo người xem vào trải nghiệm xưởng vẽ')">⊕</button>
+            </div>
+            <div class="grid-title">Bố Cục Qua Vai 3/4 &amp; Chiều Sâu Lớp Cắt: </div>
+        </div>
+
+        <div class="grid-item" onclick="playShot(0.0, 20.64, 'SHOT 04')">
+            <div class="grid-img-wrap">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_04_mid.jpg" alt="SHOT 04" loading="lazy" />
+                <span class="grid-num">SHOT 04</span>
+                <span class="grid-time">0.0s – 20.6s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_04_mid.jpg', 'SHOT 04 • Bố Cục Ẩm Thực 1/3 Bất Đối Xứng: Đặc tả mâm cỗ truyền thống Khantoke miền Bắc Thái')">⊕</button>
+            </div>
+            <div class="grid-title">Bố Cục Ẩm Thực 1/3 Bất Đối Xứng: Đặc tả </div>
+        </div>
+
+        <div class="grid-item" onclick="playShot(0.0, 46.64, 'SHOT 05')">
+            <div class="grid-img-wrap">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_05_mid.jpg" alt="SHOT 05" loading="lazy" />
+                <span class="grid-num">SHOT 05</span>
+                <span class="grid-time">0.0s – 46.6s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_05_mid.jpg', 'SHOT 05 • Bố Cục Tương Phản Sáng Tối Chiaroscuro: Gom toàn bộ sự chú ý vào đĩa tiệc tối Fine Dining')">⊕</button>
+            </div>
+            <div class="grid-title">Bố Cục Tương Phản Sáng Tối Chiaroscuro: </div>
+        </div>
+
+        <div class="grid-item" onclick="playShot(0.0, 34.04, 'SHOT 06')">
+            <div class="grid-img-wrap">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_06_mid.jpg" alt="SHOT 06" loading="lazy" />
+                <span class="grid-num">SHOT 06</span>
+                <span class="grid-time">0.0s – 34.0s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_06_mid.jpg', 'SHOT 06 • Bố Cục Tiền Cảnh Mờ Nhòe &amp; Đường Chéo Thị Giác: Đặc tả kỹ nghệ pha chế tại quầy Bar')">⊕</button>
+            </div>
+            <div class="grid-title">Bố Cục Tiền Cảnh Mờ Nhòe &amp; Đường Chéo Th</div>
+        </div>
+
+        <div class="grid-item" onclick="playShot(0.0, 34.88, 'SHOT 07')">
+            <div class="grid-img-wrap">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_07_mid.jpg" alt="SHOT 07" loading="lazy" />
+                <span class="grid-num">SHOT 07</span>
+                <span class="grid-time">0.0s – 34.9s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_07_mid.jpg', 'SHOT 07 • Bố Cục Xếp Lớp Dọc &amp; Ánh Sáng Xiên: Đánh thức vân thời gian trên tượng cổ Lanna')">⊕</button>
+            </div>
+            <div class="grid-title">Bố Cục Xếp Lớp Dọc &amp; Ánh Sáng Xiên: Đánh</div>
+        </div>
+
+        <div class="grid-item" onclick="playShot(0.0, 17.2, 'SHOT 08')">
+            <div class="grid-img-wrap">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_08_mid.jpg" alt="SHOT 08" loading="lazy" />
+                <span class="grid-num">SHOT 08</span>
+                <span class="grid-time">0.0s – 17.2s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_08_mid.jpg', 'SHOT 08 • Bố Cục Hướng Tâm Từ Góc Cao: Gắn kết không gian trải nghiệm thủ công gia đình')">⊕</button>
+            </div>
+            <div class="grid-title">Bố Cục Hướng Tâm Từ Góc Cao: Gắn kết khô</div>
+        </div>
+
+        <div class="grid-item" onclick="playShot(0.0, 20.44, 'SHOT 09')">
+            <div class="grid-img-wrap">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_09_mid.jpg" alt="SHOT 09" loading="lazy" />
+                <span class="grid-num">SHOT 09</span>
+                <span class="grid-time">0.0s – 20.4s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_09_mid.jpg', 'SHOT 09 • Bố Cục Nhịp Điệu Hình Học Tròn: Sắp đặt mẹt gia vị mây tre tự nhiên')">⊕</button>
+            </div>
+            <div class="grid-title">Bố Cục Nhịp Điệu Hình Học Tròn: Sắp đặt </div>
+        </div>
+
+        <div class="grid-item" onclick="playShot(0.0, 31.08, 'SHOT 10')">
+            <div class="grid-img-wrap">
+                <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_10_mid.jpg" alt="SHOT 10" loading="lazy" />
+                <span class="grid-num">SHOT 10</span>
+                <span class="grid-time">0.0s – 31.1s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_10_mid.jpg', 'SHOT 10 • Bố Cục Khung Trong Khung Kiến Trúc: Đóng khung nhân vật tĩnh tại trước sảnh Ballroom')">⊕</button>
+            </div>
+            <div class="grid-title">Bố Cục Khung Trong Khung Kiến Trúc: Đóng</div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div id="drawerBackdrop" class="drawer-backdrop" onclick="toggleDrawer(false)">
+    <div class="drawer-panel" onclick="event.stopPropagation()">
+        <div class="drawer-head">
+            <span>MỤC LỤC (10)</span>
+            <button onclick="toggleDrawer(false)">&times;</button>
+        </div>
+        <div class="drawer-list">
+        <div class="drawer-item" onclick="jumpToShot(1, 0.0, 10.12, 'SHOT 01')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_01_mid.jpg" alt="SHOT 01" loading="lazy" /></div>
+            <div class="drawer-info">
+                <div class="drawer-shot-num">SHOT 01</div>
+                <div class="drawer-shot-hl">Bố Cục 1/3 Lệch Tâm &amp; Tiêu Đề Môi Trường: </div>
+                <div class="drawer-shot-time">0.00s – 10.12s</div>
+            </div>
+            <div class="drawer-arrow">▶</div>
+        </div>
+
+        <div class="drawer-item" onclick="jumpToShot(2, 0.0, 26.44, 'SHOT 02')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_02_mid.jpg" alt="SHOT 02" loading="lazy" /></div>
+            <div class="drawer-info">
+                <div class="drawer-shot-num">SHOT 02</div>
+                <div class="drawer-shot-hl">Bố Cục Đối Xứng Một Điểm Tụ: Phân tầng Tiề</div>
+                <div class="drawer-shot-time">0.00s – 26.44s</div>
+            </div>
+            <div class="drawer-arrow">▶</div>
+        </div>
+
+        <div class="drawer-item" onclick="jumpToShot(3, 0.0, 37.52, 'SHOT 03')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_03_mid.jpg" alt="SHOT 03" loading="lazy" /></div>
+            <div class="drawer-info">
+                <div class="drawer-shot-num">SHOT 03</div>
+                <div class="drawer-shot-hl">Bố Cục Qua Vai 3/4 &amp; Chiều Sâu Lớp Cắt: Ké</div>
+                <div class="drawer-shot-time">0.00s – 37.52s</div>
+            </div>
+            <div class="drawer-arrow">▶</div>
+        </div>
+
+        <div class="drawer-item" onclick="jumpToShot(4, 0.0, 20.64, 'SHOT 04')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_04_mid.jpg" alt="SHOT 04" loading="lazy" /></div>
+            <div class="drawer-info">
+                <div class="drawer-shot-num">SHOT 04</div>
+                <div class="drawer-shot-hl">Bố Cục Ẩm Thực 1/3 Bất Đối Xứng: Đặc tả mâ</div>
+                <div class="drawer-shot-time">0.00s – 20.64s</div>
+            </div>
+            <div class="drawer-arrow">▶</div>
+        </div>
+
+        <div class="drawer-item" onclick="jumpToShot(5, 0.0, 46.64, 'SHOT 05')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_05_mid.jpg" alt="SHOT 05" loading="lazy" /></div>
+            <div class="drawer-info">
+                <div class="drawer-shot-num">SHOT 05</div>
+                <div class="drawer-shot-hl">Bố Cục Tương Phản Sáng Tối Chiaroscuro: Go</div>
+                <div class="drawer-shot-time">0.00s – 46.64s</div>
+            </div>
+            <div class="drawer-arrow">▶</div>
+        </div>
+
+        <div class="drawer-item" onclick="jumpToShot(6, 0.0, 34.04, 'SHOT 06')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_06_mid.jpg" alt="SHOT 06" loading="lazy" /></div>
+            <div class="drawer-info">
+                <div class="drawer-shot-num">SHOT 06</div>
+                <div class="drawer-shot-hl">Bố Cục Tiền Cảnh Mờ Nhòe &amp; Đường Chéo Thị </div>
+                <div class="drawer-shot-time">0.00s – 34.04s</div>
+            </div>
+            <div class="drawer-arrow">▶</div>
+        </div>
+
+        <div class="drawer-item" onclick="jumpToShot(7, 0.0, 34.88, 'SHOT 07')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_07_mid.jpg" alt="SHOT 07" loading="lazy" /></div>
+            <div class="drawer-info">
+                <div class="drawer-shot-num">SHOT 07</div>
+                <div class="drawer-shot-hl">Bố Cục Xếp Lớp Dọc &amp; Ánh Sáng Xiên: Đánh t</div>
+                <div class="drawer-shot-time">0.00s – 34.88s</div>
+            </div>
+            <div class="drawer-arrow">▶</div>
+        </div>
+
+        <div class="drawer-item" onclick="jumpToShot(8, 0.0, 17.2, 'SHOT 08')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_08_mid.jpg" alt="SHOT 08" loading="lazy" /></div>
+            <div class="drawer-info">
+                <div class="drawer-shot-num">SHOT 08</div>
+                <div class="drawer-shot-hl">Bố Cục Hướng Tâm Từ Góc Cao: Gắn kết không</div>
+                <div class="drawer-shot-time">0.00s – 17.20s</div>
+            </div>
+            <div class="drawer-arrow">▶</div>
+        </div>
+
+        <div class="drawer-item" onclick="jumpToShot(9, 0.0, 20.44, 'SHOT 09')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_09_mid.jpg" alt="SHOT 09" loading="lazy" /></div>
+            <div class="drawer-info">
+                <div class="drawer-shot-num">SHOT 09</div>
+                <div class="drawer-shot-hl">Bố Cục Nhịp Điệu Hình Học Tròn: Sắp đặt mẹ</div>
+                <div class="drawer-shot-time">0.00s – 20.44s</div>
+            </div>
+            <div class="drawer-arrow">▶</div>
+        </div>
+
+        <div class="drawer-item" onclick="jumpToShot(10, 0.0, 31.08, 'SHOT 10')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_10_mid.jpg" alt="SHOT 10" loading="lazy" /></div>
+            <div class="drawer-info">
+                <div class="drawer-shot-num">SHOT 10</div>
+                <div class="drawer-shot-hl">Bố Cục Khung Trong Khung Kiến Trúc: Đóng k</div>
+                <div class="drawer-shot-time">0.00s – 31.08s</div>
+            </div>
+            <div class="drawer-arrow">▶</div>
+        </div></div>
+    </div>
+</div>
+
+<div id="lightboxModal" onclick="closeLightbox()">
+    <span class="lightbox-x" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImg" onclick="event.stopPropagation()" />
+    <div id="lightboxCaption"></div>
+</div>
+
+<script>
+// Video source resolution - try multiple paths
+const rawVideoSrc = 'https://media.fedu.vn/videos/DdolqWHEsws.mp4';
+let currentEndTime = null;
+
+function getCandidateUrls(src) {
+    if (!src) return [];
+    if (src.startsWith('http://') || src.startsWith('https://')) return [src];
+    let clean = src.replace(/^(\.\.\/|\.\/)*/g, '').replace(/^(videos\/|reports\/)/, '');
+    return [
+        'https://media.fedu.vn/videos/' + encodeURI(clean),
+        '../videos/' + clean,
+        './videos/' + clean,
+        './' + clean
+    ];
+}
+
+const candidateUrls = getCandidateUrls(rawVideoSrc);
+let candidateIdx = 0;
+const player = document.getElementById('mainPlayer');
+window.isYtMuted = false;
+
+function loadVideoCandidate() {
+    if (!player || player.tagName === 'IFRAME' || candidateIdx >= candidateUrls.length) return;
+    player.src = candidateUrls[candidateIdx];
+    var link = document.getElementById('directVidLink');
+    if (link) link.href = candidateUrls[candidateIdx];
+    player.load();
+}
+
+if (player && player.tagName !== 'IFRAME') {
+    player.onerror = function() {
+        candidateIdx++;
+        if (candidateIdx < candidateUrls.length) loadVideoCandidate();
+    };
+    loadVideoCandidate();
+}
+
+function playShot(startTime, endTime, label) {
+    if (!player) return;
+    currentEndTime = (typeof endTime === 'number') ? endTime : null;
+    var tag = document.getElementById('shotStatusTag');
+    if (tag) {
+        var endTxt = currentEndTime ? ' - ' + currentEndTime.toFixed(2) + 's' : '';
+        tag.innerText = (label || 'Phân cảnh') + ': [' + startTime.toFixed(2) + 's' + endTxt + ']';
+    }
+    if (player.tagName === 'IFRAME') {
+        player.contentWindow.postMessage(JSON.stringify({
+            event: 'command',
+            func: 'seekTo',
+            args: [startTime, true]
+        }), '*');
+        player.contentWindow.postMessage(JSON.stringify({
+            event: 'command',
+            func: 'playVideo',
+            args: []
+        }), '*');
+    } else {
+        player.currentTime = startTime;
+        var p = player.play();
+        if (p !== undefined) {
+            p.catch(function() {
+                player.muted = true;
+                player.play().catch(function() {});
+            });
+        }
+    }
+    document.querySelectorAll('.shot-card').forEach(function(c) { c.classList.remove('active-playing'); });
+    var cards = document.querySelectorAll('.shot-card');
+    for (var i = 0; i < cards.length; i++) {
+        if (cards[i].innerText.indexOf(label) !== -1) {
+            cards[i].classList.add('active-playing');
+            break;
+        }
+    }
+    if (window.innerWidth < 1024) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
+function setSpeed(speed, btn) {
+    if (!player) return;
+    if (player.tagName === 'IFRAME') {
+        player.contentWindow.postMessage(JSON.stringify({
+            event: 'command',
+            func: 'setPlaybackRate',
+            args: [speed]
+        }), '*');
+    } else {
+        player.playbackRate = speed;
+    }
+    document.querySelectorAll('.speed-row .ctrl-btn').forEach(function(b) { b.classList.remove('active'); });
+    if (btn) btn.classList.add('active');
+}
+
+function stepFrame(frames) {
+    if (!player) return;
+    if (player.tagName !== 'IFRAME') {
+        player.pause();
+        player.currentTime += (frames * (1/30));
+    }
+}
+
+function toggleMute(btn) {
+    if (!player) return;
+    if (player.tagName === 'IFRAME') {
+        window.isYtMuted = !window.isYtMuted;
+        player.contentWindow.postMessage(JSON.stringify({
+            event: 'command',
+            func: window.isYtMuted ? 'mute' : 'unMute',
+            args: []
+        }), '*');
+        if (btn) btn.innerText = window.isYtMuted ? 'Tắt tiếng' : 'Âm thanh';
+    } else {
+        player.muted = !player.muted;
+        if (btn) btn.innerText = player.muted ? 'Tắt tiếng' : 'Âm thanh';
+    }
+}
+
+function togglePlayerFullscreen() {
+    var v = document.getElementById('mainPlayer');
+    if (!v) return;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (v.requestFullscreen) v.requestFullscreen().catch(function(){});
+        else if (v.webkitRequestFullscreen) v.webkitRequestFullscreen();
+        else if (v.webkitEnterFullscreen) v.webkitEnterFullscreen();
+    } else {
+        if (document.exitFullscreen) document.exitFullscreen().catch(function(){});
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+    }
+}
+
+document.addEventListener('keydown', function(e) {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        togglePlayerFullscreen();
+    }
+    if (e.key === 'Escape') {
+        closeLightbox();
+        toggleDrawer(false);
+    }
+    if (e.key === ' ' && document.activeElement.tagName !== 'INPUT') {
+        e.preventDefault();
+        if (player) player.paused ? player.play() : player.pause();
+    }
+});
+
+function switchView(view) {
+    var sb = document.getElementById('storyboardView');
+    var grid = document.getElementById('gridView');
+    var tabD = document.getElementById('tabDetailBtn');
+    var tabG = document.getElementById('tabGridBtn');
+    if (view === 'grid') {
+        sb.style.display = 'none';
+        grid.style.display = 'grid';
+        tabD.classList.remove('active');
+        tabG.classList.add('active');
+    } else {
+        sb.style.display = 'flex';
+        grid.style.display = 'none';
+        tabD.classList.add('active');
+        tabG.classList.remove('active');
+    }
+}
+
+function toggleDrawer(open) {
+    var d = document.getElementById('drawerBackdrop');
+    if (open) d.classList.add('open');
+    else d.classList.remove('open');
+}
+
+function jumpToShot(shotNum, st, et, label) {
+    toggleDrawer(false);
+    switchView('detail');
+    playShot(st, et, label);
+    var card = document.getElementById('shot-card-' + shotNum);
+    if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function openLightbox(src, caption) {
+    var modal = document.getElementById('lightboxModal');
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').innerText = caption || '';
+    modal.style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightboxModal').style.display = 'none';
+}
+
+function togglePromptAccordion(headerEl) {
+    var card = headerEl.closest('.remake-prompt-card');
+    if (!card) return;
+    var body = card.querySelector('.prompt-accordion-body');
+    var icon = card.querySelector('.toggle-icon');
+    var label = card.querySelector('.toggle-label');
+    if (!body) return;
+    var collapsed = (body.style.display === 'none' || getComputedStyle(body).display === 'none');
+    if (collapsed) {
+        body.style.display = 'block';
+        if (icon) icon.textContent = '▲';
+        if (label) label.textContent = 'Thu gọn';
+    } else {
+        body.style.display = 'none';
+        if (icon) icon.textContent = '▼';
+        if (label) label.textContent = 'Mở xem';
+    }
+}
+
+function copyMegaPrompt(e, btn) {
+    if (e && e.stopPropagation) e.stopPropagation();
+    var card = btn.closest('.remake-prompt-card');
+    var codeEl = card ? card.querySelector('.prompt-code-content') : document.getElementById('megaPromptText');
+    if (!codeEl) return;
+    var text = codeEl.innerText || codeEl.textContent;
+    navigator.clipboard.writeText(text).then(function() {
+        var orig = btn.innerHTML;
+        btn.innerHTML = '✅ Đã chép!';
+        btn.style.background = '#16a34a';
+        btn.style.color = '#fff';
+        setTimeout(function() {
+            btn.innerHTML = orig;
+            btn.style.background = '';
+            btn.style.color = '';
+        }, 2000);
+    }).catch(function() {
+        alert('Lỗi sao chép, bạn bôi đen văn bản để copy nhé!');
+    });
+}
+</script>
+</body>
+</html>
