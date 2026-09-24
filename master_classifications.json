@@ -18885,5 +18885,147 @@
     "youtube_id": "xDqN0flMCK0",
     "youtube_url": "https://youtu.be/xDqN0flMCK0",
     "youtube_embed": "https://www.youtube.com/embed/xDqN0flMCK0"
+  },
+  "IG_@davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis": {
+    "id": "IG_@davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis",
+    "creator": "@davidmurphyfilm",
+    "creator_name": "Davidmurphyfilm",
+    "title": "@davidmurphyfilm - Some rules I follow while filming and documen",
+    "shots_count": 11,
+    "duration": "22.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @davidmurphyfilm",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "Ddo3aQxjMeq": {
+    "id": "IG_@davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis",
+    "creator": "@davidmurphyfilm",
+    "creator_name": "Davidmurphyfilm",
+    "title": "@davidmurphyfilm - Some rules I follow while filming and documen",
+    "shots_count": 11,
+    "duration": "22.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @davidmurphyfilm",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot": {
+    "id": "IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot",
+    "creator": "@etaemin",
+    "creator_name": "Etaemin",
+    "title": "@etaemin - Get ready for the shoot",
+    "shots_count": 1,
+    "duration": "2.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @etaemin",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "Vf2GS8tIPlM",
+    "youtube_url": "https://youtu.be/Vf2GS8tIPlM",
+    "youtube_embed": "https://www.youtube.com/embed/Vf2GS8tIPlM"
+  },
+  "DdoooYmq-cd": {
+    "id": "IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot",
+    "creator": "@etaemin",
+    "creator_name": "Etaemin",
+    "title": "@etaemin - Get ready for the shoot",
+    "shots_count": 1,
+    "duration": "2.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @etaemin",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "Vf2GS8tIPlM",
+    "youtube_url": "https://youtu.be/Vf2GS8tIPlM",
+    "youtube_embed": "https://www.youtube.com/embed/Vf2GS8tIPlM"
   }
 }
