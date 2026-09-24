@@ -21328,28 +21328,33 @@
     "id": "IG_@dvdnguyen_DdXbbBiEq7P_Carousel_Analysis",
     "creator": "@dvdnguyen",
     "creator_name": "Dvdnguyen",
-    "title": "@dvdnguyen - Rainy season in Ho Chi Minh City",
+    "title": "8 Lát Cắt Điện Ảnh Ẩm Thực Đường Phố Mùa Mưa Sài Gòn — Cú Đấm Vị Giác & Nghệ Thuật Ánh Sáng Thực Chiến",
     "shots_count": 8,
-    "duration": "16.0s",
+    "duration": "62.9s",
     "shooting_style": {
       "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "am-thuc",
+      "name": "am-thuc",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @dvdnguyen",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting"
+      "Food Tour",
+      "Ẩm Thực Sài Gòn",
+      "Bánh Canh",
+      "Lẩu Gà Trứng Non",
+      "Macro Food Porn",
+      "Street Food",
+      "Mùa Mưa Sài Gòn",
+      "Ghế Nhựa Vỉa Hè"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "⚡ Gợn Sóng Vũng Nước Mưa Sài Gòn ➔ Rót Nước Cốt Dừa Trắng Muốt: Hành trình 8 lát cắt điện ảnh ẩm thực đường phố mùa mưa Sài Gòn đỉnh cao của @dvdnguyen.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -21362,28 +21367,33 @@
     "id": "IG_@dvdnguyen_DdXbbBiEq7P_Carousel_Analysis",
     "creator": "@dvdnguyen",
     "creator_name": "Dvdnguyen",
-    "title": "@dvdnguyen - Rainy season in Ho Chi Minh City",
+    "title": "8 Lát Cắt Điện Ảnh Ẩm Thực Đường Phố Mùa Mưa Sài Gòn — Cú Đấm Vị Giác & Nghệ Thuật Ánh Sáng Thực Chiến",
     "shots_count": 8,
-    "duration": "16.0s",
+    "duration": "62.9s",
     "shooting_style": {
       "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "am-thuc",
+      "name": "am-thuc",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @dvdnguyen",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting"
+      "Food Tour",
+      "Ẩm Thực Sài Gòn",
+      "Bánh Canh",
+      "Lẩu Gà Trứng Non",
+      "Macro Food Porn",
+      "Street Food",
+      "Mùa Mưa Sài Gòn",
+      "Ghế Nhựa Vỉa Hè"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "⚡ Gợn Sóng Vũng Nước Mưa Sài Gòn ➔ Rót Nước Cốt Dừa Trắng Muốt: Hành trình 8 lát cắt điện ảnh ẩm thực đường phố mùa mưa Sài Gòn đỉnh cao của @dvdnguyen.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
