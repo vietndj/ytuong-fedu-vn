@@ -1,14 +1,32 @@
 var TRAINING_DATA = {
-  "generated_at": "2026-09-24T08:20:41.507004",
+  "generated_at": "2026-09-24T08:22:06.790151",
   "stats": {
     "total_videos": 452,
-    "total_corrections": 26,
+    "total_corrections": 27,
     "alignment_score": 0,
     "target_score": 98.0,
-    "rules_count": 6,
+    "rules_count": 7,
     "most_common_errors": []
   },
   "corrections": [
+    {
+      "video_id": "DdnqexOTN8A",
+      "video_title": "@jigummmmm - 설거지하는 모습도 예쁘게 찍을 수 있냐고요",
+      "ai_predicted": {
+        "shooting_style": "Đời Thường & Chữa Lành",
+        "industries": [
+          "Đời Sống & Gia Đình"
+        ]
+      },
+      "mentor_corrected": {
+        "shooting_style": "dien-anh",
+        "industries": [
+          "Đời Sống & Gia Đình"
+        ]
+      },
+      "reason_distilled": "Video B-roll quay macro-actions rửa bát đa góc máy, không có người nói trực diện. Talking-head yêu cầu phải có thoại trực tiếp vào ống kính.",
+      "learned_at": "2026-09-24T08:21:54.762603"
+    },
     {
       "log_id": "LEARN_20260915_01",
       "video_id": "IG_@jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro",
@@ -584,6 +602,23 @@ var TRAINING_DATA = {
         "from": "Điện Ảnh",
         "to": "Chỉn Chu"
       },
+      "confidence_boost": 1.0
+    },
+    {
+      "rule_id": "RULE_012",
+      "name": "B-Roll Micro-Actions Đời Thường ≠ Talking Head",
+      "description": "Video quay macro/micro cận cảnh hành động thường ngày (rửa bát, nấu ăn, dọn dẹp) với đa góc máy, không có người nhìn thẳng ống kính nói thoại → KHÔNG xếp vào Nói Trực Diện (talking-head). Xếp vào Chỉn Chu (dien-anh) nếu chất lượng hình ảnh cao, hoặc Đời Thường (storytelling) nếu kể chuyện qua hình ảnh.",
+      "trigger_keywords": [
+        "rửa bát",
+        "nấu ăn",
+        "dọn dẹp",
+        "micro-actions",
+        "B-roll đời thường",
+        "macro cận cảnh",
+        "không thoại"
+      ],
+      "conflict_style": "talking-head",
+      "resolved_style": "dien-anh OR storytelling",
       "confidence_boost": 1.0
     }
   ],
@@ -9317,8 +9352,8 @@ var TRAINING_DATA = {
       "title": "@jigummmmm - 설거지하는 모습도 예쁘게 찍을 수 있냐고요",
       "creator": "@jigummmmm",
       "shooting_style": {
-        "id": "Đời Thường & Chữa Lành",
-        "name": "Đời Thường & Chữa Lành",
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
         "icon": "🎬"
       },
       "industry": {
@@ -9337,8 +9372,8 @@ var TRAINING_DATA = {
       "title": "@jigummmmm - 설거지하는 모습도 예쁘게 찍을 수 있냐고요",
       "creator": "@jigummmmm",
       "shooting_style": {
-        "id": "Đời Thường & Chữa Lành",
-        "name": "Đời Thường & Chữa Lành",
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
         "icon": "🎬"
       },
       "industry": {
@@ -9349,8 +9384,8 @@ var TRAINING_DATA = {
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jigummmmm",
       "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
       "report_url": "",
-      "has_correction": false,
-      "correction_summary": ""
+      "has_correction": true,
+      "correction_summary": "Video B-roll quay macro-actions rửa bát đa góc máy, không có người nói trực diện. Talking-head yêu cầu phải có thoại trực tiếp vào ống kính."
     },
     {
       "id": "IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공",
