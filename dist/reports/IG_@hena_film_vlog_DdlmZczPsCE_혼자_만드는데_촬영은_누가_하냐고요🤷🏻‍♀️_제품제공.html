@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@hena_film_vlog - 혼자 만드는데 촬영은 누가 하냐고요🤷🏻‍♀️ 제품제공</title>
+    <title>Công Thức 5 Cú Máy Solo Creator: 1 Người Tự Quay Video Pha Chế Chuẩn Studio Đỉnh Cao</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B0F19'/%3E%3Crect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%23FFFFFF' stroke-opacity='0.12' stroke-width='1.5'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='system-ui, sans-serif' font-weight='900' font-size='23' fill='%23FFFFFF'%3EYT%3C/text%3E%3Ccircle cx='48' cy='18' r='4' fill='%23eab308'/%3E%3C/svg%3E">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -678,6 +678,300 @@
             text-align: center;
         }
 
+        /* Dialogue Section */
+        .dialogue-section {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .dialogue-col-main {
+            flex: 1;
+            background: var(--cl-card);
+            border: 1px solid var(--cl-line);
+            border-radius: var(--cl-radius-md);
+            overflow: hidden;
+        }
+
+        .dialogue-col-aside {
+            flex: 0 0 320px;
+            background: var(--cl-tint);
+            border: 1px solid var(--cl-line);
+            border-radius: var(--cl-radius-md);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dialogue-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--cl-line);
+            background: var(--cl-card);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .dialogue-aside-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--cl-line);
+            background: var(--cl-tint);
+            display: flex;
+            align-items: center;
+        }
+
+        .dialogue-badge {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 700;
+            color: white;
+            background: var(--cl-text-base);
+            padding: 4px 8px;
+            border-radius: 4px;
+            letter-spacing: 0.05em;
+        }
+
+        .dialogue-sub {
+            font-family: var(--font-ui);
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--cl-text-muted);
+        }
+
+        .dialogue-aside-header span {
+            font-family: var(--font-ui);
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--cl-text-muted);
+            letter-spacing: 0.05em;
+        }
+
+        .dialogue-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .dialogue-aside-body {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            overflow-y: auto;
+            max-height: 400px;
+        }
+
+        .vn-para {
+            cursor: pointer;
+            padding: 14px;
+            border-radius: var(--cl-radius-sm);
+            transition: background 0.2s var(--apple-ease);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            border: 1px solid transparent;
+        }
+
+        .vn-para:hover {
+            background: var(--cl-tint);
+            border-color: var(--cl-line);
+        }
+
+        .vn-time {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--cl-text-muted);
+        }
+
+        .vn-beat {
+            font-family: var(--font-ui);
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--cl-accent);
+        }
+
+        .vn-text {
+            font-family: var(--font-body);
+            font-size: 17px;
+            line-height: 1.6;
+            color: var(--cl-text-body);
+        }
+
+        .en-line {
+            cursor: pointer;
+            padding: 10px 14px;
+            border-radius: var(--cl-radius-sm);
+            transition: background 0.2s;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .en-line:hover {
+            background: rgba(0,0,0,0.03);
+        }
+
+        .en-time {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--cl-text-muted);
+        }
+
+        .en-text {
+            font-family: var(--font-body);
+            font-size: 14px;
+            color: var(--cl-text-muted);
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* Remake Prompt Card */
+        .remake-prompt-card {
+            background: var(--cl-card);
+            border: 1px solid var(--cl-accent);
+            border-radius: var(--cl-radius-md);
+            margin-bottom: 32px;
+            box-shadow: 0 4px 20px var(--cl-accent-tint);
+            overflow: hidden;
+        }
+
+        .prompt-accordion-header {
+            padding: 16px 20px;
+            background: #f0f7ff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s;
+            border-bottom: 1px solid transparent;
+        }
+
+        .prompt-accordion-header:hover {
+            background: #e0efff;
+        }
+
+        .prompt-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .prompt-badge {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 700;
+            color: white;
+            background: var(--cl-accent);
+            padding: 4px 8px;
+            border-radius: 4px;
+            letter-spacing: 0.05em;
+        }
+
+        .prompt-title {
+            font-family: var(--font-ui);
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--cl-text-base);
+        }
+
+        .prompt-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .prompt-copy-btn {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--cl-text-base);
+            background: white;
+            border: 1px solid var(--cl-line-strong);
+            padding: 6px 12px;
+            border-radius: var(--cl-radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .prompt-copy-btn:hover {
+            border-color: var(--cl-accent);
+            color: var(--cl-accent);
+        }
+
+        .prompt-toggle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--cl-text-muted);
+            font-family: var(--font-ui);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .prompt-accordion-body {
+            padding: 24px;
+            border-top: 1px solid #e0efff;
+        }
+
+        .prompt-desc {
+            font-family: var(--font-ui);
+            font-size: 14.5px;
+            color: var(--cl-text-muted);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .prompt-code-wrap {
+            border: 1px solid var(--cl-line);
+            border-radius: var(--cl-radius-sm);
+            overflow: hidden;
+        }
+
+        .prompt-code-bar {
+            background: var(--cl-tint);
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--cl-line);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--cl-text-muted);
+        }
+
+        .prompt-code-content {
+            padding: 20px;
+            font-family: var(--font-mono);
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: var(--cl-text-base);
+            background: white;
+            white-space: pre-wrap;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        @media (max-width: 768px) {
+            .dialogue-section {
+                flex-direction: column;
+            }
+            .dialogue-col-aside {
+                flex: none;
+                max-height: 300px;
+            }
+            .prompt-accordion-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .prompt-right {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
         /* Mobile Responsive */
         @media (max-width: 1024px) {
             .app-container {
@@ -739,12 +1033,12 @@
 
     <div class="content-column">
         <header class="report-header">
-            <div class="header-badges"><span class="badge">STORYBOARD BREAKDOWN</span></div>
+            <div class="header-badges"><span class="badge">ky-thuat-quay</span> <span class="badge badge-alt">BTS / Hậu Trường Sáng Tạo</span></div>
             <h1 class="report-title">
-                <a href="https://www.instagram.com/reel/DdlmZczPsCE/" target="_blank" rel="noopener">@hena_film_vlog - 혼자 만드는데 촬영은 누가 하냐고요🤷🏻‍♀️ 제품제공</a>
+                <a href="https://www.instagram.com/reel/film/" target="_blank" rel="noopener">Công Thức 5 Cú Máy Solo Creator: 1 Người Tự Quay Video Pha Chế Chuẩn Studio Đỉnh Cao</a>
             </h1>
             <div class="header-meta">
-                <span>Nguồn: <a href="https://www.instagram.com/hena_film_vlog/" target="_blank" class="creator-link">@hena_film_vlog ↗</a></span>
+                <span>Nguồn: <a href="https://www.instagram.com/hena/" target="_blank" class="creator-link">@hena ↗</a></span>
                 <span class="meta-dot">•</span>
                 <span class="meta-stat">23 cảnh</span>
                 <span class="meta-dot">•</span>
@@ -754,82 +1048,16 @@
         </header>
 
         
+        <section class="axis-card">
+            <h3 class="axis-title">TRỤC KỊCH BẢN 3 NHỊP</h3>
+            <div class="axis-content">Mồi hook tò mò &#x27;1 mình ai quay?&#x27; (0s-2s) ➔ Bóc tách 5 bước góc máy thực chiến kèm pha chế thẩm mỹ (2s-14s) ➔ Thưởng thức &amp; Kêu gọi tương tác cho tập tiếp theo (14s-15s)</div>
+        </section>
 
         <div class="overview-card">
-            ⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.
+            Công thức 5 góc máy BTS Solo Creator: Tự quay video pha chế F&amp;B chuẩn Studio không cần trợ lý (Auto Tracking ➔ Remote Shot ➔ Live View ➔ Fixed Shot ➔ Moving Shot).
         </div>
 
         
-        <section class="dialogue-section">
-            <div class="dialogue-col-main">
-                <div class="dialogue-header">
-                    <span class="dialogue-badge">KỊCH BẢN LỜI THOẠI</span>
-                    <span class="dialogue-sub">Bản dịch thực chiến</span>
-                </div>
-                <div class="dialogue-body">
-                <div class="vn-para" onclick="playShot(0.0, 15.24, 'Phân đoạn #01')">
-                    <span class="vn-time">0.00s</span>
-                    <span class="vn-beat">Phân đoạn #01</span>
-                    <span class="vn-text">"구독과 좋아요는 필수!"</span>
-                </div></div>
-            </div>
-            <div class="dialogue-col-aside">
-                <div class="dialogue-aside-header">
-                    <span>ORIGINAL TRANSCRIPT</span>
-                </div>
-                <div class="dialogue-aside-body">
-                <div class="en-line" onclick="playShot(0.0, 15.24, 'ORIGINAL')">
-                    <span class="en-time">0.00s</span>
-                    <span class="en-text">"구독과 좋아요는 필수!"</span>
-                </div></div>
-            </div>
-        </section>
-        <div class="remake-prompt-card" id="remakePromptCard">
-            <div class="prompt-accordion-header" onclick="togglePromptAccordion(this)">
-                <div class="prompt-left">
-                    <span class="prompt-badge">KỊCH BẢN STU</span>
-                    <span class="prompt-title">Ánh xạ kịch bản sang ngành nghề của bạn</span>
-                </div>
-                <div class="prompt-right">
-                    <button class="prompt-copy-btn" onclick="copyMegaPrompt(event, this)">Sao chép</button>
-                    <div class="prompt-toggle">
-                        <span class="toggle-icon">▼</span>
-                        <span class="toggle-label">Mở xem</span>
-                    </div>
-                </div>
-            </div>
-            <div class="prompt-accordion-body" style="display: none;">
-                <p class="prompt-desc">Sao chép Mega Prompt này dán vào Gemini. Hệ thống tự động gợi ý đúng các ngành nghề học viên thực tế trong STU.</p>
-                <div class="prompt-code-wrap">
-                    <div class="prompt-code-bar">
-                        <span>MEGA_PROMPT_REMAKE_GEMINI.md</span>
-                        <button class="prompt-copy-btn" onclick="copyMegaPrompt(event, this)">Sao chép Prompt</button>
-                    </div>
-                    <div class="prompt-code-content" id="megaPromptText">Bạn là Đạo diễn Video Ngắn &amp; Chuyên gia Tinh chỉnh Lời thoại Thực Chiến theo trường phái mộc mạc của anh Việt (nguyen-viet-voice).
-
-Tôi có cấu trúc logic giữ chân từ video mẫu với 4 nhịp:
-1. Hook 3s: Nêu sự thật trần trụi về một việc ai cũng nghĩ là đơn giản.
-2. Xung đột 2 vế: Cái cớ chủ quan giữ thể diện đối đầu với Thực tế khách quan.
-3. Tactile B-roll: Bàn tay liên tục đặt từng món đồ nghề/chi tiết thật xuống bàn làm việc theo nhịp nói.
-4. Kết bài tự trào &amp; Mở lời tự nhiên: Thừa nhận cái khó của người làm nghề.
-
-=== QUY TẮC VĂN PHONG ===
-- CẤM VĂN MẪU AI: Không dùng bứt phá, chuyển hóa, vũ khí, thần thái, nâng tầm...
-- CẤM từ ÔNG GIÁO. Xưng hô: mình - bạn hoặc tôi - bạn.
-- GIỮ VĂN PHONG MỘC MẠC.
-
-=== HƯỚNG DẪN ===
-Nếu tôi chưa ghi ngành nghề, hỏi 1 câu:
-1. Làm đẹp &amp; Spa / Da liễu / Salon tóc
-2. Nội thất / Decor / Kiến trúc
-3. Ẩm thực &amp; F&amp;B / Tiệm bánh
-4. Nông nghiệp / Phân bón / Sức khỏe
-5. Ngành khác: [Tên nghề] + [3 món đồ trên bàn]
-
-Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll | Lời thoại | Âm thanh Foley)!</div>
-                </div>
-            </div>
-        </div>
 
         <div class="toolbar">
             <div class="tab-group">
@@ -852,19 +1080,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 01</span>
                     <span class="shot-dur">0.27s</span>
                 </div>
-                <h4 class="shot-headline">Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh</h4>
-                <p class="shot-insight">Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.</p>
+                <h4 class="shot-headline">Visual Hook bí mật hậu trường: Đập tan thắc mắc &quot;Làm 1 mình ai quay cho?&quot;</h4>
+                <p class="shot-insight">Đánh trúng nỗi đau (Pain Point) lớn nhất của người sáng tạo nội dung đơn độc để giật hook giữ chân 100%.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Establishing Hook Shot (Góc toàn định vị bối cảnh)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">POV / Cận cảnh thiết bị cầm tay</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng tán xạ tự nhiên trong nhà (Diffused Indoor)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Jump Cut giật nhịp sang thao tác ngón tay</span></div>
                     </div>
-                    <div class="critique-good">Tạo điểm nhấn thị giác ngay trung tâm; ánh sáng Balanced Diffused Lighting  dẫn hướng mắt người xem hoàn hảo. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Thời lượng shot ngắn nên người xem dễ bị trôi qua nếu chi tiết chữ/đối tượng phân bổ quá sát góc viền. Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Mở màn định vị không gian và nhịp thở của toàn bộ video, thu hút sự chú ý tức thì.</div>
+                    <div class="critique-good">Khung hình giấu mặt người quay, chỉ lộ bàn tay và thiết bị công nghệ tạo tò mò tột độ ngay 0.2 giây đầu.</div>
+                    <div class="critique-warn">Thời lượng cực ngắn (0.23s) dễ khiến người xem lướt qua nếu mắt chưa kịp bắt trọn dòng text.</div>
+                    <div class="shot-narrative">Cầm bộ điều khiển màn hình rời trên tay, màn hình chiếu trực tiếp góc quay người làm vlog. Text mồi lớn: &quot;Làm một mình thì ai quay cho?&quot;.</div>
                 </details>
             </div>
         </div>
@@ -880,19 +1108,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 02</span>
                     <span class="shot-dur">0.47s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Chạm kích hoạt Auto Tracking: Giải phóng hoàn toàn đôi tay của Solo Creator</h4>
+                <p class="shot-insight">Biến công nghệ phức tạp thành hành vi 1 chạm trực quan để thuyết phục khách hàng và người xem ngay lập tức.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Macro / Cận cảnh ngón tay thao tác màn hình</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng môi trường dịu nhẹ, không lóa màn hình OLED</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut nối liền sang cảnh hành động pha chế</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Cận cảnh giao diện UI/UX sắc nét, chứng minh thao tác 1 chạm thực tế không cần cài đặt rườm rà.</div>
+                    <div class="critique-warn">Cần zoom nhanh hoặc viền sáng nút bấm để người xem nhận biết rõ hơn tính năng trên màn hình bé.</div>
+                    <div class="shot-narrative">Ngón tay chạm trực tiếp lên màn hình cảm ứng, chọn nút &quot;Tự động bám đuổi&quot; (Auto Tracking) rồi bấm Bắt đầu (시작).</div>
                 </details>
             </div>
         </div>
@@ -908,19 +1136,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 03</span>
                     <span class="shot-dur">0.67s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Đặc tả bình trà lạnh &amp; &quot;trợ lý vô hình&quot;: Đặt thiết bị ngầm vào khung hình đời thường</h4>
+                <p class="shot-insight">Luôn để sản phẩm xuất hiện như một phần tự nhiên của bối cảnh sống thay vì quảng cáo gượng gạo.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up góc nghiêng 45 độ</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng tạt ngang làm nổi bật bong bóng đá và độ trong suốt của nước</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut chuyển sang dàn thành phẩm</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Bố cục tương phản giữa đồ uống hấp dẫn và thiết bị công nghệ mini, ngầm giải thích máy vẫn đang tự quay.</div>
+                    <div class="critique-warn">Thiết bị điều khiển ở góc phải hơi bị nhạt nhòa, dễ bị người xem tưởng là đồ chơi nếu không để ý.</div>
+                    <div class="shot-narrative">Tay khuấy ống hút trong bình trà đá hoa quả mát lạnh; chiếc điều khiển thông minh được đặt tự nhiên ngay bên cạnh trên mặt bàn.</div>
                 </details>
             </div>
         </div>
@@ -936,19 +1164,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 04</span>
                     <span class="shot-dur">0.43s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Mồi mắt thị giác 3 ly nước: Neo giữ tiêu chuẩn thẩm mỹ cao cấp cho cả video</h4>
+                <p class="shot-insight">Show ngay kết quả thành phẩm lung linh ở 2 giây đầu để người xem có động lực xem hết toàn bộ quá trình hướng dẫn.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Close-Up xếp lớp đa tầng (Layered Depth)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Studio Softbox ánh sáng trắng dịu, đánh ven thành ly thủy tinh</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Smash Cut sang quy trình bước 1</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Phối màu tương phản mạnh giữa xanh lá matcha - cam đào - đỏ hồng; hiệu ứng sương đọng trên thành kính kích thích vị giác cực đỉnh.</div>
+                    <div class="critique-warn">Cắt cảnh quá nhanh (0.4s) chưa kịp để người xem ngắm trọn vẹn từng lớp phân tầng của ly nước.</div>
+                    <div class="shot-narrative">3 ly nước nghệ thuật (Matcha latte phân tầng, trà hoa quả hồng tím, trà đào) xếp lớp theo chiều sâu.</div>
                 </details>
             </div>
         </div>
@@ -964,19 +1192,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 05</span>
                     <span class="shot-dur">0.93s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Bước 1 - Auto Tracking tự xoay: Camera tự động bám đuổi từng bước chân creator</h4>
+                <p class="shot-insight">Show trọn vẹn hậu trường máy quay tự vận hành là bằng chứng thép mạnh nhất cho video bán đồ công nghệ hoặc chia sẻ tips làm vlog.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Over-the-Shoulder / Góc nhìn thứ ba thấy máy và người</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Key light softbox từ trên xuống kết hợp ambient light</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut giật sang chi tiết điều khiển</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Bố cục kép (Double Layer): Tiền cảnh là cỗ máy đang tác nghiệp, hậu cảnh là nhân vật đang biểu diễn hành động.</div>
+                    <div class="critique-warn">Hậu cảnh cửa nhà và rào chắn trẻ em hơi bừa bộn, làm giảm đi chất điện ảnh tối giản.</div>
+                    <div class="shot-narrative">Text &quot;1. Auto Tracking - Tự động bám theo vật thể chuyển động&quot;. Creator rót matcha vào ly, gimbal tiền cảnh tự xoay đầu máy quay bám theo nhịp di chuyển.</div>
                 </details>
             </div>
         </div>
@@ -992,19 +1220,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 06</span>
                     <span class="shot-dur">0.67s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Khóa điểm lấy nét bàn làm việc: Định vị chuẩn xác khu vực thao tác vi mô</h4>
+                <p class="shot-insight">Cụ thể hóa tính năng bằng hành động thực chiến: Muốn quay chỗ nào, chạm đúng chỗ đó trên màn hình.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Macro góc nhìn cá nhân (POV)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng phòng tự nhiên dịu mắt</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Action sang góc top-down đúng vị trí vừa chọn</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Thao tác trỏ tay trực diện, minh họa cơ chế AI nhận diện vùng làm việc cực kỳ thông minh.</div>
+                    <div class="critique-warn">Góc chụp máy bấm điện thoại hơi nghiêng làm người xem phải nghiêng đầu để đọc chữ Hàn trên màn hình.</div>
+                    <div class="shot-narrative">Bàn tay chạm lên màn hình điều khiển, kéo khung tracking xanh ôm trọn miếng táo trên thớt gỗ.</div>
                 </details>
             </div>
         </div>
@@ -1020,19 +1248,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 07</span>
                     <span class="shot-dur">0.50s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Góc Top-Down dập hoa quả nghệ thuật: Trình diễn kỹ năng tinh tế từ góc nhìn thẳng đứng</h4>
+                <p class="shot-insight">Góc quay thẳng đứng 90 độ (Top-Down) là vũ khí tối thượng cho video nấu ăn, thủ công và unboxing vì không bị phân tâm hậu cảnh.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Top-Down (Flat Lay 90 độ)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng tản đều không đổ bóng gắt (Shadowless Top Light)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut cận cảnh tay cầm hoa</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Bố cục từ trên xuống (Flat Lay Top-Down) vuông vức, vân gỗ ấm áp làm nổi bật miếng táo trắng sáng và khuôn inox sắc lẹm.</div>
+                    <div class="critique-warn">Tay phải che khuất một phần bông hoa vừa dập khi nhấc khuôn lên.</div>
+                    <div class="shot-narrative">Camera treo cao quay thẳng xuống thớt gỗ; creator dùng khuôn dập inox bấm từng bông hoa đều tăm tắp từ lát táo tròn. Logo Insta360 Luna Ultra Leica ở góc phải.</div>
                 </details>
             </div>
         </div>
@@ -1048,19 +1276,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 08</span>
                     <span class="shot-dur">0.80s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Đặc tả bông hoa táo mọng nước: Chạm vào giác quan bằng chi tiết bề mặt siêu thực</h4>
+                <p class="shot-insight">Luôn có 1 shot đưa vật thể đến gần sát camera để tạo cú đấm cảm xúc về chất lượng nguyên liệu.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Extreme Close-Up (Macro)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng phản xạ mềm làm nổi bật độ bóng ẩm trên bề mặt táo</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut nhanh sang bước 2</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Độ mở ống kính lớn tạo bokeh xóa mờ thớt gỗ phía sau, ép toàn bộ thị giác vào vân thớ nước của lát táo.</div>
+                    <div class="critique-warn">Bàn tay hơi rung nhẹ ở nửa giây đầu khi đưa vào tiêu cự lấy nét.</div>
+                    <div class="shot-narrative">Lòng bàn tay nâng miếng táo hình hoa 5 cánh đưa sát vào ống kính máy quay để khoe đường cắt sắc sảo và độ tươi mọng.</div>
                 </details>
             </div>
         </div>
@@ -1076,19 +1304,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 09</span>
                     <span class="shot-dur">0.67s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Bước 2 - Remote Shot tách rời màn hình: Tự do điều khiển từ xa không cần trợ lý</h4>
+                <p class="shot-insight">Trình diễn tính năng module tháo rời bằng chuyển động tay vật lý thay vì chỉ đọc thông số kỹ thuật.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Shot cận thiết bị</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng phòng kết hợp viền đèn bàn</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut sang thao tác rót nước từ xa</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Động tác tách rời cơ học dứt khoát giải thích trọn vẹn cơ chế không dây của thiết bị chỉ trong 0.6 giây.</div>
+                    <div class="critique-warn">Thân máy bên dưới hơi bị mất nét do máy quay tập trung vào cụm màn hình ở tay.</div>
+                    <div class="shot-narrative">Text &quot;2. Remote Shot - Màn hình tách rời, quay chụp từ xa&quot;. Creator rút module màn hình điều khiển rời ra khỏi thân gimbal đang dựng trên bàn.</div>
                 </details>
             </div>
         </div>
@@ -1104,19 +1332,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 10</span>
                     <span class="shot-dur">0.67s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Rót nước ép hồng vào bình đá: Kích thích thính giác và thị giác bằng dòng chảy</h4>
+                <p class="shot-insight">Tận dụng chuyển động chất lỏng đổ đầy để tạo nhịp thư giãn (ASMR visual) giữ chân người xem không rời mắt.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up ngang tầm mắt</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Đèn softbox tạt nghiêng tạo viền sáng phản chiếu trên dòng nước</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut nối tiếp sang động tác thả topping</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Bắt trọn khoảnh khắc nước lọt qua từng khe đá tạo bọt sủi tăm, màu hồng tươi sáng tương phản với áo đen của nhân vật.</div>
+                    <div class="critique-warn">Miệng chai nước hơi khuất viền trên khung hình 9:16.</div>
+                    <div class="shot-narrative">Creator rót dòng nước trái cây màu hồng cam vào bình thủy tinh chứa đầy đá viên hoa văn nổi. Logo Luna Ultra ở góc.</div>
                 </details>
             </div>
         </div>
@@ -1132,19 +1360,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 11</span>
                     <span class="shot-dur">0.37s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Thả hoa táo bồng bềnh: Tăng chiều sâu thị giác cho món nước bằng tầng topping</h4>
+                <p class="shot-insight">Ghép nối chuỗi hành động bằng các micro-shots (0.3s - 0.5s) để giữ nhịp độ dồn dập khiến video không bị chùng.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up góc hơi chếch trên</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng xuyên thấu qua thành thủy tinh</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut sang động tác khuấy</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Chuyển động thả nhẹ nhàng, topping hoa trắng hồng tạo điểm nhấn đắt giá giữa bình nước thủy tinh.</div>
+                    <div class="critique-warn">Cắt cảnh quá nhanh (0.33s), chưa kịp thấy bông hoa ổn định vị trí trên mặt nước.</div>
+                    <div class="shot-narrative">Dùng muỗng gắp các bông hoa táo thả trượt nhẹ vào bình nước hồng, các cánh hoa nổi bềnh bồng giữa các viên đá.</div>
                 </details>
             </div>
         </div>
@@ -1160,19 +1388,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 12</span>
                     <span class="shot-dur">0.93s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Khuấy tròn tầng hoa quả: Tạo chuyển động xoáy nước đánh thức cảm giác sảng khoái</h4>
+                <p class="shot-insight">Hành động khuấy nước là &quot;Hero Action&quot; kinh điển trong F&amp;B vlog, kích thích tối đa dopamine của khán giả.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Tight Close-Up</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng tự nhiên dịu kết hợp đèn rọi</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut sang bước 3 - Thiết lập trường quay</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Bắt trọn độ phản chiếu lấp lánh của thủy tinh và chuyển động xoáy tròn mê hoặc.</div>
+                    <div class="critique-warn">Tay cầm ống hút hơi che một góc bình nước.</div>
+                    <div class="shot-narrative">Ống hút thủy tinh xoay tròn nhịp nhàng làm các lát hoa táo và đá viên xoay tít trong dòng nước màu đào.</div>
                 </details>
             </div>
         </div>
@@ -1188,19 +1416,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 13</span>
                     <span class="shot-dur">0.70s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Bước 3 - Live View căn chỉnh góc máy: Vừa nhìn màn hình vừa dàn dựng ánh sáng chuẩn xác</h4>
+                <p class="shot-insight">Đừng sợ lộ hậu trường thô mộc; khán giả Gen Z cực kỳ thích xem cách set up đèn và góc máy thực tế tại nhà.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Wide Shot bối cảnh studio tại gia</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Hệ thống đèn Softbox bát giác + Đèn tản sáng mini + Đèn trần</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut cận cảnh vào màn hình trên tay</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Toàn cảnh hậu trường bộc lộ chân thực không gian phòng khách: chân đèn, dây điện, đèn rọi đều lộ diện tạo cảm giác gần gũi, chân thật 100%.</div>
+                    <div class="critique-warn">Không gian hơi chật chội phía sau có rào trẻ em.</div>
+                    <div class="shot-narrative">Text &quot;3. Live View - Nhìn màn hình căn góc quay&quot;. Creator quỳ bên bàn, cầm remote soi góc nhìn thực tế để điều chỉnh các cụm đèn softbox và mini LED.</div>
                 </details>
             </div>
         </div>
@@ -1216,19 +1444,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 14</span>
                     <span class="shot-dur">0.70s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Màn hình Live View 3K sắc nét: Kiểm soát bố cục bàn quay trong lòng bàn tay</h4>
+                <p class="shot-insight">Cận cảnh màn hình hiển thị trực tiếp là bằng chứng không thể chối cãi giúp dẹp tan nỗi lo &quot;quay bị lệch khung&quot; của dân solo creator.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Macro POV góc nhìn chủ quan</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng phòng cân bằng</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut chuyển sang bước 4</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Góc nhìn POV chân thực chứng minh tính tiện lợi: Ngồi một chỗ vẫn biết camera chính đang thấy gì.</div>
+                    <div class="critique-warn">Màn hình hơi nhỏ đối với người có thị lực yếu nếu đứng xa quá 3 mét.</div>
+                    <div class="shot-narrative">Cận cảnh màn hình bộ điều khiển hiển thị toàn bộ mặt bàn gỗ, thông số 3K 60fps và thời lượng thẻ nhớ.</div>
                 </details>
             </div>
         </div>
@@ -1244,19 +1472,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 15</span>
                     <span class="shot-dur">1.37s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Bước 4 - Fixed Shot dựng chân đế tích hợp: Ổn định góc máy tĩnh chỉ trong 1 giây</h4>
+                <p class="shot-insight">Nhấn mạnh tính cơ động &quot;All-in-one&quot;: Dẹp bỏ rào cản chuẩn bị thiết bị rườm rà là chìa khóa giúp người làm nội dung ra video đều đặn mỗi ngày.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Shot hậu trường bàn pha chế</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Đèn rọi bàn làm nổi bật độ trong suốt của ly và đá</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut cận cảnh vào miệng ly</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Trực quan hóa thiết kế chân đứng tích hợp: Không cần mang vác tripod cồng kềnh, đặt xuống mặt phẳng là quay ngay.</div>
+                    <div class="critique-warn">Hộp sữa matcha phía sau hơi lọt vào rìa khung hình làm phân tán điểm nhìn.</div>
+                    <div class="shot-narrative">Text &quot;4. Fixed Shot - Dựng chân đứng tích hợp để quay góc tĩnh&quot;. Creator xúc từng muỗng đá lạnh thả vào ly cao, camera gimbal Luna tự đứng vững trên bàn nhờ chân kim loại gập mở.</div>
                 </details>
             </div>
         </div>
@@ -1272,19 +1500,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 16</span>
                     <span class="shot-dur">0.67s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Bắt đầu rót matcha xanh: Cú chạm màu sắc khởi đầu màn biến ảo thị giác</h4>
+                <p class="shot-insight">Tạo xung đột thị giác bằng cách ghép 2 mảng màu tương phản mạnh (xanh matcha vs trắng sữa) để giật lại sự chú ý ở giây thứ 10.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up góc chính diện</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Rim light trắng vuốt theo đường cong thân ly thủy tinh</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Jump Cut tăng tốc dòng chảy</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Độ nghiêng hoàn hảo của dòng chảy, màu xanh lục đậm rọi trên nền sữa trắng muốt tạo độ tương phản cực đại.</div>
+                    <div class="critique-warn">Cắt shot hơi sớm khi dòng matcha vừa chạm mặt sữa.</div>
+                    <div class="shot-narrative">Creator nghiêng cốc thủy tinh rót dòng matcha xanh ngọc bích đậm đặc vào mép ly sữa đá. Logo Luna Ultra Leica góc trên.</div>
                 </details>
             </div>
         </div>
@@ -1300,19 +1528,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 17</span>
                     <span class="shot-dur">0.70s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Vệt loang cẩm thạch huyền ảo: Hiệu ứng phân tầng sữa và matcha thôi miên thị giác</h4>
+                <p class="shot-insight">Cú máy tĩnh quay cận cảnh dòng loang chất lỏng là &quot;điểm thôi miên&quot; khiến người xem replay lại nhiều lần mà không chán.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Vertical Close-Up tỷ lệ 9:16</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Backlight xuyên sáng qua lớp đá và sữa</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cực cận Macro chi tiết bọt</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Bắt trọn khoảnh khắc vật lý chất lỏng (Fluid Dynamics) cực kỳ nghệ thuật; ánh sáng xuyên thấu làm rõ độ đậm đặc của lớp bọt trà.</div>
+                    <div class="critique-warn">Đáy ly bị tràn nhẹ một giọt nước matcha ra mặt bàn.</div>
+                    <div class="shot-narrative">Matcha chảy cuộn xoáy giữa các khe đá, khuếch tán dần vào sữa tươi tạo những vệt mây xanh loang lổ như tranh thủy mặc.</div>
                 </details>
             </div>
         </div>
@@ -1328,19 +1556,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 18</span>
                     <span class="shot-dur">0.63s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Macro bọt trà matcha sóng sánh: Đỉnh cao độ sắc nét của cảm biến camera</h4>
+                <p class="shot-insight">Sử dụng góc siêu macro để chứng minh chất lượng hình ảnh của thiết bị cao cấp mà không cần nói một lời khen nào.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Extreme Macro Shot</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng tạt ngang nhấn rõ kết cấu bọt khí</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut lùi ra thấy toàn bộ bối cảnh máy và ly</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Độ phân giải và độ nổi khối cực cao, chứng minh năng lực quang học của ống kính Leica co-engineered.</div>
+                    <div class="critique-warn">Khung hình quá hẹp chỉ thấy phần trên của ly nước.</div>
+                    <div class="shot-narrative">Ống kính tiến sát vào bề mặt ly, đặc tả lớp bọt matcha xanh mịn màng và những bọt khí li ti vỡ nhẹ trên thành ly.</div>
                 </details>
             </div>
         </div>
@@ -1356,19 +1584,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 19</span>
                     <span class="shot-dur">0.67s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Góc máy đôi ly matcha và camera gimbal: Minh chứng góc quay thực tế từ thiết bị nhỏ gọn</h4>
+                <p class="shot-insight">Luôn đặt camera và sản phẩm cạnh nhau trong một khung hình tĩnh để &quot;chốt hạ&quot; niềm tin của người xem vào năng lực của thiết bị.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Shot cận bàn</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng studio dịu mát</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut sang bước 5 - Cú máy chuyển động</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Ghép đôi trực quan giữa &quot;công cụ&quot; và &quot;thành quả&quot;, khẳng định toàn bộ cảnh quay mướt mắt nãy giờ đều do chiếc máy mini này ghi lại.</div>
+                    <div class="critique-warn">Bàn tay khuấy nước ở phía sau hơi bị nhòe mờ.</div>
+                    <div class="shot-narrative">Chiếc camera gimbal màu trắng đứng cạnh ly matcha phân tầng hoàn hảo, người quay dùng que khuấy nhẹ lớp bọt.</div>
                 </details>
             </div>
         </div>
@@ -1384,19 +1612,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 20</span>
                     <span class="shot-dur">0.60s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Bước 5 - Moving Shot lia máy nghệ thuật: Di chuyển máy quay lấy trọn thần thái ly trà đá</h4>
+                <p class="shot-insight">Sử dụng chuyển động lia máy chậm ở cuối video để nâng tầm giá trị thẩm mỹ của sản phẩm lên đẳng cấp TVC quảng cáo.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">High-Angle Moving Pan</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng phản xạ kim cương trên mặt đá lạnh</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Pan Cut quét sang bộ sưu tập 3 ly</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Chuyển động lia mượt mà (Gimbal Smooth Pan) không hề rung lắc dù quay cầm tay cận cảnh.</div>
+                    <div class="critique-warn">Thời lượng 0.57s quá ngắn để cảm nhận trọn vẹn hành trình trượt của ống kính.</div>
+                    <div class="shot-narrative">Text &quot;5. Moving Shot - Di chuyển máy quay để lấy cảnh thành phẩm&quot;. Cú máy lia mềm mại từ góc cao lướt qua miệng bình trà đá hoa quả lấp lánh.</div>
                 </details>
             </div>
         </div>
@@ -1412,19 +1640,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 21</span>
                     <span class="shot-dur">1.13s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Lướt trượt qua bộ 3 ly đồ uống: Bản giao hưởng màu sắc hoàn hảo của buổi sáng tạo</h4>
+                <p class="shot-insight">Gom tất cả các sản phẩm đã làm vào một cú máy lướt tổng kết (Showcase Sweep) để tạo cảm giác &quot;bội thu&quot; và kích thích người xem muốn bắt tay làm ngay.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Slow Tracking Pan Shot</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng cân bằng toàn dải, làm nổi bật màu xanh, cam và hồng</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut sang creator thưởng thức thành quả</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Nhịp trượt ổn định tuyệt đối; màu sắc 3 ly nước bổ trợ cho nhau tạo cảm giác trọn vẹn, thỏa mãn thị giác (visual satisfaction).</div>
+                    <div class="critique-warn">Khoảng cách giữa các ly hơi sát nhau nên bóng đổ của ly trước đè nhẹ lên ly sau.</div>
+                    <div class="shot-narrative">Ống kính lướt chậm rãi qua bình trà hoa quả, ly matcha latte 2 tầng và ly trà nhiệt đới trong suốt.</div>
                 </details>
             </div>
         </div>
@@ -1440,19 +1668,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 22</span>
                     <span class="shot-dur">0.33s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Creator nếm thử thành quả &amp; Kêu gọi tương tác: Tạo móc câu giữ chân sang tập tiếp theo</h4>
+                <p class="shot-insight">Đặt câu hỏi mở cho tập tiếp theo ngay tại thời điểm khán giả đang thỏa mãn nhất để tăng tỷ lệ comment và follower tự nhiên.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Close-Up trò chuyện</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng mặt chính diện kết hợp nền sáng phòng</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut sang cử chỉ like chốt hạ</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Biểu cảm tự nhiên, ánh mắt nhìn thẳng vào người xem kết hợp câu hỏi mở thúc đẩy bình luận tương tác.</div>
+                    <div class="critique-warn">Đoạn uống nước hơi ngắn (0.3s) nên chưa kịp thấy phản ứng cảm xúc sảng khoái rõ ràng.</div>
+                    <div class="shot-narrative">Creator nhấp một ngụm trà hoa quả mát lạnh. Badge kênh @hena_film_vlog xuất hiện cùng phụ đề: &quot;Lần sau muốn tôi dùng Luna quay gì? Hẹn gặp ở tập 5 nhé!&quot;.</div>
                 </details>
             </div>
         </div>
@@ -1468,19 +1696,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 23</span>
                     <span class="shot-dur">0.43s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Nụ cười rạng rỡ &amp; Cú Thumbs-Up đanh thép: Khẳng định sự tự tin của một Solo Creator chuyên nghiệp</h4>
+                <p class="shot-insight">Kết thúc video bằng nụ cười và cử chỉ tán thành (Affirmative Gesture) giúp đóng đinh ấn tượng tích cực của khán giả đối với thương hiệu cá nhân.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Close-Up kết màn (Hero End-Shot)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">High-key sáng đều toàn mặt</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Fade Out / Loop về đầu video</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Động tác hình thể dứt khoát, năng lượng tích cực lan tỏa mạnh mẽ, kết thúc video trên nốt thăng đầy cảm hứng.</div>
+                    <div class="critique-warn">Video ngắt hơi gấp ngay sau khi giơ tay.</div>
+                    <div class="shot-narrative">Creator nhìn thẳng ống kính cười tươi, giơ cả 2 ngón tay cái (Double Thumbs-Up) biểu thị sự hài lòng tuyệt đối với quy trình quay 1 mình.</div>
                 </details>
             </div>
         </div>
@@ -1493,9 +1721,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
                 <span class="grid-num">SHOT 01</span>
                 <span class="grid-time">0.0s – 0.2s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_01_mid.jpg', 'SHOT 01 • Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_01_mid.jpg', 'SHOT 01 • Visual Hook bí mật hậu trường: Đập tan thắc mắc &quot;Làm 1 mình ai quay cho?&quot;')">⊕</button>
             </div>
-            <div class="grid-title">Visual Hook Mở Màn: Giữ chân người xem n</div>
+            <div class="grid-title">Visual Hook bí mật hậu trường: Đập tan t</div>
         </div>
 
         <div class="grid-item" onclick="playShot(0.27, 0.7, 'SHOT 02')">
@@ -1503,9 +1731,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
                 <span class="grid-num">SHOT 02</span>
                 <span class="grid-time">0.3s – 0.7s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_02_mid.jpg', 'SHOT 02 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_02_mid.jpg', 'SHOT 02 • Chạm kích hoạt Auto Tracking: Giải phóng hoàn toàn đôi tay của Solo Creator')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Chạm kích hoạt Auto Tracking: Giải phóng</div>
         </div>
 
         <div class="grid-item" onclick="playShot(0.73, 1.37, 'SHOT 03')">
@@ -1513,9 +1741,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
                 <span class="grid-num">SHOT 03</span>
                 <span class="grid-time">0.7s – 1.4s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_03_mid.jpg', 'SHOT 03 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_03_mid.jpg', 'SHOT 03 • Đặc tả bình trà lạnh &amp; &quot;trợ lý vô hình&quot;: Đặt thiết bị ngầm vào khung hình đời thường')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Đặc tả bình trà lạnh &amp; &quot;trợ lý vô hình&quot;:</div>
         </div>
 
         <div class="grid-item" onclick="playShot(1.4, 1.8, 'SHOT 04')">
@@ -1523,9 +1751,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
                 <span class="grid-num">SHOT 04</span>
                 <span class="grid-time">1.4s – 1.8s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_04_mid.jpg', 'SHOT 04 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_04_mid.jpg', 'SHOT 04 • Mồi mắt thị giác 3 ly nước: Neo giữ tiêu chuẩn thẩm mỹ cao cấp cho cả video')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Mồi mắt thị giác 3 ly nước: Neo giữ tiêu</div>
         </div>
 
         <div class="grid-item" onclick="playShot(1.83, 2.73, 'SHOT 05')">
@@ -1533,9 +1761,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
                 <span class="grid-num">SHOT 05</span>
                 <span class="grid-time">1.8s – 2.7s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_05_mid.jpg', 'SHOT 05 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_05_mid.jpg', 'SHOT 05 • Bước 1 - Auto Tracking tự xoay: Camera tự động bám đuổi từng bước chân creator')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Bước 1 - Auto Tracking tự xoay: Camera t</div>
         </div>
 
         <div class="grid-item" onclick="playShot(2.77, 3.4, 'SHOT 06')">
@@ -1543,9 +1771,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
                 <span class="grid-num">SHOT 06</span>
                 <span class="grid-time">2.8s – 3.4s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_06_mid.jpg', 'SHOT 06 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_06_mid.jpg', 'SHOT 06 • Khóa điểm lấy nét bàn làm việc: Định vị chuẩn xác khu vực thao tác vi mô')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Khóa điểm lấy nét bàn làm việc: Định vị </div>
         </div>
 
         <div class="grid-item" onclick="playShot(3.43, 3.9, 'SHOT 07')">
@@ -1553,9 +1781,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" />
                 <span class="grid-num">SHOT 07</span>
                 <span class="grid-time">3.4s – 3.9s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_07_mid.jpg', 'SHOT 07 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_07_mid.jpg', 'SHOT 07 • Góc Top-Down dập hoa quả nghệ thuật: Trình diễn kỹ năng tinh tế từ góc nhìn thẳng đứng')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Góc Top-Down dập hoa quả nghệ thuật: Trì</div>
         </div>
 
         <div class="grid-item" onclick="playShot(3.93, 4.7, 'SHOT 08')">
@@ -1563,9 +1791,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" />
                 <span class="grid-num">SHOT 08</span>
                 <span class="grid-time">3.9s – 4.7s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_08_mid.jpg', 'SHOT 08 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_08_mid.jpg', 'SHOT 08 • Đặc tả bông hoa táo mọng nước: Chạm vào giác quan bằng chi tiết bề mặt siêu thực')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Đặc tả bông hoa táo mọng nước: Chạm vào </div>
         </div>
 
         <div class="grid-item" onclick="playShot(4.73, 5.37, 'SHOT 09')">
@@ -1573,9 +1801,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" />
                 <span class="grid-num">SHOT 09</span>
                 <span class="grid-time">4.7s – 5.4s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_09_mid.jpg', 'SHOT 09 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_09_mid.jpg', 'SHOT 09 • Bước 2 - Remote Shot tách rời màn hình: Tự do điều khiển từ xa không cần trợ lý')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Bước 2 - Remote Shot tách rời màn hình: </div>
         </div>
 
         <div class="grid-item" onclick="playShot(5.4, 6.03, 'SHOT 10')">
@@ -1583,9 +1811,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_10_mid.jpg" alt="SHOT 10" loading="lazy" />
                 <span class="grid-num">SHOT 10</span>
                 <span class="grid-time">5.4s – 6.0s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_10_mid.jpg', 'SHOT 10 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_10_mid.jpg', 'SHOT 10 • Rót nước ép hồng vào bình đá: Kích thích thính giác và thị giác bằng dòng chảy')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Rót nước ép hồng vào bình đá: Kích thích</div>
         </div>
 
         <div class="grid-item" onclick="playShot(6.07, 6.4, 'SHOT 11')">
@@ -1593,9 +1821,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_11_mid.jpg" alt="SHOT 11" loading="lazy" />
                 <span class="grid-num">SHOT 11</span>
                 <span class="grid-time">6.1s – 6.4s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_11_mid.jpg', 'SHOT 11 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_11_mid.jpg', 'SHOT 11 • Thả hoa táo bồng bềnh: Tăng chiều sâu thị giác cho món nước bằng tầng topping')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Thả hoa táo bồng bềnh: Tăng chiều sâu th</div>
         </div>
 
         <div class="grid-item" onclick="playShot(6.43, 7.33, 'SHOT 12')">
@@ -1603,9 +1831,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_12_mid.jpg" alt="SHOT 12" loading="lazy" />
                 <span class="grid-num">SHOT 12</span>
                 <span class="grid-time">6.4s – 7.3s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_12_mid.jpg', 'SHOT 12 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_12_mid.jpg', 'SHOT 12 • Khuấy tròn tầng hoa quả: Tạo chuyển động xoáy nước đánh thức cảm giác sảng khoái')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Khuấy tròn tầng hoa quả: Tạo chuyển động</div>
         </div>
 
         <div class="grid-item" onclick="playShot(7.37, 8.03, 'SHOT 13')">
@@ -1613,9 +1841,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_13_mid.jpg" alt="SHOT 13" loading="lazy" />
                 <span class="grid-num">SHOT 13</span>
                 <span class="grid-time">7.4s – 8.0s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_13_mid.jpg', 'SHOT 13 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_13_mid.jpg', 'SHOT 13 • Bước 3 - Live View căn chỉnh góc máy: Vừa nhìn màn hình vừa dàn dựng ánh sáng chuẩn xác')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Bước 3 - Live View căn chỉnh góc máy: Vừ</div>
         </div>
 
         <div class="grid-item" onclick="playShot(8.07, 8.73, 'SHOT 14')">
@@ -1623,9 +1851,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_14_mid.jpg" alt="SHOT 14" loading="lazy" />
                 <span class="grid-num">SHOT 14</span>
                 <span class="grid-time">8.1s – 8.7s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_14_mid.jpg', 'SHOT 14 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_14_mid.jpg', 'SHOT 14 • Màn hình Live View 3K sắc nét: Kiểm soát bố cục bàn quay trong lòng bàn tay')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Màn hình Live View 3K sắc nét: Kiểm soát</div>
         </div>
 
         <div class="grid-item" onclick="playShot(8.77, 10.1, 'SHOT 15')">
@@ -1633,9 +1861,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_15_mid.jpg" alt="SHOT 15" loading="lazy" />
                 <span class="grid-num">SHOT 15</span>
                 <span class="grid-time">8.8s – 10.1s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_15_mid.jpg', 'SHOT 15 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_15_mid.jpg', 'SHOT 15 • Bước 4 - Fixed Shot dựng chân đế tích hợp: Ổn định góc máy tĩnh chỉ trong 1 giây')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Bước 4 - Fixed Shot dựng chân đế tích hợ</div>
         </div>
 
         <div class="grid-item" onclick="playShot(10.13, 10.77, 'SHOT 16')">
@@ -1643,9 +1871,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_16_mid.jpg" alt="SHOT 16" loading="lazy" />
                 <span class="grid-num">SHOT 16</span>
                 <span class="grid-time">10.1s – 10.8s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_16_mid.jpg', 'SHOT 16 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_16_mid.jpg', 'SHOT 16 • Bắt đầu rót matcha xanh: Cú chạm màu sắc khởi đầu màn biến ảo thị giác')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Bắt đầu rót matcha xanh: Cú chạm màu sắc</div>
         </div>
 
         <div class="grid-item" onclick="playShot(10.8, 11.47, 'SHOT 17')">
@@ -1653,9 +1881,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_17_mid.jpg" alt="SHOT 17" loading="lazy" />
                 <span class="grid-num">SHOT 17</span>
                 <span class="grid-time">10.8s – 11.5s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_17_mid.jpg', 'SHOT 17 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_17_mid.jpg', 'SHOT 17 • Vệt loang cẩm thạch huyền ảo: Hiệu ứng phân tầng sữa và matcha thôi miên thị giác')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Vệt loang cẩm thạch huyền ảo: Hiệu ứng p</div>
         </div>
 
         <div class="grid-item" onclick="playShot(11.5, 12.1, 'SHOT 18')">
@@ -1663,9 +1891,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_18_mid.jpg" alt="SHOT 18" loading="lazy" />
                 <span class="grid-num">SHOT 18</span>
                 <span class="grid-time">11.5s – 12.1s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_18_mid.jpg', 'SHOT 18 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_18_mid.jpg', 'SHOT 18 • Macro bọt trà matcha sóng sánh: Đỉnh cao độ sắc nét của cảm biến camera')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Macro bọt trà matcha sóng sánh: Đỉnh cao</div>
         </div>
 
         <div class="grid-item" onclick="playShot(12.13, 12.77, 'SHOT 19')">
@@ -1673,9 +1901,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_19_mid.jpg" alt="SHOT 19" loading="lazy" />
                 <span class="grid-num">SHOT 19</span>
                 <span class="grid-time">12.1s – 12.8s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_19_mid.jpg', 'SHOT 19 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_19_mid.jpg', 'SHOT 19 • Góc máy đôi ly matcha và camera gimbal: Minh chứng góc quay thực tế từ thiết bị nhỏ gọn')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Góc máy đôi ly matcha và camera gimbal: </div>
         </div>
 
         <div class="grid-item" onclick="playShot(12.8, 13.37, 'SHOT 20')">
@@ -1683,9 +1911,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_20_mid.jpg" alt="SHOT 20" loading="lazy" />
                 <span class="grid-num">SHOT 20</span>
                 <span class="grid-time">12.8s – 13.4s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_20_mid.jpg', 'SHOT 20 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_20_mid.jpg', 'SHOT 20 • Bước 5 - Moving Shot lia máy nghệ thuật: Di chuyển máy quay lấy trọn thần thái ly trà đá')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Bước 5 - Moving Shot lia máy nghệ thuật:</div>
         </div>
 
         <div class="grid-item" onclick="playShot(13.4, 14.5, 'SHOT 21')">
@@ -1693,9 +1921,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_21_mid.jpg" alt="SHOT 21" loading="lazy" />
                 <span class="grid-num">SHOT 21</span>
                 <span class="grid-time">13.4s – 14.5s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_21_mid.jpg', 'SHOT 21 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_21_mid.jpg', 'SHOT 21 • Lướt trượt qua bộ 3 ly đồ uống: Bản giao hưởng màu sắc hoàn hảo của buổi sáng tạo')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Lướt trượt qua bộ 3 ly đồ uống: Bản giao</div>
         </div>
 
         <div class="grid-item" onclick="playShot(14.53, 14.83, 'SHOT 22')">
@@ -1703,9 +1931,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_22_mid.jpg" alt="SHOT 22" loading="lazy" />
                 <span class="grid-num">SHOT 22</span>
                 <span class="grid-time">14.5s – 14.8s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_22_mid.jpg', 'SHOT 22 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_22_mid.jpg', 'SHOT 22 • Creator nếm thử thành quả &amp; Kêu gọi tương tác: Tạo móc câu giữ chân sang tập tiếp theo')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Creator nếm thử thành quả &amp; Kêu gọi tươn</div>
         </div>
 
         <div class="grid-item" onclick="playShot(14.87, 15.27, 'SHOT 23')">
@@ -1713,9 +1941,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_23_mid.jpg" alt="SHOT 23" loading="lazy" />
                 <span class="grid-num">SHOT 23</span>
                 <span class="grid-time">14.9s – 15.3s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_23_mid.jpg', 'SHOT 23 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_23_mid.jpg', 'SHOT 23 • Nụ cười rạng rỡ &amp; Cú Thumbs-Up đanh thép: Khẳng định sự tự tin của một Solo Creator chuyên nghiệp')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Nụ cười rạng rỡ &amp; Cú Thumbs-Up đanh thép</div>
         </div>
         </div>
     </div>
@@ -1732,7 +1960,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 01</div>
-                <div class="drawer-shot-hl">Visual Hook Mở Màn: Giữ chân người xem nga</div>
+                <div class="drawer-shot-hl">Visual Hook bí mật hậu trường: Đập tan thắ</div>
                 <div class="drawer-shot-time">0.00s – 0.23s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1742,7 +1970,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 02</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Chạm kích hoạt Auto Tracking: Giải phóng h</div>
                 <div class="drawer-shot-time">0.27s – 0.70s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1752,7 +1980,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 03</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Đặc tả bình trà lạnh &amp; &quot;trợ lý vô hình&quot;: Đ</div>
                 <div class="drawer-shot-time">0.73s – 1.37s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1762,7 +1990,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 04</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Mồi mắt thị giác 3 ly nước: Neo giữ tiêu c</div>
                 <div class="drawer-shot-time">1.40s – 1.80s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1772,7 +2000,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 05</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Bước 1 - Auto Tracking tự xoay: Camera tự </div>
                 <div class="drawer-shot-time">1.83s – 2.73s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1782,7 +2010,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 06</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Khóa điểm lấy nét bàn làm việc: Định vị ch</div>
                 <div class="drawer-shot-time">2.77s – 3.40s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1792,7 +2020,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 07</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Góc Top-Down dập hoa quả nghệ thuật: Trình</div>
                 <div class="drawer-shot-time">3.43s – 3.90s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1802,7 +2030,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 08</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Đặc tả bông hoa táo mọng nước: Chạm vào gi</div>
                 <div class="drawer-shot-time">3.93s – 4.70s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1812,7 +2040,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 09</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Bước 2 - Remote Shot tách rời màn hình: Tự</div>
                 <div class="drawer-shot-time">4.73s – 5.37s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1822,7 +2050,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_10_mid.jpg" alt="SHOT 10" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 10</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Rót nước ép hồng vào bình đá: Kích thích t</div>
                 <div class="drawer-shot-time">5.40s – 6.03s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1832,7 +2060,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_11_mid.jpg" alt="SHOT 11" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 11</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Thả hoa táo bồng bềnh: Tăng chiều sâu thị </div>
                 <div class="drawer-shot-time">6.07s – 6.40s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1842,7 +2070,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_12_mid.jpg" alt="SHOT 12" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 12</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Khuấy tròn tầng hoa quả: Tạo chuyển động x</div>
                 <div class="drawer-shot-time">6.43s – 7.33s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1852,7 +2080,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_13_mid.jpg" alt="SHOT 13" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 13</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Bước 3 - Live View căn chỉnh góc máy: Vừa </div>
                 <div class="drawer-shot-time">7.37s – 8.03s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1862,7 +2090,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_14_mid.jpg" alt="SHOT 14" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 14</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Màn hình Live View 3K sắc nét: Kiểm soát b</div>
                 <div class="drawer-shot-time">8.07s – 8.73s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1872,7 +2100,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_15_mid.jpg" alt="SHOT 15" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 15</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Bước 4 - Fixed Shot dựng chân đế tích hợp:</div>
                 <div class="drawer-shot-time">8.77s – 10.10s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1882,7 +2110,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_16_mid.jpg" alt="SHOT 16" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 16</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Bắt đầu rót matcha xanh: Cú chạm màu sắc k</div>
                 <div class="drawer-shot-time">10.13s – 10.77s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1892,7 +2120,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_17_mid.jpg" alt="SHOT 17" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 17</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Vệt loang cẩm thạch huyền ảo: Hiệu ứng phâ</div>
                 <div class="drawer-shot-time">10.80s – 11.47s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1902,7 +2130,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_18_mid.jpg" alt="SHOT 18" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 18</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Macro bọt trà matcha sóng sánh: Đỉnh cao đ</div>
                 <div class="drawer-shot-time">11.50s – 12.10s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1912,7 +2140,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_19_mid.jpg" alt="SHOT 19" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 19</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Góc máy đôi ly matcha và camera gimbal: Mi</div>
                 <div class="drawer-shot-time">12.13s – 12.77s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1922,7 +2150,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_20_mid.jpg" alt="SHOT 20" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 20</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Bước 5 - Moving Shot lia máy nghệ thuật: D</div>
                 <div class="drawer-shot-time">12.80s – 13.37s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1932,7 +2160,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_21_mid.jpg" alt="SHOT 21" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 21</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Lướt trượt qua bộ 3 ly đồ uống: Bản giao h</div>
                 <div class="drawer-shot-time">13.40s – 14.50s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1942,7 +2170,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_22_mid.jpg" alt="SHOT 22" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 22</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Creator nếm thử thành quả &amp; Kêu gọi tương </div>
                 <div class="drawer-shot-time">14.53s – 14.83s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1952,7 +2180,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공/shot_23_mid.jpg" alt="SHOT 23" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 23</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Nụ cười rạng rỡ &amp; Cú Thumbs-Up đanh thép: </div>
                 <div class="drawer-shot-time">14.87s – 15.27s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1968,7 +2196,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
 
 <script>
 // Video source resolution - try multiple paths
-const rawVideoSrc = 'https://media.fedu.vn/videos/DdlmZczPsCE.mp4';
+const rawVideoSrc = 'https://media.fedu.vn/videos/film.mp4';
 let currentEndTime = null;
 
 function getCandidateUrls(src) {

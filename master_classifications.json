@@ -19220,25 +19220,29 @@
     "creator_name": "Hena_Film_Vlog",
     "title": "@hena_film_vlog - 혼자 만드는데 촬영은 누가 하냐고요🤷🏻‍♀️ 제품제공",
     "shots_count": 23,
-    "duration": "46.0s",
+    "duration": "15.3s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "BTS / Hậu Trường Sáng Tạo",
+      "name": "BTS / Hậu Trường Sáng Tạo",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @hena_film_vlog",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot"
+      "Solo Creator",
+      "BTS Vlog",
+      "Kỹ Thuật Quay",
+      "Auto Tracking",
+      "F&B Aesthetic",
+      "Gimbal"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Công thức 5 góc máy BTS Solo Creator: Tự quay video pha chế F&B chuẩn Studio không cần trợ lý (Auto Tracking ➔ Remote Shot ➔ Live View ➔ Fixed Shot ➔ Moving Shot).",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
