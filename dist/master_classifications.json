@@ -18501,25 +18501,29 @@
     "creator": "@ulanzi",
     "creator_name": "Ulanzi",
     "title": "@ulanzi - MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m",
-    "shots_count": 1,
-    "duration": "2.0s",
+    "shots_count": 12,
+    "duration": "26.1s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "dien-anh",
+      "name": "dien-anh",
+      "icon": "🎬"
     },
     "industry": {
       "id": "cong-nghe",
-      "name": "Công Nghệ & Thiết Bị",
-      "icon": "📱"
+      "name": "cong-nghe",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ulanzi",
     "tech_tags": [
-      "Establishing Hook Shot"
+      "Auto-Deploy",
+      "Quadpod Base",
+      "Cold Shoe Mount",
+      "Bluetooth Remote",
+      "1.52m Extension"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+    "quick_takeaway": "Cú đấm thị giác chạm đất bung 4 chân tức thì giải quyết triệt để nỗi đau thao tác mở tripod rườm rà.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -18536,25 +18540,29 @@
     "creator": "@ulanzi",
     "creator_name": "Ulanzi",
     "title": "@ulanzi - MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m",
-    "shots_count": 1,
-    "duration": "2.0s",
+    "shots_count": 12,
+    "duration": "26.1s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "dien-anh",
+      "name": "dien-anh",
+      "icon": "🎬"
     },
     "industry": {
       "id": "cong-nghe",
-      "name": "Công Nghệ & Thiết Bị",
-      "icon": "📱"
+      "name": "cong-nghe",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ulanzi",
     "tech_tags": [
-      "Establishing Hook Shot"
+      "Auto-Deploy",
+      "Quadpod Base",
+      "Cold Shoe Mount",
+      "Bluetooth Remote",
+      "1.52m Extension"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+    "quick_takeaway": "Cú đấm thị giác chạm đất bung 4 chân tức thì giải quyết triệt để nỗi đau thao tác mở tripod rườm rà.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
