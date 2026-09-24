@@ -18900,34 +18900,41 @@
     "creator_name": "Davidmurphyfilm",
     "title": "@davidmurphyfilm - Some rules I follow while filming and documen",
     "shots_count": 11,
-    "duration": "22.0s",
+    "duration": "63.4s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "id": "Điện Ảnh (Cinematic)",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Nhiếp Ảnh & Làm Phim",
+      "name": "Nhiếp Ảnh & Làm Phim",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @davidmurphyfilm",
+    "purpose": "Đúc kết 10 kỹ thuật quay phim đời thường biến những khoảnh khắc bình dị thành thước phim điện ảnh đắt giá.",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting",
-      "Medium Tracking Shot"
+      "Cinematography Rules",
+      "Visual Hook",
+      "Framing Within A Frame",
+      "Public Space Production Value",
+      "Deep Depth Of Field",
+      "Sound Design ASMR",
+      "Scale Contrast",
+      "In-frame Entrance"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "⚡ 10 quy tắc vàng điện ảnh hóa đời thường: từ góc nhìn xuyên kẽ hở, đại cảnh tương phản quy mô đến khép khẩu sâu và thiết kế âm thanh cơ học.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    }
+    },
+    "youtube_id": "WZyaT5cnJmM",
+    "youtube_url": "https://youtu.be/WZyaT5cnJmM",
+    "youtube_embed": "https://www.youtube.com/embed/WZyaT5cnJmM"
   },
   "Ddo3aQxjMeq": {
     "id": "IG_@davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis",
@@ -18935,34 +18942,41 @@
     "creator_name": "Davidmurphyfilm",
     "title": "@davidmurphyfilm - Some rules I follow while filming and documen",
     "shots_count": 11,
-    "duration": "22.0s",
+    "duration": "63.4s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "id": "Điện Ảnh (Cinematic)",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Nhiếp Ảnh & Làm Phim",
+      "name": "Nhiếp Ảnh & Làm Phim",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @davidmurphyfilm",
+    "purpose": "Đúc kết 10 kỹ thuật quay phim đời thường biến những khoảnh khắc bình dị thành thước phim điện ảnh đắt giá.",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting",
-      "Medium Tracking Shot"
+      "Cinematography Rules",
+      "Visual Hook",
+      "Framing Within A Frame",
+      "Public Space Production Value",
+      "Deep Depth Of Field",
+      "Sound Design ASMR",
+      "Scale Contrast",
+      "In-frame Entrance"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "⚡ 10 quy tắc vàng điện ảnh hóa đời thường: từ góc nhìn xuyên kẽ hở, đại cảnh tương phản quy mô đến khép khẩu sâu và thiết kế âm thanh cơ học.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    }
+    },
+    "youtube_id": "WZyaT5cnJmM",
+    "youtube_url": "https://youtu.be/WZyaT5cnJmM",
+    "youtube_embed": "https://www.youtube.com/embed/WZyaT5cnJmM"
   },
   "IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot": {
     "id": "IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot",
