@@ -20945,36 +20945,40 @@
     "id": "IG_@nana_icroom_DdoJCWrT0Do_vlog撮影、どんな画角で何を撮ったらいいかわかんない…",
     "creator": "@nana_icroom",
     "creator_name": "Nana_Icroom",
-    "title": "@nana_icroom - vlog撮影、どんな画角で何を撮ったらいいかわかんない…",
+    "title": "5 Góc Quay & Bố Cục Thần Thánh Cứu Cánh Mọi Video Vlog Khi Bí Ý Tưởng",
     "shots_count": 20,
-    "duration": "40.0s",
+    "duration": "26.1s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "Vlog",
+      "name": "Vlog",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Đời Sống & Phong Cách Sống",
+      "name": "Đời Sống & Phong Cách Sống",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @nana_icroom",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "High-key Lighting",
-      "Low-key Lighting"
+      "Vlog Đời Thường",
+      "5 Bố Cục Thần Thánh",
+      "Nghệ Thuật Tiền Cảnh",
+      "Japandi Lifestyle",
+      "Thẩm Mỹ Tối Giản"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "5 đòn bẩy thị giác kinh điển biến mọi sinh hoạt gia đình thành thước phim điện ảnh thư thái chuẩn phong cách sống tối giản",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    }
+    },
+    "youtube_id": "krn5bpvvBnU",
+    "youtube_url": "https://youtu.be/krn5bpvvBnU",
+    "youtube_embed": "https://www.youtube.com/embed/krn5bpvvBnU"
   },
   "DdoJCWrT0Do": {
     "id": "IG_@nana_icroom_DdoJCWrT0Do_vlog撮影、どんな画角で何を撮ったらいいかわかんない…",
