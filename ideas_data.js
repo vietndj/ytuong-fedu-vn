@@ -2312,8 +2312,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Du Lịch & Khám Phá",
-        "Chuyển Cảnh (Transition)"
+        "Chuyển Cảnh (Transition)",
+        "Du Lịch & Khám Phá"
       ],
       "country": {
         "id": "us_eu",
@@ -2384,8 +2384,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Du Lịch & Trải Nghiệm Sống",
-        "Cinematic Vlog / Cut On Action"
+        "Cinematic Vlog / Cut On Action",
+        "Du Lịch & Trải Nghiệm Sống"
       ],
       "country": {
         "id": "us_eu",
@@ -2424,9 +2424,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/IG_@acupper_DdoYrPsy9g-_hello_is_konnichiwa.html",
         "shots_count": 18,
         "duration": "36s",
-        "youtube_id": "TA2gE4FMf9s",
-        "youtube_embed": "https://www.youtube.com/embed/TA2gE4FMf9s",
-        "youtube_url": "https://youtu.be/TA2gE4FMf9s"
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
       },
       "complexity": {
         "id": "trung-binh",
@@ -2438,8 +2438,8 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@mylenesmind_DdoWrpERdvD_can_you_guess_the_theme_👀",
       "shortcode": "DdoWrpERdvD",
-      "title_vi": "Công thức Walk &amp; Talk kết hợp B-Roll bàn làm việc kiểu phim tài liệu tự sự (Documentary Essay)",
-      "quick_takeaway": "Kỹ thuật làm vlog Walk and Talk kết hợp phim tài liệu tự sự cao cấp: đan xen 3 bối cảnh A-roll ngoài trời với bàn làm việc Flat-lay kính lúp và Typography tạp chí.",
+      "title_vi": "can you guess the theme 👀",
+      "quick_takeaway": "⚡ Visual Hook Mở Màn: Vừa bước đi vừa trò chuyện (Walk & Talk) ngoài trời dưới nắng xiên ➔ Nụ Cười Kết Mở (Open Loop Hook): Đón nắng hoàng hôn thôi thúc đón chờ tập sau",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot",
       "shooting_style": {
         "id": "Walk and Talk Documentary",
@@ -2496,9 +2496,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/IG_@mylenesmind_DdoWrpERdvD_can_you_guess_the_theme_👀.html",
         "shots_count": 18,
         "duration": "36s",
-        "youtube_id": "JlUn02PFeWU",
-        "youtube_embed": "https://www.youtube.com/embed/JlUn02PFeWU",
-        "youtube_url": "https://youtu.be/JlUn02PFeWU"
+        "youtube_id": "1YrmyjSeN2k",
+        "youtube_embed": "https://www.youtube.com/embed/1YrmyjSeN2k",
+        "youtube_url": "https://youtu.be/1YrmyjSeN2k"
       },
       "complexity": {
         "id": "trung-binh",
@@ -2529,8 +2529,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "lifestyle-cinematic",
-        "du-lich-khach-san"
+        "du-lich-khach-san",
+        "lifestyle-cinematic"
       ],
       "country": {
         "id": "us_eu",
@@ -2638,9 +2638,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵.html",
         "shots_count": 25,
         "duration": "50s",
-        "youtube_id": "bVSKHhDYsbc",
-        "youtube_embed": "https://www.youtube.com/embed/bVSKHhDYsbc",
-        "youtube_url": "https://youtu.be/bVSKHhDYsbc"
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
       },
       "complexity": {
         "id": "nang-cao",
@@ -2782,9 +2782,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공.html",
         "shots_count": 23,
         "duration": "46s",
-        "youtube_id": "dtL6KuAYHqI",
-        "youtube_embed": "https://www.youtube.com/embed/dtL6KuAYHqI",
-        "youtube_url": "https://youtu.be/dtL6KuAYHqI"
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
       },
       "complexity": {
         "id": "nang-cao",
@@ -2853,9 +2853,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/IG_@jigummmmm_DdnqexOTN8A_설거지하는_모습도_예쁘게_찍을_수_있냐고요.html",
         "shots_count": 10,
         "duration": "20s",
-        "youtube_id": "J9pdkt-qOqM",
-        "youtube_embed": "https://www.youtube.com/embed/J9pdkt-qOqM",
-        "youtube_url": "https://youtu.be/J9pdkt-qOqM"
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
       },
       "complexity": {
         "id": "trung-binh",
@@ -2957,8 +2957,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Chuyển Cảnh",
-        "thoi-trang"
+        "thoi-trang",
+        "Chuyển Cảnh"
       ],
       "country": {
         "id": "us_eu",
@@ -2990,15 +2990,15 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
         "shots_count": 1,
         "duration": "2s",
-        "youtube_id": "Vf2GS8tIPlM",
-        "youtube_embed": "https://www.youtube.com/embed/Vf2GS8tIPlM",
-        "youtube_url": "https://youtu.be/Vf2GS8tIPlM"
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
       },
       "complexity": {
         "id": "de",
@@ -3070,9 +3070,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/IG_@davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis.html",
         "shots_count": 11,
         "duration": "22s",
-        "youtube_id": "WZyaT5cnJmM",
-        "youtube_embed": "https://www.youtube.com/embed/WZyaT5cnJmM",
-        "youtube_url": "https://youtu.be/WZyaT5cnJmM"
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
       },
       "complexity": {
         "id": "trung-binh",
@@ -3103,8 +3103,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "ugc",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "ugc"
       ],
       "country": {
         "id": "us_eu",
@@ -3143,9 +3143,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/IG_@joshdiazfilms_Ddo-TSWMZpG_Video_by_joshdiazfilms.html",
         "shots_count": 15,
         "duration": "30s",
-        "youtube_id": "xDqN0flMCK0",
-        "youtube_embed": "https://www.youtube.com/embed/xDqN0flMCK0",
-        "youtube_url": "https://youtu.be/xDqN0flMCK0"
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
       },
       "complexity": {
         "id": "trung-binh",
@@ -3176,8 +3176,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "du-lich",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "du-lich"
       ],
       "country": {
         "id": "us_eu",
@@ -3214,9 +3214,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/IG_@yifan.liii_Dap0s2RhySa_summer_in_florence_🤍.html",
         "shots_count": 7,
         "duration": "14s",
-        "youtube_id": "OKjffTTi-dQ",
-        "youtube_embed": "https://www.youtube.com/embed/OKjffTTi-dQ",
-        "youtube_url": "https://youtu.be/OKjffTTi-dQ"
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
       },
       "complexity": {
         "id": "de",
@@ -3286,9 +3286,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/IG_@la6vish_DakwX2NBYs1_Fukuoka_🇯🇵.html",
         "shots_count": 3,
         "duration": "6s",
-        "youtube_id": "FhDv05kYsWg",
-        "youtube_embed": "https://www.youtube.com/embed/FhDv05kYsWg",
-        "youtube_url": "https://youtu.be/FhDv05kYsWg"
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
       },
       "complexity": {
         "id": "de",
@@ -3358,9 +3358,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/IG_@ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand.html",
         "shots_count": 19,
         "duration": "38s",
-        "youtube_id": "VFbhow8GDWQ",
-        "youtube_embed": "https://www.youtube.com/embed/VFbhow8GDWQ",
-        "youtube_url": "https://youtu.be/VFbhow8GDWQ"
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
       },
       "complexity": {
         "id": "nang-cao",
@@ -3462,8 +3462,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "chuyen_canh",
-        "cong_nghe"
+        "cong_nghe",
+        "chuyen_canh"
       ],
       "country": {
         "id": "us_eu",
@@ -3500,9 +3500,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/IG_@ulanzi_lazada_Easy_Open_Portable_Aluminum_Trigopod.html",
         "shots_count": 15,
         "duration": "30s",
-        "youtube_id": "GV5S7So_VTc",
-        "youtube_embed": "https://www.youtube.com/embed/GV5S7So_VTc",
-        "youtube_url": "https://youtu.be/GV5S7So_VTc"
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
       },
       "complexity": {
         "id": "trung-binh",
@@ -3605,8 +3605,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Phim Điện Ảnh (Cinematic Stills)",
-        "Nhiếp Ảnh & Điện Ảnh"
+        "Nhiếp Ảnh & Điện Ảnh",
+        "Phim Điện Ảnh (Cinematic Stills)"
       ],
       "country": {
         "id": "us_eu",
@@ -3890,8 +3890,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Chuyển Cảnh",
-        "Công Nghệ & Thiết Bị"
+        "Công Nghệ & Thiết Bị",
+        "Chuyển Cảnh"
       ],
       "country": {
         "id": "us_eu",
@@ -4029,8 +4029,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Chuyển Cảnh",
-        "Du Lịch & Văn Hóa"
+        "Du Lịch & Văn Hóa",
+        "Chuyển Cảnh"
       ],
       "country": {
         "id": "us_eu",
@@ -4101,8 +4101,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Thời Trang & Phụ Kiện",
-        "Chuyển Cảnh"
+        "Chuyển Cảnh",
+        "Thời Trang & Phụ Kiện"
       ],
       "country": {
         "id": "kr",
@@ -4328,8 +4328,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Công Nghệ & AI / Năng Suất",
-        "Chuyển Cảnh"
+        "Chuyển Cảnh",
+        "Công Nghệ & AI / Năng Suất"
       ],
       "country": {
         "id": "asia",
@@ -4430,7 +4430,7 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
         "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
@@ -4470,8 +4470,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Chỉn Chu",
-        "Du Lịch & Trải Nghiệm"
+        "Du Lịch & Trải Nghiệm",
+        "Chỉn Chu"
       ],
       "country": {
         "id": "asia",
@@ -4613,8 +4613,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Thời Trang & Phụ Kiện",
-        "Chuyển Cảnh"
+        "Chuyển Cảnh",
+        "Thời Trang & Phụ Kiện"
       ],
       "country": {
         "id": "us_eu",
@@ -5041,8 +5041,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Chuyển Cảnh",
-        "Công Nghệ & Thiết Bị"
+        "Công Nghệ & Thiết Bị",
+        "Chuyển Cảnh"
       ],
       "country": {
         "id": "us_eu",
@@ -6223,8 +6223,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Nói Trực Diện",
-        "Xây kênh"
+        "Xây kênh",
+        "Nói Trực Diện"
       ],
       "country": {
         "id": "us_eu",
@@ -6373,8 +6373,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Bố cục",
-        "Chỉn Chu"
+        "Chỉn Chu",
+        "Bố cục"
       ],
       "country": {
         "id": "us_eu",
@@ -6450,8 +6450,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Xây kênh",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Xây kênh"
       ],
       "country": {
         "id": "us_eu",
@@ -7117,8 +7117,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Công Nghệ & Lập Trình",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Công Nghệ & Lập Trình"
       ],
       "country": {
         "id": "global",
@@ -7573,8 +7573,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Thời Trang & Phụ Kiện",
-        "Chuyển Cảnh"
+        "Chuyển Cảnh",
+        "Thời Trang & Phụ Kiện"
       ],
       "country": {
         "id": "global",
@@ -7649,8 +7649,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Thời Trang & Phụ Kiện",
-        "Chuyển Cảnh"
+        "Chuyển Cảnh",
+        "Thời Trang & Phụ Kiện"
       ],
       "country": {
         "id": "global",
@@ -8547,8 +8547,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Tâm Lý & Phát Triển Bản Thân",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Tâm Lý & Phát Triển Bản Thân"
       ],
       "country": {
         "id": "us_eu",
@@ -8702,8 +8702,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Walk & Talk",
-        "Thời Trang & Phong Cách Sống"
+        "Thời Trang & Phong Cách Sống",
+        "Walk & Talk"
       ],
       "country": {
         "id": "russia",
@@ -8858,8 +8858,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Làm Đẹp & Spa / Y Tế",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Làm Đẹp & Spa / Y Tế"
       ],
       "country": {
         "id": "vietnam",
@@ -9003,8 +9003,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Làm Đẹp & Spa / Y Tế",
-        "Chuyển Cảnh"
+        "Chuyển Cảnh",
+        "Làm Đẹp & Spa / Y Tế"
       ],
       "country": {
         "id": "vn",
@@ -9152,8 +9152,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Walk & Talk",
-        "Giáo Dục & Tuyển Sinh"
+        "Giáo Dục & Tuyển Sinh",
+        "Walk & Talk"
       ],
       "country": {
         "id": "au",
@@ -9227,8 +9227,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Nói Trực Diện",
-        "Kỹ Thuật Quay & Dựng Video"
+        "Kỹ Thuật Quay & Dựng Video",
+        "Nói Trực Diện"
       ],
       "country": {
         "id": "us",
@@ -9298,8 +9298,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Walk & Talk",
-        "Làm Đẹp & Spa / Y Tế (Salon Tóc)"
+        "Làm Đẹp & Spa / Y Tế (Salon Tóc)",
+        "Walk & Talk"
       ],
       "country": {
         "id": "us_eu",
@@ -9372,8 +9372,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Chuyển Cảnh",
-        "Thời Trang & Phụ Kiện / Quà Tặng"
+        "Thời Trang & Phụ Kiện / Quà Tặng",
+        "Chuyển Cảnh"
       ],
       "country": {
         "id": "vn",
@@ -9668,8 +9668,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Thời Trang & Phụ Kiện",
-        "Chuyển Cảnh"
+        "Chuyển Cảnh",
+        "Thời Trang & Phụ Kiện"
       ],
       "country": {
         "id": "russia",
@@ -10936,8 +10936,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Thương Hiệu Cá Nhân & Dịch Vụ",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Thương Hiệu Cá Nhân & Dịch Vụ"
       ],
       "country": {
         "id": "japan",
@@ -11014,8 +11014,8 @@ var FEDU_IDEAS_DATABASE = {
         "Chuyển cảnh cấp 2"
       ],
       "tags": [
-        "Chuyển Cảnh",
-        "Thể Thao & Năng Động"
+        "Thể Thao & Năng Động",
+        "Chuyển Cảnh"
       ],
       "country": {
         "id": "asia_other",
@@ -11093,8 +11093,8 @@ var FEDU_IDEAS_DATABASE = {
         "Chuyển cảnh cấp 2"
       ],
       "tags": [
-        "Chuyển Cảnh",
-        "Công Nghệ & Thiết Bị"
+        "Công Nghệ & Thiết Bị",
+        "Chuyển Cảnh"
       ],
       "country": {
         "id": "us_eu",
@@ -11171,8 +11171,8 @@ var FEDU_IDEAS_DATABASE = {
         "Chuyển cảnh cấp 2"
       ],
       "tags": [
-        "Thời Trang & Phụ Kiện",
-        "Chuyển Cảnh"
+        "Chuyển Cảnh",
+        "Thời Trang & Phụ Kiện"
       ],
       "country": {
         "id": "us_eu",
@@ -11696,8 +11696,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Chuyển Cảnh",
-        "Du Lịch & Văn Hóa"
+        "Du Lịch & Văn Hóa",
+        "Chuyển Cảnh"
       ],
       "country": {
         "id": "us_eu",
@@ -12085,8 +12085,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Công Nghệ & Phụ Kiện Máy Ảnh",
-        "Chỉn Chu"
+        "Chỉn Chu",
+        "Công Nghệ & Phụ Kiện Máy Ảnh"
       ],
       "country": {
         "id": "middle_east",
@@ -12321,8 +12321,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Thể Thao & Năng Động",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Thể Thao & Năng Động"
       ],
       "country": {
         "id": "us_eu",
@@ -12480,8 +12480,8 @@ var FEDU_IDEAS_DATABASE = {
         "Chuyển cảnh cấp 2"
       ],
       "tags": [
-        "Chuyển Cảnh",
-        "Thể Thao & Năng Động"
+        "Thể Thao & Năng Động",
+        "Chuyển Cảnh"
       ],
       "country": {
         "id": "korea",
@@ -12560,8 +12560,8 @@ var FEDU_IDEAS_DATABASE = {
         "Chuyển cảnh cấp 2"
       ],
       "tags": [
-        "Thời Trang & Phụ Kiện",
-        "Chuyển Cảnh"
+        "Chuyển Cảnh",
+        "Thời Trang & Phụ Kiện"
       ],
       "country": {
         "id": "us_eu",
@@ -12946,8 +12946,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Thương Hiệu Cá Nhân & Dịch Vụ",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Thương Hiệu Cá Nhân & Dịch Vụ"
       ],
       "country": {
         "id": "us_eu",
@@ -13022,8 +13022,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Thương Hiệu Cá Nhân & Dịch Vụ",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Thương Hiệu Cá Nhân & Dịch Vụ"
       ],
       "country": {
         "id": "korea",
@@ -13478,8 +13478,8 @@ var FEDU_IDEAS_DATABASE = {
         "Chuyển cảnh cấp 2"
       ],
       "tags": [
-        "Chuyển Cảnh",
-        "Thể Thao & Năng Động"
+        "Thể Thao & Năng Động",
+        "Chuyển Cảnh"
       ],
       "country": {
         "id": "us_eu",
@@ -14090,8 +14090,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Ẩm Thực & F&B",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Ẩm Thực & F&B"
       ],
       "country": {
         "id": "asia_other",
@@ -14610,8 +14610,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Thương Hiệu Cá Nhân & Dịch Vụ",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Thương Hiệu Cá Nhân & Dịch Vụ"
       ],
       "country": {
         "id": "india",
@@ -16087,8 +16087,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Công Nghệ & Thiết Bị",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Công Nghệ & Thiết Bị"
       ],
       "country": {
         "id": "india",
@@ -16905,8 +16905,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Thương Hiệu Cá Nhân & Dịch Vụ",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Thương Hiệu Cá Nhân & Dịch Vụ"
       ],
       "country": {
         "id": "asia_other",
@@ -17358,8 +17358,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Công Nghệ & Thiết Bị",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Công Nghệ & Thiết Bị"
       ],
       "country": {
         "id": "us_eu",
@@ -17656,8 +17656,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Thương Hiệu Cá Nhân & Dịch Vụ",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Thương Hiệu Cá Nhân & Dịch Vụ"
       ],
       "country": {
         "id": "japan",
@@ -18247,8 +18247,8 @@ var FEDU_IDEAS_DATABASE = {
         "Chuyển cảnh cấp 2"
       ],
       "tags": [
-        "Thương Hiệu Cá Nhân & Dịch Vụ",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Thương Hiệu Cá Nhân & Dịch Vụ"
       ],
       "country": {
         "id": "us_eu",
@@ -18470,8 +18470,8 @@ var FEDU_IDEAS_DATABASE = {
         "Chuyển cảnh cấp 2"
       ],
       "tags": [
-        "Thời Trang & Phụ Kiện",
-        "Chuyển Cảnh"
+        "Chuyển Cảnh",
+        "Thời Trang & Phụ Kiện"
       ],
       "country": {
         "id": "asia_other",
@@ -18693,8 +18693,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Thời Trang & Phụ Kiện",
-        "Chuyển Cảnh"
+        "Chuyển Cảnh",
+        "Thời Trang & Phụ Kiện"
       ],
       "country": {
         "id": "asia_other",
@@ -19421,8 +19421,8 @@ var FEDU_IDEAS_DATABASE = {
         "Chuyển cảnh cấp 2"
       ],
       "tags": [
-        "Thương Hiệu Cá Nhân & Dịch Vụ",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Thương Hiệu Cá Nhân & Dịch Vụ"
       ],
       "country": {
         "id": "us_eu",
@@ -19802,8 +19802,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Lồng Tiếng",
-        "Du Lịch & Văn Hóa"
+        "Du Lịch & Văn Hóa",
+        "Lồng Tiếng"
       ],
       "country": {
         "id": "vietnam",
@@ -19880,8 +19880,8 @@ var FEDU_IDEAS_DATABASE = {
         "Chuyển cảnh cấp 2"
       ],
       "tags": [
-        "Chuyển Cảnh",
-        "Công Nghệ & Thiết Bị"
+        "Công Nghệ & Thiết Bị",
+        "Chuyển Cảnh"
       ],
       "country": {
         "id": "us_eu",
@@ -20033,8 +20033,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Du Lịch & Văn Hóa",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Du Lịch & Văn Hóa"
       ],
       "country": {
         "id": "asia_other",
@@ -20185,8 +20185,8 @@ var FEDU_IDEAS_DATABASE = {
       ],
       "x_factors": [],
       "tags": [
-        "Du Lịch & Văn Hóa",
-        "Kể Chuyện"
+        "Kể Chuyện",
+        "Du Lịch & Văn Hóa"
       ],
       "country": {
         "id": "asia_other",
