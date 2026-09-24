@@ -20260,28 +20260,31 @@
     "id": "IG_@lisha_ho_Ddqo7-eTI2A_Wait…_@ralphlauren_+_coffee_at_KLCC_👀",
     "creator": "@lisha_ho",
     "creator_name": "Lisha_Ho",
-    "title": "@lisha_ho - Wait… @ralphlauren + coffee at KLCC 👀",
+    "title": "Kỹ Thuật Chuyển Cảnh Khung Cửa Vòm & Cắt Theo Nhịp Điệu (Rhythm Cut) Trong Lookbook Ralph Lauren KLCC",
     "shots_count": 26,
-    "duration": "52.0s",
+    "duration": "28.8s",
     "shooting_style": {
-      "id": "chuyen-canh",
+      "id": "Chuyển Cảnh (Transition)",
       "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Thời Trang & Phong Cách Sống",
+      "name": "Thời Trang & Phong Cách Sống",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @lisha_ho",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting"
+      "Chuyen canh 1",
+      "Chuyển Cảnh (Transition)",
+      "Archway Framing",
+      "Rhythm Cut",
+      "Ralph Lauren",
+      "Ralph's Coffee"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Bóc tách 26 phân cảnh chuyển đổi nhịp thở bậc thầy: từ Visual Hook cửa vòm, cắt dồn dập đồ vật thương hiệu, bẻ cua trải nghiệm Ralph's Coffee đến khép màn rèm nhung điện ảnh.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
