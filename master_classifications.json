@@ -21823,5 +21823,83 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@KUZYA_монтаж_Reels_DdYHuz_sXs0_Video_by_kuzya.tm": {
+    "id": "IG_@KUZYA_монтаж_Reels_DdYHuz_sXs0_Video_by_kuzya.tm",
+    "creator": "@KUZYA_монтаж_Reels",
+    "creator_name": "Kuzya_Монтаж_Reels",
+    "title": "@KUZYA_монтаж_Reels - Video by kuzya.tm",
+    "shots_count": 6,
+    "duration": "12.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Instagram Liked 24h: Video, 12 of 18, by @kuzya.tm, shared September 16, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "12 Of 18",
+      "By @kuzya.tm",
+      "Shared September 16",
+      "2026",
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 12 of 18, by @kuzya.tm, shared September 16, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Điện Ảnh (Cinematic).",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DdYHuz_sXs0": {
+    "id": "IG_@KUZYA_монтаж_Reels_DdYHuz_sXs0_Video_by_kuzya.tm",
+    "creator": "@KUZYA_монтаж_Reels",
+    "creator_name": "Kuzya_Монтаж_Reels",
+    "title": "@KUZYA_монтаж_Reels - Video by kuzya.tm",
+    "shots_count": 6,
+    "duration": "12.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Instagram Liked 24h: Video, 12 of 18, by @kuzya.tm, shared September 16, 2026",
+    "tech_tags": [
+      "Instagram Liked 24h: Video",
+      "12 Of 18",
+      "By @kuzya.tm",
+      "Shared September 16",
+      "2026",
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 12 of 18, by @kuzya.tm, shared September 16, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Điện Ảnh (Cinematic).",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }
