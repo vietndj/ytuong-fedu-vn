@@ -19144,8 +19144,8 @@
     "shots_count": 10,
     "duration": "20.1s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "Chỉn Chu",
+      "id": "Đời Thường & Chữa Lành",
+      "name": "Đời Thường & Chữa Lành",
       "icon": "🎬"
     },
     "industry": {
@@ -19183,8 +19183,8 @@
     "shots_count": 10,
     "duration": "20.1s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "Chỉn Chu",
+      "id": "Đời Thường & Chữa Lành",
+      "name": "Đời Thường & Chữa Lành",
       "icon": "🎬"
     },
     "industry": {
@@ -19759,5 +19759,75 @@
     "youtube_id": "ym5IHfXNMn4",
     "youtube_url": "https://youtu.be/ym5IHfXNMn4",
     "youtube_embed": "https://www.youtube.com/embed/ym5IHfXNMn4"
+  },
+  "IG_@iamaayushswamy_DdpxcaOMaQS_caption_placement": {
+    "id": "IG_@iamaayushswamy_DdpxcaOMaQS_caption_placement",
+    "creator": "@iamaayushswamy",
+    "creator_name": "Iamaayushswamy",
+    "title": "@iamaayushswamy - caption placement",
+    "shots_count": 11,
+    "duration": "22.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @iamaayushswamy",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "High-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DdpxcaOMaQS": {
+    "id": "IG_@iamaayushswamy_DdpxcaOMaQS_caption_placement",
+    "creator": "@iamaayushswamy",
+    "creator_name": "Iamaayushswamy",
+    "title": "@iamaayushswamy - caption placement",
+    "shots_count": 11,
+    "duration": "22.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @iamaayushswamy",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "High-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }
