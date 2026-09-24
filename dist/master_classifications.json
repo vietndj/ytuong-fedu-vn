@@ -20223,29 +20223,31 @@
     "id": "IG_@Flying_DdplzLRytOA_Video_by_loveqinghe",
     "creator": "@Flying",
     "creator_name": "Flying",
-    "title": "@Flying - Video by loveqinghe",
+    "title": "Công Thức Du Lịch 0.5x: Đòn Bẩy Góc Siêu Rộng Tự Quay Triệu View",
     "shots_count": 10,
-    "duration": "20.0s",
+    "duration": "11.2s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "Vlog 0.5x POV Montage",
+      "name": "Vlog 0.5x POV Montage",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Du Lịch & Phong Cách Sống",
+      "name": "Du Lịch & Phong Cách Sống",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Flying",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot",
-      "Low-key Lighting"
+      "Camera 0.5x",
+      "Travel Vlog Hack",
+      "POV Montage",
+      "Match Cut",
+      "Fast Beat",
+      "Day in the life"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "⚡ Mồi mắt giơ camera sau góc 0.5x tại sân bay ➔ Xả liên hoàn 5 tọa độ biểu tượng với 5 layout trang phục qua Match Cut ➔ Hạ màn ấm áp ôm gấu ngủ say.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
