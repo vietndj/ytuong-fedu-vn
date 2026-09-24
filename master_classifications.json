@@ -20576,10 +20576,10 @@
     }
   },
   "DcYZMc7Sc49": {
-    "id": "IG_@Sodam_Kim_DcYZMc7Sc49_Video_by_31.ioa",
-    "creator": "@Sodam_Kim",
-    "creator_name": "Sodam_Kim",
-    "title": "@Sodam_Kim - Video by 31.ioa",
+    "id": "IG_@31.ioa_DcYZMc7Sc49_Video_by_31.ioa",
+    "creator": "@31.ioa",
+    "creator_name": "31 Ioa",
+    "title": "@31.ioa - Video by 31.ioa",
     "shots_count": 10,
     "duration": "20.0s",
     "shooting_style": {
@@ -20592,7 +20592,41 @@
       "name": "Kiến Trúc & Không Gian Sống",
       "icon": "🏛️"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Sodam_Kim",
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @31.ioa",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "IG_@31.ioa_DcYZMc7Sc49_Video_by_31.ioa": {
+    "id": "IG_@31.ioa_DcYZMc7Sc49_Video_by_31.ioa",
+    "creator": "@31.ioa",
+    "creator_name": "31 Ioa",
+    "title": "@31.ioa - Video by 31.ioa",
+    "shots_count": 10,
+    "duration": "20.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @31.ioa",
     "tech_tags": [
       "Establishing Hook Shot",
       "Close-Up / Macro Detail Shot",
