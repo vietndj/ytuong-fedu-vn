@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@filmwithred - An escape from the noise of Tokyo. 🇯🇵</title>
+    <title>Nghệ Thuật Kể Chuyện Đường Phố Hoài Cổ: Cách Quay B-Roll Đời Thường Chạm Đáy Cảm Xúc Khán Giả</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B0F19'/%3E%3Crect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%23FFFFFF' stroke-opacity='0.12' stroke-width='1.5'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='system-ui, sans-serif' font-weight='900' font-size='23' fill='%23FFFFFF'%3EYT%3C/text%3E%3Ccircle cx='48' cy='18' r='4' fill='%23eab308'/%3E%3C/svg%3E">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -678,6 +678,300 @@
             text-align: center;
         }
 
+        /* Dialogue Section */
+        .dialogue-section {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .dialogue-col-main {
+            flex: 1;
+            background: var(--cl-card);
+            border: 1px solid var(--cl-line);
+            border-radius: var(--cl-radius-md);
+            overflow: hidden;
+        }
+
+        .dialogue-col-aside {
+            flex: 0 0 320px;
+            background: var(--cl-tint);
+            border: 1px solid var(--cl-line);
+            border-radius: var(--cl-radius-md);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dialogue-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--cl-line);
+            background: var(--cl-card);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .dialogue-aside-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--cl-line);
+            background: var(--cl-tint);
+            display: flex;
+            align-items: center;
+        }
+
+        .dialogue-badge {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 700;
+            color: white;
+            background: var(--cl-text-base);
+            padding: 4px 8px;
+            border-radius: 4px;
+            letter-spacing: 0.05em;
+        }
+
+        .dialogue-sub {
+            font-family: var(--font-ui);
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--cl-text-muted);
+        }
+
+        .dialogue-aside-header span {
+            font-family: var(--font-ui);
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--cl-text-muted);
+            letter-spacing: 0.05em;
+        }
+
+        .dialogue-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .dialogue-aside-body {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            overflow-y: auto;
+            max-height: 400px;
+        }
+
+        .vn-para {
+            cursor: pointer;
+            padding: 14px;
+            border-radius: var(--cl-radius-sm);
+            transition: background 0.2s var(--apple-ease);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            border: 1px solid transparent;
+        }
+
+        .vn-para:hover {
+            background: var(--cl-tint);
+            border-color: var(--cl-line);
+        }
+
+        .vn-time {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--cl-text-muted);
+        }
+
+        .vn-beat {
+            font-family: var(--font-ui);
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--cl-accent);
+        }
+
+        .vn-text {
+            font-family: var(--font-body);
+            font-size: 17px;
+            line-height: 1.6;
+            color: var(--cl-text-body);
+        }
+
+        .en-line {
+            cursor: pointer;
+            padding: 10px 14px;
+            border-radius: var(--cl-radius-sm);
+            transition: background 0.2s;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .en-line:hover {
+            background: rgba(0,0,0,0.03);
+        }
+
+        .en-time {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--cl-text-muted);
+        }
+
+        .en-text {
+            font-family: var(--font-body);
+            font-size: 14px;
+            color: var(--cl-text-muted);
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* Remake Prompt Card */
+        .remake-prompt-card {
+            background: var(--cl-card);
+            border: 1px solid var(--cl-accent);
+            border-radius: var(--cl-radius-md);
+            margin-bottom: 32px;
+            box-shadow: 0 4px 20px var(--cl-accent-tint);
+            overflow: hidden;
+        }
+
+        .prompt-accordion-header {
+            padding: 16px 20px;
+            background: #f0f7ff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s;
+            border-bottom: 1px solid transparent;
+        }
+
+        .prompt-accordion-header:hover {
+            background: #e0efff;
+        }
+
+        .prompt-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .prompt-badge {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 700;
+            color: white;
+            background: var(--cl-accent);
+            padding: 4px 8px;
+            border-radius: 4px;
+            letter-spacing: 0.05em;
+        }
+
+        .prompt-title {
+            font-family: var(--font-ui);
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--cl-text-base);
+        }
+
+        .prompt-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .prompt-copy-btn {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--cl-text-base);
+            background: white;
+            border: 1px solid var(--cl-line-strong);
+            padding: 6px 12px;
+            border-radius: var(--cl-radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .prompt-copy-btn:hover {
+            border-color: var(--cl-accent);
+            color: var(--cl-accent);
+        }
+
+        .prompt-toggle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--cl-text-muted);
+            font-family: var(--font-ui);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .prompt-accordion-body {
+            padding: 24px;
+            border-top: 1px solid #e0efff;
+        }
+
+        .prompt-desc {
+            font-family: var(--font-ui);
+            font-size: 14.5px;
+            color: var(--cl-text-muted);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .prompt-code-wrap {
+            border: 1px solid var(--cl-line);
+            border-radius: var(--cl-radius-sm);
+            overflow: hidden;
+        }
+
+        .prompt-code-bar {
+            background: var(--cl-tint);
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--cl-line);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--cl-text-muted);
+        }
+
+        .prompt-code-content {
+            padding: 20px;
+            font-family: var(--font-mono);
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: var(--cl-text-base);
+            background: white;
+            white-space: pre-wrap;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        @media (max-width: 768px) {
+            .dialogue-section {
+                flex-direction: column;
+            }
+            .dialogue-col-aside {
+                flex: none;
+                max-height: 300px;
+            }
+            .prompt-accordion-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .prompt-right {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
         /* Mobile Responsive */
         @media (max-width: 1024px) {
             .app-container {
@@ -739,9 +1033,9 @@
 
     <div class="content-column">
         <header class="report-header">
-            <div class="header-badges"><span class="badge">STORYBOARD BREAKDOWN</span></div>
+            <div class="header-badges"><span class="badge">Du Lịch &amp; Khám Phá</span> <span class="badge badge-alt">Cinematic B-Roll</span></div>
             <h1 class="report-title">
-                <a href="https://www.instagram.com/reel/DdpIITJKrmR/" target="_blank" rel="noopener">@filmwithred - An escape from the noise of Tokyo. 🇯🇵</a>
+                <a href="https://www.instagram.com/reel/DdpIITJKrmR/" target="_blank" rel="noopener">Nghệ Thuật Kể Chuyện Đường Phố Hoài Cổ: Cách Quay B-Roll Đời Thường Chạm Đáy Cảm Xúc Khán Giả</a>
             </h1>
             <div class="header-meta">
                 <span>Nguồn: <a href="https://www.instagram.com/filmwithred/" target="_blank" class="creator-link">@filmwithred ↗</a></span>
@@ -754,148 +1048,16 @@
         </header>
 
         
+        <section class="axis-card">
+            <h3 class="axis-title">TRỤC KỊCH BẢN 3 NHỊP</h3>
+            <div class="axis-content">[Nhịp 1: Hook mồi mắt &amp; Định vị không gian tĩnh tại đối lập phố thị ồn ào] ➔ [Nhịp 2: Thân bài - Dòng chảy sinh hoạt đời thường bình dị, tình làng nghĩa xóm Shitamachi] ➔ [Nhịp 3: Chốt hạ - Tan ca lắng đọng, giải thoát khỏi áp lực cuộc sống]</div>
+        </section>
 
         <div class="overview-card">
-            ⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.
+            Bóc tách nghệ thuật quay phim đường phố hoài cổ (Tokyo Street Aesthetic): Dùng nhịp thở chậm rãi, ánh sáng chiều tà ấm áp và đời sống bản địa Yanaka Ginza để kể câu chuyện trốn khỏi sự ồn ào đô thị.
         </div>
 
         
-        <section class="dialogue-section">
-            <div class="dialogue-col-main">
-                <div class="dialogue-header">
-                    <span class="dialogue-badge">KỊCH BẢN LỜI THOẠI</span>
-                    <span class="dialogue-sub">Bản dịch thực chiến</span>
-                </div>
-                <div class="dialogue-body">
-                <div class="vn-para" onclick="playShot(0.0, 4.0, 'Phân đoạn #01')">
-                    <span class="vn-time">0.00s</span>
-                    <span class="vn-beat">Phân đoạn #01</span>
-                    <span class="vn-text">"There&#x27;s a retro site in Tokyo that nobody talks about."</span>
-                </div>
-
-                <div class="vn-para" onclick="playShot(6.5, 10.0, 'Phân đoạn #02')">
-                    <span class="vn-time">6.50s</span>
-                    <span class="vn-beat">Phân đoạn #02</span>
-                    <span class="vn-text">"In Yanukaginza, time doesn&#x27;t chase you."</span>
-                </div>
-
-                <div class="vn-para" onclick="playShot(11.0, 13.0, 'Phân đoạn #03')">
-                    <span class="vn-time">11.00s</span>
-                    <span class="vn-beat">Phân đoạn #03</span>
-                    <span class="vn-text">"It strolls beside you."</span>
-                </div>
-
-                <div class="vn-para" onclick="playShot(14.5, 19.0, 'Phân đoạn #04')">
-                    <span class="vn-time">14.50s</span>
-                    <span class="vn-beat">Phân đoạn #04</span>
-                    <span class="vn-text">"There&#x27;s no spectacle here, just the quiet magic of people living."</span>
-                </div>
-
-                <div class="vn-para" onclick="playShot(21.5, 24.0, 'Phân đoạn #05')">
-                    <span class="vn-time">21.50s</span>
-                    <span class="vn-beat">Phân đoạn #05</span>
-                    <span class="vn-text">"Old shops breathe out the last of the day."</span>
-                </div>
-
-                <div class="vn-para" onclick="playShot(25.0, 28.0, 'Phân đoạn #06')">
-                    <span class="vn-time">25.00s</span>
-                    <span class="vn-beat">Phân đoạn #06</span>
-                    <span class="vn-text">"Colleagues gather just out of habit."</span>
-                </div>
-
-                <div class="vn-para" onclick="playShot(31.0, 36.0, 'Phân đoạn #07')">
-                    <span class="vn-time">31.00s</span>
-                    <span class="vn-beat">Phân đoạn #07</span>
-                    <span class="vn-text">"For a moment, you forget the rush that even mattered."</span>
-                </div></div>
-            </div>
-            <div class="dialogue-col-aside">
-                <div class="dialogue-aside-header">
-                    <span>ORIGINAL TRANSCRIPT</span>
-                </div>
-                <div class="dialogue-aside-body">
-                <div class="en-line" onclick="playShot(0.0, 4.0, 'ORIGINAL')">
-                    <span class="en-time">0.00s</span>
-                    <span class="en-text">"There&#x27;s a retro site in Tokyo that nobody talks about."</span>
-                </div>
-
-                <div class="en-line" onclick="playShot(6.5, 10.0, 'ORIGINAL')">
-                    <span class="en-time">6.50s</span>
-                    <span class="en-text">"In Yanukaginza, time doesn&#x27;t chase you."</span>
-                </div>
-
-                <div class="en-line" onclick="playShot(11.0, 13.0, 'ORIGINAL')">
-                    <span class="en-time">11.00s</span>
-                    <span class="en-text">"It strolls beside you."</span>
-                </div>
-
-                <div class="en-line" onclick="playShot(14.5, 19.0, 'ORIGINAL')">
-                    <span class="en-time">14.50s</span>
-                    <span class="en-text">"There&#x27;s no spectacle here, just the quiet magic of people living."</span>
-                </div>
-
-                <div class="en-line" onclick="playShot(21.5, 24.0, 'ORIGINAL')">
-                    <span class="en-time">21.50s</span>
-                    <span class="en-text">"Old shops breathe out the last of the day."</span>
-                </div>
-
-                <div class="en-line" onclick="playShot(25.0, 28.0, 'ORIGINAL')">
-                    <span class="en-time">25.00s</span>
-                    <span class="en-text">"Colleagues gather just out of habit."</span>
-                </div>
-
-                <div class="en-line" onclick="playShot(31.0, 36.0, 'ORIGINAL')">
-                    <span class="en-time">31.00s</span>
-                    <span class="en-text">"For a moment, you forget the rush that even mattered."</span>
-                </div></div>
-            </div>
-        </section>
-        <div class="remake-prompt-card" id="remakePromptCard">
-            <div class="prompt-accordion-header" onclick="togglePromptAccordion(this)">
-                <div class="prompt-left">
-                    <span class="prompt-badge">KỊCH BẢN STU</span>
-                    <span class="prompt-title">Ánh xạ kịch bản sang ngành nghề của bạn</span>
-                </div>
-                <div class="prompt-right">
-                    <button class="prompt-copy-btn" onclick="copyMegaPrompt(event, this)">Sao chép</button>
-                    <div class="prompt-toggle">
-                        <span class="toggle-icon">▼</span>
-                        <span class="toggle-label">Mở xem</span>
-                    </div>
-                </div>
-            </div>
-            <div class="prompt-accordion-body" style="display: none;">
-                <p class="prompt-desc">Sao chép Mega Prompt này dán vào Gemini. Hệ thống tự động gợi ý đúng các ngành nghề học viên thực tế trong STU.</p>
-                <div class="prompt-code-wrap">
-                    <div class="prompt-code-bar">
-                        <span>MEGA_PROMPT_REMAKE_GEMINI.md</span>
-                        <button class="prompt-copy-btn" onclick="copyMegaPrompt(event, this)">Sao chép Prompt</button>
-                    </div>
-                    <div class="prompt-code-content" id="megaPromptText">Bạn là Đạo diễn Video Ngắn &amp; Chuyên gia Tinh chỉnh Lời thoại Thực Chiến theo trường phái mộc mạc của anh Việt (nguyen-viet-voice).
-
-Tôi có cấu trúc logic giữ chân từ video mẫu với 4 nhịp:
-1. Hook 3s: Nêu sự thật trần trụi về một việc ai cũng nghĩ là đơn giản.
-2. Xung đột 2 vế: Cái cớ chủ quan giữ thể diện đối đầu với Thực tế khách quan.
-3. Tactile B-roll: Bàn tay liên tục đặt từng món đồ nghề/chi tiết thật xuống bàn làm việc theo nhịp nói.
-4. Kết bài tự trào &amp; Mở lời tự nhiên: Thừa nhận cái khó của người làm nghề.
-
-=== QUY TẮC VĂN PHONG ===
-- CẤM VĂN MẪU AI: Không dùng bứt phá, chuyển hóa, vũ khí, thần thái, nâng tầm...
-- CẤM từ ÔNG GIÁO. Xưng hô: mình - bạn hoặc tôi - bạn.
-- GIỮ VĂN PHONG MỘC MẠC.
-
-=== HƯỚNG DẪN ===
-Nếu tôi chưa ghi ngành nghề, hỏi 1 câu:
-1. Làm đẹp &amp; Spa / Da liễu / Salon tóc
-2. Nội thất / Decor / Kiến trúc
-3. Ẩm thực &amp; F&amp;B / Tiệm bánh
-4. Nông nghiệp / Phân bón / Sức khỏe
-5. Ngành khác: [Tên nghề] + [3 món đồ trên bàn]
-
-Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll | Lời thoại | Âm thanh Foley)!</div>
-                </div>
-            </div>
-        </div>
 
         <div class="toolbar">
             <div class="tab-group">
@@ -918,19 +1080,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 01</span>
                     <span class="shot-dur">1.42s</span>
                 </div>
-                <h4 class="shot-headline">Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh</h4>
-                <p class="shot-insight">Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.</p>
+                <h4 class="shot-headline">Hook Ngược Dòng: Người phụ nữ cầm ô đen sải bước qua vạch kẻ đường hẻm cổ Yanaka</h4>
+                <p class="shot-insight">Mở đầu video bằng một hành động đời thường cắt ngang khung hình tạo động lực thị giác giữ chân khán giả ngay giây đầu.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Ngã ba phố cổ Yanaka, Tokyo</span></div>
                         <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Establishing Hook Shot (Góc toàn định vị bối cảnh)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Late Afternoon Sidelight (Nắng xiên hoàng hôn)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut theo nhịp chuyển động</span></div>
                     </div>
-                    <div class="critique-good">Tạo điểm nhấn thị giác ngay trung tâm; ánh sáng Balanced Diffused Lighting  dẫn hướng mắt người xem hoàn hảo. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Thời lượng shot ngắn nên người xem dễ bị trôi qua nếu chi tiết chữ/đối tượng phân bổ quá sát góc viền. Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Mở màn định vị không gian và nhịp thở của toàn bộ video, thu hút sự chú ý tức thì.</div>
+                    <div class="critique-good">Khung hình 9:16 đóng khung con hẻm sâu hút mắt, ánh hoàng hôn chiếu xiên qua ban công tạo tương phản ấm áp mồi mắt người xem tức thì.</div>
+                    <div class="critique-warn">Nhân vật di chuyển nhanh cắt ngang mép dưới khung hình, người xem chưa kịp định hình toàn bộ không gian đã chuyển cảnh.</div>
+                    <div class="shot-narrative">Người phụ nữ mặc áo đen, quần suông cầm ô đen sải bước qua vạch kẻ đường (zebra crossing) ngã ba phố Yanaka dưới mạng lưới dây điện chằng chịt đặc trưng Tokyo.</div>
                 </details>
             </div>
         </div>
@@ -946,19 +1108,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 02</span>
                     <span class="shot-dur">1.79s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Dẫn Hướng Tâm Linh: Bước chân lữ khách hướng về mái ngói chùa cổ rực nắng</h4>
+                <p class="shot-insight">Tận dụng kiến trúc mái ngói cổ kính làm điểm tựa trọng lực thị giác, nhân vật đóng vai trò dẫn đường kể chuyện.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Lối vào chùa cổ Yanaka</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Follow Shot (Góc trung theo sau)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Golden Hour Backlight (Nắng vàng ngược sáng)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Mái chùa cổ kính chiếm trọn 1/2 trên khung hình, hàng cây xanh hai bên tạo đường dẫn thị giác hút mắt vào trung tâm.</div>
+                    <div class="critique-warn">Nhân vật quay lưng đi xa dần tạo cảm giác đơn độc, hơi thiếu điểm neo cảm xúc phía trước mặt.</div>
+                    <div class="shot-narrative">Một thanh niên mặc áo sơ mi trắng, đeo balo đi dọc con đường lát đá dẫn thẳng vào ngôi chùa truyền thống lợp ngói âm dương, nắng chiều rọi sáng rực mảng mái ngói.</div>
                 </details>
             </div>
         </div>
@@ -974,19 +1136,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 03</span>
                     <span class="shot-dur">1.08s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Khoảng Lặng Phố Vắng: Vệt nắng chiều in trên bờ tường đá và chữ &#x27;Tomare&#x27; dưới lòng đường</h4>
+                <p class="shot-insight">Bắt trọn những mảng sáng - tối hình học tự nhiên trên tường phố để tạo nhịp thở tĩnh tại cho thước phim.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Con hẻm dốc tường đá Yanaka</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Static Wide Shot (Góc toàn tĩnh)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Hard Contrast Sidelight (Nắng xiên tương phản cao)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Cân bằng màu sắc hoàn hảo giữa vệt nắng cam vàng rực rỡ trên tường và nền bóng râm xanh trầm của con đường dốc tĩnh mịch.</div>
+                    <div class="critique-warn">Không gian tĩnh lặng kéo dài dễ làm chùng nhịp nếu không có chữ subtitle neo giữ cảm xúc.</div>
+                    <div class="shot-narrative">Toàn cảnh ngõ dốc vắng lặng ở Yanaka, bóng nắng vàng in rực trên bức tường đá dài, xa xa có bóng người đi bộ đơn độc, dưới đường sơn chữ trắng &#x27;Tomare&#x27; (Dừng lại).</div>
                 </details>
             </div>
         </div>
@@ -1002,19 +1164,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 04</span>
                     <span class="shot-dur">1.00s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Hồn Cốt Phố Thị: Cụ ông đội mũ phớt dắt xe đạp giơ tay chào người quen</h4>
+                <p class="shot-insight">Săn tìm các cử chỉ tương tác người - người tự nhiên của người bản địa để thổi linh hồn vào video du lịch.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Ngã ba trước khách sạn Fuji Hotel</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Close-Up (Góc trung cận)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Golden Rim Light (Ánh sáng viền vàng ấm)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut theo chuyển động vẫy tay</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Nhân vật đời thực mang đậm hơi thở Tokyo hoài cổ; lồng đèn đỏ và biển hiệu &#x27;Fuji Hotel&#x27; phía sau làm giàu bối cảnh văn hóa.</div>
+                    <div class="critique-warn">Xe cộ phía xa hơi phân tán sự chú ý vào nhân vật chính.</div>
+                    <div class="shot-narrative">Cụ ông cao tuổi đội mũ phớt, áo sơ mi kẻ sọc dắt chiếc xe đạp giỏ đựng túi đồ, một tay giơ lên chào thân thiện người qua đường giữa ngã ba ngập nắng.</div>
                 </details>
             </div>
         </div>
@@ -1030,19 +1192,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 05</span>
                     <span class="shot-dur">1.83s</span>
                 </div>
-                <h4 class="shot-headline">Nhịp Dẫn Theo Dõi (Medium Tracking): Duy trì sự liên tục và kết nối cảm xúc nhân vật</h4>
-                <p class="shot-insight">Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.</p>
+                <h4 class="shot-headline">Nhịp Sống Bình Dị: Mẹ dắt tay con nhỏ thong dong giữa phố chiều</h4>
+                <p class="shot-insight">Đưa những khoảnh khắc gia đình đời thường vào video du lịch để tạo cảm giác an yên, gần gũi.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Tracking Shot (Góc trung linh hoạt)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Khu phố sinh hoạt Yanaka</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Frontal Medium Tracking (Góc trung chính diện di chuyển)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Soft Sunset Glow (Nắng hoàng hôn dịu)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Tỷ lệ cơ thể và môi trường đạt độ cân đối vàng, truyền tải cảm xúc tự nhiên và gần gũi. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Góc quay quen thuộc, dễ bị đều đều nếu không kết hợp chuyển động máy tinh tế (Tilt/Pan/Dolly). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Nhân vật / đối tượng thực hiện hành động chính trong bối cảnh sinh hoạt chân thực.</div>
+                    <div class="critique-good">Bắt trọn nhịp sống chậm rãi, tương phản hoàn toàn với sự xô bồ gấp gáp thường thấy ở Shinjuku hay Shibuya.</div>
+                    <div class="critique-warn">Hậu cảnh có nhiều người qua lại nên chủ thể hai mẹ con chưa thực sự tách biệt mạnh.</div>
+                    <div class="shot-narrative">Người mẹ đeo kính, mang túi xách đỏ đang dắt tay em bé nhỏ bước đi chậm rãi giữa lòng đường dưới mạng dây điện chằng chịt, phía sau là dòng người tản bộ.</div>
                 </details>
             </div>
         </div>
@@ -1058,19 +1220,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 06</span>
                     <span class="shot-dur">1.54s</span>
                 </div>
-                <h4 class="shot-headline">Nhịp Dẫn Theo Dõi (Medium Tracking): Duy trì sự liên tục và kết nối cảm xúc nhân vật</h4>
-                <p class="shot-insight">Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.</p>
+                <h4 class="shot-headline">Ký Ức Chiều Tà: Quán nhậu bình dân treo rèm tre Sudare và đèn lồng đỏ</h4>
+                <p class="shot-insight">Sử dụng các chi tiết vật lý biểu tượng (đèn lồng, mành tre, két bia) để gói gọn bản sắc địa phương trong 1 giây.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Tracking Shot (Góc trung linh hoạt)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Hiên quán ăn phố cổ Yanaka</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Architectural Wide (Góc toàn kiến trúc)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Late Afternoon Sidelight (Nắng xiên chiều muộn)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Tỷ lệ cơ thể và môi trường đạt độ cân đối vàng, truyền tải cảm xúc tự nhiên và gần gũi. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Góc quay quen thuộc, dễ bị đều đều nếu không kết hợp chuyển động máy tinh tế (Tilt/Pan/Dolly). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Nhân vật / đối tượng thực hiện hành động chính trong bối cảnh sinh hoạt chân thực.</div>
+                    <div class="critique-good">Chất hoài niệm Showa đặc sệt qua từng chi tiết mộc mạc: két bia, chậu cây nhỏ trước hiên, mành tre bạc màu rọi nắng vàng.</div>
+                    <div class="critique-warn">Không có nhân vật chuyển động, tính chất là một shot thiết lập bối cảnh tĩnh.</div>
+                    <div class="shot-narrative">Mặt tiền quán ăn/nhậu cổ kính với tấm mành tre sudare che nắng, chiếc đèn lồng đỏ treo lơ lửng, két bia Sapporo đỏ và chiếc xe hơi vuông đậu nép bên đường ngập nắng.</div>
                 </details>
             </div>
         </div>
@@ -1086,19 +1248,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 07</span>
                     <span class="shot-dur">1.25s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Khoảnh Khắc Không Tuổi: Hai người bạn già ngồi uống bia vỉa hè quán mực nướng Ikayaki</h4>
+                <p class="shot-insight">Tận dụng khoảnh khắc đời thường không dàn dựng của người dân địa phương để chạm vào cảm xúc hoài niệm.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Trước cửa quán mực nướng Yanaka Ikayaki</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Eye-level Medium Shot (Góc trung ngang tầm mắt)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ambient Mix (Đèn vàng tiệm kết hợp ánh chiều tà)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Tính chân thực tuyệt đối (100% candid); tấm rèm đỏ Ikayaki và biển gỗ chữ thư pháp tạo khung hình đậm chất điện ảnh Yasujiro Ozu.</div>
+                    <div class="critique-warn">Góc máy chính diện hơi phẳng, nếu góc nghiêng 45 độ sẽ thấy rõ biểu cảm gương mặt hơn.</div>
+                    <div class="shot-narrative">Hai người đàn ông trung niên/cao tuổi ngồi ghế gỗ trước cửa tiệm &#x27;Yanaka Ikayaki Yakiya&#x27; (谷中 いか焼 やきや), lấy chiếc ghế gỗ lật ngược làm bàn để lon bia, người cúi mở lon, người thảnh thơi trò chuyện.</div>
                 </details>
             </div>
         </div>
@@ -1114,19 +1276,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 08</span>
                     <span class="shot-dur">1.25s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Giao Cảm Mẫu Tử: Mẹ vỗ tay trêu em bé ngồi trong buồng chắn gió xe đạp</h4>
+                <p class="shot-insight">Khai thác những thói quen di chuyển đặc thù bản địa để tạo nét độc đáo cho video trải nghiệm văn hóa.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Vỉa hè phố Sendagi / Yanaka</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Over-the-shoulder Medium (Góc trung qua vai)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Dusk Ambient Light (Ánh sáng chạng vạng đô thị)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Khắc họa văn hóa xe đạp chở con (mamachari) độc nhất vô nhị của Nhật Bản với góc nhìn đầy trìu mến.</div>
+                    <div class="critique-warn">Người mẹ quay lưng về phía máy quay nên che mất một phần biểu cảm của em bé.</div>
+                    <div class="shot-narrative">Người mẹ đứng trước chiếc xe đạp vỗ tay chơi đùa cùng đứa con nhỏ đang đội mũ bảo hiểm xanh ngồi ngoan ngoãn trong lồng trùm xe đạp bên cột điện phố Chome.</div>
                 </details>
             </div>
         </div>
@@ -1142,19 +1304,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 09</span>
                     <span class="shot-dur">1.38s</span>
                 </div>
-                <h4 class="shot-headline">Nhịp Dẫn Theo Dõi (Medium Tracking): Duy trì sự liên tục và kết nối cảm xúc nhân vật</h4>
-                <p class="shot-insight">Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.</p>
+                <h4 class="shot-headline">Biểu Tượng Phố Cổ: Cổng vòm Yanaka Ginza bật sáng đón dòng người tan tầm</h4>
+                <p class="shot-insight">Sử dụng cổng chào hoặc biển hiệu địa danh phát sáng để đánh dấu sự chuyển đổi không gian và thời gian trong video.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Tracking Shot (Góc trung linh hoạt)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Cổng chào chợ Yanaka Ginza</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Low-angle Medium-Wide (Góc trung toàn hướng lên)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Dusk Mixed Light (Đèn neon biển hiệu kết hợp hoàng hôn)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Tỷ lệ cơ thể và môi trường đạt độ cân đối vàng, truyền tải cảm xúc tự nhiên và gần gũi. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Góc quay quen thuộc, dễ bị đều đều nếu không kết hợp chuyển động máy tinh tế (Tilt/Pan/Dolly). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Nhân vật / đối tượng thực hiện hành động chính trong bối cảnh sinh hoạt chân thực.</div>
+                    <div class="critique-good">Bố cục khung trong khung (frame in frame), bảng hiệu hình mái nhà trở thành tâm điểm thị giác dẫn dắt người xem vào khu chợ.</div>
+                    <div class="critique-warn">Đám đông di chuyển nhiều hướng làm phân tán điểm nhìn trung tâm trong nửa giây đầu.</div>
+                    <div class="shot-narrative">Góc nhìn từ chân dốc hướng lên cổng chào hình mái nhà phát sáng chữ &#x27;Yanaka Ginza&#x27; (谷中ぎんざ) với hai chao đèn đường cổ điển rực sáng, người dân tấp nập đi lại phía dưới.</div>
                 </details>
             </div>
         </div>
@@ -1170,19 +1332,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 10</span>
                     <span class="shot-dur">1.17s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Ánh Sáng Đời Thường: Cửa hàng thuốc tây Kusuri Papasu rực sáng giữa phố đêm</h4>
+                <p class="shot-insight">Sử dụng ánh sáng hắt ra từ các ô cửa kính cửa hàng đêm để làm nổi bật nhịp sinh hoạt của cư dân.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Tiệm thuốc Papasu Yanaka</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Eye-level Medium (Góc trung ngang tầm mắt)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">High-key Interior vs Low-key Exterior (Nội thất sáng đối lập ngoại cảnh tối)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Tương phản sáng tối (chiaroscuro) cực mạnh giữa nội thất cửa hàng trắng sáng rực rỡ và màn đêm yên ắng của con phố.</div>
+                    <div class="critique-warn">Chuyển động người đi ngang phía trước hơi mờ nhòe do tốc độ màn trập ban đêm.</div>
+                    <div class="shot-narrative">Bóng người bước qua cửa kính sáng trưng của tiệm thuốc tây &#x27;Papasu&#x27; (薬 ぱぱす 谷中店), bên trong là kệ hàng ngay ngắn và khách mua sắm, tương phản với mặt đường tối bên ngoài.</div>
                 </details>
             </div>
         </div>
@@ -1198,19 +1360,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 11</span>
                     <span class="shot-dur">0.71s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Điểm Nhấn Hoài Niệm: Cột đèn lồng lục giác phát sáng giữa trời xanh chạng vạng</h4>
+                <p class="shot-insight">Chèn một shot b-roll tĩnh đặc tả chi tiết kiến trúc hoặc đèn đường để ngắt nhịp và tạo chuyển biến thời gian.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Đèn đường phố cổ Yanaka</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Low-angle Detail Shot (Góc ngước đặc tả chi tiết)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Blue Hour vs Warm Tungsten (Trời xanh tương phản đèn vàng)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Tông màu tương phản vàng cam ấm của đèn trên nền trời xanh thẫm cực kỳ mãn nhãn và đậm chất điện ảnh anime.</div>
+                    <div class="critique-warn">Thời lượng 1 giây quá ngắn, chỉ vừa đủ làm điểm nghỉ thị giác.</div>
+                    <div class="shot-narrative">Cận cảnh chiếc đèn lồng sắt kiểu lục giác truyền thống treo trên cột điện phát ánh sáng trắng ấm áp trên nền trời xanh thẫm (Blue Hour) đan xen mạng dây điện.</div>
                 </details>
             </div>
         </div>
@@ -1226,19 +1388,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 12</span>
                     <span class="shot-dur">0.92s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Góc Ấm Sau Khung Cửa: Tiệm cà phê gỗ Yanakanaka lung linh ánh đèn vàng</h4>
+                <p class="shot-insight">Đặt góc máy nhìn trộm qua cửa sổ (voyeuristic framing) để tạo cảm giác ấm cúng, riêng tư và mời gọi.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Tiệm cà phê bánh Yanakanaka</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Framing through Window (Khung hình nhìn qua cửa sổ)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Warm Ambient Interior (Ánh sáng vàng nội thất)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Sự kết hợp màu sắc tinh tế giữa ánh đèn vàng ấm áp của gỗ và ánh đèn xanh mát của tủ kính trưng bày.</div>
+                    <div class="critique-warn">Khung cửa kính hơi phản chiếu ánh sáng bên ngoài làm mờ một phần hậu cảnh phía sau.</div>
+                    <div class="shot-narrative">Nhìn qua khung cửa kính gỗ vào tiệm cà phê nhỏ &#x27;Yanakanaka&#x27; (やなかなか), cô gái nhân viên đứng sau quầy bar bên cạnh tủ kem phát sáng xanh ngọc, nội thất gỗ mộc ấm cúng.</div>
                 </details>
             </div>
         </div>
@@ -1254,19 +1416,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 13</span>
                     <span class="shot-dur">1.46s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Dòng Chảy Bình Yên: Trẻ em đạp xe dưới hàng đèn lồng giăng kín phố đêm</h4>
+                <p class="shot-insight">Quay theo đuôi phương tiện di chuyển chậm (xe đạp, người đi bộ) để kéo tầm mắt khán giả đi sâu vào không gian.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Phố mua sắm Yanaka Ginza về đêm</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Wide Following Shot (Góc toàn theo dấu)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Lantern Night Glow (Đèn lồng đường phố ban đêm)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Chiều sâu hút mắt của con phố với hai hàng đèn lồng thẳng tắp, chuyển động xe đạp tạo trục dẫn thị giác hoàn hảo.</div>
+                    <div class="critique-warn">Ánh sáng tổng thể hơi tối ở phần lòng đường.</div>
+                    <div class="shot-narrative">Toàn cảnh con phố Yanaka Ginza lúc lên đèn, hàng chục ngọn đèn đường treo cao rực rỡ, hai đứa trẻ thong thả đạp xe về phía trước giữa dòng người đi bộ.</div>
                 </details>
             </div>
         </div>
@@ -1282,19 +1444,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 14</span>
                     <span class="shot-dur">1.62s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Tuổi Thơ Thảnh Thơi: Cận cảnh góc nghiêng cô bé đạp xe trong gió đêm</h4>
+                <p class="shot-insight">Kỹ thuật quay lia ngang theo chủ thể di chuyển (panning/tracking) mang lại động lực thị giác mạnh mẽ cho thước phim chậm.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Đường phố Yanaka Ginza</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Side Tracking Close-Up (Góc cận lia ngang)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-light Ambient (Ánh sáng môi trường yếu)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Tốc độ lia máy khớp chuẩn với tốc độ xe đạp, tách chủ thể nét căng trên nền cửa cuốn mờ nhòe.</div>
+                    <div class="critique-warn">Vùng mặt chủ thể hơi thiếu sáng do chỉ dựa vào đèn đường tự nhiên.</div>
+                    <div class="shot-narrative">Góc máy lia ngang (side tracking) bắt trọn góc nghiêng khuôn mặt tập trung và mái tóc buộc đuôi ngựa của bé gái đang đạp chiếc xe đạp mini qua phố.</div>
                 </details>
             </div>
         </div>
@@ -1310,19 +1472,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 15</span>
                     <span class="shot-dur">1.54s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Hơi Ấm Cuối Ngày: Tiệm đồ ăn Bento đỏ rực mở cửa đón người tan sở</h4>
+                <p class="shot-insight">Sử dụng các quầy thức ăn phát sáng làm ngọn hải đăng thị giác (visual beacon) trong cảnh quay đêm.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Quầy Bento góc ngã ba Yanaka</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Wide-Medium Shot (Góc toàn trung)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Fluorescent Stall Light (Đèn huỳnh quang quầy hàng)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Mảng màu đỏ tươi của mái hiên và ánh sáng trắng từ quầy hàng tạo điểm hút mắt tự nhiên giữa đêm đen.</div>
+                    <div class="critique-warn">Người đi bộ phía trước đi ngang qua che khuất tiệm trong một tích tắc.</div>
+                    <div class="shot-narrative">Khung cảnh đêm dưới cổng Yanaka Ginza, cửa hàng bán đồ ăn mang về (Bento/Obento) với mái che đỏ rực phát sáng ấm áp, người đầu bếp đang chuẩn bị món ăn cho khách đứng đợi.</div>
                 </details>
             </div>
         </div>
@@ -1338,19 +1500,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 16</span>
                     <span class="shot-dur">1.17s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Đóng Lại Ngày Dài: Cửa hàng giày Pansy kéo nửa cánh cửa cuốn đón khách muộn</h4>
+                <p class="shot-insight">Bắt trọn những hành động đóng cửa, dọn hàng của tiểu thương để truyền tải cảm giác tan ca, lắng đọng.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Cửa hàng giày Pansy Yanaka</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Oblique Medium Shot (Góc trung góc nghiêng)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Warm Storefront Spill (Ánh sáng vàng hắt từ cửa hàng)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Chi tiết &#x27;nửa đóng nửa mở&#x27; của cánh cửa cuốn kể câu chuyện về khoảnh khắc kết thúc một ngày làm việc của người dân phố cổ.</div>
+                    <div class="critique-warn">Hướng di chuyển của người đi bộ ngược ra ngoài khung hình.</div>
+                    <div class="shot-narrative">Tiệm giày lâu đời &#x27;Pansy&#x27; kéo cửa cuốn xuống một nửa để chuẩn bị đóng cửa, một chiếc xe đạp dựng trước thềm và người phụ nữ mang balo đi chậm ngang qua.</div>
                 </details>
             </div>
         </div>
@@ -1366,19 +1528,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 17</span>
                     <span class="shot-dur">1.29s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Vật Chứng Thời Gian: Cận cảnh giỏ sắt và bánh xe đạp Mamachari phong sương</h4>
+                <p class="shot-insight">Đặc tả những đồ vật cũ kỹ, có vết hằn sử dụng để củng cố chủ đề hoài niệm (retro/vintage aesthetic).</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Vỉa hè trước cửa tiệm phố cổ</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Low-angle Close-Up (Góc cận thấp)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Streetlight Sidelight (Ánh sáng đèn đường hắt xiên)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Chi tiết kim loại và lốp xe kể câu chuyện chân thật về phương tiện di chuyển gắn liền với đời sống hàng ngày ở Tokyo.</div>
+                    <div class="critique-warn">Khung hình hơi tĩnh và góc quay hẹp, thiếu yếu tố chuyển động con người.</div>
+                    <div class="shot-narrative">Cận cảnh góc thấp đặc tả chiếc xe đạp Nhật cũ màu đồng dựng trên vỉa hè lát gạch, giỏ kim loại trầy xước theo năm tháng, bên cạnh chiếc cọc tiêu đỏ.</div>
                 </details>
             </div>
         </div>
@@ -1394,19 +1556,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 18</span>
                     <span class="shot-dur">1.54s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Hội Ngộ Chòm Xóm: Bàn rượu vỉa hè rộn rã trước tiệm mực nướng Ikayaki</h4>
+                <p class="shot-insight">Tận dụng các tụ điểm sinh hoạt cộng đồng để chứng minh giá trị văn hóa vô hình của vùng đất.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Vỉa hè quán Ikayaki Yakiya</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Group Medium Shot (Góc trung nhóm)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Warm Tungsten Glow (Ánh đèn vàng ấm từ tiệm)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Khắc họa trọn vẹn tình làng nghĩa xóm (Shitamachi spirit) ấm áp, xóa tan định kiến về một Tokyo lạnh lùng xa cách.</div>
+                    <div class="critique-warn">Góc máy bị che khuất một phần bởi lưng của vị khách ngồi phía trước.</div>
+                    <div class="shot-narrative">Quán Ikayaki lúc này đã tụ tập 5-6 người hàng xóm cao tuổi ngồi quây quần trên những chiếc ghế gỗ nhỏ, chủ quán đứng rót thêm đồ uống, mọi người rôm rả trò chuyện.</div>
                 </details>
             </div>
         </div>
@@ -1422,19 +1584,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 19</span>
                     <span class="shot-dur">1.17s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Bóng Đêm Phố Vắng: Người đi xe đạp băng qua vạch sơn đỏ dưới ngọn đèn cao áp</h4>
+                <p class="shot-insight">Tận dụng các vệt sơn màu chỉ dẫn giao thông để tạo khối màu đồ họa bắt mắt cho khung hình đêm.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Ngã ba vệt đường đỏ Rokumida Dori</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Night Medium-Wide (Góc trung toàn đêm)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Single Top Key Light (Đèn đường LED đơn nguồn)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Mảng màu đỏ của vệt sơn đường tương phản gắt với mặt đường nhựa đen và nền trời đêm thăm thẳm.</div>
+                    <div class="critique-warn">Chuyển động xe đạp nhanh làm nhòe hình nhẹ (motion blur).</div>
+                    <div class="shot-narrative">Một phụ nữ đạp xe lướt qua ngã ba đường được sơn màu đỏ nổi bật dưới ánh đèn đường sáng trắng đơn độc, một bên là dãy tường nhà phong cách truyền thống.</div>
                 </details>
             </div>
         </div>
@@ -1450,19 +1612,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 20</span>
                     <span class="shot-dur">1.17s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Toàn Cảnh Dốc Hoàng Hôn: Cổng vòm Yanaka Ginza nhìn từ bậc thang Yuyake Dandan</h4>
+                <p class="shot-insight">Luôn tìm vị trí cao (bậc thang, cầu vượt) để lấy được cú máy toàn cảnh định vị không gian hùng tráng.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bậc thang Yuyake Dandan nhìn xuống cổng Yanaka</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">High-angle Extreme Wide (Góc toàn từ trên cao)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Urban Night Multilight (Ánh sáng đa nguồn đô thị)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Khung cảnh kinh điển của Yanaka với độ sâu không gian nhiều tầng bậc, ánh sáng đèn lồng trải dài hun hút.</div>
+                    <div class="critique-warn">Vùng tiền cảnh bậc thang hơi chìm trong bóng tối.</div>
+                    <div class="shot-narrative">Cú máy toàn cảnh nhìn từ đỉnh bậc thang nổi tiếng Yuyake Dandan xuống lòng chợ đêm rực rỡ dưới cổng vòm phát sáng, dòng người qua lại như dòng chảy êm đềm.</div>
                 </details>
             </div>
         </div>
@@ -1478,19 +1640,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 21</span>
                     <span class="shot-dur">1.25s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Huyền Thoại Đường Phố: Chiếc xe Honda Super Cub nép mình bên cánh cửa kính mờ</h4>
+                <p class="shot-insight">Sử dụng các phương tiện mang tính biểu tượng văn hóa quốc gia làm điểm nhấn neo cảm xúc người xem.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Cửa hiên nhà hẻm Yanaka, quận Arakawa</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Frontal Medium Shot (Góc trung trực diện)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Subtle Porch Light (Ánh sáng hắt dịu từ biển số)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Chiếc Super Cub là biểu tượng bất tử của văn hóa lao động Nhật Bản, được đặt ngay vị trí 1/3 khung hình đầy cân đối.</div>
+                    <div class="critique-warn">Cảnh tĩnh hoàn toàn, không có nhân vật hay chuyển động máy.</div>
+                    <div class="shot-narrative">Chiếc xe máy Honda Super Cub cổ điển màu kem với biển số quận Arakawa (荒川区) dựng ngay ngắn trước cửa kính mờ của một căn nhà hẻm phố cổ.</div>
                 </details>
             </div>
         </div>
@@ -1506,19 +1668,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 22</span>
                     <span class="shot-dur">1.42s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Tan Ca Giải Tỏa: Nhóm nhân viên văn phòng quây quần nâng ly bia ngoài tiệm Kyushu-do</h4>
+                <p class="shot-insight">Ghi lại thói quen sinh hoạt hậu công sở (nomikai) của giới văn phòng để tạo sự đồng cảm sâu sắc với khán giả.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Trước cửa quán Kyushu-do Yanaka</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Group Shot (Góc trung nhóm)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Warm Bar Noren Glow (Ánh sáng ấm áp từ đèn noren của quán)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Bắt trọn khoảnh khắc xả stress sau giờ làm việc căng thẳng; áo sơ mi trắng nổi bật trên nền gỗ tối của quán nhậu.</div>
+                    <div class="critique-warn">Vài nhân vật quay lưng che mất tương tác của người đối diện.</div>
+                    <div class="shot-narrative">Nhóm 4-5 nam nhân viên công sở (salarymen) mặc áo sơ mi trắng, đeo balo đứng tụ tập trước hiên quán &#x27;Kyushu-do&#x27; (九州堂), người cầm ly bia tươi giơ lên mời bạn, cười nói sảng khoái.</div>
                 </details>
             </div>
         </div>
@@ -1534,19 +1696,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 23</span>
                     <span class="shot-dur">1.29s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Chữ Cổ Đèn Tròn: Biển hiệu bất động sản &#x27;Fudousan&#x27; phát sáng hoài niệm</h4>
+                <p class="shot-insight">Chú ý ghi lại các biển hiệu chữ Hán/chữ địa phương tinh tế để làm tư liệu chuyển cảnh (cutaway shot) đắt giá.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Tường gỗ văn phòng bất động sản phố cổ</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">High-angle Oblique Close-Up (Cận cảnh nghiêng góc cao)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Backlit Sign (Ánh sáng hộp đèn tự thân)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Kiểu chữ thư pháp (kanji typography) truyền thống kết hợp thiết kế hộp đèn tròn tạo phong vị retro cực kỳ thanh lịch.</div>
+                    <div class="critique-warn">Cảnh quay tĩnh 1.4s, có thể hơi đơn điệu nếu không có âm thanh môi trường hỗ trợ.</div>
+                    <div class="shot-narrative">Cận cảnh biển hộp đèn tròn gắn tường khắc chữ Hán cổ &#x27;Bất Động Sản - Mua Bán - Cho Thuê&#x27; (不動産 売買 賃貸) phát ánh sáng trắng dịu bên bức tường gỗ mộc.</div>
                 </details>
             </div>
         </div>
@@ -1562,19 +1724,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 24</span>
                     <span class="shot-dur">1.29s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Mặt Nạ Dân Gian: Vẻ ma mị của mặt nạ cáo Kitsune và thần tài Ebisu</h4>
+                <p class="shot-insight">Tận dụng đồ thủ công mỹ nghệ dân gian làm chi tiết thị giác gợi mở yếu tố huyền bí, truyền thống.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Quầy hàng lưu niệm thủ công mỹ nghệ Yanaka</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Dutch Angle Close-Up (Góc cận nghiêng)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Direct Spot Store Light (Ánh sáng đèn cửa hàng rọi trực diện)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct Cut</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Màu sắc sống động và biểu cảm tương phản giữa nụ cười của tượng gỗ và vẻ sắc lạnh của mặt nạ cáo Kitsune.</div>
+                    <div class="critique-warn">Khung hình hơi nghiêng và bố cục xếp lớp dày đặc có thể gây rối mắt nếu nhìn lướt qua.</div>
+                    <div class="shot-narrative">Cận cảnh chùm mặt nạ truyền thống Nhật Bản treo trên giá: mặt nạ cáo Kitsune trắng vẽ hoa văn xanh đỏ, mặt nạ thần tài Ebisu bằng gỗ cười hiền hậu, mặt nạ quỷ Oni đỏ rực.</div>
                 </details>
             </div>
         </div>
@@ -1590,19 +1752,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 25</span>
                     <span class="shot-dur">5.04s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Lắng Đọng Phút Cuối: Bóng người dắt xe đạp chìm dần vào con ngõ tĩnh lặng</h4>
+                <p class="shot-insight">Kết thúc video bằng cú máy nhân vật đi xa dần vào không gian tĩnh lặng để đọng lại dư ba trong lòng khán giả.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Hẻm đêm Yanaka gần hiệu thuốc</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Deep Wide Shot (Góc toàn sâu theo sau)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Chiaroscuro (Đèn đường xa le lói tương phản bóng tối)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Fade Out kết thúc</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Khép lại video bằng hình ảnh nhân vật đi về phía ánh sáng le lói cuối ngõ, tạo cảm xúc lắng đọng, giải thoát khỏi sự ồn ào của Tokyo.</div>
+                    <div class="critique-warn">Vùng tối chiếm phần lớn khung hình ở những giây cuối.</div>
+                    <div class="shot-narrative">Một người dắt chiếc xe đạp bước dần vào con hẻm tối tĩnh mịch giữa hai dãy nhà cao tầng, bên cạnh biển vẫy màu vàng &#x27;Nhận đơn thuốc&#x27; (処方せん受付) và ánh đèn đường le lói phía xa.</div>
                 </details>
             </div>
         </div>
@@ -1615,9 +1777,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
                 <span class="grid-num">SHOT 01</span>
                 <span class="grid-time">0.0s – 1.4s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_01_mid.jpg', 'SHOT 01 • Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_01_mid.jpg', 'SHOT 01 • Hook Ngược Dòng: Người phụ nữ cầm ô đen sải bước qua vạch kẻ đường hẻm cổ Yanaka')">⊕</button>
             </div>
-            <div class="grid-title">Visual Hook Mở Màn: Giữ chân người xem n</div>
+            <div class="grid-title">Hook Ngược Dòng: Người phụ nữ cầm ô đen </div>
         </div>
 
         <div class="grid-item" onclick="playShot(1.42, 3.17, 'SHOT 02')">
@@ -1625,9 +1787,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
                 <span class="grid-num">SHOT 02</span>
                 <span class="grid-time">1.4s – 3.2s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_02_mid.jpg', 'SHOT 02 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_02_mid.jpg', 'SHOT 02 • Dẫn Hướng Tâm Linh: Bước chân lữ khách hướng về mái ngói chùa cổ rực nắng')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Dẫn Hướng Tâm Linh: Bước chân lữ khách h</div>
         </div>
 
         <div class="grid-item" onclick="playShot(3.21, 4.25, 'SHOT 03')">
@@ -1635,9 +1797,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
                 <span class="grid-num">SHOT 03</span>
                 <span class="grid-time">3.2s – 4.2s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_03_mid.jpg', 'SHOT 03 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_03_mid.jpg', 'SHOT 03 • Khoảng Lặng Phố Vắng: Vệt nắng chiều in trên bờ tường đá và chữ &#x27;Tomare&#x27; dưới lòng đường')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Khoảng Lặng Phố Vắng: Vệt nắng chiều in </div>
         </div>
 
         <div class="grid-item" onclick="playShot(4.29, 5.25, 'SHOT 04')">
@@ -1645,9 +1807,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
                 <span class="grid-num">SHOT 04</span>
                 <span class="grid-time">4.3s – 5.2s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_04_mid.jpg', 'SHOT 04 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_04_mid.jpg', 'SHOT 04 • Hồn Cốt Phố Thị: Cụ ông đội mũ phớt dắt xe đạp giơ tay chào người quen')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Hồn Cốt Phố Thị: Cụ ông đội mũ phớt dắt </div>
         </div>
 
         <div class="grid-item" onclick="playShot(5.29, 7.08, 'SHOT 05')">
@@ -1655,9 +1817,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
                 <span class="grid-num">SHOT 05</span>
                 <span class="grid-time">5.3s – 7.1s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_05_mid.jpg', 'SHOT 05 • Nhịp Dẫn Theo Dõi (Medium Tracking): Duy trì sự liên tục và kết nối cảm xúc nhân vật')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_05_mid.jpg', 'SHOT 05 • Nhịp Sống Bình Dị: Mẹ dắt tay con nhỏ thong dong giữa phố chiều')">⊕</button>
             </div>
-            <div class="grid-title">Nhịp Dẫn Theo Dõi (Medium Tracking): Duy</div>
+            <div class="grid-title">Nhịp Sống Bình Dị: Mẹ dắt tay con nhỏ th</div>
         </div>
 
         <div class="grid-item" onclick="playShot(7.12, 8.62, 'SHOT 06')">
@@ -1665,9 +1827,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
                 <span class="grid-num">SHOT 06</span>
                 <span class="grid-time">7.1s – 8.6s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_06_mid.jpg', 'SHOT 06 • Nhịp Dẫn Theo Dõi (Medium Tracking): Duy trì sự liên tục và kết nối cảm xúc nhân vật')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_06_mid.jpg', 'SHOT 06 • Ký Ức Chiều Tà: Quán nhậu bình dân treo rèm tre Sudare và đèn lồng đỏ')">⊕</button>
             </div>
-            <div class="grid-title">Nhịp Dẫn Theo Dõi (Medium Tracking): Duy</div>
+            <div class="grid-title">Ký Ức Chiều Tà: Quán nhậu bình dân treo </div>
         </div>
 
         <div class="grid-item" onclick="playShot(8.67, 9.88, 'SHOT 07')">
@@ -1675,9 +1837,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" />
                 <span class="grid-num">SHOT 07</span>
                 <span class="grid-time">8.7s – 9.9s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_07_mid.jpg', 'SHOT 07 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_07_mid.jpg', 'SHOT 07 • Khoảnh Khắc Không Tuổi: Hai người bạn già ngồi uống bia vỉa hè quán mực nướng Ikayaki')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Khoảnh Khắc Không Tuổi: Hai người bạn gi</div>
         </div>
 
         <div class="grid-item" onclick="playShot(9.92, 11.12, 'SHOT 08')">
@@ -1685,9 +1847,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" />
                 <span class="grid-num">SHOT 08</span>
                 <span class="grid-time">9.9s – 11.1s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_08_mid.jpg', 'SHOT 08 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_08_mid.jpg', 'SHOT 08 • Giao Cảm Mẫu Tử: Mẹ vỗ tay trêu em bé ngồi trong buồng chắn gió xe đạp')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Giao Cảm Mẫu Tử: Mẹ vỗ tay trêu em bé ng</div>
         </div>
 
         <div class="grid-item" onclick="playShot(11.17, 12.5, 'SHOT 09')">
@@ -1695,9 +1857,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" />
                 <span class="grid-num">SHOT 09</span>
                 <span class="grid-time">11.2s – 12.5s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_09_mid.jpg', 'SHOT 09 • Nhịp Dẫn Theo Dõi (Medium Tracking): Duy trì sự liên tục và kết nối cảm xúc nhân vật')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_09_mid.jpg', 'SHOT 09 • Biểu Tượng Phố Cổ: Cổng vòm Yanaka Ginza bật sáng đón dòng người tan tầm')">⊕</button>
             </div>
-            <div class="grid-title">Nhịp Dẫn Theo Dõi (Medium Tracking): Duy</div>
+            <div class="grid-title">Biểu Tượng Phố Cổ: Cổng vòm Yanaka Ginza</div>
         </div>
 
         <div class="grid-item" onclick="playShot(12.54, 13.67, 'SHOT 10')">
@@ -1705,9 +1867,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_10_mid.jpg" alt="SHOT 10" loading="lazy" />
                 <span class="grid-num">SHOT 10</span>
                 <span class="grid-time">12.5s – 13.7s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_10_mid.jpg', 'SHOT 10 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_10_mid.jpg', 'SHOT 10 • Ánh Sáng Đời Thường: Cửa hàng thuốc tây Kusuri Papasu rực sáng giữa phố đêm')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Ánh Sáng Đời Thường: Cửa hàng thuốc tây </div>
         </div>
 
         <div class="grid-item" onclick="playShot(13.71, 14.38, 'SHOT 11')">
@@ -1715,9 +1877,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_11_mid.jpg" alt="SHOT 11" loading="lazy" />
                 <span class="grid-num">SHOT 11</span>
                 <span class="grid-time">13.7s – 14.4s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_11_mid.jpg', 'SHOT 11 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_11_mid.jpg', 'SHOT 11 • Điểm Nhấn Hoài Niệm: Cột đèn lồng lục giác phát sáng giữa trời xanh chạng vạng')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Điểm Nhấn Hoài Niệm: Cột đèn lồng lục gi</div>
         </div>
 
         <div class="grid-item" onclick="playShot(14.42, 15.29, 'SHOT 12')">
@@ -1725,9 +1887,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_12_mid.jpg" alt="SHOT 12" loading="lazy" />
                 <span class="grid-num">SHOT 12</span>
                 <span class="grid-time">14.4s – 15.3s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_12_mid.jpg', 'SHOT 12 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_12_mid.jpg', 'SHOT 12 • Góc Ấm Sau Khung Cửa: Tiệm cà phê gỗ Yanakanaka lung linh ánh đèn vàng')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Góc Ấm Sau Khung Cửa: Tiệm cà phê gỗ Yan</div>
         </div>
 
         <div class="grid-item" onclick="playShot(15.33, 16.75, 'SHOT 13')">
@@ -1735,9 +1897,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_13_mid.jpg" alt="SHOT 13" loading="lazy" />
                 <span class="grid-num">SHOT 13</span>
                 <span class="grid-time">15.3s – 16.8s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_13_mid.jpg', 'SHOT 13 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_13_mid.jpg', 'SHOT 13 • Dòng Chảy Bình Yên: Trẻ em đạp xe dưới hàng đèn lồng giăng kín phố đêm')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Dòng Chảy Bình Yên: Trẻ em đạp xe dưới h</div>
         </div>
 
         <div class="grid-item" onclick="playShot(16.79, 18.38, 'SHOT 14')">
@@ -1745,9 +1907,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_14_mid.jpg" alt="SHOT 14" loading="lazy" />
                 <span class="grid-num">SHOT 14</span>
                 <span class="grid-time">16.8s – 18.4s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_14_mid.jpg', 'SHOT 14 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_14_mid.jpg', 'SHOT 14 • Tuổi Thơ Thảnh Thơi: Cận cảnh góc nghiêng cô bé đạp xe trong gió đêm')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Tuổi Thơ Thảnh Thơi: Cận cảnh góc nghiên</div>
         </div>
 
         <div class="grid-item" onclick="playShot(18.42, 19.92, 'SHOT 15')">
@@ -1755,9 +1917,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_15_mid.jpg" alt="SHOT 15" loading="lazy" />
                 <span class="grid-num">SHOT 15</span>
                 <span class="grid-time">18.4s – 19.9s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_15_mid.jpg', 'SHOT 15 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_15_mid.jpg', 'SHOT 15 • Hơi Ấm Cuối Ngày: Tiệm đồ ăn Bento đỏ rực mở cửa đón người tan sở')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Hơi Ấm Cuối Ngày: Tiệm đồ ăn Bento đỏ rự</div>
         </div>
 
         <div class="grid-item" onclick="playShot(19.96, 21.08, 'SHOT 16')">
@@ -1765,9 +1927,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_16_mid.jpg" alt="SHOT 16" loading="lazy" />
                 <span class="grid-num">SHOT 16</span>
                 <span class="grid-time">20.0s – 21.1s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_16_mid.jpg', 'SHOT 16 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_16_mid.jpg', 'SHOT 16 • Đóng Lại Ngày Dài: Cửa hàng giày Pansy kéo nửa cánh cửa cuốn đón khách muộn')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Đóng Lại Ngày Dài: Cửa hàng giày Pansy k</div>
         </div>
 
         <div class="grid-item" onclick="playShot(21.12, 22.38, 'SHOT 17')">
@@ -1775,9 +1937,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_17_mid.jpg" alt="SHOT 17" loading="lazy" />
                 <span class="grid-num">SHOT 17</span>
                 <span class="grid-time">21.1s – 22.4s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_17_mid.jpg', 'SHOT 17 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_17_mid.jpg', 'SHOT 17 • Vật Chứng Thời Gian: Cận cảnh giỏ sắt và bánh xe đạp Mamachari phong sương')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Vật Chứng Thời Gian: Cận cảnh giỏ sắt và</div>
         </div>
 
         <div class="grid-item" onclick="playShot(22.42, 23.92, 'SHOT 18')">
@@ -1785,9 +1947,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_18_mid.jpg" alt="SHOT 18" loading="lazy" />
                 <span class="grid-num">SHOT 18</span>
                 <span class="grid-time">22.4s – 23.9s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_18_mid.jpg', 'SHOT 18 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_18_mid.jpg', 'SHOT 18 • Hội Ngộ Chòm Xóm: Bàn rượu vỉa hè rộn rã trước tiệm mực nướng Ikayaki')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Hội Ngộ Chòm Xóm: Bàn rượu vỉa hè rộn rã</div>
         </div>
 
         <div class="grid-item" onclick="playShot(23.96, 25.08, 'SHOT 19')">
@@ -1795,9 +1957,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_19_mid.jpg" alt="SHOT 19" loading="lazy" />
                 <span class="grid-num">SHOT 19</span>
                 <span class="grid-time">24.0s – 25.1s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_19_mid.jpg', 'SHOT 19 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_19_mid.jpg', 'SHOT 19 • Bóng Đêm Phố Vắng: Người đi xe đạp băng qua vạch sơn đỏ dưới ngọn đèn cao áp')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Bóng Đêm Phố Vắng: Người đi xe đạp băng </div>
         </div>
 
         <div class="grid-item" onclick="playShot(25.12, 26.25, 'SHOT 20')">
@@ -1805,9 +1967,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_20_mid.jpg" alt="SHOT 20" loading="lazy" />
                 <span class="grid-num">SHOT 20</span>
                 <span class="grid-time">25.1s – 26.2s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_20_mid.jpg', 'SHOT 20 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_20_mid.jpg', 'SHOT 20 • Toàn Cảnh Dốc Hoàng Hôn: Cổng vòm Yanaka Ginza nhìn từ bậc thang Yuyake Dandan')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Toàn Cảnh Dốc Hoàng Hôn: Cổng vòm Yanaka</div>
         </div>
 
         <div class="grid-item" onclick="playShot(26.29, 27.5, 'SHOT 21')">
@@ -1815,9 +1977,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_21_mid.jpg" alt="SHOT 21" loading="lazy" />
                 <span class="grid-num">SHOT 21</span>
                 <span class="grid-time">26.3s – 27.5s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_21_mid.jpg', 'SHOT 21 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_21_mid.jpg', 'SHOT 21 • Huyền Thoại Đường Phố: Chiếc xe Honda Super Cub nép mình bên cánh cửa kính mờ')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Huyền Thoại Đường Phố: Chiếc xe Honda Su</div>
         </div>
 
         <div class="grid-item" onclick="playShot(27.54, 28.92, 'SHOT 22')">
@@ -1825,9 +1987,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_22_mid.jpg" alt="SHOT 22" loading="lazy" />
                 <span class="grid-num">SHOT 22</span>
                 <span class="grid-time">27.5s – 28.9s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_22_mid.jpg', 'SHOT 22 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_22_mid.jpg', 'SHOT 22 • Tan Ca Giải Tỏa: Nhóm nhân viên văn phòng quây quần nâng ly bia ngoài tiệm Kyushu-do')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Tan Ca Giải Tỏa: Nhóm nhân viên văn phòn</div>
         </div>
 
         <div class="grid-item" onclick="playShot(28.96, 30.21, 'SHOT 23')">
@@ -1835,9 +1997,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_23_mid.jpg" alt="SHOT 23" loading="lazy" />
                 <span class="grid-num">SHOT 23</span>
                 <span class="grid-time">29.0s – 30.2s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_23_mid.jpg', 'SHOT 23 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_23_mid.jpg', 'SHOT 23 • Chữ Cổ Đèn Tròn: Biển hiệu bất động sản &#x27;Fudousan&#x27; phát sáng hoài niệm')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Chữ Cổ Đèn Tròn: Biển hiệu bất động sản </div>
         </div>
 
         <div class="grid-item" onclick="playShot(30.25, 31.5, 'SHOT 24')">
@@ -1845,9 +2007,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_24_mid.jpg" alt="SHOT 24" loading="lazy" />
                 <span class="grid-num">SHOT 24</span>
                 <span class="grid-time">30.2s – 31.5s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_24_mid.jpg', 'SHOT 24 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_24_mid.jpg', 'SHOT 24 • Mặt Nạ Dân Gian: Vẻ ma mị của mặt nạ cáo Kitsune và thần tài Ebisu')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Mặt Nạ Dân Gian: Vẻ ma mị của mặt nạ cáo</div>
         </div>
 
         <div class="grid-item" onclick="playShot(31.54, 36.54, 'SHOT 25')">
@@ -1855,9 +2017,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_25_mid.jpg" alt="SHOT 25" loading="lazy" />
                 <span class="grid-num">SHOT 25</span>
                 <span class="grid-time">31.5s – 36.5s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_25_mid.jpg', 'SHOT 25 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_25_mid.jpg', 'SHOT 25 • Lắng Đọng Phút Cuối: Bóng người dắt xe đạp chìm dần vào con ngõ tĩnh lặng')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Lắng Đọng Phút Cuối: Bóng người dắt xe đ</div>
         </div>
         </div>
     </div>
@@ -1874,7 +2036,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 01</div>
-                <div class="drawer-shot-hl">Visual Hook Mở Màn: Giữ chân người xem nga</div>
+                <div class="drawer-shot-hl">Hook Ngược Dòng: Người phụ nữ cầm ô đen sả</div>
                 <div class="drawer-shot-time">0.00s – 1.38s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1884,7 +2046,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 02</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Dẫn Hướng Tâm Linh: Bước chân lữ khách hướ</div>
                 <div class="drawer-shot-time">1.42s – 3.17s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1894,7 +2056,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 03</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Khoảng Lặng Phố Vắng: Vệt nắng chiều in tr</div>
                 <div class="drawer-shot-time">3.21s – 4.25s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1904,7 +2066,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 04</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Hồn Cốt Phố Thị: Cụ ông đội mũ phớt dắt xe</div>
                 <div class="drawer-shot-time">4.29s – 5.25s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1914,7 +2076,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 05</div>
-                <div class="drawer-shot-hl">Nhịp Dẫn Theo Dõi (Medium Tracking): Duy t</div>
+                <div class="drawer-shot-hl">Nhịp Sống Bình Dị: Mẹ dắt tay con nhỏ thon</div>
                 <div class="drawer-shot-time">5.29s – 7.08s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1924,7 +2086,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 06</div>
-                <div class="drawer-shot-hl">Nhịp Dẫn Theo Dõi (Medium Tracking): Duy t</div>
+                <div class="drawer-shot-hl">Ký Ức Chiều Tà: Quán nhậu bình dân treo rè</div>
                 <div class="drawer-shot-time">7.12s – 8.62s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1934,7 +2096,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 07</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Khoảnh Khắc Không Tuổi: Hai người bạn già </div>
                 <div class="drawer-shot-time">8.67s – 9.88s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1944,7 +2106,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 08</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Giao Cảm Mẫu Tử: Mẹ vỗ tay trêu em bé ngồi</div>
                 <div class="drawer-shot-time">9.92s – 11.12s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1954,7 +2116,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 09</div>
-                <div class="drawer-shot-hl">Nhịp Dẫn Theo Dõi (Medium Tracking): Duy t</div>
+                <div class="drawer-shot-hl">Biểu Tượng Phố Cổ: Cổng vòm Yanaka Ginza b</div>
                 <div class="drawer-shot-time">11.17s – 12.50s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1964,7 +2126,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_10_mid.jpg" alt="SHOT 10" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 10</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Ánh Sáng Đời Thường: Cửa hàng thuốc tây Ku</div>
                 <div class="drawer-shot-time">12.54s – 13.67s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1974,7 +2136,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_11_mid.jpg" alt="SHOT 11" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 11</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Điểm Nhấn Hoài Niệm: Cột đèn lồng lục giác</div>
                 <div class="drawer-shot-time">13.71s – 14.38s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1984,7 +2146,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_12_mid.jpg" alt="SHOT 12" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 12</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Góc Ấm Sau Khung Cửa: Tiệm cà phê gỗ Yanak</div>
                 <div class="drawer-shot-time">14.42s – 15.29s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1994,7 +2156,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_13_mid.jpg" alt="SHOT 13" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 13</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Dòng Chảy Bình Yên: Trẻ em đạp xe dưới hàn</div>
                 <div class="drawer-shot-time">15.33s – 16.75s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -2004,7 +2166,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_14_mid.jpg" alt="SHOT 14" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 14</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Tuổi Thơ Thảnh Thơi: Cận cảnh góc nghiêng </div>
                 <div class="drawer-shot-time">16.79s – 18.38s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -2014,7 +2176,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_15_mid.jpg" alt="SHOT 15" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 15</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Hơi Ấm Cuối Ngày: Tiệm đồ ăn Bento đỏ rực </div>
                 <div class="drawer-shot-time">18.42s – 19.92s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -2024,7 +2186,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_16_mid.jpg" alt="SHOT 16" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 16</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Đóng Lại Ngày Dài: Cửa hàng giày Pansy kéo</div>
                 <div class="drawer-shot-time">19.96s – 21.08s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -2034,7 +2196,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_17_mid.jpg" alt="SHOT 17" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 17</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Vật Chứng Thời Gian: Cận cảnh giỏ sắt và b</div>
                 <div class="drawer-shot-time">21.12s – 22.38s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -2044,7 +2206,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_18_mid.jpg" alt="SHOT 18" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 18</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Hội Ngộ Chòm Xóm: Bàn rượu vỉa hè rộn rã t</div>
                 <div class="drawer-shot-time">22.42s – 23.92s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -2054,7 +2216,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_19_mid.jpg" alt="SHOT 19" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 19</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Bóng Đêm Phố Vắng: Người đi xe đạp băng qu</div>
                 <div class="drawer-shot-time">23.96s – 25.08s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -2064,7 +2226,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_20_mid.jpg" alt="SHOT 20" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 20</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Toàn Cảnh Dốc Hoàng Hôn: Cổng vòm Yanaka G</div>
                 <div class="drawer-shot-time">25.12s – 26.25s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -2074,7 +2236,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_21_mid.jpg" alt="SHOT 21" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 21</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Huyền Thoại Đường Phố: Chiếc xe Honda Supe</div>
                 <div class="drawer-shot-time">26.29s – 27.50s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -2084,7 +2246,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_22_mid.jpg" alt="SHOT 22" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 22</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Tan Ca Giải Tỏa: Nhóm nhân viên văn phòng </div>
                 <div class="drawer-shot-time">27.54s – 28.92s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -2094,7 +2256,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_23_mid.jpg" alt="SHOT 23" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 23</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Chữ Cổ Đèn Tròn: Biển hiệu bất động sản &#x27;F</div>
                 <div class="drawer-shot-time">28.96s – 30.21s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -2104,7 +2266,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_24_mid.jpg" alt="SHOT 24" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 24</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Mặt Nạ Dân Gian: Vẻ ma mị của mặt nạ cáo K</div>
                 <div class="drawer-shot-time">30.25s – 31.50s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -2114,7 +2276,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵/shot_25_mid.jpg" alt="SHOT 25" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 25</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Lắng Đọng Phút Cuối: Bóng người dắt xe đạp</div>
                 <div class="drawer-shot-time">31.54s – 36.54s</div>
             </div>
             <div class="drawer-arrow">▶</div>
