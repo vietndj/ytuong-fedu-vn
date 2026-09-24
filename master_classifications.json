@@ -19292,27 +19292,29 @@
     "creator_name": "Laylaa_398",
     "title": "@laylaa_398 - ♥️",
     "shots_count": 21,
-    "duration": "42.0s",
+    "duration": "12.8s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "POV & Aesthetic B-Roll Montage",
+      "name": "POV & Aesthetic B-Roll Montage",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Phong Cách Sống & Du Lịch",
+      "name": "Phong Cách Sống & Du Lịch",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @laylaa_398",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Low-key Lighting",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot"
+      "Aesthetic B-Roll",
+      "POV Lifestyle",
+      "Copenhagen Hygge",
+      "Fast Micro-Beats",
+      "Tivoli Gardens",
+      "Specialty Coffee"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Thước phim phong cách sống mùa thu Copenhagen với nhịp cắt vi mô 0.5s chuẩn nhịp thở Hygge, kết hợp POV đắm chìm và đại cảnh công viên cổ tích Tivoli.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
