@@ -509,7 +509,7 @@ function renderUI() {
         
         gHtml += `
         <div class="grid-card" onclick="playShot(${s.st}, ${s.et}, '${stTitle}')">
-            <div class="grid-img-wrap">
+            <div class="grid-thumb">
                 <img crossorigin="anonymous" src="${midUrl}" alt="${stTitle}" loading="lazy" />
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('${midUrl}', '${stTitle} [${s.st.toFixed(2)}s - ${s.et.toFixed(2)}s] • ${s.hl}')">🔍</button>
