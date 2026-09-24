@@ -1,0 +1,2261 @@
+{
+  "consoleErrors": [],
+  "elements": [
+    {
+      "tag": "H1",
+      "classes": "report-title",
+      "text": "\n                @jigummmmm - 설거지하는 모습도 예쁘게 찍을 수 있냐고요\n            ",
+      "visible": true,
+      "rect": {
+        "x": 16,
+        "y": 695,
+        "w": 358,
+        "h": 53
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "H4",
+      "classes": "shot-headline",
+      "text": "Mở Màn Đảo Khung Hình: Nhìn xuyên giàn inox úp ly thủy tinh trong suốt",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 1323,
+        "w": 316,
+        "h": 49
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "P",
+      "classes": "shot-insight",
+      "text": "Dùng vật thể gia dụng làm khung tiền cảnh (Framing) để biến góc bếp quen thuộc thành khung hình điện ảnh.",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 1381,
+        "w": 316,
+        "h": 77
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DETAILS",
+      "classes": "shot-details",
+      "text": "\n                    Chi tiết kỹ thuật ▸\n                    \n                        Bối cảnhBồn rửa bát gia đình\n                        Góc máyFore",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 1474,
+        "w": 316,
+        "h": 41
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "shot-meta-grid",
+      "text": "\n                        Bối cảnhBồn rửa bát gia đình\n                        Góc máyForeground Framing / Macro Through-Grid\n                        Á",
+      "visible": true,
+      "rect": {
+        "x": 38,
+        "y": 1514,
+        "w": 314,
+        "h": 201
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Bối cảnhBồn rửa bát gia đình",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 1514,
+        "w": 133,
+        "h": 79
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Bối cảnh",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 1514,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Bồn rửa bát gia đình",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 1534,
+        "w": 133,
+        "h": 20
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Góc máyForeground Framing / Macro Through-Grid",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 1514,
+        "w": 133,
+        "h": 79
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Góc máy",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 1514,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Foreground Framing / Macro Through-Grid",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 1534,
+        "w": 133,
+        "h": 59
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Ánh sángDiffused Soft Window Light (Ánh sáng tản dịu nhẹ từ cửa sổ)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 1605,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Ánh sáng",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 1605,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Diffused Soft Window Light (Ánh sáng tản dịu nhẹ từ cửa sổ)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 1625,
+        "w": 133,
+        "h": 78
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Chuyển cảnhMatch Cut theo nhịp đặt ly",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 1605,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Chuyển cảnh",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 1605,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Match Cut theo nhịp đặt ly",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 1625,
+        "w": 133,
+        "h": 39
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "H4",
+      "classes": "shot-headline",
+      "text": "Góc Chéo Bồn Rửa: Tuyên ngôn thay đổi điểm nhìn (POV) để làm mới không gian",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 1797,
+        "w": 316,
+        "h": 73
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "P",
+      "classes": "shot-insight",
+      "text": "Cùng một bồn rửa bát, chỉ cần đổi góc chéo 45 độ từ trên cao là triệt tiêu hoàn toàn sự nhàm chán của góc quay ngang truyền thống.",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 1880,
+        "w": 316,
+        "h": 102
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DETAILS",
+      "classes": "shot-details",
+      "text": "\n                    Chi tiết kỹ thuật ▸\n                    \n                        Bối cảnhBồn rửa bát gia đình\n                        Góc máyHigh",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 1998,
+        "w": 316,
+        "h": 41
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "shot-meta-grid",
+      "text": "\n                        Bối cảnhBồn rửa bát gia đình\n                        Góc máyHigh-Angle 45° Medium Shot (Góc cao bao quát thao tác)\n          ",
+      "visible": true,
+      "rect": {
+        "x": 38,
+        "y": 2038,
+        "w": 314,
+        "h": 221
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Bối cảnhBồn rửa bát gia đình",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 2038,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Bối cảnh",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 2038,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Bồn rửa bát gia đình",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 2058,
+        "w": 133,
+        "h": 20
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Góc máyHigh-Angle 45° Medium Shot (Góc cao bao quát thao tác)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 2038,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Góc máy",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 2038,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "High-Angle 45° Medium Shot (Góc cao bao quát thao tác)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 2058,
+        "w": 133,
+        "h": 78
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Ánh sángNatural Ambient Daylight (Ánh sáng ban ngày tự nhiên phản xạ trên kim loại)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 2148,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Ánh sáng",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 2148,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Natural Ambient Daylight (Ánh sáng ban ngày tự nhiên phản xạ trên kim loại)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 2168,
+        "w": 133,
+        "h": 78
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Chuyển cảnhHard Cut chuyển nhịp vào lòng bồn",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 2148,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Chuyển cảnh",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 2148,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Hard Cut chuyển nhịp vào lòng bồn",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 2168,
+        "w": 133,
+        "h": 39
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "H4",
+      "classes": "shot-headline",
+      "text": "Bẻ Gãy Nhịp Tĩnh Bằng Dòng Chảy: Đòn bẩy chuyển động nước (Water Flow Dynamics)",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 2321,
+        "w": 316,
+        "h": 73
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "P",
+      "classes": "shot-insight",
+      "text": "Chèn 0.8s chuyển động nước chảy hoặc hiệu ứng âm thanh ASMR để kích thích đa giác quan người xem.",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 2404,
+        "w": 316,
+        "h": 77
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DETAILS",
+      "classes": "shot-details",
+      "text": "\n                    Chi tiết kỹ thuật ▸\n                    \n                        Bối cảnhĐáy bồn rửa bát inox\n                        Góc máyTop-",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 2497,
+        "w": 316,
+        "h": 41
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "shot-meta-grid",
+      "text": "\n                        Bối cảnhĐáy bồn rửa bát inox\n                        Góc máyTop-Down Macro Cut-in Shot (Cận cảnh thẳng đứng dòng nước)\n      ",
+      "visible": true,
+      "rect": {
+        "x": 38,
+        "y": 2537,
+        "w": 314,
+        "h": 221
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Bối cảnhĐáy bồn rửa bát inox",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 2537,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Bối cảnh",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 2537,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Đáy bồn rửa bát inox",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 2557,
+        "w": 133,
+        "h": 20
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Góc máyTop-Down Macro Cut-in Shot (Cận cảnh thẳng đứng dòng nước)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 2537,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Góc máy",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 2537,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Top-Down Macro Cut-in Shot (Cận cảnh thẳng đứng dòng nước)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 2557,
+        "w": 133,
+        "h": 78
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Ánh sángDirect Specular Highlight (Ánh sáng phản chiếu trực tiếp trên bề mặt nước)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 2647,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Ánh sáng",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 2647,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Direct Specular Highlight (Ánh sáng phản chiếu trực tiếp trên bề mặt nước)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 2667,
+        "w": 133,
+        "h": 78
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Chuyển cảnhMotion Cut nối tiếp sang dụng cụ",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 2647,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Chuyển cảnh",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 2647,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Motion Cut nối tiếp sang dụng cụ",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 2667,
+        "w": 133,
+        "h": 39
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "H4",
+      "classes": "shot-headline",
+      "text": "Băm Nhỏ Lát Cắt 1: Áp miếng bọt biển đón đầu vòi bơm xà phòng",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 2819,
+        "w": 316,
+        "h": 49
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "P",
+      "classes": "shot-insight",
+      "text": "Quy tắc Micro-Action: Đừng quay một cú xịt xà phòng liền mạch, hãy cắt riêng nhịp chuẩn bị áp miếng mút.",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 2878,
+        "w": 316,
+        "h": 77
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DETAILS",
+      "classes": "shot-details",
+      "text": "\n                    Chi tiết kỹ thuật ▸\n                    \n                        Bối cảnhBệ bồn rửa bát\n                        Góc máyEye-Level ",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 2971,
+        "w": 316,
+        "h": 41
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "shot-meta-grid",
+      "text": "\n                        Bối cảnhBệ bồn rửa bát\n                        Góc máyEye-Level Product Close-Up (Cận cảnh đặc tả sản phẩm ngang tầm mắt)\n   ",
+      "visible": true,
+      "rect": {
+        "x": 38,
+        "y": 3011,
+        "w": 314,
+        "h": 260
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Bối cảnhBệ bồn rửa bát",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 3011,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Bối cảnh",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 3011,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Bệ bồn rửa bát",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 3031,
+        "w": 133,
+        "h": 20
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Góc máyEye-Level Product Close-Up (Cận cảnh đặc tả sản phẩm ngang tầm mắt)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 3011,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Góc máy",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 3011,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Eye-Level Product Close-Up (Cận cảnh đặc tả sản phẩm ngang tầm mắt)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 3031,
+        "w": 133,
+        "h": 78
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Ánh sángSoft Studio-like Kitchen Ambient (Ánh sáng dịu tôn vinh chất liệu nhựa mờ)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 3121,
+        "w": 133,
+        "h": 138
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Ánh sáng",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 3121,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Soft Studio-like Kitchen Ambient (Ánh sáng dịu tôn vinh chất liệu nhựa mờ)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 3141,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Chuyển cảnhGóc máy đổi >30 độ (Chống Jump Cut) | Nhịp độ <3s | Chuỗi Cận (Breathe-In: Khởi động đường hầm thị giác ASMR)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 3121,
+        "w": 133,
+        "h": 138
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Chuyển cảnh",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 3121,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Góc máy đổi >30 độ (Chống Jump Cut) | Nhịp độ <3s | Chuỗi Cận (Breathe-In: Khởi động đường hầm thị giác ASMR)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 3141,
+        "w": 133,
+        "h": 118
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "H4",
+      "classes": "shot-headline",
+      "text": "Băm Nhỏ Lát Cắt 2: Cú đấm tiếp xúc lực ấn và giọt xà phòng cô đặc rơi",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 3293,
+        "w": 316,
+        "h": 49
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "P",
+      "classes": "shot-insight",
+      "text": "Điểm rơi của giọt dung dịch là điểm neo thị giác đắt nhất trong phân cảnh sinh hoạt đời thường.",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 3352,
+        "w": 316,
+        "h": 77
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DETAILS",
+      "classes": "shot-details",
+      "text": "\n                    Chi tiết kỹ thuật ▸\n                    \n                        Bối cảnhVòi bơm chai xà phòng\n                        Góc máyExt",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 3445,
+        "w": 316,
+        "h": 41
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "shot-meta-grid",
+      "text": "\n                        Bối cảnhVòi bơm chai xà phòng\n                        Góc máyExtreme Macro Action Shot (Siêu cận điểm tiếp xúc)\n             ",
+      "visible": true,
+      "rect": {
+        "x": 38,
+        "y": 3485,
+        "w": 314,
+        "h": 240
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Bối cảnhVòi bơm chai xà phòng",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 3485,
+        "w": 133,
+        "h": 79
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Bối cảnh",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 3485,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Vòi bơm chai xà phòng",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 3505,
+        "w": 133,
+        "h": 39
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Góc máyExtreme Macro Action Shot (Siêu cận điểm tiếp xúc)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 3485,
+        "w": 133,
+        "h": 79
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Góc máy",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 3485,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Extreme Macro Action Shot (Siêu cận điểm tiếp xúc)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 3505,
+        "w": 133,
+        "h": 59
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Ánh sángDirectional Soft Light (Ánh sáng xiên làm nổi bật độ bóng giọt gel)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 3576,
+        "w": 133,
+        "h": 138
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Ánh sáng",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 3576,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Directional Soft Light (Ánh sáng xiên làm nổi bật độ bóng giọt gel)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 3596,
+        "w": 133,
+        "h": 78
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Chuyển cảnhĐổi tụ tiêu & góc chéo | Nhịp độ cực nhanh <2s | Cận Cực Đại (Breathe-In: Bơm dồn dập cảm giác lực ấn)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 3576,
+        "w": 133,
+        "h": 138
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Chuyển cảnh",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 3576,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Đổi tụ tiêu & góc chéo | Nhịp độ cực nhanh <2s | Cận Cực Đại (Breathe-In: Bơm dồn dập cảm giác lực ấn)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 3596,
+        "w": 133,
+        "h": 118
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "H4",
+      "classes": "shot-headline",
+      "text": "Băm Nhỏ Lát Cắt 3: Rút miếng bọt biển giải phóng vòi xịt",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 3768,
+        "w": 316,
+        "h": 49
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "P",
+      "classes": "shot-insight",
+      "text": "Bảo toàn chu kỳ cử động (Action Cycle): Đưa vào - Ấn xuống - Rút ra là 3 shot riêng biệt tạo nên độ nhuyễn điện ảnh.",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 3826,
+        "w": 316,
+        "h": 77
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DETAILS",
+      "classes": "shot-details",
+      "text": "\n                    Chi tiết kỹ thuật ▸\n                    \n                        Bối cảnhBệ bồn rửa bát\n                        Góc máyClose-Up F",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 3919,
+        "w": 316,
+        "h": 41
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "shot-meta-grid",
+      "text": "\n                        Bối cảnhBệ bồn rửa bát\n                        Góc máyClose-Up Follow-Through (Cận cảnh theo vết chuyển động)\n               ",
+      "visible": true,
+      "rect": {
+        "x": 38,
+        "y": 3959,
+        "w": 314,
+        "h": 240
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Bối cảnhBệ bồn rửa bát",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 3959,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Bối cảnh",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 3959,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Bệ bồn rửa bát",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 3979,
+        "w": 133,
+        "h": 20
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Góc máyClose-Up Follow-Through (Cận cảnh theo vết chuyển động)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 3959,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Góc máy",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 3959,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Close-Up Follow-Through (Cận cảnh theo vết chuyển động)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 3979,
+        "w": 133,
+        "h": 78
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Ánh sángBalanced Ambient (Ánh sáng môi trường cân bằng)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 4069,
+        "w": 133,
+        "h": 118
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Ánh sáng",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 4069,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Balanced Ambient (Ánh sáng môi trường cân bằng)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 4089,
+        "w": 133,
+        "h": 59
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Chuyển cảnhGóc máy lùi tịnh tiến >30 độ | Nhịp độ <3s | Cận cảnh (Breathe-In: Nối tiếp nhịp điệu xúc giác)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 4069,
+        "w": 133,
+        "h": 118
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Chuyển cảnh",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 4069,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Góc máy lùi tịnh tiến >30 độ | Nhịp độ <3s | Cận cảnh (Breathe-In: Nối tiếp nhịp điệu xúc giác)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 4089,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "H4",
+      "classes": "shot-headline",
+      "text": "Băm Nhỏ Lát Cắt 4: Bóp tạo bọt xà phòng trắng xóa bùng nổ xúc giác",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 4242,
+        "w": 316,
+        "h": 49
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "P",
+      "classes": "shot-insight",
+      "text": "Hiệu ứng Satisfying Foam là chìa khóa giữ chân người xem trong các video về chăm sóc nhà cửa và đời thường.",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 4300,
+        "w": 316,
+        "h": 77
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DETAILS",
+      "classes": "shot-details",
+      "text": "\n                    Chi tiết kỹ thuật ▸\n                    \n                        Bối cảnhKhoảng không trên lòng bồn\n                        Góc m",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 4393,
+        "w": 316,
+        "h": 41
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "shot-meta-grid",
+      "text": "\n                        Bối cảnhKhoảng không trên lòng bồn\n                        Góc máyMacro Texture Shot (Cận cảnh đặc tả bề mặt bọt xà phòng)\n  ",
+      "visible": true,
+      "rect": {
+        "x": 38,
+        "y": 4433,
+        "w": 314,
+        "h": 240
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Bối cảnhKhoảng không trên lòng bồn",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 4433,
+        "w": 133,
+        "h": 79
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Bối cảnh",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 4433,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Khoảng không trên lòng bồn",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 4453,
+        "w": 133,
+        "h": 39
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Góc máyMacro Texture Shot (Cận cảnh đặc tả bề mặt bọt xà phòng)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 4433,
+        "w": 133,
+        "h": 79
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Góc máy",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 4433,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Macro Texture Shot (Cận cảnh đặc tả bề mặt bọt xà phòng)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 4453,
+        "w": 133,
+        "h": 59
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Ánh sángSoft Front Fill (Ánh sáng trực diện tôn cấu trúc bọt bóng)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 4524,
+        "w": 133,
+        "h": 138
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Ánh sáng",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 4524,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Soft Front Fill (Ánh sáng trực diện tôn cấu trúc bọt bóng)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 4544,
+        "w": 133,
+        "h": 59
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Chuyển cảnhGiữ cỡ Cận nhưng đổi trục máy | Nhịp độ <3s | Cận cảnh (Sensory Overload: Bùng nổ xúc giác bọt trắng xóa)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 4524,
+        "w": 133,
+        "h": 138
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Chuyển cảnh",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 4524,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Giữ cỡ Cận nhưng đổi trục máy | Nhịp độ <3s | Cận cảnh (Sensory Overload: Bùng nổ xúc giác bọt trắng xóa)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 4544,
+        "w": 133,
+        "h": 118
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "H4",
+      "classes": "shot-headline",
+      "text": "Băm Nhỏ Lát Cắt 5: Mở lòng bàn tay khoe lớp bọt phồng xốp mịn",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 4716,
+        "w": 316,
+        "h": 49
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "P",
+      "classes": "shot-insight",
+      "text": "Sau chuỗi chuyển động dồn dập (bơm - bóp), hãy giữ lại 1 shot tĩnh phô diễn thành quả để tạo nhịp thở (Breathing Room).",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 4774,
+        "w": 316,
+        "h": 77
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DETAILS",
+      "classes": "shot-details",
+      "text": "\n                    Chi tiết kỹ thuật ▸\n                    \n                        Bối cảnhLòng bàn tay trong bồn rửa\n                        Góc m",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 4867,
+        "w": 316,
+        "h": 41
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "shot-meta-grid",
+      "text": "\n                        Bối cảnhLòng bàn tay trong bồn rửa\n                        Góc máyClose-Up Presentation Shot (Cận cảnh phô diễn kết quả)\n    ",
+      "visible": true,
+      "rect": {
+        "x": 38,
+        "y": 4907,
+        "w": 314,
+        "h": 280
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Bối cảnhLòng bàn tay trong bồn rửa",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 4907,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Bối cảnh",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 4907,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Lòng bàn tay trong bồn rửa",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 4927,
+        "w": 133,
+        "h": 39
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Góc máyClose-Up Presentation Shot (Cận cảnh phô diễn kết quả)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 4907,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Góc máy",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 4907,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Close-Up Presentation Shot (Cận cảnh phô diễn kết quả)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 4927,
+        "w": 133,
+        "h": 78
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Ánh sángClean Muted Tone (Tông màu sạch trong trẻo)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 5018,
+        "w": 133,
+        "h": 157
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Ánh sáng",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 5018,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Clean Muted Tone (Tông màu sạch trong trẻo)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 5038,
+        "w": 133,
+        "h": 59
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Chuyển cảnhĐổi trục >90 độ | Nhịp độ tĩnh tạm thời | Cận cảnh (Breathing Room: Neo 1 nhịp tĩnh giữa chuỗi hành động dồn dập)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 5018,
+        "w": 133,
+        "h": 157
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Chuyển cảnh",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 5018,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Đổi trục >90 độ | Nhịp độ tĩnh tạm thời | Cận cảnh (Breathing Room: Neo 1 nhịp tĩnh giữa chuỗi hành động dồn dập)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 5038,
+        "w": 133,
+        "h": 137
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "H4",
+      "classes": "shot-headline",
+      "text": "Khung Hình Gián Tiếp: Đặt camera sau giàn úp bát tạo góc nhìn lén (Voyeuristic Framing)",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 5190,
+        "w": 316,
+        "h": 73
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "P",
+      "classes": "shot-insight",
+      "text": "Đừng đặt chân máy trước mặt, hãy giấu camera sau rổ bát hoặc góc tường để tạo góc nhìn lén chân thật nhất cho Vlog.",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 5273,
+        "w": 316,
+        "h": 77
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DETAILS",
+      "classes": "shot-details",
+      "text": "\n                    Chi tiết kỹ thuật ▸\n                    \n                        Bối cảnhGóc nhìn từ sau giá đựng bát\n                        Góc",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 5366,
+        "w": 316,
+        "h": 41
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "shot-meta-grid",
+      "text": "\n                        Bối cảnhGóc nhìn từ sau giá đựng bát\n                        Góc máyOver-the-Rack Obstructed Shot (Góc nhìn gián tiếp qua vật",
+      "visible": true,
+      "rect": {
+        "x": 38,
+        "y": 5406,
+        "w": 314,
+        "h": 260
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Bối cảnhGóc nhìn từ sau giá đựng bát",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 5406,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Bối cảnh",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 5406,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Góc nhìn từ sau giá đựng bát",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 5426,
+        "w": 133,
+        "h": 39
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Góc máyOver-the-Rack Obstructed Shot (Góc nhìn gián tiếp qua vật cản)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 5406,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Góc máy",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 5406,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Over-the-Rack Obstructed Shot (Góc nhìn gián tiếp qua vật cản)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 5426,
+        "w": 133,
+        "h": 78
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Ánh sángDim Ambient Interior (Ánh sáng nội thất dịu mắt)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 5516,
+        "w": 133,
+        "h": 138
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Ánh sáng",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 5516,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Dim Ambient Interior (Ánh sáng nội thất dịu mắt)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 5536,
+        "w": 133,
+        "h": 59
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Chuyển cảnhGóc máy xuyên thấu xa | Nhịp độ <3s | Cỡ Trung Cảnh (Breathe-Out: Nhả nhịp không gian sau chuỗi cận bức bối)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 5516,
+        "w": 133,
+        "h": 138
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Chuyển cảnh",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 5516,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Góc máy xuyên thấu xa | Nhịp độ <3s | Cỡ Trung Cảnh (Breathe-Out: Nhả nhịp không gian sau chuỗi cận bức bối)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 5536,
+        "w": 133,
+        "h": 118
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "H4",
+      "classes": "shot-headline",
+      "text": "Cú Chốt Cảm Xúc: Tráng ly thủy tinh dưới chùm tia sen trong suốt như pha lê",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 5688,
+        "w": 316,
+        "h": 73
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "P",
+      "classes": "shot-insight",
+      "text": "Kết thúc video bằng khoảnh khắc thanh lọc hoàn tất công việc (Completion Payoff) để đọng lại cảm xúc nhẹ nhõm, thư thái.",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 5771,
+        "w": 316,
+        "h": 77
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DETAILS",
+      "classes": "shot-details",
+      "text": "\n                    Chi tiết kỹ thuật ▸\n                    \n                        Bối cảnhVòi rửa bát tia sen\n                        Góc máyMediu",
+      "visible": true,
+      "rect": {
+        "x": 37,
+        "y": 5864,
+        "w": 316,
+        "h": 41
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "shot-meta-grid",
+      "text": "\n                        Bối cảnhVòi rửa bát tia sen\n                        Góc máyMedium-Close Clarifying Shot (Cận trung thanh lọc kết màn)\n       ",
+      "visible": true,
+      "rect": {
+        "x": 38,
+        "y": 5904,
+        "w": 314,
+        "h": 221
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Bối cảnhVòi rửa bát tia sen",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 5904,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Bối cảnh",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 5904,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Vòi rửa bát tia sen",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 5924,
+        "w": 133,
+        "h": 20
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Góc máyMedium-Close Clarifying Shot (Cận trung thanh lọc kết màn)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 5904,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Góc máy",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 5904,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Medium-Close Clarifying Shot (Cận trung thanh lọc kết màn)",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 5924,
+        "w": 133,
+        "h": 78
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Ánh sángBacklit Water Sparkle (Ánh sáng ngược tạo độ lấp lánh cho tia nước)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 6014,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Ánh sáng",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 6014,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Backlit Water Sparkle (Ánh sáng ngược tạo độ lấp lánh cho tia nước)",
+      "visible": true,
+      "rect": {
+        "x": 52,
+        "y": 6034,
+        "w": 133,
+        "h": 78
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    },
+    {
+      "tag": "DIV",
+      "classes": "meta-item",
+      "text": "Chuyển cảnhFade out / Loop tự nhiên",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 6014,
+        "w": 133,
+        "h": 98
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(15, 23, 42)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-label",
+      "text": "Chuyển cảnh",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 6014,
+        "w": 133,
+        "h": 16
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(71, 85, 105)"
+    },
+    {
+      "tag": "SPAN",
+      "classes": "meta-val",
+      "text": "Fade out / Loop tự nhiên",
+      "visible": true,
+      "rect": {
+        "x": 205,
+        "y": 6034,
+        "w": 133,
+        "h": 39
+      },
+      "font": "\"Tiempos Text\", \"FD Aeonik\", Inter, Georgia, serif",
+      "color": "rgb(9, 13, 22)"
+    }
+  ],
+  "fontsLoaded": "loaded",
+  "loadedFontFamilies": []
+}
