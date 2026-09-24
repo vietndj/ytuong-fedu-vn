@@ -19444,27 +19444,28 @@
     "creator_name": "Yongandmike",
     "title": "@yongandmike - Here are 8 things we did in Chiang Rai",
     "shots_count": 10,
-    "duration": "20.0s",
+    "duration": "279.0s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "lifestyle-cinematic",
+      "name": "lifestyle-cinematic",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "cong-nghe",
-      "name": "Công Nghệ & Thiết Bị",
-      "icon": "📱"
+      "id": "du-lich-khach-san",
+      "name": "du-lich-khach-san",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @yongandmike",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Medium Tracking Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting"
+      "Bố cục điện ảnh",
+      "Du lịch Chiang Rai",
+      "Carousel đa tầng",
+      "Nghỉ dưỡng",
+      "Kiến trúc resort"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "quick_takeaway": "Chuỗi 10 phân cảnh carousel kết hợp video tĩnh và chuyển động vi mô tại Chiang Rai, làm chủ kỹ thuật phân tầng tiền - trung - hậu cảnh, bố cục một điểm tụ và ánh sáng chiaroscuro ẩm thực.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -19479,27 +19480,28 @@
     "creator_name": "Yongandmike",
     "title": "@yongandmike - Here are 8 things we did in Chiang Rai",
     "shots_count": 10,
-    "duration": "20.0s",
+    "duration": "279.0s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "lifestyle-cinematic",
+      "name": "lifestyle-cinematic",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "cong-nghe",
-      "name": "Công Nghệ & Thiết Bị",
-      "icon": "📱"
+      "id": "du-lich-khach-san",
+      "name": "du-lich-khach-san",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @yongandmike",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Medium Tracking Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting"
+      "Bố cục điện ảnh",
+      "Du lịch Chiang Rai",
+      "Carousel đa tầng",
+      "Nghỉ dưỡng",
+      "Kiến trúc resort"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "quick_takeaway": "Chuỗi 10 phân cảnh carousel kết hợp video tĩnh và chuyển động vi mô tại Chiang Rai, làm chủ kỹ thuật phân tầng tiền - trung - hậu cảnh, bố cục một điểm tụ và ánh sáng chiaroscuro ẩm thực.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
