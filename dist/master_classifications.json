@@ -21585,30 +21585,30 @@
     "id": "IG_@takashi.film_DddqrBQy8lQ_One_day,_Vietnam._🇻🇳",
     "creator": "@takashi.film",
     "creator_name": "Takashi Film",
-    "title": "@takashi.film - One day, Vietnam. 🇻🇳",
+    "title": "Bố Cục Đối Xứng Và Điểm Nghỉ Chân Dung Trong Nhịp Dựng Điện Ảnh Bản Địa",
     "shots_count": 11,
-    "duration": "22.0s",
+    "duration": "10.2s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "id": "Điện Ảnh Đời Thường (Cinematic)",
+      "name": "Điện Ảnh Đời Thường (Cinematic)",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Du Lịch & Văn Hóa",
+      "name": "Du Lịch & Văn Hóa",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @takashi.film",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Low-key Lighting",
-      "Close-Up / Macro Detail Shot",
-      "Wide Establishing Shot",
-      "Medium Tracking Shot"
+      "One Day In Vietnam",
+      "Làng Nghề Truyền Thống",
+      "Bố Cục Đối Xứng",
+      "Chân Dung Văn Hóa",
+      "Nhịp Dựng Điện Ảnh"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Một ngày tại Việt Nam qua lăng kính điện ảnh: nghệ thuật kết hợp giữa hoa văn hình học làng nghề bản địa và chân dung con người lao động mộc mạc.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -21621,30 +21621,30 @@
     "id": "IG_@takashi.film_DddqrBQy8lQ_One_day,_Vietnam._🇻🇳",
     "creator": "@takashi.film",
     "creator_name": "Takashi Film",
-    "title": "@takashi.film - One day, Vietnam. 🇻🇳",
+    "title": "Bố Cục Đối Xứng Và Điểm Nghỉ Chân Dung Trong Nhịp Dựng Điện Ảnh Bản Địa",
     "shots_count": 11,
-    "duration": "22.0s",
+    "duration": "10.2s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "id": "Điện Ảnh Đời Thường (Cinematic)",
+      "name": "Điện Ảnh Đời Thường (Cinematic)",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Du Lịch & Văn Hóa",
+      "name": "Du Lịch & Văn Hóa",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @takashi.film",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Low-key Lighting",
-      "Close-Up / Macro Detail Shot",
-      "Wide Establishing Shot",
-      "Medium Tracking Shot"
+      "One Day In Vietnam",
+      "Làng Nghề Truyền Thống",
+      "Bố Cục Đối Xứng",
+      "Chân Dung Văn Hóa",
+      "Nhịp Dựng Điện Ảnh"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Một ngày tại Việt Nam qua lăng kính điện ảnh: nghệ thuật kết hợp giữa hoa văn hình học làng nghề bản địa và chân dung con người lao động mộc mạc.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
