@@ -20110,5 +20110,75 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@Lisha_Ho_Ddqo7-eTI2A_Video_by_lisha_ho": {
+    "id": "IG_@Lisha_Ho_Ddqo7-eTI2A_Video_by_lisha_ho",
+    "creator": "@Lisha_Ho",
+    "creator_name": "Lisha_Ho",
+    "title": "@Lisha_Ho - Video by lisha ho",
+    "shots_count": 26,
+    "duration": "52.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
+    },
+    "purpose": "Chuyen canh Chuyen canh 1",
+    "tech_tags": [
+      "Chuyen Canh Chuyen Canh 1",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Chuyen canh Chuyen canh 1. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
+    "is_excluded": false,
+    "quick_takeaway": "Chuyen canh Chuyen canh 1",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "Ddqo7-eTI2A": {
+    "id": "IG_@Lisha_Ho_Ddqo7-eTI2A_Video_by_lisha_ho",
+    "creator": "@Lisha_Ho",
+    "creator_name": "Lisha_Ho",
+    "title": "@Lisha_Ho - Video by lisha ho",
+    "shots_count": 26,
+    "duration": "52.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
+    },
+    "purpose": "Chuyen canh Chuyen canh 1",
+    "tech_tags": [
+      "Chuyen Canh Chuyen Canh 1",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Chuyen canh Chuyen canh 1. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
+    "is_excluded": false,
+    "quick_takeaway": "Chuyen canh Chuyen canh 1",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }
