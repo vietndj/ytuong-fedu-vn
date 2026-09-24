@@ -2138,7 +2138,7 @@ var FEDU_IDEAS_DATABASE = {
       "media": {
         "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_oU2DB_Quick_Release_Folding_L_Bracket_and_Plate_Cam/shot_01_mid.jpg",
         "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_oU2DB_Quick_Release_Folding_L_Bracket_and_Plate_Cam/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/oU2DB.mp4",
+        "video_url": "https://media.fedu.vn/videos/ulanzi_oU2DB.mp4",
         "report_url": "reports/IG_@ulanzi_oU2DB_Quick_Release_Folding_L_Bracket_and_Plate_Cam.html",
         "shots_count": 1,
         "duration": "2s",
