@@ -19598,27 +19598,30 @@
     "creator_name": "Acupper",
     "title": "@acupper - hello is konnichiwa",
     "shots_count": 18,
-    "duration": "36.0s",
+    "duration": "13.4s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "Cinematic Vlog / Cut On Action",
+      "name": "Cinematic Vlog / Cut On Action",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Du Lịch & Trải Nghiệm Sống",
+      "name": "Du Lịch & Trải Nghiệm Sống",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @acupper",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Wide Establishing Shot",
-      "Medium Tracking Shot",
-      "Close-Up / Macro Detail Shot"
+      "Cut On Action",
+      "Chuyển Cảnh Level 1",
+      "Foreground Wipe",
+      "Match Cut",
+      "Travel Vlog",
+      "B-Roll",
+      "Kyoto"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Khi quay góc rộng khung dọc, luôn bố trí một trục chuyển động hoặc đường dẫn (Leading Lines) về trung tâm.",
+    "quick_takeaway": "Bậc thầy chuyển cảnh Level 1 (Cut on Action & Foreground Wipe): Nghệ thuật mượn vật thể đời thường (người đi bộ, xe đạp, taxi) lướt ngang tiền cảnh và trục chuyển động cùng chiều để nối 18 cảnh quay Kyoto siêu mượt mà không dùng bất kỳ hiệu ứng chuyển cảnh phần mềm nào.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -19636,27 +19639,30 @@
     "creator_name": "Acupper",
     "title": "@acupper - hello is konnichiwa",
     "shots_count": 18,
-    "duration": "36.0s",
+    "duration": "13.4s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "Cinematic Vlog / Cut On Action",
+      "name": "Cinematic Vlog / Cut On Action",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Du Lịch & Trải Nghiệm Sống",
+      "name": "Du Lịch & Trải Nghiệm Sống",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @acupper",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Wide Establishing Shot",
-      "Medium Tracking Shot",
-      "Close-Up / Macro Detail Shot"
+      "Cut On Action",
+      "Chuyển Cảnh Level 1",
+      "Foreground Wipe",
+      "Match Cut",
+      "Travel Vlog",
+      "B-Roll",
+      "Kyoto"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Khi quay góc rộng khung dọc, luôn bố trí một trục chuyển động hoặc đường dẫn (Leading Lines) về trung tâm.",
+    "quick_takeaway": "Bậc thầy chuyển cảnh Level 1 (Cut on Action & Foreground Wipe): Nghệ thuật mượn vật thể đời thường (người đi bộ, xe đạp, taxi) lướt ngang tiền cảnh và trục chuyển động cùng chiều để nối 18 cảnh quay Kyoto siêu mượt mà không dùng bất kỳ hiệu ứng chuyển cảnh phần mềm nào.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
