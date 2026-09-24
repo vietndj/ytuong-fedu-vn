@@ -20004,5 +20004,77 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@Angela_DdrBPIwIpg-_Video_by_aangelazunigaa": {
+    "id": "IG_@Angela_DdrBPIwIpg-_Video_by_aangelazunigaa",
+    "creator": "@Angela",
+    "creator_name": "Angela",
+    "title": "@Angela - Video by aangelazunigaa",
+    "shots_count": 8,
+    "duration": "16.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
+    },
+    "purpose": "Pov",
+    "tech_tags": [
+      "Pov",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Pov. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+    "is_excluded": false,
+    "quick_takeaway": "Pov",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DdrBPIwIpg-": {
+    "id": "IG_@Angela_DdrBPIwIpg-_Video_by_aangelazunigaa",
+    "creator": "@Angela",
+    "creator_name": "Angela",
+    "title": "@Angela - Video by aangelazunigaa",
+    "shots_count": 8,
+    "duration": "16.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
+    },
+    "purpose": "Pov",
+    "tech_tags": [
+      "Pov",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Pov. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+    "is_excluded": false,
+    "quick_takeaway": "Pov",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }
