@@ -1,5 +1,5 @@
 var TRAINING_DATA = {
-  "generated_at": "2026-09-24T08:22:06.790151",
+  "generated_at": "2026-09-24T09:13:16.528248",
   "stats": {
     "total_videos": 452,
     "total_corrections": 27,
@@ -9472,14 +9472,14 @@ var TRAINING_DATA = {
       "title": "@filmwithred - An escape from the noise of Tokyo. 🇯🇵",
       "creator": "@filmwithred",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Talking Head",
-        "icon": "🗣️"
+        "id": "Cinematic B-Roll",
+        "name": "Cinematic B-Roll",
+        "icon": "🎬"
       },
       "industry": {
-        "id": "kien-truc",
-        "name": "Kiến Trúc & Không Gian Sống",
-        "icon": "🏛️"
+        "id": "Du Lịch & Khám Phá",
+        "name": "Du Lịch & Khám Phá",
+        "icon": "🎯"
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @filmwithred",
       "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
@@ -9492,14 +9492,14 @@ var TRAINING_DATA = {
       "title": "@filmwithred - An escape from the noise of Tokyo. 🇯🇵",
       "creator": "@filmwithred",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Talking Head",
-        "icon": "🗣️"
+        "id": "Cinematic B-Roll",
+        "name": "Cinematic B-Roll",
+        "icon": "🎬"
       },
       "industry": {
-        "id": "kien-truc",
-        "name": "Kiến Trúc & Không Gian Sống",
-        "icon": "🏛️"
+        "id": "Du Lịch & Khám Phá",
+        "name": "Du Lịch & Khám Phá",
+        "icon": "🎯"
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @filmwithred",
       "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
@@ -9632,14 +9632,14 @@ var TRAINING_DATA = {
       "title": "@jxnjuvv - A city full of joy everywhere I go ♥️",
       "creator": "@jxnjuvv",
       "shooting_style": {
-        "id": "chuyen-canh",
+        "id": "Chuyển Cảnh (Transition)",
         "name": "Chuyển Cảnh (Transition)",
-        "icon": "⚡"
+        "icon": "🎬"
       },
       "industry": {
-        "id": "kien-truc",
-        "name": "Kiến Trúc & Không Gian Sống",
-        "icon": "🏛️"
+        "id": "Du Lịch & Khám Phá",
+        "name": "Du Lịch & Khám Phá",
+        "icon": "🎯"
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jxnjuvv",
       "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
@@ -9652,14 +9652,14 @@ var TRAINING_DATA = {
       "title": "@jxnjuvv - A city full of joy everywhere I go ♥️",
       "creator": "@jxnjuvv",
       "shooting_style": {
-        "id": "chuyen-canh",
+        "id": "Chuyển Cảnh (Transition)",
         "name": "Chuyển Cảnh (Transition)",
-        "icon": "⚡"
+        "icon": "🎬"
       },
       "industry": {
-        "id": "kien-truc",
-        "name": "Kiến Trúc & Không Gian Sống",
-        "icon": "🏛️"
+        "id": "Du Lịch & Khám Phá",
+        "name": "Du Lịch & Khám Phá",
+        "icon": "🎯"
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jxnjuvv",
       "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
