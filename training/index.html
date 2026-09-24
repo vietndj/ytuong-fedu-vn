@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Hub - Kho Ý Tưởng</title>
+    <style>
+        :root {
+            --cl-bg: #ffffff;
+            --cl-tint: #f8fafc;
+            --cl-accent: #1a73e8;
+            --cl-accent-tint: rgba(26, 115, 232, 0.08);
+            --cl-text-base: #090d16;
+            --cl-text-body: #0f172a;
+            --cl-text-muted: #475569;
+            --cl-line: rgba(0, 0, 0, 0.06);
+            --cl-danger: #dc2626;
+            --cl-success: #16a34a;
+        }
+
+        @font-face { font-family: 'FDAeonikExtended'; src: url('https://font.fedu.vn/FDAeonikExtended-Bold.woff2') format('woff2'); font-weight: 700; }
+        @font-face { font-family: 'FDAeonik'; src: url('https://font.fedu.vn/FDAeonik-Regular.woff2') format('woff2'); font-weight: 400; }
+        @font-face { font-family: 'FDAeonik'; src: url('https://font.fedu.vn/FDAeonik-SemiBold.woff2') format('woff2'); font-weight: 600; }
+        @font-face { font-family: 'TiemposText'; src: url('https://font.fedu.vn/TiemposText-Regular.woff2') format('woff2'); font-weight: 400; }
+
+        body { margin: 0; padding: 20px; font-family: 'TiemposText', serif; background-color: var(--cl-tint); color: var(--cl-text-body); font-size: 16px; line-height: 1.5; }
+        h1, h2, h3 { font-family: 'FDAeonikExtended', sans-serif; color: var(--cl-text-base); }
+        .ui-text { font-family: 'FDAeonik', sans-serif; font-weight: 600; }
+        
+        .container { max-width: 1200px; margin: 0 auto; background: var(--cl-bg); padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px var(--cl-line); }
+        
+        .grid-2x2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .stat-card { background: var(--cl-tint); padding: 20px; border-radius: 8px; text-align: center; border: 1px solid var(--cl-line); }
+        .stat-card h3 { margin: 0 0 10px; font-size: 14px; color: var(--cl-text-muted); font-family: 'FDAeonik', sans-serif; }
+        .stat-card .value { font-size: 32px; font-weight: 700; color: var(--cl-accent); }
+        
+        .section { margin-bottom: 50px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-family: 'FDAeonik', sans-serif; font-size: 14px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--cl-line); }
+        th { background: var(--cl-tint); color: var(--cl-text-muted); }
+        
+        .badge { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; display: inline-block; margin-bottom: 4px;}
+        .badge-danger { background: rgba(220, 38, 38, 0.1); color: var(--cl-danger); }
+        .badge-success { background: rgba(22, 163, 74, 0.1); color: var(--cl-success); }
+        .badge-neutral { background: var(--cl-line); color: var(--cl-text-muted); }
+        
+        .rules-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        .rule-card { border: 1px solid var(--cl-line); padding: 20px; border-radius: 8px; }
+        
+        .filter-bar { display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; }
+        select, input, button { padding: 8px 12px; border: 1px solid var(--cl-line); border-radius: 6px; font-family: 'FDAeonik', sans-serif; }
+        button { background: var(--cl-accent); color: white; border: none; cursor: pointer; font-weight: 600; }
+        button:hover { background: #1557b0; }
+        
+        .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); align-items: center; justify-content: center; z-index: 100; }
+        .modal-content { background: white; padding: 30px; border-radius: 12px; width: 90%; max-width: 500px; }
+        .modal-content h3 { margin-top: 0; }
+        .modal-actions { margin-top: 20px; display: flex; gap: 10px; justify-content: flex-end; }
+        .close-btn { background: var(--cl-danger); }
+        .btn-outline { background: white; color: var(--cl-accent); border: 1px solid var(--cl-accent); }
+
+        textarea { width: 100%; padding: 10px; border: 1px solid var(--cl-line); border-radius: 6px; font-family: 'TiemposText', serif; margin-top: 10px; resize: vertical; box-sizing: border-box; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-family: 'FDAeonik', sans-serif; font-weight: 600; font-size: 14px; }
+        .form-group select { width: 100%; box-sizing: border-box; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Training Hub</h1>
+        
+        <div class="section" id="section-stats">
+            <h2>Dashboard Tổng Quan</h2>
+            <div class="grid-2x2" id="stats-container"></div>
+        </div>
+
+        <div class="section" id="section-corrections">
+            <h2>Bảng Lịch Sử Huấn Luyện</h2>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead><tr><th>Creator</th><th>Video Title</th><th>AI Dự Đoán</th><th>Anh Việt Sửa</th><th>Lý Do</th><th>Ngày</th></tr></thead>
+                    <tbody id="corrections-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section" id="section-rules">
+            <h2>Quy Tắc AI Đã Học</h2>
+            <div class="rules-grid" id="rules-container"></div>
+        </div>
+
+        <div class="section" id="section-classifications">
+            <h2>Danh Sách Phân Loại</h2>
+            <div class="filter-bar">
+                <input type="text" id="search-input" placeholder="Tìm kiếm...">
+                <select id="filter-style"><option value="">Tất cả Shooting Style</option></select>
+                <select id="filter-industry"><option value="">Tất cả Industry</option></select>
+            </div>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead><tr><th>STT</th><th>Title</th><th>Creator</th><th>Style & Industry</th><th>Lý Giải AI</th><th>Status</th><th>Hành động</th></tr></thead>
+                    <tbody id="classifications-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Hướng Dẫn Sử Dụng</h2>
+            <p><strong>Cú pháp CLI:</strong> <code>python3 feedback_learner.py "SUA: #4 -> Đời thường, Kỷ luật, Lý do: ..."</code></p>
+            <p>Hệ thống tự động học từ phản hồi của bạn để phân loại chính xác hơn trong tương lai.</p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <h3 class="ui-text">Sửa Phân Loại</h3>
+            <p id="modal-video-info" class="ui-text" style="color: var(--cl-text-muted); margin-bottom: 15px;"></p>
+            <div class="form-group">
+                <label>Shooting Style mới</label>
+                <select id="modal-style"></select>
+            </div>
+            <div class="form-group">
+                <label>Industry mới</label>
+                <select id="modal-industry"></select>
+            </div>
+            <div class="form-group">
+                <label>Lý do sửa</label>
+                <textarea id="modal-reason" rows="3" placeholder="Nhập lý do..."></textarea>
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="close-btn ui-text" onclick="closeModal()">Hủy</button>
+                <button type="button" class="btn-outline ui-text" onclick="copyCli()">Copy Lệnh CLI</button>
+                <button type="button" class="ui-text" onclick="sendApi()">Gửi API</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../training_data.js"></script>
+    <script>
+        const STYLES = [
+            {id: 'walk-and-talk', name: 'Walk & Talk', icon: '🚶'},
+            {id: 'voice-over', name: 'Lồng Tiếng', icon: '🎙️'},
+            {id: 'talking-head', name: 'Nói Trực Diện', icon: '🗣️'},
+            {id: 'storytelling', name: 'Kể Chuyện', icon: '📖'},
+            {id: 'dien-anh', name: 'Chỉn Chu', icon: '🎬'},
+            {id: 'chuyen-canh', name: 'Chuyển Cảnh', icon: '⚡'},
+            {id: 'theo-nhip-nhac', name: 'Theo nhịp nhạc', icon: '🎵'}
+        ];
+        const INDUSTRIES = [
+            {id: 'spa-lam-dep', name: 'Làm đẹp', icon: '💆'},
+            {id: 'thuong-hieu', name: 'Xây kênh', icon: '💼'},
+            {id: 'thoi-trang', name: 'Thời trang', icon: '👔'},
+            {id: 'am-thuc', name: 'F&B', icon: '🍜'},
+            {id: 'du-lich', name: 'Du lịch', icon: '✈️'},
+            {id: 'cong-nghe', name: 'Đồ công nghệ', icon: '📱'},
+            {id: 'kien-truc', name: 'Góc nhà đẹp', icon: '🏛️'},
+            {id: 'the-thao', name: 'Thể thao', icon: '🏃'},
+            {id: 'ky-thuat-quay', name: 'Bố cục', icon: '🎯'},
+            {id: 'ugc', name: 'UGC & Ads', icon: '📦'},
+            {id: 'phat-trien-ban-than', name: 'Tâm Lý', icon: '🧘'}
+        ];
+
+        let currentVideoId = null;
+        let currentCreator = null;
+
+        function init() {
+            if (typeof TRAINING_DATA === 'undefined') {
+                alert('Không thể tải training_data.js');
+                return;
+            }
+
+            // Render Stats
+            const stats = TRAINING_DATA.stats;
+            document.getElementById('stats-container').innerHTML = `
+                <div class="stat-card"><h3>Alignment Score</h3><div class="value">${stats.alignment_score}%</div><div style="width:100%; background:var(--cl-line); height:4px; margin-top:10px; border-radius:2px"><div style="width:${stats.alignment_score}%; background:var(--cl-accent); height:100%; border-radius:2px"></div></div></div>
+                <div class="stat-card"><h3>Total Corrections</h3><div class="value">${stats.total_corrections}</div></div>
+                <div class="stat-card"><h3>Total Rules</h3><div class="value">${stats.rules_count}</div></div>
+                <div class="stat-card"><h3>Target Score</h3><div class="value">${stats.target_score}%</div></div>
+            `;
+
+            // Render Corrections
+            const corHtml = (TRAINING_DATA.corrections || []).map(c => {
+                let ai = c.ai_predicted ? (c.ai_predicted.shooting_style || 'Unknown') : 'Unknown';
+                let mc = c.mentor_corrected ? (c.mentor_corrected.shooting_style || 'Unknown') : 'Unknown';
+                return `<tr>
+                    <td>${c.creator || ''}</td>
+                    <td><a href="${c.video_id ? 'https://ytuong.fedu.vn/report/' + c.video_id : '#'}" target="_blank">${c.video_title || c.video_id}</a></td>
+                    <td><span class="badge badge-danger">${ai}</span></td>
+                    <td><span class="badge badge-success">${mc}</span></td>
+                    <td><div style="max-width:200px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="${c.reason_distilled}">${c.reason_distilled}</div></td>
+                    <td>${c.learned_at ? c.learned_at.split('T')[0] : ''}</td>
+                </tr>`;
+            }).join('');
+            document.getElementById('corrections-tbody').innerHTML = corHtml;
+
+            // Render Rules
+            const rulesHtml = (TRAINING_DATA.rules || []).map(r => `
+                <div class="rule-card">
+                    <h3 style="margin-top:0"><span class="badge badge-success">${r.rule_id}</span> ${r.name}</h3>
+                    <p>${r.description}</p>
+                    <div>${(r.trigger_keywords || []).map(k => `<span class="badge badge-neutral">${k}</span>`).join(' ')}</div>
+                </div>
+            `).join('');
+            document.getElementById('rules-container').innerHTML = rulesHtml;
+
+            // Render Select Options
+            const sFilter = document.getElementById('filter-style');
+            const iFilter = document.getElementById('filter-industry');
+            const mStyle = document.getElementById('modal-style');
+            const mInd = document.getElementById('modal-industry');
+
+            STYLES.forEach(s => {
+                let opt = `<option value="${s.id}">${s.icon} ${s.name}</option>`;
+                sFilter.innerHTML += opt; mStyle.innerHTML += opt;
+            });
+            INDUSTRIES.forEach(i => {
+                let opt = `<option value="${i.id}">${i.icon} ${i.name}</option>`;
+                iFilter.innerHTML += opt; mInd.innerHTML += opt;
+            });
+
+            renderClassifications();
+
+            // Event Listeners for Filters
+            document.getElementById('search-input').addEventListener('input', renderClassifications);
+            sFilter.addEventListener('change', renderClassifications);
+            iFilter.addEventListener('change', renderClassifications);
+        }
+
+        function renderClassifications() {
+            const q = document.getElementById('search-input').value.toLowerCase();
+            const s = document.getElementById('filter-style').value;
+            const i = document.getElementById('filter-industry').value;
+
+            let filtered = (TRAINING_DATA.all_classifications || []).filter(c => {
+                if (q && !c.title.toLowerCase().includes(q) && !(c.creator || '').toLowerCase().includes(q)) return false;
+                if (s && c.shooting_style && c.shooting_style.id !== s) return false;
+                if (i && c.industry && c.industry.id !== i) return false;
+                return true;
+            });
+
+            const html = filtered.map((c, idx) => {
+                let status = c.has_correction ? '⚠️ Đã sửa' : '✅ Chưa sửa';
+                let styleBadge = c.shooting_style ? `<span class="badge badge-neutral">${c.shooting_style.name || c.shooting_style.id}</span>` : '';
+                let indBadge = c.industry ? `<span class="badge badge-neutral">${c.industry.name || c.industry.id}</span>` : '';
+                
+                return `<tr>
+                    <td>${idx + 1}</td>
+                    <td><a href="${c.report_url || '#'}" target="_blank">${c.title || c.id}</a></td>
+                    <td>${c.creator}</td>
+                    <td>${styleBadge} ${indBadge}</td>
+                    <td><div style="max-width:200px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="${c.logic_explanation}">${c.logic_explanation || ''}</div></td>
+                    <td>${status}</td>
+                    <td><button onclick="openModal('${c.id}', '${c.creator || ''}', '${c.shooting_style ? c.shooting_style.id : ''}', '${c.industry ? c.industry.id : ''}')">Sửa</button></td>
+                </tr>`;
+            }).join('');
+            document.getElementById('classifications-tbody').innerHTML = html;
+        }
+
+        function openModal(id, creator, currentStyle, currentInd) {
+            currentVideoId = id;
+            currentCreator = creator;
+            document.getElementById('modal-video-info').textContent = `${creator} - ${id}`;
+            document.getElementById('modal-style').value = currentStyle;
+            document.getElementById('modal-industry').value = currentInd;
+            document.getElementById('modal-reason').value = '';
+            document.getElementById('editModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('editModal').style.display = 'none';
+        }
+
+        function getCliCommand() {
+            const style = document.getElementById('modal-style').value;
+            const ind = document.getElementById('modal-industry').value;
+            const styleName = STYLES.find(s=>s.id === style)?.name || style;
+            const indName = INDUSTRIES.find(i=>i.id === ind)?.name || ind;
+            const reason = document.getElementById('modal-reason').value;
+            return `python3 feedback_learner.py "SUA: ${currentCreator} -> ${styleName}, ${indName}, Lý do: ${reason}"`;
+        }
+
+        function copyCli() {
+            navigator.clipboard.writeText(getCliCommand()).then(() => alert('Đã copy!')).catch(e => alert('Lỗi copy: ' + e));
+        }
+
+        async function sendApi() {
+            const data = {
+                video_id: currentVideoId,
+                new_style: document.getElementById('modal-style').value,
+                new_industry: document.getElementById('modal-industry').value,
+                reason: document.getElementById('modal-reason').value
+            };
+            try {
+                const res = await fetch('http://localhost:8765/api/train', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(data)
+                });
+                if (res.ok) {
+                    alert('Gửi thành công! Hãy tải lại trang để xem cập nhật.');
+                    closeModal();
+                } else {
+                    alert('Lỗi API. Bạn có thể dùng nút Copy Lệnh CLI.');
+                }
+            } catch (e) {
+                alert('Không thể kết nối API localhost:8765. Dùng Copy Lệnh CLI nhé!');
+            }
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
