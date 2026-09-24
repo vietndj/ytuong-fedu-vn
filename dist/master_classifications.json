@@ -18653,5 +18653,79 @@
     "youtube_id": "VFbhow8GDWQ",
     "youtube_url": "https://youtu.be/VFbhow8GDWQ",
     "youtube_embed": "https://www.youtube.com/embed/VFbhow8GDWQ"
+  },
+  "IG_@la6vish_DakwX2NBYs1_Fukuoka_🇯🇵": {
+    "id": "IG_@la6vish_DakwX2NBYs1_Fukuoka_🇯🇵",
+    "creator": "@la6vish",
+    "creator_name": "La6Vish",
+    "title": "@la6vish - Fukuoka 🇯🇵",
+    "shots_count": 3,
+    "duration": "6.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @la6vish",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "FhDv05kYsWg",
+    "youtube_url": "https://youtu.be/FhDv05kYsWg",
+    "youtube_embed": "https://www.youtube.com/embed/FhDv05kYsWg"
+  },
+  "DakwX2NBYs1": {
+    "id": "IG_@la6vish_DakwX2NBYs1_Fukuoka_🇯🇵",
+    "creator": "@la6vish",
+    "creator_name": "La6Vish",
+    "title": "@la6vish - Fukuoka 🇯🇵",
+    "shots_count": 3,
+    "duration": "6.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @la6vish",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "FhDv05kYsWg",
+    "youtube_url": "https://youtu.be/FhDv05kYsWg",
+    "youtube_embed": "https://www.youtube.com/embed/FhDv05kYsWg"
   }
 }
