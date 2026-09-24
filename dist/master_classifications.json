@@ -18969,26 +18969,30 @@
     "creator": "@etaemin",
     "creator_name": "Etaemin",
     "title": "@etaemin - Get ready for the shoot",
-    "shots_count": 1,
-    "duration": "2.0s",
+    "shots_count": 2,
+    "duration": "9.2s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "thoi-trang",
+      "name": "thoi-trang",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @etaemin",
+    "purpose": "Hướng dẫn kỹ thuật chuyển cảnh che ống kính bằng bàn tay (Level 1) cho tân thủ biến hình thời trang",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Low-key Lighting"
+      "Chuyển Cảnh Level 1",
+      "Tân Thủ Dễ Làm",
+      "Hand Lens Block",
+      "Biến Hình Thời Trang",
+      "In & Out Wipe",
+      "Rhythm Match"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+    "quick_takeaway": "⚡ Tân thủ Level 1: Mượn bàn tay che ống kính làm điểm giấu vết cắt (Hand Lens Block) để biến hình từ mặt mộc phòng tắm sang diện mạo Lookbook chỉ trong 1 nhịp nhạc.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -19005,26 +19009,30 @@
     "creator": "@etaemin",
     "creator_name": "Etaemin",
     "title": "@etaemin - Get ready for the shoot",
-    "shots_count": 1,
-    "duration": "2.0s",
+    "shots_count": 2,
+    "duration": "9.2s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "thoi-trang",
+      "name": "thoi-trang",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @etaemin",
+    "purpose": "Hướng dẫn kỹ thuật chuyển cảnh che ống kính bằng bàn tay (Level 1) cho tân thủ biến hình thời trang",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Low-key Lighting"
+      "Chuyển Cảnh Level 1",
+      "Tân Thủ Dễ Làm",
+      "Hand Lens Block",
+      "Biến Hình Thời Trang",
+      "In & Out Wipe",
+      "Rhythm Match"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+    "quick_takeaway": "⚡ Tân thủ Level 1: Mượn bàn tay che ống kính làm điểm giấu vết cắt (Hand Lens Block) để biến hình từ mặt mộc phòng tắm sang diện mạo Lookbook chỉ trong 1 nhịp nhạc.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -19042,26 +19050,28 @@
     "creator_name": "Dopeitsdamo",
     "title": "@dopeitsdamo - Art of Static Shots 🎥",
     "shots_count": 6,
-    "duration": "12.0s",
+    "duration": "10.9s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "Cinematic B-Roll",
+      "name": "Cinematic B-Roll",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Quay Dựng & Điện Ảnh",
+      "name": "Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @dopeitsdamo",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot"
+      "Bố Cục Cú Máy Tĩnh",
+      "Dirty Foreground",
+      "Diagonal Dynamics",
+      "Over-The-Shoulder",
+      "Radial Symmetry"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Bật mí nghệ thuật bố cục 6 cú máy tĩnh: Biến chuyển động cơ học và dòng người tự nhiên thành linh hồn cho khung hình khóa cứng.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -19079,26 +19089,28 @@
     "creator_name": "Dopeitsdamo",
     "title": "@dopeitsdamo - Art of Static Shots 🎥",
     "shots_count": 6,
-    "duration": "12.0s",
+    "duration": "10.9s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "Cinematic B-Roll",
+      "name": "Cinematic B-Roll",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Quay Dựng & Điện Ảnh",
+      "name": "Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @dopeitsdamo",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot"
+      "Bố Cục Cú Máy Tĩnh",
+      "Dirty Foreground",
+      "Diagonal Dynamics",
+      "Over-The-Shoulder",
+      "Radial Symmetry"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Bật mí nghệ thuật bố cục 6 cú máy tĩnh: Biến chuyển động cơ học và dòng người tự nhiên thành linh hồn cho khung hình khóa cứng.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -19185,5 +19197,153 @@
     "youtube_id": "J9pdkt-qOqM",
     "youtube_url": "https://youtu.be/J9pdkt-qOqM",
     "youtube_embed": "https://www.youtube.com/embed/J9pdkt-qOqM"
+  },
+  "IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공": {
+    "id": "IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공",
+    "creator": "@hena_film_vlog",
+    "creator_name": "Hena_Film_Vlog",
+    "title": "@hena_film_vlog - 혼자 만드는데 촬영은 누가 하냐고요🤷🏻‍♀️ 제품제공",
+    "shots_count": 23,
+    "duration": "46.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @hena_film_vlog",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "dtL6KuAYHqI",
+    "youtube_url": "https://youtu.be/dtL6KuAYHqI",
+    "youtube_embed": "https://www.youtube.com/embed/dtL6KuAYHqI"
+  },
+  "DdlmZczPsCE": {
+    "id": "IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공",
+    "creator": "@hena_film_vlog",
+    "creator_name": "Hena_Film_Vlog",
+    "title": "@hena_film_vlog - 혼자 만드는데 촬영은 누가 하냐고요🤷🏻‍♀️ 제품제공",
+    "shots_count": 23,
+    "duration": "46.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @hena_film_vlog",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "dtL6KuAYHqI",
+    "youtube_url": "https://youtu.be/dtL6KuAYHqI",
+    "youtube_embed": "https://www.youtube.com/embed/dtL6KuAYHqI"
+  },
+  "IG_@laylaa_398_Ddj6wlTxAAJ_♥️": {
+    "id": "IG_@laylaa_398_Ddj6wlTxAAJ_♥️",
+    "creator": "@laylaa_398",
+    "creator_name": "Laylaa_398",
+    "title": "@laylaa_398 - ♥️",
+    "shots_count": 21,
+    "duration": "42.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @laylaa_398",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "QDvKHNd9rfk",
+    "youtube_url": "https://youtu.be/QDvKHNd9rfk",
+    "youtube_embed": "https://www.youtube.com/embed/QDvKHNd9rfk"
+  },
+  "Ddj6wlTxAAJ": {
+    "id": "IG_@laylaa_398_Ddj6wlTxAAJ_♥️",
+    "creator": "@laylaa_398",
+    "creator_name": "Laylaa_398",
+    "title": "@laylaa_398 - ♥️",
+    "shots_count": 21,
+    "duration": "42.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @laylaa_398",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "QDvKHNd9rfk",
+    "youtube_url": "https://youtu.be/QDvKHNd9rfk",
+    "youtube_embed": "https://www.youtube.com/embed/QDvKHNd9rfk"
   }
 }
