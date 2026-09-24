@@ -19583,5 +19583,81 @@
     "youtube_id": "JlUn02PFeWU",
     "youtube_url": "https://youtu.be/JlUn02PFeWU",
     "youtube_embed": "https://www.youtube.com/embed/JlUn02PFeWU"
+  },
+  "IG_@acupper_DdoYrPsy9g-_hello_is_konnichiwa": {
+    "id": "IG_@acupper_DdoYrPsy9g-_hello_is_konnichiwa",
+    "creator": "@acupper",
+    "creator_name": "Acupper",
+    "title": "@acupper - hello is konnichiwa",
+    "shots_count": 18,
+    "duration": "36.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @acupper",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Wide Establishing Shot",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Khi quay góc rộng khung dọc, luôn bố trí một trục chuyển động hoặc đường dẫn (Leading Lines) về trung tâm.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "TA2gE4FMf9s",
+    "youtube_url": "https://youtu.be/TA2gE4FMf9s",
+    "youtube_embed": "https://www.youtube.com/embed/TA2gE4FMf9s"
+  },
+  "DdoYrPsy9g-": {
+    "id": "IG_@acupper_DdoYrPsy9g-_hello_is_konnichiwa",
+    "creator": "@acupper",
+    "creator_name": "Acupper",
+    "title": "@acupper - hello is konnichiwa",
+    "shots_count": 18,
+    "duration": "36.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @acupper",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Wide Establishing Shot",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Khi quay góc rộng khung dọc, luôn bố trí một trục chuyển động hoặc đường dẫn (Leading Lines) về trung tâm.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "TA2gE4FMf9s",
+    "youtube_url": "https://youtu.be/TA2gE4FMf9s",
+    "youtube_embed": "https://www.youtube.com/embed/TA2gE4FMf9s"
   }
 }
