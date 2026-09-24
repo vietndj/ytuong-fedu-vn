@@ -70,3 +70,15 @@ with open(output_file, 'w', encoding='utf-8') as f:
     f.write('var TRAINING_DATA = ' + json.dumps(training_data, indent=2, ensure_ascii=False) + ';')
 
 print(f"Generated {output_file} with {len(all_classifications)} classifications and {len(corrections)} corrections.")
+
+import shutil
+dist_dir = os.path.join(base_dir, "dist")
+if os.path.exists(dist_dir):
+    # Copy training_data.js
+    shutil.copy2(output_file, os.path.join(dist_dir, "training_data.js"))
+    # Copy training/ folder
+    training_src = os.path.join(base_dir, "training")
+    training_dist = os.path.join(dist_dir, "training")
+    if os.path.exists(training_src):
+        shutil.copytree(training_src, training_dist, dirs_exist_ok=True)
+    print("Copied training data and training/ directory to dist/")
