@@ -19684,27 +19684,29 @@
     "creator_name": "Jxnjuvv",
     "title": "@jxnjuvv - A city full of joy everywhere I go ♥️",
     "shots_count": 17,
-    "duration": "34.0s",
+    "duration": "15.3s",
     "shooting_style": {
-      "id": "chuyen-canh",
+      "id": "Chuyển Cảnh (Transition)",
       "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Du Lịch & Khám Phá",
+      "name": "Du Lịch & Khám Phá",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jxnjuvv",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting",
-      "Medium Tracking Shot"
+      "Chuyển Cảnh Level 1",
+      "Tân Thủ",
+      "Follow-Cam Match Cut",
+      "Bước Đi Sau Lưng",
+      "Du Lịch Thượng Hải",
+      "Lifestyle"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Công thức chuyển cảnh 'Level 1 - Tân thủ' đỉnh cao cho video du lịch & thời trang: chỉ cần bám máy quay sau lưng (Follow-cam Back Walking) giữ chủ thể ở giữa khung hình, cắt gọt liên hoàn theo nhịp bước chân qua 15+ bối cảnh và trang phục khác nhau, kết lại bằng cú quay mặt cười rực rỡ.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -19722,27 +19724,29 @@
     "creator_name": "Jxnjuvv",
     "title": "@jxnjuvv - A city full of joy everywhere I go ♥️",
     "shots_count": 17,
-    "duration": "34.0s",
+    "duration": "15.3s",
     "shooting_style": {
-      "id": "chuyen-canh",
+      "id": "Chuyển Cảnh (Transition)",
       "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Du Lịch & Khám Phá",
+      "name": "Du Lịch & Khám Phá",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jxnjuvv",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting",
-      "Medium Tracking Shot"
+      "Chuyển Cảnh Level 1",
+      "Tân Thủ",
+      "Follow-Cam Match Cut",
+      "Bước Đi Sau Lưng",
+      "Du Lịch Thượng Hải",
+      "Lifestyle"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Công thức chuyển cảnh 'Level 1 - Tân thủ' đỉnh cao cho video du lịch & thời trang: chỉ cần bám máy quay sau lưng (Follow-cam Back Walking) giữ chủ thể ở giữa khung hình, cắt gọt liên hoàn theo nhịp bước chân qua 15+ bối cảnh và trang phục khác nhau, kết lại bằng cú quay mặt cười rực rỡ.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
