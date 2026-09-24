@@ -19142,27 +19142,28 @@
     "creator_name": "Jigummmmm",
     "title": "@jigummmmm - 설거지하는 모습도 예쁘게 찍을 수 있냐고요",
     "shots_count": 10,
-    "duration": "20.0s",
+    "duration": "20.1s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "Đời Thường & Chữa Lành",
+      "name": "Đời Thường & Chữa Lành",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Đời Sống & Gia Đình",
+      "name": "Đời Sống & Gia Đình",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jigummmmm",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot",
-      "Low-key Lighting"
+      "Vlog Đời Thường",
+      "Micro-Actions",
+      "B-Roll Đời Thường",
+      "ASMR Kitchen",
+      "Tích Lũy 7 Tiếng"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Biến hành động rửa bát đơn điệu thành thước phim điện ảnh chuẩn Hàn Quốc nhờ kỹ thuật băm nhỏ thao tác (Micro-Actions 1 ➔ 5 shots) và đa góc máy điểm nhìn (Multi-POV).",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -19180,27 +19181,28 @@
     "creator_name": "Jigummmmm",
     "title": "@jigummmmm - 설거지하는 모습도 예쁘게 찍을 수 있냐고요",
     "shots_count": 10,
-    "duration": "20.0s",
+    "duration": "20.1s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "Đời Thường & Chữa Lành",
+      "name": "Đời Thường & Chữa Lành",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Đời Sống & Gia Đình",
+      "name": "Đời Sống & Gia Đình",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jigummmmm",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot",
-      "Low-key Lighting"
+      "Vlog Đời Thường",
+      "Micro-Actions",
+      "B-Roll Đời Thường",
+      "ASMR Kitchen",
+      "Tích Lũy 7 Tiếng"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Biến hành động rửa bát đơn điệu thành thước phim điện ảnh chuẩn Hàn Quốc nhờ kỹ thuật băm nhỏ thao tác (Micro-Actions 1 ➔ 5 shots) và đa góc máy điểm nhìn (Multi-POV).",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -19435,5 +19437,227 @@
     "youtube_id": "bVSKHhDYsbc",
     "youtube_url": "https://youtu.be/bVSKHhDYsbc",
     "youtube_embed": "https://www.youtube.com/embed/bVSKHhDYsbc"
+  },
+  "IG_@yongandmike_DdolqWHEsws_Carousel_Analysis": {
+    "id": "IG_@yongandmike_DdolqWHEsws_Carousel_Analysis",
+    "creator": "@yongandmike",
+    "creator_name": "Yongandmike",
+    "title": "@yongandmike - Here are 8 things we did in Chiang Rai",
+    "shots_count": 10,
+    "duration": "20.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @yongandmike",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "DdolqWHEsws": {
+    "id": "IG_@yongandmike_DdolqWHEsws_Carousel_Analysis",
+    "creator": "@yongandmike",
+    "creator_name": "Yongandmike",
+    "title": "@yongandmike - Here are 8 things we did in Chiang Rai",
+    "shots_count": 10,
+    "duration": "20.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @yongandmike",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "IG_@mylenesmind_DdoWrpERdvD_can_you_guess_the_theme_👀": {
+    "id": "IG_@mylenesmind_DdoWrpERdvD_can_you_guess_the_theme_👀",
+    "creator": "@mylenesmind",
+    "creator_name": "Mylenesmind",
+    "title": "@mylenesmind - can you guess the theme 👀",
+    "shots_count": 18,
+    "duration": "36.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mylenesmind",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "JlUn02PFeWU",
+    "youtube_url": "https://youtu.be/JlUn02PFeWU",
+    "youtube_embed": "https://www.youtube.com/embed/JlUn02PFeWU"
+  },
+  "DdoWrpERdvD": {
+    "id": "IG_@mylenesmind_DdoWrpERdvD_can_you_guess_the_theme_👀",
+    "creator": "@mylenesmind",
+    "creator_name": "Mylenesmind",
+    "title": "@mylenesmind - can you guess the theme 👀",
+    "shots_count": 18,
+    "duration": "36.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mylenesmind",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "JlUn02PFeWU",
+    "youtube_url": "https://youtu.be/JlUn02PFeWU",
+    "youtube_embed": "https://www.youtube.com/embed/JlUn02PFeWU"
+  },
+  "IG_@acupper_DdoYrPsy9g-_hello_is_konnichiwa": {
+    "id": "IG_@acupper_DdoYrPsy9g-_hello_is_konnichiwa",
+    "creator": "@acupper",
+    "creator_name": "Acupper",
+    "title": "@acupper - hello is konnichiwa",
+    "shots_count": 18,
+    "duration": "36.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @acupper",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Wide Establishing Shot",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Khi quay góc rộng khung dọc, luôn bố trí một trục chuyển động hoặc đường dẫn (Leading Lines) về trung tâm.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "TA2gE4FMf9s",
+    "youtube_url": "https://youtu.be/TA2gE4FMf9s",
+    "youtube_embed": "https://www.youtube.com/embed/TA2gE4FMf9s"
+  },
+  "DdoYrPsy9g-": {
+    "id": "IG_@acupper_DdoYrPsy9g-_hello_is_konnichiwa",
+    "creator": "@acupper",
+    "creator_name": "Acupper",
+    "title": "@acupper - hello is konnichiwa",
+    "shots_count": 18,
+    "duration": "36.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @acupper",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Wide Establishing Shot",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Khi quay góc rộng khung dọc, luôn bố trí một trục chuyển động hoặc đường dẫn (Leading Lines) về trung tâm.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "TA2gE4FMf9s",
+    "youtube_url": "https://youtu.be/TA2gE4FMf9s",
+    "youtube_embed": "https://www.youtube.com/embed/TA2gE4FMf9s"
   }
 }
