@@ -18740,27 +18740,28 @@
     "creator_name": "Yifan Liii",
     "title": "@yifan.liii - summer in florence 🤍",
     "shots_count": 7,
-    "duration": "14.0s",
+    "duration": "11.7s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
+      "id": "doi-thuong",
+      "name": "doi-thuong",
       "icon": "🎬"
     },
     "industry": {
-      "id": "cong-nghe",
-      "name": "Công Nghệ & Thiết Bị",
-      "icon": "📱"
+      "id": "du-lich",
+      "name": "du-lich",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @yifan.liii",
+    "purpose": "Hướng dẫn kỹ thuật Match Cut bước đi cấp độ tân thủ kết hợp đổi outfit và bẻ trục chuyển động kết bài cho video du lịch / OOTD.",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Medium Tracking Shot",
-      "Low-key Lighting",
-      "Wide Establishing Shot"
+      "Match Cut Bước Đi",
+      "Chuyển Cảnh Tân Thủ Level 1",
+      "Beat Sync Cut",
+      "OOTD Du Lịch",
+      "Bẻ Trục Kết Bài"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Công Nghệ & Thiết Bị.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "quick_takeaway": "Kỹ thuật chuyển cảnh Level 1 căn bản nhất cho tân thủ: Khóa chuyển động đi ngang (Profile Walk) làm mỏ neo, cắt đúng phách nhạc (~0.9s/shot) để đổi liên hoàn 4 trang phục và 5 bối cảnh, kết thúc bằng cú bẻ hướng đi thẳng vào ống kính.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -18778,27 +18779,28 @@
     "creator_name": "Yifan Liii",
     "title": "@yifan.liii - summer in florence 🤍",
     "shots_count": 7,
-    "duration": "14.0s",
+    "duration": "11.7s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
+      "id": "doi-thuong",
+      "name": "doi-thuong",
       "icon": "🎬"
     },
     "industry": {
-      "id": "cong-nghe",
-      "name": "Công Nghệ & Thiết Bị",
-      "icon": "📱"
+      "id": "du-lich",
+      "name": "du-lich",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @yifan.liii",
+    "purpose": "Hướng dẫn kỹ thuật Match Cut bước đi cấp độ tân thủ kết hợp đổi outfit và bẻ trục chuyển động kết bài cho video du lịch / OOTD.",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Medium Tracking Shot",
-      "Low-key Lighting",
-      "Wide Establishing Shot"
+      "Match Cut Bước Đi",
+      "Chuyển Cảnh Tân Thủ Level 1",
+      "Beat Sync Cut",
+      "OOTD Du Lịch",
+      "Bẻ Trục Kết Bài"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Công Nghệ & Thiết Bị.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "quick_takeaway": "Kỹ thuật chuyển cảnh Level 1 căn bản nhất cho tân thủ: Khóa chuyển động đi ngang (Profile Walk) làm mỏ neo, cắt đúng phách nhạc (~0.9s/shot) để đổi liên hoàn 4 trang phục và 5 bối cảnh, kết thúc bằng cú bẻ hướng đi thẳng vào ống kính.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -19027,5 +19029,79 @@
     "youtube_id": "Vf2GS8tIPlM",
     "youtube_url": "https://youtu.be/Vf2GS8tIPlM",
     "youtube_embed": "https://www.youtube.com/embed/Vf2GS8tIPlM"
+  },
+  "IG_@dopeitsdamo_DdpZ0RvhwXu_Art_of_Static_Shots_🎥": {
+    "id": "IG_@dopeitsdamo_DdpZ0RvhwXu_Art_of_Static_Shots_🎥",
+    "creator": "@dopeitsdamo",
+    "creator_name": "Dopeitsdamo",
+    "title": "@dopeitsdamo - Art of Static Shots 🎥",
+    "shots_count": 6,
+    "duration": "12.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @dopeitsdamo",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "3cTg5Bx6_Zo",
+    "youtube_url": "https://youtu.be/3cTg5Bx6_Zo",
+    "youtube_embed": "https://www.youtube.com/embed/3cTg5Bx6_Zo"
+  },
+  "DdpZ0RvhwXu": {
+    "id": "IG_@dopeitsdamo_DdpZ0RvhwXu_Art_of_Static_Shots_🎥",
+    "creator": "@dopeitsdamo",
+    "creator_name": "Dopeitsdamo",
+    "title": "@dopeitsdamo - Art of Static Shots 🎥",
+    "shots_count": 6,
+    "duration": "12.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @dopeitsdamo",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "3cTg5Bx6_Zo",
+    "youtube_url": "https://youtu.be/3cTg5Bx6_Zo",
+    "youtube_embed": "https://www.youtube.com/embed/3cTg5Bx6_Zo"
   }
 }
