@@ -20297,28 +20297,32 @@
     "id": "IG_@rubtsov.a_DdkHw7gIXLj_В_библиотеку",
     "creator": "@rubtsov.a",
     "creator_name": "Rubtsov A",
-    "title": "@rubtsov.a - В библиотеку",
+    "title": "Biến Hình Dark Academia Đi Thư Viện: Kỹ Thuật Match Cut Quán Tính Tay & Outro Phá Cách",
     "shots_count": 10,
-    "duration": "20.0s",
+    "duration": "10.4s",
     "shooting_style": {
-      "id": "chuyen-canh",
+      "id": "Chuyển Cảnh (Transition)",
       "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "icon": "🎬"
     },
     "industry": {
-      "id": "cong-nghe",
-      "name": "Công Nghệ & Thiết Bị",
-      "icon": "📱"
+      "id": "Thời Trang & Phong Cách Sống",
+      "name": "Thời Trang & Phong Cách Sống",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @rubtsov.a",
+    "purpose": "Chuyen canh 1",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Medium Tracking Shot",
-      "Wide Establishing Shot"
+      "Chuyen canh 1",
+      "Biến Hình",
+      "Match Cut",
+      "Dark Academia",
+      "Geek Chic",
+      "OOTD",
+      "Visual Hook"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Công Nghệ & Thiết Bị.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "quick_takeaway": "⚡ Hook Mở Màn Tương Phản: Quấn khăn tắm mặt mộc tạo tiền đề bùng nổ biến hình ➔ Outro Phá Cách Hóm Hỉnh: Nháy mắt bĩu môi quirky face kích hoạt tỷ lệ xem lại",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -20331,29 +20335,32 @@
     "id": "IG_@Ekaterina_модель_Уфа_,_Питер_DdkHw7gIXLj_Video_by_rubtsov.a",
     "creator": "@Ekaterina_модель_Уфа_,_Питер",
     "creator_name": "Ekaterina_Модель_Уфа_,_Питер",
-    "title": "@Ekaterina_модель_Уфа_,_Питер - Video by rubtsov.a",
+    "title": "Biến Hình Dark Academia Đi Thư Viện: Kỹ Thuật Match Cut Quán Tính Tay & Outro Phá Cách",
     "shots_count": 10,
-    "duration": "20.0s",
+    "duration": "10.4s",
     "shooting_style": {
-      "id": "chuyen-canh",
+      "id": "Chuyển Cảnh (Transition)",
       "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "icon": "🎬"
     },
     "industry": {
-      "id": "ky-thuat-quay",
-      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "id": "Thời Trang & Phong Cách Sống",
+      "name": "Thời Trang & Phong Cách Sống",
       "icon": "🎯"
     },
     "purpose": "Chuyen canh 1",
     "tech_tags": [
-      "Chuyen Canh 1",
-      "Establishing Hook Shot",
-      "Medium Tracking Shot",
-      "Wide Establishing Shot"
+      "Chuyen canh 1",
+      "Biến Hình",
+      "Match Cut",
+      "Dark Academia",
+      "Geek Chic",
+      "OOTD",
+      "Visual Hook"
     ],
     "logic_explanation": "Ghi chú người dùng: Chuyen canh 1. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
     "is_excluded": false,
-    "quick_takeaway": "Chuyen canh 1",
+    "quick_takeaway": "⚡ Hook Mở Màn Tương Phản: Quấn khăn tắm mặt mộc tạo tiền đề bùng nổ biến hình ➔ Outro Phá Cách Hóm Hỉnh: Nháy mắt bĩu môi quirky face kích hoạt tỷ lệ xem lại",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
