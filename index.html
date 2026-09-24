@@ -320,6 +320,52 @@
                     </div>
                 </div>
 
+                
+                <div class="mt-6 p-4 bg-emerald-950/30 border border-emerald-900/50 rounded-xl space-y-3">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-lg">🧠</span>
+                        <h4 class="font-bold text-emerald-400 text-sm">Huấn Luyện AI Phân Loại</h4>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block font-semibold text-emerald-200/70 mb-1">Shooting Style đúng là:</label>
+                            <select id="editIdeaAiStyle" class="w-full bg-slate-950 border border-emerald-900/50 rounded-xl px-3 py-2 text-emerald-100 focus:outline-none focus:border-emerald-500">
+                                <option value="">Giữ nguyên (Không đổi)</option>
+                                <option value="walk-and-talk">🚶 Walk & Talk</option>
+                                <option value="voice-over">🎙️ Lồng Tiếng</option>
+                                <option value="talking-head">🗣️ Nói Trực Diện</option>
+                                <option value="storytelling">📖 Kể Chuyện</option>
+                                <option value="dien-anh">🎬 Chỉn Chu</option>
+                                <option value="chuyen-canh">⚡ Chuyển Cảnh</option>
+                                <option value="theo-nhip-nhac">🎵 Theo nhịp nhạc</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-emerald-200/70 mb-1">Industry đúng là:</label>
+                            <select id="editIdeaAiIndustry" class="w-full bg-slate-950 border border-emerald-900/50 rounded-xl px-3 py-2 text-emerald-100 focus:outline-none focus:border-emerald-500">
+                                <option value="">Giữ nguyên (Không đổi)</option>
+                                <option value="spa-lam-dep">💆 Làm đẹp</option>
+                                <option value="thuong-hieu">💼 Xây kênh</option>
+                                <option value="thoi-trang">👔 Thời trang</option>
+                                <option value="am-thuc">🍜 F&B</option>
+                                <option value="du-lich">✈️ Du lịch</option>
+                                <option value="cong-nghe">📱 Đồ công nghệ</option>
+                                <option value="kien-truc">🏛️ Góc nhà đẹp</option>
+                                <option value="the-thao">🏃 Thể thao</option>
+                                <option value="ky-thuat-quay">🎯 Bố cục</option>
+                                <option value="ugc">📦 UGC & Ads</option>
+                                <option value="phat-trien-ban-than">🧘 Tâm Lý</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block font-semibold text-emerald-200/70 mb-1">Lý do (Bắt buộc nếu có đổi Style/Industry):</label>
+                        <textarea id="editIdeaAiReason" rows="2" placeholder="VD: Video này không có người nói trực diện, chỉ là quay cảnh sinh hoạt..." class="w-full bg-slate-950 border border-emerald-900/50 rounded-xl px-3 py-2 text-emerald-100 focus:outline-none focus:border-emerald-500"></textarea>
+                    </div>
+                </div>
+
                 <div class="pt-4 border-t border-slate-700 flex justify-end gap-3 shrink-0">
                     <button type="button" onclick="closeModal('editIdeaModal')" class="px-5 py-2.5 bg-slate-800 rounded-xl hover:bg-slate-700 font-bold">Hủy</button>
                     <button type="submit" class="px-5 py-2.5 bg-emerald-600 text-white rounded-xl hover:bg-emerald-500 font-bold shadow-lg shadow-emerald-900/50">Lưu thay đổi</button>
@@ -345,7 +391,7 @@
         </div>
     </div>
 
-    <script src="ideas_data.js?v=1790216494"></script>
+    <script src="ideas_data.js?v=1790220588"></script>
     <script>
 // State Management
         let appState = {
@@ -2219,7 +2265,13 @@
             const isExcluded = item.is_excluded || appState.localExcludedIds.has(item.id);
             const exclCb = document.getElementById('editIdeaExcluded'); if (exclCb) exclCb.checked = isExcluded;
 
+            
+            setVal('editIdeaAiStyle', '');
+            setVal('editIdeaAiIndustry', '');
+            setVal('editIdeaAiReason', '');
+            
             document.getElementById('editIdeaModal')?.classList.add('open');
+
         }
 
         function saveEditedIdea(e) {
@@ -2290,6 +2342,39 @@
             showToast(`✅ Đã lưu thay đổi cho video: ${newTitle.slice(0, 30)}...`);
             renderCountryTabs();
             applyFilters();
+            
+            // AI Training Hook
+            const aiStyle = getVal('editIdeaAiStyle');
+            const aiInd = getVal('editIdeaAiIndustry');
+            const aiReason = getVal('editIdeaAiReason');
+            
+            if (aiReason || aiStyle || aiInd) {
+                if (!aiReason) {
+                    showToast('⚠️ Vui lòng nhập lý do để AI học!', 'error');
+                    return;
+                }
+                const trainPayload = {
+                    video_id: id,
+                    new_style: aiStyle || '',
+                    new_industry: aiInd || '',
+                    reason: aiReason
+                };
+                
+                showToast('🧠 Đang gửi thông tin huấn luyện AI...', 'info');
+                fetch('http://localhost:8765/api/train', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(trainPayload)
+                }).then(res => {
+                    if (res.ok) {
+                        showToast('✅ Đã huấn luyện AI thành công! Hãy chạy build để cập nhật.');
+                    } else {
+                        showToast('❌ Gửi API thất bại. Có chạy API local ở cổng 8765 chưa?');
+                    }
+                }).catch(e => {
+                    showToast('❌ Lỗi kết nối API Training: ' + e.message);
+                });
+            }
         }
 
         // Xóa Video (Delete Idea Modal)
