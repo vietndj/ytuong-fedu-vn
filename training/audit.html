@@ -115,23 +115,20 @@
         }
 
         function getSourceLink(id, creator) {
-            if (!creator || !id) return null;
+            if (!id) return null;
             if (id.startsWith('IG_')) {
-                const prefix = "IG_" + creator + "_";
-                if (id.startsWith(prefix)) {
-                    const remainder = id.substring(prefix.length);
-                    const match = remainder.match(/^([A-Za-z0-9_-]{11})(?:_|$)/);
-                    if (match) return `https://www.instagram.com/reels/${match[1]}/`;
-                    return `https://www.instagram.com/reels/${remainder.split('_')[0]}/`;
-                }
+                // Try to find an 11-character alphanumeric post ID surrounded by underscores
+                const match = id.match(/_([A-Za-z0-9_-]{11})(?:_|$)/);
+                if (match) return `https://www.instagram.com/reels/${match[1]}/`;
+                // Fallback for short IG IDs
+                const parts = id.split('_');
+                if (parts.length > 2) return `https://www.instagram.com/reels/${parts[2]}/`;
             } else if (id.startsWith('TT_')) {
-                const prefix = "TT_" + creator + "_";
-                if (id.startsWith(prefix)) {
-                    const remainder = id.substring(prefix.length);
-                    const match = remainder.match(/^([0-9]{19})(?:_|$)/);
-                    if (match) return `https://www.tiktok.com/${creator.replace('@','')}/video/${match[1]}`;
-                    return `https://www.tiktok.com/${creator.replace('@','')}/video/${remainder.split('_')[0]}`;
-                }
+                const match = id.match(/_([0-9]{19})(?:_|$)/);
+                const safeCreator = (creator || '').replace('@','');
+                if (match) return `https://www.tiktok.com/@${safeCreator}/video/${match[1]}`;
+                const parts = id.split('_');
+                if (parts.length > 2) return `https://www.tiktok.com/@${safeCreator}/video/${parts[2]}`;
             } else if (!id.includes('_')) {
                 return `https://www.instagram.com/reels/${id}/`; // Fallback for raw IDs
             }
