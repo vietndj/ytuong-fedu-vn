@@ -266,8 +266,7 @@
 
                 if (res.ok) {
                     if (card) card.remove();
-                    // Refetch stats if needed
-                    fetchStats();
+                    // Successfully deleted
                 } else {
                     const data = await res.json();
                     alert('Lỗi khi xóa: ' + (data.message || 'Unknown error'));
@@ -277,7 +276,8 @@
                     }
                 }
             } catch(e) {
-                alert('Lỗi kết nối tới Server API (8765)!');
+                console.error(e);
+                alert('Lỗi khi thao tác: ' + e.message);
                 if (card) {
                     const btns = card.querySelectorAll('button');
                     btns.forEach(b => b.disabled = false);
