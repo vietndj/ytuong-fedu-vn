@@ -765,48 +765,6 @@
       "transition_level": null
     }
   },
-  "IG_@the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light": {
-    "id": "IG_@the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light",
-    "index": 22,
-    "creator": "@the.vantage.point",
-    "creator_name": "The.Vantage.Point",
-    "title": "The Beauty of Static - NYC Morning Light - @the.vantage.point",
-    "shots_count": 9,
-    "duration": "0.15s",
-    "shooting_style": {
-      "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
-      "icon": "🎬"
-    },
-    "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
-    },
-    "purpose": "Tôn vinh vẻ đẹp đường nét kiến trúc & Không gian sống",
-    "tech_tags": [
-      "Static Cinematography, Early Morning Sunlight, Chiaroscuro Contrast, One-Point Perspective, Architectural Symmetry"
-    ],
-    "logic_explanation": "Khai thác đường nét hình học, bố cục không gian và cấu trúc công trình kiến trúc.",
-    "is_excluded": false,
-    "quick_takeaway": "Tuyệt tác thị giác tôn vinh 'Vẻ đẹp của sự Tĩnh Lặng' (The Beauty of Static) giữa nhịp sống hối hả của New York City buổi sớm. Tác giả đã bậc thầy sử dụng các góc máy khóa tĩnh (locked-off shots), kết hợp nguồn ánh sáng tự nhiên xiên góc...",
-    "country": {
-      "id": "us_eu",
-      "name": "Âu Mỹ",
-      "en_name": "US & Europe",
-      "flag": "🇺🇸/🇪🇺",
-      "badge_color": "purple"
-    },
-    "transition_level": null,
-    "is_ad_bot": false,
-    "fedu_optimization": {
-      "key_optimization_point": "Tối ưu cho Kiến Trúc, Nội Thất, Bất Động Sản & Không Gian Sống Slow Living: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Static Cinematography, Early Morning Sunlight, Chiaroscuro Contrast, One-Point Perspective, Architectural Symmetry",
-      "practice_focus": "Bài tập khung hình tĩnh (Static Shot): Để máy yên trên chân máy, đón ánh nắng lọt qua rèm cửa và người lướt qua để tôn vinh đường nét không gian.",
-      "ig_seeding_hook": "Follow @the.vantage.point để huấn luyện thuật toán Instagram đề xuất các không gian kiến trúc tối giản wabi-sabi và nhịp sống thanh bình.",
-      "course_industry_mapping": "Kiến Trúc, Nội Thất, Bất Động Sản & Không Gian Sống Slow Living",
-      "transition_level": null
-    }
-  },
   "IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear": {
     "id": "IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear",
     "index": 25,
@@ -22361,5 +22319,121 @@
     "youtube_id": "3K2d7oEhiTY",
     "youtube_url": "https://youtu.be/3K2d7oEhiTY",
     "youtube_embed": "https://www.youtube.com/embed/3K2d7oEhiTY"
+  },
+  "IG_@framebygeorge_DdhHCL6OOfK_Day_23_learning_cinematography": {
+    "id": "IG_@framebygeorge_DdhHCL6OOfK_Day_23_learning_cinematography",
+    "creator": "@framebygeorge",
+    "creator_name": "Framebygeorge",
+    "title": "@framebygeorge - Day 23 learning cinematography",
+    "shots_count": 9,
+    "duration": "18.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "b0mTl_HsdYk",
+    "youtube_url": "https://youtu.be/b0mTl_HsdYk",
+    "youtube_embed": "https://www.youtube.com/embed/b0mTl_HsdYk"
+  },
+  "DdhHCL6OOfK": {
+    "id": "IG_@framebygeorge_DdhHCL6OOfK_Day_23_learning_cinematography",
+    "creator": "@framebygeorge",
+    "creator_name": "Framebygeorge",
+    "title": "@framebygeorge - Day 23 learning cinematography",
+    "shots_count": 9,
+    "duration": "18.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "b0mTl_HsdYk",
+    "youtube_url": "https://youtu.be/b0mTl_HsdYk",
+    "youtube_embed": "https://www.youtube.com/embed/b0mTl_HsdYk"
+  },
+  "IG_@the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light": {
+    "id": "IG_@the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light",
+    "index": 22,
+    "creator": "@the.vantage.point",
+    "creator_name": "The.Vantage.Point",
+    "title": "The Beauty of Static - NYC Morning Light",
+    "shots_count": 9,
+    "duration": "0.15s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Tôn vinh vẻ đẹp đường nét kiến trúc & Không gian sống",
+    "tech_tags": [
+      "Static Cinematography, Early Morning Sunlight, Chiaroscuro Contrast, One-Point Perspective, Architectural Symmetry"
+    ],
+    "logic_explanation": "Khai thác đường nét hình học, bố cục không gian và cấu trúc công trình kiến trúc.",
+    "is_excluded": false,
+    "quick_takeaway": "Tuyệt tác thị giác tôn vinh 'Vẻ đẹp của sự Tĩnh Lặng' (The Beauty of Static) giữa nhịp sống hối hả của New York City buổi sớm. Tác giả đã bậc thầy sử dụng các góc máy khóa tĩnh (locked-off shots), kết hợp nguồn ánh sáng tự nhiên xiên góc...",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "transition_level": null,
+    "is_ad_bot": false,
+    "fedu_optimization": {
+      "key_optimization_point": "Tối ưu cho Kiến Trúc, Nội Thất, Bất Động Sản & Không Gian Sống Slow Living: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Static Cinematography, Early Morning Sunlight, Chiaroscuro Contrast, One-Point Perspective, Architectural Symmetry",
+      "practice_focus": "Bài tập khung hình tĩnh (Static Shot): Để máy yên trên chân máy, đón ánh nắng lọt qua rèm cửa và người lướt qua để tôn vinh đường nét không gian.",
+      "ig_seeding_hook": "Follow @the.vantage.point để huấn luyện thuật toán Instagram đề xuất các không gian kiến trúc tối giản wabi-sabi và nhịp sống thanh bình.",
+      "course_industry_mapping": "Kiến Trúc, Nội Thất, Bất Động Sản & Không Gian Sống Slow Living",
+      "transition_level": null
+    }
   }
 }
