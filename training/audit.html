@@ -157,7 +157,7 @@
                     const badgeClass = item.tier === 'RED' ? 'badge-danger' : 'badge-warning';
                     const { styleOpts, indOpts } = generateSelects(item.current_style, item.current_industry);
                     const sourceLink = getSourceLink(item.id, item.creator);
-                    const sourceBtn = sourceLink ? `<a href="${sourceLink}" target="_blank" class="badge badge-warning" style="background:#0f172a; color:#fff; text-decoration:none; margin-left: 10px;">▶ Xem Bản Gốc</a>` : '';
+                    const sourceBtn = sourceLink ? `<a href="${sourceLink}" target="_blank" class="badge badge-warning" style="background:#0f172a; color:#fff; text-decoration:none; margin-left: 10px;">▶ Xem Bản Gốc</a> <span style="font-size: 10px; color: #666; margin-left: 5px;">(${sourceLink})</span>` : '';
                     
                     html += `
                     <div class="audit-card" id="card-${item.id}">
