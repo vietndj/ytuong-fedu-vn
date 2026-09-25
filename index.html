@@ -86,6 +86,43 @@
         /* Hide scrollbar for horizontal scrolling tabs */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    
+/* Group Manager CSS */
+#groupManagerPanel {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.group-manager-hidden {
+    transform: translateY(100%) translateY(48px);
+}
+.group-dropzone {
+    transition: all 0.2s ease;
+}
+.group-dropzone.drag-over {
+    background-color: rgba(16, 185, 129, 0.2);
+    border-color: rgba(16, 185, 129, 0.5);
+    transform: scale(1.02);
+}
+.idea-card-draggable {
+    cursor: grab;
+}
+.idea-card-draggable:active {
+    cursor: grabbing;
+}
+.idea-card-dragging {
+    opacity: 0.5;
+    transform: scale(0.95);
+}
+.selection-mode .glass-card {
+    cursor: pointer;
+}
+.selection-mode .glass-card:hover {
+    border-color: rgba(56, 189, 248, 0.5);
+}
+.card-selected {
+    border-color: rgba(56, 189, 248, 0.8) !important;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.5) !important;
+}
+
     </style>
     <script>
         window.hideReportSpinner = function() {
@@ -177,6 +214,55 @@
                 <div class="w-6 h-6 border-2 border-sky-500 border-t-transparent rounded-full animate-spin"></div>
             </div>
         </div>
+    
+    <!-- Group Manager Panel -->
+    <div id="groupManagerPanel" class="fixed bottom-0 right-4 w-80 bg-slate-900 border border-slate-700 rounded-t-xl shadow-2xl z-40 flex flex-col group-manager-hidden" style="max-height: 70vh;">
+        <!-- Header -->
+        <div class="p-3 border-b border-slate-700 flex justify-between items-center bg-slate-800 rounded-t-xl cursor-pointer" onclick="toggleGroupPanel()">
+            <div class="font-bold text-slate-200 flex items-center gap-2">
+                📁 <span id="groupPanelTitle">Quản Lý Nhóm</span>
+            </div>
+            <button class="text-slate-400 hover:text-white" onclick="event.stopPropagation(); toggleGroupPanel()">
+                <span id="groupPanelIcon">🔼</span>
+            </button>
+        </div>
+        
+        <!-- Content -->
+        <div id="groupPanelContent" class="p-3 flex-1 overflow-y-auto hidden flex-col gap-2">
+            <!-- Toolbar -->
+            <div class="flex justify-between items-center mb-2 gap-2">
+                <button onclick="createNewGroup()" class="flex-1 bg-sky-500/20 text-sky-400 hover:bg-sky-500/30 py-1.5 rounded text-sm font-semibold border border-sky-500/30 transition">
+                    + Tạo Nhóm Mới
+                </button>
+                <button id="toggleSelectionBtn" onclick="toggleSelectionMode()" class="px-2 py-1.5 bg-slate-700 text-slate-300 rounded text-sm hover:bg-slate-600 transition" title="Chế độ chọn nhiều (cho Mobile)">
+                    ☑️ Chọn
+                </button>
+            </div>
+            
+            <!-- List -->
+            <div id="groupsList" class="flex flex-col gap-2">
+                <!-- Groups will be rendered here -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating Toggle Button (visible when panel is hidden) -->
+    <button id="groupFloatingBtn" onclick="toggleGroupPanel()" class="fixed bottom-4 right-4 z-30 bg-sky-600 hover:bg-sky-500 text-white px-4 py-2 rounded-full shadow-lg font-bold flex items-center gap-2 transition transform hover:scale-105 border border-sky-400">
+        📁 Nhóm
+    </button>
+    
+    <!-- Group View Banner -->
+    <div id="groupViewBanner" class="hidden w-full bg-sky-900/50 border border-sky-500/50 rounded-lg p-3 mb-4 flex justify-between items-center shadow-lg">
+        <div>
+            <span class="text-sky-400 font-bold">Đang xem Nhóm:</span>
+            <span id="groupViewName" class="text-white font-bold ml-1 text-lg"></span>
+            <span id="groupViewCount" class="text-slate-400 text-sm ml-2"></span>
+        </div>
+        <button onclick="exitGroupView()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-1 rounded border border-slate-600 transition">
+            Đóng ✖
+        </button>
+    </div>
+
     </main>
 
     <!-- 6 MODALS -->
@@ -4313,6 +4399,498 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.remove('modal-open');
             // Pause video logic is already in original closeVideoModal
         };
+    
+// ==========================================
+// DRAG AND DROP GROUPING FEATURE
+// ==========================================
+(function() {
+    // State
+    const STORAGE_KEY = 'fedu_idea_groups';
+    let groups = [];
+    let isPanelOpen = false;
+    let isSelectionMode = false;
+    let selectedIdeaIds = new Set();
+    let currentViewingGroupId = null;
+    
+    // Initialize
+    function initGrouping() {
+        loadGroups();
+        checkUrlForSharedGroup();
+        renderGroupsList();
+        
+        // Intercept applyFilters to inject group filter and drag handlers
+        const originalApplyFilters = window.applyFilters;
+        window.applyFilters = function(pushToHistory = false) {
+            // Check if we are viewing a group
+            if (currentViewingGroupId) {
+                const group = groups.find(g => g.id === currentViewingGroupId);
+                if (group) {
+                    // Filter window.FEDU_IDEAS_DATABASE.ideas
+                    const matched = window.FEDU_IDEAS_DATABASE.ideas.filter(idea => group.idea_ids.includes(String(idea.id)));
+                    // Update DOM before rendering
+                    const banner = document.getElementById('groupViewBanner');
+                    if(banner) {
+                        banner.classList.remove('hidden');
+                        document.getElementById('groupViewName').textContent = group.name;
+                        document.getElementById('groupViewCount').textContent = `(${group.idea_ids.length} ý tưởng)`;
+                        
+                        // Insert banner if not already inside the grid container
+                        const gridContainer = document.getElementById('ideasCardsGrid');
+                        if (gridContainer && banner.parentElement !== gridContainer.parentElement) {
+                            gridContainer.parentElement.insertBefore(banner, gridContainer);
+                        }
+                    }
+                    
+                    // Render the filtered cards
+                    if (window.renderCards) {
+                        window.renderCards(matched);
+                    }
+                    
+                    // Inject group specific UI to cards
+                    setTimeout(() => injectGroupUI(group), 100);
+                    return; // Skip normal filters
+                }
+            } else {
+                const banner = document.getElementById('groupViewBanner');
+                if(banner) banner.classList.add('hidden');
+            }
+            
+            // Run normal filters
+            if(originalApplyFilters) {
+                originalApplyFilters(pushToHistory);
+            }
+            
+            // Inject drag UI if panel is open
+            if (isPanelOpen || isSelectionMode) {
+                setTimeout(injectDragAndSelectUI, 100);
+            }
+        };
+        
+        // Expose functions globally for HTML event handlers
+        window.toggleGroupPanel = toggleGroupPanel;
+        window.createNewGroup = createNewGroup;
+        window.deleteGroup = deleteGroup;
+        window.renameGroup = renameGroup;
+        window.toggleSelectionMode = toggleSelectionMode;
+        window.viewGroup = viewGroup;
+        window.exitGroupView = exitGroupView;
+        window.removeFromGroup = removeFromGroup;
+        window.shareGroup = shareGroup;
+        window.addSelectedToGroup = addSelectedToGroup;
+        
+        // Rerender on load
+        if(currentViewingGroupId) {
+            window.applyFilters();
+        }
+    }
+    
+    function loadGroups() {
+        try {
+            const data = localStorage.getItem(STORAGE_KEY);
+            if (data) {
+                const parsed = JSON.parse(data);
+                groups = parsed.groups || [];
+            }
+        } catch (e) {
+            console.error("Error loading groups:", e);
+        }
+    }
+    
+    function saveGroups() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ groups }));
+        renderGroupsList();
+        if(currentViewingGroupId) window.applyFilters();
+    }
+    
+    function generateId() {
+        return Math.random().toString(36).substring(2, 10);
+    }
+    
+    function toggleGroupPanel() {
+        isPanelOpen = !isPanelOpen;
+        const panel = document.getElementById('groupManagerPanel');
+        const content = document.getElementById('groupPanelContent');
+        const btn = document.getElementById('groupFloatingBtn');
+        const icon = document.getElementById('groupPanelIcon');
+        
+        if (isPanelOpen) {
+            panel.classList.remove('group-manager-hidden');
+            content.classList.remove('hidden');
+            btn.classList.add('hidden');
+            icon.textContent = '🔽';
+        } else {
+            panel.classList.add('group-manager-hidden');
+            content.classList.add('hidden');
+            btn.classList.remove('hidden');
+            icon.textContent = '🔼';
+            // Disable selection mode when closing panel
+            if (isSelectionMode) toggleSelectionMode();
+        }
+        
+        // Re-apply filters to add/remove drag handles
+        window.applyFilters();
+    }
+    
+    function createNewGroup() {
+        const name = prompt("Nhập tên nhóm mới:", `Nhóm ${groups.length + 1}`);
+        if (!name) return;
+        
+        groups.push({
+            id: generateId(),
+            name: name,
+            created_at: new Date().toISOString(),
+            idea_ids: []
+        });
+        saveGroups();
+        if(window.showToast) window.showToast("Đã tạo nhóm mới!", "✅");
+    }
+    
+    function deleteGroup(id, event) {
+        event.stopPropagation();
+        if(confirm("Bạn có chắc chắn muốn xóa nhóm này?")) {
+            groups = groups.filter(g => g.id !== id);
+            if(currentViewingGroupId === id) {
+                exitGroupView();
+            }
+            saveGroups();
+        }
+    }
+    
+    function renameGroup(id, event) {
+        event.stopPropagation();
+        const group = groups.find(g => g.id === id);
+        if(!group) return;
+        const newName = prompt("Nhập tên mới:", group.name);
+        if(newName) {
+            group.name = newName;
+            saveGroups();
+        }
+    }
+    
+    function renderGroupsList() {
+        const list = document.getElementById('groupsList');
+        if (!list) return;
+        
+        if (groups.length === 0) {
+            list.innerHTML = `<div class="text-center text-slate-500 text-sm py-4">Chưa có nhóm nào.</div>`;
+            return;
+        }
+        
+        list.innerHTML = groups.map(g => `
+            <div class="group-dropzone bg-slate-800 border border-slate-700 rounded-lg p-2 cursor-pointer hover:border-slate-500 flex flex-col gap-2" 
+                 data-group-id="${g.id}"
+                 onclick="viewGroup('${g.id}')">
+                <div class="flex justify-between items-center">
+                    <div class="font-bold text-slate-200 text-sm truncate flex-1" title="${window.escapeHtml ? window.escapeHtml(g.name) : g.name}">
+                        ${window.escapeHtml ? window.escapeHtml(g.name) : g.name} <span class="text-slate-400 font-normal">(${g.idea_ids.length})</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="renameGroup('${g.id}', event)" class="w-6 h-6 rounded bg-slate-700 hover:bg-slate-600 flex items-center justify-center text-xs" title="Đổi tên">✏️</button>
+                        <button onclick="shareGroup('${g.id}', event)" class="w-6 h-6 rounded bg-sky-500/20 text-sky-400 hover:bg-sky-500/40 flex items-center justify-center text-xs" title="Chia sẻ">🔗</button>
+                        <button onclick="deleteGroup('${g.id}', event)" class="w-6 h-6 rounded bg-rose-500/20 text-rose-400 hover:bg-rose-500/40 flex items-center justify-center text-xs" title="Xóa">🗑️</button>
+                    </div>
+                </div>
+                ${isSelectionMode && selectedIdeaIds.size > 0 ? 
+                    `<button onclick="addSelectedToGroup('${g.id}', event)" class="w-full text-xs bg-sky-600 hover:bg-sky-500 text-white py-1 rounded">
+                        Thêm ${selectedIdeaIds.size} ý tưởng đã chọn vào đây
+                    </button>` : ''}
+            </div>
+        `).join('');
+        
+        // Attach drag events to dropzones
+        const dropzones = list.querySelectorAll('.group-dropzone');
+        dropzones.forEach(zone => {
+            zone.addEventListener('dragover', e => {
+                e.preventDefault();
+                zone.classList.add('drag-over');
+            });
+            zone.addEventListener('dragleave', e => {
+                zone.classList.remove('drag-over');
+            });
+            zone.addEventListener('drop', e => {
+                e.preventDefault();
+                zone.classList.remove('drag-over');
+                const ideaId = e.dataTransfer.getData('text/plain');
+                if (ideaId) {
+                    addIdeaToGroup(ideaId, zone.dataset.groupId);
+                }
+            });
+        });
+    }
+    
+    function addIdeaToGroup(ideaId, groupId) {
+        const group = groups.find(g => g.id === groupId);
+        if (group && !group.idea_ids.includes(String(ideaId))) {
+            group.idea_ids.push(String(ideaId));
+            saveGroups();
+            if(window.showToast) window.showToast(`Đã thêm vào ${group.name}`, "✅");
+        } else if (group) {
+            if(window.showToast) window.showToast("Ý tưởng đã có trong nhóm", "ℹ️");
+        }
+    }
+    
+    function addSelectedToGroup(groupId, event) {
+        event.stopPropagation();
+        if (selectedIdeaIds.size === 0) return;
+        
+        const group = groups.find(g => g.id === groupId);
+        if (!group) return;
+        
+        let added = 0;
+        selectedIdeaIds.forEach(id => {
+            if (!group.idea_ids.includes(String(id))) {
+                group.idea_ids.push(String(id));
+                added++;
+            }
+        });
+        
+        if (added > 0) {
+            saveGroups();
+            if(window.showToast) window.showToast(`Đã thêm ${added} ý tưởng vào ${group.name}`, "✅");
+            
+            // Clear selection
+            selectedIdeaIds.clear();
+            toggleSelectionMode(); // Turn off selection mode
+        } else {
+            if(window.showToast) window.showToast("Các ý tưởng này đã có trong nhóm", "ℹ️");
+        }
+    }
+    
+    function toggleSelectionMode() {
+        isSelectionMode = !isSelectionMode;
+        selectedIdeaIds.clear();
+        
+        const btn = document.getElementById('toggleSelectionBtn');
+        if (btn) {
+            if (isSelectionMode) {
+                btn.classList.add('bg-sky-500', 'text-white');
+                btn.classList.remove('bg-slate-700', 'text-slate-300');
+                document.body.classList.add('selection-mode');
+                if(window.showToast) window.showToast("Chế độ chọn: Bấm vào ý tưởng để chọn", "☑️");
+            } else {
+                btn.classList.remove('bg-sky-500', 'text-white');
+                btn.classList.add('bg-slate-700', 'text-slate-300');
+                document.body.classList.remove('selection-mode');
+            }
+        }
+        
+        renderGroupsList();
+        window.applyFilters();
+    }
+    
+    function injectDragAndSelectUI() {
+        if (currentViewingGroupId) return; // Don't allow drag/select in group view
+        
+        const cards = document.querySelectorAll('#ideasCardsGrid .glass-card');
+        cards.forEach(card => {
+            const ideaIdStr = card.id.replace('idea-card-', '');
+            // We use string IDs to match data structure
+            
+            // Handle Selection Mode
+            if (isSelectionMode) {
+                // Add visual indicator
+                let selIndicator = card.querySelector('.selection-indicator');
+                if (!selIndicator) {
+                    selIndicator = document.createElement('div');
+                    selIndicator.className = 'selection-indicator absolute top-2 right-2 w-6 h-6 rounded-full border-2 border-white/50 flex items-center justify-center z-20 pointer-events-none transition-all';
+                    card.appendChild(selIndicator);
+                }
+                
+                if (selectedIdeaIds.has(ideaIdStr)) {
+                    card.classList.add('card-selected');
+                    selIndicator.innerHTML = '<div class="w-3 h-3 bg-sky-400 rounded-full"></div>';
+                    selIndicator.classList.add('border-sky-400');
+                } else {
+                    card.classList.remove('card-selected');
+                    selIndicator.innerHTML = '';
+                    selIndicator.classList.remove('border-sky-400');
+                }
+                
+                // Override click handler for the card (it usually opens video)
+                // We'll use a capture event listener to intercept
+                if (!card.dataset.selectBound) {
+                    card.dataset.selectBound = "true";
+                    card.addEventListener('click', function(e) {
+                        if (isSelectionMode) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            if (selectedIdeaIds.has(ideaIdStr)) {
+                                selectedIdeaIds.delete(ideaIdStr);
+                            } else {
+                                selectedIdeaIds.add(ideaIdStr);
+                            }
+                            injectDragAndSelectUI(); // Update UI
+                            renderGroupsList(); // Update buttons in panel
+                        }
+                    }, true);
+                }
+            } else {
+                // Remove selection UI
+                const selIndicator = card.querySelector('.selection-indicator');
+                if (selIndicator) selIndicator.remove();
+                card.classList.remove('card-selected');
+            }
+            
+            // Handle Drag Mode (only if not in selection mode and panel is open)
+            if (isPanelOpen && !isSelectionMode) {
+                card.setAttribute('draggable', 'true');
+                card.classList.add('idea-card-draggable');
+                
+                // Add drag grip
+                if (!card.querySelector('.drag-grip')) {
+                    const header = card.querySelector('.flex.justify-between.items-start');
+                    if (header) {
+                        const grip = document.createElement('div');
+                        grip.className = 'drag-grip cursor-grab p-1 mr-1 text-slate-500 hover:text-white transition';
+                        grip.innerHTML = '⋮⋮';
+                        grip.title = "Kéo thả vào nhóm";
+                        // Insert at start of header
+                        header.insertBefore(grip, header.firstChild);
+                    }
+                }
+                
+                // Bind drag events
+                if (!card.dataset.dragBound) {
+                    card.dataset.dragBound = "true";
+                    card.addEventListener('dragstart', (e) => {
+                        e.dataTransfer.setData('text/plain', ideaIdStr);
+                        e.dataTransfer.effectAllowed = 'copy';
+                        setTimeout(() => card.classList.add('idea-card-dragging'), 0);
+                    });
+                    card.addEventListener('dragend', () => {
+                        card.classList.remove('idea-card-dragging');
+                    });
+                }
+            } else {
+                // Remove drag UI
+                card.removeAttribute('draggable');
+                card.classList.remove('idea-card-draggable');
+                const grip = card.querySelector('.drag-grip');
+                if (grip) grip.remove();
+            }
+        });
+    }
+    
+    function injectGroupUI(group) {
+        const cards = document.querySelectorAll('#ideasCardsGrid .glass-card');
+        cards.forEach(card => {
+            const ideaIdStr = card.id.replace('idea-card-', '');
+            
+            // Add remove button
+            if (!card.querySelector('.remove-from-group-btn')) {
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'remove-from-group-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-rose-500/80 text-white flex items-center justify-center z-20 hover:bg-rose-500 transition shadow-lg';
+                removeBtn.innerHTML = '✖';
+                removeBtn.title = "Xóa khỏi nhóm";
+                removeBtn.onclick = (e) => {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    removeFromGroup(ideaIdStr, group.id);
+                };
+                card.appendChild(removeBtn);
+            }
+        });
+    }
+    
+    function viewGroup(groupId) {
+        currentViewingGroupId = groupId;
+        window.applyFilters();
+        if(window.scrollTo) window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+    
+    function exitGroupView() {
+        currentViewingGroupId = null;
+        window.applyFilters();
+    }
+    
+    function removeFromGroup(ideaId, groupId) {
+        const group = groups.find(g => g.id === groupId);
+        if (group) {
+            group.idea_ids = group.idea_ids.filter(id => String(id) !== String(ideaId));
+            saveGroups();
+            if(window.showToast) window.showToast("Đã xóa khỏi nhóm", "✅");
+        }
+    }
+    
+    // SHARE LINK LOGIC
+    function shareGroup(groupId, event) {
+        event.stopPropagation();
+        const group = groups.find(g => g.id === groupId);
+        if (!group) return;
+        
+        // Encode idea IDs
+        // To save space, we comma separate and base64 encode
+        const idString = group.idea_ids.join(',');
+        const encoded = btoa(idString);
+        
+        // Create share URL
+        const url = new URL(window.location.href);
+        url.search = `?nhom=${group.id}`;
+        url.hash = encoded;
+        
+        // Copy to clipboard
+        navigator.clipboard.writeText(url.toString()).then(() => {
+            if(window.showToast) window.showToast("Đã copy link chia sẻ!", "🔗");
+        }).catch(err => {
+            console.error('Copy failed', err);
+            prompt("Copy link sau:", url.toString());
+        });
+    }
+    
+    function checkUrlForSharedGroup() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const nhomId = urlParams.get('nhom');
+        const hash = window.location.hash.substring(1); // remove #
+        
+        if (nhomId && hash) {
+            try {
+                // Decode base64
+                const idString = atob(hash);
+                const ideaIds = idString.split(',').filter(id => id.trim() !== '');
+                
+                // Check if we already have this group
+                const existingGroupIndex = groups.findIndex(g => g.id === nhomId);
+                
+                if (existingGroupIndex >= 0) {
+                    // Update existing
+                    groups[existingGroupIndex].idea_ids = ideaIds;
+                } else {
+                    // Create new
+                    groups.push({
+                        id: nhomId,
+                        name: `Nhóm được chia sẻ (${nhomId})`,
+                        created_at: new Date().toISOString(),
+                        idea_ids: ideaIds
+                    });
+                }
+                
+                saveGroups();
+                
+                // Automatically view it
+                setTimeout(() => {
+                    viewGroup(nhomId);
+                    if(window.showToast) window.showToast("Đã mở nhóm được chia sẻ", "🎉");
+                    
+                    // Clean up URL so refresh doesn't re-trigger
+                    const cleanUrl = window.location.pathname;
+                    window.history.replaceState({}, document.title, cleanUrl);
+                }, 500);
+                
+            } catch (e) {
+                console.error("Error decoding shared group", e);
+                if(window.showToast) window.showToast("Link chia sẻ không hợp lệ", "❌");
+            }
+        }
+    }
+    
+    // Boot
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initGrouping);
+    } else {
+        initGrouping();
+    }
+})();
+
     </script>
 
     <!-- Global Toast Notification -->
