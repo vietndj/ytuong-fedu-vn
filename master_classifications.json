@@ -21944,10 +21944,10 @@
     }
   },
   "DdGx-fkPeeU": {
-    "id": "IG_@Pause_Here_DdGx-fkPeeU_Video_by_pausehereii",
-    "creator": "@Pause_Here",
-    "creator_name": "Pause_Here",
-    "title": "@Pause_Here - Video by pausehereii",
+    "id": "IG_@pausehereii_DdGx-fkPeeU_A_DAY_IN_CHIANG_MAI",
+    "creator": "@pausehereii",
+    "creator_name": "Pausehereii",
+    "title": "@pausehereii - A DAY IN CHIANG MAI",
     "shots_count": 37,
     "duration": "74.0s",
     "shooting_style": {
@@ -21960,7 +21960,7 @@
       "name": "Kiến Trúc & Không Gian Sống",
       "icon": "🏛️"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Pause_Here",
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @pausehereii",
     "tech_tags": [
       "Establishing Hook Shot",
       "Low-key Lighting",
@@ -21976,6 +21976,47 @@
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    }
+    },
+    "youtube_id": "O1eLfJHQ69k",
+    "youtube_url": "https://youtu.be/O1eLfJHQ69k",
+    "youtube_embed": "https://www.youtube.com/embed/O1eLfJHQ69k"
+  },
+  "IG_@pausehereii_DdGx-fkPeeU_A_DAY_IN_CHIANG_MAI": {
+    "id": "IG_@pausehereii_DdGx-fkPeeU_A_DAY_IN_CHIANG_MAI",
+    "creator": "@pausehereii",
+    "creator_name": "Pausehereii",
+    "title": "@pausehereii - A DAY IN CHIANG MAI",
+    "shots_count": 37,
+    "duration": "74.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @pausehereii",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "O1eLfJHQ69k",
+    "youtube_url": "https://youtu.be/O1eLfJHQ69k",
+    "youtube_embed": "https://www.youtube.com/embed/O1eLfJHQ69k"
   }
 }
