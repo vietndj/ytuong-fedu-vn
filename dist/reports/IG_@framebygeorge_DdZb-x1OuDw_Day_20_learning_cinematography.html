@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực Hành Cinematic Vlog: Định Vị Bối Cảnh &amp; Kiểm Soát Ánh Sáng Low-key</title>
+    <title>Tận Dụng Nắng Xiên Và Shadow Để Tạo Cinematic Look</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B0F19'/%3E%3Crect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%23FFFFFF' stroke-opacity='0.12' stroke-width='1.5'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='system-ui, sans-serif' font-weight='900' font-size='23' fill='%23FFFFFF'%3EYT%3C/text%3E%3Ccircle cx='48' cy='18' r='4' fill='%23eab308'/%3E%3C/svg%3E">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1013,7 +1013,7 @@
 <div class="app-container">
     <div class="video-sidebar">
         <div class="video-wrap">
-            <iframe id="mainPlayer" src="https://www.youtube.com/embed/0APEJfI-0ac?enablejsapi=1&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;aspect-ratio:9/16;border-radius:12px;"></iframe>
+            <iframe id="mainPlayer" src="https://www.youtube.com/embed/xkEX6Ms6XY8?enablejsapi=1&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;aspect-ratio:9/16;border-radius:12px;"></iframe>
         </div>
         <div class="video-controls">
             <div class="speed-row">
@@ -1034,16 +1034,16 @@
 
     <div class="content-column">
         <header class="report-header">
-            <div class="header-badges"><span class="badge">Kiến Trúc &amp; Không Gian Sống</span> <span class="badge badge-alt">Cinematic Vlog</span></div>
+            <div class="header-badges"><span class="badge">lifestyle</span> <span class="badge badge-alt">cinematic</span></div>
             <h1 class="report-title">
-                <a href="https://www.instagram.com/reel/DdPQJLvulmd/" target="_blank" rel="noopener">Thực Hành Cinematic Vlog: Định Vị Bối Cảnh &amp; Kiểm Soát Ánh Sáng Low-key</a>
+                <a href="https://www.instagram.com/reel/DdZb-x1OuDw/" target="_blank" rel="noopener">Tận Dụng Nắng Xiên Và Shadow Để Tạo Cinematic Look</a>
             </h1>
             <div class="header-meta">
                 <span>Nguồn: <a href="https://www.instagram.com/framebygeorge/" target="_blank" class="creator-link">@framebygeorge ↗</a></span>
                 <span class="meta-dot">•</span>
-                <span class="meta-stat">8 cảnh</span>
+                <span class="meta-stat">9 cảnh</span>
                 <span class="meta-dot">•</span>
-                <span class="meta-stat">17.38s</span>
+                <span class="meta-stat">15.29s</span>
                 <a href="https://ytuong.fedu.vn" target="_blank" class="hub-link">Kho Ý Tưởng ↗</a>
             </div>
         </header>
@@ -1051,19 +1051,62 @@
         
         <section class="axis-card">
             <h3 class="axis-title">TRỤC KỊCH BẢN 3 NHỊP</h3>
-            <div class="axis-content">[Mở đầu: Hé lộ qua màn hình LCD] ➔ [Thân bài: Chuẩn bị đồ uống, ánh sáng vệt cắt] ➔ [Chốt hạ: Ngồi thư giãn cạnh đèn cam]</div>
+            <div class="axis-content">Mồi mắt (Nắng bình minh) ➔ Cú đấm thị giác (Tĩnh vật &amp; Low-key) ➔ Chốt hạ (Bầu trời quang đãng)</div>
         </section>
 
         <div class="overview-card">
-            Video thực hành quay cinematic vlog với ánh sáng tự nhiên và bối cảnh trong nhà, tập trung vào góc máy và nhịp thở thị giác.
+            Cinematic slow living b-roll với ánh sáng tự nhiên tuyệt đẹp
         </div>
 
         
+        <div class="remake-prompt-card" id="remakePromptCard">
+            <div class="prompt-accordion-header" onclick="togglePromptAccordion(this)">
+                <div class="prompt-left">
+                    <span class="prompt-badge">CÚ MÁY STU</span>
+                    <span class="prompt-title">Ánh xạ kỹ thuật quay sang ngành nghề của bạn</span>
+                </div>
+                <div class="prompt-right">
+                    <button class="prompt-copy-btn" onclick="copyMegaPrompt(event, this)">Sao chép</button>
+                    <div class="prompt-toggle">
+                        <span class="toggle-icon">▼</span>
+                        <span class="toggle-label">Mở xem</span>
+                    </div>
+                </div>
+            </div>
+            <div class="prompt-accordion-body" style="display: none;">
+                <p class="prompt-desc">Video kỹ thuật quay thuần túy (không thoại). Sao chép Prompt để AI hướng dẫn áp dụng cú máy vào quay sản phẩm thực tế.</p>
+                <div class="prompt-code-wrap">
+                    <div class="prompt-code-bar">
+                        <span>MEGA_PROMPT_TECHNIQUE_REMAKE_GEMINI.md</span>
+                        <button class="prompt-copy-btn" onclick="copyMegaPrompt(event, this)">Sao chép Prompt</button>
+                    </div>
+                    <div class="prompt-code-content" id="megaPromptText">Bạn là Đạo diễn Hình ảnh &amp; Chuyên gia Hướng Dẫn Thao Tác Cú Máy Thực Chiến.
+
+Tôi vừa học được kỹ thuật quay đắt giá: @framebygeorge - Day 20 learning cinematography.
+Video này KHÔNG CÓ LỜI THOẠI, sức hút nằm ở góc đặt máy, tiêu cự và chuyển động camera.
+
+=== QUY TẮC ===
+- CẤM BỊA KỊCH BẢN NÓI. Tôi cần hướng dẫn cầm điện thoại quay gì, lia máy hướng nào.
+- CẤM VĂN MẪU AI.
+- VĂN PHONG MỘC MẠC: Xưng mình - bạn.
+
+=== HƯỚNG DẪN ===
+Nếu tôi chưa ghi ngành, hỏi 1 câu:
+1. Làm đẹp &amp; Spa (quay kem, thao tác tay, máy soi da)
+2. Nội thất / Decor (quay lia thớ gỗ/mẫu đá sang không gian)
+3. Ẩm thực &amp; F&amp;B (quay lia quanh món ăn, đổ sốt, khói)
+4. Nông nghiệp / Sức khỏe (kiểm tra lá cây, hạt giống, bao bì)
+5. Ngành khác: [Tên nghề] + [Sản phẩm muốn quay]
+
+Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
+                </div>
+            </div>
+        </div>
 
         <div class="toolbar">
             <div class="tab-group">
                 <button class="tab-btn active" id="tabDetailBtn" onclick="switchView('detail')">Bóc tách chi tiết</button>
-                <button class="tab-btn" id="tabGridBtn" onclick="switchView('grid')">Lưới ảnh (8)</button>
+                <button class="tab-btn" id="tabGridBtn" onclick="switchView('grid')">Lưới ảnh (9)</button>
             </div>
             <button class="drawer-btn" onclick="toggleDrawer(true)">Mục lục</button>
         </div>
@@ -1071,225 +1114,253 @@
         <div id="storyboardView">
             
         <div class="shot-card" id="shot-card-1">
-            <div class="shot-thumb" onclick="playShot(0.0, 4.46, 'SHOT 01')">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
+            <div class="shot-thumb" onclick="playShot(0.0, 2.0, 'SHOT 01')">
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
                 <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                <span class="shot-time-badge">0.0s – 4.5s</span>
+                <span class="shot-time-badge">0.0s – 2.0s</span>
             </div>
             <div class="shot-body">
                 <div class="shot-head">
                     <span class="shot-num">SHOT 01</span>
-                    <span class="shot-dur">4.50s</span>
+                    <span class="shot-dur">2.04s</span>
                 </div>
-                <h4 class="shot-headline">Visual Hook: Màn hình LCD điểm nét thiết lập bối cảnh</h4>
-                <p class="shot-insight">Tạo layer mở đầu gián tiếp thay vì quay thẳng vào bối cảnh.</p>
+                <h4 class="shot-headline">[Bắt đầu ngày mới] Chiếc găng tay xanh treo lơ lửng trên lò nướng</h4>
+                <p class="shot-insight">Dùng ánh sáng xiên của bình minh/hoàng hôn để tạo cảm giác bắt đầu/kết thúc ngày, rất hợp làm mồi mắt (Hook).</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Establishing Hook Shot (Góc toàn định vị bối cảnh)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Trung Cảnh Đặc Tả (Mid-Detail Shot)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Natural Light (Nắng xiên góc)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Mở đầu</span></div>
                     </div>
-                    <div class="critique-good">Định vị bối cảnh qua màn hình phụ, kéo sự tò mò ngay giây đầu.</div>
-                    <div class="critique-warn">Khá rung rinh khi cầm tay nếu không vững.</div>
-                    <div class="shot-narrative">Camera Sony hiện trên tay, màn hình lật hé lộ trước bối cảnh nhà bếp.</div>
+                    <div class="critique-good">Ánh sáng tự nhiên (Sunlight) tạo độ tương phản mạnh giữa vùng tối của lò nướng và vùng sáng của nắng, nhấn mạnh text &#x27;Day 20 Learning c&#x27;.</div>
+                    <div class="critique-warn">Vùng shadow của lò nướng khá tối, nhưng điều này cố ý để làm nổi bật chủ thể và text.</div>
+                    <div class="shot-narrative">Bối cảnh tĩnh, ánh nắng xiên tạo vệt sáng trên sàn gỗ, mang lại cảm giác bình yên của buổi sáng sớm.</div>
                 </details>
             </div>
         </div>
 
         <div class="shot-card" id="shot-card-2">
-            <div class="shot-thumb" onclick="playShot(4.5, 6.96, 'SHOT 02')">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
+            <div class="shot-thumb" onclick="playShot(2.04, 3.0, 'SHOT 02')">
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
                 <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                <span class="shot-time-badge">4.5s – 7.0s</span>
+                <span class="shot-time-badge">2.0s – 3.0s</span>
             </div>
             <div class="shot-body">
                 <div class="shot-head">
                     <span class="shot-num">SHOT 02</span>
-                    <span class="shot-dur">2.50s</span>
+                    <span class="shot-dur">1.00s</span>
                 </div>
-                <h4 class="shot-headline">Cận cảnh màn hình: Chủ thể bước vào khung hình</h4>
-                <p class="shot-insight">Dùng màn hình máy ảnh làm khung viền (frame within a frame) để tạo chiều sâu.</p>
+                <h4 class="shot-headline">[Chuyển động nhỏ] Bàn tay khuấy ly nước dưới ánh đèn vàng ấm áp</h4>
+                <p class="shot-insight">Chuyển động khuấy nước kết hợp ánh sáng warm tone tạo cảm giác slow-living, lôi cuốn người xem nán lại.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Cận Cảnh (Close-up)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Warm Ambient Light</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cắt cảnh theo nhịp (Match Cut)</span></div>
                     </div>
-                    <div class="critique-good">Dẫn dắt câu chuyện mượt mà từ thiết bị sang nhân vật.</div>
-                    <div class="critique-warn">Có thể hơi khó nhìn nếu điện thoại nhỏ.</div>
-                    <div class="shot-narrative">Người đàn ông bước đi về phía bếp, quay qua màn hình LCD.</div>
+                    <div class="critique-good">Ánh sáng vàng ấm (Warm Light) đối lập tinh tế với màu xanh của ly và chất lỏng, tạo cảm giác thư giãn, cinematic.</div>
+                    <div class="critique-warn">Không có điểm yếu đáng kể, góc máy focus tốt vào hành động.</div>
+                    <div class="shot-narrative">Bàn tay khuấy đều ly matcha/cafe trong một chiếc ly thủy tinh 2 lớp. Đèn backlight hắt nhẹ làm nổi bật màu xanh của ly.</div>
                 </details>
             </div>
         </div>
 
         <div class="shot-card" id="shot-card-3">
-            <div class="shot-thumb" onclick="playShot(7.0, 9.62, 'SHOT 03')">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
+            <div class="shot-thumb" onclick="playShot(3.04, 4.58, 'SHOT 03')">
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
                 <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                <span class="shot-time-badge">7.0s – 9.6s</span>
+                <span class="shot-time-badge">3.0s – 4.6s</span>
             </div>
             <div class="shot-body">
                 <div class="shot-head">
                     <span class="shot-num">SHOT 03</span>
-                    <span class="shot-dur">2.67s</span>
+                    <span class="shot-dur">1.58s</span>
                 </div>
-                <h4 class="shot-headline">Trung cảnh góc thấp: Chuẩn bị đồ uống</h4>
-                <p class="shot-insight">Tận dụng đèn gầm tủ bếp làm nguồn sáng chính (key light) cho những shot cận/trung tạo cảm giác cinematic.</p>
+                <h4 class="shot-headline">[Không gian mở] Ánh nắng lọt qua kẽ lá (Lens flare)</h4>
+                <p class="shot-insight">Shot quay cây cỏ ngược sáng (Breathe-out) để nhả nhịp, thoát khỏi không gian hẹp trong nhà.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Toàn Cảnh Xóa Phông (Wide shot with shallow DoF)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ngược sáng mặt trời (Backlit / Lens flare)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cắt cảnh đổi bối cảnh</span></div>
                     </div>
-                    <div class="critique-good">Ánh sáng vàng ấm hắt từ dưới kệ tủ bếp tạo khối nổi bật trên cánh tay và áo.</div>
-                    <div class="critique-warn">Góc quay hơi tối ở mảng lưng.</div>
-                    <div class="shot-narrative">Người đàn ông đứng ở bếp rót nước từ ấm đun siêu tốc màu đen.</div>
+                    <div class="critique-good">Ngược sáng (Backlight) tạo viền sáng ven cho lá cây, hiệu ứng flare mang lại sức sống và sự tươi mới.</div>
+                    <div class="critique-warn">Nếu để chói quá có thể làm mất chi tiết tiền cảnh.</div>
+                    <div class="shot-narrative">Bối cảnh ngoài trời, mặt trời lấp ló sau những tán lá tạo hiệu ứng lens flare chói lọi, phía sau là hàng rào trắng mờ ảo.</div>
                 </details>
             </div>
         </div>
 
         <div class="shot-card" id="shot-card-4">
-            <div class="shot-thumb" onclick="playShot(9.67, 11.17, 'SHOT 04')">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
+            <div class="shot-thumb" onclick="playShot(4.62, 6.17, 'SHOT 04')">
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
                 <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                <span class="shot-time-badge">9.7s – 11.2s</span>
+                <span class="shot-time-badge">4.6s – 6.2s</span>
             </div>
             <div class="shot-body">
                 <div class="shot-head">
                     <span class="shot-num">SHOT 04</span>
-                    <span class="shot-dur">1.54s</span>
+                    <span class="shot-dur">1.58s</span>
                 </div>
-                <h4 class="shot-headline">Đặc tả tĩnh: Đặt ly nước bên bệ cửa sổ</h4>
-                <p class="shot-insight">Sử dụng ly thủy tinh và ánh nắng xiên ngang (hard light) để tôn chất lỏng.</p>
+                <h4 class="shot-headline">[Tĩnh vật] Ly matcha đón nắng trên bàn gỗ</h4>
+                <p class="shot-insight">Tận dụng nắng xiên để chụp tĩnh vật (Product shot) luôn mang lại cảm giác sang trọng và điện ảnh.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Cận Cảnh Tĩnh Vật (Product Close-up)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Nắng xiên (Side/Back lighting)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cắt cảnh về trong nhà</span></div>
                     </div>
-                    <div class="critique-good">Ánh nắng xiên chiếu gắt vệt bóng đổ tuyệt đẹp, cốc thủy tinh kép hắt sáng.</div>
-                    <div class="critique-warn">Vệt nắng hơi chói nếu phơi sáng không kỹ.</div>
-                    <div class="shot-narrative">Tay đặt ly đồ uống (matcha/cà phê) thủy tinh lên đế lót gỗ.</div>
+                    <div class="critique-good">Bố cục đẹp mắt, ánh sáng tạo khối rực rỡ trên mặt bàn gỗ và xuyên qua chất lỏng, thể hiện sự trong trẻo.</div>
+                    <div class="critique-warn">Vết ố nhỏ trên mặt bàn (nếu không cố ý) có thể hơi làm rối mắt.</div>
+                    <div class="shot-narrative">Ly thủy tinh 2 lớp đặt trên đế lót gỗ vòng tròn đồng tâm. Nắng chiếu xiên qua ly đổ bóng dài trên mặt bàn.</div>
                 </details>
             </div>
         </div>
 
         <div class="shot-card" id="shot-card-5">
-            <div class="shot-thumb" onclick="playShot(11.21, 12.62, 'SHOT 05')">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
+            <div class="shot-thumb" onclick="playShot(6.21, 7.25, 'SHOT 05')">
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
                 <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                <span class="shot-time-badge">11.2s – 12.6s</span>
+                <span class="shot-time-badge">6.2s – 7.2s</span>
             </div>
             <div class="shot-body">
                 <div class="shot-head">
                     <span class="shot-num">SHOT 05</span>
-                    <span class="shot-dur">1.46s</span>
+                    <span class="shot-dur">1.08s</span>
                 </div>
-                <h4 class="shot-headline">Toàn cảnh qua cửa sổ: Thiên nhiên tĩnh lặng</h4>
-                <p class="shot-insight">Xen kẽ cảnh thiên nhiên (breathe-out) để người xem nghỉ mắt.</p>
+                <h4 class="shot-headline">[Chi tiết thiên nhiên] Cành lá phong xanh mướt đón nắng</h4>
+                <p class="shot-insight">Macro/Close-up thiên nhiên giúp tăng cường mood &#x27;chữa lành&#x27; (healing).</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Cận Cảnh (Macro/Close-up)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Nắng trực tiếp (Direct sunlight)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Nhịp thở (Breathe-in)</span></div>
                     </div>
-                    <div class="critique-good">Khung cửa sổ tạo tiền cảnh (foreground), phân chia bố cục tự nhiên.</div>
-                    <div class="critique-warn">Không có chuyển động rõ rệt, dễ làm chậm nhịp.</div>
-                    <div class="shot-narrative">Góc máy hướng ra ngoài cửa sổ nhìn ra bờ tường rào và ánh nắng.</div>
+                    <div class="critique-good">Tương phản màu sắc mạnh giữa xanh lá và vàng nắng, độ nét cao trên gân lá.</div>
+                    <div class="critique-warn">Không có.</div>
+                    <div class="shot-narrative">Cận cảnh cành lá phong (maple) xanh dưới nắng chiều vàng ươm, hậu cảnh mờ nhòe (bokeh).</div>
                 </details>
             </div>
         </div>
 
         <div class="shot-card" id="shot-card-6">
-            <div class="shot-thumb" onclick="playShot(12.67, 13.79, 'SHOT 06')">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
+            <div class="shot-thumb" onclick="playShot(7.29, 9.08, 'SHOT 06')">
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
                 <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                <span class="shot-time-badge">12.7s – 13.8s</span>
+                <span class="shot-time-badge">7.3s – 9.1s</span>
             </div>
             <div class="shot-body">
                 <div class="shot-head">
                     <span class="shot-num">SHOT 06</span>
-                    <span class="shot-dur">1.17s</span>
+                    <span class="shot-dur">1.83s</span>
                 </div>
-                <h4 class="shot-headline">Cận cảnh chậu cây: Điểm nhấn thị giác xanh</h4>
-                <p class="shot-insight">Sử dụng cây xanh tạo sức sống tươi mát cho không gian.</p>
+                <h4 class="shot-headline">[Khung cửa sổ] Ánh nắng hắt lên cây lá qua lăng kính cửa sổ</h4>
+                <p class="shot-insight">Sử dụng vật cản làm tiền cảnh (tiền cảnh mờ) để dẫn ánh mắt vào chủ thể ở xa.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Trung Cảnh (Mid Shot with framing)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng tự nhiên ngoài trời</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Kết nối trong và ngoài</span></div>
                     </div>
-                    <div class="critique-good">Màu xanh tương phản với ánh sáng ấm, xóa phông nhẹ tạo độ sâu.</div>
-                    <div class="critique-warn">Chi tiết lá hơi lộn xộn nếu bố cục không khéo.</div>
-                    <div class="shot-narrative">Cận cảnh lá cây xanh trồng bên bệ cửa sổ đang mở đón nắng.</div>
+                    <div class="critique-good">Tạo chiều sâu không gian (Depth) bằng cách sử dụng tiền cảnh mờ (Foreground blur) và khung cửa (Framing).</div>
+                    <div class="critique-warn">Góc máy hơi rung hoặc lấy nét chênh vênh có thể làm người xem mất tập trung.</div>
+                    <div class="shot-narrative">Góc nhìn từ trong nhà nhìn ra ngoài qua khung cửa sổ đang mở. Tiền cảnh là lá cây bị mờ (Out of focus), hậu cảnh là cây thông/tùng đón nắng rực rỡ.</div>
                 </details>
             </div>
         </div>
 
         <div class="shot-card" id="shot-card-7">
-            <div class="shot-thumb" onclick="playShot(13.83, 15.46, 'SHOT 07')">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" />
+            <div class="shot-thumb" onclick="playShot(9.12, 11.08, 'SHOT 07')">
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" />
                 <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                <span class="shot-time-badge">13.8s – 15.5s</span>
+                <span class="shot-time-badge">9.1s – 11.1s</span>
             </div>
             <div class="shot-body">
                 <div class="shot-head">
                     <span class="shot-num">SHOT 07</span>
-                    <span class="shot-dur">1.67s</span>
+                    <span class="shot-dur">2.00s</span>
                 </div>
-                <h4 class="shot-headline">Đặc tả bóng tối: Vệt sáng trên gối tựa</h4>
-                <p class="shot-insight">Tìm kiếm các khe sáng/vệt nắng trong nhà để làm nổi bật một chủ thể nhỏ.</p>
+                <h4 class="shot-headline">[Hình bóng] Uống nước trong vùng tối dưới bóng nắng qua khung cửa</h4>
+                <p class="shot-insight">Bóng đổ cửa sổ (Window blind shadow) là vũ khí hạng nặng để tạo Cinematic look mà không cần setup cầu kỳ.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Toàn Cảnh/Trung Cảnh Tối (Silhouette)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key, High Contrast (Chiaroscuro)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Chuyển nhịp tối</span></div>
                     </div>
-                    <div class="critique-good">Độ tương phản (contrast) cực cao, ánh sáng low-key tạo kịch tính.</div>
-                    <div class="critique-warn">Vùng shadow quá nhiều có thể làm tối màn hình.</div>
-                    <div class="shot-narrative">Gối thêu hình bướm trên ghế lót lông mềm, nhận một vệt nắng duy nhất.</div>
+                    <div class="critique-good">Sử dụng bóng đổ tường cực kỳ kịch tính (Dramatic shadow). Chủ thể chìm trong bóng tối, chỉ nổi bật hành động cầm ly.</div>
+                    <div class="critique-warn">Cực kỳ thiếu sáng (Underexposed), nếu màn hình tối sẽ không thấy gì ngoài vạch nắng.</div>
+                    <div class="shot-narrative">Nhân vật ngồi trong không gian tối (Silhouette), cầm ly nước xanh uống. Trên tường có bóng đổ rõ nét của khung cửa sổ (Window shadow).</div>
                 </details>
             </div>
         </div>
 
         <div class="shot-card" id="shot-card-8">
-            <div class="shot-thumb" onclick="playShot(15.5, 17.38, 'SHOT 08')">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" />
+            <div class="shot-thumb" onclick="playShot(11.12, 12.67, 'SHOT 08')">
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" />
                 <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                <span class="shot-time-badge">15.5s – 17.4s</span>
+                <span class="shot-time-badge">11.1s – 12.7s</span>
             </div>
             <div class="shot-body">
                 <div class="shot-head">
                     <span class="shot-num">SHOT 08</span>
-                    <span class="shot-dur">1.92s</span>
+                    <span class="shot-dur">1.58s</span>
                 </div>
-                <h4 class="shot-headline">Toàn cảnh kết thúc: Góc Low-key tĩnh tâm</h4>
-                <p class="shot-insight">Dùng bóng lưng và ánh sáng tương phản chốt hạ cảm giác chill/cinematic cho video.</p>
+                <h4 class="shot-headline">[Hành động] Lật trang sách trong bóng tối</h4>
+                <p class="shot-insight">Chấp nhận noise để lấy mood. Sự chuyển động của trang sách là cứu cánh cho khung hình tối.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Cận Cảnh Đặc Tả (Macro/Close-up)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key (Cực tối)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Direct cut</span></div>
                     </div>
-                    <div class="critique-good">Cân bằng thị giác tốt giữa vùng cam đèn và ánh sáng ban ngày từ cửa sổ.</div>
-                    <div class="critique-warn">Chủ thể bị bóng (silhouette) che khuất biểu cảm.</div>
-                    <div class="shot-narrative">Người đàn ông ngồi trên sofa nhìn ra cửa sổ, bên chiếc đèn cây cam trầm.</div>
+                    <div class="critique-good">Tạo cảm giác tĩnh mịch, trầm lắng cuối ngày.</div>
+                    <div class="critique-warn">Quá tối (Underexposed), noise (nhiễu hạt) nhiều.</div>
+                    <div class="shot-narrative">Góc quay rất cận (Macro), cảnh tay lật các trang sách. Ánh sáng rất yếu.</div>
+                </details>
+            </div>
+        </div>
+
+        <div class="shot-card" id="shot-card-9">
+            <div class="shot-thumb" onclick="playShot(12.71, 15.29, 'SHOT 09')">
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+                <span class="shot-time-badge">12.7s – 15.3s</span>
+            </div>
+            <div class="shot-body">
+                <div class="shot-head">
+                    <span class="shot-num">SHOT 09</span>
+                    <span class="shot-dur">2.62s</span>
+                </div>
+                <h4 class="shot-headline">[Kết thúc] Ngắm nhìn bầu trời chạng vạng qua khe cửa</h4>
+                <p class="shot-insight">Kết thúc video bằng một khung cảnh mở, nhìn ra bầu trời để để lại dư âm (Breathe out cuối cùng).</p>
+                <details class="shot-details">
+                    <summary>Chi tiết kỹ thuật ▸</summary>
+                    <div class="shot-meta-grid">
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Toàn Cảnh (Wide Shot with Framing)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ngược sáng (Silhouette)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Kết thúc</span></div>
+                    </div>
+                    <div class="critique-good">Khung trong khung (Frame in frame). Tương phản vùng tối trong nhà và vùng sáng rực của bầu trời ngoài kia tạo sự mở ra (Release) cho thị giác.</div>
+                    <div class="critique-warn">Vùng trong nhà đen kịt hoàn toàn.</div>
+                    <div class="shot-narrative">Bóng lưng người (Silhouette) đứng nhìn ra bầu trời quang đãng lúc chạng vạng qua cánh cửa mở.</div>
                 </details>
             </div>
         </div>
@@ -1297,84 +1368,94 @@
 
         <div id="gridView">
             
-        <div class="grid-item" onclick="playShot(0.0, 4.46, 'SHOT 01')">
+        <div class="grid-item" onclick="playShot(0.0, 2.0, 'SHOT 01')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
                 <span class="grid-num">SHOT 01</span>
-                <span class="grid-time">0.0s – 4.5s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_01_mid.jpg', 'SHOT 01 • Visual Hook: Màn hình LCD điểm nét thiết lập bối cảnh')">⊕</button>
+                <span class="grid-time">0.0s – 2.0s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_01_mid.jpg', 'SHOT 01 • [Bắt đầu ngày mới] Chiếc găng tay xanh treo lơ lửng trên lò nướng')">⊕</button>
             </div>
-            <div class="grid-title">Visual Hook: Màn hình LCD điểm nét thiết</div>
+            <div class="grid-title">[Bắt đầu ngày mới] Chiếc găng tay xanh t</div>
         </div>
 
-        <div class="grid-item" onclick="playShot(4.5, 6.96, 'SHOT 02')">
+        <div class="grid-item" onclick="playShot(2.04, 3.0, 'SHOT 02')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
                 <span class="grid-num">SHOT 02</span>
-                <span class="grid-time">4.5s – 7.0s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_02_mid.jpg', 'SHOT 02 • Cận cảnh màn hình: Chủ thể bước vào khung hình')">⊕</button>
+                <span class="grid-time">2.0s – 3.0s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_02_mid.jpg', 'SHOT 02 • [Chuyển động nhỏ] Bàn tay khuấy ly nước dưới ánh đèn vàng ấm áp')">⊕</button>
             </div>
-            <div class="grid-title">Cận cảnh màn hình: Chủ thể bước vào khun</div>
+            <div class="grid-title">[Chuyển động nhỏ] Bàn tay khuấy ly nước </div>
         </div>
 
-        <div class="grid-item" onclick="playShot(7.0, 9.62, 'SHOT 03')">
+        <div class="grid-item" onclick="playShot(3.04, 4.58, 'SHOT 03')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
                 <span class="grid-num">SHOT 03</span>
-                <span class="grid-time">7.0s – 9.6s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_03_mid.jpg', 'SHOT 03 • Trung cảnh góc thấp: Chuẩn bị đồ uống')">⊕</button>
+                <span class="grid-time">3.0s – 4.6s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_03_mid.jpg', 'SHOT 03 • [Không gian mở] Ánh nắng lọt qua kẽ lá (Lens flare)')">⊕</button>
             </div>
-            <div class="grid-title">Trung cảnh góc thấp: Chuẩn bị đồ uống</div>
+            <div class="grid-title">[Không gian mở] Ánh nắng lọt qua kẽ lá (</div>
         </div>
 
-        <div class="grid-item" onclick="playShot(9.67, 11.17, 'SHOT 04')">
+        <div class="grid-item" onclick="playShot(4.62, 6.17, 'SHOT 04')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
                 <span class="grid-num">SHOT 04</span>
-                <span class="grid-time">9.7s – 11.2s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_04_mid.jpg', 'SHOT 04 • Đặc tả tĩnh: Đặt ly nước bên bệ cửa sổ')">⊕</button>
+                <span class="grid-time">4.6s – 6.2s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_04_mid.jpg', 'SHOT 04 • [Tĩnh vật] Ly matcha đón nắng trên bàn gỗ')">⊕</button>
             </div>
-            <div class="grid-title">Đặc tả tĩnh: Đặt ly nước bên bệ cửa sổ</div>
+            <div class="grid-title">[Tĩnh vật] Ly matcha đón nắng trên bàn g</div>
         </div>
 
-        <div class="grid-item" onclick="playShot(11.21, 12.62, 'SHOT 05')">
+        <div class="grid-item" onclick="playShot(6.21, 7.25, 'SHOT 05')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
                 <span class="grid-num">SHOT 05</span>
-                <span class="grid-time">11.2s – 12.6s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_05_mid.jpg', 'SHOT 05 • Toàn cảnh qua cửa sổ: Thiên nhiên tĩnh lặng')">⊕</button>
+                <span class="grid-time">6.2s – 7.2s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_05_mid.jpg', 'SHOT 05 • [Chi tiết thiên nhiên] Cành lá phong xanh mướt đón nắng')">⊕</button>
             </div>
-            <div class="grid-title">Toàn cảnh qua cửa sổ: Thiên nhiên tĩnh l</div>
+            <div class="grid-title">[Chi tiết thiên nhiên] Cành lá phong xan</div>
         </div>
 
-        <div class="grid-item" onclick="playShot(12.67, 13.79, 'SHOT 06')">
+        <div class="grid-item" onclick="playShot(7.29, 9.08, 'SHOT 06')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
                 <span class="grid-num">SHOT 06</span>
-                <span class="grid-time">12.7s – 13.8s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_06_mid.jpg', 'SHOT 06 • Cận cảnh chậu cây: Điểm nhấn thị giác xanh')">⊕</button>
+                <span class="grid-time">7.3s – 9.1s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_06_mid.jpg', 'SHOT 06 • [Khung cửa sổ] Ánh nắng hắt lên cây lá qua lăng kính cửa sổ')">⊕</button>
             </div>
-            <div class="grid-title">Cận cảnh chậu cây: Điểm nhấn thị giác xa</div>
+            <div class="grid-title">[Khung cửa sổ] Ánh nắng hắt lên cây lá q</div>
         </div>
 
-        <div class="grid-item" onclick="playShot(13.83, 15.46, 'SHOT 07')">
+        <div class="grid-item" onclick="playShot(9.12, 11.08, 'SHOT 07')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" />
                 <span class="grid-num">SHOT 07</span>
-                <span class="grid-time">13.8s – 15.5s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_07_mid.jpg', 'SHOT 07 • Đặc tả bóng tối: Vệt sáng trên gối tựa')">⊕</button>
+                <span class="grid-time">9.1s – 11.1s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_07_mid.jpg', 'SHOT 07 • [Hình bóng] Uống nước trong vùng tối dưới bóng nắng qua khung cửa')">⊕</button>
             </div>
-            <div class="grid-title">Đặc tả bóng tối: Vệt sáng trên gối tựa</div>
+            <div class="grid-title">[Hình bóng] Uống nước trong vùng tối dướ</div>
         </div>
 
-        <div class="grid-item" onclick="playShot(15.5, 17.38, 'SHOT 08')">
+        <div class="grid-item" onclick="playShot(11.12, 12.67, 'SHOT 08')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" />
                 <span class="grid-num">SHOT 08</span>
-                <span class="grid-time">15.5s – 17.4s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_08_mid.jpg', 'SHOT 08 • Toàn cảnh kết thúc: Góc Low-key tĩnh tâm')">⊕</button>
+                <span class="grid-time">11.1s – 12.7s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_08_mid.jpg', 'SHOT 08 • [Hành động] Lật trang sách trong bóng tối')">⊕</button>
             </div>
-            <div class="grid-title">Toàn cảnh kết thúc: Góc Low-key tĩnh tâm</div>
+            <div class="grid-title">[Hành động] Lật trang sách trong bóng tố</div>
+        </div>
+
+        <div class="grid-item" onclick="playShot(12.71, 15.29, 'SHOT 09')">
+            <div class="grid-thumb">
+                <img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" />
+                <span class="grid-num">SHOT 09</span>
+                <span class="grid-time">12.7s – 15.3s</span>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_09_mid.jpg', 'SHOT 09 • [Kết thúc] Ngắm nhìn bầu trời chạng vạng qua khe cửa')">⊕</button>
+            </div>
+            <div class="grid-title">[Kết thúc] Ngắm nhìn bầu trời chạng vạng</div>
         </div>
         </div>
     </div>
@@ -1383,86 +1464,96 @@
 <div id="drawerBackdrop" class="drawer-backdrop" onclick="toggleDrawer(false)">
     <div class="drawer-panel" onclick="event.stopPropagation()">
         <div class="drawer-head">
-            <span>MỤC LỤC (8)</span>
+            <span>MỤC LỤC (9)</span>
             <button onclick="toggleDrawer(false)">&times;</button>
         </div>
         <div class="drawer-list">
-        <div class="drawer-item" onclick="jumpToShot(1, 0.0, 4.46, 'SHOT 01')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" /></div>
+        <div class="drawer-item" onclick="jumpToShot(1, 0.0, 2.0, 'SHOT 01')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 01</div>
-                <div class="drawer-shot-hl">Visual Hook: Màn hình LCD điểm nét thiết l</div>
-                <div class="drawer-shot-time">0.00s – 4.46s</div>
+                <div class="drawer-shot-hl">[Bắt đầu ngày mới] Chiếc găng tay xanh tre</div>
+                <div class="drawer-shot-time">0.00s – 2.00s</div>
             </div>
             <div class="drawer-arrow">▶</div>
         </div>
 
-        <div class="drawer-item" onclick="jumpToShot(2, 4.5, 6.96, 'SHOT 02')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" /></div>
+        <div class="drawer-item" onclick="jumpToShot(2, 2.04, 3.0, 'SHOT 02')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 02</div>
-                <div class="drawer-shot-hl">Cận cảnh màn hình: Chủ thể bước vào khung </div>
-                <div class="drawer-shot-time">4.50s – 6.96s</div>
+                <div class="drawer-shot-hl">[Chuyển động nhỏ] Bàn tay khuấy ly nước dư</div>
+                <div class="drawer-shot-time">2.04s – 3.00s</div>
             </div>
             <div class="drawer-arrow">▶</div>
         </div>
 
-        <div class="drawer-item" onclick="jumpToShot(3, 7.0, 9.62, 'SHOT 03')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" /></div>
+        <div class="drawer-item" onclick="jumpToShot(3, 3.04, 4.58, 'SHOT 03')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 03</div>
-                <div class="drawer-shot-hl">Trung cảnh góc thấp: Chuẩn bị đồ uống</div>
-                <div class="drawer-shot-time">7.00s – 9.62s</div>
+                <div class="drawer-shot-hl">[Không gian mở] Ánh nắng lọt qua kẽ lá (Le</div>
+                <div class="drawer-shot-time">3.04s – 4.58s</div>
             </div>
             <div class="drawer-arrow">▶</div>
         </div>
 
-        <div class="drawer-item" onclick="jumpToShot(4, 9.67, 11.17, 'SHOT 04')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" /></div>
+        <div class="drawer-item" onclick="jumpToShot(4, 4.62, 6.17, 'SHOT 04')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 04</div>
-                <div class="drawer-shot-hl">Đặc tả tĩnh: Đặt ly nước bên bệ cửa sổ</div>
-                <div class="drawer-shot-time">9.67s – 11.17s</div>
+                <div class="drawer-shot-hl">[Tĩnh vật] Ly matcha đón nắng trên bàn gỗ</div>
+                <div class="drawer-shot-time">4.62s – 6.17s</div>
             </div>
             <div class="drawer-arrow">▶</div>
         </div>
 
-        <div class="drawer-item" onclick="jumpToShot(5, 11.21, 12.62, 'SHOT 05')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" /></div>
+        <div class="drawer-item" onclick="jumpToShot(5, 6.21, 7.25, 'SHOT 05')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 05</div>
-                <div class="drawer-shot-hl">Toàn cảnh qua cửa sổ: Thiên nhiên tĩnh lặn</div>
-                <div class="drawer-shot-time">11.21s – 12.62s</div>
+                <div class="drawer-shot-hl">[Chi tiết thiên nhiên] Cành lá phong xanh </div>
+                <div class="drawer-shot-time">6.21s – 7.25s</div>
             </div>
             <div class="drawer-arrow">▶</div>
         </div>
 
-        <div class="drawer-item" onclick="jumpToShot(6, 12.67, 13.79, 'SHOT 06')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" /></div>
+        <div class="drawer-item" onclick="jumpToShot(6, 7.29, 9.08, 'SHOT 06')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 06</div>
-                <div class="drawer-shot-hl">Cận cảnh chậu cây: Điểm nhấn thị giác xanh</div>
-                <div class="drawer-shot-time">12.67s – 13.79s</div>
+                <div class="drawer-shot-hl">[Khung cửa sổ] Ánh nắng hắt lên cây lá qua</div>
+                <div class="drawer-shot-time">7.29s – 9.08s</div>
             </div>
             <div class="drawer-arrow">▶</div>
         </div>
 
-        <div class="drawer-item" onclick="jumpToShot(7, 13.83, 15.46, 'SHOT 07')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" /></div>
+        <div class="drawer-item" onclick="jumpToShot(7, 9.12, 11.08, 'SHOT 07')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_07_mid.jpg" alt="SHOT 07" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 07</div>
-                <div class="drawer-shot-hl">Đặc tả bóng tối: Vệt sáng trên gối tựa</div>
-                <div class="drawer-shot-time">13.83s – 15.46s</div>
+                <div class="drawer-shot-hl">[Hình bóng] Uống nước trong vùng tối dưới </div>
+                <div class="drawer-shot-time">9.12s – 11.08s</div>
             </div>
             <div class="drawer-arrow">▶</div>
         </div>
 
-        <div class="drawer-item" onclick="jumpToShot(8, 15.5, 17.38, 'SHOT 08')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" /></div>
+        <div class="drawer-item" onclick="jumpToShot(8, 11.12, 12.67, 'SHOT 08')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_08_mid.jpg" alt="SHOT 08" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 08</div>
-                <div class="drawer-shot-hl">Toàn cảnh kết thúc: Góc Low-key tĩnh tâm</div>
-                <div class="drawer-shot-time">15.50s – 17.38s</div>
+                <div class="drawer-shot-hl">[Hành động] Lật trang sách trong bóng tối</div>
+                <div class="drawer-shot-time">11.12s – 12.67s</div>
+            </div>
+            <div class="drawer-arrow">▶</div>
+        </div>
+
+        <div class="drawer-item" onclick="jumpToShot(9, 12.71, 15.29, 'SHOT 09')">
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_09_mid.jpg" alt="SHOT 09" loading="lazy" /></div>
+            <div class="drawer-info">
+                <div class="drawer-shot-num">SHOT 09</div>
+                <div class="drawer-shot-hl">[Kết thúc] Ngắm nhìn bầu trời chạng vạng q</div>
+                <div class="drawer-shot-time">12.71s – 15.29s</div>
             </div>
             <div class="drawer-arrow">▶</div>
         </div></div>
@@ -1477,7 +1568,7 @@
 
 <script>
 // Video source resolution - try multiple paths
-const rawVideoSrc = 'https://media.fedu.vn/videos/DdPQJLvulmd.mp4';
+const rawVideoSrc = 'https://media.fedu.vn/videos/DdZb-x1OuDw.mp4';
 let currentEndTime = null;
 
 function getCandidateUrls(src) {
