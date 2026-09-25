@@ -154,7 +154,7 @@
                     const badgeClass = item.tier === 'RED' ? 'badge-danger' : 'badge-warning';
                     const { styleOpts, indOpts } = generateSelects(item.current_style, item.current_industry);
                     const sourceLink = getSourceLink(item.id, item.creator);
-                    const sourceBtn = sourceLink ? `<a href="${sourceLink}" target="_blank" class="badge badge-warning" style="background:#0f172a; color:#fff; text-decoration:none; margin-left: 10px;">▶ Xem IG Gốc</a> <span style="font-size: 10px; color: #666; margin-left: 5px;">(${sourceLink})</span>` : '';
+                    const sourceBtn = sourceLink ? `<a href="${sourceLink}" target="_blank" class="badge badge-warning" style="background:#0f172a; color:#fff; text-decoration:none; margin-left: 10px;">▶ Xem IG Gốc</a>` : '';
                     const reportBtn = `<a href="../reports/${item.id}.html" target="_blank" class="badge badge-info" style="background:#0284c7; color:#fff; text-decoration:none; margin-left: 10px;">📄 Xem Báo Cáo AI</a>`;
                     
                     html += `
@@ -184,9 +184,9 @@
                                 <label>Lý do (Bắt buộc để AI học)</label>
                                 <textarea id="reason-${item.id}" placeholder="Ví dụ: Không có đoạn đi bộ, góc máy tĩnh review bàn phím..."></textarea>
                             </div>
-                            <div style="display: flex; gap: 10px;">
-                                <button onclick="submitAudit('${item.id}')" style="background:var(--cl-primary); flex: 1;">Duyệt & Dạy AI</button>
-                                <button onclick="deleteItem('${item.id}')" style="background:var(--cl-danger); flex: 0 0 auto;">🗑️ Xóa Bỏ</button>
+                            <div style="display: flex; gap: 10px; margin-top: 15px; align-items: center;">
+                                <button onclick="submitAudit('${item.id}')" style="background:var(--cl-accent); flex: 1; margin:0; padding:12px; font-size:15px; border-radius:8px;">✅ Duyệt & Dạy AI</button>
+                                <button onclick="deleteItem('${item.id}')" style="background:transparent; color:var(--cl-danger); border:1px solid var(--cl-danger); flex:0 0 auto; margin:0; width:auto; padding:11px 16px; border-radius:8px; font-weight:600; cursor:pointer;" onmouseover="this.style.background='var(--cl-danger)';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='var(--cl-danger)'">🗑️ Xóa</button>
                             </div>
                         </div>
                     </div>`;
