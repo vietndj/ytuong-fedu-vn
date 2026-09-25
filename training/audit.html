@@ -214,10 +214,14 @@
                 reason: reason
             };
 
-            const btn = document.querySelector(`#card-${id} button`);
-            const oldText = btn.innerText;
-            btn.innerText = "Đang gửi...";
-            btn.disabled = true;
+            const card = document.getElementById(`card-${id}`);
+            const btn = card ? card.querySelector('button') : null;
+            let oldText = "Duyệt & Dạy AI";
+            if (btn) {
+                oldText = btn.innerText;
+                btn.innerText = "Đang gửi...";
+                btn.disabled = true;
+            }
 
             try {
                 const res = await fetch('http://localhost:8765/api/train', {
