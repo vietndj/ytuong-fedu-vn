@@ -1338,5 +1338,15 @@
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
+    },
+    {
+        "id": "IG_@the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light",
+        "creator": "@the.vantage.point",
+        "title": "The Beauty of Static - NYC Morning Light",
+        "current_style": "Điện Ảnh (Cinematic)",
+        "current_industry": "Kiến Trúc & Không Gian Sống",
+        "confidence_score": 75,
+        "tier": "YELLOW",
+        "reason_flagged": "Confidence 75/100"
     }
 ]

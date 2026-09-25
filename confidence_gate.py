@@ -157,6 +157,7 @@ def main():
                 'title': video.get('title', ''),
                 'current_style': shooting_style.get('name', '') if isinstance(shooting_style, dict) else str(shooting_style),
                 'current_industry': industry.get('name', '') if isinstance(industry, dict) else str(industry),
+                'tech_tags': video.get('tech_tags', []),
                 'confidence_score': score,
                 'tier': tier,
                 'reason_flagged': f"Confidence {score}/100"

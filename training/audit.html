@@ -181,6 +181,10 @@
                                 <select id="ind-${item.id}">${indOpts}</select>
                             </div>
                             <div class="form-group">
+                                <label>Tech Tags (Cách nhau bằng dấu phẩy)</label>
+                                <input type="text" id="tags-${item.id}" value="${(item.tech_tags || []).join(', ')}" placeholder="Ví dụ: Jump Cut, B-Roll, Zoom In..." style="width:100%; padding:10px; border:1px solid var(--cl-line); border-radius:6px; box-sizing:border-box; font-family:'FDAeonik', sans-serif;" />
+                            </div>
+                            <div class="form-group">
                                 <label>Lý do (Bắt buộc để AI học)</label>
                                 <textarea id="reason-${item.id}" placeholder="Ví dụ: Không có đoạn đi bộ, góc máy tĩnh review bàn phím..."></textarea>
                             </div>
