@@ -114,13 +114,24 @@
             return { styleOpts, indOpts };
         }
 
-        function getSourceLink(id) {
+        function getSourceLink(id, creator) {
+            if (!creator || !id) return null;
             if (id.startsWith('IG_')) {
-                const parts = id.split('_');
-                if (parts.length >= 3) return `https://www.instagram.com/reel/${parts[2]}/`;
+                const prefix = "IG_" + creator + "_";
+                if (id.startsWith(prefix)) {
+                    const remainder = id.substring(prefix.length);
+                    const match = remainder.match(/^([A-Za-z0-9_-]{11})(?:_|$)/);
+                    if (match) return `https://www.instagram.com/reel/${match[1]}/`;
+                    return `https://www.instagram.com/reel/${remainder.split('_')[0]}/`;
+                }
             } else if (id.startsWith('TT_')) {
-                const parts = id.split('_');
-                if (parts.length >= 3) return `https://www.tiktok.com/${parts[1]}/video/${parts[2]}`;
+                const prefix = "TT_" + creator + "_";
+                if (id.startsWith(prefix)) {
+                    const remainder = id.substring(prefix.length);
+                    const match = remainder.match(/^([0-9]{19})(?:_|$)/);
+                    if (match) return `https://www.tiktok.com/${creator.replace('@','')}/video/${match[1]}`;
+                    return `https://www.tiktok.com/${creator.replace('@','')}/video/${remainder.split('_')[0]}`;
+                }
             } else if (!id.includes('_')) {
                 return `https://www.instagram.com/reel/${id}/`; // Fallback for raw IDs
             }
@@ -145,7 +156,7 @@
                 queueData.forEach((item, index) => {
                     const badgeClass = item.tier === 'RED' ? 'badge-danger' : 'badge-warning';
                     const { styleOpts, indOpts } = generateSelects(item.current_style, item.current_industry);
-                    const sourceLink = getSourceLink(item.id);
+                    const sourceLink = getSourceLink(item.id, item.creator);
                     const sourceBtn = sourceLink ? `<a href="${sourceLink}" target="_blank" class="badge badge-warning" style="background:#0f172a; color:#fff; text-decoration:none; margin-left: 10px;">▶ Xem Bản Gốc</a>` : '';
                     
                     html += `
