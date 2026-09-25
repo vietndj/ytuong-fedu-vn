@@ -71,6 +71,13 @@ class RequestHandler(BaseHTTPRequestHandler):
                 video_data = master_data.get(video_id, {})
                 creator = video_data.get('creator', video_id)
                 
+                new_tags = data.get('new_tags')
+                if new_tags is not None:
+                    video_data['tech_tags'] = [t.strip() for t in new_tags.split(',') if t.strip()]
+                    master_data[video_id] = video_data
+                    with open(master_file, 'w', encoding='utf-8') as f:
+                        json.dump(master_data, f, indent=2, ensure_ascii=False)
+                
                 # If new_style/new_industry are empty, keep the original
                 if not new_style:
                     st = video_data.get('shooting_style')
