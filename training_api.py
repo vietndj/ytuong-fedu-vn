@@ -36,6 +36,17 @@ class RequestHandler(BaseHTTPRequestHandler):
                 self.wfile.write(json.dumps(data.get('learning_history_logs', [])).encode('utf-8'))
             except Exception as e:
                 self.wfile.write(json.dumps({"error": str(e)}).encode('utf-8'))
+        elif self.path == '/api/audit_queue':
+            try:
+                audit_file = os.path.join(base_dir, 'audit_queue.json')
+                if os.path.exists(audit_file):
+                    with open(audit_file, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                    self.wfile.write(json.dumps(data).encode('utf-8'))
+                else:
+                    self.wfile.write(json.dumps([]).encode('utf-8'))
+            except Exception as e:
+                self.wfile.write(json.dumps({"error": str(e)}).encode('utf-8'))
         else:
             self.wfile.write(json.dumps({"status": "ok"}).encode('utf-8'))
 

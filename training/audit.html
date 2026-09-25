@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybrid Confidence Gate - Audit UI</title>
+    <style>
+        :root {
+            --cl-bg: #ffffff;
+            --cl-tint: #f8fafc;
+            --cl-accent: #1a73e8;
+            --cl-accent-tint: rgba(26, 115, 232, 0.08);
+            --cl-text-base: #090d16;
+            --cl-text-body: #0f172a;
+            --cl-text-muted: #475569;
+            --cl-line: rgba(0, 0, 0, 0.06);
+            --cl-danger: #dc2626;
+            --cl-success: #16a34a;
+            --cl-warning: #eab308;
+        }
+
+        @font-face { font-family: 'FDAeonikExtended'; src: url('https://font.fedu.vn/FDAeonikExtended-Bold.woff2') format('woff2'); font-weight: 700; }
+        @font-face { font-family: 'FDAeonik'; src: url('https://font.fedu.vn/FDAeonik-Regular.woff2') format('woff2'); font-weight: 400; }
+        @font-face { font-family: 'FDAeonik'; src: url('https://font.fedu.vn/FDAeonik-SemiBold.woff2') format('woff2'); font-weight: 600; }
+        @font-face { font-family: 'TiemposText'; src: url('https://font.fedu.vn/TiemposText-Regular.woff2') format('woff2'); font-weight: 400; }
+
+        body { margin: 0; padding: 20px; font-family: 'TiemposText', serif; background-color: var(--cl-tint); color: var(--cl-text-body); font-size: 16px; line-height: 1.5; }
+        h1, h2, h3 { font-family: 'FDAeonikExtended', sans-serif; color: var(--cl-text-base); margin-top: 0; }
+        .ui-text { font-family: 'FDAeonik', sans-serif; font-weight: 600; }
+        
+        .container { max-width: 900px; margin: 0 auto; }
+        
+        .header-card { background: var(--cl-bg); padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px var(--cl-line); margin-bottom: 30px; border-top: 4px solid var(--cl-warning); }
+        .header-card h1 { margin-bottom: 5px; }
+        .header-card p { color: var(--cl-text-muted); margin: 0; font-family: 'FDAeonik', sans-serif; }
+
+        .audit-card { background: var(--cl-bg); padding: 25px; border-radius: 12px; box-shadow: 0 2px 4px var(--cl-line); margin-bottom: 20px; display: flex; gap: 25px; transition: all 0.3s ease; border: 1px solid var(--cl-line); }
+        .audit-card.done { opacity: 0.5; pointer-events: none; border-color: var(--cl-success); transform: scale(0.98); }
+        .audit-card.done .badge-warning { background: rgba(22, 163, 74, 0.1); color: var(--cl-success); }
+        
+        .audit-info { flex: 1; }
+        .audit-info h3 { font-size: 18px; margin-bottom: 10px; line-height: 1.3; }
+        .audit-info .creator { font-family: 'FDAeonik', sans-serif; color: var(--cl-accent); font-weight: 600; font-size: 14px; margin-bottom: 10px; display: block;}
+        .audit-info .meta { font-size: 14px; color: var(--cl-text-muted); font-family: 'FDAeonik', sans-serif; }
+        
+        .audit-actions { flex: 1; min-width: 320px; background: var(--cl-tint); padding: 20px; border-radius: 8px; border: 1px solid var(--cl-line); }
+        
+        .badge { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; display: inline-block; margin-bottom: 8px; font-family: 'FDAeonik', sans-serif;}
+        .badge-warning { background: rgba(234, 179, 8, 0.1); color: #a16207; }
+        .badge-danger { background: rgba(220, 38, 38, 0.1); color: var(--cl-danger); }
+        
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 6px; font-family: 'FDAeonik', sans-serif; font-weight: 600; font-size: 13px; color: var(--cl-text-muted); }
+        
+        select, textarea, button { width: 100%; padding: 10px; border: 1px solid var(--cl-line); border-radius: 6px; font-family: 'FDAeonik', sans-serif; box-sizing: border-box; font-size: 14px; }
+        textarea { font-family: 'TiemposText', serif; resize: vertical; min-height: 80px; }
+        select:focus, textarea:focus { outline: none; border-color: var(--cl-accent); }
+        
+        button { background: var(--cl-accent); color: white; border: none; cursor: pointer; font-weight: 600; transition: background 0.2s; margin-top: 5px; }
+        button:hover { background: #1557b0; }
+        
+        .empty-state { text-align: center; padding: 50px; background: var(--cl-bg); border-radius: 12px; font-family: 'FDAeonik', sans-serif; color: var(--cl-text-muted); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-card">
+            <h1>⚖️ Cổng Duyệt Nhanh (Audit UI)</h1>
+            <p id="queue-stats">Đang tải dữ liệu từ Confidence Gate...</p>
+        </div>
+        
+        <div id="queue-container"></div>
+    </div>
+
+    <script>
+        const STYLES = [
+            {id: 'walk-and-talk', name: 'Walk & Talk', icon: '🚶'},
+            {id: 'voice-over', name: 'Lồng Tiếng', icon: '🎙️'},
+            {id: 'talking-head', name: 'Nói Trực Diện', icon: '🗣️'},
+            {id: 'storytelling', name: 'Kể Chuyện', icon: '📖'},
+            {id: 'dien-anh', name: 'Chỉn Chu', icon: '🎬'},
+            {id: 'chuyen-canh', name: 'Chuyển Cảnh', icon: '⚡'},
+            {id: 'theo-nhip-nhac', name: 'Theo nhịp nhạc', icon: '🎵'},
+            {id: 'doi-thuong', name: 'Đời Thường & Chữa Lành', icon: '🌿'}
+        ];
+        const INDUSTRIES = [
+            {id: 'spa-lam-dep', name: 'Làm đẹp', icon: '💆'},
+            {id: 'thuong-hieu', name: 'Xây kênh', icon: '💼'},
+            {id: 'thoi-trang', name: 'Thời trang', icon: '👔'},
+            {id: 'am-thuc', name: 'F&B', icon: '🍜'},
+            {id: 'du-lich', name: 'Du lịch', icon: '✈️'},
+            {id: 'cong-nghe', name: 'Đồ công nghệ', icon: '📱'},
+            {id: 'kien-truc', name: 'Góc nhà đẹp', icon: '🏛️'},
+            {id: 'the-thao', name: 'Thể thao', icon: '🏃'},
+            {id: 'ky-thuat-quay', name: 'Bố cục', icon: '🎯'},
+            {id: 'ugc', name: 'UGC & Ads', icon: '📦'},
+            {id: 'phat-trien-ban-than', name: 'Tâm Lý', icon: '🧘'}
+        ];
+
+        let queueData = [];
+
+        function generateSelects(currentStyleName, currentIndName) {
+            let styleOpts = '<option value="">-- Chọn Style mới --</option>';
+            STYLES.forEach(s => {
+                let selected = (currentStyleName && s.name.toLowerCase() === currentStyleName.toLowerCase()) ? 'selected' : '';
+                styleOpts += `<option value="${s.id}" ${selected}>${s.icon} ${s.name}</option>`;
+            });
+
+            let indOpts = '<option value="">-- Chọn Ngành mới --</option>';
+            INDUSTRIES.forEach(i => {
+                let selected = (currentIndName && i.name.toLowerCase() === currentIndName.toLowerCase()) ? 'selected' : '';
+                indOpts += `<option value="${i.id}" ${selected}>${i.icon} ${i.name}</option>`;
+            });
+            return { styleOpts, indOpts };
+        }
+
+        async function init() {
+            try {
+                const res = await fetch('http://localhost:8765/api/audit_queue');
+                if (!res.ok) throw new Error('Network response was not ok');
+                queueData = await res.json();
+                
+                if (queueData.length === 0) {
+                    document.getElementById('queue-stats').innerText = "Không có video nào cần duyệt!";
+                    document.getElementById('queue-container').innerHTML = '<div class="empty-state">🎉 Tuyệt vời! Hàng chờ trống. Điểm Alignment Score của hệ thống rất tốt.</div>';
+                    return;
+                }
+
+                document.getElementById('queue-stats').innerText = `Có ${queueData.length} video nằm trong vùng xám (Confidence 50-84) cần anh Việt duyệt.`;
+                
+                let html = '';
+                queueData.forEach((item, index) => {
+                    const badgeClass = item.tier === 'RED' ? 'badge-danger' : 'badge-warning';
+                    const { styleOpts, indOpts } = generateSelects(item.current_style, item.current_industry);
+                    
+                    html += `
+                    <div class="audit-card" id="card-${item.id}">
+                        <div class="audit-info">
+                            <span class="badge ${badgeClass}">Score: ${item.confidence_score} | ${item.tier}</span>
+                            <span class="creator">${item.creator}</span>
+                            <h3><a href="https://ytuong.fedu.vn/report/${item.id}" target="_blank" style="color:inherit;text-decoration:none;">${item.title || item.id}</a></h3>
+                            <div class="meta">
+                                <strong>AI Phân loại:</strong><br>
+                                Style: ${item.current_style || 'Trống'}<br>
+                                Ngành: ${item.current_industry || 'Trống'}
+                            </div>
+                        </div>
+                        <div class="audit-actions">
+                            <div class="form-group">
+                                <label>Gán Style Chuẩn</label>
+                                <select id="style-${item.id}">${styleOpts}</select>
+                            </div>
+                            <div class="form-group">
+                                <label>Gán Industry Chuẩn</label>
+                                <select id="ind-${item.id}">${indOpts}</select>
+                            </div>
+                            <div class="form-group">
+                                <label>Lý do (Bắt buộc để AI học)</label>
+                                <textarea id="reason-${item.id}" placeholder="Ví dụ: Không có đoạn đi bộ, góc máy tĩnh review bàn phím..."></textarea>
+                            </div>
+                            <button onclick="submitAudit('${item.id}')">Duyệt & Dạy AI</button>
+                        </div>
+                    </div>`;
+                });
+                
+                document.getElementById('queue-container').innerHTML = html;
+            } catch (e) {
+                document.getElementById('queue-stats').innerHTML = `<span style="color:var(--cl-danger)">⚠️ Không kết nối được tới API. Đảm bảo bạn đang chạy <code>python3 training_api.py</code></span>`;
+            }
+        }
+
+        async function submitAudit(id) {
+            const style = document.getElementById(`style-${id}`).value;
+            const ind = document.getElementById(`ind-${id}`).value;
+            const reason = document.getElementById(`reason-${id}`).value;
+
+            if (!reason.trim()) {
+                alert("Vui lòng nhập lý do để hệ thống học và sinh Rule mới!");
+                document.getElementById(`reason-${id}`).focus();
+                return;
+            }
+
+            const data = {
+                video_id: id,
+                new_style: style,
+                new_industry: ind,
+                reason: reason
+            };
+
+            const btn = document.querySelector(`#card-${id} button`);
+            const oldText = btn.innerText;
+            btn.innerText = "Đang gửi...";
+            btn.disabled = true;
+
+            try {
+                const res = await fetch('http://localhost:8765/api/train', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                if (res.ok) {
+                    const card = document.getElementById(`card-${id}`);
+                    card.classList.add('done');
+                    btn.innerText = "Đã duyệt ✅";
+                } else {
+                    alert("Lỗi khi gửi API.");
+                    btn.innerText = oldText;
+                    btn.disabled = false;
+                }
+            } catch (e) {
+                alert("Không kết nối được server.");
+                btn.innerText = oldText;
+                btn.disabled = false;
+            }
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
