@@ -184,7 +184,10 @@
                                 <label>Lý do (Bắt buộc để AI học)</label>
                                 <textarea id="reason-${item.id}" placeholder="Ví dụ: Không có đoạn đi bộ, góc máy tĩnh review bàn phím..."></textarea>
                             </div>
-                            <button onclick="submitAudit('${item.id}')">Duyệt & Dạy AI</button>
+                            <div style="display: flex; gap: 10px;">
+                                <button onclick="submitAudit('${item.id}')" style="background:var(--cl-primary); flex: 1;">Duyệt & Dạy AI</button>
+                                <button onclick="deleteItem('${item.id}')" style="background:var(--cl-danger); flex: 0 0 auto;">🗑️ Xóa Bỏ</button>
+                            </div>
                         </div>
                     </div>`;
                 });
@@ -242,6 +245,43 @@
                 alert("Không kết nối được server.");
                 btn.innerText = oldText;
                 btn.disabled = false;
+            }
+        }
+
+        async function deleteItem(id) {
+            if (!confirm("Bạn có chắc chắn muốn xóa vĩnh viễn video này khỏi Database không?")) return;
+            
+            const card = document.getElementById(`card-${id}`);
+            if (card) {
+                const btns = card.querySelectorAll('button');
+                btns.forEach(b => b.disabled = true);
+            }
+
+            try {
+                const res = await fetch('http://localhost:8765/api/delete', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ video_id: id })
+                });
+
+                if (res.ok) {
+                    if (card) card.remove();
+                    // Refetch stats if needed
+                    fetchStats();
+                } else {
+                    const data = await res.json();
+                    alert('Lỗi khi xóa: ' + (data.message || 'Unknown error'));
+                    if (card) {
+                        const btns = card.querySelectorAll('button');
+                        btns.forEach(b => b.disabled = false);
+                    }
+                }
+            } catch(e) {
+                alert('Lỗi kết nối tới Server API (8765)!');
+                if (card) {
+                    const btns = card.querySelectorAll('button');
+                    btns.forEach(b => b.disabled = false);
+                }
             }
         }
 

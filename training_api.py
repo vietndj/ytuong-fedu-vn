@@ -118,6 +118,42 @@ class RequestHandler(BaseHTTPRequestHandler):
                 self.end_headers()
                 self.wfile.write(json.dumps({"status": "error", "message": str(e)}).encode('utf-8'))
 
+        elif self.path == '/api/delete':
+            content_length = int(self.headers['Content-Length'])
+            post_data = self.rfile.read(content_length)
+            data = json.loads(post_data.decode('utf-8'))
+            video_id = data.get('video_id')
+            
+            base_dir = '/Users/vietmac/Documents/CODE/ytuong-fedu-vn'
+            master_file = os.path.join(base_dir, 'master_classifications.json')
+            
+            try:
+                if os.path.exists(master_file):
+                    with open(master_file, 'r', encoding='utf-8') as f:
+                        master_data = json.load(f)
+                    
+                    if video_id in master_data:
+                        del master_data[video_id]
+                        with open(master_file, 'w', encoding='utf-8') as f:
+                            json.dump(master_data, f, indent=2, ensure_ascii=False)
+                            
+                # Also rebuild training data and queue automatically
+                subprocess.run('python3 confidence_gate.py', shell=True, check=True, cwd=base_dir)
+                subprocess.run('python3 training_data_builder.py', shell=True, check=True, cwd=base_dir)
+
+                self.send_response(200)
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.send_header('Access-Control-Allow-Private-Network', 'true')
+                self.send_header('Content-type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps({"status": "success", "message": "Deleted successfully"}).encode('utf-8'))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.send_header('Content-type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps({"status": "error", "message": str(e)}).encode('utf-8'))
+
 def run(server_class=HTTPServer, handler_class=RequestHandler, port=8765):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
