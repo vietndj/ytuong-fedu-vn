@@ -22292,29 +22292,28 @@
     "id": "IG_@framebygeorge_DdjxG1Hu8P6_Day_24_learning_cinematography",
     "creator": "@framebygeorge",
     "creator_name": "Framebygeorge",
-    "title": "@framebygeorge - Day 24 learning cinematography",
+    "title": "B-Roll Điện Ảnh: Khai thác sức mạnh của ánh sáng tự nhiên",
     "shots_count": 9,
-    "duration": "18.0s",
+    "duration": "15.5s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "id": "B-Roll Điện Ảnh",
+      "name": "B-Roll Điện Ảnh",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
+      "id": "Kiến Trúc & Không Gian Sống",
       "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting",
-      "Medium Tracking Shot"
+      "Cinematography",
+      "B-Roll",
+      "Ánh sáng tự nhiên"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Khám phá vẻ đẹp điện ảnh từ ánh sáng tự nhiên qua các chi tiết thường nhật.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -22330,29 +22329,28 @@
     "id": "IG_@framebygeorge_DdjxG1Hu8P6_Day_24_learning_cinematography",
     "creator": "@framebygeorge",
     "creator_name": "Framebygeorge",
-    "title": "@framebygeorge - Day 24 learning cinematography",
+    "title": "B-Roll Điện Ảnh: Khai thác sức mạnh của ánh sáng tự nhiên",
     "shots_count": 9,
-    "duration": "18.0s",
+    "duration": "15.5s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "id": "B-Roll Điện Ảnh",
+      "name": "B-Roll Điện Ảnh",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
+      "id": "Kiến Trúc & Không Gian Sống",
       "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting",
-      "Medium Tracking Shot"
+      "Cinematography",
+      "B-Roll",
+      "Ánh sáng tự nhiên"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Khám phá vẻ đẹp điện ảnh từ ánh sáng tự nhiên qua các chi tiết thường nhật.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
