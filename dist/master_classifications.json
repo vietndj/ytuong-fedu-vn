@@ -22736,28 +22736,28 @@
     "id": "IG_@framebygeorge_DdejCP_tg7G_Day_22_learning_cinematography",
     "creator": "@framebygeorge",
     "creator_name": "Framebygeorge",
-    "title": "@framebygeorge - Day 22 learning cinematography",
+    "title": "Nghệ Thuật Cinematic Vlog: Chơi Đùa Với Ánh Sáng Low-Key & Nhịp Sống Chậm",
     "shots_count": 9,
-    "duration": "18.0s",
+    "duration": "16.5s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "Cinematic Vlog",
+      "name": "Cinematic Vlog",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
+      "id": "Kiến Trúc & Không Gian Sống",
       "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
+      "Cinematic",
+      "Morning Routine",
       "Low-key Lighting"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Một thước phim Cinematic vlog ghi lại buổi sáng tĩnh lặng với sự kết hợp tuyệt vời giữa ánh sáng Low-key và ánh sáng tự nhiên.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
