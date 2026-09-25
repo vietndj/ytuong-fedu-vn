@@ -115,25 +115,22 @@
         }
 
         function getSourceLink(id, creator) {
-            if (!creator || !id) return null;
+            if (!id) return null;
             if (id.startsWith('IG_')) {
-                const prefix = "IG_" + creator + "_";
-                if (id.startsWith(prefix)) {
-                    const remainder = id.substring(prefix.length);
-                    const match = remainder.match(/^([A-Za-z0-9_-]{11})(?:_|$)/);
-                    if (match) return `https://www.instagram.com/reel/${match[1]}/`;
-                    return `https://www.instagram.com/reel/${remainder.split('_')[0]}/`;
-                }
+                // Try to find an 11-character alphanumeric post ID surrounded by underscores
+                const match = id.match(/_([A-Za-z0-9_-]{11})(?:_|$)/);
+                if (match) return `https://www.instagram.com/reels/${match[1]}/`;
+                // Fallback for short IG IDs
+                const parts = id.split('_');
+                if (parts.length > 2) return `https://www.instagram.com/reels/${parts[2]}/`;
             } else if (id.startsWith('TT_')) {
-                const prefix = "TT_" + creator + "_";
-                if (id.startsWith(prefix)) {
-                    const remainder = id.substring(prefix.length);
-                    const match = remainder.match(/^([0-9]{19})(?:_|$)/);
-                    if (match) return `https://www.tiktok.com/${creator.replace('@','')}/video/${match[1]}`;
-                    return `https://www.tiktok.com/${creator.replace('@','')}/video/${remainder.split('_')[0]}`;
-                }
+                const match = id.match(/_([0-9]{19})(?:_|$)/);
+                const safeCreator = (creator || '').replace('@','');
+                if (match) return `https://www.tiktok.com/@${safeCreator}/video/${match[1]}`;
+                const parts = id.split('_');
+                if (parts.length > 2) return `https://www.tiktok.com/@${safeCreator}/video/${parts[2]}`;
             } else if (!id.includes('_')) {
-                return `https://www.instagram.com/reel/${id}/`; // Fallback for raw IDs
+                return `https://www.instagram.com/reels/${id}/`; // Fallback for raw IDs
             }
             return null;
         }
@@ -157,13 +154,15 @@
                     const badgeClass = item.tier === 'RED' ? 'badge-danger' : 'badge-warning';
                     const { styleOpts, indOpts } = generateSelects(item.current_style, item.current_industry);
                     const sourceLink = getSourceLink(item.id, item.creator);
-                    const sourceBtn = sourceLink ? `<a href="${sourceLink}" target="_blank" class="badge badge-warning" style="background:#0f172a; color:#fff; text-decoration:none; margin-left: 10px;">▶ Xem Bản Gốc</a>` : '';
+                    const sourceBtn = sourceLink ? `<a href="${sourceLink}" target="_blank" class="badge badge-warning" style="background:#0f172a; color:#fff; text-decoration:none; margin-left: 10px;">▶ Xem IG Gốc</a> <span style="font-size: 10px; color: #666; margin-left: 5px;">(${sourceLink})</span>` : '';
+                    const reportBtn = `<a href="../reports/${item.id}.html" target="_blank" class="badge badge-info" style="background:#0284c7; color:#fff; text-decoration:none; margin-left: 10px;">📄 Xem Báo Cáo AI</a>`;
                     
                     html += `
                     <div class="audit-card" id="card-${item.id}">
                         <div class="audit-info">
                             <span class="badge ${badgeClass}">Score: ${item.confidence_score} | ${item.tier}</span>
                             ${sourceBtn}
+                            ${reportBtn}
                             <span class="creator">${item.creator}</span>
                             <h3>${item.title || item.id}</h3>
                             <div class="meta">
@@ -185,7 +184,10 @@
                                 <label>Lý do (Bắt buộc để AI học)</label>
                                 <textarea id="reason-${item.id}" placeholder="Ví dụ: Không có đoạn đi bộ, góc máy tĩnh review bàn phím..."></textarea>
                             </div>
-                            <button onclick="submitAudit('${item.id}')">Duyệt & Dạy AI</button>
+                            <div style="display: flex; gap: 10px;">
+                                <button onclick="submitAudit('${item.id}')" style="background:var(--cl-primary); flex: 1;">Duyệt & Dạy AI</button>
+                                <button onclick="deleteItem('${item.id}')" style="background:var(--cl-danger); flex: 0 0 auto;">🗑️ Xóa Bỏ</button>
+                            </div>
                         </div>
                     </div>`;
                 });
@@ -214,10 +216,14 @@
                 reason: reason
             };
 
-            const btn = document.querySelector(`#card-${id} button`);
-            const oldText = btn.innerText;
-            btn.innerText = "Đang gửi...";
-            btn.disabled = true;
+            const card = document.getElementById(`card-${id}`);
+            const btn = card ? card.querySelector('button') : null;
+            let oldText = "Duyệt & Dạy AI";
+            if (btn) {
+                oldText = btn.innerText;
+                btn.innerText = "Đang gửi...";
+                btn.disabled = true;
+            }
 
             try {
                 const res = await fetch('http://localhost:8765/api/train', {
@@ -239,6 +245,43 @@
                 alert("Không kết nối được server.");
                 btn.innerText = oldText;
                 btn.disabled = false;
+            }
+        }
+
+        async function deleteItem(id) {
+            if (!confirm("Bạn có chắc chắn muốn xóa vĩnh viễn video này khỏi Database không?")) return;
+            
+            const card = document.getElementById(`card-${id}`);
+            if (card) {
+                const btns = card.querySelectorAll('button');
+                btns.forEach(b => b.disabled = true);
+            }
+
+            try {
+                const res = await fetch('http://localhost:8765/api/delete', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ video_id: id })
+                });
+
+                if (res.ok) {
+                    if (card) card.remove();
+                    // Refetch stats if needed
+                    fetchStats();
+                } else {
+                    const data = await res.json();
+                    alert('Lỗi khi xóa: ' + (data.message || 'Unknown error'));
+                    if (card) {
+                        const btns = card.querySelectorAll('button');
+                        btns.forEach(b => b.disabled = false);
+                    }
+                }
+            } catch(e) {
+                alert('Lỗi kết nối tới Server API (8765)!');
+                if (card) {
+                    const btns = card.querySelectorAll('button');
+                    btns.forEach(b => b.disabled = false);
+                }
             }
         }
 

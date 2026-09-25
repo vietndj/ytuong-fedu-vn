@@ -1,0 +1,54 @@
+        async function submitAudit(id) {
+            const style = document.getElementById(`style-${id}`).value;
+            const ind = document.getElementById(`ind-${id}`).value;
+            const reason = document.getElementById(`reason-${id}`).value;
+
+            if (!reason.trim()) {
+                alert("Vui lòng nhập lý do để hệ thống học và sinh Rule mới!");
+                document.getElementById(`reason-${id}`).focus();
+                return;
+            }
+
+            const data = {
+                video_id: id,
+                new_style: style,
+                new_industry: ind,
+                reason: reason
+            };
+
+            const card = document.getElementById(`card-${id}`);
+            const btn = card ? card.querySelector('button') : null;
+            let oldText = "Duyệt & Dạy AI";
+            if (btn) {
+                oldText = btn.innerText;
+                btn.innerText = "Đang gửi...";
+                btn.disabled = true;
+            }
+
+            try {
+                const res = await fetch('http://localhost:8765/api/train', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                if (res.ok) {
+                    const card = document.getElementById(`card-${id}`);
+                    card.classList.add('done');
+                    btn.innerText = "Đã duyệt ✅";
+                } else {
+                    alert("Lỗi khi gửi API.");
+                    btn.innerText = oldText;
+                    btn.disabled = false;
+                }
+            } catch (e) {
+                alert("Không kết nối được server.");
+                btn.innerText = oldText;
+                btn.disabled = false;
+            }
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
