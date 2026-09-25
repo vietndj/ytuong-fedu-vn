@@ -22062,10 +22062,10 @@
     }
   },
   "DdeYvmLsms6": {
-    "id": "IG_@Маша_Пак_ФЕШН-ИНФЛЮЕНСЕР_DdeYvmLsms6_Video_by__mariapark",
-    "creator": "@Маша_Пак_ФЕШН-ИНФЛЮЕНСЕР",
-    "creator_name": "Маша_Пак_Фешн-Инфлюенсер",
-    "title": "@Маша_Пак_ФЕШН-ИНФЛЮЕНСЕР - Video by  mariapark",
+    "id": "IG_@mariapark_DdeYvmLsms6_Чакра_на_осенние_образы_открыта_🤩_Ставь_огонь",
+    "creator": "@mariapark",
+    "creator_name": "Mariapark",
+    "title": "@mariapark - Чакра на осенние образы открыта 🤩 Ставь огонь",
     "shots_count": 9,
     "duration": "18.0s",
     "shooting_style": {
@@ -22078,7 +22078,7 @@
       "name": "Kiến Trúc & Không Gian Sống",
       "icon": "🏛️"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Маша_Пак_ФЕШН-ИНФЛЮЕНСЕР",
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mariapark",
     "tech_tags": [
       "Establishing Hook Shot",
       "Close-Up / Macro Detail Shot",
@@ -22093,6 +22093,46 @@
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    }
+    },
+    "youtube_id": "sxtLWq0KqAo",
+    "youtube_url": "https://youtu.be/sxtLWq0KqAo",
+    "youtube_embed": "https://www.youtube.com/embed/sxtLWq0KqAo"
+  },
+  "IG_@mariapark_DdeYvmLsms6_Чакра_на_осенние_образы_открыта_🤩_Ставь_огонь": {
+    "id": "IG_@mariapark_DdeYvmLsms6_Чакра_на_осенние_образы_открыта_🤩_Ставь_огонь",
+    "creator": "@mariapark",
+    "creator_name": "Mariapark",
+    "title": "@mariapark - Чакра на осенние образы открыта 🤩 Ставь огонь",
+    "shots_count": 9,
+    "duration": "18.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mariapark",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "sxtLWq0KqAo",
+    "youtube_url": "https://youtu.be/sxtLWq0KqAo",
+    "youtube_embed": "https://www.youtube.com/embed/sxtLWq0KqAo"
   }
 }
