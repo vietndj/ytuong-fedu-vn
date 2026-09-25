@@ -5,6 +5,9 @@
         "title": "Unwinding • Nhịp Điệu Chữa Lành Giữa Tự Nhiên & Nghệ Thuật Nén - Giãn Nhịp Phim - @jsnhow",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Công Nghệ & Thiết Bị",
+        "tech_tags": [
+            "Cấu trúc Co-Giãn Nhịp Phim (Compression & Expansion Pacing) • Tone Màu Deep Pine Film LUT • Kỹ thuật Bắt Sáng Tự Nhiên Komorebi Flare • Cắt Cảnh Rhythmic Cut theo Nhịp Âm Thanh Lofi"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -15,6 +18,9 @@
         "title": "Split City: Shanghai (Bản Giao Hưởng Thượng Hải 3 Tầng Thời Không) - @kyung6film",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "Kinetic Masking, Triptych Split Screen, Symmetrical Anchor Pose, Match Cut, 3-Layer Urban Depth"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -25,6 +31,9 @@
         "title": "Andrei Kostromskikh • Phân Tích Phân Cảnh Carousel Đa Video & Ngôn Ngữ Điện Ảnh - @Andrei_Kostromskikh",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Cinematic Lighting, Composition Mastery, Color Grading, Storyboard Rhythm, Carousel Flow"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -35,6 +44,9 @@
         "title": "How to Cook a Video: Ẩn dụ Chế biến Ẩm thực & Quy trình Hậu kỳ Chuẩn chỉ - @shogentle",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Visual Metaphor, Momentum Continuity, Diegetic Typography, Match Action, Snap Zooms, SaaS Demo Storytelling"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -45,6 +57,9 @@
         "title": "Phân Tích Đạo Diễn: Joe Rogan & Elon Musk Podcast | Master Breakdown - @Startup_TM",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Cinematic Lighting, Composition Mastery, Color Grading, Storyboard Rhythm"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -55,6 +70,9 @@
         "title": "Carousel Multi-Slide Retention Masterclass - Nghệ Thuật Giữ Chân Chuỗi Video Đa Slide - @Andrei_Kostromskikh",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "Multi-Slide Carousel Architecture, Slide-by-Slide Retention Curve, Visual Consistency, Swipe Momentum"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -65,6 +83,9 @@
         "title": "Kyoto Slow Life Visual Diaries • Nghệ Thuật Kể Chuyện Nhịp Thị Giác Chuỗi Carousel Đô Thị Cổ Kính - @ioana_iftode",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Ẩm Thực & F&B",
+        "tech_tags": [
+            "Visual Breathing Rhythm, 3:2 Film Aspect Ratio, Visual Anchor Cover Hook, One-Point Alley Perspective, Sunlit Velocity Contrast, Tactile Lifestyle Break, Zen Macro Contemplation, Frame-in-Frame Practical Light, Sunset Telephoto Compression, Hypnotic Chōchin Lantern Rhythm, Twilight Blue Hour Contrast, Nostalgic OTS Loop Closure"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -75,6 +96,14 @@
         "title": "Combo Thư Thái Hà Nội: Chiều Spa Trị Liệu & Trà Matcha Tea Space - @hanoi.liebe",
         "current_style": "Chuyển Cảnh (Transition)",
         "current_industry": "Làm Đẹp & Spa / Y Tế",
+        "tech_tags": [
+            "Sensory Pairing",
+            "7-Beat Rapid Hook",
+            "Hot Stone Therapy",
+            "Chasen Whisking ASMR",
+            "Latte Marbling Pour",
+            "DM Voucher CTA"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -85,6 +114,14 @@
         "title": "@german991020 - South Korea stills - Final Series",
         "current_style": "Phim Điện Ảnh (Cinematic Stills)",
         "current_industry": "Nhiếp Ảnh & Điện Ảnh",
+        "tech_tags": [
+            "A24 Aesthetic",
+            "Telephoto Compression",
+            "Central Typography",
+            "Urban Street Life",
+            "Film Color Grading",
+            "Beat Cut Montage"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -95,6 +132,13 @@
         "title": "@ulanzi - Easy Open Portable Aluminum Trigopod",
         "current_style": "chuyen_canh",
         "current_industry": "cong_nghe",
+        "tech_tags": [
+            "Establishing Hook Shot",
+            "Match Cut",
+            "High-key Lighting",
+            "Low Angle",
+            "Macro Detail"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -105,6 +149,14 @@
         "title": "@la6vish - Fukuoka 🇯🇵",
         "current_style": "bien-hinh",
         "current_industry": "du-lich",
+        "tech_tags": [
+            "Chuyển Cảnh Che Ống Kính",
+            "Level 1 Tân Thủ",
+            "Biến Hình Du Lịch",
+            "Lens Cover Transition",
+            "Travel Vlog",
+            "Fukuoka Nhật Bản"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -115,6 +167,16 @@
         "title": "@davidmurphyfilm - Some rules I follow while filming and documen",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Nhiếp Ảnh & Làm Phim",
+        "tech_tags": [
+            "Cinematography Rules",
+            "Visual Hook",
+            "Framing Within A Frame",
+            "Public Space Production Value",
+            "Deep Depth Of Field",
+            "Sound Design ASMR",
+            "Scale Contrast",
+            "In-frame Entrance"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -125,6 +187,13 @@
         "title": "@dopeitsdamo - Art of Static Shots 🎥",
         "current_style": "Cinematic B-Roll",
         "current_industry": "Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Bố Cục Cú Máy Tĩnh",
+            "Dirty Foreground",
+            "Diagonal Dynamics",
+            "Over-The-Shoulder",
+            "Radial Symmetry"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -135,6 +204,13 @@
         "title": "Nghệ Thuật Băm Nhỏ Chuyển Động (Micro-Actions) & ASMR B-Roll Đời Thường - @jigummmmm",
         "current_style": "Đời Thường & Chữa Lành",
         "current_industry": "Đời Sống & Gia Đình",
+        "tech_tags": [
+            "Vlog Đời Thường",
+            "Micro-Actions",
+            "B-Roll Đời Thường",
+            "ASMR Kitchen",
+            "Tích Lũy 7 Tiếng"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -145,6 +221,14 @@
         "title": "@hena_film_vlog - 혼자 만드는데 촬영은 누가 하냐고요🤷🏻‍♀️ 제품제공",
         "current_style": "BTS / Hậu Trường Sáng Tạo",
         "current_industry": "ky-thuat-quay",
+        "tech_tags": [
+            "Solo Creator",
+            "BTS Vlog",
+            "Kỹ Thuật Quay",
+            "Auto Tracking",
+            "F&B Aesthetic",
+            "Gimbal"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -155,6 +239,14 @@
         "title": "@laylaa_398 - ♥️",
         "current_style": "POV & Aesthetic B-Roll Montage",
         "current_industry": "Phong Cách Sống & Du Lịch",
+        "tech_tags": [
+            "Aesthetic B-Roll",
+            "POV Lifestyle",
+            "Copenhagen Hygge",
+            "Fast Micro-Beats",
+            "Tivoli Gardens",
+            "Specialty Coffee"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -165,6 +257,13 @@
         "title": "@filmwithred - An escape from the noise of Tokyo. 🇯🇵",
         "current_style": "Cinematic B-Roll",
         "current_industry": "Du Lịch & Khám Phá",
+        "tech_tags": [
+            "Cinematic B-Roll",
+            "Tokyo Street Aesthetic",
+            "Golden Hour",
+            "Slow Paced",
+            "Environmental Storytelling"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -175,6 +274,13 @@
         "title": "@yongandmike - Here are 8 things we did in Chiang Rai",
         "current_style": "lifestyle-cinematic",
         "current_industry": "du-lich-khach-san",
+        "tech_tags": [
+            "Bố cục điện ảnh",
+            "Du lịch Chiang Rai",
+            "Carousel đa tầng",
+            "Nghỉ dưỡng",
+            "Kiến trúc resort"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -185,6 +291,14 @@
         "title": "@mylenesmind - can you guess the theme 👀",
         "current_style": "Walk and Talk Documentary",
         "current_industry": "Sáng Tạo Nội Dung & Điện Ảnh",
+        "tech_tags": [
+            "Walk and Talk",
+            "Documentary Essay",
+            "Paper B-Roll",
+            "Physical Magnifying Glass",
+            "Sandwich Typography",
+            "Golden Hour"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -195,6 +309,15 @@
         "title": "Nghệ Thuật Chuyển Cảnh Level 1 (Cut On Action): Mượn Tiền Cảnh Đời Thường Nối Mạch Video Siêu Mượt - @acupper",
         "current_style": "Cinematic Vlog / Cut On Action",
         "current_industry": "Du Lịch & Trải Nghiệm Sống",
+        "tech_tags": [
+            "Cut On Action",
+            "Chuyển Cảnh Level 1",
+            "Foreground Wipe",
+            "Match Cut",
+            "Travel Vlog",
+            "B-Roll",
+            "Kyoto"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -205,6 +328,14 @@
         "title": "@jxnjuvv - A city full of joy everywhere I go ♥️",
         "current_style": "Chuyển Cảnh (Transition)",
         "current_industry": "Du Lịch & Khám Phá",
+        "tech_tags": [
+            "Chuyển Cảnh Level 1",
+            "Tân Thủ",
+            "Follow-Cam Match Cut",
+            "Bước Đi Sau Lưng",
+            "Du Lịch Thượng Hải",
+            "Lifestyle"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -215,6 +346,13 @@
         "title": "Nghệ Thuật Bố Cục Chữ Không Gian (Spatial Typography) & Kỹ Thuật Walk & Talk Vòng Lặp Vô Tận - @iamaayushswamy",
         "current_style": "Walk and Talk",
         "current_industry": "Sáng Tạo Nội Dung & Video",
+        "tech_tags": [
+            "Walk and Talk",
+            "Kinetic Typography",
+            "Dynamic Framing",
+            "Seamless Loop",
+            "Pattern Interrupt"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -225,6 +363,14 @@
         "title": "Nghệ Thuật Giả Lập Drone FPV Bằng Máy Bay Giấy: Bí Quyết Chia Đôi Màn Hình The Shot vs BTS Giữ Chân Người Xem 100% - @aangelazunigaa",
         "current_style": "pov",
         "current_industry": "ky-thuat-quay",
+        "tech_tags": [
+            "POV",
+            "BTS",
+            "Split Screen",
+            "FPV",
+            "Paper Airplane",
+            "Sáng Tạo Nội Dung"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -235,6 +381,14 @@
         "title": "Kỹ Thuật Chuyển Cảnh Khung Cửa Vòm & Cắt Theo Nhịp Điệu (Rhythm Cut) Trong Lookbook Ralph Lauren KLCC - @lisha_ho",
         "current_style": "Chuyển Cảnh (Transition)",
         "current_industry": "Thời Trang & Phong Cách Sống",
+        "tech_tags": [
+            "Chuyen canh 1",
+            "Chuyển Cảnh (Transition)",
+            "Archway Framing",
+            "Rhythm Cut",
+            "Ralph Lauren",
+            "Ralph's Coffee"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -245,6 +399,15 @@
         "title": "Biến Hình Dark Academia Đi Thư Viện: Kỹ Thuật Match Cut Quán Tính Tay & Outro Phá Cách - @rubtsov.a",
         "current_style": "Chuyển Cảnh (Transition)",
         "current_industry": "Thời Trang & Phong Cách Sống",
+        "tech_tags": [
+            "Chuyen canh 1",
+            "Biến Hình",
+            "Match Cut",
+            "Dark Academia",
+            "Geek Chic",
+            "OOTD",
+            "Visual Hook"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -255,6 +418,15 @@
         "title": "Kể Chuyện Bằng Chuỗi Hành Động Vi Mô & Chuyển Đổi Ánh Sáng Tương Phản (After-Work Micro Routine) - @starsinmycam",
         "current_style": "Kể Chuyện (Storytelling)",
         "current_industry": "Đời Sống & Phong Cách Sống",
+        "tech_tags": [
+            "Chuyển cảnh 2",
+            "Kể chuyện",
+            "Micro-actions",
+            "Cinematic Vlog",
+            "After Work Routine",
+            "Match Cut",
+            "Lighting Shift"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -265,6 +437,15 @@
         "title": "Biến Hình Dark Academia Đi Thư Viện: Kỹ Thuật Match Cut Quán Tính Tay & Outro Phá Cách - @Ekaterina_модель_Уфа_,_Питер",
         "current_style": "Chuyển Cảnh (Transition)",
         "current_industry": "Thời Trang & Phong Cách Sống",
+        "tech_tags": [
+            "Chuyen canh 1",
+            "Biến Hình",
+            "Match Cut",
+            "Dark Academia",
+            "Geek Chic",
+            "OOTD",
+            "Visual Hook"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -275,6 +456,13 @@
         "title": "Công thức Montage 'POV Đút Cho Ống Kính' Dồn Dập 0.8s: Đòn Bẩy Thôi Miên Vị Giác Chuyến Đi Nhật Bản - @31.ioa",
         "current_style": "pov",
         "current_industry": "am-thuc",
+        "tech_tags": [
+            "POV You Go To Japan",
+            "Fast-Cut Food Montage",
+            "Sensory Food Appeal",
+            "Travel Food Vlog",
+            "Interactive POV Feeding"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -285,6 +473,10 @@
         "title": "@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲 - Video by elenabuntushak",
         "current_style": "Talking Head",
         "current_industry": "Công Nghệ & Thiết Bị",
+        "tech_tags": [
+            "Establishing Hook Shot",
+            "Medium Tracking Shot"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -295,6 +487,13 @@
         "title": "Đòn Bẩy Lột Xác Thời Trang: Kỹ thuật Match Cut & Nhịp Thở Co Giãn Giữ Chân Khán Giả - @alenkabalenka",
         "current_style": "Chuyển Cảnh Thời Trang (OOTD Transition)",
         "current_industry": "Thời Trang & Phụ Kiện",
+        "tech_tags": [
+            "Biến Hình Thời Trang",
+            "OOTD Transition",
+            "Match Cut",
+            "Fit Check",
+            "Phối Đồ Nữ"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -305,6 +504,14 @@
         "title": "8 Kỹ Thuật Quay Chụp Bánh Trung Thu Triệu View Bằng Điện Thoại (Split Screen Hậu Trường) - @hu321938",
         "current_style": "Split Screen / Behind-The-Scenes",
         "current_industry": "Ẩm Thực & F&B",
+        "tech_tags": [
+            "Split Screen",
+            "Ẩm Thực F&B",
+            "Kỹ Thuật Điện Thoại",
+            "Visual Gag",
+            "Trung Thu",
+            "Setup Tại Nhà"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -315,6 +522,13 @@
         "title": "5 Góc Quay & Bố Cục Thần Thánh Cứu Cánh Mọi Video Vlog Khi Bí Ý Tưởng - @nana_icroom",
         "current_style": "Vlog",
         "current_industry": "Đời Sống & Phong Cách Sống",
+        "tech_tags": [
+            "Vlog Đời Thường",
+            "5 Bố Cục Thần Thánh",
+            "Nghệ Thuật Tiền Cảnh",
+            "Japandi Lifestyle",
+            "Thẩm Mỹ Tối Giản"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -325,6 +539,14 @@
         "title": "10 Bố Cục Khung Hình Điện Ảnh & Tuyệt Kỹ Quay Phố Bằng Insta360 - @minghan1004",
         "current_style": "Bố Cục (Framing)",
         "current_industry": "Công Nghệ & Thiết Bị",
+        "tech_tags": [
+            "Bố Cục Đường Dẫn",
+            "Khung Trong Khung",
+            "Split-Screen POV",
+            "Nén Không Gian Tele",
+            "Merdeka 118",
+            "Insta360"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -335,6 +557,15 @@
         "title": "Bí Kíp Dựng Video Chữa Lành Nghệ Thuật: Công Thức Băm Nhịp Breathe In - Breathe Out Của Điện Ảnh Nhật Bản - @jsnhow",
         "current_style": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
         "current_industry": "Phong Cách Sống & Nghệ Thuật",
+        "tech_tags": [
+            "Breathe In Breathe Out",
+            "Nhịp Thở Điện Ảnh",
+            "Komorebi Light",
+            "Visual Hook",
+            "ASMR Thị Giác",
+            "Natural Framing",
+            "Tối Giản Nghệ Thuật"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -345,6 +576,13 @@
         "title": "Đòn Bẩy Ném Túi Che Ống Kính (Object Occlusion) & Cú Xoay Máy Selfie Giải Phóng Năng Lượng - @elenabuntushak",
         "current_style": "POV Dynamic / Biến Hình",
         "current_industry": "Thời Trang & Phong Cách Sống",
+        "tech_tags": [
+            "Whip Transition",
+            "Object Occlusion",
+            "Outfit Transformation",
+            "Orbit Tracking",
+            "Selfie POV"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -355,6 +593,16 @@
         "title": "5 Góc Quay Điện Ảnh Đột Phá Nâng Cấp Video Của Bạn (5 Shots To Improve Your Content) - @shotsbyzaid",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Nhiếp Ảnh & Quay Phim",
+        "tech_tags": [
+            "5 Góc Quay Đắt Giá",
+            "Visual Hook Màng Nước",
+            "Mount Vô Lăng Xe",
+            "Low Angle Sát Sàn",
+            "Detail Shot Tập Tạ",
+            "Wide Shot Sân Bay",
+            "Match Cut Top-Down",
+            "Seamless Loop"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -365,6 +613,14 @@
         "title": "Nghệ Thuật Bố Cục Không Lời: Kỹ Thuật Đan Xen Cỡ Cảnh & Punchline Thị Giác Trong Solo Filmmaking - @cinematic_lee",
         "current_style": "Visual Storytelling",
         "current_industry": "Bố cục",
+        "tech_tags": [
+            "Bố cục",
+            "Bố cục đối xứng",
+            "Quy tắc 1/3",
+            "Micro-cuts",
+            "Visual Storytelling",
+            "Solo Filmmaking"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -375,6 +631,13 @@
         "title": "Đòn Bẩy Kể Chuyện HUD Timeline & Cú Cắt Nhảy Rotoscope Biến Căn Phòng Thành Tác Phẩm Điện Ảnh - @qaqu_uu",
         "current_style": "POV & Fast-Paced Montage",
         "current_industry": "Vlog & Phong Cách Sống",
+        "tech_tags": [
+            "Vlog Day In My Life",
+            "GRWM Routine",
+            "Rotoscope Transition",
+            "HUD Typography Overlay",
+            "Match Cut Before After"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -385,6 +648,13 @@
         "title": "Bố Cục Đối Xứng Và Điểm Nghỉ Chân Dung Trong Nhịp Dựng Điện Ảnh Bản Địa - @takashi.film",
         "current_style": "Điện Ảnh Đời Thường (Cinematic)",
         "current_industry": "Du Lịch & Văn Hóa",
+        "tech_tags": [
+            "One Day In Vietnam",
+            "Làng Nghề Truyền Thống",
+            "Bố Cục Đối Xứng",
+            "Chân Dung Văn Hóa",
+            "Nhịp Dựng Điện Ảnh"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -395,6 +665,16 @@
         "title": "Bậc Thầy Gài Gắm Sản Phẩm Ẩn Danh (Stealth Product Placement): Nghệ Thuật Kể Chuyện 37 Shots Dẫn Dắt Qua 9 Tọa Độ Chiang Mai - @pausehereii",
         "current_style": "Vlog Lifestyle / B-Roll Điện Ảnh",
         "current_industry": "Thời Trang & Phụ Kiện",
+        "tech_tags": [
+            "Stealth Product Placement",
+            "POV Hook",
+            "Breathe-in Breathe-out",
+            "Color Harmony",
+            "In-Product POV",
+            "Invisible Transition",
+            "Golden Hour",
+            "EDC Bag"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -405,6 +685,14 @@
         "title": "Nghệ Thuật Match-Cut Thời Trang & Catwalk Hầm Xe: Kỹ Thuật Biến Hình Từ Váy Ngủ Sang Set Đồ Thu Edgy (@mariapark_)",
         "current_style": "Chuyển Cảnh Thời Trang (OOTD Transition)",
         "current_industry": "Thời Trang & Phong Cách Sống",
+        "tech_tags": [
+            "Match Cut",
+            "Fast-Cut Beat Sync",
+            "Outfit Transition",
+            "Editorial Dutch Tilt",
+            "Low-key Lighting",
+            "Catwalk Leading Lines"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -415,6 +703,11 @@
         "title": "Bóc tách kỹ thuật quay video chạy bộ Cinematic",
         "current_style": "Cinematic",
         "current_industry": "Thể Thao & Năng Động",
+        "tech_tags": [
+            "Góc thấp",
+            "Cận cảnh",
+            "Chuyển động"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -425,6 +718,9 @@
         "title": "Nghệ Thuật Kể Chuyện Cuộc Sống Thường Nhật - @hena_film_vlog",
         "current_style": "Storytelling",
         "current_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "tech_tags": [
+            "Threshold Floor-level Angle, ASMR Daily Soundscape, Warm Ambient Sunlight, Healing Narrative Rhythm, Interactive Engagement CTA"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -435,6 +731,9 @@
         "title": "Nghệ Thuật Kể Chuyện Cuộc Sống Thường Nhật - @hena_film_vlog",
         "current_style": "Storytelling",
         "current_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "tech_tags": [
+            "Threshold Floor-level Angle, ASMR Daily Soundscape, Warm Ambient Sunlight, Healing Narrative Rhythm, Interactive Engagement CTA"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -445,6 +744,9 @@
         "title": "The Beauty of Static - NYC Morning Light",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "Static Cinematography, Early Morning Sunlight, Chiaroscuro Contrast, One-Point Perspective, Architectural Symmetry"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -455,6 +757,9 @@
         "title": "Unwinding • Nhịp Điệu Chữa Lành Giữa Tự Nhiên & Nghệ Thuật Nén - Giãn Nhịp Phim",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Công Nghệ & Thiết Bị",
+        "tech_tags": [
+            "Cấu trúc Co-Giãn Nhịp Phim (Compression & Expansion Pacing) • Tone Màu Deep Pine Film LUT • Kỹ thuật Bắt Sáng Tự Nhiên Komorebi Flare • Cắt Cảnh Rhythmic Cut theo Nhịp Âm Thanh Lofi"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -465,6 +770,9 @@
         "title": "Split City: Shanghai (Bản Giao Hưởng Thượng Hải 3 Tầng Thời Không) - @kyung6film",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "Kinetic Masking, Triptych Split Screen, Symmetrical Anchor Pose, Match Cut, 3-Layer Urban Depth"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -475,6 +783,9 @@
         "title": "Đèn Bàn Di Động Koti & Nghệ Thuật Ánh Sáng Hoàng Hôn (@by.bennnj)",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Lifestyle Product Hook, Natural Backlighting, Touch Dimmer Macro, Foreground Wipe, Hygge Warmth"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -485,6 +796,9 @@
         "title": "Đèn Bàn Di Động Koti & Nghệ Thuật Ánh Sáng Hoàng Hôn (@by.bennnj)",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Lifestyle Product Hook, Natural Backlighting, Touch Dimmer Macro, Foreground Wipe, Hygge Warmth"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -495,6 +809,9 @@
         "title": "Andrei Kostromskikh • Phân Tích Phân Cảnh Carousel Đa Video & Ngôn Ngữ Điện Ảnh",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Cinematic Lighting, Composition Mastery, Color Grading, Storyboard Rhythm, Carousel Flow"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -505,6 +822,9 @@
         "title": "How to Cook a Video: Ẩn dụ Chế biến Ẩm thực & Quy trình Hậu kỳ Chuẩn chỉ",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Visual Metaphor, Momentum Continuity, Diegetic Typography, Match Action, Snap Zooms, SaaS Demo Storytelling"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -515,6 +835,9 @@
         "title": "Summer in New York City • Nghệ Thuật Kể Chuyện POV & Nhịp Dựng Montage",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Ẩm Thực & F&B",
+        "tech_tags": [
+            "POV Storytelling, Fast-Cut Beat-Matched Montage (6 frames), Golden Hour Lens Flare, One-Point Perspective Leading Lines, Frame-in-Frame Canopy, Vintage Kodak Portra 400 Glow"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -525,6 +848,9 @@
         "title": "Summer in New York City • Nghệ Thuật Kể Chuyện POV & Nhịp Dựng Montage",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Ẩm Thực & F&B",
+        "tech_tags": [
+            "POV Storytelling, Fast-Cut Beat-Matched Montage (6 frames), Golden Hour Lens Flare, One-Point Perspective Leading Lines, Frame-in-Frame Canopy, Vintage Kodak Portra 400 Glow"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -535,6 +861,9 @@
         "title": "The Art of Composition in London - @chowyhh (4 Quy Tắc Bố Cục Đô Thị)",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "4 Composition Rules, Symmetrical Subway, Diagonal Leading Lines, Multi-Level Layering, Natural Tunnel Framing, One-Point Perspective"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -545,6 +874,9 @@
         "title": "The Art of Composition in London - @chowyhh (4 Quy Tắc Bố Cục Đô Thị)",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "4 Composition Rules, Symmetrical Subway, Diagonal Leading Lines, Multi-Level Layering, Natural Tunnel Framing, One-Point Perspective"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -555,6 +887,9 @@
         "title": "Video by jade.got.curious",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Cinematic Lighting, Composition Mastery, Color Grading, Storyboard Rhythm"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -565,6 +900,9 @@
         "title": "Video by jade.got.curious",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Cinematic Lighting, Composition Mastery, Color Grading, Storyboard Rhythm"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -575,6 +913,9 @@
         "title": "Visual Storytelling Carousel • Cấu Trúc Kể Chuyện 5 Slide Đa Chiều",
         "current_style": "Storytelling",
         "current_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "tech_tags": [
+            "5-Slide Arc, Pacing Tension, Retention Loop, Multi-Aspect Ratio"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -585,6 +926,9 @@
         "title": "Hong Kong Cinematography Guide • Hướng Dẫn Bố Cục & Ánh Sáng Điện Ảnh Đường Phố",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Teal & Orange Grade, Natural Alley Chiaroscuro, Parallax Motion, Frame Within Frame"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -595,6 +939,9 @@
         "title": "August in Hong Kong • Bóc Tách 20 Phân Cảnh Đô Thị Điện Ảnh & Nghệ Thuật Khung Hình 16:9",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Cinematic Widescreen 16:9, Color Grading, Parallax Motion, Natural Light Depth"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -605,6 +952,9 @@
         "title": "August in Hong Kong • Bóc Tách 20 Phân Cảnh Đô Thị Điện Ảnh & Nghệ Thuật Khung Hình 16:9",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Cinematic Widescreen 16:9, Color Grading, Parallax Motion, Natural Light Depth"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -615,6 +965,9 @@
         "title": "Bưu Thiếp Video Mùa Hè London - Nghệ Thuật Khung Hình 4:3 & Nhịp Thở Thị Giác",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Tỷ lệ 4:3, Locked-off Frame, Golden Summer Glow, Visual Pacing, Retention Curve, Brutalism Symmetry"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -625,6 +978,9 @@
         "title": "Tokyo Slow Life: Nghệ Thuật Biến Khoảnh Khắc Thường Nhật Thành Thước Phim Điện Ảnh (9 Video Carousel Series)",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Visual Diary, 3:2 Cinematic Aspect Ratio, 24fps Motion Blur, Smooth Pan & Tilt, Golden Hour Glow, Natural Window Key, Wabi-Sabi Texture, Frame Within Frame, Teal & Amber Contrast"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -635,6 +991,9 @@
         "title": "Tokyo Slow Life: Nghệ Thuật Biến Khoảnh Khắc Thường Nhật Thành Thước Phim Điện Ảnh (9 Video Carousel Series)",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Visual Diary, 3:2 Cinematic Aspect Ratio, 24fps Motion Blur, Smooth Pan & Tilt, Golden Hour Glow, Natural Window Key, Wabi-Sabi Texture, Frame Within Frame, Teal & Amber Contrast"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -645,6 +1004,9 @@
         "title": "Tokyo Slow Life Visual Diaries • Nghệ Thuật Kể Chuyện Diptych & Nhịp Thở Đời Thường",
         "current_style": "Storytelling",
         "current_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "tech_tags": [
+            "Diptych Split-Screen, Shadow Play, 24h Routine Timeline, Komorebi Sunlight, Wabi-Sabi Aesthetics, Macro Culinary"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -655,6 +1017,9 @@
         "title": "Tokyo Slow Life Visual Diaries • Nghệ Thuật Kể Chuyện Diptych & Nhịp Thở Đời Thường",
         "current_style": "Storytelling",
         "current_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "tech_tags": [
+            "Diptych Split-Screen, Shadow Play, 24h Routine Timeline, Komorebi Sunlight, Wabi-Sabi Aesthetics, Macro Culinary"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -665,6 +1030,9 @@
         "title": "The Next Station Is Vietnam - Hành Trình Du Lịch Điện Ảnh",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Ẩm Thực & F&B",
+        "tech_tags": [
+            "Fast Montage Beat Sync, Leading Lines, Horizon Match Cut, Emotional Anchor, Flycam Aerial"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -675,6 +1043,9 @@
         "title": "The Next Station Is Vietnam - Hành Trình Du Lịch Điện Ảnh",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Ẩm Thực & F&B",
+        "tech_tags": [
+            "Fast Montage Beat Sync, Leading Lines, Horizon Match Cut, Emotional Anchor, Flycam Aerial"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -685,6 +1056,9 @@
         "title": "Lát Cắt Cảm Xúc • Nghệ Thuật Quay Tự Nhiên & Triết Lý Anti-Technique",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Anti-Technique, Cắt cảnh Real-time 24fps, Cú máy tĩnh trường đoạn 25.7s, Bố cục 1/3 chân thực, Ánh sáng tự nhiên"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -695,6 +1069,9 @@
         "title": "Chuỗi Thị Giác Hong Kong Trước Siêu Bão: Phản Chiếu Vũng Nước & Chiều Sâu Đô Thị",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "Puddle Reflection, One-Point Perspective, Low-to-Ground 5cm, Blue Hour Teal & Orange, Orthogonal Symmetry, Multi-Layer Depth"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -705,6 +1082,9 @@
         "title": "Chuỗi Thị Giác Hong Kong Trước Siêu Bão: Phản Chiếu Vũng Nước & Chiều Sâu Đô Thị",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "Puddle Reflection, One-Point Perspective, Low-to-Ground 5cm, Blue Hour Teal & Orange, Orthogonal Symmetry, Multi-Layer Depth"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -715,6 +1095,9 @@
         "title": "Mùa Xuân Hong Kong - Bậc Thang Hoa Vàng U Lam Terrace & Sắc Hồng Anh Đào HKIA",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Foreground Framing, Pedestal Down, Worm's-eye View, Palette Shift, Backlit Glow, Rim Light, Frame-within-Frame"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -725,6 +1108,9 @@
         "title": "Mùa Xuân Hong Kong - Bậc Thang Hoa Vàng U Lam Terrace & Sắc Hồng Anh Đào HKIA",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Foreground Framing, Pedestal Down, Worm's-eye View, Palette Shift, Backlit Glow, Rim Light, Frame-within-Frame"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -735,6 +1121,9 @@
         "title": "Nghệ Thuật Quan Sát Phố Thị & Bắt Nhịp Khoảnh Khắc (The Art of Noticing - Hong Kong)",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Golden 1.8s Cut Rhythm, Micro Camera Movements (Tilt/Pedestal/Truck), Frame in Frame, One-Point Perspective, Scale Contrast, Street Observation Method"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -745,6 +1134,9 @@
         "title": "Phân Tích Chi Tiết Video IG_@by.bennnj_DbKauxkoJU_",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Cỡ cảnh, động tác máy, nhịp điệu thị giác"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -755,6 +1147,10 @@
         "title": "Bí Quyết Biến Máy Ảnh Nhập Môn Trông Như Phim Điện Ảnh (Sony ZV-E10)",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Công Nghệ & Thiết Bị",
+        "tech_tags": [
+            "Chuyển cảnh Level 1",
+            "180° Shutter Rule, Manual White Balance, Black Diffusion Mist Filter, Dynamic Range"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -765,6 +1161,9 @@
         "title": "Kỹ Thuật Quay Sản Phẩm Cao Cấp & Cú Đẩy Máy Cận Cảnh Đẳng Cấp",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Commercial Product Slow Creep, Moving Strip Light, Luxury Metal Texture"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -775,6 +1174,9 @@
         "title": "Kịch Bản 14 Cảnh Phong Cách Lifestyle & 2 Phương Án Lời Thoại Tiếng Việt",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Voice-over Script Sync, Lifestyle Storytelling, Beat-matched Cuts"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -785,6 +1187,9 @@
         "title": "Nghệ Thuật Xây Dựng Nhịp Điệu Thị Giác Trong Chuỗi Video Carousel Đa Slide",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Ẩm Thực & F&B",
+        "tech_tags": [
+            "Visual Rhythm Carousel, Stopping Power, 9:16 Mobile Framing, Hook-to-CTA Pipeline"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -795,6 +1200,9 @@
         "title": "Nghệ Thuật Xây Dựng Nhịp Điệu Thị Giác Trong Chuỗi Video Carousel Đa Slide",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Ẩm Thực & F&B",
+        "tech_tags": [
+            "Visual Rhythm Carousel, Stopping Power, 9:16 Mobile Framing, Hook-to-CTA Pipeline"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -805,6 +1213,9 @@
         "title": "Bộ 4 Slide Video Thẩm Mỹ: Sự Kết Hợp Giữa Âm Nhạc & Chuyển Động Chậm",
         "current_style": "Chuyển Cảnh (Transition)",
         "current_industry": "Thời Trang & Phụ Kiện",
+        "tech_tags": [
+            "Slow Motion 60fps to 24fps, Sunset Rim Light, Texture Focus"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -815,6 +1226,9 @@
         "title": "Bộ 4 Slide Video Thẩm Mỹ: Sự Kết Hợp Giữa Âm Nhạc & Chuyển Động Chậm",
         "current_style": "Chuyển Cảnh (Transition)",
         "current_industry": "Thời Trang & Phụ Kiện",
+        "tech_tags": [
+            "Slow Motion 60fps to 24fps, Sunset Rim Light, Texture Focus"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -825,6 +1239,10 @@
         "title": "Phân Tích 21 Cảnh Siêu Tốc: Kỹ Thuật Match Cut Trên Nhịp Beat Điện Tử",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Chuyển cảnh Level 1",
+            "Fast Paced Montage, Beat Sync Cutting, Rapid Action Transitions"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -835,6 +1253,9 @@
         "title": "Nghệ Thuật Match Cut & Nhịp Điệu Phố Hong Kong Ván Bài Mạt Chược",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Du Lịch & Văn Hóa",
+        "tech_tags": [
+            "Match Cut on Shape & Color, Micro-tempo 0.2s, Top-Down 90° Overhead, Ambient Street Foley"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -845,6 +1266,9 @@
         "title": "Nghệ Thuật Chuyển Đổi Video Ngang Sang Chuẩn Dọc 9:16 Không Mất Chi Tiết",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "16:9 to 9:16 Re-framing, Safe Zone Typography, Center Attention"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -855,6 +1279,9 @@
         "title": "Creative Visual Performance - Kỹ Thuật Đánh Sáng Kịch Tính & Bố Cục Đảo Góc",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "High-Contrast Chiaroscuro Lighting, Dutch Angle Tilts, Kinetic Camera Pacing, Graphic Silhouettes"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -865,6 +1292,9 @@
         "title": "Zen Mind & Mountain Mist - Tinh Thần Tĩnh Lặng Trọng Điểm Giữa Mây Ngàn",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Du Lịch & Văn Hóa",
+        "tech_tags": [
+            "Negative Space Mastery, Fog Depth Layering, Monochromatic Tone, Meditative Static Cuts"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -875,6 +1305,9 @@
         "title": "Sunset Coastlines & Summer Breeze - Bắt Trọn Sóng Biển Hoàng Hôn & Cảm Xúc Tự Do",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Du Lịch & Văn Hóa",
+        "tech_tags": [
+            "Backlit Golden Hour Glow, Handheld Free Movement, Shallow Depth of Field, Warm Orange Tone"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -885,6 +1318,9 @@
         "title": "Carousel Multi-Slide Retention Masterclass - Nghệ Thuật Giữ Chân Chuỗi Video Đa Slide",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "Multi-Slide Carousel Architecture, Slide-by-Slide Retention Curve, Visual Consistency, Swipe Momentum"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -895,6 +1331,9 @@
         "title": "Kyoto Slow Life Visual Diaries • Nghệ Thuật Kể Chuyện Nhịp Thị Giác Chuỗi Carousel Đô Thị Cổ Kính",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Ẩm Thực & F&B",
+        "tech_tags": [
+            "Visual Breathing Rhythm, 3:2 Film Aspect Ratio, Visual Anchor Cover Hook, One-Point Alley Perspective, Sunlit Velocity Contrast, Tactile Lifestyle Break, Zen Macro Contemplation, Frame-in-Frame Practical Light, Sunset Telephoto Compression, Hypnotic Chōchin Lantern Rhythm, Twilight Blue Hour Contrast, Nostalgic OTS Loop Closure"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -905,6 +1344,13 @@
         "title": "4 Cú Máy Siêu Thị Bằng Giá Đỡ Điện Thoại Ulanzi MA38 & MT85 - @hena_film_vlog",
         "current_style": "Kỹ Thuật Quay & Dụng Cụ Gá Đỡ",
         "current_industry": "Kỹ Thuật Quay Dựng & Phụ Kiện Solo Filmmaking",
+        "tech_tags": [
+            "Pattern Interrupt Question Hook",
+            "0.5x Ultra-Wide High-Angle",
+            "Cart Handle Dolly POV",
+            "Magnetic Surface Snap",
+            "Floor-Level Low-Angle Hero Pass-By"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -915,6 +1361,13 @@
         "title": "4 Cú Máy Siêu Thị Bằng Giá Đỡ Điện Thoại Ulanzi MA38 & MT85 - @hena_film_vlog",
         "current_style": "Kỹ Thuật Quay & Dụng Cụ Gá Đỡ",
         "current_industry": "Kỹ Thuật Quay Dựng & Phụ Kiện Solo Filmmaking",
+        "tech_tags": [
+            "Pattern Interrupt Question Hook",
+            "0.5x Ultra-Wide High-Angle",
+            "Cart Handle Dolly POV",
+            "Magnetic Surface Snap",
+            "Floor-Level Low-Angle Hero Pass-By"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -925,6 +1378,15 @@
         "title": "Vũ Điệu Nhịp Cắt Beat-Match Tại Yosemite - @fabianamsolano",
         "current_style": "Beat-Match Cut & Vũ Đạo",
         "current_industry": "Du Lịch & Dã Ngoại Outdoor",
+        "tech_tags": [
+            "Beat-Matched Cutting",
+            "Spatial Teleportation Jump-Cut",
+            "Classic 4:3 Retro Framing",
+            "Hero Landscape Contrast",
+            "Natural Framing",
+            "Kinetic Motion Flow",
+            "Iconic Outro"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -935,6 +1397,16 @@
         "title": "House of Hair • Nghệ Thuật One-Take Runway Phô Diễn Suối Tóc Xoăn Bồng Bềnh Tự Nhiên - @hairpositiveofficial",
         "current_style": "Walk & Talk / Runway Catwalk (One-Take Plan-Séquence)",
         "current_industry": "Làm Đẹp & Spa / Y Tế (Salon Tóc)",
+        "tech_tags": [
+            "One-Take Continuous Shot",
+            "Carrie Bradshaw Styling",
+            "Urban Catwalk Pacing",
+            "Reverse Moonwalk Beat",
+            "Close-Up Push-In Transition",
+            "Tactile Hair Play & Curl Bounce",
+            "Monochromatic Slate Backdrop",
+            "Seamless Infinite Loop Outro"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -945,6 +1417,16 @@
         "title": "House of Hair • Nghệ Thuật One-Take Runway Phô Diễn Suối Tóc Xoăn Bồng Bềnh Tự Nhiên - @hairpositiveofficial",
         "current_style": "Walk & Talk / Runway Catwalk (One-Take Plan-Séquence)",
         "current_industry": "Làm Đẹp & Spa / Y Tế (Salon Tóc)",
+        "tech_tags": [
+            "One-Take Continuous Shot",
+            "Carrie Bradshaw Styling",
+            "Urban Catwalk Pacing",
+            "Reverse Moonwalk Beat",
+            "Close-Up Push-In Transition",
+            "Tactile Hair Play & Curl Bounce",
+            "Monochromatic Slate Backdrop",
+            "Seamless Infinite Loop Outro"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -955,6 +1437,14 @@
         "title": "25 Phân Cảnh Kỹ Thuật Speed Ramp & Beat-Sync Dựng Day In My Life Cực Cuốn - @celfstudies",
         "current_style": "Chuyển Cảnh & Dựng Nhanh (Transition / Speed Ramp)",
         "current_industry": "Thương Hiệu Cá Nhân & Đời Sống / Sáng Tạo",
+        "tech_tags": [
+            "Staccato Beat Teaser",
+            "Action Match Cut",
+            "Speed Ramp Transition",
+            "Horizontal Shelf Scan",
+            "Interactive Climax Showcase",
+            "Circular Outro Loop"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -965,6 +1455,17 @@
         "title": "UTS Vietnam Open Day Campus Tour - @utsint",
         "current_style": "Vừa Đi Vừa Nói & Campus Tour (Walk & Talk)",
         "current_industry": "Giáo Dục & Tuyển Sinh",
+        "tech_tags": [
+            "Walk-and-Talk Tracking",
+            "National Flag Hook",
+            "Atrium Low-Angle",
+            "Study Pod Reveal",
+            "Cozy Alumni Symmetry",
+            "Skyward Mezzanine Angle",
+            "Mascot Joy Pop-up",
+            "Looping Outro Anchor",
+            "Swiss Info Card"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -975,6 +1476,17 @@
         "title": "UTS Vietnam Open Day Campus Tour - @utsint",
         "current_style": "Vừa Đi Vừa Nói & Campus Tour (Walk & Talk)",
         "current_industry": "Giáo Dục & Tuyển Sinh",
+        "tech_tags": [
+            "Walk-and-Talk Tracking",
+            "National Flag Hook",
+            "Atrium Low-Angle",
+            "Study Pod Reveal",
+            "Cozy Alumni Symmetry",
+            "Skyward Mezzanine Angle",
+            "Mascot Joy Pop-up",
+            "Looping Outro Anchor",
+            "Swiss Info Card"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -985,6 +1497,17 @@
         "title": "Nghệ Thuật Xăm Mini Tô Bún Bò Huế Thực Tế - Saigon Ink Tattoo (Artist Nikko) - @saigonink_studio",
         "current_style": "Kể Chuyện (Storytelling)",
         "current_industry": "Làm Đẹp & Spa / Y Tế",
+        "tech_tags": [
+            "Hyper-Realistic Food Tattoo",
+            "Result-First Hook",
+            "Macro Needle ASMR",
+            "Wet Towel Wipe Reveal",
+            "Audio-Visual Rhyme",
+            "Cultural Identity Storytelling",
+            "Unpopular Opinion Hook",
+            "Procreate iPad Mockup",
+            "Museum Lighting Glide"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -995,6 +1518,17 @@
         "title": "Nghệ Thuật Xăm Mini Tô Bún Bò Huế Thực Tế - Saigon Ink Tattoo (Artist Nikko) - @saigonink_studio",
         "current_style": "Kể Chuyện (Storytelling)",
         "current_industry": "Làm Đẹp & Spa / Y Tế",
+        "tech_tags": [
+            "Hyper-Realistic Food Tattoo",
+            "Result-First Hook",
+            "Macro Needle ASMR",
+            "Wet Towel Wipe Reveal",
+            "Audio-Visual Rhyme",
+            "Cultural Identity Storytelling",
+            "Unpopular Opinion Hook",
+            "Procreate iPad Mockup",
+            "Museum Lighting Glide"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -1005,6 +1539,16 @@
         "title": "5 Cenas Criativas Trabalho • Nghệ Thuật Tự Quay B-Roll & Góc Làm Việc Chỉ Bằng Điện Thoại",
         "current_style": "Kỹ Thuật Quay & Setup Solo",
         "current_industry": "Sáng Tạo Nội Dung & Thương Hiệu Cá Nhân",
+        "tech_tags": [
+            "BTS to Result Formula",
+            "Self-Shooting Desk Hacks",
+            "Low-Angle Keyboard Macro",
+            "Top-Down Laptop Screen Clamp",
+            "Eye Reflection Macro Catchlight",
+            "Phone-in-Scene Frontal Setup",
+            "MagSafe Ecosystem Mount",
+            "Kinetic Outro CTA"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1015,6 +1559,16 @@
         "title": "5 Cenas Criativas Trabalho • Nghệ Thuật Tự Quay B-Roll & Góc Làm Việc Chỉ Bằng Điện Thoại",
         "current_style": "Kỹ Thuật Quay & Setup Solo",
         "current_industry": "Sáng Tạo Nội Dung & Thương Hiệu Cá Nhân",
+        "tech_tags": [
+            "BTS to Result Formula",
+            "Self-Shooting Desk Hacks",
+            "Low-Angle Keyboard Macro",
+            "Top-Down Laptop Screen Clamp",
+            "Eye Reflection Macro Catchlight",
+            "Phone-in-Scene Frontal Setup",
+            "MagSafe Ecosystem Mount",
+            "Kinetic Outro CTA"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1025,6 +1579,12 @@
         "title": "@maxryman - day in the life ☕️",
         "current_style": "Talking Head",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "Split-Kinetic Typography",
+            "Micro-Montage",
+            "Establishing Hook Shot",
+            "Low-key Lighting"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1035,6 +1595,14 @@
         "title": "@german991020 - South Korea stills - Final Series",
         "current_style": "Phim Điện Ảnh (Cinematic Stills)",
         "current_industry": "Nhiếp Ảnh & Điện Ảnh",
+        "tech_tags": [
+            "A24 Aesthetic",
+            "Telephoto Compression",
+            "Central Typography",
+            "Urban Street Life",
+            "Film Color Grading",
+            "Beat Cut Montage"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1045,6 +1613,13 @@
         "title": "@ulanzi - Easy Open Portable Aluminum Trigopod",
         "current_style": "chuyen_canh",
         "current_industry": "cong_nghe",
+        "tech_tags": [
+            "Establishing Hook Shot",
+            "Match Cut",
+            "High-key Lighting",
+            "Low Angle",
+            "Macro Detail"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -1055,6 +1630,14 @@
         "title": "@la6vish - Fukuoka 🇯🇵",
         "current_style": "bien-hinh",
         "current_industry": "du-lich",
+        "tech_tags": [
+            "Chuyển Cảnh Che Ống Kính",
+            "Level 1 Tân Thủ",
+            "Biến Hình Du Lịch",
+            "Lens Cover Transition",
+            "Travel Vlog",
+            "Fukuoka Nhật Bản"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -1065,6 +1648,16 @@
         "title": "@davidmurphyfilm - Some rules I follow while filming and documen",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Nhiếp Ảnh & Làm Phim",
+        "tech_tags": [
+            "Cinematography Rules",
+            "Visual Hook",
+            "Framing Within A Frame",
+            "Public Space Production Value",
+            "Deep Depth Of Field",
+            "Sound Design ASMR",
+            "Scale Contrast",
+            "In-frame Entrance"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1075,6 +1668,13 @@
         "title": "@dopeitsdamo - Art of Static Shots 🎥",
         "current_style": "Cinematic B-Roll",
         "current_industry": "Quay Dựng & Điện Ảnh",
+        "tech_tags": [
+            "Bố Cục Cú Máy Tĩnh",
+            "Dirty Foreground",
+            "Diagonal Dynamics",
+            "Over-The-Shoulder",
+            "Radial Symmetry"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1085,6 +1685,13 @@
         "title": "@jigummmmm - 설거지하는 모습도 예쁘게 찍을 수 있냐고요",
         "current_style": "Đời Thường & Chữa Lành",
         "current_industry": "Đời Sống & Gia Đình",
+        "tech_tags": [
+            "Vlog Đời Thường",
+            "Micro-Actions",
+            "B-Roll Đời Thường",
+            "ASMR Kitchen",
+            "Tích Lũy 7 Tiếng"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1095,6 +1702,10 @@
         "title": "@hena_film_vlog - 혼자 만드는데 촬영은 누가 하냐고요🤷🏻‍♀️ 제품제공",
         "current_style": "Talking Head",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "Establishing Hook Shot",
+            "Close-Up / Macro Detail Shot"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -1105,6 +1716,13 @@
         "title": "@filmwithred - An escape from the noise of Tokyo. 🇯🇵",
         "current_style": "Cinematic B-Roll",
         "current_industry": "Du Lịch & Khám Phá",
+        "tech_tags": [
+            "Cinematic B-Roll",
+            "Tokyo Street Aesthetic",
+            "Golden Hour",
+            "Slow Paced",
+            "Environmental Storytelling"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1115,6 +1733,13 @@
         "title": "@yongandmike - Here are 8 things we did in Chiang Rai",
         "current_style": "lifestyle-cinematic",
         "current_industry": "du-lich-khach-san",
+        "tech_tags": [
+            "Bố cục điện ảnh",
+            "Du lịch Chiang Rai",
+            "Carousel đa tầng",
+            "Nghỉ dưỡng",
+            "Kiến trúc resort"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1125,6 +1750,14 @@
         "title": "@mylenesmind - can you guess the theme 👀",
         "current_style": "Walk and Talk Documentary",
         "current_industry": "Sáng Tạo Nội Dung & Điện Ảnh",
+        "tech_tags": [
+            "Walk and Talk",
+            "Documentary Essay",
+            "Paper B-Roll",
+            "Physical Magnifying Glass",
+            "Sandwich Typography",
+            "Golden Hour"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1135,6 +1768,15 @@
         "title": "Nghệ Thuật Chuyển Cảnh Level 1 (Cut On Action): Mượn Tiền Cảnh Đời Thường Nối Mạch Video Siêu Mượt",
         "current_style": "Cinematic Vlog / Cut On Action",
         "current_industry": "Du Lịch & Trải Nghiệm Sống",
+        "tech_tags": [
+            "Cut On Action",
+            "Chuyển Cảnh Level 1",
+            "Foreground Wipe",
+            "Match Cut",
+            "Travel Vlog",
+            "B-Roll",
+            "Kyoto"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1145,6 +1787,14 @@
         "title": "@jxnjuvv - A city full of joy everywhere I go ♥️",
         "current_style": "Chuyển Cảnh (Transition)",
         "current_industry": "Du Lịch & Khám Phá",
+        "tech_tags": [
+            "Chuyển Cảnh Level 1",
+            "Tân Thủ",
+            "Follow-Cam Match Cut",
+            "Bước Đi Sau Lưng",
+            "Du Lịch Thượng Hải",
+            "Lifestyle"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1155,6 +1805,13 @@
         "title": "Nghệ Thuật Bố Cục Chữ Không Gian (Spatial Typography) & Kỹ Thuật Walk & Talk Vòng Lặp Vô Tận",
         "current_style": "Walk and Talk",
         "current_industry": "Sáng Tạo Nội Dung & Video",
+        "tech_tags": [
+            "Walk and Talk",
+            "Kinetic Typography",
+            "Dynamic Framing",
+            "Seamless Loop",
+            "Pattern Interrupt"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1165,6 +1822,14 @@
         "title": "Nghệ Thuật Giả Lập Drone FPV Bằng Máy Bay Giấy: Bí Quyết Chia Đôi Màn Hình The Shot vs BTS Giữ Chân Người Xem 100%",
         "current_style": "pov",
         "current_industry": "ky-thuat-quay",
+        "tech_tags": [
+            "POV",
+            "BTS",
+            "Split Screen",
+            "FPV",
+            "Paper Airplane",
+            "Sáng Tạo Nội Dung"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -1175,6 +1840,14 @@
         "title": "Công Thức Du Lịch 0.5x: Đòn Bẩy Góc Siêu Rộng Tự Quay Triệu View",
         "current_style": "Vlog 0.5x POV Montage",
         "current_industry": "Du Lịch & Phong Cách Sống",
+        "tech_tags": [
+            "Camera 0.5x",
+            "Travel Vlog Hack",
+            "POV Montage",
+            "Match Cut",
+            "Fast Beat",
+            "Day in the life"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1185,6 +1858,15 @@
         "title": "Biến Hình Dark Academia Đi Thư Viện: Kỹ Thuật Match Cut Quán Tính Tay & Outro Phá Cách",
         "current_style": "Chuyển Cảnh (Transition)",
         "current_industry": "Thời Trang & Phong Cách Sống",
+        "tech_tags": [
+            "Chuyen canh 1",
+            "Biến Hình",
+            "Match Cut",
+            "Dark Academia",
+            "Geek Chic",
+            "OOTD",
+            "Visual Hook"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1195,6 +1877,15 @@
         "title": "Kể Chuyện Bằng Chuỗi Hành Động Vi Mô & Chuyển Đổi Ánh Sáng Tương Phản (After-Work Micro Routine)",
         "current_style": "Kể Chuyện (Storytelling)",
         "current_industry": "Đời Sống & Phong Cách Sống",
+        "tech_tags": [
+            "Chuyển cảnh 2",
+            "Kể chuyện",
+            "Micro-actions",
+            "Cinematic Vlog",
+            "After Work Routine",
+            "Match Cut",
+            "Lighting Shift"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1205,6 +1896,13 @@
         "title": "Công thức Montage 'POV Đút Cho Ống Kính' Dồn Dập 0.8s: Đòn Bẩy Thôi Miên Vị Giác Chuyến Đi Nhật Bản",
         "current_style": "pov",
         "current_industry": "am-thuc",
+        "tech_tags": [
+            "POV You Go To Japan",
+            "Fast-Cut Food Montage",
+            "Sensory Food Appeal",
+            "Travel Food Vlog",
+            "Interactive POV Feeding"
+        ],
         "confidence_score": 70,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 70/100"
@@ -1215,6 +1913,13 @@
         "title": "Đòn Bẩy Ném Túi Che Ống Kính (Object Occlusion) & Cú Xoay Máy Selfie Giải Phóng Năng Lượng",
         "current_style": "POV Dynamic / Biến Hình",
         "current_industry": "Thời Trang & Phong Cách Sống",
+        "tech_tags": [
+            "Whip Transition",
+            "Object Occlusion",
+            "Outfit Transformation",
+            "Orbit Tracking",
+            "Selfie POV"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1225,6 +1930,13 @@
         "title": "Đòn Bẩy Lột Xác Thời Trang: Kỹ thuật Match Cut & Nhịp Thở Co Giãn Giữ Chân Khán Giả",
         "current_style": "Chuyển Cảnh Thời Trang (OOTD Transition)",
         "current_industry": "Thời Trang & Phụ Kiện",
+        "tech_tags": [
+            "Biến Hình Thời Trang",
+            "OOTD Transition",
+            "Match Cut",
+            "Fit Check",
+            "Phối Đồ Nữ"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1235,6 +1947,14 @@
         "title": "8 Kỹ Thuật Quay Chụp Bánh Trung Thu Triệu View Bằng Điện Thoại (Split Screen Hậu Trường)",
         "current_style": "Split Screen / Behind-The-Scenes",
         "current_industry": "Ẩm Thực & F&B",
+        "tech_tags": [
+            "Split Screen",
+            "Ẩm Thực F&B",
+            "Kỹ Thuật Điện Thoại",
+            "Visual Gag",
+            "Trung Thu",
+            "Setup Tại Nhà"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1245,6 +1965,14 @@
         "title": "10 Bố Cục Khung Hình Điện Ảnh & Tuyệt Kỹ Quay Phố Bằng Insta360",
         "current_style": "Bố Cục (Framing)",
         "current_industry": "Công Nghệ & Thiết Bị",
+        "tech_tags": [
+            "Bố Cục Đường Dẫn",
+            "Khung Trong Khung",
+            "Split-Screen POV",
+            "Nén Không Gian Tele",
+            "Merdeka 118",
+            "Insta360"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1255,6 +1983,15 @@
         "title": "Bí Kíp Dựng Video Chữa Lành Nghệ Thuật: Công Thức Băm Nhịp Breathe In - Breathe Out Của Điện Ảnh Nhật Bản",
         "current_style": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
         "current_industry": "Phong Cách Sống & Nghệ Thuật",
+        "tech_tags": [
+            "Breathe In Breathe Out",
+            "Nhịp Thở Điện Ảnh",
+            "Komorebi Light",
+            "Visual Hook",
+            "ASMR Thị Giác",
+            "Natural Framing",
+            "Tối Giản Nghệ Thuật"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1265,6 +2002,16 @@
         "title": "5 Góc Quay Điện Ảnh Đột Phá Nâng Cấp Video Của Bạn (5 Shots To Improve Your Content)",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Nhiếp Ảnh & Quay Phim",
+        "tech_tags": [
+            "5 Góc Quay Đắt Giá",
+            "Visual Hook Màng Nước",
+            "Mount Vô Lăng Xe",
+            "Low Angle Sát Sàn",
+            "Detail Shot Tập Tạ",
+            "Wide Shot Sân Bay",
+            "Match Cut Top-Down",
+            "Seamless Loop"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1275,6 +2022,13 @@
         "title": "Bố Cục Đối Xứng Và Điểm Nghỉ Chân Dung Trong Nhịp Dựng Điện Ảnh Bản Địa",
         "current_style": "Điện Ảnh Đời Thường (Cinematic)",
         "current_industry": "Du Lịch & Văn Hóa",
+        "tech_tags": [
+            "One Day In Vietnam",
+            "Làng Nghề Truyền Thống",
+            "Bố Cục Đối Xứng",
+            "Chân Dung Văn Hóa",
+            "Nhịp Dựng Điện Ảnh"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1285,6 +2039,16 @@
         "title": "Bậc Thầy Gài Gắm Sản Phẩm Ẩn Danh (Stealth Product Placement): Nghệ Thuật Kể Chuyện 37 Shots Dẫn Dắt Qua 9 Tọa Độ Chiang Mai",
         "current_style": "Vlog Lifestyle / B-Roll Điện Ảnh",
         "current_industry": "Thời Trang & Phụ Kiện",
+        "tech_tags": [
+            "Stealth Product Placement",
+            "POV Hook",
+            "Breathe-in Breathe-out",
+            "Color Harmony",
+            "In-Product POV",
+            "Invisible Transition",
+            "Golden Hour",
+            "EDC Bag"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1295,6 +2059,14 @@
         "title": "Nghệ Thuật Match-Cut Thời Trang & Catwalk Hầm Xe: Kỹ Thuật Biến Hình Từ Váy Ngủ Sang Set Đồ Thu Edgy (@mariapark_)",
         "current_style": "Chuyển Cảnh Thời Trang (OOTD Transition)",
         "current_industry": "Thời Trang & Phong Cách Sống",
+        "tech_tags": [
+            "Match Cut",
+            "Fast-Cut Beat Sync",
+            "Outfit Transition",
+            "Editorial Dutch Tilt",
+            "Low-key Lighting",
+            "Catwalk Leading Lines"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1305,6 +2077,11 @@
         "title": "Bóc Tách Góc Máy Lookbook Đường Phố: Cách Show Trang Phục Quyền Lực",
         "current_style": "Lookbook Thực Chiến",
         "current_industry": "Thời Trang & Streetwear",
+        "tech_tags": [
+            "Streetwear",
+            "Couple Outfit",
+            "Transitions"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1315,6 +2092,10 @@
         "title": "@iz_hxn - How we pull up in Smart Style 🕶️ #fitcheck #l",
         "current_style": "Talking Head",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "Establishing Hook Shot",
+            "Close-Up / Macro Detail Shot"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"
@@ -1325,6 +2106,11 @@
         "title": "B-Roll Điện Ảnh: Khai thác sức mạnh của ánh sáng tự nhiên",
         "current_style": "B-Roll Điện Ảnh",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "Cinematography",
+            "B-Roll",
+            "Ánh sáng tự nhiên"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1335,6 +2121,41 @@
         "title": "B-Roll Điện Ảnh: Khai thác sức mạnh của ánh sáng tự nhiên",
         "current_style": "B-Roll Điện Ảnh",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "Cinematography",
+            "B-Roll",
+            "Ánh sáng tự nhiên"
+        ],
+        "confidence_score": 55,
+        "tier": "YELLOW",
+        "reason_flagged": "Confidence 55/100"
+    },
+    {
+        "id": "IG_@framebygeorge_DdhHCL6OOfK_Day_23_learning_cinematography",
+        "creator": "@framebygeorge",
+        "title": "Bóc Tách Kỹ Thuật Cinematic B-roll & Khai Thác Nắng Sớm",
+        "current_style": "Cinematic B-roll",
+        "current_industry": "Cinematic Lifestyle",
+        "tech_tags": [
+            "Ánh sáng tự nhiên",
+            "Backlight",
+            "Food Videography"
+        ],
+        "confidence_score": 55,
+        "tier": "YELLOW",
+        "reason_flagged": "Confidence 55/100"
+    },
+    {
+        "id": "IG_@framebygeorge_DdhHCL6OOfK_Day_23_learning_cinematography",
+        "creator": "@framebygeorge",
+        "title": "Bóc Tách Kỹ Thuật Cinematic B-roll & Khai Thác Nắng Sớm",
+        "current_style": "Cinematic B-roll",
+        "current_industry": "Cinematic Lifestyle",
+        "tech_tags": [
+            "Ánh sáng tự nhiên",
+            "Backlight",
+            "Food Videography"
+        ],
         "confidence_score": 55,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 55/100"
@@ -1345,6 +2166,9 @@
         "title": "The Beauty of Static - NYC Morning Light",
         "current_style": "Điện Ảnh (Cinematic)",
         "current_industry": "Kiến Trúc & Không Gian Sống",
+        "tech_tags": [
+            "Static Cinematography, Early Morning Sunlight, Chiaroscuro Contrast, One-Point Perspective, Architectural Symmetry"
+        ],
         "confidence_score": 75,
         "tier": "YELLOW",
         "reason_flagged": "Confidence 75/100"

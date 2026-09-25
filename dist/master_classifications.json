@@ -22435,5 +22435,153 @@
       "course_industry_mapping": "Kiến Trúc, Nội Thất, Bất Động Sản & Không Gian Sống Slow Living",
       "transition_level": null
     }
+  },
+  "IG_@framebygeorge_DdcH-N-ONJw_Day_21_learning_cinematography": {
+    "id": "IG_@framebygeorge_DdcH-N-ONJw_Day_21_learning_cinematography",
+    "creator": "@framebygeorge",
+    "creator_name": "Framebygeorge",
+    "title": "@framebygeorge - Day 21 learning cinematography",
+    "shots_count": 9,
+    "duration": "18.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "SBBGhDIIs5g",
+    "youtube_url": "https://youtu.be/SBBGhDIIs5g",
+    "youtube_embed": "https://www.youtube.com/embed/SBBGhDIIs5g"
+  },
+  "DdcH-N-ONJw": {
+    "id": "IG_@framebygeorge_DdcH-N-ONJw_Day_21_learning_cinematography",
+    "creator": "@framebygeorge",
+    "creator_name": "Framebygeorge",
+    "title": "@framebygeorge - Day 21 learning cinematography",
+    "shots_count": 9,
+    "duration": "18.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "SBBGhDIIs5g",
+    "youtube_url": "https://youtu.be/SBBGhDIIs5g",
+    "youtube_embed": "https://www.youtube.com/embed/SBBGhDIIs5g"
+  },
+  "IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography": {
+    "id": "IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography",
+    "creator": "@framebygeorge",
+    "creator_name": "Framebygeorge",
+    "title": "@framebygeorge - Day 17 learning cinematography",
+    "shots_count": 8,
+    "duration": "16.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "0APEJfI-0ac",
+    "youtube_url": "https://youtu.be/0APEJfI-0ac",
+    "youtube_embed": "https://www.youtube.com/embed/0APEJfI-0ac"
+  },
+  "DdPQJLvulmd": {
+    "id": "IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography",
+    "creator": "@framebygeorge",
+    "creator_name": "Framebygeorge",
+    "title": "@framebygeorge - Day 17 learning cinematography",
+    "shots_count": 8,
+    "duration": "16.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "0APEJfI-0ac",
+    "youtube_url": "https://youtu.be/0APEJfI-0ac",
+    "youtube_embed": "https://www.youtube.com/embed/0APEJfI-0ac"
   }
 }
