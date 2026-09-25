@@ -95,57 +95,84 @@ def send_telegram_summary(summary_text):
     cmd = f"curl -s -X POST -H 'Content-Type: application/json' -d {shlex.quote(payload_json)} {url}"
     subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
+def load_corrections():
+    """Load danh sách video_id đã được mentor sửa từ training_data.js"""
+    td_path = os.path.join(os.path.dirname(__file__), 'training_data.js')
+    try:
+        with open(td_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        # Strip "var TRAINING_DATA = " prefix and trailing ";"
+        import re
+        match = re.search(r'var TRAINING_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$', content)
+        if match:
+            data = json.loads(match.group(1))
+            return {c.get('video_id') for c in data.get('corrections', []) if c.get('video_id')}
+    except Exception:
+        pass
+    return set()
+
 def main():
     parser = argparse.ArgumentParser(description="Hybrid Confidence Gate for Video Classifications")
     parser.add_argument('--dry-run', action='store_true', help='Do not save audit_queue.json')
     parser.add_argument('--telegram', action='store_true', help='Send summary via Telegram')
     args = parser.parse_args()
 
-    # Load data
-    classifications = load_json('master_classifications.json') or []
+    # Load data — master_classifications.json is a dict {video_id: video_data}
+    classifications_dict = load_json('master_classifications.json') or {}
     learned_patterns = load_json('LEARNED_PATTERNS.json') or {}
-    
-    # Mocking corrections list based on context - normally this would load from a file
-    # If there's an existing corrections file, you can modify this logic.
-    corrections_list = set()
-    
-    results = {
-        'GREEN': [],
-        'YELLOW': [],
-        'RED': []
-    }
-    
+    corrections_list = load_corrections()
+
+    results = {'GREEN': [], 'YELLOW': [], 'RED': []}
     audit_queue = []
-    
-    for video in classifications:
+
+    for video_id, video in classifications_dict.items():
+        if not isinstance(video, dict):
+            continue
+        if video.get('is_excluded', False):
+            continue
+
         score = compute_confidence(video, learned_patterns, corrections_list)
-        
+
         tier = 'RED'
         if score >= 85:
             tier = 'GREEN'
         elif score >= 50:
             tier = 'YELLOW'
-            
+
         results[tier].append(video)
-        
+
         if tier in ['YELLOW', 'RED']:
+            shooting_style = video.get('shooting_style', {})
+            industry = video.get('industry', {})
+            if isinstance(industry, list):
+                industry = industry[0] if industry else {}
+            if isinstance(shooting_style, str):
+                shooting_style = {'id': shooting_style, 'name': shooting_style}
+            if isinstance(industry, str):
+                industry = {'id': industry, 'name': industry}
+
             audit_queue.append({
-                'id': video.get('id'),
-                'creator': video.get('creator'),
-                'title': video.get('title'),
-                'current_style': video.get('shooting_style', {}).get('name'),
-                'current_industry': video.get('industry', {}).get('name'),
+                'id': video.get('id', video_id),
+                'creator': video.get('creator', ''),
+                'title': video.get('title', ''),
+                'current_style': shooting_style.get('name', '') if isinstance(shooting_style, dict) else str(shooting_style),
+                'current_industry': industry.get('name', '') if isinstance(industry, dict) else str(industry),
                 'confidence_score': score,
                 'tier': tier,
-                'reason_flagged': f"Low confidence score ({score})"
+                'reason_flagged': f"Confidence {score}/100"
             })
 
-    # Terminal output
-    print(f"\n{Colors.BOLD}--- Confidence Gate Audit Summary ---{Colors.ENDC}")
-    print(f"{Colors.GREEN}GREEN (≥85) Auto-approved:{Colors.ENDC} {len(results['GREEN'])}")
-    print(f"{Colors.YELLOW}YELLOW (50-84) Needs mentor review:{Colors.ENDC} {len(results['YELLOW'])}")
-    print(f"{Colors.RED}RED (<50) Priority review:{Colors.ENDC} {len(results['RED'])}")
-    print(f"Total videos processed: {len(classifications)}\n")
+    total = sum(len(v) for v in results.values())
+    print(f"\n{Colors.BOLD}{'='*50}")
+    print(f"  CONFIDENCE GATE AUDIT — Kho Ý Tưởng")
+    print(f"{'='*50}{Colors.ENDC}")
+    print(f"{Colors.GREEN}  ✅ GREEN (≥85) Auto-approved:      {len(results['GREEN']):>4}{Colors.ENDC}")
+    print(f"{Colors.YELLOW}  ⚠️  YELLOW (50-84) Cần anh duyệt:  {len(results['YELLOW']):>4}{Colors.ENDC}")
+    print(f"{Colors.RED}  🔴 RED (<50) Ưu tiên duyệt:       {len(results['RED']):>4}{Colors.ENDC}")
+    print(f"  {'─'*46}")
+    print(f"  Tổng video xử lý:                  {total:>4}")
+    pct_auto = round(len(results['GREEN'])/total*100, 1) if total else 0
+    print(f"  Tỷ lệ auto-approve:                {pct_auto}%\n")
     
     # Save queue
     if not args.dry_run:
