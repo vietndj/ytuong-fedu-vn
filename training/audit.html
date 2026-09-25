@@ -121,8 +121,8 @@
                 if (id.startsWith(prefix)) {
                     const remainder = id.substring(prefix.length);
                     const match = remainder.match(/^([A-Za-z0-9_-]{11})(?:_|$)/);
-                    if (match) return `https://www.instagram.com/reel/${match[1]}/`;
-                    return `https://www.instagram.com/reel/${remainder.split('_')[0]}/`;
+                    if (match) return `https://www.instagram.com/reels/${match[1]}/`;
+                    return `https://www.instagram.com/reels/${remainder.split('_')[0]}/`;
                 }
             } else if (id.startsWith('TT_')) {
                 const prefix = "TT_" + creator + "_";
@@ -133,7 +133,7 @@
                     return `https://www.tiktok.com/${creator.replace('@','')}/video/${remainder.split('_')[0]}`;
                 }
             } else if (!id.includes('_')) {
-                return `https://www.instagram.com/reel/${id}/`; // Fallback for raw IDs
+                return `https://www.instagram.com/reels/${id}/`; // Fallback for raw IDs
             }
             return null;
         }
