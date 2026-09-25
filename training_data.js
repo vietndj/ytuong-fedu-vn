@@ -1,7 +1,7 @@
 var TRAINING_DATA = {
-  "generated_at": "2026-09-24T09:13:16.528248",
+  "generated_at": "2026-09-25T11:54:01.127285",
   "stats": {
-    "total_videos": 452,
+    "total_videos": 513,
     "total_corrections": 27,
     "alignment_score": 0,
     "target_score": 98.0,
@@ -1285,8 +1285,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DXf1LldT5co",
-      "title": "Jenny Tsang • Calvin Klein Baggy Jeans Hong Kong Lookbook",
-      "creator": "@tsangtastic",
+      "title": "Jenny Tsang • Calvin Klein Baggy Jeans Hong Kong Lookbook - @JENNY_TSANG",
+      "creator": "@JENNY_TSANG",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh (Transition)",
@@ -1305,8 +1305,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DbBQzyqimbi",
-      "title": "Boring vs Creative Shots (@yegor.sky)",
-      "creator": "@yegor.sky",
+      "title": "Boring vs Creative Shots (@yegor.sky) - @Yegor.Sky",
+      "creator": "@Yegor.Sky",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -1325,7 +1325,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow",
-      "title": "Hena Film Vlog • 5 Bố Cục Mở Hộp Unboxing Đồ Công Nghệ Chuẩn Điện Ảnh",
+      "title": "Hena Film Vlog • 5 Bố Cục Mở Hộp Unboxing Đồ Công Nghệ Chuẩn Điện Ảnh - @hena_film_vlog",
       "creator": "@hena_film_vlog",
       "shooting_style": {
         "id": "dien-anh",
@@ -1345,7 +1345,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DY_0KNxvNJa",
-      "title": "Hena Film Vlog • 5 Bố Cục Mở Hộp Unboxing Đồ Công Nghệ Chuẩn Điện Ảnh",
+      "title": "Hena Film Vlog • 5 Bố Cục Mở Hộp Unboxing Đồ Công Nghệ Chuẩn Điện Ảnh - @hena_film_vlog",
       "creator": "@hena_film_vlog",
       "shooting_style": {
         "id": "dien-anh",
@@ -1365,7 +1365,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery",
-      "title": "Mridupawan Sharma • 4 Kỹ Thuật Cắt Cảnh Nâng Tầm Video Điện Ảnh",
+      "title": "Mridupawan Sharma • 4 Kỹ Thuật Cắt Cảnh Nâng Tầm Video Điện Ảnh - @mridupawasharma",
       "creator": "@mridupawasharma",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -1385,7 +1385,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Dc0tEcOIdwy",
-      "title": "Mridupawan Sharma • 4 Kỹ Thuật Cắt Cảnh Nâng Tầm Video Điện Ảnh",
+      "title": "Mridupawan Sharma • 4 Kỹ Thuật Cắt Cảnh Nâng Tầm Video Điện Ảnh - @mridupawasharma",
       "creator": "@mridupawasharma",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -1405,7 +1405,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining",
-      "title": "Firewood KLCC • Nghệ Thuật Nấu Bếp Củi & Bản Lĩnh Nữ Bếp Trưởng",
+      "title": "Firewood KLCC • Nghệ Thuật Nấu Bếp Củi & Bản Lĩnh Nữ Bếp Trưởng - @firewood_klcc",
       "creator": "@firewood_klcc",
       "shooting_style": {
         "id": "storytelling",
@@ -1425,7 +1425,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DZFzj9YAAmG",
-      "title": "Firewood KLCC • Nghệ Thuật Nấu Bếp Củi & Bản Lĩnh Nữ Bếp Trưởng",
+      "title": "Firewood KLCC • Nghệ Thuật Nấu Bếp Củi & Bản Lĩnh Nữ Bếp Trưởng - @firewood_klcc",
       "creator": "@firewood_klcc",
       "shooting_style": {
         "id": "storytelling",
@@ -1445,7 +1445,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light",
-      "title": "The Beauty of Static - NYC Morning Light",
+      "title": "The Beauty of Static - NYC Morning Light - @the.vantage.point",
       "creator": "@the.vantage.point",
       "shooting_style": {
         "id": "dien-anh",
@@ -1465,7 +1465,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Dct9JzWKVFo",
-      "title": "The Beauty of Static - NYC Morning Light",
+      "title": "The Beauty of Static - NYC Morning Light - @the.vantage.point",
       "creator": "@the.vantage.point",
       "shooting_style": {
         "id": "dien-anh",
@@ -1525,7 +1525,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@jsnhow_Dcz7nniBEFe_Unwinding",
-      "title": "Unwinding • Nhịp Điệu Chữa Lành Giữa Tự Nhiên & Nghệ Thuật Nén - Giãn Nhịp Phim",
+      "title": "Unwinding • Nhịp Điệu Chữa Lành Giữa Tự Nhiên & Nghệ Thuật Nén - Giãn Nhịp Phim - @jsnhow",
       "creator": "@jsnhow",
       "shooting_style": {
         "id": "dien-anh",
@@ -1545,7 +1545,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Dcz7nniBEFe",
-      "title": "Unwinding • Nhịp Điệu Chữa Lành Giữa Tự Nhiên & Nghệ Thuật Nén - Giãn Nhịp Phim",
+      "title": "Unwinding • Nhịp Điệu Chữa Lành Giữa Tự Nhiên & Nghệ Thuật Nén - Giãn Nhịp Phim - @jsnhow",
       "creator": "@jsnhow",
       "shooting_style": {
         "id": "dien-anh",
@@ -1565,8 +1565,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcILfhlgsmu",
-      "title": "Elsa Qin: Choices / Wrong Answers - Ảo ảnh nỗi sợ và triết lý lựa chọn cuộc đời",
-      "creator": "@elsaqinn",
+      "title": "Elsa Qin: Choices / Wrong Answers - Ảo ảnh nỗi sợ và triết lý lựa chọn cuộc đời - @Elsa_Qin_C",
+      "creator": "@Elsa_Qin_C",
       "shooting_style": {
         "id": "storytelling",
         "name": "Storytelling",
@@ -1585,7 +1585,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "FB_@AnhSacAnh_1964049564715249_Thuong_Hieu_Ca_Nhan_Sinh_Loi",
-      "title": "Khóa Học Thương Hiệu Cá Nhân Sinh Lời • Nghệ Thuật Trám B-Roll & Kịch Bản Chuyển Đổi",
+      "title": "Khóa Học Thương Hiệu Cá Nhân Sinh Lời • Nghệ Thuật Trám B-Roll & Kịch Bản Chuyển Đổi - @AnhSacAnh",
       "creator": "@AnhSacAnh",
       "shooting_style": {
         "id": "talking-head",
@@ -1605,7 +1605,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@sajad_machu_DcBjIwPMMfa_Creative_Block_Loop",
-      "title": "Vòng Lặp Bế Tắc Sáng Tạo: Bẫy Trì Hoãn & Nghệ Thuật Infinite Loop Đỉnh Cao",
+      "title": "Vòng Lặp Bế Tắc Sáng Tạo: Bẫy Trì Hoãn & Nghệ Thuật Infinite Loop Đỉnh Cao - @sajad_machu",
       "creator": "@sajad_machu",
       "shooting_style": {
         "id": "storytelling",
@@ -1625,7 +1625,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcBjIwPMMfa",
-      "title": "Vòng Lặp Bế Tắc Sáng Tạo: Bẫy Trì Hoãn & Nghệ Thuật Infinite Loop Đỉnh Cao",
+      "title": "Vòng Lặp Bế Tắc Sáng Tạo: Bẫy Trì Hoãn & Nghệ Thuật Infinite Loop Đỉnh Cao - @sajad_machu",
       "creator": "@sajad_machu",
       "shooting_style": {
         "id": "storytelling",
@@ -1645,7 +1645,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@slaohuairen_DcLblxOy3tN_A_young_girl_in_linen",
-      "title": "SlaoHuA • A Young Girl In Linen - Bóc Tách Điện Ảnh Thơ Váy Vóc",
+      "title": "SlaoHuA • A Young Girl In Linen - Bóc Tách Điện Ảnh Thơ Váy Vóc - @slaohuairen",
       "creator": "@slaohuairen",
       "shooting_style": {
         "id": "dien-anh",
@@ -1665,7 +1665,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcLblxOy3tN",
-      "title": "SlaoHuA • A Young Girl In Linen - Bóc Tách Điện Ảnh Thơ Váy Vóc",
+      "title": "SlaoHuA • A Young Girl In Linen - Bóc Tách Điện Ảnh Thơ Váy Vóc - @slaohuairen",
       "creator": "@slaohuairen",
       "shooting_style": {
         "id": "dien-anh",
@@ -1805,7 +1805,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together",
-      "title": "3 Thói Quen Nhỏ Để Cảm Thấy Cuộc Sống Vào Nếp (3 Things That Make Life Feel Put Together)",
+      "title": "3 Thói Quen Nhỏ Để Cảm Thấy Cuộc Sống Vào Nếp (3 Things That Make Life Feel Put Together) - @joshdiazfilms",
       "creator": "@joshdiazfilms",
       "shooting_style": {
         "id": "voice-over",
@@ -1825,7 +1825,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Dctj7NfNimM",
-      "title": "3 Thói Quen Nhỏ Để Cảm Thấy Cuộc Sống Vào Nếp (3 Things That Make Life Feel Put Together)",
+      "title": "3 Thói Quen Nhỏ Để Cảm Thấy Cuộc Sống Vào Nếp (3 Things That Make Life Feel Put Together) - @joshdiazfilms",
       "creator": "@joshdiazfilms",
       "shooting_style": {
         "id": "voice-over",
@@ -1845,7 +1845,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@joshdiazfilms_DceDPc2yVm0_Worst_Person_To_Text",
-      "title": "Nghệ Thuật Kể Chuyện 'Ngại Rep Tin Nhắn' & Năng Lượng Hướng Nội (Worst Person to Text)",
+      "title": "Nghệ Thuật Kể Chuyện 'Ngại Rep Tin Nhắn' & Năng Lượng Hướng Nội (Worst Person to Text) - @joshdiazfilms",
       "creator": "@joshdiazfilms",
       "shooting_style": {
         "id": "voice-over",
@@ -1865,7 +1865,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DceDPc2yVm0",
-      "title": "Nghệ Thuật Kể Chuyện 'Ngại Rep Tin Nhắn' & Năng Lượng Hướng Nội (Worst Person to Text)",
+      "title": "Nghệ Thuật Kể Chuyện 'Ngại Rep Tin Nhắn' & Năng Lượng Hướng Nội (Worst Person to Text) - @joshdiazfilms",
       "creator": "@joshdiazfilms",
       "shooting_style": {
         "id": "voice-over",
@@ -1885,7 +1885,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@joshdiazfilms_DcJjGy1tG7d_DJI_Drone_Unboxing",
-      "title": "Unboxing DJI Drone & Ngôn Ngữ Điện Ảnh Bàn Làm Việc (First Drone Unboxing)",
+      "title": "Unboxing DJI Drone & Ngôn Ngữ Điện Ảnh Bàn Làm Việc (First Drone Unboxing) - @joshdiazfilms",
       "creator": "@joshdiazfilms",
       "shooting_style": {
         "id": "dien-anh",
@@ -1905,7 +1905,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcJjGy1tG7d",
-      "title": "Unboxing DJI Drone & Ngôn Ngữ Điện Ảnh Bàn Làm Việc (First Drone Unboxing)",
+      "title": "Unboxing DJI Drone & Ngôn Ngữ Điện Ảnh Bàn Làm Việc (First Drone Unboxing) - @joshdiazfilms",
       "creator": "@joshdiazfilms",
       "shooting_style": {
         "id": "dien-anh",
@@ -1925,7 +1925,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@joshdiazfilms_Db1hf_vO67m_Simple_Life_Routine",
-      "title": "Vẻ Đẹp Bình Yên Của Thói Quen Đời Thường & Nấu Bữa Tối (Simple Life Dinner Routine)",
+      "title": "Vẻ Đẹp Bình Yên Của Thói Quen Đời Thường & Nấu Bữa Tối (Simple Life Dinner Routine) - @joshdiazfilms",
       "creator": "@joshdiazfilms",
       "shooting_style": {
         "id": "voice-over",
@@ -1945,7 +1945,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Db1hf_vO67m",
-      "title": "Vẻ Đẹp Bình Yên Của Thói Quen Đời Thường & Nấu Bữa Tối (Simple Life Dinner Routine)",
+      "title": "Vẻ Đẹp Bình Yên Của Thói Quen Đời Thường & Nấu Bữa Tối (Simple Life Dinner Routine) - @joshdiazfilms",
       "creator": "@joshdiazfilms",
       "shooting_style": {
         "id": "voice-over",
@@ -1965,7 +1965,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@joshdiazfilms_Dbow9xKOCje_Falling_Behind_Mindset",
-      "title": "Chữa Lành Áp Lực Tự Thân 'Tôi Đang Bị Bỏ Lại Phía Sau' (Falling Behind Mindset)",
+      "title": "Chữa Lành Áp Lực Tự Thân 'Tôi Đang Bị Bỏ Lại Phía Sau' (Falling Behind Mindset) - @joshdiazfilms",
       "creator": "@joshdiazfilms",
       "shooting_style": {
         "id": "voice-over",
@@ -1985,7 +1985,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Dbow9xKOCje",
-      "title": "Chữa Lành Áp Lực Tự Thân 'Tôi Đang Bị Bỏ Lại Phía Sau' (Falling Behind Mindset)",
+      "title": "Chữa Lành Áp Lực Tự Thân 'Tôi Đang Bị Bỏ Lại Phía Sau' (Falling Behind Mindset) - @joshdiazfilms",
       "creator": "@joshdiazfilms",
       "shooting_style": {
         "id": "voice-over",
@@ -2005,7 +2005,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula",
-      "title": "Công Thức Dựng Chuỗi Chuyển Đổi Không Gian Du Ký Triệu View (Travel Sequence Formula)",
+      "title": "Công Thức Dựng Chuỗi Chuyển Đổi Không Gian Du Ký Triệu View (Travel Sequence Formula) - @omgadrian",
       "creator": "@omgadrian",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -2025,7 +2025,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcqzVfno5Al",
-      "title": "Công Thức Dựng Chuỗi Chuyển Đổi Không Gian Du Ký Triệu View (Travel Sequence Formula)",
+      "title": "Công Thức Dựng Chuỗi Chuyển Đổi Không Gian Du Ký Triệu View (Travel Sequence Formula) - @omgadrian",
       "creator": "@omgadrian",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -2045,7 +2045,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@mridupawasharma_DF2sOsNyNlY_3_Hooks_Mastery",
-      "title": "3 Chiêu Mồi Câu Thị Giác (Hooks) Biến Video Trở Nên Cuốn Hút Ngay Tức Thì",
+      "title": "3 Chiêu Mồi Câu Thị Giác (Hooks) Biến Video Trở Nên Cuốn Hút Ngay Tức Thì - @mridupawasharma",
       "creator": "@mridupawasharma",
       "shooting_style": {
         "id": "talking-head",
@@ -2065,7 +2065,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DF2sOsNyNlY",
-      "title": "3 Chiêu Mồi Câu Thị Giác (Hooks) Biến Video Trở Nên Cuốn Hút Ngay Tức Thì",
+      "title": "3 Chiêu Mồi Câu Thị Giác (Hooks) Biến Video Trở Nên Cuốn Hút Ngay Tức Thì - @mridupawasharma",
       "creator": "@mridupawasharma",
       "shooting_style": {
         "id": "talking-head",
@@ -2085,8 +2085,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "Dcxsw50zIR8",
-      "title": "How to Film Boring Tasks to be Interesting (Báo Cáo Đạo Diễn)",
-      "creator": "@bryanhynes",
+      "title": "How to Film Boring Tasks to be Interesting (Báo Cáo Đạo Diễn) - @Bryan_Hynes",
+      "creator": "@Bryan_Hynes",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -2105,8 +2105,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcwPu99sDKI",
-      "title": "The Yap Triangle: Khắc phục lỗi nói chuyện trên Camera",
-      "creator": "@iamaayushswamy",
+      "title": "The Yap Triangle: Khắc phục lỗi nói chuyện trên Camera - @Aayush_Swamy",
+      "creator": "@Aayush_Swamy",
       "shooting_style": {
         "id": "talking-head",
         "name": "Talking Head",
@@ -2125,7 +2125,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis",
-      "title": "Andrei Kostromskikh • Phân Tích Phân Cảnh Carousel Đa Video & Ngôn Ngữ Điện Ảnh",
+      "title": "Andrei Kostromskikh • Phân Tích Phân Cảnh Carousel Đa Video & Ngôn Ngữ Điện Ảnh - @Andrei_Kostromskikh",
       "creator": "@Andrei_Kostromskikh",
       "shooting_style": {
         "id": "dien-anh",
@@ -2145,7 +2145,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DctRlh0jZlj",
-      "title": "Andrei Kostromskikh • Phân Tích Phân Cảnh Carousel Đa Video & Ngôn Ngữ Điện Ảnh",
+      "title": "Andrei Kostromskikh • Phân Tích Phân Cảnh Carousel Đa Video & Ngôn Ngữ Điện Ảnh - @Andrei_Kostromskikh",
       "creator": "@Andrei_Kostromskikh",
       "shooting_style": {
         "id": "dien-anh",
@@ -2165,7 +2165,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video",
-      "title": "How to Cook a Video: Ẩn dụ Chế biến Ẩm thực & Quy trình Hậu kỳ Chuẩn chỉ",
+      "title": "How to Cook a Video: Ẩn dụ Chế biến Ẩm thực & Quy trình Hậu kỳ Chuẩn chỉ - @shogentle",
       "creator": "@shogentle",
       "shooting_style": {
         "id": "dien-anh",
@@ -2185,7 +2185,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcJDJjVJGy6",
-      "title": "How to Cook a Video: Ẩn dụ Chế biến Ẩm thực & Quy trình Hậu kỳ Chuẩn chỉ",
+      "title": "How to Cook a Video: Ẩn dụ Chế biến Ẩm thực & Quy trình Hậu kỳ Chuẩn chỉ - @shogentle",
       "creator": "@shogentle",
       "shooting_style": {
         "id": "dien-anh",
@@ -2285,7 +2285,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@rubyscafe_Db-ylimPqMu_Summer_in_the_Village",
-      "title": "Little Ruby's Cafe • Summer in West Village NYC & Nghệ Thuật Bối Cảnh F&B",
+      "title": "Little Ruby's Cafe • Summer in West Village NYC & Nghệ Thuật Bối Cảnh F&B - @rubyscafe",
       "creator": "@rubyscafe",
       "shooting_style": {
         "id": "dien-anh",
@@ -2305,7 +2305,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Db-ylimPqMu",
-      "title": "Little Ruby's Cafe • Summer in West Village NYC & Nghệ Thuật Bối Cảnh F&B",
+      "title": "Little Ruby's Cafe • Summer in West Village NYC & Nghệ Thuật Bối Cảnh F&B - @rubyscafe",
       "creator": "@rubyscafe",
       "shooting_style": {
         "id": "dien-anh",
@@ -2325,7 +2325,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@mridupawasharma_DWD7Lv4E8N8_SanDisk_Creator_SSD",
-      "title": "SanDisk Creator Phone SSD • Quy Trình Quay Dựng 4K ProRes & Mobile Cinema Đỉnh Cao",
+      "title": "SanDisk Creator Phone SSD • Quy Trình Quay Dựng 4K ProRes & Mobile Cinema Đỉnh Cao - @mridupawasharma",
       "creator": "@mridupawasharma",
       "shooting_style": {
         "id": "storytelling",
@@ -2345,7 +2345,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DWD7Lv4E8N8",
-      "title": "SanDisk Creator Phone SSD • Quy Trình Quay Dựng 4K ProRes & Mobile Cinema Đỉnh Cao",
+      "title": "SanDisk Creator Phone SSD • Quy Trình Quay Dựng 4K ProRes & Mobile Cinema Đỉnh Cao - @mridupawasharma",
       "creator": "@mridupawasharma",
       "shooting_style": {
         "id": "storytelling",
@@ -2365,7 +2365,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC",
-      "title": "Summer in New York City • Nghệ Thuật Kể Chuyện POV & Nhịp Dựng Montage",
+      "title": "Summer in New York City • Nghệ Thuật Kể Chuyện POV & Nhịp Dựng Montage - @ethanbarber.co",
       "creator": "@ethanbarber.co",
       "shooting_style": {
         "id": "dien-anh",
@@ -2385,7 +2385,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DW_iQNYDjX7",
-      "title": "Summer in New York City • Nghệ Thuật Kể Chuyện POV & Nhịp Dựng Montage",
+      "title": "Summer in New York City • Nghệ Thuật Kể Chuyện POV & Nhịp Dựng Montage - @ethanbarber.co",
       "creator": "@ethanbarber.co",
       "shooting_style": {
         "id": "dien-anh",
@@ -2405,7 +2405,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast",
-      "title": "Phân Tích Đạo Diễn: Joe Rogan & Elon Musk Podcast | Master Breakdown",
+      "title": "Phân Tích Đạo Diễn: Joe Rogan & Elon Musk Podcast | Master Breakdown - @Startup_TM",
       "creator": "@Startup_TM",
       "shooting_style": {
         "id": "dien-anh",
@@ -2465,7 +2465,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@valenti_k41_DcL1W34I6lz_DJI_Mic_3_ASMR",
-      "title": "DJI Mic 3 • Nghệ Thuật ASMR Điện Ảnh & Sound Design Đỉnh Cao",
+      "title": "DJI Mic 3 • Nghệ Thuật ASMR Điện Ảnh & Sound Design Đỉnh Cao - @valenti_k41",
       "creator": "@valenti_k41",
       "shooting_style": {
         "id": "dien-anh",
@@ -2485,7 +2485,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcL1W34I6lz",
-      "title": "DJI Mic 3 • Nghệ Thuật ASMR Điện Ảnh & Sound Design Đỉnh Cao",
+      "title": "DJI Mic 3 • Nghệ Thuật ASMR Điện Ảnh & Sound Design Đỉnh Cao - @valenti_k41",
       "creator": "@valenti_k41",
       "shooting_style": {
         "id": "dien-anh",
@@ -2545,8 +2545,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DZB9Ls3No6p",
-      "title": "Video by jade.got.curious",
-      "creator": "@jade.got.curious",
+      "title": "Video by jade.got.curious - @Jade_Sheng",
+      "creator": "@Jade_Sheng",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -2565,8 +2565,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DYXiic5xMeC",
-      "title": "Chiến Lược Xây Hệ Thống Phễu Trước Khi Video Hoàn Hảo",
-      "creator": "@jade.got.curious",
+      "title": "Chiến Lược Xây Hệ Thống Phễu Trước Khi Video Hoàn Hảo - @Jade_Sheng",
+      "creator": "@Jade_Sheng",
       "shooting_style": {
         "id": "talking-head",
         "name": "Talking Head",
@@ -2605,8 +2605,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DZa9pzKRsAU",
-      "title": "Video by jade.got.curious",
-      "creator": "@jade.got.curious",
+      "title": "Video by jade.got.curious - @Jade_Sheng",
+      "creator": "@Jade_Sheng",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -2625,8 +2625,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcbAqchxJ2t",
-      "title": "Start Stupid - @Jade Sheng (Nghịch Lý Quá Thông Minh Để Bắt Đầu)",
-      "creator": "@jade.got.curious",
+      "title": "Start Stupid - @Jade Sheng (Nghịch Lý Quá Thông Minh Để Bắt Đầu) - @Jade_Sheng",
+      "creator": "@Jade_Sheng",
       "shooting_style": {
         "id": "storytelling",
         "name": "Storytelling",
@@ -2645,7 +2645,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Visual_Storytelling_Carousel_@withyuee",
-      "title": "Visual Storytelling Carousel • Cấu Trúc Kể Chuyện 5 Slide Đa Chiều",
+      "title": "Visual Storytelling Carousel • Cấu Trúc Kể Chuyện 5 Slide Đa Chiều - @withyuee",
       "creator": "@withyuee",
       "shooting_style": {
         "id": "storytelling",
@@ -2665,7 +2665,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Hong_Kong_Urban_Transitions_@withyuee",
-      "title": "Hong Kong Urban Transitions • Nghệ Thuật Chuyển Cảnh Mượt Mà Không Cần Kỹ Xảo",
+      "title": "Hong Kong Urban Transitions • Nghệ Thuật Chuyển Cảnh Mượt Mà Không Cần Kỹ Xảo - @withyuee",
       "creator": "@withyuee",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -2685,7 +2685,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Hong_Kong_Cinematography_Guide_@withyuee",
-      "title": "Hong Kong Cinematography Guide • Hướng Dẫn Bố Cục & Ánh Sáng Điện Ảnh Đường Phố",
+      "title": "Hong Kong Cinematography Guide • Hướng Dẫn Bố Cục & Ánh Sáng Điện Ảnh Đường Phố - @withyuee",
       "creator": "@withyuee",
       "shooting_style": {
         "id": "dien-anh",
@@ -2705,7 +2705,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Hong_Kong_Bamboo_Scaffolding_@withyuee",
-      "title": "Hong Kong Bamboo Scaffolding (搭棚) • Nghệ Thuật Giàn Giáo Tre Đô Thị",
+      "title": "Hong Kong Bamboo Scaffolding (搭棚) • Nghệ Thuật Giàn Giáo Tre Đô Thị - @withyuee",
       "creator": "@withyuee",
       "shooting_style": {
         "id": "dien-anh",
@@ -2725,7 +2725,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong",
-      "title": "Mùa Sứa Đỏ Hải Dương • Nghệ Thuật Phóng Sự Ẩm Thực Đường Phố Sống Động",
+      "title": "Mùa Sứa Đỏ Hải Dương • Nghệ Thuật Phóng Sự Ẩm Thực Đường Phố Sống Động - @thodiahaiduongne",
       "creator": "@thodiahaiduongne",
       "shooting_style": {
         "id": "voice-over",
@@ -2745,7 +2745,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@tinanguyen2004_7673468312290037012_Double_Day_luon_la_dip_de_khach_hang_lua_duoc",
-      "title": "Phân Tích Kịch Bản Phóng Sự Y Khoa & Flash Sale Double Day 8.8",
+      "title": "Phân Tích Kịch Bản Phóng Sự Y Khoa & Flash Sale Double Day 8.8 - @tinanguyen2004",
       "creator": "@tinanguyen2004",
       "shooting_style": {
         "id": "walk-and-talk",
@@ -2765,7 +2765,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Day_luon_la",
-      "title": "Phân Tích Kịch Bản Phóng Sự Y Khoa & Flash Sale Double Day 8.8",
+      "title": "Phân Tích Kịch Bản Phóng Sự Y Khoa & Flash Sale Double Day 8.8 - @tinanguyen2004",
       "creator": "@tinanguyen2004",
       "shooting_style": {
         "id": "walk-and-talk",
@@ -2805,7 +2805,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@withyuee_DcTk0RGgtBO_Hong_Kong_Cinematic_Cityscape",
-      "title": "August in Hong Kong • Bóc Tách 20 Phân Cảnh Đô Thị Điện Ảnh & Nghệ Thuật Khung Hình 16:9",
+      "title": "August in Hong Kong • Bóc Tách 20 Phân Cảnh Đô Thị Điện Ảnh & Nghệ Thuật Khung Hình 16:9 - @withyuee",
       "creator": "@withyuee",
       "shooting_style": {
         "id": "dien-anh",
@@ -2825,7 +2825,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcTk0RGgtBO",
-      "title": "August in Hong Kong • Bóc Tách 20 Phân Cảnh Đô Thị Điện Ảnh & Nghệ Thuật Khung Hình 16:9",
+      "title": "August in Hong Kong • Bóc Tách 20 Phân Cảnh Đô Thị Điện Ảnh & Nghệ Thuật Khung Hình 16:9 - @withyuee",
       "creator": "@withyuee",
       "shooting_style": {
         "id": "dien-anh",
@@ -2845,7 +2845,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Dbk4X4tjJ8A",
-      "title": "Bưu Thiếp Video Mùa Hè London - Nghệ Thuật Khung Hình 4:3 & Nhịp Thở Thị Giác",
+      "title": "Bưu Thiếp Video Mùa Hè London - Nghệ Thuật Khung Hình 4:3 & Nhịp Thở Thị Giác - @daiki.shino",
       "creator": "@daiki.shino",
       "shooting_style": {
         "id": "dien-anh",
@@ -2865,7 +2865,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments",
-      "title": "Tokyo Slow Life: Nghệ Thuật Biến Khoảnh Khắc Thường Nhật Thành Thước Phim Điện Ảnh (9 Video Carousel Series)",
+      "title": "Tokyo Slow Life: Nghệ Thuật Biến Khoảnh Khắc Thường Nhật Thành Thước Phim Điện Ảnh (9 Video Carousel Series) - @ioana_iftode",
       "creator": "@ioana_iftode",
       "shooting_style": {
         "id": "dien-anh",
@@ -2885,7 +2885,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Db7zNC0jPwV",
-      "title": "Tokyo Slow Life: Nghệ Thuật Biến Khoảnh Khắc Thường Nhật Thành Thước Phim Điện Ảnh (9 Video Carousel Series)",
+      "title": "Tokyo Slow Life: Nghệ Thuật Biến Khoảnh Khắc Thường Nhật Thành Thước Phim Điện Ảnh (9 Video Carousel Series) - @ioana_iftode",
       "creator": "@ioana_iftode",
       "shooting_style": {
         "id": "dien-anh",
@@ -2905,7 +2905,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@willwfit_DbRak0lsesY_The_Goal_Is_Simple",
-      "title": "The Goal Is Simple - Nghệ Thuật Ánh Sáng Low-Key Chiaroscuro & Flash Cut Thể Hình",
+      "title": "The Goal Is Simple - Nghệ Thuật Ánh Sáng Low-Key Chiaroscuro & Flash Cut Thể Hình - @willwfit",
       "creator": "@willwfit",
       "shooting_style": {
         "id": "dien-anh",
@@ -2925,7 +2925,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DbRak0lsesY",
-      "title": "The Goal Is Simple - Nghệ Thuật Ánh Sáng Low-Key Chiaroscuro & Flash Cut Thể Hình",
+      "title": "The Goal Is Simple - Nghệ Thuật Ánh Sáng Low-Key Chiaroscuro & Flash Cut Thể Hình - @willwfit",
       "creator": "@willwfit",
       "shooting_style": {
         "id": "dien-anh",
@@ -2945,7 +2945,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@ioana_iftode_DcYQVYJjHa-_Tokyo_Slow_Life_Visual_Diaries",
-      "title": "Tokyo Slow Life Visual Diaries • Nghệ Thuật Kể Chuyện Diptych & Nhịp Thở Đời Thường",
+      "title": "Tokyo Slow Life Visual Diaries • Nghệ Thuật Kể Chuyện Diptych & Nhịp Thở Đời Thường - @ioana_iftode",
       "creator": "@ioana_iftode",
       "shooting_style": {
         "id": "storytelling",
@@ -2965,7 +2965,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcYQVYJjHa-",
-      "title": "Tokyo Slow Life Visual Diaries • Nghệ Thuật Kể Chuyện Diptych & Nhịp Thở Đời Thường",
+      "title": "Tokyo Slow Life Visual Diaries • Nghệ Thuật Kể Chuyện Diptych & Nhịp Thở Đời Thường - @ioana_iftode",
       "creator": "@ioana_iftode",
       "shooting_style": {
         "id": "storytelling",
@@ -2985,7 +2985,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine",
-      "title": "Luke Luquire • Routine Rèn Luyện & Phong Cách Thời Trang New Balance",
+      "title": "Luke Luquire • Routine Rèn Luyện & Phong Cách Thời Trang New Balance - @iamlukeluquire",
       "creator": "@iamlukeluquire",
       "shooting_style": {
         "id": "dien-anh",
@@ -3005,7 +3005,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DbjCyKgxp8S",
-      "title": "Luke Luquire • Routine Rèn Luyện & Phong Cách Thời Trang New Balance",
+      "title": "Luke Luquire • Routine Rèn Luyện & Phong Cách Thời Trang New Balance - @iamlukeluquire",
       "creator": "@iamlukeluquire",
       "shooting_style": {
         "id": "dien-anh",
@@ -3025,7 +3025,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva",
-      "title": "Biến Ý Tưởng Thành Hiện Thực Cùng Canva",
+      "title": "Biến Ý Tưởng Thành Hiện Thực Cùng Canva - @lifeofriza",
       "creator": "@lifeofriza",
       "shooting_style": {
         "id": "voice-over",
@@ -3045,7 +3045,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcTqPjitJl1",
-      "title": "Biến Ý Tưởng Thành Hiện Thực Cùng Canva",
+      "title": "Biến Ý Tưởng Thành Hiện Thực Cùng Canva - @lifeofriza",
       "creator": "@lifeofriza",
       "shooting_style": {
         "id": "voice-over",
@@ -3065,7 +3065,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@madisonkjan_Da7V4egSQxv_Vietnam_Travel_Cinematic",
-      "title": "The Next Station Is Vietnam - Hành Trình Du Lịch Điện Ảnh",
+      "title": "The Next Station Is Vietnam - Hành Trình Du Lịch Điện Ảnh - @madisonkjan",
       "creator": "@madisonkjan",
       "shooting_style": {
         "id": "dien-anh",
@@ -3085,7 +3085,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Da7V4egSQxv",
-      "title": "The Next Station Is Vietnam - Hành Trình Du Lịch Điện Ảnh",
+      "title": "The Next Station Is Vietnam - Hành Trình Du Lịch Điện Ảnh - @madisonkjan",
       "creator": "@madisonkjan",
       "shooting_style": {
         "id": "dien-anh",
@@ -3105,7 +3105,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "FB_@KopDinh_1398467868829887_Lat_Cat_Cam_Xuc_Kop_Dinh",
-      "title": "Lát Cắt Cảm Xúc • Nghệ Thuật Quay Tự Nhiên & Triết Lý Anti-Technique",
+      "title": "Lát Cắt Cảm Xúc • Nghệ Thuật Quay Tự Nhiên & Triết Lý Anti-Technique - @kopdinh",
       "creator": "@kopdinh",
       "shooting_style": {
         "id": "dien-anh",
@@ -3125,7 +3125,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@withyuee_DUqQaPbkfcQ_Chinese_New_Year_Hong_Kong",
-      "title": "Nghệ Thuật Quay Video Tết Đường Phố Bằng Điện Thoại (Chinese New Year in Hong Kong - Shot on iPhone)",
+      "title": "Nghệ Thuật Quay Video Tết Đường Phố Bằng Điện Thoại (Chinese New Year in Hong Kong - Shot on iPhone) - @withyuee",
       "creator": "@withyuee",
       "shooting_style": {
         "id": "dien-anh",
@@ -3145,7 +3145,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DUqQaPbkfcQ",
-      "title": "Nghệ Thuật Quay Video Tết Đường Phố Bằng Điện Thoại (Chinese New Year in Hong Kong - Shot on iPhone)",
+      "title": "Nghệ Thuật Quay Video Tết Đường Phố Bằng Điện Thoại (Chinese New Year in Hong Kong - Shot on iPhone) - @withyuee",
       "creator": "@withyuee",
       "shooting_style": {
         "id": "dien-anh",
@@ -3165,7 +3165,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@withyuee_DO8arRxEZvh_Hong_Kong_Visual_Rhythm_Carousel",
-      "title": "Chuỗi Thị Giác Hong Kong Trước Siêu Bão: Phản Chiếu Vũng Nước & Chiều Sâu Đô Thị",
+      "title": "Chuỗi Thị Giác Hong Kong Trước Siêu Bão: Phản Chiếu Vũng Nước & Chiều Sâu Đô Thị - @withyuee",
       "creator": "@withyuee",
       "shooting_style": {
         "id": "dien-anh",
@@ -3185,7 +3185,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DO8arRxEZvh",
-      "title": "Chuỗi Thị Giác Hong Kong Trước Siêu Bão: Phản Chiếu Vũng Nước & Chiều Sâu Đô Thị",
+      "title": "Chuỗi Thị Giác Hong Kong Trước Siêu Bão: Phản Chiếu Vũng Nước & Chiều Sâu Đô Thị - @withyuee",
       "creator": "@withyuee",
       "shooting_style": {
         "id": "dien-anh",
@@ -3205,7 +3205,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DXbzOkygG0v",
-      "title": "Phân Tích Bóc Tách 29 Phân Cảnh Nhịp Nhanh: Gough Street & Byredo Flagship Hong Kong",
+      "title": "Phân Tích Bóc Tách 29 Phân Cảnh Nhịp Nhanh: Gough Street & Byredo Flagship Hong Kong - @withyuee",
       "creator": "@withyuee",
       "shooting_style": {
         "id": "dien-anh",
@@ -3225,7 +3225,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@withyuee_DVQ3Gh6Efk1_Spring_in_Hong_Kong",
-      "title": "Mùa Xuân Hong Kong - Bậc Thang Hoa Vàng U Lam Terrace & Sắc Hồng Anh Đào HKIA",
+      "title": "Mùa Xuân Hong Kong - Bậc Thang Hoa Vàng U Lam Terrace & Sắc Hồng Anh Đào HKIA - @withyuee",
       "creator": "@withyuee",
       "shooting_style": {
         "id": "dien-anh",
@@ -3245,7 +3245,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DVQ3Gh6Efk1",
-      "title": "Mùa Xuân Hong Kong - Bậc Thang Hoa Vàng U Lam Terrace & Sắc Hồng Anh Đào HKIA",
+      "title": "Mùa Xuân Hong Kong - Bậc Thang Hoa Vàng U Lam Terrace & Sắc Hồng Anh Đào HKIA - @withyuee",
       "creator": "@withyuee",
       "shooting_style": {
         "id": "dien-anh",
@@ -3265,7 +3265,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DYKO1v3g3U2",
-      "title": "Nghệ Thuật Quan Sát Phố Thị & Bắt Nhịp Khoảnh Khắc (The Art of Noticing - Hong Kong)",
+      "title": "Nghệ Thuật Quan Sát Phố Thị & Bắt Nhịp Khoảnh Khắc (The Art of Noticing - Hong Kong) - @withyuee",
       "creator": "@withyuee",
       "shooting_style": {
         "id": "dien-anh",
@@ -3285,7 +3285,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@samuelaitken__Da0eP_msVrm_Aesthetic_Routine",
-      "title": "Setup Góc Quay & Ánh Sáng Routine Buổi Sáng Minimalist",
+      "title": "Setup Góc Quay & Ánh Sáng Routine Buổi Sáng Minimalist - @samuelaitken_",
       "creator": "@samuelaitken_",
       "shooting_style": {
         "id": "storytelling",
@@ -3305,7 +3305,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Da0eP_msVrm",
-      "title": "Setup Góc Quay & Ánh Sáng Routine Buổi Sáng Minimalist",
+      "title": "Setup Góc Quay & Ánh Sáng Routine Buổi Sáng Minimalist - @samuelaitken_",
       "creator": "@samuelaitken_",
       "shooting_style": {
         "id": "storytelling",
@@ -3325,8 +3325,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DbLToEpPPzm",
-      "title": "Nghệ Thuật Chuyển Cảnh Trong Không Gian Quán Cafe & Ánh Sáng Cửa Sổ",
-      "creator": "@jazziesillona",
+      "title": "Nghệ Thuật Chuyển Cảnh Trong Không Gian Quán Cafe & Ánh Sáng Cửa Sổ - @Jazzie",
+      "creator": "@Jazzie",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh (Transition)",
@@ -3345,8 +3345,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DZzwqWBvfwT",
-      "title": "Kỹ Thuật Lia Máy Theo Hướng Đi & Bắt Nhịp Kiến Trúc Đô Thị Hiện Đại",
-      "creator": "@jazziesillona",
+      "title": "Kỹ Thuật Lia Máy Theo Hướng Đi & Bắt Nhịp Kiến Trúc Đô Thị Hiện Đại - @Jazzie",
+      "creator": "@Jazzie",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh (Transition)",
@@ -3365,8 +3365,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DZchNiZvH6m",
-      "title": "Phân Tích Cấu Trúc 14 Cảnh Dạo Phố Đêm & Biển Hiệu Neon Sắc Màu",
-      "creator": "@jazziesillona",
+      "title": "Phân Tích Cấu Trúc 14 Cảnh Dạo Phố Đêm & Biển Hiệu Neon Sắc Màu - @Jazzie",
+      "creator": "@Jazzie",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -3386,7 +3386,7 @@ var TRAINING_DATA = {
     {
       "id": "IG_@by.bennnj_DbKauxkoJU_",
       "title": "Phân Tích Chi Tiết Video IG_@by.bennnj_DbKauxkoJU_",
-      "creator": "@creator",
+      "creator": "@by.bennnj",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -3405,7 +3405,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@by.bennnj_DbKauxkoJU_Making_beginner_cameras_look_cinematic",
-      "title": "Bí Quyết Biến Máy Ảnh Nhập Môn Trông Như Phim Điện Ảnh (Sony ZV-E10)",
+      "title": "Bí Quyết Biến Máy Ảnh Nhập Môn Trông Như Phim Điện Ảnh (Sony ZV-E10) - @by.bennnj",
       "creator": "@by.bennnj",
       "shooting_style": {
         "id": "dien-anh",
@@ -3425,8 +3425,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DaP3EE-qgAQ",
-      "title": "Kỹ Thuật Quay Sản Phẩm Cao Cấp & Cú Đẩy Máy Cận Cảnh Đẳng Cấp",
-      "creator": "@mkxpresar",
+      "title": "Kỹ Thuật Quay Sản Phẩm Cao Cấp & Cú Đẩy Máy Cận Cảnh Đẳng Cấp - @Katsuki",
+      "creator": "@Katsuki",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -3445,8 +3445,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DYcM_9FPr7I",
-      "title": "Tương Quan Giữa Góc Quay Tĩnh & Chuyển Động Xoay Tròn Ly Cà Phê",
-      "creator": "@jazziesillona",
+      "title": "Tương Quan Giữa Góc Quay Tĩnh & Chuyển Động Xoay Tròn Ly Cà Phê - @Jazzie",
+      "creator": "@Jazzie",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -3465,8 +3465,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DXoss18j011",
-      "title": "Kịch Bản 14 Cảnh Phong Cách Lifestyle & 2 Phương Án Lời Thoại Tiếng Việt",
-      "creator": "@jazziesillona",
+      "title": "Kịch Bản 14 Cảnh Phong Cách Lifestyle & 2 Phương Án Lời Thoại Tiếng Việt - @Jazzie",
+      "creator": "@Jazzie",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -3485,7 +3485,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@jazziesillona_DXUG_1TjwJu_Carousel_Analysis",
-      "title": "Chuỗi Carousel 6 Slide Video: Kỹ Thuật Đẩy Nhanh Tiết Tấu Giữ Chân Khán Giả",
+      "title": "Chuỗi Carousel 6 Slide Video: Kỹ Thuật Đẩy Nhanh Tiết Tấu Giữ Chân Khán Giả - @jazziesillona",
       "creator": "@jazziesillona",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -3505,7 +3505,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DXUG_1TjwJu",
-      "title": "Chuỗi Carousel 6 Slide Video: Kỹ Thuật Đẩy Nhanh Tiết Tấu Giữ Chân Khán Giả",
+      "title": "Chuỗi Carousel 6 Slide Video: Kỹ Thuật Đẩy Nhanh Tiết Tấu Giữ Chân Khán Giả - @jazziesillona",
       "creator": "@jazziesillona",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -3525,7 +3525,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@jazziesillona_DW8lBR9Dzop_Carousel_Analysis",
-      "title": "Nghệ Thuật Xây Dựng Nhịp Điệu Thị Giác Trong Chuỗi Video Carousel Đa Slide",
+      "title": "Nghệ Thuật Xây Dựng Nhịp Điệu Thị Giác Trong Chuỗi Video Carousel Đa Slide - @jazziesillona",
       "creator": "@jazziesillona",
       "shooting_style": {
         "id": "dien-anh",
@@ -3545,7 +3545,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DW8lBR9Dzop",
-      "title": "Nghệ Thuật Xây Dựng Nhịp Điệu Thị Giác Trong Chuỗi Video Carousel Đa Slide",
+      "title": "Nghệ Thuật Xây Dựng Nhịp Điệu Thị Giác Trong Chuỗi Video Carousel Đa Slide - @jazziesillona",
       "creator": "@jazziesillona",
       "shooting_style": {
         "id": "dien-anh",
@@ -3565,8 +3565,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@Jazzie_DWnsVqWj2XN_Carousel_Analysis",
-      "title": "Album 7 Slide Video Dạo Phố & Nghệ Thuật Chọn Điểm Cắt Cảnh Tự Nhiên",
-      "creator": "@jazziesillona",
+      "title": "Album 7 Slide Video Dạo Phố & Nghệ Thuật Chọn Điểm Cắt Cảnh Tự Nhiên - @Jazzie",
+      "creator": "@Jazzie",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -3585,8 +3585,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DWnsVqWj2XN",
-      "title": "Album 7 Slide Video Dạo Phố & Nghệ Thuật Chọn Điểm Cắt Cảnh Tự Nhiên",
-      "creator": "@jazziesillona",
+      "title": "Album 7 Slide Video Dạo Phố & Nghệ Thuật Chọn Điểm Cắt Cảnh Tự Nhiên - @Jazzie",
+      "creator": "@Jazzie",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -3605,7 +3605,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@jazziesillona_DWrDUymD4_a_Carousel_Analysis",
-      "title": "Bộ 4 Slide Video Thẩm Mỹ: Sự Kết Hợp Giữa Âm Nhạc & Chuyển Động Chậm",
+      "title": "Bộ 4 Slide Video Thẩm Mỹ: Sự Kết Hợp Giữa Âm Nhạc & Chuyển Động Chậm - @jazziesillona",
       "creator": "@jazziesillona",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -3625,7 +3625,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DWrDUymD4_a",
-      "title": "Bộ 4 Slide Video Thẩm Mỹ: Sự Kết Hợp Giữa Âm Nhạc & Chuyển Động Chậm",
+      "title": "Bộ 4 Slide Video Thẩm Mỹ: Sự Kết Hợp Giữa Âm Nhạc & Chuyển Động Chậm - @jazziesillona",
       "creator": "@jazziesillona",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -3645,8 +3645,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@Jakarta_Videographer_Jacoub_Anwar_DbnwnkrAVQ9_Carousel_Analysis",
-      "title": "7 Quy Tắc Vàng Quay Phim Đường Phố: Khung Hình Tĩnh & Thị Sai 3 Lớp",
-      "creator": "@mcjacoub",
+      "title": "7 Quy Tắc Vàng Quay Phim Đường Phố: Khung Hình Tĩnh & Thị Sai 3 Lớp - @Jakarta_Videographer_Jacoub_Anwar",
+      "creator": "@Jakarta_Videographer_Jacoub_Anwar",
       "shooting_style": {
         "id": "talking-head",
         "name": "Talking Head",
@@ -3665,8 +3665,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DbnwnkrAVQ9",
-      "title": "7 Quy Tắc Vàng Quay Phim Đường Phố: Khung Hình Tĩnh & Thị Sai 3 Lớp",
-      "creator": "@mcjacoub",
+      "title": "7 Quy Tắc Vàng Quay Phim Đường Phố: Khung Hình Tĩnh & Thị Sai 3 Lớp - @Jakarta_Videographer_Jacoub_Anwar",
+      "creator": "@Jakarta_Videographer_Jacoub_Anwar",
       "shooting_style": {
         "id": "talking-head",
         "name": "Talking Head",
@@ -3685,8 +3685,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DWERTvEjy7k",
-      "title": "Phân Tích 21 Cảnh Siêu Tốc: Kỹ Thuật Match Cut Trên Nhịp Beat Điện Tử",
-      "creator": "@jazziesillona",
+      "title": "Phân Tích 21 Cảnh Siêu Tốc: Kỹ Thuật Match Cut Trên Nhịp Beat Điện Tử - @Jazzie",
+      "creator": "@Jazzie",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -3705,8 +3705,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@Jazzie_DU2CTKzEqvl_Carousel_Analysis",
-      "title": "Chuỗi 8 Slide Video Sáng Tạo Không Gian Sống & Bố Cục Tối Giản",
-      "creator": "@jazziesillona",
+      "title": "Chuỗi 8 Slide Video Sáng Tạo Không Gian Sống & Bố Cục Tối Giản - @Jazzie",
+      "creator": "@Jazzie",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -3725,8 +3725,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DU2CTKzEqvl",
-      "title": "Chuỗi 8 Slide Video Sáng Tạo Không Gian Sống & Bố Cục Tối Giản",
-      "creator": "@jazziesillona",
+      "title": "Chuỗi 8 Slide Video Sáng Tạo Không Gian Sống & Bố Cục Tối Giản - @Jazzie",
+      "creator": "@Jazzie",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -3745,8 +3745,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DUPo66yklxb",
-      "title": "Jazzie Sillona • Dạo Phố Thời Trang & Chuyển Động Bước Chân Nối Cảnh",
-      "creator": "@jazziesillona",
+      "title": "Jazzie Sillona • Dạo Phố Thời Trang & Chuyển Động Bước Chân Nối Cảnh - @Jazzie",
+      "creator": "@Jazzie",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh (Transition)",
@@ -3765,8 +3765,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DUS5DYCEgyg",
-      "title": "Nghệ Thuật Match Cut & Nhịp Điệu Phố Hong Kong Ván Bài Mạt Chược",
-      "creator": "@jazziesillona",
+      "title": "Nghệ Thuật Match Cut & Nhịp Điệu Phố Hong Kong Ván Bài Mạt Chược - @Jazzie",
+      "creator": "@Jazzie",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -3785,7 +3785,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@jazziesillona_DbIA2jwPHCV",
-      "title": "Nghệ Thuật Chuyển Đổi Video Ngang Sang Chuẩn Dọc 9:16 Không Mất Chi Tiết",
+      "title": "Nghệ Thuật Chuyển Đổi Video Ngang Sang Chuẩn Dọc 9:16 Không Mất Chi Tiết - @jazziesillona",
       "creator": "@jazziesillona",
       "shooting_style": {
         "id": "dien-anh",
@@ -3805,8 +3805,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "Db6a3tHoWTS",
-      "title": "Commercial Creative Reel: Kỹ Thuật Đổi Bối Cảnh Khóa Chủ Thể (JBL)",
-      "creator": "@by.bennnj",
+      "title": "Commercial Creative Reel: Kỹ Thuật Đổi Bối Cảnh Khóa Chủ Thể (JBL) - @Ben",
+      "creator": "@Ben",
       "shooting_style": {
         "id": "storytelling",
         "name": "Storytelling",
@@ -3825,7 +3825,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01",
-      "title": "Project 100 Day 01 • Nghệ Thuật Kể Chuyện Đa Góc Máy Một Ngày Sáng Tạo",
+      "title": "Project 100 Day 01 • Nghệ Thuật Kể Chuyện Đa Góc Máy Một Ngày Sáng Tạo - @byjxson",
       "creator": "@byjxson",
       "shooting_style": {
         "id": "storytelling",
@@ -3845,7 +3845,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Dal3RFpA5nI",
-      "title": "Project 100 Day 01 • Nghệ Thuật Kể Chuyện Đa Góc Máy Một Ngày Sáng Tạo",
+      "title": "Project 100 Day 01 • Nghệ Thuật Kể Chuyện Đa Góc Máy Một Ngày Sáng Tạo - @byjxson",
       "creator": "@byjxson",
       "shooting_style": {
         "id": "storytelling",
@@ -3865,7 +3865,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life",
-      "title": "The Beauty of Bangkok in Everyday Life - Nén Tiêu Cự & Đa Tầng Giao Thông Đô Thị",
+      "title": "The Beauty of Bangkok in Everyday Life - Nén Tiêu Cự & Đa Tầng Giao Thông Đô Thị - @intothethailand",
       "creator": "@intothethailand",
       "shooting_style": {
         "id": "dien-anh",
@@ -3885,7 +3885,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Dad0d3xtv9E",
-      "title": "The Beauty of Bangkok in Everyday Life - Nén Tiêu Cự & Đa Tầng Giao Thông Đô Thị",
+      "title": "The Beauty of Bangkok in Everyday Life - Nén Tiêu Cự & Đa Tầng Giao Thông Đô Thị - @intothethailand",
       "creator": "@intothethailand",
       "shooting_style": {
         "id": "dien-anh",
@@ -3905,8 +3905,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "Dau0C9AzXc8",
-      "title": "Night Walk Tokyo - Bắt Trọn Ánh Sáng Neon Phản Chiếu & Không Khí Đêm Mưa Điện Ảnh",
-      "creator": "@17th.visuals",
+      "title": "Night Walk Tokyo - Bắt Trọn Ánh Sáng Neon Phản Chiếu & Không Khí Đêm Mưa Điện Ảnh - @Rilo",
+      "creator": "@Rilo",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -3925,8 +3925,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DY2XJzdioZg",
-      "title": "Urban Symmetry & Motion Flow - Bố Cục Đối Xứng Kiến Trúc & Nhịp Dựng Match Cut",
-      "creator": "@simeonkraeft",
+      "title": "Urban Symmetry & Motion Flow - Bố Cục Đối Xứng Kiến Trúc & Nhịp Dựng Match Cut - @Simeon_Kraeft",
+      "creator": "@Simeon_Kraeft",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -3945,8 +3945,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DaH_rTUTe14",
-      "title": "OPPO Find X9s - 3 Picture Collage & Nghệ Thuật Kể Chuyện Đa Góc Nhìn",
-      "creator": "@mridupawasharma",
+      "title": "OPPO Find X9s - 3 Picture Collage & Nghệ Thuật Kể Chuyện Đa Góc Nhìn - @Mridupawan_Sharma",
+      "creator": "@Mridupawan_Sharma",
       "shooting_style": {
         "id": "storytelling",
         "name": "Storytelling",
@@ -3965,8 +3965,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DaXdrAVzGcc",
-      "title": "JBL Noise Cancelling Earbuds - 'Less Distractions, More Ideas' & Nghệ Thuật Kể Chuyện Quảng Cáo Âm Thanh",
-      "creator": "@mridupawasharma",
+      "title": "JBL Noise Cancelling Earbuds - 'Less Distractions, More Ideas' & Nghệ Thuật Kể Chuyện Quảng Cáo Âm Thanh - @Mridupawan_Sharma",
+      "creator": "@Mridupawan_Sharma",
       "shooting_style": {
         "id": "storytelling",
         "name": "Storytelling",
@@ -3985,8 +3985,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DbnlAB5Twrw",
-      "title": "3 Habits That Are Ruining Your Video - Mridupawan Sharma Bóc Tách 3 Sai Lầm Phổ Biến Khi Làm Phim",
-      "creator": "@mridupawasharma",
+      "title": "3 Habits That Are Ruining Your Video - Mridupawan Sharma Bóc Tách 3 Sai Lầm Phổ Biến Khi Làm Phim - @Mridupawan_Sharma",
+      "creator": "@Mridupawan_Sharma",
       "shooting_style": {
         "id": "talking-head",
         "name": "Talking Head",
@@ -4005,8 +4005,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcGbEVFznin",
-      "title": "Himalayan Serenity - Khắc Họa Sự Tĩnh Lặng Dãy Himalaya & Chiều Sâu Mây Núi",
-      "creator": "@mridupawasharma",
+      "title": "Himalayan Serenity - Khắc Họa Sự Tĩnh Lặng Dãy Himalaya & Chiều Sâu Mây Núi - @Mridupawan_Sharma",
+      "creator": "@Mridupawan_Sharma",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -4025,8 +4025,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DZN-FfdyPgH",
-      "title": "Alpine FPV Cinema - Nghệ Thuật Lướt Drone Vận Tốc Cao Qua Đỉnh Núi Tuyết",
-      "creator": "@briantooker",
+      "title": "Alpine FPV Cinema - Nghệ Thuật Lướt Drone Vận Tốc Cao Qua Đỉnh Núi Tuyết - @Brian_Tooker",
+      "creator": "@Brian_Tooker",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -4045,8 +4045,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "Da46F-lxueg",
-      "title": "Kyoto Autumn Slow Living - Mỹ Học Không Gian Gỗ Truyền Thống & Nhịp Thở Trà Đạo",
-      "creator": "@junko_livlog",
+      "title": "Kyoto Autumn Slow Living - Mỹ Học Không Gian Gỗ Truyền Thống & Nhịp Thở Trà Đạo - @Junko",
+      "creator": "@Junko",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -4065,8 +4065,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DY5aQaoABsy",
-      "title": "Creative Visual Performance - Kỹ Thuật Đánh Sáng Kịch Tính & Bố Cục Đảo Góc",
-      "creator": "@kerennilan",
+      "title": "Creative Visual Performance - Kỹ Thuật Đánh Sáng Kịch Tính & Bố Cục Đảo Góc - @Keren_Ilan",
+      "creator": "@Keren_Ilan",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -4085,8 +4085,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DbS3HNNIKR7",
-      "title": "Tokyo Retro Alleyways - Khám Phá Hẻm Cổ Yokocho & Ánh Đèn Lồng Đỏ Ẩm Thực",
-      "creator": "@hana.konichiwa",
+      "title": "Tokyo Retro Alleyways - Khám Phá Hẻm Cổ Yokocho & Ánh Đèn Lồng Đỏ Ẩm Thực - @Hana_Konichiwa",
+      "creator": "@Hana_Konichiwa",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -4105,8 +4105,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DaAm8suhCau",
-      "title": "A Long Way To Home - Vlog Điện Ảnh Road Trip Chuyển Nhà Sau Đám Cưới Đến Leyte",
-      "creator": "@nicoolalah",
+      "title": "A Long Way To Home - Vlog Điện Ảnh Road Trip Chuyển Nhà Sau Đám Cưới Đến Leyte - @Nicole_💖",
+      "creator": "@Nicole_💖",
       "shooting_style": {
         "id": "storytelling",
         "name": "Storytelling",
@@ -4125,8 +4125,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DbomJ6-Tpry",
-      "title": "Nomadic Wilderness Journey - Nghệ Thuật Quay Phong Cảnh Thiên Nhiên & Hành Trình Du Mục",
-      "creator": "@thewaytowherever",
+      "title": "Nomadic Wilderness Journey - Nghệ Thuật Quay Phong Cảnh Thiên Nhiên & Hành Trình Du Mục - @Erin_&_Jackson_Travel_Filmmakers_&_Photograph",
+      "creator": "@Erin_&_Jackson_Travel_Filmmakers_&_Photograph",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -4145,8 +4145,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcLwG_mKyKM",
-      "title": "Modern Metro Rhythms - Nhịp Sống Đô Thị & Kiến Trúc Ánh Sáng Ga Tàu Điện",
-      "creator": "@thomasmathewt2",
+      "title": "Modern Metro Rhythms - Nhịp Sống Đô Thị & Kiến Trúc Ánh Sáng Ga Tàu Điện - @𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄",
+      "creator": "@𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -4165,8 +4165,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DZVHH27S7Lf",
-      "title": "Zen Mind & Mountain Mist - Tinh Thần Tĩnh Lặng Trọng Điểm Giữa Mây Ngàn",
-      "creator": "@bewoom",
+      "title": "Zen Mind & Mountain Mist - Tinh Thần Tĩnh Lặng Trọng Điểm Giữa Mây Ngàn - @비움_-_양희종",
+      "creator": "@비움_-_양희종",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -4185,8 +4185,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DZVAYFwvo4y",
-      "title": "Sunset Coastlines & Summer Breeze - Bắt Trọn Sóng Biển Hoàng Hôn & Cảm Xúc Tự Do",
-      "creator": "@jazziesillona",
+      "title": "Sunset Coastlines & Summer Breeze - Bắt Trọn Sóng Biển Hoàng Hôn & Cảm Xúc Tự Do - @Jazzie",
+      "creator": "@Jazzie",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -4205,8 +4205,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcJBTCoT6UT",
-      "title": "Master Studio Lighting Breakdown - Kỹ Thuật Đánh Đèn Chuyên Nghiệp 3 Điểm Trong Studio",
-      "creator": "@photoknack.in",
+      "title": "Master Studio Lighting Breakdown - Kỹ Thuật Đánh Đèn Chuyên Nghiệp 3 Điểm Trong Studio - @Neeraj_Khurana_Video,_Lighting_&",
+      "creator": "@Neeraj_Khurana_Video,_Lighting_&",
       "shooting_style": {
         "id": "talking-head",
         "name": "Talking Head",
@@ -4225,8 +4225,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis",
-      "title": "Carousel Multi-Slide Retention Masterclass - Nghệ Thuật Giữ Chân Chuỗi Video Đa Slide",
-      "creator": "@kosnio",
+      "title": "Carousel Multi-Slide Retention Masterclass - Nghệ Thuật Giữ Chân Chuỗi Video Đa Slide - @Andrei_Kostromskikh",
+      "creator": "@Andrei_Kostromskikh",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -4245,8 +4245,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcI-darjckz",
-      "title": "Carousel Multi-Slide Retention Masterclass - Nghệ Thuật Giữ Chân Chuỗi Video Đa Slide",
-      "creator": "@kosnio",
+      "title": "Carousel Multi-Slide Retention Masterclass - Nghệ Thuật Giữ Chân Chuỗi Video Đa Slide - @Andrei_Kostromskikh",
+      "creator": "@Andrei_Kostromskikh",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -4265,8 +4265,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DYwzs3zRRkv",
-      "title": "Rugged Pacific Northwest - Vẻ Đẹp Hoang Sơ Bờ Tây Rừng Thông & Khói Sương",
-      "creator": "@austinrutland",
+      "title": "Rugged Pacific Northwest - Vẻ Đẹp Hoang Sơ Bờ Tây Rừng Thông & Khói Sương - @Austin_Rutland",
+      "creator": "@Austin_Rutland",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -4285,8 +4285,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DaC90d3tWuV",
-      "title": "Cinematic Urban Color Mastery - Nghệ Thuật Chuyển Động Camera & Phối Màu Đô Thị Sống Động",
-      "creator": "@kosnio",
+      "title": "Cinematic Urban Color Mastery - Nghệ Thuật Chuyển Động Camera & Phối Màu Đô Thị Sống Động - @Andrei_Kostromskikh",
+      "creator": "@Andrei_Kostromskikh",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -4305,8 +4305,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "Db7P1GeOxvq",
-      "title": "Bố Cục Tương Phản Ánh Sáng & Khung Hình Kiến Trúc - Arif Hakim",
-      "creator": "@ariffathulhakim",
+      "title": "Bố Cục Tương Phản Ánh Sáng & Khung Hình Kiến Trúc - Arif Hakim - @Arif_Hakim",
+      "creator": "@Arif_Hakim",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -4325,7 +4325,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@ioana_iftode_DbqCYu4DAz2_Kyoto_Slow_Life_Visual_Diaries",
-      "title": "Kyoto Slow Life Visual Diaries • Nghệ Thuật Kể Chuyện Nhịp Thị Giác Chuỗi Carousel Đô Thị Cổ Kính",
+      "title": "Kyoto Slow Life Visual Diaries • Nghệ Thuật Kể Chuyện Nhịp Thị Giác Chuỗi Carousel Đô Thị Cổ Kính - @ioana_iftode",
       "creator": "@ioana_iftode",
       "shooting_style": {
         "id": "dien-anh",
@@ -4345,7 +4345,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DbqCYu4DAz2",
-      "title": "Kyoto Slow Life Visual Diaries • Nghệ Thuật Kể Chuyện Nhịp Thị Giác Chuỗi Carousel Đô Thị Cổ Kính",
+      "title": "Kyoto Slow Life Visual Diaries • Nghệ Thuật Kể Chuyện Nhịp Thị Giác Chuỗi Carousel Đô Thị Cổ Kính - @ioana_iftode",
       "creator": "@ioana_iftode",
       "shooting_style": {
         "id": "dien-anh",
@@ -4365,7 +4365,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@bryanhynes_DacaMHwzEm3_Visual_Sequence",
-      "title": "The Art of Visual Sequence • 8 Quy Tắc Biến Điều Bình Thường Thành Điện Ảnh",
+      "title": "The Art of Visual Sequence • 8 Quy Tắc Biến Điều Bình Thường Thành Điện Ảnh - @bryanhynes",
       "creator": "@bryanhynes",
       "shooting_style": {
         "id": "voice-over",
@@ -4385,7 +4385,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DacaMHwzEm3",
-      "title": "The Art of Visual Sequence • 8 Quy Tắc Biến Điều Bình Thường Thành Điện Ảnh",
+      "title": "The Art of Visual Sequence • 8 Quy Tắc Biến Điều Bình Thường Thành Điện Ảnh - @bryanhynes",
       "creator": "@bryanhynes",
       "shooting_style": {
         "id": "voice-over",
@@ -4405,7 +4405,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@kenshoji.visuals_DZOzwweTc5a_The_Art_of_Static_Shot",
-      "title": "Ken Shoji • The Art of Static Shot: Triết Lý Để Thế Giới Tự Chuyển Động",
+      "title": "Ken Shoji • The Art of Static Shot: Triết Lý Để Thế Giới Tự Chuyển Động - @kenshoji.visuals",
       "creator": "@kenshoji.visuals",
       "shooting_style": {
         "id": "dien-anh",
@@ -4425,7 +4425,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DZOzwweTc5a",
-      "title": "Ken Shoji • The Art of Static Shot: Triết Lý Để Thế Giới Tự Chuyển Động",
+      "title": "Ken Shoji • The Art of Static Shot: Triết Lý Để Thế Giới Tự Chuyển Động - @kenshoji.visuals",
       "creator": "@kenshoji.visuals",
       "shooting_style": {
         "id": "dien-anh",
@@ -4445,7 +4445,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@minhmigoi_Db0Sn3zvuHP_The_Power_of_Composition",
-      "title": "The Power of Composition • Sức Mạnh Bố Cục Khung Hình Trong Nhiếp Ảnh & Điện Ảnh",
+      "title": "The Power of Composition • Sức Mạnh Bố Cục Khung Hình Trong Nhiếp Ảnh & Điện Ảnh - @minhmigoi",
       "creator": "@minhmigoi",
       "shooting_style": {
         "id": "dien-anh",
@@ -4465,7 +4465,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Db0Sn3zvuHP",
-      "title": "The Power of Composition • Sức Mạnh Bố Cục Khung Hình Trong Nhiếp Ảnh & Điện Ảnh",
+      "title": "The Power of Composition • Sức Mạnh Bố Cục Khung Hình Trong Nhiếp Ảnh & Điện Ảnh - @minhmigoi",
       "creator": "@minhmigoi",
       "shooting_style": {
         "id": "dien-anh",
@@ -4485,7 +4485,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@mcjacoub_Db22SIxAVtJ_Camera_Angles_Mastery",
-      "title": "Camera Angles Mastery • 5 Góc Máy Điện Ảnh & Tâm Lý Học Thị Giác",
+      "title": "Camera Angles Mastery • 5 Góc Máy Điện Ảnh & Tâm Lý Học Thị Giác - @mcjacoub",
       "creator": "@mcjacoub",
       "shooting_style": {
         "id": "talking-head",
@@ -4505,7 +4505,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Db22SIxAVtJ",
-      "title": "Camera Angles Mastery • 5 Góc Máy Điện Ảnh & Tâm Lý Học Thị Giác",
+      "title": "Camera Angles Mastery • 5 Góc Máy Điện Ảnh & Tâm Lý Học Thị Giác - @mcjacoub",
       "creator": "@mcjacoub",
       "shooting_style": {
         "id": "talking-head",
@@ -4525,7 +4525,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@qfroost_DXWKIztktTN_Saigon_Vietnam",
-      "title": "Saigon, Vietnam • Nghệ Thuật Kể Chuyện Thị Giác & Tình Cảm Hồi Hương",
+      "title": "Saigon, Vietnam • Nghệ Thuật Kể Chuyện Thị Giác & Tình Cảm Hồi Hương - @qfroost",
       "creator": "@qfroost",
       "shooting_style": {
         "id": "voice-over",
@@ -4545,7 +4545,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DXWKIztktTN",
-      "title": "Saigon, Vietnam • Nghệ Thuật Kể Chuyện Thị Giác & Tình Cảm Hồi Hương",
+      "title": "Saigon, Vietnam • Nghệ Thuật Kể Chuyện Thị Giác & Tình Cảm Hồi Hương - @qfroost",
       "creator": "@qfroost",
       "shooting_style": {
         "id": "voice-over",
@@ -4565,7 +4565,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
-      "title": "Ray-Ban Meta System • Nghệ Thuật Kể Chuyện Đa Góc Nhìn & Nhịp Dựng Hyperlapse Đỉnh Cao",
+      "title": "Ray-Ban Meta System • Nghệ Thuật Kể Chuyện Đa Góc Nhìn & Nhịp Dựng Hyperlapse Đỉnh Cao - @qfroost",
       "creator": "@qfroost",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -4585,7 +4585,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Dah8zTnNgq5",
-      "title": "Ray-Ban Meta System • Nghệ Thuật Kể Chuyện Đa Góc Nhìn & Nhịp Dựng Hyperlapse Đỉnh Cao",
+      "title": "Ray-Ban Meta System • Nghệ Thuật Kể Chuyện Đa Góc Nhìn & Nhịp Dựng Hyperlapse Đỉnh Cao - @qfroost",
       "creator": "@qfroost",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -4605,7 +4605,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow",
-      "title": "Quy Trình Sáng Tạo Adobe Firefly • Mixed-Reality Spatial Workflow",
+      "title": "Quy Trình Sáng Tạo Adobe Firefly • Mixed-Reality Spatial Workflow - @qfroost",
       "creator": "@qfroost",
       "shooting_style": {
         "id": "talking-head",
@@ -4625,7 +4625,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DbdG7v1tjrz",
-      "title": "Quy Trình Sáng Tạo Adobe Firefly • Mixed-Reality Spatial Workflow",
+      "title": "Quy Trình Sáng Tạo Adobe Firefly • Mixed-Reality Spatial Workflow - @qfroost",
       "creator": "@qfroost",
       "shooting_style": {
         "id": "talking-head",
@@ -4645,7 +4645,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@jeromememe_Db-zVchOXV7_People_of_Bhutan",
-      "title": "Jerome Teo • People of Bhutan: Ngôn Ngữ Điện Ảnh & Hạnh Phúc Himalaya",
+      "title": "Jerome Teo • People of Bhutan: Ngôn Ngữ Điện Ảnh & Hạnh Phúc Himalaya - @jeromememe",
       "creator": "@jeromememe",
       "shooting_style": {
         "id": "storytelling",
@@ -4665,7 +4665,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "Db-zVchOXV7",
-      "title": "Jerome Teo • People of Bhutan: Ngôn Ngữ Điện Ảnh & Hạnh Phúc Himalaya",
+      "title": "Jerome Teo • People of Bhutan: Ngôn Ngữ Điện Ảnh & Hạnh Phúc Himalaya - @jeromememe",
       "creator": "@jeromememe",
       "shooting_style": {
         "id": "storytelling",
@@ -4685,7 +4685,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@jeromememe_DQuEXMbj8fT_People_of_Porto",
-      "title": "People of Porto • Nghệ Thuật Quan Sát Phố Thị Sớm & Hơi Thở Đời Thường Bồ Đào Nha",
+      "title": "People of Porto • Nghệ Thuật Quan Sát Phố Thị Sớm & Hơi Thở Đời Thường Bồ Đào Nha - @jeromememe",
       "creator": "@jeromememe",
       "shooting_style": {
         "id": "dien-anh",
@@ -4705,7 +4705,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DQuEXMbj8fT",
-      "title": "People of Porto • Nghệ Thuật Quan Sát Phố Thị Sớm & Hơi Thở Đời Thường Bồ Đào Nha",
+      "title": "People of Porto • Nghệ Thuật Quan Sát Phố Thị Sớm & Hơi Thở Đời Thường Bồ Đào Nha - @jeromememe",
       "creator": "@jeromememe",
       "shooting_style": {
         "id": "dien-anh",
@@ -4725,7 +4725,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@jeromememe_DQmKgPDEWgJ_Artisans_of_Venice",
-      "title": "Artisans of Venice • Bản Trường Ca Tôn Vinh Nghề Thủ Công Di Sản & Nghệ Thuật Điện Ảnh",
+      "title": "Artisans of Venice • Bản Trường Ca Tôn Vinh Nghề Thủ Công Di Sản & Nghệ Thuật Điện Ảnh - @jeromememe",
       "creator": "@jeromememe",
       "shooting_style": {
         "id": "storytelling",
@@ -4745,7 +4745,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DQmKgPDEWgJ",
-      "title": "Artisans of Venice • Bản Trường Ca Tôn Vinh Nghề Thủ Công Di Sản & Nghệ Thuật Điện Ảnh",
+      "title": "Artisans of Venice • Bản Trường Ca Tôn Vinh Nghề Thủ Công Di Sản & Nghệ Thuật Điện Ảnh - @jeromememe",
       "creator": "@jeromememe",
       "shooting_style": {
         "id": "storytelling",
@@ -4765,7 +4765,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@jeromememe_DbGMt3oIaZm_People_of_Copenhagen",
-      "title": "Nghệ Thuật Quan Sát Cuộc Sống Mùa Hè Copenhagen & Tinh Thần Hygge",
+      "title": "Nghệ Thuật Quan Sát Cuộc Sống Mùa Hè Copenhagen & Tinh Thần Hygge - @jeromememe",
       "creator": "@jeromememe",
       "shooting_style": {
         "id": "dien-anh",
@@ -4785,7 +4785,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DbGMt3oIaZm",
-      "title": "Nghệ Thuật Quan Sát Cuộc Sống Mùa Hè Copenhagen & Tinh Thần Hygge",
+      "title": "Nghệ Thuật Quan Sát Cuộc Sống Mùa Hè Copenhagen & Tinh Thần Hygge - @jeromememe",
       "creator": "@jeromememe",
       "shooting_style": {
         "id": "dien-anh",
@@ -4965,7 +4965,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro",
-      "title": "Quán Cà Phê San Euljiro - Tái Định Vị Thương Hiệu & B-Roll Không Gian Ẩm Thực Tối Giản",
+      "title": "Quán Cà Phê San Euljiro - Tái Định Vị Thương Hiệu & B-Roll Không Gian Ẩm Thực Tối Giản - @cafe.pilgrim",
       "creator": "@cafe.pilgrim",
       "shooting_style": {
         "id": "voice-over",
@@ -4985,7 +4985,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DbVhTUiznEp",
-      "title": "Quán Cà Phê San Euljiro - Tái Định Vị Thương Hiệu & B-Roll Không Gian Ẩm Thực Tối Giản",
+      "title": "Quán Cà Phê San Euljiro - Tái Định Vị Thương Hiệu & B-Roll Không Gian Ẩm Thực Tối Giản - @cafe.pilgrim",
       "creator": "@cafe.pilgrim",
       "shooting_style": {
         "id": "voice-over",
@@ -5365,8 +5365,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DchxEAkJ9Hw",
-      "title": "Nghệ Thuật Kể Chuyện Hài Bẻ Lái Thực Tế (Relatable Comedy Skit) - @steven.vuu",
-      "creator": "@steven.vuu",
+      "title": "Nghệ Thuật Kể Chuyện Hài Bẻ Lái Thực Tế (Relatable Comedy Skit) - @steven.vuu - @Steven_🇻🇳_Vu",
+      "creator": "@Steven_🇻🇳_Vu",
       "shooting_style": {
         "id": "storytelling",
         "name": "Storytelling",
@@ -5385,7 +5385,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa",
-      "title": "Neolumo • Phóng Sự Trị Liệu Da Liễu Y Khoa & Thẩm Mỹ",
+      "title": "Neolumo • Phóng Sự Trị Liệu Da Liễu Y Khoa & Thẩm Mỹ - @neolumo.uralsk",
       "creator": "@neolumo.uralsk",
       "shooting_style": {
         "id": "talking-head",
@@ -5405,7 +5405,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DdF-qr0s4Kk",
-      "title": "Neolumo • Phóng Sự Trị Liệu Da Liễu Y Khoa & Thẩm Mỹ",
+      "title": "Neolumo • Phóng Sự Trị Liệu Da Liễu Y Khoa & Thẩm Mỹ - @neolumo.uralsk",
       "creator": "@neolumo.uralsk",
       "shooting_style": {
         "id": "talking-head",
@@ -5425,7 +5425,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine",
-      "title": "Josh Diaz • Lifestyle Habit & Cinematic B-Roll Routine",
+      "title": "Josh Diaz • Lifestyle Habit & Cinematic B-Roll Routine - @joshdiazfilms",
       "creator": "@joshdiazfilms",
       "shooting_style": {
         "id": "storytelling",
@@ -5445,7 +5445,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DdEshZtz9Rb",
-      "title": "Josh Diaz • Lifestyle Habit & Cinematic B-Roll Routine",
+      "title": "Josh Diaz • Lifestyle Habit & Cinematic B-Roll Routine - @joshdiazfilms",
       "creator": "@joshdiazfilms",
       "shooting_style": {
         "id": "storytelling",
@@ -5565,7 +5565,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "LAZADA_Ulanzi_UA20_Đèn_LED_Thanh_Bơm_Hơi_20W_Bi",
-      "title": "Ulanzi UA20 Đèn LED Thanh Bơm Hơi 20W Bi-Color Tích Hợp Pin",
+      "title": "Ulanzi UA20 Đèn LED Thanh Bơm Hơi 20W Bi-Color Tích Hợp Pin - @ulanzi.vietnam",
       "creator": "@ulanzi.vietnam",
       "shooting_style": {
         "id": "dien-anh",
@@ -5587,7 +5587,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "SHOPEE_ULANZI_MT80_Chân_Máy_Tripod_Cao_213cm_Tả",
-      "title": "ULANZI MT80 Chân Máy Tripod Cao 213cm Tải Trọng 5kg",
+      "title": "ULANZI MT80 Chân Máy Tripod Cao 213cm Tải Trọng 5kg - @ulanzi.vietnam",
       "creator": "@ulanzi.vietnam",
       "shooting_style": {
         "id": "dien-anh",
@@ -5609,7 +5609,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing",
-      "title": "Jenny Tsang • Nghệ Thuật Mở Hộp Rương Mùa Hè Tory Burch & Phối Đồ Điện Ảnh",
+      "title": "Jenny Tsang • Nghệ Thuật Mở Hộp Rương Mùa Hè Tory Burch & Phối Đồ Điện Ảnh - @tsangtastic",
       "creator": "@tsangtastic",
       "shooting_style": {
         "id": "dien-anh",
@@ -5629,7 +5629,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DaB-gO6hvPX",
-      "title": "Jenny Tsang • Nghệ Thuật Mở Hộp Rương Mùa Hè Tory Burch & Phối Đồ Điện Ảnh",
+      "title": "Jenny Tsang • Nghệ Thuật Mở Hộp Rương Mùa Hè Tory Burch & Phối Đồ Điện Ảnh - @tsangtastic",
       "creator": "@tsangtastic",
       "shooting_style": {
         "id": "dien-anh",
@@ -5649,7 +5649,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant",
-      "title": "Triết Lý Fast Food Outsells Restaurant: Ẩn Dụ Thị Giác & Giữ Chân Khán Giả",
+      "title": "Triết Lý Fast Food Outsells Restaurant: Ẩn Dụ Thị Giác & Giữ Chân Khán Giả - @shogentle",
       "creator": "@shogentle",
       "shooting_style": {
         "id": "storytelling",
@@ -5669,7 +5669,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DdCRQnBI4ny",
-      "title": "Triết Lý Fast Food Outsells Restaurant: Ẩn Dụ Thị Giác & Giữ Chân Khán Giả",
+      "title": "Triết Lý Fast Food Outsells Restaurant: Ẩn Dụ Thị Giác & Giữ Chân Khán Giả - @shogentle",
       "creator": "@shogentle",
       "shooting_style": {
         "id": "storytelling",
@@ -5689,7 +5689,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook",
-      "title": "Aidana • Tornado Kick Martial Arts Kinetic Hook & Match Action Chân Máy",
+      "title": "Aidana • Tornado Kick Martial Arts Kinetic Hook & Match Action Chân Máy - @aidana_adilkassym",
       "creator": "@aidana_adilkassym",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -5709,7 +5709,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcQy-eEOIHc",
-      "title": "Aidana • Tornado Kick Martial Arts Kinetic Hook & Match Action Chân Máy",
+      "title": "Aidana • Tornado Kick Martial Arts Kinetic Hook & Match Action Chân Máy - @aidana_adilkassym",
       "creator": "@aidana_adilkassym",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -5729,7 +5729,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency",
-      "title": "Critos Pro • The Art of Consistency: Bàn Làm Việc Công Nghệ & Match Cut Cố Định",
+      "title": "Critos Pro • The Art of Consistency: Bàn Làm Việc Công Nghệ & Match Cut Cố Định - @critos_pro",
       "creator": "@critos_pro",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -5749,7 +5749,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcxwKHYoBFv",
-      "title": "Critos Pro • The Art of Consistency: Bàn Làm Việc Công Nghệ & Match Cut Cố Định",
+      "title": "Critos Pro • The Art of Consistency: Bàn Làm Việc Công Nghệ & Match Cut Cố Định - @critos_pro",
       "creator": "@critos_pro",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -5769,7 +5769,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion",
-      "title": "Jamison Lange • Coffee + Outfit Match Cut Transition: Biến Hình Thời Trang Chân Máy",
+      "title": "Jamison Lange • Coffee + Outfit Match Cut Transition: Biến Hình Thời Trang Chân Máy - @jamison.lange",
       "creator": "@jamison.lange",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -5789,7 +5789,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DawDiT2M1p8",
-      "title": "Jamison Lange • Coffee + Outfit Match Cut Transition: Biến Hình Thời Trang Chân Máy",
+      "title": "Jamison Lange • Coffee + Outfit Match Cut Transition: Biến Hình Thời Trang Chân Máy - @jamison.lange",
       "creator": "@jamison.lange",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -5809,7 +5809,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcvmVl2hbuY",
-      "title": "Ju Seobang • Vlog Đời Thường Hàn Quốc & Nhịp Sống Chữa Lành Yên Bình",
+      "title": "Ju Seobang • Vlog Đời Thường Hàn Quốc & Nhịp Sống Chữa Lành Yên Bình - @주서방",
       "creator": "@주서방",
       "shooting_style": {
         "id": "storytelling",
@@ -5829,7 +5829,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds",
-      "title": "Layton • 6 Góc Máy Trong 60 Giây: Thao Lược B-Roll Thần Tốc Cầu Đi Bộ",
+      "title": "Layton • 6 Góc Máy Trong 60 Giây: Thao Lược B-Roll Thần Tốc Cầu Đi Bộ - @layton_video",
       "creator": "@layton_video",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -5849,7 +5849,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DbILcfyxZot",
-      "title": "Layton • 6 Góc Máy Trong 60 Giây: Thao Lược B-Roll Thần Tốc Cầu Đi Bộ",
+      "title": "Layton • 6 Góc Máy Trong 60 Giây: Thao Lược B-Roll Thần Tốc Cầu Đi Bộ - @layton_video",
       "creator": "@layton_video",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -6309,7 +6309,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey",
-      "title": "Asian Dragon Tattoo Journey • Hannya Tattoo Hà Nội",
+      "title": "Asian Dragon Tattoo Journey • Hannya Tattoo Hà Nội - @hannya.tattoos",
       "creator": "@hannya.tattoos",
       "shooting_style": {
         "id": "storytelling",
@@ -6489,7 +6489,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DbQtoVPRMWk",
-      "title": "5 Cenas Criativas Trabalho • Nghệ Thuật Tự Quay B-Roll & Góc Làm Việc Chỉ Bằng Điện Thoại",
+      "title": "5 Cenas Criativas Trabalho • Nghệ Thuật Tự Quay B-Roll & Góc Làm Việc Chỉ Bằng Điện Thoại - @mercantegi",
       "creator": "@mercantegi",
       "shooting_style": {
         "id": "ky-thuat-quay",
@@ -6509,7 +6509,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho",
-      "title": "5 Cenas Criativas Trabalho • Nghệ Thuật Tự Quay B-Roll & Góc Làm Việc Chỉ Bằng Điện Thoại",
+      "title": "5 Cenas Criativas Trabalho • Nghệ Thuật Tự Quay B-Roll & Góc Làm Việc Chỉ Bằng Điện Thoại - @mercantegi",
       "creator": "@mercantegi",
       "shooting_style": {
         "id": "ky-thuat-quay",
@@ -6589,7 +6589,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "LAZADA_Ulanzi_Chân_Đế_Tự_Sướng_Có_Từ_Tính_",
-      "title": "Ulanzi | Chân Đế Tự Sướng Có Từ Tính với Hỗ Trợ Camera Điện Thoại, Đa Năng và Di Động",
+      "title": "Ulanzi | Chân Đế Tự Sướng Có Từ Tính với Hỗ Trợ Camera Điện Thoại, Đa Năng và Di Động - @ulanzi.vietnam",
       "creator": "@ulanzi.vietnam",
       "shooting_style": {
         "id": "dien-anh",
@@ -6609,7 +6609,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "LAZADA_Ulanzi_Đèn_LED_Thanh_Bơm_Hơi_UA20,_",
-      "title": "Ulanzi | Đèn LED Thanh Bơm Hơi UA20, 20W Bi-Color, Tích Hợp Pin",
+      "title": "Ulanzi | Đèn LED Thanh Bơm Hơi UA20, 20W Bi-Color, Tích Hợp Pin - @ulanzi.vietnam",
       "creator": "@ulanzi.vietnam",
       "shooting_style": {
         "id": "dien-anh",
@@ -6629,8 +6629,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "Dc5uepPBXKq",
-      "title": "Outfit Check Black Setup • Biến Hình In-Camera Match Cut & Phụ Kiện Xúc Giác",
-      "creator": "@sg.genchan",
+      "title": "Outfit Check Black Setup • Biến Hình In-Camera Match Cut & Phụ Kiện Xúc Giác - @Genya",
+      "creator": "@Genya",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh (Transitions)",
@@ -6649,7 +6649,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@iman.lizi_Dc6qXoKoYKh",
-      "title": "Iman Lizi • ASMR Trà Chiều & B-Roll Đời Sống Chậm Cozy Homebody",
+      "title": "Iman Lizi • ASMR Trà Chiều & B-Roll Đời Sống Chậm Cozy Homebody - @iman.lizi",
       "creator": "@iman.lizi",
       "shooting_style": {
         "id": "dien-anh",
@@ -6669,7 +6669,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@hayancook_DdSUI9BvhqR",
-      "title": "Hayan Cook • Công Thức Thịt Viên Sốt Cà Chua Cho Bé 22 Tháng & Nhịp Dựng Nấu Ăn Nhanh",
+      "title": "Hayan Cook • Công Thức Thịt Viên Sốt Cà Chua Cho Bé 22 Tháng & Nhịp Dựng Nấu Ăn Nhanh - @hayancook",
       "creator": "@hayancook",
       "shooting_style": {
         "id": "voice-over",
@@ -6689,7 +6689,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@cushygarden_DdL6pHDSKRc",
-      "title": "Cushy Garden • Nhật Ký Làm Vườn Mỗi Ngày & Kỹ Thuật Macro Chăm Cây Chữa Lành",
+      "title": "Cushy Garden • Nhật Ký Làm Vườn Mỗi Ngày & Kỹ Thuật Macro Chăm Cây Chữa Lành - @cushygarden",
       "creator": "@cushygarden",
       "shooting_style": {
         "id": "voice-over",
@@ -6709,7 +6709,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@dev_zero_Db-S8i1hXwF",
-      "title": "Zero Dev • Routine Sau Giờ Làm: Tự Học Code, Đàn Guitar & Kỷ Luật Bản Thân",
+      "title": "Zero Dev • Routine Sau Giờ Làm: Tự Học Code, Đàn Guitar & Kỷ Luật Bản Thân - @dev_zero",
       "creator": "@dev_zero",
       "shooting_style": {
         "id": "storytelling",
@@ -6729,7 +6729,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@nagisa.decor_Dco_DevvUla",
-      "title": "Nagisa • Nghệ Thuật Decor Căn Hộ Phong Cách Japandi & Phối Màu Cây Xanh Tinh Tế",
+      "title": "Nagisa • Nghệ Thuật Decor Căn Hộ Phong Cách Japandi & Phối Màu Cây Xanh Tinh Tế - @nagisa.decor",
       "creator": "@nagisa.decor",
       "shooting_style": {
         "id": "dien-anh",
@@ -6749,7 +6749,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@yuto_creator_DdBlAWRO1Hl",
-      "title": "Yuto • Cảnh Sắc Mùa Hè Nagano & Gifu: Nghệ Thuật Quay Phong Cảnh Điện Ảnh Trong Ngày Mưa",
+      "title": "Yuto • Cảnh Sắc Mùa Hè Nagano & Gifu: Nghệ Thuật Quay Phong Cảnh Điện Ảnh Trong Ngày Mưa - @yuto_creator",
       "creator": "@yuto_creator",
       "shooting_style": {
         "id": "dien-anh",
@@ -6789,7 +6789,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@layton_video_DdKGq2TMhf4",
-      "title": "Layton • Sự Thật Khắc Nghiệt Khi Làm Creator: Cứ Làm Đi Thay Vì Dạy Đời",
+      "title": "Layton • Sự Thật Khắc Nghiệt Khi Làm Creator: Cứ Làm Đi Thay Vì Dạy Đời - @layton_video",
       "creator": "@layton_video",
       "shooting_style": {
         "id": "talking-head",
@@ -6809,7 +6809,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@kienobifilms_DdPLvUpBwCl",
-      "title": "Kien Nguyen • Cách Chuyển Động Camera Thao Túng Cảm Xúc Khán Giả (Dolly-In & Push)",
+      "title": "Kien Nguyen • Cách Chuyển Động Camera Thao Túng Cảm Xúc Khán Giả (Dolly-In & Push) - @kienobifilms",
       "creator": "@kienobifilms",
       "shooting_style": {
         "id": "talking-head",
@@ -6830,7 +6830,7 @@ var TRAINING_DATA = {
     {
       "id": "IG_@aki_japan_DaDFH_TSii8",
       "title": "Aki • Kỹ Thuật Match Cut Đổi Trang Phục Siêu Mượt Của Barista Đường Phố",
-      "creator": "@aki_japan",
+      "creator": "@aki",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh (In-Camera Transitions)",
@@ -6849,7 +6849,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@nathanael.lct_DdRg_ybtlKI",
-      "title": "Nathanael • Thử Thách Phối Đồ Thu Dưới €150 & Kỹ Thuật Hook 3s Đổi Outfit Siêu Tốc",
+      "title": "Nathanael • Thử Thách Phối Đồ Thu Dưới €150 & Kỹ Thuật Hook 3s Đổi Outfit Siêu Tốc - @nathanael.lct",
       "creator": "@nathanael.lct",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -6869,7 +6869,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@c.j.visuals_DdMrb4ARxHv",
-      "title": "CJ • 5 Ý Tưởng Góc Máy Du Lịch Siêu Dễ Bằng Điện Thoại Không Cần Thiết Bị Phụ Trợ",
+      "title": "CJ • 5 Ý Tưởng Góc Máy Du Lịch Siêu Dễ Bằng Điện Thoại Không Cần Thiết Bị Phụ Trợ - @c.j.visuals",
       "creator": "@c.j.visuals",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -6889,7 +6889,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@genya_jp_Dc3PgRbBp-m",
-      "title": "Genya • Khám Phá Ẩm Thực Vùng Núi Hakone & Nghệ Thuật Quay Đồ Ăn Xúc Giác Nóng Hổi",
+      "title": "Genya • Khám Phá Ẩm Thực Vùng Núi Hakone & Nghệ Thuật Quay Đồ Ăn Xúc Giác Nóng Hổi - @genya_jp",
       "creator": "@genya_jp",
       "shooting_style": {
         "id": "dien-anh",
@@ -6909,7 +6909,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@charlotte.arsenault_DdHGBpZOzIm",
-      "title": "Charlotte • Chiến Lược Xây Kho B-Roll Du Lịch Để Dùng Dần Cho Cả Năm Làm Content UGC",
+      "title": "Charlotte • Chiến Lược Xây Kho B-Roll Du Lịch Để Dùng Dần Cho Cả Năm Làm Content UGC - @charlotte.arsenault",
       "creator": "@charlotte.arsenault",
       "shooting_style": {
         "id": "talking-head",
@@ -6949,7 +6949,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@jazziesillona_Dc6Cxf-QRWh",
-      "title": "Jazzie • Cẩm Nang Quay Phim Bằng iPhone Chuyên Nghiệp Từ Ngày Đầu Tiên Đến Nay",
+      "title": "Jazzie • Cẩm Nang Quay Phim Bằng iPhone Chuyên Nghiệp Từ Ngày Đầu Tiên Đến Nay - @jazziesillona",
       "creator": "@jazziesillona",
       "shooting_style": {
         "id": "talking-head",
@@ -6969,7 +6969,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@c.j.visuals_DdR7dEIxzT9",
-      "title": "CJ • Thử Thách Góc Quay Điện Thoại Mùa iPhone Mới: Đẩy Camera Qua Khung Kính Ô Tô",
+      "title": "CJ • Thử Thách Góc Quay Điện Thoại Mùa iPhone Mới: Đẩy Camera Qua Khung Kính Ô Tô - @c.j.visuals",
       "creator": "@c.j.visuals",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -6989,7 +6989,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@jusorok_korea_DdBr6LZqkFd",
-      "title": "Jusorok • Review Quán Cafe Ô Cửa Kính Khổng Lồ Ôm Trọn Thiên Nhiên Xanh Gwangju",
+      "title": "Jusorok • Review Quán Cafe Ô Cửa Kính Khổng Lồ Ôm Trọn Thiên Nhiên Xanh Gwangju - @jusorok_korea",
       "creator": "@jusorok_korea",
       "shooting_style": {
         "id": "dien-anh",
@@ -7009,7 +7009,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@arianballate_DdRe4-xpHs2",
-      "title": "Arian • Quảng Cáo Trang Phục Chạy Bộ Gymshark Elite: Phong Cách Năng Động Cả Khi Không Chạy",
+      "title": "Arian • Quảng Cáo Trang Phục Chạy Bộ Gymshark Elite: Phong Cách Năng Động Cả Khi Không Chạy - @arianballate",
       "creator": "@arianballate",
       "shooting_style": {
         "id": "dien-anh",
@@ -7029,7 +7029,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@genya_jp_DdD_QqPB7aW",
-      "title": "Genya • Chuẩn Bị Trang Phục Mùa Thu Tối Giản: Nghệ Thuật Phối Đồ Len V-Neck & Phụ Kiện Tinh Tế",
+      "title": "Genya • Chuẩn Bị Trang Phục Mùa Thu Tối Giản: Nghệ Thuật Phối Đồ Len V-Neck & Phụ Kiện Tinh Tế - @genya_jp",
       "creator": "@genya_jp",
       "shooting_style": {
         "id": "dien-anh",
@@ -7130,7 +7130,7 @@ var TRAINING_DATA = {
     {
       "id": "DdTeHleIqkg",
       "title": "@AL,_The_Creator_Videography_Reels - Video by shogentle",
-      "creator": "@AL,_The_Creator_Videography_Reels",
+      "creator": "@AL,",
       "shooting_style": {
         "id": "talking-head",
         "name": "Talking Head",
@@ -7150,7 +7150,7 @@ var TRAINING_DATA = {
     {
       "id": "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
       "title": "@AL,_The_Creator_Videography_Reels - Video by shogentle",
-      "creator": "@AL,_The_Creator_Videography_Reels",
+      "creator": "@AL,",
       "shooting_style": {
         "id": "talking-head",
         "name": "Talking Head",
@@ -7269,8 +7269,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun",
-      "title": "Shin Yueun • Cú Máy Tracking Đi Lùi Lookbook Dạo Phố Cổ Điển Hàn Quốc",
-      "creator": "@yuuxeun",
+      "title": "Shin Yueun • Cú Máy Tracking Đi Lùi Lookbook Dạo Phố Cổ Điển Hàn Quốc - @신_유은_yueun_shin",
+      "creator": "@신_유은_yueun_shin",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Chỉn Chu",
@@ -7289,8 +7289,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DdQwL3Ahci1",
-      "title": "Shin Yueun • Cú Máy Tracking Đi Lùi Lookbook Dạo Phố Cổ Điển Hàn Quốc",
-      "creator": "@yuuxeun",
+      "title": "Shin Yueun • Cú Máy Tracking Đi Lùi Lookbook Dạo Phố Cổ Điển Hàn Quốc - @신_유은_yueun_shin",
+      "creator": "@신_유은_yueun_shin",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Chỉn Chu",
@@ -7309,8 +7309,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen",
-      "title": "Megan Tan • Nghệ Thuật Lồng Ghép Tài Trợ Công Nghệ Vào Phong Cách Sống Tự Do",
-      "creator": "@megantanhweewen",
+      "title": "Megan Tan • Nghệ Thuật Lồng Ghép Tài Trợ Công Nghệ Vào Phong Cách Sống Tự Do - @Megan_Tan",
+      "creator": "@Megan_Tan",
       "shooting_style": {
         "id": "storytelling",
         "name": "Kể Chuyện",
@@ -7329,8 +7329,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DdT4EOzveQL",
-      "title": "Megan Tan • Nghệ Thuật Lồng Ghép Tài Trợ Công Nghệ Vào Phong Cách Sống Tự Do",
-      "creator": "@megantanhweewen",
+      "title": "Megan Tan • Nghệ Thuật Lồng Ghép Tài Trợ Công Nghệ Vào Phong Cách Sống Tự Do - @Megan_Tan",
+      "creator": "@Megan_Tan",
       "shooting_style": {
         "id": "storytelling",
         "name": "Kể Chuyện",
@@ -7349,8 +7349,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock",
-      "title": "Pascal Blaurock • Bí Quyết Biến iPhone Thành Máy Quay Điện Ảnh Bằng Lens Anamorphic",
-      "creator": "@pascal_blaurock",
+      "title": "Pascal Blaurock • Bí Quyết Biến iPhone Thành Máy Quay Điện Ảnh Bằng Lens Anamorphic - @Pascal_Blaurock",
+      "creator": "@Pascal_Blaurock",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Chỉn Chu",
@@ -7369,8 +7369,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DdT9CF7tGzn",
-      "title": "Pascal Blaurock • Bí Quyết Biến iPhone Thành Máy Quay Điện Ảnh Bằng Lens Anamorphic",
-      "creator": "@pascal_blaurock",
+      "title": "Pascal Blaurock • Bí Quyết Biến iPhone Thành Máy Quay Điện Ảnh Bằng Lens Anamorphic - @Pascal_Blaurock",
+      "creator": "@Pascal_Blaurock",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Chỉn Chu",
@@ -7389,8 +7389,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword",
-      "title": "Jackson Sword • Kỹ Thuật Đặt Máy Chân Dung Mộc & Nghệ Thuật Kể Chuyện Bằng Âm Thanh Giọng Nói",
-      "creator": "@byjacksonsword",
+      "title": "Jackson Sword • Kỹ Thuật Đặt Máy Chân Dung Mộc & Nghệ Thuật Kể Chuyện Bằng Âm Thanh Giọng Nói - @Jackson_Sword",
+      "creator": "@Jackson_Sword",
       "shooting_style": {
         "id": "talking-head",
         "name": "Nói Trực Diện",
@@ -7409,8 +7409,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DdU4rBeMXZt",
-      "title": "Jackson Sword • Kỹ Thuật Đặt Máy Chân Dung Mộc & Nghệ Thuật Kể Chuyện Bằng Âm Thanh Giọng Nói",
-      "creator": "@byjacksonsword",
+      "title": "Jackson Sword • Kỹ Thuật Đặt Máy Chân Dung Mộc & Nghệ Thuật Kể Chuyện Bằng Âm Thanh Giọng Nói - @Jackson_Sword",
+      "creator": "@Jackson_Sword",
       "shooting_style": {
         "id": "talking-head",
         "name": "Nói Trực Diện",
@@ -7429,8 +7429,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@𝐂𝐢𝐧𝐝𝐲🌼_DcgQDZ_JNIr_Video_by_clarissaacindy",
-      "title": "Clarissa Cindy • 10 Bố Cục Thơ Mộng Dạo Phố & Chuyển Cảnh Giao Thoa Ánh Sáng Hoàng Hôn",
-      "creator": "@clarissaacindy",
+      "title": "Clarissa Cindy • 10 Bố Cục Thơ Mộng Dạo Phố & Chuyển Cảnh Giao Thoa Ánh Sáng Hoàng Hôn - @𝐂𝐢𝐧𝐝𝐲🌼",
+      "creator": "@𝐂𝐢𝐧𝐝𝐲🌼",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Chỉn Chu",
@@ -7449,8 +7449,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcgQDZ_JNIr",
-      "title": "Clarissa Cindy • 10 Bố Cục Thơ Mộng Dạo Phố & Chuyển Cảnh Giao Thoa Ánh Sáng Hoàng Hôn",
-      "creator": "@clarissaacindy",
+      "title": "Clarissa Cindy • 10 Bố Cục Thơ Mộng Dạo Phố & Chuyển Cảnh Giao Thoa Ánh Sáng Hoàng Hôn - @𝐂𝐢𝐧𝐝𝐲🌼",
+      "creator": "@𝐂𝐢𝐧𝐝𝐲🌼",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Chỉn Chu",
@@ -7469,8 +7469,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5",
-      "title": "Hayan Cook • ASMR Nấu Ăn Bếp Nhà Hàn Quốc & Nghệ Thuật Ánh Sáng Tự Nhiên Cạnh Cửa Sổ",
-      "creator": "@hayan_cook",
+      "title": "Hayan Cook • ASMR Nấu Ăn Bếp Nhà Hàn Quốc & Nghệ Thuật Ánh Sáng Tự Nhiên Cạnh Cửa Sổ - @creator",
+      "creator": "@creator",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Chỉn Chu",
@@ -7489,8 +7489,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DdVBqUzj3o5",
-      "title": "Hayan Cook • ASMR Nấu Ăn Bếp Nhà Hàn Quốc & Nghệ Thuật Ánh Sáng Tự Nhiên Cạnh Cửa Sổ",
-      "creator": "@hayan_cook",
+      "title": "Hayan Cook • ASMR Nấu Ăn Bếp Nhà Hàn Quốc & Nghệ Thuật Ánh Sáng Tự Nhiên Cạnh Cửa Sổ - @creator",
+      "creator": "@creator",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Chỉn Chu",
@@ -7750,7 +7750,7 @@ var TRAINING_DATA = {
     {
       "id": "IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg",
       "title": "@Five_Oars_Coffee_Roasters - Video by focr.sg",
-      "creator": "@Five_Oars_Coffee_Roasters",
+      "creator": "@Five",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -7770,7 +7770,7 @@ var TRAINING_DATA = {
     {
       "id": "DcxcVGtxjNl",
       "title": "@Five_Oars_Coffee_Roasters - Video by focr.sg",
-      "creator": "@Five_Oars_Coffee_Roasters",
+      "creator": "@Five",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -7910,7 +7910,7 @@ var TRAINING_DATA = {
     {
       "id": "IG_@Hayden_Slow_Korean_&_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean",
       "title": "@Hayden_Slow_Korean_&_Daily_Life - Video by haydenkorean",
-      "creator": "@Hayden_Slow_Korean_&_Daily_Life",
+      "creator": "@Hayden",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -7930,7 +7930,7 @@ var TRAINING_DATA = {
     {
       "id": "Daz3Po8zHIE",
       "title": "@Hayden_Slow_Korean_&_Daily_Life - Video by haydenkorean",
-      "creator": "@Hayden_Slow_Korean_&_Daily_Life",
+      "creator": "@Hayden",
       "shooting_style": {
         "id": "dien-anh",
         "name": "Điện Ảnh (Cinematic)",
@@ -7950,7 +7950,7 @@ var TRAINING_DATA = {
     {
       "id": "IG_@Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc",
       "title": "@Eugenia_Syd_UGC_creator - Video by eugcreates.ugc",
-      "creator": "@Eugenia_Syd_UGC_creator",
+      "creator": "@Eugenia_Syd",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh (Transition)",
@@ -7970,7 +7970,7 @@ var TRAINING_DATA = {
     {
       "id": "DdA1ErpRMg2",
       "title": "@Eugenia_Syd_UGC_creator - Video by eugcreates.ugc",
-      "creator": "@Eugenia_Syd_UGC_creator",
+      "creator": "@Eugenia_Syd",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh (Transition)",
@@ -8149,8 +8149,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video_by_nemo_ooo",
-      "title": "@nemo_ooo • Trải Nghiệm Triển Lãm Nghệ Thuật Số Arte Museum Busan.",
-      "creator": "@尼莫Nemo_ིྀ_ᗦ↞◃",
+      "title": "@nemo_ooo • Trải Nghiệm Triển Lãm Nghệ Thuật Số Arte Museum Busan. - @尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video",
+      "creator": "@尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video",
       "shooting_style": {
         "id": "voice-over",
         "name": "Voice Over",
@@ -8169,8 +8169,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DclWb98PiK",
-      "title": "@nemo_ooo • Trải Nghiệm Triển Lãm Nghệ Thuật Số Arte Museum Busan.",
-      "creator": "@尼莫Nemo_ིྀ_ᗦ↞◃",
+      "title": "@nemo_ooo • Trải Nghiệm Triển Lãm Nghệ Thuật Số Arte Museum Busan. - @尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video",
+      "creator": "@尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video",
       "shooting_style": {
         "id": "voice-over",
         "name": "Voice Over",
@@ -8449,7 +8449,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@Megan_Tan_DdgwV6dsxcS_Video_by_megantanhweewen",
-      "title": "Đừng Để Tương Lai Đánh Cắp Hiện Tại - Bí Quyết Giải Phóng Thời Gian Cùng Claude AI (@megantanhweewen)",
+      "title": "Đừng Để Tương Lai Đánh Cắp Hiện Tại - Bí Quyết Giải Phóng Thời Gian Cùng Claude AI (@megantanhweewen) - @Megan_Tan",
       "creator": "@Megan_Tan",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -8489,8 +8489,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@Жамьяна_Осознанный_стилист_UGC_DdeWMWLsaHA_Video_by_zhamyana",
-      "title": "@zhamyana - Biến hình thời trang đường phố Worm's-Eye",
-      "creator": "@zhamyana",
+      "title": "@zhamyana - Biến hình thời trang đường phố Worm's-Eye - @Жамьяна_Осознанный_стилист_UGC",
+      "creator": "@Жамьяна_Осознанный_стилист_UGC",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh / Biến Hình",
@@ -8509,8 +8509,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DdeWMWLsaHA",
-      "title": "@zhamyana - Biến hình thời trang đường phố Worm's-Eye",
-      "creator": "@zhamyana",
+      "title": "@zhamyana - Biến hình thời trang đường phố Worm's-Eye - @Жамьяна_Осознанный_стилист_UGC",
+      "creator": "@Жамьяна_Осознанный_стилист_UGC",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh / Biến Hình",
@@ -8529,8 +8529,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@หยก.ละกัน_ꔛ_DcA80Aez6Aw_Video_by_yok.lagun",
-      "title": "5 Visual Hooks - 5 Kiểu Diễn Mở Màn Tự Nhiên Chặn Feed (@yok.lagun)",
-      "creator": "@yok.lagun",
+      "title": "5 Visual Hooks - 5 Kiểu Diễn Mở Màn Tự Nhiên Chặn Feed (@yok.lagun) - @หยก.ละกัน_ꔛ",
+      "creator": "@หยก.ละกัน_ꔛ",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh & Diễn Xuất",
@@ -8549,8 +8549,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcA80Aez6Aw",
-      "title": "5 Visual Hooks - 5 Kiểu Diễn Mở Màn Tự Nhiên Chặn Feed (@yok.lagun)",
-      "creator": "@yok.lagun",
+      "title": "5 Visual Hooks - 5 Kiểu Diễn Mở Màn Tự Nhiên Chặn Feed (@yok.lagun) - @หยก.ละกัน_ꔛ",
+      "creator": "@หยก.ละกัน_ꔛ",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh & Diễn Xuất",
@@ -8569,7 +8569,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@pauline_폴린_ᥫ᭡。༘⋆✿_DdlWfRSMioH_Video_by_pau.liine",
-      "title": "Tạo Dáng Thần Thái & Chuyển Cảnh Lookbook Sân Ga (17 Phân Cảnh)",
+      "title": "Tạo Dáng Thần Thái & Chuyển Cảnh Lookbook Sân Ga (17 Phân Cảnh) - @pauline_폴린_ᥫ᭡。༘⋆✿",
       "creator": "@pauline_폴린_ᥫ᭡。༘⋆✿",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -8589,7 +8589,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DdlWfRSMioH",
-      "title": "Tạo Dáng Thần Thái & Chuyển Cảnh Lookbook Sân Ga (17 Phân Cảnh)",
+      "title": "Tạo Dáng Thần Thái & Chuyển Cảnh Lookbook Sân Ga (17 Phân Cảnh) - @pauline_폴린_ᥫ᭡。༘⋆✿",
       "creator": "@pauline_폴린_ᥫ᭡。༘⋆✿",
       "shooting_style": {
         "id": "chuyen-canh",
@@ -8709,7 +8709,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@mario.prawira_DcgEuvwx47P_How_to_do_a_before_after_with_a_prop_and_your",
-      "title": "Mario Prawira • Kỹ Thuật Match-Cut Before/After Bằng Đạo Cụ Cành Hoa",
+      "title": "@mario.prawira - How to do a before after with a prop and your",
       "creator": "@mario.prawira",
       "shooting_style": {
         "id": "talking-head",
@@ -8729,7 +8729,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DcgEuvwx47P",
-      "title": "Mario Prawira • Kỹ Thuật Match-Cut Before/After Bằng Đạo Cụ Cành Hoa",
+      "title": "@mario.prawira - How to do a before after with a prop and your",
       "creator": "@mario.prawira",
       "shooting_style": {
         "id": "talking-head",
@@ -8743,6 +8743,46 @@ var TRAINING_DATA = {
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mario.prawira",
       "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@creator_video_Video_video",
+      "title": "@creator - Video video",
+      "creator": "@creator",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Điện Ảnh (Cinematic)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "thuong-hieu",
+        "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "icon": "💼"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
+      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "video",
+      "title": "@creator - Video video",
+      "creator": "@creator",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Điện Ảnh (Cinematic)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "thuong-hieu",
+        "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+        "icon": "💼"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
+      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
       "report_url": "",
       "has_correction": false,
       "correction_summary": ""
@@ -8988,49 +9028,9 @@ var TRAINING_DATA = {
       "correction_summary": ""
     },
     {
-      "id": "IG_@creator_video_Video_video",
-      "title": "@creator - Video video",
-      "creator": "@creator",
-      "shooting_style": {
-        "id": "dien-anh",
-        "name": "Điện Ảnh (Cinematic)",
-        "icon": "🎬"
-      },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
-        "icon": "💼"
-      },
-      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
-      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
-      "report_url": "",
-      "has_correction": false,
-      "correction_summary": ""
-    },
-    {
-      "id": "video",
-      "title": "@creator - Video video",
-      "creator": "@creator",
-      "shooting_style": {
-        "id": "dien-anh",
-        "name": "Điện Ảnh (Cinematic)",
-        "icon": "🎬"
-      },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
-        "icon": "💼"
-      },
-      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @creator",
-      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
-      "report_url": "",
-      "has_correction": false,
-      "correction_summary": ""
-    },
-    {
       "id": "IG_@ulanzi_oUV0c_MT86_Auto-Deploy_Tripod_&_Selfie_Stick,_1.52m",
-      "title": "@ulanzi - MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m",
-      "creator": "@ulanzi",
+      "title": "@ulanzi - MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m - @ulanzi_oUV0c_MT86",
+      "creator": "@ulanzi_oUV0c_MT86",
       "shooting_style": {
         "id": "dien-anh",
         "name": "dien-anh",
@@ -9049,8 +9049,8 @@ var TRAINING_DATA = {
     },
     {
       "id": "oUV0c",
-      "title": "@ulanzi - MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m",
-      "creator": "@ulanzi",
+      "title": "@ulanzi - MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m - @ulanzi_oUV0c_MT86",
+      "creator": "@ulanzi_oUV0c_MT86",
       "shooting_style": {
         "id": "dien-anh",
         "name": "dien-anh",
@@ -9349,11 +9349,11 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@jigummmmm_DdnqexOTN8A_설거지하는_모습도_예쁘게_찍을_수_있냐고요",
-      "title": "@jigummmmm - 설거지하는 모습도 예쁘게 찍을 수 있냐고요",
+      "title": "Nghệ Thuật Băm Nhỏ Chuyển Động (Micro-Actions) & ASMR B-Roll Đời Thường - @jigummmmm",
       "creator": "@jigummmmm",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
+        "id": "Đời Thường & Chữa Lành",
+        "name": "Đời Thường & Chữa Lành",
         "icon": "🎬"
       },
       "industry": {
@@ -9372,8 +9372,8 @@ var TRAINING_DATA = {
       "title": "@jigummmmm - 설거지하는 모습도 예쁘게 찍을 수 있냐고요",
       "creator": "@jigummmmm",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
+        "id": "Đời Thường & Chữa Lành",
+        "name": "Đời Thường & Chữa Lành",
         "icon": "🎬"
       },
       "industry": {
@@ -9589,7 +9589,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "IG_@acupper_DdoYrPsy9g-_hello_is_konnichiwa",
-      "title": "@acupper - hello is konnichiwa",
+      "title": "Nghệ Thuật Chuyển Cảnh Level 1 (Cut On Action): Mượn Tiền Cảnh Đời Thường Nối Mạch Video Siêu Mượt - @acupper",
       "creator": "@acupper",
       "shooting_style": {
         "id": "Cinematic Vlog / Cut On Action",
@@ -9609,7 +9609,7 @@ var TRAINING_DATA = {
     },
     {
       "id": "DdoYrPsy9g-",
-      "title": "@acupper - hello is konnichiwa",
+      "title": "Nghệ Thuật Chuyển Cảnh Level 1 (Cut On Action): Mượn Tiền Cảnh Đời Thường Nối Mạch Video Siêu Mượt - @acupper",
       "creator": "@acupper",
       "shooting_style": {
         "id": "Cinematic Vlog / Cut On Action",
@@ -9663,6 +9663,1226 @@ var TRAINING_DATA = {
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jxnjuvv",
       "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@iamaayushswamy_DdpxcaOMaQS_caption_placement",
+      "title": "Nghệ Thuật Bố Cục Chữ Không Gian (Spatial Typography) & Kỹ Thuật Walk & Talk Vòng Lặp Vô Tận - @iamaayushswamy",
+      "creator": "@iamaayushswamy",
+      "shooting_style": {
+        "id": "Walk and Talk",
+        "name": "Walk and Talk",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Sáng Tạo Nội Dung & Video",
+        "name": "Sáng Tạo Nội Dung & Video",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @iamaayushswamy",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DdpxcaOMaQS",
+      "title": "Nghệ Thuật Bố Cục Chữ Không Gian (Spatial Typography) & Kỹ Thuật Walk & Talk Vòng Lặp Vô Tận - @iamaayushswamy",
+      "creator": "@iamaayushswamy",
+      "shooting_style": {
+        "id": "Walk and Talk",
+        "name": "Walk and Talk",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Sáng Tạo Nội Dung & Video",
+        "name": "Sáng Tạo Nội Dung & Video",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @iamaayushswamy",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@createdbyadz_⚡️_DdGQQL-ih_O_Video_by_adz.mov",
+      "title": "@createdbyadz_⚡️ - Video by adz.mov",
+      "creator": "@createdbyadz_⚡️",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @createdbyadz_⚡️",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DdGQQL-ih_O",
+      "title": "@adz.mov - the land of smiles 🇹🇭 #thailand #cinematograp",
+      "creator": "@adz.mov",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @adz.mov",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@adz.mov_DdGQQL-ih_O_the_land_of_smiles_🇹🇭_#thailand_#cinematograp",
+      "title": "@adz.mov - the land of smiles 🇹🇭 #thailand #cinematograp",
+      "creator": "@adz.mov",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @adz.mov",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@𝙗𝙮𝙨𝙪𝙣𝙘𝙖𝙣_DcvZ-FowD_A_Video_by_bysuncan",
+      "title": "@𝙗𝙮𝙨𝙪𝙣𝙘𝙖𝙣 - Video by bysuncan",
+      "creator": "@𝙗𝙮𝙨𝙪𝙣𝙘𝙖𝙣",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @𝙗𝙮𝙨𝙪𝙣𝙘𝙖𝙣",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DcvZ-FowD_A",
+      "title": "@𝙗𝙮𝙨𝙪𝙣𝙘𝙖𝙣 - Video by bysuncan",
+      "creator": "@𝙗𝙮𝙨𝙪𝙣𝙘𝙖𝙣",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @𝙗𝙮𝙨𝙪𝙣𝙘𝙖𝙣",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@Angela_DdrBPIwIpg-_Video_by_aangelazunigaa",
+      "title": "@Angela - Video by aangelazunigaa",
+      "creator": "@Angela",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "ky-thuat-quay",
+        "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "icon": "🎯"
+      },
+      "purpose": "Pov",
+      "logic_explanation": "Ghi chú người dùng: Pov. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Talking Head.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DdrBPIwIpg-",
+      "title": "Nghệ Thuật Giả Lập Drone FPV Bằng Máy Bay Giấy: Bí Quyết Chia Đôi Màn Hình The Shot vs BTS Giữ Chân Người Xem 100% - @aangelazunigaa",
+      "creator": "@aangelazunigaa",
+      "shooting_style": {
+        "id": "pov",
+        "name": "pov",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "ky-thuat-quay",
+        "name": "ky-thuat-quay",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @aangelazunigaa",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@aangelazunigaa_DdrBPIwIpg-_BTS_from_Day_56_of_Capturing_10_Clips_Until_I",
+      "title": "Nghệ Thuật Giả Lập Drone FPV Bằng Máy Bay Giấy: Bí Quyết Chia Đôi Màn Hình The Shot vs BTS Giữ Chân Người Xem 100% - @aangelazunigaa",
+      "creator": "@aangelazunigaa",
+      "shooting_style": {
+        "id": "pov",
+        "name": "pov",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "ky-thuat-quay",
+        "name": "ky-thuat-quay",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @aangelazunigaa",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@Lisha_Ho_Ddqo7-eTI2A_Video_by_lisha_ho",
+      "title": "@Lisha_Ho - Video by lisha ho",
+      "creator": "@Lisha_Ho",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh (Transition)",
+        "icon": "⚡"
+      },
+      "industry": {
+        "id": "ky-thuat-quay",
+        "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "icon": "🎯"
+      },
+      "purpose": "Chuyen canh Chuyen canh 1",
+      "logic_explanation": "Ghi chú người dùng: Chuyen canh Chuyen canh 1. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "Ddqo7-eTI2A",
+      "title": "@lisha_ho - Wait… @ralphlauren + coffee at KLCC 👀",
+      "creator": "@lisha_ho",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh (Transition)",
+        "icon": "⚡"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @lisha_ho",
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@Flying_DdplzLRytOA_Video_by_loveqinghe",
+      "title": "@Flying - Video by loveqinghe",
+      "creator": "@Flying",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Flying",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DdplzLRytOA",
+      "title": "Công Thức Du Lịch 0.5x: Đòn Bẩy Góc Siêu Rộng Tự Quay Triệu View - @Flying",
+      "creator": "@Flying",
+      "shooting_style": {
+        "id": "Vlog 0.5x POV Montage",
+        "name": "Vlog 0.5x POV Montage",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Du Lịch & Phong Cách Sống",
+        "name": "Du Lịch & Phong Cách Sống",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Flying",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@lisha_ho_Ddqo7-eTI2A_Wait…_@ralphlauren_+_coffee_at_KLCC_👀",
+      "title": "Kỹ Thuật Chuyển Cảnh Khung Cửa Vòm & Cắt Theo Nhịp Điệu (Rhythm Cut) Trong Lookbook Ralph Lauren KLCC - @lisha_ho",
+      "creator": "@lisha_ho",
+      "shooting_style": {
+        "id": "Chuyển Cảnh (Transition)",
+        "name": "Chuyển Cảnh (Transition)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Thời Trang & Phong Cách Sống",
+        "name": "Thời Trang & Phong Cách Sống",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @lisha_ho",
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@rubtsov.a_DdkHw7gIXLj_В_библиотеку",
+      "title": "Biến Hình Dark Academia Đi Thư Viện: Kỹ Thuật Match Cut Quán Tính Tay & Outro Phá Cách - @rubtsov.a",
+      "creator": "@rubtsov.a",
+      "shooting_style": {
+        "id": "Chuyển Cảnh (Transition)",
+        "name": "Chuyển Cảnh (Transition)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Thời Trang & Phong Cách Sống",
+        "name": "Thời Trang & Phong Cách Sống",
+        "icon": "🎯"
+      },
+      "purpose": "Chuyen canh 1",
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Công Nghệ & Thiết Bị.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DdkHw7gIXLj",
+      "title": "Biến Hình Dark Academia Đi Thư Viện: Kỹ Thuật Match Cut Quán Tính Tay & Outro Phá Cách - @Ekaterina_модель_Уфа_,_Питер",
+      "creator": "@Ekaterina_модель_Уфа_,_Питер",
+      "shooting_style": {
+        "id": "Chuyển Cảnh (Transition)",
+        "name": "Chuyển Cảnh (Transition)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Thời Trang & Phong Cách Sống",
+        "name": "Thời Trang & Phong Cách Sống",
+        "icon": "🎯"
+      },
+      "purpose": "Chuyen canh 1",
+      "logic_explanation": "Ghi chú người dùng: Chuyen canh 1. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@starsinmycam_DddgEE5R2CW_i_blink_and_it’s_night_time",
+      "title": "Kể Chuyện Bằng Chuỗi Hành Động Vi Mô & Chuyển Đổi Ánh Sáng Tương Phản (After-Work Micro Routine) - @starsinmycam",
+      "creator": "@starsinmycam",
+      "shooting_style": {
+        "id": "Kể Chuyện (Storytelling)",
+        "name": "Kể Chuyện (Storytelling)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Đời Sống & Phong Cách Sống",
+        "name": "Đời Sống & Phong Cách Sống",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @starsinmycam",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DddgEE5R2CW",
+      "title": "Kể Chuyện Bằng Chuỗi Hành Động Vi Mô & Chuyển Đổi Ánh Sáng Tương Phản (After-Work Micro Routine) - @starsinmycam",
+      "creator": "@starsinmycam",
+      "shooting_style": {
+        "id": "Kể Chuyện (Storytelling)",
+        "name": "Kể Chuyện (Storytelling)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Đời Sống & Phong Cách Sống",
+        "name": "Đời Sống & Phong Cách Sống",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @starsinmycam",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@Ekaterina_модель_Уфа_,_Питер_DdkHw7gIXLj_Video_by_rubtsov.a",
+      "title": "Biến Hình Dark Academia Đi Thư Viện: Kỹ Thuật Match Cut Quán Tính Tay & Outro Phá Cách - @Ekaterina_модель_Уфа_,_Питер",
+      "creator": "@Ekaterina_модель_Уфа_,_Питер",
+      "shooting_style": {
+        "id": "Chuyển Cảnh (Transition)",
+        "name": "Chuyển Cảnh (Transition)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Thời Trang & Phong Cách Sống",
+        "name": "Thời Trang & Phong Cách Sống",
+        "icon": "🎯"
+      },
+      "purpose": "Chuyen canh 1",
+      "logic_explanation": "Ghi chú người dùng: Chuyen canh 1. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@holberrydietitian_DcODbRTu-E1_sunday_morn_=_🥖🍓🫐🍯☕️",
+      "title": "Góc Máy POV Lọt Lòng Độc Bản & Cắt Cảnh Xúc Giác Đa Chiều (Sunday Morning French Toast) - @holberrydietitian",
+      "creator": "@holberrydietitian",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "chuyen-canh",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "am-thuc",
+        "name": "am-thuc",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @holberrydietitian",
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DcODbRTu-E1",
+      "title": "Góc Máy POV Lọt Lòng Độc Bản & Cắt Cảnh Xúc Giác Đa Chiều (Sunday Morning French Toast) - @holberrydietitian",
+      "creator": "@holberrydietitian",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "chuyen-canh",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "am-thuc",
+        "name": "am-thuc",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @holberrydietitian",
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@Sodam_Kim_DcYZMc7Sc49_Video_by_31.ioa",
+      "title": "@Sodam_Kim - Video by 31.ioa",
+      "creator": "@Sodam_Kim",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Sodam_Kim",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DcYZMc7Sc49",
+      "title": "Công thức Montage 'POV Đút Cho Ống Kính' Dồn Dập 0.8s: Đòn Bẩy Thôi Miên Vị Giác Chuyến Đi Nhật Bản - @31.ioa",
+      "creator": "@31.ioa",
+      "shooting_style": {
+        "id": "pov",
+        "name": "pov",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "am-thuc",
+        "name": "am-thuc",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @31.ioa",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@31.ioa_DcYZMc7Sc49_Video_by_31.ioa",
+      "title": "Công thức Montage 'POV Đút Cho Ống Kính' Dồn Dập 0.8s: Đòn Bẩy Thôi Miên Vị Giác Chuyến Đi Nhật Bản - @31.ioa",
+      "creator": "@31.ioa",
+      "shooting_style": {
+        "id": "pov",
+        "name": "pov",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "am-thuc",
+        "name": "am-thuc",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @31.ioa",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲_Ddb6rA7NwQd_Video_by_elenabuntushak",
+      "title": "@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲 - Video by elenabuntushak",
+      "creator": "@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "cong-nghe",
+        "name": "Công Nghệ & Thiết Bị",
+        "icon": "📱"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "Ddb6rA7NwQd",
+      "title": "Đòn Bẩy Ném Túi Che Ống Kính (Object Occlusion) & Cú Xoay Máy Selfie Giải Phóng Năng Lượng - @elenabuntushak",
+      "creator": "@elenabuntushak",
+      "shooting_style": {
+        "id": "POV Dynamic / Biến Hình",
+        "name": "POV Dynamic / Biến Hình",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Thời Trang & Phong Cách Sống",
+        "name": "Thời Trang & Phong Cách Sống",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @elenabuntushak",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@alenkabalenka_DaJofHTvQw3_1010_would_hit_that_corner_again",
+      "title": "Đòn Bẩy Lột Xác Thời Trang: Kỹ thuật Match Cut & Nhịp Thở Co Giãn Giữ Chân Khán Giả - @alenkabalenka",
+      "creator": "@alenkabalenka",
+      "shooting_style": {
+        "id": "Chuyển Cảnh Thời Trang (OOTD Transition)",
+        "name": "Chuyển Cảnh Thời Trang (OOTD Transition)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Thời Trang & Phụ Kiện",
+        "name": "Thời Trang & Phụ Kiện",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @alenkabalenka",
+      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DaJofHTvQw3",
+      "title": "Đòn Bẩy Lột Xác Thời Trang: Kỹ thuật Match Cut & Nhịp Thở Co Giãn Giữ Chân Khán Giả - @alenkabalenka",
+      "creator": "@alenkabalenka",
+      "shooting_style": {
+        "id": "Chuyển Cảnh Thời Trang (OOTD Transition)",
+        "name": "Chuyển Cảnh Thời Trang (OOTD Transition)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Thời Trang & Phụ Kiện",
+        "name": "Thời Trang & Phụ Kiện",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @alenkabalenka",
+      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@celfstudies_DajU5I5AKIu_LA_VLOG_!!_(horizontal_edition🤳)",
+      "title": "Vlog Đời Sống LA: Nghệ Thuật Chuyển Cảnh Cut On Action & Nhịp Thở Đa Bối Cảnh - @celfstudies",
+      "creator": "@celfstudies",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "chuyen-canh",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "thoi-trang",
+        "name": "thoi-trang",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @celfstudies",
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Công Nghệ & Thiết Bị.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DajU5I5AKIu",
+      "title": "Vlog Đời Sống LA: Nghệ Thuật Chuyển Cảnh Cut On Action & Nhịp Thở Đa Bối Cảnh - @˗ˏˋ_celina_ˎˊ˗",
+      "creator": "@˗ˏˋ_celina_ˎˊ˗",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "chuyen-canh",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "thoi-trang",
+        "name": "thoi-trang",
+        "icon": "🎯"
+      },
+      "purpose": "Chuyen canh 1",
+      "logic_explanation": "Ghi chú người dùng: Chuyen canh 1. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@hu321938_DdrKmGFBMzc_拍出中秋节的氛围感",
+      "title": "8 Kỹ Thuật Quay Chụp Bánh Trung Thu Triệu View Bằng Điện Thoại (Split Screen Hậu Trường) - @hu321938",
+      "creator": "@hu321938",
+      "shooting_style": {
+        "id": "Split Screen / Behind-The-Scenes",
+        "name": "Split Screen / Behind-The-Scenes",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Ẩm Thực & F&B",
+        "name": "Ẩm Thực & F&B",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @hu321938",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DdrKmGFBMzc",
+      "title": "8 Kỹ Thuật Quay Chụp Bánh Trung Thu Triệu View Bằng Điện Thoại (Split Screen Hậu Trường) - @hu321938",
+      "creator": "@hu321938",
+      "shooting_style": {
+        "id": "Split Screen / Behind-The-Scenes",
+        "name": "Split Screen / Behind-The-Scenes",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Ẩm Thực & F&B",
+        "name": "Ẩm Thực & F&B",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @hu321938",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@nana_icroom_DdoJCWrT0Do_vlog撮影、どんな画角で何を撮ったらいいかわかんない…",
+      "title": "5 Góc Quay & Bố Cục Thần Thánh Cứu Cánh Mọi Video Vlog Khi Bí Ý Tưởng - @nana_icroom",
+      "creator": "@nana_icroom",
+      "shooting_style": {
+        "id": "Vlog",
+        "name": "Vlog",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Đời Sống & Phong Cách Sống",
+        "name": "Đời Sống & Phong Cách Sống",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @nana_icroom",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DdoJCWrT0Do",
+      "title": "@nana_icroom - vlog撮影、どんな画角で何を撮ったらいいかわかんない…",
+      "creator": "@nana_icroom",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @nana_icroom",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@minghan1004_DdESxNlE2Ay_Carousel_Analysis",
+      "title": "10 Bố Cục Khung Hình Điện Ảnh & Tuyệt Kỹ Quay Phố Bằng Insta360 - @minghan1004",
+      "creator": "@minghan1004",
+      "shooting_style": {
+        "id": "Bố Cục (Framing)",
+        "name": "Bố Cục (Framing)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Công Nghệ & Thiết Bị",
+        "name": "Công Nghệ & Thiết Bị",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @minghan1004",
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Công Nghệ & Thiết Bị.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DdESxNlE2Ay",
+      "title": "10 Bố Cục Khung Hình Điện Ảnh & Tuyệt Kỹ Quay Phố Bằng Insta360 - @minghan1004",
+      "creator": "@minghan1004",
+      "shooting_style": {
+        "id": "Bố Cục (Framing)",
+        "name": "Bố Cục (Framing)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Công Nghệ & Thiết Bị",
+        "name": "Công Nghệ & Thiết Bị",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @minghan1004",
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Công Nghệ & Thiết Bị.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@˗ˏˋ_celina_ˎˊ˗_DajU5I5AKIu_Video_by_celfstudies",
+      "title": "@˗ˏˋ_celina_ˎˊ˗ - Video by celfstudies",
+      "creator": "@˗ˏˋ_celina_ˎˊ˗",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh (Transition)",
+        "icon": "⚡"
+      },
+      "industry": {
+        "id": "ky-thuat-quay",
+        "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+        "icon": "🎯"
+      },
+      "purpose": "Chuyen canh 1",
+      "logic_explanation": "Ghi chú người dùng: Chuyen canh 1. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@jsnhow_DdncdgVRBIp_Soft_sounds,_quiet_minds,_and_a_moment_to_jus",
+      "title": "Bí Kíp Dựng Video Chữa Lành Nghệ Thuật: Công Thức Băm Nhịp Breathe In - Breathe Out Của Điện Ảnh Nhật Bản - @jsnhow",
+      "creator": "@jsnhow",
+      "shooting_style": {
+        "id": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
+        "name": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Phong Cách Sống & Nghệ Thuật",
+        "name": "Phong Cách Sống & Nghệ Thuật",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jsnhow",
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Công Nghệ & Thiết Bị.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DdncdgVRBIp",
+      "title": "Bí Kíp Dựng Video Chữa Lành Nghệ Thuật: Công Thức Băm Nhịp Breathe In - Breathe Out Của Điện Ảnh Nhật Bản - @jsnhow",
+      "creator": "@jsnhow",
+      "shooting_style": {
+        "id": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
+        "name": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Phong Cách Sống & Nghệ Thuật",
+        "name": "Phong Cách Sống & Nghệ Thuật",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jsnhow",
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Công Nghệ & Thiết Bị.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@elenabuntushak_Ddb6rA7NwQd_YES,_I’m_always_ready!",
+      "title": "Đòn Bẩy Ném Túi Che Ống Kính (Object Occlusion) & Cú Xoay Máy Selfie Giải Phóng Năng Lượng - @elenabuntushak",
+      "creator": "@elenabuntushak",
+      "shooting_style": {
+        "id": "POV Dynamic / Biến Hình",
+        "name": "POV Dynamic / Biến Hình",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Thời Trang & Phong Cách Sống",
+        "name": "Thời Trang & Phong Cách Sống",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @elenabuntushak",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@shotsbyzaid_DdkimD5DPNL_Carousel_Analysis",
+      "title": "5 Góc Quay Điện Ảnh Đột Phá Nâng Cấp Video Của Bạn (5 Shots To Improve Your Content) - @shotsbyzaid",
+      "creator": "@shotsbyzaid",
+      "shooting_style": {
+        "id": "Điện Ảnh (Cinematic)",
+        "name": "Điện Ảnh (Cinematic)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Nhiếp Ảnh & Quay Phim",
+        "name": "Nhiếp Ảnh & Quay Phim",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @shotsbyzaid",
+      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DdkimD5DPNL",
+      "title": "5 Góc Quay Điện Ảnh Đột Phá Nâng Cấp Video Của Bạn (5 Shots To Improve Your Content) - @shotsbyzaid",
+      "creator": "@shotsbyzaid",
+      "shooting_style": {
+        "id": "Điện Ảnh (Cinematic)",
+        "name": "Điện Ảnh (Cinematic)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Nhiếp Ảnh & Quay Phim",
+        "name": "Nhiếp Ảnh & Quay Phim",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @shotsbyzaid",
+      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@dvdnguyen_DdXbbBiEq7P_Carousel_Analysis",
+      "title": "8 Lát Cắt Điện Ảnh Ẩm Thực Đường Phố Mùa Mưa Sài Gòn — Cú Đấm Vị Giác & Nghệ Thuật Ánh Sáng Thực Chiến - @dvdnguyen",
+      "creator": "@dvdnguyen",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "dien-anh",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "am-thuc",
+        "name": "am-thuc",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @dvdnguyen",
+      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DdXbbBiEq7P",
+      "title": "8 Lát Cắt Điện Ảnh Ẩm Thực Đường Phố Mùa Mưa Sài Gòn — Cú Đấm Vị Giác & Nghệ Thuật Ánh Sáng Thực Chiến - @dvdnguyen",
+      "creator": "@dvdnguyen",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "dien-anh",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "am-thuc",
+        "name": "am-thuc",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @dvdnguyen",
+      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@cinematic_lee_Dbd8gmqRAc3_It’s_a_constant_struggle_😅",
+      "title": "Nghệ Thuật Bố Cục Không Lời: Kỹ Thuật Đan Xen Cỡ Cảnh & Punchline Thị Giác Trong Solo Filmmaking - @cinematic_lee",
+      "creator": "@cinematic_lee",
+      "shooting_style": {
+        "id": "Visual Storytelling",
+        "name": "Visual Storytelling",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Bố cục",
+        "name": "Bố cục",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @cinematic_lee",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "Dbd8gmqRAc3",
+      "title": "@cinematic_lee - It’s a constant struggle 😅",
+      "creator": "@cinematic_lee",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @cinematic_lee",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@qaqu_uu_Dblr-88PjlJ_yelena_belova_would_call_this_small_baby_pota",
+      "title": "Đòn Bẩy Kể Chuyện HUD Timeline & Cú Cắt Nhảy Rotoscope Biến Căn Phòng Thành Tác Phẩm Điện Ảnh - @qaqu_uu",
+      "creator": "@qaqu_uu",
+      "shooting_style": {
+        "id": "POV & Fast-Paced Montage",
+        "name": "POV & Fast-Paced Montage",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Vlog & Phong Cách Sống",
+        "name": "Vlog & Phong Cách Sống",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @qaqu_uu",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "Dblr-88PjlJ",
+      "title": "@ALLYQQ_子涵🐤 - Video by qaqu uu",
+      "creator": "@ALLYQQ_子涵🐤",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ALLYQQ_子涵🐤",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@ALLYQQ_子涵🐤_Dblr-88PjlJ_Video_by_qaqu_uu",
+      "title": "@ALLYQQ_子涵🐤 - Video by qaqu uu",
+      "creator": "@ALLYQQ_子涵🐤",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ALLYQQ_子涵🐤",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@takashi.film_DddqrBQy8lQ_One_day,_Vietnam._🇻🇳",
+      "title": "Bố Cục Đối Xứng Và Điểm Nghỉ Chân Dung Trong Nhịp Dựng Điện Ảnh Bản Địa - @takashi.film",
+      "creator": "@takashi.film",
+      "shooting_style": {
+        "id": "Điện Ảnh Đời Thường (Cinematic)",
+        "name": "Điện Ảnh Đời Thường (Cinematic)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Du Lịch & Văn Hóa",
+        "name": "Du Lịch & Văn Hóa",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @takashi.film",
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DddqrBQy8lQ",
+      "title": "Bố Cục Đối Xứng Và Điểm Nghỉ Chân Dung Trong Nhịp Dựng Điện Ảnh Bản Địa - @takashi.film",
+      "creator": "@takashi.film",
+      "shooting_style": {
+        "id": "Điện Ảnh Đời Thường (Cinematic)",
+        "name": "Điện Ảnh Đời Thường (Cinematic)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Du Lịch & Văn Hóa",
+        "name": "Du Lịch & Văn Hóa",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @takashi.film",
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@Harry_DdlmRIcBw81_Video_by_hdnimedia",
+      "title": "@Harry - Video by hdnimedia",
+      "creator": "@Harry",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Instagram Liked 24h: Video, 2 of 18, by @hdnimedia, shared September 22, 2026",
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 2 of 18, by @hdnimedia, shared September 22, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Talking Head.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DdlmRIcBw81",
+      "title": "@Harry - Video by hdnimedia",
+      "creator": "@Harry",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Instagram Liked 24h: Video, 2 of 18, by @hdnimedia, shared September 22, 2026",
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 2 of 18, by @hdnimedia, shared September 22, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Talking Head.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@AŁEC_RIJKS_DdPESzcNS-W_Video_by_alecrijks",
+      "title": "@AŁEC_RIJKS - Video by alecrijks",
+      "creator": "@AŁEC_RIJKS",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Instagram Liked 24h: Video, 5 of 18, by @alecrijks_, shared September 13, 2026",
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 5 of 18, by @alecrijks_, shared September 13, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Talking Head.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DdPESzcNS-W",
+      "title": "@AŁEC_RIJKS - Video by alecrijks",
+      "creator": "@AŁEC_RIJKS",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Instagram Liked 24h: Video, 5 of 18, by @alecrijks_, shared September 13, 2026",
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 5 of 18, by @alecrijks_, shared September 13, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Talking Head.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@KUZYA_монтаж_Reels_DdYHuz_sXs0_Video_by_kuzya.tm",
+      "title": "@KUZYA_монтаж_Reels - Video by kuzya.tm",
+      "creator": "@KUZYA_монтаж_Reels",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Điện Ảnh (Cinematic)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Instagram Liked 24h: Video, 12 of 18, by @kuzya.tm, shared September 16, 2026",
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 12 of 18, by @kuzya.tm, shared September 16, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Điện Ảnh (Cinematic).",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DdYHuz_sXs0",
+      "title": "@KUZYA_монтаж_Reels - Video by kuzya.tm",
+      "creator": "@KUZYA_монтаж_Reels",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Điện Ảnh (Cinematic)",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Instagram Liked 24h: Video, 12 of 18, by @kuzya.tm, shared September 16, 2026",
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 12 of 18, by @kuzya.tm, shared September 16, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Điện Ảnh (Cinematic).",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@Pause_Here_DdGx-fkPeeU_Video_by_pausehereii",
+      "title": "@Pause_Here - Video by pausehereii",
+      "creator": "@Pause_Here",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Talking Head",
+        "icon": "🗣️"
+      },
+      "industry": {
+        "id": "kien-truc",
+        "name": "Kiến Trúc & Không Gian Sống",
+        "icon": "🏛️"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Pause_Here",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "DdGx-fkPeeU",
+      "title": "Bậc Thầy Gài Gắm Sản Phẩm Ẩn Danh (Stealth Product Placement): Nghệ Thuật Kể Chuyện 37 Shots Dẫn Dắt Qua 9 Tọa Độ Chiang Mai - @pausehereii",
+      "creator": "@pausehereii",
+      "shooting_style": {
+        "id": "Vlog Lifestyle / B-Roll Điện Ảnh",
+        "name": "Vlog Lifestyle / B-Roll Điện Ảnh",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Thời Trang & Phụ Kiện",
+        "name": "Thời Trang & Phụ Kiện",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @pausehereii",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "report_url": "",
+      "has_correction": false,
+      "correction_summary": ""
+    },
+    {
+      "id": "IG_@pausehereii_DdGx-fkPeeU_A_DAY_IN_CHIANG_MAI",
+      "title": "Bậc Thầy Gài Gắm Sản Phẩm Ẩn Danh (Stealth Product Placement): Nghệ Thuật Kể Chuyện 37 Shots Dẫn Dắt Qua 9 Tọa Độ Chiang Mai - @pausehereii",
+      "creator": "@pausehereii",
+      "shooting_style": {
+        "id": "Vlog Lifestyle / B-Roll Điện Ảnh",
+        "name": "Vlog Lifestyle / B-Roll Điện Ảnh",
+        "icon": "🎬"
+      },
+      "industry": {
+        "id": "Thời Trang & Phụ Kiện",
+        "name": "Thời Trang & Phụ Kiện",
+        "icon": "🎯"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @pausehereii",
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
       "report_url": "",
       "has_correction": false,
       "correction_summary": ""
