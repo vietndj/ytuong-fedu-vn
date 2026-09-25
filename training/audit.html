@@ -157,13 +157,15 @@
                     const badgeClass = item.tier === 'RED' ? 'badge-danger' : 'badge-warning';
                     const { styleOpts, indOpts } = generateSelects(item.current_style, item.current_industry);
                     const sourceLink = getSourceLink(item.id, item.creator);
-                    const sourceBtn = sourceLink ? `<a href="${sourceLink}" target="_blank" class="badge badge-warning" style="background:#0f172a; color:#fff; text-decoration:none; margin-left: 10px;">▶ Xem Bản Gốc</a> <span style="font-size: 10px; color: #666; margin-left: 5px;">(${sourceLink})</span>` : '';
+                    const sourceBtn = sourceLink ? `<a href="${sourceLink}" target="_blank" class="badge badge-warning" style="background:#0f172a; color:#fff; text-decoration:none; margin-left: 10px;">▶ Xem IG Gốc</a> <span style="font-size: 10px; color: #666; margin-left: 5px;">(${sourceLink})</span>` : '';
+                    const reportBtn = `<a href="../reports/${item.id}.html" target="_blank" class="badge badge-info" style="background:#0284c7; color:#fff; text-decoration:none; margin-left: 10px;">📄 Xem Báo Cáo AI</a>`;
                     
                     html += `
                     <div class="audit-card" id="card-${item.id}">
                         <div class="audit-info">
                             <span class="badge ${badgeClass}">Score: ${item.confidence_score} | ${item.tier}</span>
                             ${sourceBtn}
+                            ${reportBtn}
                             <span class="creator">${item.creator}</span>
                             <h3>${item.title || item.id}</h3>
                             <div class="meta">
