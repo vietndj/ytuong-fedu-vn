@@ -2841,7 +2841,7 @@ let isLooping = false;
 // Timeupdate listener
 player.addEventListener('timeupdate', () => {
     const ct = player.currentTime;
-    timeDisplay.textContent = ;
+    timeDisplay.textContent = ct.toFixed(2) + 's / ' + (player.duration ? player.duration.toFixed(2) : '0.00') + 's';
 
     if (isLooping && currentLoopShot) {
         if (ct >= currentLoopShot.en_time) {
