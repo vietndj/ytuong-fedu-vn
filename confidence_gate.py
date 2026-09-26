@@ -1,4 +1,5 @@
 import json
+import glob
 import os
 import argparse
 import sys
@@ -142,6 +143,16 @@ def main():
         results[tier].append(video)
 
         if tier in ['YELLOW', 'RED']:
+            # LỌC GHOST ITEMS: Chỉ đưa vào hàng đợi nếu ĐÃ CÓ báo cáo HTML
+            html_exists = False
+            for r in glob.glob("reports/*.html"):
+                if video.get('id', video_id) in r:
+                    html_exists = True
+                    break
+            
+            if not html_exists:
+                continue
+
             shooting_style = video.get('shooting_style', {})
             industry = video.get('industry', {})
             if isinstance(industry, list):
