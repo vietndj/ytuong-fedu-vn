@@ -2417,9 +2417,10 @@
                 purpose: newPurpose,
                 media: { ...item.media, video_url: newVideoUrl, report_url: newReportUrl },
                 ig_url: newIgUrl,
-                industry: indObj,
-                shooting_style: styleObj,
-                country: countryObj,
+                tags: newTags,
+                industry: item.industry,
+                shooting_style: item.shooting_style,
+                country: item.country,
                 is_excluded: shouldExclude
             };
 
