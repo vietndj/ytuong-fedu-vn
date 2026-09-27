@@ -4,9 +4,9 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 309,
-  "total_unique_ideas": 290,
-  "total_active_ideas": 262,
+  "total_scene_items": 310,
+  "total_unique_ideas": 291,
+  "total_active_ideas": 263,
   "total_excluded_ideas": 28,
   "total_creators": 200,
   "shooting_styles": [
@@ -345,7 +345,7 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 32,
     "storytelling": 23,
     "dien-anh": 93,
-    "chuyen-canh": 51,
+    "chuyen-canh": 52,
     "theo-nhip-nhac": 3,
     "Chuyển Cảnh (Transition)": 4,
     "Quay B-Roll Quảng Cáo Điện Ảnh": 1,
@@ -470,7 +470,7 @@ var FEDU_IDEAS_DATABASE = {
     "thoi-trang": 22,
     "am-thuc": 22,
     "du-lich": 17,
-    "cong-nghe": 35,
+    "cong-nghe": 36,
     "kien-truc": 31,
     "the-thao": 5,
     "ky-thuat-quay": 38,
@@ -533,7 +533,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 169,
+    "us_eu": 170,
     "korea": 10,
     "india": 3,
     "japan": 6,
@@ -546,8 +546,8 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "IG_@creator_video_Video_video",
-    "video"
+    "video",
+    "IG_@creator_video_Video_video"
   ],
   "creators_hub": [
     {
@@ -570,6 +570,24 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@ulanzi",
+      "name": "Ulanzi",
+      "profile_url": "https://www.instagram.com/ulanzi/",
+      "video_count": 8,
+      "top_industry": "cong-nghe",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40ulanzi_oSa57_Ch%C3%A2n_%C4%90%E1%BA%BF_M%C3%A1y_%E1%BA%A2nh_Nh%E1%BA%B9_v%C3%A0_%C4%90a_N%C4%83ng/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@ulanzi_oSa57_Chân_Đế_Máy_Ảnh_Nhẹ_và_Đa_Năng",
+        "IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4",
+        "IG_@ulanzi_ohBhc_Gậy_Tự_Sướng_Ulanzi_MT85_Có_Đèn_Pin_Nhỏ_và_Ch",
+        "IG_@ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc",
+        "IG_@ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand",
+        "IG_@ulanzi_oUV0c_MT86_Auto-Deploy_Tripod_&_Selfie_Stick,_1.52m",
+        "IG_@ulanzi_lazada_Easy_Open_Portable_Aluminum_Trigopod",
+        "IG_@ulanzi_oU2DB_Quick_Release_Folding_L_Bracket_and_Plate_Cam"
+      ]
+    },
+    {
       "handle": "@withyuee",
       "name": "Withyuee",
       "profile_url": "https://www.instagram.com/withyuee/",
@@ -585,23 +603,6 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@withyuee_DUqQaPbkfcQ_Chinese_New_Year_Hong_Kong",
         "IG_@withyuee_DO8arRxEZvh_Hong_Kong_Visual_Rhythm_Carousel",
         "IG_@withyuee_DVQ3Gh6Efk1_Spring_in_Hong_Kong"
-      ]
-    },
-    {
-      "handle": "@ulanzi",
-      "name": "Ulanzi",
-      "profile_url": "https://www.instagram.com/ulanzi/",
-      "video_count": 7,
-      "top_industry": "cong-nghe",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40ulanzi_oSaTN_Tripod_%26_G%E1%BA%ADy_Selfie_T%E1%BB%B1_%C4%90%E1%BB%99ng_MT86%2C_Cao_1.52m_4/shot_01_mid.webp",
-      "video_ids": [
-        "IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4",
-        "IG_@ulanzi_ohBhc_Gậy_Tự_Sướng_Ulanzi_MT85_Có_Đèn_Pin_Nhỏ_và_Ch",
-        "IG_@ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc",
-        "IG_@ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand",
-        "IG_@ulanzi_oUV0c_MT86_Auto-Deploy_Tripod_&_Selfie_Stick,_1.52m",
-        "IG_@ulanzi_lazada_Easy_Open_Portable_Aluminum_Trigopod",
-        "IG_@ulanzi_oU2DB_Quick_Release_Folding_L_Bracket_and_Plate_Cam"
       ]
     },
     {
@@ -2833,6 +2834,73 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@ulanzi_oSa57_Chân_Đế_Máy_Ảnh_Nhẹ_và_Đa_Năng",
+      "shortcode": "IG_@ulanzi_oSa57_Chân_Đế_Máy_Ảnh_Nhẹ_và_Đa_Năng",
+      "title_vi": "Chân Đế Máy Ảnh Nhẹ và Đa Năng",
+      "quick_takeaway": "Check out Ulanzi | Mini Folding Portable Tripod. Get it on Lazada now! Ugc",
+      "key_tech": "Establishing Hook Shot • High-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
+      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Check out Ulanzi | Mini Folding Portable Tripod. Get it on Lazada now! Ugc",
+      "tech_tags": [
+        "Establishing Hook Shot",
+        "High-key Lighting",
+        "Close-Up / Macro Detail Shot",
+        "Medium Tracking Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Check out Ulanzi | Mini Folding Portable Tripod. Get it on Lazada now! Ugc. Phân loại vào Công Nghệ & Thiết Bị • Chuyển Cảnh (Transition).",
+      "creator": {
+        "raw": "@ulanzi",
+        "name": "Ulanzi",
+        "handle": "@ulanzi",
+        "profile_url": "https://www.instagram.com/ulanzi/"
+      },
+      "ig_url": "https://www.instagram.com/ulanzi/",
+      "gdrive_folder": "https://drive.google.com/open?id=1Y3ujEAuM1abKPYALopAbpU9Jq9eGiYKi",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ulanzi_oSa57_Ch%C3%A2n_%C4%90%E1%BA%BF_M%C3%A1y_%E1%BA%A2nh_Nh%E1%BA%B9_v%C3%A0_%C4%90a_N%C4%83ng/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ulanzi_oSa57_Ch%C3%A2n_%C4%90%E1%BA%BF_M%C3%A1y_%E1%BA%A2nh_Nh%E1%BA%B9_v%C3%A0_%C4%90a_N%C4%83ng/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/oSa57.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/oSa57.mp4",
+        "report_url": "reports/IG_@ulanzi_oSa57_Chân_Đế_Máy_Ảnh_Nhẹ_và_Đa_Năng.html",
+        "shots_count": 23,
+        "duration": "46s",
+        "youtube_id": "wbRlOKO71Ws",
+        "youtube_embed": "https://www.youtube.com/embed/wbRlOKO71Ws",
+        "youtube_url": "https://youtu.be/wbRlOKO71Ws"
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4",
       "shortcode": "IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4",
@@ -8027,8 +8095,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
@@ -9142,7 +9210,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",
