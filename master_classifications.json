@@ -23471,28 +23471,32 @@
     "id": "IG_@page_vrn_DdT9nr_o_SP_Каким_бы_ни_был_ваш_завтрак,_в_P+AGE_он_будет",
     "creator": "@page_vrn",
     "creator_name": "Page_Vrn",
-    "title": "@page_vrn - Каким бы ни был ваш завтрак, в P+AGE он будет",
+    "title": "Cú Đấm Thị Giác F&B: Kỹ Thuật Spin Match Cut & Macro Đồ Ăn Sáng Đánh Thức Tuyến Nước Bọt (@page_vrn)",
     "shots_count": 14,
-    "duration": "28.0s",
+    "duration": "7.1s",
     "shooting_style": {
-      "id": "chuyen-canh",
+      "id": "Chuyển Cảnh (Transition)",
       "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Ẩm Thực & F&B",
+      "name": "Ẩm Thực & F&B",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @page_vrn",
+    "purpose": "Kích hoạt cơn đói và tuyến nước bọt của khách hàng bằng chuỗi tương tác dao dĩa Macro cực nét, nâng tầm trải nghiệm bữa sáng tại nhà hàng.",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "High-key Lighting"
+      "Chuyển cảnh 1",
+      "Match Cut",
+      "Spin Transition",
+      "Macro Food Porn",
+      "Visual Hook",
+      "Yolk Ooze Money Shot",
+      "Crisp Action"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Khai thác đòn bẩy Spin Match Cut xoay đĩa trên bàn gỗ và chuỗi đặc tả Macro cận cảnh (lòng đào trứng chần ùa chảy, thịt bò hun khói mỏng tơi, rosti khoai tây giòn rụm) biến video 7 giây thành cỗ máy kích hoạt cơn thèm ăn đỉnh cao.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
