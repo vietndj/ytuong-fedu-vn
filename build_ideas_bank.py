@@ -859,10 +859,6 @@ def build_database():
 
         
         idea_tags = master.get("tags", []) if master else []
-        if master and master.get("industry"):
-            idea_tags.append(master["industry"].get("name"))
-        if style_obj:
-            idea_tags.append(style_obj.get("name"))
         
         # Clean tags (remove None, empty, and deduplicate)
         idea_tags = list(set([t.strip() for t in idea_tags if t and t.strip()]))

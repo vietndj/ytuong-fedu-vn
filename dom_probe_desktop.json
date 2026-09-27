@@ -1,0 +1,12 @@
+{
+  "consoleErrors": [],
+  "elements": [
+    {
+      "tag": "INPUT",
+      "id": "editIdeaTags",
+      "value": "Test Tag 123, Nghi\u1ec7m Thu OK",
+      "visible": true
+    }
+  ],
+  "collectedConsoleErrors": []
+}
