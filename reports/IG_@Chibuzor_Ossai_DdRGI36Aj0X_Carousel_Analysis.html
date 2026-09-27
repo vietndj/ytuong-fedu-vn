@@ -117,6 +117,8 @@
             max-height: 70vh;
             border-radius: var(--cl-radius-md);
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
             background: #000;
             position: relative;
         }
@@ -1013,7 +1015,16 @@
 <div class="app-container">
     <div class="video-sidebar">
         <div class="video-wrap">
-            <video id="mainPlayer" src="https://media.fedu.vn/videos/carousel_slides/IG_%40Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01.mp4" controls autoplay muted playsinline preload="auto" loop style="width:100%;aspect-ratio:9/16;border-radius:12px;background:#000;"></video>
+            <style>.carousel-stack::-webkit-scrollbar { display: none; }</style>
+<div class="carousel-stack" style="display:flex; flex-direction:column; gap:16px; height:100%; overflow-y:auto; scroll-snap-type:y mandatory; -ms-overflow-style:none; scrollbar-width:none;">
+<video src="https://media.fedu.vn/videos/carousel_slides/IG_%40Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01.mp4" controls autoplay muted playsinline loop style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;"></video>
+<img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_02_mid.webp" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;" />
+<img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_03_mid.webp" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;" />
+<img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_04_mid.webp" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;" />
+<img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_05_mid.webp" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;" />
+<img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_06_mid.webp" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;" />
+<img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_07_mid.webp" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;" />
+</div>
         </div>
         <div class="video-controls">
             <div class="speed-row">
@@ -1509,6 +1520,25 @@ if (player && player.tagName !== 'IFRAME') {
 }
 
 function playShot(startTime, endTime, label) {
+    var stack = document.querySelector('.carousel-stack');
+    if (stack) {
+        var match = label ? label.match(/SHOT\s+(\d+)/i) : null;
+        var slideIndex = 0;
+        if (match) {
+            slideIndex = parseInt(match[1]) - 1;
+        } else if (startTime > 0) {
+            slideIndex = Math.floor(startTime);
+        }
+        var target = stack.querySelectorAll('video, img')[slideIndex];
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            stack.querySelectorAll('video').forEach(function(v) { v.pause(); });
+            if (target.tagName === 'VIDEO') { target.currentTime = 0; target.play().catch(function(){}); }
+        }
+        var tag = document.getElementById('shotStatusTag');
+        if (tag) tag.innerText = (label || ('Slide ' + (slideIndex+1))) + ' (Đang xem)';
+        return;
+    }
     if (!player) return;
     currentEndTime = (typeof endTime === 'number') ? endTime : null;
     var tag = document.getElementById('shotStatusTag');
