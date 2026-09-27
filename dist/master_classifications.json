@@ -23031,28 +23031,32 @@
     "id": "IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis",
     "creator": "@Chibuzor_Ossai",
     "creator_name": "Chibuzor_Ossai",
-    "title": "@Chibuzor_Ossai - Video by hellochibuzor",
+    "title": "Đòn Bẩy Đa Góc Máy B-Roll: Nghệ Thuật Tự Quay Quy Trình Lắp Ráp Sản Phẩm Cuốn Hút Cho Solo Creator",
     "shots_count": 7,
     "duration": "14.0s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
+      "id": "Solo Creator Setup",
+      "name": "Solo Creator Setup",
       "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Sáng Tạo Nội Dung",
+      "name": "Sáng Tạo Nội Dung",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @Chibuzor_Ossai",
+    "purpose": "Kỹ thuật phân rã cỡ cảnh và góc máy linh hoạt để solo creator tự quay B-roll lắp ráp sản phẩm cuốn hút",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting"
+      "Solo Filmmaking",
+      "How To Film Yourself",
+      "B-Roll Angles",
+      "POV Shot",
+      "Product Assembly",
+      "Establishing Shot",
+      "Close Up Shot"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Giáo trình thị giác 7 bước tự quay B-roll quy trình lắp ráp sản phẩm cho Solo Creator. Biến hành động đơn điệu thành chuỗi hình ảnh điện ảnh bằng việc đan xen 6 cỡ cảnh & góc máy độc đáo (Dutch Angle, Establishing, Top-Down, Worm's Eye POV, Tilt Down, Hero Wide).",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
