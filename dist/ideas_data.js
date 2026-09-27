@@ -67,6 +67,14 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Cắt cảnh đồng bộ nhịp điệu âm nhạc, vũ đạo, hành động khớp beat dồn dập."
     },
     {
+      "id": "Review Sản Phẩm / UGC",
+      "name": "Review Sản Phẩm / UGC",
+      "en_name": "Review Sản Phẩm / Ugc",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Review Sản Phẩm / UGC."
+    },
+    {
       "id": "Chuyển Cảnh (Transition)",
       "name": "Chuyển Cảnh (Transition)",
       "en_name": "Chuyển Cảnh (Transition)",
@@ -345,8 +353,9 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 32,
     "storytelling": 23,
     "dien-anh": 93,
-    "chuyen-canh": 52,
+    "chuyen-canh": 51,
     "theo-nhip-nhac": 3,
+    "Review Sản Phẩm / UGC": 1,
     "Chuyển Cảnh (Transition)": 4,
     "Quay B-Roll Quảng Cáo Điện Ảnh": 1,
     "UGC Thực Chiến": 1,
@@ -470,7 +479,7 @@ var FEDU_IDEAS_DATABASE = {
     "thoi-trang": 22,
     "am-thuc": 22,
     "du-lich": 17,
-    "cong-nghe": 36,
+    "cong-nghe": 35,
     "kien-truc": 31,
     "the-thao": 5,
     "ky-thuat-quay": 38,
@@ -2837,21 +2846,21 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@ulanzi_oSa57_Chân_Đế_Máy_Ảnh_Nhẹ_và_Đa_Năng",
       "shortcode": "IG_@ulanzi_oSa57_Chân_Đế_Máy_Ảnh_Nhẹ_và_Đa_Năng",
-      "title_vi": "Chân Đế Máy Ảnh Nhẹ và Đa Năng",
-      "quick_takeaway": "Check out Ulanzi | Mini Folding Portable Tripod. Get it on Lazada now! Ugc",
+      "title_vi": "Công Thức Video UGC Đa Năng: Từ Tripod Bỏ Túi Đến Studio Di Động 1 Chạm",
+      "quick_takeaway": "Bóc tách đòn bẩy thị giác của video UGC bán phụ kiện: Từ giải quyết nỗi đau cồng kềnh bằng tripod bỏ túi 26.5cm, chứng minh tải trọng với máy ảnh thật, đến cú đấm công năng ngàm kẹp 2-trong-1 làm máy nhắc chữ và biến hình thành gậy selfie du lịch.",
       "key_tech": "Establishing Hook Shot • High-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "Review Sản Phẩm / UGC",
+        "name": "Review Sản Phẩm / UGC",
+        "en_name": "Review Sản Phẩm / Ugc",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "cong-nghe",
+          "id": "Công Nghệ & Thiết Bị",
           "name": "Công Nghệ & Thiết Bị",
-          "icon": "📱"
+          "icon": "🎯"
         }
       ],
       "x_factors": [],
@@ -2865,10 +2874,14 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Check out Ulanzi | Mini Folding Portable Tripod. Get it on Lazada now! Ugc",
       "tech_tags": [
-        "Establishing Hook Shot",
-        "High-key Lighting",
-        "Close-Up / Macro Detail Shot",
-        "Medium Tracking Shot"
+        "UGC",
+        "Tripod Mini",
+        "Đập Hộp & Review",
+        "Studio Di Động",
+        "Đa Năng 2 Trong 1",
+        "Ulanzi",
+        "Teleprompter",
+        "Selfie Stick"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -4934,7 +4947,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1jpYV1rRzpuPRMXcYkd1oVjIxfm7pBZFo",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_02_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "report_url": "reports/IG_@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲_Ddb6rA7NwQd_Video_by_elenabuntushak.html",
@@ -6715,7 +6728,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
