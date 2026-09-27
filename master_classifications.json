@@ -23311,30 +23311,33 @@
     "id": "IG_@ecuator_cafe_Dc0iEdiuYZ-_Există_pauze_de_cafea_și_există_momente_în_ca",
     "creator": "@ecuator_cafe",
     "creator_name": "Ecuator_Cafe",
-    "title": "@ecuator_cafe - Există pauze de cafea și există momente în ca",
+    "title": "B-Roll F&B Đỉnh Cao: Kể Chuyện Bằng Hành Động & Chi Tiết Giác Quan",
     "shots_count": 12,
-    "duration": "24.0s",
+    "duration": "17.5s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "id": "Quay B-Roll Quảng Cáo Điện Ảnh",
+      "name": "Quay B-Roll Quảng Cáo Điện Ảnh",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "ugc",
-      "name": "UGC",
-      "icon": "📱"
+      "id": "Ẩm Thực & F&B",
+      "name": "Ẩm Thực & F&B",
+      "icon": "🎯"
     },
     "purpose": "Life",
     "tech_tags": [
-      "Life Quảng Cáo",
       "Life",
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting"
+      "Quảng cáo",
+      "B-Roll F&B",
+      "Matcha Nitro",
+      "ASMR",
+      "Macro Detail",
+      "POV",
+      "Flatlay"
     ],
     "logic_explanation": "Ghi chú người dùng: Life. Phân loại vào Ẩm Thực & F&B • Chuyển Cảnh (Transition).",
     "is_excluded": false,
-    "quick_takeaway": "Life",
+    "quick_takeaway": "Chuỗi B-Roll quảng cáo F&B chuẩn nhịp điện ảnh: dẫn dắt từ bước chân dạo phố, tiếng đẩy cửa, tiếng rót Nitro Matcha bọt tuyết đến cú bẻ bánh ngàn lớp giòn rụm và chiếc ly cạn đáy.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -23342,9 +23345,9 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     },
-    "youtube_id": "kpCfb4kchSM",
-    "youtube_url": "https://youtu.be/kpCfb4kchSM",
-    "youtube_embed": "https://www.youtube.com/embed/kpCfb4kchSM"
+    "youtube_id": "9NoGdaidqNo",
+    "youtube_url": "https://youtu.be/9NoGdaidqNo",
+    "youtube_embed": "https://www.youtube.com/embed/9NoGdaidqNo"
   },
   "Dc0iEdiuYZ-": {
     "id": "IG_@ecuator_cafe_Dc0iEdiuYZ-_Există_pauze_de_cafea_și_există_momente_în_ca",
