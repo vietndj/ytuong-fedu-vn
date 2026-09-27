@@ -344,8 +344,8 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 12,
     "talking-head": 32,
     "storytelling": 23,
-    "dien-anh": 94,
-    "chuyen-canh": 50,
+    "dien-anh": 93,
+    "chuyen-canh": 51,
     "theo-nhip-nhac": 3,
     "Quay B-Roll Quảng Cáo Điện Ảnh": 1,
     "UGC Thực Chiến": 1,
@@ -468,10 +468,10 @@ var FEDU_IDEAS_DATABASE = {
     "spa-lam-dep": 3,
     "thuong-hieu": 19,
     "thoi-trang": 22,
-    "am-thuc": 21,
+    "am-thuc": 22,
     "du-lich": 17,
     "cong-nghe": 34,
-    "kien-truc": 33,
+    "kien-truc": 32,
     "the-thao": 5,
     "ky-thuat-quay": 38,
     "ugc": 5
@@ -1031,7 +1031,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Fiveseven Idn",
       "profile_url": "https://www.instagram.com/fiveseven.idn/",
       "video_count": 1,
-      "top_industry": "Kiến Trúc & Không Gian Sống",
+      "top_industry": "am-thuc",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside/shot_01_mid.webp",
       "video_ids": [
         "IG_@fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside"
@@ -2901,21 +2901,21 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside",
       "shortcode": "DbDAdZShiS9",
-      "title_vi": "Crispy outside. Tender inside",
-      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "title_vi": "Tuyệt Kỹ Match Cut Phi Đĩa F&B: Phá Vỡ Quy Chuẩn Bưng Bê Để Giật 100% Chú Ý Về Món Ăn",
+      "quick_takeaway": "Cú phi đĩa frisbee giật mình kết hợp Action Match Cut 0.3s hoán đổi đĩa rỗng thành mâm gà nướng sốt nấm vàng giòn cực phẩm.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "Kiến Trúc & Không Gian Sống",
-          "icon": "🏛️"
+          "id": "am-thuc",
+          "name": "am-thuc",
+          "icon": "🎯"
         }
       ],
       "x_factors": [],
@@ -2927,12 +2927,14 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇺🇸/🇪🇺",
         "badge_color": "purple"
       },
-      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @fiveseven.idn",
+      "purpose": "Mổ xẻ kỹ thuật Match Cut hành động và chuyển cảnh giật gân (Disruptive Action Hook) ứng dụng cho F&B thực chiến.",
       "tech_tags": [
-        "Establishing Hook Shot",
-        "Low-key Lighting",
-        "Close-Up / Macro Detail Shot",
-        "Medium Tracking Shot"
+        "Chuyển cảnh",
+        "Match Cut",
+        "Action Cut",
+        "Ẩm Thực & F&B",
+        "Visual Hook",
+        "Food Cinematography"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -6569,7 +6571,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
@@ -7949,8 +7951,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
