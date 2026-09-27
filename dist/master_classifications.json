@@ -23226,5 +23226,83 @@
     "youtube_id": "e2VcSltcofU",
     "youtube_url": "https://youtu.be/e2VcSltcofU",
     "youtube_embed": "https://www.youtube.com/embed/e2VcSltcofU"
+  },
+  "IG_@ulanzi_ohBhc_Gậy_Tự_Sướng_Ulanzi_MT85_Có_Đèn_Pin_Nhỏ_và_Ch": {
+    "id": "IG_@ulanzi_ohBhc_Gậy_Tự_Sướng_Ulanzi_MT85_Có_Đèn_Pin_Nhỏ_và_Ch",
+    "creator": "@ulanzi",
+    "creator_name": "Ulanzi",
+    "title": "@ulanzi - Gậy Tự Sướng Ulanzi MT85 Có Đèn Pin Nhỏ và Ch",
+    "shots_count": 27,
+    "duration": "54.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ulanzi",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot",
+      "High-key Lighting",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Công Nghệ & Thiết Bị.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "2XikfROzIFI",
+    "youtube_url": "https://youtu.be/2XikfROzIFI",
+    "youtube_embed": "https://www.youtube.com/embed/2XikfROzIFI"
+  },
+  "ohBhc": {
+    "id": "IG_@ulanzi_ohBhc_Gậy_Tự_Sướng_Ulanzi_MT85_Có_Đèn_Pin_Nhỏ_và_Ch",
+    "creator": "@ulanzi",
+    "creator_name": "Ulanzi",
+    "title": "@ulanzi - Gậy Tự Sướng Ulanzi MT85 Có Đèn Pin Nhỏ và Ch",
+    "shots_count": 27,
+    "duration": "54.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ulanzi",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot",
+      "High-key Lighting",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Công Nghệ & Thiết Bị.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "2XikfROzIFI",
+    "youtube_url": "https://youtu.be/2XikfROzIFI",
+    "youtube_embed": "https://www.youtube.com/embed/2XikfROzIFI"
   }
 }
