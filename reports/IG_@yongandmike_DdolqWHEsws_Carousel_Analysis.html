@@ -716,7 +716,14 @@
 .carousel-stack { overflow-y: scroll !important; scroll-snap-type: y mandatory !important; }
 .carousel-stack > * { flex: 0 0 100% !important; height: 100% !important; object-fit: contain !important; scroll-snap-align: start !important; border: none !important; }
 </style>
-        </head>
+        
+<style class="carousel-yt-fix-css">
+.video-player-container { height: 75vh !important; max-height: none !important; aspect-ratio: auto !important; overflow: hidden !important; position: relative !important; }
+.carousel-stack { overflow-y: scroll !important; scroll-snap-type: y mandatory !important; height: 100% !important; }
+.carousel-stack > * { flex: 0 0 100% !important; height: 100% !important; object-fit: contain !important; scroll-snap-align: start !important; }
+.carousel-stack iframe { border: none !important; }
+</style>
+</head>
 <body>
 
 <div class="app-container">
@@ -725,7 +732,7 @@
 
 <style>.carousel-stack::-webkit-scrollbar { display: none; }</style>
 <div class="carousel-stack" style="display:flex; flex-direction:column; gap:16px; height:100%; overflow-y:auto; scroll-snap-type:y mandatory; -ms-overflow-style:none; scrollbar-width:none;">
-<video src="https://media.fedu.vn/videos/DdolqWHEsws.mp4" controls="" autoplay="" muted="" playsinline="" loop="" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;"></video>
+<iframe src="https://www.youtube.com/embed/iCCR7e8cl0U?autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="flex:0 0 100%; width:100%; height:100%; scroll-snap-align:start; background:#000; border:none;"></iframe>
 <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_02_mid.jpg" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;">
 <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_03_mid.jpg" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;">
 <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_04_mid.jpg" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;">
@@ -735,6 +742,11 @@
 <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_08_mid.jpg" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;">
 <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_09_mid.jpg" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;">
 <img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_10_mid.jpg" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;">
+</div>
+
+<div class="carousel-nav-overlay" style="position:absolute; right:10px; bottom:20px; display:flex; flex-direction:column; gap:10px; z-index:100;">
+    <button onclick="var s=document.querySelector('.carousel-stack');if(s)s.scrollBy({top:-s.clientHeight,behavior:'smooth'})" style="padding:10px; background:rgba(0,0,0,0.6); color:white; border:none; border-radius:50%; width:44px; height:44px; cursor:pointer; font-size:16px;">▲</button>
+    <button onclick="var s=document.querySelector('.carousel-stack');if(s)s.scrollBy({top:s.clientHeight,behavior:'smooth'})" style="padding:10px; background:rgba(0,0,0,0.6); color:white; border:none; border-radius:50%; width:44px; height:44px; cursor:pointer; font-size:16px;">▼</button>
 </div>
 </div>
         <div class="video-controls">
