@@ -23324,15 +23324,16 @@
       "name": "Ẩm Thực & F&B",
       "icon": "🍜"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ecuator_cafe",
+    "purpose": "Life",
     "tech_tags": [
+      "Life",
       "Establishing Hook Shot",
       "Close-Up / Macro Detail Shot",
       "Low-key Lighting"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Ẩm Thực & F&B.",
+    "logic_explanation": "Ghi chú người dùng: Life. Phân loại vào Ẩm Thực & F&B • Chuyển Cảnh (Transition).",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Life",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -23340,9 +23341,9 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     },
-    "youtube_id": "9NoGdaidqNo",
-    "youtube_url": "https://youtu.be/9NoGdaidqNo",
-    "youtube_embed": "https://www.youtube.com/embed/9NoGdaidqNo"
+    "youtube_id": "kpCfb4kchSM",
+    "youtube_url": "https://youtu.be/kpCfb4kchSM",
+    "youtube_embed": "https://www.youtube.com/embed/kpCfb4kchSM"
   },
   "Dc0iEdiuYZ-": {
     "id": "IG_@ecuator_cafe_Dc0iEdiuYZ-_Există_pauze_de_cafea_și_există_momente_în_ca",
@@ -23361,15 +23362,16 @@
       "name": "Ẩm Thực & F&B",
       "icon": "🍜"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ecuator_cafe",
+    "purpose": "Life",
     "tech_tags": [
+      "Life",
       "Establishing Hook Shot",
       "Close-Up / Macro Detail Shot",
       "Low-key Lighting"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Ẩm Thực & F&B.",
+    "logic_explanation": "Ghi chú người dùng: Life. Phân loại vào Ẩm Thực & F&B • Chuyển Cảnh (Transition).",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Life",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -23377,8 +23379,8 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     },
-    "youtube_id": "9NoGdaidqNo",
-    "youtube_url": "https://youtu.be/9NoGdaidqNo",
-    "youtube_embed": "https://www.youtube.com/embed/9NoGdaidqNo"
+    "youtube_id": "kpCfb4kchSM",
+    "youtube_url": "https://youtu.be/kpCfb4kchSM",
+    "youtube_embed": "https://www.youtube.com/embed/kpCfb4kchSM"
   }
 }
