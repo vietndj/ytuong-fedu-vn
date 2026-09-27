@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
+<!DOCTYPE html><html lang="vi"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>BÁO CÁO ĐẠO DIỄN: PHÂN TÍCH CHUỖI THỊ GIÁC HONG KONG TRƯỚC BÃO</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet">
 <style>
 :root {
     --bg-main: #070a0f;
@@ -783,6 +781,12 @@ video#mainPlayer {
 }
 
 </style>
+
+<style>
+.video-wrap { height: 75vh; overflow: hidden; position: relative; }
+.carousel-stack { overflow-y: scroll; scroll-snap-type: y mandatory; }
+iframe { flex: 0 0 100%; height: 100%; border: none; }
+</style>
 </head>
 <body>
 
@@ -791,10 +795,21 @@ video#mainPlayer {
         <div class="video-player-container">
 
 <style>.carousel-stack::-webkit-scrollbar { display: none; }</style>
-<div class="carousel-stack" style="display:flex; flex-direction:column; gap:16px; height:100%; overflow-y:auto; scroll-snap-type:y mandatory; -ms-overflow-style:none; scrollbar-width:none;">
-<video src="https://media.fedu.vn/videos/slide_01_DO8aI3uker6.mp4" controls autoplay muted playsinline loop style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;"></video>
+<div class="carousel-stack" style="display:flex; flex-direction:column; gap:16px; height:100%; overflow-y:auto; scroll-snap-type:y mandatory; -ms-overflow-style:none; scrollbar-width:none;"><iframe src="https://www.youtube.com/embed/loWBzJOxsNk?autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe src="https://www.youtube.com/embed/8-chx4ovh9w?autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe src="https://www.youtube.com/embed/VLfcyaQbdqA?autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe src="https://www.youtube.com/embed/Q9vL3_9h0Z0?autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe src="https://www.youtube.com/embed/JMD3lRXneWI?autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe src="https://www.youtube.com/embed/60JXrPy47aA?autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe src="https://www.youtube.com/embed/1mRo_eHJGnI?autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe src="https://www.youtube.com/embed/j7NlbzT1Anc?autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
+
+<div class="carousel-nav-overlay" style="position:absolute; right:10px; bottom:20px; display:flex; flex-direction:column; gap:10px; z-index:100;">
+    <button class="nav-btn" onclick="document.querySelector('.carousel-stack').scrollBy({top: -300, behavior: 'smooth'})" style="padding:10px; background:rgba(0,0,0,0.5); color:white; border:none; border-radius:50%;">▲</button>
+    <button class="nav-btn" onclick="document.querySelector('.carousel-stack').scrollBy({top: 300, behavior: 'smooth'})" style="padding:10px; background:rgba(0,0,0,0.5); color:white; border:none; border-radius:50%;">▼</button>
 </div>
+    </div>
         <div class="video-controls-panel">
             <div class="current-status-bar">
                 <span class="status-tag" id="shotStatusTag">🎬 Phân cảnh: Toàn bộ video</span>
@@ -817,7 +832,7 @@ video#mainPlayer {
         <div class="report-header-banner">
             <div class="header-top-row">
                 <span class="genre-badge">DIRECTOR BREAKDOWN</span>
-                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">8 SHOTS &bull; 20.00s</span>
+                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">8 SHOTS • 20.00s</span>
             </div>
             <h1 class="report-title">BÁO CÁO ĐẠO DIỄN: PHÂN TÍCH CHUỖI THỊ GIÁC HONG KONG TRƯỚC BÃO</h1>
             <div class="meta-tags-flex">
@@ -828,7 +843,7 @@ video#mainPlayer {
                         <span class="author-handle">(@withyuee)</span>
                         <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
                     </a>
-                </span></a></span>
+                </span>
                 <span>Tệp: <strong>Hong_Kong_Visual_Rhythm_Carousel - @withyuee.html</strong></span>
                 <span>Trực quan: <strong>9:16 Vertical HD</strong></span>
             </div>
@@ -841,13 +856,13 @@ video#mainPlayer {
 <div>
 <div class="card">
 <h3>Cốt lõi Ngôn ngữ Thị giác</h3>
-<p>• <b>Chất liệu phản chiếu (Wet Surface)</b>: Tận dụng mặt đường ướt mưa biến vỉa hè thành tấm gương nhân đôi nguồn sáng neon.<br/>
-      • <b>Bố cục Phối cảnh Một Điểm Tụ (One-Point Perspective)</b>: Trục đối xứng hút mắt vào các hẻm dốc và thang cuốn.<br/>
+<p>• <b>Chất liệu phản chiếu (Wet Surface)</b>: Tận dụng mặt đường ướt mưa biến vỉa hè thành tấm gương nhân đôi nguồn sáng neon.<br>
+      • <b>Bố cục Phối cảnh Một Điểm Tụ (One-Point Perspective)</b>: Trục đối xứng hút mắt vào các hẻm dốc và thang cuốn.<br>
       • <b>Tương phản Nhiệt độ Màu</b>: Sự hòa quyện giữa tông lạnh Blue Hour / Xám ướt và ánh sáng vàng ấm / Neon rực rỡ.</p>
 </div>
 <div class="card">
 <h3>Tư duy Động tác Máy</h3>
-<p>• <b>Chuyển động có động lực (Motivated Movement)</b>: Máy di chuyển cực chậm hoặc tĩnh tuyệt đối để người xem ngắm nhìn nhịp điệu hạt mưa và bóng người che ô.<br/>
+<p>• <b>Chuyển động có động lực (Motivated Movement)</b>: Máy di chuyển cực chậm hoặc tĩnh tuyệt đối để người xem ngắm nhìn nhịp điệu hạt mưa và bóng người che ô.<br>
       • <b>Góc máy cực hạn (Extreme Camera Angles)</b>: Luân phiên giữa góc sát đất (Ground-level 5cm), góc trực diện phẳng (Orthogonal 90°), và góc ngước cao (Low-angle Tilt-up).</p>
 </div>
 </div>
@@ -867,9 +882,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-1">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(0.0, 2.5, 'SHOT 01')">
-                    <img crossorigin="anonymous" src="extracted_shots/slide_01_mid.jpg" alt="SHOT 01" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="extracted_shots/slide_01_mid.jpg" alt="SHOT 01" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_01_mid.jpg', 'SHOT 01 [0.0s - 2.5s]')">🔍</button>
                     <span class="thumb-time-badge">0.00s - 2.50s</span>
@@ -889,9 +904,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(2.0, 4.0, 'SHOT 01')">
-<img crossorigin="anonymous" alt="SHOT 01" class="shot-img" loading="lazy" src="extracted_shots/slide_01_mid.jpg"/>
+<img crossorigin="anonymous" alt="SHOT 01" class="shot-img" loading="lazy" src="extracted_shots/slide_01_mid.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_01_mid.jpg', 'SHOT 01 [2.0s - 4.0s]')">🔍</button>
 <span class="thumb-time-badge">2.00s - 4.00s</span>
@@ -925,9 +940,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-2">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(2.5, 5.0, 'SHOT 02')">
-                    <img crossorigin="anonymous" src="extracted_shots/slide_02_mid.jpg" alt="SHOT 02" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="extracted_shots/slide_02_mid.jpg" alt="SHOT 02" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_02_mid.jpg', 'SHOT 02 [2.5s - 5.0s]')">🔍</button>
                     <span class="thumb-time-badge">2.50s - 5.00s</span>
@@ -947,9 +962,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(4.0, 6.0, 'SHOT 02')">
-<img crossorigin="anonymous" alt="SHOT 02" class="shot-img" loading="lazy" src="extracted_shots/slide_02_mid.jpg"/>
+<img crossorigin="anonymous" alt="SHOT 02" class="shot-img" loading="lazy" src="extracted_shots/slide_02_mid.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_02_mid.jpg', 'SHOT 02 [4.0s - 6.0s]')">🔍</button>
 <span class="thumb-time-badge">4.00s - 6.00s</span>
@@ -983,9 +998,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-3">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(5.0, 7.5, 'SHOT 03')">
-                    <img crossorigin="anonymous" src="extracted_shots/slide_03_mid.jpg" alt="SHOT 03" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="extracted_shots/slide_03_mid.jpg" alt="SHOT 03" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_03_mid.jpg', 'SHOT 03 [5.0s - 7.5s]')">🔍</button>
                     <span class="thumb-time-badge">5.00s - 7.50s</span>
@@ -1005,9 +1020,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(3.0, 5.0, 'SHOT 03')">
-<img crossorigin="anonymous" alt="SHOT 03" class="shot-img" loading="lazy" src="extracted_shots/slide_03_mid.jpg"/>
+<img crossorigin="anonymous" alt="SHOT 03" class="shot-img" loading="lazy" src="extracted_shots/slide_03_mid.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_03_mid.jpg', 'SHOT 03 [3.0s - 5.0s]')">🔍</button>
 <span class="thumb-time-badge">3.00s - 5.00s</span>
@@ -1041,9 +1056,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-4">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(7.5, 10.0, 'SHOT 04')">
-                    <img crossorigin="anonymous" src="extracted_shots/slide_04_mid.jpg" alt="SHOT 04" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="extracted_shots/slide_04_mid.jpg" alt="SHOT 04" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_04_mid.jpg', 'SHOT 04 [7.5s - 10.0s]')">🔍</button>
                     <span class="thumb-time-badge">7.50s - 10.00s</span>
@@ -1063,9 +1078,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(8.0, 10.0, 'SHOT 04')">
-<img crossorigin="anonymous" alt="SHOT 04" class="shot-img" loading="lazy" src="extracted_shots/slide_04_mid.jpg"/>
+<img crossorigin="anonymous" alt="SHOT 04" class="shot-img" loading="lazy" src="extracted_shots/slide_04_mid.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_04_mid.jpg', 'SHOT 04 [8.0s - 10.0s]')">🔍</button>
 <span class="thumb-time-badge">8.00s - 10.00s</span>
@@ -1099,9 +1114,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-5">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(10.0, 12.5, 'SHOT 05')">
-                    <img crossorigin="anonymous" src="extracted_shots/slide_05_mid.jpg" alt="SHOT 05" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="extracted_shots/slide_05_mid.jpg" alt="SHOT 05" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_05_mid.jpg', 'SHOT 05 [10.0s - 12.5s]')">🔍</button>
                     <span class="thumb-time-badge">10.00s - 12.50s</span>
@@ -1121,9 +1136,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(10.0, 12.0, 'SHOT 05')">
-<img crossorigin="anonymous" alt="SHOT 05" class="shot-img" loading="lazy" src="extracted_shots/slide_05_mid.jpg"/>
+<img crossorigin="anonymous" alt="SHOT 05" class="shot-img" loading="lazy" src="extracted_shots/slide_05_mid.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_05_mid.jpg', 'SHOT 05 [10.0s - 12.0s]')">🔍</button>
 <span class="thumb-time-badge">10.00s - 12.00s</span>
@@ -1157,9 +1172,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-6">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(12.5, 15.0, 'SHOT 06')">
-                    <img crossorigin="anonymous" src="extracted_shots/slide_06_mid.jpg" alt="SHOT 06" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="extracted_shots/slide_06_mid.jpg" alt="SHOT 06" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_06_mid.jpg', 'SHOT 06 [12.5s - 15.0s]')">🔍</button>
                     <span class="thumb-time-badge">12.50s - 15.00s</span>
@@ -1179,9 +1194,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(12.0, 14.0, 'SHOT 06')">
-<img crossorigin="anonymous" alt="SHOT 06" class="shot-img" loading="lazy" src="extracted_shots/slide_06_mid.jpg"/>
+<img crossorigin="anonymous" alt="SHOT 06" class="shot-img" loading="lazy" src="extracted_shots/slide_06_mid.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_06_mid.jpg', 'SHOT 06 [12.0s - 14.0s]')">🔍</button>
 <span class="thumb-time-badge">12.00s - 14.00s</span>
@@ -1215,9 +1230,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-7">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(15.0, 17.5, 'SHOT 07')">
-                    <img crossorigin="anonymous" src="extracted_shots/slide_07_mid.jpg" alt="SHOT 07" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="extracted_shots/slide_07_mid.jpg" alt="SHOT 07" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_07_mid.jpg', 'SHOT 07 [15.0s - 17.5s]')">🔍</button>
                     <span class="thumb-time-badge">15.00s - 17.50s</span>
@@ -1237,9 +1252,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(14.0, 16.0, 'SHOT 07')">
-<img crossorigin="anonymous" alt="SHOT 07" class="shot-img" loading="lazy" src="extracted_shots/slide_07_mid.jpg"/>
+<img crossorigin="anonymous" alt="SHOT 07" class="shot-img" loading="lazy" src="extracted_shots/slide_07_mid.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_07_mid.jpg', 'SHOT 07 [14.0s - 16.0s]')">🔍</button>
 <span class="thumb-time-badge">14.00s - 16.00s</span>
@@ -1273,9 +1288,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-8">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(17.5, 20.0, 'SHOT 08')">
-                    <img crossorigin="anonymous" src="extracted_shots/slide_08_mid.jpg" alt="SHOT 08" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="extracted_shots/slide_08_mid.jpg" alt="SHOT 08" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_08_mid.jpg', 'SHOT 08 [17.5s - 20.0s]')">🔍</button>
                     <span class="thumb-time-badge">17.50s - 20.00s</span>
@@ -1295,9 +1310,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(16.0, 18.0, 'SHOT 08')">
-<img crossorigin="anonymous" alt="SHOT 08" class="shot-img" loading="lazy" src="extracted_shots/slide_08_mid.jpg"/>
+<img crossorigin="anonymous" alt="SHOT 08" class="shot-img" loading="lazy" src="extracted_shots/slide_08_mid.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_08_mid.jpg', 'SHOT 08 [16.0s - 18.0s]')">🔍</button>
 <span class="thumb-time-badge">16.00s - 18.00s</span>
@@ -1333,7 +1348,7 @@ video#mainPlayer {
             
         <div class="grid-card" onclick="playShot(0.0, 2.5, 'SHOT 01')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_01_mid.jpg" alt="SHOT 01" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_01_mid.jpg" alt="SHOT 01" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_01_mid.jpg', 'SHOT 01 [0.0s - 2.5s]')">🔍</button>
                 <div class="grid-badge-top">SHOT 01</div>
@@ -1344,7 +1359,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(2.5, 5.0, 'SHOT 02')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_02_mid.jpg" alt="SHOT 02" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_02_mid.jpg" alt="SHOT 02" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_02_mid.jpg', 'SHOT 02 [2.5s - 5.0s]')">🔍</button>
                 <div class="grid-badge-top">SHOT 02</div>
@@ -1355,7 +1370,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(5.0, 7.5, 'SHOT 03')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_03_mid.jpg" alt="SHOT 03" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_03_mid.jpg" alt="SHOT 03" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_03_mid.jpg', 'SHOT 03 [5.0s - 7.5s]')">🔍</button>
                 <div class="grid-badge-top">SHOT 03</div>
@@ -1366,7 +1381,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(7.5, 10.0, 'SHOT 04')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_04_mid.jpg" alt="SHOT 04" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_04_mid.jpg" alt="SHOT 04" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_04_mid.jpg', 'SHOT 04 [7.5s - 10.0s]')">🔍</button>
                 <div class="grid-badge-top">SHOT 04</div>
@@ -1377,7 +1392,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(10.0, 12.5, 'SHOT 05')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_05_mid.jpg" alt="SHOT 05" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_05_mid.jpg" alt="SHOT 05" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_05_mid.jpg', 'SHOT 05 [10.0s - 12.5s]')">🔍</button>
                 <div class="grid-badge-top">SHOT 05</div>
@@ -1388,7 +1403,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(12.5, 15.0, 'SHOT 06')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_06_mid.jpg" alt="SHOT 06" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_06_mid.jpg" alt="SHOT 06" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_06_mid.jpg', 'SHOT 06 [12.5s - 15.0s]')">🔍</button>
                 <div class="grid-badge-top">SHOT 06</div>
@@ -1399,7 +1414,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(15.0, 17.5, 'SHOT 07')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_07_mid.jpg" alt="SHOT 07" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_07_mid.jpg" alt="SHOT 07" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_07_mid.jpg', 'SHOT 07 [15.0s - 17.5s]')">🔍</button>
                 <div class="grid-badge-top">SHOT 07</div>
@@ -1410,7 +1425,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(17.5, 20.0, 'SHOT 08')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_08_mid.jpg" alt="SHOT 08" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_08_mid.jpg" alt="SHOT 08" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('extracted_shots/slide_08_mid.jpg', 'SHOT 08 [17.5s - 20.0s]')">🔍</button>
                 <div class="grid-badge-top">SHOT 08</div>
@@ -1426,13 +1441,13 @@ video#mainPlayer {
     <div class="drawer-panel" onclick="event.stopPropagation()">
         <div class="drawer-header">
             <div class="drawer-title">📑 MỤC LỤC PHÂN CẢNH (8)</div>
-            <button class="drawer-close-btn" onclick="toggleDrawer(false)">&times;</button>
+            <button class="drawer-close-btn" onclick="toggleDrawer(false)">×</button>
         </div>
         <div class="drawer-list">
             
         <div class="drawer-item" onclick="jumpToShot(1, 0.0, 2.5, 'SHOT 01')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_01_mid.jpg" alt="SHOT 01" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_01_mid.jpg" alt="SHOT 01" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 01</div>
@@ -1444,7 +1459,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(2, 2.5, 5.0, 'SHOT 02')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_02_mid.jpg" alt="SHOT 02" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_02_mid.jpg" alt="SHOT 02" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 02</div>
@@ -1456,7 +1471,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(3, 5.0, 7.5, 'SHOT 03')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_03_mid.jpg" alt="SHOT 03" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_03_mid.jpg" alt="SHOT 03" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 03</div>
@@ -1468,7 +1483,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(4, 7.5, 10.0, 'SHOT 04')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_04_mid.jpg" alt="SHOT 04" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_04_mid.jpg" alt="SHOT 04" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 04</div>
@@ -1480,7 +1495,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(5, 10.0, 12.5, 'SHOT 05')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_05_mid.jpg" alt="SHOT 05" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_05_mid.jpg" alt="SHOT 05" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 05</div>
@@ -1492,7 +1507,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(6, 12.5, 15.0, 'SHOT 06')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_06_mid.jpg" alt="SHOT 06" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_06_mid.jpg" alt="SHOT 06" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 06</div>
@@ -1504,7 +1519,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(7, 15.0, 17.5, 'SHOT 07')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_07_mid.jpg" alt="SHOT 07" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_07_mid.jpg" alt="SHOT 07" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 07</div>
@@ -1516,7 +1531,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(8, 17.5, 20.0, 'SHOT 08')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="extracted_shots/slide_08_mid.jpg" alt="SHOT 08" loading="lazy" />
+                <img crossorigin="anonymous" src="extracted_shots/slide_08_mid.jpg" alt="SHOT 08" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 08</div>
@@ -1530,8 +1545,8 @@ video#mainPlayer {
 </div>
 
 <div id="lightboxModal" onclick="closeLightbox()">
-    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <img crossorigin="anonymous" id="lightboxImg" src="" onclick="event.stopPropagation()" />
+    <span class="lightbox-close" onclick="closeLightbox()">×</span>
+    <img crossorigin="anonymous" id="lightboxImg" src="" onclick="event.stopPropagation()">
     <div id="lightboxCaption"></div>
 </div>
 
@@ -1576,7 +1591,6 @@ function playShot(startTime, endTime, label) {
         tag.innerText = `🎬 ${label || 'Phân cảnh'}: [${startTime.toFixed(2)}s${endTxt}]`;
     }
     if(player) player.currentTime = startTime;
-    }
     document.querySelectorAll('.shot-card').forEach(c => c.classList.remove('active-playing'));
     const matchCard = Array.from(document.querySelectorAll('.shot-card')).find(c => c.innerText.includes(label));
     if (matchCard) matchCard.classList.add('active-playing');
@@ -1705,5 +1719,5 @@ document.addEventListener('keydown', (e) => {
 });
 
 </script>
-</body>
-</html>
+
+</body></html>

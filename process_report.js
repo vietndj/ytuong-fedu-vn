@@ -12,33 +12,49 @@ if (!fs.existsSync(filePath)) {
 }
 
 const html = fs.readFileSync(filePath, 'utf8');
+let igUrl = null;
 
-// 1. Tìm IG link
-const igRegex = /https?:\/\/(www\.)?instagram\.com\/(p|reels)\/[\w-]+/i;
-const match = html.match(igRegex);
+try {
+    const jsData = fs.readFileSync('ideas_data.js', 'utf8');
+    const reportUrlStr = `"report_url": "reports/${fileName}.html"`;
+    const idx = jsData.indexOf(reportUrlStr);
+    if (idx !== -1) {
+        const beforeBlock = jsData.substring(Math.max(0, idx - 1000), idx);
+        const igUrlMatch = beforeBlock.match(/"ig_url"\s*:\s*"([^"]+)"/);
+        if (igUrlMatch) {
+            igUrl = igUrlMatch[1];
+        }
+    }
+} catch (e) {}
 
-if (!match) {
+
+    // Try to extract from filename shortcode
+    const shortcodeMatch = fileName.match(/_([a-zA-Z0-9_-]{11})_/);
+    if (shortcodeMatch) {
+        igUrl = "https://www.instagram.com/p/" + shortcodeMatch[1] + "/";
+    }
+    
+if (!igUrl || !igUrl.includes('/p/') && !igUrl.includes('/reel')) {
+    const igRegex = /https?:\/\/(www\.)?instagram\.com\/(p|reels|reel)\/[\w-]+/i;
+    const match = html.match(igRegex);
+    if (match) igUrl = match[0];
+}
+
+if (!igUrl || !igUrl.includes('instagram.com')) {
     console.log("NO_IG_LINK");
     process.exit(0);
 }
 
-const igUrl = match[0];
 console.log(`FOUND_IG: ${igUrl}`);
 
-// Clean temp dir
 const tempDir = path.join(__dirname, 'temp_vids');
-if (fs.existsSync(tempDir)) {
-    fs.rmSync(tempDir, { recursive: true, force: true });
-}
+if (fs.existsSync(tempDir)) fs.rmSync(tempDir, { recursive: true, force: true });
 fs.mkdirSync(tempDir);
 
-// 2. Tải video bằng yt-dlp
 try {
     console.log(`Downloading: ${igUrl}`);
     execSync(`yt-dlp "${igUrl}" -o "${tempDir}/%(autonumber)s.%(ext)s"`, { stdio: 'pipe' });
-} catch (e) {
-    console.error("yt-dlp failed:", e.message);
-}
+} catch (e) {}
 
 const files = fs.readdirSync(tempDir).filter(f => f.endsWith('.mp4'));
 if (files.length <= 1) {
@@ -46,9 +62,6 @@ if (files.length <= 1) {
     process.exit(0);
 }
 
-console.log(`Found ${files.length} videos`);
-
-// 3. Upload YouTube
 const ytIds = [];
 for (const file of files) {
     const fullPath = path.join(tempDir, file);
@@ -56,36 +69,28 @@ for (const file of files) {
         console.log(`Uploading ${file}...`);
         const result = execSync(`python3 upload_yt.py "${fullPath}" "IG Carousel Video"`, { stdio: 'pipe' }).toString().trim();
         const id = result.split('\n').pop().trim();
-        if (id && id.length === 11) {
-            ytIds.push(id);
-            console.log(`Uploaded: ${id}`);
-        } else {
-            console.error("Failed to get valid YT ID:", id);
+        if (id && id.length === 11) ytIds.push(id);
+        else {
+            console.error("Failed YT ID:", id);
             process.exit(1);
         }
     } catch (e) {
-        console.error("Upload failed", e.stderr ? e.stderr.toString() : e.message);
-        if (e.stderr && e.stderr.toString().includes("ERROR_QUOTA")) {
-            console.log("ERROR_QUOTA");
-            process.exit(2);
-        }
+        if (e.stderr && e.stderr.toString().includes("ERROR_QUOTA")) process.exit(2);
         process.exit(1);
     }
 }
 
-// 4. Sửa HTML
 const $ = cheerio.load(html);
-
-// Sửa carousel stack
 const stack = $('.carousel-stack');
 if (stack.length) {
     stack.empty();
     ytIds.forEach(id => {
         stack.append(`<iframe src="https://www.youtube.com/embed/${id}?autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n`);
     });
+} else {
+    process.exit(1);
 }
 
-// Thêm CSS
 $('head').append(`
 <style>
 .video-wrap { height: 75vh; overflow: hidden; position: relative; }
@@ -94,7 +99,6 @@ iframe { flex: 0 0 100%; height: 100%; border: none; }
 </style>
 `);
 
-// Thêm nút điều hướng nếu chưa có
 if ($('.carousel-nav-overlay').length === 0) {
     stack.parent().append(`
 <div class="carousel-nav-overlay" style="position:absolute; right:10px; bottom:20px; display:flex; flex-direction:column; gap:10px; z-index:100;">
@@ -104,7 +108,15 @@ if ($('.carousel-nav-overlay').length === 0) {
     `);
 }
 
-// Extract scripts and test
+// Fix known JS error
+$('script').each((i, el) => {
+    let scriptContent = $(el).html();
+    if (scriptContent) {
+        scriptContent = scriptContent.replace(/if\s*\(player\)\s*player\.currentTime\s*=\s*startTime;\s*\}/g, 'if(player) player.currentTime = startTime;');
+        $(el).text(scriptContent);
+    }
+});
+
 let jsContent = '';
 $('script').each((i, el) => {
     jsContent += $(el).html() + '\n';
@@ -120,7 +132,10 @@ if (jsContent.trim()) {
     }
 }
 
-// Write back
 fs.writeFileSync(filePath, $.html());
+try {
+    fs.mkdirSync('dist/reports', { recursive: true });
+    fs.copyFileSync(filePath, path.join('dist/reports', `${fileName}.html`));
+} catch(e) {}
 
 console.log("SUCCESS:", ytIds.join(','));
