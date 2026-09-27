@@ -17,3 +17,10 @@ scratch_images/
 test_*.py
 fix_*.py
 patch_*.py
+temp_script.js
+temp_vids/
+orchestrator.js
+process_report.js
+list.txt
+upload_yt.py
+screenshots/
