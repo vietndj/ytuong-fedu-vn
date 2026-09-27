@@ -132,14 +132,14 @@
     </script>
 </head>
 <body class="text-slate-200">
-    <!-- HEADER 48px -->
-    <header class="glass-header fixed top-0 w-full z-50 h-[44px] md:h-[48px] flex items-center px-2 md:px-4 gap-2">
-        <div class="text-sm font-bold shrink-0 flex items-center gap-2">
+    <!-- HEADER -->
+    <header class="glass-header sticky top-0 w-full z-50 min-h-[56px] flex items-start sm:items-center px-2 md:px-4 py-2 gap-2 border-b border-slate-700/50">
+        <div class="text-sm font-bold shrink-0 flex items-center gap-2 mt-1 sm:mt-0">
             🎬 <span class="hidden md:inline">Kho Ý Tưởng</span>
         </div>
         
-        <!-- Shooting Styles Tabs (Horizontal Scroll) -->
-        <div id="shootingStyleTabsContainer" class="flex-1 flex items-center overflow-x-auto no-scrollbar gap-1 px-2 h-full py-1">
+        <!-- Shooting Styles Tabs (2 lines horizontal scroll) -->
+        <div id="shootingStyleTabsContainer" class="flex-1 grid gap-1.5 px-2 overflow-x-auto no-scrollbar" style="grid-template-rows: repeat(2, minmax(0, 1fr)); grid-auto-flow: column; grid-auto-columns: max-content;">
             <!-- Tabs will be rendered here by JS -->
         </div>
         
@@ -197,7 +197,7 @@
 
 
     <!-- GRID AREA (Starts right under header) -->
-    <main class="pt-[44px] md:pt-[48px] min-h-screen">
+    <main class="min-h-screen">
         <div class="p-2 md:p-4 max-w-[1920px] mx-auto">
             <!-- Empty State -->
             <div id="emptyState" class="hidden text-center py-20 text-slate-500">
