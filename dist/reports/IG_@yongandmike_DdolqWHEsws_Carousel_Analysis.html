@@ -718,8 +718,21 @@
 <div class="app-container">
     <div class="video-sidebar">
         <div class="video-wrap">
-            <video id="mainPlayer" src="https://media.fedu.vn/videos/DdolqWHEsws.mp4" controls autoplay muted playsinline preload="auto" loop style="width:100%;aspect-ratio:9/16;border-radius:12px;background:#000;"></video>
-        </div>
+
+<style>.carousel-stack::-webkit-scrollbar { display: none; }</style>
+<div class="carousel-stack" style="display:flex; flex-direction:column; gap:16px; height:100%; overflow-y:auto; scroll-snap-type:y mandatory; -ms-overflow-style:none; scrollbar-width:none;">
+<video src="https://media.fedu.vn/videos/DdolqWHEsws.mp4" controls autoplay muted playsinline loop style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;"></video>
+<img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_02_mid.jpg" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;" />
+<img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_03_mid.jpg" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;" />
+<img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_04_mid.jpg" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;" />
+<img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_05_mid.jpg" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;" />
+<img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_06_mid.jpg" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;" />
+<img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_07_mid.jpg" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;" />
+<img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_08_mid.jpg" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;" />
+<img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_09_mid.jpg" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;" />
+<img src="https://media.fedu.vn/images/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis/slide_10_mid.jpg" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;" />
+</div>
+</div>
         <div class="video-controls">
             <div class="speed-row">
                 <button class="ctrl-btn" onclick="setSpeed(0.25, this)">0.25x</button>
@@ -1315,6 +1328,20 @@ if (player && player.tagName !== 'IFRAME') {
 }
 
 function playShot(startTime, endTime, label) {
+
+    var stack = document.querySelector('.carousel-stack');
+    if (stack) {
+        var match = label ? label.match(/SHOT\s+(\d+)/i) : null;
+        if (match) {
+            var index = parseInt(match[1]) - 1;
+            var children = stack.children;
+            if (index >= 0 && index < children.length) {
+                children[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    }
+    
+
     if (!player) return;
     currentEndTime = (typeof endTime === 'number') ? endTime : null;
     var tag = document.getElementById('shotStatusTag');
@@ -1334,12 +1361,8 @@ function playShot(startTime, endTime, label) {
             args: []
         }), '*');
     } else {
-        player.currentTime = startTime;
+        if(player) player.currentTime = startTime;
         var p = player.play();
-        if (p !== undefined) {
-            p.catch(function() {
-                player.muted = true;
-                player.play().catch(function() {});
             });
         }
     }
