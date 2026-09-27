@@ -23462,5 +23462,81 @@
     "youtube_id": "eAD2xfh7q7M",
     "youtube_url": "https://youtu.be/eAD2xfh7q7M",
     "youtube_embed": "https://www.youtube.com/embed/eAD2xfh7q7M"
+  },
+  "IG_@page_vrn_DdT9nr_o_SP_Каким_бы_ни_был_ваш_завтрак,_в_P+AGE_он_будет": {
+    "id": "IG_@page_vrn_DdT9nr_o_SP_Каким_бы_ни_был_ваш_завтрак,_в_P+AGE_он_будет",
+    "creator": "@page_vrn",
+    "creator_name": "Page_Vrn",
+    "title": "@page_vrn - Каким бы ни был ваш завтрак, в P+AGE он будет",
+    "shots_count": 14,
+    "duration": "28.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
+    },
+    "purpose": "Chuyển cảnh 1",
+    "tech_tags": [
+      "Chuyển Cảnh 1",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "High-key Lighting"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Chuyển cảnh 1. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
+    "is_excluded": false,
+    "quick_takeaway": "Chuyển cảnh 1",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "GMFQlgpDqKA",
+    "youtube_url": "https://youtu.be/GMFQlgpDqKA",
+    "youtube_embed": "https://www.youtube.com/embed/GMFQlgpDqKA"
+  },
+  "DdT9nr_o_SP": {
+    "id": "IG_@page_vrn_DdT9nr_o_SP_Каким_бы_ни_был_ваш_завтрак,_в_P+AGE_он_будет",
+    "creator": "@page_vrn",
+    "creator_name": "Page_Vrn",
+    "title": "@page_vrn - Каким бы ни был ваш завтрак, в P+AGE он будет",
+    "shots_count": 14,
+    "duration": "28.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "ky-thuat-quay",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
+    },
+    "purpose": "Chuyển cảnh 1",
+    "tech_tags": [
+      "Chuyển Cảnh 1",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "High-key Lighting"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Chuyển cảnh 1. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
+    "is_excluded": false,
+    "quick_takeaway": "Chuyển cảnh 1",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "GMFQlgpDqKA",
+    "youtube_url": "https://youtu.be/GMFQlgpDqKA",
+    "youtube_embed": "https://www.youtube.com/embed/GMFQlgpDqKA"
   }
 }
