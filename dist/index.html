@@ -429,7 +429,7 @@
                         </div>
                         <div>
                             <label class="block font-semibold text-emerald-200/70 mb-1">Industry đúng là:</label>
-                            <select id="editIdeaAiIndustry" class="w-full bg-slate-950 border border-emerald-900/50 rounded-xl px-3 py-2 text-emerald-100 focus:outline-none focus:border-emerald-500">
+                            <select id="editIdeaAiIndustry" onchange="document.getElementById('editIdeaAiIndustryOther').classList.toggle('hidden', this.value !== 'other')" class="w-full bg-slate-950 border border-emerald-900/50 rounded-xl px-3 py-2 text-emerald-100 focus:outline-none focus:border-emerald-500">
                                 <option value="">Giữ nguyên (Không đổi)</option>
                                 <option value="spa-lam-dep">💆 Làm đẹp</option>
                                 <option value="thuong-hieu">💼 Xây kênh</option>
@@ -437,12 +437,14 @@
                                 <option value="am-thuc">🍜 F&B</option>
                                 <option value="du-lich">✈️ Du lịch</option>
                                 <option value="cong-nghe">📱 Đồ công nghệ</option>
-                                <option value="kien-truc">🏛️ Góc nhà đẹp</option>
+                                <option value="kien-truc">🏡 Life</option>
                                 <option value="the-thao">🏃 Thể thao</option>
                                 <option value="ky-thuat-quay">🎯 Bố cục</option>
                                 <option value="ugc">📦 UGC & Ads</option>
                                 <option value="phat-trien-ban-than">🧘 Tâm Lý</option>
+                                <option value="other">➕ Nhập danh mục mới...</option>
                             </select>
+                            <input type="text" id="editIdeaAiIndustryOther" placeholder="Gõ tên danh mục mới..." class="w-full bg-slate-950 border border-emerald-900/50 rounded-xl px-3 py-2 text-emerald-100 focus:outline-none focus:border-emerald-500 mt-2 hidden">
                         </div>
                     </div>
                     
@@ -2354,6 +2356,8 @@
             
             setVal('editIdeaAiStyle', '');
             setVal('editIdeaAiIndustry', '');
+            setVal('editIdeaAiIndustryOther', '');
+            document.getElementById('editIdeaAiIndustryOther')?.classList.add('hidden');
             setVal('editIdeaAiReason', '');
             
             document.getElementById('editIdeaModal')?.classList.add('open');
@@ -2432,7 +2436,8 @@
             
             // AI Training Hook
             const aiStyle = getVal('editIdeaAiStyle');
-            const aiInd = getVal('editIdeaAiIndustry');
+            let aiInd = getVal('editIdeaAiIndustry');
+            if (aiInd === 'other') aiInd = getVal('editIdeaAiIndustryOther');
             const aiReason = getVal('editIdeaAiReason');
             
             if (aiReason || aiStyle || aiInd) {
