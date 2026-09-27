@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
+<!DOCTYPE html><html lang="vi"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Báo Cáo Phân Tích Tuyển Tập Video Carousel: "Moving Postcards From Hong Kong"</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet">
 <style>
 :root {
     --bg-main: #070a0f;
@@ -783,7 +781,13 @@ video#mainPlayer {
 }
 
 </style>
-</head>
+
+<style class="video-player-container-fix">
+.video-player-container { height: 75vh !important; max-height: none !important; aspect-ratio: auto !important; }
+.carousel-stack { overflow-y: scroll !important; scroll-snap-type: y mandatory !important; }
+.carousel-stack > * { flex: 0 0 100% !important; height: 100% !important; object-fit: contain !important; scroll-snap-align: start !important; border: none !important; }
+</style>
+        </head>
 <body>
 
 <div class="app-container">
@@ -792,9 +796,14 @@ video#mainPlayer {
 
 <style>.carousel-stack::-webkit-scrollbar { display: none; }</style>
 <div class="carousel-stack" style="display:flex; flex-direction:column; gap:16px; height:100%; overflow-y:auto; scroll-snap-type:y mandatory; -ms-overflow-style:none; scrollbar-width:none;">
-<video src="https://ytuong.fedu.vn/api/video?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c" controls autoplay muted playsinline loop style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;"></video>
+<video src="https://ytuong.fedu.vn/api/video?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c" controls="" autoplay="" muted="" playsinline="" loop="" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;"></video>
 </div>
+
+<div class="carousel-nav-overlay" style="position:absolute; right:10px; bottom:20px; display:flex; flex-direction:column; gap:10px; z-index:100;">
+    <button class="nav-btn" onclick="const stack = document.querySelector('.carousel-stack'); if(stack) stack.scrollBy({top: -stack.clientHeight, behavior: 'smooth'})" style="padding:10px; background:rgba(0,0,0,0.6); color:white; border:none; border-radius:50%; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px;">▲</button>
+    <button class="nav-btn" onclick="const stack = document.querySelector('.carousel-stack'); if(stack) stack.scrollBy({top: stack.clientHeight, behavior: 'smooth'})" style="padding:10px; background:rgba(0,0,0,0.6); color:white; border:none; border-radius:50%; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px;">▼</button>
 </div>
+        </div>
         <div class="video-controls-panel">
             <div class="current-status-bar">
                 <span class="status-tag" id="shotStatusTag">🎬 Phân cảnh: Toàn bộ video</span>
@@ -817,7 +826,7 @@ video#mainPlayer {
         <div class="report-header-banner">
             <div class="header-top-row">
                 <span class="genre-badge">DIRECTOR BREAKDOWN</span>
-                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">8 SHOTS &bull; 20.00s</span>
+                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">8 SHOTS • 20.00s</span>
             </div>
             <h1 class="report-title">Báo Cáo Phân Tích Tuyển Tập Video Carousel: "Moving Postcards From Hong Kong"</h1>
             <div class="meta-tags-flex">
@@ -828,7 +837,7 @@ video#mainPlayer {
                         <span class="author-handle">(@jazziesillona)</span>
                         <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
                     </a>
-                </span></a></span>
+                </span>
                 <span>Tệp: <strong>Street_Photography_Carousel - @jazziesillona.html</strong></span>
                 <span>Trực quan: <strong>9:16 Vertical HD</strong></span>
             </div>
@@ -857,9 +866,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-1">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(0.0, 2.5, 'SHOT 01')">
-                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg" alt="SHOT 01" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg" alt="SHOT 01" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg">🔍</button>
                     <span class="thumb-time-badge">0.00s - 2.50s</span>
@@ -879,9 +888,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(0.0, 3.0, 'Slide 01: Visual Hook &amp; Moving Postcard Title (Mở Màn Đậm Chất Điện Ảnh)')">
-<img crossorigin="anonymous" alt="Slide 01: Visual Hook &amp; Moving Postcard Title (Mở Màn Đậm Chất Điện Ảnh)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg"/>
+<img crossorigin="anonymous" alt="Slide 01: Visual Hook &amp; Moving Postcard Title (Mở Màn Đậm Chất Điện Ảnh)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg">🔍</button>
 <span class="thumb-time-badge">0.00s - 3.00s</span>
@@ -900,7 +909,7 @@ video#mainPlayer {
 <div class="props-list">
 <div class="raw-card-content">
 <div class="slide-img-box">
-<img crossorigin="anonymous" alt="Slide 01: Visual Hook &amp; Moving Postcard Title (Mở Màn Đậm Chất Điện Ảnh)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg"/>
+<img crossorigin="anonymous" alt="Slide 01: Visual Hook &amp; Moving Postcard Title (Mở Màn Đậm Chất Điện Ảnh)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg">
 </div>
 <div class="slide-info">
 <div class="slide-header">
@@ -908,8 +917,8 @@ video#mainPlayer {
 <span class="slide-meta">18.04s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
 </div>
 <div class="slide-desc">
-<strong>Góc máy &amp; Bố cục:</strong> Medium Wide Shot (MWS) / 4:3 Film Frame (960x720) | Máy tĩnh (Locked-off Tripod), tiêu cự 35mm - 50mm, ánh sáng dịu nhẹ tự nhiên (Soft ambient daylight).<br/>
-<strong>Nội dung hình ảnh:</strong> Khung cảnh sạp đồ cổ/báo chí Hong Kong với chú mèo nằm ngủ say trên tấm gỗ tiền cảnh, người đi bộ lướt qua bậc thang. Xuất hiện Typography tiêu đề: 'MOVING POSTCARDS FROM HONG KONG'.<br/>
+<strong>Góc máy &amp; Bố cục:</strong> Medium Wide Shot (MWS) / 4:3 Film Frame (960x720) | Máy tĩnh (Locked-off Tripod), tiêu cự 35mm - 50mm, ánh sáng dịu nhẹ tự nhiên (Soft ambient daylight).<br>
+<strong>Nội dung hình ảnh:</strong> Khung cảnh sạp đồ cổ/báo chí Hong Kong với chú mèo nằm ngủ say trên tấm gỗ tiền cảnh, người đi bộ lướt qua bậc thang. Xuất hiện Typography tiêu đề: 'MOVING POSTCARDS FROM HONG KONG'.<br>
 <strong>Tâm lý giữ chân:</strong> Định vị phong cách nghệ thuật Living Photography (Bưu thiếp động), giữ chân người xem bằng nét tĩnh lặng đầy chất thơ giữa nhịp sống chuyển động.
         </div>
 <div class="tip-box">
@@ -934,9 +943,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-2">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(2.5, 5.0, 'SHOT 02')">
-                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg" alt="SHOT 02" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg" alt="SHOT 02" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg">🔍</button>
                     <span class="thumb-time-badge">2.50s - 5.00s</span>
@@ -956,9 +965,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(3.0, 6.0, 'Slide 02: Coastline Solitude &amp; Leading Lines (Khoảng Lặng Bờ Biển)')">
-<img crossorigin="anonymous" alt="Slide 02: Coastline Solitude &amp; Leading Lines (Khoảng Lặng Bờ Biển)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg"/>
+<img crossorigin="anonymous" alt="Slide 02: Coastline Solitude &amp; Leading Lines (Khoảng Lặng Bờ Biển)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg">🔍</button>
 <span class="thumb-time-badge">3.00s - 6.00s</span>
@@ -977,7 +986,7 @@ video#mainPlayer {
 <div class="props-list">
 <div class="raw-card-content">
 <div class="slide-img-box">
-<img crossorigin="anonymous" alt="Slide 02: Coastline Solitude &amp; Leading Lines (Khoảng Lặng Bờ Biển)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg"/>
+<img crossorigin="anonymous" alt="Slide 02: Coastline Solitude &amp; Leading Lines (Khoảng Lặng Bờ Biển)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg">
 </div>
 <div class="slide-info">
 <div class="slide-header">
@@ -985,8 +994,8 @@ video#mainPlayer {
 <span class="slide-meta">10.04s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
 </div>
 <div class="slide-desc">
-<strong>Góc máy &amp; Bố cục:</strong> Wide Environmental Shot / Rule of Thirds | Góc máy tĩnh tầm mắt (Eye-level), tận dụng cột biển báo chữ P làm điểm neo thị giác thẳng đứng đối xứng với đường chân trời biển.<br/>
-<strong>Nội dung hình ảnh:</strong> Người đàn ông trung niên đứng câu cá bên thanh chắn lan can kim loại ven biển Victoria Harbour, xa xa là cầu dây văng và núi non trong làn nước biển ngọc bích.<br/>
+<strong>Góc máy &amp; Bố cục:</strong> Wide Environmental Shot / Rule of Thirds | Góc máy tĩnh tầm mắt (Eye-level), tận dụng cột biển báo chữ P làm điểm neo thị giác thẳng đứng đối xứng với đường chân trời biển.<br>
+<strong>Nội dung hình ảnh:</strong> Người đàn ông trung niên đứng câu cá bên thanh chắn lan can kim loại ven biển Victoria Harbour, xa xa là cầu dây văng và núi non trong làn nước biển ngọc bích.<br>
 <strong>Tâm lý giữ chân:</strong> Chuyển đổi không gian từ phố thị nhộn nhịp sang bờ biển thoáng đãng, tạo nhịp thở thị giác (Visual Breathing Space) giúp người xem không bị ngợp.
         </div>
 <div class="tip-box">
@@ -1011,9 +1020,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-3">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(5.0, 7.5, 'SHOT 03')">
-                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg" alt="SHOT 03" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg" alt="SHOT 03" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg">🔍</button>
                     <span class="thumb-time-badge">5.00s - 7.50s</span>
@@ -1033,9 +1042,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(6.0, 9.0, 'Slide 03: Street Life &amp; Intimate Details (Nhịp Sống Hẻm Phố &amp; Chú Mèo)')">
-<img crossorigin="anonymous" alt="Slide 03: Street Life &amp; Intimate Details (Nhịp Sống Hẻm Phố &amp; Chú Mèo)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg"/>
+<img crossorigin="anonymous" alt="Slide 03: Street Life &amp; Intimate Details (Nhịp Sống Hẻm Phố &amp; Chú Mèo)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg">🔍</button>
 <span class="thumb-time-badge">6.00s - 9.00s</span>
@@ -1054,7 +1063,7 @@ video#mainPlayer {
 <div class="props-list">
 <div class="raw-card-content">
 <div class="slide-img-box">
-<img crossorigin="anonymous" alt="Slide 03: Street Life &amp; Intimate Details (Nhịp Sống Hẻm Phố &amp; Chú Mèo)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg"/>
+<img crossorigin="anonymous" alt="Slide 03: Street Life &amp; Intimate Details (Nhịp Sống Hẻm Phố &amp; Chú Mèo)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg">
 </div>
 <div class="slide-info">
 <div class="slide-header">
@@ -1062,8 +1071,8 @@ video#mainPlayer {
 <span class="slide-meta">10.72s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
 </div>
 <div class="slide-desc">
-<strong>Góc máy &amp; Bố cục:</strong> Medium Wide Shot / High Detail Focus | Máy tĩnh, bảng màu xanh rêu - đỏ đất ấm áp đặc trưng của những con phố cổ điển tại Central / Sheung Wan.<br/>
-<strong>Nội dung hình ảnh:</strong> Khung cảnh sạp hàng retro không còn Text Title, hé lộ trọn vẹn các tủ kính đồ gốm sứ phong thủy, áp phích nghệ thuật và dòng người tấp nập ngược xuôi.<br/>
+<strong>Góc máy &amp; Bố cục:</strong> Medium Wide Shot / High Detail Focus | Máy tĩnh, bảng màu xanh rêu - đỏ đất ấm áp đặc trưng của những con phố cổ điển tại Central / Sheung Wan.<br>
+<strong>Nội dung hình ảnh:</strong> Khung cảnh sạp hàng retro không còn Text Title, hé lộ trọn vẹn các tủ kính đồ gốm sứ phong thủy, áp phích nghệ thuật và dòng người tấp nập ngược xuôi.<br>
 <strong>Tâm lý giữ chân:</strong> Kích thích khám phá chi tiết vi mô (Micro-exploration), tăng thời gian dừng lại quan sát từng ngóc ngách của bức tranh đời sống.
         </div>
 <div class="tip-box">
@@ -1088,9 +1097,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-4">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(7.5, 10.0, 'SHOT 04')">
-                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg" alt="SHOT 04" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg" alt="SHOT 04" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg">🔍</button>
                     <span class="thumb-time-badge">7.50s - 10.00s</span>
@@ -1110,9 +1119,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(9.0, 12.0, 'Slide 04: Urban Slice &amp; Street Geometry (Hình Khối Góc Phố &amp; Nhịp Bước)')">
-<img crossorigin="anonymous" alt="Slide 04: Urban Slice &amp; Street Geometry (Hình Khối Góc Phố &amp; Nhịp Bước)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg"/>
+<img crossorigin="anonymous" alt="Slide 04: Urban Slice &amp; Street Geometry (Hình Khối Góc Phố &amp; Nhịp Bước)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg">🔍</button>
 <span class="thumb-time-badge">9.00s - 12.00s</span>
@@ -1131,7 +1140,7 @@ video#mainPlayer {
 <div class="props-list">
 <div class="raw-card-content">
 <div class="slide-img-box">
-<img crossorigin="anonymous" alt="Slide 04: Urban Slice &amp; Street Geometry (Hình Khối Góc Phố &amp; Nhịp Bước)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg"/>
+<img crossorigin="anonymous" alt="Slide 04: Urban Slice &amp; Street Geometry (Hình Khối Góc Phố &amp; Nhịp Bước)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg">
 </div>
 <div class="slide-info">
 <div class="slide-header">
@@ -1139,8 +1148,8 @@ video#mainPlayer {
 <span class="slide-meta">11.59s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
 </div>
 <div class="slide-desc">
-<strong>Góc máy &amp; Bố cục:</strong> Medium Street Corner Shot / Multi-layer Depth | Bố cục phân 3 lớp: Tiền cảnh rào chắn &amp; biển báo đỏ -&gt; Trung cảnh bà cụ bước đi -&gt; Hậu cảnh quán cafe và nhà kính phía trên.<br/>
-<strong>Nội dung hình ảnh:</strong> Quán cafe sơn màu xanh teal cổ điển ở góc ngã ba, người phụ nữ lớn tuổi đeo khẩu trang chống gậy bước qua đường, cạnh biển báo cấm xe máy màu đỏ nổi bật.<br/>
+<strong>Góc máy &amp; Bố cục:</strong> Medium Street Corner Shot / Multi-layer Depth | Bố cục phân 3 lớp: Tiền cảnh rào chắn &amp; biển báo đỏ -&gt; Trung cảnh bà cụ bước đi -&gt; Hậu cảnh quán cafe và nhà kính phía trên.<br>
+<strong>Nội dung hình ảnh:</strong> Quán cafe sơn màu xanh teal cổ điển ở góc ngã ba, người phụ nữ lớn tuổi đeo khẩu trang chống gậy bước qua đường, cạnh biển báo cấm xe máy màu đỏ nổi bật.<br>
 <strong>Tâm lý giữ chân:</strong> Khắc họa câu chuyện con người đô thị (Human Element in Urban Space), tạo sự đồng cảm và tò mò về cuộc sống thường nhật.
         </div>
 <div class="tip-box">
@@ -1165,9 +1174,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-5">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(10.0, 12.5, 'SHOT 05')">
-                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg" alt="SHOT 05" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg" alt="SHOT 05" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg">🔍</button>
                     <span class="thumb-time-badge">10.00s - 12.50s</span>
@@ -1187,9 +1196,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(30.0, 17.0, 'Slide 05: Top-down Geometry &amp; Golden Light (Góc Nhìn Chim Bay &amp; Ánh Vàng Rực Rỡ)')">
-<img crossorigin="anonymous" alt="Slide 05: Top-down Geometry &amp; Golden Light (Góc Nhìn Chim Bay &amp; Ánh Vàng Rực Rỡ)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg"/>
+<img crossorigin="anonymous" alt="Slide 05: Top-down Geometry &amp; Golden Light (Góc Nhìn Chim Bay &amp; Ánh Vàng Rực Rỡ)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg">🔍</button>
 <span class="thumb-time-badge">30.00s - 17.00s</span>
@@ -1208,7 +1217,7 @@ video#mainPlayer {
 <div class="props-list">
 <div class="raw-card-content">
 <div class="slide-img-box">
-<img crossorigin="anonymous" alt="Slide 05: Top-down Geometry &amp; Golden Light (Góc Nhìn Chim Bay &amp; Ánh Vàng Rực Rỡ)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg"/>
+<img crossorigin="anonymous" alt="Slide 05: Top-down Geometry &amp; Golden Light (Góc Nhìn Chim Bay &amp; Ánh Vàng Rực Rỡ)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg">
 </div>
 <div class="slide-info">
 <div class="slide-header">
@@ -1216,8 +1225,8 @@ video#mainPlayer {
 <span class="slide-meta">7.63s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
 </div>
 <div class="slide-desc">
-<strong>Góc máy &amp; Bố cục:</strong> High Angle Bird's Eye View / Geometric Grid | Góc quay từ trên cao nhìn xuống từ cầu vượt bộ hành, đón ánh nắng chiều vàng (Golden Hour) rọi xiên 45 độ tạo bóng đổ dài tuyệt đẹp.<br/>
-<strong>Nội dung hình ảnh:</strong> Giao lộ đường ray tàu điện (Tram tracks) với mạng lưới vạch kẻ vàng đan chéo. Người đàn ông đẩy xe chất đầy hàng hóa đổ bóng dài in trên mặt đường.<br/>
+<strong>Góc máy &amp; Bố cục:</strong> High Angle Bird's Eye View / Geometric Grid | Góc quay từ trên cao nhìn xuống từ cầu vượt bộ hành, đón ánh nắng chiều vàng (Golden Hour) rọi xiên 45 độ tạo bóng đổ dài tuyệt đẹp.<br>
+<strong>Nội dung hình ảnh:</strong> Giao lộ đường ray tàu điện (Tram tracks) với mạng lưới vạch kẻ vàng đan chéo. Người đàn ông đẩy xe chất đầy hàng hóa đổ bóng dài in trên mặt đường.<br>
 <strong>Tâm lý giữ chân:</strong> Đỉnh cao về bố cục hình học (Geometric Symmetry) và ánh sáng, là slide có 'Stopping Power' mạnh nhất giữ chân người xem.
         </div>
 <div class="tip-box">
@@ -1242,9 +1251,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-6">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(12.5, 15.0, 'SHOT 06')">
-                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg" alt="SHOT 06" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg" alt="SHOT 06" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg">🔍</button>
                     <span class="thumb-time-badge">12.50s - 15.00s</span>
@@ -1264,9 +1273,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(70.0, 85.0, 'Slide 06: Frame within a Frame &amp; Coffee Culture (Khung Trong Khung &amp; Góc Ban Mai)')">
-<img crossorigin="anonymous" alt="Slide 06: Frame within a Frame &amp; Coffee Culture (Khung Trong Khung &amp; Góc Ban Mai)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg"/>
+<img crossorigin="anonymous" alt="Slide 06: Frame within a Frame &amp; Coffee Culture (Khung Trong Khung &amp; Góc Ban Mai)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg">🔍</button>
 <span class="thumb-time-badge">70.00s - 85.00s</span>
@@ -1285,7 +1294,7 @@ video#mainPlayer {
 <div class="props-list">
 <div class="raw-card-content">
 <div class="slide-img-box">
-<img crossorigin="anonymous" alt="Slide 06: Frame within a Frame &amp; Coffee Culture (Khung Trong Khung &amp; Góc Ban Mai)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg"/>
+<img crossorigin="anonymous" alt="Slide 06: Frame within a Frame &amp; Coffee Culture (Khung Trong Khung &amp; Góc Ban Mai)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg">
 </div>
 <div class="slide-info">
 <div class="slide-header">
@@ -1293,8 +1302,8 @@ video#mainPlayer {
 <span class="slide-meta">11.43s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
 </div>
 <div class="slide-desc">
-<strong>Góc máy &amp; Bố cục:</strong> Frame within a Frame / Architectural Framing | Máy tĩnh, tiêu cự nén không gian (Telephoto 70-85mm), có người đi bộ lướt ngang tiền cảnh tạo hiệu ứng chuyển động tự nhiên.<br/>
-<strong>Nội dung hình ảnh:</strong> Khung hình nhìn xuyên qua lối đi bộ có hai cột trụ xanh và lan can gạch để đóng khung ô cửa sổ quán cafe vẽ tranh tường nghệ thuật, nơi các vị khách đang ngồi thưởng thức đồ uống.<br/>
+<strong>Góc máy &amp; Bố cục:</strong> Frame within a Frame / Architectural Framing | Máy tĩnh, tiêu cự nén không gian (Telephoto 70-85mm), có người đi bộ lướt ngang tiền cảnh tạo hiệu ứng chuyển động tự nhiên.<br>
+<strong>Nội dung hình ảnh:</strong> Khung hình nhìn xuyên qua lối đi bộ có hai cột trụ xanh và lan can gạch để đóng khung ô cửa sổ quán cafe vẽ tranh tường nghệ thuật, nơi các vị khách đang ngồi thưởng thức đồ uống.<br>
 <strong>Tâm lý giữ chân:</strong> Kỹ thuật đóng khung thị giác dẫn dắt ánh nhìn tập trung tuyệt đối vào không gian ấm cúng bên trong ô cửa sổ.
         </div>
 <div class="tip-box">
@@ -1319,9 +1328,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-7">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(15.0, 17.5, 'SHOT 07')">
-                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg" alt="SHOT 07" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg" alt="SHOT 07" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg">🔍</button>
                     <span class="thumb-time-badge">15.00s - 17.50s</span>
@@ -1341,9 +1350,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(18.0, 21.0, 'Slide 07: Symmetrical Floral Harmony (Bố Cục Đối Xứng Tiệm Hoa)')">
-<img crossorigin="anonymous" alt="Slide 07: Symmetrical Floral Harmony (Bố Cục Đối Xứng Tiệm Hoa)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg"/>
+<img crossorigin="anonymous" alt="Slide 07: Symmetrical Floral Harmony (Bố Cục Đối Xứng Tiệm Hoa)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg">🔍</button>
 <span class="thumb-time-badge">18.00s - 21.00s</span>
@@ -1362,7 +1371,7 @@ video#mainPlayer {
 <div class="props-list">
 <div class="raw-card-content">
 <div class="slide-img-box">
-<img crossorigin="anonymous" alt="Slide 07: Symmetrical Floral Harmony (Bố Cục Đối Xứng Tiệm Hoa)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg"/>
+<img crossorigin="anonymous" alt="Slide 07: Symmetrical Floral Harmony (Bố Cục Đối Xứng Tiệm Hoa)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg">
 </div>
 <div class="slide-info">
 <div class="slide-header">
@@ -1370,8 +1379,8 @@ video#mainPlayer {
 <span class="slide-meta">9.09s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
 </div>
 <div class="slide-desc">
-<strong>Góc máy &amp; Bố cục:</strong> Frontal Symmetrical Shot / Color Explosion | Máy tĩnh chính diện đối xứng hoàn hảo, ánh đèn huỳnh quang kết hợp ánh sáng ban ngày làm nổi bật độ bão hòa màu sắc tươi tắn.<br/>
-<strong>Nội dung hình ảnh:</strong> Sạp hoa tươi truyền thống rực rỡ sắc màu với biển hiệu chữ Hán đỏ '鮮花軒鮮花公司', hàng chục bình hoa xếp tầng lớp quanh người phụ nữ đang cần mẫn cắm hoa.<br/>
+<strong>Góc máy &amp; Bố cục:</strong> Frontal Symmetrical Shot / Color Explosion | Máy tĩnh chính diện đối xứng hoàn hảo, ánh đèn huỳnh quang kết hợp ánh sáng ban ngày làm nổi bật độ bão hòa màu sắc tươi tắn.<br>
+<strong>Nội dung hình ảnh:</strong> Sạp hoa tươi truyền thống rực rỡ sắc màu với biển hiệu chữ Hán đỏ '鮮花軒鮮花公司', hàng chục bình hoa xếp tầng lớp quanh người phụ nữ đang cần mẫn cắm hoa.<br>
 <strong>Tâm lý giữ chân:</strong> Bùng nổ thị giác về màu sắc (Color Explosion), đem lại nguồn năng lượng tươi mới và sự mãn nhãn thị giác sau các cảnh phố thị.
         </div>
 <div class="tip-box">
@@ -1396,9 +1405,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-8">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(17.5, 20.0, 'SHOT 08')">
-                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg" alt="SHOT 08" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg" alt="SHOT 08" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg">🔍</button>
                     <span class="thumb-time-badge">17.50s - 20.00s</span>
@@ -1418,9 +1427,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(21.0, 24.0, 'Slide 08: Poetic Stillness &amp; Coastal Farewell (Khoảnh Khắc Bình Yên &amp; Lời Tạm Biệt)')">
-<img crossorigin="anonymous" alt="Slide 08: Poetic Stillness &amp; Coastal Farewell (Khoảnh Khắc Bình Yên &amp; Lời Tạm Biệt)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg"/>
+<img crossorigin="anonymous" alt="Slide 08: Poetic Stillness &amp; Coastal Farewell (Khoảnh Khắc Bình Yên &amp; Lời Tạm Biệt)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg">🔍</button>
 <span class="thumb-time-badge">21.00s - 24.00s</span>
@@ -1439,7 +1448,7 @@ video#mainPlayer {
 <div class="props-list">
 <div class="raw-card-content">
 <div class="slide-img-box">
-<img crossorigin="anonymous" alt="Slide 08: Poetic Stillness &amp; Coastal Farewell (Khoảnh Khắc Bình Yên &amp; Lời Tạm Biệt)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg"/>
+<img crossorigin="anonymous" alt="Slide 08: Poetic Stillness &amp; Coastal Farewell (Khoảnh Khắc Bình Yên &amp; Lời Tạm Biệt)" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg">
 </div>
 <div class="slide-info">
 <div class="slide-header">
@@ -1447,8 +1456,8 @@ video#mainPlayer {
 <span class="slide-meta">9.51s • 960x720 • 24fps • 4:3 (Ngang Cổ Điển)</span>
 </div>
 <div class="slide-desc">
-<strong>Góc máy &amp; Bố cục:</strong> Medium Back Shot / Atmospheric Coastal Horizon | Máy tĩnh sau lưng nhân vật, bầu trời phủ lớp sương mù điện ảnh (Atmospheric Haze), ánh sáng pastel dịu nhẹ.<br/>
-<strong>Nội dung hình ảnh:</strong> Hai người phụ nữ cao tuổi (áo đỏ và áo len sáng) ngồi tâm tình bên chiếc ghế gỗ nhìn ra vịnh biển xanh ngọc bích, phía xa có chiếc phà rẽ sóng và nhành hoa đào vươn góc trên.<br/>
+<strong>Góc máy &amp; Bố cục:</strong> Medium Back Shot / Atmospheric Coastal Horizon | Máy tĩnh sau lưng nhân vật, bầu trời phủ lớp sương mù điện ảnh (Atmospheric Haze), ánh sáng pastel dịu nhẹ.<br>
+<strong>Nội dung hình ảnh:</strong> Hai người phụ nữ cao tuổi (áo đỏ và áo len sáng) ngồi tâm tình bên chiếc ghế gỗ nhìn ra vịnh biển xanh ngọc bích, phía xa có chiếc phà rẽ sóng và nhành hoa đào vươn góc trên.<br>
 <strong>Tâm lý giữ chân:</strong> Đem lại cảm xúc lắng đọng, thư thái và trọn vẹn cho toàn bộ hành trình 'Moving Postcards', thúc đẩy người xem thả tim, lưu bài và chia sẻ.
         </div>
 <div class="tip-box">
@@ -1475,7 +1484,7 @@ video#mainPlayer {
             
         <div class="grid-card" onclick="playShot(0.0, 2.5, 'SHOT 01')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg" alt="SHOT 01" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg" alt="SHOT 01" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg">🔍</button>
                 <div class="grid-badge-top">SHOT 01</div>
@@ -1486,7 +1495,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(2.5, 5.0, 'SHOT 02')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg" alt="SHOT 02" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg" alt="SHOT 02" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg">🔍</button>
                 <div class="grid-badge-top">SHOT 02</div>
@@ -1497,7 +1506,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(5.0, 7.5, 'SHOT 03')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg" alt="SHOT 03" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg" alt="SHOT 03" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg">🔍</button>
                 <div class="grid-badge-top">SHOT 03</div>
@@ -1508,7 +1517,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(7.5, 10.0, 'SHOT 04')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg" alt="SHOT 04" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg" alt="SHOT 04" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg">🔍</button>
                 <div class="grid-badge-top">SHOT 04</div>
@@ -1519,7 +1528,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(10.0, 12.5, 'SHOT 05')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg" alt="SHOT 05" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg" alt="SHOT 05" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg">🔍</button>
                 <div class="grid-badge-top">SHOT 05</div>
@@ -1530,7 +1539,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(12.5, 15.0, 'SHOT 06')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg" alt="SHOT 06" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg" alt="SHOT 06" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg">🔍</button>
                 <div class="grid-badge-top">SHOT 06</div>
@@ -1541,7 +1550,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(15.0, 17.5, 'SHOT 07')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg" alt="SHOT 07" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg" alt="SHOT 07" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg">🔍</button>
                 <div class="grid-badge-top">SHOT 07</div>
@@ -1552,7 +1561,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(17.5, 20.0, 'SHOT 08')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg" alt="SHOT 08" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg" alt="SHOT 08" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg">🔍</button>
                 <div class="grid-badge-top">SHOT 08</div>
@@ -1568,13 +1577,13 @@ video#mainPlayer {
     <div class="drawer-panel" onclick="event.stopPropagation()">
         <div class="drawer-header">
             <div class="drawer-title">📑 MỤC LỤC PHÂN CẢNH (8)</div>
-            <button class="drawer-close-btn" onclick="toggleDrawer(false)">&times;</button>
+            <button class="drawer-close-btn" onclick="toggleDrawer(false)">×</button>
         </div>
         <div class="drawer-list">
             
         <div class="drawer-item" onclick="jumpToShot(1, 0.0, 2.5, 'SHOT 01')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg" alt="SHOT 01" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.jpg" alt="SHOT 01" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 01</div>
@@ -1586,7 +1595,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(2, 2.5, 5.0, 'SHOT 02')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg" alt="SHOT 02" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_002_e6bd86b6.jpg" alt="SHOT 02" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 02</div>
@@ -1598,7 +1607,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(3, 5.0, 7.5, 'SHOT 03')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg" alt="SHOT 03" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.jpg" alt="SHOT 03" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 03</div>
@@ -1610,7 +1619,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(4, 7.5, 10.0, 'SHOT 04')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg" alt="SHOT 04" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_004_ed092b7c.jpg" alt="SHOT 04" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 04</div>
@@ -1622,7 +1631,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(5, 10.0, 12.5, 'SHOT 05')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg" alt="SHOT 05" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_005_52b22b64.jpg" alt="SHOT 05" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 05</div>
@@ -1634,7 +1643,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(6, 12.5, 15.0, 'SHOT 06')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg" alt="SHOT 06" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_006_5d37dffd.jpg" alt="SHOT 06" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 06</div>
@@ -1646,7 +1655,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(7, 15.0, 17.5, 'SHOT 07')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg" alt="SHOT 07" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_007_dcc35147.jpg" alt="SHOT 07" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 07</div>
@@ -1658,7 +1667,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(8, 17.5, 20.0, 'SHOT 08')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg" alt="SHOT 08" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_008_a41d56ab.jpg" alt="SHOT 08" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 08</div>
@@ -1672,8 +1681,8 @@ video#mainPlayer {
 </div>
 
 <div id="lightboxModal" onclick="closeLightbox()">
-    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <img crossorigin="anonymous" id="lightboxImg" src="" onclick="event.stopPropagation()" />
+    <span class="lightbox-close" onclick="closeLightbox()">×</span>
+    <img crossorigin="anonymous" id="lightboxImg" src="" onclick="event.stopPropagation()">
     <div id="lightboxCaption"></div>
 </div>
 
@@ -1718,7 +1727,6 @@ function playShot(startTime, endTime, label) {
         tag.innerText = `🎬 ${label || 'Phân cảnh'}: [${startTime.toFixed(2)}s${endTxt}]`;
     }
     if(player) player.currentTime = startTime;
-    }
     document.querySelectorAll('.shot-card').forEach(c => c.classList.remove('active-playing'));
     const matchCard = Array.from(document.querySelectorAll('.shot-card')).find(c => c.innerText.includes(label));
     if (matchCard) matchCard.classList.add('active-playing');
@@ -1847,5 +1855,5 @@ document.addEventListener('keydown', (e) => {
 });
 
 </script>
-</body>
-</html>
+
+</body></html>

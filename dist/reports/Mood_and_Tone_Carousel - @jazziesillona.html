@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
+<!DOCTYPE html><html lang="vi"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Báo Cáo Đạo Diễn: Tuyển Tập Carousel Video @jazziesillona</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet">
 <style>
 :root {
     --bg-main: #070a0f;
@@ -783,7 +781,13 @@ video#mainPlayer {
 }
 
 </style>
-</head>
+
+<style class="video-player-container-fix">
+.video-player-container { height: 75vh !important; max-height: none !important; aspect-ratio: auto !important; }
+.carousel-stack { overflow-y: scroll !important; scroll-snap-type: y mandatory !important; }
+.carousel-stack > * { flex: 0 0 100% !important; height: 100% !important; object-fit: contain !important; scroll-snap-align: start !important; border: none !important; }
+</style>
+        </head>
 <body>
 
 <div class="app-container">
@@ -792,9 +796,14 @@ video#mainPlayer {
 
 <style>.carousel-stack::-webkit-scrollbar { display: none; }</style>
 <div class="carousel-stack" style="display:flex; flex-direction:column; gap:16px; height:100%; overflow-y:auto; scroll-snap-type:y mandatory; -ms-overflow-style:none; scrollbar-width:none;">
-<video src="https://media.fedu.vn/videos/slide_01_DWrDQgoj7Uw.mp4" controls autoplay muted playsinline loop style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;"></video>
+<video src="https://media.fedu.vn/videos/slide_01_DWrDQgoj7Uw.mp4" controls="" autoplay="" muted="" playsinline="" loop="" style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;"></video>
 </div>
+
+<div class="carousel-nav-overlay" style="position:absolute; right:10px; bottom:20px; display:flex; flex-direction:column; gap:10px; z-index:100;">
+    <button class="nav-btn" onclick="const stack = document.querySelector('.carousel-stack'); if(stack) stack.scrollBy({top: -stack.clientHeight, behavior: 'smooth'})" style="padding:10px; background:rgba(0,0,0,0.6); color:white; border:none; border-radius:50%; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px;">▲</button>
+    <button class="nav-btn" onclick="const stack = document.querySelector('.carousel-stack'); if(stack) stack.scrollBy({top: stack.clientHeight, behavior: 'smooth'})" style="padding:10px; background:rgba(0,0,0,0.6); color:white; border:none; border-radius:50%; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px;">▼</button>
 </div>
+        </div>
         <div class="video-controls-panel">
             <div class="current-status-bar">
                 <span class="status-tag" id="shotStatusTag">🎬 Phân cảnh: Toàn bộ video</span>
@@ -817,7 +826,7 @@ video#mainPlayer {
         <div class="report-header-banner">
             <div class="header-top-row">
                 <span class="genre-badge">DIRECTOR BREAKDOWN</span>
-                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">4 SHOTS &bull; 10.00s</span>
+                <span style="font-size:12px; color:var(--accent-amber); font-family:var(--font-mono); font-weight:700;">4 SHOTS • 10.00s</span>
             </div>
             <h1 class="report-title">Báo Cáo Đạo Diễn: Tuyển Tập Carousel Video @jazziesillona</h1>
             <div class="meta-tags-flex">
@@ -828,7 +837,7 @@ video#mainPlayer {
                         <span class="author-handle">(@jazziesillona)</span>
                         <span class="filter-action-chip">🔍 Lọc toàn bộ video</span>
                     </a>
-                </span></a></span>
+                </span>
                 <span>Tệp: <strong>Mood_and_Tone_Carousel - @jazziesillona.html</strong></span>
                 <span>Trực quan: <strong>9:16 Vertical HD</strong></span>
             </div>
@@ -855,9 +864,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-1">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(0.0, 2.5, 'SHOT 01')">
-                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.jpg" alt="SHOT 01" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.jpg" alt="SHOT 01" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.jpg">🔍</button>
                     <span class="thumb-time-badge">0.00s - 2.50s</span>
@@ -877,9 +886,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div 12s"')"="" class="shot-thumb-wrap" in="" iphone="" on="" onclick="playShot(0.0, 3.0, 'Hong Kong Cinematic Montage - " shot="">
-<img crossorigin="anonymous" 12s""="" alt="Hong Kong Cinematic Montage - " class="shot-img" in="" iphone="" loading="lazy" on="" shot="" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.jpg"/>
+<img crossorigin="anonymous" 12s""="" alt="Hong Kong Cinematic Montage - " class="shot-img" in="" iphone="" loading="lazy" on="" shot="" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button -="" 12s"="" 3.0s]')"="" [0.0s="" class="zoom-btn" in="" iphone="" on="" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.jpg" shot="">🔍</button>
 <span class="thumb-time-badge">0.00s - 3.00s</span>
@@ -897,7 +906,7 @@ video#mainPlayer {
 </div>
 <div class="props-list">
 <div class="raw-card-content">
-<div class="slide-img-box"><img crossorigin="anonymous" alt="Slide 01" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.jpg"/></div>
+<div class="slide-img-box"><img crossorigin="anonymous" alt="Slide 01" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.jpg"></div>
 <div class="slide-info">
 <div>
 <span class="tag tag-hook">SLIDE 01 • 11.37S</span>
@@ -929,9 +938,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-2">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(2.5, 5.0, 'SHOT 02')">
-                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_010_74ebce9c.jpg" alt="SHOT 02" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_010_74ebce9c.jpg" alt="SHOT 02" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_010_74ebce9c.jpg">🔍</button>
                     <span class="thumb-time-badge">2.50s - 5.00s</span>
@@ -951,9 +960,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(3.0, 6.0, 'Chrysler Building New York - Khói Hơi Nước &amp; Ánh Sáng Vàng Sớm')">
-<img crossorigin="anonymous" alt="Chrysler Building New York - Khói Hơi Nước &amp; Ánh Sáng Vàng Sớm" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_010_74ebce9c.jpg"/>
+<img crossorigin="anonymous" alt="Chrysler Building New York - Khói Hơi Nước &amp; Ánh Sáng Vàng Sớm" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_010_74ebce9c.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_010_74ebce9c.jpg">🔍</button>
 <span class="thumb-time-badge">3.00s - 6.00s</span>
@@ -971,7 +980,7 @@ video#mainPlayer {
 </div>
 <div class="props-list">
 <div class="raw-card-content">
-<div class="slide-img-box"><img crossorigin="anonymous" alt="Slide 02" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_010_74ebce9c.jpg"/></div>
+<div class="slide-img-box"><img crossorigin="anonymous" alt="Slide 02" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_010_74ebce9c.jpg"></div>
 <div class="slide-info">
 <div>
 <span class="tag tag-city">SLIDE 02 • 6.83S</span>
@@ -1003,9 +1012,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-3">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(5.0, 7.5, 'SHOT 03')">
-                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_011_b22e8cde.jpg" alt="SHOT 03" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_011_b22e8cde.jpg" alt="SHOT 03" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_011_b22e8cde.jpg">🔍</button>
                     <span class="thumb-time-badge">5.00s - 7.50s</span>
@@ -1025,9 +1034,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(6.0, 9.0, 'Creator Meetup Tại Rockefeller Center Ice Rink (NYC)')">
-<img crossorigin="anonymous" alt="Creator Meetup Tại Rockefeller Center Ice Rink (NYC)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_011_b22e8cde.jpg"/>
+<img crossorigin="anonymous" alt="Creator Meetup Tại Rockefeller Center Ice Rink (NYC)" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_011_b22e8cde.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_011_b22e8cde.jpg">🔍</button>
 <span class="thumb-time-badge">6.00s - 9.00s</span>
@@ -1045,7 +1054,7 @@ video#mainPlayer {
 </div>
 <div class="props-list">
 <div class="raw-card-content">
-<div class="slide-img-box"><img crossorigin="anonymous" alt="Slide 03" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_011_b22e8cde.jpg"/></div>
+<div class="slide-img-box"><img crossorigin="anonymous" alt="Slide 03" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_011_b22e8cde.jpg"></div>
 <div class="slide-info">
 <div>
 <span class="tag tag-community">SLIDE 03 • 7.07S</span>
@@ -1068,7 +1077,7 @@ video#mainPlayer {
 </div>
                 </div>
                 <div class="tags-row">
-                    <span class="tag-pill">SLIDE 03 • 7.07S</span><span class="tag-pill">COMMUNITY & EMOTION</span>
+                    <span class="tag-pill">SLIDE 03 • 7.07S</span><span class="tag-pill">COMMUNITY &amp; EMOTION</span>
                 </div>
             </div>
         </div>
@@ -1077,9 +1086,9 @@ video#mainPlayer {
         <div class="shot-card" id="shot-card-4">
             <div class="shot-media-col">
                 <div class="shot-thumb-wrap" onclick="playShot(7.5, 10.0, 'SHOT 04')">
-                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_012_ee391047.jpg" alt="SHOT 04" class="shot-img" loading="lazy" />
+                    <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_012_ee391047.jpg" alt="SHOT 04" class="shot-img" loading="lazy">
                     <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                     <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_012_ee391047.jpg">🔍</button>
                     <span class="thumb-time-badge">7.50s - 10.00s</span>
@@ -1099,9 +1108,9 @@ video#mainPlayer {
                     <div class="raw-card-content">
 <div class="shot-media-col">
 <div class="shot-thumb-wrap" onclick="playShot(9.0, 12.0, 'Thẻ Apple Champs-Élysées Paris &amp; Tính Năng iOS Subject Lift')">
-<img crossorigin="anonymous" alt="Thẻ Apple Champs-Élysées Paris &amp; Tính Năng iOS Subject Lift" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_012_ee391047.jpg"/>
+<img crossorigin="anonymous" alt="Thẻ Apple Champs-Élysées Paris &amp; Tính Năng iOS Subject Lift" class="shot-img" loading="lazy" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_012_ee391047.jpg">
 <div class="play-overlay">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
 </div>
 <button class="zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_012_ee391047.jpg">🔍</button>
 <span class="thumb-time-badge">9.00s - 12.00s</span>
@@ -1119,7 +1128,7 @@ video#mainPlayer {
 </div>
 <div class="props-list">
 <div class="raw-card-content">
-<div class="slide-img-box"><img crossorigin="anonymous" alt="Slide 04" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_012_ee391047.jpg"/></div>
+<div class="slide-img-box"><img crossorigin="anonymous" alt="Slide 04" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_012_ee391047.jpg"></div>
 <div class="slide-info">
 <div>
 <span class="tag tag-brand">SLIDE 04 • 9.70S</span>
@@ -1142,7 +1151,7 @@ video#mainPlayer {
 </div>
                 </div>
                 <div class="tags-row">
-                    <span class="tag-pill">SLIDE 04 • 9.70S</span><span class="tag-pill">INTERACTIVE UI & BRAND PROOF</span>
+                    <span class="tag-pill">SLIDE 04 • 9.70S</span><span class="tag-pill">INTERACTIVE UI &amp; BRAND PROOF</span>
                 </div>
             </div>
         </div>
@@ -1153,7 +1162,7 @@ video#mainPlayer {
             
         <div class="grid-card" onclick="playShot(0.0, 2.5, 'SHOT 01')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.jpg" alt="SHOT 01" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.jpg" alt="SHOT 01" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.jpg">🔍</button>
                 <div class="grid-badge-top">SHOT 01</div>
@@ -1164,7 +1173,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(2.5, 5.0, 'SHOT 02')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_010_74ebce9c.jpg" alt="SHOT 02" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_010_74ebce9c.jpg" alt="SHOT 02" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_010_74ebce9c.jpg">🔍</button>
                 <div class="grid-badge-top">SHOT 02</div>
@@ -1175,7 +1184,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(5.0, 7.5, 'SHOT 03')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_011_b22e8cde.jpg" alt="SHOT 03" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_011_b22e8cde.jpg" alt="SHOT 03" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_011_b22e8cde.jpg">🔍</button>
                 <div class="grid-badge-top">SHOT 03</div>
@@ -1186,7 +1195,7 @@ video#mainPlayer {
 
         <div class="grid-card" onclick="playShot(7.5, 10.0, 'SHOT 04')">
             <div class="grid-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_012_ee391047.jpg" alt="SHOT 04" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_012_ee391047.jpg" alt="SHOT 04" loading="lazy">
                 <div class="grid-play-icon">▶</div>
                 <button class="grid-zoom-btn" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_012_ee391047.jpg">🔍</button>
                 <div class="grid-badge-top">SHOT 04</div>
@@ -1202,13 +1211,13 @@ video#mainPlayer {
     <div class="drawer-panel" onclick="event.stopPropagation()">
         <div class="drawer-header">
             <div class="drawer-title">📑 MỤC LỤC PHÂN CẢNH (4)</div>
-            <button class="drawer-close-btn" onclick="toggleDrawer(false)">&times;</button>
+            <button class="drawer-close-btn" onclick="toggleDrawer(false)">×</button>
         </div>
         <div class="drawer-list">
             
         <div class="drawer-item" onclick="jumpToShot(1, 0.0, 2.5, 'SHOT 01')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.jpg" alt="SHOT 01" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.jpg" alt="SHOT 01" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 01</div>
@@ -1220,7 +1229,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(2, 2.5, 5.0, 'SHOT 02')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_010_74ebce9c.jpg" alt="SHOT 02" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_010_74ebce9c.jpg" alt="SHOT 02" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 02</div>
@@ -1232,7 +1241,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(3, 5.0, 7.5, 'SHOT 03')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_011_b22e8cde.jpg" alt="SHOT 03" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_011_b22e8cde.jpg" alt="SHOT 03" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 03</div>
@@ -1244,7 +1253,7 @@ video#mainPlayer {
 
         <div class="drawer-item" onclick="jumpToShot(4, 7.5, 10.0, 'SHOT 04')">
             <div class="drawer-thumb">
-                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_012_ee391047.jpg" alt="SHOT 04" loading="lazy" />
+                <img crossorigin="anonymous" src="https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_012_ee391047.jpg" alt="SHOT 04" loading="lazy">
             </div>
             <div class="drawer-info">
                 <div class="drawer-shot-title">SHOT 04</div>
@@ -1258,8 +1267,8 @@ video#mainPlayer {
 </div>
 
 <div id="lightboxModal" onclick="closeLightbox()">
-    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <img crossorigin="anonymous" id="lightboxImg" src="" onclick="event.stopPropagation()" />
+    <span class="lightbox-close" onclick="closeLightbox()">×</span>
+    <img crossorigin="anonymous" id="lightboxImg" src="" onclick="event.stopPropagation()">
     <div id="lightboxCaption"></div>
 </div>
 
@@ -1304,7 +1313,6 @@ function playShot(startTime, endTime, label) {
         tag.innerText = `🎬 ${label || 'Phân cảnh'}: [${startTime.toFixed(2)}s${endTxt}]`;
     }
     if(player) player.currentTime = startTime;
-    }
     document.querySelectorAll('.shot-card').forEach(c => c.classList.remove('active-playing'));
     const matchCard = Array.from(document.querySelectorAll('.shot-card')).find(c => c.innerText.includes(label));
     if (matchCard) matchCard.classList.add('active-playing');
@@ -1433,5 +1441,5 @@ document.addEventListener('keydown', (e) => {
 });
 
 </script>
-</body>
-</html>
+
+</body></html>
