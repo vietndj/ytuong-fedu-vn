@@ -23476,20 +23476,19 @@
       "icon": "⚡"
     },
     "industry": {
-      "id": "ky-thuat-quay",
-      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
-      "icon": "🎯"
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
     },
-    "purpose": "Chuyển cảnh 1",
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @page_vrn",
     "tech_tags": [
-      "Chuyển Cảnh 1",
       "Establishing Hook Shot",
       "Close-Up / Macro Detail Shot",
       "High-key Lighting"
     ],
-    "logic_explanation": "Ghi chú người dùng: Chuyển cảnh 1. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "Chuyển cảnh 1",
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -23497,9 +23496,9 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     },
-    "youtube_id": "GMFQlgpDqKA",
-    "youtube_url": "https://youtu.be/GMFQlgpDqKA",
-    "youtube_embed": "https://www.youtube.com/embed/GMFQlgpDqKA"
+    "youtube_id": "lWy9YUeTwSI",
+    "youtube_url": "https://youtu.be/lWy9YUeTwSI",
+    "youtube_embed": "https://www.youtube.com/embed/lWy9YUeTwSI"
   },
   "DdT9nr_o_SP": {
     "id": "IG_@page_vrn_DdT9nr_o_SP_Каким_бы_ни_был_ваш_завтрак,_в_P+AGE_он_будет",
@@ -23514,20 +23513,19 @@
       "icon": "⚡"
     },
     "industry": {
-      "id": "ky-thuat-quay",
-      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
-      "icon": "🎯"
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
     },
-    "purpose": "Chuyển cảnh 1",
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @page_vrn",
     "tech_tags": [
-      "Chuyển Cảnh 1",
       "Establishing Hook Shot",
       "Close-Up / Macro Detail Shot",
       "High-key Lighting"
     ],
-    "logic_explanation": "Ghi chú người dùng: Chuyển cảnh 1. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "Chuyển cảnh 1",
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -23535,8 +23533,8 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     },
-    "youtube_id": "GMFQlgpDqKA",
-    "youtube_url": "https://youtu.be/GMFQlgpDqKA",
-    "youtube_embed": "https://www.youtube.com/embed/GMFQlgpDqKA"
+    "youtube_id": "lWy9YUeTwSI",
+    "youtube_url": "https://youtu.be/lWy9YUeTwSI",
+    "youtube_embed": "https://www.youtube.com/embed/lWy9YUeTwSI"
   }
 }
