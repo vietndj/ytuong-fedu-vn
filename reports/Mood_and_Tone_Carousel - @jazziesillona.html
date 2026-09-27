@@ -789,8 +789,12 @@ video#mainPlayer {
 <div class="app-container">
     <div class="video-sidebar-col">
         <div class="video-player-container">
-            <video crossorigin="anonymous" crossorigin="anonymous" id="mainPlayer" controls autoplay muted playsinline preload="auto" loop></video>
-        </div>
+
+<style>.carousel-stack::-webkit-scrollbar { display: none; }</style>
+<div class="carousel-stack" style="display:flex; flex-direction:column; gap:16px; height:100%; overflow-y:auto; scroll-snap-type:y mandatory; -ms-overflow-style:none; scrollbar-width:none;">
+<video src="https://media.fedu.vn/videos/slide_01_DWrDQgoj7Uw.mp4" controls autoplay muted playsinline loop style="flex:0 0 100%; width:100%; height:100%; object-fit:contain; scroll-snap-align:start; background:#000;"></video>
+</div>
+</div>
         <div class="video-controls-panel">
             <div class="current-status-bar">
                 <span class="status-tag" id="shotStatusTag">🎬 Phân cảnh: Toàn bộ video</span>
@@ -1279,19 +1283,27 @@ if(player) {
 }
 
 function playShot(startTime, endTime, label) {
+
+    var stack = document.querySelector('.carousel-stack');
+    if (stack) {
+        var match = label ? label.match(/SHOT\s+(\d+)/i) : null;
+        if (match) {
+            var index = parseInt(match[1]) - 1;
+            var children = stack.children;
+            if (index >= 0 && index < children.length) {
+                children[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    }
+    
+
     currentEndTime = (typeof endTime === 'number') ? endTime : null;
     const tag = document.getElementById('shotStatusTag');
     if (tag) {
         const endTxt = currentEndTime ? ` - ${currentEndTime.toFixed(2)}s` : '';
         tag.innerText = `🎬 ${label || 'Phân cảnh'}: [${startTime.toFixed(2)}s${endTxt}]`;
     }
-    player.currentTime = startTime;
-    const p = player.play();
-    if (p !== undefined) {
-        p.catch(e => {
-            player.muted = true;
-            player.play().catch(err => console.log('Autoplay muted triggered'));
-        });
+    if(player) player.currentTime = startTime;
     }
     document.querySelectorAll('.shot-card').forEach(c => c.classList.remove('active-playing'));
     const matchCard = Array.from(document.querySelectorAll('.shot-card')).find(c => c.innerText.includes(label));

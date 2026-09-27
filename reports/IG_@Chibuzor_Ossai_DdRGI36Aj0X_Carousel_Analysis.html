@@ -1558,12 +1558,8 @@ function playShot(startTime, endTime, label) {
             args: []
         }), '*');
     } else {
-        player.currentTime = startTime;
+        if(player) player.currentTime = startTime;
         var p = player.play();
-        if (p !== undefined) {
-            p.catch(function() {
-                player.muted = true;
-                player.play().catch(function() {});
             });
         }
     }
