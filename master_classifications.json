@@ -22953,5 +22953,75 @@
     "youtube_id": "eQDGFnbVraU",
     "youtube_url": "https://youtu.be/eQDGFnbVraU",
     "youtube_embed": "https://www.youtube.com/embed/eQDGFnbVraU"
+  },
+  "IG_@halooo,_aku_Suci!_✨_Ddga9BDzenm_Video_by_dwslestari": {
+    "id": "IG_@halooo,_aku_Suci!_✨_Ddga9BDzenm_Video_by_dwslestari",
+    "creator": "@halooo,_aku_Suci!_✨",
+    "creator_name": "Halooo,_Aku_Suci!_✨",
+    "title": "@halooo,_aku_Suci!_✨ - Video by dwslestari",
+    "shots_count": 8,
+    "duration": "16.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "am-thuc",
+      "name": "Ẩm Thực & F&B",
+      "icon": "🍜"
+    },
+    "purpose": "F n B , đồ ăn",
+    "tech_tags": [
+      "F N B",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Ghi chú người dùng: F n B , đồ ăn. Phân loại vào Ẩm Thực & F&B • Điện Ảnh (Cinematic).",
+    "is_excluded": false,
+    "quick_takeaway": "F n B , đồ ăn",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "Ddga9BDzenm": {
+    "id": "IG_@halooo,_aku_Suci!_✨_Ddga9BDzenm_Video_by_dwslestari",
+    "creator": "@halooo,_aku_Suci!_✨",
+    "creator_name": "Halooo,_Aku_Suci!_✨",
+    "title": "@halooo,_aku_Suci!_✨ - Video by dwslestari",
+    "shots_count": 8,
+    "duration": "16.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "am-thuc",
+      "name": "Ẩm Thực & F&B",
+      "icon": "🍜"
+    },
+    "purpose": "F n B , đồ ăn",
+    "tech_tags": [
+      "F N B",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Ghi chú người dùng: F n B , đồ ăn. Phân loại vào Ẩm Thực & F&B • Điện Ảnh (Cinematic).",
+    "is_excluded": false,
+    "quick_takeaway": "F n B , đồ ăn",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }
