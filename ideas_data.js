@@ -4,9 +4,9 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 308,
-  "total_unique_ideas": 289,
-  "total_active_ideas": 261,
+  "total_scene_items": 309,
+  "total_unique_ideas": 290,
+  "total_active_ideas": 262,
   "total_excluded_ideas": 28,
   "total_creators": 200,
   "shooting_styles": [
@@ -345,7 +345,7 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 32,
     "storytelling": 23,
     "dien-anh": 93,
-    "chuyen-canh": 50,
+    "chuyen-canh": 51,
     "theo-nhip-nhac": 3,
     "Chuyển Cảnh (Transition)": 4,
     "Quay B-Roll Quảng Cáo Điện Ảnh": 1,
@@ -470,7 +470,7 @@ var FEDU_IDEAS_DATABASE = {
     "thoi-trang": 22,
     "am-thuc": 22,
     "du-lich": 17,
-    "cong-nghe": 34,
+    "cong-nghe": 35,
     "kien-truc": 31,
     "the-thao": 5,
     "ky-thuat-quay": 38,
@@ -533,7 +533,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 168,
+    "us_eu": 169,
     "korea": 10,
     "india": 3,
     "japan": 6,
@@ -546,8 +546,8 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "IG_@creator_video_Video_video",
-    "video"
+    "video",
+    "IG_@creator_video_Video_video"
   ],
   "creators_hub": [
     {
@@ -588,6 +588,23 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@ulanzi",
+      "name": "Ulanzi",
+      "profile_url": "https://www.instagram.com/ulanzi/",
+      "video_count": 7,
+      "top_industry": "cong-nghe",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40ulanzi_oSaTN_Tripod_%26_G%E1%BA%ADy_Selfie_T%E1%BB%B1_%C4%90%E1%BB%99ng_MT86%2C_Cao_1.52m_4/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4",
+        "IG_@ulanzi_ohBhc_Gậy_Tự_Sướng_Ulanzi_MT85_Có_Đèn_Pin_Nhỏ_và_Ch",
+        "IG_@ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc",
+        "IG_@ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand",
+        "IG_@ulanzi_oUV0c_MT86_Auto-Deploy_Tripod_&_Selfie_Stick,_1.52m",
+        "IG_@ulanzi_lazada_Easy_Open_Portable_Aluminum_Trigopod",
+        "IG_@ulanzi_oU2DB_Quick_Release_Folding_L_Bracket_and_Plate_Cam"
+      ]
+    },
+    {
       "handle": "@joshdiazfilms",
       "name": "Joshdiazfilms",
       "profile_url": "https://www.instagram.com/joshdiazfilms/",
@@ -619,22 +636,6 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@jazziesillona_DWrDUymD4_a_Carousel_Analysis",
         "IG_@Jazzie_DU2CTKzEqvl_Carousel_Analysis",
         "IG_@jazziesillona_DbIA2jwPHCV"
-      ]
-    },
-    {
-      "handle": "@ulanzi",
-      "name": "Ulanzi",
-      "profile_url": "https://www.instagram.com/ulanzi/",
-      "video_count": 6,
-      "top_industry": "cong-nghe",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40ulanzi_ohBhc_G%E1%BA%ADy_T%E1%BB%B1_S%C6%B0%E1%BB%9Bng_Ulanzi_MT85_C%C3%B3_%C4%90%C3%A8n_Pin_Nh%E1%BB%8F_v%C3%A0_Ch/shot_01_mid.webp",
-      "video_ids": [
-        "IG_@ulanzi_ohBhc_Gậy_Tự_Sướng_Ulanzi_MT85_Có_Đèn_Pin_Nhỏ_và_Ch",
-        "IG_@ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc",
-        "IG_@ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand",
-        "IG_@ulanzi_oUV0c_MT86_Auto-Deploy_Tripod_&_Selfie_Stick,_1.52m",
-        "IG_@ulanzi_lazada_Easy_Open_Portable_Aluminum_Trigopod",
-        "IG_@ulanzi_oU2DB_Quick_Release_Folding_L_Bracket_and_Plate_Cam"
       ]
     },
     {
@@ -2833,11 +2834,80 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "ideas": [
     {
+      "id": "IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4",
+      "shortcode": "IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4",
+      "title_vi": "Tripod &amp; Gậy Selfie Tự Động MT86, Cao 1.52m 4",
+      "quick_takeaway": "Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!",
+      "key_tech": "1.52m Height • Quadpod Base. Get it on Lazada now! • Establishing Hook Shot • Close-Up / Macro Detail Shot • Medium Tracking Shot • High-key Lighting",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
+      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!",
+      "tech_tags": [
+        "1.52m Height",
+        "Quadpod Base. Get it on Lazada now!",
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot",
+        "Medium Tracking Shot",
+        "High-key Lighting"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!. Phân loại vào Công Nghệ & Thiết Bị • Chuyển Cảnh (Transition).",
+      "creator": {
+        "raw": "@ulanzi",
+        "name": "Ulanzi",
+        "handle": "@ulanzi",
+        "profile_url": "https://www.instagram.com/ulanzi/"
+      },
+      "ig_url": "https://www.instagram.com/ulanzi/",
+      "gdrive_folder": "https://drive.google.com/open?id=1fl62ubttCgd7PIq2mxGVcQruaCCGH7S_",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ulanzi_oSaTN_Tripod_%26_G%E1%BA%ADy_Selfie_T%E1%BB%B1_%C4%90%E1%BB%99ng_MT86%2C_Cao_1.52m_4/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ulanzi_oSaTN_Tripod_%26_G%E1%BA%ADy_Selfie_T%E1%BB%B1_%C4%90%E1%BB%99ng_MT86%2C_Cao_1.52m_4/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/oSaTN.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/oSaTN.mp4",
+        "report_url": "reports/IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4.html",
+        "shots_count": 17,
+        "duration": "34s",
+        "youtube_id": "Ec9MP_oPHdE",
+        "youtube_embed": "https://www.youtube.com/embed/Ec9MP_oPHdE",
+        "youtube_url": "https://youtu.be/Ec9MP_oPHdE"
+      },
+      "complexity": {
+        "id": "trung-binh",
+        "label": "🟡 Trung bình (9-18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
       "id": "IG_@page_vrn_DdT9nr_o_SP_Каким_бы_ни_был_ваш_завтрак,_в_P+AGE_он_будет",
       "shortcode": "DdT9nr_o_SP",
       "title_vi": "Cú Đấm Thị Giác F&B: Kỹ Thuật Spin Match Cut & Macro Đồ Ăn Sáng Đánh Thức Tuyến Nước Bọt (@page_vrn)",
       "quick_takeaway": "Khai thác đòn bẩy Spin Match Cut xoay đĩa trên bàn gỗ và chuỗi đặc tả Macro cận cảnh (lòng đào trứng chần ùa chảy, thịt bò hun khói mỏng tơi, rosti khoai tây giòn rụm) biến video 7 giây thành cỗ máy kích hoạt cơn thèm ăn đỉnh cao.",
-      "key_tech": "Chuyển Cảnh 1 • Establishing Hook Shot • Close-Up / Macro Detail Shot • High-key Lighting",
+      "key_tech": "Chuyển cảnh 1 • Spin Match Cut • Macro Food Porn • Visual Hook • Yolk Ooze Money Shot",
       "shooting_style": {
         "id": "Chuyển Cảnh (Transition)",
         "name": "Chuyển Cảnh (Transition)",
@@ -2907,7 +2977,7 @@ var FEDU_IDEAS_DATABASE = {
       "shortcode": "DbDAdZShiS9",
       "title_vi": "Tuyệt Kỹ Match Cut Phi Đĩa F&B: Phá Vỡ Quy Chuẩn Bưng Bê Để Giật 100% Chú Ý Về Món Ăn",
       "quick_takeaway": "Cú phi đĩa frisbee giật mình kết hợp Action Match Cut 0.3s hoán đổi đĩa rỗng thành mâm gà nướng sốt nấm vàng giòn cực phẩm.",
-      "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot",
+      "key_tech": "Chuyển Cảnh (Transition) • Match Cut • Action Cut • Ẩm Thực & F&B",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh",
@@ -4794,7 +4864,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1jpYV1rRzpuPRMXcYkd1oVjIxfm7pBZFo",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_02_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "report_url": "reports/IG_@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲_Ddb6rA7NwQd_Video_by_elenabuntushak.html",
@@ -7955,8 +8025,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
@@ -9070,7 +9140,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",

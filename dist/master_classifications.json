@@ -23544,5 +23544,85 @@
     "youtube_id": "lWy9YUeTwSI",
     "youtube_url": "https://youtu.be/lWy9YUeTwSI",
     "youtube_embed": "https://www.youtube.com/embed/lWy9YUeTwSI"
+  },
+  "IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4": {
+    "id": "IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4",
+    "creator": "@ulanzi",
+    "creator_name": "Ulanzi",
+    "title": "@ulanzi - Tripod & Gậy Selfie Tự Động MT86, Cao 1.52m 4",
+    "shots_count": 17,
+    "duration": "34.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!",
+    "tech_tags": [
+      "1.52m Height",
+      "Quadpod Base. Get it on Lazada now!",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot",
+      "High-key Lighting"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!. Phân loại vào Công Nghệ & Thiết Bị • Chuyển Cảnh (Transition).",
+    "is_excluded": false,
+    "quick_takeaway": "Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "Ec9MP_oPHdE",
+    "youtube_url": "https://youtu.be/Ec9MP_oPHdE",
+    "youtube_embed": "https://www.youtube.com/embed/Ec9MP_oPHdE"
+  },
+  "oSaTN": {
+    "id": "IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4",
+    "creator": "@ulanzi",
+    "creator_name": "Ulanzi",
+    "title": "@ulanzi - Tripod & Gậy Selfie Tự Động MT86, Cao 1.52m 4",
+    "shots_count": 17,
+    "duration": "34.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!",
+    "tech_tags": [
+      "1.52m Height",
+      "Quadpod Base. Get it on Lazada now!",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot",
+      "High-key Lighting"
+    ],
+    "logic_explanation": "Ghi chú người dùng: Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!. Phân loại vào Công Nghệ & Thiết Bị • Chuyển Cảnh (Transition).",
+    "is_excluded": false,
+    "quick_takeaway": "Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "Ec9MP_oPHdE",
+    "youtube_url": "https://youtu.be/Ec9MP_oPHdE",
+    "youtube_embed": "https://www.youtube.com/embed/Ec9MP_oPHdE"
   }
 }
