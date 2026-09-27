@@ -1580,6 +1580,9 @@ function playShot(startTime, endTime, label) {
     } else {
         if(player) player.currentTime = startTime;
         var p = player.play();
+        if (p !== undefined) {
+            p.catch(function(error) {
+                console.log('Play prevented');
             });
         }
     }
