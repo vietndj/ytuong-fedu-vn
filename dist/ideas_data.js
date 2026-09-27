@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 306,
-  "total_unique_ideas": 287,
-  "total_active_ideas": 259,
+  "total_scene_items": 307,
+  "total_unique_ideas": 288,
+  "total_active_ideas": 260,
   "total_excluded_ideas": 28,
-  "total_creators": 198,
+  "total_creators": 199,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -336,7 +336,7 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 12,
     "talking-head": 32,
     "storytelling": 23,
-    "dien-anh": 93,
+    "dien-anh": 94,
     "chuyen-canh": 50,
     "theo-nhip-nhac": 3,
     "UGC Thực Chiến": 1,
@@ -459,13 +459,13 @@ var FEDU_IDEAS_DATABASE = {
     "spa-lam-dep": 3,
     "thuong-hieu": 19,
     "thoi-trang": 22,
-    "am-thuc": 22,
+    "am-thuc": 21,
     "du-lich": 17,
     "cong-nghe": 34,
-    "kien-truc": 31,
+    "kien-truc": 32,
     "the-thao": 5,
     "ky-thuat-quay": 38,
-    "ugc": 5
+    "ugc": 6
   },
   "x_factors": [
     "Chuyển cảnh cấp 2"
@@ -524,7 +524,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 166,
+    "us_eu": 167,
     "korea": 10,
     "india": 3,
     "japan": 6,
@@ -534,11 +534,11 @@ var FEDU_IDEAS_DATABASE = {
   "transition_stats": {
     "level_1_count": 5,
     "level_2_count": 14,
-    "ad_bot_count": 7
+    "ad_bot_count": 8
   },
   "deleted_ids": [
-    "IG_@creator_video_Video_video",
-    "video"
+    "video",
+    "IG_@creator_video_Video_video"
   ],
   "creators_hub": [
     {
@@ -1007,11 +1007,22 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@fiveseven.idn",
+      "name": "Fiveseven Idn",
+      "profile_url": "https://www.instagram.com/fiveseven.idn/",
+      "video_count": 1,
+      "top_industry": "Kiến Trúc & Không Gian Sống",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside"
+      ]
+    },
+    {
       "handle": "@ecuator_cafe",
       "name": "Ecuator_Cafe",
       "profile_url": "https://www.instagram.com/ecuator_cafe/",
       "video_count": 1,
-      "top_industry": "Ẩm Thực & F&B",
+      "top_industry": "UGC",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40ecuator_cafe_Dc0iEdiuYZ-_Exist%C4%83_pauze_de_cafea_%C8%99i_exist%C4%83_momente_%C3%AEn_ca/shot_01_mid.webp",
       "video_ids": [
         "IG_@ecuator_cafe_Dc0iEdiuYZ-_Există_pauze_de_cafea_și_există_momente_în_ca"
@@ -2802,6 +2813,73 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "ideas": [
     {
+      "id": "IG_@fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside",
+      "shortcode": "DbDAdZShiS9",
+      "title_vi": "Crispy outside. Tender inside",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @fiveseven.idn",
+      "tech_tags": [
+        "Establishing Hook Shot",
+        "Low-key Lighting",
+        "Close-Up / Macro Detail Shot",
+        "Medium Tracking Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
+      "creator": {
+        "raw": "@fiveseven.idn",
+        "name": "Fiveseven Idn",
+        "handle": "@fiveseven.idn",
+        "profile_url": "https://www.instagram.com/fiveseven.idn/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DbDAdZShiS9/",
+      "gdrive_folder": "https://drive.google.com/open?id=1Cjm9sRyI88sb0MWtS663qdhBftwoEI2w",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/DbDAdZShiS9.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DbDAdZShiS9.mp4",
+        "report_url": "reports/IG_@fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside.html",
+        "shots_count": 5,
+        "duration": "10s",
+        "youtube_id": "eAD2xfh7q7M",
+        "youtube_embed": "https://www.youtube.com/embed/eAD2xfh7q7M",
+        "youtube_url": "https://youtu.be/eAD2xfh7q7M"
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
       "id": "IG_@ecuator_cafe_Dc0iEdiuYZ-_Există_pauze_de_cafea_și_există_momente_în_ca",
       "shortcode": "Dc0iEdiuYZ-",
       "title_vi": "Există pauze de cafea și există momente în ca",
@@ -2816,9 +2894,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [
         {
-          "id": "am-thuc",
-          "name": "Ẩm Thực & F&B",
-          "icon": "🍜"
+          "id": "ugc",
+          "name": "UGC",
+          "icon": "📱"
         }
       ],
       "x_factors": [],
@@ -2832,13 +2910,14 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Life",
       "tech_tags": [
+        "Life Quảng Cáo",
         "Life",
         "Establishing Hook Shot",
         "Close-Up / Macro Detail Shot",
         "Low-key Lighting"
       ],
       "transition_level": null,
-      "is_ad_bot": false,
+      "is_ad_bot": true,
       "fedu_optimization": {},
       "logic_explanation": "Ghi chú người dùng: Life. Phân loại vào Ẩm Thực & F&B • Chuyển Cảnh (Transition).",
       "creator": {
@@ -4620,7 +4699,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1jpYV1rRzpuPRMXcYkd1oVjIxfm7pBZFo",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_02_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "report_url": "reports/IG_@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲_Ddb6rA7NwQd_Video_by_elenabuntushak.html",
@@ -6401,7 +6480,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",

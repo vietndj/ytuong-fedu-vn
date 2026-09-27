@@ -23320,12 +23320,13 @@
       "icon": "⚡"
     },
     "industry": {
-      "id": "am-thuc",
-      "name": "Ẩm Thực & F&B",
-      "icon": "🍜"
+      "id": "ugc",
+      "name": "UGC",
+      "icon": "📱"
     },
     "purpose": "Life",
     "tech_tags": [
+      "Life Quảng Cáo",
       "Life",
       "Establishing Hook Shot",
       "Close-Up / Macro Detail Shot",
@@ -23382,5 +23383,81 @@
     "youtube_id": "kpCfb4kchSM",
     "youtube_url": "https://youtu.be/kpCfb4kchSM",
     "youtube_embed": "https://www.youtube.com/embed/kpCfb4kchSM"
+  },
+  "IG_@fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside": {
+    "id": "IG_@fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside",
+    "creator": "@fiveseven.idn",
+    "creator_name": "Fiveseven Idn",
+    "title": "@fiveseven.idn - Crispy outside. Tender inside",
+    "shots_count": 5,
+    "duration": "10.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @fiveseven.idn",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "eAD2xfh7q7M",
+    "youtube_url": "https://youtu.be/eAD2xfh7q7M",
+    "youtube_embed": "https://www.youtube.com/embed/eAD2xfh7q7M"
+  },
+  "DbDAdZShiS9": {
+    "id": "IG_@fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside",
+    "creator": "@fiveseven.idn",
+    "creator_name": "Fiveseven Idn",
+    "title": "@fiveseven.idn - Crispy outside. Tender inside",
+    "shots_count": 5,
+    "duration": "10.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @fiveseven.idn",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "eAD2xfh7q7M",
+    "youtube_url": "https://youtu.be/eAD2xfh7q7M",
+    "youtube_embed": "https://www.youtube.com/embed/eAD2xfh7q7M"
   }
 }
