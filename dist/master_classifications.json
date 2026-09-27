@@ -22990,10 +22990,10 @@
     }
   },
   "Ddga9BDzenm": {
-    "id": "IG_@halooo,_aku_Suci!_✨_Ddga9BDzenm_Video_by_dwslestari",
-    "creator": "@halooo,_aku_Suci!_✨",
-    "creator_name": "Halooo,_Aku_Suci!_✨",
-    "title": "@halooo,_aku_Suci!_✨ - Video by dwslestari",
+    "id": "IG_@dwslestari_Ddga9BDzenm_buat_yang_sering_nanyain_font_yang_aku_pakai,",
+    "creator": "@dwslestari",
+    "creator_name": "Dwslestari",
+    "title": "@dwslestari - buat yang sering nanyain font yang aku pakai,",
     "shots_count": 8,
     "duration": "16.0s",
     "shooting_style": {
@@ -23022,7 +23022,10 @@
       "en_name": "US & Europe",
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
-    }
+    },
+    "youtube_id": "rMANbHwCYW4",
+    "youtube_url": "https://youtu.be/rMANbHwCYW4",
+    "youtube_embed": "https://www.youtube.com/embed/rMANbHwCYW4"
   },
   "IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis": {
     "id": "IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis",
@@ -23091,5 +23094,43 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@dwslestari_Ddga9BDzenm_buat_yang_sering_nanyain_font_yang_aku_pakai,": {
+    "id": "IG_@dwslestari_Ddga9BDzenm_buat_yang_sering_nanyain_font_yang_aku_pakai,",
+    "creator": "@dwslestari",
+    "creator_name": "Dwslestari",
+    "title": "@dwslestari - buat yang sering nanyain font yang aku pakai,",
+    "shots_count": 8,
+    "duration": "16.0s",
+    "shooting_style": {
+      "id": "dien-anh",
+      "name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "am-thuc",
+      "name": "Ẩm Thực & F&B",
+      "icon": "🍜"
+    },
+    "purpose": "F n B , đồ ăn",
+    "tech_tags": [
+      "F N B",
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting"
+    ],
+    "logic_explanation": "Ghi chú người dùng: F n B , đồ ăn. Phân loại vào Ẩm Thực & F&B • Điện Ảnh (Cinematic).",
+    "is_excluded": false,
+    "quick_takeaway": "F n B , đồ ăn",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "rMANbHwCYW4",
+    "youtube_url": "https://youtu.be/rMANbHwCYW4",
+    "youtube_embed": "https://www.youtube.com/embed/rMANbHwCYW4"
   }
 }
