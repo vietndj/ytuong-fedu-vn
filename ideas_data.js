@@ -4,9 +4,9 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 303,
-  "total_unique_ideas": 284,
-  "total_active_ideas": 256,
+  "total_scene_items": 304,
+  "total_unique_ideas": 285,
+  "total_active_ideas": 257,
   "total_excluded_ideas": 28,
   "total_creators": 197,
   "shooting_styles": [
@@ -320,7 +320,7 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 12,
     "talking-head": 32,
     "storytelling": 23,
-    "dien-anh": 93,
+    "dien-anh": 94,
     "chuyen-canh": 49,
     "theo-nhip-nhac": 3,
     "BTS / Hậu Trường Sáng Tạo": 2,
@@ -443,7 +443,7 @@ var FEDU_IDEAS_DATABASE = {
     "thoi-trang": 22,
     "am-thuc": 21,
     "du-lich": 17,
-    "cong-nghe": 33,
+    "cong-nghe": 34,
     "kien-truc": 31,
     "the-thao": 5,
     "ky-thuat-quay": 38,
@@ -506,7 +506,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 163,
+    "us_eu": 164,
     "korea": 10,
     "india": 3,
     "japan": 6,
@@ -595,6 +595,21 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@ulanzi",
+      "name": "Ulanzi",
+      "profile_url": "https://www.instagram.com/ulanzi/",
+      "video_count": 5,
+      "top_industry": "cong-nghe",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc",
+        "IG_@ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand",
+        "IG_@ulanzi_oUV0c_MT86_Auto-Deploy_Tripod_&_Selfie_Stick,_1.52m",
+        "IG_@ulanzi_lazada_Easy_Open_Portable_Aluminum_Trigopod",
+        "IG_@ulanzi_oU2DB_Quick_Release_Folding_L_Bracket_and_Plate_Cam"
+      ]
+    },
+    {
       "handle": "@hena_film_vlog",
       "name": "Hena_Film_Vlog",
       "profile_url": "https://www.instagram.com/hena_film_vlog/",
@@ -607,20 +622,6 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85",
         "IG_@hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog",
         "IG_@hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow"
-      ]
-    },
-    {
-      "handle": "@ulanzi",
-      "name": "Ulanzi",
-      "profile_url": "https://www.instagram.com/ulanzi/",
-      "video_count": 4,
-      "top_industry": "cong-nghe",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand/shot_01_mid.webp",
-      "video_ids": [
-        "IG_@ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand",
-        "IG_@ulanzi_oUV0c_MT86_Auto-Deploy_Tripod_&_Selfie_Stick,_1.52m",
-        "IG_@ulanzi_lazada_Easy_Open_Portable_Aluminum_Trigopod",
-        "IG_@ulanzi_oU2DB_Quick_Release_Folding_L_Bracket_and_Plate_Cam"
       ]
     },
     {
@@ -2771,6 +2772,71 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "ideas": [
     {
+      "id": "IG_@ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc",
+      "shortcode": "IG_@ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc",
+      "title_vi": "MagSafe Compatible Selfie Stick Tripod Produc",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.",
+      "key_tech": "Establishing Hook Shot • Low-key Lighting",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ulanzi",
+      "tech_tags": [
+        "Establishing Hook Shot",
+        "Low-key Lighting"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Công Nghệ & Thiết Bị.",
+      "creator": {
+        "raw": "@ulanzi",
+        "name": "Ulanzi",
+        "handle": "@ulanzi",
+        "profile_url": "https://www.instagram.com/ulanzi/"
+      },
+      "ig_url": "https://www.instagram.com/ulanzi/",
+      "gdrive_folder": "https://drive.google.com/open?id=17y2tpde8wLwSgWpQCU-7gKwRYwv36UTI",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc/shot_01_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/ohxID.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/ohxID.mp4",
+        "report_url": "reports/IG_@ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc.html",
+        "shots_count": 1,
+        "duration": "2s",
+        "youtube_id": "e2VcSltcofU",
+        "youtube_embed": "https://www.youtube.com/embed/e2VcSltcofU",
+        "youtube_url": "https://youtu.be/e2VcSltcofU"
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
       "id": "IG_@dwslestari_Ddga9BDzenm_buat_yang_sering_nanyain_font_yang_aku_pakai,",
       "shortcode": "Ddga9BDzenm",
       "title_vi": "Nghệ Thuật Setup Ánh Sáng Nắng Xiên & Phối Font Chữ Điện Ảnh Cho Video Nấu Ăn",
@@ -2791,10 +2857,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding",
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2864,10 +2927,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding",
-        "Others"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -2937,9 +2997,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3005,10 +3063,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3074,10 +3129,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3143,9 +3195,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3211,9 +3261,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3279,10 +3327,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3348,10 +3393,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3417,9 +3459,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3485,10 +3525,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3554,9 +3591,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3622,10 +3657,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing",
-        "Sport"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3691,9 +3723,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3762,10 +3792,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3836,9 +3863,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3909,9 +3934,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3983,9 +4006,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4056,10 +4077,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4127,10 +4145,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4198,9 +4213,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4269,9 +4282,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4342,9 +4353,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4415,9 +4424,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4444,7 +4451,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1jpYV1rRzpuPRMXcYkd1oVjIxfm7pBZFo",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_02_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "report_url": "reports/IG_@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲_Ddb6rA7NwQd_Video_by_elenabuntushak.html",
@@ -4482,10 +4489,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing",
-        "Others"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4555,9 +4559,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4625,10 +4627,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4697,9 +4696,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4767,10 +4764,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Others",
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4839,9 +4833,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4909,9 +4901,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4977,9 +4967,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5049,10 +5037,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5122,10 +5107,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5195,9 +5177,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5264,10 +5244,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5336,9 +5313,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5473,9 +5448,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5542,10 +5515,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Deep Talk",
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5613,10 +5583,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5685,10 +5652,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5758,10 +5722,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Deep Talk",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5830,10 +5791,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing",
-        "Others"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5901,10 +5859,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5972,10 +5927,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6044,10 +5996,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding",
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6116,9 +6065,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6186,9 +6133,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6256,9 +6201,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6289,7 +6232,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
@@ -6327,9 +6270,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6400,9 +6341,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "UGC"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6472,9 +6411,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6542,10 +6479,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel",
-        "Others"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6614,10 +6548,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech",
-        "UGC"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6686,9 +6617,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6756,9 +6685,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Others"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6826,9 +6753,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6897,9 +6822,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6968,9 +6891,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7039,9 +6960,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7108,9 +7027,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7178,9 +7095,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7247,9 +7162,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7315,9 +7228,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7386,9 +7297,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "kr",
         "name": "Hàn Quốc",
@@ -7461,9 +7370,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "asia",
         "name": "Thái Lan",
@@ -7537,9 +7444,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7610,9 +7515,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "asia",
         "name": "Châu Á",
@@ -7680,9 +7583,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -7711,8 +7612,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
@@ -7750,9 +7651,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "asia",
         "name": "Châu Á",
@@ -7821,9 +7720,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7891,9 +7788,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7959,9 +7854,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8029,9 +7922,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8098,9 +7989,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "asia",
         "name": "Châu Á",
@@ -8168,9 +8057,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8241,9 +8128,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8313,9 +8198,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8386,9 +8269,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8459,9 +8340,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "UGC"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8532,9 +8411,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8606,9 +8483,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8678,9 +8553,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8751,9 +8624,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8824,9 +8695,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8858,7 +8727,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",
@@ -8896,9 +8765,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8967,9 +8834,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9040,9 +8905,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9114,9 +8977,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9188,9 +9049,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9260,9 +9119,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9329,9 +9186,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9403,9 +9258,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9479,9 +9332,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9554,9 +9405,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9627,9 +9476,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9703,9 +9550,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9779,9 +9624,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9854,9 +9697,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9925,9 +9766,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9999,9 +9838,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10067,9 +9904,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10136,9 +9971,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10211,9 +10044,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10286,9 +10117,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10361,9 +10190,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10436,9 +10263,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10511,9 +10336,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10586,9 +10409,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10661,9 +10482,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10736,9 +10555,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10811,9 +10628,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10886,9 +10701,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -10961,9 +10774,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -11036,9 +10847,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -11111,9 +10920,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "UGC"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -11186,9 +10993,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -11261,9 +11066,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -11336,9 +11139,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -11411,9 +11212,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -11486,9 +11285,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -11561,9 +11358,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Quốc Tế",
@@ -11636,9 +11431,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -11704,9 +11497,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -11772,9 +11563,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Deep Talk"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11846,9 +11635,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "latin_brazil",
         "name": "Brazil",
@@ -11925,9 +11712,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "russia",
         "name": "Nga",
@@ -12002,9 +11787,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12079,9 +11862,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Beauty"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -12151,9 +11932,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "us",
         "name": "Hoa Kỳ",
@@ -12222,9 +12001,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Beauty"
-      ],
+      "tags": [],
       "country": {
         "id": "vn",
         "name": "Việt Nam",
@@ -12295,9 +12072,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "vn",
         "name": "Việt Nam (Hà Nội)",
@@ -12369,9 +12144,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "au",
         "name": "Úc",
@@ -12443,9 +12216,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us",
         "name": "Hoa Kỳ",
@@ -12513,9 +12284,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Beauty"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12586,9 +12355,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "vn",
         "name": "Việt Nam",
@@ -12656,9 +12423,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "asia",
         "name": "Đông Á (Thượng Hải, Trung Quốc)",
@@ -12731,9 +12496,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "kr",
         "name": "Hàn Quốc",
@@ -12801,9 +12564,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -12878,9 +12639,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "russia",
         "name": "Nga / Đông Âu",
@@ -13822,9 +13581,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "UGC"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13900,9 +13657,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "UGC"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13976,9 +13731,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14052,9 +13805,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -14129,9 +13880,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [
-        "Sport"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14207,9 +13956,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14284,9 +14031,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14359,9 +14104,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14435,9 +14178,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -14512,9 +14253,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14589,9 +14328,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Beauty"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Quốc Tế (Kazakhstan)",
@@ -14667,9 +14404,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14801,9 +14536,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14878,9 +14611,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14955,9 +14686,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "global",
         "name": "Toàn Cầu",
@@ -15031,9 +14760,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á (Indonesia)",
@@ -15108,9 +14835,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15185,9 +14910,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "middle_east",
         "name": "Trung Đông / Nam Á",
@@ -15262,9 +14985,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "spain",
         "name": "Tây Ban Nha",
@@ -15340,9 +15061,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -15418,9 +15137,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Sport"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ (Áo)",
@@ -15496,9 +15213,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15575,9 +15290,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [
-        "Sport"
-      ],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -15654,9 +15367,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ (Tây Ban Nha)",
@@ -15735,9 +15446,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15810,9 +15519,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15885,9 +15592,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15960,9 +15665,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Beauty"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16035,9 +15738,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16110,9 +15811,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -16182,9 +15881,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16257,9 +15954,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16332,9 +16027,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16407,9 +16100,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -16482,9 +16173,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16560,9 +16249,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [
-        "Sport"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16636,9 +16323,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -16711,9 +16396,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -16786,9 +16469,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16861,9 +16542,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16936,9 +16615,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17011,9 +16688,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -17088,9 +16763,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -17164,9 +16837,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -17239,9 +16910,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17311,9 +16980,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -17383,9 +17050,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -17455,9 +17120,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -17530,9 +17193,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -17602,9 +17263,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -17677,9 +17336,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -17752,9 +17409,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -17827,9 +17482,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -17904,9 +17557,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -17975,9 +17626,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -18105,9 +17754,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -18177,9 +17824,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -18252,9 +17897,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -18327,9 +17970,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -18402,9 +18043,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -18477,9 +18116,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -18554,9 +18191,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -18630,9 +18265,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -18705,9 +18338,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -18777,9 +18408,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -18849,9 +18478,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -18924,9 +18551,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19057,9 +18682,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19132,9 +18755,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -19207,9 +18828,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19279,9 +18898,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -19351,9 +18968,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -19423,9 +19038,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -19497,9 +19110,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19573,9 +19184,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -19645,9 +19254,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -19717,9 +19324,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19792,9 +19397,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19867,9 +19470,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -19939,9 +19540,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -20011,9 +19610,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -20087,9 +19684,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -20159,9 +19754,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -20234,9 +19827,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -20309,9 +19900,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Beauty"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -20386,9 +19975,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -20461,9 +20048,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -20533,9 +20118,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -20605,9 +20188,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Sport"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -20680,9 +20261,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -20752,9 +20331,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -20827,9 +20404,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -20902,9 +20477,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -20973,9 +20546,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -21045,9 +20616,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -21117,9 +20686,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -21189,9 +20756,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -21263,9 +20828,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -21336,9 +20899,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -21408,9 +20969,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -21483,9 +21042,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -21559,9 +21116,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -21631,9 +21186,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -21703,9 +21256,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Fashion"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -21775,9 +21326,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -21850,9 +21399,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -21925,9 +21472,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -22055,9 +21600,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -22130,9 +21673,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Life"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -22202,9 +21743,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -22274,9 +21813,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -22346,9 +21883,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -22420,9 +21955,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -22496,9 +22029,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Branding"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -22571,9 +22102,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Food"
-      ],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -22646,9 +22175,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -22721,9 +22248,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Framing"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -22796,9 +22321,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -22873,9 +22396,7 @@ var FEDU_IDEAS_DATABASE = {
       "x_factors": [
         "Chuyển cảnh cấp 2"
       ],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -22949,9 +22470,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Tech"
-      ],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -23024,9 +22543,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -23099,9 +22616,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -23174,9 +22689,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -23249,9 +22762,7 @@ var FEDU_IDEAS_DATABASE = {
         }
       ],
       "x_factors": [],
-      "tags": [
-        "Travel"
-      ],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",

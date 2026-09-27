@@ -1,0 +1,25 @@
+{
+  "name": "ytuong-fedu-vn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "block5.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vietndj/ytuong-fedu-vn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/vietndj/ytuong-fedu-vn/issues"
+  },
+  "homepage": "https://github.com/vietndj/ytuong-fedu-vn#readme",
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "playwright": "^1.63.0"
+  }
+}
