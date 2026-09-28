@@ -1,43 +1,56 @@
+#!/usr/bin/env python3
+"""
+gemini_optimizer.py — Chạy liên tục tiêu token Gemini để làm giàu dữ liệu ytuong.fedu.vn
+Usage:
+  python3 gemini_optimizer.py                        # Enrich 578 items, batch 10
+  python3 gemini_optimizer.py --batch-size 20        # Batch lớn hơn
+  python3 gemini_optimizer.py --dry-run --batch-size 3
+  python3 gemini_optimizer.py --skip-done            # Resume từ lần trước
+  python3 gemini_optimizer.py --model gemini-pro-latest  # Dùng Pro (chất lượng cao hơn)
+  python3 gemini_optimizer.py --mode add-practice    # Chỉ thêm practice_scenario
+"""
+
 import os
 import json
 import time
 import argparse
 import logging
-import google.generativeai as genai
-from google.api_core.exceptions import ResourceExhausted
+import sys
+import re
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(message)s",
+    handlers=[
+        logging.StreamHandler(sys.stdout),
+        logging.FileHandler("/Users/vietmac/Documents/CODE/ytuong-fedu-vn/optimizer.log", encoding="utf-8"),
+    ]
+)
 logger = logging.getLogger(__name__)
 
-MASTER_JSON_PATH = "/Users/vietmac/Documents/CODE/ytuong-fedu-vn/master_classifications.json"
-STATE_JSON_PATH = "/Users/vietmac/Documents/CODE/ytuong-fedu-vn/optimizer_state.json"
+# ── Paths ──────────────────────────────────────────────────────────────────────
+BASE_DIR = "/Users/vietmac/Documents/CODE/ytuong-fedu-vn"
+MASTER_JSON_PATH = f"{BASE_DIR}/dist/master_classifications.json"
+STATE_JSON_PATH  = f"{BASE_DIR}/optimizer_state.json"
+IDEAS_JS_PATH    = f"{BASE_DIR}/dist/ideas_data.js"
 
+# ── API Key ────────────────────────────────────────────────────────────────────
 def get_api_key():
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if api_key:
-        return api_key
-        
-    config_path = os.path.expanduser("~/.gemini/config.json")
-    if os.path.exists(config_path):
-        try:
-            with open(config_path, "r") as f:
-                config = json.load(f)
-                return config.get("api_key") or config.get("GEMINI_API_KEY")
-        except Exception as e:
-            logger.warning(f"Failed to read {config_path}: {e}")
-            
-    # Try Antigravity config
-    agy_config_path = os.path.expanduser("~/.gemini/antigravity/config.json")
-    if os.path.exists(agy_config_path):
-         try:
-            with open(agy_config_path, "r") as f:
-                config = json.load(f)
-                return config.get("api_key") or config.get("GEMINI_API_KEY")
-         except Exception as e:
-            pass
-            
+    # 1. ENV
+    key = os.environ.get("GEMINI_API_KEY")
+    if key:
+        return key
+    # 2. Antigravity registry path
+    agy_path = os.path.expanduser("~/.config/gemini/api_key")
+    if os.path.exists(agy_path):
+        return open(agy_path).read().strip()
+    # 3. ~/.gemini/api_key
+    fallback = os.path.expanduser("~/.gemini/api_key")
+    if os.path.exists(fallback):
+        return open(fallback).read().strip()
     return None
 
+# ── Data I/O ──────────────────────────────────────────────────────────────────
 def load_data():
     with open(MASTER_JSON_PATH, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -52,198 +65,267 @@ def load_state():
             with open(STATE_JSON_PATH, "r", encoding="utf-8") as f:
                 return json.load(f)
         except Exception:
-            return {"processed_keys": []}
-    return {"processed_keys": []}
+            pass
+    return {"processed_keys": [], "total_done": 0, "errors": 0}
 
 def save_state(state):
     with open(STATE_JSON_PATH, "w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=2)
 
-def needs_processing(item, args):
-    if args.mode == 'enrich':
-        fedu_opt = item.get("fedu_optimization")
-        if not fedu_opt or (isinstance(fedu_opt, dict) and len(str(fedu_opt.get("key_optimization_point", ""))) < 10):
+# ── Item filter ───────────────────────────────────────────────────────────────
+def needs_processing(item, mode):
+    if mode == "enrich":
+        fedu = item.get("fedu_optimization")
+        if not fedu:
             return True
-        logic = item.get("logic_explanation", "")
-        if len(str(logic)) < 100:
+        if isinstance(fedu, dict):
+            kp = str(fedu.get("key_optimization_point", ""))
+            ps = str(fedu.get("practice_focus", ""))
+            # Thiếu practice_focus hoặc ig_seeding_hook
+            if len(kp) < 30:
+                return True
+            if not fedu.get("ig_seeding_hook"):
+                return True
+            if not fedu.get("practice_focus"):
+                return True
+        logic = str(item.get("logic_explanation", ""))
+        if len(logic) < 80:
             return True
-        if "practice_scenario" not in item:
+        if not item.get("practice_scenario"):
             return True
-        if "ig_seeding_hook" not in item:
-            return True
-    elif args.mode == 'fix-slugs':
-        return True # Filter later based on slugs
-    elif args.mode == 'add-practice':
-        if "practice_scenario" not in item:
-            return True
+        return False
+    elif mode == "add-practice":
+        return not item.get("practice_scenario")
+    elif mode == "fix-logic":
+        return len(str(item.get("logic_explanation", ""))) < 80
+    elif mode == "full":
+        return True  # Reprocess everything
     return False
 
-def build_prompt(item, mode):
-    item_str = json.dumps(item, ensure_ascii=False, indent=2)
-    return f"""
-Bạn là một chuyên gia phân tích và tối ưu hóa nội dung video thực chiến.
-Dựa vào dữ liệu video sau, hãy tạo ra các trường thông tin còn thiếu hoặc nâng cấp các trường hiện tại.
+# ── Prompt builder ─────────────────────────────────────────────────────────────
+def build_prompt(item):
+    # Strip heavy fields to save tokens
+    trimmed = {
+        "id": item.get("id", ""),
+        "creator": item.get("creator", ""),
+        "title": item.get("title", ""),
+        "shooting_style": item.get("shooting_style", {}),
+        "industry": item.get("industry", {}),
+        "purpose": item.get("purpose", ""),
+        "tech_tags": item.get("tech_tags", []),
+        "logic_explanation": item.get("logic_explanation", ""),
+        "quick_takeaway": item.get("quick_takeaway", ""),
+        "country": item.get("country", ""),
+        "transition_level": item.get("transition_level", ""),
+    }
+    item_str = json.dumps(trimmed, ensure_ascii=False, indent=2)
 
-DỮ LIỆU VIDEO GỐC:
+    return f"""Bạn là chuyên gia phân tích video marketing thực chiến — huấn luyện kỹ năng làm video cho người Việt.
+
+Dữ liệu video Instagram cần phân tích:
 {item_str}
 
-YÊU CẦU ĐẦU RA (JSON format - chỉ trả về đúng JSON, không format markdown, không giải thích):
+Trả về ĐÚNG JSON (không markdown, không giải thích thêm):
 {{
   "fedu_optimization": {{
-    "key_optimization_point": "Hướng dẫn tối ưu hóa video logic cho riêng ngành này (sâu sắc, thực chiến, không văn mẫu)"
+    "key_optimization_point": "1-2 câu cô đọng: kỹ thuật/cấu trúc tâm lý đặc trưng video này (chuyên sâu, không văn mẫu, tiếng Việt)",
+    "practice_focus": "Bài tập thực chiến 1 câu: học viên cần quay/dựng thử ĐÚNG kỹ thuật nào, theo bối cảnh ngành nào",
+    "ig_seeding_hook": "1 câu comment ngắn, kích thích tò mò, phù hợp để seeding dưới video gốc trên Instagram",
+    "course_industry_mapping": "Tên ngành phù hợp nhất với học viên khóa video của anh Việt (VD: Spa & Làm Đẹp, Bất Động Sản, Coaching...)"
   }},
-  "logic_explanation": "Giải thích logic kịch bản, tâm lý học đằng sau video, cấu trúc hook, thân, kết (phải dài hơn 100 ký tự)",
-  "shooting_style_slug": "chuỗi-slug-chuẩn-hóa (ví dụ: dien-anh, chuyen-canh, talking-head)",
-  "industry_slug": "chuỗi-slug-ngành-chuẩn-hóa (ví dụ: spa-lam-dep, thoi-trang, phat-trien-ban-than)",
-  "practice_scenario": "Một tình huống thực hành cụ thể dành cho học viên (ngắn gọn, action-oriented)",
-  "ig_seeding_hook": "Một câu hook giật gân, khơi gợi tò mò để dùng đi comment seeding trên Instagram"
-}}
-"""
+  "logic_explanation": "Giải thích cấu trúc kịch bản: hook là gì, thân bài tạo cảm xúc/tò mò như thế nào, kết thúc dẫn action gì — tối thiểu 120 ký tự",
+  "practice_scenario": "Nếu bạn bán [ngành X], áp dụng video này bằng cách: [hành động cụ thể 1-2 câu]"
+}}"""
 
-def parse_llm_response(text):
+# ── Response parser ────────────────────────────────────────────────────────────
+def parse_response(text):
     text = text.strip()
-    if text.startswith("```json"):
-        text = text[7:]
-    if text.startswith("```"):
-        text = text[3:]
-    if text.endswith("```"):
-        text = text[:-3]
+    # Strip markdown fences
+    text = re.sub(r"^```(?:json)?\s*", "", text)
+    text = re.sub(r"\s*```$", "", text)
     text = text.strip()
     try:
         return json.loads(text)
-    except json.JSONDecodeError as e:
-        logger.error(f"Failed to parse JSON: {e}\n{text}")
-        return None
-
-def process_batch(items_to_process, model, args):
-    results = {}
-    for key, item in items_to_process:
-        logger.info(f"Processing: {key}")
-        if args.dry_run:
-            results[key] = {"status": "dry_run"}
-            continue
-            
-        prompt = build_prompt(item, args.mode)
-        
-        retries = 3
-        backoff = 2
-        success = False
-        
-        while retries > 0 and not success:
+    except json.JSONDecodeError:
+        # Try extracting first {...} block
+        m = re.search(r"\{.*\}", text, re.DOTALL)
+        if m:
             try:
-                # Need to specify generation_config to encourage JSON if supported, or just text
-                response = model.generate_content(prompt, generation_config=genai.types.GenerationConfig(
-                    temperature=0.7,
-                ))
-                parsed = parse_llm_response(response.text)
-                if parsed:
-                    results[key] = parsed
-                    success = True
-                else:
-                    logger.warning(f"Invalid JSON for {key}")
-                    break
-            except ResourceExhausted:
-                logger.warning(f"Rate limited. Waiting {backoff}s...")
-                time.sleep(backoff)
-                backoff *= 2
-                retries -= 1
-            except Exception as e:
-                logger.error(f"Error calling API for {key}: {e}")
-                break
-                
-        time.sleep(1) # Base delay to prevent rate limit
-        
-    return results
+                return json.loads(m.group())
+            except Exception:
+                pass
+    logger.warning(f"Could not parse JSON from response: {text[:200]}")
+    return None
 
-def apply_results(data, results):
-    for key, updates in results.items():
-        if key not in data or updates.get("status") == "dry_run":
-            continue
-            
-        item = data[key]
-        if "fedu_optimization" in updates:
+# ── Apply updates to item ─────────────────────────────────────────────────────
+def apply_update(item, updates):
+    if not updates:
+        return
+    if "fedu_optimization" in updates and updates["fedu_optimization"]:
+        existing = item.get("fedu_optimization") or {}
+        if isinstance(existing, dict):
+            existing.update(updates["fedu_optimization"])
+            item["fedu_optimization"] = existing
+        else:
             item["fedu_optimization"] = updates["fedu_optimization"]
-        if "logic_explanation" in updates:
-            item["logic_explanation"] = updates["logic_explanation"]
-        if "practice_scenario" in updates:
-            item["practice_scenario"] = updates["practice_scenario"]
-        if "ig_seeding_hook" in updates:
-            item["ig_seeding_hook"] = updates["ig_seeding_hook"]
-            
-        # Update slugs if valid
-        ss_slug = updates.get("shooting_style_slug")
-        if ss_slug and isinstance(item.get("shooting_style"), dict):
-            item["shooting_style"]["id"] = ss_slug
-            
-        ind_slug = updates.get("industry_slug")
-        if ind_slug and isinstance(item.get("industry"), dict):
-            item["industry"]["id"] = ind_slug
+    if "logic_explanation" in updates:
+        new_logic = str(updates["logic_explanation"])
+        old_logic = str(item.get("logic_explanation", ""))
+        if len(new_logic) > len(old_logic):
+            item["logic_explanation"] = new_logic
+    if "practice_scenario" in updates and updates["practice_scenario"]:
+        item["practice_scenario"] = updates["practice_scenario"]
 
+# ── Stats printer ─────────────────────────────────────────────────────────────
+def print_stats(done, total, errors, batch_num, total_batches, elapsed):
+    pct = done * 100 // total if total else 0
+    bar_len = 30
+    filled = bar_len * done // total if total else 0
+    bar = "█" * filled + "░" * (bar_len - filled)
+    eta = ""
+    if done > 0:
+        per_item = elapsed / done
+        remaining = (total - done) * per_item
+        mins = int(remaining // 60)
+        eta = f" ETA ~{mins}m"
+    print(f"\n  [{bar}] {pct}% — {done}/{total} items  |  Batch {batch_num}/{total_batches}  |  Lỗi: {errors}{eta}\n")
+
+# ── Main ──────────────────────────────────────────────────────────────────────
 def main():
-    parser = argparse.ArgumentParser(description="Gemini Optimizer for Video Ideas Bank")
-    parser.add_argument("--dry-run", action="store_true", help="Print what would happen without calling API")
-    parser.add_argument("--batch-size", type=int, default=10, help="Number of items per batch")
-    parser.add_argument("--mode", type=str, choices=["enrich", "fix-slugs", "add-practice"], default="enrich", help="Processing mode")
-    parser.add_argument("--skip-done", action="store_true", help="Skip items already processed in state JSON")
+    parser = argparse.ArgumentParser(description="Gemini Optimizer — ytuong.fedu.vn ideas bank")
+    parser.add_argument("--dry-run", action="store_true", help="Không gọi API, chỉ in danh sách items")
+    parser.add_argument("--batch-size", type=int, default=10, help="Số items mỗi batch (default: 10)")
+    parser.add_argument("--mode", choices=["enrich", "add-practice", "fix-logic", "full"], default="enrich",
+                        help="Mode xử lý (default: enrich)")
+    parser.add_argument("--skip-done", action="store_true", help="Bỏ qua items đã xử lý trong session trước")
+    parser.add_argument("--model", default="gemini-flash-latest",
+                        help="Gemini model (default: gemini-flash-latest). Dùng gemini-pro-latest để chất lượng cao hơn")
+    parser.add_argument("--delay", type=float, default=1.5,
+                        help="Delay giữa mỗi API call (giây, default: 1.5)")
+    parser.add_argument("--limit", type=int, default=0,
+                        help="Giới hạn số items xử lý (0 = không giới hạn)")
     args = parser.parse_args()
 
-    api_key = get_api_key()
-    if not api_key and not args.dry_run:
-        logger.error("GEMINI_API_KEY not found. Please set the environment variable.")
-        return
-
+    # ── Setup Gemini client ──
+    client = None
     if not args.dry_run:
-        genai.configure(api_key=api_key)
-        
-    try:
-        model = genai.GenerativeModel('gemini-2.5-flash')
-    except Exception as e:
-        logger.warning(f"Could not load gemini-2.5-flash, trying gemini-1.5-flash. Error: {e}")
+        api_key = get_api_key()
+        if not api_key:
+            logger.error("❌ Không tìm thấy GEMINI_API_KEY. File: ~/.config/gemini/api_key")
+            sys.exit(1)
         try:
-            model = genai.GenerativeModel('gemini-1.5-flash')
-        except Exception:
-            model = None
+            import google.genai as genai
+            client = genai.Client(api_key=api_key)
+            # Quick connectivity test
+            test = client.models.generate_content(model=args.model, contents="OK?")
+            logger.info(f"✅ Gemini API kết nối OK — Model: {args.model}")
+        except Exception as e:
+            logger.error(f"❌ Gemini API lỗi: {e}")
+            sys.exit(1)
 
-    data = load_data()
-    state = load_state()
-    
-    processed_keys = set(state.get("processed_keys", []))
-    
-    # Filter items
-    items_to_process = []
+    # ── Load data ──
+    data   = load_data()
+    state  = load_state()
+    processed_set = set(state.get("processed_keys", []))
+
+    # ── Filter items ──
+    queue = []
     for key, item in data.items():
-        if args.skip_done and key in processed_keys:
+        if args.skip_done and key in processed_set:
             continue
-            
-        if needs_processing(item, args):
-            items_to_process.append((key, item))
-            
-    total_items = len(items_to_process)
-    logger.info(f"Total items needing processing: {total_items}")
-    
-    if total_items == 0:
-        logger.info("Nothing to do.")
+        if needs_processing(item, args.mode):
+            queue.append((key, item))
+
+    if args.limit > 0:
+        queue = queue[:args.limit]
+
+    total = len(queue)
+    logger.info(f"📋 Tổng items cần xử lý: {total}  |  Mode: {args.mode}  |  Dry-run: {args.dry_run}")
+
+    if total == 0:
+        logger.info("✅ Tất cả items đã đủ data. Không cần xử lý thêm.")
         return
-        
-    # Process in batches
-    for i in range(0, total_items, args.batch_size):
-        batch = items_to_process[i:i + args.batch_size]
-        logger.info(f"--- Batch {i//args.batch_size + 1}/{(total_items + args.batch_size - 1)//args.batch_size} ({len(batch)} items) ---")
-        
-        results = process_batch(batch, model, args)
-        
-        if not args.dry_run:
-            apply_results(data, results)
-            save_data(data)
-            
-            # Update state
-            for key in results.keys():
-                if key not in processed_keys:
-                    processed_keys.add(key)
-                    state["processed_keys"].append(key)
-            save_state(state)
-            
-        logger.info(f"Batch completed.")
+
+    if args.dry_run:
+        for i, (k, _) in enumerate(queue[:20]):
+            print(f"  [{i+1}] {k[:80]}")
+        if total > 20:
+            print(f"  ... và {total - 20} items khác")
+        return
+
+    # ── Process loop ──
+    total_batches = (total + args.batch_size - 1) // args.batch_size
+    done   = state.get("total_done", 0)
+    errors = state.get("errors", 0)
+    start  = time.time()
+    session_done = 0
+
+    print(f"\n🚀 Bắt đầu chạy {total} items / {total_batches} batches\n")
+
+    for batch_num, i in enumerate(range(0, total, args.batch_size), 1):
+        batch = queue[i : i + args.batch_size]
+        logger.info(f"── Batch {batch_num}/{total_batches} ({len(batch)} items) ──")
+
+        for key, item in batch:
+            logger.info(f"  ⚙ {key[:70]}")
+            prompt = build_prompt(item)
+
+            retries = 4
+            backoff = 2
+            success = False
+
+            while retries > 0:
+                try:
+                    resp = client.models.generate_content(model=args.model, contents=prompt)
+                    updates = parse_response(resp.text)
+                    if updates:
+                        apply_update(data[key], updates)
+                        success = True
+                        session_done += 1
+                        done += 1
+                    else:
+                        errors += 1
+                    break
+                except Exception as e:
+                    err_str = str(e)
+                    if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
+                        logger.warning(f"  ⏳ Rate limit — chờ {backoff}s...")
+                        time.sleep(backoff)
+                        backoff = min(backoff * 2, 60)
+                        retries -= 1
+                    else:
+                        logger.error(f"  ❌ API error: {err_str[:100]}")
+                        errors += 1
+                        break
+
+            # Mark processed
+            if key not in processed_set:
+                processed_set.add(key)
+                state["processed_keys"].append(key)
+
+            time.sleep(args.delay)
+
+        # ── Save after every batch ──
+        save_data(data)
+        state["total_done"] = done
+        state["errors"] = errors
+        save_state(state)
+
+        elapsed = time.time() - start
+        print_stats(session_done, total, errors, batch_num, total_batches, elapsed)
+        logger.info(f"  💾 Saved — {done} done total, {errors} errors")
+
+    elapsed = time.time() - start
+    print(f"\n{'='*60}")
+    print(f"✅ HOÀN THÀNH")
+    print(f"   Xử lý: {session_done} items  |  Lỗi: {errors}  |  Thời gian: {elapsed/60:.1f} phút")
+    print(f"   File: {MASTER_JSON_PATH}")
+    print(f"{'='*60}\n")
+
+    # Suggest rebuild
+    print("👉 Rebuild ideas_data.js:")
+    print(f"   python3 {BASE_DIR}/build_ideas_bank.py\n")
+
 
 if __name__ == "__main__":
     main()
