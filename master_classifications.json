@@ -8638,50 +8638,42 @@
     }
   },
   "Dc0tEcOIdwy": {
-    "id": "IG_@mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery",
-    "index": 20,
+    "id": "IG_@mridupawasharma_Dc0tEcOIdwy_4_cuts_to_instantly_make_your_videos_🔥",
     "creator": "@mridupawasharma",
     "creator_name": "Mridupawasharma",
-    "title": "Mridupawan Sharma • 4 Kỹ Thuật Cắt Cảnh Nâng Tầm Video Điện Ảnh",
-    "shots_count": 24,
-    "duration": "0.2s",
+    "title": "@mridupawasharma - 4 cuts to instantly make your videos 🔥",
+    "shots_count": 37,
+    "duration": "74.0s",
     "shooting_style": {
       "id": "chuyen-canh",
       "name": "Chuyển Cảnh (Transition)",
       "icon": "⚡"
     },
     "industry": {
-      "id": "ky-thuat-quay",
-      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
-      "icon": "🎯"
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
     },
-    "purpose": "4 kỹ thuật cắt cảnh nâng tầm video điện ảnh",
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
     "tech_tags": [
-      "Chuyển cảnh Level 2",
-      "Match Cut On Action",
-      "J-Cut Audio Lead",
-      "L-Cut Continuity",
-      "Smash Cut Impact"
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting",
+      "High-key Lighting"
     ],
-    "logic_explanation": "Mridupawan Sharma phân tích 4 kỹ thuật cắt cảnh cốt lõi trong điện ảnh (Match Cut, J-Cut, L-Cut, Smash Cut) giúp nhịp phim mượt mà và cuốn hút.",
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "Bóc tách 24 phân cảnh chuẩn đạo diễn về 4 kỹ thuật cắt cảnh kinh điển của ngôn ngữ điện ảnh ứng dụng vào video dọc Instagram Reels/TikTok: 1. The Mask Cut (Cắt giấu mép bằng vật thể tự nhiên), 2.",
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
     "country": {
-      "id": "india",
-      "name": "Ấn Độ",
-      "en_name": "India",
-      "flag": "🇮🇳",
-      "badge_color": "amber"
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
     },
-    "transition_level": "Chuyển cảnh Level 2",
-    "is_ad_bot": false,
-    "fedu_optimization": {
-      "key_optimization_point": "⚡ Chuyển cảnh Level 2: Đặt máy lên chân máy (tripod), chuyển cảnh bằng hành động cơ thể rõ ràng lặp lại 2 lần",
-      "practice_focus": "Bài tập thực hành trong phòng / bối cảnh tĩnh: Cố định điện thoại trên tripod, thực hiện 1 hành động cơ thể rõ nét (vung tay, ném đồ, dậm chân, đổi áo) lặp lại 2 lần để cắt match cut ở đỉnh quán tính.",
-      "ig_seeding_hook": "Follow @mridupawasharma (Mridupawasharma) để thuật toán Instagram liên tục cập nhật các reel biến hình triệu view, match action chuẩn xác và cách kiểm soát nhịp dựng.",
-      "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Mẫu Biến Hình & Match Action Khóa Học video.fedu.vn",
-      "transition_level": "Chuyển cảnh Level 2"
-    }
+    "youtube_id": "KetLXEHPVZ8",
+    "youtube_url": "https://youtu.be/KetLXEHPVZ8",
+    "youtube_embed": "https://www.youtube.com/embed/KetLXEHPVZ8"
   },
   "DZFzj9YAAmG": {
     "id": "IG_@firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining",
@@ -23712,5 +23704,43 @@
     "youtube_id": "wbRlOKO71Ws",
     "youtube_url": "https://youtu.be/wbRlOKO71Ws",
     "youtube_embed": "https://www.youtube.com/embed/wbRlOKO71Ws"
+  },
+  "IG_@mridupawasharma_Dc0tEcOIdwy_4_cuts_to_instantly_make_your_videos_🔥": {
+    "id": "IG_@mridupawasharma_Dc0tEcOIdwy_4_cuts_to_instantly_make_your_videos_🔥",
+    "creator": "@mridupawasharma",
+    "creator_name": "Mridupawasharma",
+    "title": "@mridupawasharma - 4 cuts to instantly make your videos 🔥",
+    "shots_count": 37,
+    "duration": "74.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting",
+      "High-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "KetLXEHPVZ8",
+    "youtube_url": "https://youtu.be/KetLXEHPVZ8",
+    "youtube_embed": "https://www.youtube.com/embed/KetLXEHPVZ8"
   }
 }
