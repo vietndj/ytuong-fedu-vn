@@ -23749,29 +23749,30 @@
     "id": "IG_@alexmegino_DdzHC1ljMjk_Carousel_Analysis",
     "creator": "@alexmegino",
     "creator_name": "Alexmegino",
-    "title": "@alexmegino - A Day in the Life — Sunday Routine",
+    "title": "Kỷ Luật Thép Của Kẻ Hành Động: Cách Dùng Thời Gian Để Kể Chuyện",
     "shots_count": 13,
-    "duration": "26.0s",
+    "duration": "29.6s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "id": "A Day In The Life (Vlog Không Lời)",
+      "name": "A Day In The Life (Vlog Không Lời)",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Lifestyle & Phát Triển Bản Thân",
+      "name": "Lifestyle & Phát Triển Bản Thân",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @alexmegino",
     "tech_tags": [
-      "Establishing Hook Shot",
+      "Productivity",
+      "Morning Routine",
+      "ASMR",
       "Low-key Lighting",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot"
+      "Time-lapse Narrative"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Khắc họa một ngày kỷ luật thép (từ 8:08 sáng đến 19:59 tối) thông qua chuỗi không gian tối giản, nhịp điệu từ tốn và cách chơi ánh sáng Low-key xuất sắc.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -23784,29 +23785,30 @@
     "id": "IG_@alexmegino_DdzHC1ljMjk_Carousel_Analysis",
     "creator": "@alexmegino",
     "creator_name": "Alexmegino",
-    "title": "@alexmegino - A Day in the Life — Sunday Routine",
+    "title": "Kỷ Luật Thép Của Kẻ Hành Động: Cách Dùng Thời Gian Để Kể Chuyện",
     "shots_count": 13,
-    "duration": "26.0s",
+    "duration": "29.6s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "id": "A Day In The Life (Vlog Không Lời)",
+      "name": "A Day In The Life (Vlog Không Lời)",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Lifestyle & Phát Triển Bản Thân",
+      "name": "Lifestyle & Phát Triển Bản Thân",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @alexmegino",
     "tech_tags": [
-      "Establishing Hook Shot",
+      "Productivity",
+      "Morning Routine",
+      "ASMR",
       "Low-key Lighting",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot"
+      "Time-lapse Narrative"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Khắc họa một ngày kỷ luật thép (từ 8:08 sáng đến 19:59 tối) thông qua chuỗi không gian tối giản, nhịp điệu từ tốn và cách chơi ánh sáng Low-key xuất sắc.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
