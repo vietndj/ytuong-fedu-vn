@@ -23966,5 +23966,81 @@
     "youtube_id": "c9Lwac8Lk60",
     "youtube_url": "https://youtu.be/c9Lwac8Lk60",
     "youtube_embed": "https://www.youtube.com/embed/c9Lwac8Lk60"
+  },
+  "IG_@sametxhunter_DdwxosERt7n_It’s_Now_or_Never": {
+    "id": "IG_@sametxhunter_DdwxosERt7n_It’s_Now_or_Never",
+    "creator": "@sametxhunter",
+    "creator_name": "Sametxhunter",
+    "title": "@sametxhunter - It’s Now or Never",
+    "shots_count": 21,
+    "duration": "42.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @sametxhunter",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "fedr6x8RGuI",
+    "youtube_url": "https://youtu.be/fedr6x8RGuI",
+    "youtube_embed": "https://www.youtube.com/embed/fedr6x8RGuI"
+  },
+  "DdwxosERt7n": {
+    "id": "IG_@sametxhunter_DdwxosERt7n_It’s_Now_or_Never",
+    "creator": "@sametxhunter",
+    "creator_name": "Sametxhunter",
+    "title": "@sametxhunter - It’s Now or Never",
+    "shots_count": 21,
+    "duration": "42.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @sametxhunter",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "fedr6x8RGuI",
+    "youtube_url": "https://youtu.be/fedr6x8RGuI",
+    "youtube_embed": "https://www.youtube.com/embed/fedr6x8RGuI"
   }
 }

@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 314,
-  "total_unique_ideas": 294,
-  "total_active_ideas": 266,
+  "total_scene_items": 315,
+  "total_unique_ideas": 295,
+  "total_active_ideas": 267,
   "total_excluded_ideas": 28,
-  "total_creators": 203,
+  "total_creators": 204,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -369,7 +369,7 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 32,
     "storytelling": 23,
     "dien-anh": 93,
-    "chuyen-canh": 52,
+    "chuyen-canh": 53,
     "theo-nhip-nhac": 3,
     "Walk & Talk / Phỏng Vấn": 1,
     "A Day In The Life (Vlog Không Lời)": 1,
@@ -498,7 +498,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 22,
     "du-lich": 17,
     "cong-nghe": 35,
-    "kien-truc": 32,
+    "kien-truc": 33,
     "the-thao": 5,
     "ky-thuat-quay": 38,
     "ugc": 5
@@ -560,7 +560,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 173,
+    "us_eu": 174,
     "korea": 10,
     "india": 3,
     "japan": 6,
@@ -1042,6 +1042,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "REMAKE_Byjxson_Quang_Cao_Dong_Ho_Bam_Gio",
         "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01"
+      ]
+    },
+    {
+      "handle": "@sametxhunter",
+      "name": "Sametxhunter",
+      "profile_url": "https://www.instagram.com/sametxhunter/",
+      "video_count": 1,
+      "top_industry": "Kiến Trúc & Không Gian Sống",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40sametxhunter_DdwxosERt7n_It%E2%80%99s_Now_or_Never/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@sametxhunter_DdwxosERt7n_It’s_Now_or_Never"
       ]
     },
     {
@@ -2894,6 +2905,73 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@sametxhunter_DdwxosERt7n_It’s_Now_or_Never",
+      "shortcode": "DdwxosERt7n",
+      "title_vi": "It’s Now or Never",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
+      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @sametxhunter",
+      "tech_tags": [
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot",
+        "Low-key Lighting",
+        "Medium Tracking Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+      "creator": {
+        "raw": "@sametxhunter",
+        "name": "Sametxhunter",
+        "handle": "@sametxhunter",
+        "profile_url": "https://www.instagram.com/sametxhunter/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DdwxosERt7n/",
+      "gdrive_folder": "https://drive.google.com/open?id=13IG0wJyf9fn_OfT-5xefar1Vrpwly6Ue",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40sametxhunter_DdwxosERt7n_It%E2%80%99s_Now_or_Never/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40sametxhunter_DdwxosERt7n_It%E2%80%99s_Now_or_Never/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/DdwxosERt7n.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdwxosERt7n.mp4",
+        "report_url": "reports/IG_@sametxhunter_DdwxosERt7n_It’s_Now_or_Never.html",
+        "shots_count": 21,
+        "duration": "42s",
+        "youtube_id": "fedr6x8RGuI",
+        "youtube_embed": "https://www.youtube.com/embed/fedr6x8RGuI",
+        "youtube_url": "https://youtu.be/fedr6x8RGuI"
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@nouince_DduU6THJQ8y_O_que_traz_mais_autoridade_👀",
       "shortcode": "DduU6THJQ8y",
@@ -7056,7 +7134,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
@@ -8436,8 +8514,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
