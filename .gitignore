@@ -24,3 +24,4 @@ process_report.js
 list.txt
 upload_yt.py
 screenshots/
+.codegraph/
