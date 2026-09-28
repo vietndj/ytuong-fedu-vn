@@ -171,10 +171,12 @@ def apply_update(item, updates):
     if "logic_explanation" in updates:
         new_logic = str(updates["logic_explanation"])
         old_logic = str(item.get("logic_explanation", ""))
-        if len(new_logic) > len(old_logic):
+        # Overwrite nếu mới dài hơn hoặc cũ quá ngắn
+        if len(new_logic) > max(80, len(old_logic)):
             item["logic_explanation"] = new_logic
+    # Luôn ghi practice_scenario nếu có data mới
     if "practice_scenario" in updates and updates["practice_scenario"]:
-        item["practice_scenario"] = updates["practice_scenario"]
+        item["practice_scenario"] = str(updates["practice_scenario"])
 
 # ── Stats printer ─────────────────────────────────────────────────────────────
 def print_stats(done, total, errors, batch_num, total_batches, elapsed):
@@ -270,8 +272,8 @@ def main():
             logger.info(f"  ⚙ {key[:70]}")
             prompt = build_prompt(item)
 
-            retries = 4
-            backoff = 2
+            retries = 6
+            backoff = 3
             success = False
 
             while retries > 0:
@@ -288,10 +290,10 @@ def main():
                     break
                 except Exception as e:
                     err_str = str(e)
-                    if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
-                        logger.warning(f"  ⏳ Rate limit — chờ {backoff}s...")
+                    if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "503" in err_str:
+                        logger.warning(f"  ⏳ Rate limit/overload — chờ {backoff}s... (còn {retries-1} retry)")
                         time.sleep(backoff)
-                        backoff = min(backoff * 2, 60)
+                        backoff = min(backoff * 2, 120)
                         retries -= 1
                     else:
                         logger.error(f"  ❌ API error: {err_str[:100]}")
