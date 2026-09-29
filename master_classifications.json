@@ -13,8 +13,8 @@
       "icon": "🌿"
     },
     "industry": {
-      "id": "phat-trien-ban-than",
-      "name": "Tâm Lý & Phát Triển Bản Thân",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🧘"
     },
     "purpose": "Bẻ gãy quán tính vội vã vô thức và điều hòa hệ thần kinh bằng chuỗi thói quen đời thường",
@@ -2717,8 +2717,8 @@
       "icon": "⚡"
     },
     "industry": {
-      "id": "lam-dep",
-      "name": "Làm Đẹp & Spa / Y Tế",
+      "id": "spa-lam-dep",
+      "name": "spa-lam-dep",
       "icon": "💆"
     },
     "purpose": "Combo trải nghiệm thư giãn kép: Spa trị liệu cổ vai gáy & Cafe Matcha Wabi-sabi",
@@ -2890,8 +2890,8 @@
       "icon": "🎙️"
     },
     "industry": {
-      "id": "doi-thuong",
-      "name": "Đời Thường & Chữa Lành",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🌿"
     },
     "country": {
@@ -5459,13 +5459,13 @@
     "shots_count": 29,
     "duration": "24.3s",
     "shooting_style": {
-      "id": "Phim Điện Ảnh (Cinematic Stills)",
-      "name": "Phim Điện Ảnh (Cinematic Stills)",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Nhiếp Ảnh & Điện Ảnh",
-      "name": "Nhiếp Ảnh & Điện Ảnh",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @german991020",
@@ -5539,13 +5539,13 @@
     "shots_count": 15,
     "duration": "35.5s",
     "shooting_style": {
-      "id": "chuyen_canh",
-      "name": "chuyen_canh",
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "cong_nghe",
-      "name": "cong_nghe",
+      "id": "cong-nghe",
+      "name": "cong-nghe",
       "icon": "🎯"
     },
     "purpose": "Quảng cáo thương mại TMĐT chuyển đổi cao cho chân máy du lịch",
@@ -5617,8 +5617,8 @@
     "shots_count": 19,
     "duration": "53.5s",
     "shooting_style": {
-      "id": "san-pham",
-      "name": "san-pham",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
@@ -5657,8 +5657,8 @@
     "shots_count": 3,
     "duration": "7.7s",
     "shooting_style": {
-      "id": "bien-hinh",
-      "name": "bien-hinh",
+      "id": "theo-nhip-nhac",
+      "name": "theo-nhip-nhac",
       "icon": "🎬"
     },
     "industry": {
@@ -5777,13 +5777,13 @@
     "shots_count": 11,
     "duration": "63.4s",
     "shooting_style": {
-      "id": "Điện Ảnh (Cinematic)",
-      "name": "Điện Ảnh (Cinematic)",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Nhiếp Ảnh & Làm Phim",
-      "name": "Nhiếp Ảnh & Làm Phim",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Đúc kết 10 kỹ thuật quay phim đời thường biến những khoảnh khắc bình dị thành thước phim điện ảnh đắt giá.",
@@ -5859,13 +5859,13 @@
     "shots_count": 6,
     "duration": "10.9s",
     "shooting_style": {
-      "id": "Cinematic B-Roll",
-      "name": "Cinematic B-Roll",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Quay Dựng & Điện Ảnh",
-      "name": "Quay Dựng & Điện Ảnh",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @dopeitsdamo",
@@ -5903,8 +5903,8 @@
       "icon": "🎬"
     },
     "industry": {
-      "id": "Đời Sống & Gia Đình",
-      "name": "Đời Sống & Gia Đình",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jigummmmm",
@@ -5937,8 +5937,8 @@
     "shots_count": 23,
     "duration": "15.3s",
     "shooting_style": {
-      "id": "BTS / Hậu Trường Sáng Tạo",
-      "name": "BTS / Hậu Trường Sáng Tạo",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
@@ -5977,13 +5977,13 @@
     "shots_count": 21,
     "duration": "12.8s",
     "shooting_style": {
-      "id": "POV & Aesthetic B-Roll Montage",
-      "name": "POV & Aesthetic B-Roll Montage",
+      "id": "theo-nhip-nhac",
+      "name": "theo-nhip-nhac",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Phong Cách Sống & Du Lịch",
-      "name": "Phong Cách Sống & Du Lịch",
+      "id": "du-lich",
+      "name": "du-lich",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @laylaa_398",
@@ -6017,13 +6017,13 @@
     "shots_count": 25,
     "duration": "36.6s",
     "shooting_style": {
-      "id": "Cinematic B-Roll",
-      "name": "Cinematic B-Roll",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Du Lịch & Khám Phá",
-      "name": "Du Lịch & Khám Phá",
+      "id": "du-lich",
+      "name": "du-lich",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @filmwithred",
@@ -6056,13 +6056,13 @@
     "shots_count": 10,
     "duration": "279.0s",
     "shooting_style": {
-      "id": "lifestyle-cinematic",
-      "name": "lifestyle-cinematic",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "du-lich-khach-san",
-      "name": "du-lich-khach-san",
+      "id": "du-lich",
+      "name": "du-lich",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @yongandmike",
@@ -6092,13 +6092,13 @@
     "shots_count": 18,
     "duration": "71.9s",
     "shooting_style": {
-      "id": "Walk and Talk Documentary",
-      "name": "Walk and Talk Documentary",
+      "id": "walk-and-talk",
+      "name": "walk-and-talk",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Sáng Tạo Nội Dung & Điện Ảnh",
-      "name": "Sáng Tạo Nội Dung & Điện Ảnh",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mylenesmind",
@@ -6132,13 +6132,13 @@
     "shots_count": 18,
     "duration": "13.4s",
     "shooting_style": {
-      "id": "Cinematic Vlog / Cut On Action",
-      "name": "Cinematic Vlog / Cut On Action",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Du Lịch & Trải Nghiệm Sống",
-      "name": "Du Lịch & Trải Nghiệm Sống",
+      "id": "du-lich",
+      "name": "du-lich",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @acupper",
@@ -6173,13 +6173,13 @@
     "shots_count": 17,
     "duration": "15.3s",
     "shooting_style": {
-      "id": "Chuyển Cảnh (Transition)",
-      "name": "Chuyển Cảnh (Transition)",
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Du Lịch & Khám Phá",
-      "name": "Du Lịch & Khám Phá",
+      "id": "du-lich",
+      "name": "du-lich",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jxnjuvv",
@@ -6213,13 +6213,13 @@
     "shots_count": 11,
     "duration": "30.7s",
     "shooting_style": {
-      "id": "Walk and Talk",
-      "name": "Walk and Talk",
+      "id": "walk-and-talk",
+      "name": "walk-and-talk",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Sáng Tạo Nội Dung & Video",
-      "name": "Sáng Tạo Nội Dung & Video",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @iamaayushswamy",
@@ -6389,8 +6389,8 @@
     "shots_count": 8,
     "duration": "27.9s",
     "shooting_style": {
-      "id": "pov",
-      "name": "pov",
+      "id": "theo-nhip-nhac",
+      "name": "theo-nhip-nhac",
       "icon": "🎬"
     },
     "industry": {
@@ -6496,13 +6496,13 @@
     "shots_count": 26,
     "duration": "28.8s",
     "shooting_style": {
-      "id": "Chuyển Cảnh (Transition)",
-      "name": "Chuyển Cảnh (Transition)",
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Thời Trang & Phong Cách Sống",
-      "name": "Thời Trang & Phong Cách Sống",
+      "id": "thoi-trang",
+      "name": "thoi-trang",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @lisha_ho",
@@ -6533,13 +6533,13 @@
     "shots_count": 10,
     "duration": "10.4s",
     "shooting_style": {
-      "id": "Chuyển Cảnh (Transition)",
-      "name": "Chuyển Cảnh (Transition)",
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Thời Trang & Phong Cách Sống",
-      "name": "Thời Trang & Phong Cách Sống",
+      "id": "thoi-trang",
+      "name": "thoi-trang",
       "icon": "🎯"
     },
     "purpose": "Chuyen canh 1",
@@ -6571,13 +6571,13 @@
     "shots_count": 14,
     "duration": "22.4s",
     "shooting_style": {
-      "id": "Kể Chuyện (Storytelling)",
-      "name": "Kể Chuyện (Storytelling)",
+      "id": "storytelling",
+      "name": "storytelling",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Đời Sống & Phong Cách Sống",
-      "name": "Đời Sống & Phong Cách Sống",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @starsinmycam",
@@ -6609,13 +6609,13 @@
     "shots_count": 10,
     "duration": "10.4s",
     "shooting_style": {
-      "id": "Chuyển Cảnh (Transition)",
-      "name": "Chuyển Cảnh (Transition)",
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Thời Trang & Phong Cách Sống",
-      "name": "Thời Trang & Phong Cách Sống",
+      "id": "thoi-trang",
+      "name": "thoi-trang",
       "icon": "🎯"
     },
     "purpose": "Chuyen canh 1",
@@ -6719,8 +6719,8 @@
     "shots_count": 10,
     "duration": "11.4s",
     "shooting_style": {
-      "id": "pov",
-      "name": "pov",
+      "id": "theo-nhip-nhac",
+      "name": "theo-nhip-nhac",
       "icon": "🎬"
     },
     "industry": {
@@ -6788,13 +6788,13 @@
     "shots_count": 5,
     "duration": "8.1s",
     "shooting_style": {
-      "id": "Chuyển Cảnh Thời Trang (OOTD Transition)",
-      "name": "Chuyển Cảnh Thời Trang (OOTD Transition)",
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Thời Trang & Phụ Kiện",
-      "name": "Thời Trang & Phụ Kiện",
+      "id": "thoi-trang",
+      "name": "thoi-trang",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @alenkabalenka",
@@ -6860,13 +6860,13 @@
     "shots_count": 8,
     "duration": "16.0s",
     "shooting_style": {
-      "id": "Split Screen / Behind-The-Scenes",
-      "name": "Split Screen / Behind-The-Scenes",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Ẩm Thực & F&B",
-      "name": "Ẩm Thực & F&B",
+      "id": "am-thuc",
+      "name": "am-thuc",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @hu321938",
@@ -6900,13 +6900,13 @@
     "shots_count": 20,
     "duration": "26.1s",
     "shooting_style": {
-      "id": "Vlog",
-      "name": "Vlog",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Đời Sống & Phong Cách Sống",
-      "name": "Đời Sống & Phong Cách Sống",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @nana_icroom",
@@ -6939,13 +6939,13 @@
     "shots_count": 10,
     "duration": "49.0s",
     "shooting_style": {
-      "id": "Bố Cục (Framing)",
-      "name": "Bố Cục (Framing)",
+      "id": "theo-nhip-nhac",
+      "name": "theo-nhip-nhac",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Công Nghệ & Thiết Bị",
-      "name": "Công Nghệ & Thiết Bị",
+      "id": "cong-nghe",
+      "name": "cong-nghe",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @minghan1004",
@@ -7012,13 +7012,13 @@
     "shots_count": 20,
     "duration": "21.8s",
     "shooting_style": {
-      "id": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
-      "name": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Phong Cách Sống & Nghệ Thuật",
-      "name": "Phong Cách Sống & Nghệ Thuật",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jsnhow",
@@ -7058,8 +7058,8 @@
       "icon": "🎬"
     },
     "industry": {
-      "id": "Thời Trang & Phong Cách Sống",
-      "name": "Thời Trang & Phong Cách Sống",
+      "id": "thoi-trang",
+      "name": "thoi-trang",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @elenabuntushak",
@@ -7089,13 +7089,13 @@
     "shots_count": 7,
     "duration": "32.0s",
     "shooting_style": {
-      "id": "Điện Ảnh (Cinematic)",
-      "name": "Điện Ảnh (Cinematic)",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Nhiếp Ảnh & Quay Phim",
-      "name": "Nhiếp Ảnh & Quay Phim",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @shotsbyzaid",
@@ -7170,13 +7170,13 @@
     "shots_count": 12,
     "duration": "20.8s",
     "shooting_style": {
-      "id": "Visual Storytelling",
-      "name": "Visual Storytelling",
+      "id": "storytelling",
+      "name": "storytelling",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Bố cục",
-      "name": "Bố cục",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @cinematic_lee",
@@ -7207,13 +7207,13 @@
     "shots_count": 25,
     "duration": "28.9s",
     "shooting_style": {
-      "id": "POV & Fast-Paced Montage",
-      "name": "POV & Fast-Paced Montage",
+      "id": "theo-nhip-nhac",
+      "name": "theo-nhip-nhac",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Vlog & Phong Cách Sống",
-      "name": "Vlog & Phong Cách Sống",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @qaqu_uu",
@@ -7278,13 +7278,13 @@
     "shots_count": 11,
     "duration": "10.2s",
     "shooting_style": {
-      "id": "Điện Ảnh Đời Thường (Cinematic)",
-      "name": "Điện Ảnh Đời Thường (Cinematic)",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Du Lịch & Văn Hóa",
-      "name": "Du Lịch & Văn Hóa",
+      "id": "du-lich",
+      "name": "du-lich",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @takashi.film",
@@ -7467,13 +7467,13 @@
     "shots_count": 37,
     "duration": "60.0s",
     "shooting_style": {
-      "id": "Vlog Lifestyle / B-Roll Điện Ảnh",
-      "name": "Vlog Lifestyle / B-Roll Điện Ảnh",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Thời Trang & Phụ Kiện",
-      "name": "Thời Trang & Phụ Kiện",
+      "id": "thoi-trang",
+      "name": "thoi-trang",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @pausehereii",
@@ -7543,13 +7543,13 @@
     "shots_count": 9,
     "duration": "10.7s",
     "shooting_style": {
-      "id": "Chuyển Cảnh Thời Trang (OOTD Transition)",
-      "name": "Chuyển Cảnh Thời Trang (OOTD Transition)",
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Thời Trang & Phong Cách Sống",
-      "name": "Thời Trang & Phong Cách Sống",
+      "id": "thoi-trang",
+      "name": "thoi-trang",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mariapark",
@@ -7583,13 +7583,13 @@
     "shots_count": 9,
     "duration": "9.8s",
     "shooting_style": {
-      "id": "Cinematic",
-      "name": "Cinematic",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Thể Thao & Năng Động",
-      "name": "Thể Thao & Năng Động",
+      "id": "the-thao",
+      "name": "the-thao",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jackwebstter",
@@ -8645,13 +8645,13 @@
     "shots_count": 37,
     "duration": "48.7s",
     "shooting_style": {
-      "id": "Chuyển Cảnh (Transition)",
-      "name": "Chuyển Cảnh (Transition)",
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Kỹ Thuật Quay Dựng & Điện Ảnh",
-      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
@@ -17213,8 +17213,8 @@
       "icon": "📐"
     },
     "industry": {
-      "id": "ky-thuat-quay-dung",
-      "name": "Kỹ Thuật Quay Dựng & Phụ Kiện Solo Filmmaking",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎬"
     },
     "purpose": "Hướng dẫn 4 cú máy sáng tạo tại siêu thị chỉ với 2 chiếc giá đỡ Ulanzi MA38 & MT85",
@@ -17250,8 +17250,8 @@
       "icon": "📐"
     },
     "industry": {
-      "id": "ky-thuat-quay-dung",
-      "name": "Kỹ Thuật Quay Dựng & Phụ Kiện Solo Filmmaking",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎬"
     },
     "purpose": "Hướng dẫn 4 cú máy sáng tạo tại siêu thị chỉ với 2 chiếc giá đỡ Ulanzi MA38 & MT85",
@@ -17492,8 +17492,8 @@
       "icon": "🚶"
     },
     "industry": {
-      "id": "lam-dep",
-      "name": "Làm Đẹp & Spa / Y Tế (Salon Tóc)",
+      "id": "spa-lam-dep",
+      "name": "spa-lam-dep",
       "icon": "💆"
     },
     "purpose": "Quảng bá dịch vụ uốn tóc xoăn cao cấp bằng phong cách sàn diễn đường phố New York",
@@ -17532,8 +17532,8 @@
       "icon": "🚶"
     },
     "industry": {
-      "id": "lam-dep",
-      "name": "Làm Đẹp & Spa / Y Tế (Salon Tóc)",
+      "id": "spa-lam-dep",
+      "name": "spa-lam-dep",
       "icon": "💆"
     },
     "purpose": "Quảng bá dịch vụ uốn tóc xoăn cao cấp bằng phong cách sàn diễn đường phố New York",
@@ -17728,8 +17728,8 @@
       "icon": "⚡"
     },
     "industry": {
-      "id": "thuong-hieu-ca-nhan",
-      "name": "Thương Hiệu Cá Nhân & Đời Sống / Sáng Tạo",
+      "id": "thuong-hieu",
+      "name": "thuong-hieu",
       "icon": "💡"
     },
     "purpose": "Vlog một ngày làm việc và phong cách sống Clean Aesthetic tại San Francisco",
@@ -17801,8 +17801,8 @@
       "icon": "🚶‍♀️"
     },
     "industry": {
-      "id": "giao-duc",
-      "name": "Giáo Dục & Tuyển Sinh",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎓"
     },
     "purpose": "Chiêu sinh sự kiện UTS Vietnam Open Day tại Hà Nội kết hợp dẫn tour khám phá khuôn viên đại học số 1 nước Úc",
@@ -17842,8 +17842,8 @@
       "icon": "🚶‍♀️"
     },
     "industry": {
-      "id": "giao-duc",
-      "name": "Giáo Dục & Tuyển Sinh",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎓"
     },
     "purpose": "Chiêu sinh sự kiện UTS Vietnam Open Day tại Hà Nội kết hợp dẫn tour khám phá khuôn viên đại học số 1 nước Úc",
@@ -18228,8 +18228,8 @@
       "icon": "🎬"
     },
     "industry": {
-      "id": "sang-tao-noi-dung",
-      "name": "Sáng Tạo Nội Dung & Thương Hiệu Cá Nhân",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "📱"
     },
     "purpose": "Bóc tách 5 mẹo tự quay B-roll góc làm việc bằng điện thoại không cần thợ quay",
@@ -18277,8 +18277,8 @@
       "icon": "🎬"
     },
     "industry": {
-      "id": "sang-tao-noi-dung",
-      "name": "Sáng Tạo Nội Dung & Thương Hiệu Cá Nhân",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "📱"
     },
     "purpose": "Bóc tách 5 mẹo tự quay B-roll góc làm việc bằng điện thoại không cần thợ quay",
@@ -20380,13 +20380,13 @@
     "shots_count": 17,
     "duration": "34.0s",
     "shooting_style": {
-      "id": "Talking Head",
-      "name": "Talking Head",
+      "id": "talking-head",
+      "name": "talking-head",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Kiến Trúc & Không Gian Sống",
-      "name": "Kiến Trúc & Không Gian Sống",
+      "id": "kien-truc",
+      "name": "kien-truc",
       "icon": "🎯"
     },
     "purpose": "Bóc tách công thức Day In The Life 17 shots Micro-Montage kết hợp Split-Kinetic Typography",
@@ -20415,13 +20415,13 @@
     "shots_count": 29,
     "duration": "24.3s",
     "shooting_style": {
-      "id": "Phim Điện Ảnh (Cinematic Stills)",
-      "name": "Phim Điện Ảnh (Cinematic Stills)",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Nhiếp Ảnh & Điện Ảnh",
-      "name": "Nhiếp Ảnh & Điện Ảnh",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @german991020",
@@ -20495,13 +20495,13 @@
     "shots_count": 15,
     "duration": "35.5s",
     "shooting_style": {
-      "id": "chuyen_canh",
-      "name": "chuyen_canh",
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "cong_nghe",
-      "name": "cong_nghe",
+      "id": "cong-nghe",
+      "name": "cong-nghe",
       "icon": "🎯"
     },
     "purpose": "Quảng cáo thương mại TMĐT chuyển đổi cao cho chân máy du lịch",
@@ -20573,8 +20573,8 @@
     "shots_count": 19,
     "duration": "53.5s",
     "shooting_style": {
-      "id": "san-pham",
-      "name": "san-pham",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
@@ -20613,8 +20613,8 @@
     "shots_count": 3,
     "duration": "7.7s",
     "shooting_style": {
-      "id": "bien-hinh",
-      "name": "bien-hinh",
+      "id": "theo-nhip-nhac",
+      "name": "theo-nhip-nhac",
       "icon": "🎬"
     },
     "industry": {
@@ -20733,13 +20733,13 @@
     "shots_count": 11,
     "duration": "63.4s",
     "shooting_style": {
-      "id": "Điện Ảnh (Cinematic)",
-      "name": "Điện Ảnh (Cinematic)",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Nhiếp Ảnh & Làm Phim",
-      "name": "Nhiếp Ảnh & Làm Phim",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Đúc kết 10 kỹ thuật quay phim đời thường biến những khoảnh khắc bình dị thành thước phim điện ảnh đắt giá.",
@@ -20815,13 +20815,13 @@
     "shots_count": 6,
     "duration": "10.9s",
     "shooting_style": {
-      "id": "Cinematic B-Roll",
-      "name": "Cinematic B-Roll",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Quay Dựng & Điện Ảnh",
-      "name": "Quay Dựng & Điện Ảnh",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @dopeitsdamo",
@@ -20859,8 +20859,8 @@
       "icon": "🎬"
     },
     "industry": {
-      "id": "Đời Sống & Gia Đình",
-      "name": "Đời Sống & Gia Đình",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jigummmmm",
@@ -20967,13 +20967,13 @@
     "shots_count": 25,
     "duration": "36.6s",
     "shooting_style": {
-      "id": "Cinematic B-Roll",
-      "name": "Cinematic B-Roll",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Du Lịch & Khám Phá",
-      "name": "Du Lịch & Khám Phá",
+      "id": "du-lich",
+      "name": "du-lich",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @filmwithred",
@@ -21006,13 +21006,13 @@
     "shots_count": 10,
     "duration": "279.0s",
     "shooting_style": {
-      "id": "lifestyle-cinematic",
-      "name": "lifestyle-cinematic",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "du-lich-khach-san",
-      "name": "du-lich-khach-san",
+      "id": "du-lich",
+      "name": "du-lich",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @yongandmike",
@@ -21042,13 +21042,13 @@
     "shots_count": 18,
     "duration": "71.9s",
     "shooting_style": {
-      "id": "Walk and Talk Documentary",
-      "name": "Walk and Talk Documentary",
+      "id": "walk-and-talk",
+      "name": "walk-and-talk",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Sáng Tạo Nội Dung & Điện Ảnh",
-      "name": "Sáng Tạo Nội Dung & Điện Ảnh",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mylenesmind",
@@ -21082,13 +21082,13 @@
     "shots_count": 18,
     "duration": "13.4s",
     "shooting_style": {
-      "id": "Cinematic Vlog / Cut On Action",
-      "name": "Cinematic Vlog / Cut On Action",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Du Lịch & Trải Nghiệm Sống",
-      "name": "Du Lịch & Trải Nghiệm Sống",
+      "id": "du-lich",
+      "name": "du-lich",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @acupper",
@@ -21123,13 +21123,13 @@
     "shots_count": 17,
     "duration": "15.3s",
     "shooting_style": {
-      "id": "Chuyển Cảnh (Transition)",
-      "name": "Chuyển Cảnh (Transition)",
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Du Lịch & Khám Phá",
-      "name": "Du Lịch & Khám Phá",
+      "id": "du-lich",
+      "name": "du-lich",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jxnjuvv",
@@ -21163,13 +21163,13 @@
     "shots_count": 11,
     "duration": "30.7s",
     "shooting_style": {
-      "id": "Walk and Talk",
-      "name": "Walk and Talk",
+      "id": "walk-and-talk",
+      "name": "walk-and-talk",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Sáng Tạo Nội Dung & Video",
-      "name": "Sáng Tạo Nội Dung & Video",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @iamaayushswamy",
@@ -21268,8 +21268,8 @@
     "shots_count": 8,
     "duration": "27.9s",
     "shooting_style": {
-      "id": "pov",
-      "name": "pov",
+      "id": "theo-nhip-nhac",
+      "name": "theo-nhip-nhac",
       "icon": "🎬"
     },
     "industry": {
@@ -21376,13 +21376,13 @@
     "shots_count": 10,
     "duration": "10.4s",
     "shooting_style": {
-      "id": "Chuyển Cảnh (Transition)",
-      "name": "Chuyển Cảnh (Transition)",
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Thời Trang & Phong Cách Sống",
-      "name": "Thời Trang & Phong Cách Sống",
+      "id": "thoi-trang",
+      "name": "thoi-trang",
       "icon": "🎯"
     },
     "purpose": "Chuyen canh 1",
@@ -21414,13 +21414,13 @@
     "shots_count": 14,
     "duration": "22.4s",
     "shooting_style": {
-      "id": "Kể Chuyện (Storytelling)",
-      "name": "Kể Chuyện (Storytelling)",
+      "id": "storytelling",
+      "name": "storytelling",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Đời Sống & Phong Cách Sống",
-      "name": "Đời Sống & Phong Cách Sống",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @starsinmycam",
@@ -21490,8 +21490,8 @@
     "shots_count": 10,
     "duration": "11.4s",
     "shooting_style": {
-      "id": "pov",
-      "name": "pov",
+      "id": "theo-nhip-nhac",
+      "name": "theo-nhip-nhac",
       "icon": "🎬"
     },
     "industry": {
@@ -21531,8 +21531,8 @@
       "icon": "🎬"
     },
     "industry": {
-      "id": "Thời Trang & Phong Cách Sống",
-      "name": "Thời Trang & Phong Cách Sống",
+      "id": "thoi-trang",
+      "name": "thoi-trang",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @elenabuntushak",
@@ -21562,13 +21562,13 @@
     "shots_count": 5,
     "duration": "8.1s",
     "shooting_style": {
-      "id": "Chuyển Cảnh Thời Trang (OOTD Transition)",
-      "name": "Chuyển Cảnh Thời Trang (OOTD Transition)",
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Thời Trang & Phụ Kiện",
-      "name": "Thời Trang & Phụ Kiện",
+      "id": "thoi-trang",
+      "name": "thoi-trang",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @alenkabalenka",
@@ -21634,13 +21634,13 @@
     "shots_count": 8,
     "duration": "16.0s",
     "shooting_style": {
-      "id": "Split Screen / Behind-The-Scenes",
-      "name": "Split Screen / Behind-The-Scenes",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Ẩm Thực & F&B",
-      "name": "Ẩm Thực & F&B",
+      "id": "am-thuc",
+      "name": "am-thuc",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @hu321938",
@@ -21709,13 +21709,13 @@
     "shots_count": 10,
     "duration": "49.0s",
     "shooting_style": {
-      "id": "Bố Cục (Framing)",
-      "name": "Bố Cục (Framing)",
+      "id": "theo-nhip-nhac",
+      "name": "theo-nhip-nhac",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Công Nghệ & Thiết Bị",
-      "name": "Công Nghệ & Thiết Bị",
+      "id": "cong-nghe",
+      "name": "cong-nghe",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @minghan1004",
@@ -21746,13 +21746,13 @@
     "shots_count": 20,
     "duration": "21.8s",
     "shooting_style": {
-      "id": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
-      "name": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Phong Cách Sống & Nghệ Thuật",
-      "name": "Phong Cách Sống & Nghệ Thuật",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @jsnhow",
@@ -21787,13 +21787,13 @@
     "shots_count": 7,
     "duration": "32.0s",
     "shooting_style": {
-      "id": "Điện Ảnh (Cinematic)",
-      "name": "Điện Ảnh (Cinematic)",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Nhiếp Ảnh & Quay Phim",
-      "name": "Nhiếp Ảnh & Quay Phim",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @shotsbyzaid",
@@ -21938,13 +21938,13 @@
     "shots_count": 11,
     "duration": "10.2s",
     "shooting_style": {
-      "id": "Điện Ảnh Đời Thường (Cinematic)",
-      "name": "Điện Ảnh Đời Thường (Cinematic)",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Du Lịch & Văn Hóa",
-      "name": "Du Lịch & Văn Hóa",
+      "id": "du-lich",
+      "name": "du-lich",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @takashi.film",
@@ -22092,13 +22092,13 @@
     "shots_count": 37,
     "duration": "60.0s",
     "shooting_style": {
-      "id": "Vlog Lifestyle / B-Roll Điện Ảnh",
-      "name": "Vlog Lifestyle / B-Roll Điện Ảnh",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Thời Trang & Phụ Kiện",
-      "name": "Thời Trang & Phụ Kiện",
+      "id": "thoi-trang",
+      "name": "thoi-trang",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @pausehereii",
@@ -22134,13 +22134,13 @@
     "shots_count": 9,
     "duration": "10.7s",
     "shooting_style": {
-      "id": "Chuyển Cảnh Thời Trang (OOTD Transition)",
-      "name": "Chuyển Cảnh Thời Trang (OOTD Transition)",
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Thời Trang & Phong Cách Sống",
-      "name": "Thời Trang & Phong Cách Sống",
+      "id": "thoi-trang",
+      "name": "thoi-trang",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mariapark",
@@ -22174,13 +22174,13 @@
     "shots_count": 4,
     "duration": "8.3s",
     "shooting_style": {
-      "id": "Lookbook Thực Chiến",
-      "name": "Lookbook Thực Chiến",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Thời Trang & Streetwear",
-      "name": "Thời Trang & Streetwear",
+      "id": "thoi-trang",
+      "name": "thoi-trang",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @iz_hxn",
@@ -22247,13 +22247,13 @@
     "shots_count": 9,
     "duration": "15.5s",
     "shooting_style": {
-      "id": "B-Roll Điện Ảnh",
-      "name": "B-Roll Điện Ảnh",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Kiến Trúc & Không Gian Sống",
-      "name": "Kiến Trúc & Không Gian Sống",
+      "id": "kien-truc",
+      "name": "kien-truc",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
@@ -22284,13 +22284,13 @@
     "shots_count": 9,
     "duration": "15.5s",
     "shooting_style": {
-      "id": "B-Roll Điện Ảnh",
-      "name": "B-Roll Điện Ảnh",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Kiến Trúc & Không Gian Sống",
-      "name": "Kiến Trúc & Không Gian Sống",
+      "id": "kien-truc",
+      "name": "kien-truc",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
@@ -22321,13 +22321,13 @@
     "shots_count": 9,
     "duration": "15.7s",
     "shooting_style": {
-      "id": "Cinematic B-roll",
-      "name": "Cinematic B-roll",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Cinematic Lifestyle",
-      "name": "Cinematic Lifestyle",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
@@ -22358,13 +22358,13 @@
     "shots_count": 9,
     "duration": "15.7s",
     "shooting_style": {
-      "id": "Cinematic B-roll",
-      "name": "Cinematic B-roll",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Cinematic Lifestyle",
-      "name": "Cinematic Lifestyle",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
@@ -22437,13 +22437,13 @@
     "shots_count": 9,
     "duration": "14.0s",
     "shooting_style": {
-      "id": "Cinematic / Đời thường",
-      "name": "Cinematic / Đời thường",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Kiến Trúc & Không Gian Sống",
-      "name": "Kiến Trúc & Không Gian Sống",
+      "id": "kien-truc",
+      "name": "kien-truc",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
@@ -22474,13 +22474,13 @@
     "shots_count": 9,
     "duration": "14.0s",
     "shooting_style": {
-      "id": "Cinematic / Đời thường",
-      "name": "Cinematic / Đời thường",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Kiến Trúc & Không Gian Sống",
-      "name": "Kiến Trúc & Không Gian Sống",
+      "id": "kien-truc",
+      "name": "kien-truc",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
@@ -22511,13 +22511,13 @@
     "shots_count": 8,
     "duration": "17.4s",
     "shooting_style": {
-      "id": "Cinematic Vlog",
-      "name": "Cinematic Vlog",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Kiến Trúc & Không Gian Sống",
-      "name": "Kiến Trúc & Không Gian Sống",
+      "id": "kien-truc",
+      "name": "kien-truc",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
@@ -22548,13 +22548,13 @@
     "shots_count": 8,
     "duration": "17.4s",
     "shooting_style": {
-      "id": "Cinematic Vlog",
-      "name": "Cinematic Vlog",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Kiến Trúc & Không Gian Sống",
-      "name": "Kiến Trúc & Không Gian Sống",
+      "id": "kien-truc",
+      "name": "kien-truc",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
@@ -22585,13 +22585,13 @@
     "shots_count": 11,
     "duration": "15.3s",
     "shooting_style": {
-      "id": "Cinematic B-Roll",
-      "name": "Cinematic B-Roll",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Nhiếp Ảnh & Quay Phim",
-      "name": "Nhiếp Ảnh & Quay Phim",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
@@ -22622,13 +22622,13 @@
     "shots_count": 11,
     "duration": "15.3s",
     "shooting_style": {
-      "id": "Cinematic B-Roll",
-      "name": "Cinematic B-Roll",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Nhiếp Ảnh & Quay Phim",
-      "name": "Nhiếp Ảnh & Quay Phim",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
@@ -22733,13 +22733,13 @@
     "shots_count": 9,
     "duration": "16.5s",
     "shooting_style": {
-      "id": "Cinematic Vlog",
-      "name": "Cinematic Vlog",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Kiến Trúc & Không Gian Sống",
-      "name": "Kiến Trúc & Không Gian Sống",
+      "id": "kien-truc",
+      "name": "kien-truc",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
@@ -22807,13 +22807,13 @@
     "shots_count": 8,
     "duration": "15.5s",
     "shooting_style": {
-      "id": "Cinematic Vlog",
-      "name": "Cinematic Vlog",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Kiến Trúc & Không Gian Sống",
-      "name": "Kiến Trúc & Không Gian Sống",
+      "id": "kien-truc",
+      "name": "kien-truc",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
@@ -22844,13 +22844,13 @@
     "shots_count": 8,
     "duration": "15.5s",
     "shooting_style": {
-      "id": "Cinematic Vlog",
-      "name": "Cinematic Vlog",
+      "id": "dien-anh",
+      "name": "dien-anh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Kiến Trúc & Không Gian Sống",
-      "name": "Kiến Trúc & Không Gian Sống",
+      "id": "kien-truc",
+      "name": "kien-truc",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @framebygeorge",
@@ -22955,8 +22955,8 @@
     "shots_count": 8,
     "duration": "9.6s",
     "shooting_style": {
-      "id": "BTS / Hậu Trường Sáng Tạo",
-      "name": "BTS / Hậu Trường Sáng Tạo",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
@@ -22996,8 +22996,8 @@
     "shots_count": 8,
     "duration": "9.6s",
     "shooting_style": {
-      "id": "BTS / Hậu Trường Sáng Tạo",
-      "name": "BTS / Hậu Trường Sáng Tạo",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
@@ -23037,8 +23037,8 @@
     "shots_count": 7,
     "duration": "14.0s",
     "shooting_style": {
-      "id": "Solo Creator Setup",
-      "name": "Solo Creator Setup",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
@@ -23109,8 +23109,8 @@
     "shots_count": 8,
     "duration": "9.6s",
     "shooting_style": {
-      "id": "BTS / Hậu Trường Sáng Tạo",
-      "name": "BTS / Hậu Trường Sáng Tạo",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
@@ -23150,8 +23150,8 @@
     "shots_count": 20,
     "duration": "33.0s",
     "shooting_style": {
-      "id": "quang-cao",
-      "name": "quang-cao",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
@@ -23189,8 +23189,8 @@
     "shots_count": 20,
     "duration": "33.0s",
     "shooting_style": {
-      "id": "quang-cao",
-      "name": "quang-cao",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
@@ -23228,13 +23228,13 @@
     "shots_count": 27,
     "duration": "14.4s",
     "shooting_style": {
-      "id": "UGC Thực Chiến",
-      "name": "UGC Thực Chiến",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Công Nghệ & Thiết Bị",
-      "name": "Công Nghệ & Thiết Bị",
+      "id": "cong-nghe",
+      "name": "cong-nghe",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ulanzi",
@@ -23268,13 +23268,13 @@
     "shots_count": 27,
     "duration": "14.4s",
     "shooting_style": {
-      "id": "UGC Thực Chiến",
-      "name": "UGC Thực Chiến",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Công Nghệ & Thiết Bị",
-      "name": "Công Nghệ & Thiết Bị",
+      "id": "cong-nghe",
+      "name": "cong-nghe",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ulanzi",
@@ -23308,13 +23308,13 @@
     "shots_count": 12,
     "duration": "17.5s",
     "shooting_style": {
-      "id": "Quay B-Roll Quảng Cáo Điện Ảnh",
-      "name": "Quay B-Roll Quảng Cáo Điện Ảnh",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Ẩm Thực & F&B",
-      "name": "Ẩm Thực & F&B",
+      "id": "am-thuc",
+      "name": "am-thuc",
       "icon": "🎯"
     },
     "purpose": "Life",
@@ -23468,13 +23468,13 @@
     "shots_count": 14,
     "duration": "7.1s",
     "shooting_style": {
-      "id": "Chuyển Cảnh (Transition)",
-      "name": "Chuyển Cảnh (Transition)",
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Ẩm Thực & F&B",
-      "name": "Ẩm Thực & F&B",
+      "id": "am-thuc",
+      "name": "am-thuc",
       "icon": "🎯"
     },
     "purpose": "Kích hoạt cơn đói và tuyến nước bọt của khách hàng bằng chuỗi tương tác dao dĩa Macro cực nét, nâng tầm trải nghiệm bữa sáng tại nhà hàng.",
@@ -23630,13 +23630,13 @@
     "shots_count": 23,
     "duration": "49.3s",
     "shooting_style": {
-      "id": "Review Sản Phẩm / UGC",
-      "name": "Review Sản Phẩm / UGC",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Công Nghệ & Thiết Bị",
-      "name": "Công Nghệ & Thiết Bị",
+      "id": "cong-nghe",
+      "name": "cong-nghe",
       "icon": "🎯"
     },
     "purpose": "Check out Ulanzi | Mini Folding Portable Tripod. Get it on Lazada now! Ugc",
@@ -23672,13 +23672,13 @@
     "shots_count": 23,
     "duration": "49.3s",
     "shooting_style": {
-      "id": "Review Sản Phẩm / UGC",
-      "name": "Review Sản Phẩm / UGC",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Công Nghệ & Thiết Bị",
-      "name": "Công Nghệ & Thiết Bị",
+      "id": "cong-nghe",
+      "name": "cong-nghe",
       "icon": "🎯"
     },
     "purpose": "Check out Ulanzi | Mini Folding Portable Tripod. Get it on Lazada now! Ugc",
@@ -23714,13 +23714,13 @@
     "shots_count": 37,
     "duration": "48.7s",
     "shooting_style": {
-      "id": "Chuyển Cảnh (Transition)",
-      "name": "Chuyển Cảnh (Transition)",
+      "id": "chuyen-canh",
+      "name": "chuyen-canh",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Kỹ Thuật Quay Dựng & Điện Ảnh",
-      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "id": "ky-thuat-quay",
+      "name": "ky-thuat-quay",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
@@ -23753,13 +23753,13 @@
     "shots_count": 13,
     "duration": "29.6s",
     "shooting_style": {
-      "id": "A Day In The Life (Vlog Không Lời)",
-      "name": "A Day In The Life (Vlog Không Lời)",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Lifestyle & Phát Triển Bản Thân",
-      "name": "Lifestyle & Phát Triển Bản Thân",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @alexmegino",
@@ -23789,13 +23789,13 @@
     "shots_count": 13,
     "duration": "29.6s",
     "shooting_style": {
-      "id": "A Day In The Life (Vlog Không Lời)",
-      "name": "A Day In The Life (Vlog Không Lời)",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Lifestyle & Phát Triển Bản Thân",
-      "name": "Lifestyle & Phát Triển Bản Thân",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @alexmegino",
@@ -23825,13 +23825,13 @@
     "shots_count": 10,
     "duration": "12.5s",
     "shooting_style": {
-      "id": "Chỉn Chu / Bố Cục",
-      "name": "Chỉn Chu / Bố Cục",
+      "id": "ugc-thuc-chien",
+      "name": "ugc-thuc-chien",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Đường Phố & Đời Sống",
-      "name": "Đường Phố & Đời Sống",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @ajit_rathore886",
@@ -23901,13 +23901,13 @@
     "shots_count": 20,
     "duration": "98.4s",
     "shooting_style": {
-      "id": "Walk & Talk / Phỏng Vấn",
-      "name": "Walk & Talk / Phỏng Vấn",
+      "id": "walk-and-talk",
+      "name": "walk-and-talk",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Sự Kiện & Phỏng Vấn",
-      "name": "Sự Kiện & Phỏng Vấn",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @nouince",
@@ -23938,13 +23938,13 @@
     "shots_count": 20,
     "duration": "98.4s",
     "shooting_style": {
-      "id": "Walk & Talk / Phỏng Vấn",
-      "name": "Walk & Talk / Phỏng Vấn",
+      "id": "walk-and-talk",
+      "name": "walk-and-talk",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Sự Kiện & Phỏng Vấn",
-      "name": "Sự Kiện & Phỏng Vấn",
+      "id": "doi-song",
+      "name": "doi-song",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @nouince",
@@ -24051,13 +24051,13 @@
     "shots_count": 11,
     "duration": "66.7s",
     "shooting_style": {
-      "id": "Talking Head",
-      "name": "Talking Head",
+      "id": "talking-head",
+      "name": "talking-head",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Thương Hiệu Cá Nhân & Dịch Vụ",
-      "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+      "id": "thuong-hieu",
+      "name": "thuong-hieu",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @local_creator",
