@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 316,
-  "total_unique_ideas": 296,
-  "total_active_ideas": 267,
+  "total_scene_items": 317,
+  "total_unique_ideas": 297,
+  "total_active_ideas": 268,
   "total_excluded_ideas": 29,
-  "total_creators": 204,
+  "total_creators": 205,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -67,23 +67,365 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Cắt cảnh đồng bộ nhịp điệu âm nhạc, vũ đạo, hành động khớp beat dồn dập."
     },
     {
-      "id": "ugc-thuc-chien",
-      "name": "ugc-thuc-chien",
-      "en_name": "Ugc Thuc Chien",
+      "id": "Talking Head",
+      "name": "Talking Head",
+      "en_name": "Talking Head",
       "icon": "🎬",
       "badge_color": "purple",
-      "desc": "Kiểu quay ugc-thuc-chien."
+      "desc": "Kiểu quay Talking Head."
+    },
+    {
+      "id": "Walk & Talk / Phỏng Vấn",
+      "name": "Walk & Talk / Phỏng Vấn",
+      "en_name": "Walk & Talk / Phỏng Vấn",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Walk & Talk / Phỏng Vấn."
+    },
+    {
+      "id": "Chỉn Chu / Bố Cục",
+      "name": "Chỉn Chu / Bố Cục",
+      "en_name": "Chỉn Chu / Bố Cục",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Chỉn Chu / Bố Cục."
+    },
+    {
+      "id": "A Day In The Life (Vlog Không Lời)",
+      "name": "A Day In The Life (Vlog Không Lời)",
+      "en_name": "A Day In The Life (Vlog Không Lời)",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay A Day In The Life (Vlog Không Lời)."
+    },
+    {
+      "id": "Review Sản Phẩm / UGC",
+      "name": "Review Sản Phẩm / UGC",
+      "en_name": "Review Sản Phẩm / Ugc",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Review Sản Phẩm / UGC."
+    },
+    {
+      "id": "Chuyển Cảnh (Transition)",
+      "name": "Chuyển Cảnh (Transition)",
+      "en_name": "Chuyển Cảnh (Transition)",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Chuyển Cảnh (Transition)."
+    },
+    {
+      "id": "Quay B-Roll Quảng Cáo Điện Ảnh",
+      "name": "Quay B-Roll Quảng Cáo Điện Ảnh",
+      "en_name": "Quay B Roll Quảng Cáo Điện Ảnh",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Quay B-Roll Quảng Cáo Điện Ảnh."
+    },
+    {
+      "id": "UGC Thực Chiến",
+      "name": "UGC Thực Chiến",
+      "en_name": "Ugc Thực Chiến",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay UGC Thực Chiến."
+    },
+    {
+      "id": "quang-cao",
+      "name": "quang-cao",
+      "en_name": "Quang Cao",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay quang-cao."
+    },
+    {
+      "id": "BTS / Hậu Trường Sáng Tạo",
+      "name": "BTS / Hậu Trường Sáng Tạo",
+      "en_name": "Bts / Hậu Trường Sáng Tạo",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay BTS / Hậu Trường Sáng Tạo."
+    },
+    {
+      "id": "Solo Creator Setup",
+      "name": "Solo Creator Setup",
+      "en_name": "Solo Creator Setup",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Solo Creator Setup."
+    },
+    {
+      "id": "Cinematic Vlog",
+      "name": "Cinematic Vlog",
+      "en_name": "Cinematic Vlog",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Cinematic Vlog."
+    },
+    {
+      "id": "Cinematic B-Roll",
+      "name": "Cinematic B-Roll",
+      "en_name": "Cinematic B Roll",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Cinematic B-Roll."
+    },
+    {
+      "id": "Cinematic / Đời thường",
+      "name": "Cinematic / Đời thường",
+      "en_name": "Cinematic / Đời Thường",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Cinematic / Đời thường."
+    },
+    {
+      "id": "Cinematic B-roll",
+      "name": "Cinematic B-roll",
+      "en_name": "Cinematic B Roll",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Cinematic B-roll."
+    },
+    {
+      "id": "B-Roll Điện Ảnh",
+      "name": "B-Roll Điện Ảnh",
+      "en_name": "B Roll Điện Ảnh",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay B-Roll Điện Ảnh."
+    },
+    {
+      "id": "Lookbook Thực Chiến",
+      "name": "Lookbook Thực Chiến",
+      "en_name": "Lookbook Thực Chiến",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Lookbook Thực Chiến."
+    },
+    {
+      "id": "Cinematic",
+      "name": "Cinematic",
+      "en_name": "Cinematic",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Cinematic."
+    },
+    {
+      "id": "Chuyển Cảnh Thời Trang (OOTD Transition)",
+      "name": "Chuyển Cảnh Thời Trang (OOTD Transition)",
+      "en_name": "Chuyển Cảnh Thời Trang (Ootd Transition)",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Chuyển Cảnh Thời Trang (OOTD Transition)."
+    },
+    {
+      "id": "Vlog Lifestyle / B-Roll Điện Ảnh",
+      "name": "Vlog Lifestyle / B-Roll Điện Ảnh",
+      "en_name": "Vlog Lifestyle / B Roll Điện Ảnh",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Vlog Lifestyle / B-Roll Điện Ảnh."
+    },
+    {
+      "id": "Điện Ảnh Đời Thường (Cinematic)",
+      "name": "Điện Ảnh Đời Thường (Cinematic)",
+      "en_name": "Điện Ảnh Đời Thường (Cinematic)",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Điện Ảnh Đời Thường (Cinematic)."
+    },
+    {
+      "id": "POV & Fast-Paced Montage",
+      "name": "POV & Fast-Paced Montage",
+      "en_name": "Pov & Fast Paced Montage",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay POV & Fast-Paced Montage."
+    },
+    {
+      "id": "Visual Storytelling",
+      "name": "Visual Storytelling",
+      "en_name": "Visual Storytelling",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Visual Storytelling."
+    },
+    {
+      "id": "Điện Ảnh (Cinematic)",
+      "name": "Điện Ảnh (Cinematic)",
+      "en_name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Điện Ảnh (Cinematic)."
+    },
+    {
+      "id": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
+      "name": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
+      "en_name": "Điện Ảnh & Chữa Lành (Cinematic Mood / Asmr)",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)."
+    },
+    {
+      "id": "Bố Cục (Framing)",
+      "name": "Bố Cục (Framing)",
+      "en_name": "Bố Cục (Framing)",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Bố Cục (Framing)."
+    },
+    {
+      "id": "Vlog",
+      "name": "Vlog",
+      "en_name": "Vlog",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Vlog."
+    },
+    {
+      "id": "Split Screen / Behind-The-Scenes",
+      "name": "Split Screen / Behind-The-Scenes",
+      "en_name": "Split Screen / Behind The Scenes",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Split Screen / Behind-The-Scenes."
+    },
+    {
+      "id": "Kể Chuyện (Storytelling)",
+      "name": "Kể Chuyện (Storytelling)",
+      "en_name": "Kể Chuyện (Storytelling)",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Kể Chuyện (Storytelling)."
+    },
+    {
+      "id": "pov",
+      "name": "pov",
+      "en_name": "Pov",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay pov."
+    },
+    {
+      "id": "Walk and Talk",
+      "name": "Walk and Talk",
+      "en_name": "Walk And Talk",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Walk and Talk."
+    },
+    {
+      "id": "Cinematic Vlog / Cut On Action",
+      "name": "Cinematic Vlog / Cut On Action",
+      "en_name": "Cinematic Vlog / Cut On Action",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Cinematic Vlog / Cut On Action."
+    },
+    {
+      "id": "Walk and Talk Documentary",
+      "name": "Walk and Talk Documentary",
+      "en_name": "Walk And Talk Documentary",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Walk and Talk Documentary."
+    },
+    {
+      "id": "lifestyle-cinematic",
+      "name": "lifestyle-cinematic",
+      "en_name": "Lifestyle Cinematic",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay lifestyle-cinematic."
+    },
+    {
+      "id": "POV & Aesthetic B-Roll Montage",
+      "name": "POV & Aesthetic B-Roll Montage",
+      "en_name": "Pov & Aesthetic B Roll Montage",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay POV & Aesthetic B-Roll Montage."
+    },
+    {
+      "id": "bien-hinh",
+      "name": "bien-hinh",
+      "en_name": "Bien Hinh",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay bien-hinh."
+    },
+    {
+      "id": "san-pham",
+      "name": "san-pham",
+      "en_name": "San Pham",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay san-pham."
+    },
+    {
+      "id": "chuyen_canh",
+      "name": "chuyen_canh",
+      "en_name": "Chuyen_Canh",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay chuyen_canh."
+    },
+    {
+      "id": "Phim Điện Ảnh (Cinematic Stills)",
+      "name": "Phim Điện Ảnh (Cinematic Stills)",
+      "en_name": "Phim Điện Ảnh (Cinematic Stills)",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Phim Điện Ảnh (Cinematic Stills)."
     }
   ],
   "shooting_style_stats": {
-    "walk-and-talk": 7,
+    "walk-and-talk": 4,
     "voice-over": 12,
-    "talking-head": 32,
-    "storytelling": 25,
-    "dien-anh": 112,
-    "chuyen-canh": 59,
-    "theo-nhip-nhac": 8,
-    "ugc-thuc-chien": 12
+    "talking-head": 33,
+    "storytelling": 23,
+    "dien-anh": 93,
+    "chuyen-canh": 52,
+    "theo-nhip-nhac": 3,
+    "Talking Head": 0,
+    "Walk & Talk / Phỏng Vấn": 1,
+    "Chỉn Chu / Bố Cục": 1,
+    "A Day In The Life (Vlog Không Lời)": 1,
+    "Review Sản Phẩm / UGC": 1,
+    "Chuyển Cảnh (Transition)": 4,
+    "Quay B-Roll Quảng Cáo Điện Ảnh": 1,
+    "UGC Thực Chiến": 1,
+    "quang-cao": 1,
+    "BTS / Hậu Trường Sáng Tạo": 2,
+    "Solo Creator Setup": 1,
+    "Cinematic Vlog": 3,
+    "Cinematic B-Roll": 3,
+    "Cinematic / Đời thường": 1,
+    "Cinematic B-roll": 1,
+    "B-Roll Điện Ảnh": 1,
+    "Lookbook Thực Chiến": 1,
+    "Cinematic": 1,
+    "Chuyển Cảnh Thời Trang (OOTD Transition)": 2,
+    "Vlog Lifestyle / B-Roll Điện Ảnh": 1,
+    "Điện Ảnh Đời Thường (Cinematic)": 1,
+    "POV & Fast-Paced Montage": 1,
+    "Visual Storytelling": 1,
+    "Điện Ảnh (Cinematic)": 2,
+    "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)": 1,
+    "Bố Cục (Framing)": 1,
+    "Vlog": 1,
+    "Split Screen / Behind-The-Scenes": 1,
+    "Kể Chuyện (Storytelling)": 1,
+    "pov": 1,
+    "Walk and Talk": 1,
+    "Cinematic Vlog / Cut On Action": 1,
+    "Walk and Talk Documentary": 1,
+    "lifestyle-cinematic": 1,
+    "POV & Aesthetic B-Roll Montage": 1,
+    "bien-hinh": 1,
+    "san-pham": 1,
+    "chuyen_canh": 1,
+    "Phim Điện Ảnh (Cinematic Stills)": 1
   },
   "industries": [
     {
@@ -168,15 +510,15 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "industry_stats": {
-    "spa-lam-dep": 5,
-    "thuong-hieu": 20,
-    "thoi-trang": 28,
-    "am-thuc": 25,
-    "du-lich": 23,
-    "cong-nghe": 39,
-    "kien-truc": 37,
-    "the-thao": 6,
-    "ky-thuat-quay": 47,
+    "spa-lam-dep": 3,
+    "thuong-hieu": 19,
+    "thoi-trang": 22,
+    "am-thuc": 22,
+    "du-lich": 17,
+    "cong-nghe": 35,
+    "kien-truc": 33,
+    "the-thao": 5,
+    "ky-thuat-quay": 38,
     "ugc": 5
   },
   "x_factors": [
@@ -236,7 +578,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 174,
+    "us_eu": 175,
     "korea": 10,
     "india": 3,
     "japan": 6,
@@ -249,8 +591,8 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "video",
-    "IG_@creator_video_Video_video"
+    "IG_@creator_video_Video_video",
+    "video"
   ],
   "creators_hub": [
     {
@@ -258,7 +600,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Framebygeorge",
       "profile_url": "https://www.instagram.com/framebygeorge/",
       "video_count": 9,
-      "top_industry": "kien-truc",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_01_mid.webp",
       "video_ids": [
         "IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography",
@@ -509,7 +851,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jackwebstter",
       "profile_url": "https://www.instagram.com/jackwebstter/",
       "video_count": 2,
-      "top_industry": "the-thao",
+      "top_industry": "Thể Thao & Năng Động",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40jackwebstter_DdtKOH-TN_c_How_to_film_cinematic_running_shots_part_2/shot_01_mid.webp",
       "video_ids": [
         "IG_@jackwebstter_DdtKOH-TN_c_How_to_film_cinematic_running_shots_part_2",
@@ -521,7 +863,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jsnhow",
       "profile_url": "https://www.instagram.com/jsnhow/",
       "video_count": 2,
-      "top_industry": "doi-song",
+      "top_industry": "Phong Cách Sống & Nghệ Thuật",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40jsnhow_DdncdgVRBIp_Soft_sounds%2C_quiet_minds%2C_and_a_moment_to_jus/shot_01_mid.webp",
       "video_ids": [
         "IG_@jsnhow_DdncdgVRBIp_Soft_sounds,_quiet_minds,_and_a_moment_to_jus",
@@ -545,7 +887,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Nana_Icroom",
       "profile_url": "https://www.instagram.com/nana_icroom/",
       "video_count": 2,
-      "top_industry": "doi-song",
+      "top_industry": "Đời Sống & Phong Cách Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40nana_icroom_DdoJCWrT0Do_vlog%E6%92%AE%E5%BD%B1%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E7%94%BB%E8%A7%92%E3%81%A7%E4%BD%95%E3%82%92%E6%92%AE%E3%81%A3%E3%81%9F%E3%82%89%E3%81%84%E3%81%84%E3%81%8B%E3%82%8F%E3%81%8B%E3%82%93%E3%81%AA%E3%81%84%E2%80%A6/shot_01_mid.webp",
       "video_ids": [
         "IG_@nana_icroom_DdoJCWrT0Do_vlog撮影、どんな画角で何を撮ったらいいかわかんない…",
@@ -557,7 +899,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Mylenesmind",
       "profile_url": "https://www.instagram.com/mylenesmind/",
       "video_count": 2,
-      "top_industry": "ky-thuat-quay",
+      "top_industry": "Sáng Tạo Nội Dung & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40mylenesmind_DdoWrpERdvD_can_you_guess_the_theme_%F0%9F%91%80/shot_01_mid.webp",
       "video_ids": [
         "IG_@mylenesmind_DdoWrpERdvD_can_you_guess_the_theme_👀",
@@ -581,7 +923,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "German991020",
       "profile_url": "https://www.instagram.com/german991020/",
       "video_count": 2,
-      "top_industry": "ky-thuat-quay",
+      "top_industry": "Nhiếp Ảnh & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40german991020_DdnXgxUyok1_South_Korea_stills_-_Final_Series/shot_01_mid.webp",
       "video_ids": [
         "IG_@german991020_DdnXgxUyok1_South_Korea_stills_-_Final_Series",
@@ -721,6 +1063,17 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@kfconcept",
+      "name": "Kfconcept",
+      "profile_url": "https://www.instagram.com/kfconcept/",
+      "video_count": 1,
+      "top_industry": "Kiến Trúc & Không Gian Sống",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_%F0%9F%91%80/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀"
+      ]
+    },
+    {
       "handle": "@sametxhunter",
       "name": "Sametxhunter",
       "profile_url": "https://www.instagram.com/sametxhunter/",
@@ -736,7 +1089,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Nouince",
       "profile_url": "https://www.instagram.com/nouince/",
       "video_count": 1,
-      "top_industry": "doi-song",
+      "top_industry": "Sự Kiện & Phỏng Vấn",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40nouince_DduU6THJQ8y_O_que_traz_mais_autoridade_%F0%9F%91%80/shot_01_mid.webp",
       "video_ids": [
         "IG_@nouince_DduU6THJQ8y_O_que_traz_mais_autoridade_👀"
@@ -747,7 +1100,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ajit_Rathore886",
       "profile_url": "https://www.instagram.com/ajit_rathore886/",
       "video_count": 1,
-      "top_industry": "doi-song",
+      "top_industry": "Đường Phố & Đời Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40ajit_rathore886_DdsodC0hSmZ_Static_Shots%F0%9F%94%A5%F0%9F%93%BD%EF%B8%8F/shot_01_mid.webp",
       "video_ids": [
         "IG_@ajit_rathore886_DdsodC0hSmZ_Static_Shots🔥📽️"
@@ -758,7 +1111,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Alexmegino",
       "profile_url": "https://www.instagram.com/alexmegino/",
       "video_count": 1,
-      "top_industry": "doi-song",
+      "top_industry": "Lifestyle & Phát Triển Bản Thân",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40alexmegino_DdzHC1ljMjk_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@alexmegino_DdzHC1ljMjk_Carousel_Analysis"
@@ -769,7 +1122,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Page_Vrn",
       "profile_url": "https://www.instagram.com/page_vrn/",
       "video_count": 1,
-      "top_industry": "am-thuc",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40page_vrn_DdT9nr_o_SP_%D0%9A%D0%B0%D0%BA%D0%B8%D0%BC_%D0%B1%D1%8B_%D0%BD%D0%B8_%D0%B1%D1%8B%D0%BB_%D0%B2%D0%B0%D1%88_%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0%D0%BA%2C_%D0%B2_P%2BAGE_%D0%BE%D0%BD_%D0%B1%D1%83%D0%B4%D0%B5%D1%82/shot_01_mid.webp",
       "video_ids": [
         "IG_@page_vrn_DdT9nr_o_SP_Каким_бы_ни_был_ваш_завтрак,_в_P+AGE_он_будет"
@@ -791,7 +1144,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ecuator_Cafe",
       "profile_url": "https://www.instagram.com/ecuator_cafe/",
       "video_count": 1,
-      "top_industry": "am-thuc",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40ecuator_cafe_Dc0iEdiuYZ-_Exist%C4%83_pauze_de_cafea_%C8%99i_exist%C4%83_momente_%C3%AEn_ca/shot_01_mid.webp",
       "video_ids": [
         "IG_@ecuator_cafe_Dc0iEdiuYZ-_Există_pauze_de_cafea_și_există_momente_în_ca"
@@ -824,7 +1177,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Iz_Hxn",
       "profile_url": "https://www.instagram.com/iz_hxn/",
       "video_count": 1,
-      "top_industry": "thoi-trang",
+      "top_industry": "Thời Trang & Streetwear",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40iz_hxn_DdgqYzZM67T_How_we_pull_up_in_Smart_Style_%F0%9F%95%B6%EF%B8%8F_%23fitcheck_%23l/shot_01_mid.webp",
       "video_ids": [
         "IG_@iz_hxn_DdgqYzZM67T_How_we_pull_up_in_Smart_Style_🕶️_#fitcheck_#l"
@@ -835,7 +1188,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Mariapark",
       "profile_url": "https://www.instagram.com/mariapark/",
       "video_count": 1,
-      "top_industry": "thoi-trang",
+      "top_industry": "Thời Trang & Phong Cách Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40mariapark_DdeYvmLsms6_%D0%A7%D0%B0%D0%BA%D1%80%D0%B0_%D0%BD%D0%B0_%D0%BE%D1%81%D0%B5%D0%BD%D0%BD%D0%B8%D0%B5_%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D1%8B_%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B0_%F0%9F%A4%A9_%D0%A1%D1%82%D0%B0%D0%B2%D1%8C_%D0%BE%D0%B3%D0%BE%D0%BD%D1%8C/shot_01_mid.webp",
       "video_ids": [
         "IG_@mariapark_DdeYvmLsms6_Чакра_на_осенние_образы_открыта_🤩_Ставь_огонь"
@@ -846,7 +1199,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Pausehereii",
       "profile_url": "https://www.instagram.com/pausehereii/",
       "video_count": 1,
-      "top_industry": "thoi-trang",
+      "top_industry": "Thời Trang & Phụ Kiện",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40pausehereii_DdGx-fkPeeU_A_DAY_IN_CHIANG_MAI/shot_01_mid.webp",
       "video_ids": [
         "IG_@pausehereii_DdGx-fkPeeU_A_DAY_IN_CHIANG_MAI"
@@ -890,7 +1243,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Takashi Film",
       "profile_url": "https://www.instagram.com/takashi.film/",
       "video_count": 1,
-      "top_industry": "du-lich",
+      "top_industry": "Du Lịch & Văn Hóa",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40takashi.film_DddqrBQy8lQ_One_day%2C_Vietnam._%F0%9F%87%BB%F0%9F%87%B3/shot_01_mid.webp",
       "video_ids": [
         "IG_@takashi.film_DddqrBQy8lQ_One_day,_Vietnam._🇻🇳"
@@ -901,7 +1254,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Qaqu_Uu",
       "profile_url": "https://www.instagram.com/qaqu_uu/",
       "video_count": 1,
-      "top_industry": "doi-song",
+      "top_industry": "Vlog & Phong Cách Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40qaqu_uu_Dblr-88PjlJ_yelena_belova_would_call_this_small_baby_pota/shot_01_mid.webp",
       "video_ids": [
         "IG_@qaqu_uu_Dblr-88PjlJ_yelena_belova_would_call_this_small_baby_pota"
@@ -912,7 +1265,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Cinematic_Lee",
       "profile_url": "https://www.instagram.com/cinematic_lee/",
       "video_count": 1,
-      "top_industry": "doi-song",
+      "top_industry": "Bố cục",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40cinematic_lee_Dbd8gmqRAc3_It%E2%80%99s_a_constant_struggle_%F0%9F%98%85/shot_01_mid.webp",
       "video_ids": [
         "IG_@cinematic_lee_Dbd8gmqRAc3_It’s_a_constant_struggle_😅"
@@ -934,7 +1287,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Shotsbyzaid",
       "profile_url": "https://www.instagram.com/shotsbyzaid/",
       "video_count": 1,
-      "top_industry": "ky-thuat-quay",
+      "top_industry": "Nhiếp Ảnh & Quay Phim",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40shotsbyzaid_DdkimD5DPNL_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@shotsbyzaid_DdkimD5DPNL_Carousel_Analysis"
@@ -956,7 +1309,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Minghan1004",
       "profile_url": "https://www.instagram.com/minghan1004/",
       "video_count": 1,
-      "top_industry": "cong-nghe",
+      "top_industry": "Công Nghệ & Thiết Bị",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40minghan1004_DdESxNlE2Ay_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@minghan1004_DdESxNlE2Ay_Carousel_Analysis"
@@ -967,7 +1320,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hu321938",
       "profile_url": "https://www.instagram.com/hu321938/",
       "video_count": 1,
-      "top_industry": "am-thuc",
+      "top_industry": "Ẩm Thực & F&B",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40hu321938_DdrKmGFBMzc_%E6%8B%8D%E5%87%BA%E4%B8%AD%E7%A7%8B%E8%8A%82%E7%9A%84%E6%B0%9B%E5%9B%B4%E6%84%9F/shot_01_mid.webp",
       "video_ids": [
         "IG_@hu321938_DdrKmGFBMzc_拍出中秋节的氛围感"
@@ -978,7 +1331,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Alenkabalenka",
       "profile_url": "https://www.instagram.com/alenkabalenka/",
       "video_count": 1,
-      "top_industry": "thoi-trang",
+      "top_industry": "Thời Trang & Phụ Kiện",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40alenkabalenka_DaJofHTvQw3_1010_would_hit_that_corner_again/shot_01_mid.webp",
       "video_ids": [
         "IG_@alenkabalenka_DaJofHTvQw3_1010_would_hit_that_corner_again"
@@ -1011,7 +1364,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ekaterina_Модель_Уфа_,_Питер",
       "profile_url": "https://www.instagram.com/rubtsov.a/",
       "video_count": 1,
-      "top_industry": "thoi-trang",
+      "top_industry": "Thời Trang & Phong Cách Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40Ekaterina_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%A3%D1%84%D0%B0_%2C_%D0%9F%D0%B8%D1%82%D0%B5%D1%80_DdkHw7gIXLj_Video_by_rubtsov.a/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Ekaterina_модель_Уфа_,_Питер_DdkHw7gIXLj_Video_by_rubtsov.a"
@@ -1022,7 +1375,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Starsinmycam",
       "profile_url": "https://www.instagram.com/starsinmycam/",
       "video_count": 1,
-      "top_industry": "doi-song",
+      "top_industry": "Đời Sống & Phong Cách Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40starsinmycam_DddgEE5R2CW_i_blink_and_it%E2%80%99s_night_time/shot_01_mid.webp",
       "video_ids": [
         "IG_@starsinmycam_DddgEE5R2CW_i_blink_and_it’s_night_time"
@@ -1044,7 +1397,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Lisha_Ho",
       "profile_url": "https://www.instagram.com/lisha_ho/",
       "video_count": 1,
-      "top_industry": "thoi-trang",
+      "top_industry": "Thời Trang & Phong Cách Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40lisha_ho_Ddqo7-eTI2A_Wait%E2%80%A6_%40ralphlauren_%2B_coffee_at_KLCC_%F0%9F%91%80/shot_01_mid.webp",
       "video_ids": [
         "IG_@lisha_ho_Ddqo7-eTI2A_Wait…_@ralphlauren_+_coffee_at_KLCC_👀"
@@ -1088,7 +1441,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Iamaayushswamy",
       "profile_url": "https://www.instagram.com/iamaayushswamy/",
       "video_count": 1,
-      "top_industry": "ky-thuat-quay",
+      "top_industry": "Sáng Tạo Nội Dung & Video",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40iamaayushswamy_DdpxcaOMaQS_caption_placement/shot_01_mid.webp",
       "video_ids": [
         "IG_@iamaayushswamy_DdpxcaOMaQS_caption_placement"
@@ -1099,7 +1452,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jxnjuvv",
       "profile_url": "https://www.instagram.com/jxnjuvv/",
       "video_count": 1,
-      "top_industry": "du-lich",
+      "top_industry": "Du Lịch & Khám Phá",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40jxnjuvv_Dc-d8hKRMQm_A_city_full_of_joy_everywhere_I_go_%E2%99%A5%EF%B8%8F/shot_01_mid.webp",
       "video_ids": [
         "IG_@jxnjuvv_Dc-d8hKRMQm_A_city_full_of_joy_everywhere_I_go_♥️"
@@ -1110,7 +1463,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Acupper",
       "profile_url": "https://www.instagram.com/acupper/",
       "video_count": 1,
-      "top_industry": "du-lich",
+      "top_industry": "Du Lịch & Trải Nghiệm Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40acupper_DdoYrPsy9g-_hello_is_konnichiwa/shot_01_mid.webp",
       "video_ids": [
         "IG_@acupper_DdoYrPsy9g-_hello_is_konnichiwa"
@@ -1121,7 +1474,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Yongandmike",
       "profile_url": "https://www.instagram.com/yongandmike/",
       "video_count": 1,
-      "top_industry": "du-lich",
+      "top_industry": "du-lich-khach-san",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40yongandmike_DdolqWHEsws_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@yongandmike_DdolqWHEsws_Carousel_Analysis"
@@ -1132,7 +1485,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Filmwithred",
       "profile_url": "https://www.instagram.com/filmwithred/",
       "video_count": 1,
-      "top_industry": "du-lich",
+      "top_industry": "Du Lịch & Khám Phá",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._%F0%9F%87%AF%F0%9F%87%B5/shot_01_mid.webp",
       "video_ids": [
         "IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵"
@@ -1143,7 +1496,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Laylaa_398",
       "profile_url": "https://www.instagram.com/laylaa_398/",
       "video_count": 1,
-      "top_industry": "du-lich",
+      "top_industry": "Phong Cách Sống & Du Lịch",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40laylaa_398_Ddj6wlTxAAJ_%E2%99%A5%EF%B8%8F/shot_01_mid.webp",
       "video_ids": [
         "IG_@laylaa_398_Ddj6wlTxAAJ_♥️"
@@ -1154,7 +1507,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jigummmmm",
       "profile_url": "https://www.instagram.com/jigummmmm/",
       "video_count": 1,
-      "top_industry": "doi-song",
+      "top_industry": "Đời Sống & Gia Đình",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40jigummmmm_DdnqexOTN8A_%EC%84%A4%EA%B1%B0%EC%A7%80%ED%95%98%EB%8A%94_%EB%AA%A8%EC%8A%B5%EB%8F%84_%EC%98%88%EC%81%98%EA%B2%8C_%EC%B0%8D%EC%9D%84_%EC%88%98_%EC%9E%88%EB%83%90%EA%B3%A0%EC%9A%94/shot_01_mid.webp",
       "video_ids": [
         "IG_@jigummmmm_DdnqexOTN8A_설거지하는_모습도_예쁘게_찍을_수_있냐고요"
@@ -1165,7 +1518,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Dopeitsdamo",
       "profile_url": "https://www.instagram.com/dopeitsdamo/",
       "video_count": 1,
-      "top_industry": "ky-thuat-quay",
+      "top_industry": "Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40dopeitsdamo_DdpZ0RvhwXu_Art_of_Static_Shots_%F0%9F%8E%A5/shot_01_mid.webp",
       "video_ids": [
         "IG_@dopeitsdamo_DdpZ0RvhwXu_Art_of_Static_Shots_🎥"
@@ -1176,7 +1529,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Davidmurphyfilm",
       "profile_url": "https://www.instagram.com/davidmurphyfilm/",
       "video_count": 1,
-      "top_industry": "ky-thuat-quay",
+      "top_industry": "Nhiếp Ảnh & Làm Phim",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis"
@@ -1550,7 +1903,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Cushy Garden",
       "profile_url": "https://www.instagram.com/cushygarden/",
       "video_count": 1,
-      "top_industry": "doi-song",
+      "top_industry": "Đời Thường & Chữa Lành",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40cushygarden_DdL6pHDSKRc/shot_01_mid.webp",
       "video_ids": [
         "IG_@cushygarden_DdL6pHDSKRc"
@@ -1660,7 +2013,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Karen Lee",
       "profile_url": "https://www.instagram.com/kawoon.lee/",
       "video_count": 1,
-      "top_industry": "doi-song",
+      "top_industry": "Tâm Lý & Phát Triển Bản Thân",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_01_mid.webp",
       "video_ids": [
         "IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency"
@@ -1671,7 +2024,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Giovanna Mercante",
       "profile_url": "https://www.instagram.com/mercantegi/",
       "video_count": 1,
-      "top_industry": "ky-thuat-quay",
+      "top_industry": "Sáng Tạo Nội Dung & Thương Hiệu Cá Nhân",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho/extracted_shots/shot_01_mid.webp",
       "video_ids": [
         "IG_@mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho"
@@ -1715,7 +2068,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hanoi Liebe | Wo Hanoi auf Deutsch trifft",
       "profile_url": "https://www.instagram.com/hanoi.liebe/",
       "video_count": 1,
-      "top_industry": "spa-lam-dep",
+      "top_industry": "Làm Đẹp & Spa / Y Tế",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha/shot_01_mid.webp",
       "video_ids": [
         "IG_@hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha"
@@ -1737,7 +2090,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "UTS International Students",
       "profile_url": "https://www.instagram.com/utsint/",
       "video_count": 1,
-      "top_industry": "doi-song",
+      "top_industry": "Giáo Dục & Tuyển Sinh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour/extracted_shots/shot_01_mid.webp",
       "video_ids": [
         "IG_@utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour"
@@ -1759,7 +2112,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hair Positive (House of Hair)",
       "profile_url": "https://www.instagram.com/hairpositiveofficial/",
       "video_count": 1,
-      "top_industry": "spa-lam-dep",
+      "top_industry": "Làm Đẹp & Spa / Y Tế (Salon Tóc)",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_01_mid.webp",
       "video_ids": [
         "IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway"
@@ -2582,10 +2935,10 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "ideas": [
     {
-      "id": "IG_@local_creator_fb_ad_fb_ad",
-      "shortcode": "IG_@local_creator_fb_ad_fb_ad",
-      "title_vi": "Kịch Bản Case Study & Bằng Chứng Số Liệu",
-      "quick_takeaway": "Quảng cáo bán khóa học áp dụng cấu trúc bóc tách case study thực tế kết hợp từ khóa 'tự động hóa' để bẻ gãy sự hoài nghi và chốt sales mộc mạc.",
+      "id": "IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀",
+      "shortcode": "Dd08G0PBtKk",
+      "title_vi": "5 Creative Ways to Use a Magic Arm 👀",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
       "shooting_style": {
         "id": "talking-head",
@@ -2596,8 +2949,75 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [
         {
-          "id": "thuong-hieu",
-          "name": "thuong-hieu",
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @kfconcept",
+      "tech_tags": [
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot",
+        "Low-key Lighting",
+        "Medium Tracking Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "creator": {
+        "raw": "@kfconcept",
+        "name": "Kfconcept",
+        "handle": "@kfconcept",
+        "profile_url": "https://www.instagram.com/kfconcept/"
+      },
+      "ig_url": "https://www.instagram.com/reel/Dd08G0PBtKk/",
+      "gdrive_folder": "https://drive.google.com/open?id=1fyVdCFd_6UO-daWKjFMRjkQXkWjaFCie",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_%F0%9F%91%80/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_%F0%9F%91%80/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/Dd08G0PBtKk.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Dd08G0PBtKk.mp4",
+        "report_url": "reports/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀.html",
+        "shots_count": 6,
+        "duration": "12s",
+        "youtube_id": "Mwza4-NcIJ0",
+        "youtube_embed": "https://www.youtube.com/embed/Mwza4-NcIJ0",
+        "youtube_url": "https://youtu.be/Mwza4-NcIJ0"
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
+      "id": "IG_@local_creator_fb_ad_fb_ad",
+      "shortcode": "IG_@local_creator_fb_ad_fb_ad",
+      "title_vi": "Kịch Bản Case Study & Bằng Chứng Số Liệu",
+      "quick_takeaway": "Quảng cáo bán khóa học áp dụng cấu trúc bóc tách case study thực tế kết hợp từ khóa 'tự động hóa' để bẻ gãy sự hoài nghi và chốt sales mộc mạc.",
+      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
+      "shooting_style": {
+        "id": "Talking Head",
+        "name": "Talking Head",
+        "en_name": "Talking Head",
+        "icon": "🎬",
+        "badge_color": "purple"
+      },
+      "industries": [
+        {
+          "id": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
           "icon": "🎯"
         }
       ],
@@ -2721,16 +3141,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Mở màn bằng kỹ thuật Walk & Talk năng lượng cao để hút sự chú ý, sau đó chuyển sang format phỏng vấn chớp nhoáng khách mời tại sự kiện Hotmart Fire.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Medium Tracking Shot",
       "shooting_style": {
-        "id": "walk-and-talk",
-        "name": "Walk & Talk",
-        "en_name": "Walk and Talk",
-        "icon": "🚶",
-        "badge_color": "emerald"
+        "id": "Walk & Talk / Phỏng Vấn",
+        "name": "Walk & Talk / Phỏng Vấn",
+        "en_name": "Walk & Talk / Phỏng Vấn",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "doi-song",
-          "name": "doi-song",
+          "id": "Sự Kiện & Phỏng Vấn",
+          "name": "Sự Kiện & Phỏng Vấn",
           "icon": "🎯"
         }
       ],
@@ -2787,16 +3207,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Nghệ thuật sử dụng máy tĩnh (Static Shots) để lột tả nhịp sống đường phố Ấn Độ: lộn xộn nhưng đầy chất điện ảnh qua từng góc máy, ánh sáng và khung hình.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
       "shooting_style": {
-        "id": "ugc-thuc-chien",
-        "name": "ugc-thuc-chien",
-        "en_name": "Ugc Thuc Chien",
+        "id": "Chỉn Chu / Bố Cục",
+        "name": "Chỉn Chu / Bố Cục",
+        "en_name": "Chỉn Chu / Bố Cục",
         "icon": "🎬",
         "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "doi-song",
-          "name": "doi-song",
+          "id": "Đường Phố & Đời Sống",
+          "name": "Đường Phố & Đời Sống",
           "icon": "🎯"
         }
       ],
@@ -2854,16 +3274,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Khắc họa một ngày kỷ luật thép (từ 8:08 sáng đến 19:59 tối) thông qua chuỗi không gian tối giản, nhịp điệu từ tốn và cách chơi ánh sáng Low-key xuất sắc.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot",
       "shooting_style": {
-        "id": "ugc-thuc-chien",
-        "name": "ugc-thuc-chien",
-        "en_name": "Ugc Thuc Chien",
+        "id": "A Day In The Life (Vlog Không Lời)",
+        "name": "A Day In The Life (Vlog Không Lời)",
+        "en_name": "A Day In The Life (Vlog Không Lời)",
         "icon": "🎬",
         "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "doi-song",
-          "name": "doi-song",
+          "id": "Lifestyle & Phát Triển Bản Thân",
+          "name": "Lifestyle & Phát Triển Bản Thân",
           "icon": "🎯"
         }
       ],
@@ -2998,16 +3418,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách đòn bẩy thị giác của video UGC bán phụ kiện: Từ giải quyết nỗi đau cồng kềnh bằng tripod bỏ túi 26.5cm, chứng minh tải trọng với máy ảnh thật, đến cú đấm công năng ngàm kẹp 2-trong-1 làm máy nhắc chữ và biến hình thành gậy selfie du lịch.",
       "key_tech": "Establishing Hook Shot • High-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot",
       "shooting_style": {
-        "id": "ugc-thuc-chien",
-        "name": "ugc-thuc-chien",
-        "en_name": "Ugc Thuc Chien",
+        "id": "Review Sản Phẩm / UGC",
+        "name": "Review Sản Phẩm / UGC",
+        "en_name": "Review Sản Phẩm / Ugc",
         "icon": "🎬",
         "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "cong-nghe",
-          "name": "cong-nghe",
+          "id": "Công Nghệ & Thiết Bị",
+          "name": "Công Nghệ & Thiết Bị",
           "icon": "🎯"
         }
       ],
@@ -3140,16 +3560,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Khai thác đòn bẩy Spin Match Cut xoay đĩa trên bàn gỗ và chuỗi đặc tả Macro cận cảnh (lòng đào trứng chần ùa chảy, thịt bò hun khói mỏng tơi, rosti khoai tây giòn rụm) biến video 7 giây thành cỗ máy kích hoạt cơn thèm ăn đỉnh cao.",
       "key_tech": "Chuyển cảnh 1 • Spin Match Cut • Macro Food Porn • Visual Hook • Yolk Ooze Money Shot",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "Chuyển Cảnh (Transition)",
+        "name": "Chuyển Cảnh (Transition)",
+        "en_name": "Chuyển Cảnh (Transition)",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "am-thuc",
-          "name": "am-thuc",
+          "id": "Ẩm Thực & F&B",
+          "name": "Ẩm Thực & F&B",
           "icon": "🎯"
         }
       ],
@@ -3279,16 +3699,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Chuỗi B-Roll quảng cáo F&B chuẩn nhịp điện ảnh: dẫn dắt từ bước chân dạo phố, tiếng đẩy cửa, tiếng rót Nitro Matcha bọt tuyết đến cú bẻ bánh ngàn lớp giòn rụm và chiếc ly cạn đáy.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "ugc-thuc-chien",
-        "name": "ugc-thuc-chien",
-        "en_name": "Ugc Thuc Chien",
+        "id": "Quay B-Roll Quảng Cáo Điện Ảnh",
+        "name": "Quay B-Roll Quảng Cáo Điện Ảnh",
+        "en_name": "Quay B Roll Quảng Cáo Điện Ảnh",
         "icon": "🎬",
         "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "am-thuc",
-          "name": "am-thuc",
+          "id": "Ẩm Thực & F&B",
+          "name": "Ẩm Thực & F&B",
           "icon": "🎯"
         }
       ],
@@ -3350,16 +3770,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Đòn bẩy tương phản Cũ vs Mới (A/B Test) kết hợp chuỗi bài kiểm tra va đập thực tế (Stress Test) đập tan mọi nghi ngờ của người mua hàng.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Medium Tracking Shot • High-key Lighting • Low-key Lighting",
       "shooting_style": {
-        "id": "ugc-thuc-chien",
-        "name": "ugc-thuc-chien",
-        "en_name": "Ugc Thuc Chien",
+        "id": "UGC Thực Chiến",
+        "name": "UGC Thực Chiến",
+        "en_name": "Ugc Thực Chiến",
         "icon": "🎬",
         "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "cong-nghe",
-          "name": "cong-nghe",
+          "id": "Công Nghệ & Thiết Bị",
+          "name": "Công Nghệ & Thiết Bị",
           "icon": "🎯"
         }
       ],
@@ -3419,9 +3839,9 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Cấu trúc kịch bản review thiết bị công nghệ mẫu mực: Đi thẳng từ đòn bẩy cơ học (MagSafe, mở ngàm), chứng minh tải trọng bằng góc Top-down và chân kiềng kép, biến hình thành trạm làm vlog di động và chốt hạ bằng kích thước gập gọn thanh lịch.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "ugc-thuc-chien",
-        "name": "ugc-thuc-chien",
-        "en_name": "Ugc Thuc Chien",
+        "id": "quang-cao",
+        "name": "quang-cao",
+        "en_name": "Quang Cao",
         "icon": "🎬",
         "badge_color": "purple"
       },
@@ -3487,9 +3907,9 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Setup đèn spotlight qua nan lưới tạo bóng nắng xiên ➔ Trưng bày món mì Maluku vàng ruộm dưới ánh nắng hổ phách",
       "key_tech": "F N B • Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "ugc-thuc-chien",
-        "name": "ugc-thuc-chien",
-        "en_name": "Ugc Thuc Chien",
+        "id": "BTS / Hậu Trường Sáng Tạo",
+        "name": "BTS / Hậu Trường Sáng Tạo",
+        "en_name": "Bts / Hậu Trường Sáng Tạo",
         "icon": "🎬",
         "badge_color": "purple"
       },
@@ -3557,9 +3977,9 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Giáo trình thị giác 7 bước tự quay B-roll quy trình lắp ráp sản phẩm cho Solo Creator. Biến hành động đơn điệu thành chuỗi hình ảnh điện ảnh bằng việc đan xen 6 cỡ cảnh & góc máy độc đáo (Dutch Angle, Establishing, Top-Down, Worm's Eye POV, Tilt Down, Hero Wide).",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "ugc-thuc-chien",
-        "name": "ugc-thuc-chien",
-        "en_name": "Ugc Thuc Chien",
+        "id": "Solo Creator Setup",
+        "name": "Solo Creator Setup",
+        "en_name": "Solo Creator Setup",
         "icon": "🎬",
         "badge_color": "purple"
       },
@@ -3693,16 +4113,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bài học về cách tận dụng ánh sáng tự nhiên và bóng đổ hình học.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Cinematic Vlog",
+        "name": "Cinematic Vlog",
+        "en_name": "Cinematic Vlog",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "kien-truc",
+          "id": "Kiến Trúc & Không Gian Sống",
+          "name": "Kiến Trúc & Không Gian Sống",
           "icon": "🎯"
         }
       ],
@@ -3759,16 +4179,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Một thước phim Cinematic vlog ghi lại buổi sáng tĩnh lặng với sự kết hợp tuyệt vời giữa ánh sáng Low-key và ánh sáng tự nhiên.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Cinematic Vlog",
+        "name": "Cinematic Vlog",
+        "en_name": "Cinematic Vlog",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "kien-truc",
+          "id": "Kiến Trúc & Không Gian Sống",
+          "name": "Kiến Trúc & Không Gian Sống",
           "icon": "🎯"
         }
       ],
@@ -3891,16 +4311,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Thực hành ánh sáng Cinematic (Learning Cinematography) từ việc setup máy ảnh đến tận dụng nguồn sáng phụ (vệt nắng, bóng râm) cho cảnh tĩnh vật.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Cinematic B-Roll",
+        "name": "Cinematic B-Roll",
+        "en_name": "Cinematic B Roll",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "ky-thuat-quay",
-          "name": "ky-thuat-quay",
+          "id": "Nhiếp Ảnh & Quay Phim",
+          "name": "Nhiếp Ảnh & Quay Phim",
           "icon": "🎯"
         }
       ],
@@ -3957,16 +4377,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Video thực hành quay cinematic vlog với ánh sáng tự nhiên và bối cảnh trong nhà, tập trung vào góc máy và nhịp thở thị giác.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Cinematic Vlog",
+        "name": "Cinematic Vlog",
+        "en_name": "Cinematic Vlog",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "kien-truc",
+          "id": "Kiến Trúc & Không Gian Sống",
+          "name": "Kiến Trúc & Không Gian Sống",
           "icon": "🎯"
         }
       ],
@@ -4023,16 +4443,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Khắc họa vẻ đẹp của ánh sáng tự nhiên qua những góc cận cảnh sinh hoạt đời thường",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Cinematic / Đời thường",
+        "name": "Cinematic / Đời thường",
+        "en_name": "Cinematic / Đời Thường",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "kien-truc",
+          "id": "Kiến Trúc & Không Gian Sống",
+          "name": "Kiến Trúc & Không Gian Sống",
           "icon": "🎯"
         }
       ],
@@ -4089,16 +4509,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Video thực hành quay Cinematic Lifestyle với ánh sáng tự nhiên, rim light và shadow cực đẹp mắt.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Cinematic B-roll",
+        "name": "Cinematic B-roll",
+        "en_name": "Cinematic B Roll",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "doi-song",
-          "name": "doi-song",
+          "id": "Cinematic Lifestyle",
+          "name": "Cinematic Lifestyle",
           "icon": "🎯"
         }
       ],
@@ -4155,16 +4575,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Khám phá vẻ đẹp điện ảnh từ ánh sáng tự nhiên qua các chi tiết thường nhật.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "B-Roll Điện Ảnh",
+        "name": "B-Roll Điện Ảnh",
+        "en_name": "B Roll Điện Ảnh",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "kien-truc",
+          "id": "Kiến Trúc & Không Gian Sống",
+          "name": "Kiến Trúc & Không Gian Sống",
           "icon": "🎯"
         }
       ],
@@ -4221,16 +4641,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Video khoe trang phục đường phố cực chất với các góc máy low angle và chuyển cảnh dứt khoát.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot",
       "shooting_style": {
-        "id": "ugc-thuc-chien",
-        "name": "ugc-thuc-chien",
-        "en_name": "Ugc Thuc Chien",
+        "id": "Lookbook Thực Chiến",
+        "name": "Lookbook Thực Chiến",
+        "en_name": "Lookbook Thực Chiến",
         "icon": "🎬",
         "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "thoi-trang",
-          "name": "thoi-trang",
+          "id": "Thời Trang & Streetwear",
+          "name": "Thời Trang & Streetwear",
           "icon": "🎯"
         }
       ],
@@ -4287,16 +4707,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Phân tích kỹ thuật quay góc thấp, góc toàn và lia máy để tạo ra những khung hình chạy bộ chuẩn điện ảnh.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Cinematic",
+        "name": "Cinematic",
+        "en_name": "Cinematic",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "the-thao",
-          "name": "the-thao",
+          "id": "Thể Thao & Năng Động",
+          "name": "Thể Thao & Năng Động",
           "icon": "🎯"
         }
       ],
@@ -4353,16 +4773,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Đòn bẩy Match-Cut đối lập từ phòng ngủ ra hầm xe, kết hợp chuyển động layer áo bomber da, sải bước catwalk và micro-reactions nháy mắt giữ chân người xem 100%.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "Chuyển Cảnh Thời Trang (OOTD Transition)",
+        "name": "Chuyển Cảnh Thời Trang (OOTD Transition)",
+        "en_name": "Chuyển Cảnh Thời Trang (Ootd Transition)",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "thoi-trang",
-          "name": "thoi-trang",
+          "id": "Thời Trang & Phong Cách Sống",
+          "name": "Thời Trang & Phong Cách Sống",
           "icon": "🎯"
         }
       ],
@@ -4422,16 +4842,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Một ngày dạo quanh 9 tọa độ biểu tượng khu phố Chang Moi (Chiang Mai) được kể bằng ngôn ngữ điện ảnh 37 shots dồn dập, khéo léo gài cắm chiếc túi xách da nâu AN-A-ERA làm bạn đồng hành xuyên suốt mà không lộ liễu bán hàng.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Vlog Lifestyle / B-Roll Điện Ảnh",
+        "name": "Vlog Lifestyle / B-Roll Điện Ảnh",
+        "en_name": "Vlog Lifestyle / B Roll Điện Ảnh",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "thoi-trang",
-          "name": "thoi-trang",
+          "id": "Thời Trang & Phụ Kiện",
+          "name": "Thời Trang & Phụ Kiện",
           "icon": "🎯"
         }
       ],
@@ -4707,16 +5127,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Một ngày tại Việt Nam qua lăng kính điện ảnh: nghệ thuật kết hợp giữa hoa văn hình học làng nghề bản địa và chân dung con người lao động mộc mạc.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • Wide Establishing Shot • Medium Tracking Shot",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Điện Ảnh Đời Thường (Cinematic)",
+        "name": "Điện Ảnh Đời Thường (Cinematic)",
+        "en_name": "Điện Ảnh Đời Thường (Cinematic)",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "du-lich",
-          "name": "du-lich",
+          "id": "Du Lịch & Văn Hóa",
+          "name": "Du Lịch & Văn Hóa",
           "icon": "🎯"
         }
       ],
@@ -4775,16 +5195,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Biến lịch trình 1 ngày thành cuộc phiêu lưu điện ảnh bằng hệ thống HUD Timeline ghim 2 cánh, đòn bẩy Rotoscope biến hình và cú cắt nhảy đĩa sạch trơn đầy dí dỏm.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot",
       "shooting_style": {
-        "id": "theo-nhip-nhac",
-        "name": "Theo nhịp nhạc",
-        "en_name": "Music Beat & Rhythm",
-        "icon": "🎵",
+        "id": "POV & Fast-Paced Montage",
+        "name": "POV & Fast-Paced Montage",
+        "en_name": "Pov & Fast Paced Montage",
+        "icon": "🎬",
         "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "doi-song",
-          "name": "doi-song",
+          "id": "Vlog & Phong Cách Sống",
+          "name": "Vlog & Phong Cách Sống",
           "icon": "🎯"
         }
       ],
@@ -4843,16 +5263,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Mổ xẻ bậc thầy bố cục đối xứng, kỹ thuật đan xen cỡ cảnh dồn dập (Breathe In - Breathe Out) và cú chốt hạ không lời châm biếm sâu sắc nỗi khổ tìm khách của Solo Filmmaker.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • High-key Lighting • Low-key Lighting",
       "shooting_style": {
-        "id": "storytelling",
-        "name": "Kể Chuyện",
-        "en_name": "Storytelling",
-        "icon": "📖",
-        "badge_color": "amber"
+        "id": "Visual Storytelling",
+        "name": "Visual Storytelling",
+        "en_name": "Visual Storytelling",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "doi-song",
-          "name": "doi-song",
+          "id": "Bố cục",
+          "name": "Bố cục",
           "icon": "🎯"
         }
       ],
@@ -4983,16 +5403,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Visual Hook màng nước tốc độ cao ghì chặt mắt ➔ 5 góc quay đột phá (Gắn vô lăng, Sát sàn, Cận đặc tả, Đại cảnh, Match Cut Top-down) ➔ Vòng lặp Seamless Loop kích hoạt Save & Share.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Điện Ảnh (Cinematic)",
+        "name": "Điện Ảnh (Cinematic)",
+        "en_name": "Điện Ảnh (Cinematic)",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "ky-thuat-quay",
-          "name": "ky-thuat-quay",
+          "id": "Nhiếp Ảnh & Quay Phim",
+          "name": "Nhiếp Ảnh & Quay Phim",
           "icon": "🎯"
         }
       ],
@@ -5119,16 +5539,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Mổ xẻ công thức băm nhịp 20 phân cảnh chuẩn điện ảnh Nhật Bản: đan xen tinh tế giữa các cú cắt siêu nhanh (0.3s) đánh thức xúc giác và các nốt lặng toàn cảnh (>3s-5s) giúp người xem thực sự thở và ngấm trọn vẹn cảm xúc bình yên.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Medium Tracking Shot • Close-Up / Macro Detail Shot",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
+        "name": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
+        "en_name": "Điện Ảnh & Chữa Lành (Cinematic Mood / Asmr)",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "doi-song",
-          "name": "doi-song",
+          "id": "Phong Cách Sống & Nghệ Thuật",
+          "name": "Phong Cách Sống & Nghệ Thuật",
           "icon": "🎯"
         }
       ],
@@ -5257,16 +5677,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Mở màn bằng Hook thị giác kép đối chiếu POV thực địa ➔ Khắc hoạ kiến trúc kim cổ và đường cong đô thị qua 10 bố cục nhiếp ảnh đắt giá.",
       "key_tech": "Establishing Hook Shot • Medium Tracking Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "theo-nhip-nhac",
-        "name": "Theo nhịp nhạc",
-        "en_name": "Music Beat & Rhythm",
-        "icon": "🎵",
+        "id": "Bố Cục (Framing)",
+        "name": "Bố Cục (Framing)",
+        "en_name": "Bố Cục (Framing)",
+        "icon": "🎬",
         "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "cong-nghe",
-          "name": "cong-nghe",
+          "id": "Công Nghệ & Thiết Bị",
+          "name": "Công Nghệ & Thiết Bị",
           "icon": "🎯"
         }
       ],
@@ -5326,16 +5746,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "5 đòn bẩy thị giác kinh điển biến mọi sinh hoạt gia đình thành thước phim điện ảnh thư thái chuẩn phong cách sống tối giản",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • High-key Lighting • Low-key Lighting",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Vlog",
+        "name": "Vlog",
+        "en_name": "Vlog",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "doi-song",
-          "name": "doi-song",
+          "id": "Đời Sống & Phong Cách Sống",
+          "name": "Đời Sống & Phong Cách Sống",
           "icon": "🎯"
         }
       ],
@@ -5394,16 +5814,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách 8 kỹ thuật quay chụp bánh Trung Thu đỉnh cao bằng điện thoại với màn hình chia đôi Hậu trường vs Thành phẩm, từ đòn bẩy thị giác xuyên thấu đến cú twist mặt trăng vắt mì tôm viral.",
       "key_tech": "Split Screen • Kỹ Thuật Điện Thoại • Ẩm Thực F&B • Visual Gag • Trung Thu • Setup Tại Nhà",
       "shooting_style": {
-        "id": "ugc-thuc-chien",
-        "name": "ugc-thuc-chien",
-        "en_name": "Ugc Thuc Chien",
+        "id": "Split Screen / Behind-The-Scenes",
+        "name": "Split Screen / Behind-The-Scenes",
+        "en_name": "Split Screen / Behind The Scenes",
         "icon": "🎬",
         "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "am-thuc",
-          "name": "am-thuc",
+          "id": "Ẩm Thực & F&B",
+          "name": "Ẩm Thực & F&B",
           "icon": "🎯"
         }
       ],
@@ -5463,16 +5883,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Cú biến hình thời trang kinh điển: Hạ thấp kỳ vọng bằng đồ mặc nhà xuề xòa trước khi tung cú snap cut lột xác sang street chic tương phản Trắng - Đen, dồn dập 2 micro-cut khoe form lưng và phụ kiện túi kẹp nách rồi chốt hạ toàn cảnh fit check đỉnh cao.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "Chuyển Cảnh Thời Trang (OOTD Transition)",
+        "name": "Chuyển Cảnh Thời Trang (OOTD Transition)",
+        "en_name": "Chuyển Cảnh Thời Trang (Ootd Transition)",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "thoi-trang",
-          "name": "thoi-trang",
+          "id": "Thời Trang & Phụ Kiện",
+          "name": "Thời Trang & Phụ Kiện",
           "icon": "🎯"
         }
       ],
@@ -5667,16 +6087,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Hook Mở Màn Tương Phản: Quấn khăn tắm mặt mộc tạo tiền đề bùng nổ biến hình ➔ Outro Phá Cách Hóm Hỉnh: Nháy mắt bĩu môi quirky face kích hoạt tỷ lệ xem lại",
       "key_tech": "Chuyen Canh 1 • Establishing Hook Shot • Medium Tracking Shot • Wide Establishing Shot",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "Chuyển Cảnh (Transition)",
+        "name": "Chuyển Cảnh (Transition)",
+        "en_name": "Chuyển Cảnh (Transition)",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "thoi-trang",
-          "name": "thoi-trang",
+          "id": "Thời Trang & Phong Cách Sống",
+          "name": "Thời Trang & Phong Cách Sống",
           "icon": "🎯"
         }
       ],
@@ -5737,16 +6157,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Kể chuyện không lời bằng chuỗi hành động vi mô đời thường ➔ Cú Match Cut chuyển đổi ánh sáng nén thời gian",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "storytelling",
-        "name": "Kể Chuyện",
-        "en_name": "Storytelling",
-        "icon": "📖",
-        "badge_color": "amber"
+        "id": "Kể Chuyện (Storytelling)",
+        "name": "Kể Chuyện (Storytelling)",
+        "en_name": "Kể Chuyện (Storytelling)",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "doi-song",
-          "name": "doi-song",
+          "id": "Đời Sống & Phong Cách Sống",
+          "name": "Đời Sống & Phong Cách Sống",
           "icon": "🎯"
         }
       ],
@@ -5874,16 +6294,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách 26 phân cảnh chuyển đổi nhịp thở bậc thầy: từ Visual Hook cửa vòm, cắt dồn dập đồ vật thương hiệu, bẻ cua trải nghiệm Ralph's Coffee đến khép màn rèm nhung điện ảnh.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "Chuyển Cảnh (Transition)",
+        "name": "Chuyển Cảnh (Transition)",
+        "en_name": "Chuyển Cảnh (Transition)",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "thoi-trang",
-          "name": "thoi-trang",
+          "id": "Thời Trang & Phong Cách Sống",
+          "name": "Thời Trang & Phong Cách Sống",
           "icon": "🎯"
         }
       ],
@@ -5943,10 +6363,10 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Top-down Origami Hook ➔ Paper Airplane POV xé gió xuyên hành lang và cú đáp đất chốt CTA liên hoan phim",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
       "shooting_style": {
-        "id": "theo-nhip-nhac",
-        "name": "Theo nhịp nhạc",
-        "en_name": "Music Beat & Rhythm",
-        "icon": "🎵",
+        "id": "pov",
+        "name": "pov",
+        "en_name": "Pov",
+        "icon": "🎬",
         "badge_color": "purple"
       },
       "industries": [
@@ -6145,16 +6565,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Visual Hook Mở Màn: Góc Bird-Eye View từ trần nhà phá vỡ hoàn toàn góc quay talking head truyền thống ➔ Vòng Lặp Vô Tận (Seamless Loop Closure): Khóa đuôi bằng góc Top-Down trùng khớp 100% với mở màn",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • High-key Lighting",
       "shooting_style": {
-        "id": "walk-and-talk",
-        "name": "Walk & Talk",
-        "en_name": "Walk and Talk",
-        "icon": "🚶",
-        "badge_color": "emerald"
+        "id": "Walk and Talk",
+        "name": "Walk and Talk",
+        "en_name": "Walk And Talk",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "ky-thuat-quay",
-          "name": "ky-thuat-quay",
+          "id": "Sáng Tạo Nội Dung & Video",
+          "name": "Sáng Tạo Nội Dung & Video",
           "icon": "🎯"
         }
       ],
@@ -6213,16 +6633,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Visual Hook 'So... how was Shanghai?': Mồi câu chuyện bằng câu hỏi bỏ ngỏ và dáng kéo vali ➔ Chốt hạ cao trào (Outro Payoff): Quay lại đối diện ống kính, nhảy múa tự do trong niềm vui trọn vẹn",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "Chuyển Cảnh (Transition)",
+        "name": "Chuyển Cảnh (Transition)",
+        "en_name": "Chuyển Cảnh (Transition)",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "du-lich",
-          "name": "du-lich",
+          "id": "Du Lịch & Khám Phá",
+          "name": "Du Lịch & Khám Phá",
           "icon": "🎯"
         }
       ],
@@ -6282,16 +6702,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Soi gương búi tóc kimono: Neo giữ ánh mắt với Visual Hook hậu trường cá nhân ➔ Ngước nhìn vòm lá xanh đón nắng: Khép lại hành trình bằng nụ cười an yên",
       "key_tech": "Establishing Hook Shot • Wide Establishing Shot • Medium Tracking Shot • Close-Up / Macro Detail Shot",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Cinematic Vlog / Cut On Action",
+        "name": "Cinematic Vlog / Cut On Action",
+        "en_name": "Cinematic Vlog / Cut On Action",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "du-lich",
-          "name": "du-lich",
+          "id": "Du Lịch & Trải Nghiệm Sống",
+          "name": "Du Lịch & Trải Nghiệm Sống",
           "icon": "🎯"
         }
       ],
@@ -6352,16 +6772,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Visual Hook Mở Màn: Vừa bước đi vừa trò chuyện (Walk & Talk) ngoài trời dưới nắng xiên ➔ Nụ Cười Kết Mở (Open Loop Hook): Đón nắng hoàng hôn thôi thúc đón chờ tập sau",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot",
       "shooting_style": {
-        "id": "walk-and-talk",
-        "name": "Walk & Talk",
-        "en_name": "Walk and Talk",
-        "icon": "🚶",
-        "badge_color": "emerald"
+        "id": "Walk and Talk Documentary",
+        "name": "Walk and Talk Documentary",
+        "en_name": "Walk And Talk Documentary",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "ky-thuat-quay",
-          "name": "ky-thuat-quay",
+          "id": "Sáng Tạo Nội Dung & Điện Ảnh",
+          "name": "Sáng Tạo Nội Dung & Điện Ảnh",
           "icon": "🎯"
         }
       ],
@@ -6421,16 +6841,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Chuỗi 10 phân cảnh carousel kết hợp video tĩnh và chuyển động vi mô tại Chiang Rai, làm chủ kỹ thuật phân tầng tiền - trung - hậu cảnh, bố cục một điểm tụ và ánh sáng chiaroscuro ẩm thực.",
       "key_tech": "Establishing Hook Shot • Medium Tracking Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "lifestyle-cinematic",
+        "name": "lifestyle-cinematic",
+        "en_name": "Lifestyle Cinematic",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "du-lich",
-          "name": "du-lich",
+          "id": "du-lich-khach-san",
+          "name": "du-lich-khach-san",
           "icon": "🎯"
         }
       ],
@@ -6489,16 +6909,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Hook Ngược Dòng: Người phụ nữ cầm ô đen sải bước qua vạch kẻ đường hẻm cổ Yanaka ➔ Lắng Đọng Phút Cuối: Bóng người dắt xe đạp chìm dần vào con ngõ tĩnh lặng",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Cinematic B-Roll",
+        "name": "Cinematic B-Roll",
+        "en_name": "Cinematic B Roll",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "du-lich",
-          "name": "du-lich",
+          "id": "Du Lịch & Khám Phá",
+          "name": "Du Lịch & Khám Phá",
           "icon": "🎯"
         }
       ],
@@ -6557,16 +6977,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ POV Bước Chân Mùa Thu: Mở màn thị giác bằng bước đi trên thảm lá rụng Copenhagen ➔ Đại Cảnh Vòng Xoay Bầu Trời: Vòng đu quay văng nghiêng và hàng cờ Đan Mạch",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot",
       "shooting_style": {
-        "id": "theo-nhip-nhac",
-        "name": "Theo nhịp nhạc",
-        "en_name": "Music Beat & Rhythm",
-        "icon": "🎵",
+        "id": "POV & Aesthetic B-Roll Montage",
+        "name": "POV & Aesthetic B-Roll Montage",
+        "en_name": "Pov & Aesthetic B Roll Montage",
+        "icon": "🎬",
         "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "du-lich",
-          "name": "du-lich",
+          "id": "Phong Cách Sống & Du Lịch",
+          "name": "Phong Cách Sống & Du Lịch",
           "icon": "🎯"
         }
       ],
@@ -6626,9 +7046,9 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Visual Hook bí mật hậu trường: Đập tan thắc mắc \"Làm 1 mình ai quay cho?\" ➔ Nụ cười rạng rỡ & Cú Thumbs-Up đanh thép: Khẳng định sự tự tin của một Solo Creator chuyên nghiệp",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot",
       "shooting_style": {
-        "id": "ugc-thuc-chien",
-        "name": "ugc-thuc-chien",
-        "en_name": "Ugc Thuc Chien",
+        "id": "BTS / Hậu Trường Sáng Tạo",
+        "name": "BTS / Hậu Trường Sáng Tạo",
+        "en_name": "Bts / Hậu Trường Sáng Tạo",
         "icon": "🎬",
         "badge_color": "purple"
       },
@@ -6703,8 +7123,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [
         {
-          "id": "doi-song",
-          "name": "doi-song",
+          "id": "Đời Sống & Gia Đình",
+          "name": "Đời Sống & Gia Đình",
           "icon": "🎯"
         }
       ],
@@ -6763,16 +7183,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Đối Xứng Trục Trung Tâm & Title Card: Khóa chặt góc nhìn tĩnh bằng kiến trúc đối xứng ➔ Bố Cục Nan Hoa Đồng Tâm (Radial Focus): Điểm tựa tĩnh lặng ngắm nhìn vòng quay thời gian",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Medium Tracking Shot",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Cinematic B-Roll",
+        "name": "Cinematic B-Roll",
+        "en_name": "Cinematic B Roll",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "ky-thuat-quay",
-          "name": "ky-thuat-quay",
+          "id": "Quay Dựng & Điện Ảnh",
+          "name": "Quay Dựng & Điện Ảnh",
           "icon": "🎯"
         }
       ],
@@ -6900,16 +7320,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Hook Mở Màn Đời Thường: Tĩnh lặng định vị chủ đề ghi lại cuộc sống ➔ Chốt Hạ & Kêu Gọi Hành Động (CTA): Mỹ Cảm Thị Giác Giữ Chân Người Xem",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Điện Ảnh (Cinematic)",
+        "name": "Điện Ảnh (Cinematic)",
+        "en_name": "Điện Ảnh (Cinematic)",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "ky-thuat-quay",
-          "name": "ky-thuat-quay",
+          "id": "Nhiếp Ảnh & Làm Phim",
+          "name": "Nhiếp Ảnh & Làm Phim",
           "icon": "🎯"
         }
       ],
@@ -7109,10 +7529,10 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Visual Hook Mở Màn: Áp sát mặt ở sảnh sân bay trước khi che kín camera ➔ Cú Bung Thị Giác: Lùi bước khoe outfit áo yếm vàng giữa ngã tư phố đêm náo nhiệt",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Medium Tracking Shot",
       "shooting_style": {
-        "id": "theo-nhip-nhac",
-        "name": "Theo nhịp nhạc",
-        "en_name": "Music Beat & Rhythm",
-        "icon": "🎵",
+        "id": "bien-hinh",
+        "name": "bien-hinh",
+        "en_name": "Bien Hinh",
+        "icon": "🎬",
         "badge_color": "purple"
       },
       "industries": [
@@ -7178,9 +7598,9 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Xòe cánh quạt 7 màu sắc thái: Kích hoạt thị giác sở hữu ngay giây đầu ➔ Khóa đuôi nhận diện thương hiệu: Khẳng định vị thế số 1 toàn cầu và bảo chứng cam kết",
       "key_tech": "Ulanzi • MagSafe Tripod • Lifestyle B-Roll • Product Demo • Overhead Shot • Worm’s-eye View",
       "shooting_style": {
-        "id": "ugc-thuc-chien",
-        "name": "ugc-thuc-chien",
-        "en_name": "Ugc Thuc Chien",
+        "id": "san-pham",
+        "name": "san-pham",
+        "en_name": "San Pham",
         "icon": "🎬",
         "badge_color": "purple"
       },
@@ -7315,16 +7735,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Visual Hook Mở Màn: Đặt tripod sừng sững giữa quảng trường rộng lớn khẳng định độ thăng bằng ➔ Outro Thương Hiệu: Đóng dấu nhận diện ngắn gọn và súc tích để định vị thương hiệu",
       "key_tech": "Establishing Hook Shot • High-key Lighting • Medium Tracking Shot • Close-Up / Macro Detail Shot",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "chuyen_canh",
+        "name": "chuyen_canh",
+        "en_name": "Chuyen_Canh",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "cong-nghe",
-          "name": "cong-nghe",
+          "id": "cong_nghe",
+          "name": "cong_nghe",
           "icon": "🎯"
         }
       ],
@@ -7452,16 +7872,16 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "⚡ Khung Hình Toàn Cảnh Cầu Vượt - Khởi Đầu Điện Ảnh Với Logo A24 Ghim Tâm ➔ Bước Đi Trầm Ngâm Kết Thúc - Dư Âm Lặng Lẽ Của Thành Phố",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
+        "id": "Phim Điện Ảnh (Cinematic Stills)",
+        "name": "Phim Điện Ảnh (Cinematic Stills)",
+        "en_name": "Phim Điện Ảnh (Cinematic Stills)",
         "icon": "🎬",
-        "badge_color": "sky"
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "ky-thuat-quay",
-          "name": "ky-thuat-quay",
+          "id": "Nhiếp Ảnh & Điện Ảnh",
+          "name": "Nhiếp Ảnh & Điện Ảnh",
           "icon": "🎯"
         }
       ],
@@ -8256,8 +8676,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
@@ -9371,7 +9791,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",
@@ -10755,8 +11175,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [
         {
-          "id": "doi-song",
-          "name": "doi-song",
+          "id": "doi-thuong",
+          "name": "Đời Thường & Chữa Lành",
           "icon": "🌿"
         }
       ],
@@ -12201,8 +12621,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [
         {
-          "id": "doi-song",
-          "name": "doi-song",
+          "id": "phat-trien-ban-than",
+          "name": "Tâm Lý & Phát Triển Bản Thân",
           "icon": "🧘"
         }
       ],
@@ -12273,8 +12693,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [
         {
-          "id": "ky-thuat-quay",
-          "name": "ky-thuat-quay",
+          "id": "sang-tao-noi-dung",
+          "name": "Sáng Tạo Nội Dung & Thương Hiệu Cá Nhân",
           "icon": "📱"
         }
       ],
@@ -12570,8 +12990,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [
         {
-          "id": "thuong-hieu",
-          "name": "thuong-hieu",
+          "id": "thuong-hieu-ca-nhan",
+          "name": "Thương Hiệu Cá Nhân & Đời Sống / Sáng Tạo",
           "icon": "💡"
         }
       ],
@@ -12639,8 +13059,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [
         {
-          "id": "spa-lam-dep",
-          "name": "spa-lam-dep",
+          "id": "lam-dep",
+          "name": "Làm Đẹp & Spa / Y Tế",
           "icon": "💆"
         }
       ],
@@ -12782,8 +13202,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [
         {
-          "id": "doi-song",
-          "name": "doi-song",
+          "id": "giao-duc",
+          "name": "Giáo Dục & Tuyển Sinh",
           "icon": "🎓"
         }
       ],
@@ -12922,8 +13342,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [
         {
-          "id": "spa-lam-dep",
-          "name": "spa-lam-dep",
+          "id": "lam-dep",
+          "name": "Làm Đẹp & Spa / Y Tế (Salon Tóc)",
           "icon": "💆"
         }
       ],
@@ -13134,8 +13554,8 @@ var FEDU_IDEAS_DATABASE = {
       },
       "industries": [
         {
-          "id": "ky-thuat-quay",
-          "name": "ky-thuat-quay",
+          "id": "ky-thuat-quay-dung",
+          "name": "Kỹ Thuật Quay Dựng & Phụ Kiện Solo Filmmaking",
           "icon": "🎬"
         }
       ],
