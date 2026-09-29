@@ -67,6 +67,14 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Cắt cảnh đồng bộ nhịp điệu âm nhạc, vũ đạo, hành động khớp beat dồn dập."
     },
     {
+      "id": "Talking Head",
+      "name": "Talking Head",
+      "en_name": "Talking Head",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Talking Head."
+    },
+    {
       "id": "Walk & Talk / Phỏng Vấn",
       "name": "Walk & Talk / Phỏng Vấn",
       "en_name": "Walk & Talk / Phỏng Vấn",
@@ -379,6 +387,7 @@ var FEDU_IDEAS_DATABASE = {
     "dien-anh": 93,
     "chuyen-canh": 52,
     "theo-nhip-nhac": 3,
+    "Talking Head": 0,
     "Walk & Talk / Phỏng Vấn": 1,
     "Chỉn Chu / Bố Cục": 1,
     "A Day In The Life (Vlog Không Lời)": 1,
@@ -582,8 +591,8 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "IG_@creator_video_Video_video",
-    "video"
+    "video",
+    "IG_@creator_video_Video_video"
   ],
   "creators_hub": [
     {
@@ -2917,21 +2926,21 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@local_creator_fb_ad_fb_ad",
       "shortcode": "IG_@local_creator_fb_ad_fb_ad",
-      "title_vi": "@local creator fb ad fb ad",
-      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "title_vi": "Kịch Bản Case Study & Bằng Chứng Số Liệu",
+      "quick_takeaway": "Quảng cáo bán khóa học áp dụng cấu trúc bóc tách case study thực tế kết hợp từ khóa 'tự động hóa' để bẻ gãy sự hoài nghi và chốt sales mộc mạc.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Nói Trực Diện",
+        "id": "Talking Head",
+        "name": "Talking Head",
         "en_name": "Talking Head",
-        "icon": "🗣️",
-        "badge_color": "blue"
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "thuong-hieu",
+          "id": "Thương Hiệu Cá Nhân & Dịch Vụ",
           "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
-          "icon": "💼"
+          "icon": "🎯"
         }
       ],
       "x_factors": [],
@@ -2945,10 +2954,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @local_creator",
       "tech_tags": [
-        "Establishing Hook Shot",
-        "Close-Up / Macro Detail Shot",
-        "Low-key Lighting",
-        "Medium Tracking Shot"
+        "Khóa Học",
+        "Case Study",
+        "Tự Động Hóa"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -8590,8 +8598,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",

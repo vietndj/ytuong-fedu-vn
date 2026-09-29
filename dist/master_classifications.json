@@ -24047,29 +24047,28 @@
     "id": "IG_@local_creator_fb_ad_fb_ad",
     "creator": "@local_creator",
     "creator_name": "Local_Creator",
-    "title": "@local_creator - fb ad",
+    "title": "Kịch Bản Case Study & Bằng Chứng Số Liệu",
     "shots_count": 11,
-    "duration": "22.0s",
+    "duration": "66.7s",
     "shooting_style": {
-      "id": "talking-head",
+      "id": "Talking Head",
       "name": "Talking Head",
-      "icon": "🗣️"
+      "icon": "🎬"
     },
     "industry": {
-      "id": "thuong-hieu",
+      "id": "Thương Hiệu Cá Nhân & Dịch Vụ",
       "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
-      "icon": "💼"
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @local_creator",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting",
-      "Medium Tracking Shot"
+      "Khóa Học",
+      "Case Study",
+      "Tự Động Hóa"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Quảng cáo bán khóa học áp dụng cấu trúc bóc tách case study thực tế kết hợp từ khóa 'tự động hóa' để bẻ gãy sự hoài nghi và chốt sales mộc mạc.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
