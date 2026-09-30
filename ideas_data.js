@@ -75,6 +75,14 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Hậu trường quay dựng, góc máy setup thiết bị cho Solo Creator."
     },
     {
+      "id": "Fast-cut Cinematic ASMR",
+      "name": "Fast-cut Cinematic ASMR",
+      "en_name": "Fast Cut Cinematic Asmr",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Fast-cut Cinematic ASMR."
+    },
+    {
       "id": "B-roll Montage & Split Screen",
       "name": "B-roll Montage & Split Screen",
       "en_name": "B Roll Montage & Split Screen",
@@ -409,9 +417,10 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 32,
     "storytelling": 23,
     "dien-anh": 94,
-    "chuyen-canh": 53,
+    "chuyen-canh": 52,
     "theo-nhip-nhac": 3,
     "bts": 0,
+    "Fast-cut Cinematic ASMR": 1,
     "B-roll Montage & Split Screen": 1,
     "goc-may-sang-tao": 1,
     "Talking Head": 0,
@@ -543,7 +552,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 22,
     "du-lich": 17,
     "cong-nghe": 36,
-    "kien-truc": 33,
+    "kien-truc": 32,
     "the-thao": 5,
     "ky-thuat-quay": 38,
     "ugc": 5
@@ -618,8 +627,8 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "video",
-    "IG_@creator_video_Video_video"
+    "IG_@creator_video_Video_video",
+    "video"
   ],
   "creators_hub": [
     {
@@ -1094,7 +1103,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Mendozallopis",
       "profile_url": "https://www.instagram.com/mendozallopis/",
       "video_count": 1,
-      "top_industry": "Kiến Trúc & Không Gian Sống",
+      "top_industry": "Giải Trí & Mô Hình",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40mendozallopis_Dd4L578RNhz_The_Assembling/shot_01_mid.webp",
       "video_ids": [
         "IG_@mendozallopis_Dd4L578RNhz_The_Assembling"
@@ -2997,21 +3006,21 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@mendozallopis_Dd4L578RNhz_The_Assembling",
       "shortcode": "Dd4L578RNhz",
-      "title_vi": "The Assembling",
-      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "title_vi": "Nghệ Thuật Lắp Ráp LEGO Cinematic: Tối Đa Hóa Cảm Xúc Bằng Nhịp Cắt Siêu Nhanh & Góc Cận Đặc Tả",
+      "quick_takeaway": "Video lắp ráp LEGO Nintendo Game Boy với nhịp điệu dồn dập, kết hợp các góc máy siêu cận (macro) vào ánh mắt và chi tiết mảnh ghép, dưới ánh sáng low-key đậm chất điện ảnh.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "Fast-cut Cinematic ASMR",
+        "name": "Fast-cut Cinematic ASMR",
+        "en_name": "Fast Cut Cinematic Asmr",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "Kiến Trúc & Không Gian Sống",
-          "icon": "🏛️"
+          "id": "Giải Trí & Mô Hình",
+          "name": "Giải Trí & Mô Hình",
+          "icon": "🎯"
         }
       ],
       "x_factors": [],
@@ -3025,9 +3034,12 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mendozallopis",
       "tech_tags": [
-        "Establishing Hook Shot",
-        "Low-key Lighting",
-        "Close-Up / Macro Detail Shot"
+        "LEGO",
+        "Game Boy",
+        "ASMR",
+        "Macro",
+        "Fast Cut",
+        "Low-key"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -8928,8 +8940,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
@@ -10043,7 +10055,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",

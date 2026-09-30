@@ -24276,28 +24276,31 @@
     "id": "IG_@mendozallopis_Dd4L578RNhz_The_Assembling",
     "creator": "@mendozallopis",
     "creator_name": "Mendozallopis",
-    "title": "@mendozallopis - The Assembling",
+    "title": "Nghệ Thuật Lắp Ráp LEGO Cinematic: Tối Đa Hóa Cảm Xúc Bằng Nhịp Cắt Siêu Nhanh & Góc Cận Đặc Tả",
     "shots_count": 47,
-    "duration": "94.0s",
+    "duration": "37.4s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "id": "Fast-cut Cinematic ASMR",
+      "name": "Fast-cut Cinematic ASMR",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Giải Trí & Mô Hình",
+      "name": "Giải Trí & Mô Hình",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mendozallopis",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Low-key Lighting",
-      "Close-Up / Macro Detail Shot"
+      "LEGO",
+      "Game Boy",
+      "ASMR",
+      "Macro",
+      "Fast Cut",
+      "Low-key"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Video lắp ráp LEGO Nintendo Game Boy với nhịp điệu dồn dập, kết hợp các góc máy siêu cận (macro) vào ánh mắt và chi tiết mảnh ghép, dưới ánh sáng low-key đậm chất điện ảnh.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -24313,28 +24316,31 @@
     "id": "IG_@mendozallopis_Dd4L578RNhz_The_Assembling",
     "creator": "@mendozallopis",
     "creator_name": "Mendozallopis",
-    "title": "@mendozallopis - The Assembling",
+    "title": "Nghệ Thuật Lắp Ráp LEGO Cinematic: Tối Đa Hóa Cảm Xúc Bằng Nhịp Cắt Siêu Nhanh & Góc Cận Đặc Tả",
     "shots_count": 47,
-    "duration": "94.0s",
+    "duration": "37.4s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "id": "Fast-cut Cinematic ASMR",
+      "name": "Fast-cut Cinematic ASMR",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Giải Trí & Mô Hình",
+      "name": "Giải Trí & Mô Hình",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mendozallopis",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Low-key Lighting",
-      "Close-Up / Macro Detail Shot"
+      "LEGO",
+      "Game Boy",
+      "ASMR",
+      "Macro",
+      "Fast Cut",
+      "Low-key"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Video lắp ráp LEGO Nintendo Game Boy với nhịp điệu dồn dập, kết hợp các góc máy siêu cận (macro) vào ánh mắt và chi tiết mảnh ghép, dưới ánh sáng low-key đậm chất điện ảnh.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
