@@ -75,6 +75,14 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Hậu trường quay dựng, góc máy setup thiết bị cho Solo Creator."
     },
     {
+      "id": "B-roll Montage & Split Screen",
+      "name": "B-roll Montage & Split Screen",
+      "en_name": "B Roll Montage & Split Screen",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay B-roll Montage & Split Screen."
+    },
+    {
       "id": "goc-may-sang-tao",
       "name": "goc-may-sang-tao",
       "en_name": "Goc May Sang Tao",
@@ -398,12 +406,13 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 4,
     "voice-over": 12,
-    "talking-head": 33,
+    "talking-head": 32,
     "storytelling": 23,
     "dien-anh": 94,
     "chuyen-canh": 52,
     "theo-nhip-nhac": 3,
     "bts": 0,
+    "B-roll Montage & Split Screen": 1,
     "goc-may-sang-tao": 1,
     "Talking Head": 0,
     "Walk & Talk / Phỏng Vấn": 1,
@@ -534,7 +543,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 22,
     "du-lich": 17,
     "cong-nghe": 36,
-    "kien-truc": 33,
+    "kien-truc": 32,
     "the-thao": 5,
     "ky-thuat-quay": 38,
     "ugc": 5
@@ -609,8 +618,8 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "video",
-    "IG_@creator_video_Video_video"
+    "IG_@creator_video_Video_video",
+    "video"
   ],
   "creators_hub": [
     {
@@ -1085,7 +1094,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Austinwhite711",
       "profile_url": "https://www.instagram.com/austinwhite711/",
       "video_count": 1,
-      "top_industry": "Kiến Trúc & Không Gian Sống",
+      "top_industry": "Sáng tạo nội dung / Âm nhạc",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40austinwhite711_DdUK7JNtjGG_is_this_%E2%80%9Callowed%E2%80%9D_%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%82%EF%B8%8F/shot_01_mid.webp",
       "video_ids": [
         "IG_@austinwhite711_DdUK7JNtjGG_is_this_“allowed”_🤷🏻‍♂️"
@@ -2977,21 +2986,21 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@austinwhite711_DdUK7JNtjGG_is_this_“allowed”_🤷🏻‍♂️",
       "shortcode": "DdUK7JNtjGG",
-      "title_vi": "is this “allowed” 🤷🏻‍♂️",
-      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "title_vi": "Kỹ thuật Split Screen & B-roll Nhấn Nhịp Cực Nhanh",
+      "quick_takeaway": "Video hướng dẫn làm beat nhạc với nhịp độ cắt cảnh cực nhanh kết hợp kỹ thuật Split Screen và Talking Head.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Nói Trực Diện",
-        "en_name": "Talking Head",
-        "icon": "🗣️",
-        "badge_color": "blue"
+        "id": "B-roll Montage & Split Screen",
+        "name": "B-roll Montage & Split Screen",
+        "en_name": "B Roll Montage & Split Screen",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "Kiến Trúc & Không Gian Sống",
-          "icon": "🏛️"
+          "id": "Sáng tạo nội dung / Âm nhạc",
+          "name": "Sáng tạo nội dung / Âm nhạc",
+          "icon": "🎯"
         }
       ],
       "x_factors": [],
@@ -3005,10 +3014,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @austinwhite711",
       "tech_tags": [
-        "Establishing Hook Shot",
-        "Low-key Lighting",
-        "Close-Up / Macro Detail Shot",
-        "Medium Tracking Shot"
+        "B-roll",
+        "Split Screen",
+        "Tutorial"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -8843,8 +8851,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
