@@ -58,9 +58,9 @@ def get_source_link(id_str, creator):
             remainder = id_str[len(prefix):]
             match = re.match(r'^([A-Za-z0-9_-]{11})(?:_|$)', remainder)
             if match:
-                return f"https://www.instagram.com/reels/{match.group(1)}/"
+                return f"https://www.instagram.com/reel/{match.group(1)}/"
             else:
-                return f"https://www.instagram.com/reels/{remainder.split('_')[0]}/"
+                return f"https://www.instagram.com/reel/{remainder.split('_')[0]}/"
     elif id_str.startswith('TT_'):
         prefix = f"TT_{creator}_"
         if id_str.startswith(prefix):
@@ -71,7 +71,7 @@ def get_source_link(id_str, creator):
             else:
                 return f"https://www.tiktok.com/{creator.replace('@','')}/video/{remainder.split('_')[0]}"
     elif not "_" in id_str:
-        return f"https://www.instagram.com/reels/{id_str}/"
+        return f"https://www.instagram.com/reel/{id_str}/"
     return "N/A"
 
 results = []

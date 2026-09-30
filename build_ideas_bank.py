@@ -80,6 +80,14 @@ SHOOTING_STYLES = [
         "icon": "🎵",
         "badge_color": "purple",
         "desc": "Cắt cảnh đồng bộ nhịp điệu âm nhạc, vũ đạo, hành động khớp beat dồn dập."
+    },
+    {
+        "id": "bts",
+        "name": "BTS / Setup",
+        "en_name": "Behind The Scenes",
+        "icon": "🎥",
+        "badge_color": "zinc",
+        "desc": "Hậu trường quay dựng, góc máy setup thiết bị cho Solo Creator."
     }
 ]
 

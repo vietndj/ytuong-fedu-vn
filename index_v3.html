@@ -93,7 +93,7 @@
         </div>
         
         <!-- Shooting Styles Tabs (Horizontal Scroll) -->
-        <div id="shootingStyleTabsContainer" class="flex-1 flex items-center overflow-x-auto no-scrollbar gap-1 px-2 h-full py-1">
+        <div id="shootingStyleTabsContainer" class="flex-1 min-w-0 flex items-center overflow-x-auto no-scrollbar gap-1 px-2 h-full py-1">
             <!-- Tabs will be rendered here by JS -->
         </div>
         
@@ -537,6 +537,16 @@
             });
 
             container.innerHTML = html;
+            
+            if (!container.dataset.wheelAttached) {
+                container.addEventListener('wheel', (evt) => {
+                    if (evt.deltaY !== 0 && !evt.shiftKey) {
+                        evt.preventDefault();
+                        container.scrollLeft += evt.deltaY;
+                    }
+                }, { passive: false });
+                container.dataset.wheelAttached = 'true';
+            }
         }
 
         // Select Shooting Style

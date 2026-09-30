@@ -139,7 +139,7 @@
         </div>
         
         <!-- Shooting Styles Tabs (2 lines horizontal scroll) -->
-        <div id="shootingStyleTabsContainer" class="flex-1 grid gap-1.5 px-2 overflow-x-auto no-scrollbar" style="grid-template-rows: repeat(2, minmax(0, 1fr)); grid-auto-flow: column; grid-auto-columns: max-content;">
+        <div id="shootingStyleTabsContainer" class="flex-1 min-w-0 grid gap-1.5 px-2 overflow-x-auto no-scrollbar" style="grid-template-rows: repeat(2, minmax(0, 1fr)); grid-auto-flow: column; grid-auto-columns: max-content;">
             <!-- Tabs will be rendered here by JS -->
         </div>
         
@@ -479,7 +479,7 @@
         </div>
     </div>
 
-    <script src="ideas_data.js?v=1790686446"></script>
+    <script src="ideas_data.js?v=1790740557"></script>
     <script>
 // State Management
         let appState = {
@@ -804,6 +804,17 @@
             });
 
             container.innerHTML = html;
+            
+            // Allow horizontal scroll with mouse wheel (attach only once)
+            if (!container.dataset.wheelAttached) {
+                container.addEventListener('wheel', (evt) => {
+                    if (evt.deltaY !== 0 && !evt.shiftKey) {
+                        evt.preventDefault();
+                        container.scrollLeft += evt.deltaY;
+                    }
+                }, { passive: false });
+                container.dataset.wheelAttached = 'true';
+            }
         }
 
         // Select Shooting Style
