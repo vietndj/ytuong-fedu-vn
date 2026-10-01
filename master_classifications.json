@@ -24357,12 +24357,12 @@
     "creator": "@itsbybrandon",
     "creator_name": "Itsbybrandon",
     "title": "@itsbybrandon - Paradigme le parfum by @pradabeauty",
-    "shots_count": 7,
-    "duration": "14.0s",
+    "shots_count": 41,
+    "duration": "82.0s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
-      "icon": "🎬"
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
     },
     "industry": {
       "id": "kien-truc",
@@ -24375,7 +24375,7 @@
       "Close-Up / Macro Detail Shot",
       "Low-key Lighting"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
     "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
     "country": {
@@ -24385,21 +24385,21 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     },
-    "youtube_id": "3nDCtqOsEOQ",
-    "youtube_url": "https://youtu.be/3nDCtqOsEOQ",
-    "youtube_embed": "https://www.youtube.com/embed/3nDCtqOsEOQ"
+    "youtube_id": "eX5SmsbZquw",
+    "youtube_url": "https://youtu.be/eX5SmsbZquw",
+    "youtube_embed": "https://www.youtube.com/embed/eX5SmsbZquw"
   },
   "DdGa4hxzlJi": {
     "id": "IG_@itsbybrandon_DdGa4hxzlJi_Paradigme_le_parfum_by_@pradabeauty",
     "creator": "@itsbybrandon",
     "creator_name": "Itsbybrandon",
     "title": "@itsbybrandon - Paradigme le parfum by @pradabeauty",
-    "shots_count": 7,
-    "duration": "14.0s",
+    "shots_count": 41,
+    "duration": "82.0s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
-      "icon": "🎬"
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
     },
     "industry": {
       "id": "kien-truc",
@@ -24412,7 +24412,7 @@
       "Close-Up / Macro Detail Shot",
       "Low-key Lighting"
     ],
-    "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
     "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
     "country": {
@@ -24422,8 +24422,8 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     },
-    "youtube_id": "3nDCtqOsEOQ",
-    "youtube_url": "https://youtu.be/3nDCtqOsEOQ",
-    "youtube_embed": "https://www.youtube.com/embed/3nDCtqOsEOQ"
+    "youtube_id": "eX5SmsbZquw",
+    "youtube_url": "https://youtu.be/eX5SmsbZquw",
+    "youtube_embed": "https://www.youtube.com/embed/eX5SmsbZquw"
   }
 }
