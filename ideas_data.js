@@ -4,9 +4,9 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 326,
-  "total_unique_ideas": 306,
-  "total_active_ideas": 277,
+  "total_scene_items": 327,
+  "total_unique_ideas": 307,
+  "total_active_ideas": 278,
   "total_excluded_ideas": 29,
   "total_creators": 214,
   "shooting_styles": [
@@ -446,7 +446,7 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 4,
     "voice-over": 12,
-    "talking-head": 32,
+    "talking-head": 33,
     "storytelling": 23,
     "dien-anh": 95,
     "chuyen-canh": 52,
@@ -588,7 +588,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 22,
     "du-lich": 17,
     "cong-nghe": 36,
-    "kien-truc": 32,
+    "kien-truc": 33,
     "the-thao": 5,
     "ky-thuat-quay": 38,
     "ugc": 5
@@ -650,7 +650,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 183,
+    "us_eu": 184,
     "korea": 10,
     "india": 3,
     "japan": 7,
@@ -663,8 +663,8 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "video",
-    "IG_@creator_video_Video_video"
+    "IG_@creator_video_Video_video",
+    "video"
   ],
   "creators_hub": [
     {
@@ -757,6 +757,21 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@shogentle",
+      "name": "Shogentle",
+      "profile_url": "https://www.instagram.com/shogentle/",
+      "video_count": 5,
+      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40shogentle_Dah5Tp8oji1_The_Sound_Transition_Thing_That_Makes_Cuts_Fe/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@shogentle_Dah5Tp8oji1_The_Sound_Transition_Thing_That_Makes_Cuts_Fe",
+        "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
+        "IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant",
+        "IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five",
+        "IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video"
+      ]
+    },
+    {
       "handle": "@hena_film_vlog",
       "name": "Hena_Film_Vlog",
       "profile_url": "https://www.instagram.com/hena_film_vlog/",
@@ -783,20 +798,6 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb",
         "Bao_Cao_Boi_Canh_Thuc_Chien_R2",
         "IG_@by.bennnj_DbKauxkoJU_"
-      ]
-    },
-    {
-      "handle": "@shogentle",
-      "name": "Al,_The_Creator_Videography_Reels",
-      "profile_url": "https://www.instagram.com/shogentle/",
-      "video_count": 4,
-      "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40AL%2C_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle/shot_01_mid.webp",
-      "video_ids": [
-        "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
-        "IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant",
-        "IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five",
-        "IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video"
       ]
     },
     {
@@ -3105,6 +3106,72 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@shogentle_Dah5Tp8oji1_The_Sound_Transition_Thing_That_Makes_Cuts_Fe",
+      "shortcode": "Dah5Tp8oji1",
+      "title_vi": "The Sound Transition Thing That Makes Cuts Fe",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @shogentle",
+      "tech_tags": [
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot",
+        "Low-key Lighting"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "creator": {
+        "raw": "@shogentle",
+        "name": "Shogentle",
+        "handle": "@shogentle",
+        "profile_url": "https://www.instagram.com/shogentle/"
+      },
+      "ig_url": "https://www.instagram.com/reel/Dah5Tp8oji1/",
+      "gdrive_folder": "https://drive.google.com/open?id=1JrrZCbipHd48EvYjCLNx8_kOxn0MC_KC",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40shogentle_Dah5Tp8oji1_The_Sound_Transition_Thing_That_Makes_Cuts_Fe/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40shogentle_Dah5Tp8oji1_The_Sound_Transition_Thing_That_Makes_Cuts_Fe/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/Dah5Tp8oji1.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Dah5Tp8oji1.mp4",
+        "report_url": "reports/IG_@shogentle_Dah5Tp8oji1_The_Sound_Transition_Thing_That_Makes_Cuts_Fe.html",
+        "shots_count": 9,
+        "duration": "18s",
+        "youtube_id": "Vi1V1d50qtA",
+        "youtube_embed": "https://www.youtube.com/embed/Vi1V1d50qtA",
+        "youtube_url": "https://youtu.be/Vi1V1d50qtA"
+      },
+      "complexity": {
+        "id": "trung-binh",
+        "label": "🟡 Trung bình (9-18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@taimoorm_Db1jadggnGA_Vibe_coding_is_the_future",
       "shortcode": "Db1jadggnGA",
@@ -8065,7 +8132,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
@@ -9446,7 +9513,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_03_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
@@ -10560,7 +10627,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",
