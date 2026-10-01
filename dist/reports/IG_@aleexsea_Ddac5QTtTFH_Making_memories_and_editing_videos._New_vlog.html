@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@aleexsea - Making memories and editing videos. New vlog</title>
+    <title>Kỹ thuật Anchor Text &amp; Montage: Cắt vào hành động 2s đầu</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B0F19'/%3E%3Crect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%23FFFFFF' stroke-opacity='0.12' stroke-width='1.5'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='system-ui, sans-serif' font-weight='900' font-size='23' fill='%23FFFFFF'%3EYT%3C/text%3E%3Ccircle cx='48' cy='18' r='4' fill='%23eab308'/%3E%3C/svg%3E">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1036,9 +1036,9 @@
 
     <div class="content-column">
         <header class="report-header">
-            <div class="header-badges"><span class="badge">STORYBOARD BREAKDOWN</span></div>
+            <div class="header-badges"><span class="badge">Vlog &amp; Đời Sống</span> <span class="badge badge-alt">Montage / Fast Cut</span></div>
             <h1 class="report-title">
-                <a href="https://www.instagram.com/reel/Ddac5QTtTFH/?utm_source=ig_web_copy_link&amp;stkn=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener">@aleexsea - Making memories and editing videos. New vlog</a>
+                <a href="https://www.instagram.com/reel/Ddac5QTtTFH/?utm_source=ig_web_copy_link&amp;stkn=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener">Kỹ thuật Anchor Text &amp; Montage: Cắt vào hành động 2s đầu</a>
             </h1>
             <div class="header-meta">
                 <span>Nguồn: <a href="https://www.instagram.com/aleexsea/" target="_blank" class="creator-link">@aleexsea ↗</a></span>
@@ -1051,82 +1051,16 @@
         </header>
 
         
+        <section class="script-axis-card">
+            <h3 class="script-axis-title">TRỤC KỊCH BẢN 3 NHỊP</h3>
+            <div class="script-axis-content">[Nhịp 1: Tĩnh lặng làm nền] ➔ [Nhịp 2: Bão Montage dồn dập] ➔ [Nhịp 3: Nhả nhịp kể chuyện]</div>
+        </section>
 
         <div class="overview-card">
-            ⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.
+            Video vlog mở đầu bằng kỹ thuật neo thị giác (giữ nguyên Text chữ #VLOG) kết hợp với chuỗi chuyển cảnh cực nhanh (Montage), băm nhỏ bối cảnh để tạo nhịp điệu dồn dập ngay 2 giây đầu.
         </div>
 
         
-        <section class="dialogue-section">
-            <div class="dialogue-col-main">
-                <div class="dialogue-header">
-                    <span class="dialogue-badge">KỊCH BẢN LỜI THOẠI</span>
-                    <span class="dialogue-sub">Bản dịch thực chiến</span>
-                </div>
-                <div class="dialogue-body">
-                <div class="vn-para" onclick="playShot(0.0, 8.8, 'Phân đoạn #01')">
-                    <span class="vn-time">0.00s</span>
-                    <span class="vn-beat">Phân đoạn #01</span>
-                    <span class="vn-text">"Sometimes he&#x27;s talking"</span>
-                </div></div>
-            </div>
-            <div class="dialogue-col-aside">
-                <div class="dialogue-aside-header">
-                    <span>ORIGINAL TRANSCRIPT</span>
-                </div>
-                <div class="dialogue-aside-body">
-                <div class="en-line" onclick="playShot(0.0, 8.8, 'ORIGINAL')">
-                    <span class="en-time">0.00s</span>
-                    <span class="en-text">"Sometimes he&#x27;s talking"</span>
-                </div></div>
-            </div>
-        </section>
-        <div class="remake-prompt-card" id="remakePromptCard">
-            <div class="prompt-accordion-header" onclick="togglePromptAccordion(this)">
-                <div class="prompt-left">
-                    <span class="prompt-badge">KỊCH BẢN STU</span>
-                    <span class="prompt-title">Ánh xạ kịch bản sang ngành nghề của bạn</span>
-                </div>
-                <div class="prompt-right">
-                    <button class="prompt-copy-btn" onclick="copyMegaPrompt(event, this)">Sao chép</button>
-                    <div class="prompt-toggle">
-                        <span class="toggle-icon">▼</span>
-                        <span class="toggle-label">Mở xem</span>
-                    </div>
-                </div>
-            </div>
-            <div class="prompt-accordion-body" style="display: none;">
-                <p class="prompt-desc">Sao chép Mega Prompt này dán vào Gemini. Hệ thống tự động gợi ý đúng các ngành nghề học viên thực tế trong STU.</p>
-                <div class="prompt-code-wrap">
-                    <div class="prompt-code-bar">
-                        <span>MEGA_PROMPT_REMAKE_GEMINI.md</span>
-                        <button class="prompt-copy-btn" onclick="copyMegaPrompt(event, this)">Sao chép Prompt</button>
-                    </div>
-                    <div class="prompt-code-content" id="megaPromptText">Bạn là Đạo diễn Video Ngắn &amp; Chuyên gia Tinh chỉnh Lời thoại Thực Chiến theo trường phái mộc mạc của anh Việt (nguyen-viet-voice).
-
-Tôi có cấu trúc logic giữ chân từ video mẫu với 4 nhịp:
-1. Hook 3s: Nêu sự thật trần trụi về một việc ai cũng nghĩ là đơn giản.
-2. Xung đột 2 vế: Cái cớ chủ quan giữ thể diện đối đầu với Thực tế khách quan.
-3. Tactile B-roll: Bàn tay liên tục đặt từng món đồ nghề/chi tiết thật xuống bàn làm việc theo nhịp nói.
-4. Kết bài tự trào &amp; Mở lời tự nhiên: Thừa nhận cái khó của người làm nghề.
-
-=== QUY TẮC VĂN PHONG ===
-- CẤM VĂN MẪU AI: Không dùng bứt phá, chuyển hóa, vũ khí, thần thái, nâng tầm...
-- CẤM từ ÔNG GIÁO. Xưng hô: mình - bạn hoặc tôi - bạn.
-- GIỮ VĂN PHONG MỘC MẠC.
-
-=== HƯỚNG DẪN ===
-Nếu tôi chưa ghi ngành nghề, hỏi 1 câu:
-1. Làm đẹp &amp; Spa / Da liễu / Salon tóc
-2. Nội thất / Decor / Kiến trúc
-3. Ẩm thực &amp; F&amp;B / Tiệm bánh
-4. Nông nghiệp / Phân bón / Sức khỏe
-5. Ngành khác: [Tên nghề] + [3 món đồ trên bàn]
-
-Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll | Lời thoại | Âm thanh Foley)!</div>
-                </div>
-            </div>
-        </div>
 
         <div class="toolbar">
             <div class="tab-group">
@@ -1149,19 +1083,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 01</span>
                     <span class="shot-dur">0.28s</span>
                 </div>
-                <h4 class="shot-headline">Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh</h4>
-                <p class="shot-insight">Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.</p>
+                <h4 class="shot-headline">Establishing Hook: Định vị không gian và tĩnh lặng trước cơn bão (Calm before the storm)</h4>
+                <p class="shot-insight">Mở đầu không nhất thiết phải ồn ào. Một cảnh tĩnh siêu ngắn (dưới 1s) làm nền cho text sẽ tạo ra lực bật mạnh hơn cho các cảnh sau.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Establishing Hook Shot (Góc toàn định vị bối cảnh)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Establishing Hook Shot</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Natural Light</span></div>
                         <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                     </div>
-                    <div class="critique-good">Tạo điểm nhấn thị giác ngay trung tâm; ánh sáng Balanced Diffused Lighting  dẫn hướng mắt người xem hoàn hảo. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Thời lượng shot ngắn nên người xem dễ bị trôi qua nếu chi tiết chữ/đối tượng phân bổ quá sát góc viền. Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Mở màn định vị không gian và nhịp thở của toàn bộ video, thu hút sự chú ý tức thì.</div>
+                    <div class="critique-good">Cảnh tĩnh tạo điểm nghỉ mắt tuyệt vời, làm mồi nhử hoàn hảo để cú cắt cảnh tiếp theo dội vào đầy năng lượng.</div>
+                    <div class="critique-warn">Không có điểm yếu, thời lượng 0.28s cực kỳ hợp lý để không làm khán giả chán.</div>
+                    <div class="shot-narrative">Toàn cảnh hàng cọ tĩnh lặng dưới bầu trời âm u, chữ #VLOG xuất hiện ngay giữa khung hình.</div>
                 </details>
             </div>
         </div>
@@ -1177,19 +1111,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 02</span>
                     <span class="shot-dur">0.40s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Kinetic Montage &amp; Cut on Action: Giữ nguyên Text, đổi liên tục bối cảnh</h4>
+                <p class="shot-insight">Khi chuyển cảnh 1 (từ tĩnh sang động), hãy dùng một vật thể hoặc Text đứng im làm mỏ neo, để background phía sau tha hồ nhảy múa mà không gây nhức mắt.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Montage / Close-up</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Mixed</span></div>
                         <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Kỹ thuật neo thị giác (Visual Anchor): Chữ #VLOG đứng im tuyệt đối, trong khi background phía sau bị xé lẻ và thay đổi liên tục, ép mắt người xem phải dán chặt vào màn hình.</div>
+                    <div class="critique-warn">Nhịp cắt &lt; 0.5s đôi khi làm người xem hơi ngợp nếu xem trên màn hình lớn, nhưng cực kỳ phù hợp với Reels 9:16.</div>
+                    <div class="shot-narrative">Nhân vật xỏ tay vào túi quần jean, cắt chớp nhoáng sang bàn làm việc laptop, rồi cắt tiếp sang cảnh cụng ly bia.</div>
                 </details>
             </div>
         </div>
@@ -1205,19 +1139,19 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                     <span class="shot-num">SHOT 03</span>
                     <span class="shot-dur">0.58s</span>
                 </div>
-                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
-                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
+                <h4 class="shot-headline">Nhả nhịp thở (Breathe Out): Quay lại nhịp điệu Vlog chậm rãi</h4>
+                <p class="shot-insight">Đừng dồn dập mãi. Sau 1 chuỗi cắt nhanh, bắt buộc phải có 1 cảnh dài hơn để hạ nhịp và cung cấp thông tin (text/subtitles).</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Shot</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Indoor Soft Light</span></div>
                         <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                     </div>
-                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
-                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
-                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
+                    <div class="critique-good">Sau chuỗi montage dồn dập, cảnh này kéo dài 0.58s giúp nhả nhịp (Breathe Out) rất tốt, để khán giả kịp đọc phụ đề.</div>
+                    <div class="critique-warn">Khung hình hơi tối ở các góc, nhưng tạo cảm giác ấm cúng (cozy).</div>
+                    <div class="shot-narrative">Cô gái đội mũ đỏ quay người lại trong phòng ngủ, mang balo, có subtitle giải thích nội dung.</div>
                 </details>
             </div>
         </div>
@@ -1678,9 +1612,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
                 <span class="grid-num">SHOT 01</span>
                 <span class="grid-time">0.0s – 0.3s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_01_mid.jpg', 'SHOT 01 • Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_01_mid.jpg', 'SHOT 01 • Establishing Hook: Định vị không gian và tĩnh lặng trước cơn bão (Calm before the storm)')">⊕</button>
             </div>
-            <div class="grid-title">Visual Hook Mở Màn: Giữ chân người xem n</div>
+            <div class="grid-title">Establishing Hook: Định vị không gian và</div>
         </div>
 
         <div class="grid-item" onclick="playShot(0.28, 0.67, 'SHOT 02')">
@@ -1688,9 +1622,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
                 <span class="grid-num">SHOT 02</span>
                 <span class="grid-time">0.3s – 0.7s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_02_mid.jpg', 'SHOT 02 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_02_mid.jpg', 'SHOT 02 • Kinetic Montage &amp; Cut on Action: Giữ nguyên Text, đổi liên tục bối cảnh')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Kinetic Montage &amp; Cut on Action: Giữ ngu</div>
         </div>
 
         <div class="grid-item" onclick="playShot(0.68, 1.25, 'SHOT 03')">
@@ -1698,9 +1632,9 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
                 <img src="https://media.fedu.vn/images/IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
                 <span class="grid-num">SHOT 03</span>
                 <span class="grid-time">0.7s – 1.2s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_03_mid.jpg', 'SHOT 03 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_03_mid.jpg', 'SHOT 03 • Nhả nhịp thở (Breathe Out): Quay lại nhịp điệu Vlog chậm rãi')">⊕</button>
             </div>
-            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
+            <div class="grid-title">Nhả nhịp thở (Breathe Out): Quay lại nhị</div>
         </div>
 
         <div class="grid-item" onclick="playShot(1.27, 1.75, 'SHOT 04')">
@@ -1877,7 +1811,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 01</div>
-                <div class="drawer-shot-hl">Visual Hook Mở Màn: Giữ chân người xem nga</div>
+                <div class="drawer-shot-hl">Establishing Hook: Định vị không gian và t</div>
                 <div class="drawer-shot-time">0.00s – 0.27s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1887,7 +1821,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 02</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Kinetic Montage &amp; Cut on Action: Giữ nguyê</div>
                 <div class="drawer-shot-time">0.28s – 0.67s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1897,7 +1831,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN KỊCH BẢN (Thời lượng | B-roll 
             <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 03</div>
-                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
+                <div class="drawer-shot-hl">Nhả nhịp thở (Breathe Out): Quay lại nhịp </div>
                 <div class="drawer-shot-time">0.68s – 1.25s</div>
             </div>
             <div class="drawer-arrow">▶</div>

@@ -24511,30 +24511,29 @@
     "id": "IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog",
     "creator": "@aleexsea",
     "creator_name": "Aleexsea",
-    "title": "@aleexsea - Making memories and editing videos. New vlog",
+    "title": "Kỹ thuật Anchor Text & Montage: Cắt vào hành động 2s đầu",
     "shots_count": 19,
-    "duration": "38.0s",
+    "duration": "9.1s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "Montage / Fast Cut",
+      "name": "Montage / Fast Cut",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Vlog & Đời Sống",
+      "name": "Vlog & Đời Sống",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @aleexsea",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot",
-      "Wide Establishing Shot",
-      "Low-key Lighting"
+      "Fast Cut",
+      "Visual Anchor",
+      "Typography",
+      "Vlog"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Video vlog mở đầu bằng kỹ thuật neo thị giác (giữ nguyên Text chữ #VLOG) kết hợp với chuỗi chuyển cảnh cực nhanh (Montage), băm nhỏ bối cảnh để tạo nhịp điệu dồn dập ngay 2 giây đầu.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -24550,30 +24549,29 @@
     "id": "IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog",
     "creator": "@aleexsea",
     "creator_name": "Aleexsea",
-    "title": "@aleexsea - Making memories and editing videos. New vlog",
+    "title": "Kỹ thuật Anchor Text & Montage: Cắt vào hành động 2s đầu",
     "shots_count": 19,
-    "duration": "38.0s",
+    "duration": "9.1s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "Montage / Fast Cut",
+      "name": "Montage / Fast Cut",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Vlog & Đời Sống",
+      "name": "Vlog & Đời Sống",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @aleexsea",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot",
-      "Wide Establishing Shot",
-      "Low-key Lighting"
+      "Fast Cut",
+      "Visual Anchor",
+      "Typography",
+      "Vlog"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Video vlog mở đầu bằng kỹ thuật neo thị giác (giữ nguyên Text chữ #VLOG) kết hợp với chuỗi chuyển cảnh cực nhanh (Montage), băm nhỏ bối cảnh để tạo nhịp điệu dồn dập ngay 2 giây đầu.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
