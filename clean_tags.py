@@ -28,6 +28,8 @@ MAPPING = {
     "Chỉn Chu / Bố Cục": "dien-anh",
     "Bố Cục (Framing)": "dien-anh",
     "POV & Aesthetic B-Roll Montage": "dien-anh",
+    "B-roll Montage & Split Screen": "dien-anh",
+    "Fast-cut Cinematic ASMR": "dien-anh",
 
     # 2. Chuyển Cảnh (chuyen-canh)
     "Chuyển Cảnh (Transition)": "chuyen-canh",

@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 321,
-  "total_unique_ideas": 301,
-  "total_active_ideas": 272,
+  "total_scene_items": 322,
+  "total_unique_ideas": 302,
+  "total_active_ideas": 273,
   "total_excluded_ideas": 29,
-  "total_creators": 209,
+  "total_creators": 210,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -414,7 +414,7 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 4,
     "voice-over": 12,
-    "talking-head": 32,
+    "talking-head": 33,
     "storytelling": 23,
     "dien-anh": 95,
     "chuyen-canh": 52,
@@ -551,7 +551,7 @@ var FEDU_IDEAS_DATABASE = {
     "thoi-trang": 23,
     "am-thuc": 22,
     "du-lich": 17,
-    "cong-nghe": 36,
+    "cong-nghe": 37,
     "kien-truc": 32,
     "the-thao": 5,
     "ky-thuat-quay": 38,
@@ -614,7 +614,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 178,
+    "us_eu": 179,
     "korea": 10,
     "india": 3,
     "japan": 7,
@@ -1096,6 +1096,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "REMAKE_Byjxson_Quang_Cao_Dong_Ho_Bam_Gio",
         "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01"
+      ]
+    },
+    {
+      "handle": "@therealmarcozavala",
+      "name": "Therealmarcozavala",
+      "profile_url": "https://www.instagram.com/therealmarcozavala/",
+      "video_count": 1,
+      "top_industry": "Công Nghệ & Thiết Bị",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40therealmarcozavala_DcSXWp_O1JQ_Comment_%E2%80%9Cshot%E2%80%9D_for_a_list_of_10/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@therealmarcozavala_DcSXWp_O1JQ_Comment_“shot”_for_a_list_of_10"
       ]
     },
     {
@@ -3014,6 +3025,72 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@therealmarcozavala_DcSXWp_O1JQ_Comment_“shot”_for_a_list_of_10",
+      "shortcode": "DcSXWp_O1JQ",
+      "title_vi": "Comment “shot” for a list of 10",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+      "key_tech": "Establishing Hook Shot • Medium Tracking Shot • Close-Up / Macro Detail Shot",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industries": [
+        {
+          "id": "cong-nghe",
+          "name": "Công Nghệ & Thiết Bị",
+          "icon": "📱"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @therealmarcozavala",
+      "tech_tags": [
+        "Establishing Hook Shot",
+        "Medium Tracking Shot",
+        "Close-Up / Macro Detail Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
+      "creator": {
+        "raw": "@therealmarcozavala",
+        "name": "Therealmarcozavala",
+        "handle": "@therealmarcozavala",
+        "profile_url": "https://www.instagram.com/therealmarcozavala/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DcSXWp_O1JQ/",
+      "gdrive_folder": "https://drive.google.com/open?id=1-l_dIjh6cZGRLpkNMv6mpJzR-LXIGTSK",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40therealmarcozavala_DcSXWp_O1JQ_Comment_%E2%80%9Cshot%E2%80%9D_for_a_list_of_10/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40therealmarcozavala_DcSXWp_O1JQ_Comment_%E2%80%9Cshot%E2%80%9D_for_a_list_of_10/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/DcSXWp_O1JQ.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DcSXWp_O1JQ.mp4",
+        "report_url": "reports/IG_@therealmarcozavala_DcSXWp_O1JQ_Comment_“shot”_for_a_list_of_10.html",
+        "shots_count": 5,
+        "duration": "10s",
+        "youtube_id": "6cXYodt7BHI",
+        "youtube_embed": "https://www.youtube.com/embed/6cXYodt7BHI",
+        "youtube_url": "https://youtu.be/6cXYodt7BHI"
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@itsbybrandon_DdGa4hxzlJi_Paradigme_le_parfum_by_@pradabeauty",
       "shortcode": "DdGa4hxzlJi",
@@ -7640,7 +7717,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
@@ -10135,7 +10212,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",
