@@ -75,6 +75,14 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Hậu trường quay dựng, góc máy setup thiết bị cho Solo Creator."
     },
     {
+      "id": "Vlog Cinematic",
+      "name": "Vlog Cinematic",
+      "en_name": "Vlog Cinematic",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Vlog Cinematic."
+    },
+    {
       "id": "Vlog",
       "name": "Vlog",
       "en_name": "Vlog",
@@ -430,12 +438,13 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 4,
     "voice-over": 12,
-    "talking-head": 33,
+    "talking-head": 32,
     "storytelling": 23,
     "dien-anh": 95,
     "chuyen-canh": 52,
     "theo-nhip-nhac": 3,
     "bts": 0,
+    "Vlog Cinematic": 1,
     "Vlog": 2,
     "Montage / Fast Cut": 1,
     "Walking & Talking": 1,
@@ -570,7 +579,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 22,
     "du-lich": 17,
     "cong-nghe": 36,
-    "kien-truc": 33,
+    "kien-truc": 32,
     "the-thao": 5,
     "ky-thuat-quay": 38,
     "ugc": 5
@@ -1121,7 +1130,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Corentinhuard",
       "profile_url": "https://www.instagram.com/corentinhuard/",
       "video_count": 1,
-      "top_industry": "Kiến Trúc & Không Gian Sống",
+      "top_industry": "Phong Cách Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40corentinhuard_DbbVPaTsaun_The_Age_of_Distraction/shot_01_mid.webp",
       "video_ids": [
         "IG_@corentinhuard_DbbVPaTsaun_The_Age_of_Distraction"
@@ -3079,21 +3088,21 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@corentinhuard_DbbVPaTsaun_The_Age_of_Distraction",
       "shortcode": "DbbVPaTsaun",
-      "title_vi": "The Age of Distraction",
-      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "title_vi": "Vòng Lặp 'The Age of Distraction'",
+      "quick_takeaway": "Video mô tả nhịp sống hối hả hiện đại với cấu trúc lặp (loop), từ lúc thức dậy, đối mặt lạm phát, ăn uống đến nỗ lực làm việc và cuối cùng chìm vào giấc ngủ.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • High-key Lighting • Medium Tracking Shot",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Nói Trực Diện",
-        "en_name": "Talking Head",
-        "icon": "🗣️",
-        "badge_color": "blue"
+        "id": "Vlog Cinematic",
+        "name": "Vlog Cinematic",
+        "en_name": "Vlog Cinematic",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "Kiến Trúc & Không Gian Sống",
-          "icon": "🏛️"
+          "id": "Phong Cách Sống",
+          "name": "Phong Cách Sống",
+          "icon": "🎯"
         }
       ],
       "x_factors": [],
@@ -3107,11 +3116,10 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @corentinhuard",
       "tech_tags": [
-        "Establishing Hook Shot",
-        "Low-key Lighting",
-        "Close-Up / Macro Detail Shot",
-        "High-key Lighting",
-        "Medium Tracking Shot"
+        "Daily Routine",
+        "Motivation",
+        "Cinematic",
+        "Loop"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -6189,7 +6197,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1jpYV1rRzpuPRMXcYkd1oVjIxfm7pBZFo",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_02_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "report_url": "reports/IG_@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲_Ddb6rA7NwQd_Video_by_elenabuntushak.html",
@@ -7970,7 +7978,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
