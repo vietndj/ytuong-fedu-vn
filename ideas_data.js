@@ -75,6 +75,14 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Hậu trường quay dựng, góc máy setup thiết bị cho Solo Creator."
     },
     {
+      "id": "B-Roll Điện Thoại / Hướng Dẫn",
+      "name": "B-Roll Điện Thoại / Hướng Dẫn",
+      "en_name": "B Roll Điện Thoại / Hướng Dẫn",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay B-Roll Điện Thoại / Hướng Dẫn."
+    },
+    {
       "id": "Giáo Dục / Tips",
       "name": "Giáo Dục / Tips",
       "en_name": "Giáo Dục / Tips",
@@ -454,12 +462,13 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 4,
     "voice-over": 12,
-    "talking-head": 33,
+    "talking-head": 32,
     "storytelling": 23,
     "dien-anh": 95,
     "chuyen-canh": 52,
     "theo-nhip-nhac": 3,
     "bts": 0,
+    "B-Roll Điện Thoại / Hướng Dẫn": 1,
     "Giáo Dục / Tips": 1,
     "Vlog Đời Thường": 1,
     "Vlog Cinematic": 1,
@@ -597,7 +606,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 22,
     "du-lich": 17,
     "cong-nghe": 36,
-    "kien-truc": 33,
+    "kien-truc": 32,
     "the-thao": 5,
     "ky-thuat-quay": 38,
     "ugc": 5
@@ -672,8 +681,8 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "IG_@creator_video_Video_video",
-    "video"
+    "video",
+    "IG_@creator_video_Video_video"
   ],
   "creators_hub": [
     {
@@ -3119,21 +3128,21 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@mridupawasharma_Dd6G0lnI0zj_Shot_my_little_moments_differently_this_time,",
       "shortcode": "Dd6G0lnI0zj",
-      "title_vi": "Shot my little moments differently this time,",
-      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "title_vi": "Kỹ Thuật B-Roll Góc Máy Lạ Mắt Trên Xe Hơi",
+      "quick_takeaway": "Hướng dẫn cách tạo ra các góc quay B-Roll điện ảnh bằng điện thoại trên xe hơi.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot • Wide Establishing Shot",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Nói Trực Diện",
-        "en_name": "Talking Head",
-        "icon": "🗣️",
-        "badge_color": "blue"
+        "id": "B-Roll Điện Thoại / Hướng Dẫn",
+        "name": "B-Roll Điện Thoại / Hướng Dẫn",
+        "en_name": "B Roll Điện Thoại / Hướng Dẫn",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "Kiến Trúc & Không Gian Sống",
-          "icon": "🏛️"
+          "id": "Sáng Tạo / Công Nghệ",
+          "name": "Sáng Tạo / Công Nghệ",
+          "icon": "🎯"
         }
       ],
       "x_factors": [],
@@ -3147,11 +3156,10 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
       "tech_tags": [
-        "Establishing Hook Shot",
-        "Low-key Lighting",
-        "Close-Up / Macro Detail Shot",
-        "Medium Tracking Shot",
-        "Wide Establishing Shot"
+        "B-Roll",
+        "Góc Máy Dị",
+        "Match Cut",
+        "Transition"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -9591,7 +9599,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_03_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
