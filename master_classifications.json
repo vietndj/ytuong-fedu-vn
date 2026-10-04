@@ -25184,5 +25184,61 @@
     "youtube_id": "JR5-DWov8Uc",
     "youtube_url": "https://youtu.be/JR5-DWov8Uc",
     "youtube_embed": "https://www.youtube.com/embed/JR5-DWov8Uc"
+  },
+  "IG_@MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio": {
+    "id": "IG_@MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio",
+    "creator": "@MasterClass",
+    "creator_name": "MasterClass",
+    "title": "IG_@MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio",
+    "shots_count": 23,
+    "shooting_style": {
+      "id": "Talking Head",
+      "name": "Talking Head",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "Giáo Dục & Chuyên Gia",
+      "name": "Giáo Dục & Chuyên Gia",
+      "icon": "🎯"
+    },
+    "tech_tags": [
+      "ngồi nói trực tiếp"
+    ],
+    "quick_takeaway": "Phân tích tự động",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
+  },
+  "IG_@local_creator_uU8uPchm7is_uU8uPchm7is": {
+    "id": "IG_@local_creator_uU8uPchm7is_uU8uPchm7is",
+    "creator": "@local",
+    "creator_name": "local",
+    "title": "IG_@local_creator_uU8uPchm7is_uU8uPchm7is",
+    "shots_count": 3,
+    "shooting_style": {
+      "id": "Talking Head",
+      "name": "Talking Head",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "Giáo Dục & Chuyên Gia",
+      "name": "Giáo Dục & Chuyên Gia",
+      "icon": "🎯"
+    },
+    "tech_tags": [
+      "ngồi nói trực tiếp"
+    ],
+    "quick_takeaway": "Phân tích tự động",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    }
   }
 }
