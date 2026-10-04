@@ -6,9 +6,9 @@ var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
   "total_scene_items": 337,
   "total_unique_ideas": 316,
-  "total_active_ideas": 285,
-  "total_excluded_ideas": 31,
-  "total_creators": 216,
+  "total_active_ideas": 287,
+  "total_excluded_ideas": 29,
+  "total_creators": 217,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -465,10 +465,10 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 34,
     "storytelling": 24,
     "dien-anh": 95,
-    "chuyen-canh": 52,
+    "chuyen-canh": 53,
     "theo-nhip-nhac": 3,
     "bts": 0,
-    "Talking Head": 3,
+    "Talking Head": 4,
     "B-Roll Điện Thoại / Hướng Dẫn": 1,
     "Giáo Dục / Tips": 1,
     "Vlog Đời Thường": 1,
@@ -601,7 +601,7 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "industry_stats": {
     "spa-lam-dep": 3,
-    "thuong-hieu": 19,
+    "thuong-hieu": 20,
     "thoi-trang": 23,
     "am-thuc": 22,
     "du-lich": 17,
@@ -668,7 +668,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 190,
+    "us_eu": 192,
     "korea": 10,
     "india": 3,
     "japan": 7,
@@ -681,8 +681,8 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "IG_@creator_video_Video_video",
-    "video"
+    "video",
+    "IG_@creator_video_Video_video"
   ],
   "creators_hub": [
     {
@@ -775,6 +775,21 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@MasterClass",
+      "name": "MasterClass",
+      "profile_url": "https://www.instagram.com/MasterClass/",
+      "video_count": 5,
+      "top_industry": "Giáo Dục & Chuyên Gia",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi/shot_02_mid.webp",
+      "video_ids": [
+        "IG_@MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi",
+        "IG_@MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio",
+        "IG_@MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off",
+        "IG_@MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi",
+        "IG_@MasterClass_6nDfNUb-28I_Certificates"
+      ]
+    },
+    {
       "handle": "@shogentle",
       "name": "Shogentle",
       "profile_url": "https://www.instagram.com/shogentle/",
@@ -802,20 +817,6 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85",
         "IG_@hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog",
         "IG_@hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow"
-      ]
-    },
-    {
-      "handle": "@MasterClass",
-      "name": "MasterClass",
-      "profile_url": "https://www.instagram.com/MasterClass/",
-      "video_count": 4,
-      "top_industry": "Giáo Dục & Chuyên Gia",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi/shot_01_mid.webp",
-      "video_ids": [
-        "IG_@MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi",
-        "IG_@MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio",
-        "IG_@MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off",
-        "IG_@MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi"
       ]
     },
     {
@@ -1178,6 +1179,17 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "REMAKE_Byjxson_Quang_Cao_Dong_Ho_Bam_Gio",
         "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01"
+      ]
+    },
+    {
+      "handle": "@TheConflictPlaybook",
+      "name": "local",
+      "profile_url": "https://www.instagram.com/TheConflictPlaybook/",
+      "video_count": 1,
+      "top_industry": "Giáo Dục & Chuyên Gia",
+      "sample_thumb": "",
+      "video_ids": [
+        "IG_@TheConflictPlaybook_uU8uPchm7is_uU8uPchm7is"
       ]
     },
     {
@@ -3197,7 +3209,7 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/nNkE1fK9eQs/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi/shot_01_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi/shot_02_mid.webp",
         "thumb_key": "https://media.fedu.vn/images/IG_%40MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/nNkE1fK9eQs.mp4",
         "video_url_original": "https://media.fedu.vn/videos/nNkE1fK9eQs.mp4",
@@ -3261,7 +3273,7 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/UOAgJxrGKzk/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio/shot_01_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio/shot_02_mid.webp",
         "thumb_key": "https://media.fedu.vn/images/IG_%40MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/UOAgJxrGKzk.mp4",
         "video_url_original": "https://media.fedu.vn/videos/UOAgJxrGKzk.mp4",
@@ -3280,8 +3292,8 @@ var FEDU_IDEAS_DATABASE = {
       "is_excluded": false
     },
     {
-      "id": "IG_@local_creator_uU8uPchm7is_uU8uPchm7is",
-      "shortcode": "IG_@local_creator_uU8uPchm7is_uU8uPchm7is",
+      "id": "IG_@TheConflictPlaybook_uU8uPchm7is_uU8uPchm7is",
+      "shortcode": "IG_@TheConflictPlaybook_uU8uPchm7is_uU8uPchm7is",
       "title_vi": "The Conflict Playbook",
       "quick_takeaway": "Phân tích tự động",
       "key_tech": "ngồi nói trực tiếp",
@@ -3317,16 +3329,16 @@ var FEDU_IDEAS_DATABASE = {
       "fedu_optimization": {},
       "logic_explanation": "",
       "creator": {
-        "raw": "@local",
+        "raw": "@TheConflictPlaybook",
         "name": "local",
-        "handle": "@local",
-        "profile_url": "https://www.instagram.com/local/"
+        "handle": "@TheConflictPlaybook",
+        "profile_url": "https://www.instagram.com/TheConflictPlaybook/"
       },
-      "ig_url": "https://www.instagram.com/local/",
+      "ig_url": "https://www.instagram.com/TheConflictPlaybook/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40local_creator_uU8uPchm7is_uU8uPchm7is/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40local_creator_uU8uPchm7is_uU8uPchm7is/shot_03_mid.webp",
+        "thumb_hook": "",
+        "thumb_key": "",
         "video_url": "https://media.fedu.vn/videos/creator.mp4",
         "video_url_original": "https://media.fedu.vn/videos/creator.mp4",
         "report_url": "reports/IG_@local_creator_uU8uPchm7is_uU8uPchm7is.html",
@@ -3340,8 +3352,8 @@ var FEDU_IDEAS_DATABASE = {
         "id": "de",
         "label": "🟢 Dễ làm theo (3-8 shots)"
       },
-      "is_personal": true,
-      "is_excluded": true
+      "is_personal": false,
+      "is_excluded": false
     },
     {
       "id": "IG_@MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off",
@@ -3392,7 +3404,7 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/q8rX4GUZSsU/",
       "gdrive_folder": "https://drive.google.com/open?id=1urerNxGpW_QtVgdvQcwyTgYn3AdEHzsr",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off/shot_01_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off/shot_02_mid.webp",
         "thumb_key": "https://media.fedu.vn/images/IG_%40MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/q8rX4GUZSsU.mp4",
         "video_url_original": "https://media.fedu.vn/videos/q8rX4GUZSsU.mp4",
@@ -3458,7 +3470,7 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/vw77HWoTdoA/",
       "gdrive_folder": "https://drive.google.com/open?id=1VNjqMlpogvSqEEcH40UAjL81VcP-fsg1",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi/shot_01_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi/shot_02_mid.webp",
         "thumb_key": "https://media.fedu.vn/images/IG_%40MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/vw77HWoTdoA.mp4",
         "video_url_original": "https://media.fedu.vn/videos/vw77HWoTdoA.mp4",
@@ -3477,8 +3489,8 @@ var FEDU_IDEAS_DATABASE = {
       "is_excluded": false
     },
     {
-      "id": "IG_@local_creator_Introducing：_MasterClass_Certificates_[6nDfNU_Introducing：_MasterClass_Certificates_[6nDfNU",
-      "shortcode": "IG_@local_creator_Introducing：_MasterClass_Certificates_[6nDfNU_Introducing：_MasterClass_Certificates_[6nDfNU",
+      "id": "IG_@MasterClass_6nDfNUb-28I_Certificates",
+      "shortcode": "IG_@MasterClass_6nDfNUb-28I_Certificates",
       "title_vi": "Introducing： MasterClass Certificates [6nDfNU",
       "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • High-key Lighting",
@@ -3517,16 +3529,16 @@ var FEDU_IDEAS_DATABASE = {
       "fedu_optimization": {},
       "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
       "creator": {
-        "raw": "@local_creator",
+        "raw": "@MasterClass",
         "name": "Local_Creator",
-        "handle": "@local_creator",
-        "profile_url": "https://www.instagram.com/local_creator/"
+        "handle": "@MasterClass",
+        "profile_url": "https://www.instagram.com/MasterClass/"
       },
-      "ig_url": "https://www.instagram.com/local_creator/",
+      "ig_url": "https://www.instagram.com/MasterClass/",
       "gdrive_folder": "https://drive.google.com/open?id=1AkPXeX_AOvwx8LYw3CpNXiay6jRJtHTh",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40local_creator_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40local_creator_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU.mp4",
         "video_url_original": "https://media.fedu.vn/videos/Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU.mp4",
         "report_url": "reports/IG_@local_creator_Introducing：_MasterClass_Certificates_[6nDfNU_Introducing：_MasterClass_Certificates_[6nDfNU.html",
@@ -3540,8 +3552,8 @@ var FEDU_IDEAS_DATABASE = {
         "id": "nang-cao",
         "label": "🔴 Nâng cao (>18 shots)"
       },
-      "is_personal": true,
-      "is_excluded": true
+      "is_personal": false,
+      "is_excluded": false
     },
     {
       "id": "IG_@mridupawasharma_Dd6G0lnI0zj_Shot_my_little_moments_differently_this_time,",
@@ -8636,7 +8648,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
@@ -10016,7 +10028,7 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_01_mid.webp",
         "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
