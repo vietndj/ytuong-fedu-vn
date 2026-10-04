@@ -4,11 +4,11 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 331,
-  "total_unique_ideas": 311,
-  "total_active_ideas": 281,
-  "total_excluded_ideas": 30,
-  "total_creators": 215,
+  "total_scene_items": 336,
+  "total_unique_ideas": 315,
+  "total_active_ideas": 284,
+  "total_excluded_ideas": 31,
+  "total_creators": 216,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -462,13 +462,13 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 4,
     "voice-over": 12,
-    "talking-head": 32,
-    "storytelling": 23,
+    "talking-head": 33,
+    "storytelling": 24,
     "dien-anh": 95,
     "chuyen-canh": 52,
     "theo-nhip-nhac": 3,
     "bts": 0,
-    "Talking Head": 2,
+    "Talking Head": 3,
     "B-Roll Điện Thoại / Hướng Dẫn": 1,
     "Giáo Dục / Tips": 1,
     "Vlog Đời Thường": 1,
@@ -606,7 +606,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 22,
     "du-lich": 17,
     "cong-nghe": 36,
-    "kien-truc": 32,
+    "kien-truc": 33,
     "the-thao": 5,
     "ky-thuat-quay": 38,
     "ugc": 5
@@ -668,7 +668,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 187,
+    "us_eu": 189,
     "korea": 10,
     "india": 3,
     "japan": 7,
@@ -681,8 +681,8 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "video",
-    "IG_@creator_video_Video_video"
+    "IG_@creator_video_Video_video",
+    "video"
   ],
   "creators_hub": [
     {
@@ -861,6 +861,19 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@MasterClass",
+      "name": "Masterclass",
+      "profile_url": "https://www.instagram.com/MasterClass/",
+      "video_count": 3,
+      "top_industry": "Giáo Dục & Chuyên Gia",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off",
+        "IG_@MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi",
+        "IG_@MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio"
+      ]
+    },
+    {
       "handle": "@mcjacoub",
       "name": "Mcjacoub",
       "profile_url": "https://www.instagram.com/mcjacoub/",
@@ -936,18 +949,6 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@qfroost_DXWKIztktTN_Saigon_Vietnam",
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
         "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
-      ]
-    },
-    {
-      "handle": "@MasterClass",
-      "name": "Masterclass",
-      "profile_url": "https://www.instagram.com/MasterClass/",
-      "video_count": 2,
-      "top_industry": "Giáo Dục & Chuyên Gia",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off/shot_01_mid.webp",
-      "video_ids": [
-        "IG_@MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off",
-        "IG_@MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi"
       ]
     },
     {
@@ -1044,6 +1045,18 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious",
         "IG_@jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling"
+      ]
+    },
+    {
+      "handle": "@nemo_ooo",
+      "name": "尼莫Nemo_ིྀ_ᗦ↞◃",
+      "profile_url": "https://www.instagram.com/nemo_ooo/",
+      "video_count": 2,
+      "top_industry": "Du Lịch & Trải Nghiệm",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DclWb98PiK_Video_by_nemo_ooo/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video_by_nemo_ooo",
+        "IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DbF_D2MB6BR_Video_by_nemo_ooo"
       ]
     },
     {
@@ -1564,13 +1577,13 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "handle": "@rubtsov.a",
-      "name": "Ekaterina_Модель_Уфа_,_Питер",
+      "name": "Rubtsov A",
       "profile_url": "https://www.instagram.com/rubtsov.a/",
       "video_count": 1,
       "top_industry": "Thời Trang & Phong Cách Sống",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40Ekaterina_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%A3%D1%84%D0%B0_%2C_%D0%9F%D0%B8%D1%82%D0%B5%D1%80_DdkHw7gIXLj_Video_by_rubtsov.a/shot_01_mid.jpg",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40rubtsov.a_DdkHw7gIXLj_%D0%92_%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D1%83/shot_01_mid.webp",
       "video_ids": [
-        "IG_@Ekaterina_модель_Уфа_,_Питер_DdkHw7gIXLj_Video_by_rubtsov.a"
+        "IG_@rubtsov.a_DdkHw7gIXLj_В_библиотеку"
       ]
     },
     {
@@ -1835,17 +1848,6 @@ var FEDU_IDEAS_DATABASE = {
       "sample_thumb": "https://media.fedu.vn/images/IG_%40Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs/shot_01_mid.webp",
       "video_ids": [
         "IG_@Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs"
-      ]
-    },
-    {
-      "handle": "@nemo_ooo",
-      "name": "尼莫Nemo_ིྀ_ᗦ↞◃",
-      "profile_url": "https://www.instagram.com/nemo_ooo/",
-      "video_count": 1,
-      "top_industry": "Du Lịch & Trải Nghiệm",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DclWb98PiK_Video_by_nemo_ooo/shot_01_mid.webp",
-      "video_ids": [
-        "IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video_by_nemo_ooo"
       ]
     },
     {
@@ -3133,6 +3135,17 @@ var FEDU_IDEAS_DATABASE = {
       "sample_thumb": "https://media.fedu.vn/images/The_Power_of_Composition_-_%40minhmigoi/img_002_4ee0b6c4.webp",
       "video_ids": [
         "IG_@minhmigoi_Db0Sn3zvuHP_The_Power_of_Composition"
+      ]
+    },
+    {
+      "handle": "@saigonink_studio",
+      "name": "Saigon Ink Tattoo (Artist Nikko)",
+      "profile_url": "https://www.instagram.com/saigonink_studio/",
+      "video_count": 1,
+      "top_industry": "Làm Đẹp & Spa / Y Tế",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo"
       ]
     }
   ],
@@ -6649,7 +6662,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1jpYV1rRzpuPRMXcYkd1oVjIxfm7pBZFo",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_02_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "report_url": "reports/IG_@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲_Ddb6rA7NwQd_Video_by_elenabuntushak.html",
@@ -7215,11 +7228,11 @@ var FEDU_IDEAS_DATABASE = {
       "is_excluded": false
     },
     {
-      "id": "IG_@Ekaterina_модель_Уфа_,_Питер_DdkHw7gIXLj_Video_by_rubtsov.a",
+      "id": "IG_@rubtsov.a_DdkHw7gIXLj_В_библиотеку",
       "shortcode": "DdkHw7gIXLj",
-      "title_vi": "Biến Hình Dark Academia Đi Thư Viện: Kỹ Thuật Match Cut Quán Tính Tay & Outro Phá Cách - @Ekaterina_модель_Уфа_,_Питер",
+      "title_vi": "Biến Hình Dark Academia Đi Thư Viện: Kỹ Thuật Match Cut Quán Tính Tay & Outro Phá Cách - @rubtsov.a",
       "quick_takeaway": "⚡ Hook Mở Màn Tương Phản: Quấn khăn tắm mặt mộc tạo tiền đề bùng nổ biến hình ➔ Outro Phá Cách Hóm Hỉnh: Nháy mắt bĩu môi quirky face kích hoạt tỷ lệ xem lại",
-      "key_tech": "Chuyen Canh 1 • Establishing Hook Shot • Medium Tracking Shot • Wide Establishing Shot",
+      "key_tech": "Chuyen canh 1 • Biến Hình • Match Cut • Dark Academia • Geek Chic • OOTD • Visual Hook",
       "shooting_style": {
         "id": "Chuyển Cảnh (Transition)",
         "name": "Chuyển Cảnh (Transition)",
@@ -7256,21 +7269,21 @@ var FEDU_IDEAS_DATABASE = {
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {},
-      "logic_explanation": "Ghi chú người dùng: Chuyen canh 1. Phân loại vào Kỹ Thuật Quay Dựng & Điện Ảnh • Chuyển Cảnh (Transition).",
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Công Nghệ & Thiết Bị.",
       "creator": {
-        "raw": "@Ekaterina_модель_Уфа_,_Питер",
-        "name": "Ekaterina_Модель_Уфа_,_Питер",
+        "raw": "@rubtsov.a",
+        "name": "Rubtsov A",
         "handle": "@rubtsov.a",
         "profile_url": "https://www.instagram.com/rubtsov.a/"
       },
       "ig_url": "https://www.instagram.com/reel/DdkHw7gIXLj/",
-      "gdrive_folder": "https://drive.google.com/open?id=1AiDw3T4a7SHY32QWcS4m_BiPVQyCrHMD",
+      "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40Ekaterina_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%A3%D1%84%D0%B0_%2C_%D0%9F%D0%B8%D1%82%D0%B5%D1%80_DdkHw7gIXLj_Video_by_rubtsov.a/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Ekaterina_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%A3%D1%84%D0%B0_%2C_%D0%9F%D0%B8%D1%82%D0%B5%D1%80_DdkHw7gIXLj_Video_by_rubtsov.a/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40rubtsov.a_DdkHw7gIXLj_%D0%92_%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D1%83/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40rubtsov.a_DdkHw7gIXLj_%D0%92_%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D1%83/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdkHw7gIXLj.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdkHw7gIXLj.mp4",
-        "report_url": "reports/IG_@Ekaterina_модель_Уфа_,_Питер_DdkHw7gIXLj_Video_by_rubtsov.a.html",
+        "report_url": "reports/IG_@rubtsov.a_DdkHw7gIXLj_В_библиотеку.html",
         "shots_count": 10,
         "duration": "20s",
         "youtube_id": null,
@@ -9810,7 +9823,7 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
         "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
@@ -24935,6 +24948,276 @@ var FEDU_IDEAS_DATABASE = {
       },
       "is_personal": false,
       "is_excluded": false
+    },
+    {
+      "id": "IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo",
+      "shortcode": "DdNq5CxszVl",
+      "title_vi": "Nghệ Thuật Xăm Mini Tô Bún Bò Huế Thực Tế - Saigon Ink Tattoo (Artist Nikko) - @saigonink_studio",
+      "quick_takeaway": "Nghệ thuật làm video dịch vụ thủ công/nghệ thuật: Đừng chỉ quay người thợ đang làm việc, hãy đưa sản phẩm đỉnh cao nhất lên đầu, quay thật sâu vào cảm giác thỏa mãn thị giác (ASMR Wipe / Color Blending) và kết nối sản phẩm với một câu chuyện văn hóa cá nhân sâu sắc.",
+      "key_tech": "Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide",
+      "shooting_style": {
+        "id": "storytelling",
+        "name": "Kể Chuyện",
+        "en_name": "Storytelling",
+        "icon": "📖",
+        "badge_color": "amber"
+      },
+      "industries": [
+        {
+          "id": "lam-dep-spa",
+          "name": "Làm Đẹp & Spa / Y Tế",
+          "icon": "💆"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "vn",
+        "name": "Việt Nam",
+        "en_name": "Vietnam",
+        "flag": "🇻🇳",
+        "badge_color": "red"
+      },
+      "purpose": "Quảng bá dịch vụ xăm nghệ thuật siêu thực cao cấp kết hợp kể chuyện văn hóa ẩm thực và tôn vinh nguồn cội Việt Nam",
+      "tech_tags": [
+        "Hyper-Realistic Food Tattoo",
+        "Result-First Hook",
+        "Macro Needle ASMR",
+        "Wet Towel Wipe Reveal",
+        "Audio-Visual Rhyme",
+        "Cultural Identity Storytelling",
+        "Unpopular Opinion Hook",
+        "Procreate iPad Mockup",
+        "Museum Lighting Glide"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Kịch bản viral đa tầng: Đánh gục người xem ngay giây đầu bằng thành phẩm tô bún bò siêu nhỏ sắc nét đến từng sợi bún hạt vừng; giữ chân bằng chuỗi phân cảnh vi phẫu đi kim dặm màu ASMR cực khoái; neo đậu cảm xúc bằng cuộc phỏng vấn khách hàng khẳng định tình yêu quê hương xứ Huế và tuyên ngôn gây tranh luận ẩm thực ('ngon hơn Phở'); kết liễu bằng cú trượt macro bảo tàng ánh sáng sang trọng.",
+      "creator": {
+        "raw": "@saigonink_studio",
+        "name": "Saigon Ink Tattoo (Artist Nikko)",
+        "handle": "@saigonink_studio",
+        "profile_url": "https://www.instagram.com/saigonink_studio/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DdNq5CxszVl/",
+      "gdrive_folder": "",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/studio.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/studio.mp4",
+        "report_url": "reports/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo.html",
+        "shots_count": 14,
+        "duration": "28s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "trung-binh",
+        "label": "🟡 Trung bình (9-18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
+      "id": "IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DbF_D2MB6BR_Video_by_nemo_ooo",
+      "shortcode": "DbF_D2MB6BR",
+      "title_vi": "@尼莫Nemo_ིྀ_ᗦ↞◃ - Video by nemo ooo",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "key_tech": "Instagram Liked 24h: Video • 1 Of 18 • By @nemo_ooo__ • Shared July 30 • 2026 • Establishing Hook Shot • Close-Up / Macro Detail Shot",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Instagram Liked 24h: Video, 1 of 18, by @nemo_ooo__, shared July 30, 2026",
+      "tech_tags": [
+        "Instagram Liked 24h: Video",
+        "1 Of 18",
+        "By @nemo_ooo__",
+        "Shared July 30",
+        "2026",
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Ghi chú người dùng: Instagram Liked 24h: Video, 1 of 18, by @nemo_ooo__, shared July 30, 2026. Phân loại vào Kiến Trúc & Không Gian Sống • Talking Head.",
+      "creator": {
+        "raw": "@尼莫Nemo_ིྀ_ᗦ↞◃",
+        "name": "尼莫Nemo_ིྀ_ᗦ↞◃",
+        "handle": "@nemo_ooo",
+        "profile_url": "https://www.instagram.com/nemo_ooo/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DbF_D2MB6BR/",
+      "gdrive_folder": "",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DbF_D2MB6BR_Video_by_nemo_ooo/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DbF_D2MB6BR_Video_by_nemo_ooo/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/%E0%BD%B2%E0%BE%80.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/%E0%BD%B2%E0%BE%80.mp4",
+        "report_url": "reports/IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DbF_D2MB6BR_Video_by_nemo_ooo.html",
+        "shots_count": 25,
+        "duration": "50s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
+      "id": "IG_@MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio",
+      "shortcode": "UOAgJxrGKzk",
+      "title_vi": "IG_@MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio",
+      "quick_takeaway": "Phân tích tự động",
+      "key_tech": "ngồi nói trực tiếp",
+      "shooting_style": {
+        "id": "Talking Head",
+        "name": "Talking Head",
+        "en_name": "Talking Head",
+        "icon": "🎬",
+        "badge_color": "purple"
+      },
+      "industries": [
+        {
+          "id": "Giáo Dục & Chuyên Gia",
+          "name": "Giáo Dục & Chuyên Gia",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "tech_tags": [
+        "ngồi nói trực tiếp"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "",
+      "creator": {
+        "raw": "@MasterClass",
+        "name": "MasterClass",
+        "handle": "@MasterClass",
+        "profile_url": "https://www.instagram.com/MasterClass/"
+      },
+      "ig_url": "https://www.instagram.com/reel/UOAgJxrGKzk/",
+      "gdrive_folder": "",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/UOAgJxrGKzk.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/UOAgJxrGKzk.mp4",
+        "report_url": "reports/IG_@MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio.html",
+        "shots_count": 23,
+        "duration": "46s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
+      "id": "IG_@local_creator_uU8uPchm7is_uU8uPchm7is",
+      "shortcode": "IG_@local_creator_uU8uPchm7is_uU8uPchm7is",
+      "title_vi": "IG_@local_creator_uU8uPchm7is_uU8uPchm7is",
+      "quick_takeaway": "Phân tích tự động",
+      "key_tech": "ngồi nói trực tiếp",
+      "shooting_style": {
+        "id": "Talking Head",
+        "name": "Talking Head",
+        "en_name": "Talking Head",
+        "icon": "🎬",
+        "badge_color": "purple"
+      },
+      "industries": [
+        {
+          "id": "Giáo Dục & Chuyên Gia",
+          "name": "Giáo Dục & Chuyên Gia",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "tech_tags": [
+        "ngồi nói trực tiếp"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "",
+      "creator": {
+        "raw": "@local",
+        "name": "local",
+        "handle": "@local",
+        "profile_url": "https://www.instagram.com/local/"
+      },
+      "ig_url": "https://www.instagram.com/local/",
+      "gdrive_folder": "",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40local_creator_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40local_creator_fb_ad_fb_ad/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/creator.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/creator.mp4",
+        "report_url": "reports/IG_@local_creator_uU8uPchm7is_uU8uPchm7is.html",
+        "shots_count": 3,
+        "duration": "6s",
+        "youtube_id": null,
+        "youtube_embed": null,
+        "youtube_url": null
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": true,
+      "is_excluded": true
     }
   ]
 };
