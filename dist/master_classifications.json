@@ -25240,5 +25240,81 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     }
+  },
+  "IG_@MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi": {
+    "id": "IG_@MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi",
+    "creator": "@MasterClass",
+    "creator_name": "Masterclass",
+    "title": "@MasterClass - Coach K Teaches Values-Driven Leadership Offi",
+    "shots_count": 22,
+    "duration": "44.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @MasterClass",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "hn8hsWUSWhE",
+    "youtube_url": "https://youtu.be/hn8hsWUSWhE",
+    "youtube_embed": "https://www.youtube.com/embed/hn8hsWUSWhE"
+  },
+  "nNkE1fK9eQs": {
+    "id": "IG_@MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi",
+    "creator": "@MasterClass",
+    "creator_name": "Masterclass",
+    "title": "@MasterClass - Coach K Teaches Values-Driven Leadership Offi",
+    "shots_count": 22,
+    "duration": "44.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @MasterClass",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "hn8hsWUSWhE",
+    "youtube_url": "https://youtu.be/hn8hsWUSWhE",
+    "youtube_embed": "https://www.youtube.com/embed/hn8hsWUSWhE"
   }
 }
