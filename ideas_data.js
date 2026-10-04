@@ -681,8 +681,8 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "video",
-    "IG_@creator_video_Video_video"
+    "IG_@creator_video_Video_video",
+    "video"
   ],
   "creators_hub": [
     {
@@ -866,7 +866,7 @@ var FEDU_IDEAS_DATABASE = {
       "profile_url": "https://www.instagram.com/MasterClass/",
       "video_count": 3,
       "top_industry": "Giáo Dục & Chuyên Gia",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi/shot_01_mid.webp",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio/shot_01_mid.webp",
       "video_ids": [
         "IG_@MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio",
         "IG_@MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off",
@@ -3153,7 +3153,7 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio",
       "shortcode": "UOAgJxrGKzk",
-      "title_vi": "IG_@MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio",
+      "title_vi": "Make the Markets Work for You With Ray Dalio",
       "quick_takeaway": "Phân tích tự động",
       "key_tech": "ngồi nói trực tiếp",
       "shooting_style": {
@@ -3196,8 +3196,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/UOAgJxrGKzk/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/UOAgJxrGKzk.mp4",
         "video_url_original": "https://media.fedu.vn/videos/UOAgJxrGKzk.mp4",
         "report_url": "reports/IG_@MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio.html",
@@ -3217,7 +3217,7 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@local_creator_uU8uPchm7is_uU8uPchm7is",
       "shortcode": "IG_@local_creator_uU8uPchm7is_uU8uPchm7is",
-      "title_vi": "IG_@local_creator_uU8uPchm7is_uU8uPchm7is",
+      "title_vi": "The Conflict Playbook",
       "quick_takeaway": "Phân tích tự động",
       "key_tech": "ngồi nói trực tiếp",
       "shooting_style": {
@@ -3260,8 +3260,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/local/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40local_creator_fb_ad_fb_ad/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40local_creator_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40local_creator_uU8uPchm7is_uU8uPchm7is/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40local_creator_uU8uPchm7is_uU8uPchm7is/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/creator.mp4",
         "video_url_original": "https://media.fedu.vn/videos/creator.mp4",
         "report_url": "reports/IG_@local_creator_uU8uPchm7is_uU8uPchm7is.html",
@@ -6790,7 +6790,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1jpYV1rRzpuPRMXcYkd1oVjIxfm7pBZFo",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_02_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "report_url": "reports/IG_@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲_Ddb6rA7NwQd_Video_by_elenabuntushak.html",
@@ -8571,7 +8571,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
@@ -9951,8 +9951,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
