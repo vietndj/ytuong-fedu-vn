@@ -24958,5 +24958,81 @@
     "youtube_id": "AYK45S4m7lo",
     "youtube_url": "https://youtu.be/AYK45S4m7lo",
     "youtube_embed": "https://www.youtube.com/embed/AYK45S4m7lo"
+  },
+  "IG_@local_creator_Introducing：_MasterClass_Certificates_[6nDfNU_Introducing：_MasterClass_Certificates_[6nDfNU": {
+    "id": "IG_@local_creator_Introducing：_MasterClass_Certificates_[6nDfNU_Introducing：_MasterClass_Certificates_[6nDfNU",
+    "creator": "@local_creator",
+    "creator_name": "Local_Creator",
+    "title": "@local_creator - Introducing： MasterClass Certificates [6nDfNU",
+    "shots_count": 34,
+    "duration": "68.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "thuong-hieu",
+      "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+      "icon": "💼"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @local_creator",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "High-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "w0hkHnV5ysU",
+    "youtube_url": "https://youtu.be/w0hkHnV5ysU",
+    "youtube_embed": "https://www.youtube.com/embed/w0hkHnV5ysU"
+  },
+  "Introducing：_MasterClass_Certificates_[6nDfNU": {
+    "id": "IG_@local_creator_Introducing：_MasterClass_Certificates_[6nDfNU_Introducing：_MasterClass_Certificates_[6nDfNU",
+    "creator": "@local_creator",
+    "creator_name": "Local_Creator",
+    "title": "@local_creator - Introducing： MasterClass Certificates [6nDfNU",
+    "shots_count": 34,
+    "duration": "68.0s",
+    "shooting_style": {
+      "id": "chuyen-canh",
+      "name": "Chuyển Cảnh (Transition)",
+      "icon": "⚡"
+    },
+    "industry": {
+      "id": "thuong-hieu",
+      "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+      "icon": "💼"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @local_creator",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "High-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "w0hkHnV5ysU",
+    "youtube_url": "https://youtu.be/w0hkHnV5ysU",
+    "youtube_embed": "https://www.youtube.com/embed/w0hkHnV5ysU"
   }
 }

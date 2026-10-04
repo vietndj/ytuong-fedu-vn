@@ -4,10 +4,10 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 328,
-  "total_unique_ideas": 308,
+  "total_scene_items": 329,
+  "total_unique_ideas": 309,
   "total_active_ideas": 279,
-  "total_excluded_ideas": 29,
+  "total_excluded_ideas": 30,
   "total_creators": 214,
   "shooting_styles": [
     {
@@ -3125,6 +3125,73 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@local_creator_Introducing：_MasterClass_Certificates_[6nDfNU_Introducing：_MasterClass_Certificates_[6nDfNU",
+      "shortcode": "IG_@local_creator_Introducing：_MasterClass_Certificates_[6nDfNU_Introducing：_MasterClass_Certificates_[6nDfNU",
+      "title_vi": "Introducing： MasterClass Certificates [6nDfNU",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • High-key Lighting",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
+      },
+      "industries": [
+        {
+          "id": "thuong-hieu",
+          "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
+          "icon": "💼"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @local_creator",
+      "tech_tags": [
+        "Establishing Hook Shot",
+        "Low-key Lighting",
+        "Close-Up / Macro Detail Shot",
+        "High-key Lighting"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Thương Hiệu Cá Nhân & Dịch Vụ.",
+      "creator": {
+        "raw": "@local_creator",
+        "name": "Local_Creator",
+        "handle": "@local_creator",
+        "profile_url": "https://www.instagram.com/local_creator/"
+      },
+      "ig_url": "https://www.instagram.com/local_creator/",
+      "gdrive_folder": "https://drive.google.com/open?id=1AkPXeX_AOvwx8LYw3CpNXiay6jRJtHTh",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40local_creator_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40local_creator_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU.mp4",
+        "report_url": "reports/IG_@local_creator_Introducing：_MasterClass_Certificates_[6nDfNU_Introducing：_MasterClass_Certificates_[6nDfNU.html",
+        "shots_count": 34,
+        "duration": "68s",
+        "youtube_id": "w0hkHnV5ysU",
+        "youtube_embed": "https://www.youtube.com/embed/w0hkHnV5ysU",
+        "youtube_url": "https://youtu.be/w0hkHnV5ysU"
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": true,
+      "is_excluded": true
+    },
     {
       "id": "IG_@mridupawasharma_Dd6G0lnI0zj_Shot_my_little_moments_differently_this_time,",
       "shortcode": "Dd6G0lnI0zj",
@@ -8218,7 +8285,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
@@ -9598,7 +9665,7 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.webp",
         "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
@@ -10713,7 +10780,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",
