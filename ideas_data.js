@@ -75,6 +75,14 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Hậu trường quay dựng, góc máy setup thiết bị cho Solo Creator."
     },
     {
+      "id": "Cooking Vlog / B-Roll",
+      "name": "Cooking Vlog / B-Roll",
+      "en_name": "Cooking Vlog / B Roll",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Cooking Vlog / B-Roll."
+    },
+    {
       "id": "Cinematic Commercial / Narrative B-Roll",
       "name": "Cinematic Commercial / Narrative B-Roll",
       "en_name": "Cinematic Commercial / Narrative B Roll",
@@ -478,12 +486,13 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 4,
     "voice-over": 12,
-    "talking-head": 36,
+    "talking-head": 35,
     "storytelling": 24,
     "dien-anh": 95,
     "chuyen-canh": 53,
     "theo-nhip-nhac": 3,
     "bts": 0,
+    "Cooking Vlog / B-Roll": 1,
     "Cinematic Commercial / Narrative B-Roll": 1,
     "Talking Head & Hướng Dẫn": 1,
     "Điện Ảnh (Cinematic)": 3,
@@ -623,7 +632,7 @@ var FEDU_IDEAS_DATABASE = {
     "thoi-trang": 23,
     "am-thuc": 22,
     "du-lich": 17,
-    "cong-nghe": 38,
+    "cong-nghe": 37,
     "kien-truc": 33,
     "the-thao": 5,
     "ky-thuat-quay": 38,
@@ -1216,7 +1225,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "100033115395865",
       "profile_url": "https://www.instagram.com/100033115395865/",
       "video_count": 1,
-      "top_industry": "Công Nghệ & Thiết Bị",
+      "top_industry": "Đồ Ăn & Nước Uống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40100033115395865_2304710183702297_Video/shot_01_mid.webp",
       "video_ids": [
         "IG_@100033115395865_2304710183702297_Video"
@@ -3229,21 +3238,21 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@100033115395865_2304710183702297_Video",
       "shortcode": "2304710183702297",
-      "title_vi": "@100033115395865 2304710183702297 Video",
-      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+      "title_vi": "Phân Tích Kỹ Thuật B-Roll Nấu Ăn & Chuyển Cảnh",
+      "quick_takeaway": "Bài thực hành quay dựng video nấu ăn của học viên Quỳnh Anh Le Kitchen, ứng dụng kỹ thuật chuyển cảnh, thay đổi góc máy và tiền cảnh.",
       "key_tech": "Establishing Hook Shot • Medium Tracking Shot • Close-Up / Macro Detail Shot • Low-key Lighting • High-key Lighting",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Nói Trực Diện",
-        "en_name": "Talking Head",
-        "icon": "🗣️",
-        "badge_color": "blue"
+        "id": "Cooking Vlog / B-Roll",
+        "name": "Cooking Vlog / B-Roll",
+        "en_name": "Cooking Vlog / B Roll",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "cong-nghe",
-          "name": "Công Nghệ & Thiết Bị",
-          "icon": "📱"
+          "id": "Đồ Ăn & Nước Uống",
+          "name": "Đồ Ăn & Nước Uống",
+          "icon": "🎯"
         }
       ],
       "x_factors": [],
@@ -3257,11 +3266,10 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @100033115395865",
       "tech_tags": [
-        "Establishing Hook Shot",
-        "Medium Tracking Shot",
-        "Close-Up / Macro Detail Shot",
-        "Low-key Lighting",
-        "High-key Lighting"
+        "Cooking",
+        "B-Roll",
+        "Kitchen",
+        "Egg"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -9051,7 +9059,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
@@ -11546,7 +11554,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",
