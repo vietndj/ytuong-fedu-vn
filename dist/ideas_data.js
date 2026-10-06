@@ -83,6 +83,14 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Kiểu quay Talking Head & Hướng Dẫn."
     },
     {
+      "id": "Điện Ảnh (Cinematic)",
+      "name": "Điện Ảnh (Cinematic)",
+      "en_name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Điện Ảnh (Cinematic)."
+    },
+    {
       "id": "Talking Head",
       "name": "Talking Head",
       "en_name": "Talking Head",
@@ -347,14 +355,6 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Kiểu quay Visual Storytelling."
     },
     {
-      "id": "Điện Ảnh (Cinematic)",
-      "name": "Điện Ảnh (Cinematic)",
-      "en_name": "Điện Ảnh (Cinematic)",
-      "icon": "🎬",
-      "badge_color": "purple",
-      "desc": "Kiểu quay Điện Ảnh (Cinematic)."
-    },
-    {
       "id": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
       "name": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
       "en_name": "Điện Ảnh & Chữa Lành (Cinematic Mood / Asmr)",
@@ -473,10 +473,11 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 35,
     "storytelling": 24,
     "dien-anh": 95,
-    "chuyen-canh": 54,
+    "chuyen-canh": 53,
     "theo-nhip-nhac": 3,
     "bts": 0,
     "Talking Head & Hướng Dẫn": 1,
+    "Điện Ảnh (Cinematic)": 3,
     "Talking Head": 4,
     "B-Roll Điện Thoại / Hướng Dẫn": 1,
     "Giáo Dục / Tips": 1,
@@ -510,7 +511,6 @@ var FEDU_IDEAS_DATABASE = {
     "Điện Ảnh Đời Thường (Cinematic)": 1,
     "POV & Fast-Paced Montage": 1,
     "Visual Storytelling": 1,
-    "Điện Ảnh (Cinematic)": 2,
     "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)": 1,
     "Bố Cục (Framing)": 1,
     "Split Screen / Behind-The-Scenes": 1,
@@ -615,7 +615,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 22,
     "du-lich": 17,
     "cong-nghe": 37,
-    "kien-truc": 34,
+    "kien-truc": 33,
     "the-thao": 5,
     "ky-thuat-quay": 38,
     "ugc": 5
@@ -1218,7 +1218,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Turkishairlines",
       "profile_url": "https://www.instagram.com/turkishairlines/",
       "video_count": 1,
-      "top_industry": "Kiến Trúc & Không Gian Sống",
+      "top_industry": "Du Lịch & Văn Hóa",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c/shot_01_mid.webp",
       "video_ids": [
         "IG_@turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c"
@@ -3267,21 +3267,21 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c",
       "shortcode": "Dd8gb9ss84q",
-      "title_vi": "A timeless destination where two continents c",
-      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "title_vi": "Đòn Bẩy Lỗ Khóa & Match Cut Ký Họa: Nghệ Thuật Kể Chuyện Đẳng Cấp Biến Chuyến Bay Nối Chuyến Thành Kỳ Nghỉ Hoàng Gia",
+      "quick_takeaway": "Cú lừa thị giác qua lỗ khóa mở ra trải nghiệm Stopover trọn gói: Biến thời gian quá cảnh thành kỳ nghỉ thượng lưu khám phá kỳ quan Istanbul.",
       "key_tech": "Cinematic Lighting • Composition Mastery • Visual Rhythm",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "Điện Ảnh (Cinematic)",
+        "name": "Điện Ảnh (Cinematic)",
+        "en_name": "Điện Ảnh (Cinematic)",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "Kiến Trúc & Không Gian Sống",
-          "icon": "🏛️"
+          "id": "Du Lịch & Văn Hóa",
+          "name": "Du Lịch & Văn Hóa",
+          "icon": "🎯"
         }
       ],
       "x_factors": [],
@@ -3295,9 +3295,12 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @turkishairlines",
       "tech_tags": [
-        "Establishing Hook Shot",
-        "Low-key Lighting",
-        "Close-Up / Macro Detail Shot"
+        "Sub-framing Keyhole",
+        "Match Cut Vest",
+        "Stopover Proof",
+        "Architectural Sketch",
+        "Golden Hour Aerial",
+        "Vintage Super 8"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -8881,7 +8884,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
@@ -10262,7 +10265,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_03_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
@@ -11376,7 +11379,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",
