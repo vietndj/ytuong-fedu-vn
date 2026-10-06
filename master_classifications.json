@@ -9689,49 +9689,41 @@
     }
   },
   "DcwPu99sDKI": {
-    "id": "IG_@Aayush_Swamy_DcwPu99sDKI_Video_by_iamaayushswamy",
-    "index": 43,
+    "id": "IG_@iamaayushswamy_DcwPu99sDKI_how_to_yap_on_camera",
     "creator": "@iamaayushswamy",
     "creator_name": "Iamaayushswamy",
-    "title": "The Yap Triangle: Khắc phục lỗi nói chuyện trên Camera",
-    "shots_count": 22,
-    "duration": "0.15s",
+    "title": "@iamaayushswamy - how to yap on camera",
+    "shots_count": 30,
+    "duration": "60.0s",
     "shooting_style": {
       "id": "talking-head",
       "name": "Talking Head",
       "icon": "🗣️"
     },
     "industry": {
-      "id": "thuong-hieu",
-      "name": "Thương Hiệu Cá Nhân & Dịch Vụ",
-      "icon": "💼"
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
     },
-    "purpose": "Hướng dẫn kỹ năng nói trước camera cho Solo Creator",
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @iamaayushswamy",
     "tech_tags": [
-      "The Yap Triangle",
-      "Visual Parody",
-      "Pattern Interrupt",
-      "Direct Address"
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot"
     ],
-    "logic_explanation": "Tác giả ngồi trước camera hướng dẫn phương pháp The Yap Triangle để khắc phục lỗi nói chuyện vòng vo, thiếu tự tin cho người sáng tạo nội dung cá nhân.",
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
     "is_excluded": false,
-    "quick_takeaway": "Bản phân tích đạo diễn chuyên sâu bóc tách cấu trúc 22 phân cảnh của chuyên gia video Aayush Swamy (@iamaayushswamy). Video áp dụng mô hình \"The Yap Triangle\" (D-S-G: Drop-in, Solve it, Give direction) cùng kỹ thuật dựng hình đối lập thị...",
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
     "country": {
-      "id": "india",
-      "name": "Ấn Độ",
-      "en_name": "India",
-      "flag": "🇮🇳",
-      "badge_color": "amber"
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
     },
-    "transition_level": null,
-    "is_ad_bot": false,
-    "fedu_optimization": {
-      "key_optimization_point": "Tối ưu cho Thương Hiệu Cá Nhân, Chuyên Gia Chia Sẻ, Khóa Học & Coaching: Phân loại theo cấu trúc Talking Head kết hợp kỹ thuật The Yap Triangle, Visual Parody, Pattern Interrupt, Direct Address",
-      "practice_focus": "Bài tập Talking Head & B-Roll kết hợp: Nói trước ống kính 1 ý tưởng đanh thép, đan xen B-roll làm việc tập trung để củng cố uy tín chuyên môn.",
-      "ig_seeding_hook": "Follow @iamaayushswamy để cập nhật các kịch bản giữ chân khán giả, cách đặt tiêu đề gây tò mò và phong thái tự tin trước ống kính.",
-      "course_industry_mapping": "Thương Hiệu Cá Nhân, Chuyên Gia Chia Sẻ, Khóa Học & Coaching",
-      "transition_level": null
-    }
+    "youtube_id": "4pgkHrYun9A",
+    "youtube_url": "https://youtu.be/4pgkHrYun9A",
+    "youtube_embed": "https://www.youtube.com/embed/4pgkHrYun9A"
   },
   "DctRlh0jZlj": {
     "id": "IG_@Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis",
@@ -25268,5 +25260,42 @@
     "youtube_id": "w0hkHnV5ysU",
     "youtube_url": "https://youtu.be/w0hkHnV5ysU",
     "youtube_embed": "https://www.youtube.com/embed/w0hkHnV5ysU"
+  },
+  "IG_@iamaayushswamy_DcwPu99sDKI_how_to_yap_on_camera": {
+    "id": "IG_@iamaayushswamy_DcwPu99sDKI_how_to_yap_on_camera",
+    "creator": "@iamaayushswamy",
+    "creator_name": "Iamaayushswamy",
+    "title": "@iamaayushswamy - how to yap on camera",
+    "shots_count": 30,
+    "duration": "60.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @iamaayushswamy",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "4pgkHrYun9A",
+    "youtube_url": "https://youtu.be/4pgkHrYun9A",
+    "youtube_embed": "https://www.youtube.com/embed/4pgkHrYun9A"
   }
 }
