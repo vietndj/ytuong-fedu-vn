@@ -25535,5 +25535,83 @@
     "youtube_id": "l_PPDUhxAfM",
     "youtube_url": "https://youtu.be/l_PPDUhxAfM",
     "youtube_embed": "https://www.youtube.com/embed/l_PPDUhxAfM"
+  },
+  "IG_@100033115395865_2304710183702297_Video": {
+    "id": "IG_@100033115395865_2304710183702297_Video",
+    "creator": "@100033115395865",
+    "creator_name": "100033115395865",
+    "title": "@100033115395865 - Video",
+    "shots_count": 43,
+    "duration": "86.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @100033115395865",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting",
+      "High-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "Q7UvgJmSu0Y",
+    "youtube_url": "https://youtu.be/Q7UvgJmSu0Y",
+    "youtube_embed": "https://www.youtube.com/embed/Q7UvgJmSu0Y"
+  },
+  "2304710183702297": {
+    "id": "IG_@100033115395865_2304710183702297_Video",
+    "creator": "@100033115395865",
+    "creator_name": "100033115395865",
+    "title": "@100033115395865 - Video",
+    "shots_count": 43,
+    "duration": "86.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "cong-nghe",
+      "name": "Công Nghệ & Thiết Bị",
+      "icon": "📱"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @100033115395865",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Medium Tracking Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting",
+      "High-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Công Nghệ & Thiết Bị.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "Q7UvgJmSu0Y",
+    "youtube_url": "https://youtu.be/Q7UvgJmSu0Y",
+    "youtube_embed": "https://www.youtube.com/embed/Q7UvgJmSu0Y"
   }
 }
