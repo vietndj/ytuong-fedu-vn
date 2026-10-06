@@ -75,6 +75,14 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Hậu trường quay dựng, góc máy setup thiết bị cho Solo Creator."
     },
     {
+      "id": "Talking Head & Hướng Dẫn",
+      "name": "Talking Head & Hướng Dẫn",
+      "en_name": "Talking Head & Hướng Dẫn",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Talking Head & Hướng Dẫn."
+    },
+    {
       "id": "Talking Head",
       "name": "Talking Head",
       "en_name": "Talking Head",
@@ -462,12 +470,13 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 4,
     "voice-over": 12,
-    "talking-head": 36,
+    "talking-head": 35,
     "storytelling": 24,
     "dien-anh": 95,
     "chuyen-canh": 54,
     "theo-nhip-nhac": 3,
     "bts": 0,
+    "Talking Head & Hướng Dẫn": 1,
     "Talking Head": 4,
     "B-Roll Điện Thoại / Hướng Dẫn": 1,
     "Giáo Dục / Tips": 1,
@@ -606,7 +615,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 22,
     "du-lich": 17,
     "cong-nghe": 37,
-    "kien-truc": 35,
+    "kien-truc": 34,
     "the-thao": 5,
     "ky-thuat-quay": 38,
     "ugc": 5
@@ -681,8 +690,8 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "video",
-    "IG_@creator_video_Video_video"
+    "IG_@creator_video_Video_video",
+    "video"
   ],
   "creators_hub": [
     {
@@ -1198,7 +1207,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Pablogalafat",
       "profile_url": "https://www.instagram.com/pablogalafat/",
       "video_count": 1,
-      "top_industry": "Kiến Trúc & Không Gian Sống",
+      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40pablogalafat_DdxIiI-C4KI_Var%C3%ADa_los_planos/shot_01_mid.webp",
       "video_ids": [
         "IG_@pablogalafat_DdxIiI-C4KI_Varía_los_planos"
@@ -3189,21 +3198,21 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@pablogalafat_DdxIiI-C4KI_Varía_los_planos",
       "shortcode": "DdxIiI-C4KI",
-      "title_vi": "Varía los planos",
-      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "title_vi": "Nghệ Thuật Đổi Cỡ Cảnh & Phông Nền: Diệt Trừ Jump Cut Nhàm Chán (@pablogalafat)",
+      "quick_takeaway": "Thị phạm đối sánh giữa sai lầm Jump Cut chết người (giữ nguyên cỡ cảnh & phông nền) và đòn bẩy thay đổi cỡ cảnh liên tục (Toàn - Cận - Ngước) giúp video bùng nổ nhịp điệu và chống nhàm chán.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Medium Tracking Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Nói Trực Diện",
-        "en_name": "Talking Head",
-        "icon": "🗣️",
-        "badge_color": "blue"
+        "id": "Talking Head & Hướng Dẫn",
+        "name": "Talking Head & Hướng Dẫn",
+        "en_name": "Talking Head & Hướng Dẫn",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "Kiến Trúc & Không Gian Sống",
-          "icon": "🏛️"
+          "id": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+          "icon": "🎯"
         }
       ],
       "x_factors": [],
@@ -3215,12 +3224,14 @@ var FEDU_IDEAS_DATABASE = {
         "flag": "🇺🇸/🇪🇺",
         "badge_color": "purple"
       },
-      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @pablogalafat",
+      "purpose": "Thị phạm kỹ thuật thay đổi cỡ cảnh (Shot Sizes) và phông nền (Backgrounds) để triệt tiêu Jump Cut gây ức chế và tạo nhịp điệu cuốn hút cho video ngắn",
       "tech_tags": [
-        "Establishing Hook Shot",
-        "Close-Up / Macro Detail Shot",
-        "Medium Tracking Shot",
-        "Low-key Lighting"
+        "Jump Cut Comparison",
+        "Thay Đổi Cỡ Cảnh (Shot Variation)",
+        "Thay Đổi Phông Nền (Background Dynamics)",
+        "Extreme Wide Shot",
+        "Low-Angle Shot",
+        "Cấu Trúc Bookending"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -10250,8 +10261,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",

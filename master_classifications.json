@@ -25376,29 +25376,31 @@
     "id": "IG_@pablogalafat_DdxIiI-C4KI_Varía_los_planos",
     "creator": "@pablogalafat",
     "creator_name": "Pablogalafat",
-    "title": "@pablogalafat - Varía los planos",
+    "title": "Nghệ Thuật Đổi Cỡ Cảnh & Phông Nền: Diệt Trừ Jump Cut Nhàm Chán (@pablogalafat)",
     "shots_count": 6,
-    "duration": "12.0s",
+    "duration": "27.3s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "Talking Head & Hướng Dẫn",
+      "name": "Talking Head & Hướng Dẫn",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @pablogalafat",
+    "purpose": "Thị phạm kỹ thuật thay đổi cỡ cảnh (Shot Sizes) và phông nền (Backgrounds) để triệt tiêu Jump Cut gây ức chế và tạo nhịp điệu cuốn hút cho video ngắn",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot",
-      "Low-key Lighting"
+      "Jump Cut Comparison",
+      "Thay Đổi Cỡ Cảnh (Shot Variation)",
+      "Thay Đổi Phông Nền (Background Dynamics)",
+      "Extreme Wide Shot",
+      "Low-Angle Shot",
+      "Cấu Trúc Bookending"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Thị phạm đối sánh giữa sai lầm Jump Cut chết người (giữ nguyên cỡ cảnh & phông nền) và đòn bẩy thay đổi cỡ cảnh liên tục (Toàn - Cận - Ngước) giúp video bùng nổ nhịp điệu và chống nhàm chán.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -25414,29 +25416,31 @@
     "id": "IG_@pablogalafat_DdxIiI-C4KI_Varía_los_planos",
     "creator": "@pablogalafat",
     "creator_name": "Pablogalafat",
-    "title": "@pablogalafat - Varía los planos",
+    "title": "Nghệ Thuật Đổi Cỡ Cảnh & Phông Nền: Diệt Trừ Jump Cut Nhàm Chán (@pablogalafat)",
     "shots_count": 6,
-    "duration": "12.0s",
+    "duration": "27.3s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "Talking Head & Hướng Dẫn",
+      "name": "Talking Head & Hướng Dẫn",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "icon": "🎯"
     },
-    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @pablogalafat",
+    "purpose": "Thị phạm kỹ thuật thay đổi cỡ cảnh (Shot Sizes) và phông nền (Backgrounds) để triệt tiêu Jump Cut gây ức chế và tạo nhịp điệu cuốn hút cho video ngắn",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot",
-      "Low-key Lighting"
+      "Jump Cut Comparison",
+      "Thay Đổi Cỡ Cảnh (Shot Variation)",
+      "Thay Đổi Phông Nền (Background Dynamics)",
+      "Extreme Wide Shot",
+      "Low-Angle Shot",
+      "Cấu Trúc Bookending"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Thị phạm đối sánh giữa sai lầm Jump Cut chết người (giữ nguyên cỡ cảnh & phông nền) và đòn bẩy thay đổi cỡ cảnh liên tục (Toàn - Cận - Ngước) giúp video bùng nổ nhịp điệu và chống nhàm chán.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
