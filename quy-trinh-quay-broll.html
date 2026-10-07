@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quy Trình Quay Cảnh Trám B-Roll</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'FD Aeonik Extended';
+            src: local('Arial Black'), sans-serif; /* Fallback */
+            font-weight: 700;
+        }
+        @font-face {
+            font-family: 'FD Aeonik';
+            src: local('Arial'), sans-serif; /* Fallback */
+            font-weight: 600;
+        }
+        @font-face {
+            font-family: 'Tiempos Text';
+            src: local('Georgia'), serif; /* Fallback */
+        }
+        
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+            font-family: 'Tiempos Text', serif;
+            line-height: 1.7;
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        /* Typography */
+        h1 { font-family: 'FD Aeonik Extended', sans-serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 2rem; line-height: 1.2; }
+        h2 { font-family: 'FD Aeonik', sans-serif; font-size: 1.75rem; margin-top: 3rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e2e8f0; }
+        h3 { font-family: 'FD Aeonik', sans-serif; font-size: 1.25rem; margin-top: 2rem; margin-bottom: 1rem; }
+        p { margin-bottom: 1.5rem; }
+        
+        /* Layout - 2 Columns */
+        #toc-sidebar {
+            width: 300px;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            background: #ffffff;
+            border-right: 1px solid #e2e8f0;
+            padding: 2rem;
+            overflow-y: auto;
+            font-family: 'FD Aeonik', sans-serif;
+        }
+        
+        #main-content {
+            flex: 1;
+            padding: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* TOC Styles */
+        .toc-title { font-size: 0.875rem; text-transform: uppercase; color: #64748b; font-weight: 700; margin-bottom: 1rem; letter-spacing: 0.05em; }
+        .toc-list { list-style: none; padding: 0; margin: 0; }
+        .toc-list li { margin-bottom: 0.75rem; }
+        .toc-list a { text-decoration: none; color: #334155; font-size: 0.95rem; transition: color 0.2s; }
+        .toc-list a:hover, .toc-list a.active { color: #0ea5e9; font-weight: 600; }
+        .toc-nested { padding-left: 1.5rem; margin-top: 0.5rem; border-left: 1px solid #e2e8f0; }
+        
+        /* Dialogue Box */
+        .dialogue-box {
+            background-color: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #3b82f6;
+            margin-bottom: 2.5rem;
+        }
+        
+        .dialogue-title { font-family: 'FD Aeonik', sans-serif; font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem; color: #3b82f6; text-transform: uppercase;}
+        
+        /* Specs / Grid */
+        .spec-block {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        
+        .spec-label {
+            background-color: #f1f5f9;
+            color: #475569;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #cbd5e1;
+            margin-right: 1rem;
+            min-width: 100px;
+            text-align: center;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+            position: relative;
+            top: -1px;
+        }
+        
+        .spec-value {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 16px;
+            flex: 1;
+            line-height: 1.5;
+        }
+        
+        /* Inline Micro-Badge */
+        .micro-badge {
+            background-color: #f1f5f9;
+            color: #0f172a;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid #cbd5e1;
+            position: relative;
+            top: -1px;
+            align-baseline: true;
+            margin: 0 4px;
+        }
+        
+        /* Instant Snap */
+        html { scroll-behavior: auto; }
+    </style>
+</head>
+<body>
+
+<aside id="toc-sidebar">
+    <div class="toc-title">Nội Dung</div>
+    <ul class="toc-list">
+        <li><a href="#cau-hoi-cua-user">1. Câu hỏi của User</a></li>
+        <li><a href="#giai-ma-logic">2. Giải Mã Logic</a></li>
+        <li><a href="#quy-trinh-quay-toi-uu">3. Quy Trình Quay 1 Camera Tối Ưu</a>
+            <ul class="toc-list toc-nested">
+                <li><a href="#buoc-1-goc-a">Góc A (Toàn/Trung)</a></li>
+                <li><a href="#buoc-2-goc-b">Góc B (Đặc Tả/Qua Vai)</a></li>
+            </ul>
+        </li>
+        <li><a href="#kich-ban-dung-va-chia-pha">4. Kịch Bản Dựng & Chia Pha (Timeline)</a>
+            <ul class="toc-list toc-nested">
+                <li><a href="#boi-canh-1">Bối Cảnh 1: Ghi Chép Giấy Bút</a></li>
+                <li><a href="#boi-canh-2">Bối Cảnh 2: Check Biểu Đồ Máy Tính</a></li>
+                <li><a href="#boi-canh-3">Bối Cảnh 3: Xem Số Liệu Điện Thoại</a></li>
+            </ul>
+        </li>
+        <li><a href="#bi-quyet">5. Bí Quyết "Làm 1 Lần Dùng Mãi Mãi"</a></li>
+    </ul>
+</aside>
+
+<main id="main-content">
+    <h1>Hệ Thống Hóa Quy Trình Quay Cảnh Trám (B-Roll)</h1>
+    
+    <div class="dialogue-box" id="cau-hoi-cua-user">
+        <div class="dialogue-title">Câu hỏi của User (Vấn đề thực tế)</div>
+        <p>Có 1 vấn đề khi mà tôi quay các cảnh trám dành cho video. Ví dụ như cảnh tôi ghi chú ở trên giấy bút ấy. Thứ nhất nếu mà tôi dùng 2 camera và cách quay là quay đủ các pha như là khởi động trăn trở, vào guồng, bế tắc sáng tạo nghỉ ngơi rời khỏi. Thì nếu mà dùng 2 camera ấy tôi nghĩ là nó nhanh và hiệu quả hơn nhưng khi mà thực tế thì nó lại không như vậy nó không nhanh bằng quay 1 cam mặc dù quay 1 cam thì tôi phải quay xong tôi đổi sang góc máy khác góc cận góc trung gì đó và diễn làm lần nữa hành động để truyền cảnh. Nhưng lúc rất nhanh và các góc quay thì hiệu quả hơn bởi vì tôi phải tinh chỉnh 1 góc thôi mà còn nếu 2 góc thì tưởng là nhanh nhưng mà hành động phải rất nhanh sắc nét thì mới dùng được 2 camera còn nếu không nó dài ra thì lúc dựng video mất rất nhiều thời gian.</p>
+        <p>Có đúng vậy không hay là chi tiết về logic này và trải nghiệm này, vậy cái cách hiệu quả nhất là gì giả sử với trường hợp mà tôi quay cảnh trám là tôi ghi chú trên giấy bút thì có những cách quay nào và quay thành những pha như thế nào làm chi tiết những điều gì.</p>
+    </div>
+
+    <p>Trải nghiệm và đúc kết của bạn là <strong>hoàn toàn chính xác</strong> và vô cùng sắc sảo. Thực tế, bạn vừa tự mình khám phá ra một chân lý mang tính "bước ngoặt" (level-up): Chuyển từ tư duy <span class="micro-badge">Shoot to record</span> sang tư duy <span class="micro-badge">Shoot for the edit</span>.</p>
+
+    <h2 id="giai-ma-logic">Giải Mã Logic: Tại sao 1 Cam lại nhanh & hiệu quả hơn 2 Cam?</h2>
+    
+    <div class="spec-block">
+        <div class="spec-label">1. Post-production Nightmare</div>
+        <div class="spec-value">
+            <strong>Với 2 cam:</strong> Bạn có xu hướng "diễn" một mạch thời gian thực (VD 10 phút) -> Thu về 20 phút dữ liệu thô. Lúc dựng phải đồng bộ và xem lại 20 phút chỉ để nhặt vài đoạn 3-5s. Rất vắt kiệt sức lực.<br>
+            <strong>Với 1 cam:</strong> Bị ép phải quay các clip ngắn (3-5s). Dữ liệu mang về đã được chắt lọc sẵn, chỉ việc xếp các clip lại là thành video.
+        </div>
+    </div>
+    
+    <div class="spec-block">
+        <div class="spec-label">2. Ánh Sáng & Bố Cục</div>
+        <div class="spec-value">
+            Đánh đèn cho góc Toàn và góc Cận cùng lúc là cực kỳ khó (bị đổ bóng xấu hoặc lọt chân máy). Quay 1 máy giúp tinh chỉnh ánh sáng, góc độ hoàn hảo cho duy nhất 1 khung hình -> Hình ảnh mang tính "điện ảnh" (Cinematic) hơn.
+        </div>
+    </div>
+    
+    <div class="spec-block">
+        <div class="spec-label">3. Áp Lực Diễn Xuất</div>
+        <div class="spec-value">
+            Quay thời gian thực làm nhịp điệu bị "đều đều". Với 1 máy, quay cận tay dồn 100% tập trung vạch ngòi bút; quay mặt dồn 100% biểu cảm. Hành động dứt khoát và cô đọng hơn.
+        </div>
+    </div>
+
+    <h2 id="quy-trinh-quay-toi-uu">Quy Trình Quay 1 Camera Tối Ưu (Tư Duy Theo Góc Máy)</h2>
+    <p>Tuyệt đối <strong>KHÔNG</strong> quay theo thứ tự kịch bản. Hãy quay gom theo góc máy (Shooting by Setup) để giảm thời gian chỉnh góc/ánh sáng.</p>
+
+    <h3 id="buoc-1-goc-a">Bước 1: Setup Góc A (Toàn/Trung)</h3>
+    <div class="spec-block">
+        <div class="spec-label">Mục đích</div>
+        <div class="spec-value">Lấy ngôn ngữ cơ thể, không gian.</div>
+    </div>
+    <div class="spec-block">
+        <div class="spec-label">Hành động</div>
+        <div class="spec-value">Bấm máy chạy liên tục -> Diễn Cảnh Giấy Bút (30s) -> Kéo Laptop diễn Cảnh Máy Tính (30s) -> Lấy Điện thoại diễn (30s) -> Tắt máy.</div>
+    </div>
+
+    <h3 id="buoc-2-goc-b">Bước 2: Setup Góc B (Đặc Tả/Qua Vai)</h3>
+    <div class="spec-block">
+        <div class="spec-label">Mục đích</div>
+        <div class="spec-value">Lấy thao tác tay, chi tiết đồ vật, tốc độ.</div>
+    </div>
+    <div class="spec-block">
+        <div class="spec-label">Hành động</div>
+        <div class="spec-value">Dời chân máy chĩa sát xuống bàn. Bấm máy -> Diễn tay viết sổ (15s) -> Diễn lăn chuột/gõ phím (15s) -> Diễn quẹt điện thoại (15s) -> Tắt máy.</div>
+    </div>
+
+    <h2 id="kich-ban-dung-va-chia-pha">Kịch Bản Dựng & Chia Pha (Timeline)</h2>
+    <p>Bí quyết nối Góc Toàn và Góc Cận mượt mà là kỹ thuật <strong>Match Cut</strong> và <strong>Overlapping Action (Diễn gối)</strong>: Không bao giờ cắt lúc nhân vật đứng im, phải cắt ngay giữa chuyển động cơ thể.</p>
+
+    <h3 id="boi-canh-1">🎬 Bối Cảnh 1: Ghi Chép Giấy Bút</h3>
+    <p><em>Nhịp điệu: Trầm ngâm -> Tuôn trào -> Bế tắc -> Phá bỏ</em></p>
+    
+    <div class="spec-block">
+        <div class="spec-label">Pha 1: Khởi động</div>
+        <div class="spec-value">
+            <strong>Góc Toàn (2s):</strong> Ngồi chống cằm. Bỗng mắt sáng lên, chộp bút đâm xuống giấy.<br>
+            <span class="micro-badge" style="background:#fef2f2; color:#b91c1c; border-color:#fca5a5;">✂️ ĐIỂM CẮT</span> Ngay đúng phần nghìn giây khi mũi bút đang lao xuống (chưa chạm giấy).
+        </div>
+    </div>
+    <div class="spec-block">
+        <div class="spec-label">Pha 2: Vào guồng</div>
+        <div class="spec-value">
+            <strong>Góc Cận (2-3s):</strong> Ngòi bút đập xuống giấy và vạch đường zig-zag cực nhanh.<br>
+            <span class="micro-badge" style="background:#fef2f2; color:#b91c1c; border-color:#fca5a5;">✂️ ĐIỂM CẮT</span> Bàn tay khựng lại 1 nhịp, vẩy mạnh cổ tay để gạch bỏ. Cắt lúc đang vẩy.
+        </div>
+    </div>
+    <div class="spec-block">
+        <div class="spec-label">Pha 3: Bế tắc</div>
+        <div class="spec-value">
+            <strong>Góc Cận (2s):</strong> Mũi bút gạch xóa nát bét tờ giấy. Tay giận dữ vò tròn giấy lại.<br>
+            <span class="micro-badge" style="background:#fef2f2; color:#b91c1c; border-color:#fca5a5;">✂️ ĐIỂM CẮT</span> Đúng khoảnh khắc có tiếng sột soạt, cục giấy bị bóp chặt nhất.
+        </div>
+    </div>
+    <div class="spec-block">
+        <div class="spec-label">Pha 4: Rời đi</div>
+        <div class="spec-value">
+            <strong>Góc Toàn (2s):</strong> Ném vèo cục giấy đi. Ngả lưng ra ghế cái "rầm", xoa thái dương. Đứng dậy rời đi.
+        </div>
+    </div>
+
+    <h3 id="boi-canh-2">🎬 Bối Cảnh 2: Check Biểu Đồ Máy Tính</h3>
+    <p><em>Nhịp điệu: Tiếp cận -> Quét data nhanh -> Phát hiện vấn đề -> Chốt hạ</em></p>
+    
+    <div class="spec-block">
+        <div class="spec-label">Pha 1: Tiếp cận</div>
+        <div class="spec-value">
+            <strong>Góc Toàn (2s):</strong> Đẩy ghế sát bàn, mắt dán màn hình. Tay phải nắm chuột.<br>
+            <span class="micro-badge" style="background:#fef2f2; color:#b91c1c; border-color:#fca5a5;">✂️ ĐIỂM CẮT</span> Ngay lúc bàn tay vừa ôm trọn con chuột.
+        </div>
+    </div>
+    <div class="spec-block">
+        <div class="spec-label">Pha 2: Phân tích sâu</div>
+        <div class="spec-value">
+            <strong>Góc Cận (3s):</strong> Cận cảnh ngón trỏ lăn chuột "xoạch xoạch".<br>
+            <span class="micro-badge" style="background:#fef2f2; color:#b91c1c; border-color:#fca5a5;">✂️ ĐIỂM CẮT</span> Ngón tay nhấc lên chuyển sang bàn phím -> Cắt ngay nhịp gõ phím lạch cạch đầu tiên.
+        </div>
+    </div>
+    <div class="spec-block">
+        <div class="spec-label">Pha 3: Phát hiện</div>
+        <div class="spec-value">
+            <strong>Góc Toàn (2s):</strong> Mắt rướn sát màn hình, tay chỉ thẳng ngón trỏ vào màn hình.<br>
+            <span class="micro-badge" style="background:#fef2f2; color:#b91c1c; border-color:#fca5a5;">✂️ ĐIỂM CẮT</span> Ngón tay vừa vung lên chuẩn bị chạm màn hình.
+        </div>
+    </div>
+    <div class="spec-block">
+        <div class="spec-label">Pha 4: Chốt hạ</div>
+        <div class="spec-value">
+            <strong>Góc Toàn (2s):</strong> Gật gù đắc ý. Gõ Enter mạnh. Vươn tay gập sập màn hình xuống.<br>
+            <span class="micro-badge" style="background:#fef2f2; color:#b91c1c; border-color:#fca5a5;">✂️ ĐIỂM CẮT</span> Khi màn hình gập xuống che khuất ống kính (Kỹ thuật Fade to Black vật lý).
+        </div>
+    </div>
+
+    <h3 id="boi-canh-3">🎬 Bối Cảnh 3: Xem Số Liệu Điện Thoại</h3>
+    <p><em>Nhịp điệu: Tức thời, Nhanh gọn. (Lưu ý: Đứng hoặc ngồi sofa để đổi không gian)</em></p>
+
+    <div class="spec-block">
+        <div class="spec-label">Pha 1: Bắt thông tin</div>
+        <div class="spec-value">
+            <strong>Góc Toàn (2s):</strong> Cầm cốc nước, tay kia rút điện thoại vung lên ngang mặt.<br>
+            <span class="micro-badge" style="background:#fef2f2; color:#b91c1c; border-color:#fca5a5;">✂️ ĐIỂM CẮT</span> Ngay khi điện thoại đi lên và che khuất cằm.
+        </div>
+    </div>
+    <div class="spec-block">
+        <div class="spec-label">Pha 2: Tương tác</div>
+        <div class="spec-value">
+            <strong>Góc Cận (3s):</strong> Lướt từ dưới lên 2 nhịp. Nhịp 3 dùng 2 ngón bóp mở (Pinch-to-zoom).<br>
+            <span class="micro-badge" style="background:#fef2f2; color:#b91c1c; border-color:#fca5a5;">✂️ ĐIỂM CẮT</span> Ngay khi 2 ngón tay vừa mở banh ra tối đa.
+        </div>
+    </div>
+    <div class="spec-block">
+        <div class="spec-label">Pha 3: Cảm xúc</div>
+        <div class="spec-value">
+            <strong>Góc Toàn (2s):</strong> Ánh sáng hắt bừng mặt. Khẽ lắc đầu (nếu xấu) hoặc gật/cười (nếu đẹp).<br>
+            <span class="micro-badge" style="background:#fef2f2; color:#b91c1c; border-color:#fca5a5;">✂️ ĐIỂM CẮT</span> Ngón tay cái vươn ra bấm nút nguồn -> Cắt nghe "tạch".
+        </div>
+    </div>
+    <div class="spec-block">
+        <div class="spec-label">Pha 4: Trở lại</div>
+        <div class="spec-value">
+            <strong>Góc Toàn (2s):</strong> Màn hình tắt. Hạ tay xuống, ngước nhìn thẳng ống kính.<br>
+            (Điểm chuyển mượt sang cảnh nói chính: "Như các bạn vừa thấy...")
+        </div>
+    </div>
+
+    <h2 id="bi-quyet">3 Bí Quyết "Làm 1 Lần Dùng Mãi Mãi"</h2>
+    
+    <div class="spec-block">
+        <div class="spec-label">1. Over-acting</div>
+        <div class="spec-value">
+            <strong>Diễn lố:</strong> Cảnh B-roll ít thu âm thanh thực, nên ngôn ngữ cơ thể phải bù đắp. Diễn các hành động nhanh, mạnh, dứt khoát hơn 20% so với bình thường để lên hình năng lượng.
+        </div>
+    </div>
+    <div class="spec-block">
+        <div class="spec-label">2. Thay áo</div>
+        <div class="spec-value">
+            Sau khi quay xong cảnh 1, trước khi quay cảnh 2 ở Góc Toàn, hãy khoác thêm vest hoặc thay áo khác màu. Khán giả sẽ tưởng bạn quay ở các ngày làm việc khác nhau.
+        </div>
+    </div>
+    <div class="spec-block">
+        <div class="spec-label">3. Khung hình</div>
+        <div class="spec-value">
+            Khi cắt từ Góc A sang Góc B, kích cỡ vật thể phải thay đổi rõ rệt (Từ cả người -> Nhảy cóc mỗi bàn tay). Càng chênh lệch cỡ cảnh, chuyển động càng mượt. Tránh cắt từ Toàn sang Trung gây giật cục (Jump-cut).
+        </div>
+    </div>
+
+</main>
+
+<script>
+    // ScrollSpy for TOC
+    const sections = document.querySelectorAll('h2, h3');
+    const navLinks = document.querySelectorAll('.toc-list a');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (scrollY >= sectionTop - 100) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+</body>
+</html>
