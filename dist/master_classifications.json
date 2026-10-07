@@ -25762,29 +25762,28 @@
     "id": "IG_@mridupawasharma_C_ZzqHXS914_How_to_Master_cinematography_alone",
     "creator": "@mridupawasharma",
     "creator_name": "Mridupawasharma",
-    "title": "@mridupawasharma - How to Master cinematography alone",
+    "title": "Bí kíp Tự Quay Cinematography Bối Cảnh Lớn",
     "shots_count": 20,
-    "duration": "40.0s",
+    "duration": "28.6s",
     "shooting_style": {
-      "id": "talking-head",
+      "id": "Talking Head",
       "name": "Talking Head",
-      "icon": "🗣️"
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Công Nghệ & Phụ Kiện",
+      "name": "Công Nghệ & Phụ Kiện",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Medium Tracking Shot",
-      "Low-key Lighting"
+      "Dynamic B-Roll",
+      "Establishing Hook",
+      "Amaran"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Hướng dẫn quay phim một mình mượt mà với nhiều bối cảnh khác nhau (từ sân vận động đến booth sự kiện).",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -25838,31 +25837,28 @@
     "id": "IG_@mridupawasharma_DEBzJUZyofd_Get_studio_quality_audio_on_your_phone_with_@",
     "creator": "@mridupawasharma",
     "creator_name": "Mridupawasharma",
-    "title": "@mridupawasharma - Get studio quality audio on your phone with @",
+    "title": "Giải mã cách biến âm thanh tạp âm thành Studio với AI",
     "shots_count": 20,
-    "duration": "40.0s",
+    "duration": "16.6s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "id": "Review / Trải Nghiệm",
+      "name": "Review / Trải Nghiệm",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Công Nghệ & Ứng Dụng",
+      "name": "Công Nghệ & Ứng Dụng",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting",
-      "Medium Tracking Shot",
-      "High-key Lighting",
-      "Wide Establishing Shot"
+      "AI Audio",
+      "Before & After",
+      "Tech Review"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Video trình diễn sự lột xác của chất lượng âm thanh khi bật AI, sử dụng sự tương phản môi trường ồn ào và âm thanh studio mượt mà.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -25878,31 +25874,28 @@
     "id": "IG_@mridupawasharma_DEBzJUZyofd_Get_studio_quality_audio_on_your_phone_with_@",
     "creator": "@mridupawasharma",
     "creator_name": "Mridupawasharma",
-    "title": "@mridupawasharma - Get studio quality audio on your phone with @",
+    "title": "Giải mã cách biến âm thanh tạp âm thành Studio với AI",
     "shots_count": 20,
-    "duration": "40.0s",
+    "duration": "16.6s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "Chuyển Cảnh (Transition)",
-      "icon": "⚡"
+      "id": "Review / Trải Nghiệm",
+      "name": "Review / Trải Nghiệm",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Công Nghệ & Ứng Dụng",
+      "name": "Công Nghệ & Ứng Dụng",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting",
-      "Medium Tracking Shot",
-      "High-key Lighting",
-      "Wide Establishing Shot"
+      "AI Audio",
+      "Before & After",
+      "Tech Review"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Video trình diễn sự lột xác của chất lượng âm thanh khi bật AI, sử dụng sự tương phản môi trường ồn ào và âm thanh studio mượt mà.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -26067,5 +26060,81 @@
     "youtube_id": "bSoV6V2O-eU",
     "youtube_url": "https://youtu.be/bSoV6V2O-eU",
     "youtube_embed": "https://www.youtube.com/embed/bSoV6V2O-eU"
+  },
+  "IG_@mridupawasharma_DEcQIYAyLRq_Master_Cinematography_with_just_one_light!": {
+    "id": "IG_@mridupawasharma_DEcQIYAyLRq_Master_Cinematography_with_just_one_light!",
+    "creator": "@mridupawasharma",
+    "creator_name": "Mridupawasharma",
+    "title": "@mridupawasharma - Master Cinematography with just one light!",
+    "shots_count": 33,
+    "duration": "66.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "Wide Establishing Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "J0TjdyKrSlk",
+    "youtube_url": "https://youtu.be/J0TjdyKrSlk",
+    "youtube_embed": "https://www.youtube.com/embed/J0TjdyKrSlk"
+  },
+  "DEcQIYAyLRq": {
+    "id": "IG_@mridupawasharma_DEcQIYAyLRq_Master_Cinematography_with_just_one_light!",
+    "creator": "@mridupawasharma",
+    "creator_name": "Mridupawasharma",
+    "title": "@mridupawasharma - Master Cinematography with just one light!",
+    "shots_count": 33,
+    "duration": "66.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "Wide Establishing Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "J0TjdyKrSlk",
+    "youtube_url": "https://youtu.be/J0TjdyKrSlk",
+    "youtube_embed": "https://www.youtube.com/embed/J0TjdyKrSlk"
   }
 }

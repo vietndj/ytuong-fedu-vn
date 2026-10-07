@@ -4,9 +4,9 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 348,
-  "total_unique_ideas": 327,
-  "total_active_ideas": 298,
+  "total_scene_items": 349,
+  "total_unique_ideas": 328,
+  "total_active_ideas": 299,
   "total_excluded_ideas": 29,
   "total_creators": 221,
   "shooting_styles": [
@@ -75,6 +75,22 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Hậu trường quay dựng, góc máy setup thiết bị cho Solo Creator."
     },
     {
+      "id": "Review / Trải Nghiệm",
+      "name": "Review / Trải Nghiệm",
+      "en_name": "Review / Trải Nghiệm",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Review / Trải Nghiệm."
+    },
+    {
+      "id": "Talking Head",
+      "name": "Talking Head",
+      "en_name": "Talking Head",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Talking Head."
+    },
+    {
       "id": "Chuyển Cảnh (Transition)",
       "name": "Chuyển Cảnh (Transition)",
       "en_name": "Chuyển Cảnh (Transition)",
@@ -113,14 +129,6 @@ var FEDU_IDEAS_DATABASE = {
       "icon": "🎬",
       "badge_color": "purple",
       "desc": "Kiểu quay Điện Ảnh (Cinematic)."
-    },
-    {
-      "id": "Talking Head",
-      "name": "Talking Head",
-      "en_name": "Talking Head",
-      "icon": "🎬",
-      "badge_color": "purple",
-      "desc": "Kiểu quay Talking Head."
     },
     {
       "id": "B-Roll Điện Thoại / Hướng Dẫn",
@@ -489,15 +497,16 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 38,
     "storytelling": 24,
     "dien-anh": 95,
-    "chuyen-canh": 55,
+    "chuyen-canh": 54,
     "theo-nhip-nhac": 3,
     "bts": 0,
+    "Review / Trải Nghiệm": 1,
+    "Talking Head": 5,
     "Chuyển Cảnh (Transition)": 5,
     "Cooking Vlog / B-Roll": 1,
     "Cinematic Commercial / Narrative B-Roll": 1,
     "Talking Head & Hướng Dẫn": 1,
     "Điện Ảnh (Cinematic)": 3,
-    "Talking Head": 4,
     "B-Roll Điện Thoại / Hướng Dẫn": 1,
     "Giáo Dục / Tips": 1,
     "Vlog Đời Thường": 1,
@@ -633,7 +642,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 22,
     "du-lich": 17,
     "cong-nghe": 38,
-    "kien-truc": 37,
+    "kien-truc": 36,
     "the-thao": 5,
     "ky-thuat-quay": 38,
     "ugc": 5
@@ -695,7 +704,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 203,
+    "us_eu": 204,
     "korea": 10,
     "india": 3,
     "japan": 7,
@@ -716,10 +725,11 @@ var FEDU_IDEAS_DATABASE = {
       "handle": "@mridupawasharma",
       "name": "Mridupawasharma",
       "profile_url": "https://www.instagram.com/mridupawasharma/",
-      "video_count": 10,
+      "video_count": 11,
       "top_industry": "Kiến Trúc & Không Gian Sống",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40mridupawasharma_DHnKt0nxr3E_Get_studio_quality_voiceovers_without_a_mic%21/shot_01_mid.webp",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40mridupawasharma_DEcQIYAyLRq_Master_Cinematography_with_just_one_light%21/shot_01_mid.webp",
       "video_ids": [
+        "IG_@mridupawasharma_DEcQIYAyLRq_Master_Cinematography_with_just_one_light!",
         "IG_@mridupawasharma_DHnKt0nxr3E_Get_studio_quality_voiceovers_without_a_mic!",
         "IG_@mridupawasharma_DK_9B30RrSD_Three_devices_walk_into_a_bar…_none_of_them_h",
         "IG_@mridupawasharma_DEBzJUZyofd_Get_studio_quality_audio_on_your_phone_with_@",
@@ -3242,6 +3252,73 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "ideas": [
     {
+      "id": "IG_@mridupawasharma_DEcQIYAyLRq_Master_Cinematography_with_just_one_light!",
+      "shortcode": "DEcQIYAyLRq",
+      "title_vi": "Kỹ Thuật Đánh Sáng 1 Đèn Chuẩn Điện Ảnh Cho Người Mới",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • Wide Establishing Shot",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
+      "tech_tags": [
+        "Establishing Hook Shot",
+        "Low-key Lighting",
+        "Close-Up / Macro Detail Shot",
+        "Wide Establishing Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "creator": {
+        "raw": "@mridupawasharma",
+        "name": "Mridupawasharma",
+        "handle": "@mridupawasharma",
+        "profile_url": "https://www.instagram.com/mridupawasharma/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DEcQIYAyLRq/",
+      "gdrive_folder": "https://drive.google.com/open?id=1PPCFwA7uPl45TtmX6cSo0qaRHDlIAurw",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DEcQIYAyLRq_Master_Cinematography_with_just_one_light%21/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DEcQIYAyLRq_Master_Cinematography_with_just_one_light%21/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/DEcQIYAyLRq.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DEcQIYAyLRq.mp4",
+        "report_url": "reports/IG_@mridupawasharma_DEcQIYAyLRq_Master_Cinematography_with_just_one_light!.html",
+        "shots_count": 33,
+        "duration": "66s",
+        "youtube_id": "J0TjdyKrSlk",
+        "youtube_embed": "https://www.youtube.com/embed/J0TjdyKrSlk",
+        "youtube_url": "https://youtu.be/J0TjdyKrSlk"
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
       "id": "IG_@mridupawasharma_DHnKt0nxr3E_Get_studio_quality_voiceovers_without_a_mic!",
       "shortcode": "DHnKt0nxr3E",
       "title_vi": "Get studio quality voiceovers without a mic!",
@@ -3379,21 +3456,21 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@mridupawasharma_DEBzJUZyofd_Get_studio_quality_audio_on_your_phone_with_@",
       "shortcode": "DEBzJUZyofd",
-      "title_vi": "Get studio quality audio on your phone with @",
-      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "title_vi": "Giải mã cách biến âm thanh tạp âm thành Studio với AI",
+      "quick_takeaway": "Video trình diễn sự lột xác của chất lượng âm thanh khi bật AI, sử dụng sự tương phản môi trường ồn ào và âm thanh studio mượt mà.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot • High-key Lighting • Wide Establishing Shot",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "Review / Trải Nghiệm",
+        "name": "Review / Trải Nghiệm",
+        "en_name": "Review / Trải Nghiệm",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "Kiến Trúc & Không Gian Sống",
-          "icon": "🏛️"
+          "id": "Công Nghệ & Ứng Dụng",
+          "name": "Công Nghệ & Ứng Dụng",
+          "icon": "🎯"
         }
       ],
       "x_factors": [],
@@ -3407,12 +3484,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
       "tech_tags": [
-        "Establishing Hook Shot",
-        "Close-Up / Macro Detail Shot",
-        "Low-key Lighting",
-        "Medium Tracking Shot",
-        "High-key Lighting",
-        "Wide Establishing Shot"
+        "AI Audio",
+        "Before & After",
+        "Tech Review"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -3448,21 +3522,21 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@mridupawasharma_C_ZzqHXS914_How_to_Master_cinematography_alone",
       "shortcode": "C_ZzqHXS914",
-      "title_vi": "How to Master cinematography alone",
-      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "title_vi": "Bí kíp Tự Quay Cinematography Bối Cảnh Lớn",
+      "quick_takeaway": "Hướng dẫn quay phim một mình mượt mà với nhiều bối cảnh khác nhau (từ sân vận động đến booth sự kiện).",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Medium Tracking Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Nói Trực Diện",
+        "id": "Talking Head",
+        "name": "Talking Head",
         "en_name": "Talking Head",
-        "icon": "🗣️",
-        "badge_color": "blue"
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "Kiến Trúc & Không Gian Sống",
-          "icon": "🏛️"
+          "id": "Công Nghệ & Phụ Kiện",
+          "name": "Công Nghệ & Phụ Kiện",
+          "icon": "🎯"
         }
       ],
       "x_factors": [],
@@ -3476,10 +3550,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
       "tech_tags": [
-        "Establishing Hook Shot",
-        "Close-Up / Macro Detail Shot",
-        "Medium Tracking Shot",
-        "Low-key Lighting"
+        "Dynamic B-Roll",
+        "Establishing Hook",
+        "Amaran"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -7689,7 +7762,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1jpYV1rRzpuPRMXcYkd1oVjIxfm7pBZFo",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_02_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "report_url": "reports/IG_@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲_Ddb6rA7NwQd_Video_by_elenabuntushak.html",
@@ -10850,8 +10923,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
@@ -11965,7 +12038,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",
