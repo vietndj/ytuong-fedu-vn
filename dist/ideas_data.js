@@ -75,6 +75,14 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Hậu trường quay dựng, góc máy setup thiết bị cho Solo Creator."
     },
     {
+      "id": "Chuyển Cảnh (Transition)",
+      "name": "Chuyển Cảnh (Transition)",
+      "en_name": "Chuyển Cảnh (Transition)",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Chuyển Cảnh (Transition)."
+    },
+    {
       "id": "Cooking Vlog / B-Roll",
       "name": "Cooking Vlog / B-Roll",
       "en_name": "Cooking Vlog / B Roll",
@@ -225,14 +233,6 @@ var FEDU_IDEAS_DATABASE = {
       "icon": "🎬",
       "badge_color": "purple",
       "desc": "Kiểu quay Review Sản Phẩm / UGC."
-    },
-    {
-      "id": "Chuyển Cảnh (Transition)",
-      "name": "Chuyển Cảnh (Transition)",
-      "en_name": "Chuyển Cảnh (Transition)",
-      "icon": "🎬",
-      "badge_color": "purple",
-      "desc": "Kiểu quay Chuyển Cảnh (Transition)."
     },
     {
       "id": "Quay B-Roll Quảng Cáo Điện Ảnh",
@@ -489,9 +489,10 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 35,
     "storytelling": 24,
     "dien-anh": 95,
-    "chuyen-canh": 54,
+    "chuyen-canh": 53,
     "theo-nhip-nhac": 3,
     "bts": 0,
+    "Chuyển Cảnh (Transition)": 5,
     "Cooking Vlog / B-Roll": 1,
     "Cinematic Commercial / Narrative B-Roll": 1,
     "Talking Head & Hướng Dẫn": 1,
@@ -511,7 +512,6 @@ var FEDU_IDEAS_DATABASE = {
     "Chỉn Chu / Bố Cục": 1,
     "A Day In The Life (Vlog Không Lời)": 1,
     "Review Sản Phẩm / UGC": 1,
-    "Chuyển Cảnh (Transition)": 4,
     "Quay B-Roll Quảng Cáo Điện Ảnh": 1,
     "UGC Thực Chiến": 1,
     "quang-cao": 1,
@@ -633,7 +633,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 22,
     "du-lich": 17,
     "cong-nghe": 37,
-    "kien-truc": 34,
+    "kien-truc": 33,
     "the-thao": 5,
     "ky-thuat-quay": 38,
     "ugc": 5
@@ -708,8 +708,8 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "IG_@creator_video_Video_video",
-    "video"
+    "video",
+    "IG_@creator_video_Video_video"
   ],
   "creators_hub": [
     {
@@ -3239,21 +3239,21 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@mridupawasharma_DLW8fdfRG6w_Carousel_Analysis",
       "shortcode": "DLW8fdfRG6w_Carousel_Analysis",
-      "title_vi": "These aren’t just shots",
-      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "title_vi": "B-Roll Bằng Điện Thoại Đơn Giản Mà Đỉnh Cao",
+      "quick_takeaway": "Tổng hợp 9 ý tưởng quay B-Roll sản phẩm sáng tạo với các góc máy độc lạ và ánh sáng điện ảnh.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "Chuyển Cảnh (Transition)",
+        "name": "Chuyển Cảnh (Transition)",
+        "en_name": "Chuyển Cảnh (Transition)",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "Kiến Trúc & Không Gian Sống",
-          "icon": "🏛️"
+          "id": "Sản Phẩm & Phụ Kiện",
+          "name": "Sản Phẩm & Phụ Kiện",
+          "icon": "🎯"
         }
       ],
       "x_factors": [],
@@ -3267,9 +3267,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
       "tech_tags": [
-        "Establishing Hook Shot",
-        "Low-key Lighting",
-        "Close-Up / Macro Detail Shot"
+        "B-Roll",
+        "Product Video",
+        "Macro Shot"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -10506,7 +10506,7 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_01_mid.webp",
         "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
