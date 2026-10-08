@@ -13739,29 +13739,29 @@
     "index": 112,
     "creator": "@mridupawasharma",
     "creator_name": "Mridupawan Sharma",
-    "title": "3 Habits That Are Ruining Your Video - Mridupawan Sharma Bóc Tách 3 Sai Lầm Phổ Biến Khi Làm Phim",
-    "shots_count": 23,
-    "duration": "0.15s",
+    "title": "Kỹ Thuật Đổi Góc Thoại Liên Tục Bẻ Gãy Quán Tính",
+    "shots_count": 33,
+    "duration": "38.0s",
     "shooting_style": {
       "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "name": "talking-head",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "ky-thuat-quay",
-      "name": "Kỹ Thuật Quay Dựng & Điện Ảnh",
+      "id": "phat-trien-ban-than",
+      "name": "phat-trien-ban-than",
       "icon": "🎯"
     },
     "purpose": "Chỉ ra 3 thói quen xấu phá hỏng chất lượng video",
     "tech_tags": [
-      "Mistake Breakdown",
-      "Camera Shake Fix",
-      "Lighting Pitfalls",
-      "Director Direct Advice"
+      "private",
+      "unlisted",
+      "huong-dan",
+      "chong-nham-chan"
     ],
     "logic_explanation": "Đạo diễn Mridupawan Sharma nói chuyện trực diện cảnh báo 3 sai lầm phổ biến người mới hay mắc phải: rung máy, ánh sáng phẳng và cắt cảnh thiếu mục đích.",
     "is_excluded": true,
-    "quick_takeaway": "Báo cáo phân tích chuyên sâu 23 phân cảnh từ bài giảng ngắn thực chiến của đạo diễn hình ảnh Mridupawan Sharma về '3 thói quen đang phá hỏng video của bạn': Lạm dụng Slow-motion không mục đích, Bố cục thiếu chủ thể rõ ràng, và Video khôn...",
+    "quick_takeaway": "Video hướng dẫn tránh 3 sai lầm quay dựng bằng cách thay đổi góc máy và trang phục liên tục.",
     "country": {
       "id": "india",
       "name": "Ấn Độ",
@@ -13777,7 +13777,10 @@
       "ig_seeding_hook": "Follow @mridupawasharma để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
       "course_industry_mapping": "Kỹ Thuật Quay Dựng & Điện Ảnh • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
       "transition_level": null
-    }
+    },
+    "youtube_id": "c_UQkjulVj8",
+    "youtube_url": "https://youtu.be/c_UQkjulVj8",
+    "youtube_embed": "https://www.youtube.com/embed/c_UQkjulVj8"
   },
   "DcGbEVFznin": {
     "id": "IG_@mridupawasharma_DcGbEVFznin_Everything_looks_better_in_closeup._Am_I_righ",
@@ -26963,29 +26966,29 @@
     "id": "IG_@mridupawasharma_DV73FCHk1Ej_Some_days_feel_lighter",
     "creator": "@mridupawasharma",
     "creator_name": "Mridupawasharma",
-    "title": "@mridupawasharma - Some days feel lighter",
+    "title": "Fastrack Ease: Đánh Bật Giác Quan Bằng B-Roll Sản Phẩm Điện Ảnh",
     "shots_count": 33,
-    "duration": "66.0s",
+    "duration": "27.4s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "Sản phẩm / Cinematic b-roll",
+      "name": "Sản phẩm / Cinematic b-roll",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Thời trang & Mỹ phẩm",
+      "name": "Thời trang & Mỹ phẩm",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Low-key Lighting",
-      "Close-Up / Macro Detail Shot",
-      "High-key Lighting"
+      "Product B-roll",
+      "Perfume",
+      "Macro",
+      "Cinematic lighting"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Quảng cáo nước hoa nam Fastrack Ease với các cú máy macro sắc nét, đánh sáng đẹp khoe chất liệu trong suốt, và tia sương xịt bay bổng, tôn lên sự tươi mát.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -27001,29 +27004,29 @@
     "id": "IG_@mridupawasharma_DV73FCHk1Ej_Some_days_feel_lighter",
     "creator": "@mridupawasharma",
     "creator_name": "Mridupawasharma",
-    "title": "@mridupawasharma - Some days feel lighter",
+    "title": "Fastrack Ease: Đánh Bật Giác Quan Bằng B-Roll Sản Phẩm Điện Ảnh",
     "shots_count": 33,
-    "duration": "66.0s",
+    "duration": "27.4s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "Sản phẩm / Cinematic b-roll",
+      "name": "Sản phẩm / Cinematic b-roll",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "Thời trang & Mỹ phẩm",
+      "name": "Thời trang & Mỹ phẩm",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Low-key Lighting",
-      "Close-Up / Macro Detail Shot",
-      "High-key Lighting"
+      "Product B-roll",
+      "Perfume",
+      "Macro",
+      "Cinematic lighting"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Quảng cáo nước hoa nam Fastrack Ease với các cú máy macro sắc nét, đánh sáng đẹp khoe chất liệu trong suốt, và tia sương xịt bay bổng, tôn lên sự tươi mát.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
