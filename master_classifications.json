@@ -23022,32 +23022,29 @@
     "id": "IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis",
     "creator": "@Chibuzor_Ossai",
     "creator_name": "Chibuzor_Ossai",
-    "title": "Đòn Bẩy Đa Góc Máy B-Roll: Nghệ Thuật Tự Quay Quy Trình Lắp Ráp Sản Phẩm Cuốn Hút Cho Solo Creator",
+    "title": "Góc Máy Điện Ảnh Biến B-roll Đồ Gia Dụng Thành Cú Đấm Thị Giác",
     "shots_count": 7,
     "duration": "14.0s",
     "shooting_style": {
-      "id": "Solo Creator Setup",
-      "name": "Solo Creator Setup",
+      "id": "lifestyle",
+      "name": "lifestyle",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Sáng Tạo Nội Dung",
-      "name": "Sáng Tạo Nội Dung",
+      "id": "cong-nghe",
+      "name": "cong-nghe",
       "icon": "🎯"
     },
     "purpose": "Kỹ thuật phân rã cỡ cảnh và góc máy linh hoạt để solo creator tự quay B-roll lắp ráp sản phẩm cuốn hút",
     "tech_tags": [
-      "Solo Filmmaking",
-      "How To Film Yourself",
-      "B-Roll Angles",
-      "POV Shot",
-      "Product Assembly",
-      "Establishing Shot",
-      "Close Up Shot"
+      "quay-dung",
+      "vlog",
+      "unboxing",
+      "san-pham"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "Giáo trình thị giác 7 bước tự quay B-roll quy trình lắp ráp sản phẩm cho Solo Creator. Biến hành động đơn điệu thành chuỗi hình ảnh điện ảnh bằng việc đan xen 6 cỡ cảnh & góc máy độc đáo (Dutch Angle, Establishing, Top-Down, Worm's Eye POV, Tilt Down, Hero Wide).",
+    "quick_takeaway": "Hướng dẫn quay dựng video B-roll mượt mà khi set up chiếc quạt điện",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",

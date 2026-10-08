@@ -339,14 +339,6 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Kiểu quay huong-dan-chia-se."
     },
     {
-      "id": "Solo Creator Setup",
-      "name": "Solo Creator Setup",
-      "en_name": "Solo Creator Setup",
-      "icon": "🎬",
-      "badge_color": "purple",
-      "desc": "Kiểu quay Solo Creator Setup."
-    },
-    {
       "id": "Cinematic Vlog",
       "name": "Cinematic Vlog",
       "en_name": "Cinematic Vlog",
@@ -585,7 +577,7 @@ var FEDU_IDEAS_DATABASE = {
     "broll-storytelling": 1,
     "Sản phẩm / Cinematic b-roll": 1,
     "Talking Head": 11,
-    "lifestyle": 1,
+    "lifestyle": 2,
     "Kỹ thuật Quay Dựng": 1,
     "cinematic": 2,
     "Review / Product Showcase": 1,
@@ -613,7 +605,6 @@ var FEDU_IDEAS_DATABASE = {
     "UGC Thực Chiến": 1,
     "quang-cao": 1,
     "huong-dan-chia-se": 1,
-    "Solo Creator Setup": 1,
     "Cinematic Vlog": 3,
     "Cinematic B-Roll": 3,
     "Cinematic / Đời thường": 1,
@@ -731,7 +722,7 @@ var FEDU_IDEAS_DATABASE = {
     "thoi-trang": 23,
     "am-thuc": 22,
     "du-lich": 18,
-    "cong-nghe": 41,
+    "cong-nghe": 42,
     "kien-truc": 36,
     "the-thao": 6,
     "ky-thuat-quay": 38,
@@ -807,8 +798,8 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "IG_@creator_video_Video_video",
-    "video"
+    "video",
+    "IG_@creator_video_Video_video"
   ],
   "creators_hub": [
     {
@@ -1604,7 +1595,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Chibuzor_Ossai",
       "profile_url": "https://www.instagram.com/Chibuzor_Ossai/",
       "video_count": 1,
-      "top_industry": "Sáng Tạo Nội Dung",
+      "top_industry": "cong-nghe",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01_mid.jpg",
       "video_ids": [
         "IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis"
@@ -7628,20 +7619,20 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis",
       "shortcode": "DdRGI36Aj0X_Carousel_Analysis",
-      "title_vi": "Đòn Bẩy Đa Góc Máy B-Roll: Nghệ Thuật Tự Quay Quy Trình Lắp Ráp Sản Phẩm Cuốn Hút Cho Solo Creator",
-      "quick_takeaway": "Giáo trình thị giác 7 bước tự quay B-roll quy trình lắp ráp sản phẩm cho Solo Creator. Biến hành động đơn điệu thành chuỗi hình ảnh điện ảnh bằng việc đan xen 6 cỡ cảnh & góc máy độc đáo (Dutch Angle, Establishing, Top-Down, Worm's Eye POV, Tilt Down, Hero Wide).",
+      "title_vi": "Góc Máy Điện Ảnh Biến B-roll Đồ Gia Dụng Thành Cú Đấm Thị Giác",
+      "quick_takeaway": "Hướng dẫn quay dựng video B-roll mượt mà khi set up chiếc quạt điện",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "Solo Creator Setup",
-        "name": "Solo Creator Setup",
-        "en_name": "Solo Creator Setup",
+        "id": "lifestyle",
+        "name": "lifestyle",
+        "en_name": "Lifestyle",
         "icon": "🎬",
         "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "Sáng Tạo Nội Dung",
-          "name": "Sáng Tạo Nội Dung",
+          "id": "cong-nghe",
+          "name": "cong-nghe",
           "icon": "🎯"
         }
       ],
@@ -7656,13 +7647,10 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Kỹ thuật phân rã cỡ cảnh và góc máy linh hoạt để solo creator tự quay B-roll lắp ráp sản phẩm cuốn hút",
       "tech_tags": [
-        "Solo Filmmaking",
-        "How To Film Yourself",
-        "B-Roll Angles",
-        "POV Shot",
-        "Product Assembly",
-        "Establishing Shot",
-        "Close Up Shot"
+        "quay-dung",
+        "vlog",
+        "unboxing",
+        "san-pham"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -9170,7 +9158,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1jpYV1rRzpuPRMXcYkd1oVjIxfm7pBZFo",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_02_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "report_url": "reports/IG_@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲_Ddb6rA7NwQd_Video_by_elenabuntushak.html",
@@ -12331,8 +12319,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",

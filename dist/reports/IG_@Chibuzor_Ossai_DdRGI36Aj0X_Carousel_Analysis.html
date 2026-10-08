@@ -1,12 +1,14 @@
-<!DOCTYPE html><html lang="vi"><head>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đòn Bẩy Đa Góc Máy B-Roll: Nghệ Thuật Tự Quay Quy Trình Lắp Ráp Sản Phẩm Cuốn Hút Cho Solo Creator</title>
+    <title>Góc Máy Điện Ảnh Biến B-roll Đồ Gia Dụng Thành Cú Đấm Thị Giác</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B0F19'/%3E%3Crect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%23FFFFFF' stroke-opacity='0.12' stroke-width='1.5'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='system-ui, sans-serif' font-weight='900' font-size='23' fill='%23FFFFFF'%3EYT%3C/text%3E%3Ccircle cx='48' cy='18' r='4' fill='%23eab308'/%3E%3C/svg%3E">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         @font-face {
@@ -115,10 +117,10 @@
             max-height: 70vh;
             border-radius: var(--cl-radius-md);
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
             background: #000;
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
 
         .video-wrap video, .video-wrap iframe {
@@ -1006,51 +1008,220 @@
                 margin-top: 8px;
             }
         }
-    </style>
 
-<style class="video-player-container-fix">
-.video-player-container { height: 75vh !important; max-height: none !important; aspect-ratio: auto !important; }
-.carousel-stack { overflow-y: scroll !important; scroll-snap-type: y mandatory !important; }
-.carousel-stack > * { flex: 0 0 100% !important; height: 100% !important; object-fit: contain !important; scroll-snap-align: start !important; border: none !important; }
-</style>
-        </head>
+/* === EDIT INLINE FEATURE === */
+.edit-fab {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 50;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--cl-radius-full);
+    background: var(--cl-card);
+    border: 1px solid var(--cl-line-strong);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.2s var(--apple-ease);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.edit-fab:hover {
+    border-color: var(--cl-accent);
+    box-shadow: 0 4px 16px rgba(26, 115, 232, 0.15);
+    transform: scale(1.05);
+}
+
+.edit-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    z-index: 300;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 16px;
+    overflow-y: auto;
+}
+.edit-modal-backdrop.open {
+    display: flex;
+}
+
+.edit-modal {
+    background: var(--cl-card);
+    border-radius: var(--cl-radius-lg);
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 24px 48px rgba(0,0,0,0.15);
+    overflow: hidden;
+    animation: editSlideIn 0.3s var(--apple-spring);
+}
+
+@keyframes editSlideIn {
+    from { opacity: 0; transform: translateY(-20px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.edit-modal-head {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--cl-line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.edit-modal-head h3 {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--cl-text-base);
+    margin: 0;
+}
+.edit-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--cl-text-muted);
+    line-height: 1;
+}
+
+.edit-modal-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.edit-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.edit-field label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--cl-text-muted);
+}
+.edit-field select,
+.edit-field input,
+.edit-field textarea {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    padding: 10px 14px;
+    border: 1px solid var(--cl-line-strong);
+    border-radius: var(--cl-radius-sm);
+    background: var(--cl-card);
+    color: var(--cl-text-body);
+    transition: border-color 0.2s;
+    width: 100%;
+}
+.edit-field select:focus,
+.edit-field input:focus,
+.edit-field textarea:focus {
+    outline: none;
+    border-color: var(--cl-accent);
+    box-shadow: 0 0 0 3px var(--cl-accent-tint);
+}
+.edit-field textarea {
+    min-height: 72px;
+    resize: vertical;
+}
+
+.edit-modal-footer {
+    padding: 16px 24px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.edit-save-btn {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 24px;
+    background: var(--cl-accent);
+    color: white;
+    border: none;
+    border-radius: var(--cl-radius-full);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.edit-save-btn:hover { opacity: 0.9; }
+.edit-save-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.edit-cancel-btn {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--cl-text-muted);
+    border: 1px solid var(--cl-line-strong);
+    border-radius: var(--cl-radius-full);
+    cursor: pointer;
+}
+
+.edit-status {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    padding: 8px 14px;
+    border-radius: var(--cl-radius-sm);
+    display: none;
+}
+.edit-status.success {
+    display: block;
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+.edit-status.error {
+    display: block;
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.edit-pw-field {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.edit-pw-field label { min-width: fit-content; }
+.edit-pw-field input {
+    max-width: 120px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    font-family: var(--font-mono);
+}
+
+@media (max-width: 1024px) {
+    .edit-fab {
+        top: auto;
+        bottom: 20px;
+        right: 16px;
+    }
+}
+    </style>
+</head>
 <body>
 
 <div class="app-container">
     <div class="video-sidebar">
-        <div class="video-wrap" style="position:relative;">
-
-<div class="carousel-nav-overlay" style="position:absolute; right: 8px; top: 50%; transform: translateY(-50%); display:flex; flex-direction:column; gap:8px; z-index:99;">
-    <button onclick="scrollCarousel(-1)" style="background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.4); border-radius:50%; width:36px; height:36px; cursor:pointer; color:#fff; display:flex; justify-content:center; align-items:center; backdrop-filter:blur(4px); font-size: 12px; font-weight: bold;">▲</button>
-    <button onclick="scrollCarousel(1)" style="background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.4); border-radius:50%; width:36px; height:36px; cursor:pointer; color:#fff; display:flex; justify-content:center; align-items:center; backdrop-filter:blur(4px); font-size: 12px; font-weight: bold;">▼</button>
-</div>
-<script>
-function scrollCarousel(dir) {
-    var stack = document.querySelector('.carousel-stack');
-    if(stack) {
-        var h = stack.clientHeight;
-        stack.scrollBy({ top: dir * h, behavior: 'smooth' });
-    }
-}
-</script>
-
-            <style>.carousel-stack::-webkit-scrollbar { display: none; }</style>
-<div class="carousel-stack" style="display:flex; flex-direction:column; gap:16px; height:100%; overflow-y:auto; scroll-snap-type:y mandatory; -ms-overflow-style:none; scrollbar-width:none;">
-<style>
-.video-wrap { height: 75vh !important; overflow: hidden !important; }
-.carousel-stack { display: flex; flex-direction: column; gap: 16px; height: 100%; overflow-y: scroll !important; scroll-snap-type: y mandatory; }
-.carousel-stack::-webkit-scrollbar { width: 4px; }
-.carousel-stack::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 4px; }
-.carousel-stack > iframe { flex: 0 0 100% !important; width: 100% !important; height: 100% !important; scroll-snap-align: start; background: #000; border: none; }
-</style>
-<iframe src="https://www.youtube.com/embed/YRVDVVeveTY?autoplay=0&amp;loop=1&amp;playlist=YRVDVVeveTY&amp;controls=1&amp;mute=1&amp;rel=0" allow="autoplay; fullscreen" loading="lazy"></iframe>
-<iframe src="https://www.youtube.com/embed/UAsdASBA16A?autoplay=0&amp;loop=1&amp;playlist=UAsdASBA16A&amp;controls=1&amp;mute=1&amp;rel=0" allow="autoplay; fullscreen" loading="lazy"></iframe>
-<iframe src="https://www.youtube.com/embed/n7oST-BuHp4?autoplay=0&amp;loop=1&amp;playlist=n7oST-BuHp4&amp;controls=1&amp;mute=1&amp;rel=0" allow="autoplay; fullscreen" loading="lazy"></iframe>
-<iframe src="https://www.youtube.com/embed/Dil_NcyeDkU?autoplay=0&amp;loop=1&amp;playlist=Dil_NcyeDkU&amp;controls=1&amp;mute=1&amp;rel=0" allow="autoplay; fullscreen" loading="lazy"></iframe>
-<iframe src="https://www.youtube.com/embed/KO1h5sPdaG0?autoplay=0&amp;loop=1&amp;playlist=KO1h5sPdaG0&amp;controls=1&amp;mute=1&amp;rel=0" allow="autoplay; fullscreen" loading="lazy"></iframe>
-<iframe src="https://www.youtube.com/embed/Cd5eCdZkl9I?autoplay=0&amp;loop=1&amp;playlist=Cd5eCdZkl9I&amp;controls=1&amp;mute=1&amp;rel=0" allow="autoplay; fullscreen" loading="lazy"></iframe>
-<iframe src="https://www.youtube.com/embed/kjrtG1S80U4?autoplay=0&amp;loop=1&amp;playlist=kjrtG1S80U4&amp;controls=1&amp;mute=1&amp;rel=0" allow="autoplay; fullscreen" loading="lazy"></iframe>
-</div>
+        <div class="video-wrap">
+            <video id="mainPlayer" src="https://media.fedu.vn/videos/carousel_slides/IG_%40Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01.mp4" controls autoplay muted playsinline preload="auto" loop style="width:100%;aspect-ratio:9/16;border-radius:12px;background:#000;"></video>
         </div>
         <div class="video-controls">
             <div class="speed-row">
@@ -1071,9 +1242,9 @@ function scrollCarousel(dir) {
 
     <div class="content-column">
         <header class="report-header">
-            <div class="header-badges"><span class="badge">Sáng Tạo Nội Dung</span> <span class="badge badge-alt">Solo Creator Setup</span></div>
+            <div class="header-badges"><span class="badge">cong-nghe</span> <span class="badge badge-alt">lifestyle</span></div>
             <h1 class="report-title">
-                <a href="https://www.instagram.com/p/DdRGMalgl4E/?img_index=6&amp;stkn=MTlheHZpanpqcWYxYg==" target="_blank" rel="noopener">Đòn Bẩy Đa Góc Máy B-Roll: Nghệ Thuật Tự Quay Quy Trình Lắp Ráp Sản Phẩm Cuốn Hút Cho Solo Creator</a>
+                <a href="https://www.instagram.com/p/DdRGMalgl4E/?img_index=6&amp;stkn=MTlheHZpanpqcWYxYg==" target="_blank" rel="noopener">Góc Máy Điện Ảnh Biến B-roll Đồ Gia Dụng Thành Cú Đấm Thị Giác</a>
             </h1>
             <div class="header-meta">
                 <span>Nguồn: <a href="https://www.instagram.com/Chibuzor/" target="_blank" class="creator-link">@Chibuzor ↗</a></span>
@@ -1088,11 +1259,11 @@ function scrollCarousel(dir) {
         
         <section class="script-axis-card">
             <h3 class="script-axis-title">TRỤC KỊCH BẢN 3 NHỊP</h3>
-            <div class="script-axis-content">[Nhịp 1: Mồi mắt góc chéo cơ khí (Dutch Angle Hook)] ➔ [Nhịp 2: Chuỗi 5 góc máy đa dạng: Toàn cảnh ➔ Cận cảnh bóc hộp ➔ POV ngược lỗ trục ➔ Lia siết ốc ➔ Toàn thấp lắp thân] ➔ [Nhịp 3: Cận cảnh phím bấm Piano &amp; Hook tò mò Phần 2]</div>
+            <div class="script-axis-content">[Góc nghiêng mồi mắt] ➔ [Chuyển động vặn/siết góc thấp] ➔ [Đặc tả phím bấm mồi hook]</div>
         </section>
 
         <div class="overview-card">
-            Giáo trình thị giác 7 bước tự quay B-roll quy trình lắp ráp sản phẩm cho Solo Creator. Biến hành động đơn điệu thành chuỗi hình ảnh điện ảnh bằng việc đan xen 6 cỡ cảnh &amp; góc máy độc đáo (Dutch Angle, Establishing, Top-Down, Worm's Eye POV, Tilt Down, Hero Wide).
+            Hướng dẫn quay dựng video B-roll mượt mà khi set up chiếc quạt điện
         </div>
 
         
@@ -1152,8 +1323,8 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
             
         <div class="shot-card" id="shot-card-1">
             <div class="shot-thumb" onclick="playShot(0.0, 2.25, 'SHOT 01')">
-                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01_mid.jpg" alt="SHOT 01" loading="lazy">
-                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01_mid.jpg" alt="SHOT 01" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
                 <span class="shot-time-badge">0.0s – 2.2s</span>
             </div>
             <div class="shot-body">
@@ -1172,7 +1343,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
                         <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Swipe Left (Chuyển trang Carousel tự nhiên)</span></div>
                     </div>
                     <div class="critique-good">Đường chéo lồng quạt chiếm 2/3 khung hình dọc 9:16 tạo lực căng thị giác mạnh, texture nan kim loại bắt sáng nổi khối tách bạch.</div>
-                    <div class="critique-warn">Chữ tiêu đề 'How To Film Yourself' đặt đè lên tâm cánh quạt hơi rối mắt nếu người xem lướt quá nhanh.</div>
+                    <div class="critique-warn">Chữ tiêu đề &#x27;How To Film Yourself&#x27; đặt đè lên tâm cánh quạt hơi rối mắt nếu người xem lướt quá nhanh.</div>
                     <div class="shot-narrative">Bàn tay luồn vào chỉnh lồng quạt kim loại dưới góc máy Dutch Angle nghênh từ dưới lên, đón ánh sáng vàng ấm.</div>
                 </details>
             </div>
@@ -1180,8 +1351,8 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
 
         <div class="shot-card" id="shot-card-2">
             <div class="shot-thumb" onclick="playShot(0.0, 1.96, 'SHOT 02')">
-                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_02_mid.jpg" alt="SHOT 02" loading="lazy">
-                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_02_mid.jpg" alt="SHOT 02" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
                 <span class="shot-time-badge">0.0s – 2.0s</span>
             </div>
             <div class="shot-body">
@@ -1208,8 +1379,8 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
 
         <div class="shot-card" id="shot-card-3">
             <div class="shot-thumb" onclick="playShot(0.0, 1.96, 'SHOT 03')">
-                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_03_mid.jpg" alt="SHOT 03" loading="lazy">
-                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_03_mid.jpg" alt="SHOT 03" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
                 <span class="shot-time-badge">0.0s – 2.0s</span>
             </div>
             <div class="shot-body">
@@ -1236,8 +1407,8 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
 
         <div class="shot-card" id="shot-card-4">
             <div class="shot-thumb" onclick="playShot(0.0, 1.96, 'SHOT 04')">
-                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_04_mid.jpg" alt="SHOT 04" loading="lazy">
-                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_04_mid.jpg" alt="SHOT 04" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
                 <span class="shot-time-badge">0.0s – 2.0s</span>
             </div>
             <div class="shot-body">
@@ -1246,16 +1417,16 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
                     <span class="shot-dur">1.96s</span>
                 </div>
                 <h4 class="shot-headline">Góc POV Xuyên Trục Cực Thấp: Đưa camera vào trong lỗ đế quạt tạo góc nhìn độc bản</h4>
-                <p class="shot-insight">Đặt camera vào vị trí 'bất khả thi' (bên trong đồ vật, dưới đáy hộp) là công thức B-roll triệu view đơn giản nhất của Solo Creator.</p>
+                <p class="shot-insight">Đặt camera vào vị trí &#x27;bất khả thi&#x27; (bên trong đồ vật, dưới đáy hộp) là công thức B-roll triệu view đơn giản nhất của Solo Creator.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
                         <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Mặt sàn / Trong lỗ trục đế quạt</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Ultra Low POV / Worm's Eye View (Góc nhìn sâu từ dưới lòng trục)</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Ultra Low POV / Worm&#x27;s Eye View (Góc nhìn sâu từ dưới lòng trục)</span></div>
                         <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Backlit Ceiling Glow (Ánh sáng trần hắt ngược tạo viền silhouette khuôn mặt)</span></div>
                         <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Black Out / Match Cut qua thân ống</span></div>
                     </div>
-                    <div class="critique-good">Góc quay Worm's Eye POV hoàn toàn phá vỡ góc nhìn mắt thường, tạo cảm giác người xem đang là một phần của cỗ máy.</div>
+                    <div class="critique-good">Góc quay Worm&#x27;s Eye POV hoàn toàn phá vỡ góc nhìn mắt thường, tạo cảm giác người xem đang là một phần của cỗ máy.</div>
                     <div class="critique-warn">Khoảnh khắc ống kim loại trùm xuống dễ làm khung hình bị tối đen hoàn toàn nếu không cắt đúng nhịp chuyển cảnh.</div>
                     <div class="shot-narrative">Camera đặt ngửa mặt từ dưới sàn nhìn lên qua lỗ trục, creator cúi mặt nhìn thẳng vào ống kính và hạ thân quạt xuống trùm kín khung hình.</div>
                 </details>
@@ -1264,8 +1435,8 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
 
         <div class="shot-card" id="shot-card-5">
             <div class="shot-thumb" onclick="playShot(0.0, 1.96, 'SHOT 05')">
-                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_05_mid.jpg" alt="SHOT 05" loading="lazy">
-                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_05_mid.jpg" alt="SHOT 05" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
                 <span class="shot-time-badge">0.0s – 2.0s</span>
             </div>
             <div class="shot-body">
@@ -1292,8 +1463,8 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
 
         <div class="shot-card" id="shot-card-6">
             <div class="shot-thumb" onclick="playShot(0.0, 1.96, 'SHOT 06')">
-                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_06_mid.jpg" alt="SHOT 06" loading="lazy">
-                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_06_mid.jpg" alt="SHOT 06" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
                 <span class="shot-time-badge">0.0s – 2.0s</span>
             </div>
             <div class="shot-body">
@@ -1320,8 +1491,8 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
 
         <div class="shot-card" id="shot-card-7">
             <div class="shot-thumb" onclick="playShot(0.0, 1.96, 'SHOT 07')">
-                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_07_mid.jpg" alt="SHOT 07" loading="lazy">
-                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_07_mid.jpg" alt="SHOT 07" loading="lazy" />
+                <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
                 <span class="shot-time-badge">0.0s – 2.0s</span>
             </div>
             <div class="shot-body">
@@ -1339,7 +1510,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
                         <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Cinematic Rim Light (Ánh sáng viền tôn cạnh tròn của nút bấm)</span></div>
                         <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">End Screen CTA Hook</span></div>
                     </div>
-                    <div class="critique-good">Độ sâu trường ảnh mỏng (DoF) cô lập hoàn hảo 4 nút phím cơ học, dòng chữ call-to-action 'Follow for Part 2/3' đặt chuẩn vị trí đáy không che chi tiết.</div>
+                    <div class="critique-good">Độ sâu trường ảnh mỏng (DoF) cô lập hoàn hảo 4 nút phím cơ học, dòng chữ call-to-action &#x27;Follow for Part 2/3&#x27; đặt chuẩn vị trí đáy không che chi tiết.</div>
                     <div class="critique-warn">Bàn tay phía sau có thể hơi che mất đường viền thân quạt, nếu tách hẳn bàn tay ra sẽ tôn trọn thiết kế công nghiệp hơn.</div>
                     <div class="shot-narrative">Cận cảnh đặc tả cụm 4 nút bấm phím đàn (Piano Switch) màu đen nhám trên thân quạt, hậu cảnh đèn studio mờ nhòe dịu mắt.</div>
                 </details>
@@ -1351,7 +1522,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
             
         <div class="grid-item" onclick="playShot(0.0, 2.25, 'SHOT 01')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01_mid.jpg" alt="SHOT 01" loading="lazy">
+                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01_mid.jpg" alt="SHOT 01" loading="lazy" />
                 <span class="grid-num">SHOT 01</span>
                 <span class="grid-time">0.0s – 2.2s</span>
                 <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01_mid.jpg', 'SHOT 01 • Góc Nghiêng Hà Lan Cơ Khí: Biến chi tiết quạt tĩnh thành cú đấm thị giác chuyển động')">⊕</button>
@@ -1361,7 +1532,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
 
         <div class="grid-item" onclick="playShot(0.0, 1.96, 'SHOT 02')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_02_mid.jpg" alt="SHOT 02" loading="lazy">
+                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_02_mid.jpg" alt="SHOT 02" loading="lazy" />
                 <span class="grid-num">SHOT 02</span>
                 <span class="grid-time">0.0s – 2.0s</span>
                 <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_02_mid.jpg', 'SHOT 02 • Establishing Shot Ngồi Bệt: Thiết lập không gian làm việc chân thực của solo creator')">⊕</button>
@@ -1371,7 +1542,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
 
         <div class="grid-item" onclick="playShot(0.0, 1.96, 'SHOT 03')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_03_mid.jpg" alt="SHOT 03" loading="lazy">
+                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_03_mid.jpg" alt="SHOT 03" loading="lazy" />
                 <span class="grid-num">SHOT 03</span>
                 <span class="grid-time">0.0s – 2.0s</span>
                 <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_03_mid.jpg', 'SHOT 03 • Overhead Top-Down Cận Cảnh: Kích hoạt cảm giác thỏa mãn thị giác và xúc giác khi bóc seal')">⊕</button>
@@ -1381,7 +1552,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
 
         <div class="grid-item" onclick="playShot(0.0, 1.96, 'SHOT 04')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_04_mid.jpg" alt="SHOT 04" loading="lazy">
+                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_04_mid.jpg" alt="SHOT 04" loading="lazy" />
                 <span class="grid-num">SHOT 04</span>
                 <span class="grid-time">0.0s – 2.0s</span>
                 <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_04_mid.jpg', 'SHOT 04 • Góc POV Xuyên Trục Cực Thấp: Đưa camera vào trong lỗ đế quạt tạo góc nhìn độc bản')">⊕</button>
@@ -1391,7 +1562,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
 
         <div class="grid-item" onclick="playShot(0.0, 1.96, 'SHOT 05')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_05_mid.jpg" alt="SHOT 05" loading="lazy">
+                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_05_mid.jpg" alt="SHOT 05" loading="lazy" />
                 <span class="grid-num">SHOT 05</span>
                 <span class="grid-time">0.0s – 2.0s</span>
                 <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_05_mid.jpg', 'SHOT 05 • Dynamic Tilt Down Theo Lực Vặn: Dẫn dắt chuyển động mắt theo thao tác cơ khí siết ốc')">⊕</button>
@@ -1401,7 +1572,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
 
         <div class="grid-item" onclick="playShot(0.0, 1.96, 'SHOT 06')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_06_mid.jpg" alt="SHOT 06" loading="lazy">
+                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_06_mid.jpg" alt="SHOT 06" loading="lazy" />
                 <span class="grid-num">SHOT 06</span>
                 <span class="grid-time">0.0s – 2.0s</span>
                 <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_06_mid.jpg', 'SHOT 06 • Góc Thấp Tôn Dáng Hero Wide: Khẳng định sự hoàn thiện từng nấc của sản phẩm')">⊕</button>
@@ -1411,7 +1582,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
 
         <div class="grid-item" onclick="playShot(0.0, 1.96, 'SHOT 07')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_07_mid.jpg" alt="SHOT 07" loading="lazy">
+                <img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_07_mid.jpg" alt="SHOT 07" loading="lazy" />
                 <span class="grid-num">SHOT 07</span>
                 <span class="grid-time">0.0s – 2.0s</span>
                 <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_07_mid.jpg', 'SHOT 07 • Macro Close-Up Phím Đàn: Điểm chạm công năng tinh xảo và mồi hook Phần 2')">⊕</button>
@@ -1426,11 +1597,11 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
     <div class="drawer-panel" onclick="event.stopPropagation()">
         <div class="drawer-head">
             <span>MỤC LỤC (7)</span>
-            <button onclick="toggleDrawer(false)">×</button>
+            <button onclick="toggleDrawer(false)">&times;</button>
         </div>
         <div class="drawer-list">
         <div class="drawer-item" onclick="jumpToShot(1, 0.0, 2.25, 'SHOT 01')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01_mid.jpg" alt="SHOT 01" loading="lazy"></div>
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01_mid.jpg" alt="SHOT 01" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 01</div>
                 <div class="drawer-shot-hl">Góc Nghiêng Hà Lan Cơ Khí: Biến chi tiết q</div>
@@ -1440,7 +1611,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
         </div>
 
         <div class="drawer-item" onclick="jumpToShot(2, 0.0, 1.96, 'SHOT 02')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_02_mid.jpg" alt="SHOT 02" loading="lazy"></div>
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_02_mid.jpg" alt="SHOT 02" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 02</div>
                 <div class="drawer-shot-hl">Establishing Shot Ngồi Bệt: Thiết lập khôn</div>
@@ -1450,7 +1621,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
         </div>
 
         <div class="drawer-item" onclick="jumpToShot(3, 0.0, 1.96, 'SHOT 03')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_03_mid.jpg" alt="SHOT 03" loading="lazy"></div>
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_03_mid.jpg" alt="SHOT 03" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 03</div>
                 <div class="drawer-shot-hl">Overhead Top-Down Cận Cảnh: Kích hoạt cảm </div>
@@ -1460,7 +1631,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
         </div>
 
         <div class="drawer-item" onclick="jumpToShot(4, 0.0, 1.96, 'SHOT 04')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_04_mid.jpg" alt="SHOT 04" loading="lazy"></div>
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_04_mid.jpg" alt="SHOT 04" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 04</div>
                 <div class="drawer-shot-hl">Góc POV Xuyên Trục Cực Thấp: Đưa camera và</div>
@@ -1470,7 +1641,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
         </div>
 
         <div class="drawer-item" onclick="jumpToShot(5, 0.0, 1.96, 'SHOT 05')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_05_mid.jpg" alt="SHOT 05" loading="lazy"></div>
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_05_mid.jpg" alt="SHOT 05" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 05</div>
                 <div class="drawer-shot-hl">Dynamic Tilt Down Theo Lực Vặn: Dẫn dắt ch</div>
@@ -1480,7 +1651,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
         </div>
 
         <div class="drawer-item" onclick="jumpToShot(6, 0.0, 1.96, 'SHOT 06')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_06_mid.jpg" alt="SHOT 06" loading="lazy"></div>
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_06_mid.jpg" alt="SHOT 06" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 06</div>
                 <div class="drawer-shot-hl">Góc Thấp Tôn Dáng Hero Wide: Khẳng định sự</div>
@@ -1490,7 +1661,7 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
         </div>
 
         <div class="drawer-item" onclick="jumpToShot(7, 0.0, 1.96, 'SHOT 07')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_07_mid.jpg" alt="SHOT 07" loading="lazy"></div>
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_07_mid.jpg" alt="SHOT 07" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 07</div>
                 <div class="drawer-shot-hl">Macro Close-Up Phím Đàn: Điểm chạm công nă</div>
@@ -1502,9 +1673,86 @@ Sau khi chọn → xuất 3 PHƯƠNG ÁN BỐ TRÍ CÚ MÁY!</div>
 </div>
 
 <div id="lightboxModal" onclick="closeLightbox()">
-    <span class="lightbox-x" onclick="closeLightbox()">×</span>
-    <img id="lightboxImg" onclick="event.stopPropagation()">
+    <span class="lightbox-x" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImg" onclick="event.stopPropagation()" />
     <div id="lightboxCaption"></div>
+</div>
+
+<!-- Edit Inline Feature -->
+<button class="edit-fab" onclick="openEditModal()" title="Sửa phân loại">✎</button>
+
+<div id="editModalBackdrop" class="edit-modal-backdrop" onclick="closeEditModal()">
+    <div class="edit-modal" onclick="event.stopPropagation()">
+        <div class="edit-modal-head">
+            <h3>✎ Sửa Phân Loại</h3>
+            <button class="edit-modal-close" onclick="closeEditModal()">&times;</button>
+        </div>
+        <div class="edit-modal-body">
+            <div id="editStatus" class="edit-status"></div>
+
+            <div class="edit-field">
+                <label>Ngành nghề</label>
+                <select id="editIndustry">
+                    <option value="">— Chọn hoặc gõ bên dưới —</option>
+                    <option value="Phong Cách Sống">Phong Cách Sống</option>
+                    <option value="Tâm Lý & Phát Triển Bản Thân">Tâm Lý & Phát Triển Bản Thân</option>
+                    <option value="Kiến Trúc & Không Gian Sống">Kiến Trúc & Không Gian Sống</option>
+                    <option value="Ẩm Thực & F&B">Ẩm Thực & F&B</option>
+                    <option value="Thời Trang & Làm Đẹp">Thời Trang & Làm Đẹp</option>
+                    <option value="Sức Khỏe & Fitness">Sức Khỏe & Fitness</option>
+                    <option value="Công Nghệ & Startup">Công Nghệ & Startup</option>
+                    <option value="Giáo Dục & Đào Tạo">Giáo Dục & Đào Tạo</option>
+                    <option value="Du Lịch & Trải Nghiệm">Du Lịch & Trải Nghiệm</option>
+                    <option value="E-Commerce & Bán Hàng">E-Commerce & Bán Hàng</option>
+                    <option value="Âm Nhạc & Giải Trí">Âm Nhạc & Giải Trí</option>
+                    <option value="Nghệ Thuật & Sáng Tạo">Nghệ Thuật & Sáng Tạo</option>
+                </select>
+                <input type="text" id="editIndustryCustom" placeholder="Hoặc gõ ngành tùy chỉnh...">
+            </div>
+
+            <div class="edit-field">
+                <label>Kiểu quay / Phong cách</label>
+                <select id="editStyle">
+                    <option value="">— Chọn hoặc gõ bên dưới —</option>
+                    <option value="Vlog Cinematic">Vlog Cinematic</option>
+                    <option value="Talking Head">Talking Head</option>
+                    <option value="Đời Thường & Chữa Lành">Đời Thường & Chữa Lành</option>
+                    <option value="Montage Nhanh">Montage Nhanh</option>
+                    <option value="B-Roll Thuần Hình">B-Roll Thuần Hình</option>
+                    <option value="POV / First Person">POV / First Person</option>
+                    <option value="Review Sản Phẩm">Review Sản Phẩm</option>
+                    <option value="Tutorial / How-to">Tutorial / How-to</option>
+                    <option value="Storytelling">Storytelling</option>
+                    <option value="Interview / Đối Thoại">Interview / Đối Thoại</option>
+                </select>
+                <input type="text" id="editStyleCustom" placeholder="Hoặc gõ kiểu quay tùy chỉnh...">
+            </div>
+
+            <div class="edit-field">
+                <label>Tags kỹ thuật (phân tách bằng dấu phẩy)</label>
+                <textarea id="editTags" placeholder="VD: Daily Routine, Motivation, Cinematic Loop"></textarea>
+            </div>
+
+            <div class="edit-field">
+                <label>Mục đích / Tóm tắt (Purpose)</label>
+                <textarea id="editPurpose"></textarea>
+            </div>
+
+            <div class="edit-field">
+                <label>Bài học rút gọn (Quick Takeaway)</label>
+                <textarea id="editTakeaway"></textarea>
+            </div>
+
+            <div class="edit-field edit-pw-field">
+                <label>Mật khẩu</label>
+                <input type="password" id="editPassword" placeholder="••••" autocomplete="off">
+            </div>
+        </div>
+        <div class="edit-modal-footer">
+            <button class="edit-cancel-btn" onclick="closeEditModal()">Hủy</button>
+            <button class="edit-save-btn" id="editSaveBtn" onclick="saveEdit()">Lưu thay đổi</button>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -1555,9 +1803,11 @@ function playShot(startTime, endTime, label) {
         } else if (startTime > 0) {
             slideIndex = Math.floor(startTime);
         }
-        var target = stack.children[slideIndex];
+        var target = stack.querySelectorAll('video, img')[slideIndex];
         if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            stack.querySelectorAll('video').forEach(function(v) { v.pause(); });
+            if (target.tagName === 'VIDEO') { target.currentTime = 0; target.play().catch(function(){}); }
         }
         var tag = document.getElementById('shotStatusTag');
         if (tag) tag.innerText = (label || ('Slide ' + (slideIndex+1))) + ' (Đang xem)';
@@ -1582,11 +1832,12 @@ function playShot(startTime, endTime, label) {
             args: []
         }), '*');
     } else {
-        if(player) player.currentTime = startTime;
+        player.currentTime = startTime;
         var p = player.play();
         if (p !== undefined) {
-            p.catch(function(error) {
-                console.log('Play prevented');
+            p.catch(function() {
+                player.muted = true;
+                player.play().catch(function() {});
             });
         }
     }
@@ -1752,7 +2003,151 @@ function copyMegaPrompt(e, btn) {
         alert('Lỗi sao chép, bạn bôi đen văn bản để copy nhé!');
     });
 }
+
+// === EDIT INLINE FEATURE ===
+var ENTRY_KEY = 'IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis';
+var CLASSIFICATION_DATA = {};
+
+function openEditModal() {
+    var d = CLASSIFICATION_DATA || {};
+    var indSel = document.getElementById('editIndustry');
+    var indCust = document.getElementById('editIndustryCustom');
+    var stySel = document.getElementById('editStyle');
+    var styCust = document.getElementById('editStyleCustom');
+    
+    // Pre-fill industry
+    var indName = (d.industry && d.industry.name) ? d.industry.name : '';
+    indSel.value = '';
+    indCust.value = '';
+    for (var i = 0; i < indSel.options.length; i++) {
+        if (indSel.options[i].value === indName) { indSel.value = indName; break; }
+    }
+    if (!indSel.value && indName) indCust.value = indName;
+
+    // Pre-fill style
+    var styName = (d.shooting_style && d.shooting_style.name) ? d.shooting_style.name : '';
+    stySel.value = '';
+    styCust.value = '';
+    for (var j = 0; j < stySel.options.length; j++) {
+        if (stySel.options[j].value === styName) { stySel.value = styName; break; }
+    }
+    if (!stySel.value && styName) styCust.value = styName;
+
+    // Pre-fill tags
+    document.getElementById('editTags').value = (d.tech_tags || []).join(', ');
+    document.getElementById('editPurpose').value = d.purpose || d.logic_explanation || '';
+    document.getElementById('editTakeaway').value = d.quick_takeaway || '';
+
+    // Reset status
+    var st = document.getElementById('editStatus');
+    st.className = 'edit-status';
+    st.style.display = 'none';
+    document.getElementById('editSaveBtn').disabled = false;
+    document.getElementById('editSaveBtn').textContent = 'Lưu thay đổi';
+
+    document.getElementById('editModalBackdrop').classList.add('open');
+}
+
+function closeEditModal() {
+    document.getElementById('editModalBackdrop').classList.remove('open');
+}
+
+function saveEdit() {
+    var btn = document.getElementById('editSaveBtn');
+    var st = document.getElementById('editStatus');
+    var pw = document.getElementById('editPassword').value;
+
+    if (!pw) {
+        st.className = 'edit-status error';
+        st.textContent = 'Vui lòng nhập mật khẩu.';
+        st.style.display = 'block';
+        return;
+    }
+
+    // Collect values
+    var indSel = document.getElementById('editIndustry').value;
+    var indCust = document.getElementById('editIndustryCustom').value.trim();
+    var industry = indCust || indSel || null;
+
+    var stySel = document.getElementById('editStyle').value;
+    var styCust = document.getElementById('editStyleCustom').value.trim();
+    var style = styCust || stySel || null;
+
+    var tags = document.getElementById('editTags').value;
+    var purpose = document.getElementById('editPurpose').value;
+    var takeaway = document.getElementById('editTakeaway').value;
+
+    var updates = {};
+    if (industry) updates.industry = industry;
+    if (style) updates.shooting_style = style;
+    if (tags) updates.tech_tags = tags;
+    if (purpose) updates.purpose = purpose;
+    if (takeaway) updates.quick_takeaway = takeaway;
+
+    if (Object.keys(updates).length === 0) {
+        st.className = 'edit-status error';
+        st.textContent = 'Chưa có thay đổi nào.';
+        st.style.display = 'block';
+        return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Đang lưu...';
+    st.style.display = 'none';
+
+    fetch('/api/edit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            password: pw,
+            entryKey: ENTRY_KEY,
+            updates: updates
+        })
+    })
+    .then(function(res) { return res.json().then(function(data) { return { ok: res.ok, data: data }; }); })
+    .then(function(result) {
+        if (result.ok && result.data.success) {
+            st.className = 'edit-status success';
+            st.textContent = '✅ Đã lưu! Commit: ' + (result.data.commit || '') + '. Trang sẽ tự cập nhật sau 1-2 phút.';
+            st.style.display = 'block';
+            btn.textContent = '✅ Đã lưu';
+
+            // Update DOM ngay lập tức (instant feedback)
+            var badges = document.querySelector('.header-badges');
+            if (badges && (updates.industry || updates.shooting_style)) {
+                var html = '';
+                var ind = updates.industry || (CLASSIFICATION_DATA.industry && CLASSIFICATION_DATA.industry.name) || '';
+                var sty = updates.shooting_style || (CLASSIFICATION_DATA.shooting_style && CLASSIFICATION_DATA.shooting_style.name) || '';
+                if (ind) html += '<span class="badge">' + ind + '</span> ';
+                if (sty) html += '<span class="badge badge-alt">' + sty + '</span>';
+                badges.innerHTML = html;
+            }
+
+            // Cập nhật CLASSIFICATION_DATA nội bộ
+            if (result.data.updatedEntry) {
+                CLASSIFICATION_DATA = result.data.updatedEntry;
+            }
+        } else {
+            st.className = 'edit-status error';
+            st.textContent = '❌ ' + (result.data.error || 'Lỗi không xác định');
+            st.style.display = 'block';
+            btn.disabled = false;
+            btn.textContent = 'Lưu thay đổi';
+        }
+    })
+    .catch(function(err) {
+        st.className = 'edit-status error';
+        st.textContent = '❌ Lỗi mạng: ' + err.message;
+        st.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Lưu thay đổi';
+    });
+}
+
+// Đóng modal khi bấm Escape
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeEditModal();
+});
 </script>
-
-
-</body></html>
+</body>
+</html>
