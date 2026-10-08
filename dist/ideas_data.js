@@ -4,9 +4,9 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 356,
-  "total_unique_ideas": 335,
-  "total_active_ideas": 306,
+  "total_scene_items": 357,
+  "total_unique_ideas": 336,
+  "total_active_ideas": 307,
   "total_excluded_ideas": 29,
   "total_creators": 221,
   "shooting_styles": [
@@ -75,6 +75,22 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Hậu trường quay dựng, góc máy setup thiết bị cho Solo Creator."
     },
     {
+      "id": "lifestyle",
+      "name": "lifestyle",
+      "en_name": "Lifestyle",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay lifestyle."
+    },
+    {
+      "id": "Talking Head",
+      "name": "Talking Head",
+      "en_name": "Talking Head",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Talking Head."
+    },
+    {
       "id": "Kỹ thuật Quay Dựng",
       "name": "Kỹ thuật Quay Dựng",
       "en_name": "Kỹ Thuật Quay Dựng",
@@ -89,14 +105,6 @@ var FEDU_IDEAS_DATABASE = {
       "icon": "🎬",
       "badge_color": "purple",
       "desc": "Kiểu quay cinematic."
-    },
-    {
-      "id": "Talking Head",
-      "name": "Talking Head",
-      "en_name": "Talking Head",
-      "icon": "🎬",
-      "badge_color": "purple",
-      "desc": "Kiểu quay Talking Head."
     },
     {
       "id": "Review / Product Showcase",
@@ -518,15 +526,16 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 4,
     "voice-over": 12,
-    "talking-head": 39,
+    "talking-head": 38,
     "storytelling": 24,
     "dien-anh": 95,
     "chuyen-canh": 54,
     "theo-nhip-nhac": 3,
     "bts": 0,
+    "lifestyle": 1,
+    "Talking Head": 9,
     "Kỹ thuật Quay Dựng": 1,
     "cinematic": 1,
-    "Talking Head": 8,
     "Review / Product Showcase": 1,
     "Review / Trải Nghiệm": 1,
     "Chuyển Cảnh (Transition)": 5,
@@ -668,8 +677,8 @@ var FEDU_IDEAS_DATABASE = {
     "thoi-trang": 23,
     "am-thuc": 22,
     "du-lich": 17,
-    "cong-nghe": 38,
-    "kien-truc": 37,
+    "cong-nghe": 39,
+    "kien-truc": 36,
     "the-thao": 5,
     "ky-thuat-quay": 38,
     "ugc": 5
@@ -731,7 +740,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 211,
+    "us_eu": 212,
     "korea": 10,
     "india": 3,
     "japan": 7,
@@ -744,18 +753,19 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "IG_@creator_video_Video_video",
-    "video"
+    "video",
+    "IG_@creator_video_Video_video"
   ],
   "creators_hub": [
     {
       "handle": "@mridupawasharma",
       "name": "Mridupawasharma",
       "profile_url": "https://www.instagram.com/mridupawasharma/",
-      "video_count": 17,
+      "video_count": 18,
       "top_industry": "Kiến Trúc & Không Gian Sống",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40mridupawasharma_DSe7DfDEz9L_Everything%E2%80%99s_perfect/shot_01_mid.webp",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40mridupawasharma_DUaii-skyis_Graded_with_my_Signature_LUTs-_LINK_IN_BIO/shot_01_mid.webp",
       "video_ids": [
+        "IG_@mridupawasharma_DUaii-skyis_Graded_with_my_Signature_LUTs-_LINK_IN_BIO",
         "IG_@mridupawasharma_DSe7DfDEz9L_Everything’s_perfect",
         "IG_@mridupawasharma_DYEyL_OT1_s_Make_boring_videos_Interesting_🧐",
         "IG_@mridupawasharma_DVYdxPpE7Ji_Make_BORING_videos_INTERESTING!",
@@ -3286,11 +3296,11 @@ var FEDU_IDEAS_DATABASE = {
   ],
   "ideas": [
     {
-      "id": "IG_@mridupawasharma_DSe7DfDEz9L_Everything’s_perfect",
-      "shortcode": "DSe7DfDEz9L",
-      "title_vi": "Quảng cáo Ứng Dụng Đỉnh Cao: Khơi Gợi Cảm Xúc &amp; Kêu Gọi Hành Động Nhanh",
+      "id": "IG_@mridupawasharma_DUaii-skyis_Graded_with_my_Signature_LUTs-_LINK_IN_BIO",
+      "shortcode": "DUaii-skyis",
+      "title_vi": "Graded with my Signature LUTs- LINK IN BIO",
       "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
-      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
+      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
       "shooting_style": {
         "id": "talking-head",
         "name": "Nói Trực Diện",
@@ -3318,7 +3328,74 @@ var FEDU_IDEAS_DATABASE = {
       "tech_tags": [
         "Establishing Hook Shot",
         "Close-Up / Macro Detail Shot",
-        "Low-key Lighting"
+        "Low-key Lighting",
+        "Medium Tracking Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "creator": {
+        "raw": "@mridupawasharma",
+        "name": "Mridupawasharma",
+        "handle": "@mridupawasharma",
+        "profile_url": "https://www.instagram.com/mridupawasharma/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DUaii-skyis/",
+      "gdrive_folder": "https://drive.google.com/open?id=1DOx-JdqOrRqjx9qpmziciKKrnvAcjZxT",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DUaii-skyis_Graded_with_my_Signature_LUTs-_LINK_IN_BIO/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DUaii-skyis_Graded_with_my_Signature_LUTs-_LINK_IN_BIO/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/DUaii-skyis.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DUaii-skyis.mp4",
+        "report_url": "reports/IG_@mridupawasharma_DUaii-skyis_Graded_with_my_Signature_LUTs-_LINK_IN_BIO.html",
+        "shots_count": 17,
+        "duration": "34s",
+        "youtube_id": "ID3jhWUqm2U",
+        "youtube_embed": "https://www.youtube.com/embed/ID3jhWUqm2U",
+        "youtube_url": "https://youtu.be/ID3jhWUqm2U"
+      },
+      "complexity": {
+        "id": "trung-binh",
+        "label": "🟡 Trung bình (9-18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
+      "id": "IG_@mridupawasharma_DSe7DfDEz9L_Everything’s_perfect",
+      "shortcode": "DSe7DfDEz9L",
+      "title_vi": "Quảng cáo Ứng Dụng Đỉnh Cao: Khơi Gợi Cảm Xúc & Kêu Gọi Hành Động Nhanh",
+      "quick_takeaway": "Quảng cáo Zomato mùa Giáng Sinh với hook ấm áp, dẫn dắt nhanh gọn đến giải pháp đồ ăn giao tận nhà.",
+      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
+      "shooting_style": {
+        "id": "lifestyle",
+        "name": "lifestyle",
+        "en_name": "Lifestyle",
+        "icon": "🎬",
+        "badge_color": "purple"
+      },
+      "industries": [
+        {
+          "id": "fnb",
+          "name": "fnb",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
+      "tech_tags": [
+        "Giáng Sinh",
+        "Giao Đồ Ăn",
+        "Zomato"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -3354,21 +3431,21 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@mridupawasharma_DYEyL_OT1_s_Make_boring_videos_Interesting_🧐",
       "shortcode": "DYEyL_OT1_s",
-      "title_vi": "Make boring videos Interesting 🧐",
-      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "title_vi": "Make Boring Videos Interesting",
+      "quick_takeaway": "Cách làm video bớt nhàm chán bằng kỹ thuật chia nhỏ câu nói và chèn B-roll cận cảnh theo nhịp hành động",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "talking-head",
-        "name": "Nói Trực Diện",
+        "id": "Talking Head",
+        "name": "Talking Head",
         "en_name": "Talking Head",
-        "icon": "🗣️",
-        "badge_color": "blue"
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "kien-truc",
-          "name": "Kiến Trúc & Không Gian Sống",
-          "icon": "🏛️"
+          "id": "cong-nghe",
+          "name": "cong-nghe",
+          "icon": "🎯"
         }
       ],
       "x_factors": [],
@@ -3382,9 +3459,10 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
       "tech_tags": [
-        "Establishing Hook Shot",
-        "Close-Up / Macro Detail Shot",
-        "Low-key Lighting"
+        "Visual Hook",
+        "Jump Cut",
+        "B-Roll",
+        "Impact Point"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -8259,7 +8337,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1jpYV1rRzpuPRMXcYkd1oVjIxfm7pBZFo",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_02_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "report_url": "reports/IG_@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲_Ddb6rA7NwQd_Video_by_elenabuntushak.html",
@@ -10040,7 +10118,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
@@ -11421,7 +11499,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
@@ -12535,7 +12613,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",

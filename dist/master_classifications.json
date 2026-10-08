@@ -26545,28 +26545,29 @@
     "id": "IG_@mridupawasharma_DYEyL_OT1_s_Make_boring_videos_Interesting_🧐",
     "creator": "@mridupawasharma",
     "creator_name": "Mridupawasharma",
-    "title": "@mridupawasharma - Make boring videos Interesting 🧐",
+    "title": "Make Boring Videos Interesting",
     "shots_count": 13,
-    "duration": "26.0s",
+    "duration": "27.1s",
     "shooting_style": {
-      "id": "talking-head",
+      "id": "Talking Head",
       "name": "Talking Head",
-      "icon": "🗣️"
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "cong-nghe",
+      "name": "cong-nghe",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting"
+      "Visual Hook",
+      "Jump Cut",
+      "B-Roll",
+      "Impact Point"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Cách làm video bớt nhàm chán bằng kỹ thuật chia nhỏ câu nói và chèn B-roll cận cảnh theo nhịp hành động",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -26621,28 +26622,28 @@
     "id": "IG_@mridupawasharma_DSe7DfDEz9L_Everything’s_perfect",
     "creator": "@mridupawasharma",
     "creator_name": "Mridupawasharma",
-    "title": "@mridupawasharma - Everything’s perfect",
+    "title": "Quảng cáo Ứng Dụng Đỉnh Cao: Khơi Gợi Cảm Xúc & Kêu Gọi Hành Động Nhanh",
     "shots_count": 15,
-    "duration": "30.0s",
+    "duration": "16.3s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "lifestyle",
+      "name": "lifestyle",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "fnb",
+      "name": "fnb",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting"
+      "Giáng Sinh",
+      "Giao Đồ Ăn",
+      "Zomato"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Quảng cáo Zomato mùa Giáng Sinh với hook ấm áp, dẫn dắt nhanh gọn đến giải pháp đồ ăn giao tận nhà.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -26660,9 +26661,46 @@
     "id": "IG_@mridupawasharma_DSe7DfDEz9L_Everything’s_perfect",
     "creator": "@mridupawasharma",
     "creator_name": "Mridupawasharma",
-    "title": "@mridupawasharma - Everything’s perfect",
+    "title": "Quảng cáo Ứng Dụng Đỉnh Cao: Khơi Gợi Cảm Xúc & Kêu Gọi Hành Động Nhanh",
     "shots_count": 15,
-    "duration": "30.0s",
+    "duration": "16.3s",
+    "shooting_style": {
+      "id": "lifestyle",
+      "name": "lifestyle",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "fnb",
+      "name": "fnb",
+      "icon": "🎯"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
+    "tech_tags": [
+      "Giáng Sinh",
+      "Giao Đồ Ăn",
+      "Zomato"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "Quảng cáo Zomato mùa Giáng Sinh với hook ấm áp, dẫn dắt nhanh gọn đến giải pháp đồ ăn giao tận nhà.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "QrzVsCxjb_M",
+    "youtube_url": "https://youtu.be/QrzVsCxjb_M",
+    "youtube_embed": "https://www.youtube.com/embed/QrzVsCxjb_M"
+  },
+  "IG_@mridupawasharma_DUaii-skyis_Graded_with_my_Signature_LUTs-_LINK_IN_BIO": {
+    "id": "IG_@mridupawasharma_DUaii-skyis_Graded_with_my_Signature_LUTs-_LINK_IN_BIO",
+    "creator": "@mridupawasharma",
+    "creator_name": "Mridupawasharma",
+    "title": "@mridupawasharma - Graded with my Signature LUTs- LINK IN BIO",
+    "shots_count": 17,
+    "duration": "34.0s",
     "shooting_style": {
       "id": "talking-head",
       "name": "Talking Head",
@@ -26677,7 +26715,8 @@
     "tech_tags": [
       "Establishing Hook Shot",
       "Close-Up / Macro Detail Shot",
-      "Low-key Lighting"
+      "Low-key Lighting",
+      "Medium Tracking Shot"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
@@ -26689,8 +26728,46 @@
       "flag": "🇺🇸/🇪🇺",
       "badge_color": "purple"
     },
-    "youtube_id": "QrzVsCxjb_M",
-    "youtube_url": "https://youtu.be/QrzVsCxjb_M",
-    "youtube_embed": "https://www.youtube.com/embed/QrzVsCxjb_M"
+    "youtube_id": "ID3jhWUqm2U",
+    "youtube_url": "https://youtu.be/ID3jhWUqm2U",
+    "youtube_embed": "https://www.youtube.com/embed/ID3jhWUqm2U"
+  },
+  "DUaii-skyis": {
+    "id": "IG_@mridupawasharma_DUaii-skyis_Graded_with_my_Signature_LUTs-_LINK_IN_BIO",
+    "creator": "@mridupawasharma",
+    "creator_name": "Mridupawasharma",
+    "title": "@mridupawasharma - Graded with my Signature LUTs- LINK IN BIO",
+    "shots_count": 17,
+    "duration": "34.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting",
+      "Medium Tracking Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "ID3jhWUqm2U",
+    "youtube_url": "https://youtu.be/ID3jhWUqm2U",
+    "youtube_embed": "https://www.youtube.com/embed/ID3jhWUqm2U"
   }
 }
